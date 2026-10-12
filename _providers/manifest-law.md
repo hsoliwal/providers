@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic surface behind ManifestOS, gated by the Manifest Law OAuth 2.0 / OpenID Connect authorization server (issuer https://app.manifestlaw.com/api/auth, `api` scope).
@@ -99,7 +99,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: emerging
-  composite: 13.5
+  composite: 14.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -113,13 +113,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 13.5
+  previous_composite: 14.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -143,6 +149,5 @@ tags:
 - Case Management
 - Communications
 - Authentication
-- OpenID Connect
 website: https://manifestlaw.com
 ---

@@ -33,14 +33,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: BMS Medical Information Online provides US healthcare providers with prescribing information, medical inquiry submission, and product/regimen libraries for BMS medicines across oncology, hematology, i
   name: BMS Medical Information Portal
+  provenance: unpublished
   slug: medical-information-api
 - description: BMS Clinical Trials is the clinical trial search and enrollment platform for patients and caregivers looking for Bristol Myers Squibb sponsored studies. It was formerly published as BMS Study Connect;
   name: BMS Study Connect
+  provenance: unpublished
   slug: study-connect
 artifact_total: 6
 common:
@@ -162,7 +164,7 @@ rate_limits:
   slug: bristol-myers-squibb-rate-limits
 score:
   band: emerging
-  composite: 15.9
+  composite: 15.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 35.0
@@ -176,9 +178,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 15.9
+  previous_composite: 15.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -187,9 +189,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

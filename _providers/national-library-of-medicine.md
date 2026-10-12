@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -122,7 +122,7 @@ modified: '2026-05-19'
 name: National Library of Medicine
 nav: Providers
 network: true
-overview: 'National Library of Medicine publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Discovery API, History API, Retrieve API, and 1 more. Tagged areas include Federal-Government, Health, Library, and Medicine.
+overview: 'National Library of Medicine publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Discovery API, History API, Retrieve API, and 1 more. Tagged areas include Federal Government, Health, Library, and Medicine.
 
 
   National Library of Medicine''s developer surface includes developer portal and 5 more developer resources.'
@@ -137,7 +137,7 @@ rate_limits:
   slug: national-library-of-medicine-rate-limits
 score:
   band: thin
-  composite: 27.8
+  composite: 26.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 41.0
@@ -149,11 +149,16 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 27.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 26.9
   provenance:
     agentic_access: derived
     contracts:
@@ -166,9 +171,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -181,7 +186,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC
 slug: national-library-of-medicine
 tags:
-- Federal-Government
+- Federal Government
 - Health
 - Library
 - Medicine

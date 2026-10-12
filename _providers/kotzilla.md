@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted remote Model Context Protocol server that connects an AI coding assistant to the Kotzilla Platform. Fifteen tools covering app registration, SDK onboarding, telemetry, issue detection and conte
@@ -202,9 +202,9 @@ description: 'Kotzilla is a French developer-observability company based in Toul
 image: https://storage.googleapis.com/strapi_cms_gcp/kotzilla_light_background_413a1a7089/kotzilla_light_background_413a1a7089.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.kotzilla.io over HTTP requiring OAuth; 15 tools listed.
   name: Kotzilla MCP Server
-  slug: kotzilla-mcp-server
+  slug: kotzilla
 modified: '2026-08-17'
 name: Kotzilla
 nav: Providers
@@ -229,7 +229,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 32.9
+  composite: 35.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -243,20 +243,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 32.9
+  previous_composite: 35.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

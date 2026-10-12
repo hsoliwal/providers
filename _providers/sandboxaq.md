@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -380,21 +380,21 @@ description: 'SandboxAQ (SB Technology, Inc.) builds Large Quantitative Models (
 image: https://cdn.prod.website-files.com/622a3cfaa89636b753810f04/623911fca65004cb868ec3ec_SandboxAQ-social-share.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.{tenant}.aisim.sandboxaq.com over HTTP; 5 tools listed.
   name: SandboxAQ MCP Server
-  slug: sandboxaq-mcp-server
+  slug: sandboxaq-mcp
 modified: '2026-08-02'
 name: SandboxAQ
 nav: Providers
 network: true
-overview: 'SandboxAQ publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Aispm Agents API, Aispm Dashboard API, Aispm Guardrails API, and 16 more. Tagged areas include Company, Artificial Intelligence, Security, Cryptography, and Post-Quantum Cryptography.
+overview: 'SandboxAQ publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Aispm Agents API, Aispm Dashboard API, Aispm Guardrails API, and 18 more. Tagged areas include Company, Artificial Intelligence, Security, Cryptography, and Post-Quantum Cryptography.
 
 
   SandboxAQ''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, CLI, and 29 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 49.6
+  composite: 49.2
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -406,11 +406,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.6
+    contract_quality: 54.8
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 49.6
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -421,8 +421,14 @@ score:
       total: 19
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -451,5 +457,6 @@ tags:
 - Materials Science
 - AI Security
 - Quantum
+- A2A
 website: https://www.sandboxaq.com/
 ---

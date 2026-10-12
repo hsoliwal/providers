@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -342,7 +342,7 @@ modified: '2026-07-26'
 name: Zoopla
 nav: Providers
 network: true
-overview: 'Zoopla publishes 2 APIs on the [APIs.io](https://apis.io/) network: Products API and REST Endpoints API. Tagged areas include Real-Estate, United Kingdom, Property Listings, Property Portal, and PropTech.
+overview: 'Zoopla publishes 2 APIs on the [APIs.io](https://apis.io/) network: Products API and REST Endpoints API. Tagged areas include Real Estate, United Kingdom, Property Listings, Property Portal, and PropTech.
 
 
   The Zoopla catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -357,7 +357,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: thin
-  composite: 35.5
+  composite: 36.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 38.0
@@ -369,9 +369,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 63.4
+    contract_quality: 58.1
     developer_ergonomics: 42.3
-    discoverability: 70.4
+    discoverability: 67.9
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -381,7 +381,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.5
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -392,8 +392,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -414,7 +420,7 @@ security:
   summary_line: Hackerone · security.txt · contact published
 slug: zoopla
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - Property Listings
 - Property Portal

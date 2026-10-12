@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Partner REST API for managing user accounts, subscriptions, text consultations, form-based prescriptions, Health Navigator AI conversations and outbound webhooks. Resource-oriented URLs, JSON response
@@ -185,8 +185,8 @@ rate_limits:
   name: Abiglobalhealth Rate Limits
   slug: abiglobalhealth-rate-limits
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 37.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 42.0
@@ -198,9 +198,9 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 33.3
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -210,7 +210,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 39.5
+  previous_composite: 37.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -219,9 +219,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 40.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Autofleet''s public REST API and webhook surface for its fleet and mobility optimization platform — vehicles, drivers, tasks, rides, bookings, routes and dispatch — marketed on the integration page as '
@@ -129,7 +129,7 @@ overview: 'Autofleet publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 1
 score:
   band: emerging
-  composite: 17.3
+  composite: 18.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -143,13 +143,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 17.3
+  previous_composite: 18.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

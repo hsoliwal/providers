@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for API key management, usage credits/metering, rate limiting, and traffic analytics. POST/JSON endpoints authenticated with a project root key via Bearer token; single unauthenticated GET /h
@@ -188,8 +188,8 @@ rate_limits:
   name: Reqkey Rate Limits
   slug: reqkey-rate-limits
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 40.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 61.0
@@ -203,14 +203,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 38.8
+  previous_composite: 40.7
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

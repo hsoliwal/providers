@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: First-party Westpac payment API (beyond CDR). PayWay is Westpac's merchant payment platform; its public REST API v1 processes real-time credit-card and bank-account payments, refunds, pre-authorisatio
@@ -238,17 +238,17 @@ description: Westpac Banking Corporation is Australia's oldest bank and company,
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/westpac.png
 layout: provider
 modified: '2026-07-21'
-name: Westpac Banking Corporation
+name: Westpac
 nav: Providers
 network: true
-overview: 'Westpac Banking Corporation publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Westpac publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Banking Corporation Banking Account Balances API, Banking Corporation Banking Account Direct Debits API, Banking Corporation Banking Account Scheduled Payments API, and 6 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
-  Westpac Banking Corporation''s developer surface includes documentation, authentication, changelog, sandbox, getting-started guide, API reference, and 22 more developer resources.'
+  Westpac''s developer surface includes documentation, authentication, changelog, sandbox, getting-started guide, API reference, and 22 more developer resources.'
 random_paper: 11
 score:
   band: developing
-  composite: 49.7
+  composite: 46.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -260,9 +260,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -271,7 +271,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 49.7
+  previous_composite: 46.0
   provenance:
     conformance: derived
     contracts:
@@ -286,9 +286,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 64.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -309,7 +309,7 @@ security:
   summary_line: Bugcrowd
 slug: westpac
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

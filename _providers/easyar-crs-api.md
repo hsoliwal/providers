@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST/HTTP API for cloud image recognition: target management endpoints (/targets/, /target/<id>, /grade/detection/, /ping) and a recognition endpoint (/search), plus a token exchange service. Uses per'
@@ -135,7 +135,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: EasyAR CRS API MCP Server
-  slug: easyar-crs-api-mcp-server
+  slug: easyar-crs-api-mcp-yml
 modified: '2026-09-03'
 name: EasyAR CRS API
 nav: Providers
@@ -155,7 +155,7 @@ rate_limits:
   slug: easyar-crs-api-rate-limits
 score:
   band: thin
-  composite: 34.3
+  composite: 34.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 57.0
@@ -169,14 +169,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 34.3
+  previous_composite: 34.9
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -200,7 +206,7 @@ tags:
 - Image Recognition
 - Spatial Computing
 - Visual Positioning
-- Computer-Vision
+- Computer Vision
 - Developer Tools
 website: https://www.easyar.com
 ---

@@ -34,14 +34,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Credential-gated MDM API that lets an approved third-party asset or device-management system pull an inventory list of devices (iPads, Macs, Apple TVs) managed in Securly MDM. Access is provisioned pe
   name: Securly MDM Device Inventory API
+  provenance: modeled
   slug: securly-mdm-device-inventory-api
 - description: Credential-gated MDM API that lets an approved third-party system assign or unassign students to and from devices managed in Securly MDM. Uses the same per-tenant API connection credentials (Client ID
   name: Securly MDM Student Assignment API
+  provenance: modeled
   slug: securly-mdm-student-assignment-api
 artifact_total: 5
 common:
@@ -95,7 +97,7 @@ plans:
 random_paper: 5
 score:
   band: minimal
-  composite: 8.0
+  composite: 7.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -109,17 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 8.0
+  previous_composite: 7.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -103,9 +103,9 @@ description: Spot Runner is an AI-driven advertising technology company (backed 
 image: https://static.wixstatic.com/ficons/875226_5f83093056974a87a56d1050e1e3ee01~mv2.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.spotrunner.com over HTTP; 9 tools listed.
   name: Spot Runner Wix Site MCP
-  slug: spot-runner-wix-site-mcp
+  slug: spot-runner
 modified: '2026-08-13'
 name: Spot Runner
 nav: Providers
@@ -125,7 +125,7 @@ rate_limits:
   slug: spot-runner-rate-limits
 score:
   band: emerging
-  composite: 13.6
+  composite: 14.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -139,13 +139,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 13.6
+  previous_composite: 14.3
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +176,7 @@ tags:
 - CTV
 - Online Video
 - Contextual Advertising
-- Agentic AI
+- AI Agents
 - Media Planning
 website: https://www.spotrunner.com/
 ---

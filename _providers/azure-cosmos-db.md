@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -222,7 +222,7 @@ modified: '2026-05-11'
 name: Azure Cosmos DB
 nav: Providers
 network: true
-overview: 'Azure Cosmos DB publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Databases API, Documents API, and 9 more. Tagged areas include Database, NoSQL, Document Database, Vector Database, and Globally Distributed.
+overview: 'Azure Cosmos DB publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Databases API, Documents API, and 11 more. Tagged areas include Database, NoSQL, Document Database, Vector Database, and Globally Distributed.
 
 
   Azure Cosmos DB''s developer surface includes developer portal, support, authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
@@ -234,7 +234,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 36.4
+  composite: 37.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.4
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -258,8 +258,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

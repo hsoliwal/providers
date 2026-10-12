@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -104,6 +104,11 @@ collections:
   name: OAuth2 Proxy Endpoints
   slug: open-oauth2-proxy
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oauth2-proxy/refs/heads/main/capabilities/oauth2-proxy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/oauth2-proxy-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/oauth2-proxy/refs/heads/main/agentic-access/oauth2-proxy-agentic-access.yml
   title: ''
@@ -138,10 +143,10 @@ modified: '2026-03-27'
 name: Oauth2-Proxy
 nav: Providers
 network: true
-overview: 'Oauth2-Proxy publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Metrics API, OAuth2 Proxy Endpoints API, Ping API, and 3 more. Tagged areas include Authentication Proxy and Proxy.
+overview: 'Oauth2-Proxy publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Metrics API, OAuth2 Proxy Endpoints API, Ping API, and 4 more. Tagged areas include Authentication Proxy and Proxy.
 
 
-  Oauth2-Proxy''s developer surface includes authentication, documentation, and 3 more developer resources.'
+  Oauth2-Proxy''s developer surface includes authentication, documentation, and 4 more developer resources.'
 plans:
 - name: Oauth2 Proxy Plans Pricing
   plan_count: 3
@@ -153,9 +158,9 @@ rate_limits:
   slug: oauth2-proxy-rate-limits
 score:
   band: emerging
-  composite: 25.8
+  composite: 23.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 31.0
     catalog_earned_first_party: 0.0
     catalog_gap: 84.0
@@ -165,11 +170,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 42.0
+    contract_quality: 37.8
     developer_ergonomics: 33.3
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 25.8
+  previous_composite: 23.1
   provenance:
     agentic_access: derived
     contracts:
@@ -177,8 +182,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -145,7 +145,7 @@ modified: '2026-05-19'
 name: Lumen Technologies
 nav: Providers
 network: true
-overview: 'Lumen Technologies publishes 2 APIs on the [APIs.io](https://apis.io/) network: Bandwidth API and Connections API. Tagged areas include Bandwidth, Edge Cloud, Fiber, Infrastructure, and Internet.
+overview: 'Lumen Technologies publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Bandwidth API, Connections API, and 1 more. Tagged areas include Bandwidth, Edge Cloud, Fiber, Infrastructure, and Internet.
 
 
   Lumen Technologies'' developer surface includes authentication, developer portal, documentation, FAQ, support, and 9 more developer resources.'
@@ -165,7 +165,7 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: thin
-  composite: 34.6
+  composite: 31.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 44.0
@@ -177,11 +177,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 34.6
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -194,9 +194,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 45.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -221,6 +221,6 @@ tags:
 - Networks
 - Networking
 - Security
-- Telecom
+- Telecommunications
 website: https://www.lumen.com
 ---

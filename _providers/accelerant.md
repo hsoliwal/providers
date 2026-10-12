@@ -35,13 +35,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The member-facing Accelerant Risk Exchange platform and its supporting API surface. Accelerant states that its risk indices plug directly into Member underwriting and policy administration systems via
   name: Accelerant Risk Exchange Platform
   slug: risk-exchange-platform
-artifact_total: 4
+artifact_total: 5
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/accelerant/refs/heads/main/security/accelerant-domain-security.yml
@@ -155,6 +155,10 @@ description: 'Accelerant Holdings (NYSE: ARX) operates the Accelerant Risk Excha
   at docs.accelerant.ai behind Member authentication; the platform publishes an anonymous OpenID Connect discovery document and JWKS at app.accelerant.ai.'
 image: https://avatars.githubusercontent.com/u/102661090?v=4
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.accelerant.ai over HTTP.
+  name: Accelerant MCP Server
+  slug: accelerant
 modified: '2026-08-02'
 name: Accelerant
 nav: Providers
@@ -170,8 +174,8 @@ scopes:
   slug: accelerant-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 24.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -185,9 +189,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 2.6
-  previous_composite: 27.6
+  previous_composite: 24.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -196,9 +200,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -224,7 +228,7 @@ tags:
 - Reinsurance
 - Marketplace
 - Risk Scoring
-- Financial-Services
+- Financial Services
 - Artificial Intelligence
 website: https://accelerant.ai/
 ---

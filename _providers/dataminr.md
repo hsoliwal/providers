@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth2-secured REST API for consuming Dataminr real-time alerts and managing watchlists/lists. Token flow at /auth/2/token; alert polling at /api/3/alerts; account and list management at /account/2/*.
@@ -124,14 +124,14 @@ modified: '2026-07-18'
 name: Dataminr
 nav: Providers
 network: true
-overview: 'Dataminr publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Threat Intelligence, Risk, and Real-Time.
+overview: 'Dataminr publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Threat Intelligence, Risk Management, and Real-Time.
 
 
   Dataminr''s developer surface includes documentation, engineering blog, support, authentication, and 13 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 27.1
+  composite: 28.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -145,13 +145,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 27.1
+  previous_composite: 28.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,7 +188,7 @@ tags:
 - Company
 - Analytics
 - Threat Intelligence
-- Risk
+- Risk Management
 - Real-Time
 - Security
 - Artificial Intelligence

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -160,6 +160,11 @@ collections:
   name: Lucidworks AI Platform Chunking Tokenization API
   slug: open-lucidworks-tokenization-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lucidworks/refs/heads/main/capabilities/lucidworks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lucidworks-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lucidworks/refs/heads/main/agentic-access/lucidworks-agentic-access.yml
   title: ''
@@ -287,13 +292,13 @@ modified: '2026-05-19'
 name: Lucidworks
 nav: Providers
 network: true
-overview: 'Lucidworks publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Chunking API, Classification API, Deployments API, and 8 more. Tagged areas include Search, Artificial Intelligence, Enterprise Search, Vector Search, and RAG.
+overview: 'Lucidworks publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Chunking API, Classification API, Deployments API, and 9 more. Tagged areas include Search, Artificial Intelligence, Enterprise Search, Vector Search, and RAG.
 
 
   The Lucidworks catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Lucidworks'' developer surface includes authentication, documentation, API reference, engineering blog, and 9 more developer resources.'
+  Lucidworks'' developer surface includes authentication, documentation, API reference, engineering blog, and 10 more developer resources.'
 plans:
 - name: Lucidworks Plans Pricing
   plan_count: 1
@@ -316,7 +321,7 @@ rules:
   slug: lucidworks-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 31.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.3
@@ -328,11 +333,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 9.8
-    contract_quality: 51.4
+    contract_quality: 46.5
     developer_ergonomics: 38.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
-  previous_composite: 33.4
+  previous_composite: 31.9
   provenance:
     agentic_access: derived
     contracts:
@@ -340,8 +345,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

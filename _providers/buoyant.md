@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Linkerd is a CNCF-graduated service mesh for Kubernetes that transparently adds mutual TLS encryption, latency-aware load balancing, retries, timeouts, circuit breaking, and observability to any Kuber
@@ -251,7 +251,7 @@ rate_limits:
   slug: buoyant-rate-limits
 score:
   band: developing
-  composite: 52.5
+  composite: 54.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 50.0
@@ -263,18 +263,24 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 71.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 52.5
+  previous_composite: 54.0
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

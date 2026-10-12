@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -58,11 +58,27 @@ apis:
   baseurl_source: declared
   description: ION document routing and processing
   name: Infor ION Documents API
+  phrasing_intents:
+  - id: listIonDocuments
+    intent: List ION business documents and their routing
+    question: Which ION business documents have been routed between my Infor applications lately?
+  - id: getIonDocument
+    intent: Get one ION document with its payload
+    question: How do I see the full payload of a single ION document?
+  phrasing_ops: 2
   slug: infor-ion-documents-api
 - baseURL: https://mingle-ionapi.inforcloudsuite.com/{tenant}/M3
   baseurl_source: declared
   description: Infor M3 business API programs
   name: Infor M3 API
+  phrasing_intents:
+  - id: callM3ApiGet
+    intent: Read data from an Infor M3 MI transaction
+    question: How do I pull customer basic data out of Infor M3 through the ION API Gateway?
+  - id: callM3ApiPost
+    intent: Write to Infor M3 with an MI Add/Change/Delete
+    question: How do I add or change a customer record in Infor M3 via an MI transaction?
+  phrasing_ops: 2
   slug: infor-m3-api-api
 - description: The Infor Document Management REST API, published on the Infor Developer Portal at developer.infor.com/api and served through the ION API Gateway under the IDM suite path. It covers the content reposi
   name: Infor Document Management (IDM) API
@@ -333,7 +349,7 @@ modified: '2026-09-16'
 name: Infor
 nav: Providers
 network: true
-overview: 'Infor publishes 2 APIs on the [APIs.io](https://apis.io/) network: ION Documents API and M3 API. Tagged areas include ERP, Manufacturing, Supply Chain, Cloud, and Integration.
+overview: 'Infor publishes 6 APIs on the [APIs.io](https://apis.io/) network, including ION Documents API, M3 API, and 4 more. Tagged areas include ERP, Manufacturing, Supply Chain, Cloud, and Integration.
 
 
   The Infor catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -377,8 +393,8 @@ scopes:
   slug: infor-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 66.1
+  band: exemplar
+  composite: 68.1
   coverage:
     artifact_dirs: 30
     catalog_earned: 68.5
@@ -390,11 +406,11 @@ score:
   facets:
     access_clarity: 72.4
     contract_governance: 31.8
-    contract_quality: 64.8
+    contract_quality: 59.6
     developer_ergonomics: 82.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 66.1
+  previous_composite: 68.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -405,8 +421,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

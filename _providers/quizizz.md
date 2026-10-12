@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Remote Model Context Protocol server operated by Wayground at https://wayground.com/_quizizzmcp/main/mcp. Its existence is declared by Wayground's own /.well-known/oauth-protected-resource document, w
@@ -140,7 +140,7 @@ description: Wayground (formerly Quizizz) is a K-12 supplemental learning platfo
 image: https://cdn.prod.website-files.com/68355113496452bf05789e95/68499b8588e356f4263c24d0_57fcc3f00463cd6477e78e279a926b72_wayground-OG.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at wayground.com requiring OAuth.
   name: Wayground MCP Server
   slug: wayground-mcp-server
 modified: '2026-08-26'
@@ -162,12 +162,12 @@ rate_limits:
   slug: quizizz-rate-limits
 scopes:
 - name: Quizizz Scopes
-  scope_count: 0
+  scope_count: 1
   slug: quizizz-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 35.6
+  composite: 31.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 45.0
@@ -181,9 +181,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 35.6
+  previous_composite: 31.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -192,9 +192,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 74.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

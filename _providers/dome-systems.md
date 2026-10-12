@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -171,7 +171,7 @@ layout: provider
 mcp_servers:
 - description: The Dome Platform CLI ships a built-in MCP server that exposes Dome itself to Claude and other MCP clients for triage and review of the agentic estate (agents, tools, models, policy, and audit). Launc
   name: Dome Systems MCP Server
-  slug: dome-systems-mcp-server
+  slug: dome
 modified: '2026-07-18'
 name: Dome Systems
 nav: Providers
@@ -183,7 +183,7 @@ overview: 'Dome Systems is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 4
 score:
   band: thin
-  composite: 35.1
+  composite: 33.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -197,20 +197,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 23.7
-  previous_composite: 35.1
+  previous_composite: 33.8
   provenance:
     conformance: first-party
     mcp: first-party
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 47.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

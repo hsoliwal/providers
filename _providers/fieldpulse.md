@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: platform
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-09-20'
+  score: 38.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 0
@@ -439,7 +439,7 @@ modified: '2026-08-04'
 name: FieldPulse
 nav: Providers
 network: true
-overview: 'FieldPulse publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Assets Category API, Comments API, and 22 more. Tagged areas include Company, Field Service Management, Service Management, Scheduling, and Dispatch.
+overview: 'FieldPulse publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Assets Category API, Comments API, and 23 more. Tagged areas include Company, Field Service Management, Service Management, Scheduling, and Dispatch.
 
 
   The FieldPulse catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -457,7 +457,7 @@ rate_limits:
   slug: fieldpulse-rate-limits
 score:
   band: strong
-  composite: 61.3
+  composite: 59.3
   coverage:
     artifact_dirs: 26
     catalog_earned: 57.0
@@ -469,16 +469,18 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 66.9
+    contract_quality: 61.6
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 61.3
+  previous_composite: 59.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -494,9 +496,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -528,5 +530,6 @@ tags:
 - Work Order Management
 - CRM
 - Software-as-a-Service
+- A2A
 website: https://www.fieldpulse.com/
 ---

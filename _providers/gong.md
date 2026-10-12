@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 1
@@ -282,6 +282,11 @@ collections:
   name: Gong Auditing Audit Logs Workspaces API
   slug: open-gong-workspaces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gong/refs/heads/main/capabilities/gong-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gong-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gong/refs/heads/main/agentic-access/gong-agentic-access.yml
   title: ''
@@ -809,20 +814,20 @@ jsonld:
   slug: gong-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.gong.io over HTTP requiring OAuth; 3 tools listed.
   name: Gong MCP server
   slug: gong-mcp-server
 modified: '2026-08-13'
 name: Gong
 nav: Providers
 network: true
-overview: 'Gong publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Users API, CRM Integration API, and 22 more. Tagged areas include Sales, Revenue Intelligence, Conversations, Analytics, and Artificial Intelligence.
+overview: 'Gong publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Users API, CRM Integration API, and 23 more. Tagged areas include Sales, Revenue Intelligence, Conversations, Analytics, and Artificial Intelligence.
 
 
   The Gong catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Gong''s developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, status page, and 41 more developer resources.'
+  Gong''s developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, status page, and 42 more developer resources.'
 plans:
 - name: Gong Plans Pricing
   plan_count: 0
@@ -850,9 +855,9 @@ scopes:
   summary_line: 6 scopes
 score:
   band: strong
-  composite: 62.9
+  composite: 64.7
   coverage:
-    artifact_dirs: 33
+    artifact_dirs: 34
     catalog_earned: 62.3
     catalog_earned_first_party: 8.0
     catalog_gap: 52.8
@@ -862,11 +867,11 @@ score:
   facets:
     access_clarity: 51.3
     contract_governance: 28.0
-    contract_quality: 71.0
+    contract_quality: 65.3
     developer_ergonomics: 67.3
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 81.6
-  previous_composite: 62.9
+  previous_composite: 64.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -877,8 +882,14 @@ score:
       total: 21
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 38.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

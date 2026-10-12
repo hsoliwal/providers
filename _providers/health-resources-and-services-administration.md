@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The HRSA Health Center Data Service enables users to query for health centers by state, county, or ZIP Code, providing access to federally qualified health center location and service information.
@@ -85,7 +85,7 @@ modified: '2026-04-28'
 name: Health Resources and Services Administration
 nav: Providers
 network: true
-overview: 'Health Resources and Services Administration publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Healthcare, Open Data, and Public Health.
+overview: 'Health Resources and Services Administration publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Healthcare, Open Data, and Public Health.
 
 
   Health Resources and Services Administration''s developer surface includes developer portal, support, and 5 more developer resources.'
@@ -100,7 +100,7 @@ rate_limits:
   slug: health-resources-and-services-administration-rate-limits
 score:
   band: emerging
-  composite: 16.2
+  composite: 16.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -114,17 +114,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 16.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 16.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +143,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: health-resources-and-services-administration
 tags:
-- Federal-Government
+- Federal Government
 - Healthcare
 - Open Data
 - Public Health

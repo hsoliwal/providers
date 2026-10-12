@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -238,14 +238,14 @@ modified: '2026-05-25'
 name: Conductor OSS
 nav: Providers
 network: true
-overview: 'Conductor OSS publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Metadata API, Tasks API, and 1 more. Tagged areas include Agentic AI, Durable Execution, Event-Driven, Microservices, and Netflix.
+overview: 'Conductor OSS publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Events API, Metadata API, Tasks API, and 2 more. Tagged areas include AI Agents, Durable Execution, Event-Driven, Microservices, and Netflix.
 
 
   Conductor OSS''s developer surface includes documentation, getting-started guide, GitHub presence, engineering blog, YouTube channel, pricing, developer portal, and 20 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 34.6
+  composite: 32.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -257,11 +257,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 48.8
+    contract_quality: 44.2
     developer_ergonomics: 50.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 34.6
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -269,8 +269,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -290,12 +296,12 @@ solutions:
 - description: Fully managed Conductor on AWS, Azure, GCP, or on-prem with SOC2, RBAC, SSO, audit logs, and up to 99.99% availability SLA.
   name: Orkes Enterprise / Cloud
 tags:
-- Agentic AI
+- AI Agents
 - Durable Execution
 - Event-Driven
 - Microservices
 - Netflix
-- Open-Source
+- Open Source
 - Orchestration
 - Workflow Engine
 - Workflows

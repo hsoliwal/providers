@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Hosted, remote Model Context Protocol server exposing Stotles public sector market data to AI chat tools and agents. Streamable-HTTP transport at api.stotles.com/mcp, authenticated with the same x-api
@@ -61,7 +61,7 @@ apis:
   description: Suppliers bidding for and winning public sector contracts.
   name: Stotles Suppliers API
   slug: stotles-suppliers-api
-artifact_total: 11
+artifact_total: 10
 common:
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/stotles/refs/heads/main/overlays/stotles-public-api-overlay.yaml
@@ -168,15 +168,11 @@ description: 'Stotles is a B2G (business-to-government) public sector procuremen
   authenticate with a static x-api-key header; keys are issued by a Customer Success Manager rather than self-serve, and MCP access is in beta behind a waitlist.'
 image: https://cdn.prod.website-files.com/67caf809eabcc3eb572f7bc7/68149b136c8bcfe66f0b8b2f_SEO%20Image%20-%20Homepage.jpg
 layout: provider
-mcp_servers:
-- description: ''
-  name: Stotles MCP Server
-  slug: stotles-mcp-server
 modified: '2026-08-14'
 name: Stotles
 nav: Providers
 network: true
-overview: 'Stotles publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Buyers API, Frameworks API, Notices API, and 1 more. Tagged areas include Company, Procurement, Public Sector, Government, and Tenders.
+overview: 'Stotles publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Buyers API, Frameworks API, Notices API, and 2 more. Tagged areas include Company, Procurement, Public Sector, Government, and Tenders.
 
 
   Stotles'' developer surface includes documentation, support, getting-started guide, signup flow, pricing, engineering blog, and 17 more developer resources.'
@@ -190,8 +186,8 @@ rate_limits:
   name: Stotles Rate Limits
   slug: stotles-rate-limits
 score:
-  band: strong
-  composite: 57.7
+  band: developing
+  composite: 54.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 57.0
@@ -203,9 +199,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 59.9
+    contract_quality: 53.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -216,7 +212,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 57.7
+  previous_composite: 54.1
   provenance:
     conformance: first-party
     contracts:
@@ -235,9 +231,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,7 +265,7 @@ tags:
 - Market Intelligence
 - OpenAPI
 - MCP
-- agent-native
+- Agent-Native
 - Contract Awards
 - Framework Agreements
 - CPV

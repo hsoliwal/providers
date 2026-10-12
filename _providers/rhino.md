@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,9 +22,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -252,7 +252,7 @@ modified: '2026-08-02'
 name: Rhino
 nav: Providers
 network: true
-overview: 'Rhino publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Partner Api::V2::Test::Resident API, Partner Api::V2::Test::Sayrhino User API, and 2 more. Tagged areas include Insurance, Insurtech, Real-Estate, Property Management, and Rentals.
+overview: 'Rhino publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Partner Api::V2::Test::Resident API, Partner Api::V2::Test::Sayrhino User API, and 2 more. Tagged areas include Insurance, Insurtech, Real Estate, Property Management, and Rentals.
 
 
   The Rhino catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -262,7 +262,7 @@ overview: 'Rhino publishes 5 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 16
 score:
   band: developing
-  composite: 45.6
+  composite: 42.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 53.3
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 45.6
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,9 +294,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 47.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -319,7 +319,7 @@ slug: rhino
 tags:
 - Insurance
 - Insurtech
-- Real-Estate
+- Real Estate
 - Property Management
 - Rentals
 - Security Deposits

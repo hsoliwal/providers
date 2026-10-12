@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The store's Shopify-provided Universal Commerce Protocol agent-commerce surface — a live MCP shopping endpoint (search_catalog, create_cart, create_checkout, update_checkout, complete_checkout) docume
@@ -89,21 +89,21 @@ description: 'Matchaful is a premium Japanese matcha brand selling single-origin
 image: https://www.matchaful.com/cdn/shop/files/matchaful-organic-matcha-website-hero.jpg?v=1780489902
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.matchaful.com over HTTP; 5 tools listed.
   name: Matchaful MCP Server
-  slug: matchaful-mcp-server
+  slug: matchaful-ucp-shopping
 modified: '2026-07-20'
 name: Matchaful
 nav: Providers
 network: true
-overview: 'Matchaful publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Matcha, Tea, Food and Beverage, and CPG.
+overview: 'Matchaful publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Matcha, Tea, Food and Beverage, and Consumer Packaged Goods.
 
 
   Matchaful''s developer surface includes engineering blog, signup flow, support, and 7 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 17.3
+  composite: 16.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -117,14 +117,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 17.3
+  previous_composite: 16.9
   provenance:
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -137,7 +143,7 @@ tags:
 - Matcha
 - Tea
 - Food and Beverage
-- CPG
+- Consumer Packaged Goods
 - E-Commerce
 - Direct to Consumer
 - Shopify

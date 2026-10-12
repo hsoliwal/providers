@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -182,7 +182,7 @@ rules:
   slug: rtx-spectral-rules
 score:
   band: thin
-  composite: 31.1
+  composite: 28.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 53.5
@@ -194,11 +194,16 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 49.7
+    contract_quality: 45.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 31.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     contracts:
@@ -211,9 +216,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

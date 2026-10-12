@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -45,14 +45,14 @@ description: Yasmina Holdings Limited is a company surfaced as a portfolio compa
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/yasmina-holdings-limited.png
 layout: provider
 modified: '2026-07-17'
-name: Yasmina Holdings Limited
+name: Yasmina
 nav: Providers
 network: true
-overview: Yasmina Holdings Limited is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
+overview: Yasmina is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
 random_paper: 2
 score:
   band: minimal
-  composite: 4.1
+  composite: 1.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -66,7 +66,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -74,9 +74,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 4.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 1.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

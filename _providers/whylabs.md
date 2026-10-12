@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: whylogs is an open-source data logging library that creates approximate statistical profiles of datasets, enabling drift detection, data quality monitoring, and bias analysis for ML pipelines. Support
@@ -138,7 +138,7 @@ modified: '2026-05-23'
 name: WhyLabs
 nav: Providers
 network: true
-overview: WhyLabs publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AI Observability, ML Monitoring, LLM Monitoring, Open-Source, and whylogs.
+overview: WhyLabs publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AI Observability, ML Monitoring, LLM Monitoring, Open Source, and whylogs.
 plans:
 - name: Whylabs Plans Pricing
   plan_count: 1
@@ -149,29 +149,36 @@ rate_limits:
   name: Whylabs Rate Limits
   slug: whylabs-rate-limits
 score:
-  band: emerging
-  composite: 25.2
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 6
-    catalog_earned: 54.0
+    catalog_earned: 52.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.0
+    catalog_gap: 62.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 16.7
-    discoverability: 64.8
-    operational_transparency: 39.5
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
   open_source:
     applies: true
-    score: 65.0
-  previous_composite: 25.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 0.0
+  previous_composite: 0.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -188,7 +195,7 @@ tags:
 - AI Observability
 - ML Monitoring
 - LLM Monitoring
-- Open-Source
+- Open Source
 - whylogs
 - LangKit
 - Discontinued

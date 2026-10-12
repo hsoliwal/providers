@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The LHC Group API provides access to platform services and data for enterprise integration and automation.
@@ -85,7 +85,7 @@ rate_limits:
   slug: lhc-group-rate-limits
 score:
   band: minimal
-  composite: 9.0
+  composite: 9.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 34.0
@@ -99,17 +99,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 9.0
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

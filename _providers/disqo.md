@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://projects-api.audience.disqo.com
@@ -52,7 +52,7 @@ apis:
 - description: 'Validate an email address for co-registration flows — checks address format, whether the address already exists in the DISQO system, and optionally runs an Email Oversight verification. Authenticated '
   name: DISQO CoReg API
   slug: disqo-coreg-api
-artifact_total: 6
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -154,18 +154,22 @@ created: '2026-08-04'
 description: DISQO is a Glendale, California consumer-insights and advertising-measurement company that operates a first-party, fully opted-in consumer panel and sells programmatic access to it. Its public API surface is the DISQO Audience API — a RESTful, HTTP Basic authenticated set of services for checking sample feasibility, creating and managing survey projects and quotas, attaching custom screening questions, and managing included/excluded panelist and project lists — plus a redirect/callback tracking contract that returns panelists to DISQO with an HMAC-SHA256 signed status. A separate CoReg API validates email addresses for co-registration flows. DISQO also sells Brand Lift, Outcomes Lift, Research Management and cross-platform ad measurement products on top of the same panel.
 image: https://www.disqo.com/wp-content/uploads/2025/11/HomePage_Header.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.disqo.com over HTTP.
+  name: DISQO MCP Server
+  slug: disqo
 modified: '2026-08-04'
 name: DISQO
 nav: Providers
 network: true
-overview: 'DISQO publishes 1 API on the [APIs.io](https://apis.io/) network: Audience Projects API. Tagged areas include Company, Audiences, Market Research, Surveys, and Consumer Insights.
+overview: 'DISQO publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Audience Projects API, and 3 more. Tagged areas include Company, Audiences, Market Research, Surveys, and Consumer Insights.
 
 
   DISQO''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, changelog, and 14 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 28.8
+  composite: 29.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -178,15 +182,21 @@ score:
     access_clarity: 21.1
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 69.0
-    discoverability: 81.5
+    developer_ergonomics: 68.6
+    discoverability: 80.0
     operational_transparency: 15.8
-  previous_composite: 28.8
+  previous_composite: 29.9
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

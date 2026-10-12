@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -146,13 +146,13 @@ description: Textla is a business texting platform for sending bulk SMS marketin
 image: https://cdn.prod.website-files.com/6621259acbeea8020086d69d/66460f7a6c72efba3794bea2_Textla%20OG%20Image.png
 layout: provider
 modified: '2026-08-13'
-name: Textla Inc.
+name: Textla
 nav: Providers
 network: true
-overview: 'Textla Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, SMS, Text Messaging, Business Messaging, and Bulk SMS.
+overview: 'Textla is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, SMS, Text Messaging, Business Messaging, and Bulk SMS.
 
 
-  Textla Inc.''s developer surface includes pricing, engineering blog, support, signup flow, documentation, getting-started guide, authentication, and 13 more developer resources.'
+  Textla''s developer surface includes pricing, engineering blog, support, signup flow, documentation, getting-started guide, authentication, and 13 more developer resources.'
 plans:
 - name: Textla Inc Plans Pricing
   plan_count: 3
@@ -164,7 +164,7 @@ rate_limits:
   slug: textla-inc-rate-limits
 score:
   band: thin
-  composite: 33.5
+  composite: 32.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -178,9 +178,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 33.5
+  previous_composite: 32.1
   provenance:
     conformance: first-party
   regulatory:
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 44.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

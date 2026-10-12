@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://public.open.australianmilitarybank.com.au/cds-au/v1/banking/products
@@ -207,19 +207,19 @@ modified: '2026-07-21'
 name: Australian Military Bank
 nav: Providers
 network: true
-overview: 'Australian Military Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Australian Military Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Australian Military Bank''s developer surface includes support, API reference, authentication, and 19 more developer resources.'
 random_paper: 11
 scopes:
 - name: Australian Military Bank Scopes
-  scope_count: 0
+  scope_count: 6
   slug: australian-military-bank-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes · authorization_code
 score:
   band: thin
-  composite: 36.2
+  composite: 33.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -233,7 +233,7 @@ score:
     contract_governance: 18.2
     contract_quality: 12.4
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 36.2
+  previous_composite: 33.1
   provenance:
     conformance: first-party
     contracts:
@@ -261,9 +261,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 77.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -280,7 +280,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: australian-military-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

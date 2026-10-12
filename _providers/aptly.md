@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -307,19 +307,19 @@ layout: provider
 mcp_servers:
 - description: Official hosted Aptly MCP server — the recommended way to connect LLMs and AI agents to Aptly boards, cards, contacts, inboxes, calendars, files and knowledge documents. The /mcp endpoint requires aut
   name: Aptly MCP Server
-  slug: aptly-mcp-server
+  slug: aptly
 modified: '2026-07-18'
 name: Aptly
 nav: Providers
 network: true
-overview: 'Aptly publishes 15 APIs on the [APIs.io](https://apis.io/) network, including App API, Board API, Boards API, and 12 more. Tagged areas include Company, Cloud Saas, Property Management, Real-Estate, and PropTech.
+overview: 'Aptly publishes 15 APIs on the [APIs.io](https://apis.io/) network, including App API, Board API, Boards API, and 12 more. Tagged areas include Company, Cloud Saas, Property Management, Real Estate, and PropTech.
 
 
   Aptly''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, authentication, and 21 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 47.6
+  composite: 47.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -331,11 +331,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 54.6
+    contract_quality: 49.2
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 47.6
+  previous_composite: 47.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -346,8 +346,14 @@ score:
       total: 15
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -367,10 +373,10 @@ tags:
 - Company
 - Cloud Saas
 - Property Management
-- Real-Estate
+- Real Estate
 - PropTech
 - CRM
-- Workflow-Automation
+- Workflow Automation
 - AI Agents
 - Communications
 - MCP

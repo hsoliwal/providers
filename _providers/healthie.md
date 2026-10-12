@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Healthie GraphQL API is the single contract behind the entire Healthie platform — the same API that powers the Healthie web, iOS, and Android applications is available to partners building branded
@@ -300,9 +300,9 @@ graphqls:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/healthie.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 2 tools listed.
   name: Healthie Dev Assist (local stdio)
-  slug: healthie-dev-assist-local-stdio
+  slug: healthie-dev-assist
 modified: '2026-08-14'
 name: Healthie
 nav: Providers
@@ -336,8 +336,8 @@ rules:
     warn: 4
   slug: healthie-asyncapi-spectral-rules
 score:
-  band: exemplar
-  composite: 68.2
+  band: strong
+  composite: 65.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 64.8
@@ -349,11 +349,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 29.5
-    contract_quality: 53.0
+    contract_quality: 51.2
     developer_ergonomics: 61.3
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 86.8
-  previous_composite: 68.2
+  previous_composite: 65.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -363,9 +363,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -412,5 +412,7 @@ tags:
 - Telehealth
 - Wellness
 - Webhook
+- Real-Time
+- FHIR
 website: https://www.gethealthie.com/
 ---

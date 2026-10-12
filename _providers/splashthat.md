@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 23.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.splashthat.com
@@ -208,7 +208,7 @@ scopes:
   summary_line: 1 scope
 score:
   band: developing
-  composite: 46.4
+  composite: 48.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 63.0
@@ -220,16 +220,22 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 55.8
-    developer_ergonomics: 40.5
-    discoverability: 68.5
+    contract_quality: 53.2
+    developer_ergonomics: 40.0
+    discoverability: 67.0
     operational_transparency: 21.1
-  previous_composite: 46.4
+  previous_composite: 48.3
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

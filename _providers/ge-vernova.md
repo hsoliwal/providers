@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Manage Proficy Historian systems, collectors, collector instances, data stores, tags, the Historian model and alarms and events, and query time-series tag samples with a choice of sampling, calculatio
@@ -290,7 +290,7 @@ scopes:
   summary_line: 27 scopes · password/clientCredentials
 score:
   band: developing
-  composite: 49.0
+  composite: 45.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -302,11 +302,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 74.1
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 49.0
+  previous_composite: 45.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -315,9 +315,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 71.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

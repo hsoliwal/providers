@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.9
-  scored_at: '2026-09-20'
+  score: 49.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -275,9 +275,9 @@ description: Govly is an AI-powered market network for government contractors â€
 image: https://cdn.prod.website-files.com/65f9f755792648d187d6d0dd/69e7b31d3d986500bd367ba0_webclip-256.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.govly.com over HTTP; 7 tools listed.
   name: Govly MCP Server
-  slug: govly-mcp-server
+  slug: govly
 modified: '2026-07-19'
 name: Govly
 nav: Providers
@@ -292,7 +292,7 @@ overview: 'Govly publishes 11 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 11
 score:
   band: developing
-  composite: 51.9
+  composite: 47.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -304,11 +304,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 60.1
+    contract_quality: 54.9
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 51.9
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -324,9 +324,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

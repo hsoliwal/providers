@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: 'Pallet builds an AI-powered logistics workforce: autonomous AI agents that automate supply chain operations for freight brokerages, freight forwarders, FTL and LTL carriers, warehouses, and shippers. Its agents handle end-to-end workflows from quoting through order entry, track-and-trace, billing, and customer service, integrating with existing TMS, WMS, email, and legacy applications. The Atlas product surfaces revenue opportunities across freight operations. Pallet is backed by Bain Capital Ventures and General Catalyst. No public developer API, SDK, or documentation surface was found during enrichment.'
 image: https://cdn.sanity.io/images/1ua24syd/production/9e6b6371626a4ae6220937feaeea3ceca82a3a62-3600x1890.png?rect=0,5,3600,1881&w=1200&h=627&q=95&fit=crop&auto=format
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.pallet.com over HTTP.
+  name: Pallet MCP Server
+  slug: pallet
 modified: '2026-07-20'
 name: Pallet
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Pallet is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 4
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 12.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

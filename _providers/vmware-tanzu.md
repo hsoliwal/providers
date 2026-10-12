@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: VMware Tanzu Kubernetes Grid Tanzu Kubernetes Clusters API
   slug: open-vmware-tanzu-tanzu-kubernetes-clusters-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vmware-tanzu/refs/heads/main/capabilities/vmware-tanzu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vmware-tanzu-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -205,7 +210,7 @@ overview: 'VMware Tanzu publishes 5 APIs on the [APIs.io](https://apis.io/) netw
   The VMware Tanzu catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  VMware Tanzu''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, CLI, and 10 more developer resources.'
+  VMware Tanzu''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, CLI, and 11 more developer resources.'
 plans:
 - name: Vmware Tanzu Plans Pricing
   plan_count: 3
@@ -239,9 +244,9 @@ rules:
   slug: vmware-tanzu-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 35.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 56.5
     catalog_earned_first_party: 0.0
     catalog_gap: 58.5
@@ -251,11 +256,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
-    contract_quality: 64.6
+    contract_quality: 59.3
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 36.4
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -263,8 +268,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -256,7 +256,7 @@ modified: '2026-09-16'
 name: Apache Tika
 nav: Providers
 network: true
-overview: 'Apache Tika publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Apache Tika Server REST API, Detect API, Detectors API, and 9 more. Tagged areas include Content Extraction, Document Processing, Metadata, Text Extraction, and Open-Source.
+overview: 'Apache Tika publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Apache Tika Server REST API, Detect API, Detectors API, and 10 more. Tagged areas include Content Extraction, Document Processing, Metadata, Text Extraction, and Open Source.
 
 
   Apache Tika''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 11 more developer resources.'
@@ -271,7 +271,7 @@ rate_limits:
   slug: apache-tika-rate-limits
 score:
   band: thin
-  composite: 35.1
+  composite: 34.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -283,14 +283,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 26.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 35.1
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     contracts:
@@ -298,8 +298,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,7 +326,7 @@ tags:
 - Document Processing
 - Metadata
 - Text Extraction
-- Open-Source
+- Open Source
 use_cases:
 - description: Extract text from documents for indexing in Apache Solr or Elasticsearch.
   name: Search Indexing

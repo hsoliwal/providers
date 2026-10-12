@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Web API providing HTTP-based interfaces for accessing and manipulating SimCorp Dimension data in real time, supporting stateless RESTful operations across the investment management lifecycle. Named by
@@ -263,7 +263,7 @@ rules:
   slug: simcorp-dimension-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 32.1
+  composite: 30.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 46.3
@@ -277,9 +277,9 @@ score:
     contract_governance: 28.0
     contract_quality: 6.7
     developer_ergonomics: 38.1
-    discoverability: 79.6
+    discoverability: 76.8
     operational_transparency: 2.6
-  previous_composite: 32.1
+  previous_composite: 30.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -288,9 +288,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -316,7 +316,7 @@ tags:
 - Financial Data
 - Financial Technology
 - Investment Management
-- Portfolio-Management
+- Portfolio Management
 - Risk Management
 - SimCorp One
 - Streaming

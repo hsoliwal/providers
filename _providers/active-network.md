@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 22.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: http://api.amp.active.com
@@ -183,7 +183,7 @@ rate_limits:
   slug: active-network-rate-limits
 score:
   band: developing
-  composite: 43.3
+  composite: 43.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -195,11 +195,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 55.1
+    contract_quality: 49.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 43.3
+  previous_composite: 43.0
   provenance:
     conformance: derived
     contracts:
@@ -209,8 +209,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

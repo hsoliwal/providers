@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The only public, unauthenticated, machine-readable API surface AiDASH exposes. It is the standard Atlassian Statuspage Status API v2 served from the AiDASH status page, returning JSON for overall stat
@@ -171,7 +171,7 @@ overview: 'AiDASH publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 2
 score:
   band: emerging
-  composite: 25.5
+  composite: 24.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -185,14 +185,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.5
+  previous_composite: 24.2
   provenance:
     conformance: first-party
   regulatory:
@@ -200,9 +202,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

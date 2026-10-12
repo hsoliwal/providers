@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Nymbus Connect is the integration layer of the Nymbus platform — a modern RESTful API for direct product and data access, a client/partner developer portal with a secure compliant sandbox, real-time K
@@ -69,14 +69,14 @@ modified: '2026-07-20'
 name: Nymbus
 nav: Providers
 network: true
-overview: 'Nymbus publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Core Banking, Fintech, and Financial-Services.
+overview: 'Nymbus publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Core Banking, Fintech, and Financial Services.
 
 
   Nymbus'' developer surface includes engineering blog, support, and 3 more developer resources.'
 random_paper: 10
 score:
   band: minimal
-  composite: 3.4
+  composite: 4.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -90,22 +90,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 3.4
+  previous_composite: 4.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -123,7 +125,7 @@ tags:
 - Banking
 - Core Banking
 - Fintech
-- Financial-Services
+- Financial Services
 - Banking as a Service
 - Digital Banking
 website: https://nymbus.com/

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Evercore Inc API provides access to platform services and data for enterprise integration and automation.
@@ -67,13 +67,13 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/evercore.png
 layout: provider
 modified: '2026-04-19'
-name: Evercore Inc
+name: Evercore
 nav: Providers
 network: true
-overview: 'Evercore Inc publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Investment Banking, Advisory, and Wealth Management.
+overview: 'Evercore publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Investment Banking, Advisory, and Wealth Management.
 
 
-  Evercore Inc''s developer surface includes engineering blog and 3 more developer resources.'
+  Evercore''s developer surface includes engineering blog and 3 more developer resources.'
 plans:
 - name: Evercore Plans Pricing
   plan_count: 1
@@ -85,7 +85,7 @@ rate_limits:
   slug: evercore-rate-limits
 score:
   band: minimal
-  composite: 8.1
+  composite: 9.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 39.0
@@ -99,17 +99,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 8.1
+  previous_composite: 9.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

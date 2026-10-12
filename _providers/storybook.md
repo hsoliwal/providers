@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Storybook is an open-source frontend workshop for building UI components and pages in isolation. Supports React, Vue, Angular, Svelte, Web Components, Ember, Preact, and more. Core features include co
@@ -177,7 +177,7 @@ rules:
   slug: storybook-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.3
+  composite: 28.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 52.3
@@ -191,14 +191,20 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 29.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 28.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -217,7 +223,7 @@ tags:
 - Component Testing
 - Design Systems
 - Front-End Development
-- Open-Source
+- Open Source
 - React
 - UI Components
 - Visual Testing

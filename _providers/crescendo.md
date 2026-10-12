@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: templated
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-09-20'
+  score: 29.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -196,21 +196,21 @@ description: Crescendo is an AI-native customer experience (CX) platform that un
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crescendo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at platform.crescendo.ai over HTTP; 1 tool listed.
   name: Crescendo MCP Server
-  slug: crescendo-mcp-server
+  slug: crescendo-bots
 modified: '2026-07-18'
 name: Crescendo
 nav: Providers
 network: true
-overview: 'Crescendo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including MCP API, Provisioning API, Reporting API, and 2 more. Tagged areas include Company, Customer Experience, Customer-Support, Artificial Intelligence, and AI Agents.
+overview: 'Crescendo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including MCP API, Provisioning API, Reporting API, and 2 more. Tagged areas include Company, Customer Experience, Customer Support, Artificial Intelligence, and AI Agents.
 
 
   Crescendo''s developer surface includes documentation, API reference, quickstart, engineering blog, support, authentication, and 16 more developer resources.'
 random_paper: 4
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -222,11 +222,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 53.9
+    contract_quality: 48.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 40.2
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -237,8 +237,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -257,7 +263,7 @@ slug: crescendo
 tags:
 - Company
 - Customer Experience
-- Customer-Support
+- Customer Support
 - Artificial Intelligence
 - AI Agents
 - Contact Center

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 49.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ agentic_access:
   summary_line: 29 operations
 api_count: 1
 apis:
-- description: Hosted stateless Streamable HTTP MCP server exposing 11 astronomy tools backed by the v2 REST endpoints. Requires Bearer RapidAPI key on every call; basic plan free. Works with Claude Code, custom con
+- description: Hosted stateless Streamable HTTP MCP server exposing 11 astronomy tools backed by the v2 REST endpoints. Tool calls work without a key up to 50 a day per network address; a RapidAPI key (Basic plan fr
   name: CycleCalcs MCP Server
   slug: cyclecalcs-mcp-server
 - baseURL: https://www.cyclecalcs.com/v2
@@ -205,7 +205,7 @@ arazzos:
 - description: Resolve a place name, take the whole-sky snapshot, then find the dark moonless observing window for the next week.
   name: Tonight's sky for a place
   slug: cyclecalcs-tonights-sky
-artifact_total: 83
+artifact_total: 86
 collections:
 - collection_type: open
   name: API Collection
@@ -301,6 +301,36 @@ collections:
   name: API Collection
   slug: open-cyclecalcs-v2-discovery
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/plans/cyclecalcs-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cyclecalcs-plans-pricing.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/rules/cyclecalcs-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/cyclecalcs-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/json-ld/cyclecalcs-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/cyclecalcs-context.jsonld
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/changelog/cyclecalcs-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/cyclecalcs-changelog.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/hosts/cyclecalcs-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/cyclecalcs-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cyclecalcs/refs/heads/main/vendors/cyclecalcs-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/cyclecalcs-vendors.yml
 - group: company
   title: ''
   type: Website
@@ -509,23 +539,35 @@ examples:
   name: Cyclecalcs V2 Today Example
   slug: cyclecalcs-v2-today-example
 image: https://www.cyclecalcs.com/assets/og-card.png?v=2
+json_schemas:
+- name: Envelope
+  property_count: 9
+  slug: cyclecalcs-envelope
+jsonld:
+- class_count: 3
+  name: Cyclecalcs Context
+  property_count: 24
+  slug: cyclecalcs-context
 layout: provider
 mcp_servers:
-- description: ''
-  name: CycleCalcs MCP Server
-  slug: cyclecalcs-mcp-server
 - description: CycleCalcs publishes a hosted, stateless Streamable HTTP MCP server that exposes eleven read-only astronomy tools, each backed by exactly one live /v2 REST endpoint. The server speaks MCP revision 202
-  name: MCP server manifest (11 tools, captured from tools/list)
-  slug: mcp-server-manifest-11-tools-captured-from-toolslist
+  name: CycleCalcs Astronomy
+  slug: mcp
 modified: '2026-09-16'
 name: CycleCalcs
 nav: Providers
 network: true
-overview: 'CycleCalcs publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Apsides API, Attribution API, Conjunctions API, and 26 more. Tagged areas include Astronomy, Space, Science, Ephemeris, and Sun.
+overview: 'CycleCalcs publishes 30 APIs on the [APIs.io](https://apis.io/) network, including Apsides API, Attribution API, Conjunctions API, and 27 more. Tagged areas include Astronomy, Space, Science, Ephemeris, and Sun.
 
 
-  CycleCalcs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, pricing, signup flow, and 29 more developer resources.'
+  The CycleCalcs catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  CycleCalcs'' developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, pricing, and 35 more developer resources.'
 plans:
+- name: Cyclecalcs Plans Pricing
+  plan_count: 1
+  slug: cyclecalcs-plans-pricing
 - name: Cyclecalcs Plans
   plan_count: 4
   slug: cyclecalcs-plans
@@ -534,24 +576,36 @@ rate_limits:
 - limit_count: 15
   name: Cyclecalcs Rate Limits
   slug: cyclecalcs-rate-limits
+rules:
+- effective_rule_count: 59
+  extends:
+  - spectral:oas
+  name: CycleCalcs API Rules
+  rule_count: 18
+  severity_counts:
+    error: 16
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cyclecalcs-rules
 score:
-  band: strong
-  composite: 63.5
+  band: exemplar
+  composite: 67.0
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 66.0
-    catalog_earned_first_party: 29.0
-    catalog_gap: 49.0
+    artifact_dirs: 32
+    catalog_earned: 79.9
+    catalog_earned_first_party: 25.0
+    catalog_gap: 35.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.5
   facets:
-    access_clarity: 76.3
-    contract_governance: 33.3
-    contract_quality: 62.5
+    access_clarity: 65.8
+    contract_governance: 47.0
+    contract_quality: 65.6
     developer_ergonomics: 63.7
-    discoverability: 87.0
-    operational_transparency: 55.3
+    discoverability: 85.0
+    operational_transparency: 71.1
   previous_composite: 63.5
   provenance:
     agentic_access: derived
@@ -563,8 +617,14 @@ score:
       total: 30
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -594,6 +654,6 @@ tags:
 - Calendar
 - Geolocation
 - MCP
-- agent-native
+- Agent-Native
 website: https://www.cyclecalcs.com/
 ---

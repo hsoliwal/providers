@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -47,42 +47,42 @@ apis:
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The file API from SmartMind — 4 operation(s) for file.
-  name: SmartMind file API
+  name: SmartMind File API
   slug: smartmind-file-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The health API from SmartMind — 1 operation(s) for health.
-  name: SmartMind health API
+  name: SmartMind Health API
   slug: smartmind-health-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The metric API from SmartMind — 1 operation(s) for metric.
-  name: SmartMind metric API
+  name: SmartMind Metric API
   slug: smartmind-metric-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The query API from SmartMind — 4 operation(s) for query.
-  name: SmartMind query API
+  name: SmartMind Query API
   slug: smartmind-query-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The schema API from SmartMind — 2 operation(s) for schema.
-  name: SmartMind schema API
+  name: SmartMind Schema API
   slug: smartmind-schema-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The table API from SmartMind — 7 operation(s) for table.
-  name: SmartMind table API
+  name: SmartMind Table API
   slug: smartmind-table-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The table_template API from SmartMind — 2 operation(s) for table_template.
-  name: SmartMind table_template API
+  name: SmartMind Table Template API
   slug: smartmind-table-template-api
 - baseURL: https://thanosql-sdk-python.readthedocs.io/en/latest/
   baseurl_source: declared
   description: The view API from SmartMind — 2 operation(s) for view.
-  name: SmartMind view API
+  name: SmartMind View API
   slug: smartmind-view-api
 artifact_total: 20
 collections:
@@ -225,14 +225,14 @@ modified: '2026-07-21'
 name: SmartMind
 nav: Providers
 network: true
-overview: 'SmartMind publishes 8 APIs on the [APIs.io](https://apis.io/) network, including file API, health API, metric API, and 5 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Database, and Analytics.
+overview: 'SmartMind publishes 8 APIs on the [APIs.io](https://apis.io/) network, including File API, Health API, Metric API, and 5 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Database, and Analytics.
 
 
   SmartMind''s developer surface includes authentication, documentation, API reference, support, and 18 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 36.9
+  composite: 36.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -244,11 +244,16 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 50.1
+    contract_quality: 45.4
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-korea
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -259,8 +264,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -279,7 +290,7 @@ slug: smartmind
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Database
 - Analytics
 - Data

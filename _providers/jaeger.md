@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -93,6 +93,11 @@ collections:
   name: Jaeger Query Dependencies Traces API
   slug: open-jaeger-traces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jaeger/refs/heads/main/capabilities/jaeger-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jaeger-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -185,13 +190,13 @@ modified: '2026-05-19'
 name: Jaeger
 nav: Providers
 network: true
-overview: 'Jaeger publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Dependencies API, Metrics API, Services API, and 1 more. Tagged areas include Distributed Tracing, Microservices, Monitoring, and Observability.
+overview: 'Jaeger publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Dependencies API, Metrics API, Services API, and 4 more. Tagged areas include Distributed Tracing, Microservices, Monitoring, and Observability.
 
 
   The Jaeger catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Jaeger''s developer surface includes documentation, getting-started guide, engineering blog, support, changelog, and 14 more developer resources.'
+  Jaeger''s developer surface includes documentation, getting-started guide, engineering blog, support, changelog, and 15 more developer resources.'
 plans:
 - name: Jaeger Plans Pricing
   plan_count: 3
@@ -214,9 +219,9 @@ rules:
   slug: jaeger-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.7
+  composite: 34.0
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 33.3
     catalog_earned_first_party: 0.0
     catalog_gap: 66.8
@@ -226,14 +231,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 9.8
-    contract_quality: 46.1
+    contract_quality: 41.5
     developer_ergonomics: 35.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 36.7
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +246,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

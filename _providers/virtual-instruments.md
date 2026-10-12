@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Global View APIs for alerts, external alert ingestion, and on-prem storage dashboards. Function-based JSON POST bodies over a Solr-style query engine, served from the Virtana cloud platform.
@@ -183,7 +183,7 @@ layout: provider
 mcp_servers:
 - description: Virtana publishes an official Model Context Protocol (MCP) server surface for its observability platform. Two product endpoints are offered — Global View (GV) and Infrastructure Observability (IO) — e
   name: Virtana (Virtual Instruments) MCP Server
-  slug: virtana-virtual-instruments-mcp-server
+  slug: virtual-instruments-mcp-yml
 modified: '2026-07-21'
 name: Virtana (Virtual Instruments)
 nav: Providers
@@ -198,7 +198,7 @@ overview: 'Virtana (Virtual Instruments) publishes 3 APIs on the [APIs.io](https
 random_paper: 2
 score:
   band: developing
-  composite: 47.7
+  composite: 49.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -210,16 +210,28 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 47.7
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

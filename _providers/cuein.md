@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-09-20'
+  score: 24.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -49,12 +49,12 @@ apis:
 - baseURL: https://api.cuein.ai/answers/v1
   baseurl_source: declared
   description: APIs for getting answers
-  name: Cuein answers API
+  name: Cuein Answers API
   slug: cuein-answers-api
 - baseURL: https://api.cuein.ai/insights/v1
   baseurl_source: declared
   description: APIs for retrieving customer-support interaction insights
-  name: Cuein conversations API
+  name: Cuein Conversations API
   slug: cuein-conversations-api
 artifact_total: 11
 collections:
@@ -215,7 +215,7 @@ modified: '2026-08-14'
 name: Cuein
 nav: Providers
 network: true
-overview: 'Cuein publishes 2 APIs on the [APIs.io](https://apis.io/) network: answers API and conversations API. Tagged areas include Company, Customer Experience, Customer-Support, Conversation Intelligence, and Generative AI.
+overview: 'Cuein publishes 2 APIs on the [APIs.io](https://apis.io/) network: Answers API and Conversations API. Tagged areas include Company, Customer Experience, Customer Support, Conversation Intelligence, and Generative AI.
 
 
   Cuein''s developer surface includes authentication, documentation, API reference, engineering blog, support, and 25 more developer resources.'
@@ -230,7 +230,7 @@ rate_limits:
   slug: cuein-rate-limits
 score:
   band: thin
-  composite: 33.8
+  composite: 34.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -242,11 +242,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 46.6
+    contract_quality: 41.9
     developer_ergonomics: 33.9
-    discoverability: 87.0
+    discoverability: 83.9
     operational_transparency: 2.6
-  previous_composite: 33.8
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -257,8 +257,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -282,7 +288,7 @@ slug: cuein
 tags:
 - Company
 - Customer Experience
-- Customer-Support
+- Customer Support
 - Conversation Intelligence
 - Generative AI
 - Insights

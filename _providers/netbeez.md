@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Administrator-facing API for integrating NetBeez network-performance telemetry with external tools. v2 is a JSON API (read-write: create targets, run ad-hoc tests) documented on Postman at api.netbeez'
@@ -114,7 +114,7 @@ overview: 'Netbeez publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 1
 score:
   band: thin
-  composite: 37.4
+  composite: 37.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 31.6
-  previous_composite: 37.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 37.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

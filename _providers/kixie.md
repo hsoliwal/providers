@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'The primary Kixie automation surface. A single POST endpoint on the apig.kixie.com gateway that dispatches on an `eventname` discriminator in the JSON body — `call` (place an outbound call through an '
@@ -224,7 +224,7 @@ rate_limits:
   slug: kixie-rate-limits
 score:
   band: strong
-  composite: 60.7
+  composite: 57.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 60.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 59.5
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 73.7
-  previous_composite: 60.7
+  previous_composite: 57.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -249,9 +249,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 59.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

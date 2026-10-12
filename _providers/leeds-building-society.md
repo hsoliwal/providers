@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OBIE Read/Write Account and Transaction Information (AIS) standard for retrieving account, balance, transaction, and beneficiary data with customer consent, secured with FAPI-grade OAuth2/OIDC, mu
@@ -133,14 +133,14 @@ modified: '2026-07-23'
 name: Leeds Building Society
 nav: Providers
 network: true
-overview: 'Leeds Building Society publishes 6 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 3 more. Tagged areas include Financial-Services, Banking, Building Society, Mutual, and Savings.
+overview: 'Leeds Building Society publishes 9 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 6 more. Tagged areas include Financial Services, Banking, Building Society, Mutual, and Savings.
 
 
   Leeds Building Society''s developer surface includes support, engineering blog, and 8 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 32.1
+  composite: 31.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 32.0
@@ -152,9 +152,9 @@ score:
   facets:
     access_clarity: 57.1
     contract_governance: 0.0
-    contract_quality: 39.5
+    contract_quality: 35.5
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -164,7 +164,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 32.1
+  previous_composite: 31.4
   provenance:
     contracts:
       callable: 0.0
@@ -176,9 +176,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -192,7 +192,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: leeds-building-society
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Building Society
 - Mutual

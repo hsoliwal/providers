@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for fetching feedback entries and group taxonomy, batch-importing feedback, and building classification groups. Authenticated with a personal API key sent as an HTTP Bearer token, scoped t
@@ -187,9 +187,9 @@ description: Unwrap is an AI-powered customer intelligence platform, founded by 
 image: https://cdn.prod.website-files.com/67c5e65b5323e6f7f216d5e7/67ddb0f28d559f418b033a59_unwrap-og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at nlp.api.production.unwrap.ai over HTTP; 9 tools listed.
   name: Unwrap MCP Server
-  slug: unwrap-mcp-server
+  slug: unwrap
 modified: '2026-07-21'
 name: Unwrap
 nav: Providers
@@ -209,8 +209,8 @@ scopes:
   slug: unwrap-scopes
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 38.0
+  band: developing
+  composite: 41.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -224,15 +224,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 38.0
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

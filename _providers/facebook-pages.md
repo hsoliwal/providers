@@ -22,7 +22,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -203,7 +203,7 @@ modified: '2026-05-11'
 name: Facebook Pages API
 nav: Providers
 network: true
-overview: 'Facebook Pages API publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Conversations API, Feed API, and 8 more. Tagged areas include Social-Media, Facebook, Meta Graph API, Pages, and Content Publishing.
+overview: 'Facebook Pages API publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Conversations API, Feed API, and 9 more. Tagged areas include Social Media, Facebook, Meta Graph API, Pages, and Content Publishing.
 
 
   Facebook Pages API''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 6 more developer resources.'
@@ -215,7 +215,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.8
+  composite: 29.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -227,11 +227,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 30.8
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -239,8 +239,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -253,7 +259,7 @@ security:
   summary_line: oauth2 · 1 scheme
 slug: facebook-pages
 tags:
-- Social-Media
+- Social Media
 - Facebook
 - Meta Graph API
 - Pages

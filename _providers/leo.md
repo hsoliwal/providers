@@ -12,7 +12,7 @@ access_model:
   trial: true
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,10 +23,10 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 21.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.meetleo.com
@@ -54,7 +54,7 @@ apis:
   description: The Health API from LeO — 1 operation(s) for health.
   name: LeO Health API
   slug: leo-health-api
-artifact_total: 12
+artifact_total: 11
 common:
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/leo/refs/heads/main/capabilities/leo-capability-edges.yml
@@ -198,20 +198,17 @@ description: 'LeO is an AI-powered sales and prospecting platform for commercial
 image: https://static.wixstatic.com/media/38dea4_5b1d1b85783146d8b6cf1c6f354c9be8%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/38dea4_5b1d1b85783146d8b6cf1c6f354c9be8%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.meetleo.com over HTTP; 3 tools listed.
   name: LeO MCP Connector
   slug: leo-mcp-connector
-- description: ''
-  name: LeO MCP Server
-  slug: leo-mcp-server
-- description: ''
+- description: Remote MCP server at www.meetleo.com over HTTP; 9 tools listed.
   name: LeO 3.0 Site Visitor Assistant
-  slug: leo-30-site-visitor-assistant
+  slug: leo-3-0-site-visitor-assistant
 modified: '2026-08-14'
 name: LeO
 nav: Providers
 network: true
-overview: 'LeO publishes 2 APIs on the [APIs.io](https://apis.io/) network: Public API and Health API. Tagged areas include Company, Insurance, Commercial Insurance, Property and Casualty, and Employee Benefits.
+overview: 'LeO publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Public API, Health API, and 2 more. Tagged areas include Company, Insurance, Commercial Insurance, Property and Casualty, and Employee Benefits.
 
 
   LeO''s developer surface includes pricing, signup flow, support, FAQ, engineering blog, documentation, API reference, and 23 more developer resources.'
@@ -226,12 +223,12 @@ rate_limits:
   slug: leo-rate-limits
 scopes:
 - name: Leo Scopes
-  scope_count: 0
+  scope_count: 7
   slug: leo-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
   band: developing
-  composite: 49.7
+  composite: 45.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -243,11 +240,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
-  previous_composite: 49.7
+  previous_composite: 45.3
   provenance:
     conformance: first-party
     contracts:
@@ -255,7 +252,7 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
@@ -266,9 +263,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -300,6 +297,6 @@ tags:
 - Non-Profit
 - Trucking
 - MCP
-- agent-native
+- Agent-Native
 website: https://www.meetleo.com/
 ---

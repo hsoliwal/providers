@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The direct HTTP API behind the Atlas CLI — the research graph, Library, runs, evidence, compute, and research surfaces. Bearer (thk_*) auth; JSON responses; Idempotency-Key on writes. Base https://app
@@ -156,21 +156,21 @@ description: 'Synthetic Sciences is a Y Combinator-backed AI research lab buildi
 image: https://app.syntheticsciences.ai/synsc-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 29 tools listed.
   name: Synthetic Sciences MCP Server
-  slug: synthetic-sciences-mcp-server
+  slug: synsci-delphi
 modified: '2026-07-21'
 name: Synthetic Sciences
 nav: Providers
 network: true
-overview: 'Synthetic Sciences publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Scientific Research, and Developer Tools.
+overview: 'Synthetic Sciences publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Scientific Research, and Developer Tools.
 
 
   Synthetic Sciences'' developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, CLI, and 17 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 16.9
+  composite: 16.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -184,15 +184,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 16.9
+  previous_composite: 16.6
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +218,7 @@ slug: synthetic-sciences
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Scientific Research
 - Developer Tools
 - Agents

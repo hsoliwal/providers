@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-09-20'
+  score: 30.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -244,7 +244,7 @@ modified: '2026-09-16'
 name: Connells Group
 nav: Providers
 network: true
-overview: 'Connells Group publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Branches API, Locations API, People API, and 1 more. Tagged areas include Real-Estate, United Kingdom, Property Listings, Brokerage, and Estate Agency.
+overview: 'Connells Group publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Branches API, Locations API, People API, and 1 more. Tagged areas include Real Estate, United Kingdom, Property Listings, Brokerage, and Estate Agency.
 
 
   Connells Group''s developer surface includes code examples, authentication, engineering blog, and 30 more developer resources.'
@@ -255,7 +255,7 @@ rate_limits:
   slug: connells-rate-limits
 score:
   band: emerging
-  composite: 24.1
+  composite: 22.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -269,7 +269,7 @@ score:
     contract_governance: 18.2
     contract_quality: 15.2
     developer_ergonomics: 16.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -279,7 +279,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 24.1
+  previous_composite: 22.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -295,9 +295,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -315,7 +315,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: connells
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - Property Listings
 - Brokerage

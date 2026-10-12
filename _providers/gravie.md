@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Public machine-readable files Gravie posts on behalf of its plan sponsors under the CMS Transparency in Coverage rule (45 CFR 147.211). Files cover in-network negotiated rates for the Cigna and Cigna '
@@ -168,7 +168,7 @@ overview: 'Gravie publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: emerging
-  composite: 21.9
+  composite: 20.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -182,9 +182,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 21.9
+  previous_composite: 20.9
   provenance:
     conformance: first-party
   regulatory:
@@ -192,9 +192,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 36.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

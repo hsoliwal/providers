@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -95,7 +95,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Taito.ai MCP Server
-  slug: taitoai-mcp-server
+  slug: taito-ai
 modified: '2026-07-21'
 name: Taito.ai
 nav: Providers
@@ -107,7 +107,7 @@ overview: 'Taito.ai is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 21
 score:
   band: emerging
-  composite: 14.7
+  composite: 14.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -121,20 +121,32 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - finland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 14.7
+  previous_composite: 14.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

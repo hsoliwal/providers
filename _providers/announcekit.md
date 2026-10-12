@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The AnnounceKit API provides GraphQL and REST endpoints for programmatically creating and updating posts, syncing user data, managing widgets, and automating product changelog workflows. Supports 11 w
@@ -203,12 +203,12 @@ rate_limits:
   slug: announcekit-rate-limits
 scopes:
 - name: Announcekit Scopes
-  scope_count: 0
+  scope_count: 2
   slug: announcekit-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: strong
-  composite: 61.5
+  composite: 64.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 60.0
@@ -220,17 +220,23 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 54.2
+    contract_quality: 52.0
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 71.1
-  previous_composite: 61.5
+  previous_composite: 64.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

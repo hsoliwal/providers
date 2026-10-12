@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 37.7
-  scored_at: '2026-09-20'
+  score: 35.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 51
   human_in_the_loop: 0
@@ -48,41 +48,201 @@ apis:
   baseurl_source: declared
   description: Enrich card transactions
   name: Spade Card Enrichment API
+  phrasing_intents:
+  - id: cardEnrich
+    intent: Enrich a single card transaction
+    question: How do I turn a raw card swipe into a clean merchant name, logo and category with Spade?
+  - id: cardEnrichParse
+    intent: Enrich a card transaction from a raw DE43 field
+    question: Can I send the unparsed DE43 field instead of splitting out merchant name and city myself?
+  - id: batchesTransactionsCardsEnrichOptions
+    intent: Check the synchronous cap for card batch enrichment
+    question: What is the current synchronousMax for enriching card transaction batches inline?
+  - id: batchesTransactionsCardsEnrich
+    intent: Submit a batch of card transactions for enrichment
+    question: How do I enrich thousands of card transactions in one job instead of one at a time?
+  - id: batchesTransactionsCardsEnrichParseOptions
+    intent: Check the synchronous cap for DE43 batch enrichment
+    question: What is the inline item limit for batch DE43 parse enrichment of card transactions?
+  - id: batchesTransactionsCardsEnrichParse
+    intent: Submit a batch of DE43 card transactions
+    question: Can I batch-enrich card transactions that only carry raw DE43 strings?
+  - id: batchesCardEnrichGetResults
+    intent: Get results of a card enrichment batch
+    question: How do I download the enriched transactions once my card batch job is finished?
+  - id: batchesCardEnrichGetStatus
+    intent: Check the status of a card enrichment batch
+    question: Is my batch card enrichment job still running or has it completed?
+  phrasing_ops: 10
   slug: spade-card-enrichment-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Register category action triggers and receive triggered actions in enrichment responses
   name: Spade Category Action Triggers API
+  phrasing_intents:
+  - id: categoryActionTriggersGet
+    intent: Check account-wide category trigger status
+    question: Have my account-wide category action triggers finished registering yet?
+  - id: categoryActionTriggersPut
+    intent: Replace account-wide category triggers
+    question: How do I flag every transaction in a spending category across my whole account with Spade?
+  - id: categoryActionTriggersPatch
+    intent: Add or remove individual account category triggers
+    question: Can I add one category trigger to my account without resending the whole list?
+  - id: categoryActionTriggersDelete
+    intent: Clear all account-wide category triggers
+    question: How do I wipe every category trigger set at the account level?
+  - id: programCategoryActionTriggersGet
+    intent: Check a program's category trigger status
+    question: Are the category triggers for one of my card programs active yet?
+  - id: programCategoryActionTriggersPut
+    intent: Replace a program's category triggers
+    question: How do I attach category actions only to transactions tagged with one program?
+  - id: programCategoryActionTriggersPatch
+    intent: Add or remove a program's category triggers
+    question: Can I add a single category trigger to a program incrementally?
+  - id: programCategoryActionTriggersDelete
+    intent: Clear a program's category triggers
+    question: How do I remove every category trigger from a single program?
+  phrasing_ops: 16
   slug: spade-category-action-triggers-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Create custom categories and personalize enrichments
   name: Spade Category Personalization API
+  phrasing_intents:
+  - id: categoriesGet
+    intent: List default and custom integration categories
+    question: What spending categories does Spade use by default, plus the ones I've added?
+  - id: categoriesPost
+    intent: Create a custom integration-level category
+    question: How do I add my own spending category that every user of my integration sees?
+  - id: categoriesDelete
+    intent: Delete all custom integration-level categories
+    question: How do I remove every custom category I created for my integration at once?
+  - id: categoriesDetailDelete
+    intent: Delete one custom integration-level category
+    question: How do I delete a single integration-wide custom category by its ID?
+  - id: counterpartyCategoryPersonalizationsGet
+    intent: List integration-wide counterparty category overrides
+    question: Which merchants have I re-categorized for my whole integration?
+  - id: counterpartyCategoryPersonalizationsPut
+    intent: Override a counterparty's category for all users
+    question: How do I force a specific merchant to always map to my chosen category for every user?
+  - id: counterpartyCategoryPersonalizationsDelete
+    intent: Delete all integration counterparty category overrides
+    question: How do I clear every integration-wide merchant category override at once?
+  - id: counterpartyCategoryPersonalizationsDetailDelete
+    intent: Remove an integration override for one counterparty
+    question: How do I undo the integration-wide category override on a single merchant?
+  phrasing_ops: 16
   slug: spade-category-personalization-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Provide feedback on card events or report enrichment errors
   name: Spade Feedback and Reporting API
+  phrasing_intents:
+  - id: cardReport
+    intent: Report an incorrect card enrichment
+    question: How do I tell Spade an enriched card transaction got the wrong merchant or category?
+  - id: enrichmentChargeback
+    intent: Report a chargeback on an enriched transaction
+    question: How do I let Spade know a cardholder disputed a transaction with a chargeback?
+  - id: enrichmentDecline
+    intent: Report a card decline on an enriched transaction
+    question: How do I send Spade the decline code when a card authorization is refused?
+  - id: enrichmentRefund
+    intent: Report a refund on an enriched transaction
+    question: How do I tell Spade a merchant refunded a transaction it already enriched?
+  - id: enrichmentOtherFraud
+    intent: Report suspected fraud on a transaction
+    question: Where do I report fraud that didn't involve a chargeback, decline or refund?
+  phrasing_ops: 5
   slug: spade-feedback-and-reporting-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Register merchant action triggers and receive triggered actions in enrichment responses
   name: Spade Merchant Action Triggers API
+  phrasing_intents:
+  - id: merchantActionTriggersGet
+    intent: Check account-wide merchant trigger status
+    question: Has my account-wide merchant trigger registration finished processing?
+  - id: merchantActionTriggersPut
+    intent: Replace account-wide merchant triggers
+    question: How do I flag transactions at specific merchants for all users in my Spade account?
+  - id: merchantActionTriggersPatch
+    intent: Add or remove individual account merchant triggers
+    question: Can I add a few merchants to my account triggers without resending the whole list?
+  - id: merchantActionTriggersDelete
+    intent: Clear all account-wide merchant triggers
+    question: How do I remove every merchant trigger registered at the account level?
+  - id: programMerchantActionTriggersGet
+    intent: Check a program's merchant trigger status
+    question: Are the merchant triggers for one of my programs active yet?
+  - id: programMerchantActionTriggersPut
+    intent: Replace a program's merchant triggers
+    question: How do I attach merchant actions only to transactions tagged with one program?
+  - id: programMerchantActionTriggersPatch
+    intent: Add or remove a program's merchant triggers
+    question: How many merchant triggers can I add to a program in one incremental request?
+  - id: programMerchantActionTriggersDelete
+    intent: Clear a program's merchant triggers
+    question: How do I remove every merchant trigger from a single program?
+  phrasing_ops: 16
   slug: spade-merchant-action-triggers-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Search for Spade merchants
   name: Spade Merchant Search API
+  phrasing_intents:
+  - id: merchantSearch
+    intent: Look up detailed merchant information by name
+    question: How do I get full details on a merchant that shows up as a counterparty in my enrichments?
+  - id: corporationSearch
+    intent: Autocomplete merchant names with logos
+    question: How can I power a merchant autocomplete box with names, logos and websites?
+  phrasing_ops: 2
   slug: spade-merchant-search-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: Enrich transfers
   name: Spade Transfer Enrichment API
+  phrasing_intents:
+  - id: transferEnrich
+    intent: Enrich a single ACH or wire transfer
+    question: How do I identify who's behind an ACH deposit or wire transfer description?
+  - id: batchesTransferEnrichOptions
+    intent: Check the synchronous cap for transfer batches
+    question: What is the current synchronousMax for enriching transfer batches inline?
+  - id: batchesTransferEnrich
+    intent: Submit a batch of transfers for enrichment
+    question: How do I enrich a large file of ACH and wire transfers in one job?
+  - id: batchesTransactionsTransfersEnrichGetResults
+    intent: Get results of a transfer enrichment batch
+    question: How do I download the enriched transfers once my batch job is done?
+  - id: batchesTransactionsTransfersEnrichGetStatus
+    intent: Check the status of a transfer enrichment batch
+    question: Is my transfer enrichment batch still processing?
+  phrasing_ops: 5
   slug: spade-transfer-enrichment-api
 - baseURL: https://east.api.spade.com
   baseurl_source: declared
   description: The Universal Enrichment API from Spade — 3 operation(s) for universal enrichment.
   name: Spade Universal Enrichment API
+  phrasing_intents:
+  - id: universalEnrich
+    intent: Enrich a transaction of any type
+    question: Can I enrich aggregator, card and ACH transactions through one endpoint without knowing the type?
+  - id: batchesUniversalEnrichOptions
+    intent: Check the synchronous cap for universal batches
+    question: What is the current synchronousMax for universal enrichment batches?
+  - id: batchesUniversalEnrich
+    intent: Submit a batch of mixed transactions for enrichment
+    question: How do I enrich a large mixed set of bank and card transactions in a single job?
+  - id: batchesUniversalEnrichGetResults
+    intent: Get results of a universal enrichment batch
+    question: How do I retrieve enriched transactions from a finished universal batch?
+  phrasing_ops: 4
   slug: spade-universal-enrichment-api
 artifact_total: 25
 asyncapis:
@@ -300,7 +460,7 @@ modified: '2026-08-14'
 name: Spade
 nav: Providers
 network: true
-overview: 'Spade publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Card Enrichment API, Category Action Triggers API, Category Personalization API, and 5 more. Tagged areas include Company, Financial-Services, Transaction Enrichment, Merchant Intelligence, and Payments.
+overview: 'Spade publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Card Enrichment API, Category Action Triggers API, Category Personalization API, and 5 more. Tagged areas include Company, Financial Services, Transaction Enrichment, Merchant Intelligence, and Payments.
 
 
   The Spade catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -318,7 +478,7 @@ rate_limits:
   slug: spade-rate-limits
 score:
   band: exemplar
-  composite: 70.1
+  composite: 66.7
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -330,11 +490,11 @@ score:
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 64.7
+    contract_quality: 59.1
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 81.6
-  previous_composite: 70.1
+  previous_composite: 66.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -354,9 +514,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -382,12 +542,13 @@ security:
 slug: spade
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Transaction Enrichment
 - Merchant Intelligence
 - Payments
 - Data Enrichment
 - Fraud and Risk
 - Fintech
+- A2A
 website: https://www.spade.com/
 ---

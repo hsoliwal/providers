@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Qover''s REST API for embedded insurance: a Claims API (file, retrieve, track status history, and download claim reports), a Policy API (manage policies and dynamically add/remove risk items), and a Do'
@@ -151,7 +151,7 @@ overview: 'Qover publishes 1 API on the [APIs.io](https://apis.io/) network: Emb
 random_paper: 7
 score:
   band: developing
-  composite: 51.2
+  composite: 49.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -163,9 +163,9 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -175,7 +175,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 51.2
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -189,9 +189,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

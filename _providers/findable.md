@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for AI-powered document search and Q&A across building documentation, plus management of buildings, documents, building owners, reports, and building categories. Supports SSE streaming on the
@@ -169,21 +169,21 @@ description: Findable is an AI-powered building intelligence platform (findable.
 image: https://www.findable.ai/images/logos/findable-logo-dark.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.findable.ai over HTTP; 27 tools listed.
   name: Findable MCP Server
-  slug: findable-mcp-server
+  slug: findable
 modified: '2026-07-19'
 name: Findable
 nav: Providers
 network: true
-overview: 'Findable publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Building Intelligence, Property Technology, PropTech, and Facilities Management.
+overview: 'Findable publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Building Intelligence, PropTech, Facilities Management, and Building Documentation.
 
 
   Findable''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 20 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 35.1
+  composite: 36.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -197,14 +197,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 35.1
+  previous_composite: 36.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +238,6 @@ slug: findable
 tags:
 - Company
 - Building Intelligence
-- Property Technology
 - PropTech
 - Facilities Management
 - Building Documentation

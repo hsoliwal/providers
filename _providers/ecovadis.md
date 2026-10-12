@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'The EcoVadis API serves as a pivotal link, connecting your systems, applications, or platforms with EcoVadis'' vast repository of sustainability insights. Its primary function is facilitating seamless '
@@ -116,8 +116,8 @@ overview: 'Ecovadis publishes 4 APIs on the [APIs.io](https://apis.io/) network.
   Ecovadis'' developer surface includes support, engineering blog, and 10 more developer resources.'
 random_paper: 10
 score:
-  band: emerging
-  composite: 11.6
+  band: minimal
+  composite: 10.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 30.0
@@ -131,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 2.6
-  previous_composite: 11.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

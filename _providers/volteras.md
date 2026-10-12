@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -369,7 +369,7 @@ scopes:
   summary_line: 12 scopes · clientCredentials
 score:
   band: developing
-  composite: 51.8
+  composite: 47.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -381,11 +381,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 57.4
+    contract_quality: 52.5
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 51.8
+  previous_composite: 47.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -401,9 +401,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 63.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -429,5 +429,6 @@ tags:
 - Energy
 - Mobility
 - Fleet Management
+- Telematics
 website: https://volteras.com
 ---

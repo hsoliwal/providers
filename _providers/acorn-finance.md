@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Acorn Finance partner REST API. Basic-authenticated JSON endpoints on api.acornfinance.com let point-of-sale and contractor-software partners create companies and company users, retrieve loan appl
@@ -179,7 +179,7 @@ modified: '2026-09-06'
 name: Acorn Finance
 nav: Providers
 network: true
-overview: 'Acorn Finance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Lending, Loans, and Home Improvement.
+overview: 'Acorn Finance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Lending, Loans, and Home Improvement.
 
 
   The Acorn Finance catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -197,7 +197,7 @@ rate_limits:
   slug: acorn-finance-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 38.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -209,16 +209,22 @@ score:
   facets:
     access_clarity: 67.1
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.3
+  previous_composite: 38.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -236,7 +242,7 @@ security:
 slug: acorn-finance
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Lending
 - Loans
 - Home Improvement

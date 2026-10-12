@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -197,8 +197,8 @@ rate_limits:
   name: Boston Scientific Rate Limits
   slug: boston-scientific-rate-limits
 score:
-  band: thin
-  composite: 26.3
+  band: emerging
+  composite: 24.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 27.0
@@ -212,9 +212,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 26.3
+  previous_composite: 24.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -223,9 +223,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

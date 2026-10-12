@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Anvilogic MCP Server is the platform's Model Context Protocol surface, letting AI agents and MCP clients call Anvilogic platform tools against a customer's security graph, detections, searches, an
@@ -160,9 +160,9 @@ description: Anvilogic is an Agentic SecOps platform founded in 2019 by former S
 image: https://cdn.prod.website-files.com/6a4cfd0a31bb60a376cd1ee9/6a68af2d3deeaa9baf085208_anvilogic-og-1c-1200x630.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at secure.anvilogic.com over HTTP.
   name: Anvilogic MCP Server
-  slug: anvilogic-mcp-server
+  slug: anvilogic
 modified: '2026-07-31'
 name: Anvilogic
 nav: Providers
@@ -174,7 +174,7 @@ overview: 'Anvilogic publishes 2 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 10
 score:
   band: thin
-  composite: 30.6
+  composite: 32.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -188,14 +188,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 30.6
+  previous_composite: 32.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

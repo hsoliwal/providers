@@ -33,28 +33,28 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The fetch API from Zipline Ai — 4 operation(s) for fetch.
-  name: Zipline Ai fetch API
+  name: Zipline Ai Fetch API
   slug: zipline-ai-fetch-api
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The health API from Zipline Ai — 2 operation(s) for health.
-  name: Zipline Ai health API
+  name: Zipline Ai Health API
   slug: zipline-ai-health-api
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The schema API from Zipline Ai — 5 operation(s) for schema.
-  name: Zipline Ai schema API
+  name: Zipline Ai Schema API
   slug: zipline-ai-schema-api
 - baseURL_template: https://{host}
   baseurl_source: spec_template
   description: The workflow API from Zipline Ai — 1 operation(s) for workflow.
-  name: Zipline Ai workflow API
+  name: Zipline Ai Workflow API
   slug: zipline-ai-workflow-api
 artifact_total: 12
 collections:
@@ -74,6 +74,11 @@ collections:
   name: Zipline AI Fetcher fetch workflow API
   slug: open-zipline-ai-workflow-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zipline-ai/refs/heads/main/capabilities/zipline-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zipline-ai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zipline-ai/refs/heads/main/skills/zipline-ai-fetch-features.md
   title: ''
@@ -111,16 +116,16 @@ modified: '2026-07-17'
 name: Zipline Ai
 nav: Providers
 network: true
-overview: 'Zipline Ai publishes 4 APIs on the [APIs.io](https://apis.io/) network, including fetch API, health API, schema API, and 1 more. Tagged areas include Company.
+overview: 'Zipline Ai publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Fetch API, Health API, Schema API, and 1 more. Tagged areas include Company.
 
 
-  Zipline Ai''s developer surface includes authentication and 5 more developer resources.'
+  Zipline Ai''s developer surface includes authentication and 6 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 19.1
+  composite: 17.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
@@ -130,11 +135,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 40.1
+    contract_quality: 36.1
     developer_ergonomics: 13.7
-    discoverability: 48.1
+    discoverability: 46.4
     operational_transparency: 0.0
-  previous_composite: 19.1
+  previous_composite: 17.3
   provenance:
     conformance: first-party
     contracts:
@@ -144,8 +149,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -86,6 +86,11 @@ collections:
   name: Nubela Proxycurl API
   slug: open-nubela
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nubela/refs/heads/main/capabilities/nubela-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nubela-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nubela/refs/heads/main/agentic-access/nubela-agentic-access.yml
   title: ''
@@ -136,7 +141,7 @@ network: true
 overview: 'Nubela publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Company API, Competitor API, Customer API, and 1 more. Tagged areas include Companies, Data, People, and Scraping.
 
 
-  Nubela''s developer surface includes authentication, documentation, engineering blog, and 5 more developer resources.'
+  Nubela''s developer surface includes authentication, documentation, engineering blog, and 6 more developer resources.'
 plans:
 - name: Nubela Plans Pricing
   plan_count: 3
@@ -147,10 +152,10 @@ rate_limits:
   name: Nubela Rate Limits
   slug: nubela-rate-limits
 score:
-  band: thin
-  composite: 27.5
+  band: emerging
+  composite: 25.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -160,11 +165,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 23.8
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 10.5
-  previous_composite: 27.5
+  previous_composite: 25.5
   provenance:
     agentic_access: derived
     contracts:
@@ -172,8 +177,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

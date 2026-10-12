@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -97,18 +97,22 @@ description: Coris is an AI platform for merchant and payment risk, providing mo
   public surfaces (marketing site, status page, trust center, legal pages).
 image: https://files.readme.io/3f05149-small-Coris_Logo_vF_w_With_padding.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.coris.ai over HTTP.
+  name: Coris MCP Server
+  slug: coris
 modified: '2026-07-18'
 name: Coris
 nav: Providers
 network: true
-overview: 'Coris is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Risk, Fraud, and Payments.
+overview: 'Coris is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Risk Management, Fraud Prevention, and Payments.
 
 
   Coris'' developer surface includes documentation, engineering blog, signup flow, and 10 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 13.7
+  composite: 14.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -122,14 +126,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.7
+  previous_composite: 14.2
   provenance:
     mcp: first-party
   regulatory:
@@ -137,9 +141,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -159,8 +163,8 @@ slug: coris
 tags:
 - Company
 - Fintech
-- Risk
-- Fraud
+- Risk Management
+- Fraud Prevention
 - Payments
 - Merchant Onboarding
 - KYB

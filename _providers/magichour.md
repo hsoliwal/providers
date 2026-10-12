@@ -12,7 +12,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -23,8 +23,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.5
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.magichour.ai
@@ -199,14 +199,14 @@ description: Magic Hour is an AI media generation platform for video, image and 
 image: https://magichour.ai/logo-social.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.magichour.ai requiring an API key.
   name: Magic Hour MCP servers
   slug: magic-hour-mcp-servers
 modified: '2026-09-03'
 name: Magic Hour
 nav: Providers
 network: true
-overview: 'Magic Hour publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Audio Projects API, Files API, Image Projects API, and 1 more. Tagged areas include AI Video, Image-Generation, Audio, Generative AI, and Voice Cloning.
+overview: 'Magic Hour publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Audio Projects API, Files API, Image Projects API, and 1 more. Tagged areas include AI Video, Image Generation, Audio, Generative AI, and Voice Cloning.
 
 
   The Magic Hour catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -224,7 +224,7 @@ rate_limits:
   slug: magichour-rate-limits
 score:
   band: strong
-  composite: 62.4
+  composite: 62.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 62.4
+  previous_composite: 62.0
   provenance:
     conformance: derived
     contracts:
@@ -250,8 +250,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -269,10 +275,11 @@ security:
 slug: magichour
 tags:
 - AI Video
-- Image-Generation
+- Image Generation
 - Audio
 - Generative AI
 - Voice Cloning
 - Text-to-Video
+- A2A
 website: https://magichour.ai
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Strongly-typed GraphQL API to query and mutate the Rad TV platform — catalog (features, series, seasons, episodes, streams, miniseries), content management, uploads (TUS resumable), transcoding with A
@@ -106,9 +106,9 @@ description: Rad TV (Rad.) is a two-sided subscription video platform connecting
 image: https://rad.live/rad-new-seo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.rad.live over HTTP; 34 tools listed.
   name: Rad. MCP Server
-  slug: rad-mcp-server
+  slug: rad-tv
 modified: '2026-07-20'
 name: Rad.
 nav: Providers
@@ -125,7 +125,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 36.3
+  composite: 37.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -137,17 +137,23 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 36.3
+  previous_composite: 37.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

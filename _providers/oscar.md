@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -101,14 +101,14 @@ modified: '2026-07-20'
 name: Oscar
 nav: Providers
 network: true
-overview: 'Oscar is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health Insurance, Healthcare, Insurance, and Health Technology.
+overview: 'Oscar is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health Insurance, Healthcare, Insurance, and Health Tech.
 
 
   Oscar''s developer surface includes engineering blog and 13 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 13.7
+  composite: 13.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -122,17 +122,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 13.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 13.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -150,7 +155,7 @@ tags:
 - Health Insurance
 - Healthcare
 - Insurance
-- Health Technology
+- Health Tech
 - Telehealth
 - Medicare Advantage
 - Digital Health

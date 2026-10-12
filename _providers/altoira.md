@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.7
-  scored_at: '2026-09-20'
+  score: 42.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -45,27 +45,27 @@ agentic_access:
   summary_line: 17 operations · 11 acting
 api_count: 2
 apis:
-- baseURL: https://www.altoira.com
+- baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
   description: These are the endpoints you will redirect your investors to (these are NOT api endpoints so you cannot use the Try it out tool)
   name: AltoIRA Handoffs API
   slug: altoira-handoffs-api
-- baseURL: https://www.altoira.com
+- baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
   description: The actions are performed as the manager of an offering, not as a specific user. Authentication uses the `Basic Auth` header (same as the Offering endpoints)
   name: AltoIRA Investment API
   slug: altoira-investment-api
-- baseURL: https://www.altoira.com
+- baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
   description: The actions are performed as the manager of an offering, not as a specific user. Authentication uses the `Basic Auth` header
   name: AltoIRA Offering API
   slug: altoira-offering-api
-- baseURL: https://www.altoira.com
+- baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
   description: 'These actions are performed within the context of a specific user (uses OAuth2 with an `Authorization: Bearer` header)'
   name: AltoIRA User API
   slug: altoira-user-api
-- baseURL: https://www.altoira.com
+- baseURL: https://altoira.sandbox.altoira.com
   baseurl_source: declared
   description: Provides access to an investor's account. Generates a token to be used with the "user" endpoints below
   name: AltoIRA OAUTH API
@@ -261,7 +261,7 @@ modified: '2026-08-06'
 name: AltoIRA
 nav: Providers
 network: true
-overview: 'AltoIRA publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Handoffs API, Investment API, Offering API, and 2 more. Tagged areas include Company, Financial-Services, Retirement, Self-Directed IRA, and Alternative Investments.
+overview: 'AltoIRA publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Handoffs API, Investment API, Offering API, and 2 more. Tagged areas include Company, Financial Services, Retirement, Self-Directed IRA, and Alternative Investments.
 
 
   The AltoIRA catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -276,7 +276,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.4
+  composite: 46.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -288,16 +288,18 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 53.8
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.4
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -308,8 +310,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -331,7 +339,7 @@ security:
 slug: altoira
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Retirement
 - Self-Directed IRA
 - Alternative Investments

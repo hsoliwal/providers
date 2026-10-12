@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 1
@@ -310,7 +310,7 @@ rules:
   slug: amazon-service-catalog-spectral-rules
 score:
   band: developing
-  composite: 40.4
+  composite: 43.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 56.5
@@ -324,9 +324,9 @@ score:
     contract_governance: 13.6
     contract_quality: 22.3
     developer_ergonomics: 58.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 40.4
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     contracts:
@@ -334,8 +334,14 @@ score:
       derived: 4
       marker_coverage: 100.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

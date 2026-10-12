@@ -35,18 +35,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Bettermode''s public GraphQL API for reading and writing community data — spaces, posts, members, reactions, tags, and collections — plus app installation and signed webhooks. Single POST endpoint per '
   name: Bettermode GraphQL API
   slug: bettermode-graphql-api
-artifact_total: 6
+artifact_total: 7
 asyncapis:
 - description: ''
   name: Bettermode Webhooks
   slug: bettermode-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bettermode/refs/heads/main/vendor-facets/bettermode-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/bettermode-vendor-facets.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -181,6 +186,10 @@ created: '2026-07-17'
 description: Bettermode is an all-in-one customer community platform (formerly Tribe) that lets organizations launch branded, no-code communities to turn engagement into measurable retention and growth. It combines discussion forums, Q&A, knowledge base, member directories, events, wishlists, changelogs, and roadmaps with analytics and out-of-the-box integrations (Salesforce, HubSpot, Intercom, Segment). For developers, Bettermode exposes a GraphQL API (US and EU regions), an Apps framework with signed webhooks, embedding and custom-script surfaces, first-party @tribeplatform SDKs/UI kits, and a CLI. More than 50,000 organizations use Bettermode. Backed by Bessemer Venture Partners and CRV.
 image: https://bettermode.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bettermode.com over HTTP.
+  name: Bettermode MCP Server
+  slug: bettermode
 modified: '2026-07-18'
 name: Bettermode
 nav: Providers
@@ -191,17 +200,17 @@ overview: 'Bettermode publishes 1 API on the [APIs.io](https://apis.io/) network
   The Bettermode catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bettermode''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, engineering blog, support, and 22 more developer resources.'
+  Bettermode''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, engineering blog, support, and 23 more developer resources.'
 random_paper: 11
 rate_limits:
 - limit_count: 8
   name: Bettermode Rate Limits
   slug: bettermode-rate-limits
 score:
-  band: developing
-  composite: 54.1
+  band: strong
+  composite: 55.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -211,16 +220,28 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 54.1
+  previous_composite: 55.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

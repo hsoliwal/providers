@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -361,7 +361,7 @@ modified: '2026-05-19'
 name: Infoblox
 nav: Providers
 network: true
-overview: 'Infoblox publishes 6 APIs on the [APIs.io](https://apis.io/) network, including DHCP API, DNS Records API, DNS Zones API, and 3 more. Tagged areas include Cloud, DDI, DHCP, DNS, and IPAM.
+overview: 'Infoblox publishes 21 APIs on the [APIs.io](https://apis.io/) network, including DHCP API, DNS Records API, DNS Zones API, and 18 more. Tagged areas include Cloud, DDI, DHCP, DNS, and IPAM.
 
 
   The Infoblox catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -390,7 +390,7 @@ rules:
   slug: infoblox-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.1
+  composite: 48.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 48.3
@@ -402,11 +402,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 9.8
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 65.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 49.1
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     contracts:
@@ -414,8 +414,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

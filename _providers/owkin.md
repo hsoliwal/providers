@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -90,11 +90,15 @@ created: '2026-07-17'
 description: Owkin is a French-American AI-biotech company (offices in New York, Paris, and London) that builds K Pro, an agentic "AI biology" platform for pharmaceutical and biotech R&D. K Pro pairs large-language-model agents with Owkin's multimodal patient-data network — spanning 164 academic institutions, the MOSAIC spatial-omics dataset, and public sources such as TCGA and PubMed — to help scientists identify drug targets, prioritize indications, explore cohorts, review literature, and navigate clinical trials. Owkin is also known for open-source federated-learning and computational- pathology research (FLamby, PyDESeq2, HistoSSLscaling). The company is backed by GV (Google Ventures). Owkin exposes product documentation and an agentic app (K Pro) but no public developer/REST API.
 image: https://cdn.prod.website-files.com/6391f9bc53c032303ab23fb0/6846da3abb1bef83bcbc29c3_Open-Graph-Owkin-Home.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.k.owkin.com over HTTP.
+  name: OWKIN MCP Server
+  slug: owkin
 modified: '2026-07-20'
 name: OWKIN
 nav: Providers
 network: true
-overview: 'OWKIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Biotech, Drug Discovery, and Healthcare.
+overview: 'OWKIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Biotechnology, Drug Discovery, and Healthcare.
 
 
   OWKIN''s developer surface includes documentation, getting-started guide, engineering blog, support, pricing, signup flow, and 6 more developer resources.'
@@ -115,7 +119,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   previous_composite: 17.9
   provenance:
@@ -125,9 +129,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -143,13 +147,13 @@ slug: owkin
 tags:
 - Company
 - Artificial Intelligence
-- Biotech
+- Biotechnology
 - Drug Discovery
 - Healthcare
-- Machine-Learning
+- Machine Learning
 - Precision Medicine
 - Life Sciences
 - Federated Learning
-- Agentic AI
+- AI Agents
 website: https://www.owkin.com
 ---

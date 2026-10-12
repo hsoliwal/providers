@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -71,6 +71,11 @@ apis:
   slug: stack-moxie-how-to-test-api
 artifact_total: 12
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/stack-moxie/refs/heads/main/capabilities/stack-moxie-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/stack-moxie-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/stack-moxie/refs/heads/main/agentic-access/stack-moxie-agentic-access.yml
   title: ''
@@ -260,7 +265,7 @@ network: true
 overview: 'Stack Moxie publishes 5 APIs on the [APIs.io](https://apis.io/) network, including How To: Administer API, How To: Automate API, How To: Integrate API, and 2 more. Tagged areas include Company, Revenue Operations, Marketing Operations, Observability, and Monitoring.
 
 
-  Stack Moxie''s developer surface includes authentication, API reference, documentation, getting-started guide, support, engineering blog, pricing, and 32 more developer resources.'
+  Stack Moxie''s developer surface includes authentication, API reference, documentation, getting-started guide, support, engineering blog, pricing, and 33 more developer resources.'
 plans:
 - name: Stack Moxie Plans Pricing
   plan_count: 4
@@ -272,9 +277,9 @@ rate_limits:
   slug: stack-moxie-rate-limits
 score:
   band: strong
-  composite: 63.1
+  composite: 64.5
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -284,11 +289,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 54.7
+    contract_quality: 49.2
     developer_ergonomics: 73.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 63.1
+  previous_composite: 64.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -299,8 +304,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

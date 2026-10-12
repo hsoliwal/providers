@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Self-service developer platform for accessing blood glucose data resources from MicroTech Medical's AiDEX continuous glucose monitoring (CGM) devices. Developers register, log in, and are issued API c
@@ -89,7 +89,7 @@ overview: 'MicroTech Medical publishes 1 API on the [APIs.io](https://apis.io/) 
 random_paper: 1
 score:
   band: emerging
-  composite: 12.9
+  composite: 12.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -103,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 12.9
+  previous_composite: 12.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

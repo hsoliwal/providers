@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 28.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 2
@@ -47,22 +47,22 @@ apis:
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
   description: Operations related to configuration
-  name: Microcks config API
+  name: Microcks Config API
   slug: microcks-config-api
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
   description: Operations related to Jobs for discovering mocks and tests
-  name: Microcks job API
+  name: Microcks Job API
   slug: microcks-job-api
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
   description: Operations related to metrics
-  name: Microcks metrics API
+  name: Microcks Metrics API
   slug: microcks-metrics-api
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
   description: Operations related to API and Services mocks
-  name: Microcks mock API
+  name: Microcks Mock API
   slug: microcks-mock-api
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
@@ -72,7 +72,7 @@ apis:
 - baseURL: http://microcks.example.com/api
   baseurl_source: spec
   description: Operations related to API and Services tests
-  name: Microcks test API
+  name: Microcks Test API
   slug: microcks-test-api
 artifact_total: 22
 collections:
@@ -101,6 +101,11 @@ collections:
   name: Microcks API v1.14
   slug: open-microcks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microcks/refs/heads/main/capabilities/microcks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microcks-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -169,10 +174,10 @@ modified: '2026-05-19'
 name: Microcks
 nav: Providers
 network: true
-overview: 'Microcks publishes 6 APIs on the [APIs.io](https://apis.io/) network, including config API, job API, metrics API, and 3 more. Tagged areas include API Testing, Cloud-Native, DevOps, Mocking, and Open-Source.
+overview: 'Microcks publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Config API, Job API, Metrics API, and 3 more. Tagged areas include API Testing, Cloud-Native, DevOps, Mocking, and Open Source.
 
 
-  Microcks'' developer surface includes authentication, developer portal, documentation, engineering blog, and 8 more developer resources.'
+  Microcks'' developer surface includes authentication, developer portal, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Microcks Plans Pricing
   plan_count: 3
@@ -189,9 +194,9 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: thin
-  composite: 29.7
+  composite: 29.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -201,11 +206,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 51.1
+    contract_quality: 46.3
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 56.7
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
@@ -213,8 +218,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -235,6 +246,6 @@ tags:
 - Cloud-Native
 - DevOps
 - Mocking
-- Open-Source
+- Open Source
 website: https://www.microcks.io/
 ---

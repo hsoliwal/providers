@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -70,7 +70,7 @@ modified: '2026-07-20'
 name: Proteinea
 nav: Providers
 network: true
-overview: 'Proteinea is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Artificial Intelligence, Machine-Learning, and Protein Engineering.
+overview: 'Proteinea is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Artificial Intelligence, Machine Learning, and Protein Engineering.
 
 
   Proteinea''s developer surface includes support and 5 more developer resources.'
@@ -91,10 +91,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - egypt
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
@@ -104,9 +106,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -123,12 +125,12 @@ tags:
 - Company
 - Biotechnology
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Protein Engineering
 - Drug Discovery
 - Antibodies
 - Computational Biology
-- Open-Source
+- Open Source
 - Life Sciences
 website: https://proteinea.com
 ---

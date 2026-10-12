@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -193,7 +193,7 @@ overview: 'DeepEval is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 2
 score:
   band: emerging
-  composite: 25.1
+  composite: 24.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -205,13 +205,19 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 52.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 25.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -245,7 +251,7 @@ tags:
 - CI/CD
 - Pytest
 - Python
-- Open-Source
+- Open Source
 - Apache 2.0
 - MCP
 website: https://www.confident-ai.com

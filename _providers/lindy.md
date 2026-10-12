@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Lindy's callable surface. There is no public REST API and no published OpenAPI. The one documented HTTP endpoint is an inbound webhook trigger at https://public.lindy.ai/api/v1/webhooks/[unique-id], a
@@ -216,7 +216,7 @@ modified: '2026-08-29'
 name: Lindy
 nav: Providers
 network: true
-overview: 'Lindy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, AI Automation, Agentic AI, MCP, and Workflow-Automation.
+overview: 'Lindy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, AI Automation, MCP, Workflow Automation, and Virtual Assistant.
 
 
   The Lindy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -234,7 +234,7 @@ rate_limits:
   slug: lindy-rate-limits
 score:
   band: strong
-  composite: 56.5
+  composite: 58.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 52.0
@@ -246,17 +246,23 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 56.5
+  previous_composite: 58.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -284,13 +290,13 @@ slug: lindy
 tags:
 - AI Agents
 - AI Automation
-- Agentic AI
 - MCP
-- Workflow-Automation
+- Workflow Automation
 - Virtual Assistant
 - Productivity
 - Email
 - Meetings
 - Slack
+- A2A
 website: https://www.lindy.ai
 ---

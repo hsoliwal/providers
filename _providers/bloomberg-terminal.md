@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The Bloomberg Open API (BLPAPI) enables programmatic access to Bloomberg Terminal data from applications running on the same machine or connecting via Bloomberg's network. Provides real-time data subs
@@ -161,7 +161,7 @@ rate_limits:
   slug: bloomberg-terminal-rate-limits
 score:
   band: emerging
-  composite: 23.5
+  composite: 23.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -175,17 +175,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 23.5
+  previous_composite: 23.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 3
@@ -46,87 +46,87 @@ agentic_access:
   summary_line: 83 operations · 42 acting · 3 human-in-the-loop
 api_count: 2
 apis:
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Alerts API from PydanticAI — 2 operation(s) for alerts.
   name: PydanticAI Alerts API
   slug: pydantic-ai-alerts-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The API Keys API from PydanticAI — 2 operation(s) for api keys.
   name: PydanticAI API Keys API
   slug: pydantic-ai-api-keys-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Audit Logs API from PydanticAI — 2 operation(s) for audit logs.
   name: PydanticAI Audit Logs API
   slug: pydantic-ai-audit-logs-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Billing API from PydanticAI — 1 operation(s) for billing.
   name: PydanticAI Billing API
   slug: pydantic-ai-billing-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Channels API from PydanticAI — 2 operation(s) for channels.
   name: PydanticAI Channels API
   slug: pydantic-ai-channels-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Dashboards API from PydanticAI — 2 operation(s) for dashboards.
   name: PydanticAI Dashboards API
   slug: pydantic-ai-dashboards-api
-- baseURL: https://pydantic.dev
-  baseurl_source: declared
+- baseURL: https://pydantic.dev/api/v1
+  baseurl_source: spec
   description: The discovery API from PydanticAI — 1 operation(s) for discovery.
-  name: PydanticAI discovery API
+  name: PydanticAI Discovery API
   slug: pydantic-ai-discovery-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Group Mappings API from PydanticAI — 2 operation(s) for group mappings.
   name: PydanticAI Group Mappings API
   slug: pydantic-ai-group-mappings-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Instance API from PydanticAI — 3 operation(s) for instance.
   name: PydanticAI Instance API
   slug: pydantic-ai-instance-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Invitations API from PydanticAI — 1 operation(s) for invitations.
   name: PydanticAI Invitations API
   slug: pydantic-ai-invitations-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Members API from PydanticAI — 2 operation(s) for members.
   name: PydanticAI Members API
   slug: pydantic-ai-members-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Organizations API from PydanticAI — 3 operation(s) for organizations.
   name: PydanticAI Organizations API
   slug: pydantic-ai-organizations-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Projects API from PydanticAI — 16 operation(s) for projects.
   name: PydanticAI Projects API
   slug: pydantic-ai-projects-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The SCIM API from PydanticAI — 8 operation(s) for scim.
   name: PydanticAI SCIM API
   slug: pydantic-ai-scim-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Usage API from PydanticAI — 6 operation(s) for usage.
   name: PydanticAI Usage API
   slug: pydantic-ai-usage-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The Variables API from PydanticAI — 2 operation(s) for variables.
   name: PydanticAI Variables API
   slug: pydantic-ai-variables-api
-- baseURL: https://pydantic.dev
+- baseURL: https://logfire-us.pydantic.dev/api
   baseurl_source: declared
   description: The OAuth API from PydanticAI — 6 operation(s) for oauth.
   name: PydanticAI O Auth API
@@ -239,6 +239,11 @@ collections:
   name: Pydantic API Discovery Alerts Variables API
   slug: open-pydantic-ai-variables-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pydantic-ai/refs/heads/main/capabilities/pydantic-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pydantic-ai-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -403,7 +408,7 @@ overview: 'PydanticAI publishes 17 APIs on the [APIs.io](https://apis.io/) netwo
   The PydanticAI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  PydanticAI''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, support, and 22 more developer resources.'
+  PydanticAI''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, support, and 23 more developer resources.'
 plans:
 - name: Pydantic Ai Plans Pricing
   plan_count: 4
@@ -431,22 +436,22 @@ scopes:
   summary_line: 38 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.1
+  composite: 54.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 86.3
+    artifact_dirs: 19
+    catalog_earned: 77.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    catalog_gap: 37.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 66.9
+    access_clarity: 54.7
+    contract_governance: 23.5
+    contract_quality: 61.1
     developer_ergonomics: 48.8
-    discoverability: 68.5
-    operational_transparency: 65.8
+    discoverability: 57.1
+    operational_transparency: 62.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
@@ -456,7 +461,7 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 55.1
+  previous_composite: 54.5
   provenance:
     agentic_access: derived
     contracts:
@@ -464,8 +469,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -502,5 +513,6 @@ tags:
 - Gemini
 - Observability
 - Framework
+- A2A
 website: https://pydantic.dev/
 ---

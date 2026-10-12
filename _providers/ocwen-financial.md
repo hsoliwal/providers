@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -52,7 +52,7 @@ modified: '2026-04-28'
 name: Ocwen Financial
 nav: Providers
 network: true
-overview: Ocwen Financial is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Mortgage, Mortgage Servicing, and Reverse Mortgage.
+overview: Ocwen Financial is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Mortgage, Mortgage Servicing, and Reverse Mortgage.
 press:
 - date: ''
   title: 'Industry Watch: Loan Factory debuts a new AI application ...'
@@ -72,7 +72,7 @@ press:
 random_paper: 0
 score:
   band: minimal
-  composite: 3.2
+  composite: 0.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 17.0
@@ -86,7 +86,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 31.5
+    discoverability: 30.4
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -94,9 +94,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 3.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 0.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -104,7 +110,7 @@ score:
     reason: no_specs
 slug: ocwen-financial
 tags:
-- Financial-Services
+- Financial Services
 - Mortgage
 - Mortgage Servicing
 - Reverse Mortgage

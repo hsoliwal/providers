@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Create and manage shipments and receive status-based data updates, including risk summaries, driver details and next-delivery insights. Marketed as part of Overhaul's tiered API subscription. No publi
@@ -140,7 +140,7 @@ overview: 'Overhaul publishes 5 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 12
 score:
   band: emerging
-  composite: 21.7
+  composite: 21.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 40.0
@@ -154,13 +154,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 21.7
+  previous_composite: 21.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: REST API for sending multi-channel campaigns (rich push notifications, email, SMS, web push), creating smart deep links, managing a media library, and logging user events/purchases into the Appgain CD
@@ -239,7 +239,7 @@ rate_limits:
   slug: appgain-rate-limits
 score:
   band: thin
-  composite: 38.2
+  composite: 36.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -251,11 +251,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 75.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 38.2
+  previous_composite: 36.7
   provenance:
     conformance: derived
     mcp: derived
@@ -265,9 +265,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

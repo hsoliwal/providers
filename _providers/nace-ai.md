@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -48,12 +48,12 @@ apis:
 - baseURL: https://ndi-api.nace.ai/api/v1
   baseurl_source: declared
   description: The health API from Nace Ai — 1 operation(s) for health.
-  name: Nace Ai health API
+  name: Nace Ai Health API
   slug: nace-ai-health-api
 - baseURL: https://ndi-api.nace.ai/api/v1
   baseurl_source: declared
   description: The public-api API from Nace Ai — 12 operation(s) for public-api.
-  name: Nace Ai public-api
+  name: Nace Ai Public API
   slug: nace-ai-public-api-api
 artifact_total: 10
 collections:
@@ -162,14 +162,14 @@ description: 'Nace.AI builds specialized AI models and agents that run enterpris
 image: https://nace.ai
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 6 tools listed.
   name: NDI MCP Server
   slug: ndi-mcp-server
 modified: '2026-09-16'
 name: Nace Ai
 nav: Providers
 network: true
-overview: 'Nace Ai publishes 2 APIs on the [APIs.io](https://apis.io/) network: health API and public-api. Tagged areas include Company, Artificial Intelligence, Document Intelligence, Document Processing, and Data Extraction.
+overview: 'Nace Ai publishes 2 APIs on the [APIs.io](https://apis.io/) network: Health API and Public API. Tagged areas include Company, Artificial Intelligence, Document Intelligence, Document Processing, and Data Extraction.
 
 
   Nace Ai''s developer surface includes authentication, engineering blog, signup flow, and 16 more developer resources.'
@@ -180,7 +180,7 @@ rate_limits:
   slug: nace-ai-rate-limits
 score:
   band: developing
-  composite: 42.8
+  composite: 42.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -192,11 +192,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 31.6
-  previous_composite: 42.8
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -207,8 +207,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -231,7 +237,7 @@ tags:
 - Document Processing
 - Data Extraction
 - OCR
-- Machine-Learning
+- Machine Learning
 - Enterprise Automation
 - MCP
 website: https://nace.ai

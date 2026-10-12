@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Application Policy Infrastructure Controller REST API is the single programmatic interface into the ACI Management Information Tree. GET, POST and DELETE against /api/mo/<distinguished-name>.json '
@@ -260,7 +260,7 @@ modified: '2026-08-19'
 name: Cisco ACI
 nav: Providers
 network: true
-overview: 'Cisco ACI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include SDN, Data-Center, Networking, Fabric, and Automation.
+overview: 'Cisco ACI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include SDN, Data Center, Networking, Fabric, and Automation.
 
 
   The Cisco ACI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -277,8 +277,8 @@ rate_limits:
   name: Cisco Aci Rate Limits
   slug: cisco-aci-rate-limits
 score:
-  band: developing
-  composite: 53.7
+  band: strong
+  composite: 55.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -290,17 +290,23 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 88.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 65.8
-  previous_composite: 53.7
+  previous_composite: 55.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -327,7 +333,7 @@ security:
 slug: cisco-aci
 tags:
 - SDN
-- Data-Center
+- Data Center
 - Networking
 - Fabric
 - Automation

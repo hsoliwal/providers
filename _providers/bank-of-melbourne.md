@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -172,14 +172,14 @@ modified: '2026-07-21'
 name: Bank of Melbourne
 nav: Providers
 network: true
-overview: 'Bank of Melbourne publishes 5 APIs on the [APIs.io](https://apis.io/) network, including CDR Product Reference Data API, CDR Accounts & Balances API, CDR Transactions API, and 2 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Bank of Melbourne publishes 5 APIs on the [APIs.io](https://apis.io/) network, including CDR Product Reference Data API, CDR Accounts & Balances API, CDR Transactions API, and 2 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Bank of Melbourne''s developer surface includes documentation, authentication, and 17 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 29.9
+  composite: 27.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -191,9 +191,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -202,7 +202,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 29.9
+  previous_composite: 27.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -213,9 +213,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 48.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -236,7 +236,7 @@ security:
   summary_line: disclosure policy published
 slug: bank-of-melbourne
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

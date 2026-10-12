@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The NTIS National Technical Reports Library (NTRL) offers online, free and open access to authenticated government technical reports and documents.
@@ -70,7 +70,7 @@ modified: '2026-04-28'
 name: National Technical Information Service
 nav: Providers
 network: true
-overview: 'National Technical Information Service publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Information, and Technical.
+overview: 'National Technical Information Service publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Information, and Technical.
 
 
   National Technical Information Service''s developer surface includes developer portal and 3 more developer resources.'
@@ -85,7 +85,7 @@ rate_limits:
   slug: national-technical-information-service-rate-limits
 score:
   band: emerging
-  composite: 11.4
+  composite: 11.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 36.0
@@ -99,17 +99,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 11.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 11.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -123,7 +128,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: national-technical-information-service
 tags:
-- Federal-Government
+- Federal Government
 - Information
 - Technical
 website: https://www.ntis.gov/

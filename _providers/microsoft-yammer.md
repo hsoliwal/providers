@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -192,7 +192,7 @@ modified: '2026-04-28'
 name: Microsoft Yammer
 nav: Providers
 network: true
-overview: 'Microsoft Yammer publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Files API, Groups API, Messages API, and 6 more. Tagged areas include Enterprise Social, Microsoft, Social Networking, Viva Engage, and Yammer.
+overview: 'Microsoft Yammer publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Files API, Groups API, Messages API, and 7 more. Tagged areas include Enterprise Social, Microsoft, Social Network, Viva Engage, and Yammer.
 
 
   Microsoft Yammer''s developer surface includes authentication, developer portal, support, and 9 more developer resources.'
@@ -212,7 +212,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.3
+  composite: 34.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.9
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 34.3
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -236,8 +236,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -256,7 +262,7 @@ slug: microsoft-yammer
 tags:
 - Enterprise Social
 - Microsoft
-- Social Networking
+- Social Network
 - Viva Engage
 - Yammer
 website: https://www.microsoft.com/

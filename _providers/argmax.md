@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A local transcription server for macOS that is API-compatible with the Deepgram Speech-to-Text (Live) API, exposing a WebSocket streaming interface (default ws://localhost:50060) driven by the officia
@@ -148,14 +148,14 @@ modified: '2026-07-18'
 name: Argmax
 nav: Providers
 network: true
-overview: 'Argmax publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Artificial Intelligence, Machine-Learning, and On-Device Inference.
+overview: 'Argmax publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Artificial Intelligence, Machine Learning, and On-Device Inference.
 
 
   Argmax''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, changelog, sandbox, and 16 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 34.3
+  composite: 34.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -169,11 +169,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 34.2
-  previous_composite: 34.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 34.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,13 +200,13 @@ tags:
 - Company
 - Enterprise
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - On-Device Inference
 - Speech Recognition
 - Speech-to-Text
 - Transcription
 - Speaker Diarization
-- Image-Generation
+- Image Generation
 - SDK
 - Apple Silicon
 - Edge AI

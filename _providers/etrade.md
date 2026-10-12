@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -133,7 +133,7 @@ modified: '2026-09-16'
 name: Etrade
 nav: Providers
 network: true
-overview: 'Etrade publishes 3 APIs on the [APIs.io](https://apis.io/) network: Accounts API, Market API, and Order API. Tagged areas include Bonds, Brokerage, Financial, Futures, and Options.
+overview: 'Etrade publishes 3 APIs on the [APIs.io](https://apis.io/) network: Accounts API, Market API, and Order API. Tagged areas include Bonds, Brokerage, Finance, Futures, and Options.
 
 
   Etrade''s developer surface includes authentication, developer portal, documentation, signup flow, and 6 more developer resources.'
@@ -164,7 +164,7 @@ rate_limits:
   slug: etrade-rate-limits
 score:
   band: thin
-  composite: 39.2
+  composite: 37.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -176,11 +176,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 39.2
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -193,9 +193,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 43.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -214,10 +214,11 @@ slug: etrade
 tags:
 - Bonds
 - Brokerage
-- Financial
+- Finance
 - Futures
 - Options
 - Stocks
 - Trading
+- Financial Services
 website: https://etrade.com
 ---

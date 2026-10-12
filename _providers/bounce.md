@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -70,6 +70,10 @@ created: '2026-07-17'
 description: 'Bounce operates the world''s largest luggage storage network, connecting travelers with more than 32,000 vetted partner locations across 4,000+ cities worldwide where they can securely drop off bags, luggage, and packages by the hour or day and explore hands-free. Founded by Cody Candee in 2018, the company runs a two-sided marketplace: travelers book storage in advance or on the spot through the Bounce web and mobile apps, while local shops, hotels, and businesses earn revenue as storage partners. Bounce also offers luggage-delivery between hotels, airports, and city locations, a hotel solutions program, and an affiliate program. It is backed by Andreessen Horowitz, General Catalyst, and Sapphire. This profile currently tracks the company''s public web surface; Bounce publishes an llms.txt but no public developer API.'
 image: https://bounce.com/static/thumbnail.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bounce.com over HTTP.
+  name: Bounce MCP Server
+  slug: bounce
 modified: '2026-07-18'
 name: Bounce
 nav: Providers
@@ -81,7 +85,7 @@ overview: 'Bounce is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 20
 score:
   band: emerging
-  composite: 11.4
+  composite: 11.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -95,13 +99,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 11.4
+  previous_composite: 11.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

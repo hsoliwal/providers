@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the Alyce corporate gifting platform enabling programmatic gift sending, recipient tracking, budget management, marketplace configuration, and CRM workflow automation. Supports integratio
@@ -130,7 +130,7 @@ rate_limits:
   slug: alyce-rate-limits
 score:
   band: emerging
-  composite: 22.2
+  composite: 21.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 72.0
@@ -144,11 +144,17 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
-  previous_composite: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

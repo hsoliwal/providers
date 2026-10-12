@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Core CDP API v2 for onchain wallets, payments, trading, faucets, policies, and JSON-RPC access, authenticated with short-lived JWTs.
@@ -195,9 +195,9 @@ description: Coinbase Global, Inc. is a publicly traded cryptocurrency platform 
 image: https://avatars.githubusercontent.com/u/1885080?s=200&v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 6 tools listed.
   name: Coinbase Global MCP Server
-  slug: coinbase-global-mcp-server
+  slug: cdp
 modified: '2026-07-18'
 name: Coinbase Global
 nav: Providers
@@ -212,7 +212,7 @@ overview: 'Coinbase Global publishes 6 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 10
 score:
   band: developing
-  composite: 45.8
+  composite: 44.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 52.6
-  previous_composite: 45.8
+  previous_composite: 44.0
   provenance:
     mcp: first-party
     skills: first-party
@@ -237,9 +237,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,7 +269,7 @@ tags:
 - Trading
 - Onchain
 - Web3
-- Financial-Services
+- Financial Services
 - Developer Platform
 - AI Agents
 - Stablecoins

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -96,14 +96,14 @@ modified: '2026-07-19'
 name: Link Cell Therapies
 nav: Providers
 network: true
-overview: 'Link Cell Therapies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Life Sciences, Cell Therapy, and Cart.
+overview: 'Link Cell Therapies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Life Sciences, Cell Therapy, and CAR-T.
 
 
   Link Cell Therapies'' developer surface includes product news and 11 more developer resources.'
 random_paper: 9
 score:
   band: minimal
-  composite: 6.9
+  composite: 7.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -117,17 +117,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 6.9
+  previous_composite: 7.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,7 +145,7 @@ tags:
 - Biotechnology
 - Life Sciences
 - Cell Therapy
-- Cart
+- CAR-T
 - Oncology
 - Immunotherapy
 - Precision Medicine

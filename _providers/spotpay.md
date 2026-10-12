@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/spotpay/refs/heads/main/security/spotpay-domain-security.yml
@@ -53,6 +53,10 @@ created: '2026-07-17'
 description: SpotPay is a global neobank that operates as a stablecoin-based global bank account, letting users hold, send, receive, and spend money anywhere in the world from a single identity-verified digital wallet without a traditional bank account. The service settles payments on blockchain rails using stablecoins and pairs the wallet with the SpotPay Calypso debit card plus Apple Pay and Google Pay support, and lets merchants accept QR-code payments with instant settlement. Founded by Zsika Phillip (CEO, ex-Google) and Thomas Cesare-Herriau (CTO, ex-Brex), SpotPay is a Y Combinator Winter 2026 company operating across 40+ countries and registered as a Money Services Business with FinCEN in the United States. As of this enrichment pass SpotPay is a consumer mobile-app product with no public API, developer portal, SDKs, or OpenAPI surface; api.spotpay.ai serves only the app's private backend.
 image: https://www.spotpay.ai/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.spotpay.ai over HTTP.
+  name: SpotPay MCP Server
+  slug: spotpay
 modified: '2026-07-21'
 name: SpotPay
 nav: Providers
@@ -64,7 +68,7 @@ overview: 'SpotPay is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 14
 score:
   band: minimal
-  composite: 4.2
+  composite: 5.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -78,9 +82,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 4.2
+  previous_composite: 5.7
   provenance:
     mcp: first-party
   regulatory:
@@ -88,9 +92,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

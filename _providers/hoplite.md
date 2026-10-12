@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Hoplite platform API at api.hoplite.sh. Documented through the developer docs (no public OpenAPI published as of this profiling). Surfaces include model-provider discovery (GET /api/model-provider
@@ -145,7 +145,7 @@ layout: provider
 mcp_servers:
 - description: Hoplite operates its own official hosted Model Context Protocol server so an MCP client (Claude Code, Cursor, or any MCP client) can list projects, start Hoplite agent threads, and call reviewed Hopli
   name: Hoplite MCP Server
-  slug: hoplite-mcp-server
+  slug: hoplite
 modified: '2026-07-19'
 name: Hoplite
 nav: Providers
@@ -160,7 +160,7 @@ overview: 'Hoplite publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 9
 score:
   band: thin
-  composite: 36.4
+  composite: 35.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -172,16 +172,22 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 36.4
+  previous_composite: 35.8
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

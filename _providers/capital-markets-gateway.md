@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Schema-driven GraphQL access to CMG's live and historical ECM dataset. Per CMG's published FAQ the feed lets teams "query specific fields across deals, participants, terms and activity through a singl
@@ -134,7 +134,7 @@ modified: '2026-08-09'
 name: Capital Markets Gateway
 nav: Providers
 network: true
-overview: 'Capital Markets Gateway publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Capital Markets, Equity Capital Markets, and Market Data.
+overview: 'Capital Markets Gateway publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Capital Markets, Equity Capital Markets, and Market Data.
 
 
   The Capital Markets Gateway catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -144,7 +144,7 @@ overview: 'Capital Markets Gateway publishes 3 APIs on the [APIs.io](https://api
 random_paper: 5
 score:
   band: thin
-  composite: 28.9
+  composite: 28.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 35.0
@@ -156,11 +156,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 7.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 10.5
-  previous_composite: 28.9
+  previous_composite: 28.0
   provenance:
     conformance: first-party
   regulatory:
@@ -168,9 +168,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 31.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,7 +184,7 @@ security:
 slug: capital-markets-gateway
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Capital Markets
 - Equity Capital Markets
 - Market Data

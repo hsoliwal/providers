@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 1
@@ -301,12 +301,12 @@ layout: provider
 mcp_servers:
 - description: CANDIDATE MCP tool surface for CMS Energy. Neither CMS Energy, Consumers Energy, nor the platform operating its Green Button Connect My Data program publishes an MCP server. A third-party MCP catalogu
   name: CMS Energy MCP Server
-  slug: cms-energy-mcp-server
+  slug: cms-energy-mcp-yml
 modified: '2026-09-06'
 name: CMS Energy
 nav: Providers
 network: true
-overview: 'CMS Energy publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authorizations API, Bills API, GreenButton API, and 5 more. Tagged areas include Electric, Energy, Green Button, Michigan, and Natural Gas.
+overview: 'CMS Energy publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authorizations API, Bills API, GreenButton API, and 6 more. Tagged areas include Electric, Energy, Green Button, Michigan, and Natural Gas.
 
 
   The CMS Energy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -345,7 +345,7 @@ scopes:
   summary_line: 10 scopes
 score:
   band: strong
-  composite: 60.2
+  composite: 54.8
   coverage:
     artifact_dirs: 28
     catalog_earned: 60.0
@@ -357,11 +357,11 @@ score:
   facets:
     access_clarity: 64.5
     contract_governance: 0.0
-    contract_quality: 43.7
+    contract_quality: 40.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 60.2
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -377,9 +377,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 89.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 54.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

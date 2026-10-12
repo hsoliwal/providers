@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -342,7 +342,7 @@ rate_limits:
   slug: uk-power-networks-rate-limits
 score:
   band: strong
-  composite: 66.0
+  composite: 61.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 50.0
@@ -354,9 +354,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 33.3
-    contract_quality: 59.9
+    contract_quality: 54.2
     developer_ergonomics: 87.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -366,7 +366,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 66.0
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -382,9 +382,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

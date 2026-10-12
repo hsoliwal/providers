@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -113,7 +113,7 @@ modified: '2026-09-12'
 name: AgileSoDA
 nav: Providers
 network: true
-overview: 'AgileSoDA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Machine-Learning, and Enterprise Software.
+overview: 'AgileSoDA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Machine Learning, and Enterprise Software.
 
 
   AgileSoDA''s developer surface includes documentation, support, product news, and 11 more developer resources.'
@@ -128,7 +128,7 @@ rate_limits:
   slug: agilesoda-rate-limits
 score:
   band: minimal
-  composite: 5.5
+  composite: 6.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -142,7 +142,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -151,15 +151,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 5.5
+  previous_composite: 6.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -175,7 +175,7 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Machine-Learning
+- Machine Learning
 - Enterprise Software
 - Document Processing
 - Optical Character Recognition

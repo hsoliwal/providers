@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: true
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.6
-  scored_at: '2026-09-20'
+  score: 47.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -78,7 +78,7 @@ apis:
   description: The Prequalification API from AutoFi — 1 operation(s) for prequalification.
   name: AutoFi Prequalification API
   slug: autofi-prequalification-api
-artifact_total: 19
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Autofi Webhooks
@@ -254,17 +254,14 @@ description: AutoFi ("The Sales Momentum Company") is an AI-powered automotive c
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/autofi.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: AutoFi serves a live, OAuth-protected Model Context Protocol server from the WordPress installation that runs autofi.com. It was discovered through the RFC 9728 protected-resource metadata document at
   name: AutoFi MCP Server
-  slug: autofi-mcp-server
-- description: ''
-  name: AutoFi MCP Server
-  slug: autofi-mcp-server-2
+  slug: autofi-mcp-oauth-server
 modified: '2026-08-14'
 name: AutoFi
 nav: Providers
 network: true
-overview: 'AutoFi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Calculate Payment API, Dealers API, and 3 more. Tagged areas include Company, Automotive, Fintech, Digital Retail, and Auto Finance.
+overview: 'AutoFi publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Calculate Payment API, Dealers API, and 4 more. Tagged areas include Company, Automotive, Fintech, Digital Retail, and Auto Finance.
 
 
   The AutoFi catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -286,8 +283,8 @@ scopes:
   slug: autofi-scopes
   summary_line: 7 scopes
 score:
-  band: strong
-  composite: 56.2
+  band: developing
+  composite: 52.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -299,11 +296,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 61.8
-    developer_ergonomics: 49.4
-    discoverability: 75.9
+    contract_quality: 56.4
+    developer_ergonomics: 48.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 56.2
+  previous_composite: 52.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -312,16 +309,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

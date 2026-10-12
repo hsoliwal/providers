@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 asyncapis:
@@ -162,7 +162,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Aryaka MCP Server
-  slug: aryaka-mcp-server
+  slug: aryaka-mcp-yml
 modified: '2026-08-02'
 name: Aryaka
 nav: Providers
@@ -177,7 +177,7 @@ overview: 'Aryaka is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 17
 score:
   band: thin
-  composite: 38.7
+  composite: 36.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -189,11 +189,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 40.5
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 15.8
-  previous_composite: 38.7
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -208,9 +208,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

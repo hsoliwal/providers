@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-09-20'
+  score: 24.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -295,7 +295,7 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: developing
-  composite: 48.3
+  composite: 43.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -307,9 +307,9 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 33.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -318,7 +318,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.3
+  previous_composite: 43.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -340,9 +340,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 73.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The OpenID Connect authorization server behind Troy Medicare's secure provider portal, which contracted providers use for member eligibility verification, claim status and payment history. Its discove
@@ -146,12 +146,12 @@ rate_limits:
   slug: troy-medicare-rate-limits
 scopes:
 - name: Troy Medicare Scopes
-  scope_count: 0
+  scope_count: 35
   slug: troy-medicare-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 35 scopes
 score:
   band: thin
-  composite: 30.7
+  composite: 27.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -165,9 +165,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 30.7
+  previous_composite: 27.5
   provenance:
     conformance: first-party
   regulatory:
@@ -175,9 +175,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -204,6 +204,5 @@ tags:
 - Care Management
 - Insurance
 - Identity
-- OpenID Connect
 website: https://troymedicare.com
 ---

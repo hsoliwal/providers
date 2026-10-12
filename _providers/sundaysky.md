@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Storage-less HTTP API for real-time personalized video rendering. The caller POSTs a flat JSON object of viewer personalization fields (mapped in the SundaySky Studio data library) to the player-sessi
@@ -187,7 +187,7 @@ rate_limits:
   slug: sundaysky-rate-limits
 score:
   band: thin
-  composite: 31.5
+  composite: 33.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -201,14 +201,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 31.5
+  previous_composite: 33.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

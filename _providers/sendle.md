@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: verified
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.5
-  scored_at: '2026-09-20'
+  score: 32.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -231,7 +231,8 @@ coverage:
   reason: defunct
   state: none
 created: '2026-05-25'
-description: RETIRED — Sendle ceased operations on 11 January 2026 and the company entered liquidation; the API host, developer hub, sandbox and status page have all been withdrawn from DNS and returned NXDOMAIN when probed on 26 August 2026. Sendle was a 100%-carbon-neutral parcel shipping service built for small businesses, offering door-to-door delivery in Australia, the United States and Canada plus international shipping from AU and US to ~180 countries. Its API exposed quoting, order creation, label retrieval, tracking, USPS SCAN-Form shipping manifests and per-parcel tracking webhooks over HTTP Basic Authentication, with an Idempotency-Key header on order creation. The five OpenAPI definitions in this repository are retained as an archival record of a contract that can no longer be called.
+description: Sendle is a parcel delivery service built for small businesses, best known for 100%-carbon-neutral door-to-door shipping in Australia, the United States and Canada. The original operator, Sendle Pty Ltd, ceased trading in January 2026 and entered liquidation, and its API host, developer hub, sandbox and status page were withdrawn from DNS. In July 2026 McKenna Worldwide Services, an Australian logistics company with Quantium Solutions heritage, bought the Sendle brand, domain names and trademarks from the liquidators (not the company or its debts) and relaunched it, debuting the new Sendle at Online Retailer in Sydney on 22-23 July with operations expected by September 2026; Quantium Solutions handles the deliveries behind the customer-facing brand. As of 3 October 2026 www.sendle.com answers again, but api.sendle.com and developers.sendle.com still do not resolve, so no API from the relaunched Sendle has been confirmed. The five OpenAPI definitions in this repository describe
+  the original operator's API (quoting, orders, labels, tracking, USPS SCAN-Form manifests and tracking webhooks over HTTP Basic Authentication) and are kept as the record of that contract.
 examples:
 - key_count: 2
   name: Sendle Create Order Example
@@ -264,7 +265,7 @@ modified: '2026-08-26'
 name: Sendle
 nav: Providers
 network: true
-overview: 'Sendle publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Orders API, Products & Quoting API, Tracking API, and 2 more. Tagged areas include Shipping, Logistics, Last Mile, Parcel, and E-Commerce.
+overview: 'Sendle publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Orders API, Products & Quoting API, Tracking API, and 2 more. Tagged areas include Shipping, Logistics, Last Mile Delivery, Parcel, and E-Commerce.
 
 
   The Sendle catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -304,21 +305,21 @@ rules:
   slug: sendle-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 46.3
+  composite: 44.6
   coverage:
     artifact_dirs: 29
-    catalog_earned: 90.5
+    catalog_earned: 89.4
     catalog_earned_first_party: 24.0
-    catalog_gap: 24.5
+    catalog_gap: 25.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.7
   facets:
     access_clarity: 39.5
-    contract_governance: 33.3
-    contract_quality: 72.4
+    contract_governance: 31.8
+    contract_quality: 66.7
     developer_ergonomics: 17.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -340,8 +341,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -360,7 +367,7 @@ slug: sendle
 tags:
 - Shipping
 - Logistics
-- Last Mile
+- Last Mile Delivery
 - Parcel
 - E-Commerce
 - Carbon Neutral

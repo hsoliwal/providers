@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST management API for the Skyvia platform. Programmatically read and control account users and invitations, workspaces and workspace membership, on-premise agents, data-source connections, data inte
@@ -52,7 +52,7 @@ apis:
 - description: Inbound webhook surface for Skyvia Automation. Each automation with a Webhook trigger is assigned a Skyvia-issued base URL plus a user-defined event name; an external application POSTs its event paylo
   name: Skyvia Automation Webhook Triggers
   slug: skyvia-automation-webhook-triggers
-artifact_total: 21
+artifact_total: 20
 asyncapis:
 - description: ''
   name: Skyvia Automation Webhooks
@@ -239,17 +239,14 @@ description: 'Skyvia is a no-code cloud data platform from Devart covering five 
 image: https://skyvia.com/assets/img/meta-img/meta-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Skyvia Connect MCP endpoints are a product feature, not a single fixed server: a customer publishes any one of their Skyvia connections (200+ cloud apps and databases) as an MCP endpoint, and Skyvia s'
   name: Devart.Skyvia.Connect.Mcp
-  slug: devartskyviaconnectmcp
-- description: ''
-  name: Skyvia MCP Server
-  slug: skyvia-mcp-server
+  slug: devart-skyvia-connect-mcp
 modified: '2026-08-12'
 name: Skyvia
 nav: Providers
 network: true
-overview: 'Skyvia publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Data Integration, iPaaS, ETL, ELT, and Data Replication.
+overview: 'Skyvia publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Public API, and 3 more. Tagged areas include Data Integration, iPaaS, ETL, ELT, and Data Replication.
 
 
   The Skyvia catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -272,7 +269,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.0
+  composite: 47.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -284,11 +281,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 45.0
+  previous_composite: 47.8
   provenance:
     conformance: first-party
     contracts:
@@ -298,8 +295,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -328,12 +331,12 @@ tags:
 - Cloud Backup
 - OData
 - SQL
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 - Connectors
 - Data Management
 - MCP
-- agent-native
+- Agent-Native
 - Data Access
 website: https://skyvia.com/
 ---

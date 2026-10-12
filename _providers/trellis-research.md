@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST Data API (V2, May 2024) for programmatic access to U.S. state and federal trial court data — Search (Boolean/query over Cases, Documents, Rulings with filtering and sorting), Rulings, Judges, Usa
@@ -158,7 +158,7 @@ overview: 'Trellis Research publishes 1 API on the [APIs.io](https://apis.io/) n
 random_paper: 7
 score:
   band: developing
-  composite: 40.2
+  composite: 40.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -170,16 +170,22 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 40.2
+  previous_composite: 40.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

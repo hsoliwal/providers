@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 37.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -253,9 +253,9 @@ description: Barogo (바로고) is a South Korean last-mile delivery platform fo
 image: https://www.barogo.com/images/common/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 1 tool listed.
   name: Barogo MCP Server
-  slug: barogo-mcp-server
+  slug: gorela-developer-mcp-server
 modified: '2026-08-06'
 name: Barogo
 nav: Providers
@@ -270,7 +270,7 @@ overview: 'Barogo publishes 5 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 18
 score:
   band: thin
-  composite: 38.0
+  composite: 37.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -282,9 +282,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 71.1
+    contract_quality: 65.1
     developer_ergonomics: 39.9
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -293,7 +293,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 38.0
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -304,8 +304,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

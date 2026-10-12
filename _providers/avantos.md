@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,14 +69,14 @@ modified: '2026-07-18'
 name: Avantos
 nav: Providers
 network: true
-overview: 'Avantos is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Financial-Services, Wealth Management, and Client Management.
+overview: 'Avantos is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Financial Services, Wealth Management, and Client Management.
 
 
   Avantos'' developer surface includes support and 5 more developer resources.'
 random_paper: 16
 score:
-  band: emerging
-  composite: 11.2
+  band: minimal
+  composite: 10.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,11 +90,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -114,7 +120,7 @@ slug: avantos
 tags:
 - Company
 - Ai Ml
-- Financial-Services
+- Financial Services
 - Wealth Management
 - Client Management
 - Onboarding

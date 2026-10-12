@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -53,6 +53,10 @@ created: '2026-07-17'
 description: Sandbar is a consumer hardware and AI company behind Stream, a private voice ring and conversational notes app. Worn on the finger, Stream pairs a discreet private microphone, a glass touchpad, and silent haptics with an on-device "Inner Voice" assistant so people can capture notes, reminders, and todos, dictate speech-to-text across any iOS or Mac app, and think aloud without reaching for a phone. Backed by Kindred Ventures and True Ventures, Sandbar is a preorder-stage consumer product; it publishes a marketing site, an About/Us page, and a Careers page, but no public developer portal, API, or SDK surface was found during enrichment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sandbar.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.sandbar.com over HTTP.
+  name: Sandbar MCP Server
+  slug: sandbar
 modified: '2026-07-21'
 name: Sandbar
 nav: Providers
@@ -61,7 +65,7 @@ overview: Sandbar is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 5
 score:
   band: minimal
-  composite: 7.1
+  composite: 6.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -75,13 +79,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 7.1
+  previous_composite: 6.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

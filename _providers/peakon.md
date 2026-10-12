@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -115,6 +115,11 @@ collections:
   name: Peakon Actions Segments API
   slug: open-peakon-segments-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/peakon/refs/heads/main/capabilities/peakon-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/peakon-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -222,13 +227,13 @@ network: true
 overview: 'Peakon publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Answers API, Audits API, and 5 more. Tagged areas include Company, Software-as-a-Service, Employee Engagement, Employee Experience, and Human Resources.
 
 
-  Peakon''s developer surface includes documentation, API reference, getting-started guide, authentication, support, and 16 more developer resources.'
+  Peakon''s developer surface includes documentation, API reference, getting-started guide, authentication, support, and 17 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 32.1
+  composite: 30.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -238,11 +243,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 48.9
+    contract_quality: 44.4
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 32.1
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -253,8 +258,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

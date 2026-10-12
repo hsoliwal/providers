@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -47,97 +47,97 @@ apis:
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiActivity API from Band AI — 1 operation(s) for agentapiactivity.
-  name: Band AI agentApiActivity API
+  name: Band AI Agent API Activity API
   slug: band-ai-agentapiactivity-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiChats API from Band AI — 2 operation(s) for agentapichats.
-  name: Band AI agentApiChats API
+  name: Band AI Agent API Chats API
   slug: band-ai-agentapichats-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiChatTasks API from Band AI — 4 operation(s) for agentapichattasks.
-  name: Band AI agentApiChatTasks API
+  name: Band AI Agent API Chat Tasks API
   slug: band-ai-agentapichattasks-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiContacts API from Band AI — 5 operation(s) for agentapicontacts.
-  name: Band AI agentApiContacts API
+  name: Band AI Agent API Contacts API
   slug: band-ai-agentapicontacts-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiContext API from Band AI — 1 operation(s) for agentapicontext.
-  name: Band AI agentApiContext API
+  name: Band AI Agent API Context API
   slug: band-ai-agentapicontext-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiEvents API from Band AI — 1 operation(s) for agentapievents.
-  name: Band AI agentApiEvents API
+  name: Band AI Agent API Events API
   slug: band-ai-agentapievents-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiIdentity API from Band AI — 1 operation(s) for agentapiidentity.
-  name: Band AI agentApiIdentity API
+  name: Band AI Agent API Identity API
   slug: band-ai-agentapiidentity-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiMemories API from Band AI — 4 operation(s) for agentapimemories.
-  name: Band AI agentApiMemories API
+  name: Band AI Agent API Memories API
   slug: band-ai-agentapimemories-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiMessages API from Band AI — 5 operation(s) for agentapimessages.
-  name: Band AI agentApiMessages API
+  name: Band AI Agent API Messages API
   slug: band-ai-agentapimessages-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiParticipants API from Band AI — 2 operation(s) for agentapiparticipants.
-  name: Band AI agentApiParticipants API
+  name: Band AI Agent API Participants API
   slug: band-ai-agentapiparticipants-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The agentApiPeers API from Band AI — 1 operation(s) for agentapipeers.
-  name: Band AI agentApiPeers API
+  name: Band AI Agent API Peers API
   slug: band-ai-agentapipeers-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiAgents API from Band AI — 3 operation(s) for humanapiagents.
-  name: Band AI humanApiAgents API
+  name: Band AI Human API Agents API
   slug: band-ai-humanapiagents-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiChats API from Band AI — 2 operation(s) for humanapichats.
-  name: Band AI humanApiChats API
+  name: Band AI Human API Chats API
   slug: band-ai-humanapichats-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiContacts API from Band AI — 8 operation(s) for humanapicontacts.
-  name: Band AI humanApiContacts API
+  name: Band AI Human API Contacts API
   slug: band-ai-humanapicontacts-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiMemories API from Band AI — 5 operation(s) for humanapimemories.
-  name: Band AI humanApiMemories API
+  name: Band AI Human API Memories API
   slug: band-ai-humanapimemories-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiMessages API from Band AI — 1 operation(s) for humanapimessages.
-  name: Band AI humanApiMessages API
+  name: Band AI Human API Messages API
   slug: band-ai-humanapimessages-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiParticipants API from Band AI — 2 operation(s) for humanapiparticipants.
-  name: Band AI humanApiParticipants API
+  name: Band AI Human API Participants API
   slug: band-ai-humanapiparticipants-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiPeers API from Band AI — 1 operation(s) for humanapipeers.
-  name: Band AI humanApiPeers API
+  name: Band AI Human API Peers API
   slug: band-ai-humanapipeers-api
 - baseURL: https://app.band.ai
   baseurl_source: declared
   description: The humanApiProfile API from Band AI — 1 operation(s) for humanapiprofile.
-  name: Band AI humanApiProfile API
+  name: Band AI Human API Profile API
   slug: band-ai-humanapiprofile-api
 artifact_total: 44
 asyncapis:
@@ -349,12 +349,12 @@ layout: provider
 mcp_servers:
 - description: Official Band MCP server for AI client integration (Claude Code, Cursor, etc.). Runs locally over stdio and connects to the Band platform. Tool availability is gated by the API key type supplied via T
   name: Band AI MCP Server
-  slug: band-ai-mcp-server
+  slug: band
 modified: '2026-07-18'
 name: Band AI
 nav: Providers
 network: true
-overview: 'Band AI publishes 19 APIs on the [APIs.io](https://apis.io/) network, including agentApiActivity API, agentApiChats API, agentApiChatTasks API, and 16 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Multi-Agent, and Agent Infrastructure.
+overview: 'Band AI publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Agent API Activity API, Agent API Chats API, Agent API Chat Tasks API, and 16 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Multi-Agent, and Agent Infrastructure.
 
 
   The Band AI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -364,7 +364,7 @@ overview: 'Band AI publishes 19 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 14
 score:
   band: developing
-  composite: 52.0
+  composite: 51.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -376,11 +376,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 61.7
+    contract_quality: 56.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 52.0
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -391,8 +391,14 @@ score:
       total: 19
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

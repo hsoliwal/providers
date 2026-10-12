@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -86,6 +86,11 @@ collections:
   name: Halliday API V2 Assets Webhooks API
   slug: open-halliday-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/halliday/refs/heads/main/capabilities/halliday-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/halliday-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -237,11 +242,11 @@ overview: 'Halliday publishes 4 APIs on the [APIs.io](https://apis.io/) network,
   The Halliday catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Halliday''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, sandbox, and 23 more developer resources.'
+  Halliday''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, sandbox, and 24 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 50.9
+  composite: 48.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -253,11 +258,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 70.9
+    contract_quality: 64.8
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 50.9
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -273,9 +278,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

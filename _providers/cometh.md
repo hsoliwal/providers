@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: ERC-4337 bundler JSON-RPC endpoint. Accepts User Operations into the mempool, estimates UserOp gas, returns a UserOp and its receipt by hash, and lists supported EntryPoint addresses. One endpoint per
@@ -181,7 +181,7 @@ rate_limits:
   slug: cometh-rate-limits
 score:
   band: thin
-  composite: 30.6
+  composite: 30.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -195,9 +195,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 30.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 30.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -206,9 +211,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

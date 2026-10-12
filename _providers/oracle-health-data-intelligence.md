@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -220,7 +220,7 @@ modified: '2026-08-27'
 name: Oracle Health Data Intelligence
 nav: Providers
 network: true
-overview: 'Oracle Health Data Intelligence publishes 1 API on the [APIs.io](https://apis.io/) network: Populations API. Tagged areas include Genomic, Health Records, Healthcare, Population Health, and Longitudinal Record.
+overview: 'Oracle Health Data Intelligence publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Populations API, and 1 more. Tagged areas include Genomic, Health Records, Healthcare, Population Health, and Longitudinal Record.
 
 
   Oracle Health Data Intelligence''s developer surface includes authentication, documentation, API reference, getting-started guide, support, sandbox, and 25 more developer resources.'
@@ -235,7 +235,7 @@ rate_limits:
   slug: oracle-health-data-intelligence-rate-limits
 score:
   band: developing
-  composite: 51.5
+  composite: 47.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -247,11 +247,11 @@ score:
   facets:
     access_clarity: 51.3
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 55.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 51.5
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -267,9 +267,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

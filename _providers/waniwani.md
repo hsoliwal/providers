@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The WaniWani AI-distribution platform and its hosted MCP server — build MCP funnels with the open-source SDK/CLI, operate environments, API keys, analytics and sessions via the OAuth 2.1 MCP server.
@@ -198,7 +198,7 @@ layout: provider
 mcp_servers:
 - description: WaniWani's own hosted MCP server for operating the WaniWani platform conversationally from Claude, Cursor, or ChatGPT (manage environments, API keys, analytics digests, session breakdowns). This is di
   name: Waniwani MCP Server
-  slug: waniwani-mcp-server
+  slug: waniwani-mcp-yml
 modified: '2026-07-21'
 name: Waniwani
 nav: Providers
@@ -215,7 +215,7 @@ scopes:
   summary_line: 25 scopes
 score:
   band: developing
-  composite: 47.0
+  composite: 43.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -229,9 +229,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 47.0
+  previous_composite: 43.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -241,9 +241,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 80.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

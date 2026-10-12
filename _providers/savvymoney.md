@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: JWT-based Single Sign-On REST API that lets a partner's online or mobile banking platform transfer an authenticated member into SavvyMoney without a second set of credentials. Publicly documented oper
@@ -170,7 +170,7 @@ modified: '2026-08-26'
 name: SavvyMoney
 nav: Providers
 network: true
-overview: 'SavvyMoney publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Credit Score, Credit Monitoring, and Financial Wellness.
+overview: 'SavvyMoney publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Credit Score, Credit Monitoring, and Financial Wellness.
 
 
   SavvyMoney''s developer surface includes documentation, support, engineering blog, signup flow, changelog, and 20 more developer resources.'
@@ -185,12 +185,12 @@ rate_limits:
   slug: savvymoney-rate-limits
 scopes:
 - name: Savvymoney Scopes
-  scope_count: 0
+  scope_count: 36
   slug: savvymoney-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 36 scopes
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 37.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -204,9 +204,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 40.8
+  previous_composite: 37.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -215,9 +215,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 74.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +244,7 @@ security:
 slug: savvymoney
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Credit Score
 - Credit Monitoring
 - Financial Wellness

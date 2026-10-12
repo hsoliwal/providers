@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatically managing GPU deployments across the Spheron marketplace. Covers provider and GPU-offer discovery, deployment lifecycle (create, list, get, rename, terminate, can-terminat
@@ -165,7 +165,7 @@ overview: 'Spheron publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 19
 score:
   band: emerging
-  composite: 20.2
+  composite: 20.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -179,17 +179,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 20.2
+  previous_composite: 20.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

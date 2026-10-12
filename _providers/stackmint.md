@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -58,7 +58,7 @@ apis:
   description: The Clients API from Stackmint — 9 operation(s) for clients.
   name: Stackmint Clients API
   slug: stackmint-clients-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -138,18 +138,22 @@ created: '2026-05-15'
 description: Stackmint is a governed execution platform for enterprise AI workflows. Rather than deploying raw agents, the platform packages AI capabilities with built-in controls — budget circuit breakers, human approval gates, compliance routing, and ROI measurement — so organizations can move AI projects from research into production with auditable execution paths. The platform exposes a Semantic Execution Layer (SEL) of ontology, semantics, branches, agents, and runtime/audit, and offers a REST API for managing clients, branches (workflows), buds (atomic units), and MCP-compatible tool surfaces for LLM integration.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stackmint.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.stackmint.ai over HTTP.
+  name: Stackmint MCP Server
+  slug: stackmint
 modified: '2026-05-15'
 name: Stackmint
 nav: Providers
 network: true
-overview: 'Stackmint publishes 2 APIs on the [APIs.io](https://apis.io/) network: Admin API and Clients API. Tagged areas include AI Governance, AI Agents, Workflow-Automation, Enterprise AI, and MCP.
+overview: 'Stackmint publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Clients API, and 1 more. Tagged areas include AI Governance, AI Agents, Workflow Automation, Enterprise AI, and MCP.
 
 
   Stackmint''s developer surface includes authentication, documentation, API reference, engineering blog, signup flow, support, and 8 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 30.1
+  composite: 29.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -161,11 +165,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 30.1
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -174,8 +178,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -202,7 +212,7 @@ slug: stackmint
 tags:
 - AI Governance
 - AI Agents
-- Workflow-Automation
+- Workflow Automation
 - Enterprise AI
 - MCP
 - Semantic Layer

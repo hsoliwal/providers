@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The authenticated GraphQL API behind the Deepwatch Security Center console (devportal.deepwatch.com). The endpoint is an AWS AppSync GraphQL service at devportalapi.deepwatch.com/graphql/ with a realt
@@ -170,8 +170,8 @@ scopes:
   slug: deepwatch-scopes
   summary_line: 7 scopes · authorizationCode/implicit/deviceCode
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 30.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -185,13 +185,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 26.0
+  previous_composite: 30.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -224,6 +236,6 @@ tags:
 - Threat Intelligence
 - Vulnerability Management
 - Managed Security Services
-- Agentic AI
+- AI Agents
 website: https://www.deepwatch.com/
 ---

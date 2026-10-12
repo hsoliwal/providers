@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Real-time Nasdaq market data delivered over Apache Kafka (TLS) with SASL/OAUTHBEARER authentication against a Keycloak pro-realm token endpoint. Topics documented in the NCDS Java and Python SDKs: GID'
@@ -88,7 +88,7 @@ rules:
   slug: nasdaq-asyncapi-spectral-rules
 score:
   band: emerging
-  composite: 20.1
+  composite: 18.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 28.5
@@ -100,13 +100,19 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 49.0
+    contract_quality: 46.9
     developer_ergonomics: 7.1
-    discoverability: 44.4
+    discoverability: 42.9
     operational_transparency: 2.6
-  previous_composite: 20.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

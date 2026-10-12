@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -64,7 +64,7 @@ description: 'ACTIVON Co., Ltd. (엑티브온) is a South Korean green-biotechno
 image: https://www.activon.kr/assets/images/common/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: ACTIVON's corporate site (www.activon-global.com) is built on Wix, and Wix serves a per-site Model Context Protocol endpoint at /_api/mcp. The endpoint is live, anonymous, and returned a real tools/li
   name: Wix site MCP endpoint (platform-provided, live)
   slug: wix-site-mcp-endpoint-platform-provided-live
 modified: '2026-09-06'
@@ -86,7 +86,7 @@ rate_limits:
   slug: activeon8016-rate-limits
 score:
   band: minimal
-  composite: 8.4
+  composite: 7.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -100,7 +100,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -109,12 +109,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 8.4
+  previous_composite: 7.8
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

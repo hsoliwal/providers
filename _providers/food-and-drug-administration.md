@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -153,7 +153,7 @@ modified: '2026-05-19'
 name: Food and Drug Administration
 nav: Providers
 network: true
-overview: 'Food and Drug Administration publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Animal & Veterinary API, Device API, Drug API, and 3 more. Tagged areas include Drugs, Devices, Federal-Government, Food Safety, and Public Data.
+overview: 'Food and Drug Administration publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Animal & Veterinary API, Device API, Drug API, and 3 more. Tagged areas include Drugs, Devices, Federal Government, Food Safety, and Public Data.
 
 
   The Food and Drug Administration catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -182,7 +182,7 @@ rules:
   slug: openfda-rules
 score:
   band: thin
-  composite: 33.6
+  composite: 31.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -194,11 +194,16 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 33.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     contracts:
@@ -211,9 +216,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,7 +238,7 @@ slug: food-and-drug-administration
 tags:
 - Drugs
 - Devices
-- Federal-Government
+- Federal Government
 - Food Safety
 - Public Data
 - Recalls

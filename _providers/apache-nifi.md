@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 3
@@ -92,6 +92,11 @@ collections:
   name: Apache NiFi REST API
   slug: open-apache-nifi
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apache-nifi/refs/heads/main/capabilities/apache-nifi-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apache-nifi-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -230,10 +235,10 @@ modified: '2026-04-19'
 name: Apache NiFi
 nav: Providers
 network: true
-overview: 'Apache NiFi publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Access API, Connections API, Controller Services API, and 1 more. Tagged areas include Data Integration, Dataflows, ETL, IoT, and Streaming.
+overview: 'Apache NiFi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Access API, Connections API, Controller Services API, and 3 more. Tagged areas include Data Integration, Dataflows, ETL, IoT, and Streaming.
 
 
-  Apache NiFi''s developer surface includes authentication, developer portal, engineering blog, and 18 more developer resources.'
+  Apache NiFi''s developer surface includes authentication, developer portal, engineering blog, and 19 more developer resources.'
 plans:
 - name: Apache Nifi Plans Pricing
   plan_count: 3
@@ -245,9 +250,9 @@ rate_limits:
   slug: apache-nifi-rate-limits
 score:
   band: developing
-  composite: 40.3
+  composite: 39.9
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -257,14 +262,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 47.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 40.3
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     contracts:
@@ -272,8 +277,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

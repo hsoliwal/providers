@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -98,7 +98,7 @@ overview: 'Conductor AI is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 14
 score:
   band: emerging
-  composite: 17.3
+  composite: 14.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -112,9 +112,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 17.3
+  previous_composite: 14.7
   provenance:
     conformance: first-party
   regulatory:
@@ -122,9 +122,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 48.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -149,8 +149,8 @@ tags:
 - Government
 - National Security
 - Compliance
-- Workflow-Automation
+- Workflow Automation
 - Document Review
-- Agentic AI
+- AI Agents
 website: https://www.conductorai.com
 ---

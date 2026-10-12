@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 6
@@ -2135,7 +2135,7 @@ modified: '2026-09-16'
 name: Kombo
 nav: Providers
 network: true
-overview: 'Kombo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including AI Apply API, Custom Endpoints API, General API, and 6 more. Tagged areas include ATS, Embedded iPaaS, HRIS, LMS, and Payroll.
+overview: 'Kombo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including AI Apply API, Custom Endpoints API, General API, and 6 more. Tagged areas include Applicant Tracking, Embedded iPaaS, HRIS, LMS, and Payroll.
 
 
   The Kombo catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -2164,7 +2164,7 @@ rules:
   slug: kombo-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 44.3
+  composite: 41.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 43.3
@@ -2176,11 +2176,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 9.8
-    contract_quality: 55.3
+    contract_quality: 49.9
     developer_ergonomics: 47.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 44.3
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -2191,11 +2191,11 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Education & Research
-    regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -2216,11 +2216,13 @@ security:
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
 slug: kombo
 tags:
-- ATS
+- Applicant Tracking
 - Embedded iPaaS
 - HRIS
 - LMS
 - Payroll
-- Unified-API
+- Unified API
+- Recruiting
+- Integration
 website: https://www.kombo.dev
 ---

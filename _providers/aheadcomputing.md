@@ -33,9 +33,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/aheadcomputing/refs/heads/main/security/aheadcomputing-domain-security.yml
@@ -90,6 +90,10 @@ created: '2026-08-06'
 description: AheadComputing Inc. is a Portland, Oregon fabless semiconductor startup founded in 2024 by former Intel CPU architects — CEO Debbie Marr, Jonathon Pearce, Mark Dechene and Srikanth Srinivasan — that designs and licenses high-performance 64-bit RISC-V application processor cores. The company markets a clean-slate, massive out-of-order "big core" architecture aimed at eliminating per-core CPU bottlenecks for AI, cloud, client, mobile and edge workloads, and has raised roughly $53M across a $21.5M seed and a $30M Seed2 round co-led by Eclipse, Toyota Ventures and Cambium. Its product is silicon IP licensed to chip designers rather than software, so it publishes no public API, developer portal, SDK or machine-readable contract.
 image: https://cdn.prod.website-files.com/6909ebc0bb1e997f5360fd6a/695be60fcabc7b3e07a37ab0_webflow_webclip.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.aheadcomputing.com over HTTP.
+  name: AheadComputing MCP Server
+  slug: aheadcomputing
 modified: '2026-08-06'
 name: AheadComputing
 nav: Providers
@@ -101,7 +105,7 @@ overview: 'AheadComputing is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 7
 score:
   band: minimal
-  composite: 7.6
+  composite: 7.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -115,13 +119,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 52.5
     operational_transparency: 0.0
-  previous_composite: 7.6
+  previous_composite: 7.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -143,6 +153,6 @@ tags:
 - Silicon IP
 - Hardware
 - AI Infrastructure
-- Data-Center
+- Data Center
 website: https://www.aheadcomputing.com/
 ---

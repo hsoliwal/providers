@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: verified
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.2
-  scored_at: '2026-09-20'
+  score: 41.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://wealthville.net/api/v1
@@ -215,7 +216,7 @@ layout: provider
 mcp_servers:
 - description: Solana + EVM liquidity-pool scores - Enter/Hold/Exit verdicts and a 0-100 Wealthville Score.
   name: WealthVille — DeFi Liquidity Pool Scores API (Solana & EVM) MCP Server
-  slug: wealthville-defi-liquidity-pool-scores-api-solana-evm-mcp-server
+  slug: wealthville
 modified: '2026-08-09'
 name: WealthVille — DeFi Liquidity Pool Scores API (Solana & EVM)
 nav: Providers
@@ -231,7 +232,7 @@ rate_limits:
   slug: wealthville-defi-liquidity-pool-scores-api-solana-evm-rate-limits
 score:
   band: developing
-  composite: 44.8
+  composite: 45.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -243,11 +244,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 56.2
+    contract_quality: 50.9
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 44.8
+  previous_composite: 45.7
   provenance:
     conformance: derived
     contracts:
@@ -257,8 +258,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

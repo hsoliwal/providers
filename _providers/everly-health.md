@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The OAuth 2.0 authorization server and OpenID Connect provider that fronts the Everlywell member account. It is not a documented developer product — Everly Health publishes no API reference for it — b
@@ -184,9 +184,9 @@ description: 'Everly Health (legal name Everly Well, Inc.) is an Austin, Texas d
 image: https://www.everlywell.com/icons/icon-512x512.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: A live Model Context Protocol endpoint answers at https://docs.pwnhealth.com/mcp — the developer hub host for Everly Health Solutions (the former PWNHealth business, whose pwnhealth.com now 301s to ev
   name: Everly Health MCP Server
-  slug: everly-health-mcp-server
+  slug: everly-health-mcp-yml
 modified: '2026-08-04'
 name: Everly Health
 nav: Providers
@@ -210,8 +210,8 @@ scopes:
   slug: everly-health-scopes
   summary_line: 2 scopes · authorizationCode/password
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 24.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -225,9 +225,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 27.2
+  previous_composite: 24.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -236,9 +236,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

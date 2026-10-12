@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -52,7 +52,7 @@ apis:
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
   description: All liquidity provider endpoints
-  name: SushiSwap liquidity-providers API
+  name: SushiSwap Liquidity Providers API
   slug: sushiswap-liquidity-providers-api
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
@@ -62,7 +62,7 @@ apis:
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
   description: All price endpoints
-  name: SushiSwap price API
+  name: SushiSwap Price API
   slug: sushiswap-price-api
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
@@ -72,12 +72,12 @@ apis:
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
   description: All swap endpoints
-  name: SushiSwap swap API
+  name: SushiSwap Swap API
   slug: sushiswap-swap-api
 - baseURL: https://api.sushi.com/price/v1
   baseurl_source: declared
   description: All token endpoints
-  name: SushiSwap token API
+  name: SushiSwap Token API
   slug: sushiswap-token-api
 artifact_total: 39
 collections:
@@ -253,7 +253,7 @@ modified: '2026-06-13'
 name: SushiSwap
 nav: Providers
 network: true
-overview: 'SushiSwap publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Deposit API, liquidity-providers API, Pool API, and 4 more. Tagged areas include DeFi, Decentralized Exchange, DEX, Cryptocurrency, and Web3.
+overview: 'SushiSwap publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Deposit API, Liquidity Providers API, Pool API, and 4 more. Tagged areas include DeFi, Decentralized Exchange, DEX, Cryptocurrency, and Web3.
 
 
   The SushiSwap catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
@@ -274,7 +274,7 @@ rules:
   slug: sushiswap-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 30.3
+  composite: 29.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 48.3
@@ -286,11 +286,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 9.8
-    contract_quality: 61.4
+    contract_quality: 56.6
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 30.3
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
@@ -303,9 +303,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

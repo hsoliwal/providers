@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Pliant''s Pro API enables customers to access Pliant credit card data and features programmatically — issue and manage cards, apply card controls and limits, retrieve transactions and accounting data, '
@@ -197,7 +197,7 @@ layout: provider
 mcp_servers:
 - description: 'Pliant publishes an official hosted/remote MCP server for the Pro API (Customer). It exposes direct API access to Pliant Pro API functionality, documentation search, real-time data from the connected '
   name: Pliant MCP Server
-  slug: pliant-mcp-server
+  slug: pliant-customer-api
 modified: '2026-07-20'
 name: Pliant
 nav: Providers
@@ -212,7 +212,7 @@ overview: 'Pliant publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 10
 score:
   band: developing
-  composite: 46.8
+  composite: 43.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -224,17 +224,19 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 32.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 46.8
+  previous_composite: 43.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -244,9 +246,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

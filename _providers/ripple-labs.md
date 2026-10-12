@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 109
   human_in_the_loop: 0
@@ -526,12 +526,12 @@ layout: provider
 mcp_servers:
 - description: Ripple's product documentation (docs.ripple.com) is served on the Redocly platform, which exposes a hosted, OAuth-protected Model Context Protocol server over the docs and API references. An MCP clien
   name: Ripple Labs MCP Server
-  slug: ripple-labs-mcp-server
+  slug: ripple-docs
 modified: '2026-07-21'
 name: Ripple Labs
 nav: Providers
 network: true
-overview: 'Ripple Labs publishes 36 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, API Credentials API, Auditing API, and 33 more. Tagged areas include Company, Financial-Services, Payments, Cross-Border Payments, and Blockchain.
+overview: 'Ripple Labs publishes 36 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, API Credentials API, Auditing API, and 33 more. Tagged areas include Company, Financial Services, Payments, Cross-Border Payments, and Blockchain.
 
 
   The Ripple Labs catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -546,23 +546,23 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: strong
-  composite: 57.7
+  composite: 55.6
   coverage:
     artifact_dirs: 24
-    catalog_earned: 30.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 85.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 64.6
+    contract_quality: 59.2
     developer_ergonomics: 73.2
-    discoverability: 63.0
+    discoverability: 76.7
     operational_transparency: 34.2
-  previous_composite: 57.7
+  previous_composite: 55.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -578,9 +578,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -602,7 +602,7 @@ security:
 slug: ripple-labs
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Payments
 - Cross-Border Payments
 - Blockchain

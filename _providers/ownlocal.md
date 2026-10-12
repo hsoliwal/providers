@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://admin.austin.ownlocal.com
@@ -72,6 +72,11 @@ collections:
   name: OwnLocal API — Reports Data API
   slug: open-ownlocal-reports-data-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/capabilities/ownlocal-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ownlocal-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/ownlocal/refs/heads/main/overlays/ownlocal-ads-overlay.yaml
   title: ''
@@ -201,7 +206,7 @@ network: true
 overview: 'OwnLocal publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Ads API, Businesses API, Categories API, and 1 more. Tagged areas include Company, Advertising, Local Media, Digital Advertising, and Marketing.
 
 
-  OwnLocal''s developer surface includes documentation, API reference, support, authentication, and 21 more developer resources.'
+  OwnLocal''s developer surface includes documentation, API reference, support, authentication, and 22 more developer resources.'
 plans:
 - name: Ownlocal Plans Pricing
   plan_count: 0
@@ -213,9 +218,9 @@ rate_limits:
   slug: ownlocal-rate-limits
 score:
   band: thin
-  composite: 31.1
+  composite: 30.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -225,11 +230,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 35.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 31.1
+  previous_composite: 30.4
   provenance:
     conformance: derived
     contracts:
@@ -239,8 +244,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

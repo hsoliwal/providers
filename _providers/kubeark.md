@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -143,7 +143,7 @@ modified: '2026-07-19'
 name: Kubeark
 nav: Providers
 network: true
-overview: 'Kubeark is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Orchestration, Automation, Workflow-Automation, and Integration.
+overview: 'Kubeark is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Orchestration, Automation, Workflow Automation, and Integration.
 
 
   The Kubeark catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -153,7 +153,7 @@ overview: 'Kubeark is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 15
 score:
   band: thin
-  composite: 32.8
+  composite: 32.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -165,15 +165,21 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 33.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 34.2
-  previous_composite: 32.8
+  previous_composite: 32.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,13 +200,12 @@ tags:
 - Company
 - Orchestration
 - Automation
-- Workflow-Automation
+- Workflow Automation
 - Integration
 - Kubernetes
 - Infrastructure as Code
 - Terraform
-- Identity and Access Management
-- Agentic AI
+- AI Agents
 - DevOps
 - Self-Hosted
 website: https://kubeark.com/

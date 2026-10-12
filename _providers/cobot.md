@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The original Cobot REST API, still available and still the only surface that carries the webhook subscription API. Documented per-resource on dev.cobot.me/api-docs; Cobot directs new integrations to A
@@ -553,14 +553,14 @@ description: 'Cobot is coworking and flexible-workspace management software, bui
 image: https://dev.cobot.me/api2_logo.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Cobot operates a hosted, remote MCP server at https://api.cobot.me/mcp. It is UNDOCUMENTED — it appears in no Cobot docs page, no blog post, no llms.txt and no search result — and was found by probing
   name: Cobot MCP
   slug: cobot-mcp
 modified: '2026-08-09'
 name: Cobot
 nav: Providers
 network: true
-overview: 'Cobot publishes 42 APIs on the [APIs.io](https://apis.io/) network, including Allocation API, Approval API, Article API, and 39 more. Tagged areas include Company, Co-Working, Workspace Management, Space Management, and Real-Estate.
+overview: 'Cobot publishes 44 APIs on the [APIs.io](https://apis.io/) network, including Allocation API, Approval API, Article API, and 41 more. Tagged areas include Company, Co-Working, Workspace Management, Space Management, and Real Estate.
 
 
   The Cobot catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -574,8 +574,8 @@ scopes:
   slug: cobot-scopes
   summary_line: 60 scopes · authorizationCode
 score:
-  band: strong
-  composite: 55.2
+  band: developing
+  composite: 51.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -587,9 +587,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 66.2
+    contract_quality: 60.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -599,7 +599,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 55.2
+  previous_composite: 51.7
   provenance:
     conformance: first-party
     contracts:
@@ -614,9 +614,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 60.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -637,7 +637,7 @@ tags:
 - Co-Working
 - Workspace Management
 - Space Management
-- Real-Estate
+- Real Estate
 - Booking
 - Reservations
 - Membership

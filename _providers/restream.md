@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -75,7 +75,7 @@ apis:
   description: User profile and account management
   name: Restream User API
   slug: restream-user-api
-artifact_total: 38
+artifact_total: 39
 collections:
 - collection_type: postman
   name: Restream Channels API
@@ -229,11 +229,15 @@ jsonld:
   property_count: 6
   slug: restream-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.restream.io over HTTP.
+  name: Restream MCP Server
+  slug: restream
 modified: '2026-05-19'
 name: Restream
 nav: Providers
 network: true
-overview: 'Restream publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Events API, Platforms API, and 2 more. Tagged areas include Broadcast, Chat, Content Delivery, Live Streaming, and Multistreaming.
+overview: 'Restream publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Events API, Platforms API, and 4 more. Tagged areas include Broadcast, Chat, Content Delivery, Live Streaming, and Multistreaming.
 
 
   The Restream catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -278,7 +282,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 36.3
+  composite: 36.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 57.5
@@ -290,11 +294,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 13.6
-    contract_quality: 60.7
+    contract_quality: 55.2
     developer_ergonomics: 25.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 36.3
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     contracts:
@@ -303,8 +307,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

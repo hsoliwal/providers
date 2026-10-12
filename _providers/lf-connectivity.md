@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Magma is a next-generation packet core that delivers cellular network innovation at lower cost of ownership, with REST and gRPC APIs for orchestration, subscriber management, and policy enforcement.
@@ -110,7 +110,7 @@ modified: '2026-04-28'
 name: LF Connectivity
 nav: Providers
 network: true
-overview: 'LF Connectivity publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Connectivity, Linux Foundation, Networking, Telecom, and Wireless.
+overview: 'LF Connectivity publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Connectivity, Linux Foundation, Networking, Telecommunications, and Wireless.
 
 
   LF Connectivity''s developer surface includes documentation, engineering blog, and 9 more developer resources.'
@@ -125,7 +125,7 @@ rate_limits:
   slug: lf-connectivity-rate-limits
 score:
   band: emerging
-  composite: 14.0
+  composite: 14.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -139,17 +139,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 39.5
-  previous_composite: 14.0
+  previous_composite: 14.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -166,9 +166,9 @@ tags:
 - Connectivity
 - Linux Foundation
 - Networking
-- Telecom
+- Telecommunications
 - Wireless
 - 5G
-- Open-Source
+- Open Source
 website: https://lfconnectivity.dev/
 ---

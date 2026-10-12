@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -328,7 +328,7 @@ modified: '2026-08-14'
 name: Fasten Health
 nav: Providers
 network: true
-overview: 'Fasten Health publishes 1 API on the [APIs.io](https://apis.io/) network: Bridge API. Tagged areas include Healthcare, FHIR, Personal Health Record, Electronic Medical Record, and Health Data Interoperability.
+overview: 'Fasten Health publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Bridge API, and 10 more. Tagged areas include Healthcare, FHIR, Personal Health Record, Electronic Medical Record, and Health Data Interoperability.
 
 
   The Fasten Health catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -351,7 +351,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: strong
-  composite: 60.4
+  composite: 56.1
   coverage:
     artifact_dirs: 27
     catalog_earned: 32.0
@@ -363,16 +363,16 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 64.2
+    contract_quality: 58.9
     developer_ergonomics: 78.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 60.4
+  previous_composite: 56.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -388,9 +388,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 66.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -420,8 +420,9 @@ tags:
 - EHI Export
 - Patient Consent
 - Self-Hosted
-- Open-Source
+- Open Source
 - HL7
 - Healthcare Connectivity
+- A2A
 website: https://www.fastenhealth.com
 ---

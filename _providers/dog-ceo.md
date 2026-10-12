@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -185,7 +185,7 @@ modified: '2026-06-13'
 name: Dog CEO
 nav: Providers
 network: true
-overview: 'Dog CEO publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Breed API, Breeds API, Random API, and 1 more. Tagged areas include Dogs, Image, Animals, Open-Source, and Free API.
+overview: 'Dog CEO publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Breed API, Breeds API, Random API, and 1 more. Tagged areas include Dogs, Image, Animals, Open Source, and Free API.
 
 
   The Dog CEO catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -214,23 +214,23 @@ rules:
   slug: dog-ceo-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 32.7
   coverage:
     artifact_dirs: 15
-    catalog_earned: 67.3
+    catalog_earned: 65.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.8
+    catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 37.4
     contract_governance: 9.8
-    contract_quality: 57.9
+    contract_quality: 52.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
-    operational_transparency: 26.3
-  previous_composite: 35.1
+    discoverability: 66.1
+    operational_transparency: 24.2
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     contracts:
@@ -243,9 +243,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -262,9 +262,9 @@ tags:
 - Dogs
 - Image
 - Animals
-- Open-Source
+- Open Source
 - Free API
-- Machine-Learning
+- Machine Learning
 - Education
 website: https://dog.ceo/dog-api/
 ---

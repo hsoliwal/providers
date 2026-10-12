@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -76,7 +76,7 @@ description: Twelve is a carbon transformation company that converts CO2, water,
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/twelve.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.twelve.co over HTTP; 9 tools listed.
   name: Site Visitor Assistant for site "Twelve | A World Made from Air"
   slug: site-visitor-assistant-for-site-twelve-a-world-made-from-air
 modified: '2026-07-21'
@@ -90,7 +90,7 @@ overview: 'Twelve is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 3
 score:
   band: emerging
-  composite: 11.3
+  composite: 11.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -104,19 +104,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 11.3
+  previous_composite: 11.2
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

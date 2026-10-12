@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -89,6 +89,11 @@ collections:
   name: Enterprise OPA REST Batch Health API
   slug: open-styra-health-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/styra/refs/heads/main/capabilities/styra-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/styra-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/styra/refs/heads/main/overlays/styra-enterprise-opa-overlay.yaml
   title: ''
@@ -210,13 +215,13 @@ network: true
 overview: 'Styra publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Compile API, Data API, and 2 more. Tagged areas include Company, Cybersecurity, Authorization, Policy as Code, and Open Policy Agent.
 
 
-  Styra''s developer surface includes documentation, API reference, authentication, CLI, changelog, and 18 more developer resources.'
+  Styra''s developer surface includes documentation, API reference, authentication, CLI, changelog, and 19 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 29.4
+  composite: 28.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -226,11 +231,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 45.0
+    contract_quality: 40.5
     developer_ergonomics: 54.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 29.4
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -243,12 +248,12 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -267,7 +267,7 @@ overview: 'Smart DCC publishes 2 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 14
 score:
   band: developing
-  composite: 48.5
+  composite: 44.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 33.3
@@ -279,9 +279,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 22.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 51.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -291,7 +291,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 48.5
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -313,9 +313,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 54.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

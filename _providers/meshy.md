@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 16.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API at https://api.meshy.ai for Text-to-3D (v2 with preview + refine workflow), Image-to-3D, Multi Image-to-3D, Remesh, Rigging, Animation, Retexture, Text-to-Image, Image-to-Image, Multi-Color P
@@ -122,7 +122,7 @@ modified: '2026-05-08'
 name: Meshy
 nav: Providers
 network: true
-overview: 'Meshy publishes 2 APIs on the [APIs.io](https://apis.io/) network: Image to 3D API and Text to 3D API. Tagged areas include Artificial Intelligence, 3D, Generation, Texturing, and Animation.
+overview: 'Meshy publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Image to 3D API, Text to 3D API, and 1 more. Tagged areas include Artificial Intelligence, 3D, Generation, Texturing, and Animation.
 
 
   Meshy''s developer surface includes documentation, engineering blog, and 9 more developer resources.'
@@ -137,7 +137,7 @@ rate_limits:
   slug: meshy-rate-limits
 score:
   band: thin
-  composite: 31.1
+  composite: 28.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 46.0
@@ -149,19 +149,25 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 31.1
+  previous_composite: 28.9
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

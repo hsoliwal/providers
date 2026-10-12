@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -82,6 +82,10 @@ created: '2026-07-17'
 description: Polymorph is a Y Combinator (Winter 2026) startup building adaptive consumer internet infrastructure that personalizes user experiences with AI agents. Founded in San Francisco by Andrew Sy, the platform runs thousands of continuous product and lifecycle-engagement experiments for its customers, each carrying the craft of that product's direction and brand, so consumer teams can scale experimentation in product surfaces without being bottlenecked by headcount or design capacity. Its stated vision is to make the consumer internet polymorphic — one that adapts to each user and optimizes for delightful experiences. As of this profile the company operates a marketing site only; it publishes no public API, developer documentation, SDKs, or developer portal.
 image: https://usepolymorph.com/polymorph-mark.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.usepolymorph.com over HTTP.
+  name: Polymorph MCP Server
+  slug: polymorph
 modified: '2026-07-20'
 name: Polymorph
 nav: Providers
@@ -93,7 +97,7 @@ overview: 'Polymorph is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 12
 score:
   band: emerging
-  composite: 11.5
+  composite: 12.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -107,13 +111,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 11.5
+  previous_composite: 12.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,7 +146,7 @@ tags:
 - Experimentation
 - Consumer Internet
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Growth
 - Y Combinator
 website: https://usepolymorph.com/

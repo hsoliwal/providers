@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 5
@@ -52,12 +52,12 @@ apis:
 - baseURL: https://api.mirage.app
   baseurl_source: declared
   description: The health API from Mirage — 1 operation(s) for health.
-  name: Mirage health API
+  name: Mirage Health API
   slug: mirage-health-api
 - baseURL: https://api.mirage.app
   baseurl_source: declared
   description: The internal API from Mirage — 8 operation(s) for internal.
-  name: Mirage internal API
+  name: Mirage Internal API
   slug: mirage-internal-api
 - baseURL: https://api.mirage.app
   baseurl_source: declared
@@ -67,7 +67,7 @@ apis:
 - baseURL: https://api.mirage.app
   baseurl_source: declared
   description: The root API from Mirage — 1 operation(s) for root.
-  name: Mirage root API
+  name: Mirage Root API
   slug: mirage-root-api
 - baseURL: https://api.mirage.app
   baseurl_source: declared
@@ -240,7 +240,7 @@ modified: '2026-07-20'
 name: Mirage
 nav: Providers
 network: true
-overview: 'Mirage publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Audio API, health API, internal API, and 4 more. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Captions.
+overview: 'Mirage publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Health API, Internal API, and 4 more. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Captions.
 
 
   The Mirage catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -250,7 +250,7 @@ overview: 'Mirage publishes 7 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 13
 score:
   band: developing
-  composite: 45.5
+  composite: 46.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -262,16 +262,18 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 50.9
+    contract_quality: 46.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.5
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -282,8 +284,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -308,6 +316,6 @@ tags:
 - Media
 - Content Creation
 - Text-to-Speech
-- Machine-Learning
+- Machine Learning
 website: https://www.captions.ai/
 ---

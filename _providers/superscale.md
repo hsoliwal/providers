@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The product Model Context Protocol server. Lets an external agent runtime (Claude and similar MCP clients) drive Superscale's creative engine — generating statics, UGC video and scripts from context t
@@ -201,9 +201,9 @@ description: 'Superscale is an autonomous AI marketing agent for performance adv
 image: https://superscale.ai/images/og-images/default-og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Superscale operates two distinct Model Context Protocol surfaces on its own hosts. (1) The PRODUCT MCP server at https://mcp.superscale.ai/mcp is live and OAuth-gated — it answers HTTP 401 with an RFC
   name: Superscale MCP Server
-  slug: superscale-mcp-server
+  slug: superscale-mcp-yml
 modified: '2026-08-12'
 name: Superscale
 nav: Providers
@@ -227,8 +227,8 @@ scopes:
   slug: superscale-scopes
   summary_line: 7 scopes · authorizationCode
 score:
-  band: thin
-  composite: 38.3
+  band: developing
+  composite: 40.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 61.0
@@ -242,15 +242,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 76.3
-  previous_composite: 38.3
+  previous_composite: 40.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -284,7 +290,6 @@ tags:
 - MCP
 - A2A
 - Agent Skills
-- Advertising Technology
 - Video Generation
 - Media Buying
 website: https://www.superscale.ai/

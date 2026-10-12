@@ -14,7 +14,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.2
-  scored_at: '2026-09-20'
+  score: 37.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -269,12 +269,12 @@ layout: provider
 mcp_servers:
 - description: Atmospore ships BOTH a hosted remote MCP server and an open-source local stdio server. The remote endpoint at https://mcp.atmospore.com/mcp is live and answers JSON-RPC, gated by the same Atmospore AP
   name: Atmospore Pollen Forecasts MCP Server
-  slug: atmospore-pollen-forecasts-mcp-server
+  slug: atmospore
 modified: '2026-08-09'
 name: Atmospore Pollen Forecasts
 nav: Providers
 network: true
-overview: 'Atmospore Pollen Forecasts publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Pollen API, Pollen Area API, Pollen Top API, and 1 more. Tagged areas include Weather, Pollen, Allergy, Environmental Data, and Health.
+overview: 'Atmospore Pollen Forecasts publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Pollen API, Pollen Area API, Pollen Top API, and 2 more. Tagged areas include Weather, Pollen, Allergy, Environmental Data, and Health.
 
 
   Atmospore Pollen Forecasts'' developer surface includes documentation, API reference, support, pricing, signup flow, authentication, sandbox, and 27 more developer resources.'
@@ -288,8 +288,8 @@ rate_limits:
   name: Atmospore Pollen Forecasts Rate Limits
   slug: atmospore-pollen-forecasts-rate-limits
 score:
-  band: strong
-  composite: 56.9
+  band: developing
+  composite: 53.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -301,9 +301,9 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 52.9
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -313,7 +313,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 56.9
+  previous_composite: 53.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -329,9 +329,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

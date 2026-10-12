@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Loki HTTP API
   slug: open-loki
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/loki/refs/heads/main/capabilities/loki-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/loki-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -155,10 +160,10 @@ modified: '2026-09-16'
 name: Loki
 nav: Providers
 network: true
-overview: 'Loki publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Config API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Open-Source, and Grafana.
+overview: 'Loki publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Config API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Open Source, and Grafana.
 
 
-  Loki''s developer surface includes documentation, engineering blog, and 10 more developer resources.'
+  Loki''s developer surface includes documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Loki Plans Pricing
   plan_count: 3
@@ -170,9 +175,9 @@ rate_limits:
   slug: loki-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 28.4
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 34.0
     catalog_earned_first_party: 0.0
     catalog_gap: 81.0
@@ -182,14 +187,14 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 11.9
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 30.1
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +202,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -217,7 +228,7 @@ slug: loki
 tags:
 - Logging
 - Observability
-- Open-Source
+- Open Source
 - Grafana
 website: https://grafana.com/oss/loki/
 ---

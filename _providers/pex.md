@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: DRM, CMS, and content-monitoring API for managing rights assets, collections, and whitelists, tracking infringing copies across platforms, and running takedowns. Bearer API-key authentication; rate li
@@ -157,7 +157,7 @@ description: 'Pex (part of Vobile since April 2025) is a content-identification 
 image: https://pex.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.pex.com over HTTP; 2 tools listed.
   name: Vobile MCP (Pex AI Song Detector)
   slug: vobile-mcp-pex-ai-song-detector
 modified: '2026-07-20'
@@ -171,7 +171,7 @@ overview: 'Pex publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 3
 score:
   band: thin
-  composite: 27.5
+  composite: 27.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -185,15 +185,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 18.4
-  previous_composite: 27.5
+  previous_composite: 27.8
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

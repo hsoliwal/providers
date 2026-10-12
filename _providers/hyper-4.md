@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hyper-4/refs/heads/main/security/hyper-4-domain-security.yml
@@ -49,15 +49,19 @@ created: '2026-07-17'
 description: Hyper (heyhyper.ai) is a Y Combinator-backed startup building "the self-driving company brain" — a knowledge-management platform that assembles a centralized, self-maintaining knowledge graph from a team's emails, Slack, GitHub, calendars, and other work sources, then feeds that context back into AI agents and tools so they act with accurate company memory and require fewer repeated corrections. Founded in 2026 by Shalin Shah and Kanyes Thaker and based in San Francisco, the company was surfaced as a Y Combinator portfolio company and added to the API Evangelist network as an enrichment lead. As of this profile Hyper is very early-stage, publishing only a marketing landing page at heyhyper.ai with no public developer portal, API reference, SDKs, or machine-readable API surface yet available; this record captures verified company identity and will be re-enriched as a developer platform is published.
 image: https://heyhyper.ai/hyper-app-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.heyhyper.ai over HTTP.
+  name: Hyper 4 MCP Server
+  slug: hyper-4
 modified: '2026-07-19'
 name: Hyper 4
 nav: Providers
 network: true
-overview: Hyper 4 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Knowledge-Management, and Knowledge Graph.
+overview: Hyper 4 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Knowledge Management, and Knowledge Graph.
 random_paper: 11
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -71,18 +75,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 5.0
+  previous_composite: 3.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -99,7 +111,7 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Knowledge-Management
+- Knowledge Management
 - Knowledge Graph
 - Memory
 - Developer Tools

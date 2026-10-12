@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -45,22 +45,22 @@ apis:
 - baseURL: https://api.coinpaprika.com/v1
   baseurl_source: declared
   description: The coins API from CoinPaprika — 1 operation(s) for coins.
-  name: CoinPaprika coins API
+  name: CoinPaprika Coins API
   slug: coinpaprika-coins-api
 - baseURL: https://api.coinpaprika.com/v1
   baseurl_source: declared
   description: The global API from CoinPaprika — 1 operation(s) for global.
-  name: CoinPaprika global API
+  name: CoinPaprika Global API
   slug: coinpaprika-global-api
 - baseURL: https://api.coinpaprika.com/v1
   baseurl_source: declared
   description: The search API from CoinPaprika — 1 operation(s) for search.
-  name: CoinPaprika search API
+  name: CoinPaprika Search API
   slug: coinpaprika-search-api
 - baseURL: https://api.coinpaprika.com/v1
   baseurl_source: declared
   description: The ticker API from CoinPaprika — 2 operation(s) for ticker.
-  name: CoinPaprika ticker API
+  name: CoinPaprika Ticker API
   slug: coinpaprika-ticker-api
 artifact_total: 21
 collections:
@@ -176,7 +176,7 @@ modified: '2026-06-13'
 name: CoinPaprika
 nav: Providers
 network: true
-overview: 'CoinPaprika publishes 4 APIs on the [APIs.io](https://apis.io/) network, including coins API, global API, search API, and 1 more. Tagged areas include Cryptocurrency, Market Data, Finance, OHLCV, and Exchange.
+overview: 'CoinPaprika publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Coins API, Global API, Search API, and 1 more. Tagged areas include Cryptocurrency, Market Data, Finance, OHLCV, and Blockchain.
 
 
   The CoinPaprika catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -197,7 +197,7 @@ rules:
   slug: coinpaprika-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 23.5
+  composite: 23.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.3
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 9.8
-    contract_quality: 42.2
+    contract_quality: 38.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 23.5
+  previous_composite: 23.0
   provenance:
     agentic_access: derived
     contracts:
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,6 @@ tags:
 - Market Data
 - Finance
 - OHLCV
-- Exchange
 - Blockchain
 website: https://coinpaprika.com/
 ---

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://app.prophecy.io/api
@@ -83,6 +83,11 @@ collections:
   name: Prophecy Connections Secrets API
   slug: open-prophecyio-secrets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/prophecyio/refs/heads/main/capabilities/prophecyio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/prophecyio-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/prophecyio/refs/heads/main/security/prophecyio-trust-center.yml
   title: ''
@@ -231,13 +236,13 @@ network: true
 overview: 'Prophecy.io publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Connections API, Fabrics API, Pipeline Runs API, and 2 more. Tagged areas include Company, Data Engineering, Data Pipeline, ETL, and Apache Spark.
 
 
-  Prophecy.io''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 23 more developer resources.'
+  Prophecy.io''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 24 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 41.3
+  composite: 40.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -247,11 +252,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 45.4
+    contract_quality: 41.1
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 41.3
+  previous_composite: 40.6
   provenance:
     conformance: derived
     contracts:
@@ -261,8 +266,18 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

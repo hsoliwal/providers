@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -92,7 +92,7 @@ modified: '2026-08-12'
 name: Massive Dynamic
 nav: Providers
 network: true
-overview: Massive Dynamic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, Advertising Technology, Artificial Intelligence, and Marketing.
+overview: Massive Dynamic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Artificial Intelligence, and Marketing.
 plans:
 - name: Massive Dynamic Plans Pricing
   plan_count: 0
@@ -100,7 +100,7 @@ plans:
 random_paper: 6
 score:
   band: minimal
-  composite: 6.3
+  composite: 4.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -114,11 +114,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 6.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +140,7 @@ slug: massive-dynamic
 tags:
 - Company
 - Advertising
-- Advertising Technology
+- AdTech
 - Artificial Intelligence
 - Marketing
 - Media

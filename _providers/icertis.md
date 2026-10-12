@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -84,14 +84,14 @@ modified: '2026-07-19'
 name: Icertis
 nav: Providers
 network: true
-overview: 'Icertis is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Contract Lifecycle Management, Contract Intelligence, and Legal Technology.
+overview: 'Icertis is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Contract Lifecycle Management, Contract Intelligence, and Legal Tech.
 
 
   Icertis'' developer surface includes engineering blog and 8 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 13.7
+  composite: 13.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -105,13 +105,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 13.7
+  previous_composite: 13.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -133,7 +145,7 @@ tags:
 - Enterprise
 - Contract Lifecycle Management
 - Contract Intelligence
-- Legal Technology
+- Legal Tech
 - Artificial Intelligence
 - Procurement
 - Contract Management

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 1
@@ -326,7 +326,7 @@ scopes:
   summary_line: 5 scopes · clientCredentials
 score:
   band: developing
-  composite: 49.9
+  composite: 51.4
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -338,11 +338,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.8
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 49.9
+  previous_composite: 51.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -353,8 +353,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -383,7 +389,7 @@ tags:
 - LPR
 - Physical Security
 - Surveillance
-- Computer-Vision
+- Computer Vision
 - Webhook
 - Geolocation
 - CAD

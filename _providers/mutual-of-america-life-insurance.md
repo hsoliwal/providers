@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -128,7 +128,7 @@ modified: '2026-08-28'
 name: Mutual of America Life Insurance Company
 nav: Providers
 network: true
-overview: 'Mutual of America Life Insurance Company is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Retirement, Financial-Services, and Pensions.
+overview: 'Mutual of America Life Insurance Company is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Life Insurance, Retirement, Financial Services, and Pensions.
 
 
   Mutual of America Life Insurance Company''s developer surface includes authentication, support, engineering blog, and 12 more developer resources.'
@@ -159,12 +159,12 @@ rate_limits:
   slug: mutual-of-america-life-insurance-rate-limits
 scopes:
 - name: Mutual Of America Life Insurance Scopes
-  scope_count: 0
+  scope_count: 7
   slug: mutual-of-america-life-insurance-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
   band: emerging
-  composite: 22.0
+  composite: 19.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -178,14 +178,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 22.0
+  previous_composite: 19.3
   provenance:
     conformance: first-party
   regulatory:
@@ -193,9 +195,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -215,7 +217,7 @@ tags:
 - Insurance
 - Life Insurance
 - Retirement
-- Financial-Services
+- Financial Services
 - Pensions
 - Annuities
 - Wealth Management

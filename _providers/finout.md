@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: Create, retrieve, update, and delete Virtual Tag configurations
   name: Finout Virtual Tags API
   slug: finout-virtual-tags-api
-artifact_total: 35
+artifact_total: 36
 collections:
 - collection_type: postman
   name: Finout Cost API
@@ -121,6 +121,11 @@ collections:
   name: Finout Cost Virtual Tags API
   slug: open-finout-virtual-tags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/finout/refs/heads/main/capabilities/finout-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/finout-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -234,6 +239,9 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.finout.io over HTTP.
+  name: Finout MCP Server
+  slug: finout
 modified: '2026-05-19'
 name: Finout
 nav: Providers
@@ -244,7 +252,7 @@ overview: 'Finout publishes 6 APIs on the [APIs.io](https://apis.io/) network, i
   The Finout catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Finout''s developer surface includes authentication, pricing, engineering blog, documentation, and 15 more developer resources.'
+  Finout''s developer surface includes authentication, pricing, engineering blog, documentation, and 16 more developer resources.'
 plans:
 - name: Finout Plans Pricing
   plan_count: 3
@@ -266,24 +274,24 @@ rules:
     warn: 3
   slug: finout-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 39.9
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 17
-    catalog_earned: 62.3
+    catalog_earned: 61.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 53.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 9.8
-    contract_quality: 72.0
+    contract_quality: 65.6
     developer_ergonomics: 25.0
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 39.9
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     contracts:
@@ -292,8 +300,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

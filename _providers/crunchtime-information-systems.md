@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST data-integration API for Crunchtime's Inventory Management, Labor & Scheduling, and Cruise products. GET and POST operations move employees, locations, budgets, categories, products, recipes, sal
@@ -142,7 +142,7 @@ modified: '2026-07-18'
 name: Crunchtime Information Systems
 nav: Providers
 network: true
-overview: 'Crunchtime Information Systems publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Restaurant, Food Service, Hospitality, and Inventory Management.
+overview: 'Crunchtime Information Systems publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Restaurant, Food Service, Hospitality, and Inventory.
 
 
   Crunchtime Information Systems'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 13 more developer resources.'
@@ -153,7 +153,7 @@ rate_limits:
   slug: crunchtime-information-systems-rate-limits
 score:
   band: thin
-  composite: 28.8
+  composite: 28.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 45.0
@@ -167,19 +167,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.8
+  previous_composite: 28.6
   provenance:
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,7 +213,7 @@ tags:
 - Restaurant
 - Food Service
 - Hospitality
-- Inventory Management
+- Inventory
 - Labor Scheduling
 - Operations Management
 - Back Office

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: High-performance Solana JSON-RPC HTTP endpoints served from a fault-tolerant elastic-node architecture across four global regions (Northern Virginia, Oregon, London, Singapore). Supports the full stan
@@ -195,7 +195,7 @@ modified: '2026-05-25'
 name: Syndica
 nav: Providers
 network: true
-overview: 'Syndica publishes 2 APIs on the [APIs.io](https://apis.io/) network: Solana RPC (WebSocket) API and ChainStream API. Tagged areas include Solana, Blockchain, Web3, RPC, and Streaming.
+overview: 'Syndica publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Solana RPC (WebSocket) API, ChainStream API, and 2 more. Tagged areas include Solana, Blockchain, Web3, RPC, and Streaming.
 
 
   The Syndica catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -217,7 +217,7 @@ rules:
   slug: syndica-io-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 37.7
+  composite: 36.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 39.5
@@ -229,13 +229,19 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 42.7
+    contract_quality: 40.6
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 21.1
-  previous_composite: 37.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 36.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,6 +276,7 @@ tags:
 - Infrastructure
 - Validator
 - Staking
+- Real-Time
 use_cases:
 - description: Power on-chain trading bots, market makers, and liquidation engines with low-latency ChainStream notifications — production users have cut limit-order time-to-fill from 10s to 300ms.
   name: High-frequency Solana trading

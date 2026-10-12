@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Aible API server (self-reported version 2.0.0) is the control plane behind the Aible platform. Its published route index lists 394 routes under the /v1 prefix across 29 modules — account, project,
@@ -131,7 +131,7 @@ modified: '2026-09-14'
 name: Aible
 nav: Providers
 network: true
-overview: 'Aible publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine-Learning, AutoML, Analytics, and Data Science.
+overview: 'Aible publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine Learning, AutoML, Analytics, and Data Science.
 
 
   Aible''s developer surface includes API reference, engineering blog, support, pricing, changelog, authentication, and 14 more developer resources.'
@@ -146,7 +146,7 @@ rate_limits:
   slug: aible-rate-limits
 score:
   band: thin
-  composite: 28.6
+  composite: 29.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -160,19 +160,27 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.6
+  previous_composite: 29.4
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -190,7 +198,7 @@ security:
 slug: aible
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - AutoML
 - Analytics
 - Data Science

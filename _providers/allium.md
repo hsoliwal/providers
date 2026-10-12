@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -53,7 +53,7 @@ apis:
 - baseURL: https://api.allium.so
   baseurl_source: declared
   description: The ping API from Allium — 1 operation(s) for ping.
-  name: Allium ping API
+  name: Allium Ping API
   slug: allium-ping-api
 - baseURL: https://api.allium.so
   baseurl_source: declared
@@ -225,14 +225,14 @@ description: 'Allium is an enterprise blockchain data platform that transforms r
 image: https://www.allium.so/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.allium.so over HTTP; 4 tools listed.
   name: Allium MCP Server
-  slug: allium-mcp-server
+  slug: allium
 modified: '2026-07-17'
 name: Allium
 nav: Providers
 network: true
-overview: 'Allium publishes 3 APIs on the [APIs.io](https://apis.io/) network: Explorer API, ping API, and Polygon API. Tagged areas include Company, Data Analytics, Blockchain, Crypto, and Web3.
+overview: 'Allium publishes 3 APIs on the [APIs.io](https://apis.io/) network: Explorer API, Ping API, and Polygon API. Tagged areas include Company, Data Analytics, Blockchain, Crypto, and Web3.
 
 
   The Allium catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -241,8 +241,8 @@ overview: 'Allium publishes 3 APIs on the [APIs.io](https://apis.io/) network: E
   Allium''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, support, pricing, and 24 more developer resources.'
 random_paper: 6
 score:
-  band: strong
-  composite: 55.4
+  band: developing
+  composite: 53.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -254,11 +254,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 56.4
+    contract_quality: 51.5
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 55.4
+  previous_composite: 53.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

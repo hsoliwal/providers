@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: SOAP web services (DataService, ReadDataService, FileService, FileStreamService, InstanceService) to automate workflows by managing courses, content, files and assessments on an itslearning site. Used
@@ -173,7 +173,7 @@ overview: 'itslearning publishes 4 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 18
 score:
   band: developing
-  composite: 44.3
+  composite: 40.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 40.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 45.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -197,7 +197,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 44.3
+  previous_composite: 40.6
   provenance:
     conformance: first-party
   regulatory:
@@ -209,9 +209,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

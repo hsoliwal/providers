@@ -22,9 +22,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.5
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://developer.cashflo.io
@@ -51,6 +51,11 @@ collections:
   name: Cashflo Data Ingestion API Documentation Ingest API
   slug: open-cashflo-ingest-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cashflo/refs/heads/main/capabilities/cashflo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cashflo-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -151,13 +156,13 @@ network: true
 overview: 'CashFlo publishes 1 API on the [APIs.io](https://apis.io/) network: Ingest API. Tagged areas include Company, Fintech, Accounts Payable, Payments, and Working Capital.
 
 
-  CashFlo''s developer surface includes documentation, API reference, authentication, engineering blog, support, and 15 more developer resources.'
+  CashFlo''s developer surface includes documentation, API reference, authentication, engineering blog, support, and 16 more developer resources.'
 random_paper: 10
 score:
-  band: developing
-  composite: 39.3
+  band: thin
+  composite: 36.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -167,9 +172,9 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,7 +183,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 39.3
+  previous_composite: 36.6
   provenance:
     conformance: derived
     contracts:
@@ -193,9 +198,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

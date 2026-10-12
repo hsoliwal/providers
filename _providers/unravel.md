@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST APIs for querying and collecting data from an Unravel instance — application details, recommendations and logs, apps search, cluster operations and resource metrics, chargeback reports, queue ana
@@ -137,7 +137,7 @@ overview: 'Unravel publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 17
 score:
   band: thin
-  composite: 29.8
+  composite: 30.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,11 +151,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 29.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 30.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

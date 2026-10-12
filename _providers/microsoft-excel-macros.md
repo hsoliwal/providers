@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Core API for interacting with Excel objects, workbooks, worksheets, ranges, and cells through VBA automation.
@@ -120,7 +120,7 @@ rate_limits:
   slug: microsoft-excel-macros-rate-limits
 score:
   band: thin
-  composite: 26.3
+  composite: 27.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 39.0
@@ -134,11 +134,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 55.6
+    discoverability: 53.6
     operational_transparency: 18.4
-  previous_composite: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 27.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

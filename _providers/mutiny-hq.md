@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Mutiny's hosted Model Context Protocol server and its only public programmatic entry point. It exposes the workspace's asset creation, template, content library and publishing capabilities to any MCP-
   name: Mutiny MCP Server
   slug: mutiny-mcp-server
-artifact_total: 8
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -178,12 +178,9 @@ description: Mutiny is a GTM (go-to-market) assistant built for customer-facing 
 image: https://framerusercontent.com/assets/Ec1hAhKLtluxlMfLydNP0NTrIA.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.mutinyhq.com over HTTP; 12 tools listed.
   name: Mutiny HQ MCP Server
-  slug: mutiny-hq-mcp-server
-- description: ''
-  name: Mutiny HQ MCP Server
-  slug: mutiny-hq-mcp-server-2
+  slug: mutiny
 modified: '2026-08-13'
 name: Mutiny HQ
 nav: Providers
@@ -207,8 +204,8 @@ scopes:
   slug: mutiny-hq-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: thin
-  composite: 36.6
+  band: developing
+  composite: 39.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -222,14 +219,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 36.6
+  previous_composite: 39.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa-cpra
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

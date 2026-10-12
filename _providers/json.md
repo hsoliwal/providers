@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JSON (JavaScript Object Notation) specification and related resources. Standardized by IETF as RFC 8259 (December 2017, edited by Tim Bray) and by Ecma International as ECMA-404. Defines the grammar a
@@ -111,7 +111,7 @@ rules:
   slug: json-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 16.3
+  composite: 15.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 52.3
@@ -125,11 +125,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 16.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

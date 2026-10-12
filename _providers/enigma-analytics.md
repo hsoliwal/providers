@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'Enigma''s primary programmatic surface: a Relay-style GraphQL API over the business knowledge graph. Query Brand, LegalEntity, OperatingLocation, Address, Person, and Industry entities via connection-b'
@@ -227,7 +227,7 @@ layout: provider
 mcp_servers:
 - description: 'Remote MCP server for U.S. business intelligence: entity resolution, KYB verification, sanctions and negative-news screening, card-transaction analytics, and public-records search.'
   name: Enigma Analytics MCP Server
-  slug: enigma-analytics-mcp-server
+  slug: com-enigma-enigma-mcp
 modified: '2026-08-14'
 name: Enigma Analytics
 nav: Providers
@@ -247,12 +247,12 @@ rate_limits:
   slug: enigma-analytics-rate-limits
 scopes:
 - name: Enigma Analytics Scopes
-  scope_count: 0
+  scope_count: 1
   slug: enigma-analytics-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 47.6
+  composite: 51.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 64.0
@@ -266,15 +266,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 60.5
-  previous_composite: 47.6
+  previous_composite: 51.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

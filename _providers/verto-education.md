@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A remote Model Context Protocol endpoint served from Verto Education's own WordPress installation and advertised through RFC 9728 protected-resource metadata. Access requires an OAuth 2.0 access token
@@ -155,12 +155,12 @@ rate_limits:
   slug: verto-education-rate-limits
 scopes:
 - name: Verto Education Scopes
-  scope_count: 0
+  scope_count: 1
   slug: verto-education-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: thin
-  composite: 28.1
+  band: emerging
+  composite: 24.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -174,20 +174,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 28.1
+  previous_composite: 24.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

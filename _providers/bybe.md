@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,9 +23,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-09-20'
+  score: 27.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -238,7 +238,7 @@ rate_limits:
   slug: bybe-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 33.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 49.6
+    contract_quality: 44.6
     developer_ergonomics: 42.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 34.6
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,9 +270,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -296,7 +296,7 @@ tags:
 - Rebates
 - Marketing
 - Retail
-- CPG
+- Consumer Packaged Goods
 - Loyalty
 - Payments
 - Disbursements

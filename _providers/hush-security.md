@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the Hush Security platform, secured with OAuth 2.0 client-credentials (API Key ID + Secret exchanged at POST /v1/oauth/token for a Bearer access token). Region-scoped host (US). Errors fo
@@ -167,7 +167,7 @@ overview: 'Hush Security publishes 1 API on the [APIs.io](https://apis.io/) netw
 random_paper: 9
 score:
   band: thin
-  composite: 35.8
+  composite: 37.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -181,14 +181,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.8
+  previous_composite: 37.6
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -216,7 +222,6 @@ tags:
 - Identity and Access Management
 - Secrets Management
 - AI Agents
-- Agentic AI
 - Kubernetes
 - Cloud Security
 - Workload Identity

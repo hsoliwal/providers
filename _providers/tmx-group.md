@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 11
 apis:
 - description: End-of-day equity analytics for Canadian and US markets - basic, daily, and advanced daily stats plus liquidity analytics and liquidity summaries - via POST endpoints such as /v1/ca/dailystats, /v1/us
@@ -191,7 +191,7 @@ modified: '2026-07-22'
 name: TMX Group
 nav: Providers
 network: true
-overview: 'TMX Group publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Stocks, Exchange, and Derivatives.
+overview: 'TMX Group publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Stocks, Exchange, and Derivatives.
 
 
   TMX Group''s developer surface includes authentication, API reference, getting-started guide, developer portal, documentation, engineering blog, pricing, and 18 more developer resources.'
@@ -205,8 +205,8 @@ rate_limits:
   name: Tmx Group Rate Limits
   slug: tmx-group-rate-limits
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 37.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 64.0
@@ -220,7 +220,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 48.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 38.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -229,7 +229,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.8
+  previous_composite: 37.3
   provenance:
     conformance: derived
   regulatory:
@@ -237,9 +237,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 65.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -257,7 +257,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: tmx-group
 tags:
-- Financial
+- Finance
 - Market Data
 - Stocks
 - Exchange

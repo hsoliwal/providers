@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -381,7 +381,7 @@ modified: '2026-05-19'
 name: Xceptor
 nav: Providers
 network: true
-overview: 'Xceptor publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Workflow API, Authentication API, Data Sources API, and 8 more. Tagged areas include API Integration, Data Automation, Data Extraction, Document Processing, and ETL.
+overview: 'Xceptor publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Workflow API, Authentication API, Data Sources API, and 11 more. Tagged areas include API Integration, Data Automation, Data Extraction, Document Processing, and ETL.
 
 
   The Xceptor catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -410,7 +410,7 @@ rules:
   slug: xceptor-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 35.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.3
@@ -422,11 +422,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 9.8
-    contract_quality: 59.8
+    contract_quality: 54.3
     developer_ergonomics: 28.6
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 13.2
-  previous_composite: 36.2
+  previous_composite: 35.3
   provenance:
     agentic_access: derived
     contracts:
@@ -434,8 +434,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -458,7 +464,7 @@ tags:
 - Document Processing
 - ETL
 - Financial Data
-- Financial-Services
+- Financial Services
 - Intelligent Document Processing
 - Reconciliation
 - Trade Operations

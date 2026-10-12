@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -48,22 +48,22 @@ apis:
 - baseURL: https://data.apptentive.com
   baseurl_source: declared
   description: experimental data endpoints
-  name: Apptentive experimental API
+  name: Apptentive Experimental API
   slug: apptentive-experimental-api
 - baseURL: https://data.apptentive.com
   baseurl_source: declared
   description: info endpoints
-  name: Apptentive info API
+  name: Apptentive Info API
   slug: apptentive-info-api
 - baseURL: https://data.apptentive.com
   baseurl_source: declared
   description: metrics data endpoints
-  name: Apptentive metrics API
+  name: Apptentive Metrics API
   slug: apptentive-metrics-api
 - baseURL: https://data.apptentive.com
   baseurl_source: declared
   description: raw data endpoints
-  name: Apptentive raw API
+  name: Apptentive Raw API
   slug: apptentive-raw-api
 artifact_total: 14
 collections:
@@ -188,7 +188,7 @@ modified: '2026-07-18'
 name: Apptentive
 nav: Providers
 network: true
-overview: 'Apptentive publishes 4 APIs on the [APIs.io](https://apis.io/) network, including experimental API, info API, metrics API, and 1 more. Tagged areas include Company, Enterprise, Mobile, Customer Feedback, and Surveys.
+overview: 'Apptentive publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Experimental API, Info API, Metrics API, and 1 more. Tagged areas include Company, Enterprise, Mobile, Customer Feedback, and Surveys.
 
 
   Apptentive''s developer surface includes authentication, documentation, support, engineering blog, and 17 more developer resources.'
@@ -199,7 +199,7 @@ rate_limits:
   slug: apptentive-rate-limits
 score:
   band: developing
-  composite: 39.5
+  composite: 39.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -211,11 +211,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
-    contract_quality: 50.0
+    contract_quality: 45.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 39.5
+  previous_composite: 39.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -226,8 +226,24 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: ferpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

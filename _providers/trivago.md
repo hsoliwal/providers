@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Public Model Context Protocol connector (search_hotels) plus an invite-only direct hotel-search API delivering live prices ranked by value, enriched property data, and destination price trends across '
@@ -128,9 +128,9 @@ description: 'trivago (trivago N.V.) is a global hotel and accommodation metasea
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trivago.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.trivago.com over HTTP; 1 tool listed.
   name: Trivago MCP Server
-  slug: trivago-mcp-server
+  slug: trivago
 modified: '2026-07-21'
 name: Trivago
 nav: Providers
@@ -142,7 +142,7 @@ overview: 'Trivago publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 16
 score:
   band: thin
-  composite: 26.4
+  composite: 27.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -156,14 +156,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 26.4
+  previous_composite: 27.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

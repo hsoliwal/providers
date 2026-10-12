@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Appdome Build2Secure (DEV-API) REST API automates Appdome's no-code mobile app defense pipeline — upload, build/fuse, add context, sign (standard, private, and Auto-DEV signing), download, publish
@@ -178,7 +178,7 @@ overview: 'Appdome publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 16
 score:
   band: thin
-  composite: 26.9
+  composite: 28.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -192,15 +192,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 26.9
+  previous_composite: 28.0
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,7 +232,7 @@ tags:
 - Mobile
 - CI/CD
 - App Signing
-- Anti-Fraud
+- Fraud Prevention
 - Code Signing
 - Developer Tools
 website: https://appdome.com

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 1
@@ -309,7 +309,7 @@ rate_limits:
   slug: ferc-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 44.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -321,9 +321,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 35.8
+    contract_quality: 33.2
     developer_ergonomics: 64.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -332,7 +332,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.6
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,9 +348,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

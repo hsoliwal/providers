@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -271,7 +271,7 @@ modified: '2026-09-06'
 name: Architect of the Capitol
 nav: Providers
 network: true
-overview: 'Architect of the Capitol publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accessibility API, Art Collection API, Buildings API, and 2 more. Tagged areas include Federal-Government, Capitol Hill, Congress, Historic Preservation, and Government Services.
+overview: 'Architect of the Capitol publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accessibility API, Art Collection API, Buildings API, and 2 more. Tagged areas include Federal Government, Capitol Hill, Congress, Historic Preservation, and Government Services.
 
 
   The Architect of the Capitol catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
@@ -321,23 +321,28 @@ rules:
   slug: architect-of-the-capitol-spectral-rules
 score:
   band: developing
-  composite: 47.2
+  composite: 43.9
   coverage:
     artifact_dirs: 17
-    catalog_earned: 63.0
+    catalog_earned: 60.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 37.0
+    catalog_gap: 39.3
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 57.1
-    contract_governance: 69.7
-    contract_quality: 47.3
+    contract_governance: 62.7
+    contract_quality: 43.2
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 47.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     contracts:
@@ -350,9 +355,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -366,7 +371,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: architect-of-the-capitol
 tags:
-- Federal-Government
+- Federal Government
 - Capitol Hill
 - Congress
 - Historic Preservation

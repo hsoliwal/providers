@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 24
@@ -219,14 +219,14 @@ description: Luxury Presence is the growth platform for residential real estate'
 image: https://www.luxurypresence.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.luxurypresence.com over HTTP; 15 tools listed.
   name: Luxury Presence MCP Server
-  slug: luxury-presence-mcp-server
+  slug: luxury-presence
 modified: '2026-07-20'
 name: Luxury Presence
 nav: Providers
 network: true
-overview: 'Luxury Presence publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Media API, Offices API, and 2 more. Tagged areas include Company, Vertical Software, Real-Estate, PropTech, and CRM.
+overview: 'Luxury Presence publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Media API, Offices API, and 2 more. Tagged areas include Company, Vertical Software, Real Estate, PropTech, and CRM.
 
 
   The Luxury Presence catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -236,7 +236,7 @@ overview: 'Luxury Presence publishes 5 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 11
 score:
   band: developing
-  composite: 42.5
+  composite: 42.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 62.3
+    contract_quality: 57.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 42.5
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -263,8 +263,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -283,7 +289,7 @@ slug: luxury-presence
 tags:
 - Company
 - Vertical Software
-- Real-Estate
+- Real Estate
 - PropTech
 - CRM
 - Marketing

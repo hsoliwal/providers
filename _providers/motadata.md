@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-09-20'
+  score: 15.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: ObserveOps (formerly Motadata AIOps) is a unified observability platform correlating metrics, logs, traces, flows and topology with anomaly detection that needs no training period. Its REST API is mou
@@ -195,7 +195,7 @@ layout: provider
 mcp_servers:
 - description: Motadata ships an MCP server inside its official ObserveOps CLI. `observeops mcp` exposes the ObserveOps (AIOps) platform as typed MCP tools over stdio, holding one authenticated session for the whole
   name: Motadata MCP Server
-  slug: motadata-mcp-server
+  slug: observeops
 modified: '2026-08-29'
 name: Motadata
 nav: Providers
@@ -215,12 +215,12 @@ rate_limits:
   slug: motadata-rate-limits
 scopes:
 - name: Motadata Scopes
-  scope_count: 0
+  scope_count: 1
   slug: motadata-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · password
 score:
   band: thin
-  composite: 36.2
+  composite: 38.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 48.0
@@ -234,15 +234,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 39.5
-  previous_composite: 36.2
+  previous_composite: 38.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

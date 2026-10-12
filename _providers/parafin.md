@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: White-labeled embedded finance REST API for offering business financing — creating businesses, persons, and bank accounts; generating capital offers; creating capital, line-of-credit, and pay-over-tim
@@ -135,7 +135,7 @@ layout: provider
 mcp_servers:
 - description: Parafin operates a hosted, remote MCP server over Streamable HTTP at https://docs.parafin.com/mcp that exposes documentation search to agents. It is protected by OAuth 2.1 (RFC 8414 authorization-serv
   name: Parafin MCP Server
-  slug: parafin-mcp-server
+  slug: parafin-docs
 modified: '2026-07-20'
 name: Parafin
 nav: Providers
@@ -147,7 +147,7 @@ overview: 'Parafin publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 15.6
+  previous_composite: 15.5
   provenance:
     mcp: first-party
   regulatory:
@@ -171,9 +171,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

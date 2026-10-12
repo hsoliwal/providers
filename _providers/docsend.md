@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: DocSend's hosted Model Context Protocol server — the only programmatic surface DocSend publishes. An MCP client POSTs Streamable-HTTP JSON-RPC to https://docsend.com/mcp (also reachable at https://mcp
@@ -167,9 +167,9 @@ description: DocSend is a secure document sharing and analytics platform, now pa
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/docsend.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docsend.com over HTTP.
   name: DocSend MCP Server
-  slug: docsend-mcp-server
+  slug: docsend
 modified: '2026-08-14'
 name: DocSend
 nav: Providers
@@ -197,7 +197,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 44.8
+  composite: 48.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -209,16 +209,28 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 44.8
+  previous_composite: 48.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

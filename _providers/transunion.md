@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: TransUnion's API products for credit reporting, identity verification, fraud prevention and consumer risk decisioning. Access requires a business agreement with TransUnion and credentials issued by an
@@ -204,7 +204,7 @@ modified: '2026-08-13'
 name: TransUnion
 nav: Providers
 network: true
-overview: 'TransUnion publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication Service API, Signing API, Verification API, and 2 more. Tagged areas include Financial, Credit Reporting, Risk, Identity, and Fraud.
+overview: 'TransUnion publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication Service API, Signing API, Verification API, and 4 more. Tagged areas include Finance, Credit Reporting, Risk Management, Identity, and Fraud Prevention.
 
 
   TransUnion''s developer surface includes authentication, product news, engineering blog, and 23 more developer resources.'
@@ -218,8 +218,8 @@ rate_limits:
   name: Transunion Rate Limits
   slug: transunion-rate-limits
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 32.0
@@ -231,11 +231,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.6
+    contract_quality: 43.7
     developer_ergonomics: 39.9
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 13.2
-  previous_composite: 28.0
+  previous_composite: 26.1
   provenance:
     conformance: derived
     contracts:
@@ -250,9 +250,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 31.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -273,11 +273,11 @@ security:
   summary_line: Hackerone · security.txt · contact published
 slug: transunion
 tags:
-- Financial
+- Finance
 - Credit Reporting
-- Risk
+- Risk Management
 - Identity
-- Fraud
+- Fraud Prevention
 - Marketing
 - Telecommunications
 - Call Authentication

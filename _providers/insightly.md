@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -112,6 +112,11 @@ collections:
   name: Insightly CRM API
   slug: open-insightly
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/insightly/refs/heads/main/capabilities/insightly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/insightly-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/insightly/refs/heads/main/agentic-access/insightly-agentic-access.yml
   title: ''
@@ -172,14 +177,14 @@ modified: '2026-05-11'
 name: Insightly
 nav: Providers
 network: true
-overview: 'Insightly publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, Leads API, Opportunities API, and 4 more. Tagged areas include CRM, Project Management, Lead Management, Opportunities, and Contacts.
+overview: 'Insightly publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, Leads API, Opportunities API, and 5 more. Tagged areas include CRM, Project Management, Lead Management, Opportunities, and Contacts.
 
 
-  Insightly''s developer surface includes authentication, documentation, support, signup flow, pricing, engineering blog, and 6 more developer resources.'
+  Insightly''s developer surface includes authentication, documentation, support, signup flow, pricing, engineering blog, and 7 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 29.4
+  composite: 28.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -191,11 +196,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 29.4
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +208,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -230,6 +241,6 @@ tags:
 - Lead Management
 - Opportunities
 - Contacts
-- SMB
+- Small Business
 website: https://www.insightly.com
 ---

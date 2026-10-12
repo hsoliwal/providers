@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -235,7 +235,7 @@ layout: provider
 mcp_servers:
 - description: Create and manage Yutori Scouts and run Research and Browsing web-agent tasks via the Yutori API.
   name: Yutori MCP Server
-  slug: yutori-mcp-server
+  slug: com-yutori-yutori-mcp
 modified: '2026-07-21'
 name: Yutori
 nav: Providers
@@ -250,7 +250,7 @@ overview: 'Yutori publishes 5 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 2
 score:
   band: developing
-  composite: 46.0
+  composite: 45.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -262,11 +262,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 62.4
+    contract_quality: 57.2
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 46.0
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -277,8 +277,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -304,5 +310,6 @@ tags:
 - Research
 - MCP
 - LLM
+- Foundation Models
 website: https://yutori.com
 ---

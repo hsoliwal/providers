@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://loyalty.hang.xyz/partner-api
@@ -191,6 +191,11 @@ collections:
   name: Hang Partner API (params in:formData) Activities Wallet Integration API
   slug: open-hang-wallet-integration-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hang/refs/heads/main/capabilities/hang-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hang-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hang/refs/heads/main/security/hang-trust-center.yml
   title: ''
@@ -332,11 +337,11 @@ overview: 'Hang publishes 18 APIs on the [APIs.io](https://apis.io/) network, in
   The Hang catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Hang''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, and 22 more developer resources.'
+  Hang''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, and 23 more developer resources.'
 random_paper: 18
 score:
   band: developing
-  composite: 51.7
+  composite: 53.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -348,11 +353,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 18.2
-    contract_quality: 50.0
+    contract_quality: 45.8
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 51.7
+  previous_composite: 53.3
   provenance:
     conformance: first-party
     contracts:
@@ -362,8 +367,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -398,5 +409,6 @@ tags:
 - Restaurant
 - Point-of-Sale
 - Webhook
+- Loyalty & Incentives
 website: https://www.hang.com
 ---

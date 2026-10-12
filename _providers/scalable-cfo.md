@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -75,7 +75,7 @@ overview: 'Scalable CFO is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 14
 score:
   band: emerging
-  composite: 12.6
+  composite: 11.3
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -89,7 +89,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -97,9 +97,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 12.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -115,7 +121,7 @@ tags:
 - Cash Flow
 - Forecasting
 - Accounting
-- SME
+- Small Business
 - Marketplace
 website: https://thescalablecfo.com
 ---

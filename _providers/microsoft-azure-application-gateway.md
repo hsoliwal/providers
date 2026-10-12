@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -69,6 +69,11 @@ collections:
   name: Azure Application Gateway REST API
   slug: open-microsoft-azure-application-gateway
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-application-gateway/refs/heads/main/capabilities/microsoft-azure-application-gateway-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-application-gateway-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -140,7 +145,7 @@ network: true
 overview: 'Azure Application Gateway publishes 2 APIs on the [APIs.io](https://apis.io/) network: Application Gateways API and Operations API. Tagged areas include Layer-7, Load Balancing, Reverse Proxy, and WAF.
 
 
-  Azure Application Gateway''s developer surface includes authentication, developer portal, pricing, support, engineering blog, and 8 more developer resources.'
+  Azure Application Gateway''s developer surface includes authentication, developer portal, pricing, support, engineering blog, and 9 more developer resources.'
 plans:
 - name: Microsoft Azure Application Gateway Plans Pricing
   plan_count: 3
@@ -157,9 +162,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: thin
-  composite: 38.0
+  composite: 38.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -169,11 +174,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 38.0
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     contracts:
@@ -181,8 +186,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

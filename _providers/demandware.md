@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The modern Salesforce Commerce API (SCAPI) — Shopper APIs (products, search, baskets, orders, customers), Admin APIs, and the Shopper Login and API Access Service (SLAS). Published as OpenAPI, secured
@@ -201,7 +201,7 @@ layout: provider
 mcp_servers:
 - description: Salesforce publishes a first-party developer-experience MCP server for B2C Commerce (Demandware) as part of the B2C Developer Tooling monorepo. Distributed on npm as @salesforce/b2c-dx-mcp and intende
   name: Demandware MCP Server
-  slug: demandware-mcp-server
+  slug: b2c-dx-mcp
 modified: '2026-08-21'
 name: Demandware
 nav: Providers
@@ -218,7 +218,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.8
+  composite: 45.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -232,15 +232,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 41.8
+  previous_composite: 45.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

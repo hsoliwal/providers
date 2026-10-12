@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.0
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.angle.money
@@ -339,7 +339,7 @@ overview: 'Angle publishes 20 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 13
 score:
   band: thin
-  composite: 29.9
+  composite: 28.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -351,14 +351,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 47.3
+    contract_quality: 42.5
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 29.9
+  previous_composite: 28.8
   provenance:
     conformance: derived
     contracts:
@@ -368,8 +368,14 @@ score:
       total: 20
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

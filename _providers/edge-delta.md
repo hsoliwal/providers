@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -202,6 +202,11 @@ collections:
   name: Edge Delta Access Users API
   slug: open-edge-delta-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/edge-delta/refs/heads/main/capabilities/edge-delta-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/edge-delta-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -345,7 +350,7 @@ layout: provider
 mcp_servers:
 - description: Official first-party Edge Delta MCP server. Self-hosted (Docker container or stdio transport) — no vendor-hosted remote URL is published. Exposes Edge Delta pipeline management, live-capture, and proc
   name: Edge Delta MCP Server
-  slug: edge-delta-mcp-server
+  slug: edgedelta-mcp-server
 modified: '2026-07-19'
 name: Edge Delta
 nav: Providers
@@ -353,13 +358,13 @@ network: true
 overview: 'Edge Delta publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Access API, Add Source API, Agent Configs API, and 16 more. Tagged areas include Company, Observability, Telemetry Pipelines, Logging, and Metrics.
 
 
-  Edge Delta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+  Edge Delta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
 random_paper: 4
 score:
   band: developing
   composite: 52.9
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -369,9 +374,9 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 51.9
+    contract_quality: 46.7
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
   previous_composite: 52.9
   provenance:
@@ -384,8 +389,18 @@ score:
       total: 19
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

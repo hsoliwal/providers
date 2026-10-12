@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: REST API for exchanging patient, prescription, encounter and assistance-program application data between a health system, clinic or pharmacy and the TailorMed platform. Part of TailorMed's DTA (Data T
@@ -190,12 +190,12 @@ rate_limits:
   slug: tailormed-rate-limits
 scopes:
 - name: Tailormed Scopes
-  scope_count: 0
+  scope_count: 8
   slug: tailormed-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 8 scopes
 score:
   band: developing
-  composite: 46.0
+  composite: 41.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 35.0
@@ -207,11 +207,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 40.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 23.7
-  previous_composite: 46.0
+  previous_composite: 41.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 47.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

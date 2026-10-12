@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://studio.runautomat.com
   baseurl_source: declared
   description: The extract API from Runautomat — 1 operation(s) for extract.
-  name: Runautomat extract API
+  name: Runautomat Extract API
   slug: runautomat-extract-api
 artifact_total: 6
 collections:
@@ -178,7 +178,7 @@ modified: '2026-07-21'
 name: Runautomat
 nav: Providers
 network: true
-overview: 'Runautomat publishes 1 API on the [APIs.io](https://apis.io/) network: extract API. Tagged areas include Company, Automation, Robotic Process Automation, Document Processing, and Artificial Intelligence.
+overview: 'Runautomat publishes 1 API on the [APIs.io](https://apis.io/) network: Extract API. Tagged areas include Company, Automation, RPA, Document Processing, and Artificial Intelligence.
 
 
   Runautomat''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, signup flow, and 18 more developer resources.'
@@ -197,9 +197,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 7.9
   previous_composite: 44.8
   provenance:
@@ -212,8 +212,20 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -232,10 +244,10 @@ slug: runautomat
 tags:
 - Company
 - Automation
-- Robotic Process Automation
+- RPA
 - Document Processing
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Data Extraction
 - iPaaS
 - Agents

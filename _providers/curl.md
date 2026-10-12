@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The curl command-line tool transfers data to or from a server using URL syntax, supporting protocols including DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, MQTT, POP3, POP3S, '
@@ -113,7 +113,7 @@ rate_limits:
   slug: curl-rate-limits
 score:
   band: emerging
-  composite: 21.3
+  composite: 20.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -125,19 +125,19 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
-  previous_composite: 21.3
+  previous_composite: 20.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +162,7 @@ tags:
 - HTTP
 - Library
 - Network Tools
-- Open-Source
+- Open Source
 - REST
 website: https://curl.se/
 ---

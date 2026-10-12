@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The API host behind the Cockpit AI (formerly Kalendar AI) product. The root of https://api.oncockpit.ai returns HTTP 200 with {"name":"Cockpit AI API","status":"active"} and /health returns OK, and th
@@ -125,12 +125,12 @@ rate_limits:
   slug: goomp-inc-kalendar-ai-rate-limits
 scopes:
 - name: Goomp Inc Kalendar Ai Scopes
-  scope_count: 0
+  scope_count: 2
   slug: goomp-inc-kalendar-ai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: minimal
-  composite: 9.8
+  composite: 10.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -144,13 +144,19 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 9.8
+  previous_composite: 10.9
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

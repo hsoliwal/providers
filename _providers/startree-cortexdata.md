@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://broker.pinot.celpxu.cp.s7e.startree.cloud
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: Open-source Model Context Protocol server for Apache Pinot / StarTree Cloud, maintained in the StarTree (startreedata) GitHub org. Lets Claude and other MCP-compatible clients query a Pinot cluster ov
   name: StarTree (Cortexdata) MCP Server
-  slug: startree-cortexdata-mcp-server
+  slug: mcp-pinot
 modified: '2026-09-16'
 name: StarTree (Cortexdata)
 nav: Providers
@@ -187,7 +187,7 @@ overview: 'StarTree (Cortexdata) publishes 1 API on the [APIs.io](https://apis.i
 random_paper: 10
 score:
   band: developing
-  composite: 45.2
+  composite: 46.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -199,11 +199,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 28.9
-  previous_composite: 45.2
+  previous_composite: 46.4
   provenance:
     conformance: first-party
     contracts:
@@ -213,8 +213,14 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -25,7 +25,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 30.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -182,9 +182,9 @@ description: 'Voyage Foods is an Oakland, California food-technology company tha
 image: https://voyagefoods.com/cdn/shop/files/ComboTabletop_0035_1_5.jpg?v=1697240864
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at voyagefoods.com over HTTP; 13 tools listed.
   name: Voyage Foods MCP Server
-  slug: voyage-foods-mcp-server
+  slug: voyage-foods-ucp-shopping
 modified: '2026-08-05'
 name: Voyage Foods
 nav: Providers
@@ -201,7 +201,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/refreshToken/urn:ietf:params:oauth:grant-type:jwt-bearer
 score:
   band: thin
-  composite: 34.1
+  composite: 29.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -213,18 +213,24 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 34.1
+  previous_composite: 29.0
   provenance:
     agentic_access: first-party
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

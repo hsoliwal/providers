@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Solve Intelligence's first-party remote Model Context Protocol server. A streamable-HTTP MCP endpoint, authorized with OAuth against the company's own authorization server, that exposes patent and non
@@ -145,12 +145,12 @@ rate_limits:
   slug: solve-intelligence-rate-limits
 scopes:
 - name: Solve Intelligence Scopes
-  scope_count: 0
+  scope_count: 2
   slug: solve-intelligence-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
-  band: emerging
-  composite: 25.5
+  band: thin
+  composite: 28.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -164,14 +164,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 25.5
+  previous_composite: 28.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

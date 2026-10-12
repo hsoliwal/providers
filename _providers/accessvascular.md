@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -107,17 +107,17 @@ description: Access Vascular, Inc. is a Billerica, Massachusetts medical device 
 image: http://static1.squarespace.com/static/6221f3828dc3c91f338d47ed/t/65bacd55b532e27a3ad54ad9/1706741077575/AV_logo_white.png?format=1500w
 layout: provider
 modified: '2026-09-06'
-name: Access Vascular, Inc.
+name: Access Vascular
 nav: Providers
 network: true
-overview: 'Access Vascular, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Vascular Access, and Catheters.
+overview: 'Access Vascular is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Vascular Access, and Catheters.
 
 
-  Access Vascular, Inc.''s developer surface includes engineering blog and 10 more developer resources.'
+  Access Vascular''s developer surface includes engineering blog and 10 more developer resources.'
 random_paper: 17
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -131,17 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 9.5
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

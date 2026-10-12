@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -82,6 +82,10 @@ created: '2026-07-17'
 description: Forecastr is a startup financial planning and forecasting platform, founded in 2018 in Louisville, Kentucky, that helps founders and finance teams build investor-ready financial models, track cash flow and runway, plan headcount, budget expenses, and run what-if scenario analysis. It pairs cloud-based forecasting software (a spreadsheet-style formula builder, pre-built templates, drag-and-drop dashboards, and shareable live models) with fractional CFO services, and keeps actuals current through accounting integrations with QuickBooks Online and Xero. Forecastr is an API consumer of those accounting platforms rather than a public API provider; it publishes no developer API, OpenAPI specification, or SDKs at this time.
 image: https://www.forecastr.co/hubfs/financial-forecasting-software.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.forecastr.co over HTTP.
+  name: Forecastr MCP Server
+  slug: forecastr
 modified: '2026-07-19'
 name: Forecastr
 nav: Providers
@@ -93,7 +97,7 @@ overview: 'Forecastr is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 1
 score:
   band: emerging
-  composite: 16.4
+  composite: 16.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -107,13 +111,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 7.9
-  previous_composite: 16.4
+  previous_composite: 16.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

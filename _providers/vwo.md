@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -89,6 +89,11 @@ collections:
   name: VWO Data API
   slug: open-vwo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vwo/refs/heads/main/capabilities/vwo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vwo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/vwo/refs/heads/main/agentic-access/vwo-agentic-access.yml
   title: ''
@@ -156,10 +161,10 @@ modified: '2026-05-08'
 name: VWO
 nav: Providers
 network: true
-overview: 'VWO publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Feature Flags API, Reports API, and 1 more. Tagged areas include Experimentation, A/B Testing, Personalization, Conversion Optimization, and Feature Flags.
+overview: 'VWO publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Feature Flags API, Reports API, and 2 more. Tagged areas include Experimentation, A/B Testing, Personalization, Conversion Optimization, and Feature Flags.
 
 
-  VWO''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  VWO''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Vwo Plans Pricing
   plan_count: 1
@@ -170,10 +175,10 @@ rate_limits:
   name: Vwo Rate Limits
   slug: vwo-rate-limits
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 25.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -183,11 +188,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 51.4
+    contract_quality: 46.2
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 26.5
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     contracts:
@@ -195,8 +200,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -223,6 +223,11 @@ collections:
   name: Goodstack Services Activities Webhook Subscriptions API
   slug: open-goodstack-webhook-subscriptions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/goodstack/refs/heads/main/capabilities/goodstack-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/goodstack-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -373,11 +378,11 @@ overview: 'Goodstack publishes 21 APIs on the [APIs.io](https://apis.io/) networ
   The Goodstack catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Goodstack''s developer surface includes sandbox, changelog, authentication, documentation, API reference, getting-started guide, support, and 23 more developer resources.'
+  Goodstack''s developer surface includes sandbox, changelog, authentication, documentation, API reference, getting-started guide, support, and 24 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 51.8
+  composite: 49.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -389,11 +394,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 64.2
+    contract_quality: 58.7
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 51.8
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -409,9 +414,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

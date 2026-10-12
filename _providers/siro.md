@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.6
-  scored_at: '2026-09-20'
+  score: 29.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 116
   human_in_the_loop: 1
@@ -144,6 +144,11 @@ collections:
   name: Swagger Audit Integrations API
   slug: open-siro-integrations-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/siro/refs/heads/main/capabilities/siro-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/siro-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/siro/refs/heads/main/overlays/siro-platform-api-overlay.yaml
   title: ''
@@ -320,7 +325,7 @@ network: true
 overview: 'Siro publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Core API, Folders API, and 13 more. Tagged areas include Company, Sales, Sales Coaching, Conversation Intelligence, and Field Sales.
 
 
-  Siro''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, authentication, and 29 more developer resources.'
+  Siro''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, authentication, and 30 more developer resources.'
 plans:
 - name: Siro Plans Pricing
   plan_count: 0
@@ -332,9 +337,9 @@ rate_limits:
   slug: siro-rate-limits
 score:
   band: strong
-  composite: 56.4
+  composite: 56.6
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
@@ -344,11 +349,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.2
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 31.6
-  previous_composite: 56.4
+  previous_composite: 56.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -359,8 +364,14 @@ score:
       total: 16
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -391,5 +402,6 @@ tags:
 - Speech-to-Text
 - Webhook
 - Integration
+- A2A
 website: https://siro.ai/
 ---

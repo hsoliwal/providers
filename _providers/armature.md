@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Armature''s programmable surface: an ingest API fed by the TypeScript/Python/Go MCP-analytics SDKs, and a read-only hosted MCP server (mcp.armature.tech) that serves reconstructed sessions, use-case cl'
@@ -141,9 +141,9 @@ description: Armature is a Y Combinator (Spring 2026) startup building product a
 image: https://mcp.armature.tech/frontend/assets/armature-icon.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.armature.tech over HTTP; 6 tools listed.
   name: Armature MCP Server
-  slug: armature-mcp-server
+  slug: armature
 modified: '2026-07-18'
 name: Armature
 nav: Providers
@@ -154,8 +154,8 @@ overview: 'Armature publishes 1 API on the [APIs.io](https://apis.io/) network. 
   Armature''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 15 more developer resources.'
 random_paper: 7
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -169,15 +169,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 26.0
+  previous_composite: 26.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

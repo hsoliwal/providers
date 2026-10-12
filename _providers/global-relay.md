@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -103,6 +103,11 @@ collections:
   name: Global Relay Voice Archiving API
   slug: open-global-relay-voice-archiving-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/global-relay/refs/heads/main/capabilities/global-relay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/global-relay-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -207,7 +212,7 @@ overview: 'Global Relay publishes 5 APIs on the [APIs.io](https://apis.io/) netw
   The Global Relay catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Global Relay''s developer surface includes authentication, developer portal, documentation, engineering blog, and 9 more developer resources.'
+  Global Relay''s developer surface includes authentication, developer portal, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Global Relay Plans Pricing
   plan_count: 2
@@ -230,9 +235,9 @@ rules:
   slug: global-relay-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.7
+  composite: 34.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 56.3
     catalog_earned_first_party: 0.0
     catalog_gap: 58.8
@@ -242,20 +247,26 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 9.8
-    contract_quality: 64.4
+    contract_quality: 58.1
     developer_ergonomics: 33.3
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
-  previous_composite: 35.7
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 80.0
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

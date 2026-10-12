@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -111,6 +111,11 @@ collections:
   name: Accelo REST API
   slug: open-accelo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/accelo/refs/heads/main/capabilities/accelo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/accelo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/accelo/refs/heads/main/agentic-access/accelo-agentic-access.yml
   title: ''
@@ -175,10 +180,10 @@ modified: '2026-05-11'
 name: Accelo
 nav: Providers
 network: true
-overview: 'Accelo publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Companies API, Contacts API, and 4 more. Tagged areas include Professional Services Automation, Project Management, CRM, Time Tracking, and Invoicing.
+overview: 'Accelo publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Companies API, Contacts API, and 5 more. Tagged areas include Professional Services Automation, Project Management, CRM, Time Tracking, and Invoicing.
 
 
-  Accelo''s developer surface includes authentication, documentation, signup flow, pricing, support, engineering blog, and 7 more developer resources.'
+  Accelo''s developer surface includes authentication, documentation, signup flow, pricing, support, engineering blog, and 8 more developer resources.'
 random_paper: 21
 scopes:
 - name: Accelo Scopes
@@ -187,9 +192,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 27.5
+  composite: 27.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -199,11 +204,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 43.2
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 27.5
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -211,8 +216,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

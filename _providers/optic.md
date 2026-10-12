@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Optic CLI provides OpenAPI diffing, linting and breaking-change detection from the command line, comparing two versions of an OpenAPI specification with behaviour-aware diffing and applying style-
@@ -189,7 +189,7 @@ rate_limits:
   slug: optic-rate-limits
 score:
   band: emerging
-  composite: 21.1
+  composite: 21.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 35.0
@@ -203,16 +203,22 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 21.1
+  previous_composite: 21.0
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,6 +244,6 @@ tags:
 - OpenAPI
 - Testing
 - CLI
-- Open-Source
+- Open Source
 - Archived
 ---

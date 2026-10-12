@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted Model Context Protocol server exposing SegmentStream's marketing measurement, attribution, budget-optimization, and BigQuery query capabilities as agent-callable tools (read-only reporting by d
@@ -191,7 +191,7 @@ layout: provider
 mcp_servers:
 - description: 'Hosted remote MCP server that gives AI tools secure, read-only access to a SegmentStream workspace via the Model Context Protocol. Exposes marketing measurement, attribution, budget optimization, and '
   name: SegmentStream MCP Server
-  slug: segmentstream-mcp-server
+  slug: segmentstream
 modified: '2026-08-13'
 name: SegmentStream
 nav: Providers
@@ -211,7 +211,7 @@ rate_limits:
   slug: segmentstream-rate-limits
 score:
   band: developing
-  composite: 43.7
+  composite: 45.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -225,15 +225,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 43.7
+  previous_composite: 45.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -265,5 +275,6 @@ tags:
 - BigQuery
 - MCP
 - AI Agents
+- A2A
 website: https://segmentstream.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The CafeX Audit Events API allows the retrieval of audit event data for CafeX tenants. Events can be filtered by a required time range and by optional service, event type, action, user, app, workspace
@@ -143,14 +143,14 @@ modified: '2026-08-08'
 name: CafeX Communications
 nav: Providers
 network: true
-overview: 'CafeX Communications publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Low-Code, Workflow-Automation, Agentic AI, and Audit and Compliance.
+overview: 'CafeX Communications publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Low-Code, Workflow Automation, AI Agents, and Audit and Compliance.
 
 
   CafeX Communications'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 15 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 28.6
+  composite: 30.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -164,13 +164,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 28.6
+  previous_composite: 30.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,8 +200,8 @@ slug: cafex-communications
 tags:
 - Company
 - Low-Code
-- Workflow-Automation
-- Agentic AI
+- Workflow Automation
+- AI Agents
 - Audit and Compliance
 - Collaboration
 - Enterprise Software

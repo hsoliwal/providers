@@ -15,8 +15,9 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
-    agent_card: false
+    agent_card: conformant
     agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
@@ -34,10 +35,10 @@ agent_readiness:
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
-    well_known_catalog: false
+    well_known_catalog: true
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 46.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -52,7 +53,10 @@ apis:
   description: The rtcStats API API from rtcStats — 8 operation(s) for rtcstats api.
   name: rtcStats API
   slug: rtcstats-rtcstats-api-api
-artifact_total: 9
+- description: 'Hosted Model Context Protocol server over Streamable HTTP, so coding agents can query analyzed WebRTC sessions. Tools get_quota, list_sessions, get_session and get_observation_explanation. Bearer JWT '
+  name: rtcStats MCP Server
+  slug: rtcstats-mcp-server
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -61,6 +65,69 @@ collections:
   name: rtcStats rtcStats API API
   slug: open-rtcstats-rtcstats-api-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/plans/rtcstats-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/rtcstats-plans-pricing.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/rules/rtcstats-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/rtcstats-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/json-ld/rtcstats-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/rtcstats-context.jsonld
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/vocabulary/rtcstats-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/rtcstats-vocabulary.yml
+- group: start
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/sandbox/rtcstats-sandbox.yml
+  title: ''
+  type: Sandbox
+  url: sandbox/rtcstats-sandbox.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://rtcstats.com/trust
+- group: auth
+  title: ''
+  type: Security
+  url: https://rtcstats.com/trust
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/lifecycle/rtcstats-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/rtcstats-lifecycle.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/a2a/rtcstats-a2a.yml
+  title: ''
+  type: AgentCard
+  url: a2a/rtcstats-a2a.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/hosts/rtcstats-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/rtcstats-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/vendors/rtcstats-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/rtcstats-vendors.yml
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/security/rtcstats-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/rtcstats-trust-center.yml
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/security/rtcstats-vulnerability-disclosure.yml
+  title: ''
+  type: VulnerabilityDisclosure
+  url: security/rtcstats-vulnerability-disclosure.yml
 - group: company
   title: ''
   type: Website
@@ -224,23 +291,139 @@ common:
   title: ''
   type: PrivacyPolicy
   url: https://rtcstats.com/privacy
+- group: other
+  title: ''
+  type: APIsJSON
+  url: https://rtcstats.com/apis.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/rtcstats/refs/heads/main/well-known/rtcstats-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/rtcstats-well-known.yml
+- group: other
+  title: ''
+  type: APICatalog
+  url: https://rtcstats.com/.well-known/api-catalog
+- group: other
+  title: ''
+  type: APICatalog
+  url: https://api.rtcstats.com/.well-known/api-catalog
+- group: other
+  title: ''
+  type: AgentCard
+  url: https://rtcstats.com/.well-known/agent-card.json
+- group: other
+  title: ''
+  type: AgentCard
+  url: https://api.rtcstats.com/.well-known/agent-card.json
+- group: auth
+  title: ''
+  type: SecurityTxt
+  url: https://rtcstats.com/.well-known/security.txt
+- group: auth
+  title: ''
+  type: SecurityTxt
+  url: https://api.rtcstats.com/.well-known/security.txt
+- group: operate
+  title: ''
+  type: Deprecation
+  url: https://rtcstats.com/deprecation
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://rtcstats.com/changelog
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://rtcstats.com/compliance
+- group: other
+  title: ''
+  type: Subprocessors
+  url: https://rtcstats.com/compliance
+- group: commercial
+  title: ''
+  type: FinOps
+  url: https://rtcstats.com/finops.json
+- group: operate
+  title: ''
+  type: RateLimits
+  url: https://rtcstats.com/api-docs#rate-limits
+- group: build
+  title: ''
+  type: PostmanCollection
+  url: https://rtcstats.com/schemas/rtcstats.postman_collection.json
+- group: design
+  title: ''
+  type: SpectralRuleset
+  url: https://rtcstats.com/schemas/spectral.yml
+- group: design
+  title: ''
+  type: Vocabulary
+  url: https://rtcstats.com/schemas/vocabulary.json
+- group: docs
+  title: ''
+  type: JSONSchema
+  url: https://rtcstats.com/schemas/index.json
+- group: design
+  title: ''
+  type: JSONLD
+  url: https://rtcstats.com/schemas/context.jsonld
+- group: design
+  title: ''
+  type: Conformance
+  url: https://rtcstats.com/schemas/conformance.yml
+- group: other
+  title: ''
+  type: Overlay
+  url: https://rtcstats.com/schemas/overlay.yaml
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://rtcstats.com/kb/open-source
 created: '2026-08-09'
 description: SaaS for developers to troubleshoot and monitor WebRTC applications. Users upload webrtc-internals/rtcstats dumps or stream stats to receive metrics, Observations, Deductions, an Experience Score, and an AI root-cause summary. Offers a REST API, a hosted MCP server, and an open-source collection SDK/collector.
 image: https://rtcstats.com/opengraph-image.png
+json_schemas:
+- name: AnalyzeResponseData
+  property_count: 33
+  slug: rtcstats-analyze-response-data
+- name: EnrichResponse
+  property_count: 3
+  slug: rtcstats-enrich-response
+- name: ObservationTypesResponse
+  property_count: 2
+  slug: rtcstats-observation-types-response
+- name: QuotaResponse
+  property_count: 4
+  slug: rtcstats-quota-response
+- name: SessionsListResponse
+  property_count: 2
+  slug: rtcstats-sessions-list-response
+jsonld:
+- class_count: 13
+  name: Rtcstats Context
+  property_count: 83
+  slug: rtcstats-context
 layout: provider
 mcp_servers:
 - description: rtcStats operates a first-party hosted MCP server over Streamable HTTP at https://api.rtcstats.com/v1.0/mcp. It is stateless JSON-RPC 2.0 and is also declared in the OpenAPI as the mcpStreamablePost o
   name: rtcStats MCP Server
-  slug: rtcstats-mcp-server
+  slug: rtcstats
 modified: '2026-09-16'
 name: rtcStats
 nav: Providers
 network: true
-overview: 'rtcStats publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include WebRTC, Observability, Monitoring, Debugging, and Real-Time Communication.
+overview: 'rtcStats publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include WebRTC, Observability, Monitoring, Debugging, and Real-Time Communication.
 
 
-  rtcStats'' developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 29 more developer resources.'
+  The rtcStats catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  rtcStats'' developer surface includes sandbox, authentication, changelog, documentation, API reference, getting-started guide, support, and 64 more developer resources.'
 plans:
+- name: Rtcstats Plans Pricing
+  plan_count: 3
+  slug: rtcstats-plans-pricing
 - name: Rtcstats Plans
   plan_count: 3
   slug: rtcstats-plans
@@ -249,24 +432,36 @@ rate_limits:
 - limit_count: 3
   name: Rtcstats Rate Limits
   slug: rtcstats-rate-limits
+rules:
+- effective_rule_count: 57
+  extends:
+  - spectral:oas
+  name: rtcStats API Rules
+  rule_count: 16
+  severity_counts:
+    error: 14
+    hint: 0
+    info: 1
+    warn: 1
+  slug: rtcstats-rules
 score:
-  band: developing
-  composite: 53.1
+  band: exemplar
+  composite: 69.2
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 61.0
+    artifact_dirs: 32
+    catalog_earned: 90.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 54.0
+    catalog_gap: 24.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 16.1
   facets:
-    access_clarity: 76.3
-    contract_governance: 4.5
-    contract_quality: 55.4
-    developer_ergonomics: 66.1
-    discoverability: 75.9
-    operational_transparency: 50.0
+    access_clarity: 92.1
+    contract_governance: 34.1
+    contract_quality: 63.5
+    developer_ergonomics: 78.0
+    discoverability: 85.0
+    operational_transparency: 68.4
   open_source:
     applies: true
     score: 25.0
@@ -281,9 +476,15 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -297,6 +498,14 @@ security:
   name: Rtcstats Domain Security
   slug: rtcstats-domain-security
   summary_line: TLSv1.3 · HSTS · DMARC
+- kind: vulnerability-disclosure
+  name: Rtcstats Vulnerability Disclosure
+  slug: rtcstats-vulnerability-disclosure
+  summary_line: security.txt · contact published
+- kind: trust-center
+  name: Rtcstats Trust Center
+  slug: rtcstats-trust-center
+  summary_line: SOC 2, ISO 27001
 slug: rtcstats
 tags:
 - WebRTC

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -400,9 +400,9 @@ description: 'Pax8 is a cloud commerce marketplace that lets managed service pro
 image: https://www.pax8.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.pax8.com over HTTP.
   name: Pax8 MCP Server
-  slug: pax8-mcp-server
+  slug: pax8
 modified: '2026-07-20'
 name: Pax8
 nav: Providers
@@ -422,7 +422,7 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: developing
-  composite: 47.3
+  composite: 48.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -434,11 +434,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 64.8
+    contract_quality: 59.3
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 39.5
-  previous_composite: 47.3
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -449,8 +449,14 @@ score:
       total: 26
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

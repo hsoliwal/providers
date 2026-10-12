@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -105,9 +105,9 @@ description: Tin Can is a Seattle-based consumer hardware company behind a scree
 image: https://tincan.kids/cdn/shop/files/tinothy-icon.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at tincan.kids over HTTP; 5 tools listed.
   name: Tin Can MCP Server
-  slug: tin-can-mcp-server
+  slug: tin-can-storefront
 modified: '2026-07-21'
 name: Tin Can
 nav: Providers
@@ -124,7 +124,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 23.7
+  composite: 21.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -138,14 +138,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.7
+  previous_composite: 21.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -154,9 +156,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

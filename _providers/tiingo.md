@@ -21,19 +21,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: na
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -306,7 +306,7 @@ rate_limits:
   slug: tiingo-rate-limits
 score:
   band: developing
-  composite: 45.0
+  composite: 43.4
   coverage:
     artifact_dirs: 26
     catalog_earned: 46.0
@@ -320,9 +320,9 @@ score:
     contract_governance: 4.5
     contract_quality: 20.4
     developer_ergonomics: 67.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 45.0
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -366,5 +366,7 @@ tags:
 - News
 - Fundamentals
 - WebSocket
+- Real-Time
+- Financial Data
 website: https://www.tiingo.com/
 ---

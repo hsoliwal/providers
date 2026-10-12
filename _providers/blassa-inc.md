@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -104,20 +104,20 @@ description: Blassa is an AI-powered location intelligence and geocoding platfor
 image: https://storage.googleapis.com/gpt-engineer-file-uploads/7t37Ke0rqPPrjfKJWKCzuL6xo1r2/social-images/social-1770386874845-Logo.png
 layout: provider
 modified: '2026-07-18'
-name: Blassa Inc.
+name: Blassa
 nav: Providers
 network: true
-overview: 'Blassa Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Location Intelligence, Geocoding, Address Verification, and Maps.
+overview: 'Blassa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Location Intelligence, Geocoding, Address Verification, and Maps.
 
 
-  The Blassa Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Blassa catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Blassa Inc.''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, authentication, and 7 more developer resources.'
+  Blassa''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, authentication, and 7 more developer resources.'
 random_paper: 21
 score:
-  band: thin
-  composite: 26.9
+  band: emerging
+  composite: 26.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -129,9 +129,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 27.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -139,9 +139,15 @@ score:
     regions:
     - africa
     - middle-east
-  previous_composite: 26.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 26.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

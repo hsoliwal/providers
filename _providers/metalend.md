@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -267,7 +267,7 @@ overview: 'MetaLend publishes 10 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 6
 score:
   band: developing
-  composite: 51.6
+  composite: 48.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -279,11 +279,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 53.5
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 51.6
+  previous_composite: 48.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -299,9 +299,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -327,7 +327,7 @@ tags:
 - Web3
 - Stablecoins
 - Payments
-- agent-native
+- Agent-Native
 - Blockchain
 website: https://metalend.tech/
 ---

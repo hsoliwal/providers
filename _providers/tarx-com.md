@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -255,17 +255,17 @@ json_schemas:
   slug: tarx-com-partner-sandbox-fixture
 layout: provider
 mcp_servers:
-- description: ''
-  name: TARXAN Inc MCP Server
-  slug: tarxan-inc-mcp-server
+- description: Remote MCP server at mcp.tarx.com over streamable HTTP requiring OAuth; 22 tools listed.
+  name: TARXAN MCP Server
+  slug: tarx
 modified: '2026-09-19'
-name: TARXAN Inc
+name: TARXAN
 nav: Providers
 network: true
-overview: 'TARXAN Inc publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Runtime, Local-First AI, and Private AI.
+overview: 'TARXAN publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Runtime, Local-First AI, and Private AI.
 
 
-  TARXAN Inc''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 36 more developer resources.'
+  TARXAN''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 36 more developer resources.'
 plans:
 - name: Tarx Com Plans Pricing
   plan_count: 6
@@ -277,36 +277,42 @@ rate_limits:
   slug: tarx-com-rate-limits
 scopes:
 - name: Tarx Com Scopes
-  scope_count: 0
+  scope_count: 3
   slug: tarx-com-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: developing
-  composite: 46.7
+  composite: 50.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 41.7
+  delta: 0.0
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 28.9
-  previous_composite: 5.0
+  previous_composite: 50.3
   provenance:
     agentic_access: first-party
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

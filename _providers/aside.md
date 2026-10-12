@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -109,7 +109,7 @@ layout: provider
 mcp_servers:
 - description: Aside ships a first-party Model Context Protocol server exposed through its CLI (`aside mcp`). Any MCP-capable agent or coding tool can connect to it to drive the Aside AI browser as a browser-automat
   name: Aside MCP server
-  slug: aside-mcp-server
+  slug: aside
 modified: '2026-07-18'
 name: Aside
 nav: Providers
@@ -121,7 +121,7 @@ overview: 'Aside is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 12
 score:
   band: emerging
-  composite: 21.3
+  composite: 20.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -135,13 +135,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 15.8
-  previous_composite: 21.3
+  previous_composite: 20.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +168,7 @@ tags:
 - MCP
 - CLI
 - Password Manager
-- Agentic
+- AI Agents
 - Web Automation
 - Developer Tools
 - Y Combinator

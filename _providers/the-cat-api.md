@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -211,7 +211,7 @@ rules:
   slug: the-cat-api-rules
 score:
   band: thin
-  composite: 32.8
+  composite: 31.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 48.5
@@ -223,11 +223,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
-    contract_quality: 59.9
+    contract_quality: 54.4
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 32.8
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     contracts:
@@ -235,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

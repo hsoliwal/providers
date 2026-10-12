@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -81,7 +81,7 @@ apis:
   description: Open positions and vacancies.
   name: PeopleForce Vacancies API
   slug: peopleforce-vacancies-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -111,6 +111,11 @@ collections:
   name: PeopleForce API
   slug: open-peopleforce
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/peopleforce/refs/heads/main/capabilities/peopleforce-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/peopleforce-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -142,14 +147,18 @@ finops:
   slug: peopleforce-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/peopleforce.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.peopleforce.io over HTTP.
+  name: PeopleForce MCP Server
+  slug: peopleforce
 modified: '2026-09-16'
 name: PeopleForce
 nav: Providers
 network: true
-overview: 'PeopleForce publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Candidates API, Departments API, Divisions API, and 4 more. Tagged areas include Human Resources, Recruitment, and Employees.
+overview: 'PeopleForce publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Candidates API, Departments API, Divisions API, and 4 more. Tagged areas include Human Resources, Recruiting, and Employees.
 
 
-  PeopleForce''s developer surface includes authentication, engineering blog, and 3 more developer resources.'
+  PeopleForce''s developer surface includes authentication, engineering blog, and 4 more developer resources.'
 plans:
 - name: Peopleforce Plans Pricing
   plan_count: 3
@@ -160,10 +169,10 @@ rate_limits:
   name: Peopleforce Rate Limits
   slug: peopleforce-rate-limits
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -173,11 +182,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 26.2
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 27.6
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -186,8 +195,14 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -205,7 +220,7 @@ security:
 slug: peopleforce
 tags:
 - Human Resources
-- Recruitment
+- Recruiting
 - Employees
 website: https://peopleforce.io
 ---

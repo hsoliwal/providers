@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for financial and market data covering equities, ETFs, crypto, forex, derivatives, fundamentals, financial statements, news, economic indicators, and more. Responses in JSON/CSV; API-key auth
@@ -171,9 +171,9 @@ description: A financial-data provider offering a single REST API (with JSON/CSV
 image: https://financialdata.net/static/images/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at financialdata.net over streamable HTTP requiring an API key; 86 tools listed.
   name: FinancialData.Net MCP Server
-  slug: financialdatanet-mcp-server
+  slug: financialdata-net
 modified: '2026-08-22'
 name: FinancialData.Net
 nav: Providers
@@ -193,7 +193,7 @@ rate_limits:
   slug: financialdata-net-rate-limits
 score:
   band: developing
-  composite: 43.3
+  composite: 41.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 61.0
@@ -205,11 +205,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 50.0
-  previous_composite: 43.3
+  previous_composite: 41.9
   provenance:
     conformance: derived
     mcp: first-party
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

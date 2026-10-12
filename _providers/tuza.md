@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -57,14 +57,14 @@ modified: '2026-07-21'
 name: Tuza
 nav: Providers
 network: true
-overview: 'Tuza is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Banking, AI Agents, and Agentic AI.
+overview: 'Tuza is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Banking, AI Agents, and Automation.
 
 
   Tuza''s developer surface includes support and 2 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 1.5
+  composite: 2.4
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -78,7 +78,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -88,15 +88,15 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 1.5
+  previous_composite: 2.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,9 +113,8 @@ tags:
 - Fintech
 - Banking
 - AI Agents
-- Agentic AI
 - Automation
-- Workflow-Automation
+- Workflow Automation
 - United Kingdom
 website: https://www.tuza.ai
 ---

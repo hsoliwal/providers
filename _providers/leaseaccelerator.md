@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.leaseaccelerator.com/lease_accelerator/api/LeaseAccelerator
@@ -288,7 +288,7 @@ plans:
 random_paper: 7
 score:
   band: developing
-  composite: 50.3
+  composite: 50.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -300,11 +300,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 55.2
+    contract_quality: 49.7
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 50.3
+  previous_composite: 50.0
   provenance:
     conformance: first-party
     contracts:
@@ -314,8 +314,20 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -342,7 +354,7 @@ tags:
 - Financial Reporting
 - Enterprise Software
 - Accounting
-- Real-Estate
+- Real Estate
 - Asset Management
 - ERP Integration
 - Compliance

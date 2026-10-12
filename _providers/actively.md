@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Actively's hosted (remote) Model Context Protocol server, which connects its Per-Account Agents — per-account research, strategy and persistent memory — into external AI clients such as ChatGPT, Claud
@@ -148,7 +148,7 @@ description: Actively AI delivers "Intelligence-Led Revenue" — an AI revenue-i
 image: https://framerusercontent.com/images/rYdlvukOk7Ivrd88T13uZVYfc.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Actively MCP is a productized Model Context Protocol server that connects Actively's Per-Account Agents (per-account research, strategy, and memory) directly into external AI tools. It is a HOSTED REM
   name: Actively Intelligence MCP
   slug: actively-intelligence-mcp
 modified: '2026-08-13'
@@ -170,12 +170,12 @@ rate_limits:
   slug: actively-rate-limits
 scopes:
 - name: Actively Scopes
-  scope_count: 0
+  scope_count: 4
   slug: actively-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: emerging
-  composite: 24.4
+  band: thin
+  composite: 28.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -189,14 +189,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 13.2
-  previous_composite: 24.4
+  previous_composite: 28.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

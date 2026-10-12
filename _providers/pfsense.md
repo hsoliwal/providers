@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -88,6 +88,11 @@ collections:
   name: pfSense REST API (pfSense-pkg-RESTAPI)
   slug: open-pfsense
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pfsense/refs/heads/main/capabilities/pfsense-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pfsense-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -164,16 +169,16 @@ modified: '2026-05-11'
 name: pfSense
 nav: Providers
 network: true
-overview: 'pfSense publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Firewall Aliases API, Firewall Apply API, and 1 more. Tagged areas include Firewall, Network Security, Router, VPN, and Open-Source.
+overview: 'pfSense publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Firewall Aliases API, Firewall Apply API, and 2 more. Tagged areas include Firewall, Network Security, Router, VPN, and Open Source.
 
 
-  pfSense''s developer surface includes authentication, documentation, pricing, engineering blog, and 11 more developer resources.'
+  pfSense''s developer surface includes authentication, documentation, pricing, engineering blog, and 12 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 31.8
+  composite: 30.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -183,14 +188,14 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 52.0
+    contract_quality: 47.2
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 31.8
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -198,8 +203,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -224,7 +235,7 @@ tags:
 - Network Security
 - Router
 - VPN
-- Open-Source
+- Open Source
 - FreeBSD
 - Netgate
 website: https://www.pfsense.org/

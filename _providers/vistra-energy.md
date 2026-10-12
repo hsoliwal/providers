@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -168,17 +168,17 @@ description: 'Vistra Corp (NYSE: VST) is an Irving, Texas integrated retail elec
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-07-27'
-name: Vistra Corp
+name: Vistra
 nav: Providers
 network: true
-overview: 'Vistra Corp is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United States, Utilities, Electricity, and Natural Gas.
+overview: 'Vistra is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United States, Utilities, Electricity, and Natural Gas.
 
 
-  Vistra Corp''s developer surface includes engineering blog, documentation, and 28 more developer resources.'
+  Vistra''s developer surface includes engineering blog, documentation, and 28 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 13.5
+  composite: 12.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -192,7 +192,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -201,7 +201,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.5
+  previous_composite: 12.7
   provenance:
     conformance: derived
   regulatory:
@@ -209,9 +209,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

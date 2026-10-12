@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -230,7 +230,7 @@ modified: '2026-09-05'
 name: Bureau of Consular Affairs
 nav: Providers
 network: true
-overview: 'Bureau of Consular Affairs publishes 3 APIs on the [APIs.io](https://apis.io/) network: Datastore API, Discovery API, and Write API. Tagged areas include Federal-Government, Passports, Travel, Travel Advisories, and Visa.
+overview: 'Bureau of Consular Affairs publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Datastore API, Discovery API, Write API, and 5 more. Tagged areas include Federal Government, Passports, Travel, Travel Advisories, and Visa.
 
 
   Bureau of Consular Affairs'' developer surface includes authentication, developer portal, and 25 more developer resources.'
@@ -245,7 +245,7 @@ rate_limits:
   slug: bureau-of-consular-affairs-rate-limits
 score:
   band: thin
-  composite: 38.1
+  composite: 33.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -257,11 +257,16 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 32.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 38.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -277,9 +282,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -300,7 +305,7 @@ security:
   summary_line: Hackerone · contact published
 slug: bureau-of-consular-affairs
 tags:
-- Federal-Government
+- Federal Government
 - Passports
 - Travel
 - Travel Advisories

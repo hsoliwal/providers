@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted Model Context Protocol server that lets business partners find hourly workers and book shifts on Instawork using natural language via an AI assistant. Secured with OAuth 2.1 (PKCE + dynamic cli
@@ -123,7 +123,7 @@ layout: provider
 mcp_servers:
 - description: Instawork Partner MCP server. Lets business partners find hourly workers and book shifts on the Instawork flexible-staffing marketplace using natural language. Only the USA and Canada are supported; l
   name: Instawork MCP Server
-  slug: instawork-mcp-server
+  slug: instawork-partner
 modified: '2026-07-19'
 name: Instawork
 nav: Providers
@@ -139,8 +139,8 @@ scopes:
   slug: instawork-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.5
+  band: thin
+  composite: 28.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -154,15 +154,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 25.5
+  previous_composite: 28.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

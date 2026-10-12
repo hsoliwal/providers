@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -82,6 +82,11 @@ collections:
   name: Ocean Security Metrics Threats API
   slug: open-ocean-security-threats-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ocean-security/refs/heads/main/capabilities/ocean-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ocean-security-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ocean-security/refs/heads/main/skills/ocean-security-investigate-phishing-reports.md
   title: ''
@@ -183,13 +188,13 @@ network: true
 overview: 'Ocean Security publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Metrics API, Settings API, Sonar API, and 1 more. Tagged areas include Company, Security, Email Security, Cybersecurity, and Phishing.
 
 
-  Ocean Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 14 more developer resources.'
+  Ocean Security''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 15 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 37.3
+  composite: 36.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -199,11 +204,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 53.0
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 37.3
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -214,8 +219,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

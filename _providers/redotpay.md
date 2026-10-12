@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Production RedotPay HTTP API surface behind the redotpay CLI and the redotpay-payment MCP server. Provides OAuth2 device-flow authentication and the agentic Machine Payments Protocol (MPP) endpoint th
@@ -141,7 +141,7 @@ layout: provider
 mcp_servers:
 - description: First-party local MCP server (redotpay-payment) that lets AI agents settle MPP HTTP 402 payments on the user's behalf. Installed via the redotpay-payment-skill install.sh, which registers the MCP serv
   name: Redotpay MCP Server
-  slug: redotpay-mcp-server
+  slug: redotpay-payment
 modified: '2026-07-21'
 name: Redotpay
 nav: Providers
@@ -153,12 +153,12 @@ overview: 'Redotpay publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 14
 scopes:
 - name: Redotpay Scopes
-  scope_count: 0
+  scope_count: 1
   slug: redotpay-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 19.2
+  composite: 18.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -172,9 +172,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 19.2
+  previous_composite: 18.3
   provenance:
     conformance: derived
     mcp: first-party
@@ -184,9 +184,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

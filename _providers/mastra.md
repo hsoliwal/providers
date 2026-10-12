@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -137,6 +137,11 @@ collections:
   name: Mastra Server REST API
   slug: open-mastra
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/capabilities/mastra-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mastra-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mastra/refs/heads/main/agentic-access/mastra-agentic-access.yml
   title: ''
@@ -252,10 +257,10 @@ modified: '2026-08-08'
 name: Mastra
 nav: Providers
 network: true
-overview: 'Mastra publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Conversations API, Logs API, and 7 more. Tagged areas include Agents, Artificial Intelligence, JavaScript, RAG, and TypeScript.
+overview: 'Mastra publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Conversations API, Logs API, and 8 more. Tagged areas include Agents, Artificial Intelligence, JavaScript, RAG, and TypeScript.
 
 
-  Mastra''s developer surface includes authentication, documentation, engineering blog, GitHub presence, changelog, pricing, code examples, and 18 more developer resources.'
+  Mastra''s developer surface includes authentication, documentation, engineering blog, GitHub presence, changelog, pricing, code examples, and 19 more developer resources.'
 plans:
 - name: Mastra Plans Pricing
   plan_count: 3
@@ -267,9 +272,9 @@ rate_limits:
   slug: mastra-rate-limits
 score:
   band: thin
-  composite: 36.6
+  composite: 34.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -279,11 +284,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.7
     developer_ergonomics: 38.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 36.6
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -291,8 +296,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Kubernetes-style declarative control-plane API for managing Datum Cloud resources — projects, domains, DNS zones and record sets, gateways, HTTPProxies, HTTPRoutes, traffic protection policies (WAF), '
@@ -167,9 +167,9 @@ description: 'Datum is an open source network cloud built for AI, founded in 202
 image: https://www.datum.net/brand/social/
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.datum.net.
   name: Datum MCP Server
-  slug: datum-mcp-server
+  slug: datum-mcp-yml
 modified: '2026-07-18'
 name: Datum
 nav: Providers
@@ -186,7 +186,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: thin
-  composite: 33.0
+  composite: 34.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -200,15 +200,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 87.0
+    discoverability: 85.0
     operational_transparency: 23.7
-  previous_composite: 33.0
+  previous_composite: 34.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

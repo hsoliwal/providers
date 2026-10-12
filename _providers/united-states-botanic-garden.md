@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -106,7 +106,7 @@ modified: '2026-05-03'
 name: United States Botanic Garden
 nav: Providers
 network: true
-overview: 'United States Botanic Garden is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Botany, Plants, Conservation, and Education.
+overview: 'United States Botanic Garden is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Botany, Plants, Conservation, and Education.
 
 
   The United States Botanic Garden catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -127,7 +127,7 @@ rules:
   slug: united-states-botanic-garden-jsonschema-spectral-rules
 score:
   band: minimal
-  composite: 8.3
+  composite: 8.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 38.3
@@ -141,17 +141,22 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 8.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +170,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC
 slug: united-states-botanic-garden
 tags:
-- Federal-Government
+- Federal Government
 - Botany
 - Plants
 - Conservation

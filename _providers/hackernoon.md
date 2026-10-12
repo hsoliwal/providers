@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -167,7 +167,7 @@ rate_limits:
   slug: hackernoon-rate-limits
 score:
   band: emerging
-  composite: 17.2
+  composite: 16.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -181,13 +181,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 31.6
-  previous_composite: 17.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 16.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,7 +219,7 @@ tags:
 - Technology
 - Developer Community
 - AI Licensing
-- Open-Source
+- Open Source
 - Syndication
 - Content Licensing
 website: https://hackernoon.com

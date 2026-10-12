@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.1
-  scored_at: '2026-09-20'
+  score: 46.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 1
@@ -115,7 +115,7 @@ apis:
   description: The Skills API from Keka HR — 2 operation(s) for skills.
   name: Keka HR Skills API
   slug: keka-skills-api
-artifact_total: 39
+artifact_total: 40
 collections:
 - collection_type: open
   name: API Collection
@@ -163,6 +163,11 @@ collections:
   name: Keka HR Assets Skills API
   slug: open-keka-skills-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/keka/refs/heads/main/capabilities/keka-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/keka-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/keka/refs/heads/main/agentic-access/keka-agentic-access.yml
   title: ''
@@ -246,6 +251,10 @@ json_schemas:
   property_count: 5
   slug: keka-hr-api
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.keka.com over HTTP.
+  name: Keka HR MCP Server
+  slug: keka
 modified: 2026-06-13
 name: Keka HR
 nav: Providers
@@ -256,7 +265,7 @@ overview: 'Keka HR publishes 14 APIs on the [APIs.io](https://apis.io/) network,
   The Keka HR catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Keka HR''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  Keka HR''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Keka Plans Pricing
   plan_count: 3
@@ -284,22 +293,22 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 38.3
+  composite: 36.5
   coverage:
     artifact_dirs: 20
-    catalog_earned: 63.3
+    catalog_earned: 61.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 53.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 44.7
+    access_clarity: 41.6
     contract_governance: 9.8
-    contract_quality: 50.1
+    contract_quality: 45.1
     developer_ergonomics: 19.0
-    discoverability: 75.9
-    operational_transparency: 38.2
+    discoverability: 75.0
+    operational_transparency: 36.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -307,7 +316,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 38.3
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     contracts:
@@ -316,8 +325,14 @@ score:
       marker_coverage: 0.0
       total: 14
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -218,7 +218,7 @@ overview: 'Nowsta publishes 6 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 8
 score:
   band: thin
-  composite: 33.4
+  composite: 31.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -230,11 +230,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 60.5
+    contract_quality: 54.5
     developer_ergonomics: 32.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 33.4
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -245,8 +245,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -268,7 +274,7 @@ tags:
 - shift-scheduling
 - Time and Attendance
 - Hourly Workforce
-- gig-work
+- GigWork
 - event-staffing
 - Hospitality
 - staffing-agency

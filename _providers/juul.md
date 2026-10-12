@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -149,12 +149,12 @@ rate_limits:
   slug: juul-rate-limits
 scopes:
 - name: Juul Scopes
-  scope_count: 0
+  scope_count: 4
   slug: juul-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 21.2
+  composite: 18.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -168,14 +168,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.2
+  previous_composite: 18.5
   provenance:
     conformance: first-party
   regulatory:
@@ -183,9 +185,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -210,7 +212,7 @@ tags:
 - Hardware
 - Consumer Electronics
 - Bluetooth Low Energy
-- Open-Source
+- Open Source
 - Kotlin Multiplatform
 - Regulated Industry
 website: https://www.juullabs.com/

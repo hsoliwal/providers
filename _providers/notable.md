@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 5
+artifact_total: 6
 common:
 - group: company
   title: ''
@@ -122,6 +122,10 @@ description: Notable is an intelligent-automation company purpose-built for heal
   no public API contract; its developer documentation sits behind customer SSO. This profile is enriched from the company's public trust, security, and llms.txt surfaces.
 image: https://cdn.prod.website-files.com/628b58b14c93b9187d929a89/67b78b8f557320958bb3f989_notable_logo.svg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.notablehealth.com over HTTP.
+  name: Notable MCP Server
+  slug: notable
 modified: '2026-08-15'
 name: Notable
 nav: Providers
@@ -141,7 +145,7 @@ rate_limits:
   slug: notable-rate-limits
 score:
   band: emerging
-  composite: 21.2
+  composite: 20.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -155,9 +159,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 13.2
-  previous_composite: 21.2
+  previous_composite: 20.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -172,9 +176,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

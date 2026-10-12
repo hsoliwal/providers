@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for Plixer Scrutinizer flow analytics — run flow reports, manage alarms, tune detections, trigger packet captures, and work with Collections. Scrutinizer is deployed as a self-hosted applianc
@@ -104,7 +104,7 @@ layout: provider
 mcp_servers:
 - description: Plixer ships a native Model Context Protocol (MCP) server as part of Plixer Scrutinizer / Plixer One, released in Plixer 19.8 and available to all Scrutinizer and Plixer One customers at no additional
   name: Plixer MCP Server
-  slug: plixer-mcp-server
+  slug: plixer-scrutinizer
 modified: '2026-07-20'
 name: Plixer
 nav: Providers
@@ -120,7 +120,7 @@ plans:
 random_paper: 0
 score:
   band: thin
-  composite: 28.1
+  composite: 27.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 49.0
@@ -134,13 +134,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 28.1
+  previous_composite: 27.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public GraphQL endpoint powering the Wuilt website/e-commerce builder. Introspection is enabled; the schema exposes read queries across sites, pages, sections, menus, forms, form submissions, plans, p
@@ -124,7 +124,7 @@ overview: 'Wuilt publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 15
 score:
   band: emerging
-  composite: 25.2
+  composite: 23.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -136,9 +136,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -153,9 +153,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 25.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 23.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

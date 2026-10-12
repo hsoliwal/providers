@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Melon's first-party remote Model Context Protocol server, published by Kakao Entertainment's AI Application Technology team. Streamable HTTP transport at https://mcp.melon.com/mcp, OAuth 2.0 authentic
@@ -135,9 +135,9 @@ description: 'Kakao Entertainment Corp. is the South Korean entertainment subsid
 image: https://www.kakaoent.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.melon.com over HTTP requiring OAuth; 18 tools listed.
   name: Kakao Entertainment MCP Server
-  slug: kakao-entertainment-mcp-server
+  slug: melon
 modified: '2026-08-23'
 name: Kakao Entertainment
 nav: Providers
@@ -162,7 +162,7 @@ scopes:
   summary_line: 10 scopes
 score:
   band: emerging
-  composite: 16.6
+  composite: 18.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -176,7 +176,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -185,13 +185,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 16.6
+  previous_composite: 18.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

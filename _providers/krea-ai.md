@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.0
-  scored_at: '2026-09-20'
+  score: 53.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 0
@@ -80,7 +80,7 @@ apis:
   description: Video generation endpoints
   name: Krea Video API
   slug: krea-ai-video-api
-artifact_total: 37
+artifact_total: 38
 collections:
 - collection_type: open
   name: API Collection
@@ -325,18 +325,22 @@ features:
 - Used by Lego, Samsung, Nike, Microsoft, and Shopify
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/krea-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.krea.ai over HTTP.
+  name: Krea MCP Server
+  slug: krea-ai
 modified: '2026-05-25'
 name: Krea
 nav: Providers
 network: true
-overview: 'Krea publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Assets API, General API, Image API, and 4 more. Tagged areas include Artificial Intelligence, Image-Generation, Video Generation, Generative AI, and Real-Time.
+overview: 'Krea publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Assets API, General API, Image API, and 4 more. Tagged areas include Artificial Intelligence, Image Generation, Video Generation, Generative AI, and Real-Time.
 
 
   Krea''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, sandbox, YouTube channel, and 40 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 39.2
+  composite: 37.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -348,11 +352,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.7
     developer_ergonomics: 61.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 21.1
-  previous_composite: 39.2
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -361,8 +365,14 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -384,7 +394,7 @@ security:
 slug: krea-ai
 tags:
 - Artificial Intelligence
-- Image-Generation
+- Image Generation
 - Video Generation
 - Generative AI
 - Real-Time

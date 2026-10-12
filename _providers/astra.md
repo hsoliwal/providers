@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Astra's REST API (v1) for embedding instant money movement — accounts, users, cards, transfers, payment instruments, and Routines — authorized via OAuth 2.0 and delivered with webhooks for asynchronou
@@ -159,8 +159,8 @@ overview: 'Astra publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
   Astra''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 15 more developer resources.'
 random_paper: 11
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 37.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -172,11 +172,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 40.4
+  previous_composite: 37.6
   provenance:
     conformance: first-party
   regulatory:
@@ -190,9 +190,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

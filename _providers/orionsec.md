@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Orionsec (ORION Security) is a data loss prevention (DLP) platform that uses AI-powered, context-aware agents to detect and prevent data exfiltration across endpoints, SaaS, web, cloud, email, on-premises systems, storage, and print. Rather than relying on static policies, ORION analyzes data classification, lineage, identity, environment, and external relationships to cut false positives and deploy in minutes. The company is backed by Norwest Venture Partners and IBM Ventures and maintains a public trust center documenting SOC 2, ISO/IEC 27001, HIPAA, and GDPR posture. As of this profile, Orionsec does not publish a public developer API, reference, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orionsec.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.orionsec.io over HTTP.
+  name: Orionsec MCP Server
+  slug: orionsec
 modified: '2026-07-20'
 name: Orionsec
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Orionsec is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 8
 score:
   band: emerging
-  composite: 15.5
+  composite: 15.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.5
+  previous_composite: 15.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

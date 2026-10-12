@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.6
-  scored_at: '2026-09-20'
+  score: 31.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 0
@@ -416,7 +416,7 @@ modified: '2026-08-02'
 name: 1KOMMA5°
 nav: Providers
 network: true
-overview: '1KOMMA5° publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Admin - Audit Logs API, Admin - Branches API, Admin - Concepts API, and 24 more. Tagged areas include Company, Energy, Solar, Renewable Energy, and Smart Home.
+overview: '1KOMMA5° publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Admin - Audit Logs API, Admin - Branches API, Admin - Concepts API, and 25 more. Tagged areas include Company, Energy, Solar, Renewable Energy, and Smart Home.
 
 
   1KOMMA5°''s developer surface includes support, engineering blog, authentication, and 26 more developer resources.'
@@ -428,7 +428,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: thin
-  composite: 33.1
+  composite: 29.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -440,9 +440,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 39.3
+    contract_quality: 35.5
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -452,7 +452,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 33.1
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -468,9 +468,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 64.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

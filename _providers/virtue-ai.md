@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -119,7 +119,7 @@ layout: provider
 mcp_servers:
 - description: 'Virtue AI operates an MCP (Model Context Protocol) gateway as a product: a policy-enforcing proxy that sits in front of MCP tool servers and brokers tools/call requests for connected agent runtimes. G'
   name: Virtue Ai MCP Server
-  slug: virtue-ai-mcp-server
+  slug: virtue-ai-mcp-gateway
 modified: '2026-07-21'
 name: Virtue Ai
 nav: Providers
@@ -131,7 +131,7 @@ overview: 'Virtue Ai is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 16
 score:
   band: emerging
-  composite: 21.4
+  composite: 22.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -145,13 +145,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 50.0
+    discoverability: 48.3
     operational_transparency: 2.6
-  previous_composite: 21.4
+  previous_composite: 22.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

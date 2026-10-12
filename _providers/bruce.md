@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -82,14 +82,14 @@ modified: '2026-07-18'
 name: Bruce
 nav: Providers
 network: true
-overview: 'Bruce is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Real-Estate, Mortgage, and Insurance.
+overview: 'Bruce is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Real Estate, Mortgage, and Insurance.
 
 
   Bruce''s developer surface includes signup flow, engineering blog, support, and 6 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 13.1
+  composite: 13.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 13.1
+  previous_composite: 13.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +129,7 @@ slug: bruce
 tags:
 - Company
 - Marketplace
-- Real-Estate
+- Real Estate
 - Mortgage
 - Insurance
 - Title and Escrow

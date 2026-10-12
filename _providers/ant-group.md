@@ -35,13 +35,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Antom (Ant Group Global) AMS REST API for online payments, tokenized and subscription payments, refunds, captures, disputes, payouts and 3-D Secure 2 authentication across global payment methods. RSA2
   name: Antom Payments API (Alipay Merchant Services)
   slug: antom-payments-api-alipay-merchant-services
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -142,6 +142,10 @@ created: '2026-07-17'
 description: Ant Group is a Hangzhou-based fintech and technology company, operator of the Alipay digital payment and lifestyle super-app and parent of the Antom global merchant-payment business, the Alipay+ cross-border mobile-payment network, MYbank, and the ZOLOZ digital-identity platform. Its public developer surface is Antom (formerly Alipay Global), whose Alipay Merchant Services (AMS) REST API covers one-time payments, tokenized/auto-debit and subscription payments, refunds, captures, disputes, payouts, and 3-D Secure authentication across hundreds of global payment methods. Antom publishes first-party server SDKs (Java, Python, PHP, Go, .NET), a Web/WAP client SDK, a sandbox with a test dashboard and test wallet, RSA256 request signing, request-scoped idempotency, and dated release notes.
 image: https://logo.clearbit.com/antgroup.com
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.antom.com over HTTP.
+  name: Ant Group MCP Server
+  slug: ant-group
 modified: '2026-07-17'
 name: Ant Group
 nav: Providers
@@ -153,7 +157,7 @@ overview: 'Ant Group publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 1
 score:
   band: emerging
-  composite: 26.0
+  composite: 25.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -167,14 +171,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 26.0
+  previous_composite: 25.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -183,9 +189,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 35.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

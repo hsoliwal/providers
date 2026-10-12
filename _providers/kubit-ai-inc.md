@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Kubit's hosted Model Context Protocol server. Exposes five tools — getUserContext, getSchema, createReport, getRawData, and searchKubit — that let an MCP-compatible IDE or assistant explore schemas, e
@@ -191,26 +191,26 @@ description: Kubit is a warehouse-native digital analytics platform that runs pr
 image: https://kubit.ai/wp-content/uploads/2024/04/cropped-Kubit-Social-Profile-Image-300x300.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.kubit.ai; 5 tools listed.
   name: KubitMCP
   slug: kubitmcp
 modified: '2026-07-19'
-name: Kubit AI, Inc.
+name: Kubit AI
 nav: Providers
 network: true
-overview: 'Kubit AI, Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Product Analytics, Data Warehouse, and LLM Observability.
+overview: 'Kubit AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Product Analytics, Data Warehouse, and LLM Observability.
 
 
-  Kubit AI, Inc.''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, support, CLI, and 25 more developer resources.'
+  Kubit AI''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, support, CLI, and 25 more developer resources.'
 random_paper: 5
 scopes:
 - name: Kubit Ai Inc Scopes
-  scope_count: 0
+  scope_count: 2
   slug: kubit-ai-inc-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: thin
-  composite: 34.1
+  composite: 37.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -224,15 +224,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 56.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 34.1
+  previous_composite: 37.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

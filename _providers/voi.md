@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Deep-integration Mobility-as-a-Service API for partners to complete full user journeys inside their own apps - register users, discover vehicles by zone, get per-vehicle pricing, start and end rentals
@@ -208,7 +208,7 @@ overview: 'Voi publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 4
 score:
   band: thin
-  composite: 29.1
+  composite: 30.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -222,7 +222,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -232,11 +232,17 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 29.1
+  previous_composite: 30.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -262,5 +268,6 @@ tags:
 - GBFS
 - MDS
 - Sweden
+- Mobility
 website: https://www.voi.com
 ---

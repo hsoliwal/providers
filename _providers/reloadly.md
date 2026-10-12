@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -261,7 +261,7 @@ rules:
   slug: reloadly-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 31.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 60.3
@@ -273,11 +273,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 65.9
+    contract_quality: 60.1
     developer_ergonomics: 13.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 33.4
+  previous_composite: 31.9
   provenance:
     agentic_access: derived
     contracts:
@@ -290,9 +290,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -315,5 +315,6 @@ tags:
 - Mobile Top-Up
 - Rewards
 - Incentives
+- Loyalty & Incentives
 website: https://www.reloadly.com
 ---

@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 45.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.apitube.io
@@ -217,7 +217,7 @@ layout: provider
 mcp_servers:
 - description: Search and filter global news articles by language, category, sentiment, entities, media and more.
   name: APITube MCP Server
-  slug: apitube-mcp-server
+  slug: apitube-mcp-server-card-json
 - description: First-party hosted MCP server for the APITube News API. Streamable HTTP JSON-RPC at https://mcp.apitube.io/ — no package to install. Two tools (search_news, suggest) and four ready-made prompts (monit
   name: APITube News MCP-Server
   slug: apitube-news-mcp-server
@@ -243,7 +243,7 @@ rate_limits:
   slug: apitube-rate-limits
 score:
   band: strong
-  composite: 62.2
+  composite: 62.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 59.0
@@ -255,11 +255,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 65.9
+    contract_quality: 60.1
     developer_ergonomics: 81.0
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 65.8
-  previous_composite: 62.2
+  previous_composite: 62.1
   provenance:
     conformance: derived
     contracts:
@@ -269,8 +269,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

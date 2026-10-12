@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -80,6 +80,11 @@ collections:
   name: LeadSquared REST API
   slug: open-leadsquared
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/leadsquared/refs/heads/main/capabilities/leadsquared-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/leadsquared-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/leadsquared/refs/heads/main/agentic-access/leadsquared-agentic-access.yml
   title: ''
@@ -260,13 +265,13 @@ modified: '2026-08-13'
 name: LeadSquared
 nav: Providers
 network: true
-overview: 'LeadSquared publishes 3 APIs on the [APIs.io](https://apis.io/) network: REST API, Activities API, and Leads API. Tagged areas include Marketing Automation, CRM, Sales Automation, Lead Management, and Customer Engagement.
+overview: 'LeadSquared publishes 4 APIs on the [APIs.io](https://apis.io/) network, including REST API, Activities API, Leads API, and 1 more. Tagged areas include Marketing Automation, CRM, Sales Automation, Lead Management, and Customer Engagement.
 
 
   The LeadSquared catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  LeadSquared''s developer surface includes authentication, documentation, pricing, signup flow, API reference, getting-started guide, support, and 31 more developer resources.'
+  LeadSquared''s developer surface includes authentication, documentation, pricing, signup flow, API reference, getting-started guide, support, and 32 more developer resources.'
 plans:
 - name: Leadsquared Plans Pricing
   plan_count: 4
@@ -278,9 +283,9 @@ rate_limits:
   slug: leadsquared-rate-limits
 score:
   band: strong
-  composite: 54.7
+  composite: 54.3
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -290,11 +295,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 55.5
+    contract_quality: 50.7
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 54.7
+  previous_composite: 54.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -305,8 +310,18 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

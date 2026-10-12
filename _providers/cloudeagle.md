@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The CloudEagle API is an enterprise REST surface that exposes the same SaaS-management primitives as the web app: discovered applications, licenses and usage, identity and access state, onboarding/off'
@@ -168,7 +168,7 @@ layout: provider
 mcp_servers:
 - description: A live, OAuth-protected Model Context Protocol server served from CloudEagle's own hostname mcp.cloudeagle.ai. CloudEagle announced it publicly as a way for IT, Security, Finance and Procurement teams
   name: CloudEagle.ai MCP Server
-  slug: cloudeagleai-mcp-server
+  slug: cloudeagle-ai-mcp-server
 modified: '2026-09-05'
 name: CloudEagle.ai
 nav: Providers
@@ -188,7 +188,7 @@ rate_limits:
   slug: cloudeagle-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 35.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -202,14 +202,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 33.4
+  previous_composite: 35.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

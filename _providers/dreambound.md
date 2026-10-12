@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -64,6 +64,10 @@ created: '2026-07-17'
 description: Dreambound is a career and technical education marketplace that helps job seekers discover, compare, and enroll in vocational training programs across healthcare, technology, business, and the skilled trades. The platform aggregates thousands of schools and hundreds of programs, letting students filter by location, schedule, format (online, hybrid, or in person), and price, with enrollment coaches guiding them into certifications such as certified nursing assistant, medical billing, phlebotomy, and sterile processing. The service is free for students and monetizes through schools and workforce partners who list and advertise their programs. Backed by Union Square Ventures, Collaborative Fund, and 8VC, Dreambound is added to the API Evangelist network as a company profile; it does not currently publish a public developer program, API, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dreambound.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dreambound.com over HTTP.
+  name: Dreambound MCP Server
+  slug: dreambound
 modified: '2026-07-18'
 name: Dreambound
 nav: Providers
@@ -75,7 +79,7 @@ overview: 'Dreambound is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 1
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -89,9 +93,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.4
+  previous_composite: 10.9
   provenance:
     mcp: first-party
   regulatory:
@@ -99,9 +103,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 14.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

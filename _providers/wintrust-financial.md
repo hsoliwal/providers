@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Wintrust's commercial "API banking" for treasury clients. Rather than a documented REST API, Wintrust connects business customers directly to its secure file transfer protocol (SFTP) for account balan
@@ -91,7 +91,7 @@ modified: '2026-07-25'
 name: Wintrust Financial
 nav: Providers
 network: true
-overview: 'Wintrust Financial publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial-Services, Treasury Management, Commercial Banking, and Open Banking.
+overview: 'Wintrust Financial publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial Services, Treasury Management, Commercial Banking, and Open Banking.
 
 
   Wintrust Financial''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
@@ -106,7 +106,7 @@ rate_limits:
   slug: wintrust-financial-rate-limits
 score:
   band: emerging
-  composite: 11.5
+  composite: 11.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 39.0
@@ -120,7 +120,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 10.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -129,7 +129,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.5
+  previous_composite: 11.9
   provenance:
     conformance: derived
   regulatory:
@@ -137,9 +137,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 16.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -154,7 +154,7 @@ security:
 slug: wintrust-financial
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Treasury Management
 - Commercial Banking
 - Open Banking

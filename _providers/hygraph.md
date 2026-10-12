@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Native GraphQL API that auto-generates queries, mutations, and real-time subscriptions from the project content schema. Supports content federation, multi-environment delivery, and a high-performance '
@@ -42,7 +42,7 @@ apis:
 - description: GraphQL API for programmatically managing Hygraph project schema, content models, fields, environments, webhooks, and API tokens. Used for schema migrations and automated project provisioning.
   name: Hygraph Management API
   slug: management-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hygraph/refs/heads/main/security/hygraph-domain-security.yml
@@ -105,6 +105,10 @@ graphqls:
   slug: hygraph-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hygraph.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hygraph.com over HTTP.
+  name: Hygraph MCP Server
+  slug: hygraph
 modified: '2026-07-25'
 name: Hygraph
 nav: Providers
@@ -116,7 +120,7 @@ overview: 'Hygraph publishes 2 APIs on the [APIs.io](https://apis.io/) network. 
 random_paper: 7
 score:
   band: emerging
-  composite: 23.2
+  composite: 22.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -128,15 +132,21 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 18.4
-  previous_composite: 23.2
+  previous_composite: 22.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

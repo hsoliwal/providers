@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 2
@@ -122,6 +122,11 @@ collections:
   name: Compass Action Items User Accounts API
   slug: open-horizoniq-user-accounts-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/horizoniq/refs/heads/main/capabilities/horizoniq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/horizoniq-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -260,11 +265,11 @@ network: true
 overview: 'HorizonIQ publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Action Items API, Billing API, Devices API, and 6 more. Tagged areas include Company, Enterprise, Cloud, Bare Metal, and Infrastructure.
 
 
-  HorizonIQ''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 21 more developer resources.'
+  HorizonIQ''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 22 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 40.5
+  composite: 40.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -276,11 +281,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.7
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 40.5
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -291,8 +296,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,7 +331,7 @@ tags:
 - Infrastructure
 - Private Cloud
 - Hosting
-- Data-Center
+- Data Center
 - Compute
 - Storage
 website: https://www.horizoniq.com/

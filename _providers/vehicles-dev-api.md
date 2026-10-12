@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.vehicles.dev
@@ -215,9 +215,9 @@ created: '2026-08-15'
 description: Automotive vehicle data platform offering a live REST API for VIN decoding, specifications, recalls, market valuation, depreciation, ownership costs, listings, price history, and photos, backed by federal sources (NHTSA vPIC, NHTSA recalls, EPA) and a continuously crawled US dealer-listings store. Ships an OpenAPI 3.1 contract and a local MCP server exposing all ten endpoints as read-only tools.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 10 tools listed.
   name: Vehicles.dev MCP Server
-  slug: vehiclesdev-mcp-server
+  slug: vehicles-dev
 modified: '2026-08-16'
 name: Vehicles.dev
 nav: Providers
@@ -237,7 +237,7 @@ rate_limits:
   slug: vehicles-dev-api-rate-limits
 score:
   band: developing
-  composite: 44.2
+  composite: 42.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 59.0
@@ -249,11 +249,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 50.1
+    contract_quality: 45.1
     developer_ergonomics: 56.5
-    discoverability: 64.8
+    discoverability: 61.7
     operational_transparency: 31.6
-  previous_composite: 44.2
+  previous_composite: 42.7
   provenance:
     conformance: derived
     contracts:
@@ -263,8 +263,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -305,6 +311,6 @@ tags:
 - Vehicle Images
 - MCP
 - Agent Tools
-- Machine-Learning
+- Machine Learning
 website: https://vehicles.dev/
 ---

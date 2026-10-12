@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api2.hiverhq.com/v1
@@ -55,6 +55,11 @@ asyncapis:
   name: Hiver Webhooks
   slug: hiver-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hiver/refs/heads/main/capabilities/hiver-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hiver-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/hiver/refs/heads/main/overlays/hiver-api-overlay.yaml
   title: ''
@@ -206,7 +211,7 @@ overview: 'Hiver publishes 2 APIs on the [APIs.io](https://apis.io/) network: Co
   The Hiver catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Hiver''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 24 more developer resources.'
+  Hiver''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 25 more developer resources.'
 plans:
 - name: Hiver Plans Pricing
   plan_count: 0
@@ -218,9 +223,9 @@ rate_limits:
   slug: hiver-rate-limits
 score:
   band: developing
-  composite: 52.6
+  composite: 53.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -230,11 +235,11 @@ score:
   facets:
     access_clarity: 48.7
     contract_governance: 18.2
-    contract_quality: 53.7
+    contract_quality: 49.1
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 52.6
+  previous_composite: 53.4
   provenance:
     conformance: first-party
     contracts:
@@ -244,8 +249,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -276,7 +287,7 @@ tags:
 - Shared Inbox
 - Email
 - Ticketing
-- Customer-Support
+- Customer Support
 - Collaboration
 - Gmail
 - Google Workspace

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.compactif.ai
@@ -219,7 +219,7 @@ modified: '2026-09-16'
 name: Multiverse Computing
 nav: Providers
 network: true
-overview: 'Multiverse Computing publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Batches API, Completions API, and 3 more. Tagged areas include Artificial Intelligence, Machine-Learning, LLM Inference, Model Compression, and Quantum Computing.
+overview: 'Multiverse Computing publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Batches API, Completions API, and 3 more. Tagged areas include Artificial Intelligence, Machine Learning, Inference, Model Compression, and Quantum Computing.
 
 
   Multiverse Computing''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 24 more developer resources.'
@@ -234,7 +234,7 @@ rate_limits:
   slug: multiverse-computing-rate-limits
 score:
   band: developing
-  composite: 48.4
+  composite: 47.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -246,9 +246,9 @@ score:
   facets:
     access_clarity: 59.2
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 48.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -258,7 +258,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 48.4
+  previous_composite: 47.9
   provenance:
     conformance: derived
     contracts:
@@ -268,8 +268,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -287,8 +293,8 @@ security:
 slug: multiverse-computing
 tags:
 - Artificial Intelligence
-- Machine-Learning
-- LLM Inference
+- Machine Learning
+- Inference
 - Model Compression
 - Quantum Computing
 - Speech-to-Text

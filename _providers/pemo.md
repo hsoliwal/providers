@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: Pemo is a UAE-based fintech offering smart corporate cards and an all-in-one spend management platform for businesses across the United Arab Emirates and Saudi Arabia. The product combines physical and virtual corporate cards with expense management, automated receipt capture, invoice management, and accounting automation, giving finance teams real-time control and visibility over company spending. Pemo serves more than 10,000 companies and is backed by investors including Speedinvest. Pemo does not currently publish a public developer API or documentation portal; this profile tracks the company's identity and public web surface in the API Evangelist network.
 image: https://pemo.io/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pemo.io over HTTP.
+  name: Pemo MCP Server
+  slug: pemo
 modified: '2026-07-20'
 name: Pemo
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Pemo is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 15
 score:
   band: emerging
-  composite: 13.8
+  composite: 14.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -102,7 +106,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -112,7 +116,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 13.8
+  previous_composite: 14.5
   provenance:
     mcp: first-party
   regulatory:
@@ -120,9 +124,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

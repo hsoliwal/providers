@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Ingest user actions and objects into per-workflow namespaces and asynchronously receive AI agent decisions (labels, risk scores, enforcement actions) via signed webhooks.
@@ -182,7 +182,7 @@ modified: '2026-07-21'
 name: SafetyKit
 nav: Providers
 network: true
-overview: 'SafetyKit publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Trust and Safety, Fraud Detection, and Content Moderation.
+overview: 'SafetyKit publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Trust and Safety, Fraud Prevention, and Content Moderation.
 
 
   The SafetyKit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -192,7 +192,7 @@ overview: 'SafetyKit publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 12
 score:
   band: developing
-  composite: 46.8
+  composite: 47.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -204,17 +204,29 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 46.8
+  previous_composite: 47.6
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -239,9 +251,9 @@ tags:
 - Company
 - Artificial Intelligence
 - Trust and Safety
-- Fraud Detection
+- Fraud Prevention
 - Content Moderation
-- Risk
+- Risk Management
 - AI Agents
 - Compliance
 website: https://www.safetykit.com

@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -69,7 +69,7 @@ apis:
 - baseURL: https://example.typo3.org
   baseurl_source: declared
   description: The sitepackage API from TYPO3 — 1 operation(s) for sitepackage.
-  name: TYPO3 sitepackage API
+  name: TYPO3 Sitepackage API
   slug: typo3-sitepackage-api
 artifact_total: 19
 collections:
@@ -89,6 +89,11 @@ collections:
   name: get.typo3.org Cache sitepackage API
   slug: open-typo3-sitepackage-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/typo3/refs/heads/main/capabilities/typo3-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/typo3-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -196,13 +201,13 @@ modified: '2026-09-19'
 name: TYPO3
 nav: Providers
 network: true
-overview: 'TYPO3 publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Cache API, Major API, Release API, and 1 more. Tagged areas include CMS, Content Management, Enterprise, PHP, and Headless.
+overview: 'TYPO3 publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Cache API, Major API, Release API, and 3 more. Tagged areas include CMS, Content Management, Enterprise, PHP, and Headless.
 
 
   The TYPO3 catalog on APIs.io includes 1 JSON-LD context.
 
 
-  TYPO3''s developer surface includes authentication, documentation, engineering blog, pricing, and 16 more developer resources.'
+  TYPO3''s developer surface includes authentication, documentation, engineering blog, pricing, and 17 more developer resources.'
 plans:
 - name: Typo3 Plans Pricing
   plan_count: 3
@@ -214,26 +219,26 @@ rate_limits:
   slug: typo3-rate-limits
 score:
   band: developing
-  composite: 42.4
+  composite: 40.8
   coverage:
     artifact_dirs: 12
-    catalog_earned: 60.0
+    catalog_earned: 58.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 56.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 0.0
-    contract_quality: 47.8
+    contract_quality: 43.9
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 42.4
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +246,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -265,6 +276,7 @@ tags:
 - PHP
 - Headless
 - JSON:API
-- Open-Source
+- Open Source
+- Headless CMS
 website: https://typo3.org
 ---

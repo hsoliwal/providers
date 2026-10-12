@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -204,14 +204,14 @@ modified: '2026-07-20'
 name: Mashvisor
 nav: Providers
 network: true
-overview: 'Mashvisor publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Investment Analysis API, Property Info API, Rental Rates API, and 2 more. Tagged areas include Company, Real-Estate, Property Data, Analytics, and Rentals.
+overview: 'Mashvisor publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Investment Analysis API, Property Info API, Rental Rates API, and 2 more. Tagged areas include Company, Real Estate, Property Data, Analytics, and Rentals.
 
 
   Mashvisor''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 16 more developer resources.'
 random_paper: 20
 score:
   band: thin
-  composite: 34.3
+  composite: 33.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -223,11 +223,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 34.3
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -238,8 +238,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -258,7 +264,7 @@ security:
 slug: mashvisor
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Property Data
 - Analytics
 - Rentals

@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.7
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -234,7 +235,7 @@ modified: '2026-07-27'
 name: Amber Electric
 nav: Providers
 network: true
-overview: 'Amber Electric publishes 2 APIs on the [APIs.io](https://apis.io/) network: Sites API and State API. Tagged areas include Energy, Australia, Electricity, Utilities, and Consumer Data Right.
+overview: 'Amber Electric publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Sites API, State API, and 1 more. Tagged areas include Energy, Australia, Electricity, Utilities, and Consumer Data Right.
 
 
   Amber Electric''s developer surface includes authentication, code examples, documentation, API reference, engineering blog, support, pricing, and 28 more developer resources.'
@@ -249,8 +250,8 @@ scopes:
   slug: amber-electric-scopes
   summary_line: 16 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 54.5
+  band: developing
+  composite: 49.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -262,9 +263,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 57.5
+    contract_quality: 52.0
     developer_ergonomics: 54.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -273,7 +274,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 54.5
+  previous_composite: 49.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -289,9 +290,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 74.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: Submit orders to Riskified for fraud and chargeback risk evaluation, in either a pre-authorization (Decide / Decision) or post-authorization (Submit / Decide) flow. Returns an APPROVED, DECLINED, or S
@@ -292,14 +292,14 @@ modified: '2026-05-25'
 name: Riskified
 nav: Providers
 network: true
-overview: 'Riskified publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud, Fraud Prevention, Chargebacks, E-Commerce, and Payments.
+overview: 'Riskified publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud Prevention, Chargebacks, E-Commerce, Payments, and Risk Management.
 
 
   Riskified''s developer surface includes developer portal, API reference, getting-started guide, authentication, documentation, engineering blog, pricing, and 42 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 34.7
+  composite: 34.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -311,19 +311,24 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 69.0
-    discoverability: 64.8
+    discoverability: 64.3
     operational_transparency: 36.8
-  previous_composite: 34.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 34.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -347,13 +352,12 @@ solutions:
 - Policy Protect — refund, return, and promotion abuse prevention
 - Dispute Resolve — chargeback recovery and dispute representment
 tags:
-- Fraud
 - Fraud Prevention
 - Chargebacks
 - E-Commerce
 - Payments
-- Risk
-- Machine-Learning
+- Risk Management
+- Machine Learning
 - Account Takeover
 - Policy Abuse
 - 3D

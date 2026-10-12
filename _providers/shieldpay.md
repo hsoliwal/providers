@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API to manage payment workflows end to end — create projects, manage payers and payees, run KYC verification, and authorise payments to disburse funds securely. Secured with mTLS + API key + RSA-
@@ -183,7 +183,7 @@ modified: '2026-07-21'
 name: Shieldpay
 nav: Providers
 network: true
-overview: 'Shieldpay publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Escrow, Legal Technology, and Fintech.
+overview: 'Shieldpay publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Escrow, Legal Tech, and Fintech.
 
 
   The Shieldpay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -193,7 +193,7 @@ overview: 'Shieldpay publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 17
 score:
   band: developing
-  composite: 49.8
+  composite: 47.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -205,11 +205,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 49.8
+  previous_composite: 47.5
   provenance:
     conformance: first-party
   regulatory:
@@ -217,9 +217,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 53.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +248,7 @@ tags:
 - Company
 - Payments
 - Escrow
-- Legal Technology
+- Legal Tech
 - Fintech
 - Compliance
 - KYC

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://salesgraph.com/api/v1
@@ -236,14 +236,14 @@ description: 'Salesgraph is a Y Combinator-backed revenue automation platform th
 image: https://salesgraph.com/opengraph-image
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at salesgraph.com over HTTP; 19 tools listed.
   name: Salesgraph MCP Server
-  slug: salesgraph-mcp-server
+  slug: salesgraph
 modified: '2026-08-13'
 name: Salesgraph
 nav: Providers
 network: true
-overview: 'Salesgraph publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Commands API, Runs API, and 2 more. Tagged areas include Company, Sales, Revenue Automation, Go-To-Market, and AI Agents.
+overview: 'Salesgraph publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Commands API, Runs API, and 3 more. Tagged areas include Company, Sales, Revenue Automation, Go-To-Market, and AI Agents.
 
 
   Salesgraph''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 24 more developer resources.'
@@ -258,7 +258,7 @@ rate_limits:
   slug: salesgraph-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 31.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -272,9 +272,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 29.9
+  previous_composite: 31.2
   provenance:
     conformance: derived
     contracts:
@@ -284,8 +284,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -312,5 +318,6 @@ tags:
 - Competitive Intelligence
 - Research
 - Enterprise Sales
+- A2A
 website: https://www.salesgraph.com/
 ---

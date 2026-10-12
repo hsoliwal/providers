@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: wss://mds.qfex.com
@@ -51,17 +51,17 @@ apis:
 - baseURL: https://api.qfex.com
   baseurl_source: declared
   description: The market-data API from Qfex — 9 operation(s) for market-data.
-  name: Qfex market-data API
+  name: Qfex Market Data API
   slug: qfex-market-data-api
 - baseURL: https://api.qfex.com
   baseurl_source: declared
   description: The pnl API from Qfex — 1 operation(s) for pnl.
-  name: Qfex pnl API
+  name: Qfex Pnl API
   slug: qfex-pnl-api
 - baseURL: https://api.qfex.com
   baseurl_source: declared
   description: The user API from Qfex — 15 operation(s) for user.
-  name: Qfex user API
+  name: Qfex User API
   slug: qfex-user-api
 artifact_total: 15
 asyncapis:
@@ -245,7 +245,7 @@ modified: '2026-07-20'
 name: Qfex
 nav: Providers
 network: true
-overview: 'Qfex publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Market Data WebSocket (MDS), Trade WebSocket, market-data API, and 2 more. Tagged areas include Company, Trading, Exchange, Perpetual Futures, and Market Data.
+overview: 'Qfex publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Market Data WebSocket (MDS), Trade WebSocket, Market Data API, and 2 more. Tagged areas include Company, Trading, Exchange, Perpetual Futures, and Market Data.
 
 
   The Qfex catalog on APIs.io includes 3 event-driven AsyncAPI specifications.
@@ -255,7 +255,7 @@ overview: 'Qfex publishes 5 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 18
 score:
   band: developing
-  composite: 54.0
+  composite: 51.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.7
+    contract_quality: 54.1
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 54.0
+  previous_composite: 51.2
   provenance:
     conformance: derived
     contracts:
@@ -286,9 +286,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,7 +318,7 @@ tags:
 - FX
 - Commodities
 - Stocks
-- Financial-Services
+- Financial Services
 - CLI
 - Fintech
 - Real-Time

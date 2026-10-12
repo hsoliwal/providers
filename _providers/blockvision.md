@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Multi-chain indexing and on-chain data-retrieval REST API (accounts, coins/tokens, NFTs, collections, DeFi portfolios, DEX market data, and smart-contract verification) for Sui and Monad, authenticate
@@ -152,7 +152,7 @@ overview: 'BlockVision publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 21
 score:
   band: emerging
-  composite: 18.7
+  composite: 18.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -166,14 +166,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 18.7
+  previous_composite: 18.6
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

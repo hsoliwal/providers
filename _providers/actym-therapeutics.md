@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -92,7 +92,7 @@ description: Actym Therapeutics is a clinical-stage biotechnology company develo
 image: https://static.wixstatic.com/media/6cf7e0_57b74df73b9347cebd4f77f40a6f71e1%7Emv2.png/v1/fit/w_2500,h_1330,al_c/6cf7e0_57b74df73b9347cebd4f77f40a6f71e1%7Emv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Actym Therapeutics serves a live, anonymous Model Context Protocol endpoint on its own domain at https://www.actymthera.com/_api/mcp. The server is PLATFORM-AUTHORED: it is the Wix Site MCP runtime th'
   name: Actym Therapeutics Site MCP Server
   slug: actym-therapeutics-site-mcp-server
 modified: '2026-09-06'
@@ -114,7 +114,7 @@ rate_limits:
   slug: actym-therapeutics-rate-limits
 score:
   band: emerging
-  composite: 14.5
+  composite: 14.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -128,20 +128,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 14.5
+  previous_composite: 14.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

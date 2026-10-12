@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - baseURL: https://api.swan.io/live-partner/graphql
@@ -72,7 +72,7 @@ apis:
   description: 'Read users and drive Swan''s strong-customer-authentication consent flow. Sensitive mutations (adding memberships, issuing cards, initiating payments) return a consent that the user must approve via a '
   name: Swan Users and Consents API
   slug: swan-io-users-consents-api
-artifact_total: 13
+artifact_total: 14
 collections:
 - collection_type: open
   name: Swan Partner API (GraphQL)
@@ -131,11 +131,15 @@ finops:
   slug: swan-io-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/swan-io.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.swan.io over HTTP; 2 tools listed.
+  name: Swan MCP Server
+  slug: swan-io
 modified: '2026-07-12'
 name: Swan
 nav: Providers
 network: true
-overview: 'Swan publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Account Memberships API, Cards API, and 4 more. Tagged areas include Embedded Banking, Banking as a Service, Backend-as-a-Service, Payments, and Account.
+overview: 'Swan publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Account Memberships API, Cards API, and 4 more. Tagged areas include Embedded Banking, Banking as a Service, Payments, Account, and Cards.
 
 
   Swan''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
@@ -150,22 +154,22 @@ rate_limits:
   slug: swan-io-rate-limits
 score:
   band: thin
-  composite: 30.7
+  composite: 30.0
   coverage:
     artifact_dirs: 11
-    catalog_earned: 59.0
+    catalog_earned: 57.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 57.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
-    contract_quality: 37.2
-    developer_ergonomics: 35.7
-    discoverability: 74.1
-    operational_transparency: 23.7
+    contract_quality: 35.1
+    developer_ergonomics: 35.2
+    discoverability: 73.3
+    operational_transparency: 21.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -174,7 +178,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 30.7
+  previous_composite: 30.0
   provenance:
     mcp: first-party
   regulatory:
@@ -182,9 +186,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -204,7 +208,6 @@ slug: swan-io
 tags:
 - Embedded Banking
 - Banking as a Service
-- Backend-as-a-Service
 - Payments
 - Account
 - Cards
@@ -214,5 +217,6 @@ tags:
 - France
 - Fintech
 - GraphQL
+- Embedded Finance
 website: https://www.swan.io
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -219,14 +219,14 @@ modified: '2026-05-16'
 name: Eventbrite
 nav: Providers
 network: true
-overview: 'Eventbrite publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Attendees API, Categories API, Events API, and 5 more. Tagged areas include Event, Event Technology, Ticketing, and Marketplace.
+overview: 'Eventbrite publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Attendees API, Categories API, Events API, and 8 more. Tagged areas include Event, Event Technology, Ticketing, and Marketplace.
 
 
   Eventbrite''s developer surface includes authentication, documentation, support, engineering blog, and 16 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 35.0
+  composite: 36.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 29.0
@@ -238,14 +238,14 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 0.0
-    contract_quality: 48.1
+    contract_quality: 43.3
     developer_ergonomics: 34.5
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 21.1
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 35.0
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
@@ -253,8 +253,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

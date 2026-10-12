@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.cdr.bendigobank.com.au/cds-au/v1/banking/products
@@ -320,7 +320,7 @@ modified: '2026-07-21'
 name: Bendigo and Adelaide Bank
 nav: Providers
 network: true
-overview: 'Bendigo and Adelaide Bank publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Attachments API, Banking Account Balances API, and 11 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Data Right.
+overview: 'Bendigo and Adelaide Bank publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Attachments API, Banking Account Balances API, and 11 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Data Right.
 
 
   The Bendigo and Adelaide Bank catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -335,7 +335,7 @@ scopes:
   summary_line: 10 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 43.3
+  composite: 39.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -347,9 +347,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 60.9
+    contract_quality: 55.6
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -358,7 +358,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 43.3
+  previous_composite: 39.4
   provenance:
     conformance: first-party
     contracts:
@@ -373,9 +373,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 68.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -396,7 +396,7 @@ security:
   summary_line: disclosure policy published
 slug: bendigo-and-adelaide-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

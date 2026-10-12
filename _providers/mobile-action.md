@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Credit-metered REST intelligence API exposing App Store and Google Play keyword rankings, app metadata, ad creatives, Apple Search Ads / CPP data, and dashboard resources. Authenticated with an accoun
@@ -206,7 +206,7 @@ description: 'MobileAction is an app-store marketing intelligence platform used 
 image: https://www.mobileaction.co/wp-content/uploads/ma-featured-image-1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.mobileaction.co over HTTP requiring an API key; 88 tools listed.
   name: MobileAction
   slug: mobileaction
 modified: '2026-08-13'
@@ -233,7 +233,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.5
+  composite: 37.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -247,15 +247,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 34.5
+  previous_composite: 37.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

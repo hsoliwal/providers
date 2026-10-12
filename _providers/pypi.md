@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -173,7 +173,7 @@ modified: '2026-05-19'
 name: PyPI
 nav: Providers
 network: true
-overview: 'PyPI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Downloads API, Projects API, and Provenance API. Tagged areas include Developer Tools, Open-Source, Package Management, Packages, and Python.
+overview: 'PyPI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Downloads API, Projects API, Provenance API, and 1 more. Tagged areas include Developer Tools, Open Source, Package Management, Packages, and Python.
 
 
   The PyPI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -202,7 +202,7 @@ rules:
   slug: pypi-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 36.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.3
@@ -214,11 +214,11 @@ score:
   facets:
     access_clarity: 28.6
     contract_governance: 9.8
-    contract_quality: 56.5
+    contract_quality: 51.2
     developer_ergonomics: 38.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 36.1
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     contracts:
@@ -226,8 +226,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +256,7 @@ security:
 slug: pypi
 tags:
 - Developer Tools
-- Open-Source
+- Open Source
 - Package Management
 - Packages
 - Python

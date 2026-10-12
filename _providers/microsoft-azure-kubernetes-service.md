@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 3
@@ -57,17 +57,69 @@ apis:
   name: Azure Kubernetes Service Trusted Access Role Bindings API
   slug: azure-kubernetes-service-trusted-access-role-bindings-api
 - description: Kubernetes API accessible via kubectl for cluster operations.
-  name: Azure Kubernetes Service kubectl API
+  name: Azure Kubernetes Service Kubectl API
   slug: azure-kubernetes-service-kubectl-api
 - baseURL: https://management.azure.com
   baseurl_source: declared
   description: Operations for managing agent pools (node pools) within AKS clusters
   name: Azure Kubernetes Service Agent Pools API
+  phrasing_intents:
+  - id: AgentPools_List
+    intent: List node pools in an AKS cluster
+    question: What node pools does my AKS cluster have?
+  - id: AgentPools_Get
+    intent: Get details of one node pool
+    question: How is a specific AKS node pool configured?
+  - id: AgentPools_CreateOrUpdate
+    intent: Add or reconfigure a node pool
+    question: How do I add a new node pool to an existing AKS cluster?
+  - id: AgentPools_Delete
+    intent: Delete a node pool from an AKS cluster
+    question: How do I remove an entire node pool from my cluster?
+  - id: AgentPools_GetUpgradeProfile
+    intent: Check available upgrades for a node pool
+    question: Is there an upgrade available for one of my AKS node pools?
+  - id: AgentPools_GetAvailableAgentPoolVersions
+    intent: List supported Kubernetes versions for a node pool
+    question: Which Kubernetes versions are supported for a given agent pool?
+  - id: AgentPools_UpgradeNodeImageVersion
+    intent: Upgrade a node pool to the latest node image
+    question: How do I patch my AKS nodes to the newest OS node image?
+  - id: AgentPools_AbortLatestOperation
+    intent: Cancel the running operation on a node pool
+    question: Can I stop a node pool upgrade or scale operation that is still running?
+  phrasing_ops: 9
   slug: microsoft-azure-kubernetes-service-agent-pools-api
 - baseURL: https://management.azure.com
   baseurl_source: declared
   description: Operations for managing AKS managed clusters
   name: Azure Kubernetes Service Managed Clusters API
+  phrasing_intents:
+  - id: ManagedClusters_List
+    intent: List all AKS clusters in a subscription
+    question: How do I see every AKS cluster across my whole Azure subscription?
+  - id: ManagedClusters_ListByResourceGroup
+    intent: List AKS clusters in a resource group
+    question: What AKS clusters are in a specific resource group?
+  - id: ManagedClusters_Get
+    intent: Get details of one AKS cluster
+    question: What is the current configuration of a single AKS cluster I name?
+  - id: ManagedClusters_CreateOrUpdate
+    intent: Create or reconfigure an AKS cluster
+    question: How do I create a new managed Kubernetes cluster in Azure?
+  - id: ManagedClusters_UpdateTags
+    intent: Update tags on an AKS cluster
+    question: Can I change just the tags on an AKS cluster without touching its configuration?
+  - id: ManagedClusters_Delete
+    intent: Delete an AKS cluster
+    question: How do I tear down an AKS cluster I no longer need?
+  - id: ManagedClusters_GetUpgradeProfile
+    intent: Check available upgrades for an AKS cluster
+    question: Which Kubernetes versions can my AKS cluster's control plane upgrade to?
+  - id: ManagedClusters_ListClusterAdminCredentials
+    intent: Get admin kubeconfig for an AKS cluster
+    question: How do I get the cluster-admin kubeconfig for my AKS cluster?
+  phrasing_ops: 15
   slug: microsoft-azure-kubernetes-service-managed-clusters-api
 arazzos:
 - description: Add a new agent (node) pool to an AKS cluster and poll until it finishes provisioning.
@@ -118,6 +170,11 @@ collections:
   name: Azure Kubernetes Service REST Agent Pools Managed Clusters API
   slug: open-microsoft-azure-kubernetes-service-managed-clusters-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-kubernetes-service/refs/heads/main/capabilities/microsoft-azure-kubernetes-service-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-kubernetes-service-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -982,13 +1039,13 @@ modified: '2026-05-19'
 name: Azure Kubernetes Service
 nav: Providers
 network: true
-overview: 'Azure Kubernetes Service publishes 2 APIs on the [APIs.io](https://apis.io/) network: Agent Pools API and Managed Clusters API. Tagged areas include Azure, Cloud, Containers, DevOps, and Kubernetes.
+overview: 'Azure Kubernetes Service publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Agent Pools API, Managed Clusters API, and 5 more. Tagged areas include Azure, Cloud, Containers, DevOps, and Kubernetes.
 
 
   The Azure Kubernetes Service catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Azure Kubernetes Service''s developer surface includes authentication, developer portal, getting-started guide, CLI, support, engineering blog, Stack Overflow tag, and 37 more developer resources.'
+  Azure Kubernetes Service''s developer surface includes authentication, developer portal, getting-started guide, CLI, support, engineering blog, Stack Overflow tag, and 38 more developer resources.'
 plans:
 - name: Azure Kubernetes Service Plans Pricing
   plan_count: 3
@@ -1043,26 +1100,26 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: exemplar
-  composite: 72.2
+  composite: 73.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 75.0
+    artifact_dirs: 21
+    catalog_earned: 72.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    catalog_gap: 42.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 68.4
-    contract_governance: 54.5
-    contract_quality: 63.9
+    contract_governance: 49.1
+    contract_quality: 57.9
     developer_ergonomics: 82.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 72.2
+  previous_composite: 73.5
   provenance:
     agentic_access: derived
     contracts:
@@ -1070,8 +1127,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1093,7 +1156,7 @@ tags:
 - Containers
 - DevOps
 - Kubernetes
-- Orchestration
+- Container Orchestration
 use_cases:
 - description: Deploy and manage microservices architectures with container orchestration and service mesh capabilities.
   name: Microservices Deployment

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://market-api.metadao.fi
@@ -177,7 +177,7 @@ rate_limits:
   slug: metadao-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 33.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 48.0
@@ -189,11 +189,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 51.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 23.7
-  previous_composite: 35.0
+  previous_composite: 33.7
   provenance:
     conformance: first-party
     contracts:
@@ -208,9 +208,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

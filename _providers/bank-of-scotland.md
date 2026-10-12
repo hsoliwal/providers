@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-09-20'
+  score: 33.6
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://api.bankofscotland.co.uk/open-banking/v2.2
@@ -353,7 +353,7 @@ modified: '2026-07-23'
 name: Bank of Scotland
 nav: Providers
 network: true
-overview: 'Bank of Scotland publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Bank of Scotland publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Bank of Scotland''s developer surface includes authentication, sandbox, documentation, and 24 more developer resources.'
@@ -365,7 +365,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 33.3
+  composite: 30.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -377,9 +377,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 52.1
+    contract_quality: 46.9
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -389,7 +389,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.3
+  previous_composite: 30.5
   provenance:
     conformance: derived
     contracts:
@@ -408,9 +408,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 50.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -427,7 +427,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: bank-of-scotland
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

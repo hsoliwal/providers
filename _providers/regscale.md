@@ -25,7 +25,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: true
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.1
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The RegScale REST API is the primary programmable surface of the RegScale platform. It is served from each customer's own RegScale tenant under the /api path, authenticated with a JSON Web Token obtai
@@ -224,7 +224,7 @@ rate_limits:
   slug: regscale-rate-limits
 score:
   band: developing
-  composite: 50.9
+  composite: 46.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 50.9
+  previous_composite: 46.5
   provenance:
     conformance: first-party
   regulatory:
@@ -248,9 +248,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

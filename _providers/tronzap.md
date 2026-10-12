@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for TRON Energy and Bandwidth rental, energy subscriptions, and AML crypto checks. Endpoints include Get Services, Check Balance, Estimate Energy, Address Info, Calculate Resource Cost, Creat
@@ -185,7 +185,7 @@ modified: '2026-08-30'
 name: TronZap
 nav: Providers
 network: true
-overview: 'TronZap publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Blockchain, Cryptocurrency, TRON, DeFi infrastructure, and Stablecoins.
+overview: 'TronZap publishes 2 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 1 more. Tagged areas include Blockchain, Cryptocurrency, TRON, DeFi infrastructure, and Stablecoins.
 
 
   TronZap''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, engineering blog, and 21 more developer resources.'
@@ -200,7 +200,7 @@ rate_limits:
   slug: tronzap-rate-limits
 score:
   band: developing
-  composite: 42.1
+  composite: 41.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.0
@@ -214,9 +214,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 42.1
+  previous_composite: 41.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

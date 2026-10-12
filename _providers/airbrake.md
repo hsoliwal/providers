@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -128,6 +128,11 @@ collections:
   name: Airbrake REST API
   slug: open-airbrake
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/airbrake/refs/heads/main/capabilities/airbrake-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/airbrake-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/airbrake/refs/heads/main/agentic-access/airbrake-agentic-access.yml
   title: ''
@@ -175,16 +180,16 @@ modified: '2026-05-11'
 name: Airbrake
 nav: Providers
 network: true
-overview: 'Airbrake publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Deploys API, Groups API, and 6 more. Tagged areas include Error Monitoring, Application Performance Monitoring, Observability, DevOps, and Logging.
+overview: 'Airbrake publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Deploys API, Groups API, and 7 more. Tagged areas include Error Monitoring, Application Performance Monitoring, Observability, DevOps, and Logging.
 
 
-  Airbrake''s developer surface includes authentication, documentation, pricing, signup flow, and 5 more developer resources.'
+  Airbrake''s developer surface includes authentication, documentation, pricing, signup flow, and 6 more developer resources.'
 random_paper: 19
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 25.6
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -194,11 +199,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 27.6
+  previous_composite: 25.6
   provenance:
     agentic_access: derived
     contracts:
@@ -206,8 +211,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

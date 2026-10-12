@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -89,14 +89,14 @@ modified: '2026-07-17'
 name: Apollo Agriculture
 nav: Providers
 network: true
-overview: 'Apollo Agriculture is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AgTech, Agriculture, Fintech, and Financial-Services.
+overview: 'Apollo Agriculture is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AgTech, Agriculture, Fintech, and Financial Services.
 
 
   Apollo Agriculture''s developer surface includes support, product news, and 9 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 9.3
+  composite: 9.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -110,7 +110,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -119,15 +119,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 9.3
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,7 +145,7 @@ tags:
 - AgTech
 - Agriculture
 - Fintech
-- Financial-Services
+- Financial Services
 - Insurance
 - Lending
 - Africa

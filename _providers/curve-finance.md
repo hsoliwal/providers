@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -52,7 +52,7 @@ apis:
 - baseURL: https://api.curve.finance/api
   baseurl_source: declared
   description: The crvUSD API from Curve Finance — 6 operation(s) for crvusd.
-  name: Curve Finance crvUSD API
+  name: Curve Finance Crv USD API
   slug: curve-finance-crvusd-api
 - baseURL: https://api.curve.finance/api
   baseurl_source: declared
@@ -196,7 +196,7 @@ modified: '2026-05-08'
 name: Curve Finance
 nav: Providers
 network: true
-overview: 'Curve Finance publishes 8 APIs on the [APIs.io](https://apis.io/) network, including crvUSD API, Deprecated API, Gauges API, and 5 more. Tagged areas include Web3, DeFi, DEX, AMM, and Stablecoins.
+overview: 'Curve Finance publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Crv USD API, Deprecated API, Gauges API, and 7 more. Tagged areas include Web3, DeFi, DEX, AMM, and Stablecoins.
 
 
   Curve Finance''s developer surface includes developer portal, documentation, GitHub presence, engineering blog, and 9 more developer resources.'
@@ -211,7 +211,7 @@ rate_limits:
   slug: curve-finance-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 28.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 44.0
@@ -223,11 +223,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 53.0
+    contract_quality: 48.6
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 30.1
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     contracts:
@@ -235,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -261,6 +267,6 @@ tags:
 - Stablecoins
 - Pegged Assets
 - Multi-Chain
-- Open-Source
+- Open Source
 website: https://www.curve.finance/
 ---

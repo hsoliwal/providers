@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -192,6 +192,11 @@ collections:
   name: Redmine REST API
   slug: open-redmine
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/redmine/refs/heads/main/capabilities/redmine-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/redmine-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/redmine/refs/heads/main/agentic-access/redmine-agentic-access.yml
   title: ''
@@ -259,16 +264,16 @@ modified: '2026-05-11'
 name: Redmine
 nav: Providers
 network: true
-overview: 'Redmine publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Attachments API, Custom Fields.json API, Groups.json API, and 14 more. Tagged areas include Project Management, Issue Tracking, Open-Source, Ruby on Rails, and Bug Tracking.
+overview: 'Redmine publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Attachments API, Custom Fields.json API, Groups.json API, and 15 more. Tagged areas include Project Management, Issue Tracking, Open Source, Ruby on Rails, and Bug Tracking.
 
 
-  Redmine''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
+  Redmine''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
 random_paper: 14
 score:
   band: emerging
-  composite: 25.4
+  composite: 23.5
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -278,11 +283,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.4
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 25.4
+  previous_composite: 23.5
   provenance:
     agentic_access: derived
     contracts:
@@ -290,8 +295,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -310,7 +321,7 @@ slug: redmine
 tags:
 - Project Management
 - Issue Tracking
-- Open-Source
+- Open Source
 - Ruby on Rails
 - Bug Tracking
 - Time Tracking

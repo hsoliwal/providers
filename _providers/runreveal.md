@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for RunReveal — manage sources, detections, pipelines, investigations, dashboards, notifications, agents, and agent skills across a workspace. OAuth2 (authorization_code + PKCE) or workspace '
@@ -168,9 +168,9 @@ description: RunReveal is a unified security log management and detection platfo
 image: https://runreveal.com/unfurl.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.runreveal.com; 17 tools listed.
   name: RunReveal MCP Server
-  slug: runreveal-mcp-server
+  slug: runreveal-mcp-yml
 modified: '2026-07-21'
 name: RunReveal
 nav: Providers
@@ -187,7 +187,7 @@ scopes:
   summary_line: 37 scopes · authorizationCode/refreshToken
 score:
   band: developing
-  composite: 39.9
+  composite: 42.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -201,15 +201,27 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 39.9
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

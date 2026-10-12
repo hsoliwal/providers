@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.1
-  scored_at: '2026-09-20'
+  score: 28.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -124,7 +124,7 @@ description: 'Glowbar is a New York-founded skincare studio chain offering exper
 image: https://glowbar.com/cdn/shop/files/Face_your_skin._2.png?v=1681760540
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at glowbar.com over streamable HTTP; 13 tools listed.
   name: Glowbar UCP Commerce MCP
   slug: glowbar-ucp-commerce-mcp
 modified: '2026-08-22'
@@ -146,12 +146,12 @@ rate_limits:
   slug: glowbar-rate-limits
 scopes:
 - name: Glowbar Scopes
-  scope_count: 0
+  scope_count: 4
   slug: glowbar-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
-  band: emerging
-  composite: 24.8
+  band: thin
+  composite: 27.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -165,16 +165,22 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 24.8
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

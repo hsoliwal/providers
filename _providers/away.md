@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface for the Away storefront implementing the Universal Commerce Protocol (dev.ucp.shopping) over an MCP endpoint, with catalog search, cart, checkout, fulfillment, discount, '
@@ -108,7 +108,7 @@ layout: provider
 mcp_servers:
 - description: Away's storefront exposes an agent-commerce MCP endpoint implementing the Universal Commerce Protocol (UCP, ucp.dev) service dev.ucp.shopping. Agents discover it via /.well-known/ucp and /llms.txt. Ch
   name: Away MCP Server
-  slug: away-mcp-server
+  slug: away-ucp-shopping
 modified: '2026-07-18'
 name: Away
 nav: Providers
@@ -125,7 +125,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.1
+  composite: 21.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -139,15 +139,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 19.1
+  previous_composite: 21.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

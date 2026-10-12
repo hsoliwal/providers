@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API over the Bullhorn Staffing Object Model — CRUD, query, Lucene search, mass update, resume parsing, and file attachments across Candidate, JobOrder, Placement, ClientCorporation, ClientContact
@@ -170,14 +170,14 @@ modified: '2026-07-18'
 name: Bullhorn
 nav: Providers
 network: true
-overview: 'Bullhorn publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Staffing, Recruitment, Applicant Tracking, and ATS.
+overview: 'Bullhorn publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Staffing, Recruiting, Applicant Tracking, and CRM.
 
 
   Bullhorn''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 36.6
+  composite: 39.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -191,13 +191,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 36.6
+  previous_composite: 39.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,9 +231,8 @@ slug: bullhorn
 tags:
 - Company
 - Staffing
-- Recruitment
+- Recruiting
 - Applicant Tracking
-- ATS
 - CRM
 - Human Resources
 - REST

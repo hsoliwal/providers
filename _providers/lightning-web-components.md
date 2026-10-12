@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Core JavaScript APIs for building Lightning Web Components including decorators, wire service, and component lifecycle methods.
@@ -202,7 +202,7 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lightning-web-components.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server requiring OAuth; 13 tools listed.
   name: Salesforce DX MCP Server — LWC toolsets
   slug: salesforce-dx-mcp-server-lwc-toolsets
 modified: '2026-08-27'
@@ -223,8 +223,8 @@ rate_limits:
   name: Lightning Web Components Rate Limits
   slug: lightning-web-components-rate-limits
 score:
-  band: developing
-  composite: 41.8
+  band: thin
+  composite: 38.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 35.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 66.7
-    discoverability: 66.7
+    discoverability: 63.3
     operational_transparency: 36.8
-  previous_composite: 41.8
+  previous_composite: 38.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -249,9 +249,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -280,7 +280,7 @@ tags:
 - Web Components
 - Custom Elements
 - Shadow DOM
-- Open-Source
+- Open Source
 - UI Framework
 - Component Library
 website: https://lwc.dev/

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -119,7 +119,7 @@ modified: '2026-08-11'
 name: Credit Genie
 nav: Providers
 network: true
-overview: 'Credit Genie is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Consumer Finance, and Lending.
+overview: 'Credit Genie is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Consumer Finance, and Lending.
 
 
   Credit Genie''s developer surface includes signup flow, support, and 11 more developer resources.'
@@ -134,7 +134,7 @@ rate_limits:
   slug: credit-genie-rate-limits
 score:
   band: emerging
-  composite: 14.6
+  composite: 15.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -148,11 +148,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 14.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,12 +176,12 @@ security:
 slug: credit-genie
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Consumer Finance
 - Lending
 - Cash Advance
 - Personal Finance
-- Mobile Applications
+- Mobile App
 website: https://www.creditgenie.com/
 ---

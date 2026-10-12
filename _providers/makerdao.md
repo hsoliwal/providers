@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -112,6 +112,18 @@ common:
   title: ''
   type: Governance
   url: https://vote.makerdao.com
+- group: start
+  title: ''
+  type: Portal
+  url: https://developers.skyeco.com/
+- group: start
+  title: ''
+  type: DeveloperPortal
+  url: https://developers.skyeco.com/
+- group: company
+  title: ''
+  type: Blog
+  url: https://sky.money/blog
 created: '2026-07-17'
 description: MakerDAO is the decentralized autonomous organization behind the Maker Protocol, an Ethereum-based smart-contract system that lets anyone, anywhere generate the Dai (DAI) stablecoin by locking crypto collateral into Vaults. The protocol governs collateral types, stability fees, the Dai Savings Rate (DSR), collateral liquidation auctions, and oracle price feeds through on-chain governance by MKR token holders. Rather than a hosted REST API, developers integrate directly with the Maker Protocol smart contracts and through the official Dai.js JavaScript / TypeScript SDK, the multicall state-management library, and published developer guides. MakerDAO has since rebranded to the Sky Ecosystem (USDS / SKY). Surfaced as a portfolio company of Paradigm and enriched by the API Evangelist pipeline.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/makerdao.png
@@ -123,11 +135,11 @@ network: true
 overview: 'MakerDAO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Defi, DeFi, Stablecoins, and Ethereum.
 
 
-  MakerDAO''s developer surface includes documentation, getting-started guide, engineering blog, support, CLI, and 12 more developer resources.'
+  MakerDAO''s developer surface includes documentation, getting-started guide, engineering blog, support, CLI, developer portal, and 14 more developer resources.'
 random_paper: 0
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -141,11 +153,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 10.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

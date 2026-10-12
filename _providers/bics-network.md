@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 7
@@ -45,9 +45,11 @@ api_count: 8
 apis:
 - description: Phone number verification and mobile authentication for anti-fraud, KYC and onboarding - validating that a mobile number is real, active, and controlled by the user, including OTP-based flows. Markete
   name: BICS Number Verification API
+  provenance: modeled
   slug: bics-number-verification-api
 - description: Network-signal services for fraud prevention and mobile identity - HLR and reachability lookup (operator, ported status, active/blocked SIM state), SIM-swap detection, and device-location signals used
   name: BICS Fraud Prevention and Reachability API
+  provenance: modeled
   slug: bics-fraud-prevention-reachability-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
@@ -102,17 +104,17 @@ apis:
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Query the numbers you have bought over time.
-  name: BICS inventory API
+  name: BICS Inventory API
   slug: bics-network-inventory-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: The number API from BICS — 1 operation(s) for number.
-  name: BICS number API
+  name: BICS Number API
   slug: bics-network-number-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Purchase a number from the stock.
-  name: BICS order API
+  name: BICS Order API
   slug: bics-network-order-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
@@ -122,7 +124,7 @@ apis:
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: The porting API from BICS — 4 operation(s) for porting.
-  name: BICS porting API
+  name: BICS Porting API
   slug: bics-network-porting-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
@@ -132,12 +134,12 @@ apis:
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Query your pricelist.
-  name: BICS pricelist API
+  name: BICS Pricelist API
   slug: bics-network-pricelist-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Query BICS reference data.
-  name: BICS reference API
+  name: BICS Reference API
   slug: bics-network-reference-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
@@ -147,17 +149,17 @@ apis:
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Modify routing details for customer numbers.
-  name: BICS routing API
+  name: BICS Routing API
   slug: bics-network-routing-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: The specification API from BICS — 1 operation(s) for specification.
-  name: BICS specification API
+  name: BICS Specification API
   slug: bics-network-specification-api
 - baseURL: https://api.bics.com/sms/v3
   baseurl_source: declared
   description: Query the available stock.
-  name: BICS stock API
+  name: BICS Stock API
   slug: bics-network-stock-api
 artifact_total: 52
 collections:
@@ -285,7 +287,7 @@ modified: '2026-07-11'
 name: BICS
 nav: Providers
 network: true
-overview: 'BICS publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Address Management API, CDR API, Connections Management API, and 19 more. Tagged areas include Number Verification, Telecom, Mobile Identity, Anti-Fraud, and Device Location.
+overview: 'BICS publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Address Management API, CDR API, Connections Management API, and 21 more. Tagged areas include Number Verification, Telecommunications, Mobile Identity, Fraud Prevention, and Device Location.
 
 
   BICS''s developer surface includes authentication, documentation, and 7 more developer resources.'
@@ -300,7 +302,7 @@ rate_limits:
   slug: bics-network-rate-limits
 score:
   band: emerging
-  composite: 23.9
+  composite: 23.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 38.0
@@ -312,11 +314,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 53.0
+    contract_quality: 47.8
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 23.9
+  previous_composite: 23.3
   provenance:
     agentic_access: derived
     contracts:
@@ -329,9 +331,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -345,15 +347,14 @@ security:
 slug: bics-network
 tags:
 - Number Verification
-- Telecom
+- Telecommunications
 - Mobile Identity
-- Anti-Fraud
+- Fraud Prevention
 - Device Location
 - OTP
 - SMS
 - Numbering
 - Number Portability
-- Fraud Prevention
 - Carrier
 - CPaaS
 website: https://www.bics.com/

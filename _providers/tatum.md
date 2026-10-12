@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: The Rates API from Tatum — 1 operation(s) for rates.
   name: Tatum Rates API
   slug: tatum-rates-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -154,11 +154,15 @@ finops:
   slug: tatum-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tatum.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tatum.io over HTTP; 7 tools listed.
+  name: Tatum MCP Server
+  slug: tatum
 modified: '2026-05-08'
 name: Tatum
 nav: Providers
 network: true
-overview: 'Tatum publishes 2 APIs on the [APIs.io](https://apis.io/) network: Data API and Rates API. Tagged areas include Web3, Blockchain, RPC, Multi-Chain, and Wallets.
+overview: 'Tatum publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data API, Rates API, and 7 more. Tagged areas include Web3, Blockchain, RPC, Multi-Chain, and Wallets.
 
 
   Tatum''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
@@ -173,7 +177,7 @@ rate_limits:
   slug: tatum-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 29.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -185,11 +189,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 30.2
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -203,9 +207,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

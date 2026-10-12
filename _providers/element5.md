@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -216,7 +216,7 @@ modified: '2026-07-19'
 name: Element5
 nav: Providers
 network: true
-overview: 'Element5 publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Eligibility API, Object Store API, and 1 more. Tagged areas include Company, Healthcare, Revenue Cycle Management, Post-Acute Care, and Workflow-Automation.
+overview: 'Element5 publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Eligibility API, Object Store API, and 1 more. Tagged areas include Company, Healthcare, Revenue Cycle Management, Post-Acute Care, and Workflow Automation.
 
 
   The Element5 catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -226,7 +226,7 @@ overview: 'Element5 publishes 4 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 7
 score:
   band: developing
-  composite: 43.1
+  composite: 40.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -238,11 +238,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 62.2
+    contract_quality: 56.8
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 43.1
+  previous_composite: 40.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -262,9 +262,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -285,7 +285,7 @@ tags:
 - Healthcare
 - Revenue Cycle Management
 - Post-Acute Care
-- Workflow-Automation
+- Workflow Automation
 - Eligibility Verification
 - Prior Authorization
 - Claims Processing

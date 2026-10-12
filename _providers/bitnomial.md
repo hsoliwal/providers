@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Public HTTPS REST API for the Bitnomial exchange — products and contract specs, orders, fills, block trades, indexes, funding rates, and market statistics. HMAC-SHA256 signed authentication; cursor pa
@@ -175,7 +175,7 @@ modified: '2026-07-18'
 name: Bitnomial
 nav: Providers
 network: true
-overview: 'Bitnomial publishes 1 API on the [APIs.io](https://apis.io/) network: Market Data WebSocket API. Tagged areas include Company, Fintech, Cryptocurrency, Derivatives, and Exchange.
+overview: 'Bitnomial publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Market Data WebSocket API, and 1 more. Tagged areas include Company, Fintech, Cryptocurrency, Derivatives, and Exchange.
 
 
   The Bitnomial catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -184,8 +184,8 @@ overview: 'Bitnomial publishes 1 API on the [APIs.io](https://apis.io/) network:
   Bitnomial''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 18 more developer resources.'
 random_paper: 13
 score:
-  band: developing
-  composite: 40.1
+  band: thin
+  composite: 38.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -197,16 +197,18 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.1
+  previous_composite: 38.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -215,9 +217,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
 - baseURL: https://{tenant_id}.hanko.io
   baseurl_source: declared
   description: Represents all objects which are related to MFA in common
-  name: Hanko mfa API
+  name: Hanko Mfa API
   slug: hanko-mfa-api
 - baseURL: https://{tenant_id}.hanko.io
   baseurl_source: declared
@@ -138,7 +138,7 @@ apis:
 - baseURL: https://{tenant_id}.hanko.io
   baseurl_source: declared
   description: Represents all objects which are related to WebAuthn in common
-  name: Hanko webauthn API
+  name: Hanko Webauthn API
   slug: hanko-webauthn-api
 - baseURL: https://{tenant_id}.hanko.io
   baseurl_source: declared
@@ -222,6 +222,11 @@ collections:
   name: Hanko Admin Audit Logs .well-known API
   slug: open-hanko-well-known-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hanko/refs/heads/main/capabilities/hanko-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hanko-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hanko/refs/heads/main/agentic-access/hanko-agentic-access.yml
   title: ''
@@ -337,7 +342,7 @@ overview: 'Hanko publishes 21 APIs on the [APIs.io](https://apis.io/) network, i
   The Hanko catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Hanko''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
+  Hanko''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Hanko Plans Pricing
   plan_count: 4
@@ -360,23 +365,28 @@ rules:
   slug: hanko-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 47.3
+  composite: 44.5
   coverage:
     artifact_dirs: 16
-    catalog_earned: 86.3
+    catalog_earned: 83.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    catalog_gap: 31.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 65.2
+    access_clarity: 46.8
+    contract_governance: 23.5
+    contract_quality: 59.6
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 50.0
-  previous_composite: 47.3
+    discoverability: 71.4
+    operational_transparency: 46.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     contracts:
@@ -384,8 +394,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 22
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -409,7 +425,7 @@ tags:
 - Identity
 - SAML
 - Passwordless
-- Open-Source
+- Open Source
 - Identity Federation
 website: https://www.hanko.io
 ---

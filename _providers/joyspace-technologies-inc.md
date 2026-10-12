@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatically uploading and processing video, managing templates/branding/output settings, retrieving results, and accessing analytics. Bearer API-key authentication with signed webhoo
@@ -101,20 +101,20 @@ description: JoySpace Technologies, Inc. (Joyspace) operates an enterprise AI vi
 image: https://joyspace-ai.b-cdn.net/images/ogImage.png
 layout: provider
 modified: '2026-07-19'
-name: JoySpace Technologies, Inc.
+name: JoySpace Technologies
 nav: Providers
 network: true
-overview: 'JoySpace Technologies, Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Artificial Intelligence, Video Processing, and Content Creation.
+overview: 'JoySpace Technologies publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Artificial Intelligence, Video Processing, and Content Creation.
 
 
-  The JoySpace Technologies, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The JoySpace Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  JoySpace Technologies, Inc.''s developer surface includes documentation, API reference, pricing, signup flow, engineering blog, support, authentication, and 5 more developer resources.'
+  JoySpace Technologies'' developer surface includes documentation, API reference, pricing, signup flow, engineering blog, support, authentication, and 5 more developer resources.'
 random_paper: 20
 score:
   band: thin
-  composite: 33.1
+  composite: 31.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 33.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 31.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

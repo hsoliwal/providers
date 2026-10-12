@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for Nav partner integrations. Partners authenticate with a Bearer token API key issued during onboarding and use it to create Nav accounts for their users, fetch account state, change an acco
@@ -196,7 +196,7 @@ modified: '2026-08-26'
 name: Nav
 nav: Providers
 network: true
-overview: 'Nav publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Business Credit, Small Business, Financial-Services, Embedded Finance, and Lending.
+overview: 'Nav publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Business Credit, Small Business, Financial Services, Embedded Finance, and Lending.
 
 
   Nav''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
@@ -211,7 +211,7 @@ rate_limits:
   slug: nav-rate-limits
 score:
   band: developing
-  composite: 41.7
+  composite: 42.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -225,14 +225,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 41.7
+  previous_composite: 42.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -252,7 +258,7 @@ slug: nav
 tags:
 - Business Credit
 - Small Business
-- Financial-Services
+- Financial Services
 - Embedded Finance
 - Lending
 - Credit Score

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -112,9 +112,9 @@ description: 'Newlight Technologies, Inc. is a Huntington Beach, California biot
 image: https://static.wixstatic.com/media/218375_ff4ad9528ae44cdd8a47215d9b4fd1da%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/218375_ff4ad9528ae44cdd8a47215d9b4fd1da%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.newlight.com over HTTP; 9 tools listed.
   name: Newlight Technologies MCP Server
-  slug: newlight-technologies-mcp-server
+  slug: newlight-site-mcp
 modified: '2026-08-26'
 name: Newlight Technologies
 nav: Providers
@@ -126,7 +126,7 @@ overview: 'Newlight Technologies is profiled on the [APIs.io](https://apis.io/) 
 random_paper: 17
 score:
   band: minimal
-  composite: 9.1
+  composite: 8.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -140,13 +140,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 2.6
-  previous_composite: 9.1
+  previous_composite: 8.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

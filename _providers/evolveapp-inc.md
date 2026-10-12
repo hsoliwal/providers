@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -79,17 +79,17 @@ description: EvolveApp INC. (Evolve) is an AI-native enablement and performance 
 image: https://static.tildacdn.com/tild6664-3563-4663-a564-366461653533/logo_white_backgroun.png
 layout: provider
 modified: '2026-07-19'
-name: EvolveApp INC.
+name: EvolveApp
 nav: Providers
 network: true
-overview: 'EvolveApp INC. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Learning Management, Corporate Training, and EdTech.
+overview: 'EvolveApp is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Learning Management, Corporate Training, and EdTech.
 
 
-  EvolveApp INC.''s developer surface includes engineering blog, support, and 7 more developer resources.'
+  EvolveApp''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 16.2
+  composite: 14.7
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -103,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 16.2
+  previous_composite: 14.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

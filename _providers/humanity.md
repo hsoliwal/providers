@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Humanity HVII Public API is a REST API for workforce management — employees, positions, locations, shifts, shift swaps and trades, timeclocks, leaves, messages, training, tasks (master/shift/emplo
@@ -135,7 +135,7 @@ overview: 'Humanity publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 21
 score:
   band: thin
-  composite: 27.3
+  composite: 27.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -149,14 +149,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 27.3
+  previous_composite: 27.9
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,5 +189,6 @@ tags:
 - Leave Management
 - Payroll
 - Workforce
+- Scheduling
 website: https://www.humanity.com
 ---

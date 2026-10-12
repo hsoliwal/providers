@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.tiendanube.com/2025-03/
@@ -163,7 +163,7 @@ scopes:
   summary_line: 12 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.9
+  composite: 39.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -175,16 +175,16 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 42.7
+    contract_quality: 40.6
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 41.9
+  previous_composite: 39.3
   provenance:
     conformance: derived
     mcp: derived
@@ -193,9 +193,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 57.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

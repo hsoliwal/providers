@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://api.kotobatech.ai
   baseurl_source: declared
   description: The transcriptionApi API from Kotoba — 2 operation(s) for transcriptionapi.
-  name: Kotoba transcriptionApi API
+  name: Kotoba Transcription API
   slug: kotoba-transcriptionapi-api
 artifact_total: 10
 asyncapis:
@@ -230,14 +230,14 @@ description: Kotoba Technologies is a Japan-founded frontier voice AI company bu
 image: https://framerusercontent.com/images/7OW09ZoQn6c3oPwAHQgP3DCXI.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.kotoba.tech over HTTP; 1 tool listed.
   name: Kotoba MCP Server
-  slug: kotoba-mcp-server
+  slug: kotoba-docs
 modified: '2026-07-19'
 name: Kotoba
 nav: Providers
 network: true
-overview: 'Kotoba publishes 1 API on the [APIs.io](https://apis.io/) network: transcriptionApi API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Voice, and Speech Recognition.
+overview: 'Kotoba publishes 1 API on the [APIs.io](https://apis.io/) network: Transcription API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Voice, and Speech Recognition.
 
 
   The Kotoba catalog on APIs.io includes 3 event-driven AsyncAPI specifications.
@@ -247,7 +247,7 @@ overview: 'Kotoba publishes 1 API on the [APIs.io](https://apis.io/) network: tr
 random_paper: 2
 score:
   band: developing
-  composite: 42.2
+  composite: 41.8
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -259,14 +259,14 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 55.0
+    contract_quality: 50.3
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 42.2
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -277,8 +277,14 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -297,7 +303,7 @@ slug: kotoba
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Voice
 - Speech Recognition
 - Speech-to-Text

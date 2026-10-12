@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,29 +32,29 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.mainnet.valora.xyz
   baseurl_source: declared
   description: Divvi Hooks API (positions and shortcuts), served under /hooks-api
-  name: Valora hooks API
+  name: Valora Hooks API
   slug: valora-hooks-api
 - baseURL: https://api.mainnet.valora.xyz
   baseurl_source: declared
   description: Swap quotes
-  name: Valora swaps API
+  name: Valora Swaps API
   slug: valora-swaps-api
 - baseURL: https://api.mainnet.valora.xyz
   baseurl_source: declared
   description: Token metadata and prices
-  name: Valora tokens API
+  name: Valora Tokens API
   slug: valora-tokens-api
 - baseURL: https://api.mainnet.valora.xyz
   baseurl_source: declared
   description: Transaction simulation
-  name: Valora transactions API
+  name: Valora Transactions API
   slug: valora-transactions-api
 - baseURL: https://api.mainnet.valora.xyz
   baseurl_source: declared
@@ -198,14 +198,14 @@ modified: '2026-07-21'
 name: Valora
 nav: Providers
 network: true
-overview: 'Valora publishes 5 APIs on the [APIs.io](https://apis.io/) network, including hooks API, swaps API, tokens API, and 2 more. Tagged areas include Company, Cryptocurrency, Wallets, Payments, and DeFi.
+overview: 'Valora publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Hooks API, Swaps API, Tokens API, and 2 more. Tagged areas include Company, Cryptocurrency, Wallets, Payments, and DeFi.
 
 
   Valora''s developer surface includes engineering blog, support, documentation, sandbox, changelog, authentication, and 17 more developer resources.'
 random_paper: 7
 score:
-  band: thin
-  composite: 26.4
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -219,9 +219,9 @@ score:
     contract_governance: 4.5
     contract_quality: 12.7
     developer_ergonomics: 44.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 26.4
+  previous_composite: 25.5
   provenance:
     conformance: derived
     contracts:
@@ -236,9 +236,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 78
   human_in_the_loop: 2
@@ -414,7 +414,7 @@ overview: 'Terminal Use publishes 28 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 6
 score:
   band: developing
-  composite: 42.7
+  composite: 41.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -426,11 +426,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 55.9
+    contract_quality: 51.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 42.7
+  previous_composite: 41.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -441,8 +441,14 @@ score:
       total: 28
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

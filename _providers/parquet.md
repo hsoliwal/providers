@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The core specification for the Parquet columnar storage format.
@@ -129,7 +129,7 @@ rate_limits:
   slug: parquet-rate-limits
 score:
   band: emerging
-  composite: 18.1
+  composite: 17.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 49.0
@@ -143,11 +143,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 28.9
-  previous_composite: 18.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

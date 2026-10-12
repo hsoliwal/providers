@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: The CDAP HTTP RESTful API, documented as "Microservices". All endpoints sit under a /v3 path prefix on a self-hosted CDAP router (default port 11015, or 10443 when SSL is enabled), and are scoped by n
@@ -198,7 +198,7 @@ overview: 'Cask publishes 12 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: thin
-  composite: 30.1
+  composite: 31.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 35.0
@@ -212,13 +212,19 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
-  previous_composite: 30.1
+  previous_composite: 31.2
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +250,7 @@ tags:
 - ETL
 - Hadoop
 - Spark
-- Open-Source
+- Open Source
 - CDAP
 - Metadata
 - Data Governance

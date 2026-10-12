@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -122,7 +122,7 @@ overview: 'Antheia is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 4
 score:
   band: emerging
-  composite: 11.2
+  composite: 11.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -136,17 +136,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 11.2
+  previous_composite: 11.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 2
@@ -609,14 +609,14 @@ jsonld:
   slug: apache-kafka-kafka-rest-proxy-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 19 tools listed.
   name: Apache Kafka MCP Server
-  slug: apache-kafka-mcp-server
+  slug: apache-kafka-mcp-yml
 modified: '2026-06-20'
 name: Apache Kafka
 nav: Providers
 network: true
-overview: 'Apache Kafka publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Messaging API, ACL API, Broker API, and 9 more. Tagged areas include Apache Kafka, Distributed Systems, Event Streaming, Messaging, and Open-Source.
+overview: 'Apache Kafka publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Messaging API, ACL API, Broker API, and 9 more. Tagged areas include Apache Kafka, Distributed Systems, Event Streaming, Messaging, and Open Source.
 
 
   The Apache Kafka catalog on APIs.io includes 1 event-driven AsyncAPI specification, 5 JSON-LD contexts, and 3 Spectral governance rulesets.
@@ -667,26 +667,26 @@ rules:
   slug: apache-kafka-spectral-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 45.4
   coverage:
     artifact_dirs: 30
-    catalog_earned: 61.5
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 33.3
-    contract_quality: 56.5
+    contract_governance: 31.8
+    contract_quality: 52.8
     developer_ergonomics: 31.0
-    discoverability: 66.7
+    discoverability: 63.3
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 45.9
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -696,8 +696,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -718,8 +724,9 @@ tags:
 - Distributed Systems
 - Event Streaming
 - Messaging
-- Open-Source
+- Open Source
 - Pub-Sub
+- Real-Time
 use_cases:
 - description: Build event-driven microservices with reliable message delivery.
   name: Event-Driven Architecture

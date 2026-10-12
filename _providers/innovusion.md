@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, OAuth-gated Model Context Protocol endpoint served from Seyond's own corporate host at https://seyond.com/wp-json/mcp/mcp-oauth-server. It is provided by the WordPress MCP adapter running on s
@@ -181,7 +181,7 @@ description: 'Seyond (formerly Innovusion) is a Sunnyvale, California LiDAR make
 image: https://seyond.com/wp-content/uploads/2024/11/cropped-seyond_favicon-192x192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at seyond.com requiring OAuth.
   name: Seyond MCP Server
   slug: seyond-mcp-server
 modified: '2026-08-23'
@@ -203,12 +203,12 @@ rate_limits:
   slug: innovusion-rate-limits
 scopes:
 - name: Innovusion Scopes
-  scope_count: 0
+  scope_count: 1
   slug: innovusion-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 26.6
+  composite: 29.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -222,14 +222,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 26.6
+  previous_composite: 29.4
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

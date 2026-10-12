@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 27.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The DrDroid platform surface — the hosted Model Context Protocol (MCP) server and DroidAgent investigation API at aiops.drdroid.io, authenticated with a Bearer API key generated from the dashboard (Se
@@ -167,10 +167,10 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Doctor Droid MCP Server
-  slug: doctor-droid-mcp-server
-- description: ''
+  slug: drdroid-mcp-server
+- description: Remote MCP server at aiops.drdroid.io over HTTP.
   name: Doctor Droid MCP Server
-  slug: doctor-droid-mcp-server-2
+  slug: drdroid
 modified: '2026-07-18'
 name: Doctor Droid
 nav: Providers
@@ -182,7 +182,7 @@ overview: 'Doctor Droid publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 16
 score:
   band: thin
-  composite: 35.5
+  composite: 37.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -196,14 +196,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 35.5
+  previous_composite: 37.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -235,5 +241,6 @@ tags:
 - DevOps
 - Monitoring
 - MCP
+- Incident Management
 website: https://drdroid.io/
 ---

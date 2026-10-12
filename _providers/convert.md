@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 153
   human_in_the_loop: 5
@@ -381,7 +381,7 @@ modified: '2026-05-08'
 name: Convert
 nav: Providers
 network: true
-overview: 'Convert publishes 32 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, AI content API, API Keys API, and 29 more. Tagged areas include Experimentation, A/B Testing, Conversion Optimization, Personalization, and Analytics.
+overview: 'Convert publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, AI content API, API Keys API, and 30 more. Tagged areas include Experimentation, A/B Testing, Conversion Optimization, Personalization, and Analytics.
 
 
   Convert''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -396,7 +396,7 @@ rate_limits:
   slug: convert-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 27.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 39.0
@@ -408,11 +408,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 51.4
+    contract_quality: 46.3
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
-  previous_composite: 28.5
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -420,8 +420,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 32
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

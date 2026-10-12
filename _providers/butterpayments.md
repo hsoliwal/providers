@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Source-agnostic payment-event ingestion API for payment recovery. Merchants POST standardized successful and failed payment events and payment-method updates; Recover optimizes retry timing and report
@@ -169,7 +169,7 @@ overview: 'Butterpayments publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 3
 score:
   band: developing
-  composite: 44.8
+  composite: 42.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -181,11 +181,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 44.8
+  previous_composite: 42.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -198,9 +198,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -232,6 +232,6 @@ tags:
 - Chargebacks
 - Card Vault
 - Fintech
-- Machine-Learning
+- Machine Learning
 website: https://butterpayments.com
 ---

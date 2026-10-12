@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The Shopify Storefront GraphQL API as served from AG1's own storefront host, shop.drinkag1.com. Anonymous schema introspection succeeds, exposing 35 query fields, 41 mutations and 416 types covering p
@@ -165,9 +165,9 @@ description: 'AG1 (formerly Athletic Greens) is a direct-to-consumer health and 
 image: https://cdn.shopify.com/s/files/1/1523/4600/files/pouch_original_ae887f0b-a676-4453-adba-76bc51c30214.png?v=1770236075
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.drinkag1.com.
   name: AG1 MCP Server
-  slug: ag1-mcp-server
+  slug: athletic-greens-mcp-yml
 modified: '2026-08-02'
 name: AG1
 nav: Providers
@@ -183,8 +183,8 @@ scopes:
   slug: athletic-greens-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 34.0
+  band: emerging
+  composite: 24.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -196,23 +196,28 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 34.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 24.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

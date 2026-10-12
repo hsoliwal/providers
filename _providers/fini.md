@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 0
@@ -122,6 +122,11 @@ collections:
   name: Fini AI Agents Tags API
   slug: open-fini-tags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fini/refs/heads/main/capabilities/fini-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fini-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -251,14 +256,14 @@ modified: '2026-07-19'
 name: Fini
 nav: Providers
 network: true
-overview: 'Fini publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Articles API, Conversations API, and 6 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Customer-Support, and Customer Experience.
+overview: 'Fini publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Articles API, Conversations API, and 6 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Customer Support, and Customer Experience.
 
 
-  Fini''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, authentication, and 20 more developer resources.'
+  Fini''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, authentication, and 21 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 42.9
+  composite: 43.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -270,11 +275,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 59.7
+    contract_quality: 54.0
     developer_ergonomics: 16.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 42.9
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -285,8 +290,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -314,9 +325,9 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Customer-Support
+- Customer Support
 - Customer Experience
-- Knowledge-Management
+- Knowledge Management
 - Conversational AI
 - Voice AI
 - Help Desk

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 common:
@@ -189,12 +189,12 @@ rate_limits:
   slug: xylem-rate-limits
 scopes:
 - name: Xylem Scopes
-  scope_count: 0
+  scope_count: 14
   slug: xylem-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: thin
-  composite: 30.9
+  composite: 27.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 27.0
@@ -208,9 +208,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 26.3
-  previous_composite: 30.9
+  previous_composite: 27.4
   provenance:
     conformance: first-party
   regulatory:
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 71.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

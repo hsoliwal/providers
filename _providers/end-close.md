@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 30.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 1
@@ -279,7 +279,7 @@ overview: 'End Close publishes 13 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 10
 score:
   band: developing
-  composite: 42.6
+  composite: 40.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -291,11 +291,11 @@ score:
   facets:
     access_clarity: 14.5
     contract_governance: 4.5
-    contract_quality: 62.1
+    contract_quality: 57.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 42.6
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -310,9 +310,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 35.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

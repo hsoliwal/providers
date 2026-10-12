@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -173,7 +173,7 @@ modified: '2026-05-19'
 name: OpenReplay
 nav: Providers
 network: true
-overview: 'OpenReplay publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assist API, Events API, Jobs API, and 3 more. Tagged areas include Debugging, Error Tracking, Open-Source, Performance Monitoring, and Session Replay.
+overview: 'OpenReplay publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assist API, Events API, Jobs API, and 3 more. Tagged areas include Debugging, Error Tracking, Open Source, Performance Monitoring, and Session Replay.
 
 
   OpenReplay''s developer surface includes authentication, documentation, engineering blog, pricing, GitHub presence, signup flow, support, and 7 more developer resources.'
@@ -188,7 +188,7 @@ rate_limits:
   slug: openreplay-rate-limits
 score:
   band: thin
-  composite: 35.6
+  composite: 33.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -200,11 +200,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 56.0
+    contract_quality: 50.4
     developer_ergonomics: 32.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 35.6
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -212,8 +212,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -232,7 +238,7 @@ slug: openreplay
 tags:
 - Debugging
 - Error Tracking
-- Open-Source
+- Open Source
 - Performance Monitoring
 - Session Replay
 - User Behavior

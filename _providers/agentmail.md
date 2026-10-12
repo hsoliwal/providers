@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 64.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 0
@@ -47,27 +47,27 @@ apis:
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The agent API from AgentMail — 2 operation(s) for agent.
-  name: AgentMail agent API
+  name: AgentMail Agent API
   slug: agentmail-agent-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The api-keys API from AgentMail — 2 operation(s) for api-keys.
-  name: AgentMail api-keys API
+  name: AgentMail API Keys API
   slug: agentmail-api-keys-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The auth API from AgentMail — 1 operation(s) for auth.
-  name: AgentMail auth API
+  name: AgentMail Auth API
   slug: agentmail-auth-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The domains API from AgentMail — 4 operation(s) for domains.
-  name: AgentMail domains API
+  name: AgentMail Domains API
   slug: agentmail-domains-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The drafts API from AgentMail — 3 operation(s) for drafts.
-  name: AgentMail drafts API
+  name: AgentMail Drafts API
   slug: agentmail-drafts-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
@@ -77,7 +77,7 @@ apis:
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The inboxes API from AgentMail — 2 operation(s) for inboxes.
-  name: AgentMail inboxes API
+  name: AgentMail Inboxes API
   slug: agentmail-inboxes-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
@@ -117,17 +117,17 @@ apis:
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The lists API from AgentMail — 2 operation(s) for lists.
-  name: AgentMail lists API
+  name: AgentMail Lists API
   slug: agentmail-lists-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The metrics API from AgentMail — 2 operation(s) for metrics.
-  name: AgentMail metrics API
+  name: AgentMail Metrics API
   slug: agentmail-metrics-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The organizations API from AgentMail — 1 operation(s) for organizations.
-  name: AgentMail organizations API
+  name: AgentMail Organizations API
   slug: agentmail-organizations-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
@@ -137,7 +137,7 @@ apis:
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The pods API from AgentMail — 2 operation(s) for pods.
-  name: AgentMail pods API
+  name: AgentMail Pods API
   slug: agentmail-pods-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
@@ -177,12 +177,12 @@ apis:
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The threads API from AgentMail — 4 operation(s) for threads.
-  name: AgentMail threads API
+  name: AgentMail Threads API
   slug: agentmail-threads-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
   description: The webhooks API from AgentMail — 2 operation(s) for webhooks.
-  name: AgentMail webhooks API
+  name: AgentMail Webhooks API
   slug: agentmail-webhooks-api
 - baseURL: https://api.agentmail.to
   baseurl_source: declared
@@ -472,7 +472,7 @@ modified: '2026-07-17'
 name: AgentMail
 nav: Providers
 network: true
-overview: 'AgentMail publishes 29 APIs on the [APIs.io](https://apis.io/) network, including agent API, api-keys API, auth API, and 26 more. Tagged areas include Company, Artificial Intelligence, Email, AI Agents, and Inbox.
+overview: 'AgentMail publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Agent API, API Keys API, Auth API, and 26 more. Tagged areas include Company, Artificial Intelligence, Email, AI Agents, and Inbox.
 
 
   The AgentMail catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -493,7 +493,7 @@ rate_limits:
   slug: agentmail-rate-limits
 score:
   band: strong
-  composite: 60.9
+  composite: 60.2
   coverage:
     artifact_dirs: 28
     catalog_earned: 61.0
@@ -501,15 +501,15 @@ score:
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 10.4
+  delta: 0.0
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 64.2
+    contract_quality: 58.9
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 50.5
+  previous_composite: 60.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -520,9 +520,15 @@ score:
       total: 29
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -553,7 +559,7 @@ tags:
 - SMTP
 - IMAP
 - MCP
-- Agentic
 - Developer Tools
+- Real-Time
 website: https://www.agentmail.to/
 ---

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: HTTP and WebSocket speech synthesis. A non-streaming POST /api/v1/tts/generate returns a complete wav/mp3 for up to 300 characters; a WebSocket /api/v2/tts/stream_generate streams base64 PCM chunks wi
@@ -186,7 +186,7 @@ modified: '2026-08-26'
 name: Moore Threads
 nav: Providers
 network: true
-overview: 'Moore Threads publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, GPU, Artificial Intelligence, Machine-Learning, and Semiconductors.
+overview: 'Moore Threads publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, GPU, Artificial Intelligence, Machine Learning, and Semiconductors.
 
 
   The Moore Threads catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -204,7 +204,7 @@ rate_limits:
   slug: moore-threads-rate-limits
 score:
   band: developing
-  composite: 46.7
+  composite: 46.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 64.0
@@ -216,9 +216,9 @@ score:
   facets:
     access_clarity: 48.7
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 58.3
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -227,12 +227,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 46.7
+  previous_composite: 46.3
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -253,12 +259,12 @@ tags:
 - Company
 - GPU
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Semiconductors
 - Speech Recognition
 - Text-to-Speech
 - Voice
-- LLM Inference
+- Inference
 - Cloud Computing
 - Developer Tools
 - China

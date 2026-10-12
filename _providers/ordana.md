@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -84,9 +84,9 @@ description: 'Ordana provides AI agents that run wholesale order-desk operations
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ordana.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Ordana documents a first-party MCP (Model Context Protocol) server on its integrations page as one of the ways agents connect to the platform. Per the docs, the server lets an AI agent "pull live inve
   name: Ordana MCP Server
-  slug: ordana-mcp-server
+  slug: ordana-mcp-yml
 modified: '2026-07-20'
 name: Ordana
 nav: Providers
@@ -98,7 +98,7 @@ overview: 'Ordana is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 13
 score:
   band: emerging
-  composite: 15.3
+  composite: 14.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -112,14 +112,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 0.0
-  previous_composite: 15.3
+  previous_composite: 14.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

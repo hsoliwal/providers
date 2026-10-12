@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -164,9 +164,9 @@ description: Clarify Health Solutions is a healthcare analytics and outcomes com
 image: https://clarifyhealth.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 5 tools listed.
   name: CMS Data.gov MCP Server
-  slug: cms-datagov-mcp-server
+  slug: cms-data-gov-mcp-server
 modified: '2026-08-15'
 name: Clarify Health
 nav: Providers
@@ -191,7 +191,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 24.2
+  composite: 21.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -205,9 +205,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 48.3
     operational_transparency: 18.4
-  previous_composite: 24.2
+  previous_composite: 21.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

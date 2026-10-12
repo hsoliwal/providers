@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The university's own SAML 2.0 identity provider metadata document, served from its own domain. It declares entityID https://login.ualberta.ca/saml2/idp/metadata.php, an IDPSSODescriptor with SingleSig
@@ -211,8 +211,8 @@ rate_limits:
   name: University Of Alberta Rate Limits
   slug: university-of-alberta-rate-limits
 score:
-  band: thin
-  composite: 29.3
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 42.0
@@ -220,13 +220,13 @@ score:
     catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.2
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
     contract_quality: 4.4
     developer_ergonomics: 33.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -243,9 +243,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 61.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

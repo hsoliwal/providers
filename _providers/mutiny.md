@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Mutiny''s first-party hosted, remote Model Context Protocol server — the company''s only machine-callable surface. It lets an MCP-compatible assistant (Claude web, Claude Desktop, Claude Code, ChatGPT) '
@@ -168,7 +168,7 @@ layout: provider
 mcp_servers:
 - description: Mutiny ships a first-party hosted, remote MCP server so any MCP-compatible assistant (Claude web, Claude Desktop, Claude Code, ChatGPT) can create and publish Mutiny customer-facing assets, browse tem
   name: Mutiny MCP Server
-  slug: mutiny-mcp-server
+  slug: mutiny
 modified: '2026-08-13'
 name: Mutiny
 nav: Providers
@@ -188,12 +188,12 @@ rate_limits:
   slug: mutiny-rate-limits
 scopes:
 - name: Mutiny Scopes
-  scope_count: 0
+  scope_count: 5
   slug: mutiny-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes · authorization_code
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 40.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 61.0
@@ -207,19 +207,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.8
+  previous_composite: 40.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -246,7 +252,7 @@ tags:
 - AI Agents
 - Sales Enablement
 - Account Based Marketing
-- Workflow-Automation
+- Workflow Automation
 - MCP
 website: https://www.mutinyhq.com
 ---

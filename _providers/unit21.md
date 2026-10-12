@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for ingesting entities, instruments, and transaction events into the Unit21 risk and compliance platform. Enables creation and management of alerts, cases, rules, and suspicious activity repo
@@ -191,7 +191,7 @@ modified: '2026-08-27'
 name: Unit21
 nav: Providers
 network: true
-overview: 'Unit21 publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud Detection, AML, Anti-Money Laundering, Compliance, and Fintech.
+overview: 'Unit21 publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud Prevention, AML, Compliance, Fintech, and Transaction Monitoring.
 
 
   The Unit21 catalog on APIs.io includes 1 JSON-LD context.
@@ -209,7 +209,7 @@ rate_limits:
   slug: unit21-rate-limits
 score:
   band: thin
-  composite: 27.7
+  composite: 30.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 53.0
@@ -223,14 +223,20 @@ score:
     contract_governance: 0.0
     contract_quality: 6.7
     developer_ergonomics: 17.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 27.7
+  previous_composite: 30.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -256,13 +262,12 @@ security:
   summary_line: SOC 2, GDPR
 slug: unit21
 tags:
-- Fraud Detection
+- Fraud Prevention
 - AML
-- Anti-Money Laundering
 - Compliance
 - Fintech
 - Transaction Monitoring
-- Risk
+- Risk Management
 - SAR
 - Financial Crime
 - Suspicious Activity Reports

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SOCi's customer-facing REST API, reachable at https://app.meetsoci.com/api. Authentication uses a per-user SOCi API key issued from User Settings inside the platform, together with the customer's orga
@@ -167,8 +167,8 @@ overview: 'SOCi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
   SOCi''s developer surface includes engineering blog, changelog, support, and 20 more developer resources.'
 random_paper: 12
 score:
-  band: emerging
-  composite: 25.1
+  band: thin
+  composite: 28.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -182,18 +182,30 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.1
+  previous_composite: 28.3
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

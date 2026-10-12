@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Every Vendia project (Uni) is provisioned with an auto-generated GraphQL API derived from its JSON Schema data model — get_X / list_XItems / list_XVersions queries and add_X / create_X / put_X / updat
@@ -228,7 +228,7 @@ description: Vendia is an enterprise data platform company founded by Tim Wagner
 image: https://www.vendia.com/wp-content/uploads/2025/09/Power_genai_with_enterprise_data.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.vendia.com over HTTP.
   name: Vendia MCP Gateway
   slug: vendia-mcp-gateway
 modified: '2026-08-05'
@@ -258,7 +258,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode/clientCredentials
 score:
   band: strong
-  composite: 62.4
+  composite: 64.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 61.0
@@ -270,16 +270,22 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 84.2
-  previous_composite: 62.4
+  previous_composite: 64.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

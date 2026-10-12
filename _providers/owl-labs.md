@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -74,6 +74,10 @@ created: '2026-07-17'
 description: Owl Labs is a Boston-based video conferencing hardware and software company building smart devices for hybrid meetings. Its flagship Meeting Owl line is a 360-degree AI-powered camera, microphone, and speaker that automatically focuses on whoever is speaking, alongside accessories such as the Owl Bar, Whiteboard Owl, and Expansion Mic. The Nest is its cloud fleet-management platform for provisioning, updating, and monitoring deployed devices across an organization. Owl Labs sells to enterprises, schools, and distributed teams, and publishes an annual State of Hybrid Work report. It was surfaced as a portfolio company of Matrix Partners and Playground Global. Owl Labs does not currently publish a public developer API, SDK, or webhook surface; this profile captures its identity, security posture, and public web properties.
 image: https://www.owllabs.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.owllabs.com over HTTP.
+  name: Owl Labs MCP Server
+  slug: owl-labs
 modified: '2026-07-20'
 name: Owl Labs
 nav: Providers
@@ -85,7 +89,7 @@ overview: 'Owl Labs is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 9
 score:
   band: minimal
-  composite: 6.4
+  composite: 6.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,18 +103,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 6.4
+  previous_composite: 6.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

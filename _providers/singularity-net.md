@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -174,7 +174,7 @@ modified: '2026-05-02'
 name: SingularityNET
 nav: Providers
 network: true
-overview: 'SingularityNET publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Organizations API, Service Groups API, and 1 more. Tagged areas include Artificial Intelligence, Blockchain, Decentralized AI, AI Marketplace, and Web3.
+overview: 'SingularityNET publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Organizations API, Service Groups API, and 2 more. Tagged areas include Artificial Intelligence, Blockchain, Decentralized AI, AI Marketplace, and Web3.
 
 
   The SingularityNET catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -214,7 +214,7 @@ rules:
   slug: singularitynet-rules
 score:
   band: thin
-  composite: 32.6
+  composite: 31.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 58.5
@@ -226,11 +226,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 54.4
+    contract_quality: 49.5
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.6
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -238,8 +238,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

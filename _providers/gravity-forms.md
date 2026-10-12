@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -173,14 +173,14 @@ modified: '2026-09-16'
 name: Gravity Forms
 nav: Providers
 network: true
-overview: 'Gravity Forms publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Entries API, Feeds API, and 3 more. Tagged areas include WordPress, Forms, Form Builder, Surveys, and Workflows.
+overview: 'Gravity Forms publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Entries API, Feeds API, and 4 more. Tagged areas include WordPress, Forms, Form Builder, Surveys, and Workflows.
 
 
   Gravity Forms'' developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 10 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 31.2
+  composite: 30.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -192,11 +192,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 31.2
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -204,8 +204,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -53,7 +53,7 @@ apis:
 - baseURL: https://api.interos.ai
   baseurl_source: declared
   description: The health API from Interos — 1 operation(s) for health.
-  name: Interos health API
+  name: Interos Health API
   slug: interos-health-api
 - baseURL: https://api.interos.ai
   baseurl_source: declared
@@ -211,7 +211,7 @@ modified: '2026-07-19'
 name: Interos
 nav: Providers
 network: true
-overview: 'Interos publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Groups API, health API, Organizations API, and 2 more. Tagged areas include Company, Enterprise, Supply Chain, Risk Management, and Supplier Risk.
+overview: 'Interos publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Groups API, Health API, Organizations API, and 2 more. Tagged areas include Company, Enterprise, Supply Chain, Risk Management, and Supplier Risk.
 
 
   Interos'' developer surface includes documentation, API reference, authentication, and 21 more developer resources.'
@@ -221,8 +221,8 @@ rate_limits:
   name: Interos Rate Limits
   slug: interos-rate-limits
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -234,16 +234,18 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.4
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.7
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -254,8 +256,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -277,7 +285,7 @@ tags:
 - Supply Chain
 - Risk Management
 - Supplier Risk
-- Third-Party Risk
+- Third-Party Risk Management
 - Artificial Intelligence
 website: https://www.interos.ai
 ---

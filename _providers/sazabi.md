@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -102,7 +102,7 @@ layout: provider
 mcp_servers:
 - description: The Sazabi MCP server lets agents (e.g. Slackbot, the Sazabi Slack app, and the Microsoft Teams agent) discover and use Sazabi observability tools to investigate production issues in natural language.
   name: Sazabi MCP Server
-  slug: sazabi-mcp-server
+  slug: sazabi
 modified: '2026-07-21'
 name: Sazabi
 nav: Providers
@@ -114,7 +114,7 @@ overview: 'Sazabi is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 18
 score:
   band: emerging
-  composite: 15.9
+  composite: 15.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -128,13 +128,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 0.0
-  previous_composite: 15.9
+  previous_composite: 15.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

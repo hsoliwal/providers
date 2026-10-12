@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 0
@@ -404,7 +404,7 @@ layout: provider
 mcp_servers:
 - description: Official Picsart Creative APIs Model Context Protocol (MCP) server. Exposes the same functionality as the REST APIs through MCP so AI editors (Cursor, Windsurf, Claude Desktop, GitHub Copilot) and age
   name: Picsart MCP Server
-  slug: picsart-mcp-server
+  slug: picsart
 modified: '2026-07-20'
 name: Picsart
 nav: Providers
@@ -420,7 +420,7 @@ rate_limits:
   slug: picsart-rate-limits
 score:
   band: developing
-  composite: 52.9
+  composite: 52.4
   coverage:
     artifact_dirs: 25
     catalog_earned: 48.0
@@ -432,11 +432,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 63.2
-  previous_composite: 52.9
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -447,8 +447,14 @@ score:
       total: 23
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -471,7 +477,7 @@ tags:
 - Image Processing
 - Video
 - Generative AI
-- Machine-Learning
+- Machine Learning
 - Media
 - Content Creation
 - Developer Tools

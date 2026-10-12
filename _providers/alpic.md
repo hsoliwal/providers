@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-09-20'
+  score: 31.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -48,42 +48,42 @@ apis:
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The analytics API from Alpic — 1 operation(s) for analytics.
-  name: Alpic analytics API
+  name: Alpic Analytics API
   slug: alpic-analytics-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The beacon API from Alpic — 2 operation(s) for beacon.
-  name: Alpic beacon API
+  name: Alpic Beacon API
   slug: alpic-beacon-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The deployments API from Alpic — 1 operation(s) for deployments.
-  name: Alpic deployments API
+  name: Alpic Deployments API
   slug: alpic-deployments-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The distribution API from Alpic — 2 operation(s) for distribution.
-  name: Alpic distribution API
+  name: Alpic Distribution API
   slug: alpic-distribution-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The environments API from Alpic — 8 operation(s) for environments.
-  name: Alpic environments API
+  name: Alpic Environments API
   slug: alpic-environments-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The projects API from Alpic — 2 operation(s) for projects.
-  name: Alpic projects API
+  name: Alpic Projects API
   slug: alpic-projects-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The teams API from Alpic — 1 operation(s) for teams.
-  name: Alpic teams API
+  name: Alpic Teams API
   slug: alpic-teams-api
 - baseURL: https://api.alpic.ai
   baseurl_source: declared
   description: The tunnels API from Alpic — 1 operation(s) for tunnels.
-  name: Alpic tunnels API
+  name: Alpic Tunnels API
   slug: alpic-tunnels-api
 artifact_total: 22
 collections:
@@ -115,6 +115,11 @@ collections:
   name: Alpic analytics tunnels API
   slug: open-alpic-tunnels-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/alpic/refs/heads/main/capabilities/alpic-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/alpic-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/alpic/refs/heads/main/mcp/alpic-mcp.yml
   title: ''
@@ -230,10 +235,10 @@ modified: '2026-07-17'
 name: Alpic
 nav: Providers
 network: true
-overview: 'Alpic publishes 8 APIs on the [APIs.io](https://apis.io/) network, including analytics API, beacon API, deployments API, and 5 more. Tagged areas include Company, Ai Ml, MCP, Cloud Platform, and Developer Tools.
+overview: 'Alpic publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Beacon API, Deployments API, and 5 more. Tagged areas include Company, Ai Ml, MCP, Cloud Platform, and Developer Tools.
 
 
-  Alpic''s developer surface includes documentation, API reference, getting-started guide, CLI, authentication, engineering blog, pricing, and 17 more developer resources.'
+  Alpic''s developer surface includes documentation, API reference, getting-started guide, CLI, authentication, engineering blog, pricing, and 18 more developer resources.'
 random_paper: 15
 scopes:
 - name: Alpic Scopes
@@ -242,9 +247,9 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 46.6
+  composite: 48.5
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -254,11 +259,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 56.2
+    contract_quality: 50.8
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 46.6
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -269,8 +274,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -298,6 +309,7 @@ tags:
 - Developer Tools
 - Deployment
 - ChatGPT Apps
-- Agentic
+- AI Agents
+- Platform-as-a-Service
 website: https://alpic.ai/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -196,9 +196,9 @@ examples:
 image: https://bespokenspirits.com/cdn/shop/files/HERO_IMAGE_0808cb9f-0b04-48f3-851a-6f6bd2307ad4.png?v=1749075439
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at bespokenspirits.com.
   name: Bespoken Spirits MCP Server
-  slug: bespoken-spirits-mcp-server
+  slug: bespoken-spirits-mcp-yml
 modified: '2026-08-07'
 name: Bespoken Spirits
 nav: Providers
@@ -214,8 +214,8 @@ scopes:
   slug: bespoken-spirits-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.5
+  band: thin
+  composite: 28.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -227,18 +227,24 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 35.7
-    discoverability: 81.5
+    discoverability: 80.8
     operational_transparency: 0.0
-  previous_composite: 25.5
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

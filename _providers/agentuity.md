@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Direct HTTP access to Agentuity platform services — projects, deployments, API keys, OAuth applications, storage (key-value, vector, object, Postgres), message queues, durable streams, sandboxes, sche
@@ -207,7 +207,7 @@ overview: 'Agentuity publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 18
 score:
   band: developing
-  composite: 48.2
+  composite: 49.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -219,16 +219,28 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 48.2
+  previous_composite: 49.9
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

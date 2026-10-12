@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'An OAuth-protected Model Context Protocol endpoint served from 8B''s own WordPress installation at www.8b.africa. Discovery is standards-conformant: an RFC 8414 authorization-server metadata document a'
@@ -130,14 +130,14 @@ description: 8B Education Investments (legally 8B Finance, Inc., trading as 8B) 
 image: https://www.8b.africa/wp-content/uploads/2022/06/cropped-8b-Icon-192x192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.8b.africa requiring OAuth.
   name: 8B Model Context Protocol Server
   slug: 8b-model-context-protocol-server
 modified: '2026-09-05'
 name: 8B Education Investments
 nav: Providers
 network: true
-overview: '8B Education Investments publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, Student Loans, Financial-Services, and Lending.
+overview: '8B Education Investments publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, Student Loans, Financial Services, and Lending.
 
 
   8B Education Investments'' developer surface includes engineering blog, support, FAQ, authentication, and 17 more developer resources.'
@@ -152,12 +152,12 @@ rate_limits:
   slug: 8b-education-investments-rate-limits
 scopes:
 - name: 8B Education Investments Scopes
-  scope_count: 0
+  scope_count: 1
   slug: 8b-education-investments-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code
 score:
   band: emerging
-  composite: 24.7
+  composite: 21.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -171,25 +171,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 24.7
+  previous_composite: 21.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -209,7 +209,7 @@ tags:
 - Company
 - Education
 - Student Loans
-- Financial-Services
+- Financial Services
 - Lending
 - Fintech
 - Africa

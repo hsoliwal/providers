@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 20.5
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The agent-facing commerce surface of L-Nutra's direct-to-consumer ProLon storefront. An anonymous MCP endpoint at https://prolonlife.com/api/ucp/mcp implements Universal Commerce Protocol 2026-04-08 a
@@ -166,7 +166,7 @@ layout: provider
 mcp_servers:
 - description: L-Nutra operates no developer platform, but all three of its storefronts expose live, anonymous, remote MCP endpoints. Each storefront serves a Universal Commerce Protocol (UCP) 2026-04-08 discovery p
   name: L-Nutra MCP Server
-  slug: l-nutra-mcp-server
+  slug: l-nutra-mcp-yml
 modified: '2026-08-23'
 name: L-Nutra
 nav: Providers
@@ -186,17 +186,17 @@ rate_limits:
   slug: l-nutra-rate-limits
 scopes:
 - name: L Nutra Scopes
-  scope_count: 0
+  scope_count: 4
   slug: l-nutra-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 29.9
+  composite: 27.0
   coverage:
     artifact_dirs: 16
-    catalog_earned: 40.0
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -205,21 +205,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 29.9
+  previous_composite: 27.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

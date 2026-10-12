@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Specific control plane and CLI that builds, deploys and runs agent-defined infrastructure from a single specific.hcl file, spanning local development and production on Specific Cloud.
@@ -148,7 +148,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server that lets coding agents search and read the Specific documentation directly. Install commands are published for Claude Code, Cursor, Codex, and VS Code.
   name: Specific MCP Server
-  slug: specific-mcp-server
+  slug: specific-docs
 modified: '2026-07-21'
 name: Specific
 nav: Providers
@@ -160,7 +160,7 @@ overview: 'Specific publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 2
 score:
   band: emerging
-  composite: 25.4
+  composite: 24.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -174,14 +174,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 25.4
+  previous_composite: 24.4
   provenance:
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

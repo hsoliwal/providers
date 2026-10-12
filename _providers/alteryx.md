@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 1
@@ -573,7 +573,7 @@ modified: '2026-05-19'
 name: Alteryx
 nav: Providers
 network: true
-overview: 'Alteryx publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Credentials API, Jobs API, and 3 more. Tagged areas include Analytics, Automation, Data Engineering, Data Preparation, and Data Science.
+overview: 'Alteryx publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Credentials API, Jobs API, and 9 more. Tagged areas include Analytics, Automation, Data Engineering, Data Preparation, and Data Science.
 
 
   The Alteryx catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -618,7 +618,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.2
+  composite: 47.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.5
@@ -630,11 +630,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 13.6
-    contract_quality: 58.2
+    contract_quality: 53.0
     developer_ergonomics: 53.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 15.8
-  previous_composite: 45.2
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     contracts:
@@ -642,8 +642,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -674,7 +680,7 @@ tags:
 - Data Preparation
 - Data Science
 - ETL
-- Machine-Learning
+- Machine Learning
 - Predictive Analytics
 use_cases:
 - description: Schedule and automate data preparation workflows to generate recurring business reports.

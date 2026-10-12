@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Integrately platform connects 1500+ SaaS applications through a catalog of 20 million+ pre-built one-click automations covering common business workflows such as lead capture, CRM sync, marketing '
@@ -207,7 +207,7 @@ rules:
   slug: integrately-rules
 score:
   band: developing
-  composite: 46.1
+  composite: 45.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 64.0
@@ -219,15 +219,21 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 46.1
+  previous_composite: 45.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -246,10 +252,10 @@ tags:
 - iPaaS
 - No-Code
 - SaaS Integration
-- SMB
+- Small Business
 - Triggers and Actions
 - Webhook
-- Workflow-Automation
+- Workflow Automation
 - Workflows
 website: https://www.integrately.com/
 ---

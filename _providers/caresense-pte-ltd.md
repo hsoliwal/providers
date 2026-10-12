@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -92,17 +92,17 @@ description: 'CareSense Pte. Ltd. (CareSense.ai) is a Singapore-based preventive
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/caresense-pte-ltd.png
 layout: provider
 modified: '2026-07-20'
-name: Caresense Pte. Ltd.
+name: Caresense
 nav: Providers
 network: true
-overview: 'Caresense Pte. Ltd. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Digital Health, Artificial Intelligence, and Health Coaching.
+overview: 'Caresense is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Digital Health, Artificial Intelligence, and Health Coaching.
 
 
-  Caresense Pte. Ltd.''s developer surface includes support, signup flow, and 10 more developer resources.'
+  Caresense''s developer surface includes support, signup flow, and 10 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 13.0
+  composite: 12.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -116,7 +116,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -125,15 +125,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 13.0
+  previous_composite: 12.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -160,6 +160,6 @@ tags:
 - Telehealth
 - Wellness
 - Singapore
-- Mobile Applications
+- Mobile App
 website: https://www.caresense.ai/
 ---

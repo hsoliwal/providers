@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The partner-facing API estate Express Scripts exposes through its own gateway. The production host api.express-scripts.io and the sandbox host api-sandbox.express-scripts.io both answer HTTP 401 to ev
@@ -205,12 +205,12 @@ rate_limits:
   slug: express-scripts-holding-rate-limits
 scopes:
 - name: Express Scripts Holding Scopes
-  scope_count: 0
+  scope_count: 10
   slug: express-scripts-holding-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 10 scopes
 score:
   band: thin
-  composite: 31.9
+  composite: 28.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -224,9 +224,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 31.9
+  previous_composite: 28.4
   provenance:
     conformance: first-party
   regulatory:
@@ -234,9 +234,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 73.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

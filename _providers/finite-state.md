@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Token-authenticated REST API for the Finite State platform, served under /api/public/v0 on the platform host. Interactive Swagger documentation is published per organization at https://[org].finitesta
@@ -219,7 +219,7 @@ overview: 'Finite State publishes 3 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 19
 score:
   band: thin
-  composite: 36.7
+  composite: 37.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -233,18 +233,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 34.2
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 36.7
+  previous_composite: 37.8
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -272,5 +278,6 @@ tags:
 - Compliance
 - Cybersecurity
 - IoT
+- A2A
 website: https://finitestate.io
 ---

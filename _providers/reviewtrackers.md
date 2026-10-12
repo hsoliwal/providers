@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the ReviewTrackers online reputation management platform. Provides access to review data from 100+ review sites, enables automated review responses, supports review solicitation campaigns
@@ -210,7 +210,7 @@ rate_limits:
   slug: reviewtrackers-rate-limits
 score:
   band: strong
-  composite: 55.4
+  composite: 57.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 68.0
@@ -222,16 +222,22 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 51.9
+    contract_quality: 49.4
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 73.7
-  previous_composite: 55.4
+  previous_composite: 57.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: documented
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.1
-  scored_at: '2026-09-20'
+  score: 43.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -302,14 +302,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tradier.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.tradier.com over HTTP; 21 tools listed.
   name: Tradier MCP Server
-  slug: tradier-mcp-server
+  slug: tradier
 modified: '2026-07-22'
 name: Tradier
 nav: Providers
 network: true
-overview: 'Tradier publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Streaming API, Accounts API, Market Data API, and 5 more. Tagged areas include Fintech, Trading, Stocks, Options, and Brokerage.
+overview: 'Tradier publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Streaming API, Accounts API, Market Data API, and 7 more. Tagged areas include Fintech, Trading, Stocks, Options, and Brokerage.
 
 
   The Tradier catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -343,8 +343,8 @@ scopes:
   slug: tradier-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: strong
-  composite: 56.6
+  band: developing
+  composite: 52.4
   coverage:
     artifact_dirs: 27
     catalog_earned: 49.8
@@ -356,11 +356,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 15.9
-    contract_quality: 58.8
+    contract_quality: 54.4
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 56.6
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -376,9 +376,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -405,5 +405,8 @@ tags:
 - Options
 - Brokerage
 - Streaming
+- Real-Time
+- Investing
+- Financial Services
 website: https://www.tradier.com/
 ---

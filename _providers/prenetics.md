@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-native commerce surface for the IM8 Health (Prenetics) Shopify storefront, implemented with the Universal Commerce Protocol (UCP, 2026-04-08) over MCP. Agents discover capabilities at /.well-kno
@@ -103,9 +103,9 @@ description: 'Prenetics Global Limited (NASDAQ: PRE) is a consumer healthcare an
 image: https://cdn.prod.website-files.com/635b81308992081d90756acb/69439a3fcfe67a98dae5dae7_android-chrome-512x512-256x256.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at im8store.myshopify.com over HTTP; 5 tools listed.
   name: Prenetics MCP Server
-  slug: prenetics-mcp-server
+  slug: im8-health-ucp-shopping
 modified: '2026-07-20'
 name: Prenetics
 nav: Providers
@@ -117,7 +117,7 @@ overview: 'Prenetics publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 5
 score:
   band: emerging
-  composite: 15.0
+  composite: 14.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -131,20 +131,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 1.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 15.0
+  previous_composite: 14.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

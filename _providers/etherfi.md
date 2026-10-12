@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 21
+artifact_total: 22
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/etherfi/refs/heads/main/security/etherfi-domain-security.yml
@@ -163,6 +163,10 @@ features:
 - Open-source under MIT license on GitHub (etherfi-protocol)
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/etherfi.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ether.fi over HTTP.
+  name: ether.fi MCP Server
+  slug: etherfi
 modified: '2026-05-24'
 name: ether.fi
 nav: Providers
@@ -174,7 +178,7 @@ overview: 'ether.fi is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 17
 score:
   band: minimal
-  composite: 5.2
+  composite: 6.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -188,9 +192,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 5.2
+  previous_composite: 6.7
   provenance:
     mcp: first-party
   regulatory:
@@ -198,9 +202,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -234,6 +238,6 @@ tags:
 - Cross-Chain
 - Cash Card
 - Liquid Vaults
-- Open-Source
+- Open Source
 website: https://www.ether.fi
 ---

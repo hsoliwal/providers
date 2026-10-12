@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -63,17 +63,17 @@ description: SCENARIO-X GLOBAL HOLDING PTE. LTD. (Scenario X) is a financial-tec
 image: https://scenario-x.ai/wp-content/uploads/2024/05/Logo-Stylise.png
 layout: provider
 modified: '2026-07-21'
-name: SCENARIO-X GLOBAL HOLDING PTE. LTD.
+name: SCENARIO-X GLOBAL HOLDING
 nav: Providers
 network: true
-overview: 'SCENARIO-X GLOBAL HOLDING PTE. LTD. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Risk Management, Stress Testing, and RegTech.
+overview: 'SCENARIO-X GLOBAL HOLDING is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Risk Management, Stress Testing, and RegTech.
 
 
-  SCENARIO-X GLOBAL HOLDING PTE. LTD.''s developer surface includes engineering blog and 4 more developer resources.'
+  SCENARIO-X GLOBAL HOLDING''s developer surface includes engineering blog and 4 more developer resources.'
 random_paper: 4
 score:
   band: minimal
-  composite: 8.3
+  composite: 7.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -87,11 +87,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -106,7 +112,7 @@ security:
 slug: scenario-x-global-holding-pte-ltd
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Risk Management
 - Stress Testing
 - RegTech

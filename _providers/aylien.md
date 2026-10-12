@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -53,7 +53,7 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The autocomplete API from AYLIEN — 1 operation(s) for autocomplete.
-  name: AYLIEN autocomplete API
+  name: AYLIEN Autocomplete API
   slug: aylien-autocomplete-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The cluster API from AYLIEN — 1 operation(s) for cluster.
-  name: AYLIEN cluster API
+  name: AYLIEN Cluster API
   slug: aylien-cluster-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
@@ -93,7 +93,7 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The histogram API from AYLIEN — 1 operation(s) for histogram.
-  name: AYLIEN histogram API
+  name: AYLIEN Histogram API
   slug: aylien-histogram-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
@@ -103,7 +103,7 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The related_story API from AYLIEN — 1 operation(s) for related_story.
-  name: AYLIEN related_story API
+  name: AYLIEN Related Story API
   slug: aylien-related-story-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
@@ -113,7 +113,7 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The story API from AYLIEN — 1 operation(s) for story.
-  name: AYLIEN story API
+  name: AYLIEN Story API
   slug: aylien-story-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
@@ -123,12 +123,12 @@ apis:
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The time_series API from AYLIEN — 1 operation(s) for time_series.
-  name: AYLIEN time_series API
+  name: AYLIEN Time Series API
   slug: aylien-time-series-api
 - baseURL: https://api.aylien.com
   baseurl_source: declared
   description: The trends API from AYLIEN — 1 operation(s) for trends.
-  name: AYLIEN trends API
+  name: AYLIEN Trends API
   slug: aylien-trends-api
 artifact_total: 125
 collections:
@@ -511,7 +511,7 @@ modified: '2026-06-13'
 name: AYLIEN
 nav: Providers
 network: true
-overview: 'AYLIEN publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Absa API, autocomplete API, Classify API, and 14 more. Tagged areas include News Intelligence, Text Analysis, NLP, Sentiment Analysis, and Entity Recognition.
+overview: 'AYLIEN publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Absa API, Autocomplete API, Classify API, and 14 more. Tagged areas include News Intelligence, Text Analysis, NLP, Sentiment Analysis, and Entity Recognition.
 
 
   The AYLIEN catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
@@ -539,24 +539,24 @@ rules:
     warn: 3
   slug: aylien-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 38.5
   coverage:
     artifact_dirs: 15
-    catalog_earned: 72.3
+    catalog_earned: 69.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 42.8
+    catalog_gap: 45.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 44.7
+    access_clarity: 41.6
     contract_governance: 9.8
-    contract_quality: 57.8
+    contract_quality: 52.3
     developer_ergonomics: 17.9
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 41.1
+    discoverability: 66.1
+    operational_transparency: 49.5
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     contracts:
@@ -564,8 +564,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

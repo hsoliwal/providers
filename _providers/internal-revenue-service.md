@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The IRS Modernized e-File (MeF) system is the web-based electronic filing platform supporting individual, business, and tax-exempt return submission via XML-based schemas. Software developers and tran
@@ -81,7 +81,7 @@ modified: '2026-04-28'
 name: Internal Revenue Service
 nav: Providers
 network: true
-overview: 'Internal Revenue Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Finance, IRS, Tax, and Tax Filing.
+overview: 'Internal Revenue Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Finance, IRS, Tax, and Tax Filing.
 
 
   Internal Revenue Service''s developer surface includes support and 5 more developer resources.'
@@ -96,7 +96,7 @@ rate_limits:
   slug: internal-revenue-service-rate-limits
 score:
   band: emerging
-  composite: 11.7
+  composite: 12.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -110,17 +110,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 11.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 12.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +139,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: internal-revenue-service
 tags:
-- Federal-Government
+- Federal Government
 - Finance
 - IRS
 - Tax

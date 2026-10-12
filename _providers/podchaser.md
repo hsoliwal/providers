@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Podchaser's GraphQL API provides programmatic access to podcasts, episodes, creators, credits, reviews, and lists across the Podchaser database. Authentication is handled via OAuth-style API tokens an
   name: Podchaser GraphQL API
   slug: podchaser
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/podchaser/refs/heads/main/security/podchaser-domain-security.yml
@@ -74,6 +74,10 @@ graphqls:
   slug: podchaser-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/podchaser.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.podchaser.com over HTTP; 2 tools listed.
+  name: Podchaser MCP Server
+  slug: podchaser
 modified: '2026-04-28'
 name: Podchaser
 nav: Providers
@@ -92,8 +96,8 @@ rate_limits:
   name: Podchaser Rate Limits
   slug: podchaser-rate-limits
 score:
-  band: emerging
-  composite: 12.0
+  band: minimal
+  composite: 10.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 41.0
@@ -107,13 +111,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 7.9
-  previous_composite: 12.0
+  previous_composite: 10.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

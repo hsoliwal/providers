@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Optilogic operates a hosted, remote Model Context Protocol server that backs the Ada connector for Claude. An MCP client points at https://mcp.optilogic.app/mcp and authenticates over OAuth 2.1 agains
@@ -262,14 +262,14 @@ description: Optilogic is a cloud-native supply chain design company headquarter
 image: https://cdn.prod.website-files.com/682c88de65bdb86ec53f8277/687fd1599d7415ecd00e4908_Optilogic_logo_2025.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.optilogic.app requiring OAuth.
   name: Optilogic MCP Server (Ada Connector)
   slug: optilogic-mcp-server-ada-connector
 modified: '2026-09-16'
 name: Optilogic
 nav: Providers
 network: true
-overview: 'Optilogic publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Job API, Storage API, and 8 more. Tagged areas include Supply Chain, Supply Chain Design, Network Optimization, Simulation, and Optimization.
+overview: 'Optilogic publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Job API, Storage API, and 9 more. Tagged areas include Supply Chain, Supply Chain Design, Network Optimization, Simulation, and Optimization.
 
 
   Optilogic''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 27 more developer resources.'
@@ -284,7 +284,7 @@ rate_limits:
   slug: optilogic-rate-limits
 score:
   band: developing
-  composite: 48.5
+  composite: 48.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -296,16 +296,18 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 51.9
+    contract_quality: 46.7
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.5
+  previous_composite: 48.9
   provenance:
     conformance: derived
     contracts:
@@ -315,8 +317,18 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: cmmc
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

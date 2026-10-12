@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://poseidon.blueocean.ai/api
@@ -229,7 +229,7 @@ modified: '2026-08-13'
 name: BlueOcean
 nav: Providers
 network: true
-overview: 'BlueOcean publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Delete Conversation API, Get All Conversation History API, Get Conversation History Summary API, and 16 more. Tagged areas include Company, Marketing, Artificial Intelligence, Agentic AI, and Brand Intelligence.
+overview: 'BlueOcean publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Delete Conversation API, Get All Conversation History API, Get Conversation History Summary API, and 16 more. Tagged areas include Company, Marketing, Artificial Intelligence, AI Agents, and Brand Intelligence.
 
 
   BlueOcean''s developer surface includes engineering blog, authentication, and 16 more developer resources.'
@@ -244,7 +244,7 @@ rate_limits:
   slug: blueocean-rate-limits
 score:
   band: thin
-  composite: 32.2
+  composite: 32.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -256,11 +256,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 45.6
+    contract_quality: 41.4
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 32.2
+  previous_composite: 32.6
   provenance:
     conformance: first-party
     contracts:
@@ -269,8 +269,14 @@ score:
       marker_coverage: 0.0
       total: 19
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -290,7 +296,7 @@ tags:
 - Company
 - Marketing
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 - Brand Intelligence
 - Marketing Automation
 - Analytics

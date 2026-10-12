@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -170,7 +170,7 @@ modified: '2026-05-19'
 name: Fluent Bit
 nav: Providers
 network: true
-overview: 'Fluent Bit publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Build API, Health API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Metrics, and Open-Source.
+overview: 'Fluent Bit publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Build API, Health API, Metrics API, and 3 more. Tagged areas include Logging, Observability, Metrics, and Open Source.
 
 
   Fluent Bit''s developer surface includes documentation, engineering blog, and 12 more developer resources.'
@@ -185,7 +185,7 @@ rate_limits:
   slug: fluent-bit-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 31.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -197,14 +197,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 42.4
+    contract_quality: 38.2
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 34.2
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -212,8 +212,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -229,6 +235,6 @@ tags:
 - Logging
 - Observability
 - Metrics
-- Open-Source
+- Open Source
 website: https://fluentbit.io
 ---

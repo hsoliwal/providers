@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 1
@@ -346,7 +346,7 @@ modified: '2026-07-26'
 name: Landmark Information Group
 nav: Providers
 network: true
-overview: 'Landmark Information Group publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Cases API, Document Vaults API, and 5 more. Tagged areas include Real-Estate, United Kingdom, PropTech, Property Data, and Conveyancing.
+overview: 'Landmark Information Group publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Cases API, Document Vaults API, and 7 more. Tagged areas include Real Estate, United Kingdom, PropTech, Property Data, and Conveyancing.
 
 
   The Landmark Information Group catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -365,7 +365,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 51.2
+  composite: 52.4
   coverage:
     artifact_dirs: 25
     catalog_earned: 43.0
@@ -377,9 +377,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 65.7
+    contract_quality: 60.1
     developer_ergonomics: 66.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -389,7 +389,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 51.2
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -400,8 +400,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -418,7 +424,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: landmark-information
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - PropTech
 - Property Data
@@ -426,7 +432,7 @@ tags:
 - Land Registry
 - Geospatial
 - Valuation
-- Anti-Money Laundering
+- AML
 - Planning Data
 - Mortgage
 website: https://www.landmark.co.uk/

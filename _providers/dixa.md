@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 66
   human_in_the_loop: 0
@@ -346,7 +346,7 @@ modified: '2026-06-13'
 name: Dixa
 nav: Providers
 network: true
-overview: 'Dixa publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Anonymization API, and 17 more. Tagged areas include Customer Service, Conversational, Omnichannel, CX, and Help Desk.
+overview: 'Dixa publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Analytics API, Anonymization API, and 17 more. Tagged areas include Customer Service, Conversational AI, Omnichannel, Customer Experience, and Help Desk.
 
 
   The Dixa catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -378,7 +378,7 @@ rules:
   slug: dixa-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 48.0
+  composite: 46.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 75.3
@@ -390,11 +390,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 9.8
-    contract_quality: 65.2
+    contract_quality: 59.4
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 52.6
-  previous_composite: 48.0
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     contracts:
@@ -402,8 +402,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 20
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -421,9 +427,9 @@ security:
 slug: dixa
 tags:
 - Customer Service
-- Conversational
+- Conversational AI
 - Omnichannel
-- CX
+- Customer Experience
 - Help Desk
 - Chat
 - Knowledge Base

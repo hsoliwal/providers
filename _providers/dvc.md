@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: DVC ships as a CLI plus a Python API (`dvc.api`). It tracks data and model files via pointers stored in Git and pushes payloads to remote storage backends (S3, Azure, GCS, SSH, HDFS, HTTP, etc.). Ther
@@ -113,7 +113,7 @@ modified: '2026-05-08'
 name: DVC
 nav: Providers
 network: true
-overview: 'DVC publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Machine-Learning, MLOps, Versioning, CLI, and Open-Source.
+overview: 'DVC publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Machine Learning, MLOps, Versioning, CLI, and Open Source.
 
 
   DVC''s developer surface includes developer portal, engineering blog, and 12 more developer resources.'
@@ -128,7 +128,7 @@ rate_limits:
   slug: dvc-rate-limits
 score:
   band: emerging
-  composite: 18.6
+  composite: 21.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -142,11 +142,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 18.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  open_source:
+    applies: true
+    score: 65.0
+  previous_composite: 21.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -160,10 +169,10 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: dvc
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Versioning
 - CLI
-- Open-Source
+- Open Source
 website: https://dvc.org/
 ---

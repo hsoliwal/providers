@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.2
-  scored_at: '2026-09-20'
+  score: 39.1
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The ecforce platform REST API. Version 2 splits into v2/admin (administrator-scoped, mirroring the ecforce management screens) and v2/customer (shopper-scoped, mirroring My Page). Responses are JSON:A
@@ -237,12 +237,12 @@ rate_limits:
   slug: super-studio-rate-limits
 scopes:
 - name: Super Studio Scopes
-  scope_count: 0
+  scope_count: 1
   slug: super-studio-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code
 score:
   band: developing
-  composite: 51.2
+  composite: 53.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 52.0
@@ -254,9 +254,9 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 51.2
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -265,12 +265,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 51.2
+  previous_composite: 53.2
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

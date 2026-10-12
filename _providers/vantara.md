@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -181,9 +181,9 @@ description: Milana (formerly Vantara, a Homebrew-backed AI startup) is "the AI 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vantara.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.getmilana.ai over HTTP.
   name: Milana MCP Server
-  slug: milana-mcp-server
+  slug: milana
 modified: '2026-07-21'
 name: Milana
 nav: Providers
@@ -200,7 +200,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.2
+  composite: 36.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -214,15 +214,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 44.7
-  previous_composite: 33.2
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

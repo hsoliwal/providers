@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 61.0
-  scored_at: '2026-09-20'
+  score: 58.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -89,6 +90,11 @@ collections:
   name: Lucent Insights Signals API
   slug: open-lucent-signals-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lucent/refs/heads/main/capabilities/lucent-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lucent-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lucent/refs/heads/main/agentic-access/lucent-agentic-access.yml
   title: ''
@@ -261,9 +267,9 @@ description: 'Lucent is an AI product manager for session replay: it watches use
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lucent.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.lucenthq.com over HTTP; 5 tools listed.
   name: Lucent MCP Server
-  slug: lucent-mcp-server
+  slug: lucent
 modified: '2026-07-20'
 name: Lucent
 nav: Providers
@@ -274,7 +280,7 @@ overview: 'Lucent publishes 4 APIs on the [APIs.io](https://apis.io/) network, i
   The Lucent catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lucent''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, pricing, and 29 more developer resources.'
+  Lucent''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, pricing, and 30 more developer resources.'
 random_paper: 13
 scopes:
 - name: Lucent Scopes
@@ -283,7 +289,7 @@ scopes:
   summary_line: 2 scopes
 score:
   band: developing
-  composite: 49.7
+  composite: 50.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -295,11 +301,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 62.9
+    contract_quality: 57.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 49.7
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -310,8 +316,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

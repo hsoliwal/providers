@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: XAG's developer Open Platform (Chinese-language) integrating application management, device data authorization, secure data communication, and message subscription, offering APIs for retrieving device
@@ -106,7 +106,7 @@ overview: 'XAG publishes 1 API on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 12
 score:
   band: emerging
-  composite: 14.5
+  composite: 14.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -120,11 +120,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 14.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,6 +151,6 @@ tags:
 - Robotics
 - IoT
 - Precision Agriculture
-- Agricultural Technology
+- AgTech
 website: https://www.xa.com/en
 ---

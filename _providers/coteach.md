@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -109,7 +109,7 @@ description: CoTeach is an AI-powered curriculum co-planning assistant for K-12 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coteach.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.coteach.ai over HTTP.
   name: Coteach Claude connector
   slug: coteach-claude-connector
 modified: '2026-07-18'
@@ -128,7 +128,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.6
+  composite: 22.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,9 +142,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 5.3
-  previous_composite: 25.6
+  previous_composite: 22.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -153,9 +153,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

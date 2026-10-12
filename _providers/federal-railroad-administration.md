@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -126,7 +126,7 @@ modified: '2026-05-19'
 name: Federal Railroad Administration
 nav: Providers
 network: true
-overview: 'Federal Railroad Administration publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accidents API, Crossings API, Incidents API, and 2 more. Tagged areas include Federal-Government, Railroads, Safety, and Transportation.
+overview: 'Federal Railroad Administration publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accidents API, Crossings API, Incidents API, and 2 more. Tagged areas include Federal Government, Railroads, Safety, and Transportation.
 
 
   Federal Railroad Administration''s developer surface includes documentation and 4 more developer resources.'
@@ -141,7 +141,7 @@ rate_limits:
   slug: federal-railroad-administration-rate-limits
 score:
   band: emerging
-  composite: 17.4
+  composite: 16.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 30.0
@@ -153,11 +153,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 17.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 16.6
   provenance:
     agentic_access: derived
     contracts:
@@ -170,9 +175,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -186,7 +191,7 @@ security:
   summary_line: DNSSEC · DMARC
 slug: federal-railroad-administration
 tags:
-- Federal-Government
+- Federal Government
 - Railroads
 - Safety
 - Transportation

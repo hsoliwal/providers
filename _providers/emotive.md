@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 18
 apis:
 - description: 'Anonymous remote MCP server published by Emotive''s Mintlify knowledge base. Three tools — documentation search, a read-only virtual filesystem over the docs, and documentation feedback. Verified live '
@@ -383,14 +383,14 @@ description: 'Emotive is an SMS marketing platform for eCommerce brands, combini
 image: https://www.emotive.io/assets/brand/emotive-symbol-blue-on-transparent.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at help.emotive.io over streamable HTTP; 3 tools listed.
   name: Emotive Knowledge Base MCP Server
   slug: emotive-knowledge-base-mcp-server
 modified: '2026-08-13'
 name: Emotive
 nav: Providers
 network: true
-overview: 'Emotive publishes 35 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Auth0 API, Authentication Source API, and 32 more. Tagged areas include Company, Marketing, SMS, Messaging, and E-Commerce.
+overview: 'Emotive publishes 36 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Auth0 API, Authentication Source API, and 33 more. Tagged areas include Company, Marketing, SMS, Messaging, and E-Commerce.
 
 
   The Emotive catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -408,7 +408,7 @@ rate_limits:
   slug: emotive-rate-limits
 score:
   band: developing
-  composite: 52.0
+  composite: 49.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -420,11 +420,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 55.6
+    contract_quality: 50.9
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 23.7
-  previous_composite: 52.0
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     contracts:
@@ -439,9 +439,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -470,5 +470,6 @@ tags:
 - Customer Data
 - Segmentation
 - Attribution
+- A2A
 website: https://www.emotive.io/
 ---

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.7
-  scored_at: '2026-09-20'
+  score: 49.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -81,7 +81,7 @@ apis:
   description: The Yields API from DefiLlama — 2 operation(s) for yields.
   name: DefiLlama Yields API
   slug: defillama-yields-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -170,11 +170,15 @@ finops:
   slug: defillama-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/defillama.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.defillama.com over HTTP.
+  name: DefiLlama MCP Server
+  slug: defillama
 modified: '2026-05-08'
 name: DefiLlama
 nav: Providers
 network: true
-overview: 'DefiLlama publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Coins API, Fees API, Stablecoins API, and 3 more. Tagged areas include Web3, DeFi, TVL, Crypto, and Stablecoins.
+overview: 'DefiLlama publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Coins API, Fees API, Stablecoins API, and 5 more. Tagged areas include Web3, DeFi, TVL, Crypto, and Stablecoins.
 
 
   DefiLlama''s developer surface includes authentication, developer portal, documentation, pricing, GitHub presence, and 7 more developer resources.'
@@ -189,7 +193,7 @@ rate_limits:
   slug: defillama-rate-limits
 score:
   band: thin
-  composite: 30.7
+  composite: 29.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 44.0
@@ -201,11 +205,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 30.7
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +218,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -241,6 +251,6 @@ tags:
 - Yield
 - Bridge
 - Aggregator
-- Open-Source
+- Open Source
 website: https://www.defillama.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 2
@@ -292,14 +292,14 @@ description: 'Immuta is a data security and access-governance platform that lets
 image: https://www.immuta.com/wp-content/uploads/2024/10/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at documentation.immuta.com over HTTP; 4 tools listed.
   name: Immuta MCP Server
-  slug: immuta-mcp-server
+  slug: immuta-documentation
 modified: '2026-08-01'
 name: Immuta
 nav: Providers
 network: true
-overview: 'Immuta publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Access Request API, Asset API, Auth API, and 8 more. Tagged areas include Company, Data Governance, Data Access Control, Data Security, and Data Privacy.
+overview: 'Immuta publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Access Request API, Asset API, Auth API, and 9 more. Tagged areas include Company, Data Governance, Data Access Control, Data Security, and Privacy.
 
 
   The Immuta catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -308,8 +308,8 @@ overview: 'Immuta publishes 11 APIs on the [APIs.io](https://apis.io/) network, 
   Immuta''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 32 more developer resources.'
 random_paper: 15
 score:
-  band: strong
-  composite: 56.8
+  band: developing
+  composite: 54.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -321,11 +321,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 63.6
+    contract_quality: 58.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 56.8
+  previous_composite: 54.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -338,12 +338,12 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -372,7 +372,7 @@ tags:
 - Data Governance
 - Data Access Control
 - Data Security
-- Data Privacy
+- Privacy
 - Policy Management
 - Data Marketplace
 - Compliance

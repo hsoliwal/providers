@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Cuvva''s fleet of public single-purpose service APIs — auth (OAuth 2.0), vehicle lookup, MOT status, motor-coverage quotes/policies, billing, promo, profile, upload, terms, notification and more. Most '
@@ -149,7 +149,7 @@ modified: '2026-07-18'
 name: Cuvva
 nav: Providers
 network: true
-overview: 'Cuvva publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Car Insurance, and Financial-Services.
+overview: 'Cuvva publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Car Insurance, and Financial Services.
 
 
   Cuvva''s developer surface includes documentation, API reference, support, authentication, and 18 more developer resources.'
@@ -161,7 +161,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/refreshToken
 score:
   band: thin
-  composite: 34.6
+  composite: 31.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -175,7 +175,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -185,7 +185,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 34.6
+  previous_composite: 31.3
   provenance:
     conformance: first-party
   regulatory:
@@ -193,9 +193,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,7 +221,7 @@ tags:
 - Insurance
 - Insurtech
 - Car Insurance
-- Financial-Services
+- Financial Services
 - Mobile
 - Authentication
 - United Kingdom

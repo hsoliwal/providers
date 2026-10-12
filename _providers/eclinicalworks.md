@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: true
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.4
-  scored_at: '2026-09-20'
+  score: 40.1
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Provider-centric, backend and bulk FHIR R4 APIs for integrating with the eClinicalWorks EHR. Supports SMART on FHIR EHR Launch, Standalone Launch, Backend Services (private_key_jwt, RS384) and CDS Hoo
@@ -239,9 +239,9 @@ jsonld:
   slug: eclinicalworks-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.eclinicalworks.com requiring OAuth.
   name: eClinicalWorks MCP Server
-  slug: eclinicalworks-mcp-server
+  slug: eclinicalworks-mcp-yml
 modified: '2026-08-14'
 name: eClinicalWorks
 nav: Providers
@@ -269,7 +269,7 @@ scopes:
   summary_line: 486 scopes
 score:
   band: exemplar
-  composite: 74.2
+  composite: 69.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 71.0
@@ -281,23 +281,23 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 61.1
+    contract_quality: 58.9
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 55.3
-  previous_composite: 74.2
+  previous_composite: 69.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 83.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 52.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

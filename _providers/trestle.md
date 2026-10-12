@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The primary Trestle interface — a RESO Web API 2.0 / OData 4.0 endpoint that republishes MLS data mapped to the RESO Data Dictionary. The anonymously readable OData service document advertises 18 enti
@@ -243,12 +243,12 @@ layout: provider
 mcp_servers:
 - description: Trestle publishes no MCP server, no tool manifest, and no agent-facing surface of any kind. Its parent, Cotality, DOES operate a hosted MCP server — but it fronts a different product line (property in
   name: Trestle MCP Server
-  slug: trestle-mcp-server
+  slug: trestle-mcp-yml
 modified: '2026-07-26'
 name: Trestle
 nav: Providers
 network: true
-overview: 'Trestle publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, United States, MLS, RESO, and Property Listings.
+overview: 'Trestle publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, United States, MLS, RESO, and Property Listings.
 
 
   Trestle''s developer surface includes documentation, FAQ, signup flow, support, getting-started guide, API reference, engineering blog, and 32 more developer resources.'
@@ -264,7 +264,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 41.7
+  composite: 45.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 47.0
@@ -276,9 +276,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 12.0
+    contract_quality: 11.9
     developer_ergonomics: 60.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -287,13 +287,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 41.7
+  previous_composite: 45.9
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -315,7 +321,7 @@ security:
   summary_line: Bugcrowd
 slug: trestle
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - MLS
 - RESO

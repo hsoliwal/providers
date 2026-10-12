@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Mercury Edge Connect is EnergyHub's standardized integration framework for connecting DER providers (thermostat, battery, EV, EV charger, and solar inverter manufacturers) to the Mercury/Edge DERMS pl
@@ -155,7 +155,7 @@ overview: 'EnergyHub publishes 2 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 1
 score:
   band: emerging
-  composite: 23.9
+  composite: 22.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 32.0
@@ -169,7 +169,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,7 +178,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.9
+  previous_composite: 22.6
   provenance:
     conformance: first-party
   regulatory:
@@ -186,9 +186,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

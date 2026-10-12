@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -84,7 +84,7 @@ overview: 'Numerade is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 13
 score:
   band: minimal
-  composite: 9.9
+  composite: 9.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -98,17 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 6.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 9.9
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Provides programmatic access to Bloomberg's comprehensive financial data including pricing, reference data, fundamentals, and historical information. Content can be accessed via a REST API, SFTP, or n
@@ -180,7 +180,7 @@ modified: '2026-09-16'
 name: Bloomberg Professional Service
 nav: Providers
 network: true
-overview: 'Bloomberg Professional Service publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Cloud, Data Management, Enterprise, and Financial-Services.
+overview: 'Bloomberg Professional Service publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Cloud, Data Management, Enterprise, and Financial Services.
 
 
   Bloomberg Professional Service''s developer surface includes developer portal, documentation, support, and 18 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: bloomberg-professional-service-rate-limits
 score:
   band: thin
-  composite: 31.5
+  composite: 31.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 49.0
@@ -207,22 +207,22 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 40.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 31.5
+  previous_composite: 31.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,9 +240,9 @@ tags:
 - Cloud
 - Data Management
 - Enterprise
-- Financial-Services
+- Financial Services
 - Market Data
-- Open-Source
+- Open Source
 - Real-Time Data
 - Trading
 use_cases:

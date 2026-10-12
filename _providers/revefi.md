@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-09-20'
+  score: 41.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://gateway.revefi.com/api/v1/
@@ -92,6 +92,11 @@ collections:
   name: Data Quality Monitors Create a Custom Data Quality Monitor Update an existing Custom Data Quality Monitor API
   slug: open-revefi-update-an-existing-custom-data-quality-monitor-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/revefi/refs/heads/main/capabilities/revefi-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/revefi-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -211,7 +216,7 @@ layout: provider
 mcp_servers:
 - description: Revefi exposes a hosted Model Context Protocol (MCP) HTTP endpoint that lets MCP-compatible clients (Claude Code, Cursor, Claude Desktop, etc.) call Revefi tools to query metadata and operate on wareh
   name: Revefi MCP Server
-  slug: revefi-mcp-server
+  slug: revefi
 modified: '2026-07-20'
 name: Revefi
 nav: Providers
@@ -219,13 +224,13 @@ network: true
 overview: 'Revefi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Create a Custom Data Quality Monitor API, Delete an existing Custom Data Quality Monitor API, Get Custom Data Quality Monitors API, and 3 more. Tagged areas include Data, Data Quality, Data Observability, FinOps, and Cost Optimization.
 
 
-  Revefi''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, pricing, signup flow, and 18 more developer resources.'
+  Revefi''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, pricing, signup flow, and 19 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 41.6
+  composite: 41.5
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -235,11 +240,11 @@ score:
   facets:
     access_clarity: 48.7
     contract_governance: 18.2
-    contract_quality: 59.2
+    contract_quality: 53.6
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 41.6
+  previous_composite: 41.5
   provenance:
     conformance: first-party
     contracts:
@@ -249,8 +254,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

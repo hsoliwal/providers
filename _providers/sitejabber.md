@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.smartcustomer.com/v1
@@ -113,6 +113,11 @@ collections:
   name: SmartCustomer (Sitejabber) Business API
   slug: open-sitejabber-business-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sitejabber/refs/heads/main/capabilities/sitejabber-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sitejabber-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sitejabber/refs/heads/main/overlays/sitejabber-business-api-overlay.yaml
   title: ''
@@ -224,7 +229,7 @@ network: true
 overview: 'SiteJabber publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Business Info API, Business Questions API, and 11 more. Tagged areas include Company, Reviews, Consumer Reviews, Product Reviews, and Reputation Management.
 
 
-  SiteJabber''s developer surface includes pricing, support, documentation, signup flow, and 18 more developer resources.'
+  SiteJabber''s developer surface includes pricing, support, documentation, signup flow, and 19 more developer resources.'
 plans:
 - name: Sitejabber Plans Pricing
   plan_count: 4
@@ -236,9 +241,9 @@ rate_limits:
   slug: sitejabber-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 43.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -248,11 +253,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 52.9
+    contract_quality: 47.6
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 44.1
+  previous_composite: 43.8
   provenance:
     conformance: derived
     contracts:
@@ -262,8 +267,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

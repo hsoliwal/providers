@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -74,17 +74,17 @@ description: EAS Innovations Inc operates ELEV8, an end-to-end, cloud-based deal
 image: https://cdn.prod.website-files.com/65d7f99dc9d20d3b11ab8930/65dcfd1edd82ac04cfe0a8b9_2_Transparent_Image.png
 layout: provider
 modified: '2026-07-18'
-name: EAS Innovations Inc
+name: ELEV8
 nav: Providers
 network: true
-overview: 'EAS Innovations Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Dealer Management, DMS, and Software-as-a-Service.
+overview: 'ELEV8 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automotive, Dealer Management, DMS, and Software-as-a-Service.
 
 
-  EAS Innovations Inc''s developer surface includes pricing, support, signup flow, and 5 more developer resources.'
+  ELEV8''s developer surface includes pricing, support, signup flow, and 5 more developer resources.'
 random_paper: 11
 score:
-  band: minimal
-  composite: 10.3
+  band: emerging
+  composite: 11.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -98,17 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.3
+  previous_composite: 11.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 15.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +129,7 @@ tags:
 - Software-as-a-Service
 - CRM
 - Accounting
-- Inventory Management
+- Inventory
 - Auto Finance
 - Payments
 website: https://www.elev8automotive.com

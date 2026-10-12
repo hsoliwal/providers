@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -92,6 +92,10 @@ created: '2026-07-17'
 description: 'Fiverr is a global online marketplace for freelance digital services, founded in 2010 and headquartered in Tel Aviv, Israel, and publicly traded on the New York Stock Exchange (NYSE: FVRR). The platform connects businesses and individuals with freelancers offering "gigs" across hundreds of categories including graphic design, writing and translation, programming and tech, video and animation, digital marketing, music and audio, and AI services. Fiverr also operates Fiverr Pro and Fiverr Enterprise for vetted talent and managed teams, Fiverr Workspace for freelancer business tooling, and an affiliate partnership program. Fiverr does not currently publish a public developer API portal or OpenAPI-described API; its programmatic surfaces are limited to the consumer marketplace and partner/affiliate integrations. This profile was surfaced as a portfolio company of Accel and Bessemer Venture Partners and enriched with the public identity, security, and discovery signals available.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fiverr.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.fiverr.com over HTTP; 1 tool listed.
+  name: Fiverr MCP Server
+  slug: fiverr
 modified: '2026-07-19'
 name: Fiverr
 nav: Providers
@@ -103,7 +107,7 @@ overview: 'Fiverr is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 16
 score:
   band: emerging
-  composite: 13.9
+  composite: 14.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -117,18 +121,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 13.9
+  previous_composite: 14.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

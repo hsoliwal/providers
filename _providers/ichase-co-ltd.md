@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -67,13 +67,13 @@ description: iChase Co., Ltd. (iCHASE) builds AI-powered biosecurity and precisi
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ichase-co-ltd.png
 layout: provider
 modified: '2026-07-19'
-name: iChase Co., Ltd.
+name: iChase
 nav: Providers
 network: true
-overview: 'iChase Co., Ltd. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, AgTech, Precision Farming, and Livestock.
+overview: 'iChase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, AgTech, Precision Agriculture, and Livestock.
 
 
-  iChase Co., Ltd.''s developer surface includes support and 5 more developer resources.'
+  iChase''s developer surface includes support and 5 more developer resources.'
 random_paper: 13
 score:
   band: minimal
@@ -91,7 +91,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   previous_composite: 7.9
   regulatory:
@@ -99,9 +99,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -118,11 +118,11 @@ tags:
 - Company
 - Agriculture
 - AgTech
-- Precision Farming
+- Precision Agriculture
 - Livestock
 - Poultry
 - Biosecurity
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
 - Animal Health
 website: https://www.ichase.io

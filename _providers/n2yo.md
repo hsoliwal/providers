@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -149,7 +149,7 @@ modified: '2026-05-19'
 name: N2YO
 nav: Providers
 network: true
-overview: 'N2YO publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Above API, Positions API, Radio Passes API, and 2 more. Tagged areas include Satellite, Space, and Tracking.
+overview: 'N2YO publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Above API, Positions API, Radio Passes API, and 2 more. Tagged areas include Satellite, Space, Tracking, and Satellite Tracking.
 
 
   N2YO''s developer surface includes authentication, signup flow, and 8 more developer resources.'
@@ -164,7 +164,7 @@ rate_limits:
   slug: n2yo-rate-limits
 score:
   band: thin
-  composite: 28.6
+  composite: 26.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 36.0
@@ -176,11 +176,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 21.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 28.6
+  previous_composite: 26.6
   provenance:
     agentic_access: derived
     contracts:
@@ -188,8 +188,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -210,5 +216,6 @@ tags:
 - Satellite
 - Space
 - Tracking
+- Satellite Tracking
 website: https://www.n2yo.com/
 ---

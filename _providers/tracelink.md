@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: 'SOAP web service for serialized operations: commissioning, aggregation, decommissioning, shipment and receipt orders, serial number verification, lot status, market release, sampling, and destruction.'
@@ -348,7 +348,7 @@ overview: 'TraceLink publishes 6 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 11
 score:
   band: developing
-  composite: 52.1
+  composite: 49.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -360,16 +360,18 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.1
+  previous_composite: 49.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -379,9 +381,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

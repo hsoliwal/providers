@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.4
-  scored_at: '2026-09-20'
+  score: 46.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -418,12 +418,12 @@ layout: provider
 mcp_servers:
 - description: Canix operates a first-party hosted MCP server, announced 2026-07-09, that connects a Canix account to AI assistants such as Claude and ChatGPT. The endpoint was not published in the announcement post
   name: Canix MCP Server
-  slug: canix-mcp-server
+  slug: canix
 modified: '2026-08-09'
 name: Canix
 nav: Providers
 network: true
-overview: 'Canix publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Audited Actions API, Bill of Materials API, Brands API, and 24 more. Tagged areas include Cannabis, ERP, Seed-to-Sale, Compliance, and Inventory Management.
+overview: 'Canix publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Audited Actions API, Bill of Materials API, Brands API, and 25 more. Tagged areas include Cannabis, ERP, Seed-to-Sale, Compliance, and Inventory.
 
 
   Canix''s developer surface includes documentation, API reference, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -435,7 +435,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 39.9
+  composite: 41.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -447,11 +447,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.8
+    contract_quality: 54.2
     developer_ergonomics: 47.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 15.8
-  previous_composite: 39.9
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -462,8 +462,14 @@ score:
       total: 27
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -484,7 +490,7 @@ tags:
 - ERP
 - Seed-to-Sale
 - Compliance
-- Inventory Management
+- Inventory
 - Supply Chain
 - Track and Trace
 - Manufacturing

@@ -34,18 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Aria API is the REST control surface for the Aria Networks Deep Networking platform. Its unauthenticated root index at https://api.arianetworks.com/ advertises version 1.0.0 and sixteen resource g
   name: Aria API
   slug: aria-api
-artifact_total: 3
+artifact_total: 4
 common:
-- group: other
-  title: ''
-  type: ParentCompany
-  url: https://apis.io/providers/juniper-networks/
 - group: company
   title: ''
   type: Website
@@ -117,18 +113,22 @@ description: Aria Networks, Inc. is a Palo Alto, California networking company f
   and machine-readable specification sit behind a customer login.
 image: https://arianetworks.com/og/aria_opengraph.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.arianetworks.com over HTTP.
+  name: Aria Networks MCP Server
+  slug: aria-networks
 modified: '2026-08-06'
 name: Aria Networks
 nav: Providers
 network: true
-overview: 'Aria Networks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Data-Center, Artificial Intelligence, and Infrastructure.
+overview: 'Aria Networks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Data Center, Artificial Intelligence, and Infrastructure.
 
 
-  Aria Networks'' developer surface includes documentation, engineering blog, support, and 10 more developer resources.'
+  Aria Networks'' developer surface includes documentation, engineering blog, support, and 9 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 18.4
+  composite: 19.4
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -142,14 +142,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 18.4
+  previous_composite: 19.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -168,7 +174,7 @@ slug: aria-networks
 tags:
 - Company
 - Networking
-- Data-Center
+- Data Center
 - Artificial Intelligence
 - Infrastructure
 - Telemetry

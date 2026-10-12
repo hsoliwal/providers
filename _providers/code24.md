@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'mConsole is CODE24''s modern EPD (electronic health record). CODE24 states that the record has a software interface (API) with which other care systems can read and write care data back into mConsole, '
@@ -163,7 +163,7 @@ rate_limits:
   slug: code24-rate-limits
 score:
   band: emerging
-  composite: 23.0
+  composite: 21.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -177,7 +177,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -187,7 +187,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 23.0
+  previous_composite: 21.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -196,9 +196,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 42.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

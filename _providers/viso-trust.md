@@ -34,68 +34,68 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-assessment-rest-resource API from VISO Trust — 7 operation(s) for client-api-assessment-rest-resource.
-  name: VISO Trust client-api-assessment-rest-resource API
+  name: VISO Trust Client API Assessment Rest Resource API
   slug: viso-trust-client-api-assessment-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-audit-log-rest-resource API from VISO Trust — 2 operation(s) for client-api-audit-log-rest-resource.
-  name: VISO Trust client-api-audit-log-rest-resource API
+  name: VISO Trust Client API Audit Log Rest Resource API
   slug: viso-trust-client-api-audit-log-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-chat-rest-resource API from VISO Trust — 1 operation(s) for client-api-chat-rest-resource.
-  name: VISO Trust client-api-chat-rest-resource API
+  name: VISO Trust Client API Chat Rest Resource API
   slug: viso-trust-client-api-chat-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-context-type-rest-resource API from VISO Trust — 1 operation(s) for client-api-context-type-rest-resource.
-  name: VISO Trust client-api-context-type-rest-resource API
+  name: VISO Trust Client API Context Type Rest Resource API
   slug: viso-trust-client-api-context-type-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-data-type-rest-resource API from VISO Trust — 1 operation(s) for client-api-data-type-rest-resource.
-  name: VISO Trust client-api-data-type-rest-resource API
+  name: VISO Trust Client API Data Type Rest Resource API
   slug: viso-trust-client-api-data-type-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-external-intelligence-report-rest-resource API from VISO Trust — 8 operation(s) for client-api-external-intelligence-report-rest-resource.
-  name: VISO Trust client-api-external-intelligence-report-rest-resource API
+  name: VISO Trust Client API External Intelligence Report Rest Resource API
   slug: viso-trust-client-api-external-intelligence-report-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-questionnaire-rest-resource API from VISO Trust — 2 operation(s) for client-api-questionnaire-rest-resource.
-  name: VISO Trust client-api-questionnaire-rest-resource API
+  name: VISO Trust Client API Questionnaire Rest Resource API
   slug: viso-trust-client-api-questionnaire-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-relationship-rest-resource API from VISO Trust — 11 operation(s) for client-api-relationship-rest-resource.
-  name: VISO Trust client-api-relationship-rest-resource API
+  name: VISO Trust Client API Relationship Rest Resource API
   slug: viso-trust-client-api-relationship-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-user-rest-resource API from VISO Trust — 2 operation(s) for client-api-user-rest-resource.
-  name: VISO Trust client-api-user-rest-resource API
+  name: VISO Trust Client API User Rest Resource API
   slug: viso-trust-client-api-user-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-vendor-directory-rest-resource API from VISO Trust — 1 operation(s) for client-api-vendor-directory-rest-resource.
-  name: VISO Trust client-api-vendor-directory-rest-resource API
+  name: VISO Trust Client API Vendor Directory Rest Resource API
   slug: viso-trust-client-api-vendor-directory-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-vendor-risk-summary-rest-resource API from VISO Trust — 2 operation(s) for client-api-vendor-risk-summary-rest-resource.
-  name: VISO Trust client-api-vendor-risk-summary-rest-resource API
+  name: VISO Trust Client API Vendor Risk Summary Rest Resource API
   slug: viso-trust-client-api-vendor-risk-summary-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-webhook-rest-resource API from VISO Trust — 2 operation(s) for client-api-webhook-rest-resource.
-  name: VISO Trust client-api-webhook-rest-resource API
+  name: VISO Trust Client API Webhook Rest Resource API
   slug: viso-trust-client-api-webhook-rest-resource-api
 artifact_total: 29
 asyncapis:
@@ -143,6 +143,11 @@ collections:
   name: VISO TRUST API Documentation client-api-assessment-rest-resource client-api-webhook-rest-resource API
   slug: open-viso-trust-client-api-webhook-rest-resource-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/viso-trust/refs/heads/main/capabilities/viso-trust-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/viso-trust-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/viso-trust/refs/heads/main/overlays/viso-trust-openapi-overlay.yaml
   title: ''
@@ -272,19 +277,19 @@ modified: '2026-07-21'
 name: VISO Trust
 nav: Providers
 network: true
-overview: 'VISO Trust publishes 12 APIs on the [APIs.io](https://apis.io/) network, including client-api-assessment-rest-resource API, client-api-audit-log-rest-resource API, client-api-chat-rest-resource API, and 9 more. Tagged areas include Company, Security, Third-Party Risk Management, TPRM, and Vendor Risk.
+overview: 'VISO Trust publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Client API Assessment Rest Resource API, Client API Audit Log Rest Resource API, Client API Chat Rest Resource API, and 9 more. Tagged areas include Company, Security, Third-Party Risk Management, Vendor Risk, and Risk Management.
 
 
   The VISO Trust catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  VISO Trust''s developer surface includes documentation, API reference, quickstart, support, engineering blog, changelog, authentication, and 20 more developer resources.'
+  VISO Trust''s developer surface includes documentation, API reference, quickstart, support, engineering blog, changelog, authentication, and 21 more developer resources.'
 random_paper: 16
 score:
   band: developing
-  composite: 49.1
+  composite: 50.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -294,11 +299,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 56.6
+    contract_quality: 51.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 49.1
+  previous_composite: 50.2
   provenance:
     conformance: derived
     contracts:
@@ -308,8 +313,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -333,7 +344,6 @@ tags:
 - Company
 - Security
 - Third-Party Risk Management
-- TPRM
 - Vendor Risk
 - Risk Management
 - Compliance

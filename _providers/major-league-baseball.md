@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -372,14 +372,14 @@ modified: '2026-05-16'
 name: Major League Baseball
 nav: Providers
 network: true
-overview: 'Major League Baseball publishes 31 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Attendance API, Awards API, and 28 more. Tagged areas include Analytics, Baseball, Entertainment, Media, and Sports.
+overview: 'Major League Baseball publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Attendance API, Awards API, and 31 more. Tagged areas include Analytics, Baseball, Entertainment, Media, and Sports.
 
 
   Major League Baseball''s developer surface includes product news, engineering blog, and 12 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 19.8
+  composite: 18.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -391,11 +391,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 43.2
+    contract_quality: 38.9
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 0.0
-  previous_composite: 19.8
+  previous_composite: 18.0
   provenance:
     agentic_access: derived
     contracts:
@@ -403,8 +403,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 31
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

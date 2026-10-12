@@ -34,113 +34,113 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Bundle Items are components that make up a bundle, defining the quantity and relationship of items within product bundles.
-  name: Whiplash Merchandising bundle_items API
+  name: Whiplash Merchandising Bundle Items API
   slug: whiplash-merchandising-bundle-items-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: A ConsumerReturn represents goods coming back from an end consumer. It is a special form of Shipnotice, and is processed in much the same way.
-  name: Whiplash Merchandising consumer_returns API
+  name: Whiplash Merchandising Consumer Returns API
   slug: whiplash-merchandising-consumer-returns-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Customers are Whiplash clients, not the End Consumer. Most Whiplash resources are owned by a Customer (or belong to resources that are).
-  name: Whiplash Merchandising customers API
+  name: Whiplash Merchandising Customers API
   slug: whiplash-merchandising-customers-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Documents are imported files and exported reports. We store a record in your account of every file you import, as well as every report you've run, so they're easy to search and access.
-  name: Whiplash Merchandising documents API
+  name: Whiplash Merchandising Documents API
   slug: whiplash-merchandising-documents-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Items are probably the most fundamental entity in the Whiplash system. An item is simply a 'shippable unit'. So, it's not a Whiplash T-Shirt; it's a Small Whiplash T-Shirt, for instance. Most commerce
-  name: Whiplash Merchandising items API
+  name: Whiplash Merchandising Items API
   slug: whiplash-merchandising-items-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: The load_scacs API from Whiplash Merchandising — 2 operation(s) for load_scacs.
-  name: Whiplash Merchandising load_scacs API
+  name: Whiplash Merchandising Load Scacs API
   slug: whiplash-merchandising-load-scacs-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: System event definitions for notifications.
-  name: Whiplash Merchandising notification_events API
+  name: Whiplash Merchandising Notification Events API
   slug: whiplash-merchandising-notification-events-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: User notification preferences and subscriptions.
-  name: Whiplash Merchandising notification_subscriptions API
+  name: Whiplash Merchandising Notification Subscriptions API
   slug: whiplash-merchandising-notification-subscriptions-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Order-related documentation and paperwork.
-  name: Whiplash Merchandising order_documents API
+  name: Whiplash Merchandising Order Documents API
   slug: whiplash-merchandising-order-documents-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: An OrderItem represents an Item with a quantity in an Order.
-  name: Whiplash Merchandising order_items API
+  name: Whiplash Merchandising Order Items API
   slug: whiplash-merchandising-order-items-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Order picking container management.
-  name: Whiplash Merchandising order_totes API
+  name: Whiplash Merchandising Order Totes API
   slug: whiplash-merchandising-order-totes-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Orders are end consumer requests for Items. An Order is comprised of OrderItems. Orders represent outgoing stock.
-  name: Whiplash Merchandising orders API
+  name: Whiplash Merchandising Orders API
   slug: whiplash-merchandising-orders-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Originators are e-commerce, API, or ERP representations of an Item, Order, OrderItem, ConsumerReturn, Shipnotice, or ShipnoticeItem. They contain your system's ID and, optionally, details. You can use
-  name: Whiplash Merchandising originators API
+  name: Whiplash Merchandising Originators API
   slug: whiplash-merchandising-originators-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Shipment package details and tracking.
-  name: Whiplash Merchandising packages API
+  name: Whiplash Merchandising Packages API
   slug: whiplash-merchandising-packages-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Project management and organization.
-  name: Whiplash Merchandising projects API
+  name: Whiplash Merchandising Projects API
   slug: whiplash-merchandising-projects-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Barcode management and processing.
-  name: Whiplash Merchandising scancodes API
+  name: Whiplash Merchandising Scancodes API
   slug: whiplash-merchandising-scancodes-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Similar to an OrderItem, ShipnoticeItem represents an Item with a quantity in a Shipnotice. quantity refers to the quantity expected to arrive, and the quantity actually received is quantity_good.
-  name: Whiplash Merchandising shipnotice_items API
+  name: Whiplash Merchandising Shipnotice Items API
   slug: whiplash-merchandising-shipnotice-items-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: A Shipnotice is the opposite of an order, and are notifications by the client of inventory that is expected to arrive at a warehouse. Shipnotices represent incoming stock.
-  name: Whiplash Merchandising shipnotices API
+  name: Whiplash Merchandising Shipnotices API
   slug: whiplash-merchandising-shipnotices-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: (Sandbox Only) Simulate Order and Ship Notice processing, since these are staff-only operations.
-  name: Whiplash Merchandising simulate API
+  name: Whiplash Merchandising Simulate API
   slug: whiplash-merchandising-simulate-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: Templates allow you to customize packing slips, email confirmations, order inserts, etc.
-  name: Whiplash Merchandising templates API
+  name: Whiplash Merchandising Templates API
   slug: whiplash-merchandising-templates-api
 - baseURL: https://www.getwhiplash.com/api/v2
   baseurl_source: declared
   description: The wholesale_items API from Whiplash Merchandising — 2 operation(s) for wholesale_items.
-  name: Whiplash Merchandising wholesale_items API
+  name: Whiplash Merchandising Wholesale Items API
   slug: whiplash-merchandising-wholesale-items-api
 artifact_total: 46
 asyncapis:
@@ -357,7 +357,7 @@ modified: '2026-07-21'
 name: Whiplash Merchandising
 nav: Providers
 network: true
-overview: 'Whiplash Merchandising publishes 21 APIs on the [APIs.io](https://apis.io/) network, including bundle_items API, consumer_returns API, customers API, and 18 more. Tagged areas include Company, Fulfillment, Logistics, E-Commerce, and Shipping.
+overview: 'Whiplash Merchandising publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Bundle Items API, Consumer Returns API, Customers API, and 18 more. Tagged areas include Company, Fulfillment, Logistics, E-Commerce, and Shipping.
 
 
   The Whiplash Merchandising catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -367,7 +367,7 @@ overview: 'Whiplash Merchandising publishes 21 APIs on the [APIs.io](https://api
 random_paper: 15
 score:
   band: developing
-  composite: 40.6
+  composite: 39.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -379,11 +379,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 4.5
-    contract_quality: 59.8
+    contract_quality: 55.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 40.6
+  previous_composite: 39.9
   provenance:
     conformance: derived
     contracts:
@@ -393,8 +393,14 @@ score:
       total: 21
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

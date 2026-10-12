@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 13
 apis:
 - description: 'Token-authenticated REST endpoints under https://api.webz.io covering seven products: News, Blogs and Forums (/api/news, /api/blogs, /api/forums plus /seg_api/* segmentation), Reviews (/reviewFilter, '
@@ -243,10 +243,10 @@ layout: provider
 mcp_servers:
 - description: A first-party remote MCP server that exposes Webz.io semantic news search to any MCP client. It ships exactly one tool, news_search_by_webz, and every call runs a regular News Search API request again
   name: Webz.io News Search MCP
-  slug: webzio-news-search-mcp
+  slug: webz-io-news-search-mcp
 - description: ''
   name: Webz.io MCP Server
-  slug: webzio-mcp-server
+  slug: mcp
 modified: '2026-08-27'
 name: Webz.io
 nav: Providers
@@ -266,12 +266,12 @@ rate_limits:
   slug: webz-rate-limits
 scopes:
 - name: Webz Scopes
-  scope_count: 0
+  scope_count: 1
   slug: webz-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code/client_credentials
 score:
   band: developing
-  composite: 50.6
+  composite: 54.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 64.0
@@ -279,21 +279,33 @@ score:
     catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.6
+  delta: 0.0
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 57.9
-  previous_composite: 50.0
+  previous_composite: 54.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

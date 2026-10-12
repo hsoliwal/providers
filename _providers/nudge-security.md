@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -142,6 +142,11 @@ collections:
   name: Nudge Security API
   slug: open-nudge-security
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nudge-security/refs/heads/main/capabilities/nudge-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nudge-security-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nudge-security/refs/heads/main/agentic-access/nudge-security-agentic-access.yml
   title: ''
@@ -213,7 +218,7 @@ network: true
 overview: 'Nudge Security publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, App Integrations API, Apps API, and 8 more. Tagged areas include Access Management, AI Security, Compliance, Governance, and Authentication.
 
 
-  Nudge Security''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, changelog, FAQ, and 6 more developer resources.'
+  Nudge Security''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, changelog, FAQ, and 7 more developer resources.'
 plans:
 - name: Nudge Security Plans Pricing
   plan_count: 3
@@ -224,10 +229,10 @@ rate_limits:
   name: Nudge Security Rate Limits
   slug: nudge-security-rate-limits
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 38.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -237,11 +242,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 40.0
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
@@ -249,8 +254,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

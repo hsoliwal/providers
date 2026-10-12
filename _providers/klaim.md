@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -70,7 +70,7 @@ modified: '2026-07-19'
 name: Klaim
 nav: Providers
 network: true
-overview: Klaim is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Healthcare, and Insurance.
+overview: Klaim is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Healthcare, and Insurance.
 random_paper: 20
 score:
   band: minimal
@@ -88,7 +88,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -103,9 +103,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -120,7 +120,7 @@ security:
 slug: klaim
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Healthcare
 - Insurance
@@ -129,7 +129,7 @@ tags:
 - Working Capital
 - Receivables
 - Embedded Finance
-- Real-Estate
+- Real Estate
 - United Arab Emirates
 website: https://klaim.ai/
 ---

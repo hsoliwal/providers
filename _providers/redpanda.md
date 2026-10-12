@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.5
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Redpanda implements the Apache Kafka wire protocol natively, allowing existing Kafka clients (producers, consumers, AdminClient, Streams, Connect) to work unchanged against Redpanda brokers on TCP por
@@ -66,7 +66,7 @@ apis:
 - description: Redpanda Iceberg Topics expose topic data as Apache Iceberg tables in object storage, accessible from the Iceberg REST catalog and consumable by query engines like Spark, Trino, and Snowflake.
   name: Redpanda Iceberg Topic API
   slug: redpanda-iceberg-topic-api
-artifact_total: 23
+artifact_total: 24
 collections:
 - collection_type: open
   name: API Collection
@@ -233,11 +233,14 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at docs.redpanda.com over HTTP; 6 tools listed.
+  name: Redpanda MCP Server
+  slug: redpanda
 modified: '2026-05-19'
 name: Redpanda
 nav: Providers
 network: true
-overview: 'Redpanda publishes 1 API on the [APIs.io](https://apis.io/) network: Admin API. Tagged areas include Streaming, Kafka, Event Streaming, Real-Time, and Data Platform.
+overview: 'Redpanda publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Admin API, and 9 more. Tagged areas include Streaming, Kafka, Event Streaming, Real-Time, and Data Platform.
 
 
   Redpanda''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, developer console, code examples, and 25 more developer resources.'
@@ -252,7 +255,7 @@ rate_limits:
   slug: redpanda-rate-limits
 score:
   band: thin
-  composite: 33.8
+  composite: 33.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 39.0
@@ -264,15 +267,21 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 38.1
-    discoverability: 63.0
+    discoverability: 63.3
     operational_transparency: 26.3
-  previous_composite: 33.8
+  previous_composite: 33.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -299,7 +308,7 @@ tags:
 - Event Streaming
 - Real-Time
 - Data Platform
-- Open-Source
+- Open Source
 - C++
 - Stream Processing
 website: https://redpanda.com/

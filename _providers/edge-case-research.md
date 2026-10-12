@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Model Context Protocol endpoint served on Edge Case's own host and advertised in its llms.txt. It is the Wix platform site MCP — it exposes site content, business details, site search and Wix busi
@@ -106,9 +106,9 @@ description: Edge Case Research (operating as "Edge Case", ecr.ai) is a Pittsbur
 image: https://static.wixstatic.com/media/9347c4_84bea09e578d4f81b9a5a54b9ec29065%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/9347c4_84bea09e578d4f81b9a5a54b9ec29065%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.ecr.ai over HTTP; 9 tools listed.
   name: Edge Case Research MCP Server
-  slug: edge-case-research-mcp-server
+  slug: edge-case-site-mcp
 modified: '2026-08-04'
 name: Edge Case Research
 nav: Providers
@@ -119,8 +119,8 @@ overview: 'Edge Case Research publishes 1 API on the [APIs.io](https://apis.io/)
   Edge Case Research''s developer surface includes engineering blog, support, and 12 more developer resources.'
 random_paper: 14
 score:
-  band: emerging
-  composite: 11.4
+  band: minimal
+  composite: 10.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -134,13 +134,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 11.4
+  previous_composite: 10.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

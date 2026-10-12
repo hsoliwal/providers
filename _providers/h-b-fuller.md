@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The H.B. Fuller Company API provides access to platform services and data for enterprise integration and automation.
@@ -113,8 +113,8 @@ rate_limits:
   name: H B Fuller Rate Limits
   slug: h-b-fuller-rate-limits
 score:
-  band: emerging
-  composite: 11.9
+  band: minimal
+  composite: 10.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 39.0
@@ -128,11 +128,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 66.7
+    discoverability: 65.2
     operational_transparency: 5.3
-  previous_composite: 11.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

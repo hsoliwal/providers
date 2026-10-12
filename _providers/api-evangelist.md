@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 64.6
-  scored_at: '2026-09-20'
+  score: 62.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 1
@@ -190,14 +190,19 @@ apis:
 - baseURL: https://mcp.apievangelist.com/mcp
   baseurl_source: declared
   description: Individual API resources tracked across the network, and the relevance graph between them.
-  name: API Evangelist AP Is API
+  name: API Evangelist APIs API
   slug: api-evangelist-apis-api
-artifact_total: 44
+artifact_total: 43
 collections:
 - collection_type: open
   name: API Evangelist Governance & Discovery API
   slug: open-apievangelist-governance
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/capabilities/api-evangelist-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/api-evangelist-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/api-evangelist/refs/heads/main/overlays/api-evangelist-v1-overlay.yaml
   title: ''
@@ -244,6 +249,10 @@ common:
   title: ''
   type: Blog
   url: https://apievangelist.com
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://apievangelist.com/atom.xml
 - group: build
   title: ''
   type: GitHubOrganization
@@ -392,23 +401,20 @@ description: The index of everything available via the API Evangelist developer 
 image: https://kinlane-images.s3.amazonaws.com/shared/api-evangelist-logos/api-evangelist-butterfly-vertical.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.apievangelist.com over streamable HTTP; 57 tools listed.
   name: API Evangelist MCP Server
-  slug: api-evangelist-mcp-server
-- description: ''
-  name: API Evangelist MCP Server
-  slug: api-evangelist-mcp-server-2
+  slug: api-evangelist
 modified: '2026-08-10'
 name: API Evangelist
 nav: Providers
 network: true
-overview: 'API Evangelist publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Account API, Areas API, Building Blocks API, and 17 more. Tagged areas include API Evangelist, Developer Portal, API Research, API Governance, and API Discovery.
+overview: 'API Evangelist publishes 35 APIs on the [APIs.io](https://apis.io/) network, including Account API, Areas API, Building Blocks API, and 32 more. Tagged areas include API-Evangelist, Developer Portal, API Research, API Governance, and API Discovery.
 
 
   The API Evangelist catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  API Evangelist''s developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, support, pricing, and 35 more developer resources.'
+  API Evangelist''s developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, support, pricing, and 37 more developer resources.'
 plans:
 - name: Api Evangelist Plans Pricing
   plan_count: 4
@@ -432,23 +438,23 @@ rules:
   slug: api-evangelist-spectral-rules
 score:
   band: strong
-  composite: 65.1
+  composite: 66.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 67.5
+    artifact_dirs: 23
+    catalog_earned: 79.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 47.5
+    catalog_gap: 39.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 76.3
-    contract_governance: 47.0
-    contract_quality: 65.1
-    developer_ergonomics: 63.7
-    discoverability: 63.0
+    contract_governance: 45.5
+    contract_quality: 58.6
+    developer_ergonomics: 63.2
+    discoverability: 85.0
     operational_transparency: 73.7
-  previous_composite: 65.1
+  previous_composite: 66.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -459,8 +465,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -477,7 +489,7 @@ security:
   summary_line: TLSv1.3
 slug: api-evangelist
 tags:
-- API Evangelist
+- API-Evangelist
 - Developer Portal
 - API Research
 - API Governance
@@ -486,5 +498,6 @@ tags:
 - Agents
 - API Standards
 - API Vocabulary
+- A2A
 website: https://developer.apievangelist.com
 ---

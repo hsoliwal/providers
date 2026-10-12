@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-09-20'
+  score: 41.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Klutch Public API is a GraphQL API for the Klutch programmable credit card. It exposes enriched transaction history with filtering, cursor pagination and group-by aggregation; user-defined transac
@@ -202,14 +202,14 @@ description: Klutch (Klutch Card) is a US consumer fintech that issues an "app-p
 image: https://cdn.prod.website-files.com/660d6194e5d7f9c60a769ac1/664dff628523869c6ec161ad_image%2B2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.klutchcard.com over HTTP.
   name: Klutch MCP Server
-  slug: klutch-mcp-server
+  slug: klutch
 modified: '2026-07-19'
 name: Klutch
 nav: Providers
 network: true
-overview: 'Klutch publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Financial-Services, Fintech, Credit Cards, and Payments.
+overview: 'Klutch publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Financial Services, Fintech, Credit Cards, and Payments.
 
 
   The Klutch catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -224,7 +224,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.2
+  composite: 42.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 76.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 45.2
+  previous_composite: 42.8
   provenance:
     conformance: derived
     mcp: first-party
@@ -250,9 +250,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -271,7 +271,7 @@ security:
 slug: klutch
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Credit Cards
 - Payments

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 57.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.savee.com/v1
@@ -196,7 +196,7 @@ description: 'Savee is a curated visual-inspiration platform for designers. Its 
 image: https://m.savee-cdn.com/img/default-og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.savee.com requiring OAuth.
   name: Savee MCP Server
   slug: savee-mcp-server
 modified: '2026-09-03'
@@ -223,7 +223,7 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: strong
-  composite: 57.7
+  composite: 59.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 61.0
@@ -235,11 +235,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 57.7
+  previous_composite: 59.4
   provenance:
     conformance: first-party
     contracts:
@@ -249,8 +249,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

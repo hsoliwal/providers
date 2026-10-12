@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Consume a deployed Lua agent directly over HTTP — single-shot generation or real-time SSE streaming — with bearer API-key auth.
@@ -182,23 +182,23 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lua-global
 layout: provider
 mcp_servers:
 - description: Read-only MCP server for the Lua AI platform (heylua.ai) — exposes tools that let any MCP-aware client query Lua agent state mid-conversation.
-  name: Lua Global Inc MCP Server
-  slug: lua-global-inc-mcp-server
+  name: Lua AI MCP Server
+  slug: lua-platform-mcp
 modified: '2026-07-20'
-name: Lua Global Inc
+name: Lua AI
 nav: Providers
 network: true
-overview: 'Lua Global Inc publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Platform, and Developer Tools.
+overview: 'Lua AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Platform, and Developer Tools.
 
 
-  The Lua Global Inc catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Lua AI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lua Global Inc''s developer surface includes documentation, API reference, getting-started guide, support, changelog, CLI, authentication, and 21 more developer resources.'
+  Lua AI''s developer surface includes documentation, API reference, getting-started guide, support, changelog, CLI, authentication, and 21 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 37.1
+  composite: 36.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -210,17 +210,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 37.1
+  previous_composite: 36.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

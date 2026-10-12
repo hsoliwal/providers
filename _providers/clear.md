@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -236,7 +236,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.6
+  composite: 46.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 59.7
+    contract_quality: 54.6
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 50.6
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -268,9 +268,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -299,6 +299,6 @@ tags:
 - Biometrics
 - OpenID Connect
 - Healthcare
-- Financial-Services
+- Financial Services
 website: https://clearme.com
 ---

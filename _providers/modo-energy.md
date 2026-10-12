@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -120,7 +120,7 @@ modified: '2026-09-16'
 name: Modo Energy
 nav: Providers
 network: true
-overview: 'Modo Energy publishes 3 APIs on the [APIs.io](https://apis.io/) network: ERCOT API, GB API, and NEM API. Tagged areas include Energy, Battery Storage, Utilities, and Data.
+overview: 'Modo Energy publishes 4 APIs on the [APIs.io](https://apis.io/) network, including ERCOT API, GB API, NEM API, and 1 more. Tagged areas include Energy, Battery Storage, Utilities, and Data.
 
 
   Modo Energy''s developer surface includes authentication and 5 more developer resources.'
@@ -134,8 +134,8 @@ rate_limits:
   name: Modo Energy Rate Limits
   slug: modo-energy-rate-limits
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 36.0
@@ -147,11 +147,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 20.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 27.8
+  previous_composite: 26.1
   provenance:
     agentic_access: derived
     contracts:
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

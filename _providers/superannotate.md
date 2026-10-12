@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API and Python SDK for managing annotation projects, datasets, folders, items, annotations, annotation classes, exports, custom metadata, subsets, images, and team operations on the SuperAnnotate
   name: SuperAnnotate API
   slug: superannotate-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/superannotate/refs/heads/main/security/superannotate-trust-center.yml
@@ -121,11 +121,15 @@ jsonld:
   property_count: 26
   slug: superannotate-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.superannotate.com over HTTP; 10 tools listed.
+  name: SuperAnnotate MCP Server
+  slug: superannotate
 modified: 2026-06-12
 name: SuperAnnotate
 nav: Providers
 network: true
-overview: 'SuperAnnotate publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Annotation, Data Labeling, Computer-Vision, and NLP.
+overview: 'SuperAnnotate publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Annotation, Data Labeling, Computer Vision, and NLP.
 
 
   The SuperAnnotate catalog on APIs.io includes 1 JSON-LD context.
@@ -143,27 +147,33 @@ rate_limits:
   slug: superannotate-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 29.6
   coverage:
     artifact_dirs: 9
-    catalog_earned: 71.0
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.0
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 0.0
     contract_quality: 14.7
     developer_ergonomics: 13.1
-    discoverability: 68.5
-    operational_transparency: 39.5
-  previous_composite: 29.9
+    discoverability: 68.3
+    operational_transparency: 37.4
+  previous_composite: 29.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,9 +194,9 @@ tags:
 - Artificial Intelligence
 - Annotation
 - Data Labeling
-- Computer-Vision
+- Computer Vision
 - NLP
-- Machine-Learning
+- Machine Learning
 - Training Data
 - Image Annotation
 - Video Annotation

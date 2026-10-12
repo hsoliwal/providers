@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Dredd is a language-agnostic command-line tool for validating an API description document against a backend implementation. It supports API Blueprint, OpenAPI 2.0, and OpenAPI 3.0, and provides hooks '
@@ -156,7 +156,7 @@ rate_limits:
   slug: dredd-rate-limits
 score:
   band: emerging
-  composite: 20.2
+  composite: 19.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 35.0
@@ -170,13 +170,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 20.2
+  previous_composite: 19.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -198,7 +204,7 @@ tags:
 - Developer Tools
 - Command Line
 - Continuous Integration
-- JSON-Schema
-- Open-Source
+- JSON Schema
+- Open Source
 website: https://dredd.org
 ---

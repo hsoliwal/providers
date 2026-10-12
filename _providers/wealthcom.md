@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Advisor API connects advisor applications to Wealth.com, exposing client, asset, document, contact, quiz, AI-notes, client-group and top-account resources over JSON HTTPS, with OAuth2 (authorizati
   name: Wealth.com Advisor API
   slug: wealthcom-advisor-api
-artifact_total: 7
+artifact_total: 8
 asyncapis:
 - description: ''
   name: Wealthcom Webhooks
@@ -170,6 +170,10 @@ created: '2026-07-17'
 description: Wealth.com is the industry-leading estate and tax planning platform for financial advisors, unifying estate document creation, tax intelligence, and its proprietary Ester AI assistant to help advisors deliver sophisticated planning at scale. For developers, Wealth.com publishes an Advisor API (OAuth2, JSON over HTTPS) that connects advisor applications to the platform for managing clients, assets, documents, contacts, quizzes, and AI notes, plus a webhook surface for real-time events and an Onboarding API for partner-referred client onboarding. A separate SFTP interface supports bulk data exchange. The company is backed by GV (Google Ventures) and integrates with Salesforce, Orion, Redtail, Wealthbox, Addepar, eMoney, and other advisor tools.
 image: https://www.wealth.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.wealth.com over HTTP.
+  name: Wealth.com MCP Server
+  slug: wealthcom
 modified: '2026-07-21'
 name: Wealth.com
 nav: Providers
@@ -193,7 +197,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.9
+  composite: 49.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -205,16 +209,22 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 46.9
+  previous_composite: 49.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

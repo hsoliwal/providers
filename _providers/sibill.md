@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 25
@@ -317,7 +317,7 @@ rate_limits:
   slug: sibill-rate-limits
 score:
   band: developing
-  composite: 48.5
+  composite: 46.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -329,9 +329,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 57.5
+    contract_quality: 52.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -341,7 +341,7 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 48.5
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -357,9 +357,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -383,9 +383,9 @@ tags:
 - Reconciliation
 - Accounting
 - Banking
-- SME
+- Small Business
 - Open Banking
-- Electronic Invoicing
+- E-Invoicing
 - Italy
 website: https://sibill.com/
 ---

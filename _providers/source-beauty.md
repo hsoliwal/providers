@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 1
@@ -100,9 +100,9 @@ description: Source Beauty is an online beauty and wellbeing marketplace serving
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/source-beauty.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sourcebeauty.com over HTTP; 5 tools listed.
   name: Source Beauty UCP Shopping MCP
-  slug: source-beauty-ucp-shopping-mcp
+  slug: source-beauty-ucp-shopping
 modified: '2026-07-21'
 name: Source Beauty
 nav: Providers
@@ -119,7 +119,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.0
+  composite: 17.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -133,7 +133,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -142,12 +142,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 15.0
+  previous_composite: 17.1
   provenance:
     agentic_access: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

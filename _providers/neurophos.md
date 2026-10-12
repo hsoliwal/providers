@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, unauthenticated Model Context Protocol endpoint served from the neurophos.com host and advertised in the company's own llms.txt. It is provided by the Wix site platform rather than authored by
@@ -101,14 +101,14 @@ description: 'Neurophos is an Austin, Texas semiconductor company, spun out of D
 image: https://static.wixstatic.com/media/79aa3c_0cf41cb45de44d92ab97f571e6d733ff~mv2.jpg/v1/fill/w_1942,h_931,al_c/79aa3c_0cf41cb45de44d92ab97f571e6d733ff~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.neurophos.com over HTTP; 9 tools listed.
   name: Neurophos MCP Server
-  slug: neurophos-mcp-server
+  slug: neurophos-site-mcp
 modified: '2026-08-04'
 name: Neurophos
 nav: Providers
 network: true
-overview: 'Neurophos publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Photonics, Optical Computing, AI Inference, and AI Accelerators.
+overview: 'Neurophos publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Photonics, Optical Computing, Inference, and AI Accelerators.
 
 
   Neurophos'' developer surface includes authentication, product news, and 10 more developer resources.'
@@ -129,14 +129,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 2.6
   previous_composite: 10.8
   provenance:
     conformance: derived
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,11 +163,11 @@ tags:
 - Company
 - Photonics
 - Optical Computing
-- AI Inference
+- Inference
 - AI Accelerators
 - Semiconductors
 - Metamaterials
-- Data-Center
+- Data Center
 - Deep Tech
 - MCP
 website: https://www.neurophos.com/

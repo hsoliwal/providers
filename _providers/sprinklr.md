@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful APIs for integrating with the Sprinklr Unified-CXM platform, covering social listening, publishing, reporting, user provisioning, digital asset management, and webhook subscriptions across 30+
@@ -263,7 +263,7 @@ rate_limits:
   slug: sprinklr-rate-limits
 score:
   band: developing
-  composite: 47.7
+  composite: 49.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 60.0
@@ -275,16 +275,22 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 47.7
+  previous_composite: 49.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

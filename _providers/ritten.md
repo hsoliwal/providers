@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.ritten.io/v1
@@ -265,7 +265,7 @@ rate_limits:
   slug: ritten-rate-limits
 score:
   band: developing
-  composite: 52.4
+  composite: 49.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -277,16 +277,16 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 52.2
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.4
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     contracts:
@@ -305,9 +305,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -340,5 +340,6 @@ tags:
 - Substance Use Treatment
 - 42 CFR Part 2
 - Electronic Health Records
+- Mental Health
 website: https://ritten.io
 ---

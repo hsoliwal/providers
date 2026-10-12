@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: REST APIs for MSCI index data including index levels and performance, constituents, security master, dividends, and corporate events for MSCI indexes across supported variants and currencies.
@@ -154,7 +154,7 @@ description: MSCI is a leading provider of critical decision support tools and s
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/msci.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.msci.com over HTTP; 4 tools listed.
   name: MSCI Connector
   slug: msci-connector
 modified: '2026-07-22'
@@ -168,7 +168,7 @@ overview: 'MSCI publishes 10 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 10
 score:
   band: emerging
-  composite: 20.6
+  composite: 21.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 40.0
@@ -182,14 +182,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
-  previous_composite: 20.6
+  previous_composite: 21.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +218,7 @@ tags:
 - ESG
 - Climate
 - Risk Analytics
-- Real-Estate
+- Real Estate
 - Private Assets
 - Investing
 website: https://www.msci.com

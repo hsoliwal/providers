@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -114,9 +114,9 @@ description: 'Because (Because Market) is a direct-to-consumer retail brand sell
 image: https://becausemarket.com/cdn/shop/files/logo_0dbfcfd7-0598-4066-b687-a768edfab4ca.webp?crop=center&height=1200&v=1669043821&width=1200
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at becausemarket.com over HTTP; 5 tools listed.
   name: Because UCP shopping MCP
-  slug: because-ucp-shopping-mcp
+  slug: because-ucp-shopping
 modified: '2026-07-18'
 name: Because
 nav: Providers
@@ -133,7 +133,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.1
+  composite: 23.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -147,21 +147,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 25.1
+  previous_composite: 23.2
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 35
@@ -97,6 +97,11 @@ collections:
   name: NovelAI Primary API
   slug: open-novelai
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/novelai/refs/heads/main/capabilities/novelai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/novelai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/novelai/refs/heads/main/agentic-access/novelai-agentic-access.yml
   title: ''
@@ -141,10 +146,10 @@ modified: '2026-04-28'
 name: NovelAI
 nav: Providers
 network: true
-overview: 'NovelAI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including /ai/ API, /ai/module/ API, / API, and 2 more. Tagged areas include Artificial Intelligence, Image-Generation, LLM, and Storytelling.
+overview: 'NovelAI publishes 6 APIs on the [APIs.io](https://apis.io/) network, including /ai/ API, /ai/module/ API, / API, and 3 more. Tagged areas include Artificial Intelligence, Image Generation, LLM, and Storytelling.
 
 
-  NovelAI''s developer surface includes authentication and 6 more developer resources.'
+  NovelAI''s developer surface includes authentication and 7 more developer resources.'
 plans:
 - name: Novelai Plans Pricing
   plan_count: 3
@@ -156,9 +161,9 @@ rate_limits:
   slug: novelai-rate-limits
 score:
   band: thin
-  composite: 28.0
+  composite: 26.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 31.0
     catalog_earned_first_party: 0.0
     catalog_gap: 84.0
@@ -168,11 +173,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 50.2
+    contract_quality: 45.2
     developer_ergonomics: 21.4
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 28.0
+  previous_composite: 26.8
   provenance:
     agentic_access: derived
     contracts:
@@ -180,8 +185,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -203,7 +214,7 @@ security:
 slug: novelai
 tags:
 - Artificial Intelligence
-- Image-Generation
+- Image Generation
 - LLM
 - Storytelling
 website: https://novelai.net/

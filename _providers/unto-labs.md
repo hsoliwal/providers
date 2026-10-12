@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: High-performance proto3 gRPC API (with gRPC-Web for browsers) for the Thru blockchain. QueryService exposes 24 read operations over accounts, blocks, transactions, events, state proofs, and node statu
@@ -171,7 +171,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server on the Thru block explorer. Lets AI agents inspect blocks, transactions, accounts, recent activity, search results, and on-chain program ABIs with live chain context. Tool r
   name: Thru Explorer MCP
-  slug: thru-explorer-mcp
+  slug: thru-explorer
 modified: '2026-07-21'
 name: Unto Labs
 nav: Providers
@@ -183,7 +183,7 @@ overview: 'Unto Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 15
 score:
   band: thin
-  composite: 31.8
+  composite: 31.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -195,17 +195,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 62.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 31.8
+  previous_composite: 31.2
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: The Great Britain market Account Information Service (AIS) API - retrieve account details, balances, and transactions for consenting Handelsbanken UK customers. Published to the Berlin Group NextGenPS
@@ -165,14 +165,14 @@ modified: '2026-07-24'
 name: Handelsbanken UK
 nav: Providers
 network: true
-overview: 'Handelsbanken UK publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Open Banking, Financial-Services, PSD2, and Berlin Group.
+overview: 'Handelsbanken UK publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Open Banking, Financial Services, PSD2, and Berlin Group.
 
 
   Handelsbanken UK''s developer surface includes documentation, getting-started guide, signup flow, support, authentication, changelog, sandbox, and 15 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 37.9
+  composite: 36.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -186,7 +186,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,7 +196,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 37.9
+  previous_composite: 36.0
   provenance:
     conformance: first-party
   regulatory:
@@ -212,9 +212,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 55.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -234,7 +234,7 @@ slug: handelsbanken-uk
 tags:
 - Banking
 - Open Banking
-- Financial-Services
+- Financial Services
 - PSD2
 - Berlin Group
 - NextGenPSD2

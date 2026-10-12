@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 0
@@ -1116,7 +1116,7 @@ modified: '2026-09-16'
 name: Bloomberg AIM
 nav: Providers
 network: true
-overview: 'Bloomberg AIM publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Broker Strategies API, Catalogs API, Distributions API, and 14 more. Tagged areas include Financial Data, Market Data, Order Management, Portfolio-Management, and Trading.
+overview: 'Bloomberg AIM publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Broker Strategies API, Catalogs API, Distributions API, and 15 more. Tagged areas include Financial Data, Market Data, Order Management, Portfolio Management, and Trading.
 
 
   The Bloomberg AIM catalog on APIs.io includes 4 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -1161,7 +1161,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: developing
-  composite: 49.7
+  composite: 45.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 51.5
@@ -1173,14 +1173,14 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 13.6
-    contract_quality: 63.3
+    contract_quality: 57.4
     developer_ergonomics: 63.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 49.7
+  previous_composite: 45.1
   provenance:
     agentic_access: derived
     contracts:
@@ -1193,9 +1193,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1219,7 +1219,7 @@ tags:
 - Financial Data
 - Market Data
 - Order Management
-- Portfolio-Management
+- Portfolio Management
 - Trading
 use_cases:
 - Automated Portfolio Data Retrieval

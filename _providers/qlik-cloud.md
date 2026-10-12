@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -123,6 +123,11 @@ collections:
   name: Qlik Cloud REST API
   slug: open-qlik-cloud
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/qlik-cloud/refs/heads/main/capabilities/qlik-cloud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/qlik-cloud-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/qlik-cloud/refs/heads/main/agentic-access/qlik-cloud-agentic-access.yml
   title: ''
@@ -198,10 +203,10 @@ modified: '2026-05-19'
 name: Qlik Cloud
 nav: Providers
 network: true
-overview: 'Qlik Cloud publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Api Keys API, Apps API, Csrf Token API, and 3 more. Tagged areas include Analytics, Business Intelligence, Cloud, Data Integration, and Software-as-a-Service.
+overview: 'Qlik Cloud publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Api Keys API, Apps API, Csrf Token API, and 10 more. Tagged areas include Analytics, Business Intelligence, Cloud, Data Integration, and Software-as-a-Service.
 
 
-  Qlik Cloud''s developer surface includes authentication, getting-started guide, developer portal, and 11 more developer resources.'
+  Qlik Cloud''s developer surface includes authentication, getting-started guide, developer portal, and 12 more developer resources.'
 plans:
 - name: Qlik Cloud Plans Pricing
   plan_count: 3
@@ -213,7 +218,7 @@ rate_limits:
   slug: qlik-cloud-rate-limits
 score:
   band: thin
-  composite: 33.2
+  composite: 31.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 39.0
@@ -225,11 +230,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.8
     developer_ergonomics: 42.9
-    discoverability: 55.6
+    discoverability: 53.3
     operational_transparency: 18.4
-  previous_composite: 33.2
+  previous_composite: 31.8
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +242,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -261,5 +272,6 @@ tags:
 - Data Integration
 - Software-as-a-Service
 - Visualization
+- Data Visualization
 website: https://www.qlik.com
 ---

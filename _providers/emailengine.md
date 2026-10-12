@@ -22,7 +22,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.6
-  scored_at: '2026-09-20'
+  score: 21.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -253,7 +253,7 @@ rate_limits:
   slug: emailengine-rate-limits
 score:
   band: thin
-  composite: 27.1
+  composite: 26.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 49.0
@@ -267,9 +267,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 47.4
-  previous_composite: 27.1
+  previous_composite: 26.6
   provenance:
     agentic_access: derived
     contracts:
@@ -277,8 +277,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

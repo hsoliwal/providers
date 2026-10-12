@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-09-20'
+  score: 27.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -204,8 +204,8 @@ rate_limits:
   name: Replicant Rate Limits
   slug: replicant-rate-limits
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 54.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -217,11 +217,11 @@ score:
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 65.8
+    contract_quality: 60.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 53.6
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -232,8 +232,20 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,7 +276,7 @@ tags:
 - Customer Service
 - Voice AI
 - Contact Center Automation
-- Agentic AI
+- AI Agents
 - Conversation Intelligence
 website: https://www.replicant.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -153,7 +153,7 @@ plans:
 random_paper: 1
 score:
   band: emerging
-  composite: 21.2
+  composite: 19.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -167,9 +167,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 21.2
+  previous_composite: 19.2
   provenance:
     conformance: first-party
   regulatory:
@@ -177,9 +177,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -210,7 +210,7 @@ tags:
 - Urinalysis
 - Kidney Care
 - Wound Care
-- Computer-Vision
+- Computer Vision
 - Remote Patient Monitoring
 - Telehealth
 - SMART on FHIR

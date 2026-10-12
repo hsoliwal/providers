@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API that extracts structured contact data from email signature text (parse), completes a known contact with verified details (enrich), retrieves canonical deduplicated person records, registers w
@@ -199,7 +199,7 @@ rate_limits:
   slug: evercontact-rate-limits
 score:
   band: strong
-  composite: 57.3
+  composite: 58.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 61.0
@@ -211,16 +211,26 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 57.3
+  previous_composite: 58.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

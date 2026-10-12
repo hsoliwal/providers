@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -101,6 +101,11 @@ collections:
   name: OSV (Open Source Vulnerabilities) Projects Vulns API
   slug: open-openssf-vulns-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/openssf/refs/heads/main/capabilities/openssf-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/openssf-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -204,13 +209,13 @@ modified: '2026-05-19'
 name: OpenSSF
 nav: Providers
 network: true
-overview: 'OpenSSF publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Projects API, Query API, Querybatch API, and 2 more. Tagged areas include Linux Foundation, Open-Source, Security, Supply Chain, and Vulnerabilities.
+overview: 'OpenSSF publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Projects API, Query API, Querybatch API, and 4 more. Tagged areas include Linux Foundation, Open Source, Security, Supply Chain, and Vulnerabilities.
 
 
   The OpenSSF catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  OpenSSF''s developer surface includes documentation, developer portal, engineering blog, and 16 more developer resources.'
+  OpenSSF''s developer surface includes documentation, developer portal, engineering blog, and 17 more developer resources.'
 plans:
 - name: Openssf Plans Pricing
   plan_count: 3
@@ -233,23 +238,23 @@ rules:
   slug: openssf-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.6
+  composite: 33.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 63.3
+    artifact_dirs: 15
+    catalog_earned: 62.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 52.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 60.3
+    contract_quality: 54.8
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
-  previous_composite: 35.6
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +262,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,7 +283,7 @@ security:
 slug: openssf
 tags:
 - Linux Foundation
-- Open-Source
+- Open Source
 - Security
 - Supply Chain
 - Vulnerabilities

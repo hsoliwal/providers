@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
   description: The monitor API from ReasonBlocks — 11 operation(s) for monitor.
-  name: ReasonBlocks monitor API
+  name: ReasonBlocks Monitor API
   slug: reasonblocks-monitor-api
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
@@ -241,7 +241,7 @@ overview: 'ReasonBlocks publishes 9 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 10
 score:
   band: thin
-  composite: 34.2
+  composite: 32.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -253,11 +253,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.6
+    contract_quality: 43.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 34.2
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -268,8 +268,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -293,7 +299,7 @@ tags:
 - Developer Tools
 - Token Optimization
 - Agent Steering
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - SDK
 website: https://reasonblocks.com

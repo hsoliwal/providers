@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -217,7 +217,7 @@ modified: '2026-05-19'
 name: Gandi
 nav: Providers
 network: true
-overview: 'Gandi publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Availability API, DNSSEC API, and 8 more. Tagged areas include DNS, Domains, Domain Registrar, Email, and Hosting.
+overview: 'Gandi publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Availability API, DNSSEC API, and 14 more. Tagged areas include DNS, Domains, Domain Registrar, Email, and Hosting.
 
 
   Gandi''s developer surface includes authentication, documentation, sandbox, engineering blog, and 6 more developer resources.'
@@ -232,7 +232,7 @@ rate_limits:
   slug: gandi-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 27.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 39.0
@@ -244,11 +244,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 56.5
+    contract_quality: 51.2
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 30.1
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -261,9 +261,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

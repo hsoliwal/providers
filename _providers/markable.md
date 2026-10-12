@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Markable's visual search platform API. Index catalogs of products or styles, then search for visually similar items inside images and video. Covers catalog and catalog-item management, product search,
@@ -156,7 +156,7 @@ rate_limits:
   slug: markable-rate-limits
 score:
   band: thin
-  composite: 33.1
+  composite: 33.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 57.0
@@ -170,13 +170,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 39.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 33.1
+  previous_composite: 33.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -200,9 +206,9 @@ tags:
 - Social Commerce
 - Influencer Marketing
 - Content Monetization
-- Social-Media
+- Social Media
 - Visual Search
-- Computer-Vision
+- Computer Vision
 - Product Discovery
 - Image Recognition
 - Video Search

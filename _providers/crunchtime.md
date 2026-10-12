@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Crunchtime Inventory & Labor API is a REST/JSON web-services API for integrating restaurant back-office data with the Crunchtime platform. It exposes 150+ operations organized by functional area —
@@ -145,7 +145,7 @@ modified: '2026-07-18'
 name: Crunchtime
 nav: Providers
 network: true
-overview: 'Crunchtime publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Restaurant Operations, Inventory Management, Labor & Scheduling, and Food Cost.
+overview: 'Crunchtime publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Restaurant Operations, Inventory, Labor & Scheduling, and Food Cost.
 
 
   Crunchtime''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 14 more developer resources.'
@@ -156,7 +156,7 @@ rate_limits:
   slug: crunchtime-rate-limits
 score:
   band: thin
-  composite: 36.8
+  composite: 38.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -170,13 +170,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 36.8
+  previous_composite: 38.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -196,7 +202,7 @@ slug: crunchtime
 tags:
 - Company
 - Restaurant Operations
-- Inventory Management
+- Inventory
 - Labor & Scheduling
 - Food Cost
 - Kitchen Display
@@ -204,5 +210,6 @@ tags:
 - Supply Chain
 - Hospitality
 - REST API
+- Food and Beverage
 website: https://www.crunchtime.com/
 ---

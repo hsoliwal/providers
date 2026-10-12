@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 52.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Hosted, remote Model Context Protocol server operated by WoowUp at mcp.woowup.com. Streamable-HTTP transport, OAuth 2.1 bearer authentication with RFC 8414 authorization-server and RFC 9728 protected-
@@ -180,7 +180,7 @@ layout: provider
 mcp_servers:
 - description: 'WoowUp operates two reachable MCP surfaces. The primary one is a first-party hosted server at https://mcp.woowup.com/mcp — remote, streamable-HTTP, OAuth 2.1-protected, and gated: tools/list and initi'
   name: WoowUp MCP Server
-  slug: woowup-mcp-server
+  slug: woowup-mcp-yml
 modified: '2026-08-13'
 name: WoowUp
 nav: Providers
@@ -208,7 +208,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials/deviceCode/implicit
 score:
   band: developing
-  composite: 48.2
+  composite: 50.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 57.0
@@ -220,16 +220,22 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 48.2
+  previous_composite: 50.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -255,5 +261,6 @@ tags:
 - Retail
 - E-Commerce
 - Push Notifications
+- Loyalty & Incentives
 website: https://www.woowup.com
 ---

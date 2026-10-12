@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -125,7 +125,7 @@ layout: provider
 mcp_servers:
 - description: Alloy MCP lets AI assistants like Claude and Codex securely read Alloy session context - the design, chat, and code context behind prototyping work - to accelerate developer handoff, implement prototy
   name: Index MCP Server
-  slug: index-mcp-server
+  slug: alloy
 modified: '2026-07-19'
 name: Index
 nav: Providers
@@ -137,7 +137,7 @@ overview: 'Index is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 8
 score:
   band: thin
-  composite: 26.4
+  composite: 28.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -151,13 +151,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 42.1
-  previous_composite: 26.4
+  previous_composite: 28.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

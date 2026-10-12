@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Simetrik''s hosted remote Model Context Protocol server. An MCP client adds one URL and signs in with a Simetrik account over OAuth 2.1 (authorization code + PKCE, dynamic client registration) - there '
@@ -212,12 +212,12 @@ rate_limits:
   slug: simetrik-rate-limits
 scopes:
 - name: Simetrik Scopes
-  scope_count: 0
+  scope_count: 3
   slug: simetrik-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: developing
-  composite: 48.5
+  composite: 46.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -231,14 +231,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 76.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 48.5
+  previous_composite: 46.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -248,9 +248,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Details and summary information for member accounts, including name, status, activity dates, balances, and more. Part of Navy Federal's consumer- permissioned Open Banking API Catalog; access is gated
@@ -159,14 +159,14 @@ modified: '2026-07-23'
 name: Navy Federal Credit Union
 nav: Providers
 network: true
-overview: 'Navy Federal Credit Union publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Credit Union, and Open Finance.
+overview: 'Navy Federal Credit Union publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Credit Union, and Open Finance.
 
 
   Navy Federal Credit Union''s developer surface includes documentation, signup flow, support, API reference, engineering blog, authentication, and 14 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 30.3
+  composite: 28.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 35.0
@@ -180,7 +180,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -189,7 +189,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.3
+  previous_composite: 28.5
   provenance:
     conformance: first-party
   regulatory:
@@ -197,9 +197,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 55.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,13 +221,12 @@ security:
   summary_line: security.txt · contact published
 slug: navy-federal-credit-union
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Credit Union
 - Open Finance
 - Open Banking
-- Data Aggregation
 - Payments
 website: https://www.navyfederal.org/
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Backend API for the hosted Intlayer CMS at back.intlayer.org — dictionaries, projects, organizations, environments and tags. Secured with OAuth 2.0 client_credentials (per-project access keys issued a
@@ -148,8 +148,8 @@ rate_limits:
   name: Intlayer Rate Limits
   slug: intlayer-rate-limits
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 40.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -163,15 +163,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 39.2
+  previous_composite: 40.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

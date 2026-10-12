@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -314,7 +314,7 @@ overview: 'Amagi publishes 20 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 5
 score:
   band: thin
-  composite: 29.8
+  composite: 29.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -326,11 +326,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.4
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 29.8
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -341,8 +341,14 @@ score:
       total: 20
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

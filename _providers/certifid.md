@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.certifid.com
@@ -308,7 +308,7 @@ modified: '2026-08-09'
 name: CertifID
 nav: Providers
 network: true
-overview: 'CertifID publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Account Verifications API, Bank Lookup API, Collect Request API, and 12 more. Tagged areas include Company, Wire Fraud Prevention, Real-Estate, Title Insurance, and Identity Verification.
+overview: 'CertifID publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Account Verifications API, Bank Lookup API, Collect Request API, and 12 more. Tagged areas include Company, Wire Fraud Prevention, Real Estate, Title Insurance, and Identity Verification.
 
 
   CertifID''s developer surface includes API reference, authentication, changelog, signup flow, support, engineering blog, and 23 more developer resources.'
@@ -319,8 +319,8 @@ scopes:
   slug: certifid-scopes
   summary_line: 12 scopes · authorizationCode
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 38.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -332,11 +332,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 42.3
+    contract_quality: 38.1
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 41.4
+  previous_composite: 38.5
   provenance:
     conformance: first-party
     contracts:
@@ -351,9 +351,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -372,14 +372,14 @@ slug: certifid
 tags:
 - Company
 - Wire Fraud Prevention
-- Real-Estate
+- Real Estate
 - Title Insurance
 - Identity Verification
 - Business Verification
 - Payments
 - Fraud Prevention
 - Escrow and Settlement
-- Financial-Services
+- Financial Services
 - Security
 website: https://www.certifid.com/
 ---

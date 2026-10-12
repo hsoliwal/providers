@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Matterport's public GraphQL API family. The Model API reads and manages 3D models (spaces, meshes, assets, labels/tags, sweeps); the Account API manages account, folders and users; the Import API inge
@@ -178,14 +178,14 @@ modified: '2026-07-20'
 name: MatterPort
 nav: Providers
 network: true
-overview: 'MatterPort publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, 3D, Digital Twin, Spatial Data, and Real-Estate.
+overview: 'MatterPort publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, 3D, Digital Twin, Spatial Data, and Real Estate.
 
 
   MatterPort''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 37.4
+  composite: 38.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -199,13 +199,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 37.4
+  previous_composite: 38.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,11 +243,11 @@ tags:
 - 3D
 - Digital Twin
 - Spatial Data
-- Real-Estate
+- Real Estate
 - Construction
 - GraphQL
 - SDK
-- Computer-Vision
+- Computer Vision
 - Property Intelligence
 website: https://www.matterport.com/
 ---

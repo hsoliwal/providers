@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,9 +22,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-09-20'
+  score: 27.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -213,7 +213,7 @@ modified: '2026-08-13'
 name: Freshpaint
 nav: Providers
 network: true
-overview: 'Freshpaint publishes 1 API on the [APIs.io](https://apis.io/) network: Events API. Tagged areas include Customer Data Platform, Event Tracking, Healthcare, HIPAA, and Privacy.
+overview: 'Freshpaint publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Events API, and 1 more. Tagged areas include Customer Data Platform, Event Tracking, Healthcare, HIPAA, and Privacy.
 
 
   Freshpaint''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, signup flow, support, and 23 more developer resources.'
@@ -227,8 +227,8 @@ rate_limits:
   name: Freshpaint Rate Limits
   slug: freshpaint-rate-limits
 score:
-  band: strong
-  composite: 55.1
+  band: developing
+  composite: 52.3
   coverage:
     artifact_dirs: 24
     catalog_earned: 60.0
@@ -240,11 +240,11 @@ score:
   facets:
     access_clarity: 86.8
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 55.1
+  previous_composite: 52.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -264,9 +264,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

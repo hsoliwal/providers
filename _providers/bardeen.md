@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Bardeen is an AI-powered automation platform for automating repetitive tasks across web applications.
@@ -163,7 +163,7 @@ modified: '2026-08-29'
 name: Bardeen
 nav: Providers
 network: true
-overview: 'Bardeen publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Automation, Workflow-Automation, Web Scraping, Data Enrichment, and Browser Extension.
+overview: 'Bardeen publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Automation, Workflow Automation, Web Scraping, Data Enrichment, and Browser Extension.
 
 
   Bardeen''s developer surface includes changelog, pricing, signup flow, support, engineering blog, and 16 more developer resources.'
@@ -178,7 +178,7 @@ rate_limits:
   slug: bardeen-rate-limits
 score:
   band: thin
-  composite: 34.0
+  composite: 35.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 47.0
@@ -192,13 +192,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 34.0
+  previous_composite: 35.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,7 +227,7 @@ security:
 slug: bardeen
 tags:
 - AI Automation
-- Workflow-Automation
+- Workflow Automation
 - Web Scraping
 - Data Enrichment
 - Browser Extension

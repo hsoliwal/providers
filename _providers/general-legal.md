@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/general-legal/refs/heads/main/security/general-legal-domain-security.yml
@@ -98,6 +98,10 @@ created: '2026-07-17'
 description: General Legal is an AI-native law firm for high-growth startups and SMBs, offering flat-fee commercial, corporate, and employment legal work delivered by U.S.-barred attorneys augmented with proprietary AI workflows. The firm focuses on contract review, redlining, negotiation, and drafting with transparent flat pricing (from $250) and fast turnaround (median under three hours), positioning itself as "outside counsel that scales like software." Practice areas include technology transactions, employment, data privacy, financial regulatory, blockchain/cryptocurrency, and emerging companies / VC. Founded in 2026 by Ryan Walker (ex-Casetext CTO), J.P. Mohler, and Javed Qadruddin, the company is a Y Combinator (W26) portfolio company that raised $11.5M across pre-seed and seed rounds. This profile was surfaced as a Y Combinator portfolio lead and enriched from public sources; General Legal is a legal-services company and does not currently publish a developer API.
 image: https://cdn.prod.website-files.com/69d3ac38e8e442c9fce520b4/6a073ecb708e3d8ffc639f4b_49a76c6986df74c51aa83f6f5a579b30_og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.general.legal over HTTP; 6 tools listed.
+  name: General Legal MCP Server
+  slug: general-legal
 modified: '2026-07-19'
 name: General Legal
 nav: Providers
@@ -109,7 +113,7 @@ overview: 'General Legal is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 20
 score:
   band: emerging
-  composite: 14.8
+  composite: 14.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -123,13 +127,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 0.0
-  previous_composite: 14.8
+  previous_composite: 14.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

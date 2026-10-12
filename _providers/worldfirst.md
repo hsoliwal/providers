@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The WorldFirst Enterprise Solution (World Account) API — a RESTful, JSON, signed-request interface covering customer onboarding, account and beneficiary management, statements, foreign exchange, trans
@@ -168,8 +168,8 @@ overview: 'WorldFirst publishes 3 APIs on the [APIs.io](https://apis.io/) networ
   WorldFirst''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, authentication, and 15 more developer resources.'
 random_paper: 4
 score:
-  band: developing
-  composite: 40.6
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -181,9 +181,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 59.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -193,7 +193,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 40.6
+  previous_composite: 39.1
   provenance:
     conformance: derived
   regulatory:
@@ -201,9 +201,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,5 +231,6 @@ tags:
 - E-Commerce
 - Multi-Currency
 - Card Issuing
+- Cross-Border Payments
 website: https://www.worldfirst.com/
 ---

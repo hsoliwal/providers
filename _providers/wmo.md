@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -58,27 +58,27 @@ apis:
 - baseURL: https://worldweather.wmo.int/en/json/
   baseurl_source: declared
   description: The jobs API from World Meteorological Organization — 3 operation(s) for jobs.
-  name: World Meteorological Organization jobs API
+  name: World Meteorological Organization Jobs API
   slug: wmo-jobs-api
 - baseURL: https://worldweather.wmo.int/en/json/
   baseurl_source: declared
   description: The pywcmp-wis2-wcmp2-ets API from World Meteorological Organization — 2 operation(s) for pywcmp-wis2-wcmp2-ets.
-  name: World Meteorological Organization pywcmp-wis2-wcmp2-ets API
+  name: World Meteorological Organization Pywcmp Wis2 Wcmp2 Ets API
   slug: wmo-pywcmp-wis2-wcmp2-ets-api
 - baseURL: https://worldweather.wmo.int/en/json/
   baseurl_source: declared
   description: The pywcmp-wis2-wcmp2-kpi API from World Meteorological Organization — 2 operation(s) for pywcmp-wis2-wcmp2-kpi.
-  name: World Meteorological Organization pywcmp-wis2-wcmp2-kpi API
+  name: World Meteorological Organization Pywcmp Wis2 Wcmp2 Kpi API
   slug: wmo-pywcmp-wis2-wcmp2-kpi-api
 - baseURL: https://worldweather.wmo.int/en/json/
   baseurl_source: declared
   description: Meteorological Service of Canada Global Discovery Catalogue (GDC)
-  name: World Meteorological Organization server API
+  name: World Meteorological Organization Server API
   slug: wmo-server-api
 - baseURL: https://worldweather.wmo.int/en/json/
   baseurl_source: declared
   description: WIS2 discovery metadata
-  name: World Meteorological Organization wis2-discovery-metadata API
+  name: World Meteorological Organization Wis2 Discovery Metadata API
   slug: wmo-wis2-discovery-metadata-api
 artifact_total: 21
 collections:
@@ -168,7 +168,7 @@ modified: '2026-06-13'
 name: World Meteorological Organization
 nav: Providers
 network: true
-overview: 'World Meteorological Organization publishes 5 APIs on the [APIs.io](https://apis.io/) network, including jobs API, pywcmp-wis2-wcmp2-ets API, pywcmp-wis2-wcmp2-kpi API, and 2 more. Tagged areas include Weather, Climate, Hydrology, Meteorology, and International Organization.
+overview: 'World Meteorological Organization publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Jobs API, Pywcmp Wis2 Wcmp2 Ets API, Pywcmp Wis2 Wcmp2 Kpi API, and 6 more. Tagged areas include Weather, Climate, Hydrology, Meteorology, and International Organization.
 
 
   The World Meteorological Organization catalog on APIs.io includes 1 JSON-LD context.
@@ -186,23 +186,23 @@ rate_limits:
   slug: rate-limits
 score:
   band: thin
-  composite: 37.7
+  composite: 34.9
   coverage:
     artifact_dirs: 10
-    catalog_earned: 57.0
+    catalog_earned: 55.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.0
+    catalog_gap: 59.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 0.0
-    contract_quality: 54.7
+    contract_quality: 49.6
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 37.7
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -215,9 +215,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

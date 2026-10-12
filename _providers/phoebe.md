@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -156,9 +156,9 @@ description: Coral is a local-first SQL runtime that gives AI agents governed, r
 image: https://withcoral.com/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Coral is itself an MCP server: the same local SQL runtime that the CLI drives is exposed to agents over MCP via `coral mcp-stdio`. A separate hosted MCP server (Mintlify) provides documentation search'
   name: Coral MCP Server
-  slug: coral-mcp-server
+  slug: phoebe-mcp-yml
 modified: '2026-07-20'
 name: Coral
 nav: Providers
@@ -170,7 +170,7 @@ overview: 'Coral is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 11
 score:
   band: thin
-  composite: 30.1
+  composite: 31.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -184,15 +184,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 28.9
-  previous_composite: 30.1
+  previous_composite: 31.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -218,6 +228,6 @@ tags:
 - Data Access
 - Data Integration
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://withcoral.com
 ---

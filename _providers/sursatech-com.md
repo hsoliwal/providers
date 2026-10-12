@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'An A2A 1.0 agent (JSON-RPC 2.0 over HTTP POST, streaming declared) exposing ten skills: get_company_profile, get_services, get_portfolio_projects, get_development_process, estimate_project_timeline_an'
@@ -167,7 +167,7 @@ modified: '2026-09-19'
 name: SursaTech
 nav: Providers
 network: true
-overview: 'SursaTech publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, A2A, Agent-to-Agent, AI Consulting, and Product Engineering.
+overview: 'SursaTech publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, A2A, AI Consulting, Product Engineering, and Software Development.
 
 
   SursaTech''s developer surface includes pricing, documentation, authentication, and 24 more developer resources.'
@@ -186,8 +186,8 @@ scopes:
   slug: sursatech-com-scopes
   summary_line: 4 scopes · clientCredentials
 score:
-  band: emerging
-  composite: 25.2
+  band: thin
+  composite: 26.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 53.0
@@ -195,22 +195,33 @@ score:
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 22.4
+  delta: 0.0
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 2.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - india-south-asia
+  previous_composite: 26.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -228,14 +239,13 @@ slug: sursatech-com
 tags:
 - AI Agents
 - A2A
-- Agent-to-Agent
 - AI Consulting
 - Product Engineering
 - Software Development
 - RAG
 - QA Automation
 - Nepal
-- agent-native
+- Agent-Native
 - Company
 website: https://www.sursatech.com/
 ---

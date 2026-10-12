@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The machine-readable surface served by restor3d's corporate website. It is a stock WordPress REST API (namespaces wp/v2, wp-abilities/v1, mcp, plus SEO/caching plugin namespaces) covering site content
@@ -123,7 +123,7 @@ description: restor3d is a Durham, North Carolina medical device manufacturer, f
 image: https://www.restor3d.com/wp-content/uploads/2024/12/Main-Brand-Logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.restor3d.com requiring OAuth.
   name: restor3d Website MCP Server
   slug: restor3d-website-mcp-server
 modified: '2026-08-26'
@@ -145,12 +145,12 @@ rate_limits:
   slug: restor3d-rate-limits
 scopes:
 - name: Restor3D Scopes
-  scope_count: 0
+  scope_count: 1
   slug: restor3d-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 22.5
+  composite: 20.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -164,20 +164,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 22.5
+  previous_composite: 20.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

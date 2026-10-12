@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://imagedetector.online/v1
@@ -175,7 +175,7 @@ modified: '2026-08-11'
 name: AnyImageDetector
 nav: Providers
 network: true
-overview: 'AnyImageDetector publishes 1 API on the [APIs.io](https://apis.io/) network: Detection API. Tagged areas include AI image detection, Image Analysis, Computer-Vision, Content Moderation, and Trust and Safety.
+overview: 'AnyImageDetector publishes 1 API on the [APIs.io](https://apis.io/) network: Detection API. Tagged areas include AI image detection, Image Analysis, Computer Vision, Content Moderation, and Trust and Safety.
 
 
   AnyImageDetector''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
@@ -189,8 +189,8 @@ rate_limits:
   name: Anyimagedetector Rate Limits
   slug: anyimagedetector-rate-limits
 score:
-  band: thin
-  composite: 38.6
+  band: developing
+  composite: 39.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.0
@@ -204,9 +204,9 @@ score:
     contract_governance: 4.5
     contract_quality: 15.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 38.6
+  previous_composite: 39.4
   provenance:
     conformance: derived
     contracts:
@@ -216,8 +216,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -236,7 +242,7 @@ slug: anyimagedetector
 tags:
 - AI image detection
 - Image Analysis
-- Computer-Vision
+- Computer Vision
 - Content Moderation
 - Trust and Safety
 - Fact Checking

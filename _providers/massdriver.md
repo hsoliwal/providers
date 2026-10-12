@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Massdriver is an internal developer platform providing self-service infrastructure, ephemeral environments, and cloud operations for engineering teams.
@@ -94,7 +94,7 @@ rate_limits:
   slug: massdriver-rate-limits
 score:
   band: minimal
-  composite: 10.5
+  composite: 9.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 31.0
@@ -108,11 +108,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 10.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

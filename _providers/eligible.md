@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: The Coverage API performs real-time insurance eligibility and benefits verification for a patient against a payer. Clients submit provider NPI, payer ID, and member identity information and receive st
@@ -229,7 +229,7 @@ rate_limits:
   slug: eligible-rate-limits
 score:
   band: developing
-  composite: 54.1
+  composite: 51.8
   coverage:
     artifact_dirs: 20
     catalog_earned: 51.0
@@ -241,11 +241,11 @@ score:
   facets:
     access_clarity: 89.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 54.1
+  previous_composite: 51.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -254,9 +254,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -283,5 +283,6 @@ tags:
 - Healthcare
 - Insurance
 - Claims
+- Health Insurance
 website: https://eligible.com/
 ---

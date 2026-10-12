@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.9
-  scored_at: '2026-09-20'
+  score: 31.8
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: An OAuth-protected Model Context Protocol server RunBuggy operates on its application host. Discovered by probe — it is not referenced from the public developer documentation. tools/list returns 401 i
@@ -248,14 +248,14 @@ description: RunBuggy is a Phoenix, Arizona based technology company operating a
 image: https://runbuggy.com/wp-content/uploads/2019/05/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'RunBuggy runs a hosted, remote Model Context Protocol server called "mcp-datascience" in both production and staging. It was found by probe, not by documentation: nothing on runbuggy.com or docs.runbu'
   name: RunBuggy MCP Server
-  slug: runbuggy-mcp-server
+  slug: runbuggy-mcp-yml
 modified: '2026-08-05'
 name: RunBuggy
 nav: Providers
 network: true
-overview: 'RunBuggy publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Orders API, Token API, and 2 more. Tagged areas include Company, Automotive, Logistics, Transportation, and Vehicle Shipping.
+overview: 'RunBuggy publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Orders API, Token API, and 3 more. Tagged areas include Company, Automotive, Logistics, Transportation, and Vehicle Shipping.
 
 
   The RunBuggy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -265,12 +265,12 @@ overview: 'RunBuggy publishes 5 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 3
 scopes:
 - name: Runbuggy Scopes
-  scope_count: 0
+  scope_count: 1
   slug: runbuggy-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 45.1
+  composite: 46.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -282,11 +282,11 @@ score:
   facets:
     access_clarity: 14.5
     contract_governance: 4.5
-    contract_quality: 58.7
+    contract_quality: 53.8
     developer_ergonomics: 63.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 52.6
-  previous_composite: 45.1
+  previous_composite: 46.1
   provenance:
     conformance: derived
     contracts:
@@ -296,8 +296,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

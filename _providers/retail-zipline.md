@@ -28,7 +28,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol (MCP) endpoint published on Zipline's marketing site (getzipline.com), declared by the site's own RFC 9728 OAuth Protected Resource Metadata. The endpoint liv
@@ -157,7 +157,7 @@ description: Retail Zipline, Inc. (branded "Zipline") is a San Francisco-based r
 image: https://getzipline.com/wp-content/uploads/2023/05/zipline-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Zipline publishes an OAuth-protected Model Context Protocol endpoint on its marketing site. It was not advertised in any documentation — it was recovered from the site's own RFC 8414 and RFC 9728 well
   name: Zipline MCP Server
   slug: zipline-mcp-server
 modified: '2026-08-26'
@@ -179,12 +179,12 @@ rate_limits:
   slug: retail-zipline-rate-limits
 scopes:
 - name: Retail Zipline Scopes
-  scope_count: 0
+  scope_count: 1
   slug: retail-zipline-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 33.3
+  composite: 37.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -198,19 +198,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.3
+  previous_composite: 37.6
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

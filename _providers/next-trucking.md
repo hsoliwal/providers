@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The service gateway behind NEXT''s ATLAS transportation management system and its shipper, carrier and managed-carrier portals. Twenty-nine service paths were enumerated from the ATLAS web application '
@@ -175,12 +175,12 @@ rate_limits:
   slug: next-trucking-rate-limits
 scopes:
 - name: Next Trucking Scopes
-  scope_count: 0
+  scope_count: 14
   slug: next-trucking-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes · authorization_code/client_credentials
 score:
   band: emerging
-  composite: 20.8
+  composite: 23.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -194,18 +194,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.8
+  previous_composite: 23.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

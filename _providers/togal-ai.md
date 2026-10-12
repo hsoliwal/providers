@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/togal-ai/refs/heads/main/security/togal-ai-domain-security.yml
@@ -106,6 +106,10 @@ description: Togal.AI is a Miami, Florida construction-technology company buildi
   serves drywall, electrical, mechanical, plumbing, glazing, landscaping, painting, FF&E, and general-contracting trades, with documented case studies (e.g., Coastal Construction) showing multi-hour-per-plan-set savings and seven-figure annual ROI. Togal.AI's revenue model is SaaS subscriptions sold to estimators, subcontractors, and general contractors; there is no public developer API, SDK, or open-source release, and the only known third-party integration is Service Titan plus data export to Excel and downstream estimating tools.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/togal-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.togal.ai over HTTP.
+  name: Togal.AI MCP Server
+  slug: togal-ai
 modified: '2026-05-24'
 name: Togal.AI
 nav: Providers
@@ -117,7 +121,7 @@ overview: 'Togal.AI is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 12
 score:
   band: minimal
-  composite: 10.5
+  composite: 9.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -131,13 +135,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 5.3
-  previous_composite: 10.5
+  previous_composite: 9.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +167,7 @@ tags:
 - Estimating
 - Takeoff
 - Blueprints
-- Computer-Vision
+- Computer Vision
 - Deep Learning
 - Document AI
 - Drawing Analysis

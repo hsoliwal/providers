@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.0
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Comet REST API exposes read endpoints (workspace, project, experiment data), write endpoints (data submission), and Model Production Monitoring (MPM) endpoints. Authentication uses an API key via '
@@ -42,7 +42,7 @@ apis:
 - description: Opik is Comet's open-source GenAI observability product. It provides spans-based tracing, evaluations, prompt management, and dataset features over an HTTP API and Python SDK. Self-hostable.
   name: Opik (GenAI Observability)
   slug: opik
-artifact_total: 10
+artifact_total: 11
 common:
 - group: operate
   title: ''
@@ -129,11 +129,14 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at www.comet.com over HTTP.
+  name: Comet MCP Server
+  slug: comet-ml
 modified: '2026-05-19'
 name: Comet
 nav: Providers
 network: true
-overview: 'Comet publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Machine-Learning, MLOps, Generative AI, Experiment Tracking, and Model Monitoring.
+overview: 'Comet publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Machine Learning, MLOps, Generative AI, Experiment Tracking, and Model Monitoring.
 
 
   Comet''s developer surface includes developer portal, pricing, engineering blog, and 14 more developer resources.'
@@ -148,7 +151,7 @@ rate_limits:
   slug: comet-ml-rate-limits
 score:
   band: thin
-  composite: 28.2
+  composite: 28.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 44.0
@@ -161,17 +164,23 @@ score:
     access_clarity: 31.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 47.6
-    discoverability: 68.5
+    developer_ergonomics: 46.9
+    discoverability: 68.3
     operational_transparency: 23.7
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 28.2
+  previous_composite: 28.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -195,7 +204,7 @@ skills:
   slug: opik
 slug: comet-ml
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Generative AI
 - Experiment Tracking

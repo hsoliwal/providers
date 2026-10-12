@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.2
-  scored_at: '2026-09-20'
+  score: 53.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -49,22 +49,22 @@ apis:
 - baseURL: https://platform.usersnap.com/v0.1
   baseurl_source: declared
   description: Feedback related endpoints
-  name: Usersnap feedback API
+  name: Usersnap Feedback API
   slug: usersnap-feedback-api
 - baseURL: https://platform.usersnap.com/v0.1
   baseurl_source: declared
   description: Available options for submission
-  name: Usersnap pre_submit API
+  name: Usersnap Pre Submit API
   slug: usersnap-pre-submit-api
 - baseURL: https://platform.usersnap.com/v0.1
   baseurl_source: declared
   description: Project related endpoints
-  name: Usersnap project API
+  name: Usersnap Project API
   slug: usersnap-project-api
 - baseURL: https://platform.usersnap.com/v0.1
   baseurl_source: declared
   description: Submit feedback
-  name: Usersnap submit API
+  name: Usersnap Submit API
   slug: usersnap-submit-api
 artifact_total: 21
 asyncapis:
@@ -100,6 +100,11 @@ collections:
   name: Usersnap feedback submit API
   slug: open-usersnap-submit-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/usersnap/refs/heads/main/capabilities/usersnap-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/usersnap-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/usersnap/refs/heads/main/overlays/usersnap-api-overlay.yaml
   title: ''
@@ -282,20 +287,20 @@ description: Usersnap is a user feedback platform from Perg/Linz, Austria that l
 image: https://github.com/usersnap.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.usersnap.com over HTTP.
   name: Usersnap MCP Server
-  slug: usersnap-mcp-server
+  slug: usersnap
 modified: '2026-07-21'
 name: Usersnap
 nav: Providers
 network: true
-overview: 'Usersnap publishes 4 APIs on the [APIs.io](https://apis.io/) network, including feedback API, pre_submit API, project API, and 1 more. Tagged areas include Company, Feedback, Bug Tracking, Customer Experience, and Product Management.
+overview: 'Usersnap publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Feedback API, Pre Submit API, Project API, and 1 more. Tagged areas include Company, Feedback, Bug Tracking, Customer Experience, and Product Management.
 
 
   The Usersnap catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Usersnap''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
+  Usersnap''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 33 more developer resources.'
 random_paper: 1
 scopes:
 - name: Usersnap Scopes
@@ -303,10 +308,10 @@ scopes:
   slug: usersnap-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: developing
-  composite: 51.6
+  band: strong
+  composite: 54.5
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -316,11 +321,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 57.1
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 51.6
+  previous_composite: 54.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,8 +336,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

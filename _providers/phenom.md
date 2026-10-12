@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api-qa.phenompro.com
@@ -115,6 +115,11 @@ collections:
   name: Phenom Talent Experience Platform Applicants User Management API
   slug: open-phenom-user-management-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/capabilities/phenom-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/phenom-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/phenom/refs/heads/main/overlays/phenom-platform-overlay.yaml
   title: ''
@@ -253,13 +258,13 @@ network: true
 overview: 'Phenom publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Applicants API, Applications API, Candidates API, and 6 more. Tagged areas include Company, Human Resources, Talent Experience, Recruiting, and Applicant Tracking.
 
 
-  Phenom''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, authentication, and 21 more developer resources.'
+  Phenom''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, authentication, and 22 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 44.4
+  composite: 44.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -269,16 +274,18 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.4
+  previous_composite: 44.8
   provenance:
     conformance: first-party
     contracts:
@@ -288,8 +295,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

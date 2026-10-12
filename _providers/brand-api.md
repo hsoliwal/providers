@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.5
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Hosted, remote, streamable-HTTP MCP server exposing seven Brandfetch tools — brand_search, get_brand, get_brand_context, enrich_transaction, build_logo_urls, get_asset_base64 and send_feedback — to an
@@ -284,14 +284,14 @@ finops:
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/brand-api-create-branded-experiences.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.brandfetch.io over HTTP requiring OAuth; 7 tools listed.
   name: Brand API (Brandfetch) MCP Server
-  slug: brand-api-brandfetch-mcp-server
+  slug: brandfetch
 modified: '2026-08-14'
 name: Brand API (Brandfetch)
 nav: Providers
 network: true
-overview: 'Brand API (Brandfetch) publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Brands API, Context API, Search API, and 1 more. Tagged areas include Brands, Logo, Brand Assets, Company Data, and Firmographics.
+overview: 'Brand API (Brandfetch) publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Brands API, Context API, Search API, and 5 more. Tagged areas include Brands, Logo, Brand Assets, Company Data, and Firmographics.
 
 
   The Brand API (Brandfetch) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -313,8 +313,8 @@ scopes:
   slug: brand-api-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: exemplar
-  composite: 66.5
+  band: strong
+  composite: 63.4
   coverage:
     artifact_dirs: 29
     catalog_earned: 58.0
@@ -326,11 +326,11 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 18.2
-    contract_quality: 69.4
+    contract_quality: 64.3
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 66.5
+  previous_composite: 63.4
   provenance:
     conformance: first-party
     contracts:
@@ -345,9 +345,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -376,5 +376,6 @@ tags:
 - Brand Context
 - Merchant Enrichment
 - Agent Tools
+- A2A
 website: https://www.brandfetch.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Local JSON-over-HTTPS RPC surface exposed by the chia-blockchain reference node. Each service (full_node, wallet, farmer, harvester, datalayer, crawler, timelord, solver) listens on its own port and i
@@ -182,8 +182,8 @@ overview: 'Chia Network publishes 1 API on the [APIs.io](https://apis.io/) netwo
   Chia Network''s developer surface includes sandbox, documentation, API reference, getting-started guide, engineering blog, changelog, CLI, and 22 more developer resources.'
 random_paper: 18
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 39.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 32.0
@@ -197,16 +197,22 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 73.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 38.8
+  previous_composite: 39.9
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,6 +237,6 @@ tags:
 - Decentralized
 - Web3
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://chia.net/
 ---

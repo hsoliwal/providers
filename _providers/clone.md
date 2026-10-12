@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.8
-  scored_at: '2026-09-20'
+  score: 13.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'High-level gRPC (proto3) API to directly control the Clone Robot — muscle actuation (impulses/pulses/pressures), pinch/hydra valve control, water-pump pressure source, telemetry streaming, and camera '
@@ -139,7 +139,7 @@ overview: 'Clone publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 1
 score:
   band: emerging
-  composite: 19.3
+  composite: 18.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 32.0
@@ -151,13 +151,19 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 7.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 19.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

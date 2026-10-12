@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: UMB's partner-facing open-banking and Banking-as-a-Service REST API program, documented across five areas — Risk & Compliance (retrieve questions required for new customer applications), Customer (onb
@@ -96,14 +96,14 @@ modified: '2026-07-23'
 name: UMB Bank
 nav: Providers
 network: true
-overview: 'UMB Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Open Finance, and Banking as a Service.
+overview: 'UMB Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Open Finance, and Banking as a Service.
 
 
   UMB Bank''s developer surface includes documentation, engineering blog, support, getting-started guide, and 7 more developer resources.'
 random_paper: 4
 score:
   band: emerging
-  composite: 15.9
+  composite: 16.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -117,7 +117,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -126,15 +126,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.9
+  previous_composite: 16.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,12 +148,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: umb-financial
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Open Finance
 - Banking as a Service
 - Institutional Banking
-- Data Aggregation
 website: https://www.umb.com/
 ---

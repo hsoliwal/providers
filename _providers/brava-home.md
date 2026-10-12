@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agentic-commerce surface for Brava's Shopify storefront. The store publishes a Universal Commerce Protocol (UCP) merchant profile at /.well-known/ucp and a native Model Context Protocol (MCP) endpoint
@@ -99,7 +99,7 @@ layout: provider
 mcp_servers:
 - description: Brava's storefront (shop.brava.com) is a Shopify store that exposes a native Model Context Protocol (MCP) endpoint via the Universal Commerce Protocol (UCP, https://ucp.dev). Agents call MCP tools/lis
   name: Brava Home MCP Server
-  slug: brava-home-mcp-server
+  slug: brava-shopping
 modified: '2026-07-18'
 name: Brava Home
 nav: Providers
@@ -111,7 +111,7 @@ overview: 'Brava Home publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 4
 score:
   band: emerging
-  composite: 18.0
+  composite: 17.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -125,13 +125,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 18.0
+  previous_composite: 17.6
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

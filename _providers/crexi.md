@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Crexi Exchange API is Crexi's partner-facing REST API, documented in a Theneo-published portal at api-docs.crexi.com (password protected) and fronted by a Swagger UI gateway at exchange.crexi.com.
@@ -170,12 +170,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: CREXi MCP Server
-  slug: crexi-mcp-server
+  slug: crexi-mcp-yml
 modified: '2026-08-01'
 name: CREXi
 nav: Providers
 network: true
-overview: 'CREXi publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Commercial Real Estate, Marketplace, Property Data, and Listings.
+overview: 'CREXi publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Commercial Real Estate, Marketplace, Property Data, and Listings.
 
 
   CREXi''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 19 more developer resources.'
@@ -187,7 +187,7 @@ scopes:
   summary_line: 2 scopes · password/refresh_token/switch_user/single_use_token_exchange
 score:
   band: thin
-  composite: 32.2
+  composite: 34.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 35.0
@@ -201,19 +201,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.2
+  previous_composite: 34.7
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,7 +239,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: crexi
 tags:
-- Real-Estate
+- Real Estate
 - Commercial Real Estate
 - Marketplace
 - Property Data

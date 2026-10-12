@@ -12,7 +12,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: platform
@@ -34,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-09-20'
+  score: 38.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://backend.blockadelabs.com/api/v1
@@ -216,7 +215,7 @@ modified: '2026-07-18'
 name: Blockade Games
 nav: Providers
 network: true
-overview: 'Blockade Games publishes 2 APIs on the [APIs.io](https://apis.io/) network: Skybox Exports API and Skyboxes API. Tagged areas include Company, Artificial Intelligence, Image-Generation, 3D, and Gaming.
+overview: 'Blockade Games publishes 2 APIs on the [APIs.io](https://apis.io/) network: Skybox Exports API and Skyboxes API. Tagged areas include Company, Artificial Intelligence, Image Generation, 3D, and Gaming.
 
 
   The Blockade Games catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -226,7 +225,7 @@ overview: 'Blockade Games publishes 2 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 5
 score:
   band: developing
-  composite: 47.3
+  composite: 47.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -238,11 +237,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 56.4
+    contract_quality: 51.5
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 47.3
+  previous_composite: 47.1
   provenance:
     conformance: derived
     contracts:
@@ -250,10 +249,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,7 +277,7 @@ slug: blockade-games
 tags:
 - Company
 - Artificial Intelligence
-- Image-Generation
+- Image Generation
 - 3D
 - Gaming
 - Virtual Reality

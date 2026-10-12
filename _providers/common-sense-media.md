@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -53,7 +53,7 @@ apis:
 - baseURL: https://api.commonsense.org/api/v3
   baseurl_source: declared
   description: System and health endpoints.
-  name: Common Sense Media system API
+  name: Common Sense Media System API
   slug: common-sense-media-system-api
 artifact_total: 14
 collections:
@@ -160,7 +160,7 @@ modified: '2026-05-19'
 name: Common Sense Media
 nav: Providers
 network: true
-overview: 'Common Sense Media publishes 2 APIs on the [APIs.io](https://apis.io/) network: Reviews API and system API. Tagged areas include Application, Books, Media, Movies, and Non-Profit.
+overview: 'Common Sense Media publishes 2 APIs on the [APIs.io](https://apis.io/) network: Reviews API and System API. Tagged areas include Application, Books, Media, Movies, and Non-Profit.
 
 
   The Common Sense Media catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -200,7 +200,7 @@ rules:
   slug: common-sense-media-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 30.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 55.5
@@ -212,11 +212,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 60.2
+    contract_quality: 54.5
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.3
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -224,8 +224,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +254,6 @@ tags:
 - Media
 - Movies
 - Non-Profit
-- Podcasts
 - Ratings
 - Reviews
 - Television

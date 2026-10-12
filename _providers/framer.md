@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Build small in-editor apps that interact with the Framer Editor and CMS. Plugins can read and modify the canvas, manage CMS collections and items, register UI panels, and call out to external services
@@ -126,7 +126,7 @@ rate_limits:
   slug: framer-rate-limits
 score:
   band: emerging
-  composite: 19.6
+  composite: 18.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 49.0
@@ -140,11 +140,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 19.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/stuffthatworks/refs/heads/main/security/stuffthatworks-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: StuffThatWorks is a community-driven health research platform where patients with chronic conditions share their real-world experiences to figure out, together, which treatments work best. Members complete structured surveys about their diagnoses, symptoms, and treatment outcomes, and the platform applies collective-intelligence and machine-learning models to turn thousands of patient reports into comparative, condition-by-condition treatment rankings across hundreds of chronic illnesses such as fibromyalgia, IBS, migraine, PCOS, and endometriosis. Founded in 2018 and headquartered in Tel Aviv, StuffThatWorks is backed by Bessemer Venture Partners. The consumer product is delivered as a web and mobile (PWA / Capacitor) application; probing the public domain surfaced no public developer API, SDK, OpenAPI, or developer portal at this time — only the SPA's private backend under /api/.
 image: https://www.stuffthatworks.health/blog/wp-content/uploads/2020/06/favicon-310-300x300.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.stuffthatworks.health over HTTP.
+  name: StuffThatWorks MCP Server
+  slug: stuffthatworks
 modified: '2026-07-21'
 name: StuffThatWorks
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'StuffThatWorks is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 11
 score:
   band: minimal
-  composite: 3.8
+  composite: 4.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,14 +94,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 3.8
+  previous_composite: 4.5
   provenance:
     mcp: first-party
   regulatory:
@@ -105,9 +109,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -219,9 +219,9 @@ description: Rho Protocol (Rho Labs) operates Rho X, a decentralized multi-asset
 image: https://github.com/RhoLabs.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at x.rho.trading over HTTP; 26 tools listed.
   name: Rho Protocol MCP Server
-  slug: rho-protocol-mcp-server
+  slug: rho-mcp
 modified: '2026-07-21'
 name: Rho Protocol
 nav: Providers
@@ -240,7 +240,7 @@ rate_limits:
   slug: rho-protocol-rate-limits
 score:
   band: thin
-  composite: 38.6
+  composite: 37.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -252,11 +252,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 55.5
+    contract_quality: 50.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 38.6
+  previous_composite: 37.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -272,9 +272,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -300,5 +300,6 @@ tags:
 - Market Data
 - WebSocket
 - MCP
+- Real-Time
 website: https://x.rho.trading/
 ---

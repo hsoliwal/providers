@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -86,6 +86,11 @@ collections:
   name: PerfectScale Public Authentication Workloads API
   slug: open-perfectscale-workloads-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/perfectscale/refs/heads/main/capabilities/perfectscale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/perfectscale-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/perfectscale/refs/heads/main/agentic-access/perfectscale-agentic-access.yml
   title: ''
@@ -136,7 +141,7 @@ network: true
 overview: 'PerfectScale publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Automation API, Clusters API, and 1 more. Tagged areas include FinOps, Kubernetes, and Cost Optimization.
 
 
-  PerfectScale''s developer surface includes authentication, documentation, and 6 more developer resources.'
+  PerfectScale''s developer surface includes authentication, documentation, and 7 more developer resources.'
 plans:
 - name: Perfectscale Plans Pricing
   plan_count: 3
@@ -148,9 +153,9 @@ rate_limits:
   slug: perfectscale-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 28.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -160,11 +165,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 33.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 30.2
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     contracts:
@@ -172,8 +177,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

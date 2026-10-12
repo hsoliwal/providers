@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 3
@@ -161,6 +161,11 @@ collections:
   name: Codefresh REST API
   slug: open-codefresh
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/capabilities/codefresh-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/codefresh-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/codefresh/refs/heads/main/agentic-access/codefresh-agentic-access.yml
   title: ''
@@ -216,16 +221,16 @@ modified: '2026-05-11'
 name: Codefresh
 nav: Providers
 network: true
-overview: 'Codefresh publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Access Control API, Accounts API, Admin API, and 10 more. Tagged areas include CI/CD, Continuous Delivery, GitOps, Argo, and Kubernetes.
+overview: 'Codefresh publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Access Control API, Accounts API, Admin API, and 11 more. Tagged areas include CI/CD, Continuous Delivery, GitOps, Argo, and Kubernetes.
 
 
-  Codefresh''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 6 more developer resources.'
+  Codefresh''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 7 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 30.7
+  composite: 28.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -235,11 +240,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 30.7
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -247,8 +252,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

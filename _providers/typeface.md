@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -174,6 +174,11 @@ collections:
   name: Typeface Audiences Tag Library API
   slug: open-typeface-tag-library-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/capabilities/typeface-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/typeface-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/typeface/refs/heads/main/overlays/typeface-api-overlay.yaml
   title: ''
@@ -346,9 +351,9 @@ description: Typeface is an enterprise marketing AI platform that orchestrates A
 image: https://images.ctfassets.net/x690ow8339ug/g36Rl9hYe43Kx6buA0HBv/752c90259d7655c7accbb0ce0697a67e/Agentic-AI.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api-us.typeface.ai over HTTP; 23 tools listed.
   name: Typeface MCP Server
-  slug: typeface-mcp-server
+  slug: typeface
 modified: '2026-08-13'
 name: Typeface
 nav: Providers
@@ -359,7 +364,7 @@ overview: 'Typeface publishes 15 APIs on the [APIs.io](https://apis.io/) network
   The Typeface catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Typeface''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 30 more developer resources.'
+  Typeface''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 31 more developer resources.'
 plans:
 - name: Typeface Plans Pricing
   plan_count: 0
@@ -376,9 +381,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 49.5
+  composite: 51.3
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
@@ -388,11 +393,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 59.1
+    contract_quality: 54.0
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 49.5
+  previous_composite: 51.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -403,8 +408,14 @@ score:
       total: 15
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

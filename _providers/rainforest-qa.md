@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 1
@@ -47,92 +47,92 @@ apis:
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about callbacks
-  name: Rainforest QA callback API
+  name: Rainforest QA Callback API
   slug: rainforest-qa-callback-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about clients
-  name: Rainforest QA clients API
+  name: Rainforest QA Clients API
   slug: rainforest-qa-clients-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about connections
-  name: Rainforest QA connections API
+  name: Rainforest QA Connections API
   slug: rainforest-qa-connections-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about credit_cards
-  name: Rainforest QA credit_cards API
+  name: Rainforest QA Credit Cards API
   slug: rainforest-qa-credit-cards-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about environments
-  name: Rainforest QA environments API
+  name: Rainforest QA Environments API
   slug: rainforest-qa-environments-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about features
-  name: Rainforest QA features API
+  name: Rainforest QA Features API
   slug: rainforest-qa-features-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about folders
-  name: Rainforest QA folders API
+  name: Rainforest QA Folders API
   slug: rainforest-qa-folders-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about generators
-  name: Rainforest QA generators API
+  name: Rainforest QA Generators API
   slug: rainforest-qa-generators-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about on_premise_crowds
-  name: Rainforest QA on_premise_crowd API
+  name: Rainforest QA On Premise Crowd API
   slug: rainforest-qa-on-premise-crowd-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about run_groups
-  name: Rainforest QA run_groups API
+  name: Rainforest QA Run Groups API
   slug: rainforest-qa-run-groups-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about runs
-  name: Rainforest QA runs API
+  name: Rainforest QA Runs API
   slug: rainforest-qa-runs-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about site_environments
-  name: Rainforest QA site_environments API
+  name: Rainforest QA Site Environments API
   slug: rainforest-qa-site-environments-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about sites
-  name: Rainforest QA sites API
+  name: Rainforest QA Sites API
   slug: rainforest-qa-sites-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about tags
-  name: Rainforest QA tags API
+  name: Rainforest QA Tags API
   slug: rainforest-qa-tags-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about test_results
-  name: Rainforest QA test_results API
+  name: Rainforest QA Test Results API
   slug: rainforest-qa-test-results-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about tests
-  name: Rainforest QA tests API
+  name: Rainforest QA Tests API
   slug: rainforest-qa-tests-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about users
-  name: Rainforest QA users API
+  name: Rainforest QA Users API
   slug: rainforest-qa-users-api
 - baseURL: https://app.rainforestqa.com/api
   baseurl_source: declared
   description: Operations about vm_stacks
-  name: Rainforest QA vm_stack API
+  name: Rainforest QA Vm Stack API
   slug: rainforest-qa-vm-stack-api
 artifact_total: 42
 asyncapis:
@@ -198,6 +198,11 @@ collections:
   name: Rainforest callback vm_stack API
   slug: open-rainforest-qa-vm-stack-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/capabilities/rainforest-qa-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rainforest-qa-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/rainforest-qa/refs/heads/main/overlays/rainforest-qa-openapi-overlay.yaml
   title: ''
@@ -346,19 +351,19 @@ modified: '2026-07-20'
 name: Rainforest QA
 nav: Providers
 network: true
-overview: 'Rainforest QA publishes 18 APIs on the [APIs.io](https://apis.io/) network, including callback API, clients API, connections API, and 15 more. Tagged areas include Testing, QA, Test Automation, Software Testing, and CI/CD.
+overview: 'Rainforest QA publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Callback API, Clients API, Connections API, and 15 more. Tagged areas include Testing, QA, Test Automation, Software Testing, and CI/CD.
 
 
   The Rainforest QA catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Rainforest QA''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 24 more developer resources.'
+  Rainforest QA''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 25 more developer resources.'
 random_paper: 20
 score:
   band: developing
-  composite: 47.9
+  composite: 48.5
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -368,11 +373,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 60.1
+    contract_quality: 55.3
     developer_ergonomics: 45.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 47.9
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -383,8 +388,18 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -54,17 +54,17 @@ apis:
 - baseURL_template: http://{host}:{port}/manager/text
   baseurl_source: spec_template
   description: Manage deployed web applications
-  name: Apache Tomcat applications API
+  name: Apache Tomcat Applications API
   slug: apache-tomcat-applications-api
 - baseURL_template: http://{host}:{port}/manager/text
   baseurl_source: spec_template
   description: Server, JVM, and SSL/TLS information
-  name: Apache Tomcat server API
+  name: Apache Tomcat Server API
   slug: apache-tomcat-server-api
 - baseURL_template: http://{host}:{port}/manager/text
   baseurl_source: spec_template
   description: Inspect and expire HTTP sessions
-  name: Apache Tomcat sessions API
+  name: Apache Tomcat Sessions API
   slug: apache-tomcat-sessions-api
 artifact_total: 33
 collections:
@@ -190,7 +190,7 @@ modified: '2026-04-19'
 name: Apache Tomcat
 nav: Providers
 network: true
-overview: 'Apache Tomcat publishes 3 APIs on the [APIs.io](https://apis.io/) network: applications API, server API, and sessions API. Tagged areas include Application Server, Java, JSP, Open-Source, and Servlet.
+overview: 'Apache Tomcat publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Server API, Sessions API, and 2 more. Tagged areas include Application Server, Java, JSP, Open Source, and Servlet.
 
 
   Apache Tomcat''s developer surface includes authentication, documentation, developer portal, getting-started guide, release notes, support, and 10 more developer resources.'
@@ -205,7 +205,7 @@ rate_limits:
   slug: apache-tomcat-rate-limits
 score:
   band: developing
-  composite: 40.6
+  composite: 40.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -217,14 +217,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 47.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 40.6
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -232,8 +232,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -257,7 +263,7 @@ tags:
 - Application Server
 - Java
 - JSP
-- Open-Source
+- Open Source
 - Servlet
 - Web Server
 use_cases:

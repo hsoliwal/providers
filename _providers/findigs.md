@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -253,8 +253,8 @@ rate_limits:
   name: Findigs Rate Limits
   slug: findigs-rate-limits
 score:
-  band: strong
-  composite: 56.4
+  band: developing
+  composite: 52.9
   coverage:
     artifact_dirs: 25
     catalog_earned: 49.0
@@ -266,11 +266,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 65.8
+    contract_quality: 60.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 56.4
+  previous_composite: 52.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -286,9 +286,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -319,9 +319,9 @@ tags:
 - Income Verification
 - Credit Check
 - Background Checks
-- Fraud Detection
+- Fraud Prevention
 - Property Management
-- Real-Estate
+- Real Estate
 - PropTech
 - FCRA
 - Fair Housing

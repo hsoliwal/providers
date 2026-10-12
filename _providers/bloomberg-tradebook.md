@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: FIX protocol connectivity to Bloomberg Tradebook for electronic order routing, execution reporting, and position updates across equities, futures, options, and FX markets. Supports FIX 4.2, 4.4, and 5
@@ -124,7 +124,7 @@ rate_limits:
   slug: bloomberg-tradebook-rate-limits
 score:
   band: emerging
-  composite: 19.3
+  composite: 19.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -138,17 +138,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 19.3
+  previous_composite: 19.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

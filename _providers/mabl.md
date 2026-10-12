@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -98,7 +98,7 @@ apis:
   description: The Users API from Mabl — 1 operation(s) for users.
   name: Mabl Users API
   slug: mabl-users-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: open
   name: API Collection
@@ -137,6 +137,11 @@ collections:
   name: mabl API
   slug: open-mabl
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mabl/refs/heads/main/capabilities/mabl-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mabl-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mabl/refs/heads/main/agentic-access/mabl-agentic-access.yml
   title: ''
@@ -193,14 +198,18 @@ finops:
   slug: mabl-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mabl.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.mabl.com over HTTP.
+  name: Mabl MCP Server
+  slug: mabl
 modified: '2026-04-28'
 name: Mabl
 nav: Providers
 network: true
-overview: 'Mabl publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Credentials API, Database Connections API, and 7 more. Tagged areas include Test Automation, QA, DevOps, AI Testing, and Platform.
+overview: 'Mabl publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Credentials API, Database Connections API, and 8 more. Tagged areas include Test Automation, QA, DevOps, AI Testing, and Platform.
 
 
-  Mabl''s developer surface includes authentication, documentation, API reference, engineering blog, and 7 more developer resources.'
+  Mabl''s developer surface includes authentication, documentation, API reference, engineering blog, and 8 more developer resources.'
 plans:
 - name: Mabl Plans Pricing
   plan_count: 3
@@ -212,7 +221,7 @@ rate_limits:
   slug: mabl-rate-limits
 score:
   band: thin
-  composite: 31.0
+  composite: 29.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 41.0
@@ -224,11 +233,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 27.4
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 31.0
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +246,14 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,5 +279,6 @@ tags:
 - DevOps
 - AI Testing
 - Platform
+- Testing
 website: https://www.mabl.com
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -205,7 +205,7 @@ modified: '2026-07-23'
 name: Metro Bank
 nav: Providers
 network: true
-overview: 'Metro Bank publishes 6 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 3 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Metro Bank publishes 10 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 7 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Metro Bank''s developer surface includes authentication, documentation, engineering blog, support, and 18 more developer resources.'
@@ -217,7 +217,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 39.0
+  composite: 35.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -229,9 +229,9 @@ score:
   facets:
     access_clarity: 28.6
     contract_governance: 18.2
-    contract_quality: 39.5
+    contract_quality: 35.5
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -241,7 +241,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 39.0
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -261,9 +261,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 65.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -281,7 +281,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: metro-bank
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

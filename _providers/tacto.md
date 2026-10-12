@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -87,6 +87,10 @@ created: '2026-07-17'
 description: 'Tacto (Tacto Technology GmbH) is a Munich-based AI procurement intelligence platform for manufacturing companies. It unifies internal ERP and engineering data with external market intelligence to power AI agents that automate procurement work across four areas: Supplier Intelligence (centralized supplier management with documents, evaluations and performance data), Spend & Cost Intelligence (spend analysis and savings identification), Sourcing Intelligence (AI-optimized RFQ and price inquiries) and Compliance Intelligence (automated regulatory and supply-chain due-diligence detection). Tacto is ISO/IEC 27001:2022 certified and GDPR compliant with EU-only hosting and an audit log of every AI action. It does not publish a public API or developer program; this profile captures the company''s corporate, security and compliance surface.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tacto.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.tacto.ai over HTTP.
+  name: Tacto MCP Server
+  slug: tacto
 modified: '2026-07-21'
 name: Tacto
 nav: Providers
@@ -98,7 +102,7 @@ overview: 'Tacto is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 11
 score:
   band: emerging
-  composite: 14.0
+  composite: 15.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -112,7 +116,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -122,12 +126,22 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 14.0
+  previous_composite: 15.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

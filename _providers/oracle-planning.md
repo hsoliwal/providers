@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 17
 apis:
 - description: RESTful API for Oracle Planning and Budgeting Cloud Service providing access to planning applications, data, and metadata. Use the Planning REST APIs to manage and execute jobs, work with members, app
@@ -182,7 +182,7 @@ modified: '2026-08-21'
 name: Oracle Planning
 nav: Providers
 network: true
-overview: 'Oracle Planning publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Budgeting, Cloud, Consolidation, Enterprise, and EPM.
+overview: 'Oracle Planning publishes 17 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 16 more. Tagged areas include Budgeting, Cloud, Consolidation, Enterprise, and EPM.
 
 
   Oracle Planning''s developer surface includes developer portal, documentation, getting-started guide, authentication, changelog, training material, support, and 13 more developer resources.'
@@ -197,7 +197,7 @@ rate_limits:
   slug: oracle-planning-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 36.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 49.0
@@ -209,13 +209,19 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 50.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 42.1
-  previous_composite: 36.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 36.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

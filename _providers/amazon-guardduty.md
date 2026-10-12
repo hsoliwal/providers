@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 2
@@ -98,10 +98,15 @@ collections:
   name: Amazon GuardDuty
   slug: open-amazon-guardduty
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-guardduty/refs/heads/main/capabilities/amazon-guardduty-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-guardduty-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/guardduty/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -3772,13 +3777,13 @@ modified: '2026-09-16'
 name: Amazon GuardDuty
 nav: Providers
 network: true
-overview: 'Amazon GuardDuty publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Detector API, Invitation API, and 1 more. Tagged areas include Anomaly Detection, Compliance, Machine-Learning, Monitoring, and Security.
+overview: 'Amazon GuardDuty publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Detector API, Invitation API, and 1 more. Tagged areas include Anomaly Detection, Compliance, Machine Learning, Monitoring, and Security.
 
 
   The Amazon GuardDuty catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon GuardDuty''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 13 more developer resources.'
+  Amazon GuardDuty''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 14 more developer resources.'
 plans:
 - name: Amazon Guardduty Plans Pricing
   plan_count: 3
@@ -3812,23 +3817,23 @@ rules:
   slug: amazon-guardduty-spectral-rules
 score:
   band: strong
-  composite: 57.0
+  composite: 57.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 68.8
+    artifact_dirs: 19
+    catalog_earned: 68.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.3
+    catalog_gap: 46.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 68.4
     contract_governance: 17.4
-    contract_quality: 74.2
+    contract_quality: 67.7
     developer_ergonomics: 65.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 57.0
+  previous_composite: 57.7
   provenance:
     agentic_access: derived
     contracts:
@@ -3836,8 +3841,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -3864,7 +3875,7 @@ slug: amazon-guardduty
 tags:
 - Anomaly Detection
 - Compliance
-- Machine-Learning
+- Machine Learning
 - Monitoring
 - Security
 - Threat Detection
@@ -3879,5 +3890,5 @@ use_cases:
   name: Malware Detection
 - description: Identify unusual data access patterns and potential exfiltration from S3 buckets.
   name: Data Exfiltration Prevention
-website: https://amazon.com
+website: https://aws.amazon.com/guardduty/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -108,6 +108,11 @@ collections:
   name: Let's Encrypt ACME Account Order API
   slug: open-lets-encrypt-order-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lets-encrypt/refs/heads/main/capabilities/lets-encrypt-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lets-encrypt-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -158,7 +163,7 @@ network: true
 overview: 'Let''s Encrypt publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Authorization API, Certificate API, and 4 more. Tagged areas include Certificates, Linux Foundation, Security, TLS, and ACME.
 
 
-  Let''s Encrypt''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
+  Let''s Encrypt''s developer surface includes documentation, engineering blog, and 7 more developer resources.'
 plans:
 - name: Lets Encrypt Plans Pricing
   plan_count: 3
@@ -170,9 +175,9 @@ rate_limits:
   slug: lets-encrypt-rate-limits
 score:
   band: emerging
-  composite: 24.8
+  composite: 22.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -182,11 +187,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 45.4
+    contract_quality: 40.8
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 24.8
+  previous_composite: 22.8
   provenance:
     agentic_access: derived
     contracts:
@@ -194,8 +199,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

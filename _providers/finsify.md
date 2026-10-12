@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful bank-aggregation API for accessing consumer banking data — accounts, balances, and categorized transaction history — plus customer, connection token, and login lifecycle management, with webho
@@ -120,7 +120,7 @@ modified: '2026-07-19'
 name: Finsify
 nav: Providers
 network: true
-overview: 'Finsify publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Open Banking, Bank Aggregation, and Financial Data.
+overview: 'Finsify publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Open Banking, Bank Aggregation, and Financial Data.
 
 
   The Finsify catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -130,7 +130,7 @@ overview: 'Finsify publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 12
 score:
   band: emerging
-  composite: 24.3
+  composite: 24.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -142,16 +142,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 24.3
+  previous_composite: 24.0
   provenance:
     mcp: derived
   regulatory:
@@ -159,9 +159,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 15.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,7 +180,7 @@ security:
 slug: finsify
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Open Banking
 - Bank Aggregation
 - Financial Data

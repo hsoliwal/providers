@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 40.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://aggregator-api.kyberswap.com
@@ -55,7 +55,7 @@ apis:
 - baseURL: https://aggregator-api.kyberswap.com
   baseurl_source: declared
   description: The swap API from Kyber Network — 3 operation(s) for swap.
-  name: Kyber Network swap API
+  name: Kyber Network Swap API
   slug: kyber-network-swap-api
 - baseURL: https://aggregator-api.kyberswap.com
   baseurl_source: declared
@@ -233,9 +233,9 @@ description: 'Kyber Network is the team behind KyberSwap, a multi-chain DeFi liq
 image: https://kyberswap.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 13 tools listed.
   name: Kyber Network MCP Server
-  slug: kyber-network-mcp-server
+  slug: kyberswap
 modified: '2026-07-19'
 name: Kyber Network
 nav: Providers
@@ -251,7 +251,7 @@ rate_limits:
   slug: kyber-network-rate-limits
 score:
   band: developing
-  composite: 50.1
+  composite: 48.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 52.0
@@ -263,11 +263,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 48.4
+    contract_quality: 43.6
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 57.9
-  previous_composite: 50.1
+  previous_composite: 48.1
   provenance:
     conformance: first-party
     contracts:
@@ -282,9 +282,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 36.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -126,7 +126,7 @@ overview: 'Sling Money is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 16
 score:
   band: emerging
-  composite: 24.1
+  composite: 22.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -140,9 +140,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 23.7
-  previous_composite: 24.1
+  previous_composite: 22.8
   provenance:
     conformance: first-party
   regulatory:
@@ -150,9 +150,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

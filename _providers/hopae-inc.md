@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 21
@@ -128,6 +128,11 @@ collections:
   name: hConnect Console - API Keys Workspace API - Workspace API
   slug: open-hopae-inc-workspace-api-workspace-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hopae-inc/refs/heads/main/capabilities/hopae-inc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hopae-inc-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/hopae-inc/refs/heads/main/overlays/hopae-inc-hconnect-overlay.yaml
   title: ''
@@ -290,16 +295,16 @@ description: Hopae, Inc. (Hopae S.A.) is a digital identity infrastructure compa
 image: https://framerusercontent.com/assets/JDrpQK9QXlyYCuykjUrR228U2M.svg
 layout: provider
 modified: '2026-07-19'
-name: Hopae, Inc.
+name: Hopae
 nav: Providers
 network: true
-overview: 'Hopae, Inc. publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Console - API Keys API, Providers API, Token API, and 6 more. Tagged areas include Company, Identity, Identity Verification, Digital Identity, and eID.
+overview: 'Hopae publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Hopae, Inc. Console - API Keys API, Hopae, Inc. Providers API, Hopae, Inc. Token API, and 6 more. Tagged areas include Company, Identity, Identity Verification, Digital Identity, and eID.
 
 
-  The Hopae, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Hopae catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Hopae, Inc.''s developer surface includes authentication, sandbox, changelog, documentation, API reference, getting-started guide, support, and 27 more developer resources.'
+  Hopae''s developer surface includes authentication, sandbox, changelog, documentation, API reference, getting-started guide, support, and 28 more developer resources.'
 random_paper: 4
 scopes:
 - name: Hopae Inc Scopes
@@ -308,7 +313,7 @@ scopes:
   summary_line: 7 scopes
 score:
   band: developing
-  composite: 46.9
+  composite: 48.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -320,11 +325,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
-    contract_quality: 65.5
+    contract_quality: 59.9
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 46.9
+  previous_composite: 48.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -335,8 +340,18 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

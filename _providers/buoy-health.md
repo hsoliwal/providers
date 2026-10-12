@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-09-20'
+  score: 34.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Auth0-backed OAuth 2.0 / OpenID Connect authorization server that issues the bearer tokens the Buoy Symptom Checker API requires. Publishes anonymous RFC 8414 authorization-server metadata and OIDC di
@@ -232,7 +232,7 @@ modified: '2026-08-08'
 name: Buoy Health
 nav: Providers
 network: true
-overview: 'Buoy Health publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Complaints API, Intents API, Interviews API, and 3 more. Tagged areas include Symptom Checker, medical-triage, Digital Health, Healthcare, and Clinical AI.
+overview: 'Buoy Health publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Complaints API, Intents API, Interviews API, and 4 more. Tagged areas include Symptom Checker, medical-triage, Digital Health, Healthcare, and Clinical AI.
 
 
   Buoy Health''s developer surface includes documentation, API reference, support, engineering blog, authentication, sandbox, and 22 more developer resources.'
@@ -244,7 +244,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.8
+  composite: 45.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -256,16 +256,18 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 57.6
+    contract_quality: 52.1
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 50.8
+  previous_composite: 45.4
   provenance:
     conformance: first-party
     contracts:
@@ -280,9 +282,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 82.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 51.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

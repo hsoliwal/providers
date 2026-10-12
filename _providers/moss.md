@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -57,18 +57,18 @@ created: '2026-07-17'
 description: Moss is a company surfaced as a portfolio company of y-combinator and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 10 tools listed.
   name: Moss MCP Server
-  slug: moss-mcp-server
+  slug: moss
 modified: '2026-07-17'
 name: Moss
 nav: Providers
 network: true
-overview: Moss is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
+overview: Moss is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company and A2A.
 random_paper: 10
 score:
   band: minimal
-  composite: 7.1
+  composite: 4.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 15.0
@@ -82,7 +82,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 35.2
+    discoverability: 35.0
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -90,13 +90,23 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 7.1
+  previous_composite: 4.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -118,4 +128,5 @@ security:
 slug: moss
 tags:
 - Company
+- A2A
 ---

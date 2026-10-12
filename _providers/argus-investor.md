@@ -33,11 +33,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Argus Research Company''s coverage and ratings surface: analyst BUY/HOLD/SELL recommendations and target prices on 500+ US equities across 60+ industries, A6 quantitative ratings on 1,100+ companies, a'
   name: Argus Research Coverage and Ratings
+  provenance: unpublished
   slug: argus-research-api
 artifact_total: 24
 common:
@@ -133,7 +134,7 @@ modified: '2026-09-14'
 name: Argus Investor
 nav: Providers
 network: true
-overview: 'Argus Investor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Equity Analysis, Financial Data, Financial-Services, Investment Ratings, and Stock Research.
+overview: 'Argus Investor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Equity Analysis, Financial Data, Financial Services, Investment Ratings, and Stock Research.
 
 
   Argus Investor''s developer surface includes support, engineering blog, and 6 more developer resources.'
@@ -148,7 +149,7 @@ rate_limits:
   slug: argus-investor-rate-limits
 score:
   band: emerging
-  composite: 14.5
+  composite: 13.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 35.0
@@ -162,13 +163,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 14.5
+  previous_composite: 13.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,7 +191,7 @@ slug: argus-investor
 tags:
 - Equity Analysis
 - Financial Data
-- Financial-Services
+- Financial Services
 - Investment Ratings
 - Stock Research
 use_cases:

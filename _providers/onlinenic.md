@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OnlineNIC Reseller API (build 4.0.9) gives partners programmatic control of the OnlineNIC product catalogue. Twenty-six domain commands cover availability checking, registration, renewal, informat
@@ -183,8 +183,8 @@ rate_limits:
   name: Onlinenic Rate Limits
   slug: onlinenic-rate-limits
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 38.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 52.0
@@ -198,9 +198,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
-  previous_composite: 40.4
+  previous_composite: 38.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -209,9 +209,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

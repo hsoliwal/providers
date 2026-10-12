@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Partner API for programmable multi-asset banking: Accounts, Address, Balance, Crypto, Documents, FX, Return, RFI, Sandbox, Statement, Transactions, and Transfer resources, plus real-time signed webhoo'
@@ -159,8 +159,8 @@ overview: 'Pave Bank publishes 1 API on the [APIs.io](https://apis.io/) network.
   Pave Bank''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 16 more developer resources.'
 random_paper: 5
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 38.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -172,11 +172,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 39.7
+  previous_composite: 38.5
   provenance:
     conformance: first-party
   regulatory:
@@ -184,9 +184,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 32.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Era''s remote Model Context Protocol server. Connect bank accounts to any MCP-compatible AI agent and manage money through natural conversation: spending analysis, cash-flow forecasting, transaction au'
@@ -188,7 +188,7 @@ scopes:
   summary_line: 10 scopes · authorizationCode
 score:
   band: developing
-  composite: 43.5
+  composite: 41.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 61.0
@@ -202,9 +202,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 43.5
+  previous_composite: 41.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +244,7 @@ tags:
 - Personal Finance
 - Wealth Management
 - MCP
-- agent-native
+- Agent-Native
 - Open Banking
 - Authentication
 website: https://era.app

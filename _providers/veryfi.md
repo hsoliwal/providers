@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.1
-  scored_at: '2026-09-20'
+  score: 34.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -300,7 +300,7 @@ modified: '2026-05-19'
 name: Veryfi
 nav: Providers
 network: true
-overview: 'Veryfi publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Any Documents API, Bank Statements API, Checks API, and 4 more. Tagged areas include Artificial Intelligence, Document Processing, Finance, Invoices, and OCR.
+overview: 'Veryfi publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Any Documents API, Bank Statements API, Checks API, and 11 more. Tagged areas include Artificial Intelligence, Document Processing, Finance, Invoices, and OCR.
 
 
   The Veryfi catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -340,7 +340,7 @@ rules:
   slug: veryfi-ocr-rules
 score:
   band: developing
-  composite: 49.7
+  composite: 50.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 55.5
@@ -352,11 +352,11 @@ score:
   facets:
     access_clarity: 57.9
     contract_governance: 13.6
-    contract_quality: 66.5
-    developer_ergonomics: 48.8
-    discoverability: 66.7
+    contract_quality: 60.7
+    developer_ergonomics: 48.1
+    discoverability: 63.3
     operational_transparency: 10.5
-  previous_composite: 49.7
+  previous_composite: 50.3
   provenance:
     agentic_access: derived
     contracts:
@@ -364,8 +364,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

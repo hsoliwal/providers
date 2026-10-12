@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://us-east-1-aic.leena.ai
@@ -241,14 +241,14 @@ description: 'Leena AI is an enterprise Agentic AI platform that deploys "AI Col
 image: https://assets.leena.ai/images/og/homepage_OG_image.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at leena.ai over HTTP; 3 tools listed.
   name: Leena AI MCP Server
-  slug: leena-ai-mcp-server
+  slug: leena-ai
 modified: '2026-07-19'
 name: Leena AI
 nav: Providers
 network: true
-overview: 'Leena AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, AOP API, Audit Logs API, and 2 more. Tagged areas include Company, Ai Ml, Agentic AI, Artificial Intelligence, and Enterprise Software.
+overview: 'Leena AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, AOP API, Audit Logs API, and 2 more. Tagged areas include Company, Ai Ml, AI Agents, Artificial Intelligence, and Enterprise Software.
 
 
   Leena AI''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, changelog, authentication, and 26 more developer resources.'
@@ -259,12 +259,12 @@ rate_limits:
   slug: leena-ai-rate-limits
 scopes:
 - name: Leena Ai Scopes
-  scope_count: 0
+  scope_count: 1
   slug: leena-ai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 33.4
+  composite: 36.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 48.0
@@ -278,9 +278,9 @@ score:
     contract_governance: 18.2
     contract_quality: 13.8
     developer_ergonomics: 37.5
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 33.4
+  previous_composite: 36.7
   provenance:
     conformance: first-party
     contracts:
@@ -290,8 +290,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,15 +324,15 @@ slug: leena-ai
 tags:
 - Company
 - Ai Ml
-- Agentic AI
+- AI Agents
 - Artificial Intelligence
 - Enterprise Software
 - Human Resources
 - ITSM
 - Employee Experience
-- Workflow-Automation
+- Workflow Automation
 - Conversational AI
 - MCP
-- Knowledge-Management
+- Knowledge Management
 website: https://leena.ai
 ---

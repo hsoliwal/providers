@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 2
@@ -79,6 +79,11 @@ collections:
   name: CipherOwl Onchain Service SRR API API
   slug: open-cipherowl-srr-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cipherowl/refs/heads/main/capabilities/cipherowl-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cipherowl-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -228,23 +233,23 @@ description: 'CipherOwl provides AI-powered security and compliance for institut
 image: https://cipherowl.com/og.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 8 tools listed.
   name: CipherOwl MCP Server
-  slug: cipherowl-mcp-server
+  slug: cipherowl-sr3
 modified: '2026-09-16'
 name: CipherOwl
 nav: Providers
 network: true
-overview: 'CipherOwl publishes 3 APIs on the [APIs.io](https://apis.io/) network: Onchain Service API, Private Data API, and SRR API. Tagged areas include Blockchain, Compliance, Crypto, Security, and Risk.
+overview: 'CipherOwl publishes 3 APIs on the [APIs.io](https://apis.io/) network: Onchain Service API, Private Data API, and SRR API. Tagged areas include Blockchain, Compliance, Crypto, Security, and Risk Management.
 
 
-  CipherOwl''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
+  CipherOwl''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
 random_paper: 5
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 54.8
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -254,11 +259,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 53.6
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -269,8 +274,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -299,7 +310,7 @@ tags:
 - Compliance
 - Crypto
 - Security
-- Risk
+- Risk Management
 - Sanctions Screening
 - AML
 - Digital Assets

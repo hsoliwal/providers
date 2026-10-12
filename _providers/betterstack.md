@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 55.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -50,21 +50,110 @@ apis:
   baseurl_source: declared
   description: The Heartbeats API from Better Stack — create and manage heartbeat monitors that alert when a cron job or background task stops reporting.
   name: Better Stack Heartbeats API
+  phrasing_intents:
+  - id: listHeartbeats
+    intent: List heartbeat monitors
+    question: Which heartbeats are set up in my Better Stack account?
+  - id: createHeartbeat
+    intent: Create a heartbeat for a scheduled job
+    question: How do I get alerted when a cron job stops checking in?
+  - id: getHeartbeat
+    intent: Get a heartbeat's details
+    question: What period and grace settings does one specific heartbeat have?
+  - id: updateHeartbeat
+    intent: Change an existing heartbeat's settings
+    question: Can I change how often an existing heartbeat expects a ping?
+  - id: deleteHeartbeat
+    intent: Delete a heartbeat
+    question: Can I remove a heartbeat for a job I've retired?
+  - id: getHeartbeatAvailability
+    intent: Get a heartbeat's availability
+    question: What uptime percentage has my cron job heartbeat achieved?
+  phrasing_ops: 6
   slug: betterstack-heartbeats-api
 - baseURL: https://uptime.betterstack.com/api/v2
   baseurl_source: declared
   description: The Incidents API from Better Stack — create, acknowledge, escalate, resolve and reopen incidents, and read the incident timeline.
   name: Better Stack Incidents API
+  phrasing_intents:
+  - id: listIncidents
+    intent: List incidents
+    question: Which incidents have been opened in my Better Stack account?
+  - id: createIncident
+    intent: Open a new incident and alert the team
+    question: How do I manually raise an incident and page my on-call team?
+  - id: getIncident
+    intent: Get an incident's details
+    question: What is the current status of a specific incident?
+  - id: deleteIncident
+    intent: Delete an incident
+    question: Can I permanently remove an incident that was opened by mistake?
+  - id: getIncidentTimeline
+    intent: View an incident's timeline of events
+    question: What happened during an incident, step by step?
+  - id: acknowledgeIncident
+    intent: Acknowledge an incident
+    question: How do I tell the team I'm working on an incident so alerts stop escalating?
+  - id: resolveIncident
+    intent: Resolve an incident
+    question: Can I close out an incident once the problem is fixed?
+  - id: reopenIncident
+    intent: Reopen a resolved incident
+    question: The problem came back. Can I reopen an incident I already resolved?
+  phrasing_ops: 9
   slug: betterstack-incidents-api
 - baseURL: https://uptime.betterstack.com/api/v2
   baseurl_source: declared
   description: The Monitors API from Better Stack — create and manage uptime monitors and read their availability and response-time series.
   name: Better Stack Monitors API
+  phrasing_intents:
+  - id: listMonitors
+    intent: List uptime monitors
+    question: Which URLs am I monitoring in Better Stack?
+  - id: createMonitor
+    intent: Create an uptime monitor for a URL
+    question: How do I start monitoring a website for downtime?
+  - id: getMonitor
+    intent: Get a monitor's configuration
+    question: What URL and check frequency is a specific monitor using?
+  - id: updateMonitor
+    intent: Change an existing monitor's settings
+    question: Can I change the URL or check interval of a monitor I already have?
+  - id: deleteMonitor
+    intent: Delete a monitor
+    question: Can I stop and remove monitoring for a site I've shut down?
+  - id: getMonitorResponseTimes
+    intent: Get a monitor's response times
+    question: How fast has my website been responding to uptime checks?
+  - id: getMonitorAvailability
+    intent: Get a monitor's uptime availability
+    question: What uptime percentage has my website had?
+  phrasing_ops: 7
   slug: betterstack-monitors-api
 - baseURL: https://uptime.betterstack.com/api/v2
   baseurl_source: declared
   description: The Status Pages API from Better Stack — create and manage public and private status pages and the resources shown on them.
   name: Better Stack Status Pages API
+  phrasing_intents:
+  - id: listStatusPages
+    intent: List status pages
+    question: Which public status pages do I have in Better Stack?
+  - id: createStatusPage
+    intent: Create a public status page
+    question: How do I publish a status page for my customers?
+  - id: getStatusPage
+    intent: Get a status page's settings
+    question: What subdomain and custom domain is a specific status page using?
+  - id: updateStatusPage
+    intent: Change an existing status page
+    question: Can I post an announcement on a status page I already have?
+  - id: deleteStatusPage
+    intent: Delete a status page
+    question: Can I take down a status page I no longer need?
+  - id: listStatusPagesInGroup
+    intent: List the status pages in a group
+    question: Which status pages belong to a particular status page group?
+  phrasing_ops: 6
   slug: betterstack-status-pages-api
 - description: The Telemetry API from Better Stack — manage log, trace and metric sources, fields, metric expressions, dashboards, charts and chart alerts. Declared by Better Stack's own /.well-known/api-catalog; no
   name: Better Stack Telemetry API
@@ -97,6 +186,16 @@ collections:
   name: Better Stack Uptime API
   slug: open-betterstack
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/betterstack/refs/heads/main/capabilities/betterstack-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/betterstack-capability-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/betterstack/refs/heads/main/vendor-facets/betterstack-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/betterstack-vendor-facets.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -346,13 +445,13 @@ modified: '2026-09-04'
 name: Better Stack
 nav: Providers
 network: true
-overview: 'Better Stack publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Heartbeats API, Incidents API, Monitors API, and 1 more. Tagged areas include Observability, Uptime Monitoring, Incidents, Logs, and Monitoring.
+overview: 'Better Stack publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Heartbeats API, Incidents API, Monitors API, and 3 more. Tagged areas include Observability, Uptime Monitoring, Incidents, Logs, and Monitoring.
 
 
   The Better Stack catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Better Stack''s developer surface includes authentication, changelog, developer portal, documentation, API reference, getting-started guide, pricing, and 38 more developer resources.'
+  Better Stack''s developer surface includes authentication, changelog, developer portal, documentation, API reference, getting-started guide, pricing, and 40 more developer resources.'
 plans:
 - name: Betterstack Plans Pricing
   plan_count: 6
@@ -364,28 +463,28 @@ rate_limits:
   slug: betterstack-rate-limits
 scopes:
 - name: Betterstack Scopes
-  scope_count: 0
+  scope_count: 2
   slug: betterstack-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
-  band: strong
-  composite: 65.6
+  band: exemplar
+  composite: 68.5
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 57.0
+    artifact_dirs: 27
+    catalog_earned: 56.5
     catalog_earned_first_party: 12.0
-    catalog_gap: 58.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 100.0
-    contract_governance: 33.3
-    contract_quality: 61.6
+    contract_governance: 31.8
+    contract_quality: 56.6
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 65.6
+  previous_composite: 68.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -396,8 +495,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.sportradar.com/unrivaled
@@ -216,7 +216,7 @@ overview: 'Unrivaled Basketball publishes 7 APIs on the [APIs.io](https://apis.i
 random_paper: 14
 score:
   band: developing
-  composite: 39.5
+  composite: 39.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -228,11 +228,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 54.5
+    contract_quality: 49.1
     developer_ergonomics: 61.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
-  previous_composite: 39.5
+  previous_composite: 39.3
   provenance:
     conformance: derived
     contracts:
@@ -242,8 +242,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

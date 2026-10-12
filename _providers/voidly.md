@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Internet censorship measurements, incidents, and ISP-level blocking data across 126 countries
   name: Voidly
   slug: voidly
-artifact_total: 3
+artifact_total: 4
 common:
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/voidly/refs/heads/main/a2a/voidly-a2a.yml
@@ -71,23 +71,27 @@ common:
 created: '2026-05-28'
 description: Internet censorship measurements, incidents, and ISP-level blocking data across 126 countries
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.voidly.ai over HTTP; 54 tools listed.
+  name: Voidly MCP Server
+  slug: voidly
 modified: '2026-05-28'
 name: Voidly
 nav: Providers
 network: true
-overview: 'Voidly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open Data and Public APIs.
+overview: 'Voidly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open Data, Public APIs, and A2A.
 
 
   Voidly''s developer surface includes support and 5 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 8.3
+  composite: 7.3
   coverage:
     artifact_dirs: 5
-    catalog_earned: 25.0
+    catalog_earned: 20.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 90.0
+    catalog_gap: 95.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -96,9 +100,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 53.7
+    discoverability: 46.7
     operational_transparency: 0.0
-  previous_composite: 8.3
+  previous_composite: 7.3
   provenance:
     mcp: first-party
   regulatory:
@@ -106,9 +110,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -128,5 +132,6 @@ slug: voidly
 tags:
 - Open Data
 - Public APIs
+- A2A
 website: https://voidly.ai/api-docs
 ---

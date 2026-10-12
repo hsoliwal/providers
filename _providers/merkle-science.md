@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.kybb.app.merklescience.com/api/v1
@@ -185,7 +185,7 @@ overview: 'Merkle Science publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 7
 score:
   band: developing
-  composite: 40.8
+  composite: 41.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -197,11 +197,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 59.9
+    contract_quality: 53.9
     developer_ergonomics: 47.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 40.8
+  previous_composite: 41.1
   provenance:
     conformance: derived
     contracts:
@@ -211,8 +211,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,8 +246,8 @@ tags:
 - Compliance
 - AML
 - KYC
-- Risk
-- Fraud Detection
+- Risk Management
+- Fraud Prevention
 - Due Diligence
 - RegTech
 website: https://merklescience.com

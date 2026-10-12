@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Local developer API for the Double 3 telepresence robot. Commands and events are exchanged as JSON packets over a standard Unix domain socket with the core D3 system service (Ubuntu 18.04, aarch64). A
@@ -113,7 +113,7 @@ overview: 'Double Robotics publishes 2 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 9
 score:
   band: emerging
-  composite: 18.0
+  composite: 17.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -127,11 +127,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 18.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

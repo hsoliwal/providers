@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -49,37 +49,37 @@ apis:
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The data API from QuotaPath — 1 operation(s) for data.
-  name: QuotaPath data API
+  name: QuotaPath Data API
   slug: quotapath-data-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The deal API from QuotaPath — 3 operation(s) for deal.
-  name: QuotaPath deal API
+  name: QuotaPath Deal API
   slug: quotapath-deal-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The path API from QuotaPath — 2 operation(s) for path.
-  name: QuotaPath path API
+  name: QuotaPath Path API
   slug: quotapath-path-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The payout API from QuotaPath — 3 operation(s) for payout.
-  name: QuotaPath payout API
+  name: QuotaPath Payout API
   slug: quotapath-payout-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The plan API from QuotaPath — 1 operation(s) for plan.
-  name: QuotaPath plan API
+  name: QuotaPath Plan API
   slug: quotapath-plan-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The team API from QuotaPath — 1 operation(s) for team.
-  name: QuotaPath team API
+  name: QuotaPath Team API
   slug: quotapath-team-api
 - baseURL: https://api.quotapath.com/v1
   baseurl_source: declared
   description: The user API from QuotaPath — 1 operation(s) for user.
-  name: QuotaPath user API
+  name: QuotaPath User API
   slug: quotapath-user-api
 artifact_total: 21
 collections:
@@ -108,6 +108,11 @@ collections:
   name: QuotaPath data user API
   slug: open-quotapath-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/quotapath/refs/heads/main/capabilities/quotapath-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/quotapath-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/quotapath/refs/heads/main/agentic-access/quotapath-agentic-access.yml
   title: ''
@@ -256,10 +261,10 @@ modified: '2026-08-14'
 name: QuotaPath
 nav: Providers
 network: true
-overview: 'QuotaPath publishes 7 APIs on the [APIs.io](https://apis.io/) network, including data API, deal API, path API, and 4 more. Tagged areas include Company, Sales Commissions, Compensation Management, Sales Operations, and Revenue Operations.
+overview: 'QuotaPath publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Data API, Deal API, Path API, and 4 more. Tagged areas include Company, Sales Commissions, Compensation Management, Sales Operations, and Revenue Operations.
 
 
-  QuotaPath''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  QuotaPath''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
 plans:
 - name: Quotapath Plans Pricing
   plan_count: 3
@@ -271,9 +276,9 @@ rate_limits:
   slug: quotapath-rate-limits
 score:
   band: developing
-  composite: 52.4
+  composite: 53.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -283,11 +288,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 51.1
+    contract_quality: 46.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 52.4
+  previous_composite: 53.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -298,8 +303,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Alloovium's public REST API v2 for document intelligence over construction projects — vault (projects, documents, hybrid search), chat (grounded, cited answers), workflows (automation runs), and templ
@@ -178,7 +178,7 @@ layout: provider
 mcp_servers:
 - description: Hosted Streamable-HTTP MCP server at https://api.alloovium.com/api/v1/mcp/ exposing 15 tools over the vault, chat, workflows, and templates; authenticated with an Alloovium API key (Bearer ak_live_).
   name: Alloovium MCP Server
-  slug: alloovium-mcp-server
+  slug: alloovium
 modified: '2026-07-17'
 name: Alloovium
 nav: Providers
@@ -199,7 +199,7 @@ scopes:
   summary_line: 9 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.0
+  composite: 31.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -211,22 +211,30 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.0
+  previous_composite: 31.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

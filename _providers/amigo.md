@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 273
   human_in_the_loop: 8
@@ -126,7 +126,7 @@ apis:
 - baseURL: https://api.amigo.ai
   baseurl_source: declared
   description: The conversations API from Amigo — 6 operation(s) for conversations.
-  name: Amigo conversations API
+  name: Amigo Conversations API
   slug: amigo-conversations-api
 - baseURL: https://api.amigo.ai
   baseurl_source: declared
@@ -1023,7 +1023,7 @@ layout: provider
 mcp_servers:
 - description: Workspace-scoped Model Context Protocol server built into the Amigo Platform API. Exposes world-model read tools to MCP clients and partner agents. Authenticated with a workspace-scoped API key plus a
   name: Amigo MCP Server
-  slug: amigo-mcp-server
+  slug: amigo-platform
 modified: '2026-07-17'
 name: Amigo
 nav: Providers
@@ -1042,8 +1042,8 @@ scopes:
   slug: amigo-scopes
   summary_line: 53 scopes
 score:
-  band: exemplar
-  composite: 69.0
+  band: strong
+  composite: 64.3
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -1055,11 +1055,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 62.4
+    contract_quality: 57.0
     developer_ergonomics: 81.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 69.0
+  previous_composite: 64.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -1083,9 +1083,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 63.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://events.userlens.io
@@ -170,9 +170,9 @@ description: Userlens is an AI-native customer success platform for B2B SaaS tha
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/userlens.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 4 tools listed. A candidate, not confirmed as published by the provider.
   name: Userlens MCP Server
-  slug: userlens-mcp-server
+  slug: userlens
 modified: '2026-07-21'
 name: Userlens
 nav: Providers
@@ -184,7 +184,7 @@ overview: 'Userlens publishes 1 API on the [APIs.io](https://apis.io/) network: 
 random_paper: 1
 score:
   band: thin
-  composite: 34.3
+  composite: 36.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -198,14 +198,16 @@ score:
     contract_governance: 18.2
     contract_quality: 14.8
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 34.3
+  previous_composite: 36.1
   provenance:
     conformance: first-party
     contracts:
@@ -215,8 +217,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

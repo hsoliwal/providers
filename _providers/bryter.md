@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: REST API for triggering and executing BRYTER modules from external systems, returning module results. Authenticated with a bearer API key scoped to a tenant environment.
@@ -152,7 +152,7 @@ modified: '2026-07-18'
 name: Bryter
 nav: Providers
 network: true
-overview: 'Bryter publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automation, No-Code, Legal Tech, and Workflow-Automation.
+overview: 'Bryter publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Automation, No-Code, Legal Tech, and Workflow Automation.
 
 
   Bryter''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 14 more developer resources.'
@@ -163,7 +163,7 @@ rate_limits:
   slug: bryter-rate-limits
 score:
   band: thin
-  composite: 36.6
+  composite: 38.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 52.0
@@ -177,13 +177,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 31.6
-  previous_composite: 36.6
+  previous_composite: 38.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,7 +215,7 @@ tags:
 - Automation
 - No-Code
 - Legal Tech
-- Workflow-Automation
+- Workflow Automation
 - Document Automation
 - Artificial Intelligence
 - Compliance

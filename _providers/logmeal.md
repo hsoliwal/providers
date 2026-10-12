@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -129,7 +129,7 @@ modified: '2026-05-19'
 name: LogMeal
 nav: Providers
 network: true
-overview: 'LogMeal publishes 3 APIs on the [APIs.io](https://apis.io/) network: History API, Image Recognition API, and Nutrition API. Tagged areas include Computer-Vision, Food, Image Recognition, Nutrition, and Semantic Tagging.
+overview: 'LogMeal publishes 3 APIs on the [APIs.io](https://apis.io/) network: History API, Image Recognition API, and Nutrition API. Tagged areas include Computer Vision, Food, Image Recognition, Nutrition, and Semantic Tagging.
 
 
   LogMeal''s developer surface includes authentication, documentation, developer portal, engineering blog, and 5 more developer resources.'
@@ -144,7 +144,7 @@ rate_limits:
   slug: logmeal-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 32.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -156,11 +156,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 34.6
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
@@ -168,8 +168,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -186,7 +192,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: logmeal
 tags:
-- Computer-Vision
+- Computer Vision
 - Food
 - Image Recognition
 - Nutrition

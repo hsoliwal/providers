@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Tellius backend REST and WebSocket API. Authenticate against /api/auth/login for a JWT (or a cookie session), then call the Insights APIs (list, delete, notifications), the Search APIs (a WebSocke
@@ -231,7 +231,7 @@ scopes:
   summary_line: 1 scope
 score:
   band: developing
-  composite: 49.1
+  composite: 50.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -243,17 +243,23 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 49.1
+  previous_composite: 50.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -277,7 +283,7 @@ tags:
 - Agentic Analytics
 - Decision Intelligence
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Data
 - Embedded Analytics
 - MCP
@@ -285,5 +291,6 @@ tags:
 - Pharmaceuticals
 - Consumer Packaged Goods
 - Financial Planning
+- Real-Time
 website: https://www.tellius.com/
 ---

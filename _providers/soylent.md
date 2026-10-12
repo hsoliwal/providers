@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-facing commerce surface for the Soylent storefront implementing the Universal Commerce Protocol over MCP: catalog search, cart, checkout, and fulfillment with a buyer-approval invariant on payme'
@@ -114,9 +114,9 @@ description: 'Soylent is a nutrition company known for its plant-based, complete
 image: https://soylent.com/cdn/shop/files/soylent_logo-01.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at soylent.com over HTTP; 5 tools listed.
   name: Soylent MCP Server
-  slug: soylent-mcp-server
+  slug: soylent
 modified: '2026-07-21'
 name: Soylent
 nav: Providers
@@ -133,7 +133,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.3
+  composite: 25.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -147,14 +147,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.3
+  previous_composite: 25.0
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

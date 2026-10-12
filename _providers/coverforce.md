@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Unified commercial insurance API connecting to 40+ carriers and MGAs through a single integration. Documented endpoint families include Applications (create and submit in a unified JSON schema), Quote
@@ -137,7 +137,7 @@ overview: 'Coverforce publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 14
 score:
   band: thin
-  composite: 28.7
+  composite: 27.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -151,9 +151,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 28.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 27.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -166,9 +171,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 48.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

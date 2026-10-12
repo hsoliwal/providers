@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   name: OptScale REST API
   slug: open-optscale
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/optscale/refs/heads/main/capabilities/optscale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/optscale-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -201,10 +206,10 @@ modified: '2026-05-19'
 name: OptScale
 nav: Providers
 network: true
-overview: 'OptScale publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Cloud Accounts API, Employees API, and 6 more. Tagged areas include FinOps, Cost Optimization, Cloud, Kubernetes, and Open-Source.
+overview: 'OptScale publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Cloud Accounts API, Employees API, and 6 more. Tagged areas include FinOps, Cost Optimization, Cloud, Kubernetes, and Open Source.
 
 
-  OptScale''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
+  OptScale''s developer surface includes authentication, documentation, engineering blog, and 13 more developer resources.'
 plans:
 - name: Optscale Plans Pricing
   plan_count: 3
@@ -215,10 +220,10 @@ rate_limits:
   name: Optscale Rate Limits
   slug: optscale-rate-limits
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 37.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -228,14 +233,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 39.4
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     contracts:
@@ -243,8 +248,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -265,6 +276,6 @@ tags:
 - Cost Optimization
 - Cloud
 - Kubernetes
-- Open-Source
+- Open Source
 website: https://hystax.com/optscale/
 ---

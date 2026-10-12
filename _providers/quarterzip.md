@@ -34,9 +34,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 4
+artifact_total: 5
 asyncapis:
 - description: ''
   name: Quarterzip Webhooks
@@ -138,11 +138,15 @@ created: '2026-07-17'
 description: Quarterzip builds AI screenshare agents that deliver real-time, in-product user assistance. Its agent sees a user's screen, guides them by voice, and executes the steps alongside them in real time, powering onboarding, activation, and customer support at scale without additional headcount. Teams embed Quarterzip through a hosted Link URL or a client-side JavaScript SDK that launches a draggable in-app call (window.Quarterzip.open/close), and receive signed call.completed webhooks (Standard Webhooks HMAC) carrying transcripts and call ratings for CRM and analytics integration. Customers include Bloomreach, Apollo, Dovetail, Airspeed, and Zuper. Quarterzip is ISO 27001 certified.
 image: https://cdn.prod.website-files.com/6894695956f5ee5691443986/6a4b45ff2d315efec1742406_poster.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.quarterzip.ai over HTTP.
+  name: Quarterzip MCP Server
+  slug: quarterzip
 modified: '2026-07-20'
 name: Quarterzip
 nav: Providers
 network: true
-overview: 'Quarterzip is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Customer-Support, Onboarding, and User Activation.
+overview: 'Quarterzip is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Customer Support, Onboarding, and User Activation.
 
 
   The Quarterzip catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -152,7 +156,7 @@ overview: 'Quarterzip is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 11
 score:
   band: thin
-  composite: 37.7
+  composite: 37.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -164,16 +168,22 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 39.5
-  previous_composite: 37.7
+  previous_composite: 37.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -197,7 +207,7 @@ slug: quarterzip
 tags:
 - Company
 - AI Agents
-- Customer-Support
+- Customer Support
 - Onboarding
 - User Activation
 - Screen Sharing

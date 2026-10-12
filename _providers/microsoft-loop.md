@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Microsoft Graph Loop API enables developers to interact with Microsoft Loop workspaces and components. Loop components are portable, collaborative content blocks that sync across Microsoft 365 app
@@ -95,7 +95,7 @@ modified: '2026-04-28'
 name: Microsoft Loop
 nav: Providers
 network: true
-overview: 'Microsoft Loop publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Microsoft, Microsoft-365, and Productivity.
+overview: 'Microsoft Loop publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Microsoft, Microsoft 365, and Productivity.
 
 
   Microsoft Loop''s developer surface includes developer portal, documentation, authentication, support, and 6 more developer resources.'
@@ -110,7 +110,7 @@ rate_limits:
   slug: microsoft-loop-rate-limits
 score:
   band: emerging
-  composite: 22.5
+  composite: 23.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -124,11 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 22.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 23.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +154,7 @@ slug: microsoft-loop
 tags:
 - Collaboration
 - Microsoft
-- Microsoft-365
+- Microsoft 365
 - Productivity
 website: https://www.microsoft.com/en-us/microsoft-loop
 ---

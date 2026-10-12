@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 40.6
-  scored_at: '2026-09-20'
+  score: 38.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.bezerocarbonmarkets.com/v3
@@ -60,6 +60,11 @@ collections:
   name: BeZero Ratings API
   slug: open-bezero-carbon-ratings-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bezero-carbon/refs/heads/main/capabilities/bezero-carbon-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bezero-carbon-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -209,7 +214,7 @@ network: true
 overview: 'BeZero Carbon publishes 2 APIs on the [APIs.io](https://apis.io/) network: Projects API and Ratings API. Tagged areas include Company, Carbon Ratings, Carbon Markets, Climate, and Sustainability.
 
 
-  BeZero Carbon''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 23 more developer resources.'
+  BeZero Carbon''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
 random_paper: 1
 rate_limits:
 - limit_count: 1
@@ -222,9 +227,9 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: developing
-  composite: 41.5
+  composite: 42.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -234,11 +239,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 60.8
+    contract_quality: 55.0
     developer_ergonomics: 53.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 31.6
-  previous_composite: 41.5
+  previous_composite: 42.6
   provenance:
     conformance: derived
     contracts:
@@ -248,8 +253,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

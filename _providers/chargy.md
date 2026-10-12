@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -211,14 +211,14 @@ modified: '2026-07-27'
 name: char.gy
 nav: Providers
 network: true
-overview: 'char.gy publishes 2 APIs on the [APIs.io](https://apis.io/) network: Locations API and Tariffs API. Tagged areas include Energy, United Kingdom, EV Charging, Electricity, and Utilities.
+overview: 'char.gy publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Locations API, Tariffs API, and 1 more. Tagged areas include Energy, United Kingdom, EV Charging, Electricity, and Utilities.
 
 
   char.gy''s developer surface includes authentication, documentation, pricing, engineering blog, support, signup flow, and 24 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 35.9
+  composite: 33.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -232,7 +232,7 @@ score:
     contract_governance: 18.2
     contract_quality: 16.3
     developer_ergonomics: 30.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.9
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -258,9 +258,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 58.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

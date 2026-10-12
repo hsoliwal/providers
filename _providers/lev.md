@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 1
@@ -411,14 +411,14 @@ description: 'Lev is an AI platform and product system for commercial real estat
 image: https://www.lev.com/api/og?title=Lev&eyebrow=LEV&accent=commercial+real+estate.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.lev.com over HTTP; 60 tools listed.
   name: Lev
   slug: lev
 modified: '2026-09-16'
 name: Lev
 nav: Providers
 network: true
-overview: 'Lev publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Account & Team API, API Keys API, Billing API, and 13 more. Tagged areas include Company, Commercial Real Estate, Real-Estate, PropTech, and CRE Financing.
+overview: 'Lev publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Account & Team API, API Keys API, Billing API, and 13 more. Tagged areas include Company, Commercial Real Estate, Real Estate, PropTech, and CRE Financing.
 
 
   Lev''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
@@ -437,8 +437,8 @@ scopes:
   slug: lev-scopes
   summary_line: 11 scopes · authorizationCode
 score:
-  band: exemplar
-  composite: 67.9
+  band: strong
+  composite: 63.0
   coverage:
     artifact_dirs: 26
     catalog_earned: 61.0
@@ -450,11 +450,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 4.5
-    contract_quality: 56.3
+    contract_quality: 50.8
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 67.9
+  previous_composite: 63.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -470,9 +470,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 76.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -495,7 +495,7 @@ slug: lev
 tags:
 - Company
 - Commercial Real Estate
-- Real-Estate
+- Real Estate
 - PropTech
 - CRE Financing
 - Lending

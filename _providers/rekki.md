@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -47,27 +47,27 @@ apis:
 - baseURL: https://api.rekki.com
   baseurl_source: declared
   description: The catalog API from REKKI — 12 operation(s) for catalog.
-  name: REKKI catalog API
+  name: REKKI Catalog API
   slug: rekki-catalog-api
 - baseURL: https://api.rekki.com
   baseurl_source: declared
   description: The connect_customers API from REKKI — 2 operation(s) for connect_customers.
-  name: REKKI connect_customers API
+  name: REKKI Connect Customers API
   slug: rekki-connect-customers-api
 - baseURL: https://api.rekki.com
   baseurl_source: declared
   description: The general API from REKKI — 2 operation(s) for general.
-  name: REKKI general API
+  name: REKKI General API
   slug: rekki-general-api
 - baseURL: https://api.rekki.com
   baseurl_source: declared
   description: The order-guide API from REKKI — 1 operation(s) for order-guide.
-  name: REKKI order-guide API
+  name: REKKI Order Guide API
   slug: rekki-order-guide-api
 - baseURL: https://api.rekki.com
   baseurl_source: declared
   description: The orders API from REKKI — 11 operation(s) for orders.
-  name: REKKI orders API
+  name: REKKI Orders API
   slug: rekki-orders-api
 artifact_total: 14
 collections:
@@ -205,14 +205,14 @@ modified: '2026-07-21'
 name: REKKI
 nav: Providers
 network: true
-overview: 'REKKI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including catalog API, connect_customers API, general API, and 2 more. Tagged areas include Company, Food, Wholesale, Ordering, and Restaurant.
+overview: 'REKKI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Connect Customers API, General API, and 2 more. Tagged areas include Company, Food, Wholesale, Ordering, and Restaurant.
 
 
   REKKI''s developer surface includes getting-started guide, support, documentation, API reference, authentication, and 18 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 38.9
+  composite: 38.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 44.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 38.9
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -239,8 +239,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

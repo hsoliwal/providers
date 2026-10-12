@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -74,7 +74,7 @@ apis:
   description: Company members who give and receive recognition.
   name: Bonusly Users API
   slug: bonusly-users-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -101,6 +101,11 @@ collections:
   name: Bonusly API
   slug: open-bonusly
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/capabilities/bonusly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bonusly-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/agentic-access/bonusly-agentic-access.yml
   title: ''
@@ -159,6 +164,10 @@ finops:
   slug: bonusly-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bonusly.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at bonus.ly over HTTP.
+  name: Bonusly MCP Server
+  slug: bonusly
 modified: '2026-07-10'
 name: Bonusly
 nav: Providers
@@ -166,7 +175,7 @@ network: true
 overview: 'Bonusly publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Bonuses API, Company API, and 3 more. Tagged areas include Employee Recognition, Rewards, Employee Engagement, Human Resources, and Company Culture.
 
 
-  Bonusly''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Bonusly''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Bonusly Plans Pricing
   plan_count: 4
@@ -178,23 +187,23 @@ rate_limits:
   slug: bonusly-rate-limits
 score:
   band: thin
-  composite: 37.9
+  composite: 34.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 58.6
+    contract_quality: 53.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 37.9
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +212,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -227,5 +242,6 @@ tags:
 - Human Resources
 - Company Culture
 - Bonuses
+- Loyalty & Incentives
 website: https://bonusly.com
 ---

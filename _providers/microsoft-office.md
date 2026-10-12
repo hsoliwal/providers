@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -323,7 +323,7 @@ modified: '2026-06-20'
 name: Microsoft Office
 nav: Providers
 network: true
-overview: 'Microsoft Office publishes 3 APIs on the [APIs.io](https://apis.io/) network: Drive API, Mail API, and Teams API. Tagged areas include Collaboration, Documents, Microsoft, Office, and Productivity.
+overview: 'Microsoft Office publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Drive API, Mail API, Teams API, and 7 more. Tagged areas include Collaboration, Documents, Microsoft, Office, and Productivity.
 
 
   Microsoft Office''s developer surface includes changelog, CLI, sandbox, authentication, developer portal, documentation, engineering blog, and 32 more developer resources.'
@@ -342,8 +342,8 @@ scopes:
   slug: microsoft-office-scopes
   summary_line: 16 scopes · authorizationCode
 score:
-  band: developing
-  composite: 51.8
+  band: strong
+  composite: 54.9
   coverage:
     artifact_dirs: 27
     catalog_earned: 49.0
@@ -355,11 +355,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 4.5
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 51.8
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -369,8 +369,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.0
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -183,7 +183,7 @@ rate_limits:
   slug: daz-3d-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 33.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 39.0
@@ -197,14 +197,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 50.0
+    discoverability: 48.3
     operational_transparency: 18.4
-  previous_composite: 33.4
+  previous_composite: 33.7
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: third-party
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

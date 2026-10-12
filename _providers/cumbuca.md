@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -131,7 +131,7 @@ layout: provider
 mcp_servers:
 - description: 'Hosted, remote MCP server that connects a user''s Brazilian bank accounts to an AI assistant (Claude, ChatGPT, Cursor) through Open Finance. Exposes bank statement and credit-card transaction data for '
   name: Open Finance Data MCP
-  slug: open-finance-data-mcp
+  slug: cumbuca-openfinance
 modified: '2026-07-18'
 name: Cumbuca
 nav: Providers
@@ -148,7 +148,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.4
+  composite: 27.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -162,7 +162,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -171,7 +171,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 30.4
+  previous_composite: 27.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -180,9 +180,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 79.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 49.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

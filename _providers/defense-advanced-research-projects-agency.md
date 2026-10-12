@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The DARPA RSS feed publishes the latest news, program announcements, and opportunities posted by the agency. Unlike a developer API, the feed is consumed via standard RSS readers and HTTP clients.
@@ -82,7 +82,7 @@ modified: '2026-04-28'
 name: Defense Advanced Research Projects Agency
 nav: Providers
 network: true
-overview: 'Defense Advanced Research Projects Agency publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Defense, Research, Department of Defense, and DARPA.
+overview: 'Defense Advanced Research Projects Agency publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Defense, Research, Department of Defense, and DARPA.
 
 
   Defense Advanced Research Projects Agency''s developer surface includes product news, engineering blog, and 5 more developer resources.'
@@ -96,8 +96,8 @@ rate_limits:
   name: Defense Advanced Research Projects Agency Rate Limits
   slug: defense-advanced-research-projects-agency-rate-limits
 score:
-  band: minimal
-  composite: 10.9
+  band: emerging
+  composite: 11.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -111,17 +111,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 58.9
     operational_transparency: 7.9
-  previous_composite: 10.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 11.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +140,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: defense-advanced-research-projects-agency
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Research
 - Department of Defense

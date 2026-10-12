@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -137,7 +137,7 @@ modified: '2026-08-30'
 name: TIFIN
 nav: Providers
 network: true
-overview: 'TIFIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Wealth Management, Asset Management, and Artificial Intelligence.
+overview: 'TIFIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Wealth Management, Asset Management, and Artificial Intelligence.
 
 
   TIFIN''s developer surface includes engineering blog, product news, signup flow, and 14 more developer resources.'
@@ -166,7 +166,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
   previous_composite: 13.6
   regulatory:
@@ -174,9 +174,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -191,7 +191,7 @@ security:
 slug: tifin
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Wealth Management
 - Asset Management
 - Artificial Intelligence

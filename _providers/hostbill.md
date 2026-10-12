@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -118,6 +118,11 @@ collections:
   name: HostBill Admin API
   slug: open-hostbill
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hostbill/refs/heads/main/capabilities/hostbill-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hostbill-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hostbill/refs/heads/main/agentic-access/hostbill-agentic-access.yml
   title: ''
@@ -177,7 +182,7 @@ network: true
 overview: 'HostBill publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Admin API, Clients API, and 5 more. Tagged areas include Automation, Billing, Domain Registration, and Web Hosting.
 
 
-  HostBill''s developer surface includes authentication, documentation, support, engineering blog, and 6 more developer resources.'
+  HostBill''s developer surface includes authentication, documentation, support, engineering blog, and 7 more developer resources.'
 plans:
 - name: Hostbill Plans Pricing
   plan_count: 3
@@ -189,9 +194,9 @@ rate_limits:
   slug: hostbill-rate-limits
 score:
   band: thin
-  composite: 27.4
+  composite: 26.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
@@ -201,11 +206,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 45.4
+    contract_quality: 40.9
     developer_ergonomics: 28.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 27.4
+  previous_composite: 26.3
   provenance:
     agentic_access: derived
     contracts:
@@ -213,8 +218,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

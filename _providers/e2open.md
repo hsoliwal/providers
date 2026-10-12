@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -185,7 +185,7 @@ modified: '2026-09-16'
 name: E2open
 nav: Providers
 network: true
-overview: 'E2open publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Schedules API, Shipping Instructions API, and 1 more. Tagged areas include Logistics, Supply Chain, Transportation, and Booking.
+overview: 'E2open publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Schedules API, Shipping Instructions API, and 3 more. Tagged areas include Logistics, Supply Chain, Transportation, and Booking.
 
 
   The E2open catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -214,7 +214,7 @@ rules:
   slug: e2open-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 40.7
+  composite: 41.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 47.3
@@ -226,11 +226,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 9.8
-    contract_quality: 62.2
+    contract_quality: 56.6
     developer_ergonomics: 54.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 40.7
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     contracts:
@@ -238,8 +238,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

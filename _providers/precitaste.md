@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -116,8 +116,8 @@ rate_limits:
   name: Precitaste Rate Limits
   slug: precitaste-rate-limits
 score:
-  band: emerging
-  composite: 11.4
+  band: minimal
+  composite: 10.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -131,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 11.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -154,9 +160,9 @@ tags:
 - Restaurant
 - Food Service
 - Demand Forecasting
-- Computer-Vision
+- Computer Vision
 - Kitchen Operations
-- Inventory Management
+- Inventory
 - Food Waste
 website: https://precitaste.com/
 ---

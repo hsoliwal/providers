@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 4
+artifact_total: 5
 asyncapis:
 - description: ''
   name: Homebot Events Webhooks
@@ -134,11 +134,15 @@ created: '2026-07-17'
 description: Homebot is a homeownership platform that helps loan officers, real estate agents, banks, and credit unions engage clients with personalized home-finance insights and behavioral intelligence. It sends automated monthly digests covering home value, equity, and buying power, and surfaces high-intent "Motivated Client Alerts" so professionals can reach the right client at the right time. Homebot's Open API exposes 60+ client-activity events and equity/intent signals, and it integrates with CRMs (Salesforce, Total Expert, Follow Up Boss, Sierra Interactive), video (BombBomb), and automation (Zapier) to drive retention, referrals, and repeat business. The platform serves 10,000+ customers and 13 million homeowners. Backed by 500 Global.
 image: https://assets.homebotapp.com/images/homebot-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.homebot.ai over HTTP.
+  name: Homebot MCP Server
+  slug: homebot
 modified: '2026-07-19'
 name: Homebot
 nav: Providers
 network: true
-overview: 'Homebot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Mortgage, PropTech, and Fintech.
+overview: 'Homebot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Mortgage, PropTech, and Fintech.
 
 
   The Homebot catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -148,7 +152,7 @@ overview: 'Homebot is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 2
 score:
   band: developing
-  composite: 40.9
+  composite: 42.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -160,16 +164,28 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 21.1
-  previous_composite: 40.9
+  previous_composite: 42.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa-cpra
+    - jurisdiction: US
+      standard: glba
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -192,7 +208,7 @@ security:
 slug: homebot
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Mortgage
 - PropTech
 - Fintech

@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: true
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-09-20'
+  score: 31.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 1
@@ -225,7 +225,7 @@ layout: provider
 mcp_servers:
 - description: Getir publishes NO official MCP server. Searched the developer portal, the docs content API, the GitHub org (0 public repos), npm under @modelcontextprotocol and the MCP registries — no first-party ho
   name: Getir MCP Server
-  slug: getir-mcp-server
+  slug: getir-mcp-yml
 modified: '2026-07-31'
 name: Getir
 nav: Providers
@@ -244,7 +244,7 @@ rate_limits:
   slug: getir-rate-limits
 score:
   band: thin
-  composite: 33.9
+  composite: 33.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -256,9 +256,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 47.1
+    contract_quality: 43.2
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -267,7 +267,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 33.9
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,10 +276,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-    mcp: first-party
+    mcp: third-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

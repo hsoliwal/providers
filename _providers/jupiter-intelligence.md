@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Enterprise API for Jupiter's ClimateScore Global platform, delivering physical and extreme-weather climate risk metrics across perils, scenarios, and time horizons. Access is gated behind a commercial
@@ -92,7 +92,7 @@ overview: 'Jupiter Intelligence publishes 1 API on the [APIs.io](https://apis.io
 random_paper: 15
 score:
   band: emerging
-  composite: 18.3
+  composite: 18.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -106,16 +106,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -141,5 +149,6 @@ tags:
 - Financial Risk
 - ESG
 - Analytics
+- Climate
 website: https://www.jupiterintel.com/
 ---

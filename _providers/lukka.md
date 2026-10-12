@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.2
-  scored_at: '2026-09-20'
+  score: 55.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -584,14 +584,14 @@ examples:
 image: https://lukka.tech/wp-content/uploads/2023/06/lukka-tech.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pricing.mcp.lukka.tech.
   name: Lukka MCP Server
-  slug: lukka-mcp-server
+  slug: lukka-mcp-yml
 modified: '2026-09-16'
 name: Lukka
 nav: Providers
 network: true
-overview: 'Lukka publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Market Data Streaming API, Analytics - Analytics API, Analytics - Derived Data API, and 18 more. Tagged areas include Crypto, Digital Assets, Market Data, Reference Data, and Pricing.
+overview: 'Lukka publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Market Data Streaming API, Analytics - Analytics API, Analytics - Derived Data API, and 19 more. Tagged areas include Crypto, Digital Assets, Market Data, Reference Data, and Pricing.
 
 
   The Lukka catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -609,8 +609,8 @@ scopes:
   slug: lukka-scopes
   summary_line: 9 scopes · clientCredentials/authorizationCode
 score:
-  band: strong
-  composite: 57.7
+  band: developing
+  composite: 53.4
   coverage:
     artifact_dirs: 26
     catalog_earned: 48.0
@@ -622,11 +622,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 63.9
+    contract_quality: 59.1
     developer_ergonomics: 53.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 50.0
-  previous_composite: 57.7
+  previous_composite: 53.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -642,9 +642,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 76.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -677,9 +677,10 @@ tags:
 - Blockchain
 - AML
 - Compliance
-- Financial-Services
+- Financial Services
 - Analytics
 - Prediction Markets
 - MCP
+- Real-Time
 website: https://lukka.tech/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -51,42 +51,42 @@ apis:
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: Manage dist-tags for packages
-  name: Verdaccio dist-tags API
+  name: Verdaccio Dist Tags API
   slug: verdaccio-dist-tags-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: Retrieve package metadata and tarballs
-  name: Verdaccio packages API
+  name: Verdaccio Packages API
   slug: verdaccio-packages-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: User profile management
-  name: Verdaccio profile API
+  name: Verdaccio Profile API
   slug: verdaccio-profile-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: Publish, update, and unpublish packages
-  name: Verdaccio publish API
+  name: Verdaccio Publish API
   slug: verdaccio-publish-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: Search the registry
-  name: Verdaccio search API
+  name: Verdaccio Search API
   slug: verdaccio-search-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: API token management
-  name: Verdaccio tokens API
+  name: Verdaccio Tokens API
   slug: verdaccio-tokens-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: User authentication and management
-  name: Verdaccio user API
+  name: Verdaccio User API
   slug: verdaccio-user-api
 - baseURL: http://localhost:4873
   baseurl_source: declared
   description: Utility endpoints
-  name: Verdaccio utility API
+  name: Verdaccio Utility API
   slug: verdaccio-utility-api
 artifact_total: 32
 collections:
@@ -244,7 +244,7 @@ modified: 2026-06-13
 name: Verdaccio
 nav: Providers
 network: true
-overview: 'Verdaccio publishes 8 APIs on the [APIs.io](https://apis.io/) network, including dist-tags API, packages API, profile API, and 5 more. Tagged areas include npm, Registry, Package Manager, private-registry, and Proxy.
+overview: 'Verdaccio publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Dist Tags API, Packages API, Profile API, and 6 more. Tagged areas include npm, Registry, Package Manager, private-registry, and Proxy.
 
 
   The Verdaccio catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -269,26 +269,26 @@ rules:
   slug: verdaccio-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 40.8
+  composite: 39.3
   coverage:
     artifact_dirs: 16
-    catalog_earned: 54.3
+    catalog_earned: 53.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.8
+    catalog_gap: 61.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 9.8
-    contract_quality: 56.9
+    contract_quality: 51.8
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 31.6
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 40.8
+  previous_composite: 39.3
   provenance:
     agentic_access: derived
     contracts:
@@ -296,8 +296,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,7 +326,7 @@ tags:
 - private-registry
 - Proxy
 - Node.js
-- Open-Source
+- Open Source
 - Self-Hosted
 - YARN
 - pnpm

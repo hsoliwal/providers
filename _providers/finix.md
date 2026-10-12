@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 0
@@ -279,6 +279,11 @@ collections:
   slug: open-finix-webhooks-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/finix/refs/heads/main/capabilities/finix-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/finix-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/finix/refs/heads/main/overlays/finix-openapi-overlay.yaml
   title: ''
   type: Overlay
@@ -489,6 +494,10 @@ common:
   title: ''
   type: Arazzo
   url: arazzo/finix-refund-transfer-workflow.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://finix.com/docs/api
 created: '2026-07-17'
 description: Finix is a full-stack payments technology provider that lets software platforms, marketplaces, and merchants accept and send payments online and in person. The Finix API is a HAL/HATEOAS REST API (HTTP Basic authentication per RFC 7617, date-based Finix-Version header, cursor pagination, idempotency_id) covering Identities, Merchants, Payment Instruments, Authorizations, Transfers, Settlements, Disputes, Fee Profiles, Verifications, Onboarding Forms, Devices, Balance Transfers, Split Transfers, and Webhooks, plus low-code Checkout, Payment Links, Subscriptions, and Payouts. It is Level 1 PCI DSS certified with finix.js browser tokenization, native iOS/Android SDKs, and official Python, Node.js, Java, and PHP client libraries. This profile was enriched from Finix's own public developer surface.
 image: https://images.ctfassets.net/kqru4vgwujx6/3dBfyfPS31FWqFPTwf4dRv/417cc8b5e94029726cffb9aa85230111/OG_Image.png?w=1200&q=90
@@ -507,15 +516,15 @@ overview: 'Finix publishes 19 APIs on the [APIs.io](https://apis.io/) network, i
   The Finix catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Finix''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 39 more developer resources.'
+  Finix''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 41 more developer resources.'
 random_paper: 14
 rate_limits:
 - limit_count: 2
   name: Finix Rate Limits
   slug: finix-rate-limits
 score:
-  band: exemplar
-  composite: 66.8
+  band: strong
+  composite: 61.9
   coverage:
     artifact_dirs: 26
     catalog_earned: 45.0
@@ -527,11 +536,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 62.5
+    contract_quality: 57.0
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 73.7
-  previous_composite: 66.8
+  previous_composite: 61.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -547,9 +556,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 78.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -582,5 +591,9 @@ tags:
 - Merchant Onboarding
 - Payouts
 - Marketplace
+- Embedded Finance
+- ACH
+- Card Acceptance
+- PCI DSS
 website: https://finix.com/
 ---

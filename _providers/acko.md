@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://apisetu.gov.in/acko/v3
   baseurl_source: declared
   description: The APIs API from Acko — 3 operation(s) for apis.
-  name: Acko AP Is API
+  name: Acko APIs API
   slug: acko-apis-api
 artifact_total: 6
 collections:
@@ -168,14 +168,14 @@ modified: '2026-07-18'
 name: Acko
 nav: Providers
 network: true
-overview: 'Acko publishes 1 API on the [APIs.io](https://apis.io/) network: AP Is API. Tagged areas include Company, Consumer, Insurance, Insurtech, and Financial-Services.
+overview: 'Acko publishes 1 API on the [APIs.io](https://apis.io/) network: APIs API. Tagged areas include Company, Consumer, Insurance, Insurtech, and Financial Services.
 
 
   Acko''s developer surface includes authentication, documentation, API reference, engineering blog, support, and 17 more developer resources.'
 random_paper: 18
 score:
   band: thin
-  composite: 39.1
+  composite: 35.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -187,9 +187,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -198,7 +198,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 39.1
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 48.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -237,7 +237,7 @@ tags:
 - Consumer
 - Insurance
 - Insurtech
-- Financial-Services
+- Financial Services
 - Digital Insurance
 - India
 - Embedded Insurance

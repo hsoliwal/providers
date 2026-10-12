@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-09-20'
+  score: 30.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -242,7 +242,7 @@ rate_limits:
   slug: ofcom-rate-limits
 score:
   band: developing
-  composite: 47.5
+  composite: 45.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 61.0
@@ -254,9 +254,9 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 4.5
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 51.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -266,7 +266,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 47.5
+  previous_composite: 45.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -282,9 +282,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

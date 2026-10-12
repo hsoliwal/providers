@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 0
@@ -45,11 +45,6 @@ agentic_access:
   summary_line: 99 operations · 42 acting
 api_count: 1
 apis:
-- baseURL: https://zenodo.org/oai2d
-  baseurl_source: declared
-  description: Open Archives Initiative Protocol for Metadata Harvesting endpoint that allows bulk harvesting of Zenodo metadata in formats including oai_dc, marcxml, and oai_datacite4. Supports selective harvesting
-  name: Zenodo OAI-PMH API
-  slug: zenodo-oai-pmh-api
 - baseURL: https://zenodo.org/api
   baseurl_source: declared
   description: Access control and sharing
@@ -115,9 +110,9 @@ apis:
   description: Group management endpoints
   name: Zenodo Groups API
   slug: zenodo-groups-api
-- baseURL: https://zenodo.org/api
+- baseURL: https://zenodo.org/oai2d
   baseurl_source: declared
-  description: OAI-PMH protocol endpoints
+  description: Open Archives Initiative Protocol for Metadata Harvesting endpoint that allows bulk harvesting of Zenodo metadata in formats including oai_dc, marcxml, and oai_datacite4. Supports selective harvesting
   name: Zenodo OAI-PMH API
   slug: zenodo-oai-pmh-api
 - baseURL: https://zenodo.org/api
@@ -170,7 +165,7 @@ apis:
   description: Vocabulary and controlled terms endpoints
   name: Zenodo Vocabularies API
   slug: zenodo-vocabularies-api
-artifact_total: 60
+artifact_total: 59
 collections:
 - collection_type: open
   name: API Collection
@@ -364,7 +359,7 @@ modified: '2026-06-12'
 name: Zenodo
 nav: Providers
 network: true
-overview: 'Zenodo publishes 25 APIs on the [APIs.io](https://apis.io/) network, including OAI-PMH API, Access API, Audit Logs API, and 22 more. Tagged areas include Research, Open Data, Repository, DOI, and Datasets.
+overview: 'Zenodo publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Access API, Audit Logs API, Avatars API, and 21 more. Tagged areas include Research, Open Data, Repository, DOI, and Datasets.
 
 
   The Zenodo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -393,23 +388,23 @@ rules:
   slug: zenodo-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 50.6
+  composite: 47.1
   coverage:
     artifact_dirs: 17
-    catalog_earned: 79.3
+    catalog_earned: 76.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.8
+    catalog_gap: 38.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
-    contract_governance: 25.0
-    contract_quality: 65.9
+    access_clarity: 26.8
+    contract_governance: 23.5
+    contract_quality: 60.7
     developer_ergonomics: 45.2
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 50.6
+    discoverability: 66.1
+    operational_transparency: 46.8
+  previous_composite: 47.1
   provenance:
     agentic_access: derived
     contracts:
@@ -422,9 +417,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -454,5 +449,9 @@ tags:
 - Metadata
 - Harvesting
 - Research Data
+- Data Catalog
+- OAI-PMH
+- Research Repository
+- Open Access
 website: https://zenodo.org/
 ---

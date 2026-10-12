@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Mondoo Platform API is a GraphQL API for programmatically querying assets, configuring integrations, and fetching vulnerability, policy, and compliance reports. Authentication is token-based via s
@@ -180,7 +180,7 @@ layout: provider
 mcp_servers:
 - description: Mondoo exposes an MCP (Model Context Protocol) server through its open-source cnquery / cnspec CLIs and the MQL shell. Agents can run it locally to perform live MQL schema lookup, query validation, an
   name: Mondoo MCP Server
-  slug: mondoo-mcp-server
+  slug: mondoo-cnquery
 modified: '2026-07-20'
 name: Mondoo
 nav: Providers
@@ -192,7 +192,7 @@ overview: 'Mondoo publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 14
 score:
   band: thin
-  composite: 39.2
+  composite: 38.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -206,21 +206,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 39.2
+  previous_composite: 38.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 47.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

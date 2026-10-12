@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The authenticated backend behind Celsius, SeekOps' cloud analytics and emissions-reconciliation dashboard. Observed as a Django REST Framework service at https://celsius.seekops.com/api/ — every probe
@@ -139,7 +139,7 @@ rate_limits:
   slug: seekops-rate-limits
 score:
   band: emerging
-  composite: 18.9
+  composite: 17.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -153,9 +153,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 18.9
+  previous_composite: 17.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 35.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

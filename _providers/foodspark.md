@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Foodspark provides a restaurant data API, food and grocery pricing API, restaurant menu API, and aggregated food-delivery data sourced from 100+ platforms. Endpoint and authentication details are prov
@@ -116,7 +116,7 @@ rate_limits:
   slug: foodspark-rate-limits
 score:
   band: emerging
-  composite: 14.5
+  composite: 12.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 39.0
@@ -130,11 +130,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
-  previous_composite: 14.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

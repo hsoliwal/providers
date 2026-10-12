@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -152,9 +152,9 @@ description: Valon is a technology-first residential mortgage servicing platform
 image: https://valon.com/wp-content/uploads/2023/03/brandmark-light-1.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at gestaltd.ai over HTTP.
   name: Gestalt MCP Server (self-hosted)
-  slug: gestalt-mcp-server-self-hosted
+  slug: gestalt
 modified: '2026-07-21'
 name: Valon
 nav: Providers
@@ -166,7 +166,7 @@ overview: 'Valon is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 16
 score:
   band: developing
-  composite: 41.7
+  composite: 39.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -178,11 +178,16 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 71.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 21.1
-  previous_composite: 41.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 39.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -191,9 +196,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -220,10 +225,10 @@ tags:
 - Loan Servicing
 - Lending
 - Fintech
-- Real-Estate
+- Real Estate
 - Insurance
 - Agentic Tools
 - MCP
-- Open-Source
+- Open Source
 website: https://valon.com
 ---

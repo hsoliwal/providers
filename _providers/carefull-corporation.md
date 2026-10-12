@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -80,17 +80,17 @@ description: Carefull is a financial safety platform that protects the personal 
 image: https://getcarefull.com/assets/img/og/default.jpg
 layout: provider
 modified: '2026-07-18'
-name: Carefull Corporation
+name: Carefull
 nav: Providers
 network: true
-overview: 'Carefull Corporation is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Safety, Fraud Detection, and Identity Theft Protection.
+overview: 'Carefull is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Safety, Fraud Prevention, and Identity Theft Protection.
 
 
-  Carefull Corporation''s developer surface includes engineering blog, signup flow, and 7 more developer resources.'
+  Carefull''s developer surface includes engineering blog, signup flow, and 7 more developer resources.'
 random_paper: 1
 score:
   band: minimal
-  composite: 8.4
+  composite: 6.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -104,11 +104,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -129,7 +135,7 @@ tags:
 - Company
 - Fintech
 - Financial Safety
-- Fraud Detection
+- Fraud Prevention
 - Identity Theft Protection
 - Elder Care
 - Financial Caregiving

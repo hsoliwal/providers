@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -46,37 +46,37 @@ apis:
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Formation and compliance documents
-  name: SingleFile documents API
+  name: SingleFile Documents API
   slug: singlefile-documents-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Business entities — create, list, read, update, and their contacts, documents, jurisdictions, orders and tasks
-  name: SingleFile entities API
+  name: SingleFile Entities API
   slug: singlefile-entities-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Entity jurisdictions and DBAs across US states
-  name: SingleFile jurisdictions API
+  name: SingleFile Jurisdictions API
   slug: singlefile-jurisdictions-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Filing orders — create, place, update, and document-request driven order creation
-  name: SingleFile orders API
+  name: SingleFile Orders API
   slug: singlefile-orders-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Organizations that own entities — CRUD plus contacts, documents, entities, orders and tasks
-  name: SingleFile organizations API
+  name: SingleFile Organizations API
   slug: singlefile-organizations-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: JSON schemas for order payloads by entity_type, filing_type and jurisdiction
-  name: SingleFile schemas API
+  name: SingleFile Schemas API
   slug: singlefile-schemas-api
 - baseURL: https://api.demo.singlefile.ai/external-api/v1
   baseurl_source: declared
   description: Compliance tasks and deadlines
-  name: SingleFile tasks API
+  name: SingleFile Tasks API
   slug: singlefile-tasks-api
 artifact_total: 22
 asyncapis:
@@ -109,6 +109,11 @@ collections:
   name: SingleFile External API Documentation documents tasks API
   slug: open-singlefile-tasks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/capabilities/singlefile-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/singlefile-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/singlefile/refs/heads/main/security/singlefile-trust-center.yml
   title: ''
@@ -255,13 +260,13 @@ modified: '2026-07-21'
 name: SingleFile
 nav: Providers
 network: true
-overview: 'SingleFile publishes 7 APIs on the [APIs.io](https://apis.io/) network, including documents API, entities API, jurisdictions API, and 4 more. Tagged areas include Company, Compliance, Legal, Entity Management, and Corporate Compliance.
+overview: 'SingleFile publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Entities API, Jurisdictions API, and 4 more. Tagged areas include Company, Compliance, Legal, Entity Management, and Corporate Compliance.
 
 
   The SingleFile catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  SingleFile''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, signup flow, support, and 23 more developer resources.'
+  SingleFile''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, signup flow, support, and 24 more developer resources.'
 random_paper: 2
 rate_limits:
 - limit_count: 3
@@ -274,9 +279,9 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: developing
-  composite: 50.5
+  composite: 52.5
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -286,11 +291,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 56.4
+    contract_quality: 51.5
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 50.5
+  previous_composite: 52.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -301,8 +306,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

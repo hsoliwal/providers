@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -359,7 +359,7 @@ modified: '2026-07-23'
 name: Investec
 nav: Providers
 network: true
-overview: 'Investec publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Investec publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 31 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Investec''s developer surface includes authentication, documentation, API reference, engineering blog, support, sandbox, getting-started guide, and 24 more developer resources.'
@@ -370,8 +370,8 @@ scopes:
   slug: investec-scopes
   summary_line: 4 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 42.7
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -383,9 +383,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 68.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -395,7 +395,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 42.7
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -414,9 +414,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -433,7 +433,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: investec
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

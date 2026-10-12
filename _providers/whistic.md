@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -105,6 +105,10 @@ created: '2026-07-17'
 description: Whistic is an AI-driven Third-Party Risk Management (TPRM) platform that helps organizations assess vendor security, monitor third-party risk continuously, and share their own security posture through a Trust Center. The platform combines assessment AI (automated questionnaire responses and SOC 2 summarization), vendor monitoring with breach detection and structured alerts, compliance controls testing, and a Trust Center Exchange of verified security information for thousands of vendors. It integrates with Jira, Salesforce, Slack, and BitSight. Whistic itself holds SOC 2, ISO 27001, ISO 42001, NIST, GDPR, TX-RAMP, and START Level One / Shared Assessments certifications, backed by Battery Ventures and Emergence Capital.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/whistic.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.whistic.com over HTTP.
+  name: Whistic MCP Server
+  slug: whistic
 modified: '2026-07-21'
 name: Whistic
 nav: Providers
@@ -116,7 +120,7 @@ overview: 'Whistic is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 15
 score:
   band: emerging
-  composite: 23.2
+  composite: 25.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -130,14 +134,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 13.2
-  previous_composite: 23.2
+  previous_composite: 25.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: British Airways' IATA New Distribution Capability API - a direct link into BA's host reservation system for flight shopping, ordering, ticketing and post-booking servicing, operated jointly across IAG
@@ -171,8 +171,8 @@ scopes:
   slug: british-airways-scopes
   summary_line: 4 scopes · authorizationCode/implicit/deviceCode
 score:
-  band: emerging
-  composite: 25.4
+  band: thin
+  composite: 27.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 32.0
@@ -184,9 +184,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 66.7
+    discoverability: 65.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,11 +196,21 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 25.4
+  previous_composite: 27.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: UK
+      standard: uk-gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 0
@@ -63,12 +63,12 @@ apis:
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The admin-clusters API from Prime Intellect — 4 operation(s) for admin-clusters.
-  name: Prime Intellect admin-clusters API
+  name: Prime Intellect Admin Clusters API
   slug: prime-intellect-admin-clusters-api
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The admin-users API from Prime Intellect — 1 operation(s) for admin-users.
-  name: Prime Intellect admin-users API
+  name: Prime Intellect Admin Users API
   slug: prime-intellect-admin-users-api
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
@@ -88,7 +88,7 @@ apis:
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The evals API from Prime Intellect — 5 operation(s) for evals.
-  name: Prime Intellect evals API
+  name: Prime Intellect Evals API
   slug: prime-intellect-evals-api
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
@@ -103,7 +103,7 @@ apis:
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The hosted-evaluations API from Prime Intellect — 4 operation(s) for hosted-evaluations.
-  name: Prime Intellect hosted-evaluations API
+  name: Prime Intellect Hosted Evaluations API
   slug: prime-intellect-hosted-evaluations-api
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
@@ -128,7 +128,7 @@ apis:
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The teams API from Prime Intellect — 1 operation(s) for teams.
-  name: Prime Intellect teams API
+  name: Prime Intellect Teams API
   slug: prime-intellect-teams-api
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
@@ -143,7 +143,7 @@ apis:
 - baseURL: https://api.primeintellect.ai
   baseurl_source: declared
   description: The user API from Prime Intellect — 3 operation(s) for user.
-  name: Prime Intellect user API
+  name: Prime Intellect User API
   slug: prime-intellect-user-api
 artifact_total: 77
 collections:
@@ -484,23 +484,23 @@ rules:
   slug: prime-intellect-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 56.5
+  composite: 55.6
   coverage:
     artifact_dirs: 16
-    catalog_earned: 82.3
+    catalog_earned: 83.1
     catalog_earned_first_party: 12.0
-    catalog_gap: 32.8
+    catalog_gap: 32.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 50.0
     contract_governance: 9.8
-    contract_quality: 70.2
+    contract_quality: 63.8
     developer_ergonomics: 70.2
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 56.5
+    discoverability: 71.4
+    operational_transparency: 33.7
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     contracts:
@@ -508,8 +508,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 20
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -541,7 +547,8 @@ tags:
 - Environment
 - Evaluation
 - LoRA
-- Open-Source
+- Open Source
 - Agents
+- Model Training
 website: https://www.primeintellect.ai
 ---

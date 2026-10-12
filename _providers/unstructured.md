@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.7
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -48,47 +48,47 @@ apis:
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The channels API from Unstructured — 3 operation(s) for channels.
-  name: Unstructured channels API
+  name: Unstructured Channels API
   slug: unstructured-channels-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The destinations API from Unstructured — 3 operation(s) for destinations.
-  name: Unstructured destinations API
+  name: Unstructured Destinations API
   slug: unstructured-destinations-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The general API from Unstructured — 1 operation(s) for general.
-  name: Unstructured general API
+  name: Unstructured General API
   slug: unstructured-general-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The jobs API from Unstructured — 6 operation(s) for jobs.
-  name: Unstructured jobs API
+  name: Unstructured Jobs API
   slug: unstructured-jobs-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The notifications API from Unstructured — 4 operation(s) for notifications.
-  name: Unstructured notifications API
+  name: Unstructured Notifications API
   slug: unstructured-notifications-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The sources API from Unstructured — 3 operation(s) for sources.
-  name: Unstructured sources API
+  name: Unstructured Sources API
   slug: unstructured-sources-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The templates API from Unstructured — 2 operation(s) for templates.
-  name: Unstructured templates API
+  name: Unstructured Templates API
   slug: unstructured-templates-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The workflow-channels API from Unstructured — 3 operation(s) for workflow-channels.
-  name: Unstructured workflow-channels API
+  name: Unstructured Workflow Channels API
   slug: unstructured-workflow-channels-api
 - baseURL: https://platform.unstructuredapp.io/api/v1
   baseurl_source: declared
   description: The workflows API from Unstructured — 6 operation(s) for workflows.
-  name: Unstructured workflows API
+  name: Unstructured Workflows API
   slug: unstructured-workflows-api
 artifact_total: 30
 collections:
@@ -234,12 +234,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Unstructured MCP Server
-  slug: unstructured-mcp-server
+  slug: uns-mcp
 modified: '2026-06-12'
 name: Unstructured
 nav: Providers
 network: true
-overview: 'Unstructured publishes 9 APIs on the [APIs.io](https://apis.io/) network, including channels API, destinations API, general API, and 6 more. Tagged areas include Document Processing, ETL, RAG, LLM, and PDF.
+overview: 'Unstructured publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Destinations API, General API, and 6 more. Tagged areas include Document Processing, ETL, RAG, LLM, and PDF.
 
 
   The Unstructured catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -268,23 +268,23 @@ rules:
   slug: unstructured-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.8
+  composite: 41.7
   coverage:
     artifact_dirs: 16
-    catalog_earned: 76.3
+    catalog_earned: 73.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.8
+    catalog_gap: 41.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 60.8
+    access_clarity: 54.7
+    contract_governance: 23.5
+    contract_quality: 55.6
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 43.8
+    discoverability: 65.0
+    operational_transparency: 21.6
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     contracts:
@@ -292,8 +292,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

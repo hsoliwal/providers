@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Direct REST access to Synthefy's foundation models for multivariate time-series forecasting (Migas-1.0), with automatic timestamp/value/metadata handling and exogenous covariate context. Called via th
@@ -157,7 +157,7 @@ modified: '2026-07-21'
 name: Synthefy
 nav: Providers
 network: true
-overview: 'Synthefy publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Foundation Models, Machine-Learning, Forecasting, and Time Series.
+overview: 'Synthefy publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Foundation Models, Machine Learning, Forecasting, and Time Series.
 
 
   Synthefy''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 16 more developer resources.'
@@ -168,7 +168,7 @@ rate_limits:
   slug: synthefy-rate-limits
 score:
   band: thin
-  composite: 31.2
+  composite: 32.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -182,14 +182,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 31.2
+  previous_composite: 32.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -209,7 +215,7 @@ slug: synthefy
 tags:
 - Company
 - Foundation Models
-- Machine-Learning
+- Machine Learning
 - Forecasting
 - Time Series
 - Tabular Data

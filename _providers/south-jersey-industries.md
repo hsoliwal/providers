@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The South Jersey Industries API provides access to platform services and data for enterprise integration and automation.
@@ -78,7 +78,7 @@ rate_limits:
   slug: south-jersey-industries-rate-limits
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 39.0
@@ -92,17 +92,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 9.5
+  previous_composite: 9.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

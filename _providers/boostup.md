@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -64,6 +64,11 @@ collections:
   name: Boostup Export API
   slug: open-boostup-export-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/boostup/refs/heads/main/capabilities/boostup-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/boostup-capability-edges.yml
 - group: design
   href: https://raw.githubusercontent.com/api-evangelist/boostup/refs/heads/main/arazzo/boostup-export-all-revenue-data.yml
   title: ''
@@ -217,7 +222,7 @@ network: true
 overview: 'Boostup publishes 1 API on the [APIs.io](https://apis.io/) network: Export API. Tagged areas include Company, Revenue Intelligence, Sales, Forecasting, and Analytics.
 
 
-  Boostup''s developer surface includes authentication, engineering blog, documentation, API reference, signup flow, support, and 25 more developer resources.'
+  Boostup''s developer surface includes authentication, engineering blog, documentation, API reference, signup flow, support, and 26 more developer resources.'
 plans:
 - name: Boostup Plans Pricing
   plan_count: 0
@@ -229,9 +234,9 @@ rate_limits:
   slug: boostup-rate-limits
 score:
   band: developing
-  composite: 40.6
+  composite: 42.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -241,11 +246,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 40.6
+  previous_composite: 42.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -256,8 +261,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

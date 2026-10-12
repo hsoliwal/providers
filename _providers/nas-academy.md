@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 44.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -92,7 +92,7 @@ layout: provider
 mcp_servers:
 - description: Official authenticated hosted MCP server for Nas.com business, member, product, and order context.
   name: Nas Academy MCP Server
-  slug: nas-academy-mcp-server
+  slug: nas-com-official-mcp
 modified: '2026-07-17'
 name: Nas Academy
 nav: Providers
@@ -106,7 +106,7 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: emerging
-  composite: 18.5
+  composite: 16.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 15.0
@@ -118,11 +118,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 45.7
+    contract_quality: 41.1
     developer_ergonomics: 7.1
-    discoverability: 35.2
+    discoverability: 38.3
     operational_transparency: 0.0
-  previous_composite: 18.5
+  previous_composite: 16.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -133,8 +133,14 @@ score:
       total: 2
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

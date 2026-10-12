@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -173,13 +173,13 @@ description: Maison Safqa Holdings Limited operates Maison Safqa, a members-only
 image: https://cdn.shopify.com/s/files/1/0865/0224/4663/files/logo-ms.svg?v=1763809309
 layout: provider
 modified: '2026-07-20'
-name: Maison Safqa Holdings Limited
+name: Maison Safqa
 nav: Providers
 network: true
-overview: 'Maison Safqa Holdings Limited publishes 2 APIs on the [APIs.io](https://apis.io/) network: Inventory API and Products API. Tagged areas include Company, Retail, E-Commerce, Luxury, and Marketplace.
+overview: 'Maison Safqa publishes 2 APIs on the [APIs.io](https://apis.io/) network: Holdings Limited Inventory API and Holdings Limited Products API. Tagged areas include Company, Retail, E-Commerce, Luxury, and Marketplace.
 
 
-  Maison Safqa Holdings Limited''s developer surface includes documentation, support, authentication, sandbox, and 17 more developer resources.'
+  Maison Safqa''s developer surface includes documentation, support, authentication, sandbox, and 17 more developer resources.'
 random_paper: 2
 rate_limits:
 - limit_count: 2
@@ -187,7 +187,7 @@ rate_limits:
   slug: maison-safqa-holdings-limited-rate-limits
 score:
   band: thin
-  composite: 39.1
+  composite: 38.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -199,11 +199,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 39.1
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -214,8 +214,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -238,7 +244,7 @@ tags:
 - Luxury
 - Marketplace
 - Product Catalog
-- Inventory Management
+- Inventory
 - Shopify
 website: https://maisonsafqa.com
 ---

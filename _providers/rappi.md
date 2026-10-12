@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -31,14 +31,14 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 15.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Rappi Partners REST API is the integration surface used by approved restaurants, grocery and retail merchants, and middleware/POS providers to operate on the Rappi marketplace. Authentication is O
   name: Rappi Partners REST API
   slug: partners-api
-artifact_total: 21
+artifact_total: 22
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/rappi/refs/heads/main/security/rappi-domain-security.yml
@@ -140,18 +140,22 @@ integrations:
 - description: RappiTravel aggregates flight and hotel inventory from third-party GDS and travel partners.
   name: Travel Suppliers
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.rappi.com over HTTP.
+  name: Rappi MCP Server
+  slug: rappi
 modified: '2026-05-24'
 name: Rappi
 nav: Providers
 network: true
-overview: 'Rappi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Delivery, Food Delivery, Grocery Delivery, On-Demand, and Last Mile.
+overview: 'Rappi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Delivery, Food Delivery, Grocery Delivery, On-Demand, and Last Mile Delivery.
 
 
   Rappi''s developer surface includes API reference, authentication, FAQ, engineering blog, and 14 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 5.5
+  composite: 6.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -165,7 +169,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 1.2
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -174,7 +178,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 5.5
+  previous_composite: 6.3
   provenance:
     mcp: first-party
   regulatory:
@@ -182,9 +186,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +215,7 @@ tags:
 - Food Delivery
 - Grocery Delivery
 - On-Demand
-- Last Mile
+- Last Mile Delivery
 - Logistics
 - Super App
 - Fintech
@@ -219,6 +223,7 @@ tags:
 - Marketplace
 - Latin America
 - Colombia
+- Restaurant
 use_cases:
 - description: Restaurant POS vendors and order aggregators sync menus and push/pull orders between merchant systems and Rappi storefronts.
   name: POS & Aggregator Integration

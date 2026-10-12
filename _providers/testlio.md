@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -100,6 +100,10 @@ created: '2026-07-17'
 description: Testlio is a managed software testing and quality assurance company that pairs a global, vetted community of expert testers with a testing-management platform (powered by its Leo AI Engine) to deliver on-demand manual, automated, functional, regression, payments, localization, accessibility, usability, and AI testing across web, mobile, streaming, and voice experiences. Founded in Estonia and headquartered in Austin, Texas, Testlio is a Techstars-backed company serving enterprise engineering and QA teams. It exposes no public REST API; the platform integrates with engineering toolchains (Jira, GitHub, Azure DevOps, GitLab, TestRail, Xray, Slack, BrowserStack, SauceLabs, Playwright) and ships first-party CI/CD integrations, including a CircleCI orb and a Jenkins plugin, alongside a documented Trust Center.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/testlio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.testlio.com over HTTP.
+  name: Testlio MCP Server
+  slug: testlio
 modified: '2026-07-21'
 name: Testlio
 nav: Providers
@@ -111,7 +115,7 @@ overview: 'Testlio is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 2
 score:
   band: emerging
-  composite: 18.1
+  composite: 18.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -125,18 +129,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.1
+  previous_composite: 18.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

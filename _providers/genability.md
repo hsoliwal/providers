@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -256,7 +256,7 @@ overview: 'Genability publishes 2 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 8
 score:
   band: developing
-  composite: 48.2
+  composite: 44.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -268,9 +268,9 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -279,7 +279,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.2
+  previous_composite: 44.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -295,9 +295,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 47.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

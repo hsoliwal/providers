@@ -14,7 +14,8 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: documented
@@ -36,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.4
-  scored_at: '2026-09-20'
+  score: 41.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.newtqnia.com
@@ -184,7 +185,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: NewTqnia | Technology News, AI and Innovation MCP Server
-  slug: newtqnia-technology-news-ai-and-innovation-mcp-server
+  slug: mcp
 modified: '2026-08-28'
 name: NewTqnia | Technology News, AI and Innovation
 nav: Providers
@@ -204,12 +205,12 @@ rate_limits:
   slug: newtqnia-rate-limits
 scopes:
 - name: Newtqnia Scopes
-  scope_count: 0
+  scope_count: 2
   slug: newtqnia-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorization_code
 score:
-  band: developing
-  composite: 53.7
+  band: strong
+  composite: 54.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 57.0
@@ -221,11 +222,11 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 18.2
-    contract_quality: 51.7
+    contract_quality: 46.8
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 53.7
+  previous_composite: 54.8
   provenance:
     conformance: first-party
     contracts:
@@ -235,8 +236,14 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

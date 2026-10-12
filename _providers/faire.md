@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for Faire brands to manage products, inventory, orders, shipments, and returns.
@@ -109,7 +109,7 @@ rate_limits:
   slug: faire-rate-limits
 score:
   band: minimal
-  composite: 10.6
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 34.0
@@ -123,11 +123,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 10.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

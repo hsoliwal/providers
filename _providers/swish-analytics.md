@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.swishanalytics.com
@@ -235,7 +235,7 @@ overview: 'Swish Analytics publishes 10 APIs on the [APIs.io](https://apis.io/) 
 random_paper: 9
 score:
   band: emerging
-  composite: 16.5
+  composite: 16.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 42.0
@@ -249,9 +249,9 @@ score:
     contract_governance: 19.7
     contract_quality: 13.9
     developer_ergonomics: 13.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 16.5
+  previous_composite: 16.2
   provenance:
     conformance: derived
     contracts:
@@ -261,8 +261,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -285,7 +291,7 @@ tags:
 - Sports Betting
 - Sportsbook
 - Analytics
-- Machine-Learning
+- Machine Learning
 - Odds
 - Player Props
 - Data

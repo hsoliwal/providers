@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Netradyne partner/developer API, documented on a Stoplight-hosted developer portal (sign-in required). Exposes fleet, driver, vehicle, safety-event, and video-access data for integrating Driver·i tele
   name: Netradyne Developer API
   slug: netradyne-developer-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -107,6 +107,10 @@ created: '2026-07-17'
 description: Netradyne is a transportation technology company whose Driver·i platform brings Edge AI and computer vision to commercial fleet safety and management. In-cab camera systems capture 100% of drive time, analyze driving behavior in real time, and drive the GreenZone Score, driver self-coaching, managed coaching, GPS tracking, and vehicle alerts across trucking, delivery, construction, passenger transit, school transportation, and other industries. Netradyne exposes a partner/developer API surface (developer.netradyne.com, hosted on Stoplight, behind sign-in) plus a broad integrations and installation-partner ecosystem, and publishes a security program certified to ISO 27001/27017/27018/27701 and HIPAA. Backed by SoftBank Vision Fund.
 image: https://cdn.prod.website-files.com/691f9a539f7f4834f9f9995c/69698ab78671c782dfcdce16_681e8489de6bd665ab917ad9_71b33f703df1ca930e82831c29ab40c1_Netradyne_Home_Test_Hero.avif
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.netradyne.com over HTTP.
+  name: Netradyne MCP Server
+  slug: netradyne
 modified: '2026-07-20'
 name: Netradyne
 nav: Providers
@@ -118,7 +122,7 @@ overview: 'Netradyne publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 2
 score:
   band: emerging
-  composite: 22.2
+  composite: 22.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -132,13 +136,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 22.2
+  previous_composite: 22.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +175,7 @@ tags:
 - Fleet Safety
 - Fleet Management
 - Telematics
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
 - Dash Cameras
 - Driver Coaching

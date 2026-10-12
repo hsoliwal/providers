@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Cross-border payouts to bank accounts, cards and wallets in 220+ countries with real-time delivery in 100+.
@@ -96,7 +96,7 @@ rate_limits:
   slug: nium-rate-limits
 score:
   band: minimal
-  composite: 8.7
+  composite: 9.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 42.0
@@ -110,17 +110,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 8.7
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -139,5 +139,6 @@ tags:
 - Payments
 - FX
 - Issuing
+- Cross-Border Payments
 website: https://nium.com
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -301,14 +301,14 @@ examples:
 image: https://wegtultrarich.org/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.wegtultrarich.org over streamable HTTP; 5 tools listed.
   name: We > Ultrarich MCP Server
-  slug: we-ultrarich-mcp-server
+  slug: org-wegtultrarich-mcp
 modified: '2026-08-09'
 name: We > Ultrarich
 nav: Providers
 network: true
-overview: 'We > Ultrarich publishes 4 APIs on the [APIs.io](https://apis.io/) network, including MCP Server, Comparison API, Discovery API, and 1 more. Tagged areas include wealth inequality, economic inequality, Finance, Economics, and Education.
+overview: 'We > Ultrarich publishes 4 APIs on the [APIs.io](https://apis.io/) network, including MCP Server, Comparison API, Discovery API, and 1 more. Tagged areas include wealth inequality, economic inequality, Economics, Education, and Journalism.
 
 
   The We > Ultrarich catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -334,23 +334,23 @@ rules:
   slug: wegtultrarich-spectral
 score:
   band: strong
-  composite: 59.9
+  composite: 55.0
   coverage:
     artifact_dirs: 24
-    catalog_earned: 65.3
+    catalog_earned: 63.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 49.8
+    catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 31.6
-    contract_governance: 53.8
-    contract_quality: 56.5
+    contract_governance: 49.2
+    contract_quality: 51.1
     developer_ergonomics: 61.3
-    discoverability: 94.4
+    discoverability: 91.7
     operational_transparency: 52.6
-  previous_composite: 59.9
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -366,9 +366,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -392,7 +392,6 @@ slug: wegtultrarich
 tags:
 - wealth inequality
 - economic inequality
-- Finance
 - Economics
 - Education
 - Journalism

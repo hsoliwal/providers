@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Habitat Lab provides an overview of Habitat 2.0 with documentation, quickstart code, and reproducing benchmark results for embodied AI research in simulated 3D environments. There is no public REST or
@@ -105,7 +105,7 @@ rate_limits:
   slug: habitat-lab-rate-limits
 score:
   band: emerging
-  composite: 21.6
+  composite: 19.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -119,14 +119,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 21.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

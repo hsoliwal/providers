@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -45,11 +45,6 @@ agentic_access:
   summary_line: 39 operations · 6 acting
 api_count: 4
 apis:
-- baseURL: https://api.tomtom.com
-  baseurl_source: declared
-  description: The TomTom Geocoding API converts structured addresses into geographic coordinates and supports reverse geocoding to translate coordinates into human-readable addresses. The Premium Geocoding API adds
-  name: TomTom Geocoding API
-  slug: tomtom-geocoding-api
 - description: The TomTom Fuel Prices API provides current fuel price information at specific fueling stations, including price by fuel type.
   name: TomTom Fuel Prices API
   slug: tomtom-fuel-prices-api
@@ -84,7 +79,7 @@ apis:
   slug: tomtom-filters-api
 - baseURL: https://api.tomtom.com
   baseurl_source: declared
-  description: The Geocoding API from TomTom — 2 operation(s) for geocoding.
+  description: The TomTom Geocoding API converts structured addresses into geographic coordinates and supports reverse geocoding to translate coordinates into human-readable addresses. The Premium Geocoding API adds
   name: TomTom Geocoding API
   slug: tomtom-geocoding-api
 - baseURL: https://api.tomtom.com
@@ -342,11 +337,15 @@ jsonld:
   property_count: 4
   slug: tomtom-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tomtom.com over HTTP.
+  name: TomTom MCP Server
+  slug: tomtom
 modified: '2026-05-19'
 name: TomTom
 nav: Providers
 network: true
-overview: 'TomTom publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Geocoding API, Additional Data API, Batch Routing API, and 13 more. Tagged areas include Maps, Traffic, Transportation, Navigation, and Location.
+overview: 'TomTom publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Additional Data API, Batch Routing API, Copyrights API, and 16 more. Tagged areas include Maps, Traffic, Transportation, Navigation, and Location.
 
 
   The TomTom catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -389,18 +388,18 @@ score:
   composite: 42.4
   coverage:
     artifact_dirs: 18
-    catalog_earned: 66.5
+    catalog_earned: 66.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.5
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
-    contract_governance: 28.8
-    contract_quality: 58.6
+    contract_governance: 27.3
+    contract_quality: 53.3
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 10.5
   previous_composite: 42.4
   provenance:
@@ -411,8 +410,14 @@ score:
       marker_coverage: 0.0
       total: 15
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -441,5 +446,6 @@ tags:
 - Geospatial
 - Routing
 - Geocoding
+- Mobility
 website: https://www.tomtom.com/
 ---

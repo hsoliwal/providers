@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 73
   human_in_the_loop: 0
@@ -159,14 +159,14 @@ modified: '2026-07-18'
 name: Bittensor
 nav: Providers
 network: true
-overview: 'Bittensor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Blockchain, Decentralized AI, and Machine-Learning.
+overview: 'Bittensor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Blockchain, Decentralized AI, and Machine Learning.
 
 
   Bittensor''s developer surface includes documentation, getting-started guide, API reference, engineering blog, CLI, authentication, and 16 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 22.2
+  composite: 21.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -180,16 +180,22 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 22.2
+  previous_composite: 21.9
   provenance:
     agentic_access: derived
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +217,7 @@ tags:
 - Artificial Intelligence
 - Blockchain
 - Decentralized AI
-- Machine-Learning
+- Machine Learning
 - Cryptocurrency
 - Web3
 - SDK

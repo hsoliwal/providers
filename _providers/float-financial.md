@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.floatfinancial.com
@@ -161,6 +161,11 @@ asyncapis:
   name: Float Financial Webhooks
   slug: float-financial-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/float-financial/refs/heads/main/capabilities/float-financial-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/float-financial-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/float-financial/refs/heads/main/security/float-financial-domain-security.yml
   title: ''
@@ -327,7 +332,7 @@ overview: 'Float Financial publishes 23 APIs on the [APIs.io](https://apis.io/) 
   The Float Financial catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Float Financial''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 26 more developer resources.'
+  Float Financial''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 27 more developer resources.'
 plans:
 - name: Float Financial Plans Pricing
   plan_count: 3
@@ -339,7 +344,7 @@ rate_limits:
   slug: float-financial-rate-limits
 score:
   band: strong
-  composite: 63.1
+  composite: 59.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -351,9 +356,9 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 62.3
+    contract_quality: 57.2
     developer_ergonomics: 45.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -362,7 +367,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 63.1
+  previous_composite: 59.9
   provenance:
     conformance: first-party
     contracts:
@@ -377,9 +382,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

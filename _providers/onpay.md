@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -100,6 +100,11 @@ collections:
   name: OnPay User API
   slug: open-onpay-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/onpay/refs/heads/main/capabilities/onpay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/onpay-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/onpay/refs/heads/main/mcp/onpay-mcp.yml
   title: ''
@@ -237,7 +242,7 @@ network: true
 overview: 'OnPay publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Company API, Deductions API, Employees API, and 3 more. Tagged areas include Payroll, Human Resources, Employee Benefits, payroll-tax, and Small Business.
 
 
-  OnPay''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
+  OnPay''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 random_paper: 1
 scopes:
 - name: Onpay Scopes
@@ -246,9 +251,9 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: developing
-  composite: 39.7
+  composite: 42.2
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -258,11 +263,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 49.8
+    contract_quality: 44.9
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 39.7
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -273,8 +278,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

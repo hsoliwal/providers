@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.extensiontotal.com/api
@@ -52,6 +52,11 @@ collections:
   name: ExtensionTotal Risk API
   slug: open-koi-security-risk-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/koi-security/refs/heads/main/capabilities/koi-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/koi-security-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -189,11 +194,11 @@ network: true
 overview: 'Koi Security publishes 1 API on the [APIs.io](https://apis.io/) network: Risk API. Tagged areas include Company, Security, Endpoint Security, Supply Chain Security, and Browser Extension.
 
 
-  Koi Security''s developer surface includes documentation, API reference, engineering blog, signup flow, support, authentication, and 22 more developer resources.'
+  Koi Security''s developer surface includes documentation, API reference, engineering blog, signup flow, support, authentication, and 23 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 35.0
+  composite: 34.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -205,14 +210,14 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.9
+    contract_quality: 53.9
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 35.0
+  previous_composite: 34.8
   provenance:
     conformance: derived
     contracts:
@@ -222,8 +227,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

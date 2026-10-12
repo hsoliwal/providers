@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.1
-  scored_at: '2026-09-20'
+  score: 7.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The GreyMatter API exposes select GreyMatter capabilities through a single GraphQL endpoint. All requests are HTTPS POSTs with JSON bodies authenticated by an X-API-KEY header; 58 queries and 95 mutat
@@ -181,12 +181,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: ReliaQuest MCP Server
-  slug: reliaquest-mcp-server
+  slug: reliaquest-mcp-yml
 modified: '2026-09-18'
 name: ReliaQuest
 nav: Providers
 network: true
-overview: 'ReliaQuest publishes 1 API on the [APIs.io](https://apis.io/) network: GreyMatter API. Tagged areas include Cybersecurity, Security Operations, Threat Detection, Incident Response, and Threat Intelligence.
+overview: 'ReliaQuest publishes 2 APIs on the [APIs.io](https://apis.io/) network, including GreyMatter API, and 1 more. Tagged areas include Cybersecurity, Security Operations, Threat Detection, Incident Response, and Threat Intelligence.
 
 
   ReliaQuest''s developer surface includes engineering blog, documentation, API reference, changelog, FAQ, pricing, support, and 24 more developer resources.'
@@ -201,7 +201,7 @@ rate_limits:
   slug: reliaquest-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 37.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -213,22 +213,30 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.0
+  previous_composite: 37.7
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -259,7 +267,7 @@ tags:
 - Incident Response
 - Threat Intelligence
 - Digital Risk Protection
-- Agentic AI
+- AI Agents
 - GraphQL
 website: https://reliaquest.com/
 ---

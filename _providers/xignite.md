@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -353,14 +353,14 @@ modified: '2026-07-22'
 name: Xignite
 nav: Providers
 network: true
-overview: 'Xignite publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Global Quotes API, Global Real-Time API, Global Historical API, and 19 more. Tagged areas include Financial, Market Data, Stocks, Real-Time, and Forex.
+overview: 'Xignite publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Global Quotes API, Global Real-Time API, Global Historical API, and 20 more. Tagged areas include Finance, Market Data, Stocks, Real-Time, and Forex.
 
 
   Xignite''s developer surface includes authentication, developer portal, documentation, engineering blog, signup flow, support, API reference, and 19 more developer resources.'
 random_paper: 12
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 38.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -372,11 +372,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 46.1
+    contract_quality: 41.5
     developer_ergonomics: 66.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 2.6
-  previous_composite: 40.7
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -392,9 +392,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -412,7 +412,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: xignite
 tags:
-- Financial
+- Finance
 - Market Data
 - Stocks
 - Real-Time

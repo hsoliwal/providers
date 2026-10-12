@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 36.2
-  scored_at: '2026-09-20'
+  score: 34.0
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Referral coupon API published as a public Postman collection. Checks and burns coupons for a referrer or a newly referred prospect, authenticated by a SHA-256 hash of the coupon code concatenated with
@@ -128,6 +128,11 @@ apis:
   slug: splio-universe-api
 artifact_total: 22
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/splio/refs/heads/main/capabilities/splio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/splio-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/splio/refs/heads/main/overlays/splio-customer-platform-overlay.yaml
   title: ''
@@ -337,7 +342,7 @@ network: true
 overview: 'Splio publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Referral API, Blacklist API, Contact API, and 15 more. Tagged areas include Marketing Automation, Customer Data Platform, Loyalty, CRM, and Email Marketing.
 
 
-  Splio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 36 more developer resources.'
+  Splio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 37 more developer resources.'
 plans:
 - name: Splio Plans Pricing
   plan_count: 0
@@ -348,10 +353,10 @@ rate_limits:
   name: Splio Rate Limits
   slug: splio-rate-limits
 score:
-  band: strong
-  composite: 55.0
+  band: developing
+  composite: 51.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
@@ -361,9 +366,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 56.0
+    contract_quality: 50.5
     developer_ergonomics: 51.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -373,7 +378,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 55.0
+  previous_composite: 51.6
   provenance:
     conformance: first-party
     contracts:
@@ -392,9 +397,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

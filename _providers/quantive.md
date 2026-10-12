@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful API v1.0 for the WorkBoard / Quantive strategy-execution platform. Supports OAuth 2.0 (authorization-code) for multi-user apps and an instant-token flow for single-user or testing scenarios. A
@@ -83,12 +83,12 @@ overview: 'Quantive publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 19
 scopes:
 - name: Quantive Scopes
-  scope_count: 0
+  scope_count: 1
   slug: quantive-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code
 score:
   band: emerging
-  composite: 14.4
+  composite: 15.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -102,11 +102,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 14.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

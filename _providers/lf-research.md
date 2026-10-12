@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic access to LF Research publications, open source trend data, and industry analysis resources.
@@ -87,7 +87,7 @@ modified: '2026-04-28'
 name: LF Research
 nav: Providers
 network: true
-overview: 'LF Research publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Analysis, Linux Foundation, Open-Source, and Research.
+overview: 'LF Research publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Analysis, Linux Foundation, Open Source, and Research.
 
 
   LF Research''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
@@ -102,7 +102,7 @@ rate_limits:
   slug: lf-research-rate-limits
 score:
   band: emerging
-  composite: 12.3
+  composite: 11.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 36.0
@@ -116,11 +116,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 12.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +146,7 @@ slug: lf-research
 tags:
 - Analysis
 - Linux Foundation
-- Open-Source
+- Open Source
 - Research
 website: https://www.linuxfoundation.org/
 ---

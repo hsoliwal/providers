@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'An anonymous, read-oriented Model Context Protocol endpoint served from Field Medical''s own corporate domain. It is provided by the Wix website platform (Wix Site MCP), not authored by Field Medical, '
@@ -107,9 +107,9 @@ description: 'Field Medical, Inc. is a Carlsbad, California clinical-stage cardi
 image: https://static.wixstatic.com/media/8a66b7_1cc006a6bfe247ada2ee91171488f369%7Emv2.png/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/8a66b7_1cc006a6bfe247ada2ee91171488f369%7Emv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.fieldmedicalinc.com over HTTP; 9 tools listed.
   name: Field Medical MCP Server
-  slug: field-medical-mcp-server
+  slug: field-medical-site-mcp
 modified: '2026-08-12'
 name: Field Medical
 nav: Providers
@@ -129,7 +129,7 @@ rate_limits:
   slug: field-medical-rate-limits
 score:
   band: emerging
-  composite: 14.9
+  composite: 14.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -143,20 +143,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 14.9
+  previous_composite: 14.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

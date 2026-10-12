@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-09-20'
+  score: 34.2
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Shopify Storefront GraphQL API served on lemonperfect.com. Introspection is open anonymously: 428 types, 35 query fields and 41 mutations covering products, collections, search, carts, customer ac'
@@ -165,9 +165,9 @@ description: 'Lemon Perfect is an Atlanta-based beverage company founded in 2017
 image: https://cdn.shopify.com/s/files/1/0032/0520/2020/files/Product_Lineup_52.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Lemon Perfect publishes a live, hosted MCP endpoint on its own apex domain as the transport for the Universal Commerce Protocol (UCP) shopping service. The endpoint is advertised in three places the c
   name: Lemon Perfect MCP Server
-  slug: lemon-perfect-mcp-server
+  slug: lemon-perfect-ucp
 modified: '2026-08-04'
 name: Lemon Perfect
 nav: Providers
@@ -187,8 +187,8 @@ scopes:
   slug: lemon-perfect-scopes
   summary_line: 4 scopes · authorizationCode/refreshToken/jwtBearer
 score:
-  band: developing
-  composite: 41.0
+  band: thin
+  composite: 35.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -200,22 +200,30 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 41.0
+  previous_composite: 35.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Qubole Data Service (QDS) REST API for submitting and managing data commands (Hive, Presto, Spark, Hadoop, Pig, shell, DB import/export, notebook), managing compute clusters, scheduling recurring '
@@ -178,7 +178,7 @@ overview: 'Qubole publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 10
 score:
   band: thin
-  composite: 36.9
+  composite: 38.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -192,14 +192,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 36.9
+  previous_composite: 38.4
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -230,7 +236,7 @@ tags:
 - Presto
 - Hive
 - Airflow
-- Machine-Learning
+- Machine Learning
 - Cloud
 - Data Engineering
 website: https://www.qubole.com/

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.land.tech/api
@@ -274,14 +274,14 @@ modified: '2026-07-19'
 name: Land Insight
 nav: Providers
 network: true
-overview: 'Land Insight publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Additional Opportunities API, Development Constraints API, Development Opportunities API, and 9 more. Tagged areas include Company, Real-Estate, Property, Land, and Planning.
+overview: 'Land Insight publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Additional Opportunities API, Development Constraints API, Development Opportunities API, and 9 more. Tagged areas include Company, Real Estate, Property, Land, and Planning.
 
 
   Land Insight''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
 random_paper: 8
 score:
   band: developing
-  composite: 45.9
+  composite: 46.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -293,9 +293,9 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 56.9
+    contract_quality: 51.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -305,7 +305,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.9
+  previous_composite: 46.2
   provenance:
     conformance: derived
     contracts:
@@ -315,8 +315,18 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -338,7 +348,7 @@ security:
 slug: land-insight
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Property
 - Land
 - Planning

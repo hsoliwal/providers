@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Threshold-key Auth Network nodes that issue and recover key shares anchored to OAuth/social/passkey identity providers. Accessed primarily through the Web3Auth client SDK rather than as a developer-fa
@@ -42,7 +42,7 @@ apis:
 - description: Backend REST endpoints used by the Web3Auth dashboard to manage projects, verifiers, custom auth, and analytics. Available to project administrators.
   name: Web3Auth Dashboard / Verifier API
   slug: dashboard-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/web3auth/refs/heads/main/security/web3auth-trust-center.yml
@@ -97,6 +97,10 @@ finops:
   slug: web3auth-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/web3auth.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.web3auth.io over HTTP; 5 tools listed.
+  name: Web3Auth MCP Server
+  slug: web3auth
 modified: '2026-05-08'
 name: Web3Auth
 nav: Providers
@@ -116,7 +120,7 @@ rate_limits:
   slug: web3auth-rate-limits
 score:
   band: emerging
-  composite: 13.4
+  composite: 14.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 45.0
@@ -130,9 +134,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 13.4
+  previous_composite: 14.2
   provenance:
     mcp: first-party
   regulatory:
@@ -140,9 +144,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 17.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

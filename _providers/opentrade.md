@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Read-only REST API to query platform data, vaults, accounts, and transactions (current and historical) for building UIs, reporting, and reconciliation with middle/back-office systems. Full endpoint an
@@ -132,7 +132,7 @@ overview: 'Opentrade publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 16
 score:
   band: thin
-  composite: 27.0
+  composite: 27.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -146,13 +146,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 27.0
+  previous_composite: 27.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

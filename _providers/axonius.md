@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Axonius is a cybersecurity asset management platform providing SaaS management, device discovery, and security policy enforcement across IT environments.
@@ -253,7 +253,7 @@ layout: provider
 mcp_servers:
 - description: 'Axonius announced the Axonius MCP Server on 2026-07-21 (blog + GlobeNewswire press release): it "translates natural language questions into Axonius Query Language (AQL) and returns live answers" acros'
   name: Axonius MCP Server
-  slug: axonius-mcp-server
+  slug: axonius-mcp-yml
 modified: '2026-09-18'
 name: Axonius
 nav: Providers
@@ -276,7 +276,7 @@ rate_limits:
   slug: axonius-rate-limits
 score:
   band: developing
-  composite: 49.8
+  composite: 51.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 48.0
@@ -288,16 +288,22 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 58.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 49.8
+  previous_composite: 51.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

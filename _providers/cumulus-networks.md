@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: other
   title: ''
@@ -61,18 +61,22 @@ created: '2026-07-17'
 description: Cumulus Networks was a computer networking company founded in 2010 that developed Cumulus Linux, an open Linux-based network operating system for bare-metal and white-box data-center switches, along with NetQ, a network operations and telemetry platform. It was a pioneer of open, disaggregated networking, letting operators run a standard Linux distribution on commodity switching hardware. NVIDIA acquired Cumulus Networks in May 2020, and the products are now part of NVIDIA's Ethernet switching and networking software line. The former cumulusnetworks.com and docs.cumulusnetworks.com domains now redirect to NVIDIA's networking documentation. Surfaced as a portfolio company of a16z, Battery Ventures, and Wing Venture Capital.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cumulus-networks.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.nvidia.com over HTTP.
+  name: Cumulus Networks MCP Server
+  slug: cumulus-networks
 modified: '2026-08-21'
 name: Cumulus Networks
 nav: Providers
 network: true
-overview: 'Cumulus Networks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Network Operating System, Linux, and Data-Center.
+overview: 'Cumulus Networks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, Network Operating System, Linux, and Data Center.
 
 
   Cumulus Networks'' developer surface includes documentation and 4 more developer resources.'
 random_paper: 4
 score:
   band: minimal
-  composite: 7.2
+  composite: 6.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,13 +90,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 7.2
+  previous_composite: 6.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -110,9 +120,10 @@ tags:
 - Networking
 - Network Operating System
 - Linux
-- Data-Center
+- Data Center
 - Switching
 - Open Networking
 - Telemetry
+- Acquired
 website: https://www.nvidia.com/en-us/networking/ethernet-switching/
 ---

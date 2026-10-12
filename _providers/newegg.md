@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Seller integration API for the Newegg marketplaces covering item, order, shipping-label, RMA, datafeed, report, seller, and SBN management. Requests and responses are JSON or XML, authenticated with p
@@ -156,7 +156,7 @@ overview: 'Newegg publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 21
 score:
   band: thin
-  composite: 29.1
+  composite: 29.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -170,11 +170,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 29.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 29.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

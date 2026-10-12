@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/convoke/refs/heads/main/security/convoke-domain-security.yml
@@ -73,6 +73,10 @@ created: '2026-07-17'
 description: Convoke is building an AI-native operating system for the biopharmaceutical industry. Founded in 2024 and based in South San Francisco, the platform unifies fragmented internal knowledge, workflows, and external data into a continuously updating workspace, codifies the decision logic behind high-stakes choices, and generates critical deliverables such as competitive intelligence briefs, portfolio strategy analyses, market research, and scientific manuscripts across the drug development lifecycle. Convoke serves biopharma teams working in business development, competitive intelligence, portfolio strategy, market research, and medical affairs. The company raised an $8.6M seed round co-led by Kleiner Perkins and Dimension. As of this profile, Convoke publishes a public marketing and company site but no public developer API, SDK, or documentation surface.
 image: https://framerusercontent.com/images/Iv0xFY0plj2ZF7UOeWLJ7vJcdy8.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.convoke.bio over HTTP.
+  name: Convoke MCP Server
+  slug: convoke
 modified: '2026-07-18'
 name: Convoke
 nav: Providers
@@ -84,7 +88,7 @@ overview: 'Convoke is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 9
 score:
   band: minimal
-  composite: 6.7
+  composite: 7.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -98,9 +102,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 6.7
+  previous_composite: 7.0
   provenance:
     mcp: first-party
   regulatory:
@@ -108,9 +112,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

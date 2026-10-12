@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -251,14 +251,14 @@ modified: '2026-05-25'
 name: Pie Insurance
 nav: Providers
 network: true
-overview: 'Pie Insurance publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Appetite API, ClassCodeSearch API, Eligibility API, and 4 more. Tagged areas include Insurance, Insurtech, Workers Compensation, Small Business, and Commercial Insurance.
+overview: 'Pie Insurance publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Appetite API, ClassCodeSearch API, Eligibility API, and 5 more. Tagged areas include Insurance, Insurtech, Workers Compensation, Small Business, and Commercial Insurance.
 
 
   Pie Insurance''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, and 23 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 28.6
+  composite: 27.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -270,16 +270,18 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 0.0
-    contract_quality: 51.4
+    contract_quality: 46.3
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 67.9
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.6
+  previous_composite: 27.3
   provenance:
     agentic_access: derived
     contracts:
@@ -292,9 +294,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 24.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

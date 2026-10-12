@@ -15,7 +15,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 62.6
-  scored_at: '2026-09-20'
+  score: 59.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1203
   human_in_the_loop: 31
@@ -49,52 +49,233 @@ apis:
   baseurl_source: declared
   description: The GitHub Gists API lets you programmatically manage gistslightweight code snippets and notesover HTTP. You can create gists (public or secret/unlisted), read individual gists, list public gists, you
   name: GitHub Gists API
+  phrasing_intents:
+  - id: gists/list
+    intent: List my gists
+    question: Which gists have I created?
+  - id: gists/create
+    intent: Create a gist
+    question: How do I share a code snippet as a new gist?
+  - id: gists/list-public
+    intent: List recent public gists from everyone
+    question: What public gists have people shared most recently?
+  - id: gists/list-starred
+    intent: List gists I've starred
+    question: Which gists have I starred?
+  - id: gists/get
+    intent: Get a gist and its files
+    question: What files and content are inside a particular gist?
+  - id: gists/update
+    intent: Update a gist's description or files
+    question: Can I edit the files in a gist I already posted?
+  - id: gists/delete
+    intent: Delete a gist
+    question: How do I delete a gist I no longer need?
+  - id: gists/list-comments
+    intent: List comments on a gist
+    question: What have people commented on a gist?
+  phrasing_ops: 20
   slug: github-gists-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Issues API lets you programmatically manage issue tracking on GitHub, enabling you to list and filter issues across repositories, create and edit issues, change their state (open/closed), a
   name: GitHub Issues API
+  phrasing_intents:
+  - id: issues/list
+    intent: List my issues across every repository I can see
+    question: What issues are assigned to me across all my repos, including organization repositories?
+  - id: issues/list-for-org
+    intent: List my issues in one organization
+    question: Which issues in a single organization are assigned to me?
+  - id: issues/list-assignees
+    intent: List who can be assigned issues in a repository
+    question: Who are the available assignees for issues in a repository?
+  - id: issues/check-user-can-be-assigned
+    intent: Check if a user can be assigned issues in a repo
+    question: Does a given user have permission to be assigned issues in this repository at all?
+  - id: issues/list-for-repo
+    intent: List issues in a repository
+    question: How do I list the open issues in one specific repository?
+  - id: issues/create
+    intent: Open a new issue in a repository
+    question: How do I file a new issue in a repository through the API?
+  - id: issues/list-comments-for-repo
+    intent: List issue comments across a whole repository
+    question: What comments have been left on issues and pull requests across an entire repository?
+  - id: issues/get-comment
+    intent: Get one issue comment by its id
+    question: How can I look up a single issue comment when I only have its comment id?
+  phrasing_ops: 40
   slug: github-issues-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Licenses API lets you programmatically discover and retrieve open source license information across GitHub. It provides endpoints to list the common licenses GitHub supports, get detailed m
   name: GitHub Licenses API
+  phrasing_intents:
+  - id: licenses/get-all-commonly-used
+    intent: List commonly used open source licenses
+    question: Which open source licenses are most commonly used on GitHub?
+  - id: licenses/get
+    intent: Get the details of one license
+    question: What permissions, conditions and limitations does a specific license like MIT carry?
+  - id: licenses/get-for-repo
+    intent: Get a repository's license
+    question: Which license does a particular repository use?
+  phrasing_ops: 3
   slug: github-licenses-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Markdown API is a REST service that converts Markdownespecially GitHub Flavored Markdowninto the same HTML GitHub renders in READMEs, issues, and pull requests, so external apps can display
   name: GitHub Markdown API
+  phrasing_intents:
+  - id: markdown/render
+    intent: Render Markdown to HTML
+    question: How do I turn Markdown into HTML the same way GitHub displays it?
+  - id: markdown/render-raw
+    intent: Render plain-text Markdown like a README
+    question: Can I send Markdown as plain text instead of JSON and get HTML back?
+  phrasing_ops: 2
   slug: github-markdown-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: Use the REST API to get meta information about GitHub, including the IP addresses of GitHub services.
   name: GitHub Meta API
+  phrasing_intents:
+  - id: meta/root
+    intent: Discover the API's top-level resource links
+    question: What resource URLs does the REST API root advertise?
+  - id: meta/get
+    intent: Get server meta information
+    question: What meta information does my GitHub Enterprise Server instance publish about itself?
+  - id: meta/get-octocat
+    intent: Get the Octocat as ASCII art
+    question: Can I get the Octocat drawn as ASCII art with my own message in a speech bubble?
+  - id: meta/get-zen
+    intent: Get a random Zen of GitHub saying
+    question: What's a random line from the Zen of GitHub?
+  phrasing_ops: 4
   slug: github-meta-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Projects API enables developers to programmatically create and manage GitHub Projects, which are flexible tools for planning and tracking work using customizable boards, tables, and roadmap
   name: GitHub Projects API
+  phrasing_intents:
+  - id: projects/list-for-org
+    intent: List an organization's project boards
+    question: Which classic project boards does an organization have?
+  - id: projects/create-for-org
+    intent: Create an organization project board
+    question: How do I create a new project board owned by an organization?
+  - id: projects/get-card
+    intent: Get a project card
+    question: What's on a specific project card, and which column is it in?
+  - id: projects/update-card
+    intent: Edit or archive a project card
+    question: How do I archive a project card without deleting it?
+  - id: projects/delete-card
+    intent: Delete a project card
+    question: Can I permanently remove a card from a project board instead of archiving it?
+  - id: projects/move-card
+    intent: Move a card within or between project columns
+    question: How do I move a project card to the top or bottom of a column?
+  - id: projects/get-column
+    intent: Get a project column
+    question: What are the details of a specific column on a project board?
+  - id: projects/update-column
+    intent: Rename a project column
+    question: How do I rename a column on a project board?
+  phrasing_ops: 25
   slug: github-projects-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Repos API is a set of REST endpoints that let you programmatically create, read, update, and delete repositories and their resources, giving you control over a repos lifecycle and configura
   name: GitHub Repos API
+  phrasing_intents:
+  - id: repos/list-for-org
+    intent: List an organization's repositories
+    question: What repositories does my GitHub organization own?
+  - id: repos/create-in-org
+    intent: Create a repository in an organization
+    question: How do I create a new repository under my organization rather than my personal account?
+  - id: repos/get
+    intent: Get a repository's details
+    question: Where can I see a repository's default branch, visibility and settings?
+  - id: repos/update
+    intent: Update a repository's settings
+    question: Can I rename a repository or change its description through the API?
+  - id: repos/delete
+    intent: Delete a repository
+    question: How do I permanently delete a GitHub repository?
+  - id: repos/list-autolinks
+    intent: List a repository's autolinks
+    question: Which autolink references are configured on my repository?
+  - id: repos/create-autolink
+    intent: Create an autolink reference
+    question: How do I make ticket IDs like JIRA-123 in commits link to our tracker automatically?
+  - id: repos/get-autolink
+    intent: Get one autolink reference
+    question: What URL template does a specific autolink use?
+  phrasing_ops: 163
   slug: github-repos-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Search API lets you programmatically find and filter content across GitHubincluding repositories, code, issues and pull requests, commits, users, topics, and labelsusing a powerful query la
   name: GitHub Search API
+  phrasing_intents:
+  - id: search/code
+    intent: Search for code inside files
+    question: How do I find where a function is defined across GitHub repositories?
+  - id: search/commits
+    intent: Search commits on default branches
+    question: How can I find commits whose message mentions a bug number?
+  - id: search/issues-and-pull-requests
+    intent: Search issues and pull requests
+    question: How do I find open issues mentioning a keyword across repositories?
+  - id: search/labels
+    intent: Search labels in a repository
+    question: How do I find issue labels in one repository by name or description?
+  - id: search/repos
+    intent: Search repositories
+    question: What are the most-starred repositories for a given topic or language?
+  - id: search/topics
+    intent: Search repository topics
+    question: Which repository topics exist that relate to a keyword?
+  - id: search/users
+    intent: Search users
+    question: How do I find GitHub users by login, name or public email?
+  phrasing_ops: 7
   slug: github-search-api
 - baseURL: https://api.github.com/
   baseurl_source: declared
   description: The GitHub Users API (part of the REST API) lets applications read and, for the authenticated account, manage user-related data on GitHub. It can fetch public profiles for any user or the authenticate
   name: GitHub User API
+  phrasing_intents:
+  - id: users/get-authenticated
+    intent: Get my own account profile
+    question: Who am I signed in as, according to the token I'm using?
+  - id: users/update-authenticated
+    intent: Update my own profile
+    question: Can I change my display name, bio or location on my profile through the API?
+  - id: users/list-emails-for-authenticated-user
+    intent: List all email addresses on my account
+    question: Which email addresses are attached to my account, and which one is public?
+  - id: users/add-email-for-authenticated-user
+    intent: Add an email address to my account
+    question: How do I add another email address to my account?
+  - id: users/delete-email-for-authenticated-user
+    intent: Remove an email address from my account
+    question: Can I remove an old email address from my account?
+  - id: users/list-followers-for-authenticated-user
+    intent: List my followers
+    question: Who follows me?
+  - id: users/list-followed-by-authenticated-user
+    intent: List the people I follow
+    question: Which accounts am I following?
+  - id: users/check-person-is-followed-by-authenticated
+    intent: Check if I follow a user
+    question: Am I already following a particular user?
+  phrasing_ops: 36
   slug: github-user-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: 'The GitHub Checks API lets you create and manage check runs and check suites that report detailed status, annotations, and results for commits. It enables CI/CD tools and integrations to report build '
-  name: GitHub Checks API
-  slug: github-checks-api
 - description: 'The GitHub Deployments API lets you create and manage deployments and deployment statuses for repositories. Deployments are requests to deploy a specific ref (branch, SHA, tag) to an environment, and '
   name: GitHub Deployments API
   slug: github-deployments-api
@@ -104,11 +285,6 @@ apis:
 - description: The GitHub Pages API lets you manage GitHub Pages sites for repositories, including creating, updating, and deleting sites, configuring custom domains and HTTPS enforcement, and triggering and monitor
   name: GitHub Pages API
   slug: github-pages-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub Packages API lets you manage packages and package versions in GitHub Packages, a software package hosting service that supports npm, Maven, Gradle, RubyGems, NuGet, Docker, and other packag
-  name: GitHub Packages API
-  slug: github-packages-api
 - description: The GitHub Git Database API provides low-level access to Git objects (blobs, commits, refs, tags, and trees) in a repository. It lets you read and write raw Git data directly, enabling operations like
   name: GitHub Git Database API
   slug: github-git-database-api
@@ -118,40 +294,15 @@ apis:
 - description: The GitHub Copilot API lets organization and enterprise owners manage GitHub Copilot seat assignments, retrieve usage metrics and billing information, and configure Copilot policies. It provides endpo
   name: GitHub Copilot API
   slug: github-copilot-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub Billing API lets you view billing and usage information for organizations and enterprises, including Actions minutes, Packages storage and data transfer, Codespaces usage, and shared storag
-  name: GitHub Billing API
-  slug: github-billing-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub Migrations API lets you migrate data to and from GitHub. It supports organization migrations that export repositories and metadata as downloadable archives, source imports that convert repo
-  name: GitHub Migrations API
-  slug: github-migrations-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub Secret Scanning API lets you retrieve and manage secret scanning alerts for repositories, organizations, and enterprises. Secret scanning detects tokens, keys, and other credentials acciden
-  name: GitHub Secret Scanning API
-  slug: github-secret-scanning-api
 - description: The GitHub Security Advisories API lets you view and manage security advisories for repositories and access the GitHub Advisory Database. It provides endpoints to create, update, and list repository s
   name: GitHub Security Advisories API
   slug: github-security-advisories-api
 - description: The GitHub Commits API lets you list, retrieve, and compare commits in a repository, as well as manage commit comments and commit statuses. It provides endpoints for viewing commit details, listing pu
   name: GitHub Commits API
   slug: github-commits-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: 'The GitHub Reactions API lets you create, list, and delete emoji reactions on issues, pull requests, issue comments, pull request review comments, commit comments, release assets, and team discussion '
-  name: GitHub Reactions API
-  slug: github-reactions-api
 - description: The GitHub Deploy Keys API lets you manage deploy keys for repositories. Deploy keys are SSH keys that grant read-only or read-write access to a single repository, commonly used for automated deployme
   name: GitHub Deploy Keys API
   slug: github-deploy-keys-api
-- baseURL: https://api.github.com
-  baseurl_source: declared
-  description: The GitHub Dependency Graph API lets you view and submit dependency information for a repository. It provides endpoints to export the software bill of materials (SBOM) for a repository and to submit d
-  name: GitHub Dependency Graph API
-  slug: github-dependency-graph-api
 - description: The GitHub Metrics API lets you access community profile and repository statistics, including contributor activity, commit frequency, code frequency, participation data, punch card data, and community
   name: GitHub Metrics API
   slug: github-metrics-api
@@ -192,121 +343,589 @@ apis:
   baseurl_source: declared
   description: Endpoints to manage GitHub Actions using the REST API.
   name: GitHub Actions API
+  phrasing_intents:
+  - id: actions/get-actions-cache-usage-for-enterprise
+    intent: Check Actions cache usage for an enterprise
+    question: How much GitHub Actions cache storage is my whole enterprise using right now?
+  - id: actions/get-actions-cache-usage-policy-for-enterprise
+    intent: Get the enterprise Actions cache size policy
+    question: What cache size limit do repos in my enterprise get for GitHub Actions by default?
+  - id: actions/set-actions-cache-usage-policy-for-enterprise
+    intent: Set the enterprise Actions cache size policy
+    question: Can I raise the default Actions cache size limit for every repo in my enterprise?
+  - id: actions/get-github-actions-default-workflow-permissions-enterprise
+    intent: Get default GITHUB_TOKEN permissions for an enterprise
+    question: What permissions does GITHUB_TOKEN get by default in workflows across my enterprise?
+  - id: actions/set-github-actions-default-workflow-permissions-enterprise
+    intent: Set default GITHUB_TOKEN permissions for an enterprise
+    question: Can I make GITHUB_TOKEN read-only by default for every workflow in my enterprise?
+  - id: actions/get-actions-cache-usage-for-org
+    intent: Check Actions cache usage for an organization
+    question: How much Actions cache storage is my organization using in total?
+  - id: actions/get-actions-cache-usage-by-repo-for-org
+    intent: List repos by Actions cache usage in an org
+    question: Which repositories in my organization are using the most Actions cache?
+  - id: actions/get-github-actions-permissions-organization
+    intent: Get the Actions permissions policy for an org
+    question: Which repositories in my organization are allowed to run GitHub Actions?
+  phrasing_ops: 137
   slug: github-actions-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Activity API from GitHub — 25 operation(s) for activity.
   name: GitHub Activity API
+  phrasing_intents:
+  - id: activity/list-public-events
+    intent: List recent public events across the server
+    question: What public activity is happening across the whole GitHub instance right now?
+  - id: activity/get-feeds
+    intent: List the Atom feeds available to me
+    question: Which Atom timeline feeds can I subscribe to as the signed-in user?
+  - id: activity/list-public-events-for-repo-network
+    intent: List public events for a repository's fork network
+    question: What public activity is happening across a repository and all of its forks?
+  - id: activity/list-notifications-for-authenticated-user
+    intent: List my notifications
+    question: What unread notifications do I have across all my repositories?
+  - id: activity/mark-notifications-as-read
+    intent: Mark all my notifications as read
+    question: How do I clear every notification in my inbox at once?
+  - id: activity/get-thread
+    intent: Get one notification thread
+    question: What is a particular notification thread about and why did I get it?
+  - id: activity/mark-thread-as-read
+    intent: Mark one notification thread as read
+    question: Can I mark just a single notification as read without clearing the rest?
+  - id: activity/get-thread-subscription-for-authenticated-user
+    intent: Check my subscription to a notification thread
+    question: Am I subscribed to a given notification thread, or have I ignored it?
+  phrasing_ops: 31
   slug: github-activity-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Apps API from GitHub — 23 operation(s) for apps.
   name: GitHub Apps API
+  phrasing_intents:
+  - id: apps/get-authenticated
+    intent: Get the GitHub App I'm authenticated as
+    question: Which GitHub App do my current JWT credentials belong to?
+  - id: apps/create-from-manifest
+    intent: Finish creating an app from a manifest
+    question: How do I complete the app manifest flow after the user is redirected back with a code?
+  - id: apps/get-webhook-config-for-app
+    intent: View my app's webhook configuration
+    question: Where is my app sending its webhook payloads?
+  - id: apps/update-webhook-config-for-app
+    intent: Change my app's webhook settings
+    question: Can I point my app's webhook at a new URL?
+  - id: apps/list-webhook-deliveries
+    intent: List my app's webhook deliveries
+    question: Which webhook deliveries has my app sent recently?
+  - id: apps/get-webhook-delivery
+    intent: Inspect one webhook delivery for my app
+    question: What request and response were recorded for one of my app's webhook deliveries?
+  - id: apps/redeliver-webhook-delivery
+    intent: Redeliver a webhook from my app
+    question: Can I resend a webhook my app already delivered once?
+  - id: apps/list-installation-requests-for-authenticated-app
+    intent: List pending installation requests for my app
+    question: Who has asked to install my app but is still waiting for approval?
+  phrasing_ops: 29
   slug: github-apps-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: Monitor charges and usage from Actions and Packages.
+  description: The GitHub Billing API lets you view billing and usage information for organizations and enterprises, including Actions minutes, Packages storage and data transfer, Codespaces usage, and shared storag
   name: GitHub Billing API
+  phrasing_intents:
+  - id: billing/get-github-advanced-security-billing-ghe
+    intent: Get Advanced Security committers for an enterprise
+    question: How many Advanced Security seats is our whole enterprise consuming?
+  - id: billing/get-github-advanced-security-billing-org
+    intent: Get Advanced Security committers for an org
+    question: How many Advanced Security seats is my organization using?
+  phrasing_ops: 2
   slug: github-billing-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: The Checks API from GitHub — 28 operation(s) for checks.
+  description: 'The GitHub Checks API lets you create and manage check runs and check suites that report detailed status, annotations, and results for commits. It enables CI/CD tools and integrations to report build '
   name: GitHub Checks API
+  phrasing_intents:
+  - id: checks/create
+    intent: Create a check run for a commit
+    question: How does my app report a CI result against a specific commit?
+  - id: checks/get
+    intent: Get a check run
+    question: What's the status and conclusion of a specific check run?
+  - id: checks/update
+    intent: Update or complete a check run
+    question: How do I mark an in-progress check run as completed with a conclusion?
+  - id: checks/list-annotations
+    intent: List annotations on a check run
+    question: What line-level warnings or failures did a check run annotate?
+  - id: checks/rerequest-run
+    intent: Re-run a single check run
+    question: Can I re-run one failed check without pushing new code?
+  - id: checks/create-suite
+    intent: Create a check suite manually
+    question: When would I need to create a check suite by hand instead of letting it happen automatically?
+  - id: checks/set-suites-preferences
+    intent: Change automatic check suite creation for a repo
+    question: Can I stop check suites from being created automatically on every push?
+  - id: checks/get-suite
+    intent: Get a check suite
+    question: What's the overall status and conclusion of a check suite?
+  phrasing_ops: 12
   slug: github-checks-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Retrieve code scanning alerts from a repository.
   name: GitHub Code-Scanning API
+  phrasing_intents:
+  - id: code-scanning/list-alerts-for-enterprise
+    intent: List code scanning alerts across an enterprise
+    question: What code scanning alerts are open across every organization in our enterprise?
+  - id: code-scanning/list-alerts-for-org
+    intent: List code scanning alerts across an organization
+    question: Which repositories in our organization have critical code scanning alerts on the default branch?
+  - id: code-scanning/list-alerts-for-repo
+    intent: List code scanning alerts in a repository
+    question: What code scanning alerts does a repository have right now?
+  - id: code-scanning/get-alert
+    intent: Get one code scanning alert
+    question: What rule triggered a specific code scanning alert and where in the code is it?
+  - id: code-scanning/update-alert
+    intent: Dismiss or reopen a code scanning alert
+    question: How do I dismiss a code scanning alert as a false positive?
+  - id: code-scanning/list-alert-instances
+    intent: List where a code scanning alert occurs
+    question: On which branches and files does a single code scanning alert show up?
+  - id: code-scanning/list-recent-analyses
+    intent: List code scanning analyses for a repository
+    question: When did code scanning last analyze my repository, and with which tool?
+  - id: code-scanning/get-analysis
+    intent: Get one code scanning analysis
+    question: What did a single code scanning analysis find, and can I download it as SARIF?
+  phrasing_ops: 13
   slug: github-code-scanning-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Codes-Of-Conduct API from GitHub — 2 operation(s) for codes-of-conduct.
   name: GitHub Codes-Of-Conduct API
+  phrasing_intents:
+  - id: codes-of-conduct/get-all-codes-of-conduct
+    intent: List all available codes of conduct
+    question: Which codes of conduct does GitHub offer for projects?
+  - id: codes-of-conduct/get-conduct-code
+    intent: Get a single code of conduct by key
+    question: What does the full text of the Contributor Covenant code of conduct say?
+  phrasing_ops: 2
   slug: github-codes-of-conduct-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Endpoints to manage Dependabot.
   name: GitHub Dependabot API
+  phrasing_intents:
+  - id: dependabot/list-alerts-for-enterprise
+    intent: List Dependabot alerts across an enterprise
+    question: Which vulnerable dependencies are open across every repo in our enterprise?
+  - id: dependabot/list-alerts-for-org
+    intent: List Dependabot alerts for an organization
+    question: What Dependabot security alerts are open across my organization's repos?
+  - id: dependabot/list-org-secrets
+    intent: List an organization's Dependabot secrets
+    question: What Dependabot secrets has my organization defined?
+  - id: dependabot/get-org-public-key
+    intent: Get the org key for encrypting Dependabot secrets
+    question: Which public key do I encrypt an organization Dependabot secret with?
+  - id: dependabot/get-org-secret
+    intent: Get one organization Dependabot secret
+    question: When was an org Dependabot secret last updated and who can use it?
+  - id: dependabot/create-or-update-org-secret
+    intent: Create or update an org Dependabot secret
+    question: How do I add a private registry token as a Dependabot secret for my whole org?
+  - id: dependabot/delete-org-secret
+    intent: Delete an organization Dependabot secret
+    question: How can I remove an organization-level Dependabot secret?
+  - id: dependabot/list-selected-repos-for-org-secret
+    intent: List repos allowed to use an org Dependabot secret
+    question: Which repositories can use an org Dependabot secret set to selected visibility?
+  phrasing_ops: 19
   slug: github-dependabot-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: Endpoints to access Dependency Graph features.
-  name: GitHub Dependency-Graph API
+  description: The GitHub Dependency Graph API lets you view and submit dependency information for a repository. It provides endpoints to export the software bill of materials (SBOM) for a repository and to submit d
+  name: GitHub Dependency Graph API
+  phrasing_intents:
+  - id: dependency-graph/diff-range
+    intent: Compare dependency changes between two commits
+    question: Which dependencies were added or removed between two commits in my repo?
+  - id: dependency-graph/export-sbom
+    intent: Export a repository's SBOM
+    question: How do I get a software bill of materials for my GitHub repository?
+  - id: dependency-graph/create-repository-snapshot
+    intent: Submit a dependency snapshot for a repository
+    question: How do I submit dependencies my build detected to the dependency graph?
+  phrasing_ops: 3
   slug: github-dependency-graph-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Emojis API from GitHub — 1 operation(s) for emojis.
   name: GitHub Emojis API
+  phrasing_intents:
+  - id: emojis/get
+    intent: List the emojis available to use
+    question: Which emoji shortcodes can I use in issues and comments on my Enterprise Server?
+  phrasing_ops: 1
   slug: github-emojis-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Enterprise Administration
   name: GitHub Enterprise-Admin API
+  phrasing_intents:
+  - id: enterprise-admin/list-global-webhooks
+    intent: List global webhooks on the instance
+    question: Which global webhooks are configured on our GitHub Enterprise Server instance?
+  - id: enterprise-admin/create-global-webhook
+    intent: Create a global webhook
+    question: How do I set up an instance-wide webhook that fires on user and organization events?
+  - id: enterprise-admin/get-global-webhook
+    intent: Get a global webhook's details
+    question: What events and delivery URL is a particular global webhook configured with?
+  - id: enterprise-admin/update-global-webhook
+    intent: Update a global webhook
+    question: How do I change which events an existing global webhook listens to?
+  - id: enterprise-admin/delete-global-webhook
+    intent: Delete a global webhook
+    question: How do I remove an instance-wide webhook we no longer use?
+  - id: enterprise-admin/ping-global-webhook
+    intent: Send a test ping to a global webhook
+    question: How can I test that a global webhook's endpoint is receiving deliveries?
+  - id: enterprise-admin/list-public-keys
+    intent: List SSH public keys across the instance
+    question: Which user SSH public keys exist on our enterprise instance?
+  - id: enterprise-admin/delete-public-key
+    intent: Delete a user's SSH public key
+    question: As a site admin, how do I revoke a compromised SSH public key for a user?
+  phrasing_ops: 121
   slug: github-enterprise-admin-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Enterprise-Admin - Scim API from GitHub — 1 operation(s) for enterprise-admin - scim.
   name: GitHub Enterprise-Admin - Scim API
+  phrasing_intents:
+  - id: enterprise-admin/list-provisioned-groups-enterprise
+    intent: List SCIM-provisioned groups in an enterprise
+    question: Which groups has our identity provider provisioned into the enterprise over SCIM?
+  phrasing_ops: 1
   slug: github-enterprise-admin-scim-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Raw Git functionality.
   name: GitHub Git API
+  phrasing_intents:
+  - id: git/create-blob
+    intent: Create a Git blob in a repository
+    question: How do I upload raw file content as a Git blob without cloning the repo?
+  - id: git/get-blob
+    intent: Get a Git blob by its SHA
+    question: How can I read a file's contents from the Git database by its blob SHA?
+  - id: git/create-commit
+    intent: Create a Git commit object
+    question: How do I create a commit directly through the Git database from a tree SHA?
+  - id: git/get-commit
+    intent: Get a Git commit object by SHA
+    question: How do I look up the raw Git commit object, including its tree and parents, for a SHA?
+  - id: git/list-matching-refs
+    intent: List Git references matching a prefix
+    question: How do I find all branches whose names start with feature/?
+  - id: git/get-ref
+    intent: Get a single Git reference
+    question: What commit SHA does a specific branch point to right now?
+  - id: git/create-ref
+    intent: Create a branch or tag reference
+    question: How do I create a new branch from a commit SHA through the API?
+  - id: git/update-ref
+    intent: Move a reference to a new commit
+    question: How do I point an existing branch at a different commit?
+  phrasing_ops: 13
   slug: github-git-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Gitignore API from GitHub — 2 operation(s) for gitignore.
   name: GitHub Gitignore API
+  phrasing_intents:
+  - id: gitignore/get-all-templates
+    intent: List available gitignore templates
+    question: Which .gitignore templates can I choose from when creating a GitHub repository?
+  - id: gitignore/get-template
+    intent: Get the contents of a gitignore template
+    question: What does the Python .gitignore template actually contain?
+  phrasing_ops: 2
   slug: github-gitignore-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: Move projects to or from GitHub.
+  description: The GitHub Migrations API lets you migrate data to and from GitHub. It supports organization migrations that export repositories and metadata as downloadable archives, source imports that convert repo
   name: GitHub Migrations API
+  phrasing_intents:
+  - id: migrations/list-for-org
+    intent: List an organization's recent migrations
+    question: What migrations have been run for my organization recently, exports and imports alike?
+  - id: migrations/start-for-org
+    intent: Start an organization migration export
+    question: How do I export several of my organization's repositories into a migration archive?
+  - id: migrations/get-status-for-org
+    intent: Check an organization migration's status
+    question: Has my organization's migration export finished yet, or is it still exporting?
+  - id: migrations/download-archive-for-org
+    intent: Download an organization migration archive
+    question: Where do I download the archive once my organization migration is exported?
+  - id: migrations/delete-archive-for-org
+    intent: Delete an organization migration archive
+    question: Can I delete an organization migration archive before the seven-day automatic cleanup?
+  - id: migrations/unlock-repo-for-org
+    intent: Unlock a repository locked for migration
+    question: My repository is still locked after an organization migration; how do I unlock it?
+  - id: migrations/list-repos-for-org
+    intent: List repositories in an organization migration
+    question: Which repositories are included in a given organization migration?
+  - id: migrations/list-for-authenticated-user
+    intent: List my user migrations
+    question: What personal account migrations have I started?
+  phrasing_ops: 11
   slug: github-migrations-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: OAuth Authorizations API
   name: GitHub Oauth-Authorizations API
+  phrasing_intents:
+  - id: oauth-authorizations/list-grants
+    intent: List the OAuth apps I've granted access
+    question: Which OAuth applications have I granted access to my account?
+  - id: oauth-authorizations/get-grant
+    intent: Get one OAuth grant
+    question: What scopes did I grant a particular OAuth app?
+  - id: oauth-authorizations/delete-grant
+    intent: Revoke an OAuth grant and its tokens
+    question: How do I cut off an OAuth app's access to my account entirely?
+  - id: oauth-authorizations/list-authorizations
+    intent: List my OAuth authorizations
+    question: What OAuth tokens and authorizations exist on my account?
+  - id: oauth-authorizations/create-authorization
+    intent: Create a new OAuth authorization (deprecated)
+    question: Can I still create a personal token through the OAuth Authorizations API?
+  - id: oauth-authorizations/get-or-create-authorization-for-app
+    intent: Get or create an authorization for an OAuth app
+    question: Can I reuse an existing authorization for an OAuth app instead of making a duplicate?
+  - id: oauth-authorizations/get-or-create-authorization-for-app-and-fingerprint
+    intent: Get or create an app authorization by fingerprint
+    question: Can I keep separate authorizations for the same app per device using a fingerprint?
+  - id: oauth-authorizations/get-authorization
+    intent: Get one OAuth authorization
+    question: What scopes and note are attached to one of my authorizations?
+  phrasing_ops: 10
   slug: github-oauth-authorizations-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Oidc API from GitHub — 1 operation(s) for oidc.
   name: GitHub Oidc API
+  phrasing_intents:
+  - id: oidc/get-oidc-custom-sub-template-for-org
+    intent: Get an org's OIDC subject claim template
+    question: Which claim keys make up the OIDC subject claim for my organization's Actions tokens?
+  - id: oidc/update-oidc-custom-sub-template-for-org
+    intent: Set an org's OIDC subject claim template
+    question: Can I change which claims go into the OIDC subject claim for my org's workflows?
+  phrasing_ops: 2
   slug: github-oidc-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: The Orgs API from GitHub — 30 operation(s) for orgs.
   name: GitHub Orgs API
+  phrasing_intents:
+  - id: orgs/list
+    intent: List every organization on the server
+    question: Can I get a list of all organizations on our GitHub Enterprise Server in the order they were created?
+  - id: orgs/list-custom-roles
+    intent: List custom repository roles (deprecated, by org ID)
+    question: Is there an older endpoint that lists an organization's custom repository roles by numeric organization ID?
+  - id: orgs/get
+    intent: Get an organization's profile and settings
+    question: What details can I pull about a GitHub organization, like its plan, billing email and settings?
+  - id: orgs/update
+    intent: Update an organization's profile and settings
+    question: How do I change the billing email or public profile details of an organization?
+  - id: orgs/delete
+    intent: Delete an organization and all its repositories
+    question: What happens to the repositories when I delete a whole organization?
+  - id: announcement-banners/get-announcement-banner-for-org
+    intent: Get an organization's announcement banner
+    question: What announcement banner is currently showing to members of our organization?
+  - id: announcement-banners/set-announcement-banner-for-org
+    intent: Set an organization's announcement banner
+    question: Can I post a banner message that every member of my organization sees?
+  - id: announcement-banners/remove-announcement-banner-for-org
+    intent: Remove an organization's announcement banner
+    question: How do I take down the announcement banner from our organization?
+  phrasing_ops: 49
   slug: github-orgs-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: Manage packages for authenticated users and organizations.
+  description: The GitHub Packages API lets you manage packages and package versions in GitHub Packages, a software package hosting service that supports npm, Maven, Gradle, RubyGems, NuGet, Docker, and other packag
   name: GitHub Packages API
+  phrasing_intents:
+  - id: packages/list-docker-migration-conflicting-packages-for-organization
+    intent: List an org's packages that conflicted in Docker migration
+    question: Which of our organization's packages ran into a conflict when migrating from the Docker registry?
+  - id: packages/list-packages-for-organization
+    intent: List an organization's packages
+    question: What npm, Maven or container packages does our organization publish?
+  - id: packages/get-package-for-organization
+    intent: Get one package owned by an organization
+    question: What are the details of a specific package our organization publishes, like visibility and version count?
+  - id: packages/delete-package-for-org
+    intent: Delete an entire organization package
+    question: How do I delete a whole package, every version, from our organization?
+  - id: packages/restore-package-for-org
+    intent: Restore a deleted organization package
+    question: Can I bring back a package our organization deleted a couple of weeks ago?
+  - id: packages/get-all-package-versions-for-package-owned-by-org
+    intent: List versions of an organization package
+    question: Which versions of an organization's package have been published?
+  - id: packages/get-package-version-for-organization
+    intent: Get one version of an organization package
+    question: What are the details of one specific version of an org package, like its tags and creation date?
+  - id: packages/delete-package-version-for-org
+    intent: Delete one version of an organization package
+    question: Can I delete just one bad version of an org package and keep the rest?
+  phrasing_ops: 27
   slug: github-packages-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Interact with GitHub Pull Requests.
   name: GitHub Pulls API
+  phrasing_intents:
+  - id: pulls/list
+    intent: List pull requests in a repository
+    question: What pull requests are open in a repository right now?
+  - id: pulls/create
+    intent: Open a pull request
+    question: How do I open a pull request from my feature branch into main?
+  - id: pulls/list-review-comments-for-repo
+    intent: List review comments across all PRs in a repo
+    question: What line-level code review comments have been left across every pull request in a repository?
+  - id: pulls/get-review-comment
+    intent: Get one pull request review comment
+    question: What does a specific inline review comment on a pull request diff say?
+  - id: pulls/update-review-comment
+    intent: Edit a pull request review comment
+    question: Can I edit the text of an inline review comment on a pull request?
+  - id: pulls/delete-review-comment
+    intent: Delete a pull request review comment
+    question: Can I delete an inline code review comment I left on a pull request diff?
+  - id: pulls/get
+    intent: Get a pull request by number
+    question: What's the status, branches and mergeability of a specific pull request?
+  - id: pulls/update
+    intent: Edit, close or retarget a pull request
+    question: Can I change the base branch a pull request merges into?
+  phrasing_ops: 27
   slug: github-pulls-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Check your current rate limit status
   name: GitHub Rate-Limit API
+  phrasing_intents:
+  - id: rate-limit/get
+    intent: Check my remaining API rate limit
+    question: How many API requests do I have left before I get rate limited?
+  phrasing_ops: 1
   slug: github-rate-limit-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: The Reactions API from GitHub — 16 operation(s) for reactions.
+  description: 'The GitHub Reactions API lets you create, list, and delete emoji reactions on issues, pull requests, issue comments, pull request review comments, commit comments, release assets, and team discussion '
   name: GitHub Reactions API
+  phrasing_intents:
+  - id: reactions/list-for-team-discussion-comment-in-org
+    intent: List reactions on a team discussion comment
+    question: What emoji reactions has a reply on our team discussion received?
+  - id: reactions/create-for-team-discussion-comment-in-org
+    intent: React to a team discussion comment
+    question: How do I add an emoji reaction to a reply in a team discussion?
+  - id: reactions/delete-for-team-discussion-comment
+    intent: Remove a reaction from a team discussion comment
+    question: Can I take back an emoji reaction I left on a team discussion reply?
+  - id: reactions/list-for-team-discussion-in-org
+    intent: List reactions on a team discussion
+    question: How are people reacting to a discussion post on our team page?
+  - id: reactions/create-for-team-discussion-in-org
+    intent: React to a team discussion
+    question: Can I put an emoji reaction on a team discussion post itself?
+  - id: reactions/delete-for-team-discussion
+    intent: Remove a reaction from a team discussion
+    question: How can I remove a reaction I put on a team discussion post?
+  - id: reactions/list-for-commit-comment
+    intent: List reactions on a commit comment
+    question: What reactions has a comment on a commit gotten?
+  - id: reactions/create-for-commit-comment
+    intent: React to a commit comment
+    question: How do I add an emoji reaction to a comment on a commit?
+  phrasing_ops: 25
   slug: github-reactions-api
 - baseURL: https://api.github.com
   baseurl_source: declared
-  description: Retrieve secret scanning alerts from a repository.
-  name: GitHub Secret-Scanning API
+  description: The GitHub Secret Scanning API lets you retrieve and manage secret scanning alerts for repositories, organizations, and enterprises. Secret scanning detects tokens, keys, and other credentials acciden
+  name: GitHub Secret Scanning API
+  phrasing_intents:
+  - id: secret-scanning/list-alerts-for-enterprise
+    intent: List leaked-secret alerts across an enterprise
+    question: Where have secrets been leaked across all the organizations in our enterprise?
+  - id: secret-scanning/list-alerts-for-org
+    intent: List leaked-secret alerts across an organization
+    question: Which repositories in our organization have exposed credentials that are still open?
+  - id: secret-scanning/list-alerts-for-repo
+    intent: List leaked-secret alerts in a repository
+    question: Has anyone committed an API key or token to this repository?
+  - id: secret-scanning/get-alert
+    intent: Get one secret scanning alert
+    question: What kind of secret triggered a specific alert, and has it been resolved?
+  - id: secret-scanning/update-alert
+    intent: Resolve or reopen a secret scanning alert
+    question: How do I close a secret scanning alert after I've rotated the leaked credential?
+  - id: secret-scanning/list-locations-for-alert
+    intent: List where a leaked secret was found
+    question: In which files and commits was a leaked secret found?
+  phrasing_ops: 6
   slug: github-secret-scanning-api
 - baseURL: https://api.github.com
   baseurl_source: declared
   description: Interact with GitHub Teams.
   name: GitHub Teams API
+  phrasing_intents:
+  - id: teams/external-idp-group-info-for-org
+    intent: Look up an external identity provider group
+    question: Which members and teams are tied to one of our external IdP groups?
+  - id: teams/list-external-idp-groups-for-org
+    intent: List external IdP groups in an organization
+    question: What external identity provider groups are available to my organization?
+  - id: teams/list
+    intent: List the teams in an organization
+    question: What teams exist in my organization?
+  - id: teams/create
+    intent: Create a team in an organization
+    question: How do I create a new team in my GitHub organization?
+  - id: teams/get-by-name
+    intent: Get a team by its slug
+    question: How can I look up a team's details from its slug?
+  - id: teams/update-in-org
+    intent: Update a team's settings
+    question: Can I rename an existing team or change its description?
+  - id: teams/delete-in-org
+    intent: Delete a team from an organization
+    question: What happens to child teams when I delete a parent team in my org?
+  - id: teams/list-discussions-in-org
+    intent: List discussions on a team's page
+    question: What discussions have been posted on my team's page?
+  phrasing_ops: 63
   slug: github-teams-api
 - baseURL: https://api.github.com
   baseurl_source: declared
@@ -379,7 +998,7 @@ arazzos:
 - description: Confirm a head branch exists, then merge it into a base branch.
   name: GitHub Verify a Branch and Merge It
   slug: github-verify-and-merge-branch-workflow
-artifact_total: 1282
+artifact_total: 1376
 asyncapis:
 - description: GitHub Webhooks deliver HTTP POST payloads to a configured URL whenever specified events occur on GitHub, such as pushes, pull requests, issues, releases, and more. Webhooks can be configured at the r
   name: GitHub Webhooks
@@ -1532,6 +2151,91 @@ collections:
   name: GitHub Repos API
   slug: open-temp
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/finops/github-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/github-finops.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rules/github-asyncapi-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/github-asyncapi-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vocabulary/github-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/github-vocabulary.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/asyncapi/github-webhooks-asyncapi.yml
+  title: ''
+  type: Webhooks
+  url: asyncapi/github-webhooks-asyncapi.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/data-model/github-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/github-data-model.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/errors/github-problem-types.yml
+  title: ''
+  type: ErrorCatalog
+  url: errors/github-problem-types.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/conformance/github-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/github-conformance.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/overlays/github-actions-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/github-actions-api-overlay.yaml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/well-known/github-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/github-well-known.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/hosts/github-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/github-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vendors/github-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/github-vendors.yml
+- group: build
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/packages/github-packages.yml
+  title: ''
+  type: Packages
+  url: packages/github-packages.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/vendor-facets/github-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/github-vendor-facets.yml
 - group: operate
   href: https://raw.githubusercontent.com/api-evangelist/github/refs/heads/main/rate-limits/github-rate-limits.yml
   title: ''
@@ -2663,6 +3367,12 @@ graphqls:
   slug: github-graphql
 image: https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png
 json_schemas:
+- name: advanced-security-active-committers
+  property_count: 3
+  slug: github-advanced-security-active-committers
+- name: Api Overview
+  property_count: 5
+  slug: github-api-overview
 - name: application-grant
   property_count: 7
   slug: github-app-api-application-grant
@@ -2681,6 +3391,15 @@ json_schemas:
 - name: webhook-config
   property_count: 4
   slug: github-app-api-webhook-config
+- name: App Permissions
+  property_count: 45
+  slug: github-app-permissions
+- name: Application Grant
+  property_count: 7
+  slug: github-application-grant
+- name: audit-log-event
+  property_count: 43
+  slug: github-audit-log-event
 - name: global-hook-2
   property_count: 10
   slug: github-auth-api-global-hook-2
@@ -2705,6 +3424,30 @@ json_schemas:
 - name: root
   property_count: 33
   slug: github-auth-api-root
+- name: Authorization
+  property_count: 15
+  slug: github-authorization
+- name: Base Gist
+  property_count: 20
+  slug: github-base-gist
+- name: Blob
+  property_count: 7
+  slug: github-blob
+- name: Branch Restriction Policy
+  property_count: 7
+  slug: github-branch-restriction-policy
+- name: Check Annotation
+  property_count: 10
+  slug: github-check-annotation
+- name: CheckRun
+  property_count: 17
+  slug: github-check-run
+- name: Check Suite Preference
+  property_count: 2
+  slug: github-check-suite-preference
+- name: CheckSuite
+  property_count: 19
+  slug: github-check-suite
 - name: code-of-conduct
   property_count: 5
   slug: github-code-of-conduct-api-code-of-conduct
@@ -2729,12 +3472,60 @@ json_schemas:
 - name: webhook-check-run-created
   property_count: 6
   slug: github-code-of-conduct-api-webhook-check-run-created
+- name: Code Of Conduct
+  property_count: 5
+  slug: github-code-of-conduct
+- name: code-scanning-alert-instance
+  property_count: 10
+  slug: github-code-scanning-alert-instance
+- name: code-scanning-alert-items
+  property_count: 15
+  slug: github-code-scanning-alert-items
+- name: code-scanning-alert
+  property_count: 15
+  slug: github-code-scanning-alert
+- name: code-scanning-analysis
+  property_count: 15
+  slug: github-code-scanning-analysis
+- name: code-scanning-default-setup
+  property_count: 4
+  slug: github-code-scanning-default-setup
+- name: code-scanning-organization-alert-items
+  property_count: 16
+  slug: github-code-scanning-organization-alert-items
+- name: Code Search Result Item
+  property_count: 13
+  slug: github-code-search-result-item
 - name: code-of-conduct
   property_count: 5
   slug: github-codes-code-of-conduct
 - name: GitHub Commit
   property_count: 11
   slug: github-commit
+- name: Commit Search Result Item
+  property_count: 12
+  slug: github-commit-search-result-item
+- name: dependabot-alert
+  property_count: 15
+  slug: github-dependabot-alert
+- name: dependabot-alert-with-repository
+  property_count: 16
+  slug: github-dependabot-alert-with-repository
+- name: DependabotPublicKey
+  property_count: 2
+  slug: github-dependabot-public-key
+- name: Dependabot Secret
+  property_count: 3
+  slug: github-dependabot-secret
+- name: Dependency Graph Diff
+  property_count: 0
+  slug: github-dependency-graph-diff
+- name: Dependency Graph SPDX SBOM
+  property_count: 1
+  slug: github-dependency-graph-spdx-sbom
+- name: Deployment
+  property_count: 18
+  slug: github-deployment
 - name: webhook-branch-protection-rule-created
   property_count: 7
   slug: github-emojis-webhook-branch-protection-rule-created
@@ -2753,6 +3544,18 @@ json_schemas:
 - name: webhook-check-run-completed
   property_count: 6
   slug: github-emojis-webhook-check-run-completed
+- name: Empty Object
+  property_count: 0
+  slug: github-empty-object
+- name: Enterprise Security Analysis Settings
+  property_count: 5
+  slug: github-enterprise-security-analysis-settings
+- name: enterprise-settings
+  property_count: 2
+  slug: github-enterprise-settings
+- name: Event
+  property_count: 8
+  slug: github-event
 - name: global-hook-2
   property_count: 10
   slug: github-events-api-global-hook-2
@@ -2777,6 +3580,12 @@ json_schemas:
 - name: root
   property_count: 33
   slug: github-events-api-root
+- name: ExternalGroup
+  property_count: 5
+  slug: github-external-group
+- name: Feed
+  property_count: 11
+  slug: github-feed
 - name: feed
   property_count: 11
   slug: github-feeds-feed
@@ -2795,6 +3604,18 @@ json_schemas:
 - name: webhook-check-run-completed
   property_count: 6
   slug: github-feeds-webhook-check-run-completed
+- name: Full Repository
+  property_count: 102
+  slug: github-full-repository
+- name: Gist Comment
+  property_count: 8
+  slug: github-gist-comment
+- name: Gist Commit
+  property_count: 5
+  slug: github-gist-commit
+- name: Gist Simple
+  property_count: 21
+  slug: github-gist-simple
 - name: base-gist
   property_count: 20
   slug: github-gists-base-gist
@@ -2819,6 +3640,21 @@ json_schemas:
 - name: webhook-branch-protection-rule-created
   property_count: 7
   slug: github-gists-webhook-branch-protection-rule-created
+- name: Git Commit
+  property_count: 10
+  slug: github-git-commit
+- name: Git Reference
+  property_count: 4
+  slug: github-git-ref
+- name: Git Tag
+  property_count: 8
+  slug: github-git-tag
+- name: Git Tree
+  property_count: 4
+  slug: github-git-tree
+- name: Gitignore Template
+  property_count: 2
+  slug: github-gitignore-template
 - name: gitignore-template
   property_count: 2
   slug: github-gitignore-templates-gitignore-template
@@ -2843,6 +3679,15 @@ json_schemas:
 - name: webhook-check-run-created
   property_count: 6
   slug: github-gitignore-templates-webhook-check-run-created
+- name: GPG Key
+  property_count: 15
+  slug: github-gpg-key
+- name: Simple webhook delivery
+  property_count: 11
+  slug: github-hook-delivery-item
+- name: Webhook delivery
+  property_count: 14
+  slug: github-hook-delivery
 - name: app-permissions
   property_count: 45
   slug: github-installation-app-permissions
@@ -2858,6 +3703,9 @@ json_schemas:
 - name: integration-installation-request
   property_count: 5
   slug: github-installation-integration-installation-request
+- name: Installation
+  property_count: 20
+  slug: github-installation
 - name: validation-error
   property_count: 3
   slug: github-installation-validation-error
@@ -2867,9 +3715,21 @@ json_schemas:
 - name: webhook-branch-protection-rule-deleted
   property_count: 7
   slug: github-installation-webhook-branch-protection-rule-deleted
+- name: GitHub app
+  property_count: 17
+  slug: github-integration
+- name: Issue Comment
+  property_count: 14
+  slug: github-issue-comment
+- name: Issue Event
+  property_count: 22
+  slug: github-issue-event
 - name: GitHub Issue
   property_count: 24
   slug: github-issue
+- name: Issue Search Result Item
+  property_count: 35
+  slug: github-issue-search-result-item
 - name: global-hook-2
   property_count: 10
   slug: github-issues-api-global-hook-2
@@ -2894,6 +3754,24 @@ json_schemas:
 - name: root
   property_count: 33
   slug: github-issues-api-root
+- name: Job
+  property_count: 23
+  slug: github-job
+- name: Key
+  property_count: 7
+  slug: github-key
+- name: Ldap Private User
+  property_count: 42
+  slug: github-ldap-mapping-user
+- name: License Content
+  property_count: 13
+  slug: github-license-content
+- name: License
+  property_count: 13
+  slug: github-license
+- name: License Simple
+  property_count: 6
+  slug: github-license-simple
 - name: basic-error
   property_count: 4
   slug: github-licenses-basic-error
@@ -2987,6 +3865,15 @@ json_schemas:
 - name: webhook-check-run-created
   property_count: 6
   slug: github-meta-webhook-check-run-created
+- name: Migration
+  property_count: 18
+  slug: github-migration
+- name: Milestone
+  property_count: 16
+  slug: github-milestone
+- name: Minimal Repository
+  property_count: 87
+  slug: github-minimal-repository
 - name: basic-error
   property_count: 4
   slug: github-networks-basic-error
@@ -3035,6 +3922,9 @@ json_schemas:
 - name: webhook-check-run-completed
   property_count: 6
   slug: github-notifications-webhook-check-run-completed
+- name: Actions OIDC Subject customization
+  property_count: 1
+  slug: github-oidc-custom-sub
 - name: global-hook-2
   property_count: 10
   slug: github-openapi-global-hook-2
@@ -3059,9 +3949,18 @@ json_schemas:
 - name: root
   property_count: 33
   slug: github-openapi-root
+- name: Dependabot Secret for an Organization
+  property_count: 5
+  slug: github-organization-dependabot-secret
+- name: Organization Full
+  property_count: 56
+  slug: github-organization-full
 - name: GitHub Organization
   property_count: 37
   slug: github-organization
+- name: organization-secret-scanning-alert
+  property_count: 18
+  slug: github-organization-secret-scanning-alert
 - name: basic-error
   property_count: 4
   slug: github-organizations-basic-error
@@ -3086,6 +3985,30 @@ json_schemas:
 - name: validation-error-simple
   property_count: 3
   slug: github-organizations-validation-error-simple
+- name: Package
+  property_count: 11
+  slug: github-package
+- name: Package Version
+  property_count: 11
+  slug: github-package-version
+- name: Pending Deployment
+  property_count: 5
+  slug: github-pending-deployment
+- name: Private User
+  property_count: 42
+  slug: github-private-user
+- name: Project Card
+  property_count: 13
+  slug: github-project-card
+- name: Project Collaborator Permission
+  property_count: 2
+  slug: github-project-collaborator-permission
+- name: Project Column
+  property_count: 8
+  slug: github-project-column
+- name: Project
+  property_count: 15
+  slug: github-project
 - name: basic-error
   property_count: 4
   slug: github-projects-basic-error
@@ -3110,9 +4033,21 @@ json_schemas:
 - name: validation-error-simple
   property_count: 3
   slug: github-projects-validation-error-simple
+- name: Public User
+  property_count: 39
+  slug: github-public-user
+- name: Pull Request Review Comment
+  property_count: 29
+  slug: github-pull-request-review-comment
+- name: Pull Request Review
+  property_count: 13
+  slug: github-pull-request-review
 - name: GitHub Pull Request
   property_count: 36
   slug: github-pull-request
+- name: Pull Request Simple
+  property_count: 36
+  slug: github-pull-request-simple
 - name: basic-error
   property_count: 4
   slug: github-rate-limit--basic-error
@@ -3122,6 +4057,12 @@ json_schemas:
 - name: rate-limit
   property_count: 4
   slug: github-rate-limit--rate-limit
+- name: Rate Limit Overview
+  property_count: 2
+  slug: github-rate-limit-overview
+- name: Reaction
+  property_count: 5
+  slug: github-reaction
 - name: basic-error
   property_count: 4
   slug: github-repo-actions-api-basic-error
@@ -3302,6 +4243,9 @@ json_schemas:
 - name: validation-error-simple
   property_count: 3
   slug: github-repo-pulls-api-validation-error-simple
+- name: Repo Search Result Item
+  property_count: 89
+  slug: github-repo-search-result-item
 - name: basic-error
   property_count: 4
   slug: github-repo-subscription-api-basic-error
@@ -3359,6 +4303,15 @@ json_schemas:
 - name: GitHub Repository
   property_count: 35
   slug: github-repository
+- name: Legacy Review Comment
+  property_count: 28
+  slug: github-review-comment
+- name: root
+  property_count: 33
+  slug: github-root
+- name: scim-enterprise-group-list
+  property_count: 5
+  slug: github-scim-enterprise-group-list
 - name: group-response
   property_count: 4
   slug: github-scim-group-response
@@ -3374,6 +4327,21 @@ json_schemas:
 - name: user-response
   property_count: 8
   slug: github-scim-user-response
+- name: secret-scanning-alert-resolution-comment
+  property_count: 0
+  slug: github-secret-scanning-alert-resolution-comment
+- name: secret-scanning-alert-resolution
+  property_count: 0
+  slug: github-secret-scanning-alert-resolution
+- name: secret-scanning-alert
+  property_count: 17
+  slug: github-secret-scanning-alert
+- name: secret-scanning-alert-state
+  property_count: 0
+  slug: github-secret-scanning-alert-state
+- name: secret-scanning-location
+  property_count: 2
+  slug: github-secret-scanning-location
 - name: configuration-status
   property_count: 2
   slug: github-setup-configuration-status
@@ -3386,6 +4354,27 @@ json_schemas:
 - name: ssh-key
   property_count: 2
   slug: github-setup-ssh-key
+- name: Short Blob
+  property_count: 2
+  slug: github-short-blob
+- name: Simple User
+  property_count: 21
+  slug: github-simple-user
+- name: snapshot
+  property_count: 8
+  slug: github-snapshot
+- name: SSH Signing Key
+  property_count: 4
+  slug: github-ssh-signing-key
+- name: Team Discussion
+  property_count: 18
+  slug: github-team-discussion
+- name: Full Team
+  property_count: 18
+  slug: github-team-full
+- name: Team Repository
+  property_count: 89
+  slug: github-team-repository
 - name: basic-error
   property_count: 4
   slug: github-teams-basic-error
@@ -3410,9 +4399,21 @@ json_schemas:
 - name: validation-error
   property_count: 3
   slug: github-teams-validation-error
+- name: Thread
+  property_count: 9
+  slug: github-thread
+- name: Timeline Event
+  property_count: 0
+  slug: github-timeline-issue-events
+- name: Topic Search Result Item
+  property_count: 16
+  slug: github-topic-search-result-item
 - name: GitHub User
   property_count: 28
   slug: github-user
+- name: User Search Result Item
+  property_count: 34
+  slug: github-user-search-result-item
 - name: basic-error
   property_count: 4
   slug: github-users-api-basic-error
@@ -3440,6 +4441,9 @@ json_schemas:
 - name: GitHub Webhook Delivery
   property_count: 14
   slug: github-webhook-delivery
+- name: Workflow Run
+  property_count: 36
+  slug: github-workflow-run
 json_structures:
 - name: Github App Api Application Grant Structure
   property_count: 7
@@ -4232,19 +5236,19 @@ modified: '2026-09-16'
 name: GitHub
 nav: Providers
 network: true
-overview: 'GitHub publishes 42 APIs on the [APIs.io](https://apis.io/) network, including Gists API, Issues API, Licenses API, and 39 more. Tagged areas include Code, Developer Tools, Pipelines, Platform, and Software Development.
+overview: 'GitHub publishes 56 APIs on the [APIs.io](https://apis.io/) network, including Gists API, Issues API, Licenses API, and 53 more. Tagged areas include Code, Developer Tools, Pipelines, Platform, and Software Development.
 
 
-  The GitHub catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
+  The GitHub catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 4 Spectral governance rulesets.
 
 
-  GitHub''s developer surface includes pricing, authentication, documentation, CLI, support, getting-started guide, engineering blog, and 66 more developer resources.'
+  GitHub''s developer surface includes pricing, authentication, documentation, CLI, support, getting-started guide, engineering blog, and 83 more developer resources.'
 plans:
 - name: Github Plans Pricing
   plan_count: 6
   slug: github-plans-pricing
 - name: Github Price Estimates
-  plan_count: 0
+  plan_count: 1
   slug: github-price-estimates
 random_paper: 5
 rate_limits:
@@ -4273,6 +5277,17 @@ rules:
     info: 1
     warn: 5
   slug: github-jsonschema-spectral-rules
+- effective_rule_count: 53
+  extends:
+  - spectral:oas
+  name: GitHub API Rules
+  rule_count: 12
+  severity_counts:
+    error: 8
+    hint: 0
+    info: 1
+    warn: 3
+  slug: github-rules
 - effective_rule_count: 20
   extends: []
   name: GitHub API Rules
@@ -4285,34 +5300,42 @@ rules:
   slug: github-spectral-rules
 score:
   band: exemplar
-  composite: 77.2
+  composite: 80.3
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 74.5
+    artifact_dirs: 35
+    catalog_earned: 91.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 40.5
+    catalog_gap: 24.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 10.0
+  delta: 3.1
   facets:
     access_clarity: 84.2
-    contract_governance: 13.6
-    contract_quality: 74.7
-    developer_ergonomics: 79.8
-    discoverability: 66.7
+    contract_governance: 31.8
+    contract_quality: 75.6
+    developer_ergonomics: 74.4
+    discoverability: 71.7
     operational_transparency: 92.1
-  previous_composite: 67.2
+  previous_composite: 77.2
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 35
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 61.1
@@ -4341,6 +5364,7 @@ tags:
 - Source Control
 - T1
 - GitHub
+- Git
 use_cases:
 - description: Automate build, test, and deployment pipelines with GitHub Actions API.
   name: CI/CD Automation

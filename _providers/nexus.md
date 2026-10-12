@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -121,6 +121,11 @@ collections:
   name: Sonatype Nexus Repository REST API
   slug: open-nexus
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nexus/refs/heads/main/capabilities/nexus-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nexus-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nexus/refs/heads/main/agentic-access/nexus-agentic-access.yml
   title: ''
@@ -176,10 +181,10 @@ modified: '2026-04-28'
 name: Nexus Repository Manager
 nav: Providers
 network: true
-overview: 'Nexus Repository Manager publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Assets API, BlobStores API, Components API, and 5 more. Tagged areas include Artifact Management, DevOps, Docker, Maven, and npm.
+overview: 'Nexus Repository Manager publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Assets API, BlobStores API, Components API, and 6 more. Tagged areas include Artifact Management, DevOps, Docker, Maven, and npm.
 
 
-  Nexus Repository Manager''s developer surface includes authentication, documentation, support, getting-started guide, GitHub presence, engineering blog, and 4 more developer resources.'
+  Nexus Repository Manager''s developer surface includes authentication, documentation, support, getting-started guide, GitHub presence, engineering blog, and 5 more developer resources.'
 plans:
 - name: Nexus Plans Pricing
   plan_count: 3
@@ -191,9 +196,9 @@ rate_limits:
   slug: nexus-rate-limits
 score:
   band: emerging
-  composite: 25.9
+  composite: 24.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -203,11 +208,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 25.9
+  previous_composite: 24.0
   provenance:
     agentic_access: derived
     contracts:
@@ -215,8 +220,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

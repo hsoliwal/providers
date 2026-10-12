@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -97,9 +97,9 @@ description: Coravin is a consumer beverage-technology company best known for it
 image: https://www.coravin.com/cdn/shop/files/hero-sg-black.png?v=1746714317
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.coravin.com over HTTP.
   name: Coravin MCP Server
-  slug: coravin-mcp-server
+  slug: coravin-ucp-shopping
 modified: '2026-07-18'
 name: Coravin
 nav: Providers
@@ -116,7 +116,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.9
+  composite: 18.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -130,14 +130,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 15.9
+  previous_composite: 18.8
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

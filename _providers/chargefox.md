@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.0
-  scored_at: '2026-09-20'
+  score: 31.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Chargefox's Open Charge Point Interface implementation in the Charge Point Operator role, used for roaming so that another network's drivers can authorise, charge and be billed on Chargefox infrastruc
@@ -227,7 +227,7 @@ modified: '2026-07-27'
 name: Chargefox
 nav: Providers
 network: true
-overview: 'Chargefox publishes 1 API on the [APIs.io](https://apis.io/) network: Fleets API. Tagged areas include Energy, Australia, EV Charging, Electricity, and Utilities.
+overview: 'Chargefox publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Fleets API, and 1 more. Tagged areas include Energy, Australia, EV Charging, Electricity, and Utilities.
 
 
   Chargefox''s developer surface includes authentication, documentation, API reference, engineering blog, support, getting-started guide, code examples, and 27 more developer resources.'
@@ -238,7 +238,7 @@ rate_limits:
   slug: chargefox-rate-limits
 score:
   band: developing
-  composite: 50.9
+  composite: 47.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -250,9 +250,9 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 48.0
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -261,7 +261,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 50.9
+  previous_composite: 47.9
   provenance:
     conformance: first-party
     contracts:
@@ -276,9 +276,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://sandbox.greenbuttonalliance.org:8443/DataCustodian
@@ -219,7 +219,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 25.5
+  composite: 22.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 32.0
@@ -233,7 +233,7 @@ score:
     contract_governance: 4.5
     contract_quality: 11.1
     developer_ergonomics: 30.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.5
+  previous_composite: 22.8
   provenance:
     conformance: derived
     contracts:
@@ -256,9 +256,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

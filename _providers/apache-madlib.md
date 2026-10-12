@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: MADlib provides SQL-callable functions for classification, regression, clustering, dimensionality reduction, graph analytics, time series analysis, deep learning with Keras/TensorFlow backend, and oth
@@ -129,7 +129,7 @@ modified: '2026-04-19'
 name: Apache MADlib
 nav: Providers
 network: true
-overview: 'Apache MADlib publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include In-Database Analytics, Machine-Learning, PostgreSQL, SQL, and Statistics.
+overview: 'Apache MADlib publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include In-Database Analytics, Machine Learning, PostgreSQL, SQL, and Statistics.
 
 
   Apache MADlib''s developer surface includes developer portal and 10 more developer resources.'
@@ -144,7 +144,7 @@ rate_limits:
   slug: apache-madlib-rate-limits
 score:
   band: emerging
-  composite: 18.4
+  composite: 18.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -158,14 +158,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 15.0
-  previous_composite: 18.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,7 +190,7 @@ security:
 slug: apache-madlib
 tags:
 - In-Database Analytics
-- Machine-Learning
+- Machine Learning
 - PostgreSQL
 - SQL
 - Statistics

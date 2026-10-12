@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Packhelp''s "first-ever API for packaging" — a sales-gated set of web services for building packaging workflows into your own application: sell and quote packaging, access a curated EU-producer catalog'
   name: Packhelp Packaging API
   slug: packhelp-packaging-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/packhelp/refs/heads/main/security/packhelp-domain-security.yml
@@ -73,6 +73,10 @@ created: '2026-07-17'
 description: Packhelp is a European custom and wholesale packaging platform that lets businesses design, order, and warehouse branded packaging — boxes, mailers, bags, tubes, and accessories — through online design tools and a curated catalog of EU-based producers. Packhelp also markets "the first-ever API for packaging," a sales-gated set of web services that let 3PL, fulfillment, marketplace, logistics, and food-delivery platforms embed packaging quoting, ordering, and a drag-and-drop packaging editor directly into their own applications and whitelabel storefronts.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/packhelp.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.packhelp.com over HTTP.
+  name: Packhelp MCP Server
+  slug: packhelp
 modified: '2026-07-20'
 name: Packhelp
 nav: Providers
@@ -84,7 +88,7 @@ overview: 'Packhelp publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 4
 score:
   band: emerging
-  composite: 11.9
+  composite: 11.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -98,13 +102,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 2.6
-  previous_composite: 11.9
+  previous_composite: 11.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

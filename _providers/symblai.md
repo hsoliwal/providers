@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -176,7 +176,7 @@ rate_limits:
   slug: symblai-rate-limits
 score:
   band: thin
-  composite: 35.2
+  composite: 35.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 51.0
@@ -190,13 +190,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 50.0
-  previous_composite: 35.2
+  previous_composite: 35.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,7 +231,7 @@ tags:
 - Speech-to-Text
 - Voice AI
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Real-Time
 - SDK
 website: https://symbl.ai/

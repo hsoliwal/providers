@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Live Shopify-hosted storefront MCP endpoint for the Yeeps store, exposing catalog search, cart management, product details, and shop policy/FAQ tools over JSON-RPC (streamable HTTP). Probed live 2026-
@@ -104,7 +104,7 @@ layout: provider
 mcp_servers:
 - description: Trass Games publishes no first-party MCP server, but both of its Shopify storefronts expose the live Shopify-hosted storefront MCP endpoint. The tool list below was captured verbatim from a tools/list
   name: Trass Games MCP Server
-  slug: trass-games-mcp-server
+  slug: yeeps-storefront
 modified: '2026-07-21'
 name: Trass Games
 nav: Providers
@@ -116,7 +116,7 @@ overview: 'Trass Games publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 5
 score:
   band: emerging
-  composite: 15.6
+  composite: 16.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -130,14 +130,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 5.3
-  previous_composite: 15.6
+  previous_composite: 16.9
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -92,7 +92,7 @@ modified: '2026-04-28'
 name: Farm Machinery and Equipment API
 nav: Providers
 network: true
-overview: 'Farm Machinery and Equipment API publishes 1 API on the [APIs.io](https://apis.io/) network: Farm Machinery API. Tagged areas include Equipment, Farms, and Machinery.
+overview: 'Farm Machinery and Equipment API publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Farm Machinery API, and 1 more. Tagged areas include Equipment, Farms, and Machinery.
 
 
   Farm Machinery and Equipment API''s developer surface includes authentication and 2 more developer resources.'
@@ -107,7 +107,7 @@ rate_limits:
   slug: farm-machinery-and-equipment-api-rate-limits
 score:
   band: thin
-  composite: 29.4
+  composite: 27.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -119,11 +119,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 29.4
+  previous_composite: 27.3
   provenance:
     agentic_access: derived
     contracts:
@@ -131,8 +131,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

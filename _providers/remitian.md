@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -98,6 +98,11 @@ collections:
   name: Remitian Tax Payment Accounts Webhooks API
   slug: open-remitian-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/remitian/refs/heads/main/capabilities/remitian-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/remitian-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/remitian/refs/heads/main/agentic-access/remitian-agentic-access.yml
   title: ''
@@ -182,7 +187,7 @@ overview: 'Remitian publishes 5 APIs on the [APIs.io](https://apis.io/) network,
   The Remitian catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Remitian''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  Remitian''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Remitian Plans Pricing
   plan_count: 3
@@ -226,9 +231,9 @@ rules:
   slug: remitian-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 30.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 55.5
     catalog_earned_first_party: 0.0
     catalog_gap: 59.5
@@ -238,11 +243,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 68.6
+    contract_quality: 62.9
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 7.9
-  previous_composite: 32.3
+  previous_composite: 30.9
   provenance:
     agentic_access: derived
     contracts:
@@ -255,9 +260,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

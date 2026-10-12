@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -250,7 +250,7 @@ modified: '2026-07-26'
 name: Keller Williams
 nav: Providers
 network: true
-overview: 'Keller Williams publishes 1 API on the [APIs.io](https://apis.io/) network: Search API. Tagged areas include Real-Estate, United States, Residential Real Estate, Brokerage, and Franchise.
+overview: 'Keller Williams publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Search API, and 2 more. Tagged areas include Real Estate, United States, Residential Real Estate, Brokerage, and Franchise.
 
 
   The Keller Williams catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -265,7 +265,7 @@ scopes:
   summary_line: 40 scopes · authorizationCode/implicit/clientCredentials/tokenExchange/jwtBearer
 score:
   band: thin
-  composite: 38.8
+  composite: 35.9
   coverage:
     artifact_dirs: 25
     catalog_earned: 35.0
@@ -277,9 +277,9 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 67.1
+    contract_quality: 61.8
     developer_ergonomics: 19.6
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -288,7 +288,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 38.8
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -304,9 +304,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -323,7 +323,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: keller-williams
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - Residential Real Estate
 - Brokerage

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -117,6 +117,11 @@ collections:
   name: Mason Apps Webhooks API
   slug: open-mason-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mason/refs/heads/main/capabilities/mason-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mason-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/mason/refs/heads/main/overlays/mason-apps-overlay.yaml
   title: ''
@@ -268,7 +273,7 @@ overview: 'Mason publishes 8 APIs on the [APIs.io](https://apis.io/) network, in
   The Mason catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Mason''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, engineering blog, pricing, and 23 more developer resources.'
+  Mason''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, engineering blog, pricing, and 24 more developer resources.'
 random_paper: 14
 scopes:
 - name: Mason Scopes
@@ -277,9 +282,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.1
+  composite: 42.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -289,11 +294,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 58.9
+    contract_quality: 53.8
     developer_ergonomics: 35.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
-  previous_composite: 41.1
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -304,8 +309,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

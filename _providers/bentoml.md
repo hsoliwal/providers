@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 106
   human_in_the_loop: 4
@@ -82,7 +82,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: auth api
-  name: BentoML auth API
+  name: BentoML Auth API
   slug: bentoml-auth-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -107,7 +107,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: bentos
-  name: BentoML bentos API
+  name: BentoML Bentos API
   slug: bentoml-bentos-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -132,7 +132,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: clusters
-  name: BentoML clusters API
+  name: BentoML Clusters API
   slug: bentoml-clusters-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -152,7 +152,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: customers api
-  name: BentoML customers API
+  name: BentoML Customers API
   slug: bentoml-customers-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -202,17 +202,17 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: host_clusters
-  name: BentoML host_clusters API
+  name: BentoML Host Clusters API
   slug: bentoml-host-clusters-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: instance_types
-  name: BentoML instance_types API
+  name: BentoML Instance Types API
   slug: bentoml-instance-types-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: labels
-  name: BentoML labels API
+  name: BentoML Labels API
   slug: bentoml-labels-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -257,7 +257,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: models
-  name: BentoML models API
+  name: BentoML Models API
   slug: bentoml-models-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -287,7 +287,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: plans
-  name: BentoML plans API
+  name: BentoML Plans API
   slug: bentoml-plans-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -322,7 +322,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: usage resource
-  name: BentoML usage API
+  name: BentoML Usage API
   slug: bentoml-usage-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -332,7 +332,7 @@ apis:
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
   description: users api
-  name: BentoML users API
+  name: BentoML Users API
   slug: bentoml-users-api
 - baseURL: https://cloud.bentoml.com
   baseurl_source: declared
@@ -637,7 +637,7 @@ modified: 2026-06-12
 name: BentoML
 nav: Providers
 network: true
-overview: 'BentoML publishes 59 APIs on the [APIs.io](https://apis.io/) network, including admin api v1 API, admin deployment resource API, api token resource API, and 56 more. Tagged areas include Machine-Learning, Model Serving, Inference, Artificial Intelligence, and REST API.
+overview: 'BentoML publishes 62 APIs on the [APIs.io](https://apis.io/) network, including admin api v1 API, admin deployment resource API, api token resource API, and 59 more. Tagged areas include Machine Learning, Model Serving, Inference, Artificial Intelligence, and REST API.
 
 
   The BentoML catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -666,23 +666,23 @@ rules:
   slug: bentoml-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.8
+  composite: 40.9
   coverage:
     artifact_dirs: 17
-    catalog_earned: 75.3
+    catalog_earned: 75.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.8
+    catalog_gap: 39.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
-    access_clarity: 44.7
-    contract_governance: 25.0
-    contract_quality: 54.1
+    access_clarity: 41.6
+    contract_governance: 23.5
+    contract_quality: 50.1
     developer_ergonomics: 31.0
-    discoverability: 53.7
-    operational_transparency: 50.0
-  previous_composite: 42.8
+    discoverability: 57.1
+    operational_transparency: 46.8
+  previous_composite: 40.4
   provenance:
     agentic_access: derived
     contracts:
@@ -690,8 +690,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 59
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -708,7 +714,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: bentoml
 tags:
-- Machine-Learning
+- Machine Learning
 - Model Serving
 - Inference
 - Artificial Intelligence

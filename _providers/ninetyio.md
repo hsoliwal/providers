@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 19
@@ -113,6 +113,11 @@ collections:
   name: Ninety Public Issues Users API
   slug: open-ninetyio-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ninetyio/refs/heads/main/capabilities/ninetyio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ninetyio-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -263,13 +268,13 @@ network: true
 overview: 'Ninety.io publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Issues API, Milestones API, Rocks API, and 4 more. Tagged areas include Company, EOS, Entrepreneurial Operating System, Business Management, and Meetings.
 
 
-  Ninety.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  Ninety.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 47.0
+  composite: 47.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -279,11 +284,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 49.3
+    contract_quality: 44.7
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 47.0
+  previous_composite: 47.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,8 +299,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

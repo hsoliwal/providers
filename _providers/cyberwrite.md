@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -104,7 +104,7 @@ overview: 'Cyberwrite is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 10
 score:
   band: minimal
-  composite: 5.8
+  composite: 5.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -118,17 +118,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 5.8
+  previous_composite: 5.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 27.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -153,7 +153,7 @@ tags:
 - Risk Quantification
 - Catastrophe Modeling
 - Underwriting
-- Third-Party Risk
+- Third-Party Risk Management
 - Security Ratings
 website: https://cyberwrite.com
 ---

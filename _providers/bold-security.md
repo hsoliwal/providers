@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bold-security/refs/heads/main/security/bold-security-domain-security.yml
@@ -84,6 +84,10 @@ created: '2026-07-17'
 description: Bold Security provides real-time, on-device (endpoint) data security. Its on-device AI classifies data interactions across every application in real time and detects and prevents user- and AI-agent-driven data exfiltration before sensitive data leaves the endpoint, without requiring policy configuration or cloud round-trips. The platform gives security teams visibility into data movement, intent and risky-behavior analysis, and full-context investigation across employees and AI agents. Bold Security is ISO 27001 certified and SOC 2 compliant, and is a portfolio company of Bessemer Venture Partners. As of this profile the company publishes no public developer API, specification, or SDK; this entry captures its identity, security posture, and public properties.
 image: https://cdn.prod.website-files.com/6696877e0376bfc5993d8902/691c923b17866b6031536337_2ad9fe4431a4d3c6fba51e835e317799_Bold%20-%20Share%20Image.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bold.security over HTTP.
+  name: Bold Security MCP Server
+  slug: bold-security
 modified: '2026-07-18'
 name: Bold Security
 nav: Providers
@@ -95,7 +99,7 @@ overview: 'Bold Security is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 8
 score:
   band: emerging
-  composite: 15.1
+  composite: 15.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -109,13 +113,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 15.1
+  previous_composite: 15.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

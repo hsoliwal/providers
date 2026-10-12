@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol endpoint served from the vi.co host and advertised through RFC 9728 protected resource metadata. It is the WordPress MCP adapter running on the Vi Labs corpor
@@ -173,12 +173,12 @@ rate_limits:
   slug: vi-labs-rate-limits
 scopes:
 - name: Vi Labs Scopes
-  scope_count: 0
+  scope_count: 1
   slug: vi-labs-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: thin
-  composite: 26.3
+  band: emerging
+  composite: 23.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -192,25 +192,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.3
+  previous_composite: 23.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

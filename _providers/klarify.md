@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -115,7 +115,7 @@ overview: 'Klarify is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 6
 score:
   band: emerging
-  composite: 21.1
+  composite: 20.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -129,9 +129,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 21.1
+  previous_composite: 20.0
   provenance:
     conformance: first-party
   regulatory:
@@ -139,9 +139,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

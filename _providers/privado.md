@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -111,14 +111,14 @@ modified: '2026-07-20'
 name: Privado
 nav: Providers
 network: true
-overview: 'Privado is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, DevOps, Privacy, Data Privacy, and Security.
+overview: 'Privado is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, DevOps, Privacy, Security, and DevSecOps.
 
 
   Privado''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, CLI, changelog, and 8 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 20.9
+  composite: 20.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -132,11 +132,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 20.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +163,6 @@ tags:
 - Company
 - DevOps
 - Privacy
-- Data Privacy
 - Security
 - DevSecOps
 - Code Scanning

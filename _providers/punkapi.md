@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -215,7 +215,7 @@ modified: '2026-05-29'
 name: Punk API
 nav: Providers
 network: true
-overview: 'Punk API publishes 1 API on the [APIs.io](https://apis.io/) network: Beers API. Tagged areas include Food And Drink, Beer, BrewDog, DIY Dog, and Recipes.
+overview: 'Punk API publishes 1 API on the [APIs.io](https://apis.io/) network: Beers API. Tagged areas include Food and Beverage, Beer, BrewDog, DIY Dog, and Recipes.
 
 
   The Punk API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
@@ -251,23 +251,23 @@ rules:
     warn: 21
   slug: punkapi-rules
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 37.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 87.5
+    catalog_earned: 84.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 31.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.4
   facets:
-    access_clarity: 21.1
-    contract_governance: 28.8
-    contract_quality: 65.5
+    access_clarity: 18.9
+    contract_governance: 27.3
+    contract_quality: 60.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
-    operational_transparency: 34.2
+    discoverability: 73.2
+    operational_transparency: 31.1
   previous_composite: 40.4
   provenance:
     agentic_access: derived
@@ -276,8 +276,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -297,12 +303,12 @@ solutions:
 - description: For purely read use cases, host data.json on a CDN and serve clients directly.
   name: Static JSON Mirror
 tags:
-- Food And Drink
+- Food and Beverage
 - Beer
 - BrewDog
 - DIY Dog
 - Recipes
-- Open-Source
+- Open Source
 - Public APIs
 - REST
 - Deprecated

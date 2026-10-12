@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://proofdraw.com/api/v1
@@ -222,7 +222,7 @@ modified: '2026-08-11'
 name: ProofDraw
 nav: Providers
 network: true
-overview: 'ProofDraw publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Auth API, Draws API, and 2 more. Tagged areas include Randomness, Provably Fair, drand, Verifiable Randomness, and Cryptography.
+overview: 'ProofDraw publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Auth API, Draws API, and 2 more. Tagged areas include Randomness, Provably Fair, Drand, Verifiable Randomness, and Cryptography.
 
 
   The ProofDraw catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -240,7 +240,7 @@ rate_limits:
   slug: proofdraw-rate-limits
 score:
   band: thin
-  composite: 34.8
+  composite: 34.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -252,11 +252,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 59.6
+    contract_quality: 54.4
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.8
+  previous_composite: 34.3
   provenance:
     conformance: derived
     contracts:
@@ -266,8 +266,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -290,7 +296,7 @@ slug: proofdraw
 tags:
 - Randomness
 - Provably Fair
-- drand
+- Drand
 - Verifiable Randomness
 - Cryptography
 - raffle

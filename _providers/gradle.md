@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://develocity.example.com/api
@@ -121,6 +121,11 @@ collections:
   name: Develocity Auth Tests API
   slug: open-gradle-tests-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gradle/refs/heads/main/capabilities/gradle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gradle-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -285,7 +290,7 @@ layout: provider
 mcp_servers:
 - description: Develocity ships official Model Context Protocol servers that give AI agents access to Develocity build data and analytics. Because Develocity is self-hosted, the MCP server is exposed on the customer
   name: Gradle MCP Server
-  slug: gradle-mcp-server
+  slug: gradle-mcp-yml
 modified: '2026-07-19'
 name: Gradle
 nav: Providers
@@ -293,13 +298,13 @@ network: true
 overview: 'Gradle publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Auth API, BuildCache API, Builds API, and 6 more. Tagged areas include Company, Developer Tools, Build Automation, Developer Productivity, and CI/CD.
 
 
-  Gradle''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 27 more developer resources.'
+  Gradle''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 28 more developer resources.'
 random_paper: 7
 score:
   band: strong
-  composite: 55.8
+  composite: 57.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -309,16 +314,18 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 58.9
+    contract_quality: 53.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 55.8
+  previous_composite: 57.0
   provenance:
     conformance: derived
     contracts:
@@ -328,8 +335,18 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://third-party.lootrush.com
@@ -166,9 +166,9 @@ created: '2026-07-17'
 description: LootRush (Loot Rush Games) is a San Francisco company, backed by a16z, Paradigm and Y Combinator, that operates a crypto-native "global operating account" — wallets, cards, cryptocurrency withdrawals and transaction history for gamers and marketplaces. It began as a Steam-like platform for blockchain games with NFT rentals and has grown into a consumer crypto account and card product. For developers, LootRush publishes a Partner API (OpenAPI 3.1) exposing Withdraw, History and Connect (OAuth-style, consent-based user data) APIs, plus an official hosted, read-only Model Context Protocol (MCP) server that gives AI assistants scoped access to a user's own balances, cards, card transactions and account history.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.lootrush.com over HTTP; 5 tools listed.
   name: Loot Rush Games MCP Server
-  slug: loot-rush-games-mcp-server
+  slug: lootrush
 modified: '2026-07-20'
 name: Loot Rush Games
 nav: Providers
@@ -180,7 +180,7 @@ overview: 'Loot Rush Games publishes 4 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 15
 score:
   band: thin
-  composite: 35.6
+  composite: 34.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 35.0
@@ -192,11 +192,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 56.5
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 35.6
+  previous_composite: 34.4
   provenance:
     conformance: derived
     contracts:
@@ -211,9 +211,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

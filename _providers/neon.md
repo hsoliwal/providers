@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.2
-  scored_at: '2026-09-20'
+  score: 25.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 2
@@ -391,7 +391,7 @@ modified: '2026-09-16'
 name: Neon
 nav: Providers
 network: true
-overview: 'Neon publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Auth, API Keys API, Auth API, and 8 more. Tagged areas include Database, Serverless, Postgres, Infrastructure, and Authentication.
+overview: 'Neon publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Auth, API Keys API, Auth API, and 10 more. Tagged areas include Database, Serverless, PostgreSQL, Infrastructure, and Authentication.
 
 
   The Neon catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -431,7 +431,7 @@ rules:
   slug: neon-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.6
+  composite: 50.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 50.5
@@ -443,11 +443,11 @@ score:
   facets:
     access_clarity: 61.8
     contract_governance: 13.6
-    contract_quality: 67.8
-    developer_ergonomics: 46.4
-    discoverability: 66.7
+    contract_quality: 62.7
+    developer_ergonomics: 45.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 49.6
+  previous_composite: 50.9
   provenance:
     agentic_access: derived
     contracts:
@@ -455,8 +455,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -503,7 +509,7 @@ slug: neon
 tags:
 - Database
 - Serverless
-- Postgres
+- PostgreSQL
 - Infrastructure
 - Authentication
 - Edge

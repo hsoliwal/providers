@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -87,14 +87,14 @@ modified: '2026-07-20'
 name: Northspyre
 nav: Providers
 network: true
-overview: 'Northspyre is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Real Estate Development, Project Management, and Construction.
+overview: 'Northspyre is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Real Estate Development, Project Management, and Construction.
 
 
   Northspyre''s developer surface includes pricing, engineering blog, support, and 7 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 15.8
+  composite: 15.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,11 +108,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 15.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,7 +137,7 @@ security:
 slug: northspyre
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Real Estate Development
 - Project Management
 - Construction

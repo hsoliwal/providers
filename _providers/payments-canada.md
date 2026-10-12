@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-09-20'
+  score: 21.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -305,7 +305,7 @@ modified: '2026-07-23'
 name: Payments Canada
 nav: Providers
 network: true
-overview: 'Payments Canada publishes 10 APIs on the [APIs.io](https://apis.io/) network, including application level heartbeat API, Ccin Extract Resource API, Fif Branches Resource API, and 7 more. Tagged areas include Financial-Services, Payments, Canada, Payment Infrastructure, and Clearing and Settlement.
+overview: 'Payments Canada publishes 12 APIs on the [APIs.io](https://apis.io/) network, including application level heartbeat API, Ccin Extract Resource API, Fif Branches Resource API, and 9 more. Tagged areas include Financial Services, Payments, Canada, Payment Infrastructure, and Clearing and Settlement.
 
 
   Payments Canada''s developer surface includes authentication, sandbox, documentation, getting-started guide, support, and 31 more developer resources.'
@@ -317,7 +317,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 44.6
+  composite: 40.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -329,9 +329,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 49.8
+    contract_quality: 44.8
     developer_ergonomics: 68.5
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -340,7 +340,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.6
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -356,9 +356,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 67.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -375,7 +375,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: payments-canada
 tags:
-- Financial-Services
+- Financial Services
 - Payments
 - Canada
 - Payment Infrastructure

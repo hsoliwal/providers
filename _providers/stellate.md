@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Stellate public GraphQL API at graph.stellate.co enables programmatic access to organizational and service-level data. It supports querying organizations and their associated services, with authen
@@ -113,7 +113,7 @@ overview: 'Stellate publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 4
 score:
   band: emerging
-  composite: 23.6
+  composite: 23.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -125,13 +125,19 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 23.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 23.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

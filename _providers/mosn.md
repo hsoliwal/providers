@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: MOSN is a cloud-native network proxy that supports multiple protocols (HTTP/1.1, HTTP/2, gRPC), dynamic routing, load balancing, observability via Prometheus metrics, TLS, and WASM-based custom extens
@@ -82,7 +82,7 @@ modified: '2026-09-16'
 name: MOSN
 nav: Providers
 network: true
-overview: 'MOSN publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Service Mesh, Proxy, API Gateway, Cloud-Native, and Open-Source.
+overview: 'MOSN publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Service Mesh, Proxy, API Gateway, Cloud-Native, and Open Source.
 
 
   MOSN''s developer surface includes engineering blog and 6 more developer resources.'
@@ -97,7 +97,7 @@ rate_limits:
   slug: mosn-rate-limits
 score:
   band: emerging
-  composite: 18.7
+  composite: 17.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -111,14 +111,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 18.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,6 +142,6 @@ tags:
 - Proxy
 - API Gateway
 - Cloud-Native
-- Open-Source
+- Open Source
 website: https://mosn.io
 ---

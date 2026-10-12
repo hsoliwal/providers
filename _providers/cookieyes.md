@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -137,7 +137,7 @@ layout: provider
 mcp_servers:
 - description: CookieYes hosts a remote Model Context Protocol server at https://app.cookieyes.com/mcp. The endpoint is live (HTTP 401 without a token) and advertises RFC 9728 protected-resource metadata via WWW-Aut
   name: Cookieyes MCP Server
-  slug: cookieyes-mcp-server
+  slug: cookieyes
 modified: '2026-07-18'
 name: Cookieyes
 nav: Providers
@@ -154,7 +154,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.1
+  composite: 33.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -168,14 +168,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 30.1
+  previous_composite: 33.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

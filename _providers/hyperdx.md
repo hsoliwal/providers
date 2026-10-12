@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The documented v1 API on HyperDX Cloud, covering alerts, dashboards and chart series queries at api.hyperdx.io under /api/v1, authenticated with a Bearer personal API key. Documented as prose on hyper
@@ -97,6 +97,11 @@ asyncapis:
   name: Hyperdx Webhooks
   slug: hyperdx-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hyperdx/refs/heads/main/capabilities/hyperdx-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hyperdx-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -274,13 +279,13 @@ modified: '2026-09-16'
 name: HyperDX
 nav: Providers
 network: true
-overview: 'HyperDX publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Charts API, Connections API, and 6 more. Tagged areas include Company, Observability, Monitoring, Logging, and Tracing.
+overview: 'HyperDX publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Charts API, Connections API, and 8 more. Tagged areas include Company, Observability, Monitoring, Logging, and Tracing.
 
 
   The HyperDX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  HyperDX''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 29 more developer resources.'
+  HyperDX''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Hyperdx Plans Pricing
   plan_count: 4
@@ -292,9 +297,9 @@ rate_limits:
   slug: hyperdx-rate-limits
 score:
   band: strong
-  composite: 63.3
+  composite: 62.5
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -304,11 +309,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 65.3
+    contract_quality: 59.9
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 63.2
-  previous_composite: 63.3
+  previous_composite: 62.5
   provenance:
     conformance: derived
     contracts:
@@ -318,8 +323,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -344,7 +355,7 @@ tags:
 - Metrics
 - OpenTelemetry
 - ClickHouse
-- Open-Source
+- Open Source
 - Alerting
 - Dashboards
 - Session Replay

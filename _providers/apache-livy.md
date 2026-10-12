@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -292,7 +292,7 @@ modified: '2026-05-19'
 name: Apache Livy
 nav: Providers
 network: true
-overview: 'Apache Livy publishes 3 APIs on the [APIs.io](https://apis.io/) network: Batches API, Sessions API, and Statements API. Tagged areas include Big Data, Interactive Computing, Open-Source, REST, and Spark.
+overview: 'Apache Livy publishes 3 APIs on the [APIs.io](https://apis.io/) network: Batches API, Sessions API, and Statements API. Tagged areas include Big Data, Interactive Computing, Open Source, REST, and Spark.
 
 
   The Apache Livy catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -332,26 +332,26 @@ rules:
   slug: apache-livy-spectral-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 32.5
   coverage:
     artifact_dirs: 16
-    catalog_earned: 61.5
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 28.8
-    contract_quality: 54.4
+    contract_governance: 27.3
+    contract_quality: 49.7
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 15.0
-  previous_composite: 33.1
+  previous_composite: 32.5
   provenance:
     agentic_access: derived
     contracts:
@@ -359,8 +359,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -379,7 +385,7 @@ slug: apache-livy
 tags:
 - Big Data
 - Interactive Computing
-- Open-Source
+- Open Source
 - REST
 - Spark
 use_cases:

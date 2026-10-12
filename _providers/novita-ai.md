@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-09-20'
+  score: 33.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -52,7 +52,7 @@ apis:
   description: The Openai API from Novita AI — 4 operation(s) for openai.
   name: Novita AI Openai API
   slug: novita-ai-openai-api
-artifact_total: 13
+artifact_total: 14
 asyncapis:
 - description: 'AsyncAPI 2.6 description of the asynchronous surfaces of the Novita AI platform: 1. **Server-Sent Events (SSE) streaming** for OpenAI-compatible chat completions (`POST /openai/v1/chat/completions` wi'
   name: Novita AI Streaming & Webhook API
@@ -197,12 +197,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Novita AI MCP Server
-  slug: novita-ai-mcp-server
+  slug: novita-mcp-server
+- description: Remote MCP server at novita.ai over HTTP; 6 tools listed.
+  name: Novita AI MCP Server
+  slug: novita-ai
 modified: '2026-05-30'
 name: Novita AI
 nav: Providers
 network: true
-overview: 'Novita AI publishes 1 API on the [APIs.io](https://apis.io/) network: Openai API. Tagged areas include Artificial Intelligence, LLM, Inference, GPU, and OpenAI-Compatible.
+overview: 'Novita AI publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Openai API, and 1 more. Tagged areas include Artificial Intelligence, LLM, Inference, GPU, and OpenAI-Compatible.
 
 
   The Novita AI catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -232,7 +235,7 @@ rules:
   slug: novita-ai-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 47.4
+  composite: 46.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 47.8
@@ -244,11 +247,11 @@ score:
   facets:
     access_clarity: 57.9
     contract_governance: 11.4
-    contract_quality: 54.4
+    contract_quality: 49.7
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 47.4
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +260,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -276,11 +285,12 @@ tags:
 - Inference
 - GPU
 - OpenAI-Compatible
-- Image-Generation
+- Image Generation
 - Video Generation
 - Audio
 - Embeddings
 - Sandbox
 - MCP
+- A2A
 website: https://novita.ai/
 ---

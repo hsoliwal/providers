@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Official read-only MCP agent surface for the Shelter budgeting product — ten tools covering status, runway, forecast, alerts, opportunities, context, affordability, coaching, and Guardian Q&A, shipped
@@ -142,8 +142,8 @@ rate_limits:
   name: Shelter Money Rate Limits
   slug: shelter-money-rate-limits
 score:
-  band: thin
-  composite: 37.4
+  band: developing
+  composite: 39.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 55.0
@@ -157,14 +157,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 44.7
-  previous_composite: 37.4
+  previous_composite: 39.9
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

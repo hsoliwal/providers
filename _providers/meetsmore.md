@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 23.0
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Nittei is MeetsMore's self-hosted calendar and scheduler server, written in Rust (Axum + SQLx + PostgreSQL) and published under the MIT licence. It exposes a multi-tenant REST API under /api/v1 coveri
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: MeetsMore MCP Server
-  slug: meetsmore-mcp-server
+  slug: meetsmore-mcp-yml
 modified: '2026-08-25'
 name: MeetsMore
 nav: Providers
@@ -198,7 +198,7 @@ rate_limits:
   slug: meetsmore-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 47.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -210,9 +210,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -221,12 +221,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 47.6
+  previous_composite: 47.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -253,7 +259,7 @@ tags:
 - Calendar
 - Booking
 - Field Service
-- Open-Source
+- Open Source
 - Artificial Intelligence
 - Agents
 website: https://meetsmore.com/

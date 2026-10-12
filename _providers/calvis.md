@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/calvis/refs/heads/main/security/calvis-domain-security.yml
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: Calvis is a multi-agency security guard marketplace that connects businesses with vetted, state-licensed, background-checked security guards from multiple professional agencies across 40+ US cities. Founded in 2023 and headquartered in Miami, Florida, the platform pairs on-demand booking with AI-powered deployment matching, real-time GPS tracking and geofencing, live AI coaching delivered to guards through an earpiece, and automated incident reporting and site analytics. Businesses book unarmed, armed, event, retail, construction, corporate, residential, hospital, cannabis, and school security through the web platform and iOS/Android apps, while security professionals join the network to find work. Calvis is backed by Version One Ventures.
 image: https://calvis.com/og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.calvis.com over HTTP.
+  name: Calvis MCP Server
+  slug: calvis
 modified: '2026-07-18'
 name: Calvis
 nav: Providers
@@ -97,7 +101,7 @@ overview: 'Calvis is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 4
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -111,18 +115,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 10.9
+  previous_composite: 10.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

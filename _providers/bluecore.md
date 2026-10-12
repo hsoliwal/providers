@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -327,7 +327,7 @@ modified: '2026-08-13'
 name: Bluecore
 nav: Providers
 network: true
-overview: 'Bluecore publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authn API, CampaignsAPIPublic API, Direct send API, and 5 more. Tagged areas include Company, Retail, Marketing, Customer Data Platform, and Personalization.
+overview: 'Bluecore publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authn API, CampaignsAPIPublic API, Direct send API, and 6 more. Tagged areas include Company, Retail, Marketing, Customer Data Platform, and Personalization.
 
 
   The Bluecore catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -350,7 +350,7 @@ scopes:
   summary_line: 7 scopes
 score:
   band: developing
-  composite: 53.5
+  composite: 48.8
   coverage:
     artifact_dirs: 26
     catalog_earned: 40.0
@@ -362,11 +362,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 61.2
+    contract_quality: 55.8
     developer_ergonomics: 44.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
-  previous_composite: 53.5
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -382,9 +382,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 73.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

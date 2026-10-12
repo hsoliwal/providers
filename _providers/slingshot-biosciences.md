@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 36.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Shopify Storefront GraphQL API for the Slingshot Bio online store, declared by the company in its own /.well-known/api-catalog. Serves products, collections, cart and checkout operations for the c
@@ -143,9 +143,9 @@ description: 'Slingshot Biosciences is an Emeryville, California biotechnology c
 image: https://www.slingshotbio.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at slingshot-bio.myshopify.com over HTTP; 5 tools listed.
   name: Slingshot Biosciences MCP Server
-  slug: slingshot-biosciences-mcp-server
+  slug: slingshot-bio-storefront
 modified: '2026-08-05'
 name: Slingshot Biosciences
 nav: Providers
@@ -161,8 +161,8 @@ scopes:
   slug: slingshot-biosciences-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 30.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -174,23 +174,23 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 39.7
+  previous_composite: 30.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

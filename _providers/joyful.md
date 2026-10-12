@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -74,6 +74,10 @@ created: '2026-07-17'
 description: Joyful Health provides AI-assisted revenue recovery for healthcare organizations, combining automated claim investigation with expert billing teams to recover unpaid and denied insurance claims. Its platform runs inside an organization's existing revenue-cycle-management (RCM) systems rather than replacing them, covering denial investigation and root-cause analysis, claims recovery and appeals management, historical accounts-receivable (A/R) assessment, payer follow-up, documentation review, and financial insight to prevent future denials. The company operates a customer application at app.joyfulhealth.io and maintains a Vanta-hosted trust center. Joyful is a portfolio company of CRV. This profile was added to the API Evangelist network as a lead; Joyful does not currently publish a public API or developer program.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/joyful.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.joyfulhealth.com over HTTP.
+  name: Joyful MCP Server
+  slug: joyful
 modified: '2026-07-19'
 name: Joyful
 nav: Providers
@@ -85,7 +89,7 @@ overview: 'Joyful is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 5
 score:
   band: emerging
-  composite: 13.0
+  composite: 12.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,9 +103,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 13.0
+  previous_composite: 12.6
   provenance:
     mcp: first-party
   regulatory:
@@ -109,9 +113,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

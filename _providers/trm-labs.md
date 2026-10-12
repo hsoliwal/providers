@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -75,6 +75,11 @@ collections:
   name: Chainabuse Public Reports Sanctions Screening API
   slug: open-trm-labs-sanctions-screening-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trm-labs/refs/heads/main/capabilities/trm-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trm-labs-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/trm-labs/refs/heads/main/overlays/trm-labs-chainabuse-overlay.yaml
   title: ''
@@ -209,7 +214,7 @@ network: true
 overview: 'TRM Labs publishes 3 APIs on the [APIs.io](https://apis.io/) network: Reports API, Sanctions API, and Sanctions Screening API. Tagged areas include Company, Crypto, Blockchain, Compliance, and Sanctions.
 
 
-  TRM Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 20 more developer resources.'
+  TRM Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 21 more developer resources.'
 random_paper: 10
 rate_limits:
 - limit_count: 3
@@ -217,9 +222,9 @@ rate_limits:
   slug: trm-labs-rate-limits
 score:
   band: developing
-  composite: 47.3
+  composite: 48.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -229,11 +234,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
-  previous_composite: 47.3
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -244,8 +249,18 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -275,8 +290,8 @@ tags:
 - Blockchain
 - Compliance
 - Sanctions
-- Fraud
-- Anti-Money Laundering
+- Fraud Prevention
+- AML
 - Blockchain Intelligence
 website: https://www.trmlabs.com/
 ---

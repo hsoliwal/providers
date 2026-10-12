@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful consumer API for building applications on top of the Linkable card-linked-offer platform. Per the provider developer page it exposes consumer registration, view and opt-out (consumerapi/consum
@@ -142,7 +142,7 @@ overview: 'Linkable Networks (Collinson Group) publishes 1 API on the [APIs.io](
 random_paper: 8
 score:
   band: emerging
-  composite: 21.2
+  composite: 20.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -156,14 +156,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.2
+  previous_composite: 20.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -172,9 +174,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 32.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -200,5 +202,6 @@ tags:
 - Rewards
 - Advertising
 - Retail
+- Loyalty & Incentives
 website: https://linkablenetworks.com/
 ---

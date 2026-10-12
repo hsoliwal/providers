@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted MCP server that lets AI assistants query a manufacturer's Prox workspace (products, knowledge trees, wiki nodes) grounded in their manuals and make attributed, version-controlled edits. OAuth 2
@@ -124,7 +124,7 @@ layout: provider
 mcp_servers:
 - description: Prox's hosted Model Context Protocol connector. Lets ChatGPT, Claude, Copilot, and Gemini query a manufacturer's Prox workspace — products, knowledge trees, and wiki nodes grounded in the company's ma
   name: Prox MCP Server
-  slug: prox-mcp-server
+  slug: prox
 modified: '2026-07-20'
 name: Prox
 nav: Providers
@@ -140,8 +140,8 @@ scopes:
   slug: prox-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: emerging
-  composite: 24.2
+  band: thin
+  composite: 26.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -155,18 +155,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.2
+  previous_composite: 26.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

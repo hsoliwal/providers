@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,15 +34,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.8
-  scored_at: '2026-09-20'
+  score: 20.6
+  scored_at: '2026-10-04'
 agentic_access:
-- acting_count: 43
+- acting_count: 42
   human_in_the_loop: 3
   name: Screenpipe Agentic Access
   operation_count: 71
   slug: screenpipe-agentic-access
-  summary_line: 71 operations · 43 acting · 3 human-in-the-loop
+  summary_line: 71 operations · 42 acting · 3 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: http://localhost:3030
@@ -135,7 +135,7 @@ apis:
   description: Manage screen capture monitors
   name: Screenpipe Vision API
   slug: screenpipe-vision-api
-artifact_total: 43
+artifact_total: 102
 collections:
 - collection_type: open
   name: API Collection
@@ -195,6 +195,57 @@ collections:
   name: Screenpipe Activity Vision API
   slug: open-screenpipe-vision-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/plans/screenpipe-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/screenpipe-plans-pricing.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/rules/screenpipe-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/screenpipe-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/json-ld/screenpipe-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/screenpipe-context.jsonld
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/vocabulary/screenpipe-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/screenpipe-vocabulary.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/a2a/screenpipe-a2a.yml
+  title: ''
+  type: AgentCard
+  url: a2a/screenpipe-a2a.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/hosts/screenpipe-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/screenpipe-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/vendors/screenpipe-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/screenpipe-vendors.yml
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://screenpipe.com/terms
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://screenpipe.com/privacy
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://screenpipe.com/press
+- group: company
+  title: ''
+  type: Blog
+  url: https://screenpipe.com/blog
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/screenpipe/refs/heads/main/overlays/screenpipe-openapi-overlay.yaml
   title: ''
@@ -343,13 +394,188 @@ common:
   type: AgentSkill
   url: skills/_index.yml
 created: '2026-07-17'
-description: Screenpipe is a local-first, source-available desktop application (by Mediar AI, Y Combinator S26) that continuously captures everything you see, say, and hear on your computer, reads on-screen text through OS accessibility APIs with an OCR fallback, transcribes system and microphone audio locally with Whisper, and stores it all in a local SQLite database as a private, searchable memory. It exposes a full local REST API at http://localhost:3030 (71 operations across search, frames, audio, meetings, memories, speakers, tags, vault, cloud sync, cloud archive, and data retention) and ships as an MCP server so agents like Claude, Cursor, Codex, and Cline can query screen history and meeting transcripts. Automations are built as "pipes" — scheduled AI agents written in plain markdown. It is positioned as an open, local-first alternative to Rewind.ai, Microsoft Recall, and cloud meeting bots.
+description: Screenpipe is a local-first, source-available desktop application (by Mediar AI, Y Combinator S26) that continuously captures everything you see, say, and hear on your computer, reads on-screen text through OS accessibility APIs with an OCR fallback, transcribes system and microphone audio with local Whisper by default (or, when the user selects one in settings, with a cloud engine such as Deepgram or screenpipe-cloud, or an OpenAI-compatible transcription endpoint; audio leaves the device only when a remote engine is selected), and stores it all in a local SQLite database as a private, searchable memory. It exposes a full local REST API at http://localhost:3030 (71 operations across search, frames, audio, meetings, memories, speakers, tags, vault, cloud sync, cloud archive, and data retention) and ships as an MCP server so agents like Claude, Cursor, Codex, and Cline can query screen history and meeting transcripts. Automations are built as "pipes" — scheduled AI agents written
+  in plain markdown. It is positioned as a local-first alternative to Rewind.ai, Microsoft Recall, and cloud meeting bots.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/screenpipe.png
+json_schemas:
+- name: ActivitySummaryResponse
+  property_count: 5
+  slug: screenpipe-activity-summary-response
+- name: AddContentRequest
+  property_count: 2
+  slug: screenpipe-add-content-request
+- name: AddContentResponse
+  property_count: 2
+  slug: screenpipe-add-content-response
+- name: AddTagsRequest
+  property_count: 1
+  slug: screenpipe-add-tags-request
+- name: AddTagsResponse
+  property_count: 1
+  slug: screenpipe-add-tags-response
+- name: ArchiveConfigureRequest
+  property_count: 2
+  slug: screenpipe-archive-configure-request
+- name: ArchiveInitRequest
+  property_count: 2
+  slug: screenpipe-archive-init-request
+- name: ArchiveInitResponse
+  property_count: 2
+  slug: screenpipe-archive-init-response
+- name: ArchiveStatusResponse
+  property_count: 12
+  slug: screenpipe-archive-status-response
+- name: AudioDeviceControlRequest
+  property_count: 1
+  slug: screenpipe-audio-device-control-request
+- name: AudioDeviceControlResponse
+  property_count: 2
+  slug: screenpipe-audio-device-control-response
+- name: BulkDeleteMeetingsRequest
+  property_count: 1
+  slug: screenpipe-bulk-delete-meetings-request
+- name: CreateMemoryRequest
+  property_count: 6
+  slug: screenpipe-create-memory-request
+- name: DeleteDeviceDataRequest
+  property_count: 1
+  slug: screenpipe-delete-device-data-request
+- name: DeleteTimeRangeRequest
+  property_count: 2
+  slug: screenpipe-delete-time-range-request
+- name: DeleteTimeRangeResponse
+  property_count: 9
+  slug: screenpipe-delete-time-range-response
+- name: DeviceStorageEntry
+  property_count: 3
+  slug: screenpipe-device-storage-entry
+- name: ElementsListResponse
+  property_count: 2
+  slug: screenpipe-elements-list-response
+- name: FrameContextResponse
+  property_count: 5
+  slug: screenpipe-frame-context-response
+- name: FrameMetadataResponse
+  property_count: 2
+  slug: screenpipe-frame-metadata-response
+- name: FrameTextResponse
+  property_count: 2
+  slug: screenpipe-frame-text-response
+- name: GetTagsBatchRequest
+  property_count: 1
+  slug: screenpipe-get-tags-batch-request
+- name: GetTagsBatchResponse
+  property_count: 1
+  slug: screenpipe-get-tags-batch-response
+- name: HealthCheckResponse
+  property_count: 20
+  slug: screenpipe-health-check-response
+- name: ListDeviceResponse
+  property_count: 2
+  slug: screenpipe-list-device-response
+- name: MeetingRecord
+  property_count: 9
+  slug: screenpipe-meeting-record
+- name: MemoryListResponse
+  property_count: 2
+  slug: screenpipe-memory-list-response
+- name: MemoryResponse
+  property_count: 9
+  slug: screenpipe-memory-response
+- name: MergeMeetingsRequest
+  property_count: 1
+  slug: screenpipe-merge-meetings-request
+- name: MergeSpeakersRequest
+  property_count: 2
+  slug: screenpipe-merge-speakers-request
+- name: MergeVideosRequest
+  property_count: 1
+  slug: screenpipe-merge-videos-request
+- name: MergeVideosResponse
+  property_count: 1
+  slug: screenpipe-merge-videos-response
+- name: MonitorInfo
+  property_count: 6
+  slug: screenpipe-monitor-info
+- name: NextValidFrameResponse
+  property_count: 3
+  slug: screenpipe-next-valid-frame-response
+- name: PipeSyncResponse
+  property_count: 3
+  slug: screenpipe-pipe-sync-response
+- name: RawSqlQuery
+  property_count: 1
+  slug: screenpipe-raw-sql-query
+- name: ReassignSpeakerRequest
+  property_count: 3
+  slug: screenpipe-reassign-speaker-request
+- name: ReassignSpeakerResponse
+  property_count: 5
+  slug: screenpipe-reassign-speaker-response
+- name: RemoveTagsRequest
+  property_count: 1
+  slug: screenpipe-remove-tags-request
+- name: RemoveTagsResponse
+  property_count: 1
+  slug: screenpipe-remove-tags-response
+- name: RetentionConfigureRequest
+  property_count: 2
+  slug: screenpipe-retention-configure-request
+- name: RetentionStatusResponse
+  property_count: 5
+  slug: screenpipe-retention-status-response
+- name: SearchResponse
+  property_count: 3
+  slug: screenpipe-search-response
+- name: SetupRequest
+  property_count: 1
+  slug: screenpipe-setup-request
+- name: Speaker
+  property_count: 3
+  slug: screenpipe-speaker
+- name: StartMeetingRequest
+  property_count: 3
+  slug: screenpipe-start-meeting-request
+- name: SyncDownloadRequest
+  property_count: 1
+  slug: screenpipe-sync-download-request
+- name: SyncDownloadResponse
+  property_count: 3
+  slug: screenpipe-sync-download-response
+- name: SyncInitRequest
+  property_count: 4
+  slug: screenpipe-sync-init-request
+- name: SyncInitResponse
+  property_count: 3
+  slug: screenpipe-sync-init-response
+- name: SyncStatusResponse
+  property_count: 6
+  slug: screenpipe-sync-status-response
+- name: UndoSpeakerReassignRequest
+  property_count: 1
+  slug: screenpipe-undo-speaker-reassign-request
+- name: UnlockRequest
+  property_count: 1
+  slug: screenpipe-unlock-request
+- name: UpdateMeetingRequest
+  property_count: 6
+  slug: screenpipe-update-meeting-request
+- name: UpdateMemoryRequest
+  property_count: 4
+  slug: screenpipe-update-memory-request
+- name: UpdateSpeakerRequest
+  property_count: 3
+  slug: screenpipe-update-speaker-request
+jsonld:
+- class_count: 85
+  name: Screenpipe Context
+  property_count: 197
+  slug: screenpipe-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 2 tools listed.
   name: Screenpipe MCP Server
-  slug: screenpipe-mcp-server
+  slug: screenpipe
 modified: '2026-07-21'
 name: Screenpipe
 nav: Providers
@@ -357,30 +583,49 @@ network: true
 overview: 'Screenpipe publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Activity API, Audio API, Cloud Archive API, and 15 more. Tagged areas include Company, Screen Recording, Screen Memory, Audio Transcription, and Meeting Intelligence.
 
 
-  Screenpipe''s developer surface includes documentation, API reference, getting-started guide, quickstart, changelog, pricing, support, and 25 more developer resources.'
+  The Screenpipe catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+
+
+  Screenpipe''s developer surface includes engineering blog, documentation, API reference, getting-started guide, quickstart, changelog, pricing, and 36 more developer resources.'
+plans:
+- name: Screenpipe Plans Pricing
+  plan_count: 3
+  slug: screenpipe-plans-pricing
 random_paper: 14
+rules:
+- effective_rule_count: 51
+  extends:
+  - spectral:oas
+  name: Screenpipe API Rules
+  rule_count: 10
+  severity_counts:
+    error: 8
+    hint: 0
+    info: 1
+    warn: 1
+  slug: screenpipe-rules
 score:
-  band: developing
-  composite: 40.8
+  band: strong
+  composite: 60.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 32.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    artifact_dirs: 29
+    catalog_earned: 69.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 20.0
   facets:
-    access_clarity: 26.3
-    contract_governance: 4.5
-    contract_quality: 40.3
-    developer_ergonomics: 70.8
-    discoverability: 66.7
+    access_clarity: 78.9
+    contract_governance: 35.6
+    contract_quality: 50.0
+    developer_ergonomics: 73.2
+    discoverability: 66.1
     operational_transparency: 36.8
   previous_composite: 40.8
   provenance:
     agentic_access: derived
-    conformance: derived
+    conformance: first-party
     contracts:
       callable: 0.0
       derived: 0
@@ -388,9 +633,23 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -399,7 +658,7 @@ security:
 - kind: authentication
   name: Screenpipe Authentication
   slug: screenpipe-authentication
-  summary_line: 0 schemes
+  summary_line: 1 scheme
 - kind: domain-security
   name: Screenpipe Domain Security
   slug: screenpipe-domain-security
@@ -407,11 +666,11 @@ security:
 - kind: vulnerability-disclosure
   name: Screenpipe Vulnerability Disclosure
   slug: screenpipe-vulnerability-disclosure
-  summary_line: Hackerone · contact published
+  summary_line: security.txt · contact published
 - kind: trust-center
   name: Screenpipe Trust Center
   slug: screenpipe-trust-center
-  summary_line: SOC 2, HIPAA, GDPR
+  summary_line: SOC 2, ISO 27001, PCI DSS, HIPAA, GDPR
 slug: screenpipe
 tags:
 - Company
@@ -425,6 +684,5 @@ tags:
 - MCP
 - Developer Tools
 - Productivity
-- Open-Source
 website: https://screenpi.pe
 ---

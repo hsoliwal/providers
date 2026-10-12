@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 common:
@@ -174,12 +174,12 @@ rate_limits:
   slug: 1mind-rate-limits
 scopes:
 - name: 1Mind Scopes
-  scope_count: 0
+  scope_count: 3
   slug: 1mind-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: thin
-  composite: 28.2
+  composite: 32.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 35.0
@@ -193,14 +193,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 50.0
-  previous_composite: 28.2
+  previous_composite: 32.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

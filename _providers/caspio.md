@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -83,7 +83,7 @@ apis:
   description: View record operations
   name: Caspio Views API
   slug: caspio-views-api
-artifact_total: 21
+artifact_total: 22
 collections:
 - collection_type: open
   name: API Collection
@@ -113,6 +113,11 @@ collections:
   name: Caspio REST API
   slug: open-caspio
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/caspio/refs/heads/main/capabilities/caspio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/caspio-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/caspio/refs/heads/main/agentic-access/caspio-agentic-access.yml
   title: ''
@@ -165,20 +170,24 @@ created: '2026-05-11'
 description: Caspio is a low-code cloud platform for building online database applications without writing code, enabling business users and developers to create multi-user data-driven web apps through a point-and-click visual builder. The platform includes automated workflows, AI integration, identity management, and compliance tooling, and exposes a REST API for managing tables, views, records, files, users, and tasks in a Caspio account.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/caspio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.caspio.com over HTTP.
+  name: Caspio MCP Server
+  slug: caspio
 modified: '2026-05-11'
 name: Caspio
 nav: Providers
 network: true
-overview: 'Caspio publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Authentication API, Files API, and 4 more. Tagged areas include Low-Code, No-Code, Database, Application Platform, and Cloud Database.
+overview: 'Caspio publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Authentication API, Files API, and 5 more. Tagged areas include Low-Code, No-Code, Database, Application Platform, and Cloud Database.
 
 
-  Caspio''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, support, and 5 more developer resources.'
+  Caspio''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, support, and 6 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 34.1
+  composite: 33.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -188,11 +197,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 49.1
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 34.1
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -201,8 +210,14 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -229,6 +244,6 @@ tags:
 - Application Platform
 - Cloud Database
 - Online Forms
-- Workflow-Automation
+- Workflow Automation
 website: https://www.caspio.com
 ---

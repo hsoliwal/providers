@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -136,14 +136,14 @@ modified: '2026-05-11'
 name: OPNsense
 nav: Providers
 network: true
-overview: 'OPNsense publishes 3 APIs on the [APIs.io](https://apis.io/) network: Core API, Diagnostics API, and Firewall API. Tagged areas include Firewall, Networking, Security, VPN, and Routing.
+overview: 'OPNsense publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Core API, Diagnostics API, Firewall API, and 1 more. Tagged areas include Firewall, Networking, Security, VPN, and Routing.
 
 
   OPNsense''s developer surface includes authentication, documentation, and 9 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 25.1
+  composite: 23.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -155,11 +155,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 25.1
+  previous_composite: 23.0
   provenance:
     agentic_access: derived
     contracts:
@@ -167,8 +167,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -190,6 +196,6 @@ tags:
 - Security
 - VPN
 - Routing
-- Open-Source
+- Open Source
 website: https://opnsense.org
 ---

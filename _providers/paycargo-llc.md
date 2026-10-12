@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Partner-facing PayCargo API for retrieving charges due, processing payments, and reconciling transactions directly from a customer's accounting or transportation-management system. Uses GET and POST c
@@ -108,17 +108,17 @@ description: PayCargo, LLC is a fintech platform for the global logistics and fr
 image: https://paycargo.com/wp-content/uploads/2026/02/PayCargo_featured_2026.webp
 layout: provider
 modified: '2026-07-20'
-name: PayCargo, LLC
+name: PayCargo
 nav: Providers
 network: true
-overview: 'PayCargo, LLC publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Freight, Logistics, and Supply Chain.
+overview: 'PayCargo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Freight, Logistics, and Supply Chain.
 
 
-  PayCargo, LLC''s developer surface includes documentation, support, engineering blog, pricing, signup flow, changelog, and 9 more developer resources.'
+  PayCargo''s developer surface includes documentation, support, engineering blog, pricing, signup flow, changelog, and 9 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 28.3
+  composite: 26.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -132,9 +132,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 28.3
+  previous_composite: 26.8
   provenance:
     conformance: first-party
   regulatory:
@@ -148,9 +148,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

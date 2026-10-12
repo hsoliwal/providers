@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -224,14 +224,14 @@ description: Equals is an AI analytics platform that builds trusted spreadsheets
 image: https://avatars.githubusercontent.com/u/16228084?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at go.equals.com over HTTP; 3 tools listed.
   name: Equals MCP Server
-  slug: equals-mcp-server
+  slug: equals
 modified: '2026-09-16'
 name: Equals
 nav: Providers
 network: true
-overview: 'Equals publishes 1 API on the [APIs.io](https://apis.io/) network: Memories API. Tagged areas include Company, Analytics, Spreadsheets, Business Intelligence, and Dashboards.
+overview: 'Equals publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Memories API, and 1 more. Tagged areas include Company, Analytics, Spreadsheets, Business Intelligence, and Dashboards.
 
 
   Equals'' developer surface includes documentation, getting-started guide, support, pricing, signup flow, API reference, authentication, and 29 more developer resources.'
@@ -246,7 +246,7 @@ rate_limits:
   slug: equals-rate-limits
 score:
   band: developing
-  composite: 47.3
+  composite: 49.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -260,9 +260,9 @@ score:
     contract_governance: 18.2
     contract_quality: 18.1
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 47.3
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -273,8 +273,14 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -300,5 +306,6 @@ tags:
 - Revenue Operations
 - Reporting
 - MCP
+- A2A
 website: https://equals.com
 ---

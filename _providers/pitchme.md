@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: PitchMe advertises a "Custom Integration via API" for connecting any ATS or recruitment platform not covered by its native marketplace connectors. As of 2026-08-14 the company publishes no developer p
@@ -111,7 +111,7 @@ modified: '2026-08-14'
 name: PitchMe
 nav: Providers
 network: true
-overview: 'PitchMe publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruitment, Data Enrichment, Talent Intelligence, and Human Resources.
+overview: 'PitchMe publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Data Enrichment, Talent Intelligence, and Human Resources.
 
 
   PitchMe''s developer surface includes engineering blog, support, and 9 more developer resources.'
@@ -126,7 +126,7 @@ rate_limits:
   slug: pitchme-rate-limits
 score:
   band: emerging
-  composite: 14.1
+  composite: 15.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -140,14 +140,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 14.1
+  previous_composite: 15.2
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +174,7 @@ security:
 slug: pitchme
 tags:
 - Company
-- Recruitment
+- Recruiting
 - Data Enrichment
 - Talent Intelligence
 - Human Resources

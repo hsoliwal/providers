@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 880
   human_in_the_loop: 1
@@ -51,67 +51,67 @@ apis:
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The authentication-check API from NetBox — 1 operation(s) for authentication-check.
-  name: NetBox authentication-check API
+  name: NetBox Authentication Check API
   slug: netbox-authentication-check-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The circuits API from NetBox — 24 operation(s) for circuits.
-  name: NetBox circuits API
+  name: NetBox Circuits API
   slug: netbox-circuits-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The core API from NetBox — 21 operation(s) for core.
-  name: NetBox core API
+  name: NetBox Core API
   slug: netbox-core-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The dcim API from NetBox — 99 operation(s) for dcim.
-  name: NetBox dcim API
+  name: NetBox Dcim API
   slug: netbox-dcim-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The extras API from NetBox — 48 operation(s) for extras.
-  name: NetBox extras API
+  name: NetBox Extras API
   slug: netbox-extras-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The ipam API from NetBox — 41 operation(s) for ipam.
-  name: NetBox ipam API
+  name: NetBox Ipam API
   slug: netbox-ipam-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The schema API from NetBox — 1 operation(s) for schema.
-  name: NetBox schema API
+  name: NetBox Schema API
   slug: netbox-schema-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The status API from NetBox — 1 operation(s) for status.
-  name: NetBox status API
+  name: NetBox Status API
   slug: netbox-status-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The tenancy API from NetBox — 12 operation(s) for tenancy.
-  name: NetBox tenancy API
+  name: NetBox Tenancy API
   slug: netbox-tenancy-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The users API from NetBox — 14 operation(s) for users.
-  name: NetBox users API
+  name: NetBox Users API
   slug: netbox-users-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The virtualization API from NetBox — 13 operation(s) for virtualization.
-  name: NetBox virtualization API
+  name: NetBox Virtualization API
   slug: netbox-virtualization-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The vpn API from NetBox — 20 operation(s) for vpn.
-  name: NetBox vpn API
+  name: NetBox Vpn API
   slug: netbox-vpn-api
 - baseURL: https://demo.netbox.dev/api
   baseurl_source: declared
   description: The wireless API from NetBox — 6 operation(s) for wireless.
-  name: NetBox wireless API
+  name: NetBox Wireless API
   slug: netbox-wireless-api
 artifact_total: 36
 collections:
@@ -238,7 +238,7 @@ modified: '2026-09-16'
 name: NetBox
 nav: Providers
 network: true
-overview: 'NetBox publishes 13 APIs on the [APIs.io](https://apis.io/) network, including authentication-check API, circuits API, core API, and 10 more. Tagged areas include Data-Center, DCIM, Infrastructure as Code, IPAM, and Network Automation.
+overview: 'NetBox publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Authentication Check API, Circuits API, Core API, and 11 more. Tagged areas include Data Center, DCIM, Infrastructure as Code, IPAM, and Network Automation.
 
 
   NetBox''s developer surface includes pricing, authentication, engineering blog, getting-started guide, and 10 more developer resources.'
@@ -253,7 +253,7 @@ rate_limits:
   slug: netbox-rate-limits
 score:
   band: thin
-  composite: 37.6
+  composite: 35.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 55.0
@@ -261,15 +261,15 @@ score:
     catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.8
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 51.9
+    contract_quality: 47.1
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 30.8
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -277,9 +277,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -295,13 +301,13 @@ security:
   summary_line: TLSv1.3 · HSTS
 slug: netbox
 tags:
-- Data-Center
+- Data Center
 - DCIM
 - Infrastructure as Code
 - IPAM
 - Network Automation
 - Network Management
-- Open-Source
+- Open Source
 - Source of Truth
 website: https://netbox.dev
 ---

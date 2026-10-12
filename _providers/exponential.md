@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -242,9 +242,9 @@ finops:
 image: https://raw.githubusercontent.com/api-evangelist/exponential/refs/heads/main/apis.yml
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 6 tools listed.
   name: Exponential MCP Server
-  slug: exponential-mcp-server
+  slug: yo-base-mcp-plugin
 modified: '2026-07-19'
 name: Exponential
 nav: Providers
@@ -256,7 +256,7 @@ overview: 'Exponential publishes 5 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 3
 score:
   band: developing
-  composite: 40.7
+  composite: 39.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -268,11 +268,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 13.2
-  previous_composite: 40.7
+  previous_composite: 39.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -283,8 +283,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -312,7 +318,7 @@ tags:
 - Cross-Chain
 - Blockchain
 - Crypto
-- Risk
+- Risk Management
 - Risk Ratings
 - Agents
 - x402

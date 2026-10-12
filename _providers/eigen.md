@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -66,7 +66,7 @@ overview: Eigen is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 14
 score:
   band: minimal
-  composite: 2.6
+  composite: 3.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -80,23 +80,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 2.6
+  previous_composite: 3.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -115,8 +117,8 @@ tags:
 - Intelligent Document Processing
 - Data Extraction
 - Natural Language Processing
-- Machine-Learning
-- Financial-Services
+- Machine Learning
+- Financial Services
 - Legal Tech
 - Insurance
 website: https://eigentech.com/

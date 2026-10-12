@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -115,7 +115,7 @@ modified: '2026-08-12'
 name: DecisionNext
 nav: Providers
 network: true
-overview: 'DecisionNext is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Artificial Intelligence, Machine-Learning, and Forecasting.
+overview: 'DecisionNext is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Artificial Intelligence, Machine Learning, and Forecasting.
 
 
   DecisionNext''s developer surface includes engineering blog, support, pricing, and 9 more developer resources.'
@@ -144,11 +144,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   previous_composite: 19.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +171,7 @@ tags:
 - Company
 - Analytics
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Forecasting
 - Commodities
 - Agriculture

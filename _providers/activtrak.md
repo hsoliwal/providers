@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -191,7 +191,7 @@ overview: 'ActivTrak publishes 4 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 1
 score:
   band: developing
-  composite: 48.5
+  composite: 49.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -203,11 +203,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 55.9
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 48.5
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -218,8 +218,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

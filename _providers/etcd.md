@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 4
@@ -114,6 +114,11 @@ collections:
   name: etcd HTTP Gateway Auth Watch API
   slug: open-etcd-watch-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/etcd/refs/heads/main/capabilities/etcd-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/etcd-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -457,13 +462,13 @@ modified: '2026-05-19'
 name: Etcd
 nav: Providers
 network: true
-overview: 'Etcd publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Cluster API, KV API, and 3 more. Tagged areas include Cloud-Native, Consensus, Distributed Systems, Graduated, and Key-Value Store.
+overview: 'Etcd publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Cluster API, KV API, and 7 more. Tagged areas include Cloud-Native, Consensus, Distributed Systems, Graduated, and Key-Value Store.
 
 
   The Etcd catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Etcd''s developer surface includes authentication, documentation, getting-started guide, engineering blog, changelog, support, Stack Overflow tag, and 15 more developer resources.'
+  Etcd''s developer surface includes authentication, documentation, getting-started guide, engineering blog, changelog, support, Stack Overflow tag, and 16 more developer resources.'
 plans:
 - name: Etcd Plans Pricing
   plan_count: 1
@@ -486,9 +491,9 @@ rules:
   slug: etcd-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 51.2
+  composite: 49.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 48.3
     catalog_earned_first_party: 0.0
     catalog_gap: 66.8
@@ -498,14 +503,14 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 9.8
-    contract_quality: 59.2
+    contract_quality: 53.6
     developer_ergonomics: 47.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 47.4
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 51.2
+  previous_composite: 49.9
   provenance:
     agentic_access: derived
     contracts:
@@ -513,8 +518,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

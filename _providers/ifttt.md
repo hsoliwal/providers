@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -51,7 +51,7 @@ apis:
   description: The Trigger API from IFTTT — 2 operation(s) for trigger.
   name: IFTTT Trigger API
   slug: ifttt-trigger-api
-artifact_total: 7
+artifact_total: 8
 collections:
 - collection_type: open
   name: API Collection
@@ -105,18 +105,22 @@ created: '2026-05-11'
 description: IFTTT (If This Then That) is a consumer and prosumer automation platform that connects more than 750 apps, devices, and services through conditional Applets that chain triggers to actions. The IFTTT Maker Webhooks service exposes a public HTTP API that lets developers fire triggers and execute Applets from any internet-connected device using a personal Webhooks key for authentication, with both form-encoded and JSON payload variants supported.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ifttt.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at ifttt.com over HTTP.
+  name: IFTTT MCP Server
+  slug: ifttt
 modified: '2026-05-11'
 name: IFTTT
 nav: Providers
 network: true
-overview: 'IFTTT publishes 1 API on the [APIs.io](https://apis.io/) network: Trigger API. Tagged areas include Automation, Webhook, iPaaS, No-Code, and Smart Home.
+overview: 'IFTTT publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Trigger API, and 1 more. Tagged areas include Automation, Webhook, iPaaS, No-Code, and Smart Home.
 
 
   IFTTT''s developer surface includes documentation, pricing, signup flow, and 6 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 24.5
+  composite: 22.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -128,11 +132,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 24.5
+  previous_composite: 22.8
   provenance:
     agentic_access: derived
     contracts:
@@ -141,8 +145,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -161,5 +171,6 @@ tags:
 - No-Code
 - Smart Home
 - IoT
+- Workflow Automation
 website: https://ifttt.com
 ---

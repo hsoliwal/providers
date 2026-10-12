@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -80,7 +80,7 @@ overview: 'Bitcoin is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 18
 score:
   band: minimal
-  composite: 9.3
+  composite: 10.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -92,19 +92,19 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 28.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 9.3
+  previous_composite: 10.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -125,7 +125,7 @@ tags:
 - Bitcoin
 - Digital Currency
 - Payments
-- Open-Source
+- Open Source
 - JSON-RPC
 - Protocol
 website: https://bitcoin.org

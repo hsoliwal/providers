@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Uncountable External API is the authenticated REST surface of the Uncountable R&D platform. Its documented entry point is the list_entities endpoint, which returns rows from a Listing Configuratio
@@ -209,12 +209,12 @@ rate_limits:
   slug: uncountable-rate-limits
 scopes:
 - name: Uncountable Scopes
-  scope_count: 0
+  scope_count: 3
   slug: uncountable-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes · authorization_code/refresh_token
 score:
   band: thin
-  composite: 32.7
+  composite: 36.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -228,15 +228,21 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 32.7
+  previous_composite: 36.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 128
   human_in_the_loop: 1
@@ -62,7 +62,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The bland API from Bluejay — 1 operation(s) for bland.
-  name: Bluejay bland API
+  name: Bluejay Bland API
   slug: bluejay-bland-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -262,7 +262,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The retell API from Bluejay — 1 operation(s) for retell.
-  name: Bluejay retell API
+  name: Bluejay Retell API
   slug: bluejay-retell-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -327,7 +327,7 @@ apis:
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
   description: The vapi API from Bluejay — 3 operation(s) for vapi.
-  name: Bluejay vapi API
+  name: Bluejay Vapi API
   slug: bluejay-vapi-api
 - baseURL: https://api.getbluejay.ai
   baseurl_source: declared
@@ -682,9 +682,9 @@ description: Bluejay is the testing, monitoring, and improvement layer for conve
 image: https://framerusercontent.com/assets/0eWRRDcsziAELTSPQghHwloyXH0.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.getbluejay.ai over HTTP.
   name: Bluejay MCP Server
-  slug: bluejay-mcp-server
+  slug: bluejay
 modified: '2026-09-16'
 name: Bluejay
 nav: Providers
@@ -699,23 +699,23 @@ overview: 'Bluejay publishes 61 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 0
 score:
   band: developing
-  composite: 48.3
+  composite: 51.0
   coverage:
     artifact_dirs: 21
-    catalog_earned: 24.0
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 91.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 61.3
-    discoverability: 51.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 48.3
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -726,8 +726,14 @@ score:
       total: 61
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

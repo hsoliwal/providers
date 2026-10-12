@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The only publicly documented, machine-readable surface Resilience operates. portal.cyberresilience.com — the gated client and broker application — redirects through /v2/api/auth/login to an Auth0 tena
@@ -187,7 +187,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials
 score:
   band: emerging
-  composite: 21.4
+  composite: 19.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -201,7 +201,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -210,7 +210,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.4
+  previous_composite: 19.2
   provenance:
     conformance: first-party
   regulatory:
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 59.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

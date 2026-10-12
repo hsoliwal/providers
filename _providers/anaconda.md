@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 97
   human_in_the_loop: 7
@@ -238,6 +238,11 @@ collections:
   name: Anaconda Server Websocket API
   slug: open-anaconda-websocket-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/anaconda/refs/heads/main/capabilities/anaconda-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/anaconda-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/anaconda/refs/heads/main/agentic-access/anaconda-agentic-access.yml
   title: ''
@@ -459,20 +464,20 @@ description: Anaconda, Inc. is the Austin, Texas company behind the Anaconda Dis
 image: https://www.anaconda.com/wp-content/uploads/2024/07/anaconda-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at anaconda.com.
   name: Anaconda MCP Server
-  slug: anaconda-mcp-server
+  slug: anaconda-mcp-yml
 modified: '2026-09-16'
 name: Anaconda
 nav: Providers
 network: true
-overview: 'Anaconda publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Navigator API, Artifacts API, and 19 more. Tagged areas include Company, Data Science, Machine-Learning, Artificial Intelligence, and Package Management.
+overview: 'Anaconda publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Navigator API, Artifacts API, and 21 more. Tagged areas include Company, Data Science, Machine Learning, Artificial Intelligence, and Package Management.
 
 
   The Anaconda catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Anaconda''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 40 more developer resources.'
+  Anaconda''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 41 more developer resources.'
 random_paper: 7
 scopes:
 - name: Anaconda Scopes
@@ -481,9 +486,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode/clientCredentials/deviceCode/password/refreshToken
 score:
   band: developing
-  composite: 51.8
+  composite: 53.9
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -493,11 +498,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 57.5
     developer_ergonomics: 73.2
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 51.8
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -508,8 +513,14 @@ score:
       total: 22
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 38.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -536,7 +547,7 @@ slug: anaconda
 tags:
 - Company
 - Data Science
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Package Management
 - Python

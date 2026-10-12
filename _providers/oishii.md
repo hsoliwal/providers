@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Anonymous, live Model Context Protocol server for the Oishii storefront, served from oishii.com and provided by the Shopify storefront-renderer platform. A tools/list call returns five tools with full
@@ -147,9 +147,9 @@ description: 'Oishii is a US vertical-farming company founded in 2016 and headqu
 image: https://oishii.com/cdn/shop/files/OishiiOGImage_24043e78-29c0-4975-8026-ea0399740ae4.jpg?v=1655908654
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at oishii.com; 5 tools listed.
   name: Oishii MCP Server
-  slug: oishii-mcp-server
+  slug: oishii-mcp-yml
 modified: '2026-08-04'
 name: Oishii
 nav: Providers
@@ -165,8 +165,8 @@ scopes:
   slug: oishii-scopes
   summary_line: 4 scopes · authorizationCode/refreshToken/urn:ietf:params:oauth:grant-type:jwt-bearer
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -180,20 +180,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.8
+  previous_composite: 26.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

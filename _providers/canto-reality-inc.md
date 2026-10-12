@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -54,14 +54,14 @@ description: Canto Reality, Inc. is an early-stage exploratory deployment lab bu
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/canto-reality-inc.png
 layout: provider
 modified: '2026-07-18'
-name: Canto Reality Inc.
+name: Canto Reality
 nav: Providers
 network: true
-overview: Canto Reality Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Infrastructure, Social, and Startups.
+overview: Canto Reality is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Infrastructure, Social, and Palo Alto.
 random_paper: 5
 score:
   band: minimal
-  composite: 5.3
+  composite: 3.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -75,11 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 5.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -97,7 +103,6 @@ tags:
 - Artificial Intelligence
 - AI Infrastructure
 - Social
-- Startups
 - Palo Alto
 - a16z Speedrun
 website: https://cantoreality.com

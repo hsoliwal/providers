@@ -16,7 +16,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: platform
     auth_clarity: served
@@ -26,7 +26,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: MALK Organics's agent-facing commerce API, implemented via the Shopify Universal Commerce Protocol (UCP) over MCP and served from MALK's own host. Agents can search and look up the MALK product catalo
@@ -147,9 +147,9 @@ description: 'MALK Organics is an Austin, Texas plant-based beverage company fou
 image: https://malkorganics.com/cdn/shop/files/malk_logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at malkorganics.com over HTTP; 13 tools listed.
   name: MALK Organics MCP Server
-  slug: malk-organics-mcp-server
+  slug: malk-organics
 modified: '2026-08-25'
 name: MALK Organics
 nav: Providers
@@ -174,7 +174,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 26.5
+  composite: 29.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -187,16 +187,22 @@ score:
     access_clarity: 34.2
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 75.9
+    developer_ergonomics: 35.0
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 26.5
+  previous_composite: 29.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: unknown
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

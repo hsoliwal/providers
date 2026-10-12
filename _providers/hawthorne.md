@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-facing Universal Commerce Protocol (UCP) shopping surface for the Hawthorne Shopify store — catalog search/lookup, cart, checkout, fulfillment, discount and order capabilities over an MCP endpoi
@@ -93,9 +93,9 @@ description: 'Hawthorne is an internet-first men''s personal care and grooming b
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hawthorne.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at hawthorne-lab.myshopify.com over HTTP; 5 tools listed.
   name: Hawthorne MCP Server
-  slug: hawthorne-mcp-server
+  slug: hawthorne-ucp-shopping
 modified: '2026-07-19'
 name: Hawthorne
 nav: Providers
@@ -112,7 +112,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 14.2
+  composite: 16.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 14.2
+  previous_composite: 16.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

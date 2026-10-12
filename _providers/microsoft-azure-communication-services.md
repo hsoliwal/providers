@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -156,7 +156,7 @@ rate_limits:
   slug: microsoft-azure-communication-services-rate-limits
 score:
   band: thin
-  composite: 36.7
+  composite: 34.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -168,11 +168,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 38.1
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 10.5
-  previous_composite: 36.7
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -185,9 +185,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

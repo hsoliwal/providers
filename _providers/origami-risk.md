@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Quote-side policy lifecycle — create and patch proposals, add and remove policy lines, coverages, schedules and linked schedules, list insurance programs, carriers, policy lines and states, run or que
@@ -300,7 +300,7 @@ modified: '2026-07-25'
 name: Origami Risk
 nav: Providers
 network: true
-overview: 'Origami Risk publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Has Token Expired API, New Endpoint 1 API, and 2 more. Tagged areas include Insurance, United States, Property and Casualty, Policy Administration, and Claims.
+overview: 'Origami Risk publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Has Token Expired API, New Endpoint 1 API, and 8 more. Tagged areas include Insurance, United States, Property and Casualty, Policy Administration, and Claims.
 
 
   The Origami Risk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -314,7 +314,7 @@ rate_limits:
   slug: origami-risk-rate-limits
 score:
   band: developing
-  composite: 53.7
+  composite: 51.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 52.0
@@ -326,9 +326,9 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 53.0
+    contract_quality: 48.5
     developer_ergonomics: 50.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -337,7 +337,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.7
+  previous_composite: 51.0
   provenance:
     conformance: derived
     contracts:
@@ -352,9 +352,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

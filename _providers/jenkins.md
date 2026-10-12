@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -99,6 +99,11 @@ collections:
   name: Jenkins Remote Access API
   slug: open-jenkins
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jenkins/refs/heads/main/capabilities/jenkins-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jenkins-capability-edges.yml
 - group: design
   href: https://raw.githubusercontent.com/api-evangelist/jenkins/refs/heads/main/arazzo/jenkins-trigger-build-and-await-result-workflow.yml
   title: ''
@@ -268,7 +273,7 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jenkins.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 18 tools listed.
   name: Jenkins MCP Server
   slug: jenkins-mcp-server
 modified: '2026-06-20'
@@ -278,7 +283,7 @@ network: true
 overview: 'Jenkins publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Computer API, Jobs API, Queue API, and 1 more. Tagged areas include Automation, Build Server, CI/CD, Continuous Delivery, and Continuous Integration.
 
 
-  Jenkins'' developer surface includes authentication, changelog, CLI, getting-started guide, documentation, engineering blog, and 29 more developer resources.'
+  Jenkins'' developer surface includes authentication, changelog, CLI, getting-started guide, documentation, engineering blog, and 30 more developer resources.'
 plans:
 - name: Jenkins Plans Pricing
   plan_count: 3
@@ -290,9 +295,9 @@ rate_limits:
   slug: jenkins-rate-limits
 score:
   band: thin
-  composite: 36.4
+  composite: 36.6
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
@@ -302,11 +307,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 45.2
-    discoverability: 64.8
+    discoverability: 61.7
     operational_transparency: 31.6
-  previous_composite: 36.4
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -316,8 +321,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -344,7 +355,7 @@ tags:
 - Continuous Delivery
 - Continuous Integration
 - DevOps
-- Open-Source
+- Open Source
 - Remote Access API
 website: https://www.jenkins.io/
 ---

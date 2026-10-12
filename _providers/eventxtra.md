@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.4
-  scored_at: '2026-09-20'
+  score: 34.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ asyncapis:
   name: Eventxtra Webhooks
   slug: eventxtra-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/eventxtra/refs/heads/main/capabilities/eventxtra-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/eventxtra-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/eventxtra/refs/heads/main/agentic-access/eventxtra-agentic-access.yml
   title: ''
@@ -305,7 +310,7 @@ overview: 'EventX publishes 15 APIs on the [APIs.io](https://apis.io/) network, 
   The EventX catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  EventX''s developer surface includes authentication, documentation, support, engineering blog, pricing, API reference, getting-started guide, and 28 more developer resources.'
+  EventX''s developer surface includes authentication, documentation, support, engineering blog, pricing, API reference, getting-started guide, and 29 more developer resources.'
 plans:
 - name: Eventxtra Plans Pricing
   plan_count: 4
@@ -317,7 +322,7 @@ rate_limits:
   slug: eventxtra-rate-limits
 score:
   band: strong
-  composite: 55.9
+  composite: 56.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 57.0
@@ -329,16 +334,16 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 59.1
+    contract_quality: 54.3
     developer_ergonomics: 32.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 55.9
+  previous_composite: 56.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -349,8 +354,18 @@ score:
       total: 15
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

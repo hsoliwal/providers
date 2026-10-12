@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -79,14 +79,14 @@ description: Acutus Medical, Inc. is a Carlsbad, California arrhythmia-managemen
   operated a developer program or published an API; as of September 2026 its entire public web presence — acutus.com, acutusmedical.com and the ir.acutusmedical.com investor site its own press releases link to — no longer resolves in DNS, leaving no host on which a contract could be published.
 layout: provider
 modified: '2026-09-06'
-name: Acutus Medical, Inc.
+name: Acutus Medical
 nav: Providers
 network: true
-overview: Acutus Medical, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Cardiology, and Electrophysiology.
+overview: Acutus Medical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Cardiology, and Electrophysiology.
 random_paper: 17
 score:
   band: minimal
-  composite: 2.9
+  composite: 3.3
   coverage:
     artifact_dirs: 2
     catalog_earned: 25.0
@@ -100,7 +100,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -108,15 +108,15 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 2.9
+  previous_composite: 3.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

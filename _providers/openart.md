@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'OpenArt''s remote Model Context Protocol server, letting AI agents generate and edit images and video, discover models, manage the library and projects, and check account credits — authorized with the '
@@ -122,14 +122,14 @@ description: OpenArt is an all-in-one AI creation platform for generating and ed
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openart.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.openart.ai over HTTP.
   name: Openart MCP Server
-  slug: openart-mcp-server
+  slug: openart
 modified: '2026-07-20'
 name: Openart
 nav: Providers
 network: true
-overview: 'Openart publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Image-Generation, and Video Generation.
+overview: 'Openart publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Image Generation, and Video Generation.
 
 
   Openart''s developer surface includes authentication, documentation, support, engineering blog, pricing, signup flow, and 11 more developer resources.'
@@ -141,7 +141,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 27.2
+  composite: 29.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -155,14 +155,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 27.2
+  previous_composite: 29.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,7 +189,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Generative AI
-- Image-Generation
+- Image Generation
 - Video Generation
 - Creative Tools
 - MCP

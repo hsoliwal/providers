@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Balance API powers embedded B2B payments, digital trade credit, net terms, and order-to-cash automation. Developer documentation is gated behind a request form (ReadMe-hosted) and the production A
@@ -131,17 +131,17 @@ description: Balance (Getbalance) provides financial infrastructure for B2B comm
 image: https://www.getbalance.com/wp-content/uploads/2023/06/logo.svg
 layout: provider
 modified: '2026-07-19'
-name: Getbalance
+name: Balance
 nav: Providers
 network: true
-overview: 'Getbalance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, B2B Payments, Trade Credit, and Buy Now Pay Later.
+overview: 'Balance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, B2B Payments, Trade Credit, and Buy Now Pay Later.
 
 
-  Getbalance''s developer surface includes documentation, API reference, developer portal, signup flow, engineering blog, support, changelog, and 13 more developer resources.'
+  Balance''s developer surface includes documentation, API reference, developer portal, signup flow, engineering blog, support, changelog, and 13 more developer resources.'
 random_paper: 18
 score:
   band: thin
-  composite: 34.4
+  composite: 32.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -155,9 +155,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 34.4
+  previous_composite: 32.2
   provenance:
     conformance: first-party
   regulatory:
@@ -169,9 +169,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

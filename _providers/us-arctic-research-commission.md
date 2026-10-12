@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The US Arctic Research Commission (USARC) is an independent federal agency that advises the President and Congress on domestic and international Arctic research policy. The Commission establishes nati
@@ -79,7 +79,7 @@ modified: '2026-05-03'
 name: US Arctic Research Commission
 nav: Providers
 network: true
-overview: 'US Arctic Research Commission publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Arctic Research, Federal-Government, Climate Change, Research Policy, and Advisory Commission.
+overview: 'US Arctic Research Commission publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Arctic Research, Federal Government, Climate Change, Research Policy, and Advisory Commission.
 
 
   The US Arctic Research Commission catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
@@ -105,31 +105,36 @@ rules:
   slug: us-arctic-research-commission-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 19.3
+  composite: 18.7
   coverage:
     artifact_dirs: 11
-    catalog_earned: 58.3
+    catalog_earned: 57.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.8
+    catalog_gap: 57.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 25.3
+    contract_quality: 24.4
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 19.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 18.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -144,7 +149,7 @@ security:
 slug: us-arctic-research-commission
 tags:
 - Arctic Research
-- Federal-Government
+- Federal Government
 - Climate Change
 - Research Policy
 - Advisory Commission

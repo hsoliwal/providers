@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -132,7 +132,7 @@ modified: '2026-08-12'
 name: Anonym
 nav: Providers
 network: true
-overview: 'Anonym is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, Advertising Technology, Privacy, and Ad Measurement.
+overview: 'Anonym is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Privacy, and Ad Measurement.
 
 
   Anonym''s developer surface includes engineering blog and 14 more developer resources.'
@@ -147,7 +147,7 @@ rate_limits:
   slug: anonymco-rate-limits
 score:
   band: emerging
-  composite: 16.9
+  composite: 18.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -161,13 +161,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 16.9
+  previous_composite: 18.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: UK
+      standard: uk-gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,7 +201,7 @@ slug: anonymco
 tags:
 - Company
 - Advertising
-- Advertising Technology
+- AdTech
 - Privacy
 - Ad Measurement
 - Confidential Computing

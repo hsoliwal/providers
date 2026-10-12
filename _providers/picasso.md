@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -64,14 +64,14 @@ modified: '2026-04-28'
 name: Picasso
 nav: Providers
 network: true
-overview: 'Picasso is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Android, Caching, Image Loading, Open-Source, and Library.
+overview: 'Picasso is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Android, Caching, Image Loading, Open Source, and Library.
 
 
   Picasso''s developer surface includes GitHub presence, documentation, and 3 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 3.4
+  composite: 4.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -85,7 +85,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -93,15 +93,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 3.4
+  previous_composite: 4.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,7 +113,7 @@ tags:
 - Android
 - Caching
 - Image Loading
-- Open-Source
+- Open Source
 - Library
 - Square
 website: https://square.github.io/picasso/

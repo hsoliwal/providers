@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 12.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: ILAB's datasets are served through the U.S. Department of Labor Open Data Portal API (https://apiprod.dol.gov/v4) under the agency segment 'ilab'. The catalogue route /v4/datasets answers anonymously;
@@ -175,7 +175,7 @@ modified: '2026-09-05'
 name: Bureau of International Labor Affairs
 nav: Providers
 network: true
-overview: 'Bureau of International Labor Affairs publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, International, Labor, Standards, and Child Labor.
+overview: 'Bureau of International Labor Affairs publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, International, Labor, Standards, and Child Labor.
 
 
   Bureau of International Labor Affairs'' developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, and 20 more developer resources.'
@@ -190,7 +190,7 @@ rate_limits:
   slug: bureau-of-international-labor-affairs-rate-limits
 score:
   band: thin
-  composite: 30.4
+  composite: 27.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 56.0
@@ -202,16 +202,17 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - global
-  previous_composite: 30.4
+    - north-america
+  previous_composite: 27.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -220,9 +221,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +245,7 @@ security:
   summary_line: Bugcrowd · contact published
 slug: bureau-of-international-labor-affairs
 tags:
-- Federal-Government
+- Federal Government
 - International
 - Labor
 - Standards

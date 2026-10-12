@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://business.mamopay.com/manage_api/v1
@@ -180,6 +180,11 @@ collections:
   name: Mamo Business Business Details Webhooks API
   slug: open-mamo-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mamo/refs/heads/main/capabilities/mamo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mamo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mamo/refs/heads/main/mcp/mamo-mcp.yml
   title: ''
@@ -324,11 +329,11 @@ overview: 'Mamo publishes 12 APIs on the [APIs.io](https://apis.io/) network, in
   The Mamo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Mamo''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 23 more developer resources.'
+  Mamo''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 24 more developer resources.'
 random_paper: 8
 score:
-  band: strong
-  composite: 58.4
+  band: developing
+  composite: 53.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -340,9 +345,9 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 68.7
+    contract_quality: 63.0
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -351,7 +356,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 58.4
+  previous_composite: 53.8
   provenance:
     conformance: first-party
     contracts:
@@ -366,9 +371,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 75.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -403,5 +408,6 @@ tags:
 - Expense Management
 - United Arab Emirates
 - Middle East
+- MENA
 website: https://mamopay.com
 ---

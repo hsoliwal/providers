@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: platform
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 43.7
-  scored_at: '2026-09-20'
+  score: 41.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 3
@@ -183,9 +183,9 @@ description: 'Tecovas is an Austin, Texas direct-to-consumer Western wear brand 
 image: https://cdn.sanity.io/images/v8kybopt/production/073bf9cd1134041e2c334a569e22504347e336eb-8108x5289.jpg?auto=format&fit=max&w=1200
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at checkout.tecovas.com over HTTP; 13 tools listed.
   name: Tecovas MCP Server
-  slug: tecovas-mcp-server
+  slug: tecovas-ucp-shopping
 modified: '2026-08-05'
 name: Tecovas
 nav: Providers
@@ -202,7 +202,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.9
+  composite: 30.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -214,18 +214,24 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 54.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 35.9
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

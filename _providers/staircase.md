@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -120,19 +120,19 @@ layout: provider
 mcp_servers:
 - description: Exposes the Elephant property data graph — county datasets, oracle property records, JSON Schemas, geospatial lookups, and read-only SQL — to AI agents.
   name: Elephant MCP server
-  slug: elephant-mcp-server
+  slug: elephant
 modified: '2026-07-21'
 name: Staircase
 nav: Providers
 network: true
-overview: 'Staircase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Real-Estate, Property Data, and Data.
+overview: 'Staircase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Real Estate, Property Data, and Data.
 
 
   Staircase''s developer surface includes documentation, engineering blog, support, CLI, and 13 more developer resources.'
 random_paper: 13
 score:
   band: emerging
-  composite: 15.7
+  composite: 15.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -146,15 +146,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 15.7
+  previous_composite: 15.0
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +176,7 @@ slug: staircase
 tags:
 - Company
 - Fintech
-- Real-Estate
+- Real Estate
 - Property Data
 - Data
 - MCP

@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Erebor's developer API for programmatic access to banking, money-movement, and stablecoin operations. The gateway at api.erebor.bank authenticates requests with an API key and returns a structured JSO
   name: Erebor API
   slug: erebor-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/erebor/refs/heads/main/security/erebor-domain-security.yml
@@ -108,6 +108,10 @@ created: '2026-07-17'
 description: Erebor is a digital-first, FDIC-insured national bank built for the innovation economy — technology startups, cryptocurrency and stablecoin businesses, and AI and defense companies that traditional banks have historically underserved. Co-founded by Palmer Luckey (Anduril) and Joe Lonsdale (8VC) and backed by Founders Fund, Lux Capital, Haun Ventures, and 8VC, Erebor received OCC preliminary conditional approval in October 2025, FDIC deposit-insurance approval in December 2025, and launched in February 2026. It offers deposit accounts, wires and money movement, and stablecoin operations. Erebor exposes a developer API at api.erebor.bank secured with API keys, an Auth0-authenticated developer dashboard at developer.erebor.bank, and Fern-based developer documentation at docs.erebor.bank. The public developer docs are login-gated, so the machine-readable surface captured here is limited to what is observable without credentials.
 image: https://erebor.bank/apple-touch-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.erebor.bank over HTTP.
+  name: Erebor MCP Server
+  slug: erebor
 modified: '2026-07-19'
 name: Erebor
 nav: Providers
@@ -119,7 +123,7 @@ overview: 'Erebor publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 1
 score:
   band: emerging
-  composite: 12.1
+  composite: 12.4
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -133,9 +137,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 12.1
+  previous_composite: 12.4
   provenance:
     conformance: first-party
     mcp: first-party
@@ -144,9 +148,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 21.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,6 +175,6 @@ tags:
 - Stablecoins
 - Cryptocurrency
 - Payments
-- Financial-Services
+- Financial Services
 website: https://erebor.bank
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -114,14 +114,14 @@ modified: '2026-07-18'
 name: CyberVadis
 nav: Providers
 network: true
-overview: 'CyberVadis is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Third-Party Risk Management, Vendor Risk Management, and Security Ratings.
+overview: 'CyberVadis is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Third-Party Risk Management, Security Ratings, and Governance Risk Compliance.
 
 
   CyberVadis'' developer surface includes pricing, support, and 14 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 16.4
+  composite: 16.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -135,11 +135,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 16.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +170,6 @@ tags:
 - Company
 - Cybersecurity
 - Third-Party Risk Management
-- Vendor Risk Management
 - Security Ratings
 - Governance Risk Compliance
 - Infrastructure Saas

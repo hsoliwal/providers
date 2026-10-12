@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Live hosted Shopify Storefront MCP server on the Function of Beauty domain, exposing product catalog search, cart management, store policy/FAQ lookup, and product detail tools over JSON-RPC 2.0.
@@ -108,9 +108,9 @@ description: 'Function of Beauty is a direct-to-consumer beauty and personal-car
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/function-of-beauty.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at functionofbeauty.com over HTTP; 5 tools listed.
   name: Function of Beauty MCP Server
-  slug: function-of-beauty-mcp-server
+  slug: function-of-beauty-storefront
 modified: '2026-07-19'
 name: Function of Beauty
 nav: Providers
@@ -127,7 +127,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 18.2
+  composite: 20.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -141,13 +141,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 18.2
+  previous_composite: 20.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

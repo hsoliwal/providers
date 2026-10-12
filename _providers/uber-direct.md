@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -128,7 +128,7 @@ modified: '2026-05-08'
 name: Uber Direct
 nav: Providers
 network: true
-overview: 'Uber Direct publishes 1 API on the [APIs.io](https://apis.io/) network: Customers API. Tagged areas include Logistics, Last Mile Delivery, Couriers, Fulfillment, and DaaS.
+overview: 'Uber Direct publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Customers API, and 1 more. Tagged areas include Logistics, Last Mile Delivery, Couriers, Fulfillment, and DaaS.
 
 
   Uber Direct''s developer surface includes authentication, documentation, and 9 more developer resources.'
@@ -148,7 +148,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: emerging
-  composite: 25.7
+  composite: 25.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -160,11 +160,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 25.7
+  previous_composite: 25.2
   provenance:
     agentic_access: derived
     contracts:
@@ -172,8 +172,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

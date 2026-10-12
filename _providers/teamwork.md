@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -77,6 +77,11 @@ collections:
   name: Teamwork.com Projects API v3
   slug: open-teamwork
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/teamwork/refs/heads/main/capabilities/teamwork-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/teamwork-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/teamwork/refs/heads/main/a2a/teamwork-a2a.yml
   title: ''
@@ -148,13 +153,13 @@ network: true
 overview: 'Teamwork.com publishes 3 APIs on the [APIs.io](https://apis.io/) network: Activity API, Projects API, and Tasks API. Tagged areas include Project Management, Client Services, Task Management, Time Tracking, and Collaboration.
 
 
-  Teamwork.com''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 8 more developer resources.'
+  Teamwork.com''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, and 9 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 36.0
+  composite: 33.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -164,11 +169,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 36.0
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     contracts:
@@ -176,8 +181,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,5 +212,6 @@ tags:
 - Time Tracking
 - Collaboration
 - Professional Services Automation
+- A2A
 website: https://www.teamwork.com
 ---

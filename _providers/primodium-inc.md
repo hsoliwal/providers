@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -86,17 +86,17 @@ description: 'Primodium Inc. (primodiumxyz) is a developer-focused studio buildi
 image: https://avatars.githubusercontent.com/primodiumxyz
 layout: provider
 modified: '2026-07-20'
-name: Primodium Inc.
+name: Primodium
 nav: Providers
 network: true
-overview: 'Primodium Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Gaming, Web3, and Solana.
+overview: 'Primodium is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Gaming, Web3, and Solana.
 
 
-  Primodium Inc.''s developer surface includes documentation, getting-started guide, changelog, and 7 more developer resources.'
+  Primodium''s developer surface includes documentation, getting-started guide, changelog, and 7 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 15.8
+  composite: 14.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -110,11 +110,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 15.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

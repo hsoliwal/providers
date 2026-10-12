@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -227,7 +227,7 @@ rate_limits:
   slug: windfall-rate-limits
 score:
   band: developing
-  composite: 49.0
+  composite: 49.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -239,11 +239,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 59.9
+    contract_quality: 54.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 23.7
-  previous_composite: 49.0
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -254,8 +254,18 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -285,5 +295,8 @@ tags:
 - Identity Resolution
 - Sales Intelligence
 - Marketing
+- Data
+- Net Worth
+- Sales
 website: https://www.windfall.com
 ---

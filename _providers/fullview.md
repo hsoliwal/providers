@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.eu1.fullview.io
@@ -193,7 +193,7 @@ modified: '2026-07-19'
 name: Fullview
 nav: Providers
 network: true
-overview: 'Fullview publishes 1 API on the [APIs.io](https://apis.io/) network: Bug Report API. Tagged areas include Company, Customer-Support, Co-Browsing, Session Replay, and Customer Experience.
+overview: 'Fullview publishes 1 API on the [APIs.io](https://apis.io/) network: Bug Report API. Tagged areas include Company, Customer Support, Co-Browsing, Session Replay, and Customer Experience.
 
 
   Fullview''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, authentication, and 22 more developer resources.'
@@ -205,7 +205,7 @@ scopes:
   summary_line: 12 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 44.7
+  composite: 46.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -217,11 +217,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 44.7
+  previous_composite: 46.3
   provenance:
     conformance: first-party
     contracts:
@@ -231,8 +231,18 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -258,7 +268,7 @@ security:
 slug: fullview
 tags:
 - Company
-- Customer-Support
+- Customer Support
 - Co-Browsing
 - Session Replay
 - Customer Experience

@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: Uptrace API
   slug: open-uptrace
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/uptrace/refs/heads/main/capabilities/uptrace-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/uptrace-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -198,7 +203,7 @@ overview: 'Uptrace publishes 5 APIs on the [APIs.io](https://apis.io/) network, 
   The Uptrace catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Uptrace''s developer surface includes authentication, documentation, and 12 more developer resources.'
+  Uptrace''s developer surface includes authentication, documentation, and 13 more developer resources.'
 plans:
 - name: Uptrace Plans Pricing
   plan_count: 3
@@ -232,9 +237,9 @@ rules:
   slug: uptrace-rules
 score:
   band: thin
-  composite: 36.9
+  composite: 35.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -244,14 +249,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 64.6
+    contract_quality: 59.3
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 36.9
+  previous_composite: 35.5
   provenance:
     agentic_access: derived
     contracts:
@@ -259,8 +264,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

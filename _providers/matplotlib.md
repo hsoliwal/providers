@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Python API for creating publication-quality figures and plots, including the pyplot state-based interface and the object-oriented Axes API.
@@ -74,7 +74,7 @@ modified: '2026-04-28'
 name: Matplotlib
 nav: Providers
 network: true
-overview: Matplotlib publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Charts, Data Science, Open-Source, Plotting, and Python.
+overview: Matplotlib publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Charts, Data Science, Open Source, Plotting, and Python.
 plans:
 - name: Matplotlib Plans Pricing
   plan_count: 3
@@ -86,7 +86,7 @@ rate_limits:
   slug: matplotlib-rate-limits
 score:
   band: emerging
-  composite: 16.7
+  composite: 15.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -100,11 +100,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -120,7 +126,7 @@ slug: matplotlib
 tags:
 - Charts
 - Data Science
-- Open-Source
+- Open Source
 - Plotting
 - Python
 - Scientific Computing

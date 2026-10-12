@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Connect RPC / gRPC services backing Qpoint''s control plane: an event store service and the qscan scheduler service, with shared protobuf types for connections, requests, issues, PII, and tags.'
@@ -136,9 +136,9 @@ description: Qpoint is a security and observability company that uses eBPF to gi
 image: https://www.qpoint.io/favicon.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pulse.qpoint.io over HTTP.
   name: Qpoint MCP Server
-  slug: qpoint-mcp-server
+  slug: qpoint
 modified: '2026-07-20'
 name: Qpoint
 nav: Providers
@@ -150,7 +150,7 @@ overview: 'Qpoint publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 7
 score:
   band: thin
-  composite: 35.9
+  composite: 36.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -162,16 +162,22 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 35.9
+  previous_composite: 36.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -195,7 +201,7 @@ tags:
 - eBPF
 - Network Traffic
 - Egress Control
-- Agentic AI
+- AI Agents
 - MCP
 - gRPC
 website: https://www.qpoint.io/

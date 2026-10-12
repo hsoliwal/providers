@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -108,18 +108,22 @@ created: '2026-07-17'
 description: Savant Labs is an agentic AI platform for business analytics, finance, and data automation. It turns AI conversations into governed, audit-ready agents that automate regulated finance workflows such as month-end close, reconciliations, tax automation, and financial consolidation, with human review and audit-ready evidence. The no-code platform combines data preparation, blending, cleansing, automation, and a Vision Agent that extracts data from PDFs and images, connecting to ERPs (SAP, Oracle, NetSuite), data warehouses, BI tools, and spreadsheets through hundreds of pre-built connectors. Savant Labs is SOC 2 Type II certified with GDPR and HIPAA support, and is used by teams at Dell Technologies, ConocoPhillips, and Rover. It was surfaced as a portfolio company of Bloomberg Beta.
 image: https://savantlabs.io/wp-content/uploads/2025/10/home-banner-new.webp
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.savantlabs.io over HTTP.
+  name: Savant Labs MCP Server
+  slug: savant-labs
 modified: '2026-07-21'
 name: Savant Labs
 nav: Providers
 network: true
-overview: 'Savant Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Automation, Agentic AI, and Finance.
+overview: 'Savant Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Automation, AI Agents, and Finance.
 
 
   Savant Labs'' developer surface includes documentation, support, engineering blog, pricing, signup flow, changelog, and 10 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 24.1
+  composite: 25.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -133,14 +137,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 15.8
-  previous_composite: 24.1
+  previous_composite: 25.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -161,7 +177,7 @@ tags:
 - Company
 - Analytics
 - Automation
-- Agentic AI
+- AI Agents
 - Finance
 - Data Preparation
 - No-Code

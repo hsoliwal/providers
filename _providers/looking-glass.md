@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: http://localhost:33334/
@@ -215,7 +215,7 @@ overview: 'Looking Glass publishes 6 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 18
 score:
   band: thin
-  composite: 37.1
+  composite: 38.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 32.0
@@ -227,16 +227,18 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 40.1
+    contract_quality: 36.1
     developer_ergonomics: 49.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.1
+  previous_composite: 38.0
   provenance:
     conformance: derived
     contracts:
@@ -246,8 +248,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

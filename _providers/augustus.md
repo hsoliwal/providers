@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 12
@@ -333,7 +333,7 @@ modified: '2026-07-18'
 name: Augustus
 nav: Providers
 network: true
-overview: 'Augustus publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Account Programs API, Accounts API, API Key API, and 11 more. Tagged areas include Company, Fintech, Payments, Banking, and Open Banking.
+overview: 'Augustus publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Account Programs API, Accounts API, API Key API, and 12 more. Tagged areas include Company, Fintech, Payments, Banking, and Open Banking.
 
 
   The Augustus catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -348,7 +348,7 @@ scopes:
   summary_line: 16 scopes
 score:
   band: developing
-  composite: 48.6
+  composite: 45.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -360,11 +360,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 60.4
+    contract_quality: 55.4
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 48.6
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -380,9 +380,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 53.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

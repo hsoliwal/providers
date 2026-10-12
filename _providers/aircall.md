@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -223,7 +223,7 @@ modified: '2026-05-30'
 name: Aircall
 nav: Providers
 network: true
-overview: 'Aircall publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Numbers API, Contacts API, and 10 more. Tagged areas include Communications, Voice, Cloud Phone, CRM, and Sales.
+overview: 'Aircall publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Numbers API, Contacts API, and 13 more. Tagged areas include Communications, Voice, Cloud Phone, CRM, and Sales.
 
 
   The Aircall catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -258,7 +258,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 31.2
+  composite: 31.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 42.8
@@ -270,11 +270,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 11.4
-    contract_quality: 61.1
+    contract_quality: 56.1
     developer_ergonomics: 16.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 31.2
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     contracts:
@@ -282,8 +282,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

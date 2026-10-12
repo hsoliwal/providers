@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven commerce for the Piper storefront over the Universal Commerce Protocol (UCP), exposed as an MCP endpoint on the store's Shopify platform (store id 9256256). Catalog search/lookup, cart, c
@@ -101,17 +101,17 @@ description: 'Piper (Piper Learning, Inc. / Piper LLC) is an educational-technol
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/piper-inc.png
 layout: provider
 mcp_servers:
-- description: ''
-  name: Piper Inc. MCP Server
-  slug: piper-inc-mcp-server
+- description: Remote MCP server at piper-llc.myshopify.com; 5 tools listed.
+  name: Piper MCP Server
+  slug: piper-ucp-shopping
 modified: '2026-07-20'
-name: Piper Inc.
+name: Piper
 nav: Providers
 network: true
-overview: 'Piper Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, STEM, and Hardware.
+overview: 'Piper publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, STEM, and Hardware.
 
 
-  Piper Inc.''s developer surface includes engineering blog, support, authentication, and 9 more developer resources.'
+  Piper''s developer surface includes engineering blog, support, authentication, and 9 more developer resources.'
 random_paper: 1
 scopes:
 - name: Piper Inc Scopes
@@ -120,7 +120,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 23.4
+  composite: 20.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -134,20 +134,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.4
+  previous_composite: 20.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

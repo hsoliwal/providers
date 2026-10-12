@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://public-api.backup.net
@@ -130,6 +130,11 @@ collections:
   name: Public Agents DomainUsersV2 API
   slug: open-unitrends-domainusersv2-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/unitrends/refs/heads/main/capabilities/unitrends-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/unitrends-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/unitrends/refs/heads/main/security/unitrends-domain-security.yml
   title: ''
@@ -250,7 +255,7 @@ network: true
 overview: 'Unitrends publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Appliances API, Assets API, and 8 more. Tagged areas include Company, Backup, Disaster Recovery, Data Protection, and BCDR.
 
 
-  Unitrends'' developer surface includes authentication, engineering blog, support, documentation, pricing, and 19 more developer resources.'
+  Unitrends'' developer surface includes authentication, engineering blog, support, documentation, pricing, and 20 more developer resources.'
 random_paper: 20
 scopes:
 - name: Unitrends Scopes
@@ -259,9 +264,9 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 40.1
+  composite: 41.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -271,11 +276,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 51.1
+    contract_quality: 46.0
     developer_ergonomics: 49.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 40.1
+  previous_composite: 41.4
   provenance:
     conformance: derived
     contracts:
@@ -285,8 +290,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

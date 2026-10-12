@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -99,21 +99,21 @@ description: Atom Power, Inc. is a Charlotte, North Carolina electrical technolo
 image: https://static.wixstatic.com/media/9b626a_6de3d6548956428a831983d5b6c5ef13%7Emv2.png/v1/fit/w_2500,h_1330,al_c/9b626a_6de3d6548956428a831983d5b6c5ef13%7Emv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.atompower.com over HTTP; 9 tools listed.
   name: Atom Power MCP Server
-  slug: atom-power-mcp-server
+  slug: atom-power-site-mcp
 modified: '2026-08-06'
 name: Atom Power
 nav: Providers
 network: true
-overview: 'Atom Power is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Electric Vehicle Charging, EV Charging, and Circuit Protection.
+overview: 'Atom Power is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, EV Charging, Circuit Protection, and Solid State Circuit Breaker.
 
 
   Atom Power''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 11.3
+  composite: 11.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -127,19 +127,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 11.3
+  previous_composite: 11.2
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -155,7 +155,6 @@ slug: atom-power
 tags:
 - Company
 - Energy
-- Electric Vehicle Charging
 - EV Charging
 - Circuit Protection
 - Solid State Circuit Breaker

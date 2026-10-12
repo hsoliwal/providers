@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -106,7 +106,7 @@ overview: 'HealthEngine is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 6
 score:
   band: emerging
-  composite: 13.9
+  composite: 13.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -120,7 +120,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -129,15 +129,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 13.9
+  previous_composite: 13.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -15,7 +15,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.3
-  scored_at: '2026-09-20'
+  score: 48.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -82,7 +82,7 @@ apis:
   description: The OAuth API from Wix — 3 operation(s) for oauth.
   name: Wix O Auth API
   slug: wix-oauth-api
-artifact_total: 49
+artifact_total: 50
 asyncapis:
 - description: AsyncAPI specification for the documented Wix webhook surface. Wix delivers webhook events as signed JSON Web Tokens (JWTs) POSTed to subscriber URLs registered in the Wix Dev Center. The JWT body dec
   name: Wix Webhooks
@@ -110,6 +110,11 @@ collections:
   name: Wix REST API
   slug: open-wix
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/wix/refs/heads/main/vendor-facets/wix-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/wix-vendor-facets.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/wix/refs/heads/main/agentic-access/wix-agentic-access.yml
   title: ''
@@ -224,17 +229,20 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.wix.com over HTTP.
+  name: Wix MCP Server
+  slug: wix
 modified: '2026-05-30'
 name: Wix
 nav: Providers
 network: true
-overview: 'Wix publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Cart API, Checkout API, and 3 more. Tagged areas include CMS, E-Commerce, Headless, and Website Builder.
+overview: 'Wix publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Cart API, Checkout API, and 6 more. Tagged areas include CMS, E-Commerce, Headless, and Website Builder.
 
 
   The Wix catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Wix''s developer surface includes authentication, documentation, getting-started guide, signup flow, GitHub presence, tooling, engineering blog, and 12 more developer resources.'
+  Wix''s developer surface includes authentication, documentation, getting-started guide, signup flow, GitHub presence, tooling, engineering blog, and 13 more developer resources.'
 plans:
 - name: Wix Plans Pricing
   plan_count: 3
@@ -263,9 +271,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 34.9
+  composite: 35.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 40.5
     catalog_earned_first_party: 0.0
     catalog_gap: 74.5
@@ -275,11 +283,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 13.6
-    contract_quality: 56.7
-    developer_ergonomics: 38.1
-    discoverability: 50.0
+    contract_quality: 52.9
+    developer_ergonomics: 37.4
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 34.9
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -288,8 +296,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

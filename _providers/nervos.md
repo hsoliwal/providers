@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public JSON-RPC 2.0 interface to Nervos CKB nodes for querying chain state (blocks, transactions, cells), submitting signed transactions, and subscribing to new-tip events over WebSocket. Unauthentica
@@ -159,9 +159,9 @@ description: Nervos is the organization behind Nervos CKB (Common Knowledge Base
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nervos.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.ckbdev.com over HTTP.
   name: Nervos MCP Server
-  slug: nervos-mcp-server
+  slug: ckb-ai
 modified: '2026-07-20'
 name: Nervos
 nav: Providers
@@ -176,7 +176,7 @@ overview: 'Nervos publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 9
 score:
   band: thin
-  composite: 38.4
+  composite: 37.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -188,17 +188,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 38.4
+  previous_composite: 37.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -223,5 +229,7 @@ tags:
 - Smart Contracts
 - Web3 Infrastructure
 - Developer Tools
+- Web3
+- Cryptocurrency
 website: https://nervos.org
 ---

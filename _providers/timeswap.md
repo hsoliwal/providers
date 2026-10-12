@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.timeswap.io
@@ -207,7 +207,7 @@ overview: 'Timeswap publishes 5 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 16
 score:
   band: thin
-  composite: 31.6
+  composite: 31.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -219,11 +219,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 38.2
+    contract_quality: 34.4
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 31.6
+  previous_composite: 31.8
   provenance:
     conformance: first-party
     contracts:
@@ -233,8 +233,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -259,5 +265,7 @@ tags:
 - Liquidity Pools
 - Fixed Income
 - Blockchain
+- Web3
+- Cryptocurrency
 website: https://timeswap.io
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for tax compliance and information reporting: account owners, accounts, transactions, inventory, realized gains, tax documentation (W-8/W-9), filers, form items, disposition methods, transfer'
@@ -175,9 +175,9 @@ description: TaxBit is an end-to-end tax compliance and information-reporting pl
 image: https://files.readme.io/e2c1133-small-taxbit-dark.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at apidocs.taxbit.com over HTTP.
   name: TaxBit MCP Server
-  slug: taxbit-mcp-server
+  slug: taxbit-apidocs
 modified: '2026-07-21'
 name: TaxBit
 nav: Providers
@@ -192,7 +192,7 @@ overview: 'TaxBit publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 14
 score:
   band: developing
-  composite: 40.0
+  composite: 41.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -204,17 +204,27 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 23.7
-  previous_composite: 40.0
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

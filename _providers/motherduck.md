@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: served
@@ -27,19 +27,19 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.5
-  scored_at: '2026-09-20'
+  score: 31.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Clients connect to MotherDuck through DuckDB's native protocol using a connection string of the form `md:` plus an access token. Officially supported clients include DuckDB CLI, Python, Node.js, JDBC,
   name: MotherDuck DuckDB Connection
   slug: motherduck-duckdb-protocol
-artifact_total: 29
+artifact_total: 30
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/motherduck/refs/heads/main/security/motherduck-domain-security.yml
@@ -101,6 +101,10 @@ finops:
   slug: motherduck-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/motherduck.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.motherduck.com over HTTP.
+  name: MotherDuck MCP Server
+  slug: motherduck
 modified: '2026-05-08'
 name: MotherDuck
 nav: Providers
@@ -120,7 +124,7 @@ rate_limits:
   slug: motherduck-rate-limits
 score:
   band: emerging
-  composite: 22.3
+  composite: 21.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -133,14 +137,20 @@ score:
     access_clarity: 26.3
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 40.5
-    discoverability: 75.9
+    developer_ergonomics: 39.8
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 22.3
+  previous_composite: 21.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

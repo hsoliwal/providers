@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Core Makinari platform API covering Visitors (tracking and identification), Finder (contact and company search), Robots (browser-automation instances), Instances, Requirements, and Secure Tokens. API-
@@ -232,9 +232,9 @@ description: Uncodie, a 500 Global portfolio company, rebranded as Makinari — 
 image: https://www.makinari.com/images/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at backend.makinari.com over HTTP; 56 tools listed.
   name: Uncodie (now Makinari) MCP Server
-  slug: uncodie-now-makinari-mcp-server
+  slug: makinari
 modified: '2026-08-13'
 name: Uncodie (now Makinari)
 nav: Providers
@@ -256,8 +256,8 @@ rate_limits:
   name: Uncodie Rate Limits
   slug: uncodie-rate-limits
 score:
-  band: developing
-  composite: 53.9
+  band: strong
+  composite: 54.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 52.0
@@ -269,17 +269,23 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 42.1
-  previous_composite: 53.9
+  previous_composite: 54.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -309,6 +315,6 @@ tags:
 - Commerce
 - Workflows
 - Webhook
-- Open-Source
+- Open Source
 website: https://www.makinari.com
 ---

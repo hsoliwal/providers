@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -80,6 +80,10 @@ created: '2026-07-17'
 description: Recess (Recess Academy, recess.gg) is an online school for gifted and neurodivergent students, including learners with ADHD, dyslexia, autism spectrum, and anxiety. It combines core academics, interest-led classes, small-group coworking sessions with an AI tutor, and a daily community hour, with personalized pacing and world-class mentors. Recess is backed by Bloomberg Beta. As of this enrichment pass the company operates a consumer education web application and publishes no public API, developer portal, SDKs, or OpenAPI surface; the only machine-discoverable surface found is a valid RFC 9116 security.txt with a security contact.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/recess.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.recess.gg over HTTP.
+  name: Recess MCP Server
+  slug: recess
 modified: '2026-07-21'
 name: Recess
 nav: Providers
@@ -105,7 +109,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 5.3
   previous_composite: 9.6
   provenance:
@@ -115,9 +119,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

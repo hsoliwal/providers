@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Main REST API for the Nasdaq Calypso platform. Provides programmatic access to remotely control calls to the Calypso platform from other software, enabling regulatory analytics, current limits usage q
@@ -138,7 +138,7 @@ rate_limits:
   slug: calypso-rate-limits
 score:
   band: emerging
-  composite: 17.3
+  composite: 17.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 49.0
@@ -152,17 +152,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 17.3
+  previous_composite: 17.2
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

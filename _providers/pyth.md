@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -58,7 +58,7 @@ apis:
 - baseURL: https://hermes.pyth.network
   baseurl_source: declared
   description: The rest API from Pyth — 11 operation(s) for rest.
-  name: Pyth rest API
+  name: Pyth Rest API
   slug: pyth-rest-api
 - baseURL: https://hermes.pyth.network
   baseurl_source: declared
@@ -224,21 +224,21 @@ description: Pyth Network is a first-party financial oracle delivering real-time
 image: https://pyth.network/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.pyth.network over HTTP; 5 tools listed.
   name: Pyth MCP Server
-  slug: pyth-mcp-server
+  slug: pyth
 modified: '2026-07-20'
 name: Pyth
 nav: Providers
 network: true
-overview: 'Pyth publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Price Differences API, Price Feeds API, rest API, and 2 more. Tagged areas include Company, Crypto Web3, Oracle, Price Feeds, and Market Data.
+overview: 'Pyth publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Price Differences API, Price Feeds API, Rest API, and 2 more. Tagged areas include Company, Crypto Web3, Oracle, Price Feeds, and Market Data.
 
 
   Pyth''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, changelog, authentication, and 21 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 48.8
+  composite: 46.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 50.5
+    contract_quality: 45.4
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 48.8
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,9 +270,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -298,5 +298,7 @@ tags:
 - DeFi
 - Blockchain
 - Financial Data
+- Web3
+- Cryptocurrency
 website: https://pyth.network
 ---

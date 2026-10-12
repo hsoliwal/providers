@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Auto-generated RESTful and GraphQL APIs derived from user-defined content type definitions, enabling full CRUD operations on content objects with OpenAPI schema support.
   name: Flotiq API
   slug: api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/flotiq/refs/heads/main/security/flotiq-domain-security.yml
@@ -92,6 +92,10 @@ graphqls:
   slug: flotiq-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flotiq.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.flotiq.com over HTTP.
+  name: Flotiq MCP Server
+  slug: flotiq
 modified: 2026-06-14
 name: Flotiq
 nav: Providers
@@ -103,7 +107,7 @@ overview: 'Flotiq publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 17
 score:
   band: emerging
-  composite: 21.1
+  composite: 19.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -115,15 +119,21 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 11.9
     discoverability: 66.7
     operational_transparency: 5.3
-  previous_composite: 21.1
+  previous_composite: 19.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

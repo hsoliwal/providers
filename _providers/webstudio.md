@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -119,9 +119,9 @@ description: 'Webstudio is an advanced open-source visual website builder and We
 image: https://webstudio.is/cgi/image/visual-builder_6p7VS5-OlwHXPek83iJwo.png?format=raw
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Webstudio MCP Server
-  slug: webstudio-mcp-server
+  slug: webstudio
 modified: '2026-07-21'
 name: Webstudio
 nav: Providers
@@ -133,7 +133,7 @@ overview: 'Webstudio is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 14
 score:
   band: emerging
-  composite: 24.9
+  composite: 24.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -147,13 +147,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 23.7
-  previous_composite: 24.9
+  previous_composite: 24.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,7 +179,7 @@ tags:
 - Visual Development
 - Web Design
 - CMS
-- Open-Source
+- Open Source
 - CLI
 - MCP
 - Developer Tools

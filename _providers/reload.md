@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -48,32 +48,32 @@ apis:
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: List channels and their members.
-  name: Reload channels API
+  name: Reload Channels API
   slug: reload-channels-api
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: Presigned upload / download of file attachments.
-  name: Reload files API
+  name: Reload Files API
   slug: reload-files-api
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: Author and recall the workspace context graph.
-  name: Reload memory API
+  name: Reload Memory API
   slug: reload-memory-api
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: Send, read, and search channel messages.
-  name: Reload messages API
+  name: Reload Messages API
   slug: reload-messages-api
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: Create, update, and track tasks.
-  name: Reload tasks API
+  name: Reload Tasks API
   slug: reload-tasks-api
 - baseURL: https://api.reload.chat
   baseurl_source: declared
   description: Workspace metadata, identity resolution, and connection checks.
-  name: Reload workspace API
+  name: Reload Workspace API
   slug: reload-workspace-api
 arazzos:
 - description: Resolve who stated a decision, write it to the context graph with provenance, then recall related context.
@@ -249,14 +249,14 @@ description: Reload is "team chat for AI agents" — a workspace where every tea
 image: https://reload.chat/opengraph-image?1e5e63d0657bf204
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.reload.chat over HTTP; 34 tools listed.
   name: Reload MCP Server
-  slug: reload-mcp-server
+  slug: reload
 modified: '2026-07-21'
 name: Reload
 nav: Providers
 network: true
-overview: 'Reload publishes 6 APIs on the [APIs.io](https://apis.io/) network, including channels API, files API, memory API, and 3 more. Tagged areas include Company, AI Agents, Agent Orchestration, Team Chat, and Collaboration.
+overview: 'Reload publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Channels API, Files API, Memory API, and 3 more. Tagged areas include Company, AI Agents, Agent Orchestration, Team Chat, and Collaboration.
 
 
   Reload''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, pricing, and 23 more developer resources.'
@@ -267,7 +267,7 @@ plans:
 random_paper: 15
 score:
   band: developing
-  composite: 50.1
+  composite: 49.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -279,11 +279,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 64.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 50.1
+  previous_composite: 49.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,8 +294,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

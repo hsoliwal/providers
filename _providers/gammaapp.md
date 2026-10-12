@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Gamma Public API generates presentations, documents, websites, and social posts from text. Everything runs asynchronously: create a generation, poll for status, and retrieve the result (gammaUrl, '
@@ -172,9 +172,9 @@ description: Gamma (Gamma Tech, Inc.) is an AI-powered platform for generating p
 image: https://github.com/gamma-app.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.gamma.app over HTTP; 9 tools listed.
   name: Gamma.app MCP Server
-  slug: gammaapp-mcp-server
+  slug: gamma
 modified: '2026-09-16'
 name: Gamma.app
 nav: Providers
@@ -191,7 +191,7 @@ scopes:
   summary_line: 2 scopes
 score:
   band: thin
-  composite: 34.1
+  composite: 36.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -205,14 +205,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 34.1
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,6 +255,6 @@ tags:
 - Productivity
 - MCP
 - Websites
-- Social-Media
+- Social Media
 website: https://gamma.app
 ---

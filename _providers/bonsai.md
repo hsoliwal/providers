@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -122,7 +122,7 @@ layout: provider
 mcp_servers:
 - description: Bonsai operates an official hosted/remote MCP (Model Context Protocol) server at https://mcp.hellobonsai.com/mcp, letting AI clients (Claude, Claude Code, Cursor, Codex, ChatGPT, Gemini, Microsoft Cop
   name: Bonsai MCP Server
-  slug: bonsai-mcp-server
+  slug: bonsai
 modified: '2026-07-18'
 name: Bonsai
 nav: Providers
@@ -137,8 +137,8 @@ rate_limits:
   name: Bonsai Rate Limits
   slug: bonsai-rate-limits
 score:
-  band: emerging
-  composite: 25.0
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -152,13 +152,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 28.9
-  previous_composite: 25.0
+  previous_composite: 26.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

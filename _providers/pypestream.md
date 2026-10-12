@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 43.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - baseURL: https://reporting.pypestream.com/api/v2/
@@ -364,14 +364,14 @@ description: Pypestream is a New York based enterprise conversational and agenti
 image: https://www.pypestream.ai/pypestream-logo-black.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.pypestream.com.
   name: Pypestream Documentation MCP Server
   slug: pypestream-documentation-mcp-server
 modified: '2026-08-26'
 name: Pypestream
 nav: Providers
 network: true
-overview: 'Pypestream publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Advanced API, Agent API, and 24 more. Tagged areas include Company, Conversational AI, Agentic AI, Contact Center, and Customer Service.
+overview: 'Pypestream publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Advanced API, Agent API, and 24 more. Tagged areas include Company, Conversational AI, AI Agents, Contact Center, and Customer Service.
 
 
   The Pypestream catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -389,7 +389,7 @@ rate_limits:
   slug: pypestream-rate-limits
 score:
   band: developing
-  composite: 42.6
+  composite: 42.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 48.0
@@ -401,11 +401,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 4.5
-    contract_quality: 59.8
+    contract_quality: 54.8
     developer_ergonomics: 51.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 47.4
-  previous_composite: 42.6
+  previous_composite: 42.1
   provenance:
     conformance: derived
     contracts:
@@ -415,8 +415,14 @@ score:
       total: 27
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -443,7 +449,7 @@ slug: pypestream
 tags:
 - Company
 - Conversational AI
-- Agentic AI
+- AI Agents
 - Contact Center
 - Customer Service
 - Customer Engagement
@@ -452,5 +458,6 @@ tags:
 - Messaging
 - Analytics
 - Enterprise Software
+- Real-Time
 website: https://www.pypestream.ai/
 ---

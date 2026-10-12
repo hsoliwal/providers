@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for Qiniu Kodo object storage — bucket administration, object upload/download, stat/copy/move/delete, lifecycle and CORS rules, async fetch, and CDN prefetch/refresh. S3-compatible surface av
@@ -161,7 +161,7 @@ layout: provider
 mcp_servers:
 - description: Official Qiniu Cloud MCP server exposing Kodo object storage, intelligent media processing (Dora), CDN, and live-streaming operations to MCP-capable AI clients through a unified interface.
   name: Qiniu Cloud MCP Server
-  slug: qiniu-cloud-mcp-server
+  slug: qiniu-mcp-server
 modified: '2026-07-20'
 name: Qiniu Cloud
 nav: Providers
@@ -173,7 +173,7 @@ overview: 'Qiniu Cloud publishes 2 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 0
 score:
   band: thin
-  composite: 30.3
+  composite: 30.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,13 +196,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 30.3
+  previous_composite: 30.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,7 +232,6 @@ tags:
 - CDN
 - Media Processing
 - Live Streaming
-- Identity and Access Management
 - SDK
 - Artificial Intelligence
 - China

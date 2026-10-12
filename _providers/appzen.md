@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.appzen.com/dictionary-data-services
@@ -197,6 +197,11 @@ collections:
   slug: open-appzen-vat-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/appzen/refs/heads/main/capabilities/appzen-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/appzen-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/appzen/refs/heads/main/overlays/appzen-autonomous-ap-overlay.yaml
   title: ''
   type: Overlay
@@ -303,13 +308,13 @@ network: true
 overview: 'AppZen publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Chart of Accounts API, Custom Data Sets API, Documents API, and 16 more. Tagged areas include Company, Finance, Accounts Payable, Expense Management, and Invoice Processing.
 
 
-  AppZen''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 14 more developer resources.'
+  AppZen''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 15 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 38.4
+  composite: 37.9
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -319,11 +324,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 38.4
+  previous_composite: 37.9
   provenance:
     conformance: derived
     contracts:
@@ -333,8 +338,14 @@ score:
       total: 19
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

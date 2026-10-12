@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.0
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Run deployed WordApps programmatically. Each published WordApp exposes a run endpoint (POST /api/released-app/{app_id}/run) that accepts a JSON body of named inputs (text, image, audio) plus a semanti
@@ -125,19 +125,19 @@ layout: provider
 mcp_servers:
 - description: Wordware operates no official hosted/remote MCP server (no MCP docs page, no entry in the official MCP registry, no MCP repo in the wordware-ai GitHub org). A community-built local stdio server, wordw
   name: Wordware MCP Server
-  slug: wordware-mcp-server
+  slug: wordware-mcp
 modified: '2026-07-21'
 name: Wordware
 nav: Providers
 network: true
-overview: 'Wordware publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, AI Agents, LLM, Prompt Engineering, and Workflow-Automation.
+overview: 'Wordware publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, AI Agents, LLM, Prompt Engineering, and Workflow Automation.
 
 
   Wordware''s developer surface includes authentication, documentation, API reference, getting-started guide, support, and 12 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 23.0
+  composite: 23.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,14 +151,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 23.0
+  previous_composite: 23.7
   provenance:
     conformance: derived
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: third-party
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,7 +186,7 @@ tags:
 - AI Agents
 - LLM
 - Prompt Engineering
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 - Company
 website: https://wordware.ai

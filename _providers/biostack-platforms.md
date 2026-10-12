@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,14 +73,14 @@ modified: '2026-07-18'
 name: Biostack Platforms
 nav: Providers
 network: true
-overview: 'Biostack Platforms is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Artificial Intelligence, Machine-Learning, and Data.
+overview: 'Biostack Platforms is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Artificial Intelligence, Machine Learning, and Data.
 
 
   Biostack Platforms'' developer surface includes engineering blog, support, signup flow, and 4 more developer resources.'
 random_paper: 7
 score:
   band: minimal
-  composite: 7.4
+  composite: 7.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,17 +94,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 7.4
+  previous_composite: 7.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -121,7 +121,7 @@ tags:
 - Company
 - Healthcare
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Data
 - Life Sciences
 - Drug Discovery

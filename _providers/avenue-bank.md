@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -207,7 +207,7 @@ modified: '2026-07-21'
 name: Avenue Bank
 nav: Providers
 network: true
-overview: 'Avenue Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Data Right.
+overview: 'Avenue Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Data Right.
 
 
   Avenue Bank''s developer surface includes engineering blog, support, signup flow, authentication, and 16 more developer resources.'
@@ -219,7 +219,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.1
+  composite: 18.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -233,7 +233,7 @@ score:
     contract_governance: 4.5
     contract_quality: 12.4
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 21.1
+  previous_composite: 18.9
   provenance:
     agentic_access: first-party
     conformance: derived
@@ -262,9 +262,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -281,7 +281,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: avenue-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

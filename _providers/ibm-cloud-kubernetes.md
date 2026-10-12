@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'IBM Cloud Kubernetes Service is a managed Kubernetes offering that delivers powerful tools, an intuitive user experience, and built-in security for rapid delivery of applications that can be bound to '
@@ -104,7 +104,7 @@ modified: '2026-08-21'
 name: IBM Cloud Kubernetes
 nav: Providers
 network: true
-overview: 'IBM Cloud Kubernetes publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud, Containers, IBM, Kubernetes, and Orchestration.
+overview: 'IBM Cloud Kubernetes publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud, Containers, IBM, Kubernetes, and Container Orchestration.
 
 
   The IBM Cloud Kubernetes catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -133,7 +133,7 @@ rules:
   slug: ibm-cloud-kubernetes-rules
 score:
   band: emerging
-  composite: 22.0
+  composite: 21.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 41.0
@@ -147,11 +147,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 22.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,6 +179,6 @@ tags:
 - Containers
 - IBM
 - Kubernetes
-- Orchestration
+- Container Orchestration
 website: https://cloud.ibm.com/
 ---

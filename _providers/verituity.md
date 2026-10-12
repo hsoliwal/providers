@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Verification-as-a-Service. A single POST /v1/verifications call declares which verification modules to run — organization_identity, individual_identity, payment_method and payee_qualification (PQS) — '
@@ -173,7 +173,7 @@ rate_limits:
   slug: verituity-rate-limits
 score:
   band: developing
-  composite: 42.6
+  composite: 40.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -185,11 +185,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 57.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 42.6
+  previous_composite: 40.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -198,9 +198,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,7 +225,7 @@ tags:
 - Fraud Prevention
 - Payment Integrity
 - Banking
-- Financial-Services
+- Financial Services
 - Public Sector
 - ISO 20022
 - Compliance

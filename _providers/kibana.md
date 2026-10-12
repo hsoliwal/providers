@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 389
   human_in_the_loop: 15
@@ -58,7 +58,7 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Alerting enables you to define rules, which detect complex conditions within your data. When a condition is met, the rule tracks it as an alert and runs the actions that are defined in the rule. Actio
-  name: Kibana alerting API
+  name: Kibana Alerting API
   slug: kibana-alerting-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -88,12 +88,12 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: 'Cases are used to open and track issues. You can add assignees and tags to your cases, set their severity and status, and add alerts, comments, and visualizations. You can also send cases to external '
-  name: Kibana cases API
+  name: Kibana Cases API
   slug: kibana-cases-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Connectors provide a central place to store connection information for services and integrations with Elastic or third party systems. Alerting rules can use connectors to run actions when rule conditi
-  name: Kibana connectors API
+  name: Kibana Connectors API
   slug: kibana-connectors-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -198,12 +198,12 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Programmatically integrate with Logstash configuration management. > warn > Do not directly access the `.logstash` index. The structure of the `.logstash` index is subject to change, which could cause
-  name: Kibana logstash API
+  name: Kibana Logstash API
   slug: kibana-logstash-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: You can schedule single or recurring maintenance windows to temporarily reduce rule notifications. For example, a maintenance window prevents false alarms during planned outages.
-  name: Kibana maintenance-window API
+  name: Kibana Maintenance Window API
   slug: kibana-maintenance-window-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -213,17 +213,17 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Enables you to synchronize machine learning saved objects.
-  name: Kibana ml API
+  name: Kibana Ml API
   slug: kibana-ml-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Interact with the Observability AI Assistant resources.
-  name: Kibana observability_ai_assistant API
+  name: Kibana Observability AI Assistant API
   slug: kibana-observability-ai-assistant-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Manage the roles that grant Elasticsearch and Kibana privileges.
-  name: Kibana roles API
+  name: Kibana Roles API
   slug: kibana-roles-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -298,7 +298,7 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: SLO APIs enable you to define, manage and track service-level objectives
-  name: Kibana slo API
+  name: Kibana Slo API
   slug: kibana-slo-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -308,17 +308,17 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: 'Streams provide a unified data management layer for ingestion, routing, and processing. There are three stream types: * **Wired** streams are managed by Kibana. They route documents to child streams b'
-  name: Kibana streams API
+  name: Kibana Streams API
   slug: kibana-streams-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Synthetics APIs enable you to check the status of your services and applications.
-  name: Kibana synthetics API
+  name: Kibana Synthetics API
   slug: kibana-synthetics-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Get information about the system status, resource usage, features, and installed plugins.
-  name: Kibana system API
+  name: Kibana System API
   slug: kibana-system-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -328,12 +328,12 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: 'The Kibana Upgrade Assistant API helps you prepare for the next major Elasticsearch release. > warn > This is a Kibana REST API (not an Elasticsearch API) and requests must target your Kibana URL: > *'
-  name: Kibana upgrade API
+  name: Kibana Upgrade API
   slug: kibana-upgrade-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Uptime APIs enable you to view and update uptime monitoring settings.
-  name: Kibana uptime API
+  name: Kibana Uptime API
   slug: kibana-uptime-api
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
@@ -343,7 +343,7 @@ apis:
 - baseURL: https://localhost:5601/api
   baseurl_source: declared
   description: Workflows enable you to automate multi-step processes directly in Kibana. Define sequences of steps in YAML to transform data insights into automated actions and outcomes, without needing external aut
-  name: Kibana workflows API
+  name: Kibana Workflows API
   slug: kibana-workflows-api
 artifact_total: 128
 collections:
@@ -617,7 +617,7 @@ modified: '2026-09-16'
 name: Kibana
 nav: Providers
 network: true
-overview: 'Kibana publishes 60 APIs on the [APIs.io](https://apis.io/) network, including Actions API, agent builder API, alerting API, and 57 more. Tagged areas include Alerting, Analytics, Dashboards, Elastic Stack, and Logging.
+overview: 'Kibana publishes 60 APIs on the [APIs.io](https://apis.io/) network, including Actions API, agent builder API, Alerting API, and 57 more. Tagged areas include Alerting, Analytics, Dashboards, Elastic Stack, and Logging.
 
 
   Kibana''s developer surface includes authentication, documentation, GitHub presence, engineering blog, pricing, support, and 11 more developer resources.'
@@ -632,23 +632,23 @@ rate_limits:
   slug: kibana-rate-limits
 score:
   band: thin
-  composite: 34.8
+  composite: 34.6
   coverage:
     artifact_dirs: 12
-    catalog_earned: 35.0
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: -1.5
+  delta: 0.6
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 53.6
+    contract_quality: 48.5
     developer_ergonomics: 21.4
-    discoverability: 53.7
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 36.3
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     contracts:
@@ -656,8 +656,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 60
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -686,5 +692,6 @@ tags:
 - Monitoring
 - Observability
 - Visualization
+- Data Visualization
 website: https://www.elastic.co/kibana
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Invoicing, payments and credit-control API — customers, invoices, payment requests, direct-debit mandates, payments and signed webhooks.
@@ -172,9 +172,9 @@ description: Adfin is a London-based fintech that combines payment collection an
 image: https://assets.adfin.com/frontend-resources/favicon/web-app-manifest-512x512.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 3 tools listed.
   name: Adfin MCP Server
-  slug: adfin-mcp-server
+  slug: adfin
 modified: '2026-07-17'
 name: Adfin
 nav: Providers
@@ -189,7 +189,7 @@ overview: 'Adfin publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 8
 score:
   band: developing
-  composite: 45.1
+  composite: 42.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -201,9 +201,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -213,7 +213,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.1
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -222,9 +222,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

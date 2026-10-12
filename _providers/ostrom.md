@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -109,6 +109,11 @@ collections:
   name: Ostrom Auth Webhooks API
   slug: open-ostrom-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ostrom/refs/heads/main/capabilities/ostrom-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ostrom-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/ostrom/refs/heads/main/overlays/ostrom-openapi-overlay.yaml
   title: ''
@@ -240,19 +245,19 @@ modified: '2026-07-20'
 name: Ostrom
 nav: Providers
 network: true
-overview: 'Ostrom publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Contracts API, Orders API, and 4 more. Tagged areas include Company, Energy, Electricity, Green Energy, and Smart Meter.
+overview: 'Ostrom publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Contracts API, Orders API, and 4 more. Tagged areas include Company, Energy, Electricity, Renewable Energy, and Smart Meter.
 
 
   The Ostrom catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Ostrom''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
+  Ostrom''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
 random_paper: 16
 score:
   band: developing
-  composite: 48.2
+  composite: 45.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -262,9 +267,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 60.8
+    contract_quality: 55.5
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -274,7 +279,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 48.2
+  previous_composite: 45.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -290,9 +295,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -312,7 +317,7 @@ tags:
 - Company
 - Energy
 - Electricity
-- Green Energy
+- Renewable Energy
 - Smart Meter
 - Dynamic Pricing
 - Germany

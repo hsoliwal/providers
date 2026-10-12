@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.transload.io
@@ -301,7 +301,7 @@ modified: '2026-07-21'
 name: Transload
 nav: Providers
 network: true
-overview: 'Transload publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Ai Results API, Artifacts API, and 19 more. Tagged areas include Company, Logistics, Freight, Computer-Vision, and Warehouse.
+overview: 'Transload publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Ai Results API, Artifacts API, and 19 more. Tagged areas include Company, Logistics, Freight, Computer Vision, and Warehouse.
 
 
   Transload''s developer surface includes authentication, support, documentation, API reference, and 12 more developer resources.'
@@ -320,9 +320,9 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 4.5
-    contract_quality: 41.5
+    contract_quality: 37.5
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   previous_composite: 30.5
   provenance:
@@ -334,8 +334,18 @@ score:
       total: 22
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -355,7 +365,7 @@ tags:
 - Company
 - Logistics
 - Freight
-- Computer-Vision
+- Computer Vision
 - Warehouse
 - Supply Chain
 - Measurements

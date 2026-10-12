@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Model Context Protocol endpoint served on Botrista's Wix-hosted content site (botrista.info). It is a platform-provided site MCP — supplied by the Wix website builder rather than authored by Botri
@@ -115,9 +115,9 @@ description: 'Botrista, Inc. is a San Francisco based beverage-automation compan
 image: https://static.wixstatic.com/media/3e2957_4cab0c5391c3485993af28df133a1162%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/3e2957_4cab0c5391c3485993af28df133a1162%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.botrista.info over HTTP; 9 tools listed.
   name: Botrista MCP Server
-  slug: botrista-mcp-server
+  slug: botrista-site-mcp
 modified: '2026-08-02'
 name: Botrista
 nav: Providers
@@ -128,8 +128,8 @@ overview: 'Botrista publishes 1 API on the [APIs.io](https://apis.io/) network. 
   Botrista''s developer surface includes engineering blog, support, and 14 more developer resources.'
 random_paper: 14
 score:
-  band: emerging
-  composite: 11.6
+  band: minimal
+  composite: 10.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -143,14 +143,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 11.6
+  previous_composite: 10.8
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

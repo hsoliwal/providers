@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The API surface behind the Klarys tenant application at klarys.app. Klarys markets API and EDI integration with customer ERP, accounting and product-reference systems, and the application serves an an
@@ -212,7 +212,7 @@ scopes:
   summary_line: 6 scopes · authorizationCode/clientCredentials
 score:
   band: emerging
-  composite: 20.7
+  composite: 23.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -226,7 +226,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -236,12 +236,18 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 20.7
+  previous_composite: 23.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

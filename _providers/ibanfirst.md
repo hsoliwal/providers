@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.1
-  scored_at: '2026-09-20'
+  score: 53.0
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: First-party hosted remote MCP server, launched with API 1.7.0 on 2026-06-05, exposing 16 read tools over wallets, balances, financial movements, payments, live FX rates, spot trades, fixed forwards an
@@ -92,7 +92,7 @@ apis:
   description: '**1. WHAT IS A WEBHOOK ?** - Webhooks are events based real-time notifications providing updates on transactions and removing the need for periodic polling. - Webhook notifications are sent as HTTPS P'
   name: iBanFirst Webhook subscriptions API
   slug: ibanfirst-webhook-subscriptions-api
-artifact_total: 19
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Ibanfirst Webhooks
@@ -281,17 +281,14 @@ description: iBanFirst is a Brussels-headquartered cross-border payment and fore
 image: https://ibanfirst.com/_next/static/media/iban-og-image.1rlnmbejef6_m.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.ibanfirst.com over HTTP requiring OAuth; 16 tools listed.
   name: iBanFirst MCP
   slug: ibanfirst-mcp
-- description: ''
-  name: iBanFirst MCP Server
-  slug: ibanfirst-mcp-server
 modified: '2026-08-17'
 name: iBanFirst
 nav: Providers
 network: true
-overview: 'iBanFirst publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Beneficiaries API, Documents API, and 6 more. Tagged areas include Company, Fintech Insurtech, Cross-Border Payments, Foreign Exchange, and B2B Payments.
+overview: 'iBanFirst publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Beneficiaries API, Documents API, and 8 more. Tagged areas include Company, Fintech Insurtech, Cross-Border Payments, Foreign Exchange, and B2B Payments.
 
 
   The iBanFirst catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -309,7 +306,7 @@ rate_limits:
   slug: ibanfirst-rate-limits
 score:
   band: strong
-  composite: 59.5
+  composite: 57.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -321,9 +318,9 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 60.2
+    contract_quality: 55.1
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -333,7 +330,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 59.5
+  previous_composite: 57.1
   provenance:
     conformance: first-party
     contracts:
@@ -348,9 +345,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -378,7 +375,6 @@ tags:
 - B2B Payments
 - Treasury
 - multi-currency-accounts
-- Swift
 - SEPA
 - PSD2
 - Open Banking
@@ -387,5 +383,6 @@ tags:
 - MCP
 - Belgium
 - Europe
+- SWIFT
 website: https://www.ibanfirst.com/
 ---

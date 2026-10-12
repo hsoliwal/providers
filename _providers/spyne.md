@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Spyne Unified API accepts vehicle images and video (by SKU / VIN / stock number) and returns AI-transformed studio images, background replacement, 360-degree spins, and feature videos, plus image '
@@ -181,7 +181,7 @@ overview: 'Spyne publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 9
 score:
   band: developing
-  composite: 40.2
+  composite: 41.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -193,17 +193,23 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 40.2
+  previous_composite: 41.0
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,8 +232,8 @@ tags:
 - Automotive
 - Image
 - Video
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Dealership
 - Media Processing
 - Webhook

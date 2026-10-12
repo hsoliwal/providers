@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -223,14 +223,14 @@ description: Constellation Space Corp (ConstellationOS) is the ML-native operati
 image: https://constellation.space/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 3 tools listed. A candidate, not confirmed as published by the provider.
   name: Constellation Space MCP Server
-  slug: constellation-space-mcp-server
+  slug: constellation-space
 modified: '2026-07-18'
 name: Constellation Space
 nav: Providers
 network: true
-overview: 'Constellation Space publishes 3 APIs on the [APIs.io](https://apis.io/) network: Predictions API, Telemetry API, and Topology API. Tagged areas include Company, Satellite, Space, Telemetry, and Machine-Learning.
+overview: 'Constellation Space publishes 3 APIs on the [APIs.io](https://apis.io/) network: Predictions API, Telemetry API, and Topology API. Tagged areas include Company, Satellite, Space, Telemetry, and Machine Learning.
 
 
   Constellation Space''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, authentication, and 24 more developer resources.'
@@ -242,7 +242,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 44.2
+  composite: 45.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -254,11 +254,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 44.2
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -269,8 +269,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -299,7 +305,7 @@ tags:
 - Satellite
 - Space
 - Telemetry
-- Machine-Learning
+- Machine Learning
 - Fleet Operations
 - Ground Segment
 - Predictions

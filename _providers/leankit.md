@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.9
-  scored_at: '2026-09-20'
+  score: 40.8
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Bulk export API for LeanKit / Planview AgilePlace reporting data — cards, card lane positions, blocked card history, comments, connections, lanes, tags, and user assignments — consumed from Excel, Pow
@@ -44,122 +44,122 @@ apis:
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The account API from LeanKit — 1 operation(s) for account.
-  name: LeanKit account API
+  name: LeanKit Account API
   slug: leankit-account-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The attachment API from LeanKit — 3 operation(s) for attachment.
-  name: LeanKit attachment API
+  name: LeanKit Attachment API
   slug: leankit-attachment-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The automation API from LeanKit — 5 operation(s) for automation.
-  name: LeanKit automation API
+  name: LeanKit Automation API
   slug: leankit-automation-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The board API from LeanKit — 15 operation(s) for board.
-  name: LeanKit board API
+  name: LeanKit Board API
   slug: leankit-board-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The board-filter API from LeanKit — 2 operation(s) for board-filter.
-  name: LeanKit board-filter API
+  name: LeanKit Board Filter API
   slug: leankit-board-filter-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The board-level API from LeanKit — 1 operation(s) for board-level.
-  name: LeanKit board-level API
+  name: LeanKit Board Level API
   slug: leankit-board-level-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The board-template API from LeanKit — 2 operation(s) for board-template.
-  name: LeanKit board-template API
+  name: LeanKit Board Template API
   slug: leankit-board-template-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The card API from LeanKit — 8 operation(s) for card.
-  name: LeanKit card API
+  name: LeanKit Card API
   slug: leankit-card-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The card-scoring API from LeanKit — 1 operation(s) for card-scoring.
-  name: LeanKit card-scoring API
+  name: LeanKit Card Scoring API
   slug: leankit-card-scoring-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The card-type API from LeanKit — 2 operation(s) for card-type.
-  name: LeanKit card-type API
+  name: LeanKit Card Type API
   slug: leankit-card-type-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The comment API from LeanKit — 2 operation(s) for comment.
-  name: LeanKit comment API
+  name: LeanKit Comment API
   slug: leankit-comment-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The config API from LeanKit — 1 operation(s) for config.
-  name: LeanKit config API
+  name: LeanKit Config API
   slug: leankit-config-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The connections API from LeanKit — 8 operation(s) for connections.
-  name: LeanKit connections API
+  name: LeanKit Connections API
   slug: leankit-connections-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The custom-field API from LeanKit — 1 operation(s) for custom-field.
-  name: LeanKit custom-field API
+  name: LeanKit Custom Field API
   slug: leankit-custom-field-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The custom-icon API from LeanKit — 2 operation(s) for custom-icon.
-  name: LeanKit custom-icon API
+  name: LeanKit Custom Icon API
   slug: leankit-custom-icon-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The dependencies API from LeanKit — 2 operation(s) for dependencies.
-  name: LeanKit dependencies API
+  name: LeanKit Dependencies API
   slug: leankit-dependencies-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The lane API from LeanKit — 1 operation(s) for lane.
-  name: LeanKit lane API
+  name: LeanKit Lane API
   slug: leankit-lane-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The planning-series API from LeanKit — 6 operation(s) for planning-series.
-  name: LeanKit planning-series API
+  name: LeanKit Planning Series API
   slug: leankit-planning-series-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The tags API from LeanKit — 2 operation(s) for tags.
-  name: LeanKit tags API
+  name: LeanKit Tags API
   slug: leankit-tags-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The team API from LeanKit — 5 operation(s) for team.
-  name: LeanKit team API
+  name: LeanKit Team API
   slug: leankit-team-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The token-auth API from LeanKit — 2 operation(s) for token-auth.
-  name: LeanKit token-auth API
+  name: LeanKit Token Auth API
   slug: leankit-token-auth-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The user API from LeanKit — 6 operation(s) for user.
-  name: LeanKit user API
+  name: LeanKit User API
   slug: leankit-user-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The user-invitation API from LeanKit — 2 operation(s) for user-invitation.
-  name: LeanKit user-invitation API
+  name: LeanKit User Invitation API
   slug: leankit-user-invitation-api
 - baseURL: https://myaccount.leankit.com/io
   baseurl_source: declared
   description: The users API from LeanKit — 2 operation(s) for users.
-  name: LeanKit users API
+  name: LeanKit Users API
   slug: leankit-users-api
 artifact_total: 78
 asyncapis:
@@ -315,6 +315,11 @@ collections:
   name: Planview AgilePlace API (LeanKit) v2 account users API
   slug: open-leankit-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/leankit/refs/heads/main/capabilities/leankit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/leankit-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/leankit/refs/heads/main/overlays/leankit-agileplace-api-overlay.yaml
   title: ''
@@ -491,17 +496,17 @@ modified: '2026-07-19'
 name: LeanKit
 nav: Providers
 network: true
-overview: 'LeanKit publishes 24 APIs on the [APIs.io](https://apis.io/) network, including account API, attachment API, automation API, and 21 more. Tagged areas include Company, Kanban, Project Management, Agile, and Work Management.
+overview: 'LeanKit publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Account API, Attachment API, Automation API, and 22 more. Tagged areas include Company, Kanban, Project Management, Agile, and Work Management.
 
 
   The LeanKit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  LeanKit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
+  LeanKit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
 random_paper: 18
 score:
   band: strong
-  composite: 60.9
+  composite: 61.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -513,11 +518,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 70.3
+    contract_quality: 64.7
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 60.9
+  previous_composite: 61.3
   provenance:
     conformance: first-party
     contracts:
@@ -527,8 +532,14 @@ score:
       total: 24
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -556,8 +567,8 @@ tags:
 - Work Management
 - Collaboration
 - Enterprise Software
-- Portfolio-Management
-- Workflow-Automation
+- Workflow Automation
 - Software-as-a-Service
+- Project Portfolio Management
 website: https://www.planview.com/products-solutions/products/agileplace/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -253,20 +253,20 @@ description: BitPowr Technologies is an institutional digital-asset infrastructu
 image: https://bitpowr.com/static/img/bitpowr_banner.png
 layout: provider
 modified: '2026-07-18'
-name: BitPowr Technologies, Inc.
+name: BitPowr Technologies
 nav: Providers
 network: true
-overview: 'BitPowr Technologies, Inc. publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account API, Address API, Assets API, and 7 more. Tagged areas include Company, Cryptocurrency, Blockchain, Digital Assets, and Wallet Infrastructure.
+overview: 'BitPowr Technologies publishes 10 APIs on the [APIs.io](https://apis.io/) network, including BitPowr Technologies, Inc. Account API, BitPowr Technologies, Inc. Address API, BitPowr Technologies, Inc. Assets API, and 7 more. Tagged areas include Company, Cryptocurrency, Blockchain, Digital Assets, and Wallet Infrastructure.
 
 
-  The BitPowr Technologies, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The BitPowr Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  BitPowr Technologies, Inc.''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, engineering blog, support, and 18 more developer resources.'
+  BitPowr Technologies'' developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, engineering blog, support, and 18 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 30.6
+  composite: 29.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -280,9 +280,9 @@ score:
     contract_governance: 4.5
     contract_quality: 8.1
     developer_ergonomics: 45.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 30.6
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -298,9 +298,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

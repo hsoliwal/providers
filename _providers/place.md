@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -157,7 +157,7 @@ modified: '2026-08-05'
 name: PLACE
 nav: Providers
 network: true
-overview: 'PLACE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Property Technology, PropTech, and CRM.
+overview: 'PLACE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, CRM, and Transaction Management.
 
 
   PLACE''s developer surface includes authentication, engineering blog, support, signup flow, and 18 more developer resources.'
@@ -169,7 +169,7 @@ scopes:
   summary_line: 8 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.0
+  composite: 18.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -183,9 +183,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 20.0
+  previous_composite: 18.2
   provenance:
     conformance: derived
   regulatory:
@@ -193,9 +193,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,8 +214,7 @@ security:
 slug: place
 tags:
 - Company
-- Real-Estate
-- Property Technology
+- Real Estate
 - PropTech
 - CRM
 - Transaction Management

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.brale.xyz
@@ -310,9 +310,9 @@ description: Brale is a regulated stablecoin issuance and orchestration platform
 image: https://brale.xyz/assets/site/global-og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.brale.xyz over HTTP requiring OAuth; 4 tools listed.
   name: Brale MCP Server
-  slug: brale-mcp-server
+  slug: brale
 modified: '2026-07-18'
 name: Brale
 nav: Providers
@@ -332,7 +332,7 @@ scopes:
   summary_line: 20 scopes · clientCredentials
 score:
   band: strong
-  composite: 59.9
+  composite: 56.2
   coverage:
     artifact_dirs: 26
     catalog_earned: 37.0
@@ -344,11 +344,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 59.9
+  previous_composite: 56.2
   provenance:
     conformance: derived
     contracts:
@@ -363,9 +363,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -393,10 +393,11 @@ tags:
 - Blockchain
 - Cryptocurrency
 - Fintech
-- Financial-Services
+- Financial Services
 - Custody
 - Tokenization
 - On-Ramp
 - Off-Ramp
+- A2A
 website: https://www.brale.xyz/
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -184,7 +184,7 @@ modified: '2026-09-07'
 name: Fannie Mae
 nav: Providers
 network: true
-overview: 'Fannie Mae is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Housing, Mortgage, Finance, and GSE.
+overview: 'Fannie Mae is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Housing, Mortgage, Finance, Government-Sponsored Enterprise, and Fortune 100.
 
 
   Fannie Mae''s developer surface includes product news, engineering blog, documentation, getting-started guide, support, signup flow, authentication, and 25 more developer resources.'
@@ -215,12 +215,12 @@ rate_limits:
   slug: fannie-mae-rate-limits
 scopes:
 - name: Fannie Mae Scopes
-  scope_count: 0
+  scope_count: 15
   slug: fannie-mae-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 15 scopes
 score:
   band: thin
-  composite: 37.0
+  composite: 32.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -234,9 +234,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 41.7
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 44.7
-  previous_composite: 37.0
+  previous_composite: 32.9
   provenance:
     conformance: first-party
   regulatory:
@@ -244,9 +244,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 75.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -268,11 +268,10 @@ security:
   summary_line: Hackerone
 slug: fannie-mae
 tags:
-- Federal-Government
 - Housing
 - Mortgage
 - Finance
-- GSE
+- Government-Sponsored Enterprise
 - Fortune 100
 website: https://www.fanniemae.com/
 ---

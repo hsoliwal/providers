@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -102,6 +102,11 @@ collections:
   name: Harness Cloud Cost Management API
   slug: open-harness-cloud-cost
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/harness-cloud-cost/refs/heads/main/capabilities/harness-cloud-cost-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/harness-cloud-cost-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/harness-cloud-cost/refs/heads/main/agentic-access/harness-cloud-cost-agentic-access.yml
   title: ''
@@ -177,7 +182,7 @@ overview: 'Harness Cloud Cost Management publishes 6 APIs on the [APIs.io](https
   The Harness Cloud Cost Management catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Harness Cloud Cost Management''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, and 8 more developer resources.'
+  Harness Cloud Cost Management''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, and 9 more developer resources.'
 plans:
 - name: Harness Cloud Cost Plans Pricing
   plan_count: 3
@@ -200,7 +205,7 @@ rules:
   slug: harness-cloud-cost-rules
 score:
   band: thin
-  composite: 39.0
+  composite: 38.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -212,11 +217,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 53.1
+    contract_quality: 48.1
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.0
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     contracts:
@@ -224,8 +229,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

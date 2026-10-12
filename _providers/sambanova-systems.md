@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -147,6 +147,11 @@ collections:
   name: Sambanova Agents Service Audio Subagents Interactive API
   slug: open-sambanova-systems-subagents-interactive-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sambanova-systems/refs/heads/main/capabilities/sambanova-systems-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sambanova-systems-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sambanova-systems/refs/heads/main/security/sambanova-systems-trust-center.yml
   title: ''
@@ -322,10 +327,10 @@ modified: '2026-07-21'
 name: SambaNova Systems
 nav: Providers
 network: true
-overview: 'SambaNova Systems publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Chat completions API, Completions API, and 9 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, LLM, and Inference.
+overview: 'SambaNova Systems publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Chat completions API, Completions API, and 9 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, LLM, and Inference.
 
 
-  SambaNova Systems'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
+  SambaNova Systems'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 11
@@ -333,9 +338,9 @@ rate_limits:
   slug: sambanova-systems-rate-limits
 score:
   band: developing
-  composite: 52.6
+  composite: 52.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -345,11 +350,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 55.2
+    contract_quality: 49.7
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 52.6
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -360,8 +365,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -384,7 +395,7 @@ slug: sambanova-systems
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Inference
 - Generative AI

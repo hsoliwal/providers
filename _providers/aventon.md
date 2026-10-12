@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-driven commerce surface exposed on the aventon.com Shopify storefront via the Universal Commerce Protocol (ucp.dev). An MCP endpoint offers catalog search, cart, checkout, discount, fulfillm
@@ -93,9 +93,9 @@ description: 'Aventon is a consumer electric bicycle (e-bike) manufacturer headq
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aventon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at aventonbikes.myshopify.com over HTTP; 5 tools listed.
   name: Aventon MCP Server
-  slug: aventon-mcp-server
+  slug: aventon-ucp-shopping
 modified: '2026-07-18'
 name: Aventon
 nav: Providers
@@ -112,7 +112,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 16.4
+  composite: 19.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -126,14 +126,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 16.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 19.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -180,7 +180,7 @@ modified: '2026-07-21'
 name: Thinking Machines Lab
 nav: Providers
 network: true
-overview: 'Thinking Machines Lab is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, LLM, and Fine-Tuning.
+overview: 'Thinking Machines Lab is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, LLM, and Fine-Tuning.
 
 
   Thinking Machines Lab''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 23 more developer resources.'
@@ -192,7 +192,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
   band: thin
-  composite: 34.9
+  composite: 38.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -206,13 +206,19 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 52.6
-  previous_composite: 34.9
+  previous_composite: 38.0
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -236,11 +242,12 @@ slug: thinking-machines-lab
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Fine-Tuning
 - Model Training
 - Developer Tools
 - Reinforcement Learning
+- Foundation Models
 website: https://thinkingmachines.ai
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A read-only Model Context Protocol server over the AfterQuery Experts Help Center, served anonymously from AfterQuery's documentation host. Three tools - full-text documentation search, a sandboxed re
@@ -143,7 +143,7 @@ modified: '2026-09-12'
 name: AfterQuery
 nav: Providers
 network: true
-overview: 'AfterQuery publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Training Data, and Data.
+overview: 'AfterQuery publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Training Data, and Data.
 
 
   AfterQuery''s developer surface includes documentation, engineering blog, support, signup flow, authentication, and 17 more developer resources.'
@@ -158,7 +158,7 @@ rate_limits:
   slug: afterquery-rate-limits
 score:
   band: emerging
-  composite: 22.8
+  composite: 23.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -172,15 +172,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 22.8
+  previous_composite: 23.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +205,7 @@ slug: afterquery
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Training Data
 - Data
 - Evaluation
@@ -208,5 +214,6 @@ tags:
 - Research
 - Agents
 - MCP
+- A2A
 website: https://www.afterquery.com/
 ---

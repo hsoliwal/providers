@@ -11,7 +11,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: templated
@@ -33,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.6
-  scored_at: '2026-09-20'
+  score: 38.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.rilldata.com
@@ -51,6 +50,11 @@ collections:
   name: Rill Admin Orgs API
   slug: open-rill-data-orgs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rill-data/refs/heads/main/capabilities/rill-data-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rill-data-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/rill-data/refs/heads/main/overlays/rill-data-admin-overlay.yaml
   title: ''
@@ -179,7 +183,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted Rill Model Context Protocol server. Exposes Rill's governed metrics views and project files to LLMs so analysts can query predefined measures and dimensions through natural language. A
   name: Rill Data MCP Server
-  slug: rill-data-mcp-server
+  slug: rill
 modified: '2026-07-21'
 name: Rill Data
 nav: Providers
@@ -187,7 +191,7 @@ network: true
 overview: 'Rill Data publishes 1 API on the [APIs.io](https://apis.io/) network: Orgs API. Tagged areas include Company, Analytics, Business Intelligence, Dashboards, and Metrics.
 
 
-  Rill Data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 20 more developer resources.'
+  Rill Data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 21 more developer resources.'
 random_paper: 10
 scopes:
 - name: Rill Data Scopes
@@ -196,9 +200,9 @@ scopes:
   summary_line: 1 scope · authorizationCode/deviceCode
 score:
   band: developing
-  composite: 44.8
+  composite: 46.0
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -208,11 +212,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 42.9
+    contract_quality: 38.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 44.8
+  previous_composite: 46.0
   provenance:
     conformance: first-party
     contracts:
@@ -222,8 +226,14 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -251,7 +261,7 @@ tags:
 - Metrics
 - Data
 - OLAP
-- Open-Source
+- Open Source
 - Developer Tools
 website: https://www.rilldata.com
 ---

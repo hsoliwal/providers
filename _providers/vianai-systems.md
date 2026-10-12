@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The hila REST APIs provide CRUD operations to deploy, manage, and monitor machine-learning models — drift detection, explainability, model performance, alerts, data profiling, inference tracking, pipe
@@ -141,14 +141,14 @@ modified: '2026-07-21'
 name: Vianai Systems
 nav: Providers
 network: true
-overview: 'Vianai Systems publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Artificial Intelligence, Machine-Learning, and MLOps.
+overview: 'Vianai Systems publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Artificial Intelligence, Machine Learning, and MLOps.
 
 
   Vianai Systems'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, CLI, and 13 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 22.2
+  composite: 23.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -162,15 +162,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 22.2
+  previous_composite: 23.7
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -191,7 +197,7 @@ tags:
 - Company
 - Enterprise
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Model Monitoring
 - Analytics

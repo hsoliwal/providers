@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The only anonymously reachable, machine-readable EasyWebinar API surface. The application host publishes a complete OpenID Connect discovery document and RFC 8414 authorization-server metadata, with l
@@ -181,7 +181,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials/implicit
 score:
   band: developing
-  composite: 45.1
+  composite: 47.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -193,15 +193,25 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 45.1
+  previous_composite: 47.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

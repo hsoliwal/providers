@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.4
-  scored_at: '2026-09-20'
+  score: 10.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic access to the Antithesis autonomous testing platform via tenant-scoped webhook endpoints. POST /basic_test launches a test run; POST /debugging starts a multiverse debugging session. Auth
@@ -150,7 +150,7 @@ overview: 'Antithesis publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 6
 score:
   band: thin
-  composite: 32.3
+  composite: 34.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -164,14 +164,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 32.3
+  previous_composite: 34.1
   provenance:
     conformance: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

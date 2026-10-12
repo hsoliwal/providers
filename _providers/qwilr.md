@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatically creating and managing Qwilr pages (proposals, quotes, contracts, reports) from templates and saved blocks, managing quote taxes, listing payment gateways and users, and s
@@ -185,9 +185,9 @@ description: Qwilr is a document-experience platform for creating interactive, w
 image: https://qwilr.com/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.qwilr.com over HTTP.
   name: Qwilr MCP Server
-  slug: qwilr-mcp-server
+  slug: qwilr
 modified: '2026-07-20'
 name: Qwilr
 nav: Providers
@@ -207,7 +207,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 48.9
+  composite: 52.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -219,16 +219,28 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 48.9
+  previous_composite: 52.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: eidas
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

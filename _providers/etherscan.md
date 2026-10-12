@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,7 +50,7 @@ apis:
   description: Address balances, transactions, and token holdings
   name: Etherscan Accounts API
   slug: etherscan-accounts-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -148,6 +148,10 @@ finops:
   slug: etherscan-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/etherscan.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.etherscan.io over HTTP.
+  name: Etherscan MCP Server
+  slug: etherscan
 modified: '2026-05-19'
 name: Etherscan
 nav: Providers
@@ -167,7 +171,7 @@ rate_limits:
   slug: etherscan-rate-limits
 score:
   band: thin
-  composite: 37.1
+  composite: 36.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -179,11 +183,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 37.1
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     contracts:
@@ -192,8 +196,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

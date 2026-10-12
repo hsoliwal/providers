@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Official remote MCP (Model Context Protocol) server that connects AI assistants such as Claude Desktop and Microsoft 365 Copilot to the UpSlide add-in. Exposes selected UpSlide features (Excel link li
@@ -147,19 +147,19 @@ layout: provider
 mcp_servers:
 - description: UpSlide operates an official remote MCP server at https://api.upslide.com/mcp (Streamable HTTP) that connects AI assistants such as Claude Desktop and Microsoft 365 Copilot to the UpSlide add-in for E
   name: UpSlide MCP Server
-  slug: upslide-mcp-server
+  slug: upslide
 modified: '2026-07-21'
 name: UpSlide
 nav: Providers
 network: true
-overview: 'UpSlide publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Applicative Saas, Document Automation, Financial-Services, and Microsoft-365.
+overview: 'UpSlide publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Applicative Saas, Document Automation, Financial Services, and Microsoft 365.
 
 
   UpSlide''s developer surface includes developer portal, documentation, support, engineering blog, pricing, signup flow, changelog, and 16 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 30.6
+  composite: 32.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -173,15 +173,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 30.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 32.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -202,8 +213,8 @@ tags:
 - Company
 - Applicative Saas
 - Document Automation
-- Financial-Services
-- Microsoft-365
+- Financial Services
+- Microsoft 365
 - PowerPoint
 - Excel
 - AI Assistant

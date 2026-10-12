@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Provider-published Model Context Protocol server ("governance-hub") distributed as the npm package @credoai/governance-hub-mcp and run over stdio via npx. Grounds the Credo AI Claude Code Agent Skills
@@ -384,14 +384,14 @@ description: Credo AI is an enterprise AI governance, risk, and compliance platf
 image: https://cdn.prod.website-files.com/649d808ba8385965c74d94df/6a27d15ec3da571348386f01_OPENGRAPGH-light.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 5 tools listed.
   name: Credo AI MCP Server
-  slug: credo-ai-mcp-server
+  slug: governance-hub
 modified: '2026-08-11'
 name: Credo AI
 nav: Providers
 network: true
-overview: 'Credo AI publishes 39 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Audit Logs API, Comment Threads API, and 36 more. Tagged areas include Company, AI Governance, ai-risk-management, Responsible AI, and Compliance.
+overview: 'Credo AI publishes 40 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Audit Logs API, Comment Threads API, and 37 more. Tagged areas include Company, AI Governance, ai-risk-management, Responsible AI, and Compliance.
 
 
   Credo AI''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, pricing, and 22 more developer resources.'
@@ -405,24 +405,24 @@ rate_limits:
   name: Credo Ai Rate Limits
   slug: credo-ai-rate-limits
 score:
-  band: developing
-  composite: 53.5
+  band: strong
+  composite: 55.2
   coverage:
     artifact_dirs: 21
-    catalog_earned: 37.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 51.2
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 76.7
     operational_transparency: 13.2
-  previous_composite: 53.5
+  previous_composite: 54.7
   provenance:
     conformance: first-party
     contracts:
@@ -432,8 +432,14 @@ score:
       total: 39
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -463,7 +469,7 @@ tags:
 - ai-risk-management
 - Responsible AI
 - Compliance
-- Regulatory Technology
+- RegTech
 - Model Registry
 - Vendor Risk
 - EU AI Act

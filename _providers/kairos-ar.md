@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -200,7 +200,7 @@ overview: 'Kairos AR publishes 3 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 3
 score:
   band: thin
-  composite: 36.8
+  composite: 37.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -214,14 +214,16 @@ score:
     contract_governance: 4.5
     contract_quality: 13.6
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.8
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -232,8 +234,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -255,10 +263,10 @@ tags:
 - Facial Recognition
 - Biometrics
 - Emotion Analysis
-- Computer-Vision
+- Computer Vision
 - Identity
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Image Analysis
 website: https://kairos.com
 ---

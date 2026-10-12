@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.pay-i.com
@@ -220,9 +220,9 @@ description: 'Pay-i is a GenAI cost, capacity and ROI optimization platform foun
 image: https://cdn.prod.website-files.com/698b13d019d0be64f91a6ae7/69a72aad61995c2a45243b2e_open-graph.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.pay-i.com over HTTP; 4 tools listed.
   name: Pay-i MCP Server
-  slug: pay-i-mcp-server
+  slug: pay-i-docs
 modified: '2026-08-26'
 name: Pay-i
 nav: Providers
@@ -242,7 +242,7 @@ rate_limits:
   slug: pay-i-rate-limits
 score:
   band: developing
-  composite: 39.6
+  composite: 39.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -254,11 +254,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 53.6
+    contract_quality: 48.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 39.6
+  previous_composite: 39.3
   provenance:
     conformance: derived
     contracts:
@@ -268,8 +268,14 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

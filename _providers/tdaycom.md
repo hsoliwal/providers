@@ -21,19 +21,19 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-09-20'
+  score: 32.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Model Context Protocol server for tday, and the agent-facing entry point to the platform. It ships in two deployments that front the same nine tools: a hosted remote endpoint at https://tday.com/api/m'
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: 'Official hosted Model Context Protocol server for tday, the agent-facing surface of the tday design/launch-content platform. tday.com/mcp documents two ways in: a local stdio server installed from npm'
   name: Tdaycom MCP Server
-  slug: tdaycom-mcp-server
+  slug: tday
 modified: '2026-08-13'
 name: Tdaycom
 nav: Providers
@@ -200,7 +200,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 35.2
+  composite: 37.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -214,15 +214,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 35.2
+  previous_composite: 37.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -245,7 +251,7 @@ tags:
 - Content Generation
 - Design
 - Video
-- Social-Media
+- Social Media
 - Developer Tools
 - MCP
 - Agents

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Packmatic is a Berlin-based packaging procurement platform that helps companies source flexible and paper-based packaging at lower cost. It combines a proprietary supplier database and a smart-matching engine spanning 350+ suppliers with expert packaging engineers and a cloud-based platform for managing quotes, orders, and supplier communication. Customers pay no upfront fees; Packmatic earns a commission when they source through its network, reporting average savings around 16% and reducing supplier search time by roughly 70%. Packmatic does not currently publish a public developer API, SDKs, or developer documentation; this profile captures its company identity and domain-security posture for the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/packmatic.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.packmatic.io over HTTP.
+  name: Packmatic MCP Server
+  slug: packmatic
 modified: '2026-07-20'
 name: Packmatic
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Packmatic is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 17
 score:
   band: emerging
-  composite: 12.8
+  composite: 12.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,7 +94,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -100,11 +104,17 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 12.8
+  previous_composite: 12.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

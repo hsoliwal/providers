@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ontra-ai/refs/heads/main/security/ontra-ai-domain-security.yml
@@ -91,6 +91,10 @@ created: '2026-07-17'
 description: Ontra is an AI-powered contract automation and digital execution platform for private markets. It automates routine legal and compliance workflows for investment firms, investment banks, and law firms, including contract negotiation, entity management (Atlas), in-house negotiation (Accord), automated due-diligence questionnaires (DDQ), investor obligation management (Insight for Funds), structured credit data (Insight for Credit), and reverse KYC services. The platform combines a global network of legal professionals with proprietary AI to summarize, search, compare, and surface data from legal documents, and exposes a read-only MCP server for real-time access to Atlas entity data. Ontra serves more than 1,000 firms including Blackstone, Bain Capital, AllianceBernstein, and Battery Ventures.
 image: https://www.ontra.ai/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ontra.ai over HTTP.
+  name: Ontra AI MCP Server
+  slug: ontra-ai
 modified: '2026-07-20'
 name: Ontra AI
 nav: Providers
@@ -102,7 +106,7 @@ overview: 'Ontra AI is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 3
 score:
   band: emerging
-  composite: 20.7
+  composite: 21.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -116,14 +120,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 20.7
+  previous_composite: 21.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

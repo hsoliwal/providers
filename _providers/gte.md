@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -232,7 +232,7 @@ overview: 'GTE publishes 6 APIs on the [APIs.io](https://apis.io/) network, incl
 random_paper: 12
 score:
   band: thin
-  composite: 31.4
+  composite: 30.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -244,11 +244,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 41.2
+    contract_quality: 37.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 31.4
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -264,9 +264,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

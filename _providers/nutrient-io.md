@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Deliver rich document interactions directly in the browser including PDF rendering, annotation, form filling, and signature collection.
@@ -147,7 +147,7 @@ rate_limits:
   slug: nutrient-io-rate-limits
 score:
   band: emerging
-  composite: 24.9
+  composite: 24.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -161,11 +161,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
-  previous_composite: 24.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

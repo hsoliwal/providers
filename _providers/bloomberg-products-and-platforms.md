@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Cross-platform API providing access to the full Bloomberg data ecosystem including real-time, reference, and historical data with SDKs for Python, Java, C++, and other languages.
@@ -127,7 +127,7 @@ rate_limits:
   slug: bloomberg-products-and-platforms-rate-limits
 score:
   band: emerging
-  composite: 20.0
+  composite: 20.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -141,11 +141,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

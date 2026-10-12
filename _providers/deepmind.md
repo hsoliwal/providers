@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -107,14 +107,14 @@ modified: '2026-07-18'
 name: DeepMind
 nav: Providers
 network: true
-overview: 'DeepMind is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Foundation Models, and LLM.
+overview: 'DeepMind is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Foundation Models, and LLM.
 
 
   DeepMind''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, pricing, and 9 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 23.1
+  composite: 22.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -128,11 +128,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 23.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +154,7 @@ slug: deepmind
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Foundation Models
 - LLM
 - Research

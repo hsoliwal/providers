@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -91,6 +91,11 @@ collections:
   name: Azure REST Virtual Machines API
   slug: open-microsoft-azure-virtual-machines-virtual-machines-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-virtual-machines/refs/heads/main/capabilities/microsoft-azure-virtual-machines-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-virtual-machines-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -347,13 +352,13 @@ modified: '2026-05-19'
 name: Azure Virtual Machines
 nav: Providers
 network: true
-overview: 'Azure Virtual Machines publishes 1 API on the [APIs.io](https://apis.io/) network: Virtual Machines API. Tagged areas include Cloud Computing, Compute, Infrastructure-as-a-Service, Infrastructure, and Virtual Machines.
+overview: 'Azure Virtual Machines publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Virtual Machines API, and 9 more. Tagged areas include Cloud Computing, Compute, Infrastructure-as-a-Service, Infrastructure, and Virtual Machines.
 
 
   The Azure Virtual Machines catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Azure Virtual Machines'' developer surface includes authentication, developer portal, engineering blog, support, documentation, getting-started guide, pricing, and 24 more developer resources.'
+  Azure Virtual Machines'' developer surface includes authentication, developer portal, engineering blog, support, documentation, getting-started guide, pricing, and 25 more developer resources.'
 plans:
 - name: Microsoft Azure Virtual Machines Plans Pricing
   plan_count: 10
@@ -381,9 +386,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: strong
-  composite: 54.4
+  composite: 54.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
@@ -393,11 +398,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 9.8
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 65.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 54.4
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     contracts:
@@ -405,8 +410,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

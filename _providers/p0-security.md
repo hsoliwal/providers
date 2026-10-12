@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -66,6 +66,11 @@ collections:
   name: P0 Just-in-Time Access Command Permission Requests API
   slug: open-p0-security-permission-requests-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/p0-security/refs/heads/main/capabilities/p0-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/p0-security-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -209,13 +214,13 @@ network: true
 overview: 'P0 Security publishes 2 APIs on the [APIs.io](https://apis.io/) network: Command API and Permission Requests API. Tagged areas include Company, Security, Privileged Access Management, Identity and Access Management, and Just-In-Time Access.
 
 
-  P0 Security''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 21 more developer resources.'
+  P0 Security''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 22 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 43.5
+  composite: 42.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -225,11 +230,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 43.5
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -240,8 +245,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

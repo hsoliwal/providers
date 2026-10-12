@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -144,14 +144,14 @@ description: Lamina Labs is a San Francisco company (Y Combinator Spring 2026) b
 image: https://www.laminalabs.ai/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.laminalabs.ai over HTTP; 2 tools listed.
   name: Lamina Labs MCP Server
-  slug: lamina-labs-mcp-server
+  slug: lamina-simi
 modified: '2026-07-19'
 name: Lamina Labs
 nav: Providers
 network: true
-overview: 'Lamina Labs publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Machine-Learning.
+overview: 'Lamina Labs publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Machine Learning.
 
 
   Lamina Labs'' developer surface includes documentation, signup flow, support, authentication, and 15 more developer resources.'
@@ -167,7 +167,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.6
+  composite: 17.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -181,9 +181,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 18.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 19.6
+  previous_composite: 17.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -194,9 +194,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -218,7 +218,7 @@ tags:
 - Artificial Intelligence
 - Video
 - Video Generation
-- Machine-Learning
+- Machine Learning
 - Education
 - Media
 - MCP

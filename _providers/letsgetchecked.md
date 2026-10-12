@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Version 1 of the LetsGetChecked Orders API. Create a pre-activated test-kit order against a client-supplied order identifier (PUT is documented as idempotent), query order status from dispatch through
@@ -230,7 +230,7 @@ overview: 'LetsGetChecked publishes 5 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 19
 score:
   band: developing
-  composite: 50.8
+  composite: 48.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -242,11 +242,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 33.3
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 31.6
-  previous_composite: 50.8
+  previous_composite: 48.1
   provenance:
     conformance: first-party
   regulatory:
@@ -254,9 +254,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 48.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

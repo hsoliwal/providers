@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,74 +33,74 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The authentication-check API from NetBox Labs — 1 operation(s) for authentication-check.
-  name: NetBox Labs authentication-check API
+  name: NetBox Labs Authentication Check API
   slug: netbox-labs-authentication-check-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The circuits API from NetBox Labs — 24 operation(s) for circuits.
-  name: NetBox Labs circuits API
+  name: NetBox Labs Circuits API
   slug: netbox-labs-circuits-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The core API from NetBox Labs — 21 operation(s) for core.
-  name: NetBox Labs core API
+  name: NetBox Labs Core API
   slug: netbox-labs-core-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The dcim API from NetBox Labs — 103 operation(s) for dcim.
-  name: NetBox Labs dcim API
+  name: NetBox Labs Dcim API
   slug: netbox-labs-dcim-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The extras API from NetBox Labs — 49 operation(s) for extras.
-  name: NetBox Labs extras API
+  name: NetBox Labs Extras API
   slug: netbox-labs-extras-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The ipam API from NetBox Labs — 41 operation(s) for ipam.
-  name: NetBox Labs ipam API
+  name: NetBox Labs Ipam API
   slug: netbox-labs-ipam-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The schema API from NetBox Labs — 1 operation(s) for schema.
-  name: NetBox Labs schema API
+  name: NetBox Labs Schema API
   slug: netbox-labs-schema-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The status API from NetBox Labs — 1 operation(s) for status.
-  name: NetBox Labs status API
+  name: NetBox Labs Status API
   slug: netbox-labs-status-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The tenancy API from NetBox Labs — 12 operation(s) for tenancy.
-  name: NetBox Labs tenancy API
+  name: NetBox Labs Tenancy API
   slug: netbox-labs-tenancy-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The users API from NetBox Labs — 14 operation(s) for users.
-  name: NetBox Labs users API
+  name: NetBox Labs Users API
   slug: netbox-labs-users-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The virtualization API from NetBox Labs — 15 operation(s) for virtualization.
-  name: NetBox Labs virtualization API
+  name: NetBox Labs Virtualization API
   slug: netbox-labs-virtualization-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The vpn API from NetBox Labs — 20 operation(s) for vpn.
-  name: NetBox Labs vpn API
+  name: NetBox Labs Vpn API
   slug: netbox-labs-vpn-api
 - baseURL: https://demo.netbox.dev/api/
   baseurl_source: declared
   description: The wireless API from NetBox Labs — 6 operation(s) for wireless.
-  name: NetBox Labs wireless API
+  name: NetBox Labs Wireless API
   slug: netbox-labs-wireless-api
 artifact_total: 33
 collections:
@@ -281,14 +281,14 @@ description: NetBox Labs is the commercial company behind NetBox, the open-sourc
 image: https://netboxlabs.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: NetBox Labs MCP Server
-  slug: netbox-labs-mcp-server
+  slug: netbox-mcp-server
 modified: '2026-07-20'
 name: NetBox Labs
 nav: Providers
 network: true
-overview: 'NetBox Labs publishes 13 APIs on the [APIs.io](https://apis.io/) network, including authentication-check API, circuits API, core API, and 10 more. Tagged areas include Company, Networking, DCIM, IPAM, and Infrastructure.
+overview: 'NetBox Labs publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Authentication Check API, Circuits API, Core API, and 10 more. Tagged areas include Company, Networking, DCIM, IPAM, and Infrastructure.
 
 
   NetBox Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 22 more developer resources.'
@@ -299,7 +299,7 @@ plans:
 random_paper: 19
 score:
   band: strong
-  composite: 58.9
+  composite: 60.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -307,15 +307,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 51.9
+    contract_quality: 47.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 52.6
+  previous_composite: 60.5
   provenance:
     conformance: derived
     contracts:
@@ -325,9 +325,15 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0

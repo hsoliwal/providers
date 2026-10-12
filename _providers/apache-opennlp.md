@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -393,7 +393,7 @@ modified: '2026-05-19'
 name: Apache OpenNLP
 nav: Providers
 network: true
-overview: 'Apache OpenNLP publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Chunking API, Document Categorization API, Language Detection API, and 7 more. Tagged areas include Machine-Learning, Natural Language Processing, NLP, Text Processing, and Apache.
+overview: 'Apache OpenNLP publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Chunking API, Document Categorization API, Language Detection API, and 7 more. Tagged areas include Machine Learning, Natural Language Processing, NLP, Text Processing, and Apache.
 
 
   The Apache OpenNLP catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -433,23 +433,23 @@ rules:
   slug: apache-opennlp-spectral-rules
 score:
   band: emerging
-  composite: 23.3
+  composite: 22.9
   coverage:
     artifact_dirs: 16
-    catalog_earned: 64.5
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 28.8
+    contract_governance: 27.3
     contract_quality: 19.1
     developer_ergonomics: 23.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 23.3
+  previous_composite: 22.9
   provenance:
     agentic_access: derived
     contracts:
@@ -457,8 +457,14 @@ score:
       derived: 11
       marker_coverage: 100.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -475,12 +481,12 @@ security:
   summary_line: security.txt · contact published
 slug: apache-opennlp
 tags:
-- Machine-Learning
+- Machine Learning
 - Natural Language Processing
 - NLP
 - Text Processing
 - Apache
-- Open-Source
+- Open Source
 - Java
 use_cases:
 - description: Extract structured data from unstructured text documents

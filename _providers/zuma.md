@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -82,14 +82,14 @@ modified: '2026-07-21'
 name: Zuma
 nav: Providers
 network: true
-overview: 'Zuma is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Multifamily, and Property Management.
+overview: 'Zuma is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Multifamily, and Property Management.
 
 
   Zuma''s developer surface includes pricing, engineering blog, support, and 6 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 13.8
+  composite: 13.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,11 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -122,7 +128,7 @@ security:
 slug: zuma
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Multifamily
 - Property Management

@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -213,7 +213,7 @@ modified: '2026-05-08'
 name: Hyperscience
 nav: Providers
 network: true
-overview: 'Hyperscience publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Cases API, Documents API, and 6 more. Tagged areas include Artificial Intelligence, Document AI, IDP, Enterprise, and Automation.
+overview: 'Hyperscience publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Cases API, Documents API, and 7 more. Tagged areas include Artificial Intelligence, Document AI, IDP, Enterprise, and Automation.
 
 
   Hyperscience''s developer surface includes authentication, pricing, engineering blog, and 13 more developer resources.'
@@ -233,7 +233,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.7
+  composite: 29.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 45.0
@@ -245,11 +245,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 28.7
+  previous_composite: 29.5
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +257,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

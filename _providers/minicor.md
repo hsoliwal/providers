@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.5
-  scored_at: '2026-09-20'
+  score: 28.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://api.laminar.run
   baseurl_source: declared
   description: The external API from Minicor — 7 operation(s) for external.
-  name: Minicor external API
+  name: Minicor External API
   slug: minicor-external-api
 artifact_total: 15
 asyncapis:
@@ -242,14 +242,14 @@ description: 'Minicor (operated by Laminar Run, Inc.) is a platform for building
 image: https://minicor.com/images/logo-minicor.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 7 tools listed.
   name: Minicor MCP Server
-  slug: minicor-mcp-server
+  slug: minicor
 modified: '2026-07-20'
 name: Minicor
 nav: Providers
 network: true
-overview: 'Minicor publishes 1 API on the [APIs.io](https://apis.io/) network: external API. Tagged areas include Company, Desktop Automation, RPA, Computer Use Agents, and Workflow-Automation.
+overview: 'Minicor publishes 1 API on the [APIs.io](https://apis.io/) network: External API. Tagged areas include Company, Desktop Automation, RPA, Computer Use Agents, and Workflow Automation.
 
 
   The Minicor catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -258,8 +258,8 @@ overview: 'Minicor publishes 1 API on the [APIs.io](https://apis.io/) network: e
   Minicor''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, signup flow, and 28 more developer resources.'
 random_paper: 5
 score:
-  band: strong
-  composite: 56.7
+  band: developing
+  composite: 53.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -271,11 +271,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 56.7
+  previous_composite: 53.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -295,9 +295,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 38.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -326,7 +326,7 @@ tags:
 - Desktop Automation
 - RPA
 - Computer Use Agents
-- Workflow-Automation
+- Workflow Automation
 - Healthcare
 - Legacy Systems
 - AI Agents

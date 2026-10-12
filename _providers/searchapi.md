@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 60.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://www.searchapi.io/api/v1/search
@@ -234,9 +234,9 @@ description: SearchApi is a real-time SERP and search-data API that gives applic
 image: https://www.searchapi.io/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.searchapi.io over streamable HTTP; 19 tools listed.
   name: SearchApi hosted MCP server
-  slug: searchapi-hosted-mcp-server
+  slug: searchapi
 modified: '2026-08-13'
 name: SearchApi
 nav: Providers
@@ -256,12 +256,12 @@ rate_limits:
   slug: searchapi-rate-limits
 scopes:
 - name: Searchapi Scopes
-  scope_count: 0
+  scope_count: 1
   slug: searchapi-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 50.7
+  composite: 54.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 64.0
@@ -275,9 +275,9 @@ score:
     contract_governance: 18.2
     contract_quality: 13.9
     developer_ergonomics: 49.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 50.7
+  previous_composite: 54.1
   provenance:
     conformance: first-party
     contracts:
@@ -287,8 +287,18 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -318,6 +328,6 @@ tags:
 - Market Intelligence
 - SEO
 - MCP
-- agent-native
+- Agent-Native
 website: https://www.searchapi.io/
 ---

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ammp/refs/heads/main/security/ammp-trust-center.yml
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: AMMP (AMMP OS) is a distributed energy monitoring and operations platform for operators of commercial and industrial (C&I) solar and battery-storage portfolios. It unifies visibility across multi-vendor fleets, pulling data directly from more than 30 manufacturer cloud platforms and its own AMMP Edge data logger, and layers on monitoring, alerting, stakeholder reporting, commercial (SLA/cost) tracking, and customizable dashboards. AMMP OS monitors over 10,000 sites across 35+ countries and emphasizes vendor independence and ISO/IEC 27001:2022 certified security. Surfaced as a portfolio company of point-nine and enriched by the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ammp.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ammp.io over HTTP.
+  name: AMMP MCP Server
+  slug: ammp
 modified: '2026-07-17'
 name: AMMP
 nav: Providers
@@ -97,7 +101,7 @@ overview: 'AMMP is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 9
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -111,9 +115,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.6
+  previous_composite: 15.5
   provenance:
     mcp: first-party
   regulatory:
@@ -121,9 +125,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

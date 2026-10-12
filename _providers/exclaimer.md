@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - baseURL: https://cloudapi.exclaimer.com/exclaimerapi
@@ -110,6 +110,11 @@ collections:
   name: Exclaimer Cloud API — Subscriptions
   slug: open-exclaimer-subscriptions
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/exclaimer/refs/heads/main/capabilities/exclaimer-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/exclaimer-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/exclaimer/refs/heads/main/overlays/exclaimer-cloud-api-overlay.yaml
   title: ''
@@ -241,10 +246,10 @@ modified: '2026-08-13'
 name: Exclaimer
 nav: Providers
 network: true
-overview: 'Exclaimer publishes 9 APIs on the [APIs.io](https://apis.io/) network, including End Users API, Mailboxes API, Miscellaneous API, and 6 more. Tagged areas include Company, Email, Email Signatures, Email Signature Management, and Microsoft-365.
+overview: 'Exclaimer publishes 9 APIs on the [APIs.io](https://apis.io/) network, including End Users API, Mailboxes API, Miscellaneous API, and 6 more. Tagged areas include Company, Email, Email Signatures, Email Signature Management, and Microsoft 365.
 
 
-  Exclaimer''s developer surface includes pricing, engineering blog, signup flow, documentation, API reference, getting-started guide, support, and 21 more developer resources.'
+  Exclaimer''s developer surface includes pricing, engineering blog, signup flow, documentation, API reference, getting-started guide, support, and 22 more developer resources.'
 plans:
 - name: Exclaimer Plans Pricing
   plan_count: 4
@@ -256,9 +261,9 @@ rate_limits:
   slug: exclaimer-rate-limits
 score:
   band: strong
-  composite: 61.7
+  composite: 63.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
@@ -268,11 +273,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 56.7
+    contract_quality: 51.0
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 52.6
-  previous_composite: 61.7
+  previous_composite: 63.0
   provenance:
     conformance: derived
     contracts:
@@ -282,8 +287,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -312,7 +323,7 @@ tags:
 - Email
 - Email Signatures
 - Email Signature Management
-- Microsoft-365
+- Microsoft 365
 - Google Workspace
 - Marketing
 - Productivity

@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The 1up MCP Server is a cloud-hosted Model Context Protocol server that lets an AI assistant work directly against a 1up workspace — query the knowledge base, search and edit the Q&A library, upload a
@@ -186,12 +186,12 @@ layout: provider
 mcp_servers:
 - description: Model Context Protocol server for the 1up knowledge-management platform. Lets an MCP client manage questionnaires, the Q&A library, knowledge-base documents and knowledge groups inside a 1up workspace
   name: 1up MCP Server
-  slug: 1up-mcp-server
+  slug: 1up
 modified: '2026-09-05'
 name: 1up
 nav: Providers
 network: true
-overview: '1up publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Sales Enablement, Knowledge-Management, and RFP Automation.
+overview: '1up publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Sales Enablement, Knowledge Management, and RFP Automation.
 
 
   1up''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
@@ -211,7 +211,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 39.6
+  composite: 42.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -225,15 +225,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
-  previous_composite: 39.6
+  previous_composite: 42.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -257,7 +263,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Sales Enablement
-- Knowledge-Management
+- Knowledge Management
 - RFP Automation
 - Security Questionnaires
 - MCP

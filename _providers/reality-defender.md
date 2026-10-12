@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Asynchronous REST API for deepfake and manipulated-media detection. Request a pre-signed upload URL or submit a social-media URL, then poll for an ensemble detection verdict across image, video, audio
@@ -163,7 +163,7 @@ description: Reality Defender is an enterprise deepfake and AI-generated media d
 image: https://www.datocms-assets.com/157377/1744045826-og-image.jpg?auto=format&fit=max&w=1200
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 3 tools listed.
   name: Reality Defender MCP Server
   slug: reality-defender-mcp-server
 modified: '2026-07-20'
@@ -177,7 +177,7 @@ overview: 'Reality Defender publishes 1 API on the [APIs.io](https://apis.io/) n
 random_paper: 8
 score:
   band: thin
-  composite: 27.2
+  composite: 27.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -191,15 +191,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 27.2
+  previous_composite: 27.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,6 +231,6 @@ tags:
 - Security
 - Fraud Prevention
 - Synthetic Media
-- Machine-Learning
+- Machine Learning
 website: https://www.realitydefender.com
 ---

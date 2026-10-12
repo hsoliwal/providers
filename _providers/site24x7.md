@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -138,6 +138,11 @@ collections:
   name: Site24x7 REST Alarms Users API
   slug: open-site24x7-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/site24x7/refs/heads/main/capabilities/site24x7-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/site24x7-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/site24x7/refs/heads/main/agentic-access/site24x7-agentic-access.yml
   title: ''
@@ -253,7 +258,7 @@ overview: 'Site24x7 publishes 11 APIs on the [APIs.io](https://apis.io/) network
   The Site24x7 catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Site24x7''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
+  Site24x7''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Site24X7 Plans Pricing
   plan_count: 8
@@ -276,23 +281,23 @@ rules:
   slug: site24x7-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 47.6
+  composite: 46.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 78.3
+    artifact_dirs: 17
+    catalog_earned: 75.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 39.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 9.8
-    contract_quality: 68.3
+    contract_quality: 62.6
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 47.6
+    discoverability: 66.1
+    operational_transparency: 49.5
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     contracts:
@@ -300,8 +305,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

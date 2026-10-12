@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven commerce surface for the Molekule storefront implementing the Universal Commerce Protocol over MCP. Agents discover capabilities at /.well-known/ucp, then search the catalog, build a cart
@@ -105,7 +105,7 @@ layout: provider
 mcp_servers:
 - description: Molekule's storefront (a Shopify-hosted store) exposes a live agent-commerce MCP endpoint implementing the Universal Commerce Protocol (UCP). Agents discover capabilities via GET /.well-known/ucp, the
   name: Molekule MCP Server
-  slug: molekule-mcp-server
+  slug: molekule-ucp
 modified: '2026-07-20'
 name: Molekule
 nav: Providers
@@ -122,7 +122,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 17.8
+  composite: 20.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -136,15 +136,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 17.8
+  previous_composite: 20.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

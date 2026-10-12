@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.import2.com/api/v2.1
@@ -198,7 +198,7 @@ rate_limits:
   slug: import2-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 38.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -212,9 +212,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.2
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 37.3
+  previous_composite: 38.4
   provenance:
     conformance: derived
     contracts:
@@ -224,8 +224,20 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

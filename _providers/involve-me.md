@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'A live, OAuth-protected Model Context Protocol server that involve.me serves from its own infrastructure and advertises through RFC 9728 protected-resource metadata on www.involve.me. SCOPE: it expose'
@@ -195,7 +195,7 @@ layout: provider
 mcp_servers:
 - description: involve.me serves a live, OAuth-protected Model Context Protocol server. It is advertised by RFC 9728 protected-resource metadata on the public marketing host and it answers. IMPORTANT SCOPE NOTE — th
   name: involve.me Statamic Content MCP
-  slug: involveme-statamic-content-mcp
+  slug: involve-me-statamic-content-mcp
 modified: '2026-08-12'
 name: involve.me
 nav: Providers
@@ -223,7 +223,7 @@ scopes:
   summary_line: 21 scopes
 score:
   band: developing
-  composite: 49.1
+  composite: 52.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -235,9 +235,9 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -247,12 +247,18 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 49.1
+  previous_composite: 52.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

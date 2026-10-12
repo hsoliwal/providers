@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The CAOC publishes its charter, membership roster, meeting summaries, working group output, and federal acquisition guidance through Acquisition.gov. The Council does not expose a dedicated developer '
@@ -133,7 +133,7 @@ modified: '2026-09-05'
 name: Chief Acquisition Officers Council
 nav: Providers
 network: true
-overview: 'Chief Acquisition Officers Council publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Acquisition, CAOC, FAR, Federal-Government, and GSA.
+overview: 'Chief Acquisition Officers Council publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Acquisition, CAOC, FAR, Federal Government, and GSA.
 
 
   Chief Acquisition Officers Council''s developer surface includes engineering blog and 11 more developer resources.'
@@ -148,7 +148,7 @@ rate_limits:
   slug: chief-acquisition-officers-council-rate-limits
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 35.0
@@ -162,17 +162,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 12.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 12.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -189,7 +194,7 @@ tags:
 - Acquisition
 - CAOC
 - FAR
-- Federal-Government
+- Federal Government
 - GSA
 - Interagency Council
 - OFPP

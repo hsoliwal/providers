@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: true
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.0
-  scored_at: '2026-09-20'
+  score: 41.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Universal Commerce Protocol (UCP) MCP endpoint published on the Arccos Golf Shopify storefront for agent-driven commerce. An anonymous JSON-RPC tools/list returns 13 tools covering catalog search and '
@@ -66,7 +66,7 @@ apis:
   description: The Webhooks API from Arccos Golf — 2 operation(s) for webhooks.
   name: Arccos Golf Webhooks API
   slug: arccos-golf-webhooks-api
-artifact_total: 19
+artifact_total: 18
 asyncapis:
 - description: ''
   name: Arccos Golf Webhooks
@@ -244,17 +244,14 @@ description: Arccos Golf is the golf performance-tracking platform behind the Ar
 image: https://www.arccosgolf.com/cdn/shop/files/Arccos_Logo-Inline.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 13 tools listed.
   name: Arccos Golf Storefront UCP MCP Server
   slug: arccos-golf-storefront-ucp-mcp-server
-- description: ''
-  name: Arccos Golf MCP Server
-  slug: arccos-golf-mcp-server
 modified: '2026-08-06'
 name: Arccos Golf
 nav: Providers
 network: true
-overview: 'Arccos Golf publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Clubs API, Courses API, Rounds API, and 2 more. Tagged areas include Company, Golf, Sports Technology, Wearables, and IoT.
+overview: 'Arccos Golf publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Clubs API, Courses API, Rounds API, and 3 more. Tagged areas include Company, Golf, Sports Technology, Wearables, and IoT.
 
 
   The Arccos Golf catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -269,7 +266,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.4
+  composite: 41.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -281,11 +278,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 50.1
+    contract_quality: 45.9
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 40.4
+  previous_composite: 41.7
   provenance:
     conformance: derived
     contracts:
@@ -293,10 +290,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

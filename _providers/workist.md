@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 47
   human_in_the_loop: 0
@@ -114,6 +114,11 @@ collections:
   name: Workist Integrations & Developer Delivery Notes Rfq API
   slug: open-workist-rfq-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workist/refs/heads/main/capabilities/workist-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workist-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/workist/refs/heads/main/agentic-access/workist-agentic-access.yml
   title: ''
@@ -246,13 +251,13 @@ network: true
 overview: 'Workist publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Delivery Notes API, Invoices API, List Of Services API, and 5 more. Tagged areas include Documents, Document Processing, Artificial Intelligence, Automation, and Order.
 
 
-  Workist''s developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, support, and 20 more developer resources.'
+  Workist''s developer surface includes authentication, documentation, API reference, getting-started guide, pricing, engineering blog, support, and 21 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 45.9
+  composite: 46.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -262,17 +267,19 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 53.9
+    contract_quality: 48.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 45.9
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -283,8 +290,18 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

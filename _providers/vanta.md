@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -99,7 +99,7 @@ apis:
   description: Vulnerability tracking and remediation management
   name: Vanta Vulnerabilities API
   slug: vanta-vulnerabilities-api
-artifact_total: 56
+artifact_total: 57
 collections:
 - collection_type: postman
   name: Conduct an audit Auditors API
@@ -177,6 +177,11 @@ collections:
   name: Vanta API
   slug: open-vanta
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vanta/refs/heads/main/capabilities/vanta-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vanta-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -329,6 +334,10 @@ jsonld:
   property_count: 27
   slug: vanta-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.vanta.com over HTTP.
+  name: Vanta MCP Server
+  slug: vanta
 modified: '2026-05-19'
 name: Vanta
 nav: Providers
@@ -339,7 +348,7 @@ overview: 'Vanta publishes 11 APIs on the [APIs.io](https://apis.io/) network, i
   The Vanta catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Vanta''s developer surface includes authentication, developer portal, getting-started guide, FAQ, documentation, engineering blog, changelog, and 19 more developer resources.'
+  Vanta''s developer surface includes authentication, developer portal, getting-started guide, FAQ, documentation, engineering blog, changelog, and 20 more developer resources.'
 plans:
 - name: Vanta Plans Pricing
   plan_count: 3
@@ -378,9 +387,9 @@ scopes:
   summary_line: 8 scopes · clientCredentials
 score:
   band: developing
-  composite: 47.9
+  composite: 48.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -390,11 +399,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 68.0
+    contract_quality: 61.9
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 47.9
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     contracts:
@@ -403,8 +412,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

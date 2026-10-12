@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'OneScreen''s only API surface: a remote Model Context Protocol server over Streamable HTTP that exposes OOH audience personas, market and inventory rankings, geospatial points of interest, media-owner '
@@ -139,14 +139,14 @@ description: OneScreen AI is a data-driven out-of-home (OOH) advertising company
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/onescreen-ai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.onescreen.ai over HTTP.
   name: OneScreen MCP Server
   slug: onescreen-mcp-server
 modified: '2026-08-13'
 name: OneScreen AI
 nav: Providers
 network: true
-overview: 'OneScreen AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, Out-of-Home, Digital Out Of Home, and Advertising Technology.
+overview: 'OneScreen AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, Out-of-Home, Digital Out Of Home, and AdTech.
 
 
   OneScreen AI''s developer surface includes documentation, authentication, engineering blog, support, and 16 more developer resources.'
@@ -166,7 +166,7 @@ scopes:
   summary_line: 22 scopes
 score:
   band: thin
-  composite: 26.6
+  composite: 29.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -180,19 +180,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.6
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,7 +222,7 @@ tags:
 - Advertising
 - Out-of-Home
 - Digital Out Of Home
-- Advertising Technology
+- AdTech
 - Marketing
 - Media
 - AI Agents

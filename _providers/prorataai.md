@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.9
-  scored_at: '2026-09-20'
+  score: 35.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The publisher ingest API for the Gist Content Network. Publisher partners push articles to ProRata in real time (POST /ingest/article) or in bulk for archived content (POST /ingest/multiple_articles),
@@ -221,7 +221,7 @@ modified: '2026-08-26'
 name: ProRata.ai
 nav: Providers
 network: true
-overview: 'ProRata.ai publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Health API, Publishers API, and 4 more. Tagged areas include Artificial Intelligence, Search, Content, Publishing, and Advertising.
+overview: 'ProRata.ai publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Health API, Publishers API, and 5 more. Tagged areas include Artificial Intelligence, Search, Content, Publishing, and Advertising.
 
 
   ProRata.ai''s developer surface includes documentation, getting-started guide, support, engineering blog, signup flow, authentication, sandbox, and 21 more developer resources.'
@@ -236,7 +236,7 @@ rate_limits:
   slug: prorataai-rate-limits
 score:
   band: thin
-  composite: 39.1
+  composite: 38.9
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 50.6
+    contract_quality: 45.6
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 39.1
+  previous_composite: 38.9
   provenance:
     conformance: first-party
     contracts:
@@ -262,8 +262,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -254,7 +254,7 @@ overview: 'Door publishes 6 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 18
 score:
   band: developing
-  composite: 40.9
+  composite: 40.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -266,11 +266,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 53.2
+    contract_quality: 47.9
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 40.9
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -281,8 +281,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -306,7 +312,7 @@ tags:
 - Physical Security
 - IoT
 - Multifamily
-- Real-Estate
+- Real Estate
 - Smart Lock
 - Building Automation
 website: https://door.com/

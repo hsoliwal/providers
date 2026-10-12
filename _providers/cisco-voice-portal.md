@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 1
@@ -325,6 +325,11 @@ collections:
   name: Cisco Voice Portal VXML Services API
   slug: open-cisco-voice-portal-vxml-services
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cisco-voice-portal/refs/heads/main/capabilities/cisco-voice-portal-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cisco-voice-portal-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -988,7 +993,7 @@ overview: 'Cisco Voice Portal publishes 24 APIs on the [APIs.io](https://apis.io
   The Cisco Voice Portal catalog on APIs.io includes 1 event-driven AsyncAPI specification, 4 JSON-LD contexts, and 3 Spectral governance rulesets.
 
 
-  Cisco Voice Portal''s developer surface includes authentication, support, documentation, getting-started guide, engineering blog, signup flow, release notes, and 16 more developer resources.'
+  Cisco Voice Portal''s developer surface includes authentication, support, documentation, getting-started guide, engineering blog, signup flow, release notes, and 17 more developer resources.'
 plans:
 - name: Cisco Voice Portal Plans Pricing
   plan_count: 1
@@ -1033,9 +1038,9 @@ rules:
   slug: cisco-voice-portal-spectral-rules
 score:
   band: developing
-  composite: 41.6
+  composite: 42.3
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 51.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
@@ -1045,11 +1050,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 13.6
-    contract_quality: 64.4
+    contract_quality: 59.7
     developer_ergonomics: 13.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 31.6
-  previous_composite: 41.6
+  previous_composite: 42.3
   provenance:
     agentic_access: derived
     contracts:
@@ -1057,8 +1062,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 23
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1084,5 +1095,6 @@ tags:
 - Telephony
 - Voice
 - VXML
+- Real-Time
 website: https://www.cisco.com/
 ---

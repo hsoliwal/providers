@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -91,6 +91,11 @@ collections:
   name: Workday Reporting Workday Report-as-a-Service (RaaS) Report Metadata Reports API
   slug: open-workday-reporting-reports-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workday-reporting/refs/heads/main/capabilities/workday-reporting-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workday-reporting-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -215,13 +220,13 @@ modified: '2026-05-19'
 name: Workday Reporting
 nav: Providers
 network: true
-overview: 'Workday Reporting publishes 2 APIs on the [APIs.io](https://apis.io/) network: Report Metadata API and Reports API. Tagged areas include Analytics, Business Intelligence, Financial Reporting, HR Data, and Reporting.
+overview: 'Workday Reporting publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Report Metadata API, Reports API, and 5 more. Tagged areas include Analytics, Business Intelligence, Financial Reporting, HR Data, and Reporting.
 
 
   The Workday Reporting catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Workday Reporting''s developer surface includes authentication, getting-started guide, documentation, support, engineering blog, signup flow, and 16 more developer resources.'
+  Workday Reporting''s developer surface includes authentication, getting-started guide, documentation, support, engineering blog, signup flow, and 17 more developer resources.'
 plans:
 - name: Workday Reporting Plans Pricing
   plan_count: 1
@@ -244,9 +249,9 @@ rules:
   slug: workday-reporting-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 40.9
+  composite: 40.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 42.3
     catalog_earned_first_party: 0.0
     catalog_gap: 72.8
@@ -256,11 +261,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 9.8
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 25.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 40.9
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     contracts:
@@ -268,8 +273,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

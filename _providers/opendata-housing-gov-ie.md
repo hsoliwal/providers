@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: CKAN Action API for Irish Housing Open Data, ~461 datasets. Base URL https://opendata.housing.gov.ie/api/3/action/.
@@ -100,7 +100,7 @@ rate_limits:
   slug: opendata-housing-gov-ie-rate-limits
 score:
   band: minimal
-  composite: 7.8
+  composite: 8.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 35.0
@@ -114,7 +114,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -123,16 +123,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
+    - north-america
     - united-kingdom-ireland
-  previous_composite: 7.8
+  previous_composite: 8.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -151,7 +152,7 @@ tags:
 - Data Catalog
 - DCAT
 - Government Data
-- Federal-Government
+- Federal Government
 - Ireland
 website: https://opendata.housing.gov.ie
 ---

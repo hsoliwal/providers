@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -116,7 +116,7 @@ press:
 random_paper: 3
 score:
   band: minimal
-  composite: 9.6
+  composite: 9.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -130,11 +130,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 9.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -153,5 +159,6 @@ tags:
 - Fortune 500
 - Personal Care
 - Tissue
+- Consumer Packaged Goods
 website: https://www.kimberly-clark.com
 ---

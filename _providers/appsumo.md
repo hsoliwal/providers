@@ -25,7 +25,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.0
-  scored_at: '2026-09-20'
+  score: 53.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -46,17 +46,17 @@ agentic_access:
   summary_line: 4 operations · 2 acting
 api_count: 1
 apis:
-- baseURL: https://appsumo.com
-  baseurl_source: declared
+- baseURL: https://appsumo.com/api/v2
+  baseurl_source: spec
   description: License management for AppSumo marketplace purchases
   name: AppSumo Licenses API
   slug: appsumo-licenses-api
-- baseURL: https://appsumo.com
-  baseurl_source: declared
+- baseURL: https://appsumo.com/api/v2
+  baseurl_source: spec
   description: Partner profile management
   name: AppSumo Profile API
   slug: appsumo-profile-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: postman
   name: AppSumo Licensing Licenses API
@@ -74,6 +74,11 @@ collections:
   name: AppSumo Licensing Licenses Profile API
   slug: open-appsumo-profile-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/appsumo/refs/heads/main/capabilities/appsumo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/appsumo-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -198,6 +203,10 @@ jsonld:
   property_count: 0
   slug: appsumo-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at appsumo.com over HTTP.
+  name: AppSumo MCP Server
+  slug: appsumo
 modified: '2026-05-19'
 name: AppSumo
 nav: Providers
@@ -208,7 +217,7 @@ overview: 'AppSumo publishes 2 APIs on the [APIs.io](https://apis.io/) network: 
   The AppSumo catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  AppSumo''s developer surface includes authentication, documentation, signup flow, pricing, getting-started guide, support, engineering blog, and 17 more developer resources.'
+  AppSumo''s developer surface includes authentication, documentation, signup flow, pricing, getting-started guide, support, engineering blog, and 18 more developer resources.'
 plans:
 - name: Appsumo Plans Pricing
   plan_count: 3
@@ -242,23 +251,23 @@ rules:
   slug: appsumo-spectral-rules
 score:
   band: developing
-  composite: 47.4
+  composite: 46.4
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 56.5
+    artifact_dirs: 20
+    catalog_earned: 50.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 64.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 60.5
-    contract_governance: 28.8
-    contract_quality: 69.4
+    contract_governance: 27.3
+    contract_quality: 63.2
     developer_ergonomics: 41.7
-    discoverability: 44.4
+    discoverability: 38.3
     operational_transparency: 18.4
-  previous_composite: 47.4
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     contracts:
@@ -267,8 +276,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

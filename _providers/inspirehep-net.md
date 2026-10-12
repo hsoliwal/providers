@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: High Energy Physics info. system
@@ -56,11 +56,11 @@ modified: '2026-05-28'
 name: inspirehep.net
 nav: Providers
 network: true
-overview: inspirehep.net publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Science And Math and Public APIs.
+overview: inspirehep.net publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Public APIs, OAI-PMH, Scholarly, Citations, and Science.
 random_paper: 21
 score:
   band: minimal
-  composite: 6.9
+  composite: 3.9
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -74,7 +74,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -82,9 +82,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 6.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.9
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Education & Research
+    regime_id: education
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -93,6 +99,11 @@ score:
 screenshot: https://raw.githubusercontent.com/api-evangelist/inspirehep-net/refs/heads/main/screenshots/inspirehep-net-2026-06-20T183413.png
 slug: inspirehep-net
 tags:
-- Science And Math
 - Public APIs
+- OAI-PMH
+- Scholarly
+- Citations
+- Science
+- Physics
+- Research
 ---

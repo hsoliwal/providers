@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -144,7 +144,7 @@ modified: '2026-05-08'
 name: The Graph
 nav: Providers
 network: true
-overview: 'The Graph publishes 1 API on the [APIs.io](https://apis.io/) network: Subgraphs API. Tagged areas include Web3, Indexing, GraphQL, Subgraph, and Multi-Chain.
+overview: 'The Graph publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Subgraphs API, and 5 more. Tagged areas include Web3, Indexing, GraphQL, Subgraph, and Multi-Chain.
 
 
   The Graph''s developer surface includes authentication, engineering blog, and 9 more developer resources.'
@@ -159,7 +159,7 @@ rate_limits:
   slug: the-graph-rate-limits
 score:
   band: thin
-  composite: 28.1
+  composite: 26.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 45.0
@@ -171,11 +171,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 28.1
+  previous_composite: 26.8
   provenance:
     agentic_access: derived
     contracts:
@@ -183,8 +183,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -210,5 +216,6 @@ tags:
 - GraphQL
 - Subgraph
 - Multi-Chain
+- Ethereum
 website: https://thegraph.com/
 ---

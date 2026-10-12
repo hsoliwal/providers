@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 66
   human_in_the_loop: 0
@@ -83,17 +83,17 @@ apis:
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to competitors of type Player
-  name: Genius Sports competitors/players API
+  name: Genius Sports Competitors/players API
   slug: genius-sports-competitors-players-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to to-be-determined competitors.
-  name: Genius Sports competitors/tbds API
+  name: Genius Sports Competitors/tbds API
   slug: genius-sports-competitors-tbds-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
   description: Groups the operations related to competitors of type Team
-  name: Genius Sports competitors/teams API
+  name: Genius Sports Competitors/teams API
   slug: genius-sports-competitors-teams-api
 - baseURL: https://fixtures.api.geniussports.com/v2
   baseurl_source: declared
@@ -326,7 +326,7 @@ modified: '2026-09-16'
 name: Genius Sports
 nav: Providers
 network: true
-overview: 'Genius Sports publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Competitions API, Competitors API, competitors/doubles API, and 23 more. Tagged areas include Sports, Statistics, Live Data, and Fixtures.
+overview: 'Genius Sports publishes 31 APIs on the [APIs.io](https://apis.io/) network, including Competitions API, Competitors API, competitors/doubles API, and 28 more. Tagged areas include Sports, Statistics, Live Data, and Fixtures.
 
 
   Genius Sports'' developer surface includes authentication, documentation, and 5 more developer resources.'
@@ -341,7 +341,7 @@ rate_limits:
   slug: genius-sports-rate-limits
 score:
   band: thin
-  composite: 29.7
+  composite: 27.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 39.0
@@ -353,11 +353,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 55.2
+    contract_quality: 50.0
     developer_ergonomics: 21.4
-    discoverability: 55.6
+    discoverability: 53.6
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 27.6
   provenance:
     agentic_access: derived
     contracts:
@@ -365,8 +365,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 26
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

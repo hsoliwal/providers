@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Bespoke Starling Developer API for retrieving a customer's accounts, account identifiers (sort code / account number), and balances. Served over OAuth2 at the api.starlingbank.com/api/v2 host with a f
@@ -258,14 +258,14 @@ modified: '2026-07-23'
 name: Starling Bank
 nav: Providers
 network: true
-overview: 'Starling Bank publishes 6 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 3 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Starling Bank publishes 18 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 15 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Starling Bank''s developer surface includes authentication, sandbox, API reference, documentation, getting-started guide, engineering blog, support, and 24 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 49.5
+  composite: 46.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -277,9 +277,9 @@ score:
   facets:
     access_clarity: 78.6
     contract_governance: 18.2
-    contract_quality: 39.5
+    contract_quality: 35.5
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -289,7 +289,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 49.5
+  previous_composite: 46.3
   provenance:
     conformance: first-party
     contracts:
@@ -306,9 +306,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 62.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -330,7 +330,7 @@ security:
   summary_line: Hackerone · security.txt · contact published
 slug: starling-bank
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2
@@ -341,5 +341,6 @@ tags:
 - Challenger Bank
 - Fintech
 - FAPI
+- Consumer Banking
 website: https://www.starlingbank.com/
 ---

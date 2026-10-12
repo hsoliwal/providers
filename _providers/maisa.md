@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.4
-  scored_at: '2026-09-20'
+  score: 3.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Maisa''s developer REST API. Key-authenticated (X-API-Key), base URL https://api.maisa.ai, all operations under /v1. Surfaces: capabilities (compare/extract/summarize over text and media), models (embe'
@@ -132,14 +132,14 @@ modified: '2026-07-20T12:00:00Z'
 name: Maisa
 nav: Providers
 network: true
-overview: 'Maisa publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Agentic AI, AI Agents, and Digital Workers.
+overview: 'Maisa publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Digital Workers, and Business Process Automation.
 
 
   Maisa''s developer surface includes authentication, API reference, documentation, engineering blog, support, and 13 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 17.9
+  composite: 17.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -153,9 +153,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 17.9
+  previous_composite: 17.1
   provenance:
     mcp: derived
   regulatory:
@@ -163,9 +163,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 30.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,7 +185,6 @@ slug: maisa
 tags:
 - Company
 - Artificial Intelligence
-- Agentic AI
 - AI Agents
 - Digital Workers
 - Business Process Automation

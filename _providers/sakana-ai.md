@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Multi-agent orchestration system that routes tasks across frontier foundation models (OpenAI, Anthropic, Google). OpenAI-compatible API surface. Two variants - Fugu Mini (low-latency) and Fugu Ultra (
@@ -108,8 +108,8 @@ rate_limits:
   name: Sakana Ai Rate Limits
   slug: sakana-ai-rate-limits
 score:
-  band: emerging
-  composite: 11.3
+  band: minimal
+  composite: 10.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -123,16 +123,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - japan
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 11.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

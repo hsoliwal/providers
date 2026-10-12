@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -116,14 +116,14 @@ modified: '2026-05-11'
 name: Expensify
 nav: Providers
 network: true
-overview: 'Expensify publishes 1 API on the [APIs.io](https://apis.io/) network: Integrations API. Tagged areas include Expense Management, Expense Reporting, Receipt Scanning, Corporate Cards, and Bill Pay.
+overview: 'Expensify publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Integrations API, and 1 more. Tagged areas include Expense Management, Expense Reporting, Receipt Scanning, Corporate Cards, and Bill Pay.
 
 
   Expensify''s developer surface includes documentation, signup flow, pricing, support, engineering blog, and 6 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 25.2
+  composite: 24.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -135,11 +135,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 25.2
+  previous_composite: 24.9
   provenance:
     agentic_access: derived
     contracts:
@@ -152,9 +152,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -174,5 +174,6 @@ tags:
 - Bill Pay
 - Reimbursement
 - Accounting Integration
+- Accounting
 website: https://www.expensify.com
 ---

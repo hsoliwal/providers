@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: PointOne is an AI-powered legal practice management platform that automates time entry, billing compliance, and analytics for law firms. Its products include PointOne Time (automatic cross-device time capture with AI-generated narratives), PointOne Review (pre-bill review with AI markup and collaboration), and PointOne Intelligence (time analytics and resource-allocation insights), along with automatic enforcement of Outside Counsel Guidelines. The platform syncs with billing systems including Aderant, Clio, Filevine, QuickBooks, Actionstep, Elite 3E, Surepoint, MyCase, and LeanLaw, and serves 200+ law firms. PointOne is backed by Bessemer, Y Combinator, General Catalyst, and 8VC. No public developer API is currently published; integrations are delivered as pre-built connectors.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pointone.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pointone.com over HTTP.
+  name: Pointone MCP Server
+  slug: pointone
 modified: '2026-07-20'
 name: Pointone
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Pointone is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 18
 score:
   band: emerging
-  composite: 16.1
+  composite: 17.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -103,14 +107,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 16.1
+  previous_composite: 17.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

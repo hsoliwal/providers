@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The HTTP interface of every Urbit ship, served by the Eyre kernel vane. Clients authenticate by POSTing the ship's web login code to /~/login for an urbauth session cookie, then interact through chann
@@ -170,7 +170,7 @@ layout: provider
 mcp_servers:
 - description: Urbit MCP (%mcp) is a general-purpose Model Context Protocol interface for Urbit, documented in urbit.org's first-party public agent-skill snapshot (/.agents/skills/using-urbit-apps/references/urbit-m
   name: Urbit MCP Server
-  slug: urbit-mcp-server
+  slug: urbit-mcp
 modified: '2026-07-21'
 name: Urbit
 nav: Providers
@@ -182,7 +182,7 @@ overview: 'Urbit publishes 2 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: thin
-  composite: 31.9
+  composite: 32.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -196,15 +196,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 31.9
+  previous_composite: 32.8
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

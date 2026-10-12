@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Genius API exposes the music knowledge community behind genius.com: annotations (crowd-sourced explanations attached to a fragment of a document), referents (the fragments annotations attach to), '
@@ -235,7 +235,7 @@ modified: '2026-08-01'
 name: MediaLab.AI
 nav: Providers
 network: true
-overview: 'MediaLab.AI publishes 1 API on the [APIs.io](https://apis.io/) network: Imgur API. Tagged areas include Company, Media, Social, Advertising, and Content.
+overview: 'MediaLab.AI publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Imgur API, and 1 more. Tagged areas include Company, Media, Social, Advertising, and Content.
 
 
   MediaLab.AI''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 31 more developer resources.'
@@ -250,8 +250,8 @@ scopes:
   slug: medialab-ai-scopes
   summary_line: 4 scopes · authorizationCode/implicit
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 42.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -263,17 +263,23 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 6.7
-    developer_ergonomics: 56.5
-    discoverability: 75.9
+    contract_quality: 6.5
+    developer_ergonomics: 56.1
+    discoverability: 73.2
     operational_transparency: 68.4
-  previous_composite: 38.9
+  previous_composite: 42.2
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -303,7 +309,7 @@ tags:
 - Image
 - Music
 - Messaging
-- Communities
+- Community
 - Holding Company
 website: https://medialab.la/
 ---

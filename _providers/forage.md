@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API to tokenize EBT cards, run PIN-secured balance inquiries, and create, capture, void, and refund EBT SNAP, EBT Cash, and HSA/FSA payments and orders for online and in-store checkout.
@@ -222,7 +222,7 @@ overview: 'Forage publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 12
 score:
   band: developing
-  composite: 49.5
+  composite: 47.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -234,11 +234,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 49.5
+  previous_composite: 47.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -248,9 +248,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -282,6 +282,6 @@ tags:
 - Government Benefits
 - Grocery
 - Checkout
-- Financial-Services
+- Financial Services
 website: https://www.joinforage.com
 ---

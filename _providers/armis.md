@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -125,9 +125,9 @@ description: Armis is a cyber exposure management and asset intelligence company
 image: https://avatars.githubusercontent.com/u/32813597?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at knowledge-mcp.moose.armis.com.
   name: Armis MCP Server
-  slug: armis-mcp-server
+  slug: armis-mcp-yml
 modified: '2026-07-18'
 name: Armis
 nav: Providers
@@ -138,8 +138,8 @@ overview: 'Armis is profiled on the [APIs.io](https://apis.io/) network. Tagged 
   Armis'' developer surface includes documentation, engineering blog, support, authentication, CLI, and 13 more developer resources.'
 random_paper: 12
 score:
-  band: thin
-  composite: 28.4
+  band: emerging
+  composite: 25.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -153,9 +153,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 28.4
+  previous_composite: 25.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -169,9 +169,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

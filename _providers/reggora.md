@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Create and manage the loan records that appraisal orders are placed against - sync loan data from the LOS, retrieve loan detail, update loan fields, and receive a webhook when a loan is deleted. Endpo
@@ -115,7 +115,7 @@ modified: '2026-07-04'
 name: Reggora
 nav: Providers
 network: true
-overview: 'Reggora publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Appraisal Management, Mortgage, Lending, Real-Estate, and Valuation.
+overview: 'Reggora publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Appraisal Management, Mortgage, Lending, Real Estate, and Valuation.
 
 
   Reggora''s developer surface includes documentation, engineering blog, and 7 more developer resources.'
@@ -130,25 +130,31 @@ rate_limits:
   slug: reggora-rate-limits
 score:
   band: emerging
-  composite: 22.2
+  composite: 20.4
   coverage:
     artifact_dirs: 6
-    catalog_earned: 63.0
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 36.8
+    access_clarity: 34.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 74.1
-    operational_transparency: 31.6
-  previous_composite: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    discoverability: 71.4
+    operational_transparency: 28.4
+  previous_composite: 20.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -169,7 +175,7 @@ tags:
 - Appraisal Management
 - Mortgage
 - Lending
-- Real-Estate
+- Real Estate
 - Valuation
 - Loan Origination
 - LOS Integration

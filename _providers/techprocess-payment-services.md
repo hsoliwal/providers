@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Merchant payment-gateway and checkout API for the TechProcess / Worldline India (Paynimo) platform — card, Net-banking, NACH, UPI, IMPS and e-wallet payment collection via hosted/embeddable checkout a
@@ -80,14 +80,14 @@ modified: '2026-07-21'
 name: TechProcess Payment Services
 nav: Providers
 network: true
-overview: 'TechProcess Payment Services publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Payment Gateway, Financial-Services, and India.
+overview: 'TechProcess Payment Services publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Payment Gateway, Financial Services, and India.
 
 
   TechProcess Payment Services'' developer surface includes documentation and 6 more developer resources.'
 random_paper: 7
 score:
   band: minimal
-  composite: 9.0
+  composite: 10.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -101,7 +101,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -110,15 +110,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 9.0
+  previous_composite: 10.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +134,7 @@ tags:
 - Company
 - Payments
 - Payment Gateway
-- Financial-Services
+- Financial Services
 - India
 - Checkout
 - E-Commerce

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, anonymously reachable Model Context Protocol endpoint served from aceRNA Technologies' own host and advertised in the site's llms.txt. It is provided by the Wix platform, not built by aceRNA —
@@ -81,9 +81,9 @@ description: aceRNA Technologies Co., Ltd. is a Japanese biotechnology venture f
 image: https://static.wixstatic.com/media/0bb01f_e4929cb81df449498969dcb40a661968~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.acernatec.com over HTTP; 9 tools listed.
   name: コーポレートサイト (aceRNA Technologies corporate site)
-  slug: コーポレートサイト-acerna-technologies-corporate-site
+  slug: acerna-technologies-corporate-site
 modified: '2026-09-06'
 name: aceRNA Technologies
 nav: Providers
@@ -103,7 +103,7 @@ rate_limits:
   slug: acerna-rate-limits
 score:
   band: emerging
-  composite: 16.8
+  composite: 16.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -117,7 +117,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -126,18 +126,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 16.8
+  previous_composite: 16.2
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

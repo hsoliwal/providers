@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 56.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Reevo's permission-scoped public REST API. Endpoints cover account and contact upsert, accounts (create/update/get/search-by-domain), contacts (get/search), opportunities (create/update/get/search/shi
@@ -199,7 +199,7 @@ description: 'Reevo is an AI-native revenue platform ("revenue operating system"
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reevo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.reevo.ai over streamable HTTP requiring OAuth; 30 tools listed.
   name: Reevo MCP
   slug: reevo-mcp
 modified: '2026-08-13'
@@ -229,7 +229,7 @@ scopes:
   summary_line: 22 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.1
+  composite: 52.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -241,17 +241,23 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 50.1
+  previous_composite: 52.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -279,5 +285,6 @@ tags:
 - Agents
 - MCP
 - Sales Engagement
+- A2A
 website: https://www.reevo.ai
 ---

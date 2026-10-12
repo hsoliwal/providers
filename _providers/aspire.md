@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Aspire''s public REST API for business finance automation: payout/transfer operations across 30+ currencies (local and SWIFT), FX quotes, virtual card issuance and controls, and bank-feed/transaction r'
@@ -119,7 +119,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Aspire MCP Server
-  slug: aspire-mcp-server
+  slug: aspire
 modified: '2026-07-18'
 name: Aspire
 nav: Providers
@@ -139,7 +139,7 @@ scopes:
   summary_line: 2 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 47.3
+  composite: 44.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -151,9 +151,9 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -162,7 +162,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 47.3
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -171,9 +171,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +199,7 @@ tags:
 - Card Issuance
 - Foreign Exchange
 - Expense Management
-- Financial-Services
+- Financial Services
 - Singapore
 website: https://aspireapp.com
 ---

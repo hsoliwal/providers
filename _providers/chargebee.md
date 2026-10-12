@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -84,7 +84,7 @@ apis:
   description: The Subscriptions API from Chargebee — 2 operation(s) for subscriptions.
   name: Chargebee Subscriptions API
   slug: chargebee-subscriptions-api
-artifact_total: 23
+artifact_total: 24
 asyncapis:
 - description: AsyncAPI description of Chargebee's webhook (event) surface. When a notable change occurs on a Chargebee site (customer created, subscription cancelled, invoice generated, payment failed, etc.) Charge
   name: Chargebee Webhooks
@@ -121,6 +121,11 @@ collections:
   name: Chargebee API v2
   slug: open-chargebee
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/chargebee/refs/heads/main/capabilities/chargebee-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/chargebee-capability-edges.yml
 - group: start
   title: ''
   type: Sandbox
@@ -244,6 +249,10 @@ created: '2026-05-11'
 description: Chargebee is a subscription billing and revenue management platform that enables SaaS and subscription businesses to automate recurring billing, invoicing, payments, dunning, and revenue recognition. The Chargebee REST API v2 provides programmatic access to subscriptions, customers, invoices, payments, plans, addons, coupons, and usage metering, with HTTP Basic Auth using API keys scoped to each Chargebee site.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chargebee.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.chargebee.com over HTTP.
+  name: Chargebee MCP Server
+  slug: chargebee
 modified: '2026-05-30'
 name: Chargebee
 nav: Providers
@@ -254,7 +263,7 @@ overview: 'Chargebee publishes 8 APIs on the [APIs.io](https://apis.io/) network
   The Chargebee catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Chargebee''s developer surface includes sandbox, changelog, getting-started guide, authentication, documentation, API reference, pricing, and 22 more developer resources.'
+  Chargebee''s developer surface includes sandbox, changelog, getting-started guide, authentication, documentation, API reference, pricing, and 23 more developer resources.'
 random_paper: 16
 rules:
 - effective_rule_count: 36
@@ -270,9 +279,9 @@ rules:
   slug: chargebee-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 49.9
+  composite: 48.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.8
     catalog_earned_first_party: 0.0
     catalog_gap: 74.3
@@ -282,11 +291,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 11.4
-    contract_quality: 57.7
+    contract_quality: 52.8
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 49.9
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     contracts:
@@ -300,9 +309,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

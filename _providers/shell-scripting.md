@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: A static analysis tool for shell scripts that provides API access for linting and validation.
@@ -64,7 +64,7 @@ modified: 2024-01-15 00:00:00+00:00
 name: Shell Scripting
 nav: Providers
 network: true
-overview: 'Shell Scripting publishes 2 APIs on the [APIs.io](https://apis.io/) network: ShellCheck API and Shell Script Compiler API. Tagged areas include Automation, Bash, CLI, DevOps, and Linux.'
+overview: Shell Scripting publishes 5 APIs on the [APIs.io](https://apis.io/) network, including ShellCheck API, Shell Script Compiler API, and 3 more. Tagged areas include Automation, Bash, CLI, DevOps, and Linux.
 plans:
 - name: Shell Scripting Plans Pricing
   plan_count: 3
@@ -76,7 +76,7 @@ rate_limits:
   slug: shell-scripting-rate-limits
 score:
   band: emerging
-  composite: 18.8
+  composite: 15.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 34.0
@@ -88,13 +88,19 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 9.5
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 13.2
-  previous_composite: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

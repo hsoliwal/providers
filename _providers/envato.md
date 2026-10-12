@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-09-20'
+  score: 33.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -80,7 +80,7 @@ apis:
   description: The User API from Envato — 4 operation(s) for user.
   name: Envato User API
   slug: envato-user-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: open
   name: API Collection
@@ -175,11 +175,15 @@ finops:
   slug: envato-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/envato.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.envato.com over HTTP; 15 tools listed.
+  name: Envato MCP Server
+  slug: envato
 modified: '2026-05-08'
 name: Envato
 nav: Providers
 network: true
-overview: 'Envato publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Author API, Catalog API, Downloads API, and 3 more. Tagged areas include Stock Media, Marketplace, Themes, Audio, and Video.
+overview: 'Envato publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Author API, Catalog API, Downloads API, and 5 more. Tagged areas include Stock Media, Marketplace, Themes, Audio, and Video.
 
 
   Envato''s developer surface includes authentication, engineering blog, and 11 more developer resources.'
@@ -199,7 +203,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 27.4
+  composite: 27.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 44.0
@@ -211,11 +215,18 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 27.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - anz
+  previous_composite: 27.9
   provenance:
     agentic_access: derived
     contracts:
@@ -224,8 +235,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -254,5 +271,6 @@ tags:
 - Video
 - Graphics
 - Subscription
+- Australia
 website: https://envato.com/
 ---

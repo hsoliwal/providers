@@ -33,14 +33,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Yaak is an open-source desktop API client for organizing and executing REST, GraphQL, WebSockets, Server Sent Events, and gRPC requests. Built with Tauri, Rust, and React, it is a privacy-first, fast '
   name: Yaak
   slug: yaak
-artifact_total: 6
+artifact_total: 7
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/yaak/refs/heads/main/vendor-facets/yaak-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/yaak-vendor-facets.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/yaak/refs/heads/main/security/yaak-domain-security.yml
   title: ''
@@ -82,6 +87,10 @@ graphqls:
   slug: yaak-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/yaak.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.yaak.app over HTTP.
+  name: Yaak MCP Server
+  slug: yaak
 modified: '2026-03-27'
 name: Yaak
 nav: Providers
@@ -89,7 +98,7 @@ network: true
 overview: 'Yaak publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include API Client, Clients, Developer Tools, GraphQL, and gRPC.
 
 
-  Yaak''s developer surface includes documentation, engineering blog, and 5 more developer resources.'
+  Yaak''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
 plans:
 - name: Yaak Plans Pricing
   plan_count: 3
@@ -101,9 +110,9 @@ rate_limits:
   slug: yaak-rate-limits
 score:
   band: emerging
-  composite: 16.0
+  composite: 15.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -117,11 +126,17 @@ score:
     developer_ergonomics: 23.8
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 16.0
+  previous_composite: 15.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

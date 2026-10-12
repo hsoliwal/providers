@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -105,9 +105,9 @@ description: Northwood Space is an El Segundo, California ground-infrastructure 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/northwood-space.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.northwoodspace.io over streamable HTTP requiring OAuth.
   name: Northwood Space MCP Server
-  slug: northwood-space-mcp-server
+  slug: northwood-docs
 modified: '2026-07-20'
 name: Northwood Space
 nav: Providers
@@ -127,7 +127,7 @@ rate_limits:
   slug: northwood-space-rate-limits
 score:
   band: minimal
-  composite: 10.6
+  composite: 9.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -141,13 +141,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 10.6
+  previous_composite: 9.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -168,5 +174,6 @@ tags:
 - Defense
 - Infrastructure
 - Communications
+- A2A
 website: https://www.northwoodspace.io/
 ---

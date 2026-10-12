@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 46.4
-  scored_at: '2026-09-20'
+  score: 46.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -95,7 +95,7 @@ apis:
   description: The Threads API from LiveChat — 4 operation(s) for threads.
   name: LiveChat Threads API
   slug: livechat-threads-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -184,18 +184,22 @@ created: '2026-05-11'
 description: LiveChat is a customer service and live chat platform used by businesses to engage website visitors, run sales conversations, and route support tickets across agent teams. The Text Platform (which powers LiveChat) exposes a suite of REST APIs for chats, agents, customers, configuration, and reporting, with both Web API and RTM (real-time messaging) interfaces. Authentication uses OAuth 2.1 with Personal Access Tokens or full OAuth authorization code flow.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/livechat.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.text.com over HTTP.
+  name: LiveChat MCP Server
+  slug: livechat
 modified: '2026-05-30'
 name: LiveChat
 nav: Providers
 network: true
-overview: 'LiveChat publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Webhooks and RTM API, Chats API, Customers API, and 5 more. Tagged areas include Live Chat, Customer Service, Customer-Support, Messaging, and Sales.
+overview: 'LiveChat publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Webhooks and RTM API, Chats API, Customers API, and 9 more. Tagged areas include Live Chat, Customer Service, Customer Support, Messaging, and Sales.
 
 
   LiveChat''s developer surface includes authentication, documentation, developer console, signup flow, pricing, engineering blog, and 6 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 32.2
+  composite: 30.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -207,11 +211,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 59.0
+    contract_quality: 54.6
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 32.2
+  previous_composite: 30.5
   provenance:
     agentic_access: derived
     contracts:
@@ -220,8 +224,14 @@ score:
       marker_coverage: 0.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -240,7 +250,7 @@ slug: livechat
 tags:
 - Live Chat
 - Customer Service
-- Customer-Support
+- Customer Support
 - Messaging
 - Sales
 - Help Desk

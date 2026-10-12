@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -302,7 +302,7 @@ modified: '2026-07-23'
 name: C. Hoare & Co.
 nav: Providers
 network: true
-overview: 'C. Hoare & Co. publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Account Access API, Accounts API, Balances API, and 17 more. Tagged areas include Financial-Services, Banking, Private Bank, Open Banking, and PSD2.
+overview: 'C. Hoare & Co. publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Account Access API, Accounts API, Balances API, and 17 more. Tagged areas include Financial Services, Banking, Private Bank, Open Banking, and PSD2.
 
 
   C. Hoare & Co.''s developer surface includes authentication, documentation, support, legal docs, and 26 more developer resources.'
@@ -314,7 +314,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 45.5
+  composite: 41.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -326,9 +326,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 44.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -338,7 +338,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.5
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -354,9 +354,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 77.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -373,7 +373,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: c-hoare-and-co
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Private Bank
 - Open Banking

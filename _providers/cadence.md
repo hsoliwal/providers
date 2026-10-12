@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Cadence Design Systems delivers software and IP for electronic design automation, including IC and PCB design, verification, emulation, and system analysis. The EDA product lines (Virtuoso, Allegro X,
@@ -216,12 +216,12 @@ rate_limits:
   slug: cadence-rate-limits
 scopes:
 - name: Cadence Scopes
-  scope_count: 0
+  scope_count: 36
   slug: cadence-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 36 scopes
 score:
   band: thin
-  composite: 34.0
+  composite: 36.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 38.0
@@ -235,13 +235,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 72.2
+    discoverability: 70.5
     operational_transparency: 18.4
-  previous_composite: 34.0
+  previous_composite: 36.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

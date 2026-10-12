@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -117,7 +117,7 @@ modified: '2026-09-16'
 name: SPARQL
 nav: Providers
 network: true
-overview: SPARQL publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Query API, Graph API, and 3 more. Tagged areas include Linked Data, Query Language, RDF, Semantic Web, and SPARQL.
+overview: SPARQL publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Query API, Graph API, and 4 more. Tagged areas include Linked Data, Query Language, RDF, Semantic Web, and SPARQL.
 plans:
 - name: Sparql Plans Pricing
   plan_count: 3
@@ -128,8 +128,8 @@ rate_limits:
   name: Sparql Rate Limits
   slug: sparql-rate-limits
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 23.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 43.0
@@ -141,11 +141,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 58.4
+    contract_quality: 52.8
     developer_ergonomics: 0.0
-    discoverability: 70.4
+    discoverability: 67.9
     operational_transparency: 7.9
-  previous_composite: 26.2
+  previous_composite: 23.1
   provenance:
     agentic_access: derived
     contracts:
@@ -153,8 +153,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

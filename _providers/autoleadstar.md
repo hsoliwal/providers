@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A first-party Model Context Protocol tool manifest published by Fullpath for AI assistants. Thirteen tools with real JSON Schema inputSchemas covering consent management, shoppers, audiences, tasks, l
@@ -233,14 +233,14 @@ description: AutoLeadStar is an automotive marketing technology company founded 
 image: https://developers.fullpath.com/fullpath-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Fullpath publishes a first-party Model Context Protocol tool manifest at developers.fullpath.com/mcp-tools.json — thirteen tools with real JSON Schema inputSchemas, saved verbatim here as autoleadstar
   name: Fullpath MCP Tools
   slug: fullpath-mcp-tools
 modified: '2026-08-14'
 name: AutoLeadStar
 nav: Providers
 network: true
-overview: 'AutoLeadStar publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Appointments API, Audiences API, and 4 more. Tagged areas include Company, Automotive, Customer Data Platform, Marketing Automation, and Dealership.
+overview: 'AutoLeadStar publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Appointments API, Audiences API, and 5 more. Tagged areas include Company, Automotive, Customer Data Platform, Marketing Automation, and Dealership.
 
 
   AutoLeadStar''s developer surface includes documentation, API reference, engineering blog, support, signup flow, changelog, and 21 more developer resources.'
@@ -255,7 +255,7 @@ rate_limits:
   slug: autoleadstar-rate-limits
 score:
   band: developing
-  composite: 50.9
+  composite: 51.9
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -267,9 +267,9 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 58.3
+    contract_quality: 52.5
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -278,7 +278,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 50.9
+  previous_composite: 51.9
   provenance:
     conformance: first-party
     contracts:
@@ -288,8 +288,18 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -211,7 +211,7 @@ rules:
   slug: prosci-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 33.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 55.3
@@ -223,11 +223,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 65.9
+    contract_quality: 60.4
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 33.9
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -235,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

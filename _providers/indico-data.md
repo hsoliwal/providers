@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.indico.io/restapi
@@ -203,14 +203,14 @@ modified: '2026-07-19'
 name: Indico Data
 nav: Providers
 network: true
-overview: 'Indico Data publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Datasets API, Storage API, and 2 more. Tagged areas include Company, Intelligent Document Processing, Intelligent Process Automation, Document AI, and Machine-Learning.
+overview: 'Indico Data publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Datasets API, Storage API, and 2 more. Tagged areas include Company, Intelligent Document Processing, Intelligent Process Automation, Document AI, and Machine Learning.
 
 
   Indico Data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 19 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 43.1
+  composite: 40.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -222,11 +222,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 43.1
+  previous_composite: 40.0
   provenance:
     conformance: derived
     contracts:
@@ -241,9 +241,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -268,7 +268,7 @@ tags:
 - Intelligent Document Processing
 - Intelligent Process Automation
 - Document AI
-- Machine-Learning
+- Machine Learning
 - Unstructured Data
 - Data Extraction
 - Insurance

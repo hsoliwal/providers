@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -56,6 +56,10 @@ created: '2026-07-17'
 description: Proper (proper.ai) is an AI-powered, full-service property-management accounting and bookkeeping provider serving property managers, asset managers, and real estate developers. Rather than shipping software, Proper delivers a trained accounting team supported by automation to handle accounts payable, accounts receivable, bank reconciliations, month-end close, and financial reporting, integrating with existing property-management systems such as AppFolio, Buildium, and RentManager. Founded in the property-management space in 2017, the company is backed by QED Investors, Redpoint Ventures, MetaProp, Expa, and Bling Capital. As of this enrichment pass Proper exposes no public API, developer portal, SDK, or machine-readable developer surface; this profile is maintained as a company record.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/proper.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.proper.ai over HTTP.
+  name: Proper MCP Server
+  slug: proper
 modified: '2026-07-20'
 name: Proper
 nav: Providers
@@ -67,7 +71,7 @@ overview: 'Proper is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 4
 score:
   band: minimal
-  composite: 9.7
+  composite: 8.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -81,13 +85,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 9.7
+  previous_composite: 8.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -101,7 +111,7 @@ tags:
 - Property Management
 - Accounting
 - Bookkeeping
-- Real-Estate
+- Real Estate
 - Artificial Intelligence
 website: https://www.proper.ai/
 ---

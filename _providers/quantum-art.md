@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 1
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The admin API from Quantum Art — 12 operation(s) for admin.
-  name: Quantum Art admin API
+  name: Quantum Art Admin API
   slug: quantum-art-admin-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -142,7 +142,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The qiskit-provider API from Quantum Art — 5 operation(s) for qiskit-provider.
-  name: Quantum Art qiskit-provider API
+  name: Quantum Art Qiskit Provider API
   slug: quantum-art-qiskit-provider-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -152,7 +152,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The registration API from Quantum Art — 2 operation(s) for registration.
-  name: Quantum Art registration API
+  name: Quantum Art Registration API
   slug: quantum-art-registration-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -351,14 +351,14 @@ modified: '2026-09-16'
 name: Quantum Art
 nav: Providers
 network: true
-overview: 'Quantum Art publishes 24 APIs on the [APIs.io](https://apis.io/) network, including admin API, Apple Touch Icon.png API, Artifacts API, and 21 more. Tagged areas include Company, Quantum Computing, Quantum as a Service, Qiskit, and Developer Tools.
+overview: 'Quantum Art publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Apple Touch Icon.png API, Artifacts API, and 21 more. Tagged areas include Company, Quantum Computing, Quantum as a Service, Qiskit, and Developer Tools.
 
 
   Quantum Art''s developer surface includes authentication, documentation, API reference, signup flow, and 18 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 31.6
+  composite: 30.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -370,11 +370,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 45.9
+    contract_quality: 41.4
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 31.6
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -385,8 +385,14 @@ score:
       total: 24
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -408,7 +414,7 @@ tags:
 - Quantum as a Service
 - Qiskit
 - Developer Tools
-- Machine-Learning
+- Machine Learning
 - Optimization
 - Finance
 - Chemistry

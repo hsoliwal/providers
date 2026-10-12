@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: platform
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.8
-  scored_at: '2026-09-20'
+  score: 35.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -203,7 +203,7 @@ layout: provider
 mcp_servers:
 - description: 'Black Buffalo serves TWO live MCP endpoints from its own storefront host, and — unlike most Shopify merchants profiled in this catalog — BOTH answer an anonymous JSON-RPC tools/list with HTTP 200 and '
   name: Black Buffalo MCP Server
-  slug: black-buffalo-mcp-server
+  slug: black-buffalo-mcp-yml
 modified: '2026-08-07'
 name: Black Buffalo
 nav: Providers
@@ -220,7 +220,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 32.6
+  composite: 28.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -232,23 +232,31 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.6
+  previous_composite: 28.2
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

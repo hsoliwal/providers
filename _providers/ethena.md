@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.0
-  scored_at: '2026-09-20'
+  score: 40.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -240,9 +240,9 @@ description: Ethena is a compliance platform powered by AI agents that helps org
 image: https://www.goethena.com/wp-content/uploads/2025/12/Ethenas-Featured-Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.goethena.com over HTTP.
   name: Ethena MCP Server
-  slug: ethena-mcp-server
+  slug: goethena-wordpress-mcp
 modified: '2026-07-19'
 name: Ethena
 nav: Providers
@@ -257,7 +257,7 @@ overview: 'Ethena publishes 5 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 13
 score:
   band: developing
-  composite: 52.6
+  composite: 48.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -269,11 +269,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 70.5
+    contract_quality: 64.6
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 52.6
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -282,16 +282,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

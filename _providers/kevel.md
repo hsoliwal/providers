@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -108,7 +108,7 @@ apis:
   description: Manage zones.
   name: Kevel Zones API
   slug: kevel-zones-api
-artifact_total: 33
+artifact_total: 34
 collections:
 - collection_type: open
   name: API Collection
@@ -147,6 +147,11 @@ collections:
   name: Kevel APIs
   slug: open-kevel
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kevel/refs/heads/main/capabilities/kevel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kevel-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kevel/refs/heads/main/agentic-access/kevel-agentic-access.yml
   title: ''
@@ -215,14 +220,18 @@ finops:
   slug: kevel-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kevel.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.kevel.com over HTTP.
+  name: Kevel MCP Server
+  slug: kevel
 modified: '2026-04-28'
 name: Kevel
 nav: Providers
 network: true
-overview: 'Kevel publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Ads API, Advertisers API, Campaigns API, and 7 more. Tagged areas include Ad Serving, Advertising, API-First, Audiences, and Monetization.
+overview: 'Kevel publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Ads API, Advertisers API, Campaigns API, and 11 more. Tagged areas include Ad Serving, Advertising, API-First, Audiences, and Monetization.
 
 
-  Kevel''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, and 8 more developer resources.'
+  Kevel''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, and 9 more developer resources.'
 plans:
 - name: Kevel Plans Pricing
   plan_count: 3
@@ -234,7 +243,7 @@ rate_limits:
   slug: kevel-rate-limits
 score:
   band: thin
-  composite: 36.5
+  composite: 35.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 41.0
@@ -246,11 +255,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 51.5
+    contract_quality: 46.5
     developer_ergonomics: 59.5
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 36.5
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -259,8 +268,14 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

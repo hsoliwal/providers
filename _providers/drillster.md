@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Drillster REST API (v2.1.1) lets developers integrate Drillster's adaptive learning and training platform into external applications. Roughly 180 documented endpoints and 200 response objects cove
@@ -223,8 +223,8 @@ scopes:
   slug: drillster-scopes
   summary_line: 1 scope · authorizationCode/urn:ietf:params:oauth:grant-type:jwt-bearer
 score:
-  band: strong
-  composite: 57.3
+  band: developing
+  composite: 52.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 48.0
@@ -236,17 +236,19 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - netherlands
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - benelux
     - europe
-  previous_composite: 57.3
+  previous_composite: 52.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -255,9 +257,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 75.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

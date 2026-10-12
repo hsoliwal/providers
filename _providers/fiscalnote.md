@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -294,7 +294,7 @@ rules:
   slug: fiscalnote-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 41.1
+  composite: 39.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 56.3
@@ -306,11 +306,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 9.8
-    contract_quality: 58.2
+    contract_quality: 52.8
     developer_ergonomics: 33.3
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 41.1
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     contracts:
@@ -321,11 +321,11 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Government & Public Sector
+    regime_id: government
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

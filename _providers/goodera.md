@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for volunteering partners to list Goodera volunteer opportunities inside their own platform, create volunteering events against an opportunity, register and de-register volunteers, and record
@@ -182,7 +182,7 @@ rate_limits:
   slug: goodera-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 34.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -194,17 +194,23 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 34.2
+  previous_composite: 34.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

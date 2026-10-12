@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Authenticated JSON API backing the CrossCheck NetSuite DevOps platform (server: uvicorn / FastAPI-style). Requires a bearer Authorization header; no public OpenAPI specification or developer documenta'
@@ -96,17 +96,17 @@ description: 'Vertical Bar Inc. builds CrossCheck, a DevOps and operations-visib
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vertical-bar-inc.png
 layout: provider
 modified: '2026-07-21'
-name: Vertical Bar Inc.
+name: Vertical Bar
 nav: Providers
 network: true
-overview: 'Vertical Bar Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, NetSuite, DevOps, ERP, and Change Management.
+overview: 'Vertical Bar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, NetSuite, DevOps, ERP, and Change Management.
 
 
-  Vertical Bar Inc.''s developer surface includes authentication, pricing, engineering blog, signup flow, and 7 more developer resources.'
+  Vertical Bar''s developer surface includes authentication, pricing, engineering blog, signup flow, and 7 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 14.7
+  composite: 14.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -120,11 +120,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 14.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

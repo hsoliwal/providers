@@ -32,9 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
+common:
+- group: company
+  title: ''
+  type: Website
+  url: https://cayena.com/
 created: '2026-07-17'
 description: Cayena is a Brazilian B2B technology company operating an e-procurement marketplace and embedded-fintech platform for the food-service industry. It connects restaurants, bars, hotels, and other food-service buyers with food, beverage, and supply distributors, streamlining ordering, catalog discovery, and fulfillment while layering in payments and short-term credit (buy-now-pay-later) so operators can purchase supplies and defer payment. Headquartered in Sao Paulo, Cayena is backed by venture investors including Canaan Partners. This API Evangelist profile was surfaced as a portfolio company lead; no public developer API, OpenAPI, or developer portal has been confirmed for Cayena at the time of enrichment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cayena.png
@@ -47,7 +52,7 @@ overview: Cayena is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 9
 score:
   band: minimal
-  composite: 0.1
+  composite: 1.9
   coverage:
     artifact_dirs: 0
     catalog_earned: 27.0
@@ -61,7 +66,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -75,18 +80,16 @@ score:
     owner: catalog
     reasons:
     - owner: catalog
-      reason: no_resolvable_host
-    - owner: catalog
       reason: never_enriched
-  previous_composite: 0.1
+  previous_composite: 1.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -105,4 +108,5 @@ tags:
 - Procurement
 - Restaurant
 - Brazil
+website: https://cayena.com/
 ---

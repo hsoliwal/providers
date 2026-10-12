@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -50,6 +50,11 @@ apis:
   slug: localclarity-endpoints-api
 artifact_total: 8
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/localclarity/refs/heads/main/capabilities/localclarity-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/localclarity-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/localclarity/refs/heads/main/overlays/localclarity-openapi-overlay.yaml
   title: ''
@@ -213,7 +218,7 @@ overview: 'LocalClarity publishes 1 API on the [APIs.io](https://apis.io/) netwo
   The LocalClarity catalog on APIs.io includes 1 JSON-LD context.
 
 
-  LocalClarity''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 24 more developer resources.'
+  LocalClarity''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 25 more developer resources.'
 plans:
 - name: Localclarity Plans Pricing
   plan_count: 3
@@ -225,9 +230,9 @@ rate_limits:
   slug: localclarity-rate-limits
 score:
   band: developing
-  composite: 52.2
+  composite: 51.8
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 60.0
     catalog_earned_first_party: 12.0
     catalog_gap: 55.0
@@ -237,11 +242,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 63.3
+    contract_quality: 57.3
     developer_ergonomics: 49.4
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 28.9
-  previous_composite: 52.2
+  previous_composite: 51.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -252,8 +257,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

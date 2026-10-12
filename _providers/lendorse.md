@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -95,14 +95,14 @@ modified: '2026-07-19'
 name: Lendorse
 nav: Providers
 network: true
-overview: 'Lendorse is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Lending, and Education.
+overview: 'Lendorse is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Lending, and Education.
 
 
   Lendorse''s developer surface includes signup flow, support, and 10 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 13.3
+  composite: 12.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -116,7 +116,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -126,15 +126,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 13.3
+  previous_composite: 12.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -149,7 +149,7 @@ security:
 slug: lendorse
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Lending
 - Education

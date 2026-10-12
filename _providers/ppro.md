@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 48.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 21
 apis:
 - baseURL: https://api.eu.ppro.com
@@ -308,7 +308,7 @@ modified: '2026-08-26'
 name: PPRO
 nav: Providers
 network: true
-overview: 'PPRO publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Authorization Endpoints API, Capture Endpoints API, Dispute Reports API, and 15 more. Tagged areas include Payments, Local Payment Methods, Financial-Services, Fintech, and Acquiring.
+overview: 'PPRO publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Authorization Endpoints API, Capture Endpoints API, Dispute Reports API, and 15 more. Tagged areas include Payments, Local Payment Methods, Financial Services, Fintech, and Acquiring.
 
 
   The PPRO catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -325,8 +325,8 @@ rate_limits:
   name: Ppro Rate Limits
   slug: ppro-rate-limits
 score:
-  band: strong
-  composite: 54.6
+  band: developing
+  composite: 52.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 52.0
@@ -338,11 +338,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 64.5
+    contract_quality: 59.3
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 73.7
-  previous_composite: 54.6
+  previous_composite: 52.0
   provenance:
     conformance: first-party
     contracts:
@@ -357,9 +357,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -386,7 +386,7 @@ slug: ppro
 tags:
 - Payments
 - Local Payment Methods
-- Financial-Services
+- Financial Services
 - Fintech
 - Acquiring
 - Checkout

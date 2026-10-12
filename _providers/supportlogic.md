@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -114,21 +114,21 @@ description: SupportLogic is an enterprise AI infrastructure company for custome
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/supportlogic.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.supportlogic.com over HTTP; 16 tools listed.
   name: Supportlogic MCP Server
-  slug: supportlogic-mcp-server
+  slug: supportlogic
 modified: '2026-07-21'
 name: Supportlogic
 nav: Providers
 network: true
-overview: 'Supportlogic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer-Support, Customer Experience, Artificial Intelligence, and Service Experience.
+overview: 'Supportlogic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Support, Customer Experience, Artificial Intelligence, and Service Experience.
 
 
   Supportlogic''s developer surface includes documentation, support, engineering blog, pricing, authentication, and 11 more developer resources.'
 random_paper: 3
 score:
-  band: emerging
-  composite: 24.5
+  band: thin
+  composite: 26.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -142,14 +142,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 24.5
+  previous_composite: 26.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,7 +190,7 @@ security:
 slug: supportlogic
 tags:
 - Company
-- Customer-Support
+- Customer Support
 - Customer Experience
 - Artificial Intelligence
 - Service Experience

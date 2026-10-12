@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Equifax API platform provides programmatic access to Equifax''s consumer credit information, including credit reports, credit scores, identity verification, and fraud detection. APIs are organized '
@@ -158,7 +158,7 @@ modified: '2026-09-06'
 name: Equifax
 nav: Providers
 network: true
-overview: 'Equifax publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Credit, Credit History, Credit Reporting, Identity, and Fraud Detection.
+overview: 'Equifax publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Credit, Credit History, Credit Reporting, Identity, and Fraud Prevention.
 
 
   Equifax''s developer surface includes engineering blog, signup flow, support, changelog, and 19 more developer resources.'
@@ -194,7 +194,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 47.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 52.0
@@ -208,14 +208,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 68.4
-  previous_composite: 43.1
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -245,7 +251,7 @@ tags:
 - Credit History
 - Credit Reporting
 - Identity
-- Fraud Detection
+- Fraud Prevention
 - Fortune 1000
 website: https://www.equifax.com/
 ---

@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.0
-  scored_at: '2026-09-20'
+  score: 12.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Noded (Apollo) GraphQL API behind the Customer Context Graph. One POST endpoint serving people and accounts (both modelled as tags), the unified activity timeline (blocks: notes, emails, tasks, me'
@@ -231,7 +231,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 40.6
+  composite: 43.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -245,15 +245,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 40.6
+  previous_composite: 43.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -286,7 +292,7 @@ tags:
 - AI Agents
 - GraphQL
 - MCP
-- agent-native
+- Agent-Native
 - Customer Context Graph
 website: https://www.getnoded.ai/
 ---

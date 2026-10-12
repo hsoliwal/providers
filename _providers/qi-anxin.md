@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST threat-intelligence API from the QAX Threat Intelligence Center. Provides IP reputation, domain and URL reputation, file/hash verdicts, compromise (失陷) detection intelligence and vulnerability in
@@ -162,7 +162,7 @@ description: 'Qi An Xin Technology Group (QAX, 奇安信) is a Beijing-headquart
 image: https://en.qianxin.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.ti.qianxin.com requiring an API key; 16 tools listed.
   name: QAX Threat Intelligence MCP Service
   slug: qax-threat-intelligence-mcp-service
 modified: '2026-08-26'
@@ -184,7 +184,7 @@ rate_limits:
   slug: qi-anxin-rate-limits
 score:
   band: emerging
-  composite: 18.7
+  composite: 19.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -198,7 +198,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -207,12 +207,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 18.7
+  previous_composite: 19.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

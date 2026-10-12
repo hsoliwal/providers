@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -109,7 +109,7 @@ modified: '2026-09-16'
 name: Marginalia Search
 nav: Providers
 network: true
-overview: 'Marginalia Search publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Filters API, and 1 more. Tagged areas include Open-Source, Search, and Web Search.
+overview: 'Marginalia Search publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Filters API, and 1 more. Tagged areas include Open Source, Search, and Web Search.
 
 
   Marginalia Search''s developer surface includes authentication and 5 more developer resources.'
@@ -123,8 +123,8 @@ rate_limits:
   name: Marginalia Search Rate Limits
   slug: marginalia-search-rate-limits
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 25.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -136,11 +136,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 55.1
+    contract_quality: 49.6
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 27.8
+  previous_composite: 25.6
   provenance:
     agentic_access: derived
     contracts:
@@ -148,8 +148,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -166,7 +172,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: marginalia-search
 tags:
-- Open-Source
+- Open Source
 - Search
 - Web Search
 website: https://marginalia-search.com/

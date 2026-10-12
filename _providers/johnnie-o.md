@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.0
-  scored_at: '2026-09-20'
+  score: 36.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Anonymous, fully introspectable GraphQL endpoint served from Johnnie-O's own Hydrogen storefront host. This is the Shopify Storefront API for merchant tenant 22750137; the Hydrogen app proxies the req
@@ -166,9 +166,9 @@ description: 'Johnnie-O is a Los Angeles based men''s, women''s and boys'' appar
 image: https://johnnie-o-prod.s3.us-west-2.amazonaws.com/media/_190x190_crop_center-center_none/logo-200x200.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at checkout.johnnie-o.com over HTTP; 13 tools listed.
   name: Johnnie-O MCP Server
-  slug: johnnie-o-mcp-server
+  slug: johnnie-o-ucp-shopping
 modified: '2026-08-23'
 name: Johnnie-O
 nav: Providers
@@ -188,12 +188,12 @@ rate_limits:
   slug: johnnie-o-rate-limits
 scopes:
 - name: Johnnie O Scopes
-  scope_count: 0
+  scope_count: 4
   slug: johnnie-o-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: thin
-  composite: 31.5
+  composite: 27.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -205,17 +205,23 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 31.5
+  previous_composite: 27.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

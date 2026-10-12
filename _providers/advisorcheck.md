@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The first-party HTTP API behind the AdvisorCheck consumer web application, served from an AWS API Gateway custom domain at api.advisorcheck.com. It is an internal application backend, not a published '
@@ -111,7 +111,7 @@ modified: '2026-09-09'
 name: AdvisorCheck
 nav: Providers
 network: true
-overview: 'AdvisorCheck publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Regulatory Data, and Background Checks.
+overview: 'AdvisorCheck publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Regulatory Data, and Background Checks.
 
 
   AdvisorCheck''s developer surface includes support, engineering blog, getting-started guide, and 10 more developer resources.'
@@ -126,7 +126,7 @@ rate_limits:
   slug: advisorcheck-rate-limits
 score:
   band: emerging
-  composite: 19.7
+  composite: 19.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 45.0
@@ -140,18 +140,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 17.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.7
+  previous_composite: 19.3
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +173,7 @@ security:
 slug: advisorcheck
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Regulatory Data
 - Background Checks

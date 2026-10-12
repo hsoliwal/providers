@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -74,18 +74,22 @@ created: '2026-07-17'
 description: Croissant is the workspace infrastructure layer for distributed teams, letting companies find, book, and manage on-demand access to 700+ coworking spaces across 100+ cities without long-term leases. Founded in 2015, the platform pairs instant workspace booking with spend governance, centralized policy controls, vendor consolidation, and usage-intelligence reporting, giving finance and people teams real-time control over where and how their people work. Croissant serves early-stage, scaling, and enterprise organizations, and exposes Slack, HRIS, stipend, and ERP integrations plus a custom API and integrations on its enterprise tier.
 image: https://www.getcroissant.com/images/space.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.getcroissant.com over HTTP.
+  name: Croissant MCP Server
+  slug: croissant
 modified: '2026-07-18'
 name: Croissant
 nav: Providers
 network: true
-overview: 'Croissant is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Co-Working, Workspace Management, Distributed Teams, and Real-Estate.
+overview: 'Croissant is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Co-Working, Workspace Management, Distributed Teams, and Real Estate.
 
 
   Croissant''s developer surface includes pricing, signup flow, support, and 5 more developer resources.'
 random_paper: 14
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,13 +103,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 10.9
+  previous_composite: 10.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -123,7 +133,7 @@ tags:
 - Co-Working
 - Workspace Management
 - Distributed Teams
-- Real-Estate
+- Real Estate
 - Spend Management
 - Booking
 - Software-as-a-Service

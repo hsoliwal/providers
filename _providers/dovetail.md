@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 30.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Dovetail Public API for building custom integrations against a Dovetail workspace: manage projects, folders, docs, insights, data (notes), highlights, tags, themes, channels, topics, contacts, users, '
@@ -160,9 +160,9 @@ description: Dovetail is a customer intelligence platform that aggregates custom
 image: https://dovetail.com/media/Social_Meta1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at dovetail.com over HTTP; 9 tools listed.
   name: Dovetail MCP Server
-  slug: dovetail-mcp-server
+  slug: dovetail
 modified: '2026-07-18'
 name: Dovetail
 nav: Providers
@@ -178,7 +178,7 @@ rate_limits:
   slug: dovetail-rate-limits
 score:
   band: thin
-  composite: 31.5
+  composite: 32.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -192,13 +192,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 31.5
+  previous_composite: 32.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -51,7 +51,7 @@ apis:
 - baseURL_template: http://{host}/{context}
   baseurl_source: spec_template
   description: Generic RESTful resource exposed by the Struts REST plugin
-  name: Apache Struts resource API
+  name: Apache Struts Resource API
   slug: apache-struts-resource-api
 artifact_total: 27
 collections:
@@ -179,7 +179,7 @@ modified: '2026-04-19'
 name: Apache Struts
 nav: Providers
 network: true
-overview: 'Apache Struts publishes 1 API on the [APIs.io](https://apis.io/) network: resource API. Tagged areas include Java, MVC, Web Applications, Web Framework, and Open-Source.
+overview: 'Apache Struts publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Resource API, and 1 more. Tagged areas include Java, MVC, Web Applications, Web Framework, and Open Source.
 
 
   Apache Struts'' developer surface includes authentication, documentation, developer portal, getting-started guide, release notes, support, FAQ, and 11 more developer resources.'
@@ -194,7 +194,7 @@ rate_limits:
   slug: apache-struts-rate-limits
 score:
   band: developing
-  composite: 44.0
+  composite: 43.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -206,14 +206,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 52.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 44.0
+  previous_composite: 43.6
   provenance:
     agentic_access: derived
     contracts:
@@ -221,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -247,7 +253,7 @@ tags:
 - MVC
 - Web Applications
 - Web Framework
-- Open-Source
+- Open Source
 use_cases:
 - description: Build large-scale Java web applications with clean MVC separation.
   name: Enterprise Java Web Applications

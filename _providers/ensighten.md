@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://manage-api.ensighten.com
@@ -243,7 +243,7 @@ rate_limits:
   slug: ensighten-rate-limits
 score:
   band: developing
-  composite: 39.6
+  composite: 41.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -257,9 +257,9 @@ score:
     contract_governance: 18.2
     contract_quality: 18.6
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 39.6
+  previous_composite: 41.4
   provenance:
     conformance: first-party
     contracts:
@@ -269,8 +269,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

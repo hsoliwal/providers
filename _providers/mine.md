@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 1
@@ -200,6 +200,11 @@ collections:
   slug: open-mine-webhooks-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mine/refs/heads/main/capabilities/mine-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mine-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/mine/refs/heads/main/overlays/mine-openapi-overlay.yaml
   title: ''
   type: Overlay
@@ -340,20 +345,20 @@ description: Mine (MineOS) is a data privacy, governance, and AI security postur
 image: https://cdn.prod.website-files.com/699ac7647b64bcef08a8aeaa/69c298d5668a7bb9c1d54c47_Open%20Graph%20image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.mineos.ai over HTTP.
   name: MINE MCP Server
-  slug: mine-mcp-server
+  slug: mineos
 modified: '2026-07-20'
 name: MINE
 nav: Providers
 network: true
-overview: 'MINE publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Aispm API, AispmDeviceFlags API, AispmEnroll API, and 15 more. Tagged areas include Company, Data Privacy, Data Governance, Privacy Operations, and Consent Management.
+overview: 'MINE publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Aispm API, AispmDeviceFlags API, AispmEnroll API, and 15 more. Tagged areas include Company, Privacy, Data Governance, Privacy Operations, and Consent Management.
 
 
   The MINE catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  MINE''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 24 more developer resources.'
+  MINE''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 25 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 2
@@ -361,9 +366,9 @@ rate_limits:
   slug: mine-rate-limits
 score:
   band: developing
-  composite: 49.0
+  composite: 50.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -373,11 +378,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 56.7
+    contract_quality: 51.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 49.0
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -388,8 +393,22 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -415,12 +434,12 @@ security:
 slug: mine
 tags:
 - Company
-- Data Privacy
+- Privacy
 - Data Governance
 - Privacy Operations
 - Consent Management
 - AI Governance
-- Third-Party Risk
+- Third-Party Risk Management
 - Compliance
 - Security
 website: https://www.mineos.ai

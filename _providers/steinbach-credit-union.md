@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -106,7 +106,7 @@ modified: '2026-07-23'
 name: Steinbach Credit Union
 nav: Providers
 network: true
-overview: 'Steinbach Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Canada, Credit Union, and Cooperative.
+overview: 'Steinbach Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Credit Union, and Cooperative.
 
 
   Steinbach Credit Union''s developer surface includes authentication, support, documentation, and 10 more developer resources.'
@@ -118,7 +118,7 @@ scopes:
   summary_line: 7 scopes
 score:
   band: emerging
-  composite: 23.1
+  composite: 21.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -132,7 +132,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -141,7 +141,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.1
+  previous_composite: 21.1
   provenance:
     conformance: first-party
   regulatory:
@@ -149,9 +149,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -169,14 +169,13 @@ security:
   summary_line: TLSv1.3 · HSTS
 slug: steinbach-credit-union
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Credit Union
 - Cooperative
 - Manitoba
 - Interac
-- Data Aggregation
 - Open Banking
 website: https://scu.mb.ca/
 ---

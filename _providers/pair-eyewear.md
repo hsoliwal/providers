@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Shopify-hosted Universal Commerce Protocol shopping service exposed over MCP for agent-driven catalog search, cart, and buyer-approved checkout on the Pair Eyewear storefront.
@@ -119,9 +119,9 @@ description: 'Pair Eyewear is a direct-to-consumer eyewear brand known for its m
 image: https://paireyewear.com/cdn/shop/files/PAIR_SEO-Image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pair-eyewear.myshopify.com over HTTP; 5 tools listed.
   name: Pair Eyewear MCP Server
-  slug: pair-eyewear-mcp-server
+  slug: pair-eyewear-ucp
 modified: '2026-07-20'
 name: Pair Eyewear
 nav: Providers
@@ -137,8 +137,8 @@ scopes:
   slug: pair-eyewear-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -152,15 +152,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.8
+  previous_composite: 26.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

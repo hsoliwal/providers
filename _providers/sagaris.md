@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for the SAGARIS Agentic Revenue OS, including the Company Brain context endpoints. Bearer/workspace-key authentication. Formal reference, SDKs, and webhooks are marked 'Soon' (pre-launch).
@@ -57,10 +57,10 @@ layout: provider
 mcp_servers:
 - description: ''
   name: SAGARIS MCP Server
-  slug: sagaris-mcp-server
+  slug: mcp
 - description: ''
   name: SAGARIS MCP Server
-  slug: sagaris-mcp-server-2
+  slug: mcp-2
 modified: '2026-08-24'
 name: SAGARIS
 nav: Providers
@@ -72,7 +72,7 @@ overview: 'SAGARIS publishes 2 APIs on the [APIs.io](https://apis.io/) network. 
 random_paper: 20
 score:
   band: minimal
-  composite: 9.1
+  composite: 6.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -86,13 +86,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 9.1
+  previous_composite: 6.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

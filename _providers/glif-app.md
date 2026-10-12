@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: HTTP endpoint for invoking a single published glif (AI workflow) by ID and passing a list of named or positional string inputs. POST a JSON body with `id` and `inputs` to https://simple-api.glif.app u
@@ -171,7 +171,7 @@ overview: 'Glif publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 14
 score:
   band: emerging
-  composite: 23.9
+  composite: 24.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 34.0
@@ -185,11 +185,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 21.1
-  previous_composite: 23.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -213,9 +219,10 @@ tags:
 - Creative AI
 - Generative AI
 - Video Generation
-- Image-Generation
+- Image Generation
 - ComfyUI
 - MCP
 - LLM Apps
+- A2A
 website: https://www.glif.app/
 ---

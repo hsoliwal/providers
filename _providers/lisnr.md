@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://tones.lisnr.com/
@@ -244,7 +244,7 @@ overview: 'LISNR publishes 10 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 2
 score:
   band: emerging
-  composite: 19.1
+  composite: 19.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -258,9 +258,9 @@ score:
     contract_governance: 4.5
     contract_quality: 15.0
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 19.1
+  previous_composite: 19.0
   provenance:
     conformance: derived
     contracts:
@@ -275,9 +275,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -90,6 +90,10 @@ created: '2026-07-17'
 description: EINO (eino.ai) is an AI-native platform for designing, simulating, validating, and monitoring wireless networks — Wi-Fi, Cellular, DAS, Fixed Wireless, LoRa, IoT, and 5G/LTE. It builds connectivity digital twins that let network providers, systems integrators, and enterprises automate network design (cutting multi-day design cycles to minutes) and run 24/7 agentic monitoring with real-time anomaly detection and root-cause analysis. Founded in 2018 and headquartered in New York City, EINO is backed by 500 Global and Techstars. The company exposes a SaaS web application and a product knowledge base rather than a public developer API.
 image: https://cdn.prod.website-files.com/699f0f742cb5193877c003a3/69a5a201af4f89e038a62e44_og2.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.eino.ai over HTTP.
+  name: EINO MCP Server
+  slug: eino
 modified: '2026-07-19'
 name: EINO
 nav: Providers
@@ -101,7 +105,7 @@ overview: 'EINO is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 9
 score:
   band: emerging
-  composite: 16.5
+  composite: 16.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -115,14 +119,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.5
+  previous_composite: 16.7
   provenance:
     mcp: first-party
   regulatory:
@@ -130,9 +134,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 19.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

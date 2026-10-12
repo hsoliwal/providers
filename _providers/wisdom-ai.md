@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Single GraphQL endpoint for programmatic access to WisdomAI domains, tables, users, dashboards, and analytics data. Supports queries, mutations, and real-time WebSocket subscriptions. Tenant-scoped: r'
@@ -182,9 +182,9 @@ description: WisdomAI is an enterprise agentic analytics platform built around a
 image: https://framerusercontent.com/assets/43nPV2DraEOsNMFDaMIdigVzUU.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at {ACCOUNT}.wisdom.ai over HTTP; 3 tools listed.
   name: Wisdom AI MCP Server
-  slug: wisdom-ai-mcp-server
+  slug: wisdomai
 modified: '2026-07-21'
 name: Wisdom AI
 nav: Providers
@@ -196,7 +196,7 @@ overview: 'Wisdom AI publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 4
 score:
   band: thin
-  composite: 33.6
+  composite: 35.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -210,15 +210,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 33.6
+  previous_composite: 35.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

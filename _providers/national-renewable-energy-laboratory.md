@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -139,7 +139,7 @@ modified: '2026-05-19'
 name: National Renewable Energy Laboratory
 nav: Providers
 network: true
-overview: 'National Renewable Energy Laboratory publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Alt Fuel Stations API, Pvwatts API, Solar API, and 1 more. Tagged areas include Energy, Renewable Energy, Federal-Government, Climate, and Research.
+overview: 'National Renewable Energy Laboratory publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Alt Fuel Stations API, Pvwatts API, Solar API, and 5 more. Tagged areas include Energy, Renewable Energy, Federal Government, Climate, and Research.
 
 
   National Renewable Energy Laboratory''s developer surface includes authentication, developer portal, signup flow, and 4 more developer resources.'
@@ -154,7 +154,7 @@ rate_limits:
   slug: national-renewable-energy-laboratory-rate-limits
 score:
   band: thin
-  composite: 28.7
+  composite: 27.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 45.0
@@ -166,11 +166,16 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 46.6
+    contract_quality: 41.9
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 28.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 27.7
   provenance:
     agentic_access: derived
     contracts:
@@ -183,9 +188,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -200,7 +205,7 @@ slug: national-renewable-energy-laboratory
 tags:
 - Energy
 - Renewable Energy
-- Federal-Government
+- Federal Government
 - Climate
 - Research
 website: https://www.nrel.gov/

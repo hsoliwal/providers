@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'OGC-standard web services served from a GeoServer instance. Verified anonymously on 2026-08-20: a WMS 1.3.0 GetCapabilities document declaring 48 layers and a WFS 2.0.0 GetCapabilities document declar'
@@ -42,14 +42,14 @@ created: '2026-08-20'
 description: GeoCat bv is a Dutch company built around the open-source geospatial stack, and is the primary maintainer of GeoNetwork, the catalogue software that runs a large share of Europe's INSPIRE metadata infrastructure. It sells GeoCat Bridge, GeoCat Live and hosted catalogue services, and runs a public demonstration estate serving both classic OGC web services and a modern OGC API - Features endpoint.
 layout: provider
 modified: '2026-08-20'
-name: GeoCat bv
+name: GeoCat
 nav: Providers
 network: true
-overview: GeoCat bv publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Geospatial, OGC, WMS, WFS, and Open Access.
+overview: GeoCat publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Geospatial, OGC, WMS, WFS, and Open Access.
 random_paper: 11
 score:
   band: minimal
-  composite: 7.8
+  composite: 5.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 32.0
@@ -63,11 +63,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 7.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - netherlands
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 5.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

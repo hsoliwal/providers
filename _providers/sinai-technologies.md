@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.sinai.com/v1
@@ -67,6 +67,11 @@ collections:
   name: SINAI Baseline forecasts Organization management API
   slug: open-sinai-technologies-organization-management-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sinai-technologies/refs/heads/main/capabilities/sinai-technologies-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sinai-technologies-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sinai-technologies/refs/heads/main/security/sinai-technologies-domain-security.yml
   title: ''
@@ -186,7 +191,7 @@ network: true
 overview: 'Sinai Technologies publishes 3 APIs on the [APIs.io](https://apis.io/) network: Baseline forecasts API, Carbon accounting API, and Organization management API. Tagged areas include Company, Carbon Management, Carbon Accounting, Emissions, and Sustainability.
 
 
-  Sinai Technologies'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, and 18 more developer resources.'
+  Sinai Technologies'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, and 19 more developer resources.'
 random_paper: 13
 scopes:
 - name: Sinai Technologies Scopes
@@ -195,9 +200,9 @@ scopes:
   summary_line: 6 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 40.7
+  composite: 42.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -207,11 +212,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 57.2
+    contract_quality: 51.8
     developer_ergonomics: 43.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 40.7
+  previous_composite: 42.7
   provenance:
     conformance: first-party
     contracts:
@@ -221,8 +226,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 64
   human_in_the_loop: 64
@@ -105,6 +105,11 @@ collections:
   name: Securitize Domains Webhooks API
   slug: open-securitize-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/securitize/refs/heads/main/capabilities/securitize-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/securitize-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -240,20 +245,20 @@ description: 'Securitize is a tokenization platform and SEC-registered financial
 image: https://cdn.builder.io/api/v1/image/assets%2Fd39b51a544e84e2fbb2445f58c6c6f2c%2F0eeaf40c7ecd4ee0a05f030d32ae949e
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.securitize.io over HTTP; 5 tools listed.
   name: Securitize Connector
   slug: securitize-connector
 modified: '2026-08-05'
 name: Securitize
 nav: Providers
 network: true
-overview: 'Securitize publishes 5 APIs on the [APIs.io](https://apis.io/) network, including APAC API, Domains API, Health Check API, and 2 more. Tagged areas include Tokenization, Digital Securities, Real World Assets, Capital Markets, and Fund Administration.
+overview: 'Securitize publishes 7 APIs on the [APIs.io](https://apis.io/) network, including APAC API, Domains API, Health Check API, and 4 more. Tagged areas include Tokenization, Digital Securities, Real World Assets, Capital Markets, and Fund Administration.
 
 
   The Securitize catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Securitize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 21 more developer resources.'
+  Securitize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 22 more developer resources.'
 random_paper: 17
 scopes:
 - name: Securitize Scopes
@@ -262,9 +267,9 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 45.1
+  composite: 42.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -274,11 +279,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 55.4
+    contract_quality: 51.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 45.1
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,9 +299,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

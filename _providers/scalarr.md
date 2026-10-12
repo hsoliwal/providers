@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Self-hosted HTTP API of Parallax, the Apache-2.0 runtime security engine Scalarr publishes for AI agents. Two endpoints: POST /evaluate takes a lifecycle event (message.before, tool.before, tool.after'
@@ -217,7 +217,7 @@ rate_limits:
   slug: scalarr-rate-limits
 score:
   band: developing
-  composite: 49.2
+  composite: 50.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -229,15 +229,21 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 49.2
+  previous_composite: 50.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,10 +275,10 @@ tags:
 - Vulnerability Management
 - Compliance
 - NIS2
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
-- Open-Source
-- Fraud Detection
+- Open Source
+- Fraud Prevention
 - Mobile Ad Fraud
 website: https://scalarr.io
 ---

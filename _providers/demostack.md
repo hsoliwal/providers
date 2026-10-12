@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Demostack webhooks push real-time demo engagement events to any CRM, data warehouse, BI tool, or custom HTTP endpoint. Events are fired when prospects view, interact with, or complete a demo, enabling
@@ -202,7 +202,7 @@ layout: provider
 mcp_servers:
 - description: Demostack ships a first-party remote MCP server. It is a live, reachable HTTPS endpoint that an MCP client POSTs JSON-RPC to — not a package a human has to install — and it is protected by OAuth 2.1 w
   name: Demostack MCP Server
-  slug: demostack-mcp-server
+  slug: demostack
 modified: '2026-08-14'
 name: Demostack
 nav: Providers
@@ -230,7 +230,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 47.3
+  composite: 50.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 51.0
@@ -242,16 +242,28 @@ score:
   facets:
     access_clarity: 61.8
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 53.2
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 47.3
+  previous_composite: 50.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

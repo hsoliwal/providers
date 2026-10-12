@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -208,6 +208,11 @@ collections:
   name: Kita Capture Applications Webhooks API
   slug: open-kita-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kita/refs/heads/main/capabilities/kita-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kita-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kita/refs/heads/main/overlays/kita-capture-overlay.yaml
   title: ''
@@ -401,9 +406,9 @@ description: Kita is an AI-native loan origination and underwriting company (Y C
 image: https://www.kita.ai/kita_logo_green.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 7 tools listed.
   name: Kita MCP Server
-  slug: kita-mcp-server
+  slug: kita-docs
 modified: '2026-07-19'
 name: Kita
 nav: Providers
@@ -414,7 +419,7 @@ overview: 'Kita publishes 14 APIs on the [APIs.io](https://apis.io/) network, in
   The Kita catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Kita''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, pricing, and 34 more developer resources.'
+  Kita''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, pricing, and 35 more developer resources.'
 plans:
 - name: Kita Plans
   plan_count: 3
@@ -426,9 +431,9 @@ rate_limits:
   slug: kita-rate-limits
 score:
   band: strong
-  composite: 64.8
+  composite: 60.8
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -438,11 +443,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 68.8
+    contract_quality: 63.3
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 21.1
-  previous_composite: 64.8
+  previous_composite: 60.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -458,9 +463,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -492,9 +497,9 @@ tags:
 - Credit Scoring
 - Document Intelligence
 - Document Extraction
-- Fraud Detection
+- Fraud Prevention
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Emerging Markets
 - Loan Origination
 website: https://www.kita.ai/

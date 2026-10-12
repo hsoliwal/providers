@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: JSON REST API (v4) for the OpenX ad server. Sixteen CRUD objects (account, ad, adunit, adunitgroup, comment, creative, deal, floorrule, lineitem, optimization, order, package, paymenthistory, site, si
@@ -327,9 +327,9 @@ graphqls:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openx.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.openx.com over HTTP requiring OAuth.
   name: OpenX MCP Server
-  slug: openx-mcp-server
+  slug: openx
 modified: '2026-08-13'
 name: OpenX
 nav: Providers
@@ -354,7 +354,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/refreshToken
 score:
   band: thin
-  composite: 34.4
+  composite: 36.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 35.0
@@ -366,21 +366,35 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 69.0
-    discoverability: 72.2
+    discoverability: 73.3
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 34.4
+  previous_composite: 36.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: coppa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

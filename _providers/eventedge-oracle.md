@@ -23,41 +23,46 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: Unsigned calldata for the customer's own wallet to send.
   name: EventEdge Oracle Cancellation API
   slug: eventedge-oracle-cancellation-api
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: A single payment to a single recipient.
   name: EventEdge Oracle One-time payments API
   slug: eventedge-oracle-one-time-payments-api
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: Signed once by the customer, charged by your renewal job.
   name: EventEdge Oracle Recurring payments API
   slug: eventedge-oracle-recurring-payments-api
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: A transfer from the merchant's own wallet back to the wallet that paid.
   name: EventEdge Oracle Refunds API
   slug: eventedge-oracle-refunds-api
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: Liveness.
   name: EventEdge Oracle Service API
   slug: eventedge-oracle-service-api
-- baseURL: https://edge.arakelproof.space
+- baseURL: https://api.p2flux.com
   baseurl_source: declared
   description: The Subscriptions API from EventEdge Oracle — 1 operation(s) for subscriptions.
   name: EventEdge Oracle Subscriptions API
   slug: eventedge-oracle-subscriptions-api
 artifact_total: 11
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/eventedge-oracle/refs/heads/main/capabilities/eventedge-oracle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/eventedge-oracle-capability-edges.yml
 - group: agent
   title: ''
   type: MCPServer
@@ -82,7 +87,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: EventEdge Oracle MCP Server
-  slug: eventedge-oracle-mcp-server
+  slug: mcp
 modified: '2026-09-15'
 name: EventEdge Oracle
 nav: Providers
@@ -99,9 +104,9 @@ rate_limits:
   slug: eventedge-oracle-rate-limits
 score:
   band: thin
-  composite: 28.8
+  composite: 27.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -111,11 +116,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 51.6
+    contract_quality: 46.4
     developer_ergonomics: 25.6
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 28.8
+  previous_composite: 27.6
   provenance:
     conformance: first-party
     contracts:
@@ -125,8 +130,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -150,5 +161,6 @@ tags:
 - market-context
 - Decision Support
 - Finance
+- A2A
 website: https://edge.arakelproof.space
 ---

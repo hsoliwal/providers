@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 51.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -275,12 +275,12 @@ layout: provider
 mcp_servers:
 - description: Sponge publishes official, hosted (remote) MCP servers for both the agent Wallet and the merchant Gateway. Wallet servers authenticate with an agent API key (sponge_live_...) for CLI clients, or OAuth
   name: Sponge MCP Server
-  slug: sponge-mcp-server
+  slug: sponge-mcp-yml
 modified: '2026-09-16'
 name: Sponge
 nav: Providers
 network: true
-overview: 'Sponge publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Cards API, Fiat API, and 7 more. Tagged areas include Company, Agent Payments, AI Agents, Wallets, and Cryptocurrency.
+overview: 'Sponge publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Cards API, Fiat API, and 7 more. Tagged areas include Company, Agentic Payments, AI Agents, Wallets, and Cryptocurrency.
 
 
   Sponge''s developer surface includes documentation, getting-started guide, support, signup flow, authentication, CLI, sandbox, and 21 more developer resources.'
@@ -292,7 +292,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 49.3
+  composite: 46.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -304,11 +304,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 52.1
+    contract_quality: 47.0
     developer_ergonomics: 83.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 49.3
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -324,9 +324,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -344,7 +344,7 @@ security:
 slug: sponge
 tags:
 - Company
-- Agent Payments
+- Agentic Payments
 - AI Agents
 - Wallets
 - Cryptocurrency

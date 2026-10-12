@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -68,9 +68,9 @@ description: RedWing Aerospace Laboratories (RedWing Labs, operated by Kitemaps 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redwing-aerospace-laboratories.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.redwinglabs.in over HTTP; 9 tools listed.
   name: RedWing Labs Site MCP (Wix)
-  slug: redwing-labs-site-mcp-wix
+  slug: redwing-labs-site
 modified: '2026-07-21'
 name: RedWing Aerospace Laboratories
 nav: Providers
@@ -82,7 +82,7 @@ overview: 'RedWing Aerospace Laboratories is profiled on the [APIs.io](https://a
 random_paper: 18
 score:
   band: minimal
-  composite: 4.5
+  composite: 5.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -96,7 +96,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -105,17 +105,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 4.5
+  previous_composite: 5.2
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

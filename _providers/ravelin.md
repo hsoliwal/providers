@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -318,14 +318,14 @@ modified: '2026-05-25'
 name: Ravelin
 nav: Providers
 network: true
-overview: 'Ravelin publishes 11 APIs on the [APIs.io](https://apis.io/) network, including 3D Secure API, Authentication API, Checkout API, and 8 more. Tagged areas include Fraud Prevention, Fraud Detection, Chargeback Prevention, Account Takeover, and 3D Secure.
+overview: 'Ravelin publishes 12 APIs on the [APIs.io](https://apis.io/) network, including 3D Secure API, Authentication API, Checkout API, and 9 more. Tagged areas include Fraud Prevention, Chargeback Prevention, Account Takeover, 3D Secure, and Risk Scoring.
 
 
   Ravelin''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, support, engineering blog, and 25 more developer resources.'
 random_paper: 5
 score:
   band: thin
-  composite: 38.5
+  composite: 36.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -337,17 +337,19 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 0.0
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 61.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 38.5
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     contracts:
@@ -360,9 +362,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 35.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -395,13 +397,12 @@ solutions:
   name: 3D Secure and Transaction Optimization
 tags:
 - Fraud Prevention
-- Fraud Detection
 - Chargeback Prevention
 - Account Takeover
 - 3D Secure
 - Risk Scoring
 - Payments
-- Machine-Learning
+- Machine Learning
 use_cases:
 - description: Scoring checkout and transaction events to block fraudulent orders before they ship and reduce card scheme chargebacks.
   name: Online Payment Fraud and Chargeback Prevention

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 2
@@ -85,6 +85,11 @@ collections:
   name: Appfire Worklogs API
   slug: open-appfire-worklogs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/appfire/refs/heads/main/capabilities/appfire-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/appfire-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/appfire/refs/heads/main/mcp/appfire-mcp.yml
   title: ''
@@ -228,16 +233,16 @@ modified: '2026-08-06'
 name: Appfire
 nav: Providers
 network: true
-overview: 'Appfire publishes 4 APIs on the [APIs.io](https://apis.io/) network, including API query methods API, API update methods API, Settings API, and 1 more. Tagged areas include Atlassian, Jira, Confluence, Project Portfolio Management, and Work Management.
+overview: 'Appfire publishes 5 APIs on the [APIs.io](https://apis.io/) network, including API query methods API, API update methods API, Settings API, and 2 more. Tagged areas include Atlassian, Jira, Confluence, Project Portfolio Management, and Work Management.
 
 
-  Appfire''s developer surface includes authentication, documentation, API reference, support, engineering blog, CLI, changelog, and 22 more developer resources.'
+  Appfire''s developer surface includes authentication, documentation, API reference, support, engineering blog, CLI, changelog, and 23 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 42.0
+  composite: 41.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 38.0
     catalog_earned_first_party: 0.0
     catalog_gap: 77.0
@@ -247,11 +252,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 60.4
+    contract_quality: 54.6
     developer_ergonomics: 49.4
-    discoverability: 77.8
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 42.0
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -262,8 +267,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -291,7 +302,7 @@ tags:
 - Work Management
 - Time Tracking
 - OKRs
-- Workflow-Automation
+- Workflow Automation
 - Azure DevOps
 - marketplace-apps
 - Document Workflow

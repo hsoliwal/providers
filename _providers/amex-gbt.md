@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 14
@@ -509,7 +509,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: American Express Global Business Travel MCP Server
-  slug: american-express-global-business-travel-mcp-server
+  slug: amex-gbt-mcp-yml
 modified: '2026-09-16'
 name: American Express Global Business Travel
 nav: Providers
@@ -529,21 +529,21 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 47.0
+  composite: 49.8
   coverage:
     artifact_dirs: 24
-    catalog_earned: 37.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -552,7 +552,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.0
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -563,8 +563,14 @@ score:
       total: 26
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

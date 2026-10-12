@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -54,67 +54,67 @@ apis:
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Activities
-  name: DataCite activities API
+  name: DataCite Activities API
   slug: datacite-activities-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Client Prefixes
-  name: DataCite client-prefixes API
+  name: DataCite Client Prefixes API
   slug: datacite-client-prefixes-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Clients
-  name: DataCite clients API
+  name: DataCite Clients API
   slug: datacite-clients-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Events
-  name: DataCite events API
+  name: DataCite Events API
   slug: datacite-events-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Heartbeat
-  name: DataCite heartbeat API
+  name: DataCite Heartbeat API
   slug: datacite-heartbeat-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Prefixes
-  name: DataCite prefixes API
+  name: DataCite Prefixes API
   slug: datacite-prefixes-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Provider Prefixes
-  name: DataCite provider-prefixes API
+  name: DataCite Provider Prefixes API
   slug: datacite-provider-prefixes-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Providers
-  name: DataCite providers API
+  name: DataCite Providers API
   slug: datacite-providers-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: The publishers API from DataCite — 2 operation(s) for publishers.
-  name: DataCite publishers API
+  name: DataCite Publishers API
   slug: datacite-publishers-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: The report_types API from DataCite — 1 operation(s) for report_types.
-  name: DataCite report_types API
+  name: DataCite Report Types API
   slug: datacite-report-types-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: Reports
-  name: DataCite reports API
+  name: DataCite Reports API
   slug: datacite-reports-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: The repositories API from DataCite — 2 operation(s) for repositories.
-  name: DataCite repositories API
+  name: DataCite Repositories API
   slug: datacite-repositories-api
 - baseURL: https://api.datacite.org
   baseurl_source: declared
   description: The status API from DataCite — 1 operation(s) for status.
-  name: DataCite status API
+  name: DataCite Status API
   slug: datacite-status-api
 - baseURL: https://api.datacite.org/graphql
   baseurl_source: declared
@@ -270,7 +270,7 @@ modified: '2026-06-12'
 name: DataCite
 nav: Providers
 network: true
-overview: 'DataCite publishes 14 APIs on the [APIs.io](https://apis.io/) network, including activities API, client-prefixes API, clients API, and 11 more. Tagged areas include DOI, Persistent Identifiers, Scholarly Metadata, Research Data, and Open Science.
+overview: 'DataCite publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Client Prefixes API, Clients API, and 13 more. Tagged areas include DOI, Persistent Identifiers, Scholarly Metadata, Research Data, and Open Science.
 
 
   The DataCite catalog on APIs.io includes 1 JSON-LD context.
@@ -287,24 +287,24 @@ rate_limits:
   name: Datacite Rate Limits
   slug: datacite-rate-limits
 score:
-  band: developing
-  composite: 41.3
+  band: thin
+  composite: 38.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 72.0
+    catalog_earned: 69.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 45.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 63.6
+    contract_quality: 59.2
     developer_ergonomics: 21.4
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 41.3
+    discoverability: 66.1
+    operational_transparency: 46.8
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     contracts:
@@ -317,9 +317,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -343,5 +343,6 @@ tags:
 - Open Science
 - Linked Data
 - DataCite
+- OAI-PMH
 website: https://datacite.org
 ---

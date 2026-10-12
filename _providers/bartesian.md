@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the Bartesian Shopify storefront. The store publishes a Universal Commerce Protocol merchant profile at https://bartesian.com/.well-known/ucp declaring UCP version
@@ -98,9 +98,9 @@ description: 'Bartesian is a Chicago-based consumer appliance company founded in
 image: https://avatars.githubusercontent.com/u/220963642?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at bartesian.com over HTTP; 13 tools listed.
   name: Bartesian MCP Server
-  slug: bartesian-mcp-server
+  slug: universal-commerce
 modified: '2026-08-06'
 name: Bartesian
 nav: Providers
@@ -116,8 +116,8 @@ scopes:
   slug: bartesian-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.1
+  band: thin
+  composite: 27.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -131,20 +131,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.1
+  previous_composite: 27.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

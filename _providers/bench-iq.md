@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bench-iq/refs/heads/main/security/bench-iq-vulnerability-disclosure.yml
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Bench IQ is a legal technology company building an AI-powered judicial intelligence platform that analyzes how individual judges reason and rule. Rather than limiting analysis to the roughly 3% of matters that produce written opinions, Bench IQ studies the reasoning behind all of a judge's rulings so litigators can anticipate decisions, craft stronger arguments, and shape case strategy. Founded by the team behind ROSS Intelligence — CEO Jimoh Ovbiagele and CTO Maxim Isakov — together with former Kirkland & Ellis restructuring partner Jeffrey Gettleman, the company says four of the top five AmLaw 100 firms rely on its analysis. It is backed by Battery Ventures, Inovia Capital, and Haystack, along with leading law firms including Wilson Sonsini Goodrich & Rosati, Fenwick & West, and Cooley.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bench-iq.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.benchiq.com over HTTP.
+  name: Bench IQ MCP Server
+  slug: bench-iq
 modified: '2026-07-18'
 name: Bench IQ
 nav: Providers
@@ -91,7 +95,7 @@ overview: Bench IQ is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 5
 score:
   band: emerging
-  composite: 11.4
+  composite: 12.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -105,13 +109,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 52.5
     operational_transparency: 10.5
-  previous_composite: 11.4
+  previous_composite: 12.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

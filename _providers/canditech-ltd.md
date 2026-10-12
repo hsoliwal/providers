@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -96,17 +96,17 @@ description: Canditech is a skills-assessment and job-simulation platform that h
 image: https://site-assets.canditech.io/wp-content/uploads/2023/08/ogimage.jpeg
 layout: provider
 modified: '2026-07-18'
-name: Canditech Ltd.
+name: Canditech
 nav: Providers
 network: true
-overview: 'Canditech Ltd. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Hiring, Skills Assessment, and Talent Assessment.
+overview: 'Canditech is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Hiring, Skills Assessment, and Talent Assessment.
 
 
-  Canditech Ltd.''s developer surface includes documentation, support, pricing, engineering blog, and 9 more developer resources.'
+  Canditech''s developer surface includes documentation, support, pricing, engineering blog, and 9 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 17.8
+  composite: 17.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -120,13 +120,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 17.8
+  previous_composite: 17.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

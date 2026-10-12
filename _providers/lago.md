@@ -13,10 +13,9 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -35,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-09-20'
+  score: 38.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 54
   human_in_the_loop: 2
@@ -131,7 +130,7 @@ apis:
   description: Everything about Webhooks
   name: Lago Webhooks API
   slug: lago-webhooks-api
-artifact_total: 44
+artifact_total: 45
 collections:
 - collection_type: open
   name: API Collection
@@ -191,6 +190,11 @@ collections:
   name: Lago API documentation
   slug: open-lago
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/capabilities/lago-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lago-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lago/refs/heads/main/agentic-access/lago-agentic-access.yml
   title: ''
@@ -252,14 +256,18 @@ finops:
   slug: lago-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lago.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at getlago.com over HTTP; 2 tools listed.
+  name: Lago MCP Server
+  slug: lago
 modified: '2026-05-19'
 name: Lago
 nav: Providers
 network: true
-overview: 'Lago publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Add_ons API, Analytics API, Billable_metrics API, and 14 more. Tagged areas include Billing, Metering, Open-Source, and Usage-Based.
+overview: 'Lago publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Add_ons API, Analytics API, Billable_metrics API, and 14 more. Tagged areas include Billing, Metering, Open Source, and Usage-Based.
 
 
-  Lago''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  Lago''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Lago Plans Pricing
   plan_count: 3
@@ -271,7 +279,7 @@ rate_limits:
   slug: lago-rate-limits
 score:
   band: thin
-  composite: 34.9
+  composite: 34.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 31.0
@@ -283,11 +291,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 62.8
-    developer_ergonomics: 31.0
-    discoverability: 48.1
+    contract_quality: 56.8
+    developer_ergonomics: 30.2
+    discoverability: 50.0
     operational_transparency: 10.5
-  previous_composite: 34.9
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     contracts:
@@ -296,8 +304,14 @@ score:
       marker_coverage: 0.0
       total: 17
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -324,7 +338,7 @@ slug: lago
 tags:
 - Billing
 - Metering
-- Open-Source
+- Open Source
 - Usage-Based
 website: https://getlago.com/
 ---

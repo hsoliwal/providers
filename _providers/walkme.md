@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: WalkMe Public APIs provide programmatic access to insights data, account/system metadata, content publishing, and integration with the WalkMe digital adoption platform.
@@ -113,7 +113,7 @@ rate_limits:
   slug: walkme-rate-limits
 score:
   band: emerging
-  composite: 13.8
+  composite: 13.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 39.0
@@ -127,11 +127,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 13.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

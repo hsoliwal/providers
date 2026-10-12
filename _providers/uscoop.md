@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Universal Commerce Protocol shopping service exposed over MCP by the tnuck.com Shopify storefront - catalog search, cart, checkout, fulfillment, discounts, and orders, with buyer-approved payment. Dis
@@ -114,9 +114,9 @@ description: uScoop appears in the 500 Global portfolio mapped to the website tn
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/uscoop.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at tnuck.com over HTTP; 5 tools listed.
   name: uScoop MCP Server
-  slug: uscoop-mcp-server
+  slug: tnuck-ucp-shopping
 modified: '2026-07-21'
 name: uScoop
 nav: Providers
@@ -133,7 +133,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.4
+  composite: 24.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -147,15 +147,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 21.4
+  previous_composite: 24.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

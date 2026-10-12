@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -274,7 +274,7 @@ modified: '2026-05-19'
 name: SWIFT
 nav: Providers
 network: true
-overview: 'SWIFT publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Account Numbers API, BBANs API, BICs API, and 5 more. Tagged areas include Swift, Banking, Cross-Border Payments, Financial Messaging, and Financial-Services.
+overview: 'SWIFT publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Account Numbers API, BBANs API, BICs API, and 8 more. Tagged areas include Banking, Cross-Border Payments, Financial Messaging, Financial Services, and GPI.
 
 
   The SWIFT catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -319,7 +319,7 @@ scopes:
   summary_line: 2 scopes · password
 score:
   band: thin
-  composite: 38.4
+  composite: 35.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 51.5
@@ -331,11 +331,11 @@ score:
   facets:
     access_clarity: 30.3
     contract_governance: 13.6
-    contract_quality: 59.2
+    contract_quality: 53.8
     developer_ergonomics: 32.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 38.4
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -348,9 +348,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 48.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -368,13 +368,13 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: swift
 tags:
-- Swift
 - Banking
 - Cross-Border Payments
 - Financial Messaging
-- Financial-Services
+- Financial Services
 - GPI
 - ISO 20022
 - Payments
+- SWIFT
 website: https://www.swift.com
 ---

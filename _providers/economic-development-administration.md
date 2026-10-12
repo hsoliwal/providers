@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -136,7 +136,7 @@ modified: '2026-09-06'
 name: Economic Development Administration
 nav: Providers
 network: true
-overview: 'Economic Development Administration is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Economic Development, Federal-Government, Grants, Public Sector, and Regional Development.
+overview: 'Economic Development Administration is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Economic Development, Federal Government, Grants, Public Sector, and Regional Development.
 
 
   Economic Development Administration''s developer surface includes YouTube channel, engineering blog, support, authentication, and 13 more developer resources.'
@@ -153,10 +153,10 @@ scopes:
 - name: Economic Development Administration Scopes
   scope_count: 36
   slug: economic-development-administration-scopes
-  summary_line: 36 scopes
+  summary_line: 36 scopes · authorization_code
 score:
   band: emerging
-  composite: 21.7
+  composite: 18.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -170,9 +170,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 21.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 18.2
   provenance:
     conformance: first-party
   regulatory:
@@ -180,9 +185,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,7 +206,7 @@ security:
 slug: economic-development-administration
 tags:
 - Economic Development
-- Federal-Government
+- Federal Government
 - Grants
 - Public Sector
 - Regional Development

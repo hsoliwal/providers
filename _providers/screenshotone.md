@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.0
-  scored_at: '2026-09-20'
+  score: 53.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -61,7 +61,7 @@ apis:
   description: The Screenshots API from ScreenshotOne — 1 operation(s) for screenshots.
   name: ScreenshotOne Screenshots API
   slug: screenshotone-screenshots-api
-artifact_total: 16
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -138,6 +138,9 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.screenshotone.com over HTTP.
+  name: ScreenshotOne MCP Server
+  slug: screenshotone
 modified: '2026-05-19'
 name: ScreenshotOne
 nav: Providers
@@ -157,7 +160,7 @@ rate_limits:
   slug: screenshotone-rate-limits
 score:
   band: thin
-  composite: 33.3
+  composite: 31.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 39.0
@@ -169,11 +172,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 51.0
-    developer_ergonomics: 42.9
-    discoverability: 55.6
+    contract_quality: 45.9
+    developer_ergonomics: 42.1
+    discoverability: 56.7
     operational_transparency: 10.5
-  previous_composite: 33.3
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     contracts:
@@ -182,8 +185,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

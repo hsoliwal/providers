@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'The v1 Import API lets a customer push their own data into a SegMetrics integration — contacts (with UTM attribution, geo, affiliate and custom fields), tags, orders/invoices, subscriptions, products '
@@ -195,7 +195,7 @@ description: 'SegMetrics is a marketing attribution and revenue analytics platfo
 image: https://segmetrics.io/wp-content/uploads/2016/02/cropped-icon-lg-300x300.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.segmetrics.io over HTTP; 11 tools listed.
   name: SegMetrics MCP Server
   slug: segmetrics-mcp-server
 modified: '2026-08-12'
@@ -217,7 +217,7 @@ rate_limits:
   slug: segmetrics-rate-limits
 score:
   band: developing
-  composite: 43.2
+  composite: 45.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 52.0
@@ -231,14 +231,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 43.2
+  previous_composite: 45.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

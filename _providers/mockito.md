@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The core Mockito mocking framework for creating mock objects, stubbing methods, verifying invocations, and writing expressive unit tests in Java. Mockito Core is consumed as a Java library (Maven / Gr
@@ -94,7 +94,7 @@ modified: '2026-04-28'
 name: Mockito
 nav: Providers
 network: true
-overview: 'Mockito publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Java, Mocking, Testing, Unit Testing, and Open-Source.
+overview: 'Mockito publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Java, Mocking, Testing, Unit Testing, and Open Source.
 
 
   Mockito''s developer surface includes getting-started guide, release notes, and 8 more developer resources.'
@@ -109,7 +109,7 @@ rate_limits:
   slug: mockito-rate-limits
 score:
   band: emerging
-  composite: 17.0
+  composite: 22.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -123,11 +123,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 15.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 36.8
-  previous_composite: 17.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  open_source:
+    applies: true
+    score: 85.0
+  previous_composite: 22.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,7 +154,7 @@ tags:
 - Mocking
 - Testing
 - Unit Testing
-- Open-Source
+- Open Source
 - Framework
 website: https://site.mockito.org
 ---

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://spectrumoutage.us/api/v1
@@ -209,7 +209,7 @@ rate_limits:
   slug: spectrumoutage-api-rate-limits
 score:
   band: developing
-  composite: 50.4
+  composite: 47.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 53.0
@@ -221,11 +221,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 50.4
+  previous_composite: 47.6
   provenance:
     conformance: derived
     contracts:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -267,7 +267,7 @@ tags:
 - Monitoring
 - Status
 - ZIP Code
-- Telecom
+- Telecommunications
 - ISP
 - Network Status
 - Crowdsourced

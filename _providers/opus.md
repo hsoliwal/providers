@@ -24,8 +24,8 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
-    event_surface_described: true
+    error_semantics: derived
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 56.9
-  scored_at: '2026-09-20'
+  score: 54.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 13
@@ -49,27 +49,27 @@ apis:
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The brand-templates API from Opus — 1 operation(s) for brand-templates.
-  name: Opus brand-templates API
+  name: Opus Brand Templates API
   slug: opus-brand-templates-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The censor-jobs API from Opus — 2 operation(s) for censor-jobs.
-  name: Opus censor-jobs API
+  name: Opus Censor Jobs API
   slug: opus-censor-jobs-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The clip-project API from Opus — 3 operation(s) for clip-project.
-  name: Opus clip-project API
+  name: Opus Clip Project API
   slug: opus-clip-project-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The collection API from Opus — 3 operation(s) for collection.
-  name: Opus collection API
+  name: Opus Collection API
   slug: opus-collection-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The collection-content API from Opus — 2 operation(s) for collection-content.
-  name: Opus collection-content API
+  name: Opus Collection Content API
   slug: opus-collection-content-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
@@ -79,17 +79,17 @@ apis:
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The generative-jobs API from Opus — 2 operation(s) for generative-jobs.
-  name: Opus generative-jobs API
+  name: Opus Generative Jobs API
   slug: opus-generative-jobs-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The social-posting API from Opus — 6 operation(s) for social-posting.
-  name: Opus social-posting API
+  name: Opus Social Posting API
   slug: opus-social-posting-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The transcripts API from Opus — 1 operation(s) for transcripts.
-  name: Opus transcripts API
+  name: Opus Transcripts API
   slug: opus-transcripts-api
 arazzos:
 - description: Submit a long-form video, wait for clipping, list clips, and export a collection.
@@ -320,21 +320,21 @@ description: OpusClip (Opus) is an AI video platform that turns long-form videos
 image: https://cdn.prod.website-files.com/6388604483b03a9ecb34d695/6435197bfb1d6e486e04c37b_webclip.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.opus.pro over HTTP requiring OAuth.
   name: Opus MCP Server
-  slug: opus-mcp-server
+  slug: opusclip
 modified: '2026-07-20'
 name: Opus
 nav: Providers
 network: true
-overview: 'Opus publishes 9 APIs on the [APIs.io](https://apis.io/) network, including brand-templates API, censor-jobs API, clip-project API, and 6 more. Tagged areas include Company, Frontier Tech, Video, Artificial Intelligence, and Video Editing.
+overview: 'Opus publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Brand Templates API, Censor Jobs API, Clip Project API, and 6 more. Tagged areas include Company, Frontier Tech, Video, Artificial Intelligence, and Video Editing.
 
 
   Opus'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 47.1
+  composite: 47.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -346,11 +346,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 48.9
+    contract_quality: 44.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 47.1
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -361,8 +361,18 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -394,7 +404,7 @@ tags:
 - Video Editing
 - Short-Form Video
 - Content Creation
-- Social-Media
+- Social Media
 - Media
 - Agents
 website: https://www.opus.pro/

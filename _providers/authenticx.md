@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -385,8 +385,8 @@ scopes:
   slug: authenticx-scopes
   summary_line: 1 scope · clientCredentials
 score:
-  band: strong
-  composite: 54.7
+  band: developing
+  composite: 50.7
   coverage:
     artifact_dirs: 25
     catalog_earned: 40.0
@@ -398,11 +398,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 67.4
+    contract_quality: 62.1
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 54.7
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -418,9 +418,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

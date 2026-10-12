@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -116,6 +116,10 @@ created: '2026-07-17'
 description: Akto is a proactive API security platform that discovers, tests, and protects APIs and AI systems across an organization's infrastructure. Its open-source core (MIT, Java) delivers automated API discovery, API security posture management, and dynamic API security testing (DAST) in CI/CD, backed by a community test library of 1000+ tests covering the OWASP API Security Top 10 and HackerOne top vulnerabilities. Traffic is ingested from eBPF, Kubernetes, API gateways (Envoy, NGINX, Istio, Kong, Apigee, MuleSoft and more), and cloud mirroring, and can be deployed self-hosted in ~60 seconds or as SaaS. Akto has expanded into agentic AI security with Atlas (shadow-AI discovery for employee-facing endpoints) and Argus (governance and red-teaming for homegrown AI, MCP tools, and LLMs), adding runtime guardrails and human-in-the-loop testing. Recognized by Gartner in the API and AI-agent protection markets and backed by Accel.
 image: https://www.akto.io/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.akto.io over HTTP.
+  name: Akto MCP Server
+  slug: akto
 modified: '2026-07-17'
 name: Akto
 nav: Providers
@@ -127,7 +131,7 @@ overview: 'Akto is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 13
 score:
   band: thin
-  composite: 27.6
+  composite: 28.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -141,13 +145,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 27.6
+  previous_composite: 28.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,7 +183,7 @@ tags:
 - API Discovery
 - AI Security
 - MCP Security
-- Open-Source
+- Open Source
 - DevSecOps
 - Governance
 website: https://www.akto.io/

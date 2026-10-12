@@ -21,9 +21,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.6
-  scored_at: '2026-09-20'
+  score: 17.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://test.ipdb.io:9984
@@ -189,7 +189,7 @@ overview: 'Bigchaindb publishes 7 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 7
 score:
   band: thin
-  composite: 32.0
+  composite: 32.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -203,12 +203,12 @@ score:
     contract_governance: 4.5
     contract_quality: 11.0
     developer_ergonomics: 58.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 32.0
+  previous_composite: 32.2
   provenance:
     conformance: derived
     contracts:
@@ -217,8 +217,14 @@ score:
       marker_coverage: 100.0
       total: 7
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

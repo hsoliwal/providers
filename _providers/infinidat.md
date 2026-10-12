@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - baseURL: https://{infinibox_host}/api/rest
@@ -230,7 +230,7 @@ overview: 'Infinidat publishes 8 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 4
 score:
   band: thin
-  composite: 32.7
+  composite: 33.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -243,10 +243,10 @@ score:
     access_clarity: 21.1
     contract_governance: 4.5
     contract_quality: 20.6
-    developer_ergonomics: 68.5
-    discoverability: 74.1
+    developer_ergonomics: 68.0
+    discoverability: 71.4
     operational_transparency: 18.4
-  previous_composite: 32.7
+  previous_composite: 33.7
   provenance:
     conformance: derived
     contracts:
@@ -256,8 +256,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

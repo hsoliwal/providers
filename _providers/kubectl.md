@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: kubectl is the official command-line tool for Kubernetes, used to deploy applications, inspect resources, and manage clusters via the Kubernetes API.
@@ -110,7 +110,7 @@ rate_limits:
   slug: kubectl-rate-limits
 score:
   band: emerging
-  composite: 13.9
+  composite: 13.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 31.0
@@ -124,14 +124,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 13.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Hosted remote MCP server at https://mcp.samaya.ai/mcp that connects ChatGPT, Claude and other AI applications to Samaya''s expert financial research capabilities. Live and reachable: an anonymous tools'
@@ -197,17 +197,17 @@ description: 'Samaya AI builds domain-trained "Expert AI Agents" for financial s
 image: https://cdn.prod.website-files.com/68d859e7b33c148e692a2d17/68e48e3a26edcad357d09fa9_open-graph-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.samaya.ai over streamable HTTP requiring OAuth.
   name: Samaya MCP Server
   slug: samaya-mcp-server
 - description: ''
   name: Samaya AI MCP Server
-  slug: samaya-ai-mcp-server
+  slug: mcp
 modified: '2026-08-26'
 name: Samaya AI
 nav: Providers
 network: true
-overview: 'Samaya AI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Organizations API, Teams API, and Users API. Tagged areas include Artificial Intelligence, Financial-Services, Investment Research, AI Agents, and MCP.
+overview: 'Samaya AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Organizations API, Teams API, Users API, and 2 more. Tagged areas include Artificial Intelligence, Financial Services, Investment Research, AI Agents, and MCP.
 
 
   Samaya AI''s developer surface includes API reference, engineering blog, signup flow, support, authentication, and 23 more developer resources.'
@@ -227,7 +227,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.7
+  composite: 35.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -239,11 +239,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 33.7
+  previous_composite: 35.0
   provenance:
     conformance: first-party
     contracts:
@@ -253,8 +253,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -275,11 +281,11 @@ security:
 slug: samaya-ai
 tags:
 - Artificial Intelligence
-- Financial-Services
+- Financial Services
 - Investment Research
 - AI Agents
 - MCP
-- agent-native
+- Agent-Native
 - Capital Markets
 - Enterprise Search
 - Retrieval

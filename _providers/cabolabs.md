@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Atomik is CaboLabs' standardized Clinical Data Repository and Demographic Data Repository. Its REST API implements the official openEHR ITS REST specification Release 1.0.2 for EHR, EHR_STATUS, CONTRI
@@ -164,7 +164,7 @@ examples:
 image: https://cabolabs.com/images/cabolabs_vertical_square_web_text.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 7 tools listed.
   name: openehr-cli MCP server
   slug: openehr-cli-mcp-server
 modified: '2026-09-02'
@@ -186,7 +186,7 @@ rate_limits:
   slug: cabolabs-rate-limits
 score:
   band: thin
-  composite: 38.4
+  composite: 37.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -198,11 +198,16 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 38.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - latin-america
+  previous_composite: 37.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -211,9 +216,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

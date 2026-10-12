@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -117,7 +117,7 @@ modified: '2026-05-19'
 name: KVdb
 nav: Providers
 network: true
-overview: 'KVdb publishes 3 APIs on the [APIs.io](https://apis.io/) network: Buckets API, Keys API, and Scripts API. Tagged areas include Database, Key-Value, NoSQL, and Serverless.
+overview: 'KVdb publishes 3 APIs on the [APIs.io](https://apis.io/) network: Buckets API, Keys API, and Scripts API. Tagged areas include Database, Key-Value Store, NoSQL, and Serverless.
 
 
   KVdb''s developer surface includes authentication, documentation, engineering blog, and 3 more developer resources.'
@@ -132,7 +132,7 @@ rate_limits:
   slug: kvdb-rate-limits
 score:
   band: thin
-  composite: 28.7
+  composite: 26.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 36.0
@@ -144,11 +144,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 35.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 28.7
+  previous_composite: 26.6
   provenance:
     agentic_access: derived
     contracts:
@@ -156,8 +156,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -175,7 +181,7 @@ security:
 slug: kvdb
 tags:
 - Database
-- Key-Value
+- Key-Value Store
 - NoSQL
 - Serverless
 website: https://kvdb.io/

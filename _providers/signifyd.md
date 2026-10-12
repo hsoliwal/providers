@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Submit checkout and sale events to Signifyd's Commerce Protection Platform for real-time fraud and chargeback risk evaluation. The Checkout flow supports pre-authorization screening, while the Sale fl
@@ -192,14 +192,14 @@ modified: '2026-05-25'
 name: Signifyd
 nav: Providers
 network: true
-overview: 'Signifyd publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud, Fraud Prevention, Chargebacks, E-Commerce, and Payments.
+overview: 'Signifyd publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fraud Prevention, Chargebacks, E-Commerce, Payments, and Risk Management.
 
 
   Signifyd''s developer surface includes developer portal, documentation, getting-started guide, authentication, pricing, engineering blog, support, and 19 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 26.1
+  composite: 25.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -213,17 +213,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 26.1
+  previous_composite: 25.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -241,13 +241,12 @@ security:
   summary_line: security.txt · contact published
 slug: signifyd
 tags:
-- Fraud
 - Fraud Prevention
 - Chargebacks
 - E-Commerce
 - Payments
-- Risk
-- Machine-Learning
+- Risk Management
+- Machine Learning
 - Commerce Protection
 - Account Protection
 - Returns

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-09-20'
+  score: 25.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 3
@@ -133,6 +133,11 @@ collections:
   name: Artifact Hub API
   slug: open-artifact-hub
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/artifact-hub/refs/heads/main/capabilities/artifact-hub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/artifact-hub-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -341,13 +346,13 @@ modified: '2026-09-04'
 name: Artifact Hub
 nav: Providers
 network: true
-overview: 'Artifact Hub publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Organizations API, Packages API, Repositories API, and 6 more. Tagged areas include Cloud-Native, CNCF, Helm Charts, Package Registry, and Discovery.
+overview: 'Artifact Hub publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Organizations API, Packages API, Repositories API, and 7 more. Tagged areas include Cloud-Native, CNCF, Helm Charts, Package Registry, and Discovery.
 
 
   The Artifact Hub catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Artifact Hub''s developer surface includes authentication, documentation, developer portal, release notes, CLI, changelog, sandbox, and 31 more developer resources.'
+  Artifact Hub''s developer surface includes authentication, documentation, developer portal, release notes, CLI, changelog, sandbox, and 32 more developer resources.'
 plans:
 - name: Artifact Hub Plans Pricing
   plan_count: 0
@@ -359,9 +364,9 @@ rate_limits:
   slug: artifact-hub-rate-limits
 score:
   band: developing
-  composite: 49.4
+  composite: 50.4
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -371,14 +376,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 57.5
+    contract_quality: 52.8
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 49.4
+  previous_composite: 50.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -389,8 +394,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -416,7 +427,7 @@ tags:
 - Helm Charts
 - Package Registry
 - Discovery
-- Open-Source
+- Open Source
 use_cases:
 - description: Platform engineers discover and evaluate Helm charts across multiple repositories from a single searchable interface with version history and security report data.
   name: Helm Chart Discovery

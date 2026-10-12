@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for comparing carrier rates, creating shipments and shipping labels, and tracking parcels across Latin American carriers. Live, authenticated host at api.mienvio.mx/v2.
   name: Mienvío Shipping API
   slug: mienvío-shipping-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -87,6 +87,10 @@ created: '2026-07-17'
 description: Mienvío is a Mexican logistics control-tower platform that unifies multiple parcel carriers behind a single multi-carrier shipping API and dashboard for e-commerce, retail, marketplace, and fintech shippers across Latin America. It compares carrier rates, automates routing by cost, SLA, and coverage zone, generates shipping labels, and provides real-time tracking, delivery-incident management, and post-purchase customer notifications. Merchants integrate through the REST API (api.mienvio.mx/v2) or prebuilt Shopify and WooCommerce connectors, shipping nationally, internationally, and locally across Mexico, Colombia, Chile, Costa Rica, Peru, Guatemala, and El Salvador.
 image: https://cdn.prod.website-files.com/65b146ad7d71aced5d8ce108/66215bcd108d7fa4e58d0d3b_icono-256.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.mienvio.mx over HTTP.
+  name: Mienvío MCP Server
+  slug: mienv-o
 modified: '2026-07-20'
 name: Mienvío
 nav: Providers
@@ -98,7 +102,7 @@ overview: 'Mienvío publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 17
 score:
   band: emerging
-  composite: 12.5
+  composite: 12.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -112,7 +116,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -121,7 +125,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 12.5
+  previous_composite: 12.9
   provenance:
     mcp: first-party
   regulatory:
@@ -129,9 +133,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 13.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

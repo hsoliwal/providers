@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -219,7 +219,7 @@ modified: '2026-07-25'
 name: Chief Financial Officers Council
 nav: Providers
 network: true
-overview: 'Chief Financial Officers Council publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Agencies API, Awards API, Downloads API, and 5 more. Tagged areas include Federal Financial Management, Federal-Government, Finance, Government, and OMB.
+overview: 'Chief Financial Officers Council publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Agencies API, Awards API, Downloads API, and 8 more. Tagged areas include Federal Financial Management, Federal Government, Finance, Government, and OMB.
 
 
   Chief Financial Officers Council''s developer surface includes product news and 17 more developer resources.'
@@ -234,7 +234,7 @@ rate_limits:
   slug: chief-financial-officers-council-rate-limits
 score:
   band: emerging
-  composite: 22.7
+  composite: 21.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 41.0
@@ -246,11 +246,16 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 7.9
-  previous_composite: 22.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 21.7
   provenance:
     agentic_access: derived
     contracts:
@@ -263,9 +268,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 14.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -279,7 +284,7 @@ security:
 slug: chief-financial-officers-council
 tags:
 - Federal Financial Management
-- Federal-Government
+- Federal Government
 - Finance
 - Government
 - OMB

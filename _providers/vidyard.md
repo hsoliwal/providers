@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Vidyard Dashboard API provides full CRUD access to your Vidyard account assets including players, videos, chapters, organizations, teams, users, roles, events, campaigns, tags, webhooks, embeds, a
@@ -253,7 +253,7 @@ modified: '2026-08-13'
 name: Vidyard
 nav: Providers
 network: true
-overview: 'Vidyard publishes 1 API on the [APIs.io](https://apis.io/) network: Analytics Webhook API. Tagged areas include Video, Video Platform, Video Analytics, Video Sharing, and Sales Video.
+overview: 'Vidyard publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Analytics Webhook API, and 2 more. Tagged areas include Video, Video Platform, Video Analytics, Video Sharing, and Sales Video.
 
 
   The Vidyard catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 JSON-LD context.
@@ -271,7 +271,7 @@ rate_limits:
   slug: vidyard-rate-limits
 score:
   band: exemplar
-  composite: 69.4
+  composite: 71.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 78.0
@@ -283,16 +283,26 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 53.2
     developer_ergonomics: 76.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 76.3
-  previous_composite: 69.4
+  previous_composite: 71.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -327,5 +337,6 @@ tags:
 - Marketing
 - AI Video
 - Webhook
+- A2A
 website: https://www.vidyard.com/
 ---

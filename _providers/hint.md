@@ -26,8 +26,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the drinkhint.com storefront. Discovery is published at https://www.drinkhint.com/.well-known/ucp (Universal Commerce Protocol merchant profile, versions 2026-04-0
@@ -152,7 +152,7 @@ description: 'Hint Inc. is a San Francisco based beverage company founded in 200
 image: https://www.drinkhint.com/cdn/shop/files/Logo_Hint-Wordmark-Droplet-Secondary-2_Color.png?v=1762813167
 layout: provider
 mcp_servers:
-- description: ''
+- description: drinkhint.com serves a live Model Context Protocol endpoint for agent-driven commerce against Hint's own product catalog. It is reachable anonymously — an unauthenticated POST of {"jsonrpc":"2.0","id"
   name: Hint Storefront Agentic Commerce MCP
   slug: hint-storefront-agentic-commerce-mcp
 modified: '2026-08-22'
@@ -174,12 +174,12 @@ rate_limits:
   slug: hint-rate-limits
 scopes:
 - name: Hint Scopes
-  scope_count: 0
+  scope_count: 4
   slug: hint-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: emerging
-  composite: 22.7
+  composite: 25.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -193,15 +193,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.7
+  previous_composite: 25.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

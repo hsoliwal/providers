@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -71,12 +71,12 @@ apis:
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
   description: The change API from Propel Software (Propel PLM) — 3 operation(s) for change.
-  name: Propel Software (Propel PLM) change API
+  name: Propel Software (Propel PLM) Change API
   slug: propelplm-change-api
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
   description: The channels API from Propel Software (Propel PLM) — 3 operation(s) for channels.
-  name: Propel Software (Propel PLM) channels API
+  name: Propel Software (Propel PLM) Channels API
   slug: propelplm-channels-api
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
@@ -101,17 +101,17 @@ apis:
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
   description: The markup API from Propel Software (Propel PLM) — 1 operation(s) for markup.
-  name: Propel Software (Propel PLM) markup API
+  name: Propel Software (Propel PLM) Markup API
   slug: propelplm-markup-api
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
   description: The products API from Propel Software (Propel PLM) — 5 operation(s) for products.
-  name: Propel Software (Propel PLM) products API
+  name: Propel Software (Propel PLM) Products API
   slug: propelplm-products-api
 - baseURL: https://na85.salesforce.com/services/apexrest/PDLM/api
   baseurl_source: declared
   description: The variants API from Propel Software (Propel PLM) — 4 operation(s) for variants.
-  name: Propel Software (Propel PLM) variants API
+  name: Propel Software (Propel PLM) Variants API
   slug: propelplm-variants-api
 artifact_total: 36
 asyncapis:
@@ -168,6 +168,11 @@ collections:
   name: Get Bom Assembly variants API
   slug: open-propelplm-variants-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/propelplm/refs/heads/main/capabilities/propelplm-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/propelplm-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/propelplm/refs/heads/main/agentic-access/propelplm-agentic-access.yml
   title: ''
@@ -333,7 +338,7 @@ overview: 'Propel Software (Propel PLM) publishes 14 APIs on the [APIs.io](https
   The Propel Software (Propel PLM) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Propel Software (Propel PLM)''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 26 more developer resources.'
+  Propel Software (Propel PLM)''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 27 more developer resources.'
 random_paper: 19
 scopes:
 - name: Propelplm Scopes
@@ -342,9 +347,9 @@ scopes:
   summary_line: 4 scopes · implicit/authorizationCode
 score:
   band: strong
-  composite: 55.7
+  composite: 57.7
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -354,11 +359,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 59.1
+    contract_quality: 54.1
     developer_ergonomics: 70.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 55.7
+  previous_composite: 57.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -369,8 +374,20 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -113,6 +113,11 @@ collections:
   name: Bitwarden Public API
   slug: open-bitwarden-public-swagger
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bitwarden/refs/heads/main/capabilities/bitwarden-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bitwarden-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/bitwarden/refs/heads/main/agentic-access/bitwarden-agentic-access.yml
   title: ''
@@ -189,10 +194,10 @@ modified: '2026-05-19'
 name: Bitwarden
 nav: Providers
 network: true
-overview: 'Bitwarden publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Events API, Groups API, and 3 more. Tagged areas include Security, Password Manager, Open-Source, Vault, and Identity.
+overview: 'Bitwarden publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Events API, Groups API, and 7 more. Tagged areas include Security, Password Manager, Open Source, Vault, and Identity.
 
 
-  Bitwarden''s developer surface includes authentication, documentation, API reference, engineering blog, and 10 more developer resources.'
+  Bitwarden''s developer surface includes authentication, documentation, API reference, engineering blog, and 11 more developer resources.'
 plans:
 - name: Bitwarden Plans Pricing
   plan_count: 6
@@ -209,9 +214,9 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: thin
-  composite: 34.7
+  composite: 34.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -221,11 +226,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 57.7
+    contract_quality: 52.3
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 34.7
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -233,8 +238,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -257,7 +268,7 @@ slug: bitwarden
 tags:
 - Security
 - Password Manager
-- Open-Source
+- Open Source
 - Vault
 - Identity
 - SCIM

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - baseURL: https://api.talkwalker.com
@@ -98,6 +98,11 @@ apis:
   slug: talkwalker-topic-api-api
 artifact_total: 17
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/talkwalker/refs/heads/main/capabilities/talkwalker-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/talkwalker-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/talkwalker/refs/heads/main/overlays/talkwalker-search-overlay.yaml
   title: ''
@@ -294,7 +299,7 @@ network: true
 overview: 'Talkwalker publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Image API, Modify documents API, Resources API, and 9 more. Tagged areas include Social Media Analytics, Social Listening, Brand Monitoring, Sentiment Analysis, and Media Monitoring.
 
 
-  Talkwalker''s developer surface includes authentication, documentation, engineering blog, pricing, API reference, getting-started guide, support, and 32 more developer resources.'
+  Talkwalker''s developer surface includes authentication, documentation, engineering blog, pricing, API reference, getting-started guide, support, and 33 more developer resources.'
 plans:
 - name: Talkwalker Plans Pricing
   plan_count: 3
@@ -306,9 +311,9 @@ rate_limits:
   slug: talkwalker-rate-limits
 score:
   band: strong
-  composite: 54.8
+  composite: 54.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 67.0
     catalog_earned_first_party: 24.0
     catalog_gap: 48.0
@@ -318,11 +323,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 44.7
-  previous_composite: 54.8
+  previous_composite: 54.7
   provenance:
     conformance: derived
     contracts:
@@ -332,8 +337,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

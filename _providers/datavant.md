@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 2
@@ -315,7 +315,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 61.3
+  composite: 56.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -327,9 +327,9 @@ score:
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
-    contract_quality: 55.6
+    contract_quality: 50.3
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -338,7 +338,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 61.3
+  previous_composite: 56.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -354,9 +354,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 73.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

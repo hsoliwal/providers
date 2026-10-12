@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Real-time account and balance retrieval across fiat, digital assets and traditional securities held at Sygnum, with role-based permissions, exposed to B2B partners as REST.
@@ -265,12 +265,12 @@ rate_limits:
   slug: sygnum-rate-limits
 scopes:
 - name: Sygnum Scopes
-  scope_count: 0
+  scope_count: 14
   slug: sygnum-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: developing
-  composite: 53.4
+  composite: 49.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -282,9 +282,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -296,7 +296,7 @@ score:
     - dach
     - europe
     - southeast-asia
-  previous_composite: 53.4
+  previous_composite: 49.8
   provenance:
     conformance: first-party
     mcp: first-party
@@ -305,9 +305,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 74.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -339,7 +339,7 @@ tags:
 - Tokenization
 - Settlement
 - Market Data
-- Financial-Services
+- Financial Services
 - Switzerland
 - Singapore
 - B2B

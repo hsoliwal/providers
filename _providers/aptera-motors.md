@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of Aptera Motors' branded merchandise storefront at shop.aptera.us. It is a Model Context Protocol server (protocol 2025-06-18) answering anonymously at /api/mcp with
@@ -152,9 +152,9 @@ description: 'Aptera Motors Corp. (Nasdaq: SEV) is a Carlsbad, California solar 
 image: https://i0.wp.com/aptera.us/wp-content/uploads/2026/04/website_pic_og.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.aptera.us.
   name: Aptera Motors MCP Server
-  slug: aptera-motors-mcp-server
+  slug: aptera-motors-mcp-yml
 modified: '2026-08-02'
 name: Aptera Motors
 nav: Providers
@@ -171,7 +171,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 24.8
+  composite: 22.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -185,21 +185,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 22.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 24.8
+  previous_composite: 22.3
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

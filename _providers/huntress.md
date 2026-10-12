@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 1
@@ -195,6 +195,11 @@ collections:
   name: Huntress Webhooks
   slug: open-huntress-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/huntress/refs/heads/main/capabilities/huntress-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/huntress-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -353,7 +358,7 @@ layout: provider
 mcp_servers:
 - description: Huntress operates an official remote MCP server fronting the Huntress API, discoverable via RFC 8414 OAuth Authorization Server metadata and RFC 9728 OAuth Protected Resource metadata at api.huntress.
   name: Huntress MCP Server
-  slug: huntress-mcp-server
+  slug: huntress
 modified: '2026-07-19'
 name: Huntress
 nav: Providers
@@ -364,7 +369,7 @@ overview: 'Huntress publishes 17 APIs on the [APIs.io](https://apis.io/) network
   The Huntress catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Huntress'' developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 26 more developer resources.'
+  Huntress'' developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 27 more developer resources.'
 random_paper: 12
 scopes:
 - name: Huntress Scopes
@@ -373,9 +378,9 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 51.1
+  composite: 54.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -385,11 +390,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 65.6
+    contract_quality: 60.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 51.1
+  previous_composite: 54.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -400,8 +405,20 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: cmmc
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

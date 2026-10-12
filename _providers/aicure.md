@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The OpenDBM REST API is a self-hosted FastAPI service published inside AiCure''s open-source OpenDBM repository (rest_api/). It exposes the OpenDBM digital-biomarker pipeline over HTTP: an OAuth2 passw'
@@ -181,7 +181,7 @@ rate_limits:
   slug: aicure-rate-limits
 score:
   band: thin
-  composite: 37.2
+  composite: 35.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -195,9 +195,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 37.2
+  previous_composite: 35.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -212,9 +212,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -242,9 +242,9 @@ tags:
 - Digital Biomarkers
 - Digital Health
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Patient Engagement
 - Life Sciences
-- Open-Source
+- Open Source
 website: https://aicure.com/
 ---

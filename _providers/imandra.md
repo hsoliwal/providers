@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The ImandraX cloud-native automated reasoning engine, exposed as a protobuf-defined gRPC API. Services include Eval (evaluate code snippets, parse terms/types, manage artifacts), Simple (verify, test,
@@ -142,7 +142,7 @@ layout: provider
 mcp_servers:
 - description: The CodeLogician MCP server exposes Imandra's CodeLogician Agent and Server workflows as structured tool calls, letting MCP-compatible agents (Claude, Cursor, Gemini, Codex) build formal models of sou
   name: Imandra MCP Server
-  slug: imandra-mcp-server
+  slug: code-logician
 modified: '2026-07-19'
 name: Imandra
 nav: Providers
@@ -154,7 +154,7 @@ overview: 'Imandra publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 6
 score:
   band: thin
-  composite: 33.9
+  composite: 33.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -166,15 +166,21 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.9
+  previous_composite: 33.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +205,7 @@ tags:
 - Theorem Proving
 - Developer Tools
 - Code Analysis
-- Financial-Services
+- Financial Services
 - gRPC
 - MCP
 website: https://www.imandra.ai

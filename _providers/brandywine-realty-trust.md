@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -131,7 +131,7 @@ rules:
   slug: brandywine-realty-trust-jsonschema-spectral-rules
 score:
   band: minimal
-  composite: 8.3
+  composite: 7.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 35.3
@@ -145,11 +145,17 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -169,6 +175,6 @@ tags:
 - Office
 - Philadelphia
 - REIT
-- Real-Estate
+- Real Estate
 website: https://www.brandywinerealty.com/
 ---

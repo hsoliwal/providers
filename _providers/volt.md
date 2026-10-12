@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Authenticated remote MCP server that lets AI models and agents access a user's Volt (WhatsApp) data — contacts, chats, messages, groups, and lists.
@@ -92,9 +92,9 @@ description: Volt is a desktop application (Mac, Windows, and Chrome) that super
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/volt.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.voltchat.com over HTTP; 15 tools listed.
   name: Volt MCP Server
-  slug: volt-mcp-server
+  slug: volt
 modified: '2026-07-21'
 name: Volt
 nav: Providers
@@ -106,7 +106,7 @@ overview: 'Volt publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 13
 score:
   band: emerging
-  composite: 16.9
+  composite: 16.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -120,14 +120,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 16.9
+  previous_composite: 16.2
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

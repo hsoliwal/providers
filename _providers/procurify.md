@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -47,82 +47,82 @@ apis:
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The account-codes API from Procurify — 2 operation(s) for account-codes.
-  name: Procurify account-codes API
+  name: Procurify Account Codes API
   slug: procurify-account-codes-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The accounts API from Procurify — 1 operation(s) for accounts.
-  name: Procurify accounts API
+  name: Procurify Accounts API
   slug: procurify-accounts-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The ap API from Procurify — 8 operation(s) for ap.
-  name: Procurify ap API
+  name: Procurify Ap API
   slug: procurify-ap-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The catalog API from Procurify — 3 operation(s) for catalog.
-  name: Procurify catalog API
+  name: Procurify Catalog API
   slug: procurify-catalog-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The currencies API from Procurify — 1 operation(s) for currencies.
-  name: Procurify currencies API
+  name: Procurify Currencies API
   slug: procurify-currencies-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The custom-fields API from Procurify — 2 operation(s) for custom-fields.
-  name: Procurify custom-fields API
+  name: Procurify Custom Fields API
   slug: procurify-custom-fields-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The departments API from Procurify — 2 operation(s) for departments.
-  name: Procurify departments API
+  name: Procurify Departments API
   slug: procurify-departments-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The locations API from Procurify — 2 operation(s) for locations.
-  name: Procurify locations API
+  name: Procurify Locations API
   slug: procurify-locations-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The order-items API from Procurify — 1 operation(s) for order-items.
-  name: Procurify order-items API
+  name: Procurify Order Items API
   slug: procurify-order-items-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The permissions API from Procurify — 2 operation(s) for permissions.
-  name: Procurify permissions API
+  name: Procurify Permissions API
   slug: procurify-permissions-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The public API from Procurify — 2 operation(s) for public.
-  name: Procurify public API
+  name: Procurify Public API
   slug: procurify-public-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The purchase-orders API from Procurify — 7 operation(s) for purchase-orders.
-  name: Procurify purchase-orders API
+  name: Procurify Purchase Orders API
   slug: procurify-purchase-orders-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The receipt API from Procurify — 1 operation(s) for receipt.
-  name: Procurify receipt API
+  name: Procurify Receipt API
   slug: procurify-receipt-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The requisitions API from Procurify — 3 operation(s) for requisitions.
-  name: Procurify requisitions API
+  name: Procurify Requisitions API
   slug: procurify-requisitions-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The users API from Procurify — 3 operation(s) for users.
-  name: Procurify users API
+  name: Procurify Users API
   slug: procurify-users-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
   description: The vendors API from Procurify — 2 operation(s) for vendors.
-  name: Procurify vendors API
+  name: Procurify Vendors API
   slug: procurify-vendors-api
 - baseURL: https://api.procurify.com/
   baseurl_source: declared
@@ -1314,7 +1314,7 @@ modified: 2026-06-13
 name: Procurify
 nav: Providers
 network: true
-overview: 'Procurify publishes 17 APIs on the [APIs.io](https://apis.io/) network, including account-codes API, accounts API, ap API, and 14 more. Tagged areas include Spend Management, Procurement, Purchase Orders, Accounts Payable, and Vendor Management.
+overview: 'Procurify publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Account Codes API, Accounts API, Ap API, and 14 more. Tagged areas include Spend Management, Procurement, Purchase Orders, Accounts Payable, and Vendor Management.
 
 
   The Procurify catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -1348,23 +1348,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.6
+  composite: 45.7
   coverage:
     artifact_dirs: 18
-    catalog_earned: 82.3
+    catalog_earned: 79.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 32.8
+    catalog_gap: 35.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 60.6
+    access_clarity: 37.4
+    contract_governance: 23.5
+    contract_quality: 55.4
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 46.6
+    discoverability: 66.1
+    operational_transparency: 49.5
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     contracts:
@@ -1372,8 +1372,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

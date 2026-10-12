@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -186,7 +186,7 @@ modified: '2026-05-19'
 name: Broadridge
 nav: Providers
 network: true
-overview: 'Broadridge publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Performance API, Positions API, and 1 more. Tagged areas include Fortune 1000.
+overview: 'Broadridge publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Performance API, Positions API, and 4 more. Tagged areas include Fortune 1000 and Wealth Management.
 
 
   The Broadridge catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -235,8 +235,8 @@ scopes:
   slug: broadridge-scopes
   summary_line: 3 scopes · clientCredentials
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 40.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 43.3
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 9.8
-    contract_quality: 55.6
+    contract_quality: 50.4
     developer_ergonomics: 54.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 38.9
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     contracts:
@@ -260,8 +260,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -280,5 +286,6 @@ security:
 slug: broadridge
 tags:
 - Fortune 1000
+- Wealth Management
 website: https://www.broadridge.com
 ---

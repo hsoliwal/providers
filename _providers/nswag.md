@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: NSwag is an open source .NET toolchain for generating C# and TypeScript API clients and Swagger/OpenAPI specifications from ASP.NET controllers and vice versa. It ships as NuGet packages, MSBuild targ
@@ -156,7 +156,7 @@ rate_limits:
   slug: nswag-rate-limits
 score:
   band: emerging
-  composite: 24.2
+  composite: 25.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 41.0
@@ -170,13 +170,22 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 31.6
-  previous_composite: 24.2
+  open_source:
+    applies: true
+    score: 50.0
+  previous_composite: 25.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -195,10 +204,11 @@ tags:
 - C#
 - Code Generation
 - Developer Tools
-- JSON-Schema
-- Open-Source
+- JSON Schema
+- Open Source
 - OpenAPI
 - SDK
 - Swagger
 - TypeScript
+- SDK Generation
 ---

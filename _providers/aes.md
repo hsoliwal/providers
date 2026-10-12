@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Mosaic is an AI-powered intelligent bidding application developed by Fluence (an AES and Siemens company) for optimizing energy market participation. Mosaic automates bidding strategies for battery en
@@ -182,13 +182,13 @@ integrations:
   name: MISO and PJM Markets
 layout: provider
 modified: '2026-08-30'
-name: AES Corporation
+name: AES
 nav: Providers
 network: true
-overview: 'AES Corporation publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Power Generation, Renewable Energy, Battery Storage, and Utility.
+overview: 'AES publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Power Generation, Renewable Energy, Battery Storage, and Utility.
 
 
-  AES Corporation''s developer surface includes support, documentation, developer portal, engineering blog, and 15 more developer resources.'
+  AES''s developer surface includes support, documentation, developer portal, engineering blog, and 15 more developer resources.'
 plans:
 - name: Aes Plans Pricing
   plan_count: 0
@@ -216,7 +216,7 @@ rate_limits:
   slug: aes-rate-limits
 score:
   band: emerging
-  composite: 22.1
+  composite: 20.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -230,9 +230,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 22.1
+  previous_composite: 20.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -241,9 +241,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

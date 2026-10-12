@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/alassio/refs/heads/main/security/alassio-domain-security.yml
@@ -53,15 +53,19 @@ created: '2026-07-17'
 description: Alassio is a French financial-technology company building a next-generation payroll software platform (logiciel de paie nouvelle generation) for businesses. Alassio positions itself as offering the functional depth expected of a specialist payroll and HR tool, with added transparency and control for finance and people teams. The company is backed by venture-capital firm Partech and operates from France, serving the French and European payroll, compensation, and human-resources market. As of this profile the company publishes only a marketing landing page and a legal notice; no public API, developer documentation, SDK, or integration surface has been located. This profile is maintained in the API Evangelist network as a portfolio-lead stub awaiting a public developer surface to enrich.
 image: https://www.alassio.fr/og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.alassio.fr over HTTP.
+  name: Alassio MCP Server
+  slug: alassio
 modified: '2026-07-17'
 name: Alassio
 nav: Providers
 network: true
-overview: Alassio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Payroll, Human Resources, and Payroll Software.
+overview: Alassio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Payroll, Human Resources, and Payroll Software.
 random_paper: 0
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -75,7 +79,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -85,11 +89,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 5.0
+  previous_composite: 3.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -104,7 +114,7 @@ security:
 slug: alassio
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Payroll
 - Human Resources
 - Payroll Software

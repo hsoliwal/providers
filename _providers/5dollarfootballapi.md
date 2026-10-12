@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.5dollarfootballapi.com/v1
@@ -125,7 +125,7 @@ overview: '5DollarFootballAPI publishes 7 APIs on the [APIs.io](https://apis.io/
 random_paper: 8
 score:
   band: thin
-  composite: 37.2
+  composite: 34.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -137,19 +137,25 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 15.8
-  previous_composite: 37.2
+  previous_composite: 34.3
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

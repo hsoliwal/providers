@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful card-issuing and payments platform API for users, cards, card products, accounts, funding/transfers, limits, transactions and webhooks.
@@ -190,7 +190,7 @@ overview: 'Nymcard publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 2
 score:
   band: developing
-  composite: 47.9
+  composite: 44.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -202,11 +202,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 47.9
+  previous_composite: 44.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

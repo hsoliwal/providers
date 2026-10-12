@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: COM-based Automation Interface providing programmatic access to Enterprise Architect repositories, models, packages, elements, diagrams, connectors, attributes, and tagged values. Supports creating, r
@@ -247,7 +247,7 @@ rate_limits:
   slug: sparx-enterprise-architect-rate-limits
 score:
   band: thin
-  composite: 38.2
+  composite: 39.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 50.0
@@ -261,15 +261,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 15.8
-  previous_composite: 38.2
+  previous_composite: 39.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

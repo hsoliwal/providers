@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -310,21 +310,21 @@ description: OpsMill is the company behind Infrahub, an open-source, graph-based
 image: https://avatars.githubusercontent.com/u/118297816?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 12 tools listed.
   name: OpsMill MCP Server
-  slug: opsmill-mcp-server
+  slug: infrahub-mcp
 modified: '2026-07-20'
 name: OpsMill
 nav: Providers
 network: true
-overview: 'OpsMill publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Artifact API, Auth API, Config API, and 12 more. Tagged areas include Company, Infrastructure Saas, Network Automation, Source of Truth, and Data Management.
+overview: 'OpsMill publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Artifact API, Auth API, Config API, and 13 more. Tagged areas include Company, Infrastructure Saas, Network Automation, Source of Truth, and Data Management.
 
 
   OpsMill''s developer surface includes authentication, documentation, API reference, getting-started guide, sandbox, engineering blog, support, and 22 more developer resources.'
 random_paper: 20
 score:
   band: developing
-  composite: 45.8
+  composite: 45.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -336,11 +336,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 45.4
+    contract_quality: 40.8
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 45.8
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -351,8 +351,14 @@ score:
       total: 15
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -378,6 +384,6 @@ tags:
 - DevOps
 - Configuration Management
 - AIOps
-- Open-Source
+- Open Source
 website: https://opsmill.com/
 ---

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.1
-  scored_at: '2026-09-20'
+  score: 29.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API to programmatically manage Shopify Hydrogen storefront content — pages, product pages, collection pages, blogs, articles, sections, templates, site settings, schedules, and revisions — wit
@@ -161,19 +161,19 @@ layout: provider
 mcp_servers:
 - description: Official remote MCP server that connects AI assistants to Pack to search, edit, preview, publish, schedule, and A/B test Shopify Hydrogen storefront content. Backed by the Pack GraphQL Content Managem
   name: Packdigital MCP Server
-  slug: packdigital-mcp-server
+  slug: pack
 modified: '2026-07-20'
 name: Packdigital
 nav: Providers
 network: true
-overview: 'Packdigital publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Content Management, Headless Commerce, Shopify, and Hydrogen.
+overview: 'Packdigital publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Content Management, Headless Commerce, Shopify, and CMS.
 
 
   Packdigital''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 18 more developer resources.'
 random_paper: 5
 score:
   band: thin
-  composite: 29.3
+  composite: 30.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -187,15 +187,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 29.3
+  previous_composite: 30.6
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -217,12 +223,12 @@ tags:
 - Content Management
 - Headless Commerce
 - Shopify
-- Hydrogen
 - CMS
 - A/B Testing
 - GraphQL
 - MCP
 - Agents
 - Storefront
+- Shopify Hydrogen
 website: https://packdigital.com
 ---

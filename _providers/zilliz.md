@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 16.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Control Plane API manages clusters (create / modify / suspend), users, roles, backups, alerts, metrics, and billing. Authentication is Bearer with a Zilliz API key.
@@ -72,6 +72,11 @@ collections:
   name: Zilliz Cloud Collections API
   slug: open-zilliz-collections-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zilliz/refs/heads/main/capabilities/zilliz-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zilliz-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zilliz/refs/heads/main/security/zilliz-trust-center.yml
   title: ''
@@ -137,10 +142,10 @@ modified: '2026-05-08'
 name: Zilliz
 nav: Providers
 network: true
-overview: 'Zilliz publishes 3 APIs on the [APIs.io](https://apis.io/) network: Cloud Providers API, Clusters API, and Collections API. Tagged areas include Vector Database, Artificial Intelligence, Cloud, Milvus, and Managed.
+overview: 'Zilliz publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Cloud Providers API, Clusters API, Collections API, and 2 more. Tagged areas include Vector Database, Artificial Intelligence, Cloud, Milvus, and Managed.
 
 
-  Zilliz''s developer surface includes developer portal, pricing, and 10 more developer resources.'
+  Zilliz''s developer surface includes developer portal, pricing, and 11 more developer resources.'
 plans:
 - name: Zilliz Plans Pricing
   plan_count: 1
@@ -152,7 +157,7 @@ rate_limits:
   slug: zilliz-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 31.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 44.0
@@ -164,19 +169,25 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 33.4
+  previous_composite: 31.8
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -198,5 +209,6 @@ tags:
 - Cloud
 - Milvus
 - Managed
+- Vector Search
 website: https://zilliz.com/
 ---

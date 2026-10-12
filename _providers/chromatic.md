@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://index.chromatic.com/graphql
@@ -56,7 +56,7 @@ apis:
   description: Read the published Storybook and its structure. The `storybook(url)` query and the Story and Component node types expose the components and stories captured in a build, their CSF story IDs, test param
   name: Chromatic Storybook and Stories API
   slug: chromatic-storybook-stories-api
-artifact_total: 9
+artifact_total: 10
 collections:
 - collection_type: open
   name: Chromatic Public GraphQL API
@@ -109,6 +109,10 @@ graphqls:
   slug: chromatic-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/chromatic.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.chromatic.com over HTTP.
+  name: Chromatic MCP Server
+  slug: chromatic
 modified: '2026-07-11'
 name: Chromatic
 nav: Providers
@@ -128,27 +132,33 @@ rate_limits:
   slug: chromatic-rate-limits
 score:
   band: thin
-  composite: 33.5
+  composite: 29.4
   coverage:
     artifact_dirs: 9
-    catalog_earned: 67.0
+    catalog_earned: 64.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 50.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 41.5
-    developer_ergonomics: 16.7
-    discoverability: 74.1
-    operational_transparency: 34.2
-  previous_composite: 33.5
+    contract_quality: 39.4
+    developer_ergonomics: 16.2
+    discoverability: 73.3
+    operational_transparency: 31.1
+  previous_composite: 29.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

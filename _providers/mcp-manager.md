@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Control-plane surface that lets an agent or script manage MCP Manager configuration — servers, gateways, identities, hosts, teams, roles, logs, and integrations — with the same actions as the app, sco
@@ -168,9 +168,9 @@ description: MCP Manager, by Usercentrics, is an enterprise governance and secur
 image: https://mcpmanager.ai/wp-content/uploads/mcp-manager-og-share-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 63 tools listed.
   name: MCP Manager MCP Server
-  slug: mcp-manager-mcp-server
+  slug: mcp-manager-mcp-yml
 modified: '2026-07-20'
 name: MCP Manager
 nav: Providers
@@ -185,7 +185,7 @@ overview: 'MCP Manager publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 18
 score:
   band: developing
-  composite: 47.9
+  composite: 48.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -197,17 +197,23 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 28.9
-  previous_composite: 47.9
+  previous_composite: 48.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

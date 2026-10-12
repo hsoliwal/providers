@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Historical REST API that exposed job listings, employer reviews, salary reports, and company metadata to approved partners. Required a partner ID and partner key as query parameters. The program stopp
@@ -82,7 +82,7 @@ modified: '2026-05-23'
 name: Glassdoor
 nav: Providers
 network: true
-overview: 'Glassdoor publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Employer Reviews, Job Search, Salaries, Recruitment, and Employer Branding.
+overview: 'Glassdoor publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Employer Reviews, Job Search, Salaries, Recruiting, and Employer Branding.
 
 
   Glassdoor''s developer surface includes documentation and 5 more developer resources.'
@@ -97,25 +97,31 @@ rate_limits:
   slug: glassdoor-rate-limits
 score:
   band: emerging
-  composite: 17.3
+  composite: 15.8
   coverage:
     artifact_dirs: 7
-    catalog_earned: 56.0
+    catalog_earned: 54.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 17.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    discoverability: 66.1
+    operational_transparency: 18.9
+  previous_composite: 15.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,7 +142,7 @@ tags:
 - Employer Reviews
 - Job Search
 - Salaries
-- Recruitment
+- Recruiting
 - Employer Branding
 website: https://www.glassdoor.com/
 ---

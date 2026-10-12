@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.6
-  scored_at: '2026-09-20'
+  score: 47.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -71,7 +71,7 @@ apis:
   description: Opinions represent published and unpublished case law opinions. Opinions belong to a Court and Jurisdiction.
   name: OpenLaws Opinions API
   slug: openlaws-opinions-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -161,6 +161,10 @@ finops:
   slug: openlaws-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openlaws.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.openlaws.us over HTTP.
+  name: OpenLaws MCP Server
+  slug: openlaws
 modified: '2026-05-21'
 name: OpenLaws
 nav: Providers
@@ -180,7 +184,7 @@ rate_limits:
   slug: openlaws-rate-limits
 score:
   band: thin
-  composite: 35.2
+  composite: 33.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -192,11 +196,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 55.9
+    contract_quality: 50.3
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 35.2
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -210,9 +214,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

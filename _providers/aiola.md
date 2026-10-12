@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'Jargonic automatic speech recognition. Batch file transcription over HTTP (POST /api/speech-to-text/file, 50 MB maximum file size) and real-time streaming transcription over a Socket.IO connection at '
@@ -151,7 +151,7 @@ description: 'aiOla is a deep-tech voice, speech and conversational AI lab that 
 image: https://aiola.ai/wp-content/uploads/2026/03/favicon-300x300.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.aiola.ai; 1 tool listed.
   name: aiOla Documentation MCP Server
   slug: aiola-documentation-mcp-server
 modified: '2026-09-14'
@@ -173,7 +173,7 @@ rate_limits:
   slug: aiola-rate-limits
 score:
   band: thin
-  composite: 29.7
+  composite: 30.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -187,14 +187,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 18.4
-  previous_composite: 29.7
+  previous_composite: 30.6
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,7 +231,7 @@ tags:
 - Voice AI
 - Conversational AI
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Audio
 - Transcription
 - Enterprise

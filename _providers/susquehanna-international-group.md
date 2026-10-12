@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 16
 common:
@@ -145,7 +145,7 @@ overview: Susquehanna International Group (SIG) is profiled on the [APIs.io](htt
 random_paper: 9
 score:
   band: minimal
-  composite: 4.4
+  composite: 5.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -159,22 +159,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 4.4
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 18.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -196,8 +198,8 @@ tags:
 - Institutional Sales
 - Growth Equity
 - Venture Capital
-- Machine-Learning
-- Financial-Services
+- Machine Learning
+- Financial Services
 use_cases:
 - description: Continuously quoting bids and offers on listed options markets to provide liquidity for institutional and retail order flow.
   name: Liquidity Provision On Listed Options

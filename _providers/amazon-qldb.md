@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -84,6 +84,11 @@ collections:
   name: Amazon QLDB Journal S3 Exports Tags API
   slug: open-amazon-qldb-tags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-qldb/refs/heads/main/capabilities/amazon-qldb-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-qldb-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -1117,7 +1122,7 @@ overview: 'Amazon QLDB publishes 3 APIs on the [APIs.io](https://apis.io/) netwo
   The Amazon QLDB catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon QLDB''s developer surface includes authentication, developer portal, documentation, support, developer console, signup flow, code examples, and 128 more developer resources.'
+  Amazon QLDB''s developer surface includes authentication, developer portal, documentation, support, developer console, signup flow, code examples, and 129 more developer resources.'
 plans:
 - name: Amazon Qldb Plans Pricing
   plan_count: 3
@@ -1151,9 +1156,9 @@ rules:
   slug: amazon-qldb-spectral-rules
 score:
   band: developing
-  composite: 46.0
+  composite: 47.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 56.5
     catalog_earned_first_party: 0.0
     catalog_gap: 58.5
@@ -1163,11 +1168,11 @@ score:
   facets:
     access_clarity: 61.8
     contract_governance: 13.6
-    contract_quality: 68.5
+    contract_quality: 63.0
     developer_ergonomics: 27.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 46.0
+  previous_composite: 47.3
   provenance:
     agentic_access: derived
     contracts:
@@ -1175,8 +1180,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Ethereum-compatible JSON-RPC endpoint for the 0G Chain mainnet ("Aristotle", chain ID 16661), an AI-focused Layer 1 with sub-second finality. Standard EVM methods (eth_chainId, eth_call, eth_sendRawTr
@@ -102,6 +102,11 @@ collections:
   name: 0G Router Service Types API
   slug: open-0g-labs-service-types-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/0g-labs/refs/heads/main/capabilities/0g-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/0g-labs-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -307,10 +312,10 @@ modified: '2026-08-05'
 name: 0G Labs
 nav: Providers
 network: true
-overview: '0G Labs publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Account API, API Key API, Inference API, and 3 more. Tagged areas include Artificial Intelligence, AI Inference, LLM, GPU Compute, and Decentralized Compute.
+overview: '0G Labs publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, API Key API, Inference API, and 6 more. Tagged areas include Artificial Intelligence, Inference, LLM, GPU Compute, and Decentralized Compute.
 
 
-  0G Labs'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 36 more developer resources.'
+  0G Labs'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 37 more developer resources.'
 random_paper: 20
 rate_limits:
 - limit_count: 0
@@ -318,9 +323,9 @@ rate_limits:
   slug: 0g-labs-rate-limits
 score:
   band: developing
-  composite: 49.1
+  composite: 48.7
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -330,11 +335,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 52.7
+    contract_quality: 47.6
     developer_ergonomics: 85.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 42.1
-  previous_composite: 49.1
+  previous_composite: 48.7
   provenance:
     conformance: derived
     contracts:
@@ -344,8 +349,14 @@ score:
       total: 6
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -363,7 +374,7 @@ security:
 slug: 0g-labs
 tags:
 - Artificial Intelligence
-- AI Inference
+- Inference
 - LLM
 - GPU Compute
 - Decentralized Compute
@@ -374,7 +385,7 @@ tags:
 - Data Availability
 - OpenAI-Compatible
 - Trusted Execution Environment
-- agent-native
+- Agent-Native
 - Crypto Infrastructure
 website: https://0g.ai
 ---

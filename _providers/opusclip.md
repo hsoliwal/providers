@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.6
-  scored_at: '2026-09-20'
+  score: 57.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 13
@@ -49,27 +49,27 @@ apis:
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The brand-templates API from OpusClip — 1 operation(s) for brand-templates.
-  name: OpusClip brand-templates API
+  name: OpusClip Brand Templates API
   slug: opusclip-brand-templates-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The censor-jobs API from OpusClip — 2 operation(s) for censor-jobs.
-  name: OpusClip censor-jobs API
+  name: OpusClip Censor Jobs API
   slug: opusclip-censor-jobs-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The clip-project API from OpusClip — 3 operation(s) for clip-project.
-  name: OpusClip clip-project API
+  name: OpusClip Clip Project API
   slug: opusclip-clip-project-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The collection API from OpusClip — 3 operation(s) for collection.
-  name: OpusClip collection API
+  name: OpusClip Collection API
   slug: opusclip-collection-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The collection-content API from OpusClip — 2 operation(s) for collection-content.
-  name: OpusClip collection-content API
+  name: OpusClip Collection Content API
   slug: opusclip-collection-content-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
@@ -79,17 +79,17 @@ apis:
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The generative-jobs API from OpusClip — 2 operation(s) for generative-jobs.
-  name: OpusClip generative-jobs API
+  name: OpusClip Generative Jobs API
   slug: opusclip-generative-jobs-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The social-posting API from OpusClip — 6 operation(s) for social-posting.
-  name: OpusClip social-posting API
+  name: OpusClip Social Posting API
   slug: opusclip-social-posting-api
 - baseURL: https://api.opus.pro
   baseurl_source: declared
   description: The transcripts API from OpusClip — 1 operation(s) for transcripts.
-  name: OpusClip transcripts API
+  name: OpusClip Transcripts API
   slug: opusclip-transcripts-api
 artifact_total: 28
 asyncapis:
@@ -308,14 +308,14 @@ description: 'OpusClip (opus.pro), operated by Opusclip Inc. of Mountain View, C
 image: https://avatars.githubusercontent.com/u/94627721?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.opus.pro over HTTP; 26 tools listed.
   name: OpusClip MCP Server
-  slug: opusclip-mcp-server
+  slug: opusclip
 modified: '2026-07-20'
 name: OpusClip
 nav: Providers
 network: true
-overview: 'OpusClip publishes 9 APIs on the [APIs.io](https://apis.io/) network, including brand-templates API, censor-jobs API, clip-project API, and 6 more. Tagged areas include Company, Consumer, Video, Artificial Intelligence, and Video Editing.
+overview: 'OpusClip publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Brand Templates API, Censor Jobs API, Clip Project API, and 6 more. Tagged areas include Company, Consumer, Video, Artificial Intelligence, and Video Editing.
 
 
   The OpusClip catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -329,7 +329,7 @@ rate_limits:
   slug: opusclip-rate-limits
 score:
   band: developing
-  composite: 53.4
+  composite: 54.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -341,11 +341,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 57.0
+    contract_quality: 52.1
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 53.4
+  previous_composite: 54.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -356,8 +356,14 @@ score:
       total: 9
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -384,7 +390,7 @@ tags:
 - Artificial Intelligence
 - Video Editing
 - Short-Form Video
-- Social-Media
+- Social Media
 - Content Creation
 - MCP
 - Developer API

@@ -33,11 +33,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Cabela's offers an online storefront for hunting, fishing, camping, and outdoor gear, along with store locator, customer service, and loyalty program pages. No public developer API is currently docume
   name: Cabela's
+  provenance: unpublished
   slug: cabelas-website
 artifact_total: 5
 common:
@@ -134,7 +135,7 @@ rate_limits:
   slug: cabelas-rate-limits
 score:
   band: emerging
-  composite: 13.4
+  composite: 12.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -148,11 +149,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 13.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

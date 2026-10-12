@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Qumat is a unified Python API for building and executing quantum circuits across multiple quantum computing backends including Qiskit, Cirq, and Amazon Braket. It provides a hardware-agnostic interfac
@@ -144,7 +144,7 @@ modified: '2026-04-19'
 name: Apache Mahout
 nav: Providers
 network: true
-overview: 'Apache Mahout publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Distributed Computing, Machine-Learning, Python, Quantum Computing, and Scala.
+overview: 'Apache Mahout publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Distributed Computing, Machine Learning, Python, Quantum Computing, and Scala.
 
 
   Apache Mahout''s developer surface includes developer portal, engineering blog, and 13 more developer resources.'
@@ -159,7 +159,7 @@ rate_limits:
   slug: apache-mahout-rate-limits
 score:
   band: thin
-  composite: 28.2
+  composite: 27.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -173,14 +173,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 28.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 27.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +205,7 @@ security:
 slug: apache-mahout
 tags:
 - Distributed Computing
-- Machine-Learning
+- Machine Learning
 - Python
 - Quantum Computing
 - Scala

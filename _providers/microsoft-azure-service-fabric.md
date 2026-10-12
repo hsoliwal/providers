@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -69,6 +69,11 @@ collections:
   name: Azure Service Fabric REST API
   slug: open-microsoft-azure-service-fabric
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-service-fabric/refs/heads/main/capabilities/microsoft-azure-service-fabric-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-service-fabric-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -153,10 +158,10 @@ modified: '2026-09-16'
 name: Azure Service Fabric
 nav: Providers
 network: true
-overview: 'Azure Service Fabric publishes 2 APIs on the [APIs.io](https://apis.io/) network: Clusters API and Operations API. Tagged areas include Microservices, Distributed Systems, Containers, and Orchestration.
+overview: 'Azure Service Fabric publishes 2 APIs on the [APIs.io](https://apis.io/) network: Clusters API and Operations API. Tagged areas include Microservices, Distributed Systems, Containers, and Container Orchestration.
 
 
-  Azure Service Fabric''s developer surface includes authentication, developer portal, pricing, documentation, getting-started guide, support, engineering blog, and 10 more developer resources.'
+  Azure Service Fabric''s developer surface includes authentication, developer portal, pricing, documentation, getting-started guide, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: Microsoft Azure Service Fabric Plans Pricing
   plan_count: 3
@@ -173,7 +178,7 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 43.6
+  composite: 44.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 41.0
@@ -185,11 +190,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 47.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 43.6
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +202,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -218,6 +229,6 @@ tags:
 - Microservices
 - Distributed Systems
 - Containers
-- Orchestration
+- Container Orchestration
 website: https://microsoft.com
 ---

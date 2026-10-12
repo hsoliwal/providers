@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -144,8 +144,8 @@ scopes:
   slug: cleo-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 39.0
@@ -159,9 +159,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 28.0
+  previous_composite: 26.1
   provenance:
     conformance: first-party
   regulatory:
@@ -169,9 +169,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 53.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

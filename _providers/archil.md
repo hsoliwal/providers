@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://control.green.us-east-1.aws.prod.archil.com
@@ -87,6 +87,11 @@ collections:
   name: Archil Control Plane API Tokens Serverless Execution API
   slug: open-archil-serverless-execution-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/archil/refs/heads/main/capabilities/archil-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/archil-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/archil/refs/heads/main/overlays/archil-controlplane-overlay.yaml
   title: ''
@@ -233,13 +238,13 @@ network: true
 overview: 'Archil publishes 4 APIs on the [APIs.io](https://apis.io/) network, including API Tokens API, Disk Users API, Disks API, and 1 more. Tagged areas include Company, Cloud Storage, Filesystem, Object Storage, and Artificial Intelligence.
 
 
-  Archil''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, pricing, and 23 more developer resources.'
+  Archil''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, pricing, and 24 more developer resources.'
 random_paper: 11
 score:
   band: strong
-  composite: 55.6
+  composite: 56.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -249,11 +254,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 59.2
+    contract_quality: 53.3
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 55.6
+  previous_composite: 56.5
   provenance:
     conformance: first-party
     contracts:
@@ -263,8 +268,22 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

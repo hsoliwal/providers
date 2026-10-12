@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Acclinate is a health-equity technology company that improves clinical trial diversity by building trust with historically underrepresented communities. Its NOWINCLUDED community platform engages 250,000+ members with culturally relevant content and in-person events, while its proprietary e-DICT AI/ML engine transforms community trust signals into predictive enrollment intelligence — participation-probability scoring, demographic forecasting, and real-time dashboards for pharmaceutical sponsors and CROs. Acclinate operates as a managed service across a three-stage trust model (Access, Engage, Mobilize) rather than a self-service developer platform; no public API, developer portal, or API documentation is published as of this profile.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/acclinate.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.acclinate.com over HTTP.
+  name: Acclinate MCP Server
+  slug: acclinate
 modified: '2026-07-17'
 name: Acclinate
 nav: Providers
@@ -90,7 +94,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   previous_composite: 10.5
   provenance:
@@ -100,9 +104,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -122,7 +126,7 @@ tags:
 - Health Equity
 - Patient Recruitment
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Healthcare
 - Diversity
 website: https://acclinate.com/

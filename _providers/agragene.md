@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.5
-  scored_at: '2026-09-20'
+  score: 7.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An anonymous remote Model Context Protocol endpoint served on Agragene's own host and advertised in the company's llms.txt. Nine tools let an agent read business details, search site content, mint a v
@@ -106,7 +106,7 @@ layout: provider
 mcp_servers:
 - description: Agragene serves a live, unauthenticated remote MCP endpoint at https://www.agragene.com/_api/mcp, advertised in the company's own /llms.txt under an "AI Agent Access" section. An anonymous JSON-RPC in
   name: Agragene Site MCP manifest
-  slug: agragene-site-mcp-manifest
+  slug: site-visitor-assistant-for-site-agragene
 modified: '2026-09-12'
 name: Agragene
 nav: Providers
@@ -126,7 +126,7 @@ rate_limits:
   slug: agragene-rate-limits
 score:
   band: emerging
-  composite: 14.0
+  composite: 13.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -140,25 +140,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.0
+  previous_composite: 13.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

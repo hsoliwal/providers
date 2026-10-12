@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 13.3
-  scored_at: '2026-09-20'
+  score: 11.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OpenID Connect issuer Glacier Bank serves at connect.glacierbank.com for its Jack Henry Banno Digital Toolkit tenant. Issuer https://connect.glacierbank.com/a/consumer/api/v0/oidc; the base URL fo
@@ -121,7 +121,7 @@ modified: '2026-09-14'
 name: Glacier Bancorp
 nav: Providers
 network: true
-overview: 'Glacier Bancorp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial-Services, Digital Banking, OpenID Connect, and Authentication.
+overview: 'Glacier Bancorp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial Services, Digital Banking, Authentication, and Treasury Management.
 
 
   Glacier Bancorp''s developer surface includes authentication, signup flow, support, and 12 more developer resources.'
@@ -140,8 +140,8 @@ scopes:
   slug: glacier-bancorp-scopes
   summary_line: 116 scopes
 score:
-  band: thin
-  composite: 27.0
+  band: emerging
+  composite: 24.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 44.0
@@ -155,9 +155,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 27.0
+  previous_composite: 24.9
   provenance:
     conformance: first-party
   regulatory:
@@ -165,9 +165,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,9 +185,8 @@ security:
 slug: glacier-bancorp
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Digital Banking
-- OpenID Connect
 - Authentication
 - Treasury Management
 website: https://www.glacierbancorp.com

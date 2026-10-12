@@ -34,13 +34,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.gradium.ai/api
   baseurl_source: declared
   description: The metering API from Gradium — 1 operation(s) for metering.
-  name: Gradium metering API
+  name: Gradium Metering API
   slug: gradium-metering-api
 - baseURL: https://api.gradium.ai/api
   baseurl_source: declared
@@ -265,7 +265,7 @@ modified: '2026-07-19'
 name: Gradium
 nav: Providers
 network: true
-overview: 'Gradium publishes 6 APIs on the [APIs.io](https://apis.io/) network, including metering API, Pronunciations API, S2S API, and 3 more. Tagged areas include Company, Ai Ml, Voice AI, Text-to-Speech, and Speech-to-Text.
+overview: 'Gradium publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Metering API, Pronunciations API, S2S API, and 3 more. Tagged areas include Company, Ai Ml, Voice AI, Text-to-Speech, and Speech-to-Text.
 
 
   The Gradium catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -275,7 +275,7 @@ overview: 'Gradium publishes 6 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 19
 score:
   band: developing
-  composite: 48.2
+  composite: 47.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -287,11 +287,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 57.6
+    contract_quality: 53.0
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 48.2
+  previous_composite: 47.7
   provenance:
     conformance: derived
     contracts:
@@ -301,8 +301,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -331,5 +337,6 @@ tags:
 - WebSocket
 - Developer API
 - Voice Agents
+- Real-Time
 website: https://gradium.ai
 ---

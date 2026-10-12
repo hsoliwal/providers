@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, remotely hosted Model Context Protocol server operated by SellerX at mcp.sellerx.com. The endpoint requires an OAuth 2.1 bearer token, so the tool manifest is auth-gated, but the server publis
@@ -110,9 +110,9 @@ description: SellerX is a Berlin-based consumer-brand builder, founded in 2020, 
 image: https://www.sellerx.com/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.sellerx.com over HTTP.
   name: SellerX MCP Server
-  slug: sellerx-mcp-server
+  slug: sellerx
 modified: '2026-08-05'
 name: SellerX
 nav: Providers
@@ -129,7 +129,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 13.9
+  composite: 16.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -143,7 +143,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -153,12 +153,18 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 13.9
+  previous_composite: 16.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

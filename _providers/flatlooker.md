@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -75,14 +75,14 @@ modified: '2026-07-19'
 name: Flatlooker
 nav: Providers
 network: true
-overview: 'Flatlooker is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Real-Estate, Property Management, and Rentals.
+overview: 'Flatlooker is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketplace, Real Estate, Property Management, and Rentals.
 
 
   Flatlooker''s developer surface includes pricing, engineering blog, support, and 4 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 9.3
+  composite: 7.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -96,7 +96,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -106,9 +106,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 9.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,7 +130,7 @@ slug: flatlooker
 tags:
 - Company
 - Marketplace
-- Real-Estate
+- Real Estate
 - Property Management
 - Rentals
 - PropTech

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -161,7 +161,7 @@ modified: '2026-05-19'
 name: GovInfo
 nav: Providers
 network: true
-overview: 'GovInfo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Packages API, Published API, and 2 more. Tagged areas include Federal-Government, Government Publishing, Documents, and Open Data.
+overview: 'GovInfo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Packages API, Published API, and 2 more. Tagged areas include Federal Government, Government Publishing, Documents, and Open Data.
 
 
   GovInfo''s developer surface includes authentication, developer portal, documentation, signup flow, GitHub presence, and 8 more developer resources.'
@@ -176,7 +176,7 @@ rate_limits:
   slug: govinfo-rate-limits
 score:
   band: thin
-  composite: 34.3
+  composite: 32.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -188,11 +188,16 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 48.8
+    contract_quality: 44.0
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 34.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -205,9 +210,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,7 +230,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC
 slug: govinfo
 tags:
-- Federal-Government
+- Federal Government
 - Government Publishing
 - Documents
 - Open Data

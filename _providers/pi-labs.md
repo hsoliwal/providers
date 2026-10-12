@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'OpenAPI-compatible REST API for scoring, calibrating, and optimizing LLM outputs against rubrics of natural-language questions. Authenticated with an API key (WITHPI_API_KEY) sent as an Authorization '
@@ -114,7 +114,7 @@ overview: 'Pi Labs publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 20
 score:
   band: emerging
-  composite: 16.9
+  composite: 15.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -128,13 +128,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 16.9
+  previous_composite: 15.2
   provenance:
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -152,7 +158,7 @@ tags:
 - Evaluation
 - LLM
 - Scoring
-- Machine-Learning
+- Machine Learning
 - Developer Tools
 website: https://withpi.ai
 ---

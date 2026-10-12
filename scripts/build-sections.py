@@ -311,6 +311,13 @@ TAG_INDUSTRY_EXCLUDE = {
     "event-management-software": {
         "harmony", "pylon", "freshservice", "sysaid", "zoho-desk", "halp",
         "shohoz", "catch-that-bus",
+        # roadmap#632 -- `event management` is a homograph too. In IT operations an "event" is a
+        # monitoring signal (AIOps, alert correlation, on-call): Moogsoft, Zenoss, ilert and
+        # ServiceNow's ITOM carry the tag for that, and Druva for backup events. CrossEngage and
+        # Togai mean tracked/metered events, NewsBreak local listings. Zendesk and Kaseya reach
+        # the vertical through ITSM `ticketing`, the same half taken out above.
+        "moogsoft", "zenoss", "ilert", "servicenow", "druva",
+        "crossenagage", "togai", "news-break", "zendesk", "kaseya",
     },
     # `billing` is the leaky tag here and it leaks in one direction: CLINICAL
     # systems whose billing is a module. Revenue cycle management is finance
@@ -804,7 +811,11 @@ TAG_INDUSTRIES = [
             "microservices", "infrastructure as code", "orchestration", "deployment",
             "edge computing", "api gateway", "api management", "api design", "api testing",
             "api security", "sdk", "sdks", "cli", "software development", "testing",
-            "quality assurance", "low-code", "no-code", "version control", "repository",
+            "quality assurance", "low-code", "version control", "repository",
+            # "no-code" removed 2026-09-23 (roadmap#640). No-code is built for non-developers and
+            # says how a product is used, not what market it is in; alone it filed 130 providers
+            # here (Webflow, Tally, Carrd, Level2, Synthflow, Jotform). "low-code" stays: its 67
+            # sole carriers are developer platforms (Retool, Appian, Oracle APEX, Budibase, n8n).
             "distributed systems", "multi-cloud",
         ],
     },
@@ -862,9 +873,13 @@ TAG_INDUSTRIES = [
         "description": "Chains, exchanges, wallets, and the on-chain data and settlement infrastructure the digital-asset economy runs on.",
         "tags": [
             "blockchain", "web3", "crypto web3", "cryptocurrency", "crypto", "defi", "bitcoin",
-            "ethereum", "solana", "evm", "smart contracts", "nft", "digital assets", "tokens",
-            "tokenization", "stablecoins", "stablecoin", "staking", "wallet", "wallets",
-            "digital wallet", "decentralized", "exchange", "liquidity",
+            "ethereum", "solana", "evm", "smart contracts", "nft", "digital assets",
+            "tokenization", "stablecoins", "stablecoin", "staking", "decentralized",
+            # "exchange", "liquidity", "tokens", "wallet", "wallets" and "digital wallet" removed
+            # 2026-09-22 (roadmap#508). Each is a word crypto shares with other trades, and on its
+            # own it filed Basel III (liquidity), Amazon WorkMail and Loop Returns (exchange),
+            # OAuth and PayPal (tokens) and Mercado Pago (wallets) as crypto. A crypto wallet or
+            # exchange also carries a crypto tag, so nothing real is lost.
         ],
     },
     # --- Tier 2 -----------------------------------------------------------
@@ -897,8 +912,15 @@ TAG_INDUSTRIES = [
         ],
     },
     {
-        "slug": "venture-capital",
-        "name": "Venture Capital & Investing",
+        # Slug was `venture-capital` until 2026-09-22 (roadmap#508). The definition has always
+        # been VC/PE PLUS brokerages, trading, market data and wealth management, so the old slug
+        # misled: Trading 212 read as "venture-capital". Renamed to `investing`; `renamed_from`
+        # makes every old URL a redirect on both sites and lets the apis.io API accept the old
+        # slug as an alias. NOT to be confused with `x-type: venture-capital` (VC firm records,
+        # rendered under /vcs/), which is unchanged.
+        "slug": "investing",
+        "name": "Investing & Venture Capital",
+        "renamed_from": ["venture-capital"],
         "icon": "trending_up",
         "description": "The firms allocating capital and the platforms moving it — venture and private equity, brokerages, trading, market data, and wealth management.",
         "tags": [
@@ -911,7 +933,10 @@ TAG_INDUSTRIES = [
             "investment management", "asset management", "wealth management",
             "portfolio management", "trading", "brokerage", "broker", "stocks", "options",
             "derivatives", "capital markets", "hedge fund",
-            "family office", "crowdfunding", "startups", "venture backed",
+            "family office", "crowdfunding",
+            # "startups" and "venture backed" removed 2026-09-22 (roadmap#508): they describe
+            # how a company was FUNDED, not what it does, and filed 172 providers under this
+            # industry on that word alone -- a startup-ranking site, a legal-tech firm, a biotech.
         ],
     },
     {
@@ -1006,8 +1031,21 @@ TAG_INDUSTRIES = [
         "description": "Robots, drones, autonomous vehicles, and the perception and control stacks that let machines act on their own.",
         "tags": [
             "robotics", "robots", "autonomous systems", "autonomous vehicles", "autonomy",
-            "self-driving", "drones", "uav", "industrial automation", "automation",
-            "warehouse automation", "simulation", "teleoperation", "humanoid",
+            "self-driving", "drones", "uav", "industrial automation",
+            "warehouse automation", "teleoperation", "humanoid",
+            # Added 2026-09-23 (roadmap#639): physical-autonomy tags the list had missed. Together
+            # they bring in 7 (FANUC, XPeng, Matternet, NATIX). `physical ai` and `counter-uas`
+            # were measured and left out: "Physical AI" is on MaintainX, Cofactr and a carbon-
+            # removal company; counter-drone defense is not robotics.
+            "industrial robotics", "collaborative robots", "humanoid robots", "embodied ai",
+            "autonomous mobile robots", "ros", "ros 2", "autonomous driving", "robotaxi",
+            "unmanned aerial systems", "unmanned aerial vehicles", "uas",
+            # "automation" and "simulation" removed 2026-09-23 (roadmap#639). Alone, "automation"
+            # filed 429 providers here (Brevo, Klaviyo, Dynatrace, GitHub Actions, Ada) and
+            # "simulation" 80 more (COMSOL, Labster, Tenderly, game studios). Measured with
+            # build_industries._tag_membership: 1,104 -> 602 members; of the 509 that leave, the
+            # only ones with any robot word carry "Robotic Process Automation" (UiPath), which is
+            # software. Industrial automation (Rockwell, SCADA, machine vision) stays.
         ],
     },
     {
@@ -2114,6 +2152,31 @@ def esc(text):
     return text.replace('"', "'")
 
 
+def write_industry_redirects():
+    """Redirect every retired industry slug to the slug that replaced it (roadmap#508).
+
+    A TAG_INDUSTRIES entry lists its former slugs under `renamed_from`. Nothing deletes a stale
+    industries/<slug>/ directory, so without this the old page would linger, frozen at its last
+    build, rather than send readers on. The stub is the site's plugin-free `layout: redirect`
+    (meta refresh + canonical). Pure function of TAG_INDUSTRIES, so it is safe to re-run.
+    """
+    for spec in TAG_INDUSTRIES:
+        for old in spec.get("renamed_from") or ():
+            write_page(
+                os.path.join(SITE, "industries", old, "index.html"),
+                "\n".join([
+                    "---",
+                    "layout: redirect",
+                    "redirect_to: /industries/%s/" % spec["slug"],
+                    "sitemap: false",
+                    "# Generated by scripts/build-sections.py from TAG_INDUSTRIES `renamed_from`;",
+                    "# %s was renamed to %s (roadmap#508). Do not hand-edit." % (old, spec["slug"]),
+                    "---",
+                    "",
+                ]),
+            )
+
+
 # ---------------------------------------------------------------------------
 # Roster-driven sections
 # ---------------------------------------------------------------------------
@@ -2475,6 +2538,8 @@ def main():
     industry_cards.sort(key=lambda c: c["name"].lower())
     with open(os.path.join(data_dir, "sections-industries.json"), "w", encoding="utf-8") as fh:
         json.dump(industry_cards, fh, ensure_ascii=False, indent=1)
+
+    write_industry_redirects()
 
     write_page(
         os.path.join(SITE, "industries", "index.html"),

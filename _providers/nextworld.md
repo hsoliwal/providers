@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Inbound REST endpoints into the Nextworld Platform. Every table and logic block created in the platform automatically exposes a set of endpoints for fetching, inserting, updating and deleting records '
@@ -186,14 +186,14 @@ description: Nextworld is a Denver, Colorado enterprise application platform com
 image: https://cdn.prod.website-files.com/68fbb4299bc0c9e658c018cc/6978e9a290aa1dc1c6a606c3_Nextworld_OpenGraph.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at apps.nextworld.net requiring OAuth.
   name: Nextworld MCP Server
   slug: nextworld-mcp-server
 modified: '2026-08-26'
 name: Nextworld
 nav: Providers
 network: true
-overview: 'Nextworld publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, ERP, No-Code, Enterprise Application Platform, and Workflow-Automation.
+overview: 'Nextworld publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, ERP, No-Code, Enterprise Application Platform, and Workflow Automation.
 
 
   The Nextworld catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -211,12 +211,12 @@ rate_limits:
   slug: nextworld-rate-limits
 scopes:
 - name: Nextworld Scopes
-  scope_count: 0
+  scope_count: 5
   slug: nextworld-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 48.8
+  composite: 51.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -228,16 +228,22 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 48.8
+  previous_composite: 51.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -267,7 +273,7 @@ tags:
 - ERP
 - No-Code
 - Enterprise Application Platform
-- Workflow-Automation
+- Workflow Automation
 - Artificial Intelligence
 - MCP
 - Integration

@@ -34,9 +34,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/human-behavior/refs/heads/main/security/human-behavior-domain-security.yml
@@ -104,6 +104,10 @@ created: '2026-07-17'
 description: Human Behavior Inc. is an AI-powered product analytics platform that uses autonomous agents to watch session replays, auto-instrument event tracking, map product workflows, and surface friction, bugs, and rage clicks without manual instrumentation. Developers integrate it with a first-party JavaScript session-recording SDK (humanbehavior-js) that initializes with an API key and streams events to the platform's ingestion endpoint, with framework guides for React, Next.js, Vue, Svelte, Angular, and more, plus optional PostHog ingestion. Backed by $5M from Y Combinator, Vercel, and General Catalyst.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/human-behavior.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.humanbehavior.co over HTTP.
+  name: Human Behavior MCP Server
+  slug: human-behavior
 modified: '2026-07-19'
 name: Human Behavior
 nav: Providers
@@ -115,7 +119,7 @@ overview: 'Human Behavior is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 0
 score:
   band: emerging
-  composite: 19.1
+  composite: 18.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -129,13 +133,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 19.1
+  previous_composite: 18.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

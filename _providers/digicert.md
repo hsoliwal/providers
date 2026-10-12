@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 1
@@ -82,7 +82,7 @@ apis:
   description: The User API from Digicert — 1 operation(s) for user.
   name: Digicert User API
   slug: digicert-user-api
-artifact_total: 23
+artifact_total: 24
 collections:
 - collection_type: open
   name: API Collection
@@ -106,6 +106,11 @@ collections:
   name: DigiCert CertCentral Services API
   slug: open-digicert
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/digicert/refs/heads/main/capabilities/digicert-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/digicert-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/digicert/refs/heads/main/agentic-access/digicert-agentic-access.yml
   title: ''
@@ -189,14 +194,18 @@ graphqls:
   slug: digicert-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digicert.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.digicert.com over HTTP; 26 tools listed.
+  name: Digicert MCP Server
+  slug: digicert
 modified: '2026-05-19'
 name: Digicert
 nav: Providers
 network: true
-overview: 'Digicert publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Domain API, Order API, and 2 more. Tagged areas include Certificates, Encryption, PKI, SSL, and TLS.
+overview: 'Digicert publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, Domain API, Order API, and 6 more. Tagged areas include Certificates, Encryption, PKI, SSL, and TLS.
 
 
-  Digicert''s developer surface includes authentication, documentation, support, engineering blog, pricing, GitHub presence, changelog, and 10 more developer resources.'
+  Digicert''s developer surface includes authentication, documentation, support, engineering blog, pricing, GitHub presence, changelog, and 11 more developer resources.'
 plans:
 - name: Digicert Plans Pricing
   plan_count: 3
@@ -208,9 +217,9 @@ rate_limits:
   slug: digicert-rate-limits
 score:
   band: developing
-  composite: 40.8
+  composite: 40.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
@@ -220,11 +229,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 28.6
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 55.3
-  previous_composite: 40.8
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     contracts:
@@ -233,8 +242,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST APIs for embedded insurance distribution — lookups/master data, quotes, proposals and payments — built to OpenAPI 3.0 (Swagger), secured with Bearer access tokens, and testable in a sandbox "Deve
@@ -143,9 +143,9 @@ description: 'Turtlemint is an Indian insurtech that sells and services insuranc
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/turtlemint.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.turtlefin.com over HTTP; 7 tools listed.
   name: Turtlemint MCP Server
-  slug: turtlemint-mcp-server
+  slug: turtlefin-site
 modified: '2026-07-21'
 name: Turtlemint
 nav: Providers
@@ -157,7 +157,7 @@ overview: 'Turtlemint publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: thin
-  composite: 30.0
+  composite: 29.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -171,20 +171,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 53.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 30.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - india
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 29.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

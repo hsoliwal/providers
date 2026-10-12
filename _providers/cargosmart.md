@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -189,7 +189,7 @@ modified: '2026-05-19'
 name: CargoSmart
 nav: Providers
 network: true
-overview: 'CargoSmart publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Containers API, Documents API, and 2 more. Tagged areas include Booking, Containers, Documentation, GSBN, and IQAX.
+overview: 'CargoSmart publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Bookings API, Containers API, Documents API, and 2 more. Tagged areas include Booking, Containers, GSBN, IQAX, and Logistics.
 
 
   The CargoSmart catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -234,7 +234,7 @@ scopes:
   summary_line: 4 scopes · clientCredentials
 score:
   band: thin
-  composite: 34.0
+  composite: 33.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 51.5
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 68.1
+    contract_quality: 62.4
     developer_ergonomics: 31.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 34.0
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
@@ -258,8 +258,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -278,7 +284,6 @@ slug: cargosmart
 tags:
 - Booking
 - Containers
-- Documentation
 - GSBN
 - IQAX
 - Logistics

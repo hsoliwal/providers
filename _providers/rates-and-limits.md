@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Keyless, unauthenticated REST-style JSON API serving US tax, payroll, benefits, and wage figures with bundled provenance. Includes a self-describing catalog (index.json) and a bulk current-figures end
@@ -44,9 +44,9 @@ created: '2026-09-14'
 description: 'A free, keyless open-data publisher exposing US federal and state tax, payroll, benefits, and wage figures as JSON. Every figure ships bundled with provenance: the exact quoted sentence from the governing government document, byte offsets, sha256-stamped source snapshots, and last-verified dates.'
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'No official MCP server exists. This is a DERIVED candidate tool list mapped from the five documented, keyless JSON endpoints, offered as a shape a server could take. No endpoint URL is asserted as an '
   name: Rates and Limits MCP Server
-  slug: rates-and-limits-mcp-server
+  slug: rates-and-limits-mcp-yml
 modified: '2026-09-14'
 name: Rates and Limits
 nav: Providers
@@ -63,7 +63,7 @@ rate_limits:
   slug: rates-and-limits-rate-limits
 score:
   band: emerging
-  composite: 19.8
+  composite: 18.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 32.0
@@ -77,9 +77,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 19.8
+  previous_composite: 18.3
   provenance:
     mcp: derived
   regulatory:
@@ -87,9 +87,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

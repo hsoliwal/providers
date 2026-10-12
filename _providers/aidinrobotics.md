@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.4
-  scored_at: '2026-09-20'
+  score: 10.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An anonymous remote Model Context Protocol endpoint served on AIDIN ROBOTICS' own host and advertised in the company's own /llms.txt under an "AI 에이전트 액세스" section. An unauthenticated JSON-RPC initial
@@ -168,7 +168,7 @@ layout: provider
 mcp_servers:
 - description: AIDIN ROBOTICS serves a live, unauthenticated remote MCP endpoint at https://www.aidinrobotics.co.kr/_api/mcp, advertised in the company's own /llms.txt under an "AI 에이전트 액세스" (AI agent access) sectio
   name: AIDIN ROBOTICS Site MCP manifest
-  slug: aidin-robotics-site-mcp-manifest
+  slug: site-visitor-assistant-for-site-aidin-robotics-https-www-aidinrobotics-co-kr-api-mcp
 modified: '2026-09-14'
 name: AIDIN ROBOTICS
 nav: Providers
@@ -188,7 +188,7 @@ rate_limits:
   slug: aidinrobotics-rate-limits
 score:
   band: thin
-  composite: 26.8
+  composite: 28.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -202,14 +202,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 18.4
-  previous_composite: 26.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-korea
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 28.3
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The core open-source Tuva dbt package that transforms healthcare data from the Tuva Input Layer into the Tuva Core Data Model and Data Marts, including data-quality tests, normalization, claims prepro
@@ -248,7 +248,7 @@ modified: '2026-09-16'
 name: Tuva Health
 nav: Providers
 network: true
-overview: 'Tuva Health publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Config API, Data Sources API, Check API, and 5 more. Tagged areas include Healthcare, United States, Health Data, FHIR, and Interoperability.
+overview: 'Tuva Health publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Config API, Data Sources API, Check API, and 8 more. Tagged areas include Healthcare, United States, Health Data, FHIR, and Interoperability.
 
 
   Tuva Health''s developer surface includes documentation, getting-started guide, changelog, engineering blog, support, API reference, authentication, and 26 more developer resources.'
@@ -263,7 +263,7 @@ rate_limits:
   slug: tuva-health-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 41.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 32.0
@@ -275,9 +275,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.2
+    contract_quality: 37.0
     developer_ergonomics: 80.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -286,7 +286,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.1
+  previous_composite: 41.9
   provenance:
     conformance: first-party
     contracts:
@@ -301,9 +301,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -328,7 +328,7 @@ tags:
 - Data Analytics
 - Data Transformation
 - Claims
-- Open-Source
+- Open Source
 - dbt
 - EMPI
 - Patient Matching

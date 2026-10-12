@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.cobre.co
@@ -164,7 +164,7 @@ description: Cobre is a Latin American B2B payments and treasury platform that g
 image: https://cdn.prod.website-files.com/67e310fc26a7ea5ef01f179f/68517f73899598147cb51036_banner_site.avif
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Cobre API Documentation
   slug: cobre-api-documentation
 modified: '2026-07-18'
@@ -185,7 +185,7 @@ rate_limits:
   slug: cobre-rate-limits
 score:
   band: developing
-  composite: 40.2
+  composite: 39.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -197,9 +197,9 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 42.7
+    contract_quality: 40.6
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -209,7 +209,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 40.2
+  previous_composite: 39.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.a.loconav.com/integration/api/v1
@@ -278,7 +278,7 @@ rate_limits:
   slug: loconav-rate-limits
 score:
   band: developing
-  composite: 47.2
+  composite: 47.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -290,11 +290,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 64.0
+    contract_quality: 58.7
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 47.2
+  previous_composite: 47.7
   provenance:
     conformance: first-party
     contracts:
@@ -304,8 +304,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

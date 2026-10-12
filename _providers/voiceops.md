@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Live first-party remote Model Context Protocol server operated by VoiceOps. JSON-RPC 2.0 over HTTP (streamable HTTP transport), authenticated with a VoiceOps API key sent in the Authorization header. '
@@ -153,9 +153,9 @@ description: VoiceOps is an AI agent platform that analyzes customer conversatio
 image: https://cdn.prod.website-files.com/677e212e69df600d0a08b485/678abf9aa13aa718ca1f779f_voiceops_favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.voiceops.com over HTTP requiring an API key.
   name: VoiceOps MCP Server
-  slug: voiceops-mcp-server
+  slug: voiceops
 modified: '2026-08-14'
 name: VoiceOps
 nav: Providers
@@ -179,8 +179,8 @@ scopes:
   slug: voiceops-scopes
   summary_line: 6 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.3
+  band: thin
+  composite: 27.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -194,14 +194,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 79.6
+    discoverability: 78.3
     operational_transparency: 5.3
-  previous_composite: 23.3
+  previous_composite: 27.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

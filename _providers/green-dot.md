@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 17
 apis:
 - description: The Enrollments API is typically the first API used in a partner integration and establishes the initial banking relationship for a new end user. It covers account creation, identity capture, KYC (Kno
@@ -234,16 +234,16 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/green-dot.png
 layout: provider
 modified: '2026-07-23'
-name: Green Dot Corporation
+name: Green Dot
 nav: Providers
 network: true
-overview: 'Green Dot Corporation publishes 17 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Banking as a Service, Embedded Finance, Prepaid Cards, and Banking.
+overview: 'Green Dot publishes 17 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Banking as a Service, Embedded Finance, Prepaid Cards, and Banking.
 
 
-  The Green Dot Corporation catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Green Dot catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Green Dot Corporation''s developer surface includes documentation, API reference, authentication, engineering blog, changelog, sandbox, and 23 more developer resources.'
+  Green Dot''s developer surface includes documentation, API reference, authentication, engineering blog, changelog, sandbox, and 23 more developer resources.'
 plans:
 - name: Green Dot Plans Pricing
   plan_count: 1
@@ -260,7 +260,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: thin
-  composite: 36.5
+  composite: 33.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 42.0
@@ -272,9 +272,9 @@ score:
   facets:
     access_clarity: 30.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 11.3
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -283,7 +283,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.5
+  previous_composite: 33.6
   provenance:
     conformance: first-party
     skills: derived
@@ -296,9 +296,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 60.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

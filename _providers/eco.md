@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://quotes.eco.com
@@ -196,8 +196,8 @@ overview: 'Eco publishes 3 APIs on the [APIs.io](https://apis.io/) network: Quot
   Eco''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, CLI, authentication, and 18 more developer resources.'
 random_paper: 3
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 37.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 43.1
+    contract_quality: 38.8
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 39.8
+  previous_composite: 37.9
   provenance:
     conformance: derived
     contracts:
@@ -228,9 +228,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -256,6 +256,6 @@ tags:
 - DeFi
 - Web3
 - Infrastructure
-- Financial-Services
+- Financial Services
 website: https://www.eco.com/
 ---

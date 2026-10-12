@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 8
 common:
@@ -182,12 +182,12 @@ rate_limits:
   slug: innovaccer-rate-limits
 scopes:
 - name: Innovaccer Scopes
-  scope_count: 0
+  scope_count: 9
   slug: innovaccer-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 9 scopes
 score:
   band: thin
-  composite: 34.9
+  composite: 30.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 27.0
@@ -201,9 +201,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 28.9
-  previous_composite: 34.9
+  previous_composite: 30.4
   provenance:
     conformance: first-party
     mcp: first-party
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 83.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 49.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

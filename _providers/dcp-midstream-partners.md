@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -176,7 +176,7 @@ rate_limits:
   slug: dcp-midstream-partners-rate-limits
 score:
   band: emerging
-  composite: 18.7
+  composite: 17.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -190,9 +190,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 18.7
+  previous_composite: 17.4
   provenance:
     conformance: first-party
   regulatory:
@@ -200,9 +200,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

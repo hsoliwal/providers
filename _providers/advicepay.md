@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The AdvicePay REST API (v1.0.1) exposes the fee-for-service billing platform to integrators: admins, advisors, agreements, clients, custom attributes, deliverables, engagements, invoices, notification'
@@ -197,7 +197,7 @@ modified: '2026-09-09'
 name: AdvicePay
 nav: Providers
 network: true
-overview: 'AdvicePay publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Payments, Billing, Invoicing, and Financial Planning.
+overview: 'AdvicePay publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Payments, Billing, Invoicing, and Financial Planning.
 
 
   AdvicePay''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
@@ -217,7 +217,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 53.3
+  composite: 50.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.0
@@ -231,9 +231,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 53.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 71.1
-  previous_composite: 53.3
+  previous_composite: 50.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -242,9 +242,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,7 +269,7 @@ security:
   summary_line: SOC 2 Type II, PCI SAQ A
 slug: advicepay
 tags:
-- Financial-Services
+- Financial Services
 - Payments
 - Billing
 - Invoicing

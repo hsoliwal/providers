@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -139,7 +139,7 @@ overview: 'Laserhub is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 18
 score:
   band: emerging
-  composite: 16.9
+  composite: 16.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -153,7 +153,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,9 +163,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 16.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

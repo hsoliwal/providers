@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 14
 apis:
 - description: The authorization endpoints provide a token that will allow your service or application to call Kroger APIs.
@@ -256,7 +256,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: developing
-  composite: 39.5
+  composite: 42.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 63.0
@@ -270,14 +270,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 39.5
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

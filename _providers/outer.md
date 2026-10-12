@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol shopping service Outer's storefront exposes over MCP, advertised in the merchant profile at https://liveouter.com/.well-known/ucp. It carries the dev.ucp.shopping servi
@@ -126,9 +126,9 @@ description: 'Outer is a direct-to-consumer outdoor furniture brand founded in 2
 image: https://liveouter.com/cdn/shop/files/outer-hero-banner-aluminum_513ea457-357e-47e1-9e01-8e84b8b4fd29.png?v=1769763708&width=2048
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at liveouter.com over HTTP; 5 tools listed.
   name: Outer MCP Server
-  slug: outer-mcp-server
+  slug: outer-ucp-shopping
 modified: '2026-08-04'
 name: Outer
 nav: Providers
@@ -145,7 +145,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.9
+  composite: 24.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -159,20 +159,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.9
+  previous_composite: 24.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

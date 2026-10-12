@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Zyla API Hub provides a centralized marketplace for discovering, testing, and integrating thousands of APIs across categories including finance, weather, geolocation, communication, and more, all acce
   name: Zyla API Hub
   slug: zyla-api-hub
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zyla/refs/heads/main/security/zyla-domain-security.yml
@@ -94,6 +94,9 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.zylalabs.com over HTTP; 8 tools listed.
+  name: Zyla MCP Server
+  slug: zyla
 modified: '2026-05-19'
 name: Zyla
 nav: Providers
@@ -112,8 +115,8 @@ rate_limits:
   name: Zyla Rate Limits
   slug: zyla-rate-limits
 score:
-  band: emerging
-  composite: 11.9
+  band: minimal
+  composite: 10.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 36.0
@@ -127,13 +130,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 11.9
+  previous_composite: 10.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

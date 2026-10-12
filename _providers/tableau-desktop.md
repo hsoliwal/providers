@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -239,7 +239,7 @@ modified: '2026-09-16'
 name: Tableau Desktop
 nav: Providers
 network: true
-overview: 'Tableau Desktop publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Projects API, and 4 more. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Desktop Application.
+overview: 'Tableau Desktop publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Projects API, and 9 more. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Desktop Application.
 
 
   Tableau Desktop''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, training material, and 10 more developer resources.'
@@ -253,8 +253,8 @@ rate_limits:
   name: Tableau Desktop Rate Limits
   slug: tableau-desktop-rate-limits
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 44.0
@@ -266,14 +266,14 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.3
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 39.8
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     contracts:
@@ -281,8 +281,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

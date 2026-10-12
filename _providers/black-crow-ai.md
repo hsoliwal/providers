@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Live, versioned HTTP event-ingest API behind the Black Crow AI JavaScript tag. POST /v1/events/{event_name} accepts a JSON body identified by siteName, pageId and visitorId and carries the visit, purc
@@ -175,7 +175,7 @@ modified: '2026-08-12'
 name: Black Crow AI
 nav: Providers
 network: true
-overview: 'Black Crow AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Artificial Intelligence, Machine-Learning, and Marketing.
+overview: 'Black Crow AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Artificial Intelligence, Machine Learning, and Marketing.
 
 
   Black Crow AI''s developer surface includes authentication, sandbox, documentation, getting-started guide, engineering blog, support, signup flow, and 20 more developer resources.'
@@ -190,7 +190,7 @@ rate_limits:
   slug: black-crow-ai-rate-limits
 score:
   band: thin
-  composite: 29.3
+  composite: 30.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -204,13 +204,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 29.3
+  previous_composite: 30.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +241,7 @@ tags:
 - Company
 - E-Commerce
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Marketing
 - Advertising
 - Personalization

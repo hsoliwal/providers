@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: Whatfix API
   slug: open-whatfix
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/whatfix/refs/heads/main/capabilities/whatfix-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/whatfix-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/whatfix/refs/heads/main/agentic-access/whatfix-agentic-access.yml
   title: ''
@@ -203,7 +208,7 @@ overview: 'Whatfix publishes 5 APIs on the [APIs.io](https://apis.io/) network, 
   The Whatfix catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Whatfix''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
+  Whatfix''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Whatfix Plans Pricing
   plan_count: 1
@@ -237,9 +242,9 @@ rules:
   slug: whatfix-rules
 score:
   band: thin
-  composite: 34.0
+  composite: 33.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 51.5
     catalog_earned_first_party: 0.0
     catalog_gap: 63.5
@@ -249,11 +254,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 13.6
-    contract_quality: 60.5
+    contract_quality: 55.0
     developer_ergonomics: 19.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 34.0
+  previous_composite: 33.3
   provenance:
     agentic_access: derived
     contracts:
@@ -261,8 +266,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

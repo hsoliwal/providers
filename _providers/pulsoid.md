@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -205,7 +205,7 @@ scopes:
   summary_line: 9 scopes · implicit/authorizationCode
 score:
   band: thin
-  composite: 29.7
+  composite: 27.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -217,11 +217,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
-    contract_quality: 49.8
+    contract_quality: 44.8
     developer_ergonomics: 9.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 29.7
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -234,9 +234,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 36.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 1
@@ -49,32 +49,32 @@ apis:
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Manage access tokens
-  name: S2 Dev access-tokens API
+  name: S2 Dev Access Tokens API
   slug: s2-dev-access-tokens-api
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Manage basins
-  name: S2 Dev basins API
+  name: S2 Dev Basins API
   slug: s2-dev-basins-api
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Manage locations
-  name: S2 Dev locations API
+  name: S2 Dev Locations API
   slug: s2-dev-locations-api
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Usage metrics and data.
-  name: S2 Dev metrics API
+  name: S2 Dev Metrics API
   slug: s2-dev-metrics-api
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Manage records
-  name: S2 Dev records API
+  name: S2 Dev Records API
   slug: s2-dev-records-api
 - baseURL: https://a.s2.dev/v1
   baseurl_source: declared
   description: Manage streams
-  name: S2 Dev streams API
+  name: S2 Dev Streams API
   slug: s2-dev-streams-api
 artifact_total: 19
 collections:
@@ -288,7 +288,7 @@ modified: '2026-07-21'
 name: S2 Dev
 nav: Providers
 network: true
-overview: 'S2 Dev publishes 6 APIs on the [APIs.io](https://apis.io/) network, including access-tokens API, basins API, locations API, and 3 more. Tagged areas include Company, Streaming, Real-Time, Event Streaming, and Durable Storage.
+overview: 'S2 Dev publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Access Tokens API, Basins API, Locations API, and 3 more. Tagged areas include Company, Streaming, Real-Time, Event Streaming, and Durable Storage.
 
 
   S2 Dev''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 32 more developer resources.'
@@ -299,7 +299,7 @@ rate_limits:
   slug: s2-dev-rate-limits
 score:
   band: strong
-  composite: 59.4
+  composite: 60.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -311,11 +311,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 55.4
+    contract_quality: 50.2
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 76.3
-  previous_composite: 59.4
+  previous_composite: 60.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -326,8 +326,20 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

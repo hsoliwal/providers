@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Single-endpoint healthcare interoperability API exposing proprietary LK* operations (appointments, patient bridge/search, documents, charges, patient balance, master lists) that bi-directionally conne
@@ -155,7 +155,7 @@ rate_limits:
   slug: ellkay-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 27.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -169,9 +169,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 39.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 28.5
+  previous_composite: 27.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -180,9 +180,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 36.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: platform
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.3
-  scored_at: '2026-09-20'
+  score: 30.1
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: http://192.168.0.95
@@ -193,7 +193,7 @@ overview: 'Nine Fives publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 0
 score:
   band: thin
-  composite: 29.0
+  composite: 29.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -207,9 +207,9 @@ score:
     contract_governance: 18.2
     contract_quality: 11.5
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 29.0
+  previous_composite: 29.6
   provenance:
     conformance: first-party
     contracts:
@@ -217,10 +217,16 @@ score:
       derived: 7
       marker_coverage: 100.0
       total: 7
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

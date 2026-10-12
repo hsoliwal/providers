@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.myfitnesspal.com/v2
@@ -144,7 +144,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.5
+  composite: 42.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -156,11 +156,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 45.5
+  previous_composite: 42.3
   provenance:
     conformance: derived
     mcp: derived
@@ -170,9 +170,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

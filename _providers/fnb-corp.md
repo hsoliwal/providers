@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: F.N.B. Corporation publishes no first-party developer API. Consumer-permissioned account, balance and transaction data for First National Bank of Pennsylvania is available only through third-party dat
@@ -84,14 +84,14 @@ modified: '2026-07-23'
 name: F.N.B. Corporation
 nav: Providers
 network: true
-overview: 'F.N.B. Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Regional Bank, and Consumer Banking.
+overview: 'F.N.B. Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Regional Bank, and Consumer Banking.
 
 
   F.N.B. Corporation''s developer surface includes support and 7 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 13.0
+  composite: 13.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -105,7 +105,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -114,15 +114,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.0
+  previous_composite: 13.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,14 +136,13 @@ security:
   summary_line: TLSv1.2 · HSTS · DNSSEC · DMARC
 slug: fnb-corp
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Consumer Banking
 - Commercial Banking
 - Wealth Management
-- Data Aggregation
 - Open Finance
 website: https://www.fnb-online.com/
 ---

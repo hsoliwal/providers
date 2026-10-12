@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/nuvelar/refs/heads/main/security/nuvelar-domain-security.yml
@@ -63,6 +63,10 @@ created: '2026-07-17'
 description: Nuvelar is an Argentine technology solutions firm founded in 2014 that designs and builds digital experiences across consulting, hardware, software, and design. Its flagship product, Nuvelar Display, is a cloud platform for creating, distributing, and managing digital-signage content networks with content scheduling, player monitoring, dynamic templates, multi-format support, and social/weather/RSS integrations. Beyond the platform, Nuvelar builds custom interactive installations — videowalls, interactive tables, and branded experiential systems for clients such as Adidas. It was surfaced as a 500 Global portfolio company and added to the API Evangelist network. As of the latest enrichment pass Nuvelar publishes no public API, developer portal, SDK, or specification.
 image: https://nuvelar.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nuvelar.com over HTTP.
+  name: Nuvelar MCP Server
+  slug: nuvelar
 modified: '2026-07-20'
 name: Nuvelar
 nav: Providers
@@ -71,7 +75,7 @@ overview: Nuvelar is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 17
 score:
   band: minimal
-  composite: 7.1
+  composite: 5.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -85,7 +89,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -94,11 +98,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 7.1
+  previous_composite: 5.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

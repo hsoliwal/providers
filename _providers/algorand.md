@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 1
@@ -50,7 +50,7 @@ apis:
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
   description: The common API from Algorand — 6 operation(s) for common.
-  name: Algorand common API
+  name: Algorand Common API
   slug: algorand-common-api
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
@@ -60,7 +60,7 @@ apis:
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
   description: The lookup API from Algorand — 14 operation(s) for lookup.
-  name: Algorand lookup API
+  name: Algorand Lookup API
   slug: algorand-lookup-api
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
@@ -75,7 +75,7 @@ apis:
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
   description: The private API from Algorand — 7 operation(s) for private.
-  name: Algorand private API
+  name: Algorand Private API
   slug: algorand-private-api
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
@@ -85,12 +85,12 @@ apis:
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
   description: The public API from Algorand — 43 operation(s) for public.
-  name: Algorand public API
+  name: Algorand Public API
   slug: algorand-public-api
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
   description: The search API from Algorand — 6 operation(s) for search.
-  name: Algorand search API
+  name: Algorand Search API
   slug: algorand-search-api
 - baseURL: https://mainnet-api.4160.nodely.dev
   baseurl_source: declared
@@ -399,7 +399,7 @@ modified: '2026-06-13'
 name: Algorand
 nav: Providers
 network: true
-overview: 'Algorand publishes 14 APIs on the [APIs.io](https://apis.io/) network, including common API, Key API, lookup API, and 11 more. Tagged areas include Blockchain, Cryptocurrency, Proof of Stake, DeFi, and Smart Contracts.
+overview: 'Algorand publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Common API, Key API, Lookup API, and 12 more. Tagged areas include Blockchain, Cryptocurrency, Proof of Stake, DeFi, and Smart Contracts.
 
 
   The Algorand catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -428,23 +428,23 @@ rules:
   slug: algorand-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.0
+  composite: 47.5
   coverage:
     artifact_dirs: 18
-    catalog_earned: 70.3
+    catalog_earned: 67.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.8
+    catalog_gap: 47.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 9.8
-    contract_quality: 50.3
+    contract_quality: 46.5
     developer_ergonomics: 75.0
-    discoverability: 64.8
-    operational_transparency: 34.2
-  previous_composite: 49.0
+    discoverability: 62.5
+    operational_transparency: 31.1
+  previous_composite: 47.5
   provenance:
     agentic_access: derived
     contracts:
@@ -452,8 +452,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

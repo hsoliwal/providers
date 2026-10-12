@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The machine0 control plane for creating, managing, snapshotting and connecting to persistent cloud VMs. Exposed as a CLI (npm @machine0/cli) and a remote MCP server (Streamable HTTP, OAuth 2.0 + API k
@@ -118,7 +118,7 @@ layout: provider
 mcp_servers:
 - description: Machine0 operates an official remote MCP server at https://app.machine0.io/mcp (Streamable HTTP transport, stateless, JSON responses) that gives AI agents the same infrastructure control as the CLI. A
   name: Machine0 MCP Server
-  slug: machine0-mcp-server
+  slug: machine0
 modified: '2026-07-20'
 name: Machine0
 nav: Providers
@@ -130,12 +130,12 @@ overview: 'Machine0 publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 3
 scopes:
 - name: Machine0 Scopes
-  scope_count: 0
+  scope_count: 4
   slug: machine0-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 29.9
+  composite: 32.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -149,15 +149,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 29.9
+  previous_composite: 32.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Ring Partner API (Amazon Vision API / AVA) lets certified Ring Appstore partners access Ring device data and media on behalf of consenting users: list and inspect devices, read status/capabilities'
@@ -183,7 +183,7 @@ layout: provider
 mcp_servers:
 - description: The Ring Appstore Knowledge MCP Server is a remote Model Context Protocol server backed by an Amazon Bedrock Knowledge Base. It connects an AI coding assistant (Kiro, Cursor, Cline, Claude Desktop) to
   name: Ring MCP Server
-  slug: ring-mcp-server
+  slug: ring-appstore-knowledge-mcp-server
 modified: '2026-07-21'
 name: Ring
 nav: Providers
@@ -198,7 +198,7 @@ overview: 'Ring publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 14
 score:
   band: developing
-  composite: 42.3
+  composite: 43.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -210,16 +210,22 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 42.3
+  previous_composite: 43.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

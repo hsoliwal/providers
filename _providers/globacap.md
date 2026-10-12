@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -147,7 +147,7 @@ modified: '2026-08-22'
 name: Globacap
 nav: Providers
 network: true
-overview: 'Globacap is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Private Capital Markets, Capital Markets, Securities, and Financial-Services.
+overview: 'Globacap is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Private Capital Markets, Capital Markets, Securities, and Financial Services.
 
 
   Globacap''s developer surface includes support, authentication, and 16 more developer resources.'
@@ -162,12 +162,12 @@ rate_limits:
   slug: globacap-rate-limits
 scopes:
 - name: Globacap Scopes
-  scope_count: 0
+  scope_count: 6
   slug: globacap-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes · authorization_code
 score:
   band: emerging
-  composite: 20.0
+  composite: 17.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -181,7 +181,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -191,7 +191,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 20.0
+  previous_composite: 17.5
   provenance:
     conformance: first-party
   regulatory:
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -227,7 +227,7 @@ tags:
 - Private Capital Markets
 - Capital Markets
 - Securities
-- Financial-Services
+- Financial Services
 - Fintech
 - Tokenization
 - Share Register

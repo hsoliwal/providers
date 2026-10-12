@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -75,6 +75,11 @@ collections:
   name: Scribe Search & Retrieval Documents Teams API
   slug: open-scribe-teams-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/scribe/refs/heads/main/capabilities/scribe-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/scribe-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/scribe/refs/heads/main/overlays/scribe-search-retrieval-overlay.yaml
   title: ''
@@ -206,10 +211,10 @@ modified: '2026-07-21'
 name: Scribe
 nav: Providers
 network: true
-overview: 'Scribe publishes 3 APIs on the [APIs.io](https://apis.io/) network: Documents API, Search API, and Teams API. Tagged areas include Company, Ai Ml, Documentation, Knowledge-Management, and Search.
+overview: 'Scribe publishes 3 APIs on the [APIs.io](https://apis.io/) network: Documents API, Search API, and Teams API. Tagged areas include Company, Ai Ml, Documentation, Knowledge Management, and Search.
 
 
-  Scribe''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
+  Scribe''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
 random_paper: 16
 rate_limits:
 - limit_count: 2
@@ -217,9 +222,9 @@ rate_limits:
   slug: scribe-rate-limits
 score:
   band: developing
-  composite: 51.2
+  composite: 51.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -229,11 +234,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 58.5
+    contract_quality: 52.7
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 51.2
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -244,8 +249,22 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ferpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,7 +289,7 @@ tags:
 - Company
 - Ai Ml
 - Documentation
-- Knowledge-Management
+- Knowledge Management
 - Search
 - Workflows
 - Process Documentation

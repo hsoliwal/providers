@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 11.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -112,18 +112,22 @@ created: '2026-07-17'
 description: LegalOS is an AI-native U.S. immigration law practice based in San Francisco and backed by Y Combinator (Winter 2026 batch). Founded by Matthew Asir (CEO), Rachel Asir (COO) and Claire Jutabha (CTO), the company pairs proprietary legal software with licensed immigration attorneys to prepare employment-based visa and green-card petitions — H-1B, L-1A, L-1B, O-1 and TN visas, plus EB-1A, EB-1C and EB-2 NIW green cards. AI agents draft petition narratives, assemble supporting evidence and anticipate USCIS objections, with every filing reviewed by a licensed attorney before submission. LegalOS is delivered as a service through a customer web application at app.legalos.ai; as of this profile it publishes no public developer API, SDKs, developer portal or machine-readable API artifacts.
 image: https://cdn.prod.website-files.com/667d1a68c2779a28ef89b338/697dc2de49d014db1c617fe9_OG%201.webp
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.legalos.ai over HTTP.
+  name: LegalOS MCP Server
+  slug: legalos
 modified: '2026-07-19'
 name: LegalOS
 nav: Providers
 network: true
-overview: 'LegalOS is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Technology, Immigration, and Artificial Intelligence.
+overview: 'LegalOS is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Tech, Immigration, and Artificial Intelligence.
 
 
   LegalOS''s developer surface includes engineering blog, support, and 15 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 16.4
+  composite: 17.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -137,19 +141,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.4
+  previous_composite: 17.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +177,7 @@ slug: legalos
 tags:
 - Company
 - Legal
-- Legal Technology
+- Legal Tech
 - Immigration
 - Artificial Intelligence
 - Professional Services

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -176,7 +176,7 @@ layout: provider
 mcp_servers:
 - description: Official Code Ocean MCP server. Provides tools to search and run capsules and pipelines and to manage data assets. Runs locally as a stdio child process; authenticates with a Code Ocean access token v
   name: Code Ocean MCP Server
-  slug: code-ocean-mcp-server
+  slug: codeocean
 modified: '2026-07-18'
 name: Code Ocean
 nav: Providers
@@ -193,7 +193,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: thin
-  composite: 38.0
+  composite: 34.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -205,11 +205,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 56.7
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 2.6
-  previous_composite: 38.0
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -225,9 +225,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 42.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

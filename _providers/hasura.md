@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -48,11 +48,6 @@ apis:
 - description: The Hasura GraphQL Engine v2 provides instant realtime GraphQL APIs on your data with fine-grained access control. Supports GraphQL queries, mutations, and subscriptions at the /v1/graphql endpoint, a
   name: Hasura GraphQL API
   slug: hasura-graphql-api
-- baseURL: https://my-graphql-engine.example.com
-  baseurl_source: spec
-  description: The Hasura Metadata API allows programmatic management of Hasura GraphQL Engine configuration. All requests are POST requests to the /v1/metadata endpoint, supporting operations for managing data sour
-  name: Hasura Metadata API
-  slug: hasura-metadata-api
 - description: The Hasura Data Delivery Network (DDN) is a metadata-driven API platform that generates instant GraphQL APIs on any data source. It provides queries, mutations, and subscriptions as root-level fields,
   name: Hasura DDN GraphQL API
   slug: hasura-ddn-graphql-api
@@ -69,7 +64,7 @@ apis:
   slug: hasura-healthz-api
 - baseURL: https://my-graphql-engine.example.com
   baseurl_source: spec
-  description: Hasura metadata management.
+  description: The Hasura Metadata API allows programmatic management of Hasura GraphQL Engine configuration. All requests are POST requests to the /v1/metadata endpoint, supporting operations for managing data sour
   name: Hasura Metadata API
   slug: hasura-metadata-api
 - baseURL: https://my-graphql-engine.example.com
@@ -102,7 +97,7 @@ apis:
   description: The Graph QL API from Hasura — 2 operation(s) for graph ql.
   name: Hasura Graph QL API
   slug: hasura-graph-ql-api
-artifact_total: 47
+artifact_total: 46
 asyncapis:
 - description: AsyncAPI definition for Hasura GraphQL Engine real-time subscriptions delivered over WebSocket at the `/v1/graphql` endpoint. Hasura supports two WebSocket subprotocols, negotiated via the `Sec-WebSoc
   name: Hasura GraphQL Subscriptions over WebSocket
@@ -417,7 +412,7 @@ modified: '2026-08-03'
 name: Hasura
 nav: Providers
 network: true
-overview: 'Hasura publishes 10 APIs on the [APIs.io](https://apis.io/) network, including GraphQL API, Metadata API, Healthz API, and 7 more. Tagged areas include Data Access and GraphQL.
+overview: 'Hasura publishes 12 APIs on the [APIs.io](https://apis.io/) network, including GraphQL API, Healthz API, Metadata API, and 9 more. Tagged areas include Data Access, GraphQL, and Real-Time.
 
 
   The Hasura catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -447,7 +442,7 @@ rules:
   slug: hasura-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 51.9
+  composite: 52.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 34.8
@@ -459,11 +454,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 11.4
-    contract_quality: 57.4
+    contract_quality: 53.1
     developer_ergonomics: 56.0
-    discoverability: 48.1
+    discoverability: 46.7
     operational_transparency: 55.3
-  previous_composite: 51.9
+  previous_composite: 52.9
   provenance:
     agentic_access: derived
     contracts:
@@ -471,8 +466,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -499,5 +500,6 @@ slug: hasura
 tags:
 - Data Access
 - GraphQL
+- Real-Time
 website: https://hasura.io/
 ---

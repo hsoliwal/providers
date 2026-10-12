@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -94,9 +94,9 @@ description: Arka is a custom packaging company that lets ecommerce brands desig
 image: https://www.arka.com/cdn/shop/files/Meta-Image_8d5f53a4-fc6a-4675-aea9-a25b6f96e578.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.arka.com over HTTP; 5 tools listed.
   name: Arka MCP Server
-  slug: arka-mcp-server
+  slug: arka-ucp-shopping
 modified: '2026-07-18'
 name: Arka
 nav: Providers
@@ -108,7 +108,7 @@ overview: 'Arka is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 19
 score:
   band: emerging
-  composite: 16.2
+  composite: 17.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -122,14 +122,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 16.2
+  previous_composite: 17.6
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

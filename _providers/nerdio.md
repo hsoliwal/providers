@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 2
@@ -80,6 +80,11 @@ collections:
   name: NMM Distributor API
   slug: open-nerdio-distributor-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/capabilities/nerdio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nerdio-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/nerdio/refs/heads/main/overlays/nerdio-distributor-api-overlay.yaml
   title: ''
@@ -234,19 +239,19 @@ modified: '2026-08-01'
 name: Nerdio
 nav: Providers
 network: true
-overview: 'Nerdio publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Health API, Install API, Invoices API, and 1 more. Tagged areas include Company, Azure Virtual Desktop, Windows 365, Virtual Desktop Infrastructure, and Cloud Desktop Management.
+overview: 'Nerdio publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Health API, Install API, Invoices API, and 3 more. Tagged areas include Company, Azure Virtual Desktop, Windows 365, Virtual Desktop Infrastructure, and Cloud Desktop Management.
 
 
   The Nerdio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Nerdio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
+  Nerdio''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 26 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 49.1
+  composite: 50.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -256,11 +261,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 45.8
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 49.1
+  previous_composite: 50.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,8 +276,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

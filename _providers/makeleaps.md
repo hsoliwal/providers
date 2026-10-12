@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the MakeLeaps cloud invoicing platform. Authenticated with OAuth 2.0 client-credentials against api.makeleaps.com, it exposes partner-scoped resources for clients, documents (invoices, qu
@@ -132,7 +132,7 @@ overview: 'MakeLeaps publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 1
 score:
   band: thin
-  composite: 33.3
+  composite: 32.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -146,7 +146,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -155,7 +155,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 33.3
+  previous_composite: 32.4
   provenance:
     conformance: derived
     mcp: derived
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -190,7 +190,7 @@ tags:
 - Accounting
 - Finance
 - Payments
-- Document-Management
+- Document Management
 - E-Invoicing
 - Software-as-a-Service
 - Japan

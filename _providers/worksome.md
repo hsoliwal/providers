@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Worksome public GraphQL API — a single POST endpoint at https://api.worksome.com/graphql exposing 87 queries and 113 mutations across 496 types. Covers hires and contracts, jobs and candidates, pr
@@ -241,8 +241,8 @@ rate_limits:
   name: Worksome Rate Limits
   slug: worksome-rate-limits
 score:
-  band: strong
-  composite: 55.6
+  band: developing
+  composite: 54.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -254,9 +254,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 49.0
+    contract_quality: 46.9
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 71.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -266,7 +266,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 55.6
+  previous_composite: 54.2
   provenance:
     conformance: derived
     mcp: derived
@@ -276,9 +276,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -11,7 +11,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
@@ -33,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 59.2
-  scored_at: '2026-09-20'
+  score: 57.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -288,9 +289,9 @@ description: Ando is a messaging platform built from the ground up for teams tha
 image: https://www.ando.so/opengraph-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.ando.so over HTTP; 29 tools listed.
   name: Ando MCP Server
-  slug: ando-mcp-server
+  slug: ando
 modified: '2026-07-17'
 name: Ando
 nav: Providers
@@ -305,7 +306,7 @@ overview: 'Ando publishes 8 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 0
 score:
   band: developing
-  composite: 46.5
+  composite: 46.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -317,11 +318,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 64.4
+    contract_quality: 58.8
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 46.5
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -332,8 +333,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

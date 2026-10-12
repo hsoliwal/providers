@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 0
@@ -128,6 +128,11 @@ collections:
   name: Tokenizer Endpoint
   slug: open-bolt-financial-tokenizer
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/capabilities/bolt-financial-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bolt-financial-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/bolt-financial/refs/heads/main/agentic-access/bolt-financial-agentic-access.yml
   title: ''
@@ -354,20 +359,20 @@ finops:
 image: https://kinlane-productions2.s3.amazonaws.com/api-evangelist-site/company-images/bolt-financial.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at help.boltapp.com.
   name: Bolt Financial MCP Server
-  slug: bolt-financial-mcp-server
+  slug: bolt-financial-mcp-yml
 modified: '2026-07-31'
 name: Bolt Financial
 nav: Providers
 network: true
-overview: 'Bolt Financial publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Account API, Callbacks API, Configuration API, and 9 more. Tagged areas include Company, Payments, Checkout, E-Commerce, and Fintech.
+overview: 'Bolt Financial publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Account API, Callbacks API, Configuration API, and 10 more. Tagged areas include Company, Payments, Checkout, E-Commerce, and Fintech.
 
 
   The Bolt Financial catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bolt Financial''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 40 more developer resources.'
+  Bolt Financial''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 41 more developer resources.'
 plans:
 - name: Bolt Financial Plans Pricing
   plan_count: 1
@@ -383,24 +388,29 @@ scopes:
   slug: bolt-financial-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: exemplar
-  composite: 70.1
+  band: strong
+  composite: 65.0
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 51.0
+    artifact_dirs: 28
+    catalog_earned: 50.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 65.8
+    access_clarity: 63.7
     contract_governance: 18.2
-    contract_quality: 63.0
+    contract_quality: 57.5
     developer_ergonomics: 79.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 70.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 65.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -416,9 +426,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 78.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -446,7 +456,7 @@ tags:
 - Fintech
 - Subscription
 - Tokenization
-- Fraud
+- Fraud Prevention
 - Identity
 - Webhook
 website: https://www.bolt.com

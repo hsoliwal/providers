@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -105,14 +105,14 @@ modified: '2026-05-23'
 name: Healthpeak Properties
 nav: Providers
 network: true
-overview: 'Healthpeak Properties is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, REIT, Healthcare, Life Sciences, and Lab Real Estate.
+overview: 'Healthpeak Properties is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, REIT, Healthcare, Life Sciences, and Lab Real Estate.
 
 
   Healthpeak Properties'' developer surface includes signup flow and 14 more developer resources.'
 random_paper: 15
 score:
   band: minimal
-  composite: 5.6
+  composite: 6.3
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -126,7 +126,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -134,15 +134,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 5.6
+  previous_composite: 6.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -151,7 +151,7 @@ score:
 screenshot: https://raw.githubusercontent.com/api-evangelist/healthpeak-properties/refs/heads/main/screenshots/healthpeak-properties-2026-07-25T220839.png
 slug: healthpeak-properties
 tags:
-- Real-Estate
+- Real Estate
 - REIT
 - Healthcare
 - Life Sciences

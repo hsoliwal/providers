@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -181,7 +181,7 @@ overview: 'Viewpoints AI publishes 3 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 17
 score:
   band: developing
-  composite: 40.1
+  composite: 40.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -193,11 +193,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 40.1
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -208,8 +208,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

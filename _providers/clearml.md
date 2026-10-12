@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 3
@@ -121,6 +121,11 @@ collections:
   name: ClearML REST API
   slug: open-clearml
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/clearml/refs/heads/main/capabilities/clearml-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/clearml-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -204,10 +209,10 @@ modified: '2026-05-08'
 name: ClearML
 nav: Providers
 network: true
-overview: 'ClearML publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Debug API, Events API, and 5 more. Tagged areas include Machine-Learning, MLOps, Open-Source, Experiment Tracking, and Orchestration.
+overview: 'ClearML publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Debug API, Events API, and 6 more. Tagged areas include Machine Learning, MLOps, Open Source, Experiment Tracking, and Orchestration.
 
 
-  ClearML''s developer surface includes authentication, developer portal, pricing, engineering blog, and 12 more developer resources.'
+  ClearML''s developer surface includes authentication, developer portal, pricing, engineering blog, and 13 more developer resources.'
 plans:
 - name: Clearml Plans Pricing
   plan_count: 1
@@ -219,9 +224,9 @@ rate_limits:
   slug: clearml-rate-limits
 score:
   band: thin
-  composite: 36.0
+  composite: 34.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
@@ -231,11 +236,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 36.0
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -243,8 +248,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -265,9 +276,9 @@ security:
   summary_line: security.txt · contact published
 slug: clearml
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
-- Open-Source
+- Open Source
 - Experiment Tracking
 - Orchestration
 website: https://clear.ml/

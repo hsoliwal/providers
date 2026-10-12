@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -120,9 +120,9 @@ description: Ripl is a social media marketing platform for small businesses, hel
 image: https://static.wixstatic.com/ficons/d8d800_48a04f46042747328480b7d817dc73f2~mv2.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.ripl.com over HTTP; 9 tools listed.
   name: Ripl (Wix Site MCP)
-  slug: ripl-wix-site-mcp
+  slug: ripl-wix-site
 modified: '2026-08-13'
 name: Ripl
 nav: Providers
@@ -142,7 +142,7 @@ rate_limits:
   slug: ripl-rate-limits
 score:
   band: emerging
-  composite: 21.4
+  composite: 21.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 35.0
@@ -156,13 +156,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 21.4
+  previous_composite: 21.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,5 +189,6 @@ tags:
 - Marketing
 - Software-as-a-Service
 - Social Media Management
+- Scheduling
 website: https://www.ripl.com/
 ---

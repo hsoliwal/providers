@@ -25,8 +25,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 19.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Anonymous, publicly callable MCP server on binske's direct-to-consumer storefront host implementing the Universal Commerce Protocol shopping service. A live JSON-RPC 2.0 tools/list returned 13 tools w
@@ -149,7 +149,7 @@ mcp_servers:
   slug: binske-storefront-commerce-mcp-server
 - description: ''
   name: Binske MCP Server
-  slug: binske-mcp-server
+  slug: binske-mcp-tools-json
 modified: '2026-08-07'
 name: Binske
 nav: Providers
@@ -161,12 +161,12 @@ overview: 'Binske publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 20
 scopes:
 - name: Binske Scopes
-  scope_count: 0
+  scope_count: 4
   slug: binske-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 20.1
+  composite: 22.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -180,15 +180,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 20.1
+  previous_composite: 22.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

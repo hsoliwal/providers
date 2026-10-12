@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -52,12 +52,12 @@ apis:
 - baseURL: https://graph.cofactr.com
   baseurl_source: declared
   description: Execute multiple product queries in a single request. Each batch member is an operation against the products API expressed as a relative URL; members are fulfilled concurrently and returned in order.
-  name: Cofactr batch API
+  name: Cofactr Batch API
   slug: cofactr-batch-api
 - baseURL: https://graph.cofactr.com
   baseurl_source: declared
   description: Search, view, and autocomplete electronic component products. Every product is a unique combination of manufacturer (`mfr`) and manufacturer part number (`mpn`), identified by a Cofactr ID (CPID). Pro
-  name: Cofactr products API
+  name: Cofactr Products API
   slug: cofactr-products-api
 arazzos:
 - description: Search the Cofactr Knowledge Graph for a part, then view its full detail.
@@ -231,7 +231,7 @@ modified: '2026-07-18'
 name: Cofactr
 nav: Providers
 network: true
-overview: 'Cofactr publishes 2 APIs on the [APIs.io](https://apis.io/) network: batch API and products API. Tagged areas include Company, Physical AI, Component Intelligence, Electronics, and Supply Chain.
+overview: 'Cofactr publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Products API, and 1 more. Tagged areas include Company, Physical AI, Component Intelligence, Electronics, and Supply Chain.
 
 
   The Cofactr catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -245,7 +245,7 @@ rate_limits:
   slug: cofactr-rate-limits
 score:
   band: developing
-  composite: 45.1
+  composite: 45.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -257,11 +257,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 66.4
+    contract_quality: 60.6
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 45.1
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -272,8 +272,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

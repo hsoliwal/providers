@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.1
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Python interfaces for the core T-code components that drive a Trilobot fleet — Commands, Labware, Locations, Scripts — plus the T-code Servicer client for runtime control and the Integrator client for
@@ -116,14 +116,14 @@ modified: '2026-07-21'
 name: Trilobio
 nav: Providers
 network: true
-overview: 'Trilobio publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Frontier Tech, Lab Automation, Biotech, and Life Sciences.
+overview: 'Trilobio publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Frontier Tech, Lab Automation, Biotechnology, and Life Sciences.
 
 
   Trilobio''s developer surface includes documentation, getting-started guide, API reference, engineering blog, signup flow, and 11 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 30.6
+  composite: 29.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -136,13 +136,13 @@ score:
     access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 66.7
-    discoverability: 75.9
+    developer_ergonomics: 66.0
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 30.6
+  previous_composite: 29.8
   provenance:
     skills: unknown
   regulatory:
@@ -150,9 +150,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,7 +173,7 @@ tags:
 - Company
 - Frontier Tech
 - Lab Automation
-- Biotech
+- Biotechnology
 - Life Sciences
 - Robotics
 - Synthetic Biology

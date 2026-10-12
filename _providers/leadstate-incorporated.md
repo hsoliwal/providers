@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -67,14 +67,14 @@ description: Leadstate Incorporated is a New York City based real estate and des
 image: https://www.leadstate.com/preview.jpg
 layout: provider
 modified: '2026-07-19'
-name: Leadstate Incorporated
+name: Leadstate
 nav: Providers
 network: true
-overview: Leadstate Incorporated is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Property Technology, Artificial Intelligence, and Generative Video.
+overview: Leadstate is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Artificial Intelligence, and Generative Video.
 random_paper: 20
 score:
   band: minimal
-  composite: 10.0
+  composite: 9.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -88,11 +88,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -107,8 +113,8 @@ security:
 slug: leadstate-incorporated
 tags:
 - Company
-- Real-Estate
-- Property Technology
+- Real Estate
+- PropTech
 - Artificial Intelligence
 - Generative Video
 - 3D Visualization

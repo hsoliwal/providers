@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -71,7 +71,7 @@ apis:
   description: Information about the authenticated user and their subscription.
   name: Import.io User API
   slug: import-io-user-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -166,6 +166,10 @@ finops:
   slug: import-io-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/import-io.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.import.io over HTTP.
+  name: Import.io MCP Server
+  slug: import-io
 modified: '2026-05-19'
 name: Import.io
 nav: Providers
@@ -185,7 +189,7 @@ rate_limits:
   slug: import-io-rate-limits
 score:
   band: thin
-  composite: 33.1
+  composite: 31.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 46.0
@@ -197,11 +201,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 48.7
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 33.1
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -210,8 +214,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

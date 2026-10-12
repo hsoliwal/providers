@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -91,7 +91,7 @@ apis:
   description: Co-workers/users in the account.
   name: Clockodo Users API
   slug: clockodo-users-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: open
   name: API Collection
@@ -127,6 +127,11 @@ collections:
   name: Clockodo API
   slug: open-clockodo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/clockodo/refs/heads/main/capabilities/clockodo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/clockodo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/clockodo/refs/heads/main/agentic-access/clockodo-agentic-access.yml
   title: ''
@@ -207,6 +212,10 @@ jsonld:
   property_count: 10
   slug: clockodo-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.clockodo.com over HTTP.
+  name: Clockodo MCP Server
+  slug: clockodo
 modified: '2026-05-19'
 name: Clockodo
 nav: Providers
@@ -217,7 +226,7 @@ overview: 'Clockodo publishes 9 APIs on the [APIs.io](https://apis.io/) network,
   The Clockodo catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Clockodo''s developer surface includes authentication, documentation, engineering blog, pricing, and 10 more developer resources.'
+  Clockodo''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
 plans:
 - name: Clockodo Plans Pricing
   plan_count: 3
@@ -251,9 +260,9 @@ rules:
   slug: clockodo-rules
 score:
   band: thin
-  composite: 38.3
+  composite: 38.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -263,11 +272,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 13.6
-    contract_quality: 61.2
+    contract_quality: 56.2
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 38.3
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -276,8 +285,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

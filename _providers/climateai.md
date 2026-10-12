@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
     rate_limit_signal: false
-    reversibility_documented: false
+    reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 23.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 4
@@ -304,7 +304,7 @@ overview: 'ClimateAI publishes 15 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 13
 score:
   band: developing
-  composite: 43.0
+  composite: 42.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 42.0
@@ -316,11 +316,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 19.7
-    contract_quality: 55.2
+    contract_quality: 50.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 43.0
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,8 +331,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -357,7 +363,7 @@ tags:
 - Agriculture
 - Data
 - Supply Chain
-- Risk
+- Risk Management
 - Sustainability
 website: https://climate.ai/
 ---

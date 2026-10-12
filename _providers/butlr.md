@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Butlr GraphQL API manages spatial assets and their configuration across the organization hierarchy - sites, buildings, floors, rooms, zones, hives, and sensors - plus asset tags and self-service w
@@ -199,9 +199,9 @@ description: 'Butlr is an AI platform for privacy-first, heat-based (thermal) oc
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/butlr.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 10 tools listed.
   name: Butlr MCP Server
-  slug: butlr-mcp-server
+  slug: butlr
 modified: '2026-07-18'
 name: Butlr
 nav: Providers
@@ -221,7 +221,7 @@ scopes:
   summary_line: 12 scopes
 score:
   band: developing
-  composite: 42.7
+  composite: 45.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -233,17 +233,23 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 62.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 42.7
+  previous_composite: 45.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -274,6 +280,6 @@ tags:
 - IoT
 - GraphQL
 - Webhook
-- Real-Estate
+- Real Estate
 website: https://www.butlr.com
 ---

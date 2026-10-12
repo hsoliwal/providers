@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -75,6 +75,11 @@ collections:
   name: SIGNL4 Webhook and REST API
   slug: open-signl4
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/capabilities/signl4-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/signl4-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/signl4/refs/heads/main/agentic-access/signl4-agentic-access.yml
   title: ''
@@ -135,16 +140,16 @@ modified: '2026-05-11'
 name: SIGNL4
 nav: Providers
 network: true
-overview: 'SIGNL4 publishes 2 APIs on the [APIs.io](https://apis.io/) network: Events API and Webhook API. Tagged areas include Alerting, Incident Management, On-Call, Mobile Alerts, and Notification.
+overview: 'SIGNL4 publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Webhook API, and 2 more. Tagged areas include Alerting, Incident Management, On-Call, Mobile Alerts, and Notification.
 
 
-  SIGNL4''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, GitHub presence, and 5 more developer resources.'
+  SIGNL4''s developer surface includes authentication, documentation, pricing, signup flow, support, engineering blog, GitHub presence, and 6 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 37.9
+  composite: 36.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -154,11 +159,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 59.5
+    contract_quality: 53.8
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 37.9
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     contracts:
@@ -166,8 +171,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

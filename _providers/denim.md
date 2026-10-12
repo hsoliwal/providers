@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 10
@@ -236,7 +236,7 @@ overview: 'Denim publishes 6 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 19
 score:
   band: developing
-  composite: 46.3
+  composite: 44.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 52.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 46.3
+  previous_composite: 44.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -268,9 +268,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

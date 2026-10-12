@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -307,7 +307,7 @@ modified: '2026-09-06'
 name: Contensis
 nav: Providers
 network: true
-overview: 'Contensis publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Content Types API, Entries API, Projects API, and 1 more. Tagged areas include CMS, Content, Headless CMS, Content Management, and Digital Experience Platform.
+overview: 'Contensis publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Content Types API, Entries API, Projects API, and 4 more. Tagged areas include CMS, Content, Headless CMS, Content Management, and Digital Experience Platform.
 
 
   The Contensis catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -325,12 +325,12 @@ rate_limits:
   slug: contensis-rate-limits
 scopes:
 - name: Contensis Scopes
-  scope_count: 0
+  scope_count: 5
   slug: contensis-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes · clientCredentials
 score:
   band: strong
-  composite: 66.3
+  composite: 60.3
   coverage:
     artifact_dirs: 27
     catalog_earned: 40.0
@@ -342,11 +342,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 53.7
+    contract_quality: 49.1
     developer_ergonomics: 78.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 66.3
+  previous_composite: 60.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -362,9 +362,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 85.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

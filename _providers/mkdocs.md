@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mkdocs/refs/heads/main/vendor-facets/mkdocs-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/mkdocs-vendor-facets.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/mkdocs/refs/heads/main/security/mkdocs-domain-security.yml
   title: ''
@@ -92,13 +97,13 @@ modified: '2026-04-28'
 name: MkDocs
 nav: Providers
 network: true
-overview: 'MkDocs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Documentation, Markdown, Open-Source, Python, and Static Site Generator.
+overview: 'MkDocs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Documentation, Markdown, Open Source, Python, and Static Site Generator.
 
 
   The MkDocs catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  MkDocs'' developer surface includes documentation, getting-started guide, GitHub presence, and 5 more developer resources.'
+  MkDocs'' developer surface includes documentation, getting-started guide, GitHub presence, and 6 more developer resources.'
 random_paper: 3
 rules:
 - effective_rule_count: 6
@@ -113,9 +118,9 @@ rules:
   slug: mkdocs-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 12.8
+  composite: 11.9
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 35.3
     catalog_earned_first_party: 0.0
     catalog_gap: 79.8
@@ -127,11 +132,17 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 21.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 12.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -147,7 +158,7 @@ slug: mkdocs
 tags:
 - Documentation
 - Markdown
-- Open-Source
+- Open Source
 - Python
 - Static Site Generator
 website: https://www.mkdocs.org

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 63.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -417,14 +417,14 @@ description: 'Clear Street is a New York–based financial technology firm build
 image: https://clear-street.github.io/docs/assets/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.clearstreet.com over HTTP.
   name: Clear Street MCP
   slug: clear-street-mcp
 modified: '2026-08-02'
 name: Clear Street
 nav: Providers
 network: true
-overview: 'Clear Street publishes 22 APIs on the [APIs.io](https://apis.io/) network, including API (Trades and Uploads), Accounts API, API version API, and 19 more. Tagged areas include Company, Financial-Services, Capital Markets, Prime Brokerage, and Trading.
+overview: 'Clear Street publishes 23 APIs on the [APIs.io](https://apis.io/) network, including API (Trades and Uploads), Accounts API, API version API, and 20 more. Tagged areas include Company, Financial Services, Capital Markets, Prime Brokerage, and Trading.
 
 
   The Clear Street catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -439,7 +439,7 @@ scopes:
   summary_line: 5 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 65.0
+  composite: 60.5
   coverage:
     artifact_dirs: 25
     catalog_earned: 40.0
@@ -451,11 +451,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 65.8
+    contract_quality: 60.2
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 44.7
-  previous_composite: 65.0
+  previous_composite: 60.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -471,9 +471,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 76.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -499,7 +499,7 @@ security:
 slug: clear-street
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Capital Markets
 - Prime Brokerage
 - Trading

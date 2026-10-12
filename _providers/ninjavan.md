@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -70,7 +70,7 @@ apis:
   description: Pull tracking events for parcels.
   name: Ninja Van Tracking API
   slug: ninjavan-tracking-api-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -94,6 +94,11 @@ collections:
   name: Ninja Van API (ninjaAPI)
   slug: open-ninjavan
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ninjavan/refs/heads/main/capabilities/ninjavan-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ninjavan-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ninjavan/refs/heads/main/agentic-access/ninjavan-agentic-access.yml
   title: ''
@@ -148,6 +153,10 @@ finops:
   slug: ninjavan-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ninjavan.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.ninjavan.co over HTTP.
+  name: Ninja Van MCP Server
+  slug: ninjavan
 modified: '2026-09-16'
 name: Ninja Van
 nav: Providers
@@ -155,7 +164,7 @@ network: true
 overview: 'Ninja Van publishes 5 APIs on the [APIs.io](https://apis.io/) network, including OAuth API, Order API, PUDO API, and 2 more. Tagged areas include Logistics, Last Mile Delivery, Shipping, Southeast Asia, and Parcel.
 
 
-  Ninja Van''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  Ninja Van''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Ninjavan Plans Pricing
   plan_count: 3
@@ -167,28 +176,28 @@ rate_limits:
   slug: ninjavan-rate-limits
 score:
   band: thin
-  composite: 38.6
+  composite: 35.6
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
+    discoverability: 68.3
+    operational_transparency: 28.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 38.6
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +206,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

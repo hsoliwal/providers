@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.myome.com/0/
@@ -168,7 +168,7 @@ rate_limits:
   slug: myome-rate-limits
 score:
   band: developing
-  composite: 45.9
+  composite: 41.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -180,11 +180,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 44.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 45.9
+  previous_composite: 41.7
   provenance:
     conformance: derived
     contracts:
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.2
-  scored_at: '2026-09-20'
+  score: 35.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.lendapi.com/api/v1/
@@ -323,14 +323,14 @@ description: 'LendAPI is a no-code / low-code loan origination and digital accou
 image: https://files.readme.io/8262098-Logo_Black.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.lendapi.com over HTTP; 20 tools listed.
   name: LendAPI MCP Server
-  slug: lendapi-mcp-server
+  slug: lendapi
 modified: '2026-07-19'
 name: LendAPI
 nav: Providers
 network: true
-overview: 'LendAPI publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Amortization API, Application API, Credit Risk API, and 10 more. Tagged areas include Company, Lending, Loan Origination, Financial-Services, and Fintech.
+overview: 'LendAPI publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Amortization API, Application API, Credit Risk API, and 10 more. Tagged areas include Company, Lending, Loan Origination, Financial Services, and Fintech.
 
 
   The LendAPI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -340,7 +340,7 @@ overview: 'LendAPI publishes 13 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 7
 score:
   band: developing
-  composite: 50.4
+  composite: 47.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -352,11 +352,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 62.8
+    contract_quality: 57.3
     developer_ergonomics: 57.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 6.6
-  previous_composite: 50.4
+  previous_composite: 47.7
   provenance:
     conformance: first-party
     contracts:
@@ -371,9 +371,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -393,7 +393,7 @@ tags:
 - Company
 - Lending
 - Loan Origination
-- Financial-Services
+- Financial Services
 - Fintech
 - Embedded Finance
 - Underwriting

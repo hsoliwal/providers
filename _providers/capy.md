@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -47,62 +47,62 @@ apis:
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The automations API from Capy — 3 operation(s) for automations.
-  name: Capy automations API
+  name: Capy Automations API
   slug: capy-automations-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The browser-snapshots API from Capy — 2 operation(s) for browser-snapshots.
-  name: Capy browser-snapshots API
+  name: Capy Browser Snapshots API
   slug: capy-browser-snapshots-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The environment-variables API from Capy — 2 operation(s) for environment-variables.
-  name: Capy environment-variables API
+  name: Capy Environment Variables API
   slug: capy-environment-variables-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The models API from Capy — 1 operation(s) for models.
-  name: Capy models API
+  name: Capy Models API
   slug: capy-models-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The projects API from Capy — 2 operation(s) for projects.
-  name: Capy projects API
+  name: Capy Projects API
   slug: capy-projects-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The sessions API from Capy — 1 operation(s) for sessions.
-  name: Capy sessions API
+  name: Capy Sessions API
   slug: capy-sessions-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The setup API from Capy — 1 operation(s) for setup.
-  name: Capy setup API
+  name: Capy Setup API
   slug: capy-setup-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The snapshots API from Capy — 1 operation(s) for snapshots.
-  name: Capy snapshots API
+  name: Capy Snapshots API
   slug: capy-snapshots-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The tags API from Capy — 2 operation(s) for tags.
-  name: Capy tags API
+  name: Capy Tags API
   slug: capy-tags-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The tasks API from Capy — 2 operation(s) for tasks.
-  name: Capy tasks API
+  name: Capy Tasks API
   slug: capy-tasks-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The threads API from Capy — 8 operation(s) for threads.
-  name: Capy threads API
+  name: Capy Threads API
   slug: capy-threads-api
 - baseURL: https://capy.ai/api/v1/
   baseurl_source: declared
   description: The usage API from Capy — 1 operation(s) for usage.
-  name: Capy usage API
+  name: Capy Usage API
   slug: capy-usage-api
 artifact_total: 30
 collections:
@@ -146,6 +146,11 @@ collections:
   name: Capy automations usage API
   slug: open-capy-usage-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/capy/refs/heads/main/capabilities/capy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/capy-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/capy/refs/heads/main/overlays/capy-openapi-overlay.yaml
   title: ''
@@ -276,16 +281,16 @@ modified: '2026-07-18'
 name: Capy
 nav: Providers
 network: true
-overview: 'Capy publishes 12 APIs on the [APIs.io](https://apis.io/) network, including automations API, browser-snapshots API, environment-variables API, and 9 more. Tagged areas include Company, Artificial Intelligence, AI Coding Agents, Software Engineering, and Developer Tools.
+overview: 'Capy publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Automations API, Browser Snapshots API, Environment Variables API, and 9 more. Tagged areas include Company, Artificial Intelligence, AI Coding Agents, Software Engineering, and Developer Tools.
 
 
-  Capy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
+  Capy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
 random_paper: 11
 score:
   band: developing
-  composite: 49.2
+  composite: 49.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -295,11 +300,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 57.0
+    contract_quality: 51.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 49.2
+  previous_composite: 49.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -310,8 +315,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

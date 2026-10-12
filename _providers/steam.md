@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -287,7 +287,7 @@ modified: '2026-05-08'
 name: Steam
 nav: Providers
 network: true
-overview: 'Steam publishes 4 APIs on the [APIs.io](https://apis.io/) network, including IPlayerService API, ISteamNews API, ISteamUser API, and 1 more. Tagged areas include Gaming, Valve, Distribution, Steamworks, and Marketplace.
+overview: 'Steam publishes 25 APIs on the [APIs.io](https://apis.io/) network, including IPlayerService API, ISteamNews API, ISteamUser API, and 22 more. Tagged areas include Gaming, Valve, Distribution, Steamworks, and Marketplace.
 
 
   Steam''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, engineering blog, and 24 more developer resources.'
@@ -302,7 +302,7 @@ rate_limits:
   slug: steam-rate-limits
 score:
   band: thin
-  composite: 35.7
+  composite: 34.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 36.0
@@ -314,11 +314,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 42.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 26.3
-  previous_composite: 35.7
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     contracts:
@@ -326,8 +326,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -352,5 +358,6 @@ tags:
 - Marketplace
 - Web API
 - Steam
+- Video Games
 website: https://store.steampowered.com/
 ---

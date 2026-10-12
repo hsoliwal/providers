@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 2.2
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -80,9 +80,9 @@ description: Kindor is a performance-intelligence platform for technology teams 
 image: https://static.wixstatic.com/media/1ffb47_aaa5346a6e2e403b83c1f08f0bdb4da2~mv2.png/v1/fill/w_2500,h_2500,al_c/1ffb47_aaa5346a6e2e403b83c1f08f0bdb4da2~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.kindor.co over HTTP; 9 tools listed.
   name: Kindor.co Wix Site MCP
-  slug: kindorco-wix-site-mcp
+  slug: kindor-co
 modified: '2026-07-19'
 name: Kindor
 nav: Providers
@@ -94,7 +94,7 @@ overview: 'Kindor is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 9
 score:
   band: minimal
-  composite: 10.8
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -108,13 +108,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 10.8
+  previous_composite: 9.8
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

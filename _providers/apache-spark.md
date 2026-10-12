@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -205,7 +205,7 @@ modified: '2026-05-19'
 name: Apache Spark
 nav: Providers
 network: true
-overview: 'Apache Spark publishes 2 APIs on the [APIs.io](https://apis.io/) network: Applications API and Version API. Tagged areas include Analytics, Big Data, Distributed Computing, Machine-Learning, and Open-Source.
+overview: 'Apache Spark publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Version API, and 4 more. Tagged areas include Analytics, Big Data, Distributed Computing, Machine Learning, and Open Source.
 
 
   Apache Spark''s developer surface includes developer portal, documentation, getting-started guide, engineering blog, support, Stack Overflow tag, and 14 more developer resources.'
@@ -219,8 +219,8 @@ rate_limits:
   name: Apache Spark Rate Limits
   slug: apache-spark-rate-limits
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 38.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 38.0
@@ -232,14 +232,14 @@ score:
   facets:
     access_clarity: 28.6
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 54.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 23.7
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 39.5
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -247,8 +247,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,8 +275,8 @@ tags:
 - Analytics
 - Big Data
 - Distributed Computing
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Streaming
 use_cases:
 - description: Extract, transform, and load petabytes of data across distributed clusters.

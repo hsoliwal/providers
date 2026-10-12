@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/taai-labs-inc/refs/heads/main/security/taai-labs-inc-domain-security.yml
@@ -65,18 +65,22 @@ created: '2026-07-17'
 description: TAAI Labs, Inc operates Sparkle (sparkle.security), an AI-first secure software development lifecycle (SDLC) platform, currently in beta, that aims to prevent vulnerabilities across the entire SDLC by embedding AI-powered security analysis into existing engineering workflows. Sparkle works across five phases — contextualize, design, build, validate, and govern — and deploys "Secure Agents" that surface risks, gather evidence, and track security decisions to give product security, AppSec, platform engineering, and engineering leadership teams audit-ready visibility across the secure SDLC. The company markets outcomes such as increased security-team productivity, reduced AI-generated risk, and full visibility, and is backed by 500 Global. The product is pre-general-availability and publishes no public developer API, SDKs, or documentation as of this profile.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/taai-labs-inc.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sparkle.security over HTTP.
+  name: Sparkle MCP Server
+  slug: taai-labs-inc
 modified: '2026-07-21'
-name: TAAI Labs, Inc
+name: Sparkle
 nav: Providers
 network: true
-overview: 'TAAI Labs, Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Application Security, Artificial Intelligence, and Secure SDLC.
+overview: 'Sparkle is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Application Security, Artificial Intelligence, and Secure SDLC.
 
 
-  TAAI Labs, Inc''s developer surface includes signup flow and 5 more developer resources.'
+  Sparkle''s developer surface includes signup flow and 5 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 11.8
+  composite: 11.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 11.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 2
@@ -172,6 +172,11 @@ collections:
   name: Privado ID - Issuer Agent Schemas API
   slug: open-polygon-id-schemas-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/polygon-id/refs/heads/main/capabilities/polygon-id-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/polygon-id-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -565,13 +570,13 @@ modified: 2026-06-14
 name: Polygon ID
 nav: Providers
 network: true
-overview: 'Polygon ID publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Auth API, Config API, and 11 more. Tagged areas include Identity, Verifiable Credentials, Zero-Knowledge Proofs, Self-Sovereign Identity, and Decentralized Identity.
+overview: 'Polygon ID publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Auth API, Config API, and 14 more. Tagged areas include Identity, Verifiable Credentials, Zero-Knowledge Proofs, Self-Sovereign Identity, and Decentralized Identity.
 
 
   The Polygon ID catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Polygon ID''s developer surface includes authentication, documentation, engineering blog, YouTube channel, support, and 10 more developer resources.'
+  Polygon ID''s developer surface includes authentication, documentation, engineering blog, YouTube channel, support, and 11 more developer resources.'
 plans:
 - name: Plans
   plan_count: 3
@@ -594,23 +599,23 @@ rules:
   slug: polygon-id-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.8
+  composite: 34.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 60.3
+    artifact_dirs: 17
+    catalog_earned: 59.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.8
+    catalog_gap: 56.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 9.8
-    contract_quality: 56.8
+    contract_quality: 51.6
     developer_ergonomics: 23.8
-    discoverability: 70.4
+    discoverability: 67.9
     operational_transparency: 18.4
-  previous_composite: 36.8
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -618,8 +623,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

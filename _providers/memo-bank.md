@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.memo.bank
@@ -325,9 +325,9 @@ description: Memo Bank is an independent French commercial bank, accredited as a
 image: https://media.memo.bank/home_hero_602cdab270/home_hero_602cdab270.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.memo.bank requiring OAuth; 14 tools listed.
   name: Memo Bank MCP Server
-  slug: memo-bank-mcp-server
+  slug: memo-bank-mcp-yml
 modified: '2026-08-17'
 name: Memo Bank
 nav: Providers
@@ -355,7 +355,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 66.4
+  composite: 61.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 48.0
@@ -367,9 +367,9 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 54.4
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -379,7 +379,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 66.4
+  previous_composite: 61.6
   provenance:
     conformance: first-party
     contracts:
@@ -404,9 +404,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 87.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 54.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

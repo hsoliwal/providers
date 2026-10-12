@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The core Ximalaya Open Platform HTTP+JSON API on api.ximalaya.com: free on-demand content (albums, tracks, categories, tags), paid on-demand content metadata, content search with hot/suggest words, re'
@@ -189,12 +189,12 @@ rate_limits:
   slug: ximalaya-rate-limits
 scopes:
 - name: Ximalaya Scopes
-  scope_count: 0
+  scope_count: 6
   slug: ximalaya-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes
 score:
   band: thin
-  composite: 28.7
+  composite: 29.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -206,9 +206,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -217,12 +217,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 28.7
+  previous_composite: 29.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 1
@@ -51,17 +51,17 @@ apis:
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
   description: The agent-traffic API from Scrunch AI — 1 operation(s) for agent-traffic.
-  name: Scrunch AI agent-traffic API
+  name: Scrunch AI Agent Traffic API
   slug: scrunch-ai-agent-traffic-api
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
   description: The ai-referrals API from Scrunch AI — 3 operation(s) for ai-referrals.
-  name: Scrunch AI ai-referrals API
+  name: Scrunch AI AI Referrals API
   slug: scrunch-ai-ai-referrals-api
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
   description: The axp-render API from Scrunch AI — 1 operation(s) for axp-render.
-  name: Scrunch AI axp-render API
+  name: Scrunch AI Axp Render API
   slug: scrunch-ai-axp-render-api
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
@@ -71,7 +71,7 @@ apis:
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
   description: The orchestration API from Scrunch AI — 2 operation(s) for orchestration.
-  name: Scrunch AI orchestration API
+  name: Scrunch AI Orchestration API
   slug: scrunch-ai-orchestration-api
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
@@ -96,7 +96,7 @@ apis:
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
   description: The sitemap API from Scrunch AI — 4 operation(s) for sitemap.
-  name: Scrunch AI sitemap API
+  name: Scrunch AI Sitemap API
   slug: scrunch-ai-sitemap-api
 - baseURL: https://api.scrunchai.com/v1
   baseurl_source: declared
@@ -352,14 +352,14 @@ description: 'Scrunch AI (scrunch.com) is an AI customer experience platform for
 image: https://cdn.sanity.io/images/3lyosn52/production/3846d0bcd45fb4d64491c6d548d181d696aaa339-1200x753.png?rect=0,62,1200,630&w=1200&h=630&q=75&fit=crop&auto=format
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.scrunchai.com over streamable HTTP; 33 tools listed.
   name: Scrunch AI MCP Server
-  slug: scrunch-ai-mcp-server
+  slug: scrunch
 modified: '2026-08-13'
 name: Scrunch AI
 nav: Providers
 network: true
-overview: 'Scrunch AI publishes 13 APIs on the [APIs.io](https://apis.io/) network, including agent-traffic API, ai-referrals API, axp-render API, and 10 more. Tagged areas include Company, Artificial Intelligence, AI Search, Answer Engine Optimization, and Generative Engine Optimization.
+overview: 'Scrunch AI publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Agent Traffic API, AI Referrals API, Axp Render API, and 10 more. Tagged areas include Company, Artificial Intelligence, AI Search, Answer Engine Optimization, and Generative Engine Optimization.
 
 
   The Scrunch AI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -382,7 +382,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: strong
-  composite: 59.7
+  composite: 61.3
   coverage:
     artifact_dirs: 27
     catalog_earned: 49.0
@@ -394,11 +394,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 68.7
+    contract_quality: 63.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 59.7
+  previous_composite: 61.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -409,8 +409,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

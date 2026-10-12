@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -209,7 +209,7 @@ modified: '2026-09-16'
 name: Ansible Automation Platform
 nav: Providers
 network: true
-overview: 'Ansible Automation Platform publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Inventories API, Job Templates API, Jobs API, and 1 more. Tagged areas include Automation, Configuration Management, DevOps, Infrastructure as Code, and Orchestration.
+overview: 'Ansible Automation Platform publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Inventories API, Job Templates API, Jobs API, and 5 more. Tagged areas include Automation, Configuration Management, DevOps, Infrastructure as Code, and Orchestration.
 
 
   The Ansible Automation Platform catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -239,7 +239,7 @@ rules:
   slug: ansible-automation-platform-spectral-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 35.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 57.8
@@ -253,9 +253,9 @@ score:
     contract_governance: 11.4
     contract_quality: 16.2
     developer_ergonomics: 54.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 33.9
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -263,8 +263,14 @@ score:
       derived: 5
       marker_coverage: 100.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

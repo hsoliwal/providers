@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Navattic's hosted, remote Model Context Protocol server — the company's primary machine-readable product surface. Agents authenticate with an OAuth 2.1 authorization-code flow (PKCE, dynamic client re
@@ -264,12 +264,12 @@ layout: provider
 mcp_servers:
 - description: Navattic ships a first-party, hosted remote MCP server. It is the company's primary machine-readable product surface — there is no public REST API reference — and it is reachable by any MCP client tha
   name: Navattic MCP Server
-  slug: navattic-mcp-server
+  slug: navattic
 modified: 2026-08-13
 name: Navattic
 nav: Providers
 network: true
-overview: 'Navattic publishes 1 API on the [APIs.io](https://apis.io/) network: Health API. Tagged areas include Interactive Demos, Product Demo, Sales Enablement, Marketing, and No-Code.
+overview: 'Navattic publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Health API, and 1 more. Tagged areas include Interactive Demos, Product Demo, Sales Enablement, Marketing, and No-Code.
 
 
   The Navattic catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 JSON-LD context.
@@ -292,7 +292,7 @@ scopes:
   summary_line: 11 scopes · authorizationCode
 score:
   band: strong
-  composite: 59.1
+  composite: 62.3
   coverage:
     artifact_dirs: 26
     catalog_earned: 60.0
@@ -304,11 +304,11 @@ score:
   facets:
     access_clarity: 93.4
     contract_governance: 18.2
-    contract_quality: 57.0
+    contract_quality: 52.7
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 59.1
+  previous_composite: 62.3
   provenance:
     conformance: first-party
     contracts:
@@ -318,8 +318,14 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -356,5 +362,6 @@ tags:
 - MCP
 - Agents
 - Product Analytics
+- A2A
 website: https://www.navattic.com/
 ---

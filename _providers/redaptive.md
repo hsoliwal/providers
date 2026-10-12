@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'The core API gateway behind the Redaptive ONE platform, serving the account, portfolio and building-insights surfaces of the ONE web application. Access is OAuth 2.0 protected: every path returns 401 '
@@ -135,7 +135,7 @@ overview: 'Redaptive publishes 3 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 18
 score:
   band: emerging
-  composite: 20.5
+  composite: 19.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 40.0
@@ -149,9 +149,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 20.5
+  previous_composite: 19.1
   provenance:
     conformance: derived
   regulatory:
@@ -159,9 +159,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,7 +187,7 @@ tags:
 - ESG Reporting
 - Metering
 - Buildings
-- Real-Estate
+- Real Estate
 - Industrial
 - Climate Tech
 website: https://redaptive.com/

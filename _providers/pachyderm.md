@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Pachyderm's platform API, exposed over gRPC/protobuf. Core services are PFS (data versioning — repos, commits, branches, files) and PPS (pipelines — jobs, datums, pipelines, logs), plus an Auth servic
@@ -138,7 +138,7 @@ overview: 'Pachyderm publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 11
 score:
   band: thin
-  composite: 28.2
+  composite: 26.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -150,18 +150,24 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 28.2
+  previous_composite: 26.5
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,8 +186,8 @@ tags:
 - Data Versioning
 - Data Pipeline
 - Data Lineage
-- Machine-Learning
+- Machine Learning
 - Kubernetes
 - gRPC
-- Open-Source
+- Open Source
 ---

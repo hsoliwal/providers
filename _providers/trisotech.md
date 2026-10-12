@@ -1,6 +1,6 @@
 ---
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-09-20'
+  score: 27.4
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Public API of the Digital Enterprise Suite — 129 operations across 30 resource groups covering modeling places and their content, model promotion change requests, execution environments and deploy
@@ -215,14 +215,14 @@ description: 'Trisotech is a Montreal, Canada software company, founded in 1996,
 image: https://www.trisotech.com/wp-content/themes/trisotech/images/logo-trisotech-brand.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Trisotech ships a real, first-party MCP server, but it is generated per customer rather than published as one vendor endpoint. Every service in a customer's Service Library — each DMN decision service
   name: Trisotech Service Library MCP Server
   slug: trisotech-service-library-mcp-server
 modified: '2026-09-02'
 name: Trisotech
 nav: Providers
 network: true
-overview: 'Trisotech publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Business Process Management, Decision Management, Workflow-Automation, Low-Code, and BPMN.
+overview: 'Trisotech publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Business Process Management, Decision Management, Workflow Automation, Low-Code, and BPMN.
 
 
   The Trisotech catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -242,10 +242,10 @@ scopes:
 - name: Trisotech Scopes
   scope_count: 20
   slug: trisotech-scopes
-  summary_line: 20 scopes
+  summary_line: 20 scopes · authorization_code/client_credentials
 score:
   band: strong
-  composite: 63.2
+  composite: 58.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -257,11 +257,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 70.0
     operational_transparency: 52.6
-  previous_composite: 63.2
+  previous_composite: 58.4
   provenance:
     conformance: first-party
     mcp: first-party
@@ -271,9 +271,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 83.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 52.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -300,7 +300,7 @@ slug: trisotech
 tags:
 - Business Process Management
 - Decision Management
-- Workflow-Automation
+- Workflow Automation
 - Low-Code
 - BPMN
 - DMN

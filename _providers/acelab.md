@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The private production API behind the Acelab Material Hub web application and Revit add-in. It is not a published developer product: no OpenAPI, no API reference and no key-issuance flow is published '
@@ -147,9 +147,9 @@ description: 'Acelab is a Brooklyn, New York software company building Material 
 image: https://cdn.prod.website-files.com/69975a27432ddb9dcf949f22/69a700a421be3d2a922e2752_acelab%20logo%20black.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.acelabusa.com over streamable HTTP; 3 tools listed.
   name: Acelab MCP Server
-  slug: acelab-mcp-server
+  slug: acelab-mcp-yml
 modified: '2026-09-06'
 name: Acelab
 nav: Providers
@@ -169,12 +169,12 @@ rate_limits:
   slug: acelab-rate-limits
 scopes:
 - name: Acelab Scopes
-  scope_count: 0
+  scope_count: 1
   slug: acelab-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 35.5
+  composite: 38.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -188,14 +188,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 35.5
+  previous_composite: 38.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

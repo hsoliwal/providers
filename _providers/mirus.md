@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -120,8 +120,8 @@ rate_limits:
   name: Mirus Rate Limits
   slug: mirus-rate-limits
 score:
-  band: emerging
-  composite: 11.8
+  band: minimal
+  composite: 10.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -135,9 +135,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 3.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 10.8
   provenance:
     conformance: first-party
   regulatory:
@@ -145,9 +145,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

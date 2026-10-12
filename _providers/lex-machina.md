@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -135,7 +135,7 @@ apis:
   description: Provides API status.
   name: Lex Machina Status API
   slug: lex-machina-status-api
-artifact_total: 71
+artifact_total: 72
 collections:
 - collection_type: open
   name: API Collection
@@ -207,6 +207,11 @@ collections:
   name: Lex Machina API
   slug: open-lex-machina
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lex-machina/refs/heads/main/capabilities/lex-machina-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lex-machina-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lex-machina/refs/heads/main/agentic-access/lex-machina-agentic-access.yml
   title: ''
@@ -351,20 +356,24 @@ features:
 - SOC 2 and ISO certifications via LexisNexis enterprise security program
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lex-machina.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.lexmachina.com over HTTP.
+  name: Lex Machina MCP Server
+  slug: lex-machina
 modified: '2026-05-25'
 name: Lex Machina
 nav: Providers
 network: true
-overview: 'Lex Machina publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Attorneys API, Authorization API, and 15 more. Tagged areas include Legal, Legal Analytics, Legal Technology, Litigation, and Litigation Analytics.
+overview: 'Lex Machina publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Attorneys API, Authorization API, and 15 more. Tagged areas include Legal, Legal Analytics, Legal Tech, Litigation, and Litigation Analytics.
 
 
-  Lex Machina''s developer surface includes authentication, developer portal, documentation, engineering blog, YouTube channel, support, and 21 more developer resources.'
+  Lex Machina''s developer surface includes authentication, developer portal, documentation, engineering blog, YouTube channel, support, and 22 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 32.9
+  composite: 29.9
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -374,11 +383,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 0.0
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 32.9
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     contracts:
@@ -392,9 +401,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 40.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -421,7 +430,7 @@ slug: lex-machina
 tags:
 - Legal
 - Legal Analytics
-- Legal Technology
+- Legal Tech
 - Litigation
 - Litigation Analytics
 - Court Data

@@ -33,11 +33,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Placeholder entry — FTI Consulting publishes no public API. The scaffolded hosts developer.fticonsulting.com and api.fticonsulting.com do not resolve (DNS NXDOMAIN, probed 2026-09-17), so the former D
   name: FTI Consulting API
+  provenance: unpublished
   slug: fti-consulting-api
 artifact_total: 5
 common:
@@ -116,7 +117,7 @@ rate_limits:
   slug: fti-consulting-rate-limits
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 44.0
@@ -130,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
-  previous_composite: 15.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

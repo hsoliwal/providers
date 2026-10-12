@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: U.S. Department of Health & Human Services; Administration for Children & Families; Select an ACF Office. Administration for Native Americans (ANA) Administration on Children, Youth, and Families (ACY
@@ -58,7 +58,7 @@ modified: '2026-04-28'
 name: Office of Child Support Services
 nav: Providers
 network: true
-overview: Office of Child Support Services publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government.
+overview: Office of Child Support Services publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government.
 plans:
 - name: Office Of Child Support Services Plans Pricing
   plan_count: 3
@@ -70,7 +70,7 @@ rate_limits:
   slug: office-of-child-support-services-rate-limits
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 36.0
@@ -84,17 +84,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 9.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -108,5 +113,5 @@ security:
   summary_line: TLSv1.2 · DNSSEC · DMARC
 slug: office-of-child-support-services
 tags:
-- Federal-Government
+- Federal Government
 ---

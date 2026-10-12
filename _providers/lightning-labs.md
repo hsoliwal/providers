@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 3
@@ -111,7 +111,7 @@ rate_limits:
   slug: lightning-labs-rate-limits
 score:
   band: emerging
-  composite: 16.8
+  composite: 17.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 36.0
@@ -123,11 +123,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 36.1
+    contract_quality: 32.4
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 16.8
+  previous_composite: 17.0
   provenance:
     agentic_access: derived
     contracts:
@@ -140,9 +140,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

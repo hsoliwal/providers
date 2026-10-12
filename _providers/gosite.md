@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The GoSite developer API, marketed at developers.gosite.com in two families — Business Growth APIs (online presence, listings, lead generation) and Business Management APIs (scheduling, invoicing, pay
@@ -156,7 +156,7 @@ rate_limits:
   slug: gosite-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 28.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 45.0
@@ -170,17 +170,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 28.5
+  previous_composite: 28.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

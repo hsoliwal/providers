@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -128,7 +128,7 @@ modified: '2026-08-08'
 name: ScraperAPI
 nav: Providers
 network: true
-overview: 'ScraperAPI publishes 2 APIs on the [APIs.io](https://apis.io/) network: Structured API and Sync API. Tagged areas include Data Extraction, Proxies, and Scraping.
+overview: 'ScraperAPI publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Structured API, Sync API, and 1 more. Tagged areas include Data Extraction, Proxies, and Scraping.
 
 
   ScraperAPI''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
@@ -142,8 +142,8 @@ rate_limits:
   name: Scraper Api Rate Limits
   slug: scraper-api-rate-limits
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 25.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 31.0
@@ -155,11 +155,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 35.7
-    discoverability: 48.1
+    discoverability: 46.4
     operational_transparency: 10.5
-  previous_composite: 27.2
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     contracts:
@@ -167,8 +167,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

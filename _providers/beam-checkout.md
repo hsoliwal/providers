@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Beam's v1 REST payments API — payment links, charges, refunds, transactions, card authorizations (auth/capture/cancel), network tokenization, and Beam Bolt in-person payments.
@@ -187,7 +187,7 @@ modified: '2026-07-18'
 name: Beam Checkout
 nav: Providers
 network: true
-overview: 'Beam Checkout publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Payments, Checkout, and Card Payments.
+overview: 'Beam Checkout publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Payments, Checkout, and Card Payments.
 
 
   The Beam Checkout catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -196,8 +196,8 @@ overview: 'Beam Checkout publishes 1 API on the [APIs.io](https://apis.io/) netw
   Beam Checkout''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, sandbox, pricing, and 21 more developer resources.'
 random_paper: 6
 score:
-  band: strong
-  composite: 54.6
+  band: developing
+  composite: 51.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -209,9 +209,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
-    developer_ergonomics: 66.7
-    discoverability: 75.9
+    contract_quality: 39.0
+    developer_ergonomics: 66.2
+    discoverability: 73.2
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -220,7 +220,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 54.6
+  previous_composite: 51.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -229,9 +229,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,7 @@ security:
 slug: beam-checkout
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Payments
 - Checkout
 - Card Payments

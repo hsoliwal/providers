@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -289,7 +289,7 @@ rate_limits:
   slug: anysphere-rate-limits
 score:
   band: thin
-  composite: 37.2
+  composite: 36.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -301,11 +301,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 4.5
-    contract_quality: 57.2
+    contract_quality: 51.5
     developer_ergonomics: 26.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 37.2
+  previous_composite: 36.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -316,8 +316,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

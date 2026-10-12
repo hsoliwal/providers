@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 69.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.mollie.com
@@ -256,14 +256,14 @@ description: Mollie B.V. is a Dutch payment service provider headquartered in Am
 image: https://www.mollie.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.mollie.com over HTTP.
   name: Mollie MCP Server
-  slug: mollie-mcp-server
+  slug: mollie
 modified: '2026-08-01'
 name: Mollie
 nav: Providers
 network: true
-overview: 'Mollie publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Fintech, Financial-Services, and Checkout.
+overview: 'Mollie publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Fintech, Financial Services, and Checkout.
 
 
   The Mollie catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -278,7 +278,7 @@ scopes:
   summary_line: 61 scopes · authorizationCode
 score:
   band: strong
-  composite: 65.2
+  composite: 59.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -290,9 +290,9 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 63.7
+    contract_quality: 58.1
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -302,7 +302,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 65.2
+  previous_composite: 59.6
   provenance:
     conformance: first-party
     contracts:
@@ -323,9 +323,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 93.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 53.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -354,12 +354,13 @@ tags:
 - Company
 - Payments
 - Fintech
-- Financial-Services
+- Financial Services
 - Checkout
 - E-Commerce
 - Subscription
 - Point-of-Sale
 - Europe
 - Netherlands
+- Payment Processing
 website: https://www.mollie.com/
 ---

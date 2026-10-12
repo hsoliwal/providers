@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -179,12 +179,12 @@ rate_limits:
   slug: meow-wolf-rate-limits
 scopes:
 - name: Meow Wolf Scopes
-  scope_count: 0
+  scope_count: 14
   slug: meow-wolf-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 22.4
+  composite: 25.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -198,13 +198,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 22.4
+  previous_composite: 25.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -95,6 +95,11 @@ collections:
   name: SVN WebDAV HTTP API
   slug: open-svn-webdav
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/svn/refs/heads/main/capabilities/svn-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/svn-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -198,13 +203,13 @@ modified: '2026-05-19'
 name: Subversion
 nav: Providers
 network: true
-overview: 'Subversion publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Commits API, Files API, History API, and 1 more. Tagged areas include Apache, Open-Source, Repository, Source Control, and Svn.
+overview: 'Subversion publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Commits API, Files API, History API, and 4 more. Tagged areas include Apache, Open Source, Repository, Source Control, and Svn.
 
 
   The Subversion catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Subversion''s developer surface includes authentication, getting-started guide, FAQ, GitHub presence, and 12 more developer resources.'
+  Subversion''s developer surface includes authentication, getting-started guide, FAQ, GitHub presence, and 13 more developer resources.'
 plans:
 - name: Svn Plans Pricing
   plan_count: 3
@@ -238,9 +243,9 @@ rules:
   slug: svn-rules
 score:
   band: thin
-  composite: 34.9
+  composite: 32.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 53.5
     catalog_earned_first_party: 0.0
     catalog_gap: 61.5
@@ -250,11 +255,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 58.5
+    contract_quality: 53.2
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 23.7
-  previous_composite: 34.9
+  open_source:
+    applies: true
+    score: 15.0
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
@@ -262,8 +270,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -285,7 +299,7 @@ security:
 slug: svn
 tags:
 - Apache
-- Open-Source
+- Open Source
 - Repository
 - Source Control
 - Svn

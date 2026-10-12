@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-09-20'
+  score: 24.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -59,6 +59,11 @@ apis:
   slug: owler-feed-api-api
 artifact_total: 8
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/owler/refs/heads/main/capabilities/owler-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/owler-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -197,7 +202,7 @@ network: true
 overview: 'Owler publishes 3 APIs on the [APIs.io](https://apis.io/) network: Company Premium API, Competitor Premium API, and Feed API. Tagged areas include Company, Company Intelligence, Sales Intelligence, Competitive Intelligence, and Business Data.
 
 
-  Owler''s developer surface includes engineering blog, support, pricing, documentation, API reference, and 23 more developer resources.'
+  Owler''s developer surface includes engineering blog, support, pricing, documentation, API reference, and 24 more developer resources.'
 plans:
 - name: Owler Plans Pricing
   plan_count: 0
@@ -209,9 +214,9 @@ rate_limits:
   slug: owler-rate-limits
 score:
   band: developing
-  composite: 41.7
+  composite: 41.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -221,11 +226,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 4.5
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 41.7
+  previous_composite: 41.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -236,8 +241,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

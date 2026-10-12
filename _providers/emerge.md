@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://api.emergemarket.io/v1
@@ -297,7 +297,7 @@ rate_limits:
   slug: emerge-rate-limits
 score:
   band: developing
-  composite: 47.5
+  composite: 48.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 48.0
@@ -309,11 +309,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 65.5
+    contract_quality: 60.0
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 50.0
-  previous_composite: 47.5
+  previous_composite: 48.7
   provenance:
     conformance: derived
     contracts:
@@ -323,8 +323,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

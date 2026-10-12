@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/puddle/refs/heads/main/security/puddle-vulnerability-disclosure.yml
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Puddle is a technical-interview platform for evaluating software-engineering candidates in real-world, AI-enabled conditions. Candidates work through live coding assessments inside a sandboxed environment with an integrated IDE and terminal, and are free to use modern AI tools (such as Claude Code) during the session. Puddle captures detailed signals about how a candidate approaches a problem across structured phases (problem discussion, architecture, implementation, and debrief) and produces an outcome report with confidence scores, focus and iteration-pace metrics, and hiring recommendations. It is sold as a B2B SaaS recruitment-assessment tool via demo and early-access waitlist. Puddle was surfaced as an a16z portfolio company and added to the API Evangelist network. As of this pass Puddle publishes no public API, developer documentation, SDK, or OpenAPI surface; the profile below captures its verifiable public web and security presence.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/puddle.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at app.usepuddle.com over HTTP.
+  name: Puddle MCP Server
+  slug: puddle
 modified: '2026-07-20'
 name: Puddle
 nav: Providers
@@ -86,7 +90,7 @@ overview: Puddle is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 0
 score:
   band: minimal
-  composite: 8.4
+  composite: 7.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -100,13 +104,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 10.5
-  previous_composite: 8.4
+  previous_composite: 7.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

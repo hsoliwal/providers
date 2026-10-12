@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Open-source (Apache-2.0) HTML5-canvas financial charting library — the flagship first-party client SDK, distributed on npm as lightweight-charts.
@@ -41,7 +41,7 @@ apis:
 - description: Free, self-hosted Charting Library plus the Datafeed API and the Broker Integration REST API that brokerages implement for in-chart trading.
   name: TradingView Advanced Charts & Broker API
   slug: tradingview-advanced-charts-broker-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: operate
   title: ''
@@ -161,6 +161,10 @@ created: '2026-07-17'
 description: 'TradingView is a charting, social, and market-data platform for traders and investors, and one of the most-visited finance sites in the world. Its developer surface is delivered primarily as client-side, embeddable UI components and self-hosted JavaScript charting libraries rather than a hosted market-data REST API: the open-source (Apache-2.0) Lightweight Charts library, the free self-hosted Advanced Charts (Charting Library) with its custom Datafeed API, the Trading Platform library, and a large catalog of copy-paste embeddable widgets (charts, tickers, heatmaps, screeners, economic calendars). For brokerages, TradingView publishes a Broker Integration REST API contract that a broker implements to enable order entry and account management directly from the chart. Client libraries ship on npm (lightweight-charts), with official iOS and Android wrappers, and the organization runs a self-hosted bug bounty program.'
 image: https://www.tradingview.com/static/images/logo-preview.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tradingview.com over HTTP.
+  name: TradingView MCP Server
+  slug: tradingview
 modified: '2026-07-21'
 name: TradingView
 nav: Providers
@@ -172,7 +176,7 @@ overview: 'TradingView publishes 2 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 0
 score:
   band: thin
-  composite: 30.2
+  composite: 30.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -186,12 +190,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 30.2
+  previous_composite: 30.0
   provenance:
     mcp: first-party
   regulatory:
@@ -199,9 +203,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

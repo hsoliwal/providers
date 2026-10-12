@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 115
   human_in_the_loop: 8
@@ -46,12 +46,12 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to artifacts
-  name: Podman artifacts API
+  name: Podman Artifacts API
   slug: podman-artifacts-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to containers
-  name: Podman containers API
+  name: Podman Containers API
   slug: podman-containers-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -61,7 +61,7 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to exec
-  name: Podman exec API
+  name: Podman Exec API
   slug: podman-exec-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -71,7 +71,7 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to images
-  name: Podman images API
+  name: Podman Images API
   slug: podman-images-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -81,12 +81,12 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to manifests
-  name: Podman manifests API
+  name: Podman Manifests API
   slug: podman-manifests-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to networks
-  name: Podman networks API
+  name: Podman Networks API
   slug: podman-networks-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -96,17 +96,17 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to pods
-  name: Podman pods API
+  name: Podman Pods API
   slug: podman-pods-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: The quadlets API from Podman — 5 operation(s) for quadlets.
-  name: Podman quadlets API
+  name: Podman Quadlets API
   slug: podman-quadlets-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to secrets
-  name: Podman secrets API
+  name: Podman Secrets API
   slug: podman-secrets-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -116,7 +116,7 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to Podman engine
-  name: Podman system API
+  name: Podman System API
   slug: podman-system-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -126,7 +126,7 @@ apis:
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
   description: Actions related to volumes
-  name: Podman volumes API
+  name: Podman Volumes API
   slug: podman-volumes-api
 - baseURL: http://d/v6.0.0/libpod
   baseurl_source: declared
@@ -196,6 +196,11 @@ collections:
   name: supports a RESTful API for the Libpod library
   slug: open-podman
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/podman/refs/heads/main/capabilities/podman-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/podman-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -270,10 +275,10 @@ modified: '2026-05-19'
 name: Podman
 nav: Providers
 network: true
-overview: 'Podman publishes 18 APIs on the [APIs.io](https://apis.io/) network, including artifacts API, containers API, containers (compat) API, and 15 more. Tagged areas include Cloud-Native, Containers, DevOps, OCI, and Open-Source.
+overview: 'Podman publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Artifacts API, Containers API, containers (compat) API, and 15 more. Tagged areas include Cloud-Native, Containers, DevOps, OCI, and Open Source.
 
 
-  Podman''s developer surface includes documentation, engineering blog, getting-started guide, and 12 more developer resources.'
+  Podman''s developer surface includes documentation, engineering blog, getting-started guide, and 13 more developer resources.'
 plans:
 - name: Podman Plans Pricing
   plan_count: 3
@@ -285,9 +290,9 @@ rate_limits:
   slug: podman-rate-limits
 score:
   band: thin
-  composite: 38.4
+  composite: 35.6
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -297,14 +302,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 51.3
+    contract_quality: 46.2
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 38.4
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -312,8 +317,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 18
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -330,6 +341,6 @@ tags:
 - Containers
 - DevOps
 - OCI
-- Open-Source
+- Open Source
 website: https://podman.io/
 ---

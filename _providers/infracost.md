@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-09-20'
+  score: 23.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -70,6 +70,11 @@ collections:
   name: Infracost Cloud Pricing API
   slug: open-infracost
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/infracost/refs/heads/main/capabilities/infracost-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/infracost-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/infracost/refs/heads/main/agentic-access/infracost-agentic-access.yml
   title: ''
@@ -133,7 +138,7 @@ network: true
 overview: 'Infracost publishes 2 APIs on the [APIs.io](https://apis.io/) network: Breakdown API and Diff API. Tagged areas include Cloud Cost, FinOps, Infrastructure, and Terraform.
 
 
-  Infracost''s developer surface includes authentication, documentation, support, engineering blog, and 7 more developer resources.'
+  Infracost''s developer surface includes authentication, documentation, support, engineering blog, and 8 more developer resources.'
 plans:
 - name: Infracost Plans Pricing
   plan_count: 3
@@ -145,9 +150,9 @@ rate_limits:
   slug: infracost-rate-limits
 score:
   band: thin
-  composite: 32.8
+  composite: 31.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -157,11 +162,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 57.8
-    developer_ergonomics: 42.9
-    discoverability: 59.3
+    contract_quality: 52.0
+    developer_ergonomics: 42.1
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 32.8
+  previous_composite: 31.2
   provenance:
     agentic_access: derived
     contracts:
@@ -169,8 +174,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -104,13 +104,13 @@ description: Aeterlink Corp. is a Tokyo-headquartered deep-tech company, origina
 image: https://aeterlink.com/wp-content/uploads/ogp/ogp_new_en.png
 layout: provider
 modified: '2026-09-12'
-name: Aeterlink Corp.
+name: Aeterlink
 nav: Providers
 network: true
-overview: 'Aeterlink Corp. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wireless Power, IoT, Hardware, and Industrial Automation.
+overview: 'Aeterlink is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wireless Power, IoT, Hardware, and Industrial Automation.
 
 
-  Aeterlink Corp.''s developer surface includes product news, engineering blog, and 11 more developer resources.'
+  Aeterlink''s developer surface includes product news, engineering blog, and 11 more developer resources.'
 plans:
 - name: Aeterlinkcorp Plans Pricing
   plan_count: 0
@@ -122,7 +122,7 @@ rate_limits:
   slug: aeterlinkcorp-rate-limits
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -136,7 +136,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -145,15 +145,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 10.4
+  previous_composite: 10.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

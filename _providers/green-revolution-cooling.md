@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -121,7 +121,7 @@ modified: '2026-08-22'
 name: Green Revolution Cooling
 nav: Providers
 network: true
-overview: 'Green Revolution Cooling is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data-Center, Immersion Cooling, Liquid Cooling, and Infrastructure.
+overview: 'Green Revolution Cooling is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Center, Immersion Cooling, Liquid Cooling, and Infrastructure.
 
 
   Green Revolution Cooling''s developer surface includes engineering blog, support, product news, and 11 more developer resources.'
@@ -132,7 +132,7 @@ plans:
 random_paper: 13
 score:
   band: minimal
-  composite: 4.7
+  composite: 5.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -146,17 +146,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 4.7
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,7 +171,7 @@ security:
 slug: green-revolution-cooling
 tags:
 - Company
-- Data-Center
+- Data Center
 - Immersion Cooling
 - Liquid Cooling
 - Infrastructure

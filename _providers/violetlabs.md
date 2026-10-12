@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatic access to your Violet data. The Explore endpoint (POST /api/explore) accepts a rich query payload (keyword, filterModel, sort, grouping, pagination) and returns a paginated P
@@ -176,7 +176,7 @@ layout: provider
 mcp_servers:
 - description: Violet Labs operates an official hosted (remote) Model Context Protocol server that gives agents secure access to a workspace's structured Violet data — to answer questions, build insights, and assemb
   name: Violetlabs MCP Server
-  slug: violetlabs-mcp-server
+  slug: violet
 modified: '2026-07-21'
 name: Violetlabs
 nav: Providers
@@ -192,8 +192,8 @@ scopes:
   slug: violetlabs-scopes
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 42.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -207,14 +207,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 38.8
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

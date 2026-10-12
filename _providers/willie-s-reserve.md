@@ -13,8 +13,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 20.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live Model Context Protocol server implementing the Universal Commerce Protocol shopping service for the Willie's Reserve store. Thirteen tools cover catalog search and lookup, cart lifecycle, check
@@ -132,7 +132,7 @@ layout: provider
 mcp_servers:
 - description: Willie's Reserve serves a live, anonymously reachable Model Context Protocol server at https://williesreserve.com/api/ucp/mcp implementing the Universal Commerce Protocol (UCP) shopping service. A too
   name: Willie's Reserve Commerce MCP Server (UCP)
-  slug: willies-reserve-commerce-mcp-server-ucp
+  slug: willie-s-reserve-commerce-mcp-server-ucp
 modified: '2026-09-04'
 name: Willie's Reserve
 nav: Providers
@@ -152,12 +152,12 @@ rate_limits:
   slug: willie-s-reserve-rate-limits
 scopes:
 - name: Willie S Reserve Scopes
-  scope_count: 0
+  scope_count: 4
   slug: willie-s-reserve-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 21.1
+  composite: 23.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -171,15 +171,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 21.1
+  previous_composite: 23.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

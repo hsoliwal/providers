@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL Federation API powering the erxes XOS platform. An Apollo Router gateway federates one subgraph per plugin — core (contacts, companies, products, tags, documents, brands, organization structur
@@ -244,7 +244,7 @@ modified: 2026-08-13
 name: Erxes
 nav: Providers
 network: true
-overview: 'Erxes publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include GraphQL, CRM, Customer Experience, Open-Source, and Marketing Automation.
+overview: 'Erxes publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include GraphQL, CRM, Customer Experience, Open Source, and Marketing Automation.
 
 
   The Erxes catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -267,7 +267,7 @@ scopes:
   summary_line: 34 scopes · deviceCode
 score:
   band: strong
-  composite: 62.7
+  composite: 65.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 57.0
@@ -279,17 +279,23 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 49.0
+    contract_quality: 46.9
     developer_ergonomics: 78.6
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 81.6
-  previous_composite: 62.7
+  previous_composite: 65.6
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -314,7 +320,7 @@ tags:
 - GraphQL
 - CRM
 - Customer Experience
-- Open-Source
+- Open Source
 - Marketing Automation
 - Sales Pipeline
 - Help Desk

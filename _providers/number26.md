@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,14 +33,14 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-09-20'
+  score: 21.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://xs2a.tech26.de/v1/berlin-group/v1
   baseurl_source: declared
   description: The default API from Number26 — 9 operation(s) for default.
-  name: Number26 default API
+  name: Number26 Default API
   slug: number26-default-api
 artifact_total: 5
 collections:
@@ -150,14 +150,14 @@ modified: '2026-07-20'
 name: Number26
 nav: Providers
 network: true
-overview: 'Number26 publishes 1 API on the [APIs.io](https://apis.io/) network: default API. Tagged areas include Company, Fintech, Banking, Neobank, and Mobile Banking.
+overview: 'Number26 publishes 1 API on the [APIs.io](https://apis.io/) network: Default API. Tagged areas include Company, Fintech, Banking, Neobank, and Mobile Banking.
 
 
   Number26''s developer surface includes engineering blog, support, documentation, API reference, authentication, and 15 more developer resources.'
 random_paper: 5
 score:
   band: thin
-  composite: 35.7
+  composite: 33.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -169,9 +169,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 51.4
+    contract_quality: 46.3
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -181,7 +181,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 35.7
+  previous_composite: 33.9
   provenance:
     conformance: first-party
     contracts:
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

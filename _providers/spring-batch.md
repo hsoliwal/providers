@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -82,6 +82,11 @@ collections:
   name: Spring Batch 5.1 Actuator API
   slug: open-spring-batch
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spring-batch/refs/heads/main/capabilities/spring-batch-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spring-batch-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -187,13 +192,13 @@ modified: '2026-09-16'
 name: Spring Batch
 nav: Providers
 network: true
-overview: 'Spring Batch publishes 3 APIs on the [APIs.io](https://apis.io/) network: Jobs API, Health API, and Metrics API. Tagged areas include Batch Processing, Data Processing, Enterprise, ETL, and Java.
+overview: 'Spring Batch publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Jobs API, Health API, Metrics API, and 2 more. Tagged areas include Batch Processing, Data Processing, Enterprise, ETL, and Java.
 
 
   The Spring Batch catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spring Batch''s developer surface includes engineering blog, Stack Overflow tag, release notes, and 13 more developer resources.'
+  Spring Batch''s developer surface includes engineering blog, Stack Overflow tag, release notes, and 14 more developer resources.'
 plans:
 - name: Spring Batch Plans Pricing
   plan_count: 3
@@ -227,9 +232,9 @@ rules:
   slug: spring-batch-rules
 score:
   band: thin
-  composite: 31.6
+  composite: 33.9
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 49.5
@@ -239,11 +244,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 56.7
+    contract_quality: 52.0
     developer_ergonomics: 16.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 44.7
-  previous_composite: 31.6
+  open_source:
+    applies: true
+    score: 65.0
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
@@ -251,8 +259,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

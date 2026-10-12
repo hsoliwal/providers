@@ -35,13 +35,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Dealpath's REST API for programmatic access to deals, pipeline, and portfolio data. Bearer-token authentication (token provisioned by Dealpath); responses are JSON and advertise X-RateLimit-* headers.
   name: Dealpath API
   slug: dealpath-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -121,11 +121,15 @@ created: '2026-07-17'
 description: Dealpath is an AI-powered deal management platform for commercial real estate investing, used by 300+ institutional firms to centralize deal data, automate workflows, and surface analytics across the full investment lifecycle from sourcing and pipeline management through underwriting, due diligence, IC approval, close, and portfolio insights. Its product areas include market tracking and comps, Dealpath Connect deal sourcing, pipeline visibility, deal execution, reporting dashboards, relationship/CRM management, and Dealpath AI. Dealpath exposes a bearer-token REST API at api.dealpath.com (documented on Stoplight) so customers can programmatically feed opportunities into their pipeline and establish bidirectional data flows with other business systems.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dealpath.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dealpath.com over HTTP.
+  name: Dealpath MCP Server
+  slug: dealpath
 modified: '2026-07-18'
 name: Dealpath
 nav: Providers
 network: true
-overview: 'Dealpath publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Deal Management, and Commercial Real Estate.
+overview: 'Dealpath publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Deal Management, and Commercial Real Estate.
 
 
   Dealpath''s developer surface includes documentation, API reference, pricing, signup flow, engineering blog, authentication, and 11 more developer resources.'
@@ -136,7 +140,7 @@ rate_limits:
   slug: dealpath-rate-limits
 score:
   band: thin
-  composite: 27.7
+  composite: 28.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 45.0
@@ -150,13 +154,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 27.7
+  previous_composite: 28.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -175,7 +185,7 @@ security:
 slug: dealpath
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Deal Management
 - Commercial Real Estate

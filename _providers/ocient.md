@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://docs.ocient.com/api-playgrounds/ocient-http-query-api
@@ -233,7 +233,7 @@ description: Ocient is a Chicago-based data platform company founded in 2016 tha
 image: https://ocient.com/wp-content/uploads/2024/03/logo_adjust-2r.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.ocient.com over HTTP; 3 tools listed.
   name: Ocient Documentation
   slug: ocient-documentation
 modified: '2026-09-16'
@@ -247,7 +247,7 @@ overview: 'Ocient publishes 2 APIs on the [APIs.io](https://apis.io/) network: H
 random_paper: 4
 score:
   band: developing
-  composite: 48.2
+  composite: 48.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -259,16 +259,18 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.2
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     contracts:
@@ -278,8 +280,14 @@ score:
       total: 2
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -307,8 +315,9 @@ tags:
 - Database
 - SQL
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Big Data
 - Geospatial
+- A2A
 website: https://ocient.com/
 ---

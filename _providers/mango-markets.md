@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: wss://fills.mngo.cloud
@@ -105,7 +105,7 @@ rules:
   slug: mango-markets-asyncapi-spectral-rules
 score:
   band: emerging
-  composite: 16.3
+  composite: 17.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 41.5
@@ -117,19 +117,19 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 37.5
+    contract_quality: 35.4
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 16.3
+  previous_composite: 17.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

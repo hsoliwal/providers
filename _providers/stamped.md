@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -90,6 +90,11 @@ collections:
   name: Loyalty Operations Customer Actions Program Reporting API
   slug: open-stamped-program-reporting-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/stamped/refs/heads/main/capabilities/stamped-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/stamped-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/stamped/refs/heads/main/overlays/stamped-loyalty-operations-overlay.yaml
   title: ''
@@ -190,13 +195,13 @@ network: true
 overview: 'Stamped publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Customer Actions API, Customers API, Orders API, and 2 more. Tagged areas include Company, Consumer, Reviews, Ratings, and Loyalty.
 
 
-  Stamped''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 14 more developer resources.'
+  Stamped''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 15 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 31.1
+  composite: 29.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -206,11 +211,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 52.0
+    contract_quality: 46.8
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 31.1
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -221,8 +226,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -247,5 +258,6 @@ tags:
 - E-Commerce
 - Customer Marketing
 - Shopify
+- Loyalty & Incentives
 website: https://stamped.io
 ---

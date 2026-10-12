@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -77,6 +77,11 @@ collections:
   name: HashiCorp Consul Connect API
   slug: open-consul-connect
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/consul-connect/refs/heads/main/capabilities/consul-connect-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/consul-connect-capability-edges.yml
 - group: build
   title: ''
   type: CodeOfConduct
@@ -177,13 +182,13 @@ modified: '2026-05-19'
 name: Consul Connect
 nav: Providers
 network: true
-overview: 'Consul Connect publishes 2 APIs on the [APIs.io](https://apis.io/) network: CA API and Intentions API. Tagged areas include Consul, Envoy, HashiCorp, Intentions, and Kubernetes.
+overview: 'Consul Connect publishes 4 APIs on the [APIs.io](https://apis.io/) network, including CA API, Intentions API, and 2 more. Tagged areas include Consul, Envoy, HashiCorp, Intentions, and Kubernetes.
 
 
   The Consul Connect catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Consul Connect''s developer surface includes authentication, documentation, changelog, engineering blog, and 14 more developer resources.'
+  Consul Connect''s developer surface includes authentication, documentation, changelog, engineering blog, and 15 more developer resources.'
 plans:
 - name: Consul Connect Plans Pricing
   plan_count: 3
@@ -217,23 +222,23 @@ rules:
   slug: consul-connect-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 35.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 61.5
+    artifact_dirs: 16
+    catalog_earned: 60.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 54.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 51.0
+    contract_governance: 27.3
+    contract_quality: 46.3
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 36.4
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +246,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

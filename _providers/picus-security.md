@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -163,6 +163,11 @@ collections:
   name: Picus Customer Users API
   slug: open-picus-security-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/picus-security/refs/heads/main/capabilities/picus-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/picus-security-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/picus-security/refs/heads/main/mcp/picus-security-mcp.yml
   title: ''
@@ -327,7 +332,7 @@ network: true
 overview: 'Picus Security publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Activity Logs API, Agents API, Authentication API, and 11 more. Tagged areas include Cybersecurity, Security Validation, Breach and Attack Simulation, Adversarial Exposure Validation, and Continuous Threat Exposure Management.
 
 
-  Picus Security''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 27 more developer resources.'
+  Picus Security''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 28 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 2
@@ -335,9 +340,9 @@ rate_limits:
   slug: picus-security-rate-limits
 score:
   band: developing
-  composite: 47.9
+  composite: 49.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
@@ -347,11 +352,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 54.3
+    contract_quality: 49.1
     developer_ergonomics: 35.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 59.2
-  previous_composite: 47.9
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -362,8 +367,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

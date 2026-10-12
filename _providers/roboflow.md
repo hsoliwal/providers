@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -255,6 +255,11 @@ collections:
   slug: open-roboflow-yolo-world-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/roboflow/refs/heads/main/capabilities/roboflow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/roboflow-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/roboflow/refs/heads/main/overlays/roboflow-inference-overlay.yaml
   title: ''
   type: Overlay
@@ -418,17 +423,17 @@ description: Roboflow is a computer vision platform used by over one million eng
 image: https://cdn.prod.website-files.com/5f6bc60e665f54545a1e52a5/670954c541fe7e67c3d2cb01_og-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.roboflow.com over HTTP; 67 tools listed.
   name: Roboflow MCP Server
-  slug: roboflow-mcp-server
+  slug: roboflow
 modified: '2026-09-16'
 name: Roboflow
 nav: Providers
 network: true
-overview: 'Roboflow publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Clip API, Dashboard.html API, Doctr API, and 21 more. Tagged areas include Computer-Vision, Machine-Learning, Artificial Intelligence, Object Detection, and Image Annotation.
+overview: 'Roboflow publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Clip API, Dashboard.html API, Doctr API, and 23 more. Tagged areas include Computer Vision, Machine Learning, Artificial Intelligence, Object Detection, and Image Annotation.
 
 
-  Roboflow''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+  Roboflow''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
 random_paper: 16
 rate_limits:
 - limit_count: 3
@@ -440,10 +445,10 @@ scopes:
   slug: roboflow-scopes
   summary_line: 67 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.9
+  band: strong
+  composite: 55.9
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -453,11 +458,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 44.4
+    contract_quality: 40.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 53.9
+  previous_composite: 55.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -468,8 +473,18 @@ score:
       total: 24
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -490,8 +505,8 @@ security:
   summary_line: SOC 2, HIPAA
 slug: roboflow
 tags:
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Artificial Intelligence
 - Object Detection
 - Image Annotation

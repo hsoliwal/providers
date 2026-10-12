@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://madapi.madkudu.com
@@ -100,6 +100,11 @@ apis:
   slug: madkudu-utilities-api
 artifact_total: 18
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/madkudu/refs/heads/main/capabilities/madkudu-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/madkudu-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/madkudu/refs/heads/main/overlays/madkudu-madapi-overlay.yaml
   title: ''
@@ -261,7 +266,7 @@ description: MadKudu is a predictive lead scoring and account intelligence platf
 image: https://cdn.prod.website-files.com/6107b1101d4d3e748743f234/65f31ad2b4ac6cf0cb8bd691_og-img.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.madkudu.com over HTTP; 12 tools listed.
   name: MadMCP
   slug: madmcp
 modified: '2026-08-14'
@@ -271,7 +276,7 @@ network: true
 overview: 'MadKudu publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, AI API, Companies API, and 9 more. Tagged areas include Company, Applicative Saas, Sales Intelligence, Lead Scoring, and Predictive Analytics.
 
 
-  MadKudu''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 27 more developer resources.'
+  MadKudu''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 28 more developer resources.'
 plans:
 - name: Madkudu Plans Pricing
   plan_count: 0
@@ -283,7 +288,7 @@ rate_limits:
   slug: madkudu-rate-limits
 score:
   band: developing
-  composite: 51.2
+  composite: 51.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -295,11 +300,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 54.8
+    contract_quality: 49.3
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 39.5
-  previous_composite: 51.2
+  previous_composite: 51.1
   provenance:
     conformance: derived
     contracts:
@@ -309,8 +314,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

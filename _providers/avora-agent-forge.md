@@ -23,9 +23,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-09-20'
+  score: 29.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -197,12 +197,12 @@ layout: provider
 mcp_servers:
 - description: Solana token scans, signed assessments, user-approved evidence orders, and verified commerce status.
   name: AVORA Agent Forge MCP Server
-  slug: avora-agent-forge-mcp-server
+  slug: avora-agent-forge
 modified: '2026-08-09'
 name: AVORA Agent Forge
 nav: Providers
 network: true
-overview: 'AVORA Agent Forge publishes 2 APIs on the [APIs.io](https://apis.io/) network: Agent API and Public Evidence API. Tagged areas include Blockchain, Crypto, Solana, Token Risk, and Due Diligence.
+overview: 'AVORA Agent Forge publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Public Evidence API, and 1 more. Tagged areas include Blockchain, Crypto, Solana, Token Risk, and Due Diligence.
 
 
   The AVORA Agent Forge catalog on APIs.io includes 1 JSON-LD context.
@@ -216,7 +216,7 @@ plans:
 random_paper: 13
 score:
   band: thin
-  composite: 37.4
+  composite: 36.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 51.0
@@ -228,11 +228,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 50.7
+    contract_quality: 46.0
     developer_ergonomics: 51.8
-    discoverability: 70.4
+    discoverability: 70.0
     operational_transparency: 0.0
-  previous_composite: 37.4
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -248,9 +248,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

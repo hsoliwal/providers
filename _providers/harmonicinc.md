@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the VOS360 media processing platform — manage assets, channels, services, live events, storage and packaging, DRM/encryption, graphics and jobs. Secured with OAuth 2.0 (Bearer access toke
@@ -53,6 +53,14 @@ common:
   title: ''
   type: APIReference
   url: https://s3-us-west-1.amazonaws.com/vos360-public-api/index.html
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://techlibrary.harmonicinc.com
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/harmonicinc-com
 - group: operate
   title: ''
   type: Support
@@ -102,17 +110,17 @@ description: 'Harmonic Inc. (NASDAQ: HLIT) is a video streaming and virtualized 
 image: https://www.harmonicinc.com/hubfs/Harmonic_Overview_VideoThumbnail.png
 layout: provider
 modified: '2026-07-19'
-name: Harmonic Inc.
+name: Harmonic
 nav: Providers
 network: true
-overview: 'Harmonic Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Video Streaming, Broadband, and Media.
+overview: 'Harmonic publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Video Streaming, Broadband, and Media.
 
 
-  Harmonic Inc.''s developer surface includes documentation, API reference, support, engineering blog, changelog, authentication, and 7 more developer resources.'
+  Harmonic''s developer surface includes documentation, API reference, support, engineering blog, changelog, authentication, and 9 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 18.9
+  composite: 19.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -120,23 +128,23 @@ score:
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.2
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 66.7
-    operational_transparency: 15.8
+    discoverability: 64.3
+    operational_transparency: 21.1
   previous_composite: 18.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

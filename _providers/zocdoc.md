@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 49.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -48,67 +48,67 @@ apis:
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints for booking, cancelling, and rescheduling appointments, including retrieving current appointment statuses and updated information.
-  name: Zocdoc appointments API
+  name: Zocdoc Appointments API
   slug: zocdoc-appointments-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to manage timeslots for providers.
-  name: Zocdoc calendar-integration-timeslots API
+  name: Zocdoc Calendar Integration Timeslots API
   slug: zocdoc-calendar-integration-timeslots-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints for managing API credentials.
-  name: Zocdoc credentials API
+  name: Zocdoc Credentials API
   slug: zocdoc-credentials-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve facilities within the developer's directory.
-  name: Zocdoc facilities API
+  name: Zocdoc Facilities API
   slug: zocdoc-facilities-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve insurance plans supported by Zocdoc.
-  name: Zocdoc insurance-reference API
+  name: Zocdoc Insurance Reference API
   slug: zocdoc-insurance-reference-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints for retrieving and modifying provider location objects and their related insurance plans and availability.
-  name: Zocdoc provider-locations API
+  name: Zocdoc Provider Locations API
   slug: zocdoc-provider-locations-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve providers within the developer's directory.
-  name: Zocdoc providers API
+  name: Zocdoc Providers API
   slug: zocdoc-providers-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve information about the developer's directory.
-  name: Zocdoc reference API
+  name: Zocdoc Reference API
   slug: zocdoc-reference-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve schedulable entities with availability information.
-  name: Zocdoc schedulable-entities API
+  name: Zocdoc Schedulable Entities API
   slug: zocdoc-schedulable-entities-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Sandbox endpoints to mock webhook behavior
-  name: Zocdoc webhook API
+  name: Zocdoc Webhook API
   slug: zocdoc-webhook-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Endpoints to retrieve aggregate review summaries for providers, individually or in batches of up to 100 provider IDs.
-  name: Zocdoc reviews API
+  name: Zocdoc Reviews API
   slug: zocdoc-reviews-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Reference endpoints to retrieve the specialties Zocdoc supports and their default visit reasons, optionally filtered by care category.
-  name: Zocdoc specialties API
+  name: Zocdoc Specialties API
   slug: zocdoc-specialties-api
 - baseURL: https://api-developer.zocdoc.com
   baseurl_source: declared
   description: Reference endpoints to retrieve the visit reasons Zocdoc supports and the specialty each one belongs to. Visit reason drives appointment duration and bookable timeslots.
-  name: Zocdoc visit-reasons API
+  name: Zocdoc Visit Reasons API
   slug: zocdoc-visit-reasons-api
 artifact_total: 41
 asyncapis:
@@ -332,7 +332,7 @@ common:
 - group: start
   title: ''
   type: SignUp
-  url: https://developer.zocdoc.com/?utm_medium=organicpro&utm_routing=API_Sender#api-form
+  url: https://developer.zocdoc.com/#api-form
 - group: commercial
   title: ''
   type: TermsOfService
@@ -378,7 +378,7 @@ modified: '2026-08-15'
 name: Zocdoc
 nav: Providers
 network: true
-overview: 'Zocdoc publishes 13 APIs on the [APIs.io](https://apis.io/) network, including appointments API, calendar-integration-timeslots API, credentials API, and 10 more. Tagged areas include Healthcare, Appointments, Booking, Providers, and Insurance.
+overview: 'Zocdoc publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Appointments API, Calendar Integration Timeslots API, Credentials API, and 10 more. Tagged areas include Healthcare, Appointments, Booking, Providers, and Insurance.
 
 
   The Zocdoc catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
@@ -412,23 +412,23 @@ scopes:
   summary_line: 10 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 64.1
+  composite: 59.9
   coverage:
     artifact_dirs: 32
-    catalog_earned: 64.3
+    catalog_earned: 63.8
     catalog_earned_first_party: 8.0
-    catalog_gap: 50.8
+    catalog_gap: 51.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 67.1
-    contract_governance: 29.5
-    contract_quality: 69.7
+    contract_governance: 28.0
+    contract_quality: 64.4
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 64.1
+  previous_composite: 59.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -444,9 +444,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

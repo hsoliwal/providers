@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.matik.io/api/1.0/
@@ -205,9 +205,9 @@ description: Matik is a data-driven content automation platform that generates p
 image: https://cdn.prod.website-files.com/6169c25fc3b5f387dbc1b0ab/672c8fdcb72e6d3999cd7f45_Matik%20Logo%20On%20White%20Colored.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 8 tools listed.
   name: Matik MCP Server
-  slug: matik-mcp-server
+  slug: matik
 modified: '2026-08-14'
 name: Matik
 nav: Providers
@@ -235,7 +235,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.3
+  composite: 48.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -247,17 +247,27 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 46.3
+  previous_composite: 48.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

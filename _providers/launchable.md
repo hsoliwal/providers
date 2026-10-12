@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Launchable (CloudBees Smart Tests) service API that the Launchable CLI calls to record builds, create test sessions, upload test results, request predictive test subsets and split subsets for para
@@ -193,7 +193,7 @@ overview: 'Launchable publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 5
 score:
   band: developing
-  composite: 40.2
+  composite: 42.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -207,13 +207,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 40.2
+  previous_composite: 42.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -245,7 +251,7 @@ tags:
 - Test Automation
 - Developer Tools
 - DevOps
-- Machine-Learning
+- Machine Learning
 - Software Delivery
 - Predictive Test Selection
 - CI/CD

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic access to Stilla's capabilities. The REST API and the remote MCP server are protected by OAuth 2.0 / OIDC (WorkOS AuthKit). The OpenAPI document is served at api.stilla.ai/openapi.json bu
@@ -176,12 +176,12 @@ layout: provider
 mcp_servers:
 - description: Official remote MCP server that gives MCP-compatible clients (Claude Code, Cursor, Claude Desktop, etc.) authenticated access to a Stilla workspace — meeting notes, decisions, canvases, transcripts, a
   name: Stilla MCP Server
-  slug: stilla-mcp-server
+  slug: stilla
 modified: '2026-07-21'
 name: Stilla
 nav: Providers
 network: true
-overview: 'Stilla publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic, and Productivity.
+overview: 'Stilla publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Productivity, and Collaboration.
 
 
   Stilla''s developer surface includes documentation, getting-started guide, support, engineering blog, changelog, pricing, signup flow, and 22 more developer resources.'
@@ -193,7 +193,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
   band: thin
-  composite: 32.6
+  composite: 35.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -207,14 +207,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 32.6
+  previous_composite: 35.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -239,7 +245,6 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Agentic
 - Productivity
 - Collaboration
 - MCP

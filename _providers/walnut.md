@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Read-only REST API for Walnut demo analytics. Two data endpoints plus a health check — GET /demo-sessions returns individual demo-session records across 29 documented fields with filtering, offset pag
@@ -248,8 +248,8 @@ rate_limits:
   name: Walnut Rate Limits
   slug: walnut-rate-limits
 score:
-  band: strong
-  composite: 65.5
+  band: exemplar
+  composite: 66.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 64.0
@@ -261,16 +261,22 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 53.2
+    contract_quality: 50.5
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 73.7
-  previous_composite: 65.5
+  previous_composite: 66.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

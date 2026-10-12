@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 asyncapis:
@@ -158,7 +158,7 @@ modified: '2026-08-29'
 name: Supply Wisdom
 nav: Providers
 network: true
-overview: 'Supply Wisdom is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Risk, Third-Party Risk Management, Supply Chain, and Governance Risk and Compliance.
+overview: 'Supply Wisdom is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Risk Management, Third-Party Risk Management, Supply Chain, and Governance Risk and Compliance.
 
 
   The Supply Wisdom catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -176,7 +176,7 @@ rate_limits:
   slug: supply-wisdom-rate-limits
 score:
   band: thin
-  composite: 38.3
+  composite: 38.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -188,15 +188,25 @@ score:
   facets:
     access_clarity: 81.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 38.3
+  previous_composite: 38.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -215,12 +225,11 @@ security:
 slug: supply-wisdom
 tags:
 - Company
-- Risk
+- Risk Management
 - Third-Party Risk Management
 - Supply Chain
 - Governance Risk and Compliance
 - Monitoring
-- Intelligence
 - Supplier Risk
 - Operational Resilience
 - ESG

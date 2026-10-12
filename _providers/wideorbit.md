@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Certified-partner API gateway for WideOrbit.io providing real-time, object-level interaction with WideOrbit Traffic, Network, and Omni systems. Access is restricted to authorized, WideOrbit-certified '
@@ -195,12 +195,12 @@ rate_limits:
   slug: wideorbit-rate-limits
 scopes:
 - name: Wideorbit Scopes
-  scope_count: 0
+  scope_count: 10
   slug: wideorbit-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 10 scopes · authorization_code
 score:
   band: thin
-  composite: 37.2
+  composite: 39.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 32.0
@@ -212,15 +212,21 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 37.2
+  previous_composite: 39.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -53,11 +53,11 @@ modified: '2026-07-19'
 name: Health Co (Stealth)
 nav: Providers
 network: true
-overview: Health Co (Stealth) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Startups, and Stealth.
+overview: Health Co (Stealth) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, and Stealth.
 random_paper: 15
 score:
   band: minimal
-  composite: 2.4
+  composite: 2.8
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -71,17 +71,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
-  previous_composite: 2.4
+  previous_composite: 2.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -97,7 +97,6 @@ slug: health-co-stealth
 tags:
 - Company
 - Health
-- Startups
 - Stealth
 website: https://unwind.me
 ---

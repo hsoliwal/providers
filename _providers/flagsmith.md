@@ -36,62 +36,329 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
-- acting_count: 17
-  human_in_the_loop: 0
+- acting_count: 401
+  human_in_the_loop: 8
   name: Flagsmith Agentic Access
-  operation_count: 35
+  operation_count: 650
   slug: flagsmith-agentic-access
-  summary_line: 35 operations · 17 acting
+  summary_line: 650 operations · 401 acting · 8 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: https://edge.api.flagsmith.com
   baseurl_source: declared
   description: The Flagsmith Flags API is the public-facing REST API that client-side and server-side SDKs use to retrieve feature flag values and remote configuration for environments and users. It uses a non-secre
   name: Flagsmith Flags API
+  phrasing_intents:
+  - id: listFlags
+    intent: Get all flags for an environment
+    question: How does a client SDK fetch every flag and its value for an environment in Flagsmith?
+  phrasing_ops: 1
   slug: flags-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage environments within a project. Environments represent deployment stages such as development, staging, and production.
   name: flagsmith Environments API
+  phrasing_intents:
+  - id: listEnvironments
+    intent: List environments I can access
+    question: Which Flagsmith environments do I have access to?
+  - id: getEnvironment
+    intent: Get an environment (unversioned path)
+    question: What project and feature states belong to an environment, from the unversioned endpoint?
+  - id: updateEnvironment
+    intent: Update an environment (unversioned path)
+    question: Can I rename an environment through the unversioned update endpoint?
+  - id: api_v1_environments_create
+    intent: Create an environment in a project
+    question: How do I add a new staging environment to my project?
+  - id: api_v1_environments_retrieve
+    intent: Get an environment's settings (v1)
+    question: What settings like banner text or versioning does an environment have in the v1 API?
+  - id: api_v1_environments_update
+    intent: Replace an environment's settings (v1)
+    question: How do I fully replace an environment's configuration with the v1 API?
+  - id: api_v1_environments_partial_update
+    intent: Change individual environment settings
+    question: Can I just set a banner colour on an environment without touching other settings?
+  - id: api_v1_environments_destroy
+    intent: Delete an environment
+    question: How do I remove an environment I no longer use?
+  phrasing_ops: 61
   slug: flagsmith-environments-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage feature flags within a project. Features can be toggled on or off and can have remote configuration values.
   name: flagsmith Features API
+  phrasing_intents:
+  - id: listFeatures
+    intent: List a project's feature flags
+    question: What feature flags are defined in my Flagsmith project?
+  - id: createFeature
+    intent: Create a feature flag
+    question: How do I add a new feature flag that shows up in every environment?
+  - id: getFeature
+    intent: Get a feature flag's details
+    question: How is a specific feature flag configured, including its multivariate options?
+  - id: updateFeature
+    intent: Replace a feature flag (unversioned path)
+    question: How do I rename a feature flag or change its type with a full update?
+  - id: deleteFeature
+    intent: Delete a feature flag (unversioned path)
+    question: How do I permanently remove a feature flag from all environments using the unversioned route?
+  - id: listFeatureStates
+    intent: List feature states in an environment
+    question: Which flags are on or off in my production environment and with what values?
+  - id: updateFeatureState
+    intent: Toggle a flag or change its value in an environment
+    question: How do I turn a flag on in just one environment?
+  - id: api_v1_environments_features_versions_destroy
+    intent: Delete a feature version in an environment
+    question: Can I delete a specific version of a feature's state in an environment?
+  phrasing_ops: 41
   slug: flagsmith-features-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage user identities within an environment. Identities represent individual users and their associated traits.
   name: flagsmith Identities API
+  phrasing_intents:
+  - id: listIdentities
+    intent: List identities in an environment
+    question: Which users have identities in this environment, via the endpoint without the /api/v1 prefix?
+  - id: getIdentity
+    intent: Get an identity and its traits
+    question: What traits does a given identity have, fetched from the non-v1 identity path?
+  - id: deleteIdentity
+    intent: Permanently delete an identity
+    question: Does deleting an identity also wipe its traits and flag overrides?
+  - id: api_v1_environments_edge_identities_list
+    intent: List edge identities in an environment
+    question: Which edge identities exist in an environment?
+  - id: api_v1_environments_edge_identities_create
+    intent: Create an edge identity
+    question: Can I create an edge identity with a friendly dashboard alias?
+  - id: api_v1_environments_edge_identities_edge_featurestates_list
+    intent: List an edge identity's flag overrides
+    question: Which flags have been overridden for a specific edge identity?
+  - id: api_v1_environments_edge_identities_edge_featurestates_create
+    intent: Override a flag for an edge identity
+    question: How do I give one edge identity its own value for a flag?
+  - id: api_v1_environments_edge_identities_edge_featurestates_retrieve
+    intent: Get one edge identity flag override
+    question: What value does a specific edge identity override currently hold?
+  phrasing_ops: 47
   slug: flagsmith-identities-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage organisations within Flagsmith. Organisations are the top-level container for projects, users, and billing.
   name: flagsmith Organisations API
+  phrasing_intents:
+  - id: listOrganisations
+    intent: List the organisations I belong to
+    question: Which Flagsmith organisations does my account have access to?
+  - id: getOrganisation
+    intent: Get an organisation's plan and usage limits
+    question: What subscription plan and feature usage limits does my organisation have?
+  - id: api_v1_organisations_create
+    intent: Create a new organisation
+    question: How do I create a brand-new organisation under my account?
+  - id: api_v1_organisations_licence_update
+    intent: Upload or replace an organisation's licence
+    question: Where do I apply a self-hosted licence to my organisation?
+  - id: api_v1_organisations_api_usage_notification_list
+    intent: List API usage notifications for an organisation
+    question: Has my organisation been warned about approaching its API request limit?
+  - id: api_v1_organisations_github_create_cleanup_issue_create
+    intent: Open a GitHub issue to clean up stale flags
+    question: Can Flagsmith open a GitHub issue reminding us to remove an old flag from code?
+  - id: api_v1_organisations_github_issues_retrieve
+    intent: List GitHub issues from the linked integration
+    question: Which GitHub issues can I link to a feature flag?
+  - id: api_v1_organisations_github_pulls_retrieve
+    intent: List GitHub pull requests from the integration
+    question: What pull requests from our GitHub repos can be linked to a flag?
+  phrasing_ops: 106
   slug: flagsmith-organisations-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage projects within an organisation. Projects contain environments and feature flags.
   name: flagsmith Projects API
+  phrasing_intents:
+  - id: listProjects
+    intent: List projects I can access across organisations
+    question: Which Flagsmith projects do I have access to across all my organisations?
+  - id: createProject
+    intent: Create a project with just a name and organisation
+    question: What is the minimum I need to create a project that will hold environments and flags?
+  - id: getProject
+    intent: Get a project's details
+    question: How do I see a project's name, organisation and environments?
+  - id: updateProject
+    intent: Rename or replace a project's details
+    question: How do I rename an existing project?
+  - id: deleteProject
+    intent: Permanently delete a project and everything in it
+    question: What gets wiped when I permanently delete a project and all its environments and flags?
+  - id: api_v1_projects_list
+    intent: List projects via the v1 API
+    question: How do I list projects through the versioned v1 projects API?
+  - id: api_v1_projects_create
+    intent: Create a project with its settings
+    question: Can I create a project that enforces lower-case feature names or a naming regex?
+  - id: api_v1_projects_partial_update
+    intent: Change a project's settings
+    question: How do I change the stale flag threshold on a project?
+  phrasing_ops: 46
   slug: flagsmith-projects-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage segments within a project. Segments define groups of users based on traits and rules for targeted flag delivery.
   name: flagsmith Segments API
+  phrasing_intents:
+  - id: listSegments
+    intent: List a project's segments
+    question: Which user segments are defined in my project?
+  - id: createSegment
+    intent: Create a segment from trait rules
+    question: How do I create a segment of users based on trait rules for targeted flags?
+  - id: getSegment
+    intent: Get a segment's rules and conditions
+    question: What rules and conditions make up a particular segment?
+  - id: updateSegment
+    intent: Replace a segment's name, description and rules
+    question: How do I rewrite the full rule set of an existing segment?
+  - id: deleteSegment
+    intent: Permanently delete a segment
+    question: What happens to segment overrides when I delete a segment?
+  - id: api_v1_projects_segments_partial_update
+    intent: Change some fields on a segment
+    question: Can I change just a segment's description without resending its rules?
+  - id: api_v1_projects_segments_destroy
+    intent: Delete a segment via the v1 project endpoint
+    question: Is there a v1 API path under /api/v1/projects for deleting a segment?
+  - id: api_v1_projects_segments_associated_features_retrieve
+    intent: See which features a segment is used by
+    question: Which features have overrides that depend on this segment?
+  phrasing_ops: 11
   slug: flagsmith-segments-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Manage organisation users and their permissions within Flagsmith.
   name: flagsmith Users API
+  phrasing_intents:
+  - id: listOrganisationUsers
+    intent: List users in an organisation
+    question: Who are the members of my Flagsmith organisation?
+  phrasing_ops: 1
   slug: flagsmith-users-api
 - baseURL: https://api.flagsmith.com/api/v1
   baseurl_source: declared
   description: Configure webhooks for environments and organisations to receive notifications about flag changes and audit log events.
   name: flagsmith Webhooks API
+  phrasing_intents:
+  - id: listEnvironmentWebhooks
+    intent: List environment webhooks (unversioned path)
+    question: Which webhooks receive flag evaluation data for identified users in my environment, via the unversioned path?
+  - id: createEnvironmentWebhook
+    intent: Add an environment webhook (unversioned path)
+    question: How can I get flag evaluation data POSTed to my URL whenever identities are evaluated?
+  - id: listOrganisationWebhooks
+    intent: List organisation audit webhooks (unversioned)
+    question: Which webhooks receive audit log events for my whole organisation, from the unversioned path?
+  - id: createOrganisationWebhook
+    intent: Add an organisation audit webhook (unversioned)
+    question: How do I stream audit log events for changes across my organisation to my own URL?
+  - id: api_v1_cb_webhook_create
+    intent: Receive Chargebee subscription webhooks
+    question: What endpoint handles incoming Chargebee billing webhooks for subscription changes?
+  - id: api_v1_cohort_sync_mixpanel_webhook_create
+    intent: Receive a Mixpanel cohort sync
+    question: How does Mixpanel push cohort membership into Flagsmith each sync cycle?
+  - id: api_v1_cohort_sync_webhook_cohorts_members_add_create
+    intent: Add members to a CSV cohort
+    question: How do I add identities to an existing CSV cohort without re-uploading the file?
+  - id: api_v1_cohort_sync_webhook_cohorts_members_remove_create
+    intent: Remove members from a CSV cohort
+    question: How can I take specific identities out of a CSV cohort?
+  phrasing_ops: 21
   slug: flagsmith-webhooks-api
-artifact_total: 35
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Platform hub admin dashboard endpoints.
+  name: Flagsmith Admin dashboard API
+  slug: flagsmith-admin-dashboard-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: SDK analytics and telemetry.
+  name: Flagsmith Analytics API
+  slug: flagsmith-analytics-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Access audit logs.
+  name: Flagsmith Audit API
+  slug: flagsmith-audit-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Authentication, MFA, OAuth, and token management.
+  name: Flagsmith Authentication API
+  slug: flagsmith-authentication-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Experimental endpoints subject to change.
+  name: Flagsmith Experimental API
+  slug: flagsmith-experimental-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Manage feature states and feature versioning.
+  name: Flagsmith Feature states API
+  slug: flagsmith-feature-states-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Configure third-party integrations (Amplitude, DataDog, Slack, etc.).
+  name: Flagsmith Integrations API
+  slug: flagsmith-integrations-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: MCP-compatible endpoints.
+  name: Flagsmith MCP API
+  slug: flagsmith-mcp-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Manage metadata fields and model configuration.
+  name: Flagsmith Metadata API
+  slug: flagsmith-metadata-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: The o API from Flagsmith — 1 operation(s) for o.
+  name: Flagsmith O API
+  slug: flagsmith-o-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Onboarding flows.
+  name: Flagsmith Onboarding API
+  slug: flagsmith-onboarding-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Other endpoints.
+  name: Flagsmith Other API
+  slug: flagsmith-other-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: Manage user and group permissions across organisations, projects, and environments.
+  name: Flagsmith Permissions API
+  slug: flagsmith-permissions-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: The processor API from Flagsmith — 1 operation(s) for processor.
+  name: Flagsmith Processor API
+  slug: flagsmith-processor-api
+- baseURL: https://edge.api.flagsmith.com
+  baseurl_source: declared
+  description: SDK endpoints for flags, identities, and traits.
+  name: Flagsmith SDK API
+  slug: flagsmith-sdk-api
+artifact_total: 50
 asyncapis:
 - description: Flagsmith provides two types of webhooks for receiving event notifications. Environment webhooks automatically send flag evaluations for identified users whenever an identity's flags are evaluated via
   name: Flagsmith Webhook Events
@@ -131,6 +398,11 @@ collections:
   name: Flagsmith Admin Environments Webhooks API
   slug: open-flagsmith-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/flagsmith/refs/heads/main/capabilities/flagsmith-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/flagsmith-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -363,20 +635,20 @@ jsonld:
   slug: flagsmith-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.flagsmith.com over streamable HTTP requiring OAuth; 54 tools listed.
   name: Flagsmith MCP Server
-  slug: flagsmith-mcp-server
+  slug: flagsmith
 modified: '2026-09-17'
 name: Flagsmith
 nav: Providers
 network: true
-overview: 'Flagsmith publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Flags API, Environments API, Features API, and 6 more. Tagged areas include Feature Flags, Remote Config, Release Management, A/B Testing, and Experimentation.
+overview: 'Flagsmith publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Flags API, Environments API, Features API, and 21 more. Tagged areas include Feature Flags, Remote Config, Release Management, A/B Testing, and Experimentation.
 
 
   The Flagsmith catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Flagsmith''s developer surface includes authentication, engineering blog, documentation, API reference, getting-started guide, support, pricing, and 39 more developer resources.'
+  Flagsmith''s developer surface includes authentication, engineering blog, documentation, API reference, getting-started guide, support, pricing, and 40 more developer resources.'
 plans:
 - name: Flagsmith Plans Pricing
   plan_count: 4
@@ -410,12 +682,12 @@ rules:
   slug: flagsmith-jsonschema-spectral-rules
 scopes:
 - name: Flagsmith Scopes
-  scope_count: 0
+  scope_count: 2
   slug: flagsmith-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: exemplar
-  composite: 77.9
+  composite: 78.5
   coverage:
     artifact_dirs: 30
     catalog_earned: 73.5
@@ -423,27 +695,33 @@ score:
     catalog_gap: 41.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 93.4
     contract_governance: 31.8
-    contract_quality: 71.8
+    contract_quality: 56.9
     developer_ergonomics: 79.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 92.1
   previous_composite: 77.9
   provenance:
     agentic_access: derived
     conformance: first-party
     contracts:
-      callable: 100.0
+      callable: 37.5
       derived: 0
       marker_coverage: 0.0
-      total: 9
+      total: 24
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -476,7 +754,7 @@ tags:
 - Segmentation
 - Developer Tools
 - DevOps
-- Open-Source
+- Open Source
 - Software-as-a-Service
 - MCP
 - Agent Ready

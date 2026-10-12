@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -192,7 +192,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 31.5
+  composite: 34.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -206,15 +206,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 23.7
-  previous_composite: 31.5
+  previous_composite: 34.0
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -241,6 +247,6 @@ tags:
 - MCP
 - Quality Assurance
 - CI/CD
-- Agentic
+- AI Agents
 website: https://testsprite.com/
 ---

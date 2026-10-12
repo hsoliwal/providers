@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Partner Integration API is the SkyKick / ConnectWise Cloud Services partner-facing REST API. The provider's own Get Started page documents an OAuth 2.0 client-credentials token exchange at /auth/t
@@ -171,7 +171,7 @@ modified: '2026-08-28'
 name: SkyKick
 nav: Providers
 network: true
-overview: 'SkyKick publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backup, Migration, Microsoft-365, and Managed Service Providers.
+overview: 'SkyKick publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backup, Migration, Microsoft 365, and Managed Service Providers.
 
 
   SkyKick''s developer surface includes getting-started guide, support, pricing, authentication, and 22 more developer resources.'
@@ -186,12 +186,12 @@ rate_limits:
   slug: skykick-rate-limits
 scopes:
 - name: Skykick Scopes
-  scope_count: 0
+  scope_count: 2
   slug: skykick-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · clientCredentials
 score:
   band: thin
-  composite: 29.6
+  composite: 33.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -205,19 +205,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.6
+  previous_composite: 33.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -246,7 +254,7 @@ tags:
 - Company
 - Backup
 - Migration
-- Microsoft-365
+- Microsoft 365
 - Managed Service Providers
 - SaaS Security
 - Cloud Automation

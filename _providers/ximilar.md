@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Ximilar REST API at https://api.ximilar.com. One account token in an ''Authorization: Token'' header unlocks every service the active plan includes: fashion, home-decor and photo tagging, collectibl'
   name: Ximilar API
   slug: ximilar
-artifact_total: 9
+artifact_total: 8
 asyncapis:
 - description: ''
   name: Ximilar Webhooks
@@ -212,14 +212,11 @@ mcp_servers:
 - description: 'Ximilar publishes a first-party MCP server for its Computer Vision Platform. It is a Python FastMCP server distributed inside the official ximilar-client repository (ximilar/server/server.py) and run '
   name: Ximilar MCP Server
   slug: ximilar-mcp-server
-- description: ''
-  name: Ximilar MCP Server
-  slug: ximilar-mcp-server-2
 modified: '2026-08-28'
 name: Ximilar
 nav: Providers
 network: true
-overview: 'Ximilar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Computer-Vision, Image Recognition, Visual Search, Image Tagging, and Machine-Learning.
+overview: 'Ximilar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Computer Vision, Image Recognition, Visual Search, Image Tagging, and Machine Learning.
 
 
   The Ximilar catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -237,7 +234,7 @@ rate_limits:
   slug: ximilar-rate-limits
 score:
   band: strong
-  composite: 58.8
+  composite: 59.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 64.0
@@ -249,16 +246,22 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 57.9
-  previous_composite: 58.8
+  previous_composite: 59.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -276,11 +279,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: ximilar
 tags:
-- Computer-Vision
+- Computer Vision
 - Image Recognition
 - Visual Search
 - Image Tagging
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - OCR
 - Collectibles

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -278,6 +278,11 @@ collections:
   name: AppDynamics Alert and Respond Actions Transaction Detection Export/Import API
   slug: open-appdynamics-transaction-detection-export-import-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/appdynamics/refs/heads/main/capabilities/appdynamics-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/appdynamics-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -556,7 +561,7 @@ overview: 'AppDynamics publishes 25 APIs on the [APIs.io](https://apis.io/) netw
   The AppDynamics catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  AppDynamics'' developer surface includes authentication, documentation, getting-started guide, pricing, support, code examples, and 19 more developer resources.'
+  AppDynamics'' developer surface includes authentication, documentation, getting-started guide, pricing, support, code examples, and 20 more developer resources.'
 plans:
 - name: Appdynamics Plans Pricing
   plan_count: 7
@@ -578,10 +583,10 @@ rules:
     warn: 4
   slug: appdynamics-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 39.3
+  band: thin
+  composite: 37.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 57.3
     catalog_earned_first_party: 0.0
     catalog_gap: 57.8
@@ -591,11 +596,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 67.4
+    contract_quality: 61.6
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 39.3
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -603,8 +608,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 25
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

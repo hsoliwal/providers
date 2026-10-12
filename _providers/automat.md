@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://studio.runautomat.com
   baseurl_source: declared
   description: The extract API from Automat — 1 operation(s) for extract.
-  name: Automat extract API
+  name: Automat Extract API
   slug: automat-extract-api
 artifact_total: 8
 collections:
@@ -140,19 +140,19 @@ layout: provider
 mcp_servers:
 - description: Hosted MCP server published by Automat for AI client integration (Claude Code, Cursor, and other MCP clients). Advertised in the Automat documentation and llms.txt. Exposes the Automat documentation a
   name: Automat MCP Server
-  slug: automat-mcp-server
+  slug: automat-docs
 modified: '2026-07-18'
 name: Automat
 nav: Providers
 network: true
-overview: 'Automat publishes 1 API on the [APIs.io](https://apis.io/) network: extract API. Tagged areas include Company, Enterprise Saas, Automation, RPA, and Robotic Process Automation.
+overview: 'Automat publishes 1 API on the [APIs.io](https://apis.io/) network: Extract API. Tagged areas include Company, Enterprise Saas, Automation, RPA, and Document Extraction.
 
 
   Automat''s developer surface includes documentation, getting-started guide, API reference, engineering blog, support, authentication, and 11 more developer resources.'
 random_paper: 15
 score:
   band: thin
-  composite: 35.3
+  composite: 34.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -164,11 +164,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 35.3
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -179,8 +179,20 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -205,7 +217,6 @@ tags:
 - Enterprise Saas
 - Automation
 - RPA
-- Robotic Process Automation
 - Document Extraction
 - IDP
 - iPaaS

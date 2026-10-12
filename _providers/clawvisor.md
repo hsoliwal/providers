@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -99,6 +99,11 @@ collections:
   name: Clawvisor Gateway Auth Tokens API
   slug: open-clawvisor-tokens-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/clawvisor/refs/heads/main/capabilities/clawvisor-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/clawvisor-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -230,7 +235,7 @@ layout: provider
 mcp_servers:
 - description: Clawvisor operates an official MCP (Model Context Protocol) server exposed at the `/mcp` path of the gateway, authenticated with OAuth 2.1 (authorization server https://app.clawvisor.com, RFC 8414 met
   name: Clawvisor MCP Server
-  slug: clawvisor-mcp-server
+  slug: clawvisor
 modified: '2026-07-18'
 name: Clawvisor
 nav: Providers
@@ -241,13 +246,13 @@ overview: 'Clawvisor publishes 5 APIs on the [APIs.io](https://apis.io/) network
   The Clawvisor catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Clawvisor''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 20 more developer resources.'
+  Clawvisor''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 21 more developer resources.'
 random_paper: 18
 score:
   band: developing
-  composite: 45.7
+  composite: 45.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -257,11 +262,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 60.4
+    contract_quality: 55.2
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 45.7
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -272,8 +277,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

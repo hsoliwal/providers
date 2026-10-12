@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -161,7 +161,7 @@ rate_limits:
   slug: laronde-rate-limits
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -177,15 +177,15 @@ score:
     developer_ergonomics: 2.4
     discoverability: 50.0
     operational_transparency: 0.0
-  previous_composite: 9.5
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,7 +205,7 @@ tags:
 - RNA
 - Circular RNA
 - Cell Therapy
-- Cart
+- CAR-T
 - Nanoparticles
 - Drug Discovery
 - Immunology

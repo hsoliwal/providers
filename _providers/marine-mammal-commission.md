@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Marine Mammal Commission provides science-based oversight of federal agency actions and domestic and international policies affecting the conservation of marine mammals and their ecosystems. The M
@@ -75,7 +75,7 @@ modified: '2026-04-28'
 name: Marine Mammal Commission
 nav: Providers
 network: true
-overview: 'Marine Mammal Commission publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Conservation, Federal-Government, Marine Mammals, and Wildlife.
+overview: 'Marine Mammal Commission publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Conservation, Federal Government, Marine Mammals, and Wildlife.
 
 
   Marine Mammal Commission''s developer surface includes documentation and 4 more developer resources.'
@@ -89,8 +89,8 @@ rate_limits:
   name: Marine Mammal Commission Rate Limits
   slug: marine-mammal-commission-rate-limits
 score:
-  band: emerging
-  composite: 11.2
+  band: minimal
+  composite: 10.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 36.0
@@ -104,17 +104,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 11.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 10.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -133,7 +138,7 @@ security:
 slug: marine-mammal-commission
 tags:
 - Conservation
-- Federal-Government
+- Federal Government
 - Marine Mammals
 - Wildlife
 website: https://www.mmc.gov

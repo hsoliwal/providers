@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -113,7 +113,7 @@ description: 'Superhuman is an AI-native productivity platform built around a fa
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superhuman.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at help.superhuman.com.
   name: Superhuman Mail & Docs MCP servers
   slug: superhuman-mail-docs-mcp-servers
 modified: '2026-07-21'
@@ -126,8 +126,8 @@ overview: 'Superhuman is profiled on the [APIs.io](https://apis.io/) network. Ta
   Superhuman''s developer surface includes documentation, API reference, engineering blog, support, pricing, signup flow, and 11 more developer resources.'
 random_paper: 18
 score:
-  band: emerging
-  composite: 25.8
+  band: thin
+  composite: 26.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -141,13 +141,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 25.8
+  previous_composite: 26.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

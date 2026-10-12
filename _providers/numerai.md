@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Single GraphQL endpoint (Elixir/Absinthe, introspection enabled) covering datasets, submissions, models, leaderboards, staking, and Compute webhooks for Numerai Classic, Signals, and Crypto Signals. A
@@ -203,7 +203,7 @@ modified: '2026-07-20'
 name: Numerai
 nav: Providers
 network: true
-overview: 'Numerai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Machine-Learning, Data Science, and Hedge Funds.
+overview: 'Numerai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Machine Learning, Data Science, and Hedge Funds.
 
 
   The Numerai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -222,7 +222,7 @@ scopes:
   summary_line: 8 scopes
 score:
   band: developing
-  composite: 47.0
+  composite: 49.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -234,17 +234,23 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 68.4
-  previous_composite: 47.0
+  previous_composite: 49.3
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -268,7 +274,7 @@ slug: numerai
 tags:
 - Company
 - Fintech
-- Machine-Learning
+- Machine Learning
 - Data Science
 - Hedge Funds
 - GraphQL

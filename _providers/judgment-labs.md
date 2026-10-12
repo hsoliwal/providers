@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The backend platform API behind Judgeval — ingests agent traces/spans, runs evaluations and judges, and serves traces, sessions, behaviors, datasets, and automations. Consumed through the Judgeval SDK
@@ -156,7 +156,7 @@ layout: provider
 mcp_servers:
 - description: 'The Judgment MCP server exposes production agent data — traces, sessions, behaviors, judges, projects, views, datasets, prompts, and automations — to MCP-capable AI code editors and to the in-product '
   name: Judgment Labs MCP Server
-  slug: judgment-labs-mcp-server
+  slug: judgment
 modified: '2026-07-19'
 name: Judgment Labs
 nav: Providers
@@ -168,7 +168,7 @@ overview: 'Judgment Labs publishes 1 API on the [APIs.io](https://apis.io/) netw
 random_paper: 5
 score:
   band: thin
-  composite: 35.8
+  composite: 36.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -182,15 +182,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 35.8
+  previous_composite: 36.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

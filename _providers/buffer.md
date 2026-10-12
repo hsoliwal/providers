@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for scheduling and publishing posts, managing social media channels, handling content ideas and idea groups, post templates, and accessing normalized post metrics across 11 major social me
@@ -257,7 +257,7 @@ modified: '2026-08-13'
 name: Buffer
 nav: Providers
 network: true
-overview: 'Buffer publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Social-Media, Scheduling, Analytics, Publishing, and Content Management.
+overview: 'Buffer publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Social Media, Scheduling, Analytics, Publishing, and Content Management.
 
 
   Buffer''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 36 more developer resources.'
@@ -276,8 +276,8 @@ scopes:
   slug: buffer-scopes
   summary_line: 11 scopes · authorizationCode
 score:
-  band: strong
-  composite: 63.2
+  band: exemplar
+  composite: 67.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 52.0
@@ -289,17 +289,29 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 63.2
+  previous_composite: 67.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -321,7 +333,7 @@ security:
   summary_line: Hackerone · contact published
 slug: buffer
 tags:
-- Social-Media
+- Social Media
 - Scheduling
 - Analytics
 - Publishing

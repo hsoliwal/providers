@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://cdr.energymadeeasy.gov.au/agl/cds-au/v1
@@ -300,7 +300,7 @@ rate_limits:
   slug: aer-rate-limits
 score:
   band: developing
-  composite: 43.9
+  composite: 40.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -312,9 +312,9 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 68.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -323,7 +323,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 43.9
+  previous_composite: 40.8
   provenance:
     conformance: first-party
     contracts:
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 43.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

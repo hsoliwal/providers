@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 30.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.habu.com/v1/
@@ -211,7 +211,7 @@ apis:
   description: The Questions API from Habu — 3 operation(s) for questions.
   name: Habu Questions API
   slug: habu-questions-api
-artifact_total: 42
+artifact_total: 43
 collections:
 - collection_type: open
   name: External APIs for Customer Integration
@@ -385,6 +385,10 @@ description: 'Habu was a data clean room and data collaboration company, founded
   Wing Venture Capital) and is enriched here from that live, publicly documented surface plus the security and compliance posture inherited by LiveRamp.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/habu.png
 layout: provider
+mcp_servers:
+- description: 'Habu itself ships no MCP server: api.habu.com/mcp returns 404 and there is no Habu-branded MCP endpoint. Two MCP endpoints exist on the acquirer''s infrastructure and both cover the Clean Room API docu'
+  name: Habu MCP Server
+  slug: habu-mcp-yml
 modified: '2026-08-12'
 name: Habu
 nav: Providers
@@ -409,28 +413,30 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.7
+  composite: 50.7
   coverage:
     artifact_dirs: 23
-    catalog_earned: 36.0
+    catalog_earned: 49.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 79.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 52.5
     developer_ergonomics: 16.1
-    discoverability: 51.9
+    discoverability: 71.7
     operational_transparency: 76.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.7
+  previous_composite: 50.2
   provenance:
     conformance: derived
     contracts:
@@ -440,8 +446,22 @@ score:
       total: 34
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: sox
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

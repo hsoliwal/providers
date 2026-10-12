@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Customer-scoped reporting APIs exposed by the AtlasFive platform, used to build tailored reporting on top of AtlasFive data alongside the documented Power BI integration. Eton Solutions advertises the
@@ -140,7 +140,7 @@ overview: 'Eton Solutions publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 17
 score:
   band: emerging
-  composite: 11.8
+  composite: 12.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -154,13 +154,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 59.3
+    discoverability: 58.9
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 12.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

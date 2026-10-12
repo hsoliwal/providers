@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 47.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: 'Anonymous, hosted Model Context Protocol server published by Umbra on the Canopy documentation host. Exposes six tools that let an agent enumerate the Canopy OpenAPI specs, list and search endpoints, '
@@ -320,14 +320,14 @@ description: 'Umbra is an American space technology company operating a constell
 image: https://umbra.space/wp-content/uploads/2025/10/cropped-site-identifier-logo_.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.canopy.umbra.space over HTTP; 6 tools listed.
   name: Umbra MCP Server
-  slug: umbra-mcp-server
+  slug: canopy-docs
 modified: '2026-08-05'
 name: Umbra
 nav: Providers
 network: true
-overview: 'Umbra publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Client Credentials API, Collections API, Collect Metadata API, and 11 more. Tagged areas include Satellite Imagery, Synthetic Aperture Radar, Earth Observation, Geospatial, and Space.
+overview: 'Umbra publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Client Credentials API, Collections API, Collect Metadata API, and 12 more. Tagged areas include Satellite Imagery, Synthetic Aperture Radar, Earth Observation, Geospatial, and Space.
 
 
   Umbra''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
@@ -343,7 +343,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 44.2
+  composite: 45.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 52.0
@@ -355,11 +355,16 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.7
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 46.1
-  previous_composite: 44.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 45.2
   provenance:
     conformance: derived
     contracts:
@@ -369,8 +374,14 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -397,5 +408,6 @@ tags:
 - Tasking
 - Defense and Intelligence
 - Company
+- Satellite
 website: https://umbra.space/
 ---

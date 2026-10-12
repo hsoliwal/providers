@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -113,7 +113,7 @@ arazzos:
 - description: Write a dataset's properties aspect into the metadata graph, then read the entity back to confirm the write landed.
   name: DataHub Upsert Dataset and Verify
   slug: datahub-upsert-dataset-workflow
-artifact_total: 53
+artifact_total: 54
 asyncapis:
 - description: Event-driven interface for responding to real-time changes in the DataHub metadata graph. The Actions Framework consumes Metadata Change Log events and Platform Events from Kafka topics, enabling seam
   name: DataHub Actions Framework Events
@@ -144,6 +144,11 @@ collections:
   name: DataHub Open Batch Timeline API
   slug: open-datahub-timeline-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/datahub/refs/heads/main/capabilities/datahub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/datahub-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -361,17 +366,21 @@ jsonld:
   property_count: 9
   slug: datahub-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.datahub.com over HTTP.
+  name: DataHub MCP Server
+  slug: datahub
 modified: '2026-05-19'
 name: DataHub
 nav: Providers
 network: true
-overview: 'DataHub publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Actions Framework, Batch API, Entities API, and 3 more. Tagged areas include Data Catalog, Data Discovery, Data Governance, Data Lineage, and Metadata.
+overview: 'DataHub publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Actions Framework, Batch API, Entities API, and 8 more. Tagged areas include Data Catalog, Data Discovery, Data Governance, Data Lineage, and Metadata.
 
 
   The DataHub catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  DataHub''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, changelog, YouTube channel, and 28 more developer resources.'
+  DataHub''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, changelog, YouTube channel, and 29 more developer resources.'
 plans:
 - name: Datahub Plans Pricing
   plan_count: 2
@@ -416,26 +425,26 @@ rules:
   slug: datahub-rules
 score:
   band: strong
-  composite: 57.4
+  composite: 56.9
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 59.5
+    artifact_dirs: 24
+    catalog_earned: 58.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.5
+    catalog_gap: 56.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 28.8
-    contract_quality: 66.8
+    contract_governance: 27.3
+    contract_quality: 61.8
     developer_ergonomics: 66.7
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 52.6
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 57.4
+  previous_composite: 56.9
   provenance:
     agentic_access: derived
     contracts:
@@ -444,8 +453,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -467,5 +482,6 @@ tags:
 - Data Governance
 - Data Lineage
 - Metadata
+- Real-Time
 website: https://datahub.com
 ---

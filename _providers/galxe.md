@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Galxe's public GraphQL API for building web3 experiences — query credentials and eligibility, quests, spaces, loyalty-points leaderboards, and Starboard social/onchain influence metrics, and push cred
@@ -194,7 +194,7 @@ scopes:
   summary_line: 12 scopes · authorizationCode
 score:
   band: thin
-  composite: 36.1
+  composite: 38.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 53.0
@@ -208,15 +208,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 36.1
+  previous_composite: 38.6
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,5 +249,6 @@ tags:
 - GraphQL
 - Authentication
 - Blockchain
+- Web3
 website: https://galxe.com
 ---

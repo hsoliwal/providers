@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Create, retrieve, update, renew, replace, and convert physical and virtual cards; manage card status, cardholder details, card images, encrypted card data, and bulk card creation. The core issuing sur
@@ -203,8 +203,8 @@ scopes:
   slug: thredd-scopes
   summary_line: 6 scopes
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 37.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -216,9 +216,9 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 32.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -228,7 +228,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 41.4
+  previous_composite: 37.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -241,9 +241,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 70.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -269,7 +269,7 @@ tags:
 - Banking as a Service
 - Digital Wallet
 - Cross-Border
-- Fraud
+- Fraud Prevention
 - Open Banking
 - FAPI
 website: https://www.thredd.com/

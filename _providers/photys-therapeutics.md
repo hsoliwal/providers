@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Wix-platform Site MCP server Photys serves from its own production host. Nine tools over public site content — business details, in-site search, site API docs discovery, an anonymous visitor-token
@@ -97,7 +97,7 @@ description: 'Photys Therapeutics is a clinical-stage biopharmaceutical company 
 image: https://static.wixstatic.com/ficons/2079da_8b1665acced14f96aa889139336df6ad%7Emv2.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.photys.com; 9 tools listed.
   name: Site Visitor Assistant for site "Photys"
   slug: site-visitor-assistant-for-site-photys
 modified: '2026-08-26'
@@ -119,7 +119,7 @@ rate_limits:
   slug: photys-therapeutics-rate-limits
 score:
   band: emerging
-  composite: 12.9
+  composite: 12.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -133,20 +133,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 12.9
+  previous_composite: 12.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

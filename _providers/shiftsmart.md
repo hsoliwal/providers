@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The private REST API backing the Shiftsmart worker and manager applications. Probing confirms a live FeathersJS service at api.shiftsmart.com: an unauthenticated GET /health returns 200, service colle'
@@ -121,7 +121,7 @@ overview: 'Shiftsmart publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 15
 score:
   band: emerging
-  composite: 18.7
+  composite: 17.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -135,9 +135,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 2.6
-  previous_composite: 18.7
+  previous_composite: 17.9
   provenance:
     conformance: first-party
   regulatory:
@@ -145,9 +145,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

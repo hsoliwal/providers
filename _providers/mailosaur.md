@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -48,36 +48,131 @@ apis:
   baseurl_source: declared
   description: Operations for analyzing the content and deliverability of an email, including SpamAssassin scoring and per-provider deliverability reports.
   name: Mailosaur Analysis API
+  phrasing_intents:
+  - id: getSpamAnalysis
+    intent: Check a test email for spam
+    question: Will my email be flagged as spam by filters?
+  - id: getDeliverabilityReport
+    intent: Get a deliverability report for an email
+    question: How can I tell if my email will actually reach recipients' inboxes?
+  phrasing_ops: 2
   slug: mailosaur-analysis-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for managing virtual security devices and retrieving their current one-time passwords (OTPs), used to automate testing of app-based multi-factor authentication.
   name: Mailosaur Devices API
+  phrasing_intents:
+  - id: listDevices
+    intent: List virtual security devices
+    question: Which virtual MFA devices have I set up for testing?
+  - id: createDevice
+    intent: Create a virtual security device
+    question: How do I save a virtual authenticator device to test two-factor logins?
+  - id: deleteDevice
+    intent: Delete a virtual security device
+    question: How do I remove a virtual security device I no longer need?
+  - id: getDeviceOtp
+    intent: Get the current code from a saved device
+    question: What is the current one-time password for my saved virtual device?
+  - id: getOtpBySharedSecret
+    intent: Get a one-time password from a shared secret
+    question: Can I generate a TOTP code from a base32 secret without saving a device?
+  phrasing_ops: 5
   slug: mailosaur-devices-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for downloading the raw content associated with a message — file attachments, the full EML source of an email, and rendered email previews.
   name: Mailosaur Files API
+  phrasing_intents:
+  - id: getAttachment
+    intent: Download an email attachment
+    question: How do I download a file attached to a test email?
+  - id: getEmailFile
+    intent: Download an email as an EML file
+    question: Can I export a captured email as a raw .eml file?
+  - id: getEmailPreview
+    intent: Download an email client preview screenshot
+    question: How do I download the screenshot of my email rendered in a real email client?
+  phrasing_ops: 3
   slug: mailosaur-files-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for finding, retrieving, creating, forwarding, replying to, and deleting the email and SMS messages received by your Mailosaur inboxes.
   name: Mailosaur Messages API
+  phrasing_intents:
+  - id: listMessages
+    intent: List messages in an inbox
+    question: Which emails arrived in my test inbox in the last hour?
+  - id: createMessage
+    intent: Create and send a test email
+    question: How do I send an email from my test inbox to trigger a workflow in my product?
+  - id: deleteAllMessages
+    intent: Delete every message in an inbox
+    question: How do I clear out all emails from a test inbox before a test run?
+  - id: searchMessages
+    intent: Search for or wait on matching messages
+    question: How do I find the email sent to a specific address in my test inbox?
+  - id: getMessage
+    intent: Get a message's full content
+    question: How do I read the full body, links and attachments of one captured email?
+  - id: deleteMessage
+    intent: Delete a single message
+    question: How do I delete just one email from my inbox?
+  - id: forwardMessage
+    intent: Forward a message to a verified address
+    question: Can I simulate a user forwarding one of my emails to someone else?
+  - id: replyToMessage
+    intent: Reply to a message
+    question: How do I simulate a user replying to an email or SMS my app sent?
+  phrasing_ops: 9
   slug: mailosaur-messages-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for discovering the email clients available for generating email previews (screenshots of an email rendered in real clients).
   name: Mailosaur Previews API
+  phrasing_intents:
+  - id: listEmailClients
+    intent: List email clients available for previews
+    question: Which email clients can I render my email previews in?
+  phrasing_ops: 1
   slug: mailosaur-previews-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for creating and managing your Mailosaur inboxes (servers). Inboxes group your tests together, each with its own domain and SMTP/POP3/IMAP credentials.
   name: Mailosaur Servers API
+  phrasing_intents:
+  - id: listServers
+    intent: List inboxes
+    question: Which test inboxes do I have on my account?
+  - id: createServer
+    intent: Create a new inbox
+    question: How do I set up a new test inbox for my QA team?
+  - id: getServer
+    intent: Get an inbox's details
+    question: What settings and user access does a specific inbox have?
+  - id: updateServer
+    intent: Rename an inbox or change its users
+    question: How do I rename an existing inbox?
+  - id: deleteServer
+    intent: Delete an inbox and all its messages
+    question: How do I permanently delete a test inbox I no longer use?
+  - id: getServerPassword
+    intent: Get an inbox's SMTP/POP3/IMAP password
+    question: Where do I find the password to connect to my inbox over SMTP?
+  phrasing_ops: 6
   slug: mailosaur-servers-api
 - baseURL: https://mailosaur.com/api
   baseurl_source: declared
   description: Operations for inspecting your account's usage limits and recent transactional usage. These endpoints require authentication with an account-level API key.
   name: Mailosaur Usage API
+  phrasing_intents:
+  - id: getUsageLimits
+    intent: Check account usage limits
+    question: How close is my account to its email and SMS limits?
+  - id: getUsageTransactions
+    intent: Review recent usage transactions
+    question: What usage did my account rack up over the past month?
+  phrasing_ops: 2
   slug: mailosaur-usage-api
 artifact_total: 30
 collections:
@@ -103,6 +198,11 @@ collections:
   name: Mailosaur Analysis Usage API
   slug: open-mailosaur-usage-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mailosaur/refs/heads/main/capabilities/mailosaur-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mailosaur-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mailosaur/refs/heads/main/agentic-access/mailosaur-agentic-access.yml
   title: ''
@@ -365,7 +465,7 @@ overview: 'Mailosaur publishes 7 APIs on the [APIs.io](https://apis.io/) network
   The Mailosaur catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Mailosaur''s developer surface includes authentication, documentation, engineering blog, pricing, CLI, code examples, API reference, and 40 more developer resources.'
+  Mailosaur''s developer surface includes authentication, documentation, engineering blog, pricing, CLI, code examples, API reference, and 41 more developer resources.'
 plans:
 - name: Mailosaur Plans Pricing
   plan_count: 3
@@ -388,9 +488,9 @@ rules:
   slug: mailosaur-jsonschema-spectral-rules
 score:
   band: exemplar
-  composite: 68.8
+  composite: 69.2
   coverage:
-    artifact_dirs: 28
+    artifact_dirs: 29
     catalog_earned: 76.5
     catalog_earned_first_party: 24.0
     catalog_gap: 38.5
@@ -400,11 +500,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 31.8
-    contract_quality: 64.5
+    contract_quality: 59.1
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 68.8
+  previous_composite: 69.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -415,8 +515,20 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

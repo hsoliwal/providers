@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -155,7 +155,7 @@ overview: 'INSTANDA is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 14
 score:
   band: thin
-  composite: 32.5
+  composite: 31.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -167,9 +167,9 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -179,7 +179,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 32.5
+  previous_composite: 31.1
   provenance:
     conformance: first-party
   regulatory:
@@ -187,9 +187,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 36.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

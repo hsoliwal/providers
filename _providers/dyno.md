@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.dyno-agents.app
@@ -307,7 +307,7 @@ rate_limits:
   slug: dyno-rate-limits
 score:
   band: developing
-  composite: 48.3
+  composite: 45.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -319,16 +319,18 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 49.1
-    developer_ergonomics: 85.7
-    discoverability: 68.5
+    contract_quality: 44.2
+    developer_ergonomics: 85.0
+    discoverability: 66.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.3
+  previous_composite: 45.7
   provenance:
     conformance: derived
     contracts:
@@ -343,9 +345,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -369,14 +371,14 @@ tags:
 - Gene Delivery
 - AAV Capsid
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Drug Discovery
 - Healthcare
 - Protein Design
 - Protein Structure Prediction
 - Bioinformatics
 - Computational Biology
-- Agentic AI
+- AI Agents
 - Life Sciences
 website: https://www.dynotx.com
 ---

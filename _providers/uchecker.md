@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.uchecker.net
@@ -197,10 +197,10 @@ layout: provider
 mcp_servers:
 - description: ''
   name: uChecker MCP Server
-  slug: uchecker-mcp-server
+  slug: mcp
 - description: 'First-party hosted MCP server for uChecker email validation. Streamable HTTP transport, authenticated with the same uChecker API key used by the REST API (x-api-key header, or Authorization: Bearer <k'
   name: uChecker MCP Server
-  slug: uchecker-mcp-server-2
+  slug: uchecker-mcp-server
 modified: '2026-08-16'
 name: uChecker
 nav: Providers
@@ -223,7 +223,7 @@ rate_limits:
   slug: uchecker-rate-limits
 score:
   band: developing
-  composite: 47.8
+  composite: 47.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -235,11 +235,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 60.0
+    contract_quality: 54.8
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 47.8
+  previous_composite: 47.7
   provenance:
     conformance: derived
     contracts:
@@ -249,8 +249,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -277,7 +283,7 @@ tags:
 - DKIM
 - DMARC
 - MCP
-- agent-native
+- Agent-Native
 - Data Quality
 website: https://www.uchecker.net/
 ---

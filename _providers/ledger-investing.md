@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 3
@@ -284,7 +284,7 @@ overview: 'Ledger Investing publishes 6 APIs on the [APIs.io](https://apis.io/) 
 random_paper: 5
 score:
   band: developing
-  composite: 53.6
+  composite: 50.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -296,19 +296,21 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 54.5
+    contract_quality: 49.1
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 53.6
+  previous_composite: 50.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -324,9 +326,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -360,6 +362,6 @@ tags:
 - Analytics
 - Capital Markets
 - Data Science
-- Financial-Services
+- Financial Services
 website: https://www.ledgerinvesting.com/
 ---

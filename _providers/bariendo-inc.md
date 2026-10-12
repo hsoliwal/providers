@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -69,17 +69,17 @@ description: Bariendo Inc. (now operating as Everself) is a science-forward digi
 image: https://everself.com/og/everself-social.jpg
 layout: provider
 modified: '2026-07-18'
-name: Bariendo Inc.
+name: Everself
 nav: Providers
 network: true
-overview: 'Bariendo Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Weight Loss.
+overview: 'Everself is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Weight Loss.
 
 
-  Bariendo Inc.''s developer surface includes engineering blog, pricing, signup flow, and 4 more developer resources.'
+  Everself''s developer surface includes engineering blog, pricing, signup flow, and 4 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 13.1
+  composite: 13.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -93,7 +93,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -101,15 +101,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 13.1
+  previous_composite: 13.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 6.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

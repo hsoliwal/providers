@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -102,14 +102,14 @@ modified: '2026-07-19'
 name: Lendable
 nav: Providers
 network: true
-overview: 'Lendable is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Lending, Personal Loans, and Consumer Credit.
+overview: 'Lendable is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Lending, Personal Loans, and Consumer Credit.
 
 
   Lendable''s developer surface includes support and 12 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 13.2
+  composite: 13.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -123,7 +123,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -133,9 +133,15 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 13.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -154,7 +160,7 @@ security:
 slug: lendable
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Lending
 - Personal Loans
 - Consumer Credit

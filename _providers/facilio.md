@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 53.8
-  scored_at: '2026-09-20'
+  score: 51.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 96
   human_in_the_loop: 0
@@ -506,7 +506,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/password
 score:
   band: developing
-  composite: 48.2
+  composite: 50.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -518,11 +518,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 54.7
+    contract_quality: 49.6
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 48.2
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -533,8 +533,14 @@ score:
       total: 35
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -562,7 +568,7 @@ tags:
 - Property Operations
 - Maintenance
 - Asset Management
-- Real-Estate
+- Real Estate
 - IoT
 - Buildings
 website: https://facilio.com

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -155,7 +155,7 @@ rate_limits:
   slug: remarkable-ai-rate-limits
 score:
   band: emerging
-  composite: 24.5
+  composite: 24.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 39.0
@@ -169,11 +169,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 26.3
-  previous_composite: 24.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -197,7 +203,7 @@ tags:
 - Personalization
 - E-Commerce
 - Artificial Intelligence
-- Customer-Support
+- Customer Support
 - Marketing
 website: https://www.beremarkable.ai/
 ---

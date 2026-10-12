@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -89,9 +89,9 @@ description: 'Casper (Casper Sleep Inc.) is a direct-to-consumer sleep and home 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/casper.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at casper.com over HTTP; 5 tools listed.
   name: Casper UCP shopping MCP
-  slug: casper-ucp-shopping-mcp
+  slug: casper-ucp-shopping
 modified: '2026-07-18'
 name: Casper
 nav: Providers
@@ -108,7 +108,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 12.3
+  composite: 14.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -122,13 +122,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 14.5
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

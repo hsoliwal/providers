@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A live remote MCP server over streamable HTTP that gives an AI assistant operator-level control of a Revnu store — 49 documented tools across store, products, coupons, analytics, purchases, affiliates
@@ -215,7 +215,7 @@ layout: provider
 mcp_servers:
 - description: Manage a Revnu store, products, A/B tests, SEO content, ads, coupons, affiliates, and analytics via MCP.
   name: MCP Server
-  slug: mcp-server
+  slug: revnu
 modified: '2026-08-13'
 name: Revnu
 nav: Providers
@@ -238,7 +238,7 @@ rate_limits:
   slug: revnu-rate-limits
 score:
   band: developing
-  composite: 48.2
+  composite: 48.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -250,22 +250,28 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.2
+  previous_composite: 48.5
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

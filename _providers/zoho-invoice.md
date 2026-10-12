@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing organizations, contacts, items, invoices, estimates, credit notes, recurring invoices, expenses, projects, time entries, and customer payments. Authentication is OAuth 2.0 with O
@@ -84,6 +84,11 @@ collections:
   name: Zoho Invoice Organizations API
   slug: open-zoho-invoice-organizations-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zoho-invoice/refs/heads/main/capabilities/zoho-invoice-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zoho-invoice-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zoho-invoice/refs/heads/main/security/zoho-invoice-vulnerability-disclosure.yml
   title: ''
@@ -130,16 +135,16 @@ modified: '2026-05-11'
 name: Zoho Invoice
 nav: Providers
 network: true
-overview: 'Zoho Invoice publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, Credit Notes API, Estimates API, and 2 more. Tagged areas include Invoicing, Accounting, Small Business, Billing, and Expense Tracking.
+overview: 'Zoho Invoice publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, Credit Notes API, Estimates API, and 3 more. Tagged areas include Invoicing, Accounting, Small Business, Billing, and Expense Tracking.
 
 
-  Zoho Invoice''s developer surface includes documentation, pricing, signup flow, developer console, engineering blog, and 4 more developer resources.'
+  Zoho Invoice''s developer surface includes documentation, pricing, signup flow, developer console, engineering blog, and 5 more developer resources.'
 random_paper: 10
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 25.8
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -149,19 +154,25 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 46.3
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 27.8
+  previous_composite: 25.8
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

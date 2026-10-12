@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Programmatic creation and management of virtual accounts used as transfer wallets, collection wallets, and collection tools on top of partner-bank infrastructure. Virtual accounts give platforms a uni
@@ -149,14 +149,14 @@ modified: '2026-05-24'
 name: Open (open.money)
 nav: Providers
 network: true
-overview: 'Open (open.money) publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Connected Banking, Neobank, SMB, Embedded Finance, and Banking as a Service.
+overview: 'Open (open.money) publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Connected Banking, Neobank, Small Business, Embedded Finance, and Banking as a Service.
 
 
   Open (open.money)''s developer surface includes documentation, getting-started guide, authentication, developer console, signup flow, GitHub presence, engineering blog, and 11 more developer resources.'
 random_paper: 4
 score:
   band: emerging
-  composite: 25.6
+  composite: 25.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -170,7 +170,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -179,15 +179,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 25.6
+  previous_composite: 25.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 25.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +203,7 @@ slug: open-financial
 tags:
 - Connected Banking
 - Neobank
-- SMB
+- Small Business
 - Embedded Finance
 - Banking as a Service
 - Payments

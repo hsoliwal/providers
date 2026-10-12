@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 149
   human_in_the_loop: 17
@@ -91,6 +91,11 @@ collections:
   name: HashiCorp Vault API
   slug: open-hashicorp-vault
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hashicorp/refs/heads/main/capabilities/hashicorp-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hashicorp-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -165,10 +170,10 @@ modified: '2026-09-16'
 name: HashiCorp
 nav: Providers
 network: true
-overview: 'HashiCorp publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Identity API, Secrets API, and 1 more. Tagged areas include Cloud, DevOps, Infrastructure, and Platform.
+overview: 'HashiCorp publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Identity API, Secrets API, and 6 more. Tagged areas include Cloud, DevOps, Infrastructure, and Platform.
 
 
-  HashiCorp''s developer surface includes developer portal, getting-started guide, support, engineering blog, and 10 more developer resources.'
+  HashiCorp''s developer surface includes developer portal, getting-started guide, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: Hashicorp Plans Pricing
   plan_count: 6
@@ -180,9 +185,9 @@ rate_limits:
   slug: hashicorp-rate-limits
 score:
   band: thin
-  composite: 29.4
+  composite: 27.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -192,11 +197,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 36.3
+    contract_quality: 32.7
     developer_ergonomics: 36.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 26.3
-  previous_composite: 29.4
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     contracts:
@@ -204,8 +209,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

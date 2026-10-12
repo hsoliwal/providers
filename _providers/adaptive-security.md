@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.7
-  scored_at: '2026-09-20'
+  score: 35.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: Adaptive Audit Logs Users API
   slug: open-adaptive-security-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/adaptive-security/refs/heads/main/capabilities/adaptive-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/adaptive-security-capability-edges.yml
 - group: start
   title: ''
   type: Login
@@ -261,7 +266,7 @@ overview: 'Adaptive Security publishes 5 APIs on the [APIs.io](https://apis.io/)
   The Adaptive Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Adaptive Security''s developer surface includes changelog, documentation, API reference, getting-started guide, engineering blog, support, pricing, and 27 more developer resources.'
+  Adaptive Security''s developer surface includes changelog, documentation, API reference, getting-started guide, engineering blog, support, pricing, and 28 more developer resources.'
 plans:
 - name: Adaptive Security Plans Pricing
   plan_count: 0
@@ -273,9 +278,9 @@ rate_limits:
   slug: adaptive-security-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 44.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -285,11 +290,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 66.4
+    contract_quality: 60.6
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 44.1
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -300,8 +305,20 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

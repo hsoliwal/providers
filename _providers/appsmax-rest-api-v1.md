@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -305,7 +305,7 @@ scopes:
   summary_line: 12 scopes
 score:
   band: strong
-  composite: 59.7
+  composite: 61.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -317,11 +317,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 56.7
+    contract_quality: 51.3
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 59.7
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -332,8 +332,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -361,7 +367,7 @@ tags:
 - Chatbots
 - Mini Apps
 - Customer Requests
-- Workflow-Automation
+- Workflow Automation
 - MAX
 - Telegram
 - Russian Language

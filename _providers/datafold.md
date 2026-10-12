@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -52,7 +52,7 @@ apis:
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The bi_added API from Datafold — 6 operation(s) for bi_added.
-  name: Datafold bi_added API
+  name: Datafold Bi Added API
   slug: datafold-bi-added-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
@@ -62,17 +62,17 @@ apis:
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The bi_deleted API from Datafold — 1 operation(s) for bi_deleted.
-  name: Datafold bi_deleted API
+  name: Datafold Bi Deleted API
   slug: datafold-bi-deleted-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The bi_modified API from Datafold — 6 operation(s) for bi_modified.
-  name: Datafold bi_modified API
+  name: Datafold Bi Modified API
   slug: datafold-bi-modified-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The bolt API from Datafold — 1 operation(s) for bolt.
-  name: Datafold bolt API
+  name: Datafold Bolt API
   slug: datafold-bolt-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
@@ -87,7 +87,7 @@ apis:
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The data_source_added API from Datafold — 1 operation(s) for data_source_added.
-  name: Datafold data_source_added API
+  name: Datafold Data Source Added API
   slug: datafold-data-source-added-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
@@ -97,7 +97,7 @@ apis:
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
   description: The diff_created API from Datafold — 1 operation(s) for diff_created.
-  name: Datafold diff_created API
+  name: Datafold Diff Created API
   slug: datafold-diff-created-api
 - baseURL: https://app.datafold.com/api/v1/
   baseurl_source: declared
@@ -154,6 +154,11 @@ collections:
   name: Datafold Audit Logs Monitors API
   slug: open-datafold-monitors-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/datafold/refs/heads/main/capabilities/datafold-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/datafold-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/datafold/refs/heads/main/agentic-access/datafold-agentic-access.yml
   title: ''
@@ -246,13 +251,13 @@ modified: '2026-06-13'
 name: Datafold
 nav: Providers
 network: true
-overview: 'Datafold publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, bi_added API, BI API, and 10 more. Tagged areas include Data Reliability, Data Diff, Data Quality, Column-Level Lineage, and Data Pipeline.
+overview: 'Datafold publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Bi Added API, BI API, and 10 more. Tagged areas include Data Reliability, Data Diff, Data Quality, Column-Level Lineage, and Data Pipeline.
 
 
   The Datafold catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Datafold''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  Datafold''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Datafold Plans Pricing
   plan_count: 3
@@ -275,23 +280,23 @@ rules:
   slug: datafold-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 41.2
+  composite: 39.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 66.3
+    artifact_dirs: 17
+    catalog_earned: 65.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.8
+    catalog_gap: 49.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 9.8
-    contract_quality: 63.3
+    contract_quality: 57.7
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 41.2
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     contracts:
@@ -299,8 +304,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

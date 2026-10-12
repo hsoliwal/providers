@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -89,6 +89,11 @@ collections:
   name: ReadMe API
   slug: open-readme-metrics
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/readme-metrics/refs/heads/main/capabilities/readme-metrics-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/readme-metrics-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/readme-metrics/refs/heads/main/agentic-access/readme-metrics-agentic-access.yml
   title: ''
@@ -168,10 +173,10 @@ modified: '2026-04-28'
 name: ReadMe Metrics
 nav: Providers
 network: true
-overview: 'ReadMe Metrics publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Api Registry API, Api Specification API, Changelogs API, and 1 more. Tagged areas include API Analytics, API Documentation, API Logs, API Metrics, and API Usage.
+overview: 'ReadMe Metrics publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Api Registry API, Api Specification API, Changelogs API, and 2 more. Tagged areas include API Analytics, API Documentation, API Logs, API Metrics, and API Usage.
 
 
-  ReadMe Metrics'' developer surface includes authentication, documentation, engineering blog, pricing, signup flow, support, GitHub presence, and 9 more developer resources.'
+  ReadMe Metrics'' developer surface includes authentication, documentation, engineering blog, pricing, signup flow, support, GitHub presence, and 10 more developer resources.'
 plans:
 - name: Readme Metrics Plans Pricing
   plan_count: 3
@@ -183,9 +188,9 @@ rate_limits:
   slug: readme-metrics-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 32.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -195,11 +200,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 21.1
-  previous_composite: 35.0
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     contracts:
@@ -207,8 +212,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

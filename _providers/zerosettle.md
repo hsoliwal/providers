@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.zerosettle.io/v1
@@ -140,6 +140,11 @@ collections:
   name: ZeroSettle IAP Cancel Flow User Offer API
   slug: open-zerosettle-user-offer-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zerosettle/refs/heads/main/capabilities/zerosettle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zerosettle-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -278,13 +283,13 @@ network: true
 overview: 'ZeroSettle publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Cancel Flow API, Checkout API, Entitlements API, and 9 more. Tagged areas include Company, Payments, In-App Purchase, Subscription, and Merchant of Record.
 
 
-  ZeroSettle''s developer surface includes authentication, changelog, sandbox, documentation, API reference, quickstart, signup flow, and 21 more developer resources.'
+  ZeroSettle''s developer surface includes authentication, changelog, sandbox, documentation, API reference, quickstart, signup flow, and 22 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 48.0
+  composite: 45.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -294,11 +299,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 57.5
+    contract_quality: 51.8
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 48.0
+  previous_composite: 45.7
   provenance:
     conformance: derived
     contracts:
@@ -313,9 +318,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 54
   human_in_the_loop: 1
@@ -169,6 +169,11 @@ collections:
   name: Apollo.io API
   slug: open-apollo-api-documentation
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apollo-api-documentation/refs/heads/main/capabilities/apollo-api-documentation-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apollo-api-documentation-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -415,13 +420,13 @@ modified: '2026-08-14'
 name: Apollo API Documentation
 nav: Providers
 network: true
-overview: 'Apollo API Documentation publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Apollo API Accounts, Apollo API Analytics, Apollo API Calls, and 11 more. Tagged areas include API Documentation, Sales Intelligence, Data Enrichment, People Search, and Company Search.
+overview: 'Apollo API Documentation publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Apollo API Accounts, Apollo API Analytics, Apollo API Calls, and 12 more. Tagged areas include API Documentation, Sales Intelligence, Data Enrichment, People Search, and Company Search.
 
 
   The Apollo API Documentation catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Apollo API Documentation''s developer surface includes authentication, engineering blog, documentation, getting-started guide, API reference, CLI, quickstart, and 39 more developer resources.'
+  Apollo API Documentation''s developer surface includes authentication, engineering blog, documentation, getting-started guide, API reference, CLI, quickstart, and 40 more developer resources.'
 plans:
 - name: Apollo Api Documentation Plans Pricing
   plan_count: 4
@@ -433,14 +438,14 @@ rate_limits:
   slug: apollo-api-documentation-rate-limits
 scopes:
 - name: Apollo Api Documentation Scopes
-  scope_count: 0
+  scope_count: 67
   slug: apollo-api-documentation-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 67 scopes
 score:
   band: strong
-  composite: 60.3
+  composite: 62.2
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -450,11 +455,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 67.1
+    contract_quality: 61.2
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 60.3
+  previous_composite: 62.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -465,8 +470,14 @@ score:
       total: 26
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

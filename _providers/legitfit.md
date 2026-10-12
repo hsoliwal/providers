@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: LegitFit's Model Context Protocol server — a JSON-RPC 2.0 endpoint that exposes LegitFit resources to AI agents. Protected by OAuth 2.1 (authorization_code with PKCE S256) and gated by the mcp:read an
@@ -124,9 +124,9 @@ description: LegitFit is an Irish gym, studio and fitness-business management pl
 image: https://cdn.prod.website-files.com/604d0cad0c813222fc3c19be/62cc3c109568ace3f67540e5_favicon32x32.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at legitfit.com over HTTP.
   name: LegitFit MCP Server
-  slug: legitfit-mcp-server
+  slug: legitfit
 modified: '2026-07-19'
 name: LegitFit
 nav: Providers
@@ -147,7 +147,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.5
+  composite: 24.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -161,7 +161,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -171,7 +171,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 25.5
+  previous_composite: 24.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -180,9 +180,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

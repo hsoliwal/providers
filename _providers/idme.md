@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: ID.me's OpenID Connect and OAuth 2.0 identity provider. Supports the authorization code flow (with PKCE), refresh tokens, encrypted ID tokens and userinfo, and returns verified identity attributes and
@@ -189,7 +189,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server for the ID.me developer documentation, advertised in docs.id.me/llms.txt for AI client integration (Claude Code, Cursor, etc.). Surfaces the ID.me integration docs — OIDC/OA
   name: ID.me Developer Docs
-  slug: idme-developer-docs
+  slug: id-me-developer-docs
 modified: '2026-09-16'
 name: ID.me
 nav: Providers
@@ -209,7 +209,7 @@ scopes:
   summary_line: 11 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.3
+  composite: 45.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -221,11 +221,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 50.3
+  previous_composite: 45.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -234,9 +234,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 70.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

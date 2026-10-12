@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -88,21 +88,21 @@ description: Automotus is a smart-city and urban-mobility technology company tha
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/automotus.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.automotus.ai over HTTP; 7 tools listed.
   name: Automotus MCP Server
-  slug: automotus-mcp-server
+  slug: automotus
 modified: '2026-07-18'
 name: Automotus
 nav: Providers
 network: true
-overview: 'Automotus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Smart Cities, Urban Mobility, Curb Management, and Computer-Vision.
+overview: 'Automotus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Smart Cities, Urban Mobility, Curb Management, and Computer Vision.
 
 
   Automotus'' developer surface includes engineering blog, support, signup flow, and 8 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 12.7
+  composite: 12.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -116,13 +116,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 12.7
+  previous_composite: 12.3
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +146,7 @@ tags:
 - Smart Cities
 - Urban Mobility
 - Curb Management
-- Computer-Vision
+- Computer Vision
 - Transportation
 - Parking
 - Enforcement

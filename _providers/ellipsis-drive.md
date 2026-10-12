@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Ellipsis Drive API v3 provides programmatic access to manage, use, and integrate spatial data: accounts and organizations, users, folders/paths, maps, vector and raster layers, point clouds, acces'
   name: Ellipsis Drive API v3
   slug: ellipsis-drive-api-v3
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -137,6 +137,10 @@ created: '2026-07-17'
 description: Ellipsis Drive is a cloud-native spatial data management platform that lets teams upload, store, process, share, and serve raster, vector, and 3D point-cloud geospatial data through a single interoperable interface. Uploaded files are automatically processed into high-performance Tile Pyramid Archives (rasters) and Paged Vector Tiles (vectors) and served through standard OGC protocols (WMS, WMTS, WFS, WCS, XYZ, and vector tiles) alongside a REST API v3 with Bearer-token and OAuth2 authorization. Official SDKs and integrations cover Python, R, and JavaScript, plus plugins for QGIS, ArcGIS (JS, Pro, and Server), Mapbox GL, Leaflet, React-Leaflet, and Power BI. The platform offers storage-based pricing, license-free data sharing and consumption, subscriptions for selling spatial data, and both instant SaaS and private self-hosted deployments.
 image: https://ellipsis-drive.com/ogImages/homepageHeaderImage.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ellipsis-drive.com over HTTP; 18 tools listed.
+  name: Ellipsis Drive MCP Server
+  slug: ellipsis-drive
 modified: '2026-07-19'
 name: Ellipsis Drive
 nav: Providers
@@ -153,7 +157,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 30.6
+  composite: 33.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -167,14 +171,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 30.6
+  previous_composite: 33.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

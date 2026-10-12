@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -131,7 +131,7 @@ modified: '2026-08-26'
 name: Moneybox
 nav: Providers
 network: true
-overview: 'Moneybox is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Wealth Management, and Savings.
+overview: 'Moneybox is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Wealth Management, and Savings.
 
 
   Moneybox''s developer surface includes engineering blog, support, and 13 more developer resources.'
@@ -146,7 +146,7 @@ rate_limits:
   slug: moneybox-rate-limits
 score:
   band: emerging
-  composite: 15.4
+  composite: 14.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -160,7 +160,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -170,7 +170,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 15.4
+  previous_composite: 14.9
   provenance:
     conformance: first-party
   regulatory:
@@ -178,9 +178,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -198,7 +198,7 @@ security:
 slug: moneybox
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Wealth Management
 - Savings

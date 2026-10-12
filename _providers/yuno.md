@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.y.uno
@@ -223,9 +223,9 @@ description: Yuno is a global payment orchestration platform that lets merchants
 image: https://y.uno/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 6 tools listed.
   name: Yuno MCP Server
-  slug: yuno-mcp-server
+  slug: yuno-mcp
 modified: '2026-07-21'
 name: Yuno
 nav: Providers
@@ -240,7 +240,7 @@ overview: 'Yuno publishes 1 API on the [APIs.io](https://apis.io/) network: Paym
 random_paper: 19
 score:
   band: developing
-  composite: 53.0
+  composite: 49.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -252,11 +252,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 52.6
-  previous_composite: 53.0
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -266,9 +266,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 65.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

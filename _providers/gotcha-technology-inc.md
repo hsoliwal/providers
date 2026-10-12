@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,17 +62,17 @@ description: 'GOTCHA Technology Inc. is an emotion-AI company that uses computer
 image: https://gotcha.technology/assets/img/logo-light.png
 layout: provider
 modified: '2026-07-19'
-name: GOTCHA Technology Inc.
+name: GOTCHA Technology
 nav: Providers
 network: true
-overview: 'GOTCHA Technology Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer-Vision, Emotion AI, and Facial Analysis.
+overview: 'GOTCHA Technology is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer Vision, Emotion AI, and Facial Analysis.
 
 
-  GOTCHA Technology Inc.''s developer surface includes support, FAQ, product news, and 2 more developer resources.'
+  GOTCHA Technology''s developer surface includes support, FAQ, product news, and 2 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 5.5
+  composite: 3.9
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -86,11 +86,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 5.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -106,10 +112,10 @@ slug: gotcha-technology-inc
 tags:
 - Company
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Emotion AI
 - Facial Analysis
-- Machine-Learning
+- Machine Learning
 - Affective Computing
 website: https://gotcha.technology
 ---

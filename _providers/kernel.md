@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.0
-  scored_at: '2026-09-20'
+  score: 33.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 81
   human_in_the_loop: 15
@@ -390,7 +390,7 @@ layout: provider
 mcp_servers:
 - description: Centrally hosted, authenticated remote MCP server that lets any MCP-compatible model or agent launch Chromium browsers, execute Playwright code, capture video replays, manage profiles/proxies/pools, a
   name: Kernel MCP Server
-  slug: kernel-mcp-server
+  slug: kernel
 modified: '2026-07-19'
 name: Kernel
 nav: Providers
@@ -407,7 +407,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.6
+  composite: 49.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -419,11 +419,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 58.6
+    contract_quality: 53.1
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 48.6
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -434,8 +434,14 @@ score:
       total: 22
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

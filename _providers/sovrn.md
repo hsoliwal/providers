@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-09-20'
+  score: 33.3
+  scored_at: '2026-10-04'
 api_count: 26
 apis:
 - description: Hosted, beta Model Context Protocol server exposing Sovrn Commerce affiliate data, campaigns and products to AI clients — twelve tools covering price search, link checking, product recommendations and
@@ -86,7 +86,7 @@ apis:
   description: The Sites API from Sovrn — 1 operation(s) for sites.
   name: Sovrn Sites API
   slug: sovrn-sites-api
-artifact_total: 26
+artifact_total: 25
 collections:
 - collection_type: open
   name: Sovrn Advertising Performance Reporting API
@@ -305,17 +305,14 @@ description: Sovrn is an advertising technology and content monetization company
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sovrn.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.sovrn.com over HTTP; 12 tools listed.
   name: Commerce MCP Server
   slug: commerce-mcp-server
-- description: ''
-  name: Sovrn MCP Server
-  slug: sovrn-mcp-server
 modified: '2026-08-12'
 name: Sovrn
 nav: Providers
 network: true
-overview: 'Sovrn publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, Ai Orchestration API, Bid API, and 6 more. Tagged areas include Company, AdTech, Advertising, Monetization, and Affiliate Marketing.
+overview: 'Sovrn publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account API, Ai Orchestration API, Bid API, and 7 more. Tagged areas include Company, AdTech, Advertising, Monetization, and Affiliate Marketing.
 
 
   Sovrn''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 33 more developer resources.'
@@ -330,7 +327,7 @@ rate_limits:
   slug: sovrn-rate-limits
 score:
   band: developing
-  composite: 49.8
+  composite: 51.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 52.0
@@ -342,16 +339,18 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 58.4
+    contract_quality: 52.9
     developer_ergonomics: 54.2
-    discoverability: 92.6
+    discoverability: 90.0
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 49.8
+  previous_composite: 51.1
   provenance:
     conformance: derived
     contracts:
@@ -361,8 +360,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -394,6 +399,6 @@ tags:
 - Data
 - Reporting
 - Product Data
-- agent-native
+- Agent-Native
 website: https://www.sovrn.com
 ---

@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: RESTful API covering the full Leadpages platform across eight documented endpoint categories — Pages, Sites, Assets, Blogs, Analytics, Forms, Domains and Brand Kits — with JSON responses and bearer-to
@@ -196,9 +196,9 @@ description: Leadpages is an AI web platform with built-in conversion optimizati
 image: https://leadpages.com/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.leadpages.com over HTTP.
   name: Leadpages MCP Server
-  slug: leadpages-mcp-server
+  slug: leadpages
 modified: '2026-08-12'
 name: Leadpages
 nav: Providers
@@ -225,8 +225,8 @@ scopes:
   slug: leadpages-scopes
   summary_line: 11 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.3
+  band: strong
+  composite: 56.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 52.0
@@ -238,16 +238,22 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 21.1
-  previous_composite: 53.3
+  previous_composite: 56.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -283,5 +289,6 @@ tags:
 - Content Management
 - Agents
 - Analytics
+- A2A
 website: https://leadpages.com/
 ---

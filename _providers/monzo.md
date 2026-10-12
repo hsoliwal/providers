@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Monzo API is a REST interface over a user's Monzo account. It exposes accounts, balance, savings pots (with deposit/withdraw), transactions (list, retrieve, annotate with metadata, expand merchant
@@ -178,14 +178,14 @@ description: 'Monzo is a UK-based digital challenger bank (Monzo Bank Ltd, FCA-a
 image: https://monzo.com/static/images/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 13 tools listed. A candidate, not confirmed as published by the provider.
   name: Monzo MCP (candidate)
-  slug: monzo-mcp-candidate
+  slug: monzo
 modified: '2026-07-20'
 name: Monzo
 nav: Providers
 network: true
-overview: 'Monzo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Fintech, Financial-Services, and Payments.
+overview: 'Monzo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Fintech, Financial Services, and Payments.
 
 
   The Monzo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -195,7 +195,7 @@ overview: 'Monzo publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 13
 score:
   band: developing
-  composite: 42.3
+  composite: 40.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -207,11 +207,16 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 42.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 40.8
   provenance:
     conformance: derived
     mcp: derived
@@ -221,9 +226,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,11 +253,12 @@ tags:
 - Company
 - Banking
 - Fintech
-- Financial-Services
+- Financial Services
 - Payments
 - Open Banking
 - Account
 - Transaction
 - Authentication
+- Consumer Banking
 website: https://monzo.com
 ---

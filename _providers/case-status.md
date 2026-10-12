@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -87,6 +87,10 @@ created: '2026-07-17'
 description: Case Status is a Charleston, South Carolina legal technology company, founded in 2018 by Andy Seavers and Lauren Gulley, that builds an AI-powered client engagement, experience, and communication platform for modern law firms. It delivers a branded, mobile-first client portal (iOS and Android), a CMS-integrated secure messaging hub with 1:1, bulk, and automated options, AI-driven Client Intelligence (message urgency triage, response recommendations, case summarization, sentiment prediction, and translation across 140+ languages), and client satisfaction analytics such as NPS, Predictive NPS, and CSAT. Case Status integrates with leading case management systems including Clio, Litify, MyCase, Neos, Filevine, SmartAdvocate, Docketwise, PracticePanther, SmokeBall, CASEpeer, MerusCase, CoCounselor, Salesforce, NuLaw, Matterly, and Zapier, plus a Chrome extension for attorneys. It was surfaced as a portfolio company of Techstars.
 image: https://cdn.prod.website-files.com/65f0b710052a39d20f058f70/65fb7a05597705e5e448b938_fav-icon-256.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.casestatus.com over HTTP.
+  name: Case Status MCP Server
+  slug: case-status
 modified: '2026-07-18'
 name: Case Status
 nav: Providers
@@ -98,7 +102,7 @@ overview: 'Case Status is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: emerging
-  composite: 16.5
+  composite: 17.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -112,14 +116,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 10.5
-  previous_composite: 16.5
+  previous_composite: 17.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

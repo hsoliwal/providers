@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 45
   human_in_the_loop: 1
@@ -57,7 +57,7 @@ apis:
 - baseURL: https://api.breeze.baby
   baseurl_source: declared
   description: The fund API from Breeze — 1 operation(s) for fund.
-  name: Breeze fund API
+  name: Breeze Fund API
   slug: breeze-fund-api
 - baseURL: https://api.breeze.baby
   baseurl_source: declared
@@ -170,6 +170,11 @@ collections:
   name: Breeze Admin Yield Sources API
   slug: open-breeze-yield-sources-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/breeze/refs/heads/main/capabilities/breeze-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/breeze-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -287,23 +292,23 @@ description: Breeze is instant, non-custodial yield infrastructure for Solana. A
 image: https://www.breeze.baby/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 5 tools listed.
   name: Breeze MCP Server
-  slug: breeze-mcp-server
+  slug: breeze
 modified: '2026-07-18'
 name: Breeze
 nav: Providers
 network: true
-overview: 'Breeze publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Deposits API, fund API, and 12 more. Tagged areas include Company, Crypto Web3, Solana, Yield, and DeFi.
+overview: 'Breeze publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Deposits API, Fund API, and 12 more. Tagged areas include Company, Crypto Web3, Solana, Yield, and DeFi.
 
 
-  Breeze''s developer surface includes signup flow, documentation, API reference, getting-started guide, support, authentication, and 18 more developer resources.'
+  Breeze''s developer surface includes signup flow, documentation, API reference, getting-started guide, support, authentication, and 19 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 35.3
+  composite: 33.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -313,11 +318,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 52.2
+    contract_quality: 47.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.3
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -333,9 +338,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -360,5 +365,7 @@ tags:
 - Payments
 - Blockchain
 - AI Agents
+- Web3
+- Cryptocurrency
 website: https://www.breeze.baby
 ---

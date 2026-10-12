@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Mobile Measurement Partner API enabling mobile app attribution tracking, install measurement, event tracking, and audience analytics for iOS, Android, and cross-platform mobile applications.
@@ -384,14 +384,14 @@ jsonld:
   slug: affise-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 23 tools listed.
   name: Affise MCP Server
   slug: affise-mcp-server
 modified: '2026-08-13'
 name: Affise
 nav: Providers
 network: true
-overview: 'Affise publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Admin Adcosts API, Admin Advertisers API, Admin Affiliates API, and 24 more. Tagged areas include Affiliate Marketing, Performance Marketing, Conversion, Publishers, and Analytics.
+overview: 'Affise publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Admin Adcosts API, Admin Advertisers API, Admin Affiliates API, and 25 more. Tagged areas include Affiliate Marketing, Performance Marketing, Conversion, Publishers, and Analytics.
 
 
   The Affise catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 JSON-LD context.
@@ -409,7 +409,7 @@ rate_limits:
   slug: affise-rate-limits
 score:
   band: strong
-  composite: 64.5
+  composite: 65.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 60.0
@@ -421,11 +421,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 65.9
+    contract_quality: 60.7
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 21.1
-  previous_composite: 64.5
+  previous_composite: 65.8
   provenance:
     conformance: first-party
     contracts:
@@ -435,8 +435,14 @@ score:
       total: 27
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

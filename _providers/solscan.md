@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-09-20'
+  score: 28.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Free, lower-rate-limit public API exposing basic account, transaction, and token endpoints used by the Solscan UI.
@@ -67,7 +67,7 @@ apis:
   description: Transaction lookups
   name: Solscan Transaction API
   slug: solscan-transaction-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -140,11 +140,15 @@ finops:
   slug: solscan-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/solscan.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.solscan.io over HTTP; 46 tools listed.
+  name: Solscan MCP Server
+  slug: solscan
 modified: '2026-09-16'
 name: Solscan
 nav: Providers
 network: true
-overview: 'Solscan publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Block API, NFT API, and 2 more. Tagged areas include Web3, Solana, Explorer, Onchain, and Tokens.
+overview: 'Solscan publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Block API, NFT API, and 4 more. Tagged areas include Web3, Solana, Explorer, Onchain, and Tokens.
 
 
   Solscan''s developer surface includes developer portal, documentation, pricing, and 7 more developer resources.'
@@ -159,7 +163,7 @@ rate_limits:
   slug: solscan-rate-limits
 score:
   band: thin
-  composite: 30.6
+  composite: 27.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 46.0
@@ -171,11 +175,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 30.6
+  previous_composite: 27.8
   provenance:
     contracts:
       callable: 100.0
@@ -183,8 +187,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

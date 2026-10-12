@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: API for accessing openIDL resources and frameworks for standardized, blockchain-based insurance data sharing between carriers and regulators.
@@ -93,7 +93,7 @@ rate_limits:
   slug: openidl-rate-limits
 score:
   band: minimal
-  composite: 9.5
+  composite: 10.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 36.0
@@ -107,17 +107,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 9.5
+  previous_composite: 10.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

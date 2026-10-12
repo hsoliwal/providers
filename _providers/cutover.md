@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Cutover Core API is a RESTful, JSON:API-style interface for programmatically managing workspaces, runbooks, tasks, teams, and users in the Cutover collaborative automation platform. It uses predic
@@ -171,9 +171,9 @@ description: Cutover is a collaborative automation and IT resilience platform th
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cutover.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 22 tools listed.
   name: Cutover MCP Server
-  slug: cutover-mcp-server
+  slug: cutover-mcp
 modified: '2026-07-18'
 name: Cutover
 nav: Providers
@@ -188,7 +188,7 @@ overview: 'Cutover publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 6
 score:
   band: developing
-  composite: 45.9
+  composite: 46.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -200,16 +200,26 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 45.9
+  previous_composite: 46.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,7 +248,7 @@ tags:
 - Incident Management
 - Runbook Automation
 - Orchestration
-- Workflow-Automation
+- Workflow Automation
 - DevOps
 website: https://cutover.com
 ---

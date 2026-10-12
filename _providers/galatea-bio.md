@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 1
@@ -251,7 +251,7 @@ rate_limits:
   slug: galatea-bio-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 32.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -263,11 +263,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 18.2
-    contract_quality: 59.4
+    contract_quality: 54.5
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 34.2
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -283,9 +283,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 27.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -99,14 +99,14 @@ modified: '2026-07-18'
 name: DeepHow
 nav: Providers
 network: true
-overview: 'DeepHow is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Manufacturing, Knowledge-Management, and Video.
+overview: 'DeepHow is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Manufacturing, Knowledge Management, and Video.
 
 
   DeepHow''s developer surface includes support, engineering blog, and 11 more developer resources.'
 random_paper: 0
 score:
   band: emerging
-  composite: 19.3
+  composite: 20.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -120,13 +120,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 19.3
+  previous_composite: 20.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -143,10 +155,10 @@ tags:
 - Company
 - Artificial Intelligence
 - Manufacturing
-- Knowledge-Management
+- Knowledge Management
 - Video
 - Training
-- Computer-Vision
+- Computer Vision
 - Industrial
 - SOP Verification
 website: https://deephow.com/

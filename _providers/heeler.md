@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -135,7 +135,7 @@ overview: 'Heeler is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 13
 score:
   band: thin
-  composite: 26.7
+  composite: 27.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -149,14 +149,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 26.7
+  previous_composite: 27.4
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

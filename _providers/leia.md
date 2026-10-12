@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -245,7 +245,7 @@ modified: '2026-08-01'
 name: Leia
 nav: Providers
 network: true
-overview: 'Leia publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Media Transformation API, Product Pricing API, Protocol API, and 1 more. Tagged areas include 3D, Spatial Computing, Computer-Vision, depth-estimation, and Image Processing.
+overview: 'Leia publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Media Transformation API, Product Pricing API, Protocol API, and 1 more. Tagged areas include 3D, Spatial Computing, Computer Vision, depth-estimation, and Image Processing.
 
 
   The Leia catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -264,7 +264,7 @@ scopes:
   summary_line: 20 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 52.8
+  composite: 53.5
   coverage:
     artifact_dirs: 25
     catalog_earned: 52.0
@@ -276,11 +276,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 68.8
+    contract_quality: 63.0
     developer_ergonomics: 57.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 52.8
+  previous_composite: 53.5
   provenance:
     agentic_access: first-party
     conformance: derived
@@ -291,8 +291,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -311,7 +317,7 @@ slug: leia
 tags:
 - 3D
 - Spatial Computing
-- Computer-Vision
+- Computer Vision
 - depth-estimation
 - Image Processing
 - Video Processing

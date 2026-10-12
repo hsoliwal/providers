@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.totalis.trade
@@ -107,6 +107,11 @@ collections:
   name: Totalis RFQ API Keys Webhooks API
   slug: open-totalis-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/totalis/refs/heads/main/capabilities/totalis-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/totalis-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/totalis/refs/heads/main/overlays/totalis-rfq-overlay.yaml
   title: ''
@@ -235,7 +240,7 @@ overview: 'Totalis publishes 7 APIs on the [APIs.io](https://apis.io/) network, 
   The Totalis catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
 
 
-  Totalis'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, FAQ, authentication, and 18 more developer resources.'
+  Totalis'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, FAQ, authentication, and 19 more developer resources.'
 random_paper: 20
 rate_limits:
 - limit_count: 3
@@ -243,9 +248,9 @@ rate_limits:
   slug: totalis-rate-limits
 score:
   band: developing
-  composite: 48.1
+  composite: 45.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -255,11 +260,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 61.2
+    contract_quality: 55.9
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 48.1
+  previous_composite: 45.9
   provenance:
     conformance: derived
     contracts:
@@ -274,9 +279,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -303,5 +308,8 @@ tags:
 - Crypto Web3
 - Market Data
 - Webhook
+- Real-Time
+- Web3
+- Cryptocurrency
 website: https://www.totalis.trade
 ---

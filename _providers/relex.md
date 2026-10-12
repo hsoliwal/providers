@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://eu.rest.relexsolutions.com
@@ -262,7 +262,7 @@ modified: '2026-09-16'
 name: RELEX Solutions
 nav: Providers
 network: true
-overview: 'RELEX Solutions publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Environments API, Events API, Health API, and 4 more. Tagged areas include Supply Chain, Retail, Demand Planning, Inventory Management, and Forecasting.
+overview: 'RELEX Solutions publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Environments API, Events API, Health API, and 4 more. Tagged areas include Supply Chain, Retail, Demand Planning, Inventory, and Forecasting.
 
 
   The RELEX Solutions catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -285,7 +285,7 @@ scopes:
   summary_line: 51 scopes
 score:
   band: developing
-  composite: 50.5
+  composite: 53.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -297,17 +297,19 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 65.7
+    contract_quality: 59.9
     developer_ergonomics: 49.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 65.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - finland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 50.5
+  previous_composite: 53.3
   provenance:
     conformance: first-party
     contracts:
@@ -317,8 +319,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -346,7 +354,7 @@ tags:
 - Supply Chain
 - Retail
 - Demand Planning
-- Inventory Management
+- Inventory
 - Forecasting
 - Pricing
 - Enterprise Software

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: 'Silicon Labs (Silabs) is a fabless semiconductor company headquartered in Austin, Texas that designs silicon, software, and solutions for a more connected, IoT world. Its portfolio includes wireless connectivity SoCs and modules for Bluetooth, Bluetooth Mesh, Zigbee, Thread, Matter, Z-Wave, Wi-Fi, and proprietary sub-GHz protocols, along with 32-bit microcontrollers, sensors, and timing devices. Developers build on Silicon Labs hardware using the Simplicity Studio IDE, the Simplicity SDK (formerly Gecko SDK), the docs.silabs.com developer documentation, and the Silicon Labs Community. Silicon Labs is a hardware and embedded-software provider rather than a web-API vendor: its public developer surface is embedded C/C++ SDKs, tools, and reference examples on GitHub (github.com/SiliconLabs), not a hosted REST API — so this profile carries identity, developer-portal, and security signals rather than API specifications.'
 image: https://www.silabs.com/content/dam/siliconlabs/images/social-thumbnails/homepage-thumbnail.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.silabs.com over HTTP.
+  name: Silicon Labs MCP Server
+  slug: silabs
 modified: '2026-07-21'
 name: Silicon Labs
 nav: Providers
@@ -97,7 +101,7 @@ overview: 'Silicon Labs is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 0
 score:
   band: emerging
-  composite: 16.2
+  composite: 16.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -111,18 +115,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.2
+  previous_composite: 16.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

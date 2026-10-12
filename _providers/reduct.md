@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'RESTful API (version 3) providing broad access across a Reduct workspace: projects, recordings, media, redactions and redaction motions, highlights, comments, and reels, plus transcript retrieval, tra'
@@ -158,7 +158,7 @@ overview: 'Reduct publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 9
 score:
   band: thin
-  composite: 34.4
+  composite: 35.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -172,13 +172,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 34.4
+  previous_composite: 35.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

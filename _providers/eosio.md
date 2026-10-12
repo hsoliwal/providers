@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -219,7 +219,7 @@ modified: '2026-05-19'
 name: EOSIO
 nav: Providers
 network: true
-overview: 'EOSIO publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Get Abi API, Get Account API, Get Block API, and 7 more. Tagged areas include Antelope, Blockchain, and EOS.
+overview: 'EOSIO publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Get Abi API, Get Account API, Get Block API, and 10 more. Tagged areas include Antelope, Blockchain, and EOS.
 
 
   EOSIO''s developer surface includes developer portal, getting-started guide, documentation, FAQ, changelog, and 11 more developer resources.'
@@ -234,7 +234,7 @@ rate_limits:
   slug: eosio-rate-limits
 score:
   band: thin
-  composite: 32.0
+  composite: 30.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 35.0
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 47.3
+    contract_quality: 42.6
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 32.0
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
@@ -258,8 +258,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

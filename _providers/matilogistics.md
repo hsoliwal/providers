@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST/JSON API versioned under /v2 at https://api.matilogistics.com for tracking requests, shipments, containers, carrier and terminal reference data, and webhooks. Bearer-token auth (tnt_ keys, one pe
@@ -162,7 +162,7 @@ rate_limits:
   slug: matilogistics-rate-limits
 score:
   band: developing
-  composite: 41.8
+  composite: 41.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 54.0
@@ -174,16 +174,22 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 40.5
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 28.9
-  previous_composite: 41.8
+  previous_composite: 41.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

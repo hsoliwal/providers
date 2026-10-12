@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Official remote Model Context Protocol server exposing 54 tools over the Gameball merchant/dashboard surface — customer lookup and points adjustment, tag management, earning configuration and custom e
@@ -79,7 +79,7 @@ apis:
   description: The Plants API from Gameball — 2 operation(s) for plants.
   name: Gameball Plants API
   slug: gameball-plants-api
-artifact_total: 18
+artifact_total: 17
 asyncapis:
 - description: ''
   name: Gameball Webhooks
@@ -89,6 +89,11 @@ collections:
   name: Gameball API
   slug: open-gameball
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gameball/refs/heads/main/capabilities/gameball-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gameball-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -297,23 +302,20 @@ description: Gameball is a customer loyalty and gamification platform that helps
 image: https://cdn.prod.website-files.com/6908b0d43805904c24a1139a/6909d1a17d9fb50ab471f71f_logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 54 tools listed.
   name: Gameball MCP Server
-  slug: gameball-mcp-server
-- description: ''
-  name: Gameball MCP Server
-  slug: gameball-mcp-server-2
+  slug: gameball-mcp
 modified: '2026-09-16'
 name: Gameball
 nav: Providers
 network: true
-overview: 'Gameball publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Batches API, Customers API, Events API, and 5 more. Tagged areas include Company, Loyalty, Rewards, Gamification, and Customer Engagement.
+overview: 'Gameball publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Batches API, Customers API, Events API, and 6 more. Tagged areas include Company, Loyalty, Rewards, Gamification, and Customer Engagement.
 
 
   The Gameball catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Gameball''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
+  Gameball''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 38 more developer resources.'
 plans:
 - name: Gameball Plans Pricing
   plan_count: 2
@@ -325,12 +327,12 @@ rate_limits:
   slug: gameball-rate-limits
 scopes:
 - name: Gameball Scopes
-  scope_count: 0
+  scope_count: 1
   slug: gameball-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: strong
-  composite: 58.1
+  composite: 59.2
   coverage:
     artifact_dirs: 26
     catalog_earned: 57.0
@@ -342,11 +344,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 59.4
+    contract_quality: 54.2
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 73.7
-  previous_composite: 58.1
+  previous_composite: 59.2
   provenance:
     conformance: derived
     contracts:
@@ -356,8 +358,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -383,5 +391,7 @@ tags:
 - Referrals
 - Marketing
 - E-Commerce
+- A2A
+- Loyalty & Incentives
 website: https://gameball.co
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -192,7 +192,7 @@ modified: '2026-05-19'
 name: Constellation Brands
 nav: Providers
 network: true
-overview: 'Constellation Brands publishes 7 APIs on the [APIs.io](https://apis.io/) network, including BottleShots API, HotSheets API, Items API, and 4 more. Tagged areas include Alcohol, Beer, Beverages, Digital Assets, and Fortune 500.
+overview: 'Constellation Brands publishes 13 APIs on the [APIs.io](https://apis.io/) network, including BottleShots API, HotSheets API, Items API, and 10 more. Tagged areas include Alcohol, Beer, Beverages, Digital Assets, and Fortune 500.
 
 
   Constellation Brands'' developer surface includes authentication and 11 more developer resources.'
@@ -222,8 +222,8 @@ rate_limits:
   name: Constellation Brands Rate Limits
   slug: constellation-brands-rate-limits
 score:
-  band: thin
-  composite: 28.7
+  band: emerging
+  composite: 25.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 47.0
@@ -235,20 +235,26 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 38.0
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 28.7
+  previous_composite: 25.9
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -273,5 +279,6 @@ tags:
 - Fortune 500
 - Spirits
 - Wine
+- Food and Beverage
 website: https://www.cbrands.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The BSEE Well API provides multiregional offshore well information retrieval across Alaska, Atlantic, Gulf of America, and Pacific regions. Query by API well number, company name, well status, field n
@@ -187,7 +187,7 @@ modified: '2026-09-05'
 name: Bureau of Safety and Environmental Enforcement
 nav: Providers
 network: true
-overview: 'Bureau of Safety and Environmental Enforcement publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enforcement, Environment, Federal-Government, Safety, and Offshore.
+overview: 'Bureau of Safety and Environmental Enforcement publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enforcement, Environment, Federal Government, Safety, and Offshore.
 
 
   Bureau of Safety and Environmental Enforcement''s developer surface includes developer portal, engineering blog, documentation, getting-started guide, support, pricing, and 19 more developer resources.'
@@ -202,7 +202,7 @@ rate_limits:
   slug: bureau-of-safety-and-environmental-enforcement-rate-limits
 score:
   band: thin
-  composite: 29.2
+  composite: 27.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 43.0
@@ -216,9 +216,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 13.2
-  previous_composite: 29.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 27.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -227,9 +232,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -249,7 +254,7 @@ slug: bureau-of-safety-and-environmental-enforcement
 tags:
 - Enforcement
 - Environment
-- Federal-Government
+- Federal Government
 - Safety
 - Offshore
 - Oil and Gas

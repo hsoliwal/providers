@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Shelf REST API enables developers to programmatically interact with the Shelf knowledge management platform. Access, search, create, and manage knowledge articles, gems (curated content), decision
@@ -139,7 +139,7 @@ modified: '2026-05-02'
 name: Shelf.io
 nav: Providers
 network: true
-overview: 'Shelf.io publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Contact Center, Knowledge-Management, Software-as-a-Service, and Search.
+overview: 'Shelf.io publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Contact Center, Knowledge Management, Software-as-a-Service, and Search.
 
 
   The Shelf.io catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -168,7 +168,7 @@ rules:
   slug: shelf-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 25.0
+  composite: 24.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 55.3
@@ -182,11 +182,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 45.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 13.2
-  previous_composite: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -202,7 +208,7 @@ slug: shelf
 tags:
 - Artificial Intelligence
 - Contact Center
-- Knowledge-Management
+- Knowledge Management
 - Software-as-a-Service
 - Search
 use_cases:

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.silnahealth.com/api
@@ -544,8 +544,8 @@ rate_limits:
   name: Silna Rate Limits
   slug: silna-rate-limits
 score:
-  band: strong
-  composite: 55.6
+  band: developing
+  composite: 52.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -557,11 +557,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 54.9
+    contract_quality: 49.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 55.6
+  previous_composite: 52.2
   provenance:
     conformance: derived
     contracts:
@@ -580,9 +580,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 53.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.3
-  scored_at: '2026-09-20'
+  score: 4.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for String's fiat-for-Web3-gaming platform — quotes and transactions (fiat on/off ramp, NFT purchase, cross-chain), plus management of API keys, contracts, platforms (games), members, organiz
@@ -146,17 +146,17 @@ description: String (string.xyz) is a fiat interoperability platform for Web3 ga
 image: https://avatars.githubusercontent.com/u/104804397?v=4
 layout: provider
 modified: '2026-07-21'
-name: String Technology Inc
+name: String Technology
 nav: Providers
 network: true
-overview: 'String Technology Inc publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Web3, Gaming, and Fiat On-Ramp.
+overview: 'String Technology publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Web3, Gaming, and Fiat On-Ramp.
 
 
-  String Technology Inc''s developer surface includes documentation, API reference, getting-started guide, signup flow, sandbox, authentication, and 15 more developer resources.'
+  String Technology''s developer surface includes documentation, API reference, getting-started guide, signup flow, sandbox, authentication, and 15 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 18.3
+  composite: 18.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -170,9 +170,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 18.3
+  previous_composite: 18.2
   provenance:
     conformance: derived
     mcp: derived
@@ -182,9 +182,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

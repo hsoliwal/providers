@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -144,9 +144,9 @@ description: 'Regie.ai is an AI-powered sales engagement platform that helps B2B
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/regieai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.regie.ai requiring an API key.
   name: Regie.ai MCP server (probed, API-key gated)
-  slug: regieai-mcp-server-probed-api-key-gated
+  slug: regie-ai-mcp-server-probed-api-key-gated
 modified: '2026-08-14'
 name: Regie.ai
 nav: Providers
@@ -166,7 +166,7 @@ rate_limits:
   slug: regieai-rate-limits
 score:
   band: thin
-  composite: 30.5
+  composite: 32.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 39.0
@@ -180,14 +180,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 18.4
-  previous_composite: 30.5
+  previous_composite: 32.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

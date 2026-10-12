@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.3
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 0
@@ -46,11 +46,6 @@ agentic_access:
   summary_line: 75 operations · 67 acting
 api_count: 2
 apis:
-- baseURL: https://api.decart.ai
-  baseurl_source: declared
-  description: The realtime video transformation surface. A client opens a WebRTC session (LiveKit-managed transport) against a Lucy realtime model and streams camera or video frames in; the model returns transforme
-  name: Decart Realtime API
-  slug: decart-realtime-api
 - description: A gRPC session protocol for Oasis 3 Preview, Decart's promptable real-time world model. A client initializes a session, sets a scene with a text prompt, then loops Infer calls that submit four driving
   name: Decart Oasis Action-to-Video (gRPC)
   slug: decart-oasis-a2v
@@ -84,7 +79,7 @@ apis:
   slug: decart-models-api
 - baseURL: https://api.decart.ai
   baseurl_source: declared
-  description: The Realtime API from Decart — 1 operation(s) for realtime.
+  description: The realtime video transformation surface. A client opens a WebRTC session (LiveKit-managed transport) against a Lucy realtime model and streams camera or video frames in; the model returns transforme
   name: Decart Realtime API
   slug: decart-realtime-api
 - baseURL: https://api.decart.ai
@@ -97,7 +92,7 @@ apis:
   description: The Watch Stream API from Decart — 1 operation(s) for watch stream.
   name: Decart Watch Stream API
   slug: decart-watch-stream-api
-artifact_total: 19
+artifact_total: 18
 collections:
 - collection_type: open
   name: Decart API
@@ -308,12 +303,12 @@ layout: provider
 mcp_servers:
 - description: 'Decart publishes a hosted, remote MCP server on its documentation host. It is a documentation-knowledge server, not a wrapper over the Decart REST API: its three tools search and query the Decart API '
   name: Decart MCP Server
-  slug: decart-mcp-server
+  slug: decart-api-platform-docs
 modified: '2026-08-01'
 name: Decart
 nav: Providers
 network: true
-overview: 'Decart publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Realtime API, Client API, Files API, and 6 more. Tagged areas include Artificial Intelligence, Machine-Learning, Video, Video Generation, and Video Editing.
+overview: 'Decart publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Client API, Files API, Generate API, and 7 more. Tagged areas include Artificial Intelligence, Machine Learning, Video, Video Generation, and Video Editing.
 
 
   Decart''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, support, pricing, and 36 more developer resources.'
@@ -328,7 +323,7 @@ rate_limits:
   slug: decart-rate-limits
 score:
   band: strong
-  composite: 55.3
+  composite: 54.8
   coverage:
     artifact_dirs: 26
     catalog_earned: 52.0
@@ -340,11 +335,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 48.4
+    contract_quality: 43.8
     developer_ergonomics: 75.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 42.1
-  previous_composite: 55.3
+  previous_composite: 54.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -355,8 +350,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -374,7 +375,7 @@ security:
 slug: decart
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Video
 - Video Generation
 - Video Editing
@@ -387,5 +388,6 @@ tags:
 - Media
 - Developer Tools
 - Company
+- A2A
 website: https://decart.ai/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The AGing, Independence, and Disability (AGID) Program Data Portal provides publicly accessible data from programs funded under the Older Americans Act and related disability programs. Datasets includ
@@ -165,7 +165,7 @@ modified: '2026-08-30'
 name: Administration for Community Living (ACL)
 nav: Providers
 network: true
-overview: 'Administration for Community Living (ACL) publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Aging, Federal-Government, Healthcare, Disability, and Independent Living.
+overview: 'Administration for Community Living (ACL) publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Aging, Federal Government, Healthcare, Disability, and Independent Living.
 
 
   Administration for Community Living (ACL)''s developer surface includes authentication, changelog, support, engineering blog, developer portal, and 16 more developer resources.'
@@ -179,8 +179,8 @@ rate_limits:
   name: Administration For Community Living Acl  Rate Limits
   slug: administration-for-community-living-acl--rate-limits
 score:
-  band: thin
-  composite: 29.0
+  band: emerging
+  composite: 26.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -194,9 +194,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 29.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 26.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -205,9 +210,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -230,7 +235,7 @@ security:
 slug: administration-for-community-living-acl-
 tags:
 - Aging
-- Federal-Government
+- Federal Government
 - Healthcare
 - Disability
 - Independent Living

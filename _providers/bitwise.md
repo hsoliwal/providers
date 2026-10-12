@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -167,7 +167,7 @@ overview: 'Bitwise publishes 3 APIs on the [APIs.io](https://apis.io/) network: 
 random_paper: 11
 score:
   band: thin
-  composite: 32.3
+  composite: 31.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -181,9 +181,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.3
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 32.3
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,6 +226,6 @@ tags:
 - Market Data
 - Index Funds
 - ETFs
-- Financial-Services
+- Financial Services
 website: https://bitwiseinvestments.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Public-facing website of the Defense Security Cooperation Agency that describes its mission, leadership, programs, and partners. The site links to news, the security cooperation library, and the FMS p
@@ -96,7 +96,7 @@ modified: '2026-07-25'
 name: Defense Security Cooperation Agency
 nav: Providers
 network: true
-overview: 'Defense Security Cooperation Agency publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Defense, Department of Defense, DSCA, Federal-Government, and Foreign Military Sales.
+overview: 'Defense Security Cooperation Agency publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Defense, Department of Defense, DSCA, Federal Government, and Foreign Military Sales.
 
 
   Defense Security Cooperation Agency''s developer surface includes product news and 8 more developer resources.'
@@ -111,7 +111,7 @@ rate_limits:
   slug: defense-security-cooperation-agency-rate-limits
 score:
   band: emerging
-  composite: 14.2
+  composite: 14.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -125,22 +125,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - global
-  previous_composite: 14.2
+    - north-america
+  previous_composite: 14.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +158,7 @@ tags:
 - Defense
 - Department of Defense
 - DSCA
-- Federal-Government
+- Federal Government
 - Foreign Military Sales
 - International
 - Security Cooperation

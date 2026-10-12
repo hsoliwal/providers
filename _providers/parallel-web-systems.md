@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 60.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.parallel.ai
@@ -276,7 +276,7 @@ description: 'Parallel Web Systems builds infrastructure for intelligence on the
 image: https://assets.parallel.ai/dark-parallel-avatar-540.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP; 2 tools listed.
   name: Parallel Web Search MCP Server
   slug: parallel-web-search-mcp-server
 modified: '2026-08-14'
@@ -301,12 +301,12 @@ rate_limits:
   slug: parallel-web-systems-rate-limits
 scopes:
 - name: Parallel Web Systems Scopes
-  scope_count: 0
+  scope_count: 1
   slug: parallel-web-systems-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: strong
-  composite: 61.1
+  composite: 62.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 57.0
@@ -318,11 +318,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 4.5
-    contract_quality: 65.3
+    contract_quality: 59.6
     developer_ergonomics: 65.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 81.6
-  previous_composite: 61.1
+  previous_composite: 62.8
   provenance:
     conformance: derived
     contracts:
@@ -332,8 +332,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

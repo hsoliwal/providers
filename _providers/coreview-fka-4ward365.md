@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The CoreView Public API provides programmatic access to Microsoft 365 governance operations — delegated administration, operators, platform reporting, license pools, and customer/tenant management — v
@@ -152,7 +152,7 @@ modified: '2026-07-18'
 name: CoreView (FKA 4ward365)
 nav: Providers
 network: true
-overview: 'CoreView (FKA 4ward365) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Microsoft-365, SaaS Management, Governance, and Security.
+overview: 'CoreView (FKA 4ward365) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Microsoft 365, SaaS Management, Governance, and Security.
 
 
   CoreView (FKA 4ward365)''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 16 more developer resources.'
@@ -164,7 +164,7 @@ scopes:
   summary_line: 14 scopes · clientCredentials
 score:
   band: thin
-  composite: 32.7
+  composite: 36.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -178,14 +178,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 32.7
+  previous_composite: 36.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,7 +220,7 @@ security:
 slug: coreview-fka-4ward365
 tags:
 - Company
-- Microsoft-365
+- Microsoft 365
 - SaaS Management
 - Governance
 - Security

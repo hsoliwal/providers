@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.5
-  scored_at: '2026-09-20'
+  score: 21.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: wss://highrise.game/web/botapi
@@ -48,27 +48,27 @@ apis:
 - baseURL: wss://highrise.game/web/botapi
   baseurl_source: declared
   description: The grabs API from Highrise — 2 operation(s) for grabs.
-  name: Highrise grabs API
+  name: Highrise Grabs API
   slug: highrise-grabs-api
 - baseURL: wss://highrise.game/web/botapi
   baseurl_source: declared
   description: The items API from Highrise — 2 operation(s) for items.
-  name: Highrise items API
+  name: Highrise Items API
   slug: highrise-items-api
 - baseURL: wss://highrise.game/web/botapi
   baseurl_source: declared
   description: The posts API from Highrise — 2 operation(s) for posts.
-  name: Highrise posts API
+  name: Highrise Posts API
   slug: highrise-posts-api
 - baseURL: wss://highrise.game/web/botapi
   baseurl_source: declared
   description: The rooms API from Highrise — 2 operation(s) for rooms.
-  name: Highrise rooms API
+  name: Highrise Rooms API
   slug: highrise-rooms-api
 - baseURL: wss://highrise.game/web/botapi
   baseurl_source: declared
   description: The users API from Highrise — 2 operation(s) for users.
-  name: Highrise users API
+  name: Highrise Users API
   slug: highrise-users-api
 artifact_total: 16
 asyncapis:
@@ -232,7 +232,7 @@ modified: '2026-07-19'
 name: Highrise
 nav: Providers
 network: true
-overview: 'Highrise publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Bot API, grabs API, items API, and 3 more. Tagged areas include Company, Virtual World, Metaverse, Social, and Gaming.
+overview: 'Highrise publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bot API, Grabs API, Items API, and 4 more. Tagged areas include Company, Virtual World, Metaverse, Social, and Gaming.
 
 
   The Highrise catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -242,7 +242,7 @@ overview: 'Highrise publishes 6 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 15
 score:
   band: developing
-  composite: 39.3
+  composite: 40.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -256,9 +256,9 @@ score:
     contract_governance: 4.5
     contract_quality: 21.9
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.3
+  previous_composite: 40.3
   provenance:
     conformance: derived
     contracts:
@@ -268,8 +268,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -296,5 +302,6 @@ tags:
 - Bots
 - Developer Platform
 - Chat
+- Real-Time
 website: https://highrise.game
 ---

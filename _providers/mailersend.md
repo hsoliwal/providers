@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -280,14 +280,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mailersend.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.mailersend.com over streamable HTTP requiring OAuth; 127 tools listed.
   name: MailerSend MCP Server
-  slug: mailersend-mcp-server
+  slug: mailersend
 modified: '2026-08-13'
 name: MailerSend
 nav: Providers
 network: true
-overview: 'MailerSend publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk Email API, Domains API, Email API, and 4 more. Tagged areas include Email, Transactional Email, SMTP, Marketing, and Communications.
+overview: 'MailerSend publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Bulk Email API, Domains API, Email API, and 5 more. Tagged areas include Email, Transactional Email, SMTP, Marketing, and Communications.
 
 
   The MailerSend catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -310,7 +310,7 @@ scopes:
   summary_line: 30 scopes
 score:
   band: strong
-  composite: 60.6
+  composite: 57.4
   coverage:
     artifact_dirs: 24
     catalog_earned: 64.0
@@ -322,11 +322,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 59.1
+    contract_quality: 54.0
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 60.6
+  previous_composite: 57.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -342,9 +342,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 52.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

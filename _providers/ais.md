@@ -33,11 +33,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The AIS Client Portal is the secure area where financial advisors and individual investors reach AIS statements, performance reporting and account documents. Probed 2026-08-30: clients.aisgroup.com is'
   name: AIS Client Portal
+  provenance: unpublished
   slug: ais-client-portal
 artifact_total: 14
 common:
@@ -115,8 +116,8 @@ rate_limits:
   name: Ais Rate Limits
   slug: ais-rate-limits
 score:
-  band: emerging
-  composite: 11.7
+  band: minimal
+  composite: 10.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 35.0
@@ -130,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 11.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

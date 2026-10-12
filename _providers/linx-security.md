@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -111,9 +111,9 @@ description: Linx Security is an AI-native identity security and governance plat
 image: https://cdn.prod.website-files.com/69529b4327b8e0f645d9edff/6994d775451e099494971ae4_OG.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.linx.security.
   name: Linx Security MCP Server
-  slug: linx-security-mcp-server
+  slug: linx
 modified: '2026-07-19'
 name: Linx Security
 nav: Providers
@@ -125,7 +125,7 @@ overview: 'Linx Security is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 12
 score:
   band: emerging
-  composite: 19.1
+  composite: 19.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -139,14 +139,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 19.1
+  previous_composite: 19.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,7 +177,7 @@ tags:
 - Access Management
 - Identity Security
 - Non-Human Identity
-- Agentic AI
+- AI Agents
 - MCP
 - IGA
 website: https://www.linx.security

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.kugelaudio.com
@@ -50,7 +50,7 @@ apis:
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
   description: The billing API from KugelAudio — 2 operation(s) for billing.
-  name: KugelAudio billing API
+  name: KugelAudio Billing API
   slug: kugelaudio-billing-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
@@ -65,7 +65,7 @@ apis:
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
   description: The license API from KugelAudio — 12 operation(s) for license.
-  name: KugelAudio license API
+  name: KugelAudio License API
   slug: kugelaudio-license-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
@@ -299,7 +299,7 @@ modified: '2026-07-19'
 name: KugelAudio
 nav: Providers
 network: true
-overview: 'KugelAudio publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 11labs API, Audio API, billing API, and 11 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
+overview: 'KugelAudio publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 11labs API, Audio API, Billing API, and 11 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
 
 
   The KugelAudio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -309,7 +309,7 @@ overview: 'KugelAudio publishes 14 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 10
 score:
   band: developing
-  composite: 46.8
+  composite: 46.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -321,16 +321,18 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 52.5
+    contract_quality: 48.2
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 46.8
+  previous_composite: 46.5
   provenance:
     conformance: derived
     contracts:
@@ -340,8 +342,14 @@ score:
       total: 14
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -365,7 +373,7 @@ tags:
 - Voice Cloning
 - Audio
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Streaming
 - Real-Time
 - Conversational AI

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 2
@@ -53,42 +53,42 @@ apis:
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: API metadata and auth context
-  name: CodeSandbox meta API
+  name: CodeSandbox Meta API
   slug: codesandbox-meta-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Trusted preview host management
-  name: CodeSandbox preview_host API
+  name: CodeSandbox Preview Host API
   slug: codesandbox-preview-host-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Preview token management for private sandboxes
-  name: CodeSandbox preview_token API
+  name: CodeSandbox Preview Token API
   slug: codesandbox-preview-token-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Browser and VM sandbox management
-  name: CodeSandbox sandbox API
+  name: CodeSandbox Sandbox API
   slug: codesandbox-sandbox-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Sandbox template management
-  name: CodeSandbox templates API
+  name: CodeSandbox Templates API
   slug: codesandbox-templates-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: API token management
-  name: CodeSandbox token API
+  name: CodeSandbox Token API
   slug: codesandbox-token-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Virtual machine lifecycle management
-  name: CodeSandbox vm API
+  name: CodeSandbox Vm API
   slug: codesandbox-vm-api
 - baseURL: https://api.codesandbox.io
   baseurl_source: declared
   description: Workspace and organization management
-  name: CodeSandbox workspace API
+  name: CodeSandbox Workspace API
   slug: codesandbox-workspace-api
 artifact_total: 33
 collections:
@@ -239,7 +239,7 @@ modified: '2026-06-12'
 name: CodeSandbox
 nav: Providers
 network: true
-overview: 'CodeSandbox publishes 8 APIs on the [APIs.io](https://apis.io/) network, including meta API, preview_host API, preview_token API, and 5 more. Tagged areas include Developer Tools, Cloud IDE, Code Sandboxes, Browser Development, and AI Sandboxes.
+overview: 'CodeSandbox publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Meta API, Preview Host API, Preview Token API, and 7 more. Tagged areas include Developer Tools, Cloud IDE, Code Sandboxes, Browser Development, and AI Sandboxes.
 
 
   The CodeSandbox catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -268,26 +268,26 @@ rules:
   slug: codesandbox-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 46.5
+  composite: 43.9
   coverage:
     artifact_dirs: 16
-    catalog_earned: 85.3
+    catalog_earned: 81.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 29.8
+    catalog_gap: 33.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 67.0
+    access_clarity: 46.8
+    contract_governance: 23.5
+    contract_quality: 60.8
     developer_ergonomics: 23.8
-    discoverability: 59.3
-    operational_transparency: 57.9
+    discoverability: 57.1
+    operational_transparency: 54.7
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 46.5
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     contracts:
@@ -295,8 +295,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

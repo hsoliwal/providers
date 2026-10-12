@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Avify's primary developer API. A GraphQL endpoint covering products, inventory, store locations, carts, orders and payment methods. Authenticated with the api-key header. A public GraphQL sandbox is a
@@ -199,7 +199,7 @@ overview: 'Avify publishes 2 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 15
 score:
   band: developing
-  composite: 43.0
+  composite: 41.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -211,16 +211,16 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 43.0
+  previous_composite: 41.5
   provenance:
     conformance: derived
     mcp: derived
@@ -230,9 +230,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -262,6 +262,6 @@ tags:
 - Order
 - GraphQL
 - Latin America
-- SMB
+- Small Business
 website: https://avify.com
 ---

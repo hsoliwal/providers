@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 14
 apis:
 - description: 'PennyLane is the flagship open-source Python framework for quantum differentiable programming — train and optimize variational quantum circuits with the same automatic differentiation engines used in '
@@ -264,7 +264,7 @@ overview: 'Xanadu publishes 14 APIs on the [APIs.io](https://apis.io/) network. 
 random_paper: 8
 score:
   band: thin
-  composite: 31.2
+  composite: 30.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -276,16 +276,27 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 61.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 21.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 31.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 30.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -305,7 +316,7 @@ tags:
 - Quantum Chemistry
 - Differentiable Programming
 - PennyLane
-- Open-Source
+- Open Source
 - Compilers
 - Simulator
 - Continuous Variable

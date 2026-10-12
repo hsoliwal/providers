@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Formality REST API exposes the workspace contract repository so external tools and AI agents can retrieve documents and the AI-extracted metadata layer. Every path is namespaced to a workspace — /
@@ -190,7 +190,7 @@ modified: '2026-08-17'
 name: Formality
 nav: Providers
 network: true
-overview: 'Formality publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Legal, Contract Management, and Document-Management.
+overview: 'Formality publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Legal, Contract Management, and Document Management.
 
 
   The Formality catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -208,7 +208,7 @@ rate_limits:
   slug: formality-rate-limits
 score:
   band: developing
-  composite: 39.6
+  composite: 41.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -220,22 +220,34 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 39.6
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -265,7 +277,7 @@ tags:
 - Ai Ml
 - Legal
 - Contract Management
-- Document-Management
+- Document Management
 - Asset Intelligence
 - Compliance
 - Software-as-a-Service

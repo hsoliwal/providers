@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -350,7 +350,7 @@ modified: '2026-07-24'
 name: Moneyhub
 nav: Providers
 network: true
-overview: 'Moneyhub publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Affordability API, Beneficiaries API, and 17 more. Tagged areas include Payments, United Kingdom, Open Banking, Open Finance, and Account-to-Account.
+overview: 'Moneyhub publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Affordability API, Beneficiaries API, and 18 more. Tagged areas include Payments, United Kingdom, Open Banking, Open Finance, and Account-to-Account.
 
 
   The Moneyhub catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -365,7 +365,7 @@ scopes:
   summary_line: 108 scopes
 score:
   band: strong
-  composite: 62.0
+  composite: 57.1
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -377,9 +377,9 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 65.7
-    developer_ergonomics: 60.7
-    discoverability: 75.9
+    contract_quality: 60.5
+    developer_ergonomics: 60.2
+    discoverability: 73.2
     operational_transparency: 48.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -389,7 +389,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 62.0
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -410,9 +410,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 84.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 52.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

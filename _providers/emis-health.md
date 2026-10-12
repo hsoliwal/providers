@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -222,7 +222,7 @@ modified: '2026-09-16'
 name: EMIS Health
 nav: Providers
 network: true
-overview: 'EMIS Health publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Appointments API, CORS API, and 8 more. Tagged areas include Healthcare, United Kingdom, EHR, EMR, and Interoperability.
+overview: 'EMIS Health publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Appointments API, CORS API, and 10 more. Tagged areas include Healthcare, United Kingdom, EHR, EMR, and Interoperability.
 
 
   EMIS Health''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, and 18 more developer resources.'
@@ -234,7 +234,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.7
+  composite: 34.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 32.0
@@ -246,9 +246,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 47.4
+    contract_quality: 42.7
     developer_ergonomics: 58.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -258,7 +258,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 37.7
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

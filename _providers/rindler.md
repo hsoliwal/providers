@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Hosted MCP server (https://mcp.rindler.ai) that exposes mapped websites as deterministic, typed agent tools over HTTP with OAuth 2.0 PKCE. Core tools: start_session, dispatch_action, extract_content, '
@@ -124,7 +124,7 @@ layout: provider
 mcp_servers:
 - description: Hosted MCP server that turns any pre-onboarded website, including sites without an API, into a deterministic, typed set of agent tools. Agents open a session on a mapped site, dispatch a semantic acti
   name: Rindler MCP Server
-  slug: rindler-mcp-server
+  slug: rindler
 modified: '2026-09-16'
 name: Rindler
 nav: Providers
@@ -141,7 +141,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 26.4
+  composite: 28.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -155,14 +155,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 26.4
+  previous_composite: 28.4
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

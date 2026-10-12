@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -142,7 +142,7 @@ modified: '2026-09-05'
 name: Colgate-Palmolive
 nav: Providers
 network: true
-overview: 'Colgate-Palmolive is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Consumer Products, CPG, EDI, Home Care, and Oral Care.
+overview: 'Colgate-Palmolive is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Consumer Products, Consumer Packaged Goods, EDI, Oral Care, and Personal Care.
 
 
   Colgate-Palmolive''s developer surface includes engineering blog and 18 more developer resources.'
@@ -173,7 +173,7 @@ rate_limits:
   slug: colgate-palmolive-rate-limits
 score:
   band: emerging
-  composite: 13.6
+  composite: 14.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -187,13 +187,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 13.6
+  previous_composite: 14.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,13 +218,13 @@ security:
 slug: colgate-palmolive
 tags:
 - Consumer Products
-- CPG
+- Consumer Packaged Goods
 - EDI
-- Home Care
 - Oral Care
 - Personal Care
 - Pet Nutrition
 - Retail
 - Fortune 500
+- Household Products
 website: https://www.colgatepalmolive.com/
 ---

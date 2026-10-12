@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -81,6 +81,11 @@ collections:
   name: Integrations Companies OAuth API
   slug: open-wellhub-oauth-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/wellhub/refs/heads/main/capabilities/wellhub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/wellhub-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/wellhub/refs/heads/main/overlays/wellhub-integrations-overlay.yaml
   title: ''
@@ -211,7 +216,7 @@ network: true
 overview: 'Wellhub publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Employees API, Jobs API, and 1 more. Tagged areas include Company, Health, Wellbeing, Corporate Benefits, and Fitness.
 
 
-  Wellhub''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, signup flow, engineering blog, and 19 more developer resources.'
+  Wellhub''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, signup flow, engineering blog, and 20 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 10
@@ -219,9 +224,9 @@ rate_limits:
   slug: wellhub-rate-limits
 score:
   band: developing
-  composite: 46.8
+  composite: 43.9
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -231,11 +236,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 46.8
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -251,9 +256,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -239,7 +239,7 @@ modified: '2026-07-27'
 name: Scottish and Southern Electricity Networks
 nav: Providers
 network: true
-overview: 'Scottish and Southern Electricity Networks publishes 2 APIs on the [APIs.io](https://apis.io/) network: Catalog API and Dataset API. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Grid.
+overview: 'Scottish and Southern Electricity Networks publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Dataset API, and 3 more. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Grid.
 
 
   Scottish and Southern Electricity Networks'' developer surface includes authentication, getting-started guide, support, engineering blog, signup flow, documentation, developer portal, and 29 more developer resources.'
@@ -250,7 +250,7 @@ rate_limits:
   slug: ssen-rate-limits
 score:
   band: developing
-  composite: 51.6
+  composite: 47.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -262,9 +262,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 57.2
+    contract_quality: 51.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -274,7 +274,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 51.6
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -290,9 +290,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 52.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

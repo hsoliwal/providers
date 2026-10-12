@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -337,7 +337,7 @@ modified: '2026-07-25'
 name: América Móvil
 nav: Providers
 network: true
-overview: 'América Móvil publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Check SIM swap API, Device Locations API, Location verification API, and 1 more. Tagged areas include Telecommunications, Mexico, Latin America, Mobile Network Operator, and Network APIs.
+overview: 'América Móvil publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Check SIM swap API, Device Locations API, Location verification API, and 13 more. Tagged areas include Telecommunications, Mexico, Latin America, Mobile Network Operator, and Network APIs.
 
 
   The América Móvil catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -360,7 +360,7 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: strong
-  composite: 60.3
+  composite: 55.8
   coverage:
     artifact_dirs: 28
     catalog_earned: 55.0
@@ -372,9 +372,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 61.6
+    contract_quality: 56.5
     developer_ergonomics: 54.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -383,7 +383,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 60.3
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -399,9 +399,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 72.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

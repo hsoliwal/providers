@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: Vetcove is a free purchasing and procurement platform for veterinary clinics and animal-health organizations that lets a practice shop every distributor and manufacturer at once. It consolidates accounts from suppliers such as Henry Schein, Patterson Vet, MWI, and Midwest Veterinary into one interface where staff compare live pricing and availability, place and track orders, and manage inventory across vendors without changing existing supplier relationships. The service is delivered as a web application and mobile app and is free to veterinary clinics and nonprofits. No public developer API, OpenAPI, or developer portal was found during enrichment; this profile captures the company identity and a probed domain-security posture.
 image: https://s3.amazonaws.com/vetcove-system/facebook_share2.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at developer.vetcove.com over HTTP.
+  name: Vetcove MCP Server
+  slug: vetcove
 modified: '2026-07-21'
 name: Vetcove
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Vetcove is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 16
 score:
   band: emerging
-  composite: 16.8
+  composite: 16.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -102,9 +106,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 16.8
+  previous_composite: 16.9
   provenance:
     mcp: first-party
   regulatory:
@@ -112,9 +116,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

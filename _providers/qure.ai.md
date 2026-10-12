@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: BASE_URL
@@ -211,7 +211,7 @@ modified: '2026-08-26'
 name: Qure.ai
 nav: Providers
 network: true
-overview: 'Qure.ai publishes 3 APIs on the [APIs.io](https://apis.io/) network: Fetch Results API, Initiate Computation API, and Upload DICOMs API. Tagged areas include Artificial Intelligence, Healthcare, Medical Imaging, Radiology, and Machine-Learning.
+overview: 'Qure.ai publishes 3 APIs on the [APIs.io](https://apis.io/) network: Fetch Results API, Initiate Computation API, and Upload DICOMs API. Tagged areas include Artificial Intelligence, Healthcare, Medical Imaging, Radiology, and Machine Learning.
 
 
   Qure.ai''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 25 more developer resources.'
@@ -226,7 +226,7 @@ rate_limits:
   slug: qure.ai-rate-limits
 score:
   band: developing
-  composite: 53.5
+  composite: 50.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -238,16 +238,18 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - india
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 53.5
+  previous_composite: 50.0
   provenance:
     conformance: first-party
     contracts:
@@ -268,9 +270,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -291,11 +293,11 @@ tags:
 - Healthcare
 - Medical Imaging
 - Radiology
-- Machine-Learning
+- Machine Learning
 - DICOM
 - Diagnostics
 - Clinical Decision Support
-- Health Technology
+- Health Tech
 - Company
 website: https://www.qure.ai/
 ---

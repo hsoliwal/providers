@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: true
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.8
-  scored_at: '2026-09-20'
+  score: 26.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -305,9 +305,9 @@ description: Octav is a cryptocurrency portfolio intelligence platform that prov
 image: https://framerusercontent.com/images/mzciJN6fJmiKcfU39pZcq3Zn3z4.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 14 tools listed.
   name: Octav MCP Server
-  slug: octav-mcp-server
+  slug: octav-api-mcp
 modified: '2026-07-20'
 name: Octav
 nav: Providers
@@ -319,7 +319,7 @@ overview: 'Octav publishes 14 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 13
 score:
   band: developing
-  composite: 52.1
+  composite: 49.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -331,11 +331,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 56.6
+    contract_quality: 50.9
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 52.1
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -351,9 +351,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

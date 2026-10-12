@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -167,6 +167,11 @@ collections:
   name: HashiCorp Consul HTTP ACL Transaction API
   slug: open-consul-transaction-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/consul/refs/heads/main/capabilities/consul-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/consul-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -292,7 +297,7 @@ overview: 'HashiCorp Consul publishes 14 APIs on the [APIs.io](https://apis.io/)
   The HashiCorp Consul catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  HashiCorp Consul''s developer surface includes authentication, documentation, getting-started guide, changelog, engineering blog, and 17 more developer resources.'
+  HashiCorp Consul''s developer surface includes authentication, documentation, getting-started guide, changelog, engineering blog, and 18 more developer resources.'
 plans:
 - name: Consul Plans Pricing
   plan_count: 3
@@ -326,9 +331,9 @@ rules:
   slug: consul-rules
 score:
   band: thin
-  composite: 38.9
+  composite: 37.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 64.5
@@ -338,11 +343,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 50.6
+    contract_quality: 45.9
     developer_ergonomics: 36.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 38.9
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -355,9 +360,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -379,7 +384,7 @@ tags:
 - Health Checking
 - Key-Value Store
 - Multi-Datacenter
-- Open-Source
+- Open Source
 - Service Discovery
 - Service Mesh
 website: https://www.consul.io

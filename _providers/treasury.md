@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -75,9 +75,9 @@ description: 'Treasury (treasury.app) is a consumer investing and personal-finan
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/treasury.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at treasury.app over HTTP.
   name: Treasury MCP Server
-  slug: treasury-mcp-server
+  slug: treasury
 modified: '2026-07-21'
 name: Treasury
 nav: Providers
@@ -94,7 +94,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: minimal
-  composite: 10.7
+  composite: 9.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -108,9 +108,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.7
+  previous_composite: 9.3
   provenance:
     mcp: first-party
   regulatory:
@@ -118,9 +118,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 40.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

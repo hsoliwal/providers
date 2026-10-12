@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OpenBao HTTP API gives full access to every OpenBao capability over REST-like HTTP verbs. All routes are prefixed with /v1/ and the API is versioned only at that prefix. Authentication is by clien
@@ -199,7 +199,7 @@ rate_limits:
   slug: openbao-rate-limits
 score:
   band: developing
-  composite: 49.6
+  composite: 51.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -211,17 +211,23 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 49.6
+  previous_composite: 51.6
   provenance:
     conformance: first-party
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +256,7 @@ tags:
 - Certificates
 - PKI
 - Key Management
-- Open-Source
+- Open Source
 - Self-Hosted
 - Linux Foundation
 - DevOps

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 48.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -87,7 +87,7 @@ apis:
   description: OData data service for report row and summary data
   name: Crystal Reports O Data API
   slug: crystal-reports-odata-api
-artifact_total: 115
+artifact_total: 116
 collections:
 - collection_type: open
   name: API Collection
@@ -402,11 +402,15 @@ jsonld:
   property_count: 54
   slug: crystal-reports-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at developers.sap.com over HTTP.
+  name: Crystal Reports MCP Server
+  slug: crystal-reports
 modified: '2026-09-16'
 name: Crystal Reports
 nav: Providers
 network: true
-overview: 'Crystal Reports publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Export API, Instances API, and 4 more. Tagged areas include Business Intelligence, Crystal Reports, Data Analytics, Enterprise Software, and Reporting.
+overview: 'Crystal Reports publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Export API, Instances API, and 6 more. Tagged areas include Business Intelligence, Crystal Reports, Data Analytics, Enterprise Software, and Reporting.
 
 
   The Crystal Reports catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -446,7 +450,7 @@ rules:
   slug: crystal-reports-spectral-rules
 score:
   band: emerging
-  composite: 23.8
+  composite: 26.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.5
@@ -460,9 +464,9 @@ score:
     contract_governance: 13.6
     contract_quality: 24.0
     developer_ergonomics: 14.3
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 5.3
-  previous_composite: 23.8
+  previous_composite: 26.0
   provenance:
     agentic_access: derived
     contracts:
@@ -471,8 +475,14 @@ score:
       marker_coverage: 100.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

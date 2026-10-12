@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -254,7 +254,7 @@ rules:
   slug: hivemq-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 47.5
+  composite: 49.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 35.8
@@ -266,11 +266,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 29.5
-    contract_quality: 57.2
+    contract_quality: 53.1
     developer_ergonomics: 52.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 47.5
+  previous_composite: 49.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -279,8 +279,18 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -311,5 +321,6 @@ tags:
 - Message Broker
 - Pub-Sub
 - WebSocket
+- Real-Time
 website: https://www.hivemq.com
 ---

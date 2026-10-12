@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -103,7 +103,7 @@ overview: 'Collective Health is profiled on the [APIs.io](https://apis.io/) netw
 random_paper: 3
 score:
   band: emerging
-  composite: 21.5
+  composite: 20.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -117,9 +117,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 21.5
+  previous_composite: 20.1
   provenance:
     conformance: first-party
   regulatory:
@@ -131,9 +131,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

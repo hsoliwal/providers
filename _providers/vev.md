@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Vev REST API (api.vev.design) for API-key introspection and platform integration, authenticated with an x-vev-key header. Complemented by a publish webhook and a React component SDK/CLI toolchain.
@@ -183,7 +183,7 @@ overview: 'Vev publishes 1 API on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 7
 score:
   band: developing
-  composite: 40.9
+  composite: 41.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -195,13 +195,19 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 40.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 41.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

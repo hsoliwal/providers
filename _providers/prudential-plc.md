@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -189,17 +189,17 @@ description: 'Prudential plc is a life and health insurance and asset management
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-07-25'
-name: Prudential plc
+name: Prudential
 nav: Providers
 network: true
-overview: 'Prudential plc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Life Insurance, Health Insurance, and Carrier.
+overview: 'Prudential is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Life Insurance, Health Insurance, and Carrier.
 
 
-  Prudential plc''s developer surface includes engineering blog and 32 more developer resources.'
+  Prudential''s developer surface includes engineering blog and 32 more developer resources.'
 random_paper: 14
 score:
   band: emerging
-  composite: 14.8
+  composite: 13.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -213,7 +213,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -231,7 +231,7 @@ score:
     - greater-china
     - southeast-asia
     - united-kingdom-ireland
-  previous_composite: 14.8
+  previous_composite: 13.7
   provenance:
     conformance: first-party
   regulatory:
@@ -239,9 +239,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 39.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

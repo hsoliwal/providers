@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The HTTP server started by `furiosa-llm serve <ARTIFACT_PATH>`. It hosts a single model on RNGD NPUs and exposes an OpenAI-compatible surface - /v1/completions, /v1/chat/completions, /v1/responses (Op
@@ -228,7 +228,7 @@ modified: '2026-08-16'
 name: FuriosaAI
 nav: Providers
 network: true
-overview: 'FuriosaAI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Health API, Models API, Predict API, and 1 more. Tagged areas include Artificial Intelligence, Machine-Learning, Inference, Semiconductors, and NPU.
+overview: 'FuriosaAI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Health API, Models API, Predict API, and 2 more. Tagged areas include Artificial Intelligence, Machine Learning, Inference, Semiconductors, and NPU.
 
 
   FuriosaAI''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, signup flow, and 27 more developer resources.'
@@ -243,7 +243,7 @@ rate_limits:
   slug: furiosa-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 43.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -255,11 +255,16 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
-    contract_quality: 40.3
+    contract_quality: 36.3
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 44.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-korea
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 43.3
   provenance:
     conformance: first-party
     contracts:
@@ -269,8 +274,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,7 +299,7 @@ security:
 slug: furiosa
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Inference
 - Semiconductors
 - NPU

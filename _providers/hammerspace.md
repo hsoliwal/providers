@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 17.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The management REST API served by the Hammerspace Anvil metadata server at the base path /mgmt/v1.2/rest. It is the programmatic control plane behind the Hammerspace GUI and admin CLI, covering shares
@@ -183,7 +183,7 @@ layout: provider
 mcp_servers:
 - description: Hammerspace ships Model Context Protocol services as a component of the Hammerspace AI Data Platform, announced at NVIDIA GTC in October 2025 and made generally available on an NVIDIA AI Data Platform
   name: Hammerspace MCP Server
-  slug: hammerspace-mcp-server
+  slug: hammerspace
 modified: '2026-08-04'
 name: Hammerspace
 nav: Providers
@@ -200,7 +200,7 @@ scopes:
   summary_line: 36 scopes · authorizationCode/implicit
 score:
   band: emerging
-  composite: 18.7
+  composite: 19.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -214,17 +214,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 65.8
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 18.7
+  previous_composite: 19.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

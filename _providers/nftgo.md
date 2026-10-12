@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for NFT data, market analytics, aggregated trading (GoTrading), machine-learning valuations (GoPricing), and webhook notifications (Notify). Authenticates with an X-API-KEY header and is mete
@@ -152,9 +152,9 @@ description: 'NFTgo is an NFT data, analytics, and trading-aggregator platform t
 image: https://nftgo.io/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: NFTgo MCP Server
-  slug: nftgo-mcp-server
+  slug: nftgoapi
 modified: '2026-07-20'
 name: NFTgo
 nav: Providers
@@ -169,7 +169,7 @@ overview: 'NFTgo publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 14
 score:
   band: thin
-  composite: 30.2
+  composite: 29.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -181,11 +181,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 30.2
+  previous_composite: 29.4
   provenance:
     conformance: derived
     mcp: first-party
@@ -194,9 +194,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

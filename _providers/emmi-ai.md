@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -180,7 +180,7 @@ modified: '2026-08-17'
 name: Emmi Ai
 nav: Providers
 network: true
-overview: 'Emmi Ai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Engineering AI, Physics Simulation, Machine-Learning, and Deep Learning.
+overview: 'Emmi Ai is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Engineering AI, Physics Simulation, Machine Learning, and Deep Learning.
 
 
   Emmi Ai''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, CLI, changelog, and 19 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: emmi-ai-rate-limits
 score:
   band: thin
-  composite: 31.0
+  composite: 31.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -209,14 +209,29 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 31.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - austria
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -237,12 +252,12 @@ tags:
 - Company
 - Engineering AI
 - Physics Simulation
-- Machine-Learning
+- Machine Learning
 - Deep Learning
 - Scientific Computing
 - CAE
 - CFD
 - Manufacturing
-- Open-Source
+- Open Source
 website: https://emmi.ai
 ---

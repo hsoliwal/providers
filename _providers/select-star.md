@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,139 +33,139 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 23.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The bi API from Select Star — 23 operation(s) for bi.
-  name: Select Star bi API
+  name: Select Star Bi API
   slug: select-star-bi-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The collections API from Select Star — 5 operation(s) for collections.
-  name: Select Star collections API
+  name: Select Star Collections API
   slug: select-star-collections-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The columns API from Select Star — 3 operation(s) for columns.
-  name: Select Star columns API
+  name: Select Star Columns API
   slug: select-star-columns-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The comments API from Select Star — 1 operation(s) for comments.
-  name: Select Star comments API
+  name: Select Star Comments API
   slug: select-star-comments-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The custom-attribute-values API from Select Star — 2 operation(s) for custom-attribute-values.
-  name: Select Star custom-attribute-values API
+  name: Select Star Custom Attribute Values API
   slug: select-star-custom-attribute-values-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The custom-attributes API from Select Star — 2 operation(s) for custom-attributes.
-  name: Select Star custom-attributes API
+  name: Select Star Custom Attributes API
   slug: select-star-custom-attributes-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The custom-attributes-with-value API from Select Star — 1 operation(s) for custom-attributes-with-value.
-  name: Select Star custom-attributes-with-value API
+  name: Select Star Custom Attributes With Value API
   slug: select-star-custom-attributes-with-value-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The data-metrics API from Select Star — 2 operation(s) for data-metrics.
-  name: Select Star data-metrics API
+  name: Select Star Data Metrics API
   slug: select-star-data-metrics-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The data-sources API from Select Star — 2 operation(s) for data-sources.
-  name: Select Star data-sources API
+  name: Select Star Data Sources API
   slug: select-star-data-sources-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The databases API from Select Star — 3 operation(s) for databases.
-  name: Select Star databases API
+  name: Select Star Databases API
   slug: select-star-databases-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The dbt API from Select Star — 4 operation(s) for dbt.
-  name: Select Star dbt API
+  name: Select Star Dbt API
   slug: select-star-dbt-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The documents API from Select Star — 3 operation(s) for documents.
-  name: Select Star documents API
+  name: Select Star Documents API
   slug: select-star-documents-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The ingestion API from Select Star — 2 operation(s) for ingestion.
-  name: Select Star ingestion API
+  name: Select Star Ingestion API
   slug: select-star-ingestion-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The jobs API from Select Star — 3 operation(s) for jobs.
-  name: Select Star jobs API
+  name: Select Star Jobs API
   slug: select-star-jobs-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The joins API from Select Star — 1 operation(s) for joins.
-  name: Select Star joins API
+  name: Select Star Joins API
   slug: select-star-joins-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The lineage API from Select Star — 4 operation(s) for lineage.
-  name: Select Star lineage API
+  name: Select Star Lineage API
   slug: select-star-lineage-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The metadata API from Select Star — 5 operation(s) for metadata.
-  name: Select Star metadata API
+  name: Select Star Metadata API
   slug: select-star-metadata-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The metrics API from Select Star — 3 operation(s) for metrics.
-  name: Select Star metrics API
+  name: Select Star Metrics API
   slug: select-star-metrics-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The pii API from Select Star — 1 operation(s) for pii.
-  name: Select Star pii API
+  name: Select Star Pii API
   slug: select-star-pii-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The schemas API from Select Star — 3 operation(s) for schemas.
-  name: Select Star schemas API
+  name: Select Star Schemas API
   slug: select-star-schemas-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The scim API from Select Star — 5 operation(s) for scim.
-  name: Select Star scim API
+  name: Select Star SCIM API
   slug: select-star-scim-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The search API from Select Star — 1 operation(s) for search.
-  name: Select Star search API
+  name: Select Star Search API
   slug: select-star-search-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The tables API from Select Star — 10 operation(s) for tables.
-  name: Select Star tables API
+  name: Select Star Tables API
   slug: select-star-tables-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The tags API from Select Star — 5 operation(s) for tags.
-  name: Select Star tags API
+  name: Select Star Tags API
   slug: select-star-tags-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The teams API from Select Star — 3 operation(s) for teams.
-  name: Select Star teams API
+  name: Select Star Teams API
   slug: select-star-teams-api
 - baseURL: https://api.production.selectstar.com
   baseurl_source: declared
   description: The terms API from Select Star — 5 operation(s) for terms.
-  name: Select Star terms API
+  name: Select Star Terms API
   slug: select-star-terms-api
 artifact_total: 57
 collections:
@@ -251,6 +251,11 @@ collections:
   name: Select Star Metadata bi terms API
   slug: open-select-star-terms-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/select-star/refs/heads/main/capabilities/select-star-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/select-star-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -393,16 +398,16 @@ modified: '2026-07-21'
 name: Select Star
 nav: Providers
 network: true
-overview: 'Select Star publishes 26 APIs on the [APIs.io](https://apis.io/) network, including bi API, collections API, columns API, and 23 more. Tagged areas include Company, Data Catalog, Data Lineage, Metadata, and Data Governance.
+overview: 'Select Star publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Bi API, Collections API, Columns API, and 23 more. Tagged areas include Company, Data Catalog, Data Lineage, Metadata, and Data Governance.
 
 
-  Select Star''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, pricing, and 22 more developer resources.'
+  Select Star''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, pricing, and 23 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 45.4
+  composite: 45.9
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -412,11 +417,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 50.4
+    contract_quality: 45.7
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 31.6
-  previous_composite: 45.4
+  previous_composite: 45.9
   provenance:
     conformance: derived
     contracts:
@@ -426,8 +431,14 @@ score:
       total: 26
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

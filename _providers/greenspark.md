@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-09-20'
+  score: 27.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 1
@@ -107,6 +107,11 @@ collections:
   name: Greenspark Climate Account Widgets API
   slug: open-greenspark-widgets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/greenspark/refs/heads/main/capabilities/greenspark-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/greenspark-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -248,7 +253,7 @@ layout: provider
 mcp_servers:
 - description: 'Greenspark operates an official remote MCP server hosted by ReadMe at https://docs.getgreenspark.com/mcp. v1 is read-only: it exposes the Greenspark OpenAPI specs and guides for schema-aware answers, '
   name: Greenspark MCP Server
-  slug: greenspark-mcp-server
+  slug: com-getgreenspark-greenspark-api
 modified: '2026-07-19'
 name: Greenspark
 nav: Providers
@@ -256,11 +261,11 @@ network: true
 overview: 'Greenspark publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Email API, Estimations API, and 4 more. Tagged areas include Sustainability, Carbon Offset, Climate, Impact, and Carbon Estimation.
 
 
-  Greenspark''s developer surface includes documentation, API reference, support, pricing, signup flow, authentication, sandbox, and 22 more developer resources.'
+  Greenspark''s developer surface includes documentation, API reference, support, pricing, signup flow, authentication, sandbox, and 23 more developer resources.'
 random_paper: 18
 score:
   band: developing
-  composite: 41.1
+  composite: 40.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -272,11 +277,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 59.0
+    contract_quality: 53.2
     developer_ergonomics: 51.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 41.1
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -287,8 +292,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

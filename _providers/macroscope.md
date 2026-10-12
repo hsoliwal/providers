@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://hooks.macroscope.com
@@ -163,7 +163,7 @@ overview: 'Macroscope publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: thin
-  composite: 33.8
+  composite: 33.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -177,9 +177,9 @@ score:
     contract_governance: 4.5
     contract_quality: 22.1
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 33.8
+  previous_composite: 33.7
   provenance:
     conformance: derived
     contracts:
@@ -189,8 +189,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

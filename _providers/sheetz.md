@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Sheetz Distribution Services EDI and API integration capabilities enable suppliers and trading partners to exchange electronic data interchange documents including purchase orders, invoices, advance s
@@ -144,7 +144,7 @@ rate_limits:
   slug: sheetz-rate-limits
 score:
   band: emerging
-  composite: 21.7
+  composite: 20.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 49.0
@@ -158,17 +158,22 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 21.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 20.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

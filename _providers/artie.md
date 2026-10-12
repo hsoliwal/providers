@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 0
@@ -131,6 +131,11 @@ collections:
   name: Artie Column Hashing Salts SSH Tunnels API
   slug: open-artie-ssh-tunnels-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/artie/refs/heads/main/capabilities/artie-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/artie-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/artie/refs/heads/main/overlays/artie-openapi-overlay.yaml
   title: ''
@@ -291,13 +296,13 @@ overview: 'Artie publishes 10 APIs on the [APIs.io](https://apis.io/) network, i
   The Artie catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Artie''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 25 more developer resources.'
+  Artie''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 26 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 47.5
+  composite: 47.9
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -307,11 +312,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 64.4
+    contract_quality: 59.1
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 47.5
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -322,8 +327,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

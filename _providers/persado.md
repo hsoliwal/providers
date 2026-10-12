@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'A production remote Model Context Protocol server operated by Persado at https://api.persado.com/mcp. Discovered by probing the API host: the RFC 9728 protected-resource document names the resource ve'
@@ -141,7 +141,7 @@ description: Persado is an enterprise AI platform for regulated brands that gene
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/persado.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.persado.com over HTTP requiring OAuth.
   name: Persado MCP Gateway (Production)
   slug: persado-mcp-gateway-production
 modified: '2026-08-13'
@@ -168,7 +168,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.5
+  composite: 24.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -182,14 +182,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 21.5
+  previous_composite: 24.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -218,6 +228,6 @@ tags:
 - Agents
 - MCP
 - Compliance
-- Financial-Services
+- Financial Services
 website: https://www.persado.com/
 ---

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lap-coffee/refs/heads/main/security/lap-coffee-domain-security.yml
@@ -102,6 +102,10 @@ created: '2026-07-17'
 description: 'LAP Coffee (Life Among People) is a Berlin-founded specialty coffee retail chain operated by Micro Retail Technologies MRT GmbH. It opened its first store in Berlin Mitte in August 2023 and has grown to a network of neighbourhood cafes across Berlin, with further locations and openings in Cologne, Frankfurt, Munich and Hamburg. LAP serves locally roasted specialty coffee at everyday prices from small, high-throughput stores, and runs a consumer mobile app (LAP: Everyday Coffee) for pre-ordering, in-store pickup, a stamps and rewards loyalty program, gifting and referrals, replacing an earlier Apple/Google Wallet stamp pass. LAP is backed by HV Capital. As of this enrichment pass LAP publishes no public developer program, API, SDK or developer documentation; its technology surface is the consumer app, the order.lap.coffee deep-link service and a Webflow marketing site.'
 image: https://cdn.prod.website-files.com/6486f424f96e22d43c4d3612/678d004bf7f2025c6ec5e0ac_LAP%20Coffee%20Dynamic%2019.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.lap.coffee over HTTP.
+  name: LAP Coffee MCP Server
+  slug: lap-coffee
 modified: '2026-07-19'
 name: LAP Coffee
 nav: Providers
@@ -113,7 +117,7 @@ overview: 'LAP Coffee is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 10
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -127,7 +131,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -137,11 +141,17 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 10.9
+  previous_composite: 10.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +172,7 @@ tags:
 - Food and Beverage
 - Hospitality
 - Loyalty
-- Mobile Applications
+- Mobile App
 - Germany
 website: https://www.lap.coffee/
 ---

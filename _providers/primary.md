@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -81,9 +81,9 @@ description: 'Primary (Primary Kids, Inc.) is a direct-to-consumer children''s a
 image: https://www.primary.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.primary.com over HTTP; 5 tools listed.
   name: Primary Shopify Storefront MCP
-  slug: primary-shopify-storefront-mcp
+  slug: storefront-renderer
 modified: '2026-07-20'
 name: Primary
 nav: Providers
@@ -99,8 +99,8 @@ scopes:
   slug: primary-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: minimal
-  composite: 10.3
+  band: emerging
+  composite: 12.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -114,14 +114,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 10.3
+  previous_composite: 12.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

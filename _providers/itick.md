@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Token-authenticated REST and WebSocket API for real-time and historical financial market data across crypto, forex, indices, stock, future, and fund product lines.
@@ -124,10 +124,10 @@ layout: provider
 mcp_servers:
 - description: ''
   name: iTick MCP Server
-  slug: itick-mcp-server
+  slug: mcp
 - description: Official iTick MCP server exposing the REST market-data API as MCP tools for basics, stocks, indices, futures, funds, forex and crypto. WebSocket and FIX surfaces are explicitly NOT implemented by the
   name: iTick MCP Server
-  slug: itick-mcp-server-2
+  slug: itick-mcp-server
 modified: '2026-09-16'
 name: iTick
 nav: Providers
@@ -146,8 +146,8 @@ rate_limits:
   name: Itick Rate Limits
   slug: itick-rate-limits
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 38.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 59.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 40.0
+  previous_composite: 38.7
   provenance:
     conformance: derived
     mcp: first-party
@@ -172,9 +172,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

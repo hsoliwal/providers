@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful API for Prosper investors and third-party agents to view account information, search active loan listings, place orders to purchase Notes, and retrieve owned Notes, invested loans, and loan pa
@@ -143,7 +143,7 @@ overview: 'Prosper publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 9
 score:
   band: thin
-  composite: 28.7
+  composite: 29.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -157,15 +157,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 28.7
+  previous_composite: 29.8
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -191,6 +197,6 @@ tags:
 - Investing
 - Personal Loans
 - Consumer Credit
-- Financial-Services
+- Financial Services
 website: https://www.prosper.com
 ---

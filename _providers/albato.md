@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-09-20'
+  score: 21.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -361,14 +361,14 @@ jsonld:
   slug: albato-albato-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 16 tools listed. A candidate, not confirmed as published by the provider.
   name: Albato MCP Server
-  slug: albato-mcp-server
+  slug: albato
 modified: '2026-05-19'
 name: Albato
 nav: Providers
 network: true
-overview: 'Albato publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Automations API, Connectors API, Executions API, and 3 more. Tagged areas include No-Code Automation, Workflow-Automation, Embedded iPaaS, App Integration, and Integration.
+overview: 'Albato publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Automations API, Connectors API, Executions API, and 3 more. Tagged areas include No-Code Automation, Workflow Automation, Embedded iPaaS, App Integration, and Integration.
 
 
   The Albato catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -408,23 +408,23 @@ rules:
   slug: albato-spectral-rules
 score:
   band: developing
-  composite: 49.7
+  composite: 49.3
   coverage:
     artifact_dirs: 25
-    catalog_earned: 73.5
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 33.3
-    contract_quality: 72.1
+    contract_governance: 31.8
+    contract_quality: 66.1
     developer_ergonomics: 36.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 49.7
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -434,8 +434,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -457,7 +463,7 @@ security:
 slug: albato
 tags:
 - No-Code Automation
-- Workflow-Automation
+- Workflow Automation
 - Embedded iPaaS
 - App Integration
 - Integration

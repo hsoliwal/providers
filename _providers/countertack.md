@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A customer-only HTTP API host operated by GoSecure (formerly CounterTack) behind the GoSecure Titan platform. The host answers HTTP 401 on every path probed — including /robots.txt and every /.well-kn
@@ -172,7 +172,7 @@ scopes:
   summary_line: 13 scopes · authorizationCode/clientCredentials/deviceCode/implicit/password
 score:
   band: emerging
-  composite: 13.8
+  composite: 16.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -186,13 +186,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 13.8
+  previous_composite: 16.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

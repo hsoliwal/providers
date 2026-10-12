@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -79,7 +79,7 @@ apis:
   description: Retrieve the status and results of Sift Workflow runs.
   name: Sift Workflows API
   slug: sift-workflows-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -167,11 +167,15 @@ finops:
   slug: sift-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sift.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sift.com over HTTP.
+  name: Sift MCP Server
+  slug: sift
 modified: '2026-07-12'
 name: Sift
 nav: Providers
 network: true
-overview: 'Sift publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Decisions API, Events API, Labels API, and 4 more. Tagged areas include Fraud Detection, Fraud Prevention, Risk, Trust and Safety, and Machine-Learning.
+overview: 'Sift publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Decisions API, Events API, Labels API, and 4 more. Tagged areas include Fraud Prevention, Risk Management, Trust and Safety, Machine Learning, and Payment Fraud.
 
 
   Sift''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
@@ -186,23 +190,23 @@ rate_limits:
   slug: sift-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 35.0
   coverage:
     artifact_dirs: 12
-    catalog_earned: 64.0
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 56.9
+    contract_quality: 51.3
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 36.9
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -216,9 +220,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -235,11 +239,10 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: sift
 tags:
-- Fraud Detection
 - Fraud Prevention
-- Risk
+- Risk Management
 - Trust and Safety
-- Machine-Learning
+- Machine Learning
 - Payment Fraud
 - Account Takeover
 - Chargebacks

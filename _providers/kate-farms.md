@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,9 +24,9 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.9
-  scored_at: '2026-09-20'
+  score: 35.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Shopify Storefront GraphQL API as deployed on Kate Farms' own host. Anonymous introspection succeeded on 2026-08-04, returning 424 types, 35 root query fields and 41 mutations covering products, c
@@ -173,9 +173,9 @@ description: 'Kate Farms is a Santa Barbara, California nutrition company that m
 image: https://cdn.shopify.com/s/files/1/0205/6802/files/KF_Logo_Navy_TM.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.katefarms.com over HTTP; 5 tools listed.
   name: Kate Farms MCP Server
-  slug: kate-farms-mcp-server
+  slug: kate-farms-ucp-shopping
 modified: '2026-08-04'
 name: Kate Farms
 nav: Providers
@@ -195,8 +195,8 @@ scopes:
   slug: kate-farms-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 31.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -208,23 +208,23 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 40.4
+  previous_composite: 31.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

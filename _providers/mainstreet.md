@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OpenID Connect / OAuth 2.0 authorization surface behind MainStreet sign-in, served from login.mainstreet.com on an Auth0 tenant. It publishes a complete OIDC Discovery 1.0 document and an RFC 8414
@@ -144,7 +144,7 @@ modified: '2026-08-04'
 name: MainStreet
 nav: Providers
 network: true
-overview: 'MainStreet publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Tax, Tax Credits, Accounting, and Financial-Services.
+overview: 'MainStreet publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Tax, Tax Credits, Accounting, and Financial Services.
 
 
   MainStreet''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 14 more developer resources.'
@@ -156,7 +156,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/implicit/deviceCode
 score:
   band: thin
-  composite: 29.5
+  composite: 31.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -170,13 +170,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 29.5
+  previous_composite: 31.5
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa-cpra
+    jurisdictions_satisfied: 1
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -198,7 +208,7 @@ tags:
 - Tax
 - Tax Credits
 - Accounting
-- Financial-Services
+- Financial Services
 - Small Business
 - Fintech
 - Bookkeeping

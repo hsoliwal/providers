@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -136,9 +136,9 @@ description: BrightAI builds Physical AI for essential services — continuous, 
 image: https://cdn.prod.website-files.com/6a4ea9e79536d28883c64986/6a4ea9e79536d28883c64b40_bright-ai-favicon-256x256.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at public.stateful.world over HTTP; 6 tools listed.
   name: BrightAI MCP Server
-  slug: brightai-mcp-server
+  slug: brightai-public
 modified: '2026-08-08'
 name: BrightAI
 nav: Providers
@@ -150,7 +150,7 @@ overview: 'BrightAI publishes 2 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 6
 score:
   band: emerging
-  composite: 25.6
+  composite: 24.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -164,9 +164,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 25.6
+  previous_composite: 24.4
   provenance:
     agentic_access: first-party
     conformance: first-party
@@ -177,9 +177,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 35.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

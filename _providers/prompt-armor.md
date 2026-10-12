@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -70,6 +70,11 @@ collections:
   name: PromptArmor API
   slug: open-prompt-armor
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/capabilities/prompt-armor-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/prompt-armor-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/prompt-armor/refs/heads/main/agentic-access/prompt-armor-agentic-access.yml
   title: ''
@@ -132,7 +137,7 @@ network: true
 overview: 'PromptArmor publishes 2 APIs on the [APIs.io](https://apis.io/) network: Analyze API and Content Check API. Tagged areas include Artificial Intelligence, LLM, Security, Prompt Injection, and Threat Detection.
 
 
-  PromptArmor''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  PromptArmor''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Prompt Armor Plans Pricing
   plan_count: 2
@@ -144,23 +149,23 @@ rate_limits:
   slug: prompt-armor-rate-limits
 score:
   band: thin
-  composite: 32.9
+  composite: 30.7
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 56.0
+    artifact_dirs: 11
+    catalog_earned: 54.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 21.4
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 32.9
+    discoverability: 66.1
+    operational_transparency: 18.9
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     contracts:
@@ -168,8 +173,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

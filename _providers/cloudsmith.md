@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 229
   human_in_the_loop: 4
@@ -48,112 +48,112 @@ apis:
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The audit-log API from Cloudsmith — 2 operation(s) for audit-log.
-  name: Cloudsmith audit-log API
+  name: Cloudsmith Audit Log API
   slug: cloudsmith-audit-log-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The badges API from Cloudsmith — 1 operation(s) for badges.
-  name: Cloudsmith badges API
+  name: Cloudsmith Badges API
   slug: cloudsmith-badges-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The broadcasts API from Cloudsmith — 1 operation(s) for broadcasts.
-  name: Cloudsmith broadcasts API
+  name: Cloudsmith Broadcasts API
   slug: cloudsmith-broadcasts-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The bulk-action API from Cloudsmith — 1 operation(s) for bulk-action.
-  name: Cloudsmith bulk-action API
+  name: Cloudsmith Bulk Action API
   slug: cloudsmith-bulk-action-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The distros API from Cloudsmith — 2 operation(s) for distros.
-  name: Cloudsmith distros API
+  name: Cloudsmith Distros API
   slug: cloudsmith-distros-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The entitlements API from Cloudsmith — 8 operation(s) for entitlements.
-  name: Cloudsmith entitlements API
+  name: Cloudsmith Entitlements API
   slug: cloudsmith-entitlements-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The files API from Cloudsmith — 5 operation(s) for files.
-  name: Cloudsmith files API
+  name: Cloudsmith Files API
   slug: cloudsmith-files-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The formats API from Cloudsmith — 2 operation(s) for formats.
-  name: Cloudsmith formats API
+  name: Cloudsmith Formats API
   slug: cloudsmith-formats-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The metrics API from Cloudsmith — 3 operation(s) for metrics.
-  name: Cloudsmith metrics API
+  name: Cloudsmith Metrics API
   slug: cloudsmith-metrics-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The namespaces API from Cloudsmith — 2 operation(s) for namespaces.
-  name: Cloudsmith namespaces API
+  name: Cloudsmith Namespaces API
   slug: cloudsmith-namespaces-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The orgs API from Cloudsmith — 40 operation(s) for orgs.
-  name: Cloudsmith orgs API
+  name: Cloudsmith Orgs API
   slug: cloudsmith-orgs-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The packages API from Cloudsmith — 70 operation(s) for packages.
-  name: Cloudsmith packages API
+  name: Cloudsmith Packages API
   slug: cloudsmith-packages-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The quota API from Cloudsmith — 4 operation(s) for quota.
-  name: Cloudsmith quota API
+  name: Cloudsmith Quota API
   slug: cloudsmith-quota-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The rates API from Cloudsmith — 1 operation(s) for rates.
-  name: Cloudsmith rates API
+  name: Cloudsmith Rates API
   slug: cloudsmith-rates-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The recycle-bin API from Cloudsmith — 2 operation(s) for recycle-bin.
-  name: Cloudsmith recycle-bin API
+  name: Cloudsmith Recycle Bin API
   slug: cloudsmith-recycle-bin-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The repos API from Cloudsmith — 59 operation(s) for repos.
-  name: Cloudsmith repos API
+  name: Cloudsmith Repos API
   slug: cloudsmith-repos-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The status API from Cloudsmith — 1 operation(s) for status.
-  name: Cloudsmith status API
+  name: Cloudsmith Status API
   slug: cloudsmith-status-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The storage-regions API from Cloudsmith — 2 operation(s) for storage-regions.
-  name: Cloudsmith storage-regions API
+  name: Cloudsmith Storage Regions API
   slug: cloudsmith-storage-regions-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The user API from Cloudsmith — 4 operation(s) for user.
-  name: Cloudsmith user API
+  name: Cloudsmith User API
   slug: cloudsmith-user-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The users API from Cloudsmith — 1 operation(s) for users.
-  name: Cloudsmith users API
+  name: Cloudsmith Users API
   slug: cloudsmith-users-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The vulnerabilities API from Cloudsmith — 4 operation(s) for vulnerabilities.
-  name: Cloudsmith vulnerabilities API
+  name: Cloudsmith Vulnerabilities API
   slug: cloudsmith-vulnerabilities-api
 - baseURL: https://api.cloudsmith.io
   baseurl_source: declared
   description: The webhooks API from Cloudsmith — 2 operation(s) for webhooks.
-  name: Cloudsmith webhooks API
+  name: Cloudsmith Webhooks API
   slug: cloudsmith-webhooks-api
 artifact_total: 54
 collections:
@@ -230,6 +230,11 @@ collections:
   name: Cloudsmith API (v1)
   slug: open-cloudsmith
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/capabilities/cloudsmith-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cloudsmith-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/cloudsmith/refs/heads/main/agentic-access/cloudsmith-agentic-access.yml
   title: ''
@@ -309,13 +314,13 @@ modified: '2026-05-19'
 name: Cloudsmith
 nav: Providers
 network: true
-overview: 'Cloudsmith publishes 22 APIs on the [APIs.io](https://apis.io/) network, including audit-log API, badges API, broadcasts API, and 19 more. Tagged areas include Artifact Management, Developer Tools, DevOps, DevSecOps, and Distribution.
+overview: 'Cloudsmith publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Audit Log API, Badges API, Broadcasts API, and 19 more. Tagged areas include Artifact Management, Developer Tools, DevOps, DevSecOps, and Distribution.
 
 
   The Cloudsmith catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Cloudsmith''s developer surface includes authentication, documentation, API reference, getting-started guide, GitHub presence, and 9 more developer resources.'
+  Cloudsmith''s developer surface includes authentication, documentation, API reference, getting-started guide, GitHub presence, and 10 more developer resources.'
 plans:
 - name: Cloudsmith Plans Pricing
   plan_count: 1
@@ -339,23 +344,23 @@ rules:
   slug: cloudsmith-rules
 score:
   band: developing
-  composite: 44.5
+  composite: 42.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 79.0
+    artifact_dirs: 13
+    catalog_earned: 75.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.0
+    catalog_gap: 39.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 34.2
-    contract_governance: 54.5
-    contract_quality: 55.3
+    access_clarity: 32.1
+    contract_governance: 49.1
+    contract_quality: 50.1
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 42.1
-  previous_composite: 44.5
+    discoverability: 66.1
+    operational_transparency: 40.0
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     contracts:
@@ -363,8 +368,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 22
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

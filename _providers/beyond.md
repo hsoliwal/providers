@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -263,9 +263,9 @@ description: Beyond (beyondpricing.com) is a revenue-management platform for sho
 image: https://cdn.prod.website-files.com/697a206967c894c3741f622e/697a206967c894c3741f6299_ico-256.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at neyoba.beyondpricing.com over HTTP.
   name: Beyond MCP Server
-  slug: beyond-mcp-server
+  slug: beyond-neyoba
 modified: '2026-07-18'
 name: Beyond
 nav: Providers
@@ -285,7 +285,7 @@ scopes:
   summary_line: 9 scopes · clientCredentials
 score:
   band: developing
-  composite: 45.5
+  composite: 47.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -297,11 +297,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 56.9
+    contract_quality: 52.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 45.5
+  previous_composite: 47.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -312,8 +312,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -339,7 +345,7 @@ tags:
 - Revenue Management
 - Dynamic Pricing
 - Pricing
-- Real-Estate
+- Real Estate
 - Market Intelligence
 website: https://beyondpricing.com/
 ---

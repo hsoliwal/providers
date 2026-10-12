@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Alkymi exposes a developer-friendly REST API with full event-based webhook support for ingesting, transforming, and delivering extracted private markets data. API access and reference documentation ar
@@ -116,7 +116,7 @@ modified: '2026-07-17'
 name: Alkymi
 nav: Providers
 network: true
-overview: 'Alkymi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Private Markets, Document Processing, and Data Extraction.
+overview: 'Alkymi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Private Markets, Document Processing, and Data Extraction.
 
 
   The Alkymi catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -126,7 +126,7 @@ overview: 'Alkymi publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 9
 score:
   band: thin
-  composite: 34.8
+  composite: 34.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 32.0
@@ -138,15 +138,25 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 26.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 34.8
+  previous_composite: 34.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +175,7 @@ security:
 slug: alkymi
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Private Markets
 - Document Processing
 - Data Extraction

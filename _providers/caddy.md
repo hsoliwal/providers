@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -161,7 +161,7 @@ modified: '2026-05-19'
 name: Caddy
 nav: Providers
 network: true
-overview: 'Caddy publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Adapt API, Configuration API, Lifecycle API, and 2 more. Tagged areas include Automatic HTTPS, Go, Load Balancer, Reverse Proxy, and TLS.
+overview: 'Caddy publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Adapt API, Configuration API, Lifecycle API, and 3 more. Tagged areas include Automatic HTTPS, Go, Load Balancer, Reverse Proxy, and TLS.
 
 
   Caddy''s developer surface includes documentation and 12 more developer resources.'
@@ -176,7 +176,7 @@ rate_limits:
   slug: caddy-rate-limits
 score:
   band: thin
-  composite: 29.7
+  composite: 27.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -188,14 +188,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 38.0
+    contract_quality: 34.2
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 29.7
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +203,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

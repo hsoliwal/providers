@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -2551,7 +2551,7 @@ modified: '2026-09-16'
 name: Amazon Lookout for Metrics
 nav: Providers
 network: true
-overview: 'Amazon Lookout for Metrics publishes 28 APIs on the [APIs.io](https://apis.io/) network, including ActivateAnomalyDetector API, BackTestAnomalyDetector API, CreateAlert API, and 25 more. Tagged areas include Anomaly Detection, Business Intelligence, Machine-Learning, Metrics, and Monitoring.
+overview: 'Amazon Lookout for Metrics publishes 28 APIs on the [APIs.io](https://apis.io/) network, including ActivateAnomalyDetector API, BackTestAnomalyDetector API, CreateAlert API, and 25 more. Tagged areas include Anomaly Detection, Business Intelligence, Machine Learning, Metrics, and Monitoring.
 
 
   The Amazon Lookout for Metrics catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -2590,23 +2590,24 @@ rules:
     warn: 16
   slug: amazon-lookout-for-metrics-spectral-rules
 score:
-  band: developing
-  composite: 47.7
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 18
-    catalog_earned: 69.5
+    catalog_earned: 71.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.5
+    catalog_gap: 43.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -47.7
   facets:
-    access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 69.4
-    developer_ergonomics: 27.4
-    discoverability: 63.0
-    operational_transparency: 26.3
+    access_clarity: 0.0
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
   previous_composite: 47.7
   provenance:
     agentic_access: derived
@@ -2615,9 +2616,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 28
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -2643,9 +2650,10 @@ slug: amazon-lookout-for-metrics
 tags:
 - Anomaly Detection
 - Business Intelligence
-- Machine-Learning
+- Machine Learning
 - Metrics
 - Monitoring
+- Defunct
 use_cases:
 - description: Monitor revenue metrics and detect unexpected drops or spikes that could indicate fraud or system issues.
   name: Revenue Anomaly Detection

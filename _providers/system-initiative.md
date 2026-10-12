@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Workspace-scoped REST API (the "luminork" server) for automating System Initiative: create and apply change sets, model/discover/import components, run functions, and manage actions and secrets. Beare'
@@ -152,9 +152,9 @@ description: System Initiative is an AI-native infrastructure automation platfor
 image: https://github.com/systeminit.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 20 tools listed.
   name: System Initiative MCP Server
-  slug: system-initiative-mcp-server
+  slug: system-initiative
 modified: '2026-07-21'
 name: System Initiative
 nav: Providers
@@ -165,8 +165,8 @@ overview: 'System Initiative publishes 1 API on the [APIs.io](https://apis.io/) 
   System Initiative''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, authentication, and 18 more developer resources.'
 random_paper: 18
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 25.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -178,19 +178,25 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 41.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 28.0
+  previous_composite: 25.7
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

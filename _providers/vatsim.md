@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -68,7 +68,7 @@ apis:
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
   description: The atc API from VATSIM — 2 operation(s) for atc.
-  name: VATSIM atc API
+  name: VATSIM Atc API
   slug: vatsim-atc-api
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
@@ -78,7 +78,7 @@ apis:
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
   description: The community API from VATSIM — 1 operation(s) for community.
-  name: VATSIM community API
+  name: VATSIM Community API
   slug: vatsim-community-api
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
@@ -98,7 +98,7 @@ apis:
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
   description: The members API from VATSIM — 7 operation(s) for members.
-  name: VATSIM members API
+  name: VATSIM Members API
   slug: vatsim-members-api
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
@@ -108,7 +108,7 @@ apis:
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
   description: The orgs API from VATSIM — 2 operation(s) for orgs.
-  name: VATSIM orgs API
+  name: VATSIM Orgs API
   slug: vatsim-orgs-api
 - baseURL: https://api.vatsim.net/v2
   baseurl_source: declared
@@ -213,7 +213,7 @@ modified: '2026-09-16'
 name: VATSIM
 nav: Providers
 network: true
-overview: 'VATSIM publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Events API, METAR API, Airport info API, and 13 more. Tagged areas include Aviation, Flight Simulation, Air Traffic Control, Real-Time Data, and Community.
+overview: 'VATSIM publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Events API, METAR API, Airport info API, and 15 more. Tagged areas include Aviation, Flight Simulation, Air Traffic Control, Real-Time Data, and Community.
 
 
   VATSIM''s developer surface includes authentication and 4 more developer resources.'
@@ -233,23 +233,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.7
+  composite: 32.3
   coverage:
     artifact_dirs: 12
-    catalog_earned: 59.0
+    catalog_earned: 57.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 57.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
-    contract_quality: 54.0
+    contract_quality: 48.6
     developer_ergonomics: 21.4
-    discoverability: 81.5
-    operational_transparency: 21.1
-  previous_composite: 33.7
+    discoverability: 78.6
+    operational_transparency: 18.9
+  previous_composite: 32.3
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +257,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

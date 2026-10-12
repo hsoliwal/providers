@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: OData-based REST API for querying SAP BW data, executing BEx queries, and accessing InfoProviders. Supports analytical queries with filtering, aggregation, and hierarchical navigation.
@@ -246,7 +246,7 @@ rate_limits:
   slug: sap-bw-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 38.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 38.0
@@ -260,14 +260,20 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 47.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 52.6
-  previous_composite: 35.3
+  previous_composite: 38.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-09-20'
+  score: 27.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -244,9 +244,9 @@ description: Scanner is a cloud-native security data platform that indexes secur
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scanner.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.your-env-here.scanner.dev over HTTP; 5 tools listed.
   name: Scanner MCP Server
-  slug: scanner-mcp-server
+  slug: scanner
 modified: '2026-07-21'
 name: Scanner
 nav: Providers
@@ -260,8 +260,8 @@ overview: 'Scanner publishes 6 APIs on the [APIs.io](https://apis.io/) network, 
   Scanner''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 23 more developer resources.'
 random_paper: 20
 score:
-  band: thin
-  composite: 38.7
+  band: developing
+  composite: 39.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -275,9 +275,9 @@ score:
     contract_governance: 18.2
     contract_quality: 28.4
     developer_ergonomics: 61.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 38.7
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -288,8 +288,18 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

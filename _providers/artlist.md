@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -242,12 +242,12 @@ layout: provider
 mcp_servers:
 - description: 'Artlist publishes a hosted, anonymous MCP server for its developer documentation. It is a docs-search server, not a wrapper over the Enterprise API itself: the single tool searches developer.artlist.i'
   name: Artlist MCP Server
-  slug: artlist-mcp-server
+  slug: artlist-developer-docs
 modified: '2026-08-02'
 name: Artlist
 nav: Providers
 network: true
-overview: 'Artlist publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Downloadable API, and 1 more. Tagged areas include Company, Music, Audio, Media, and Stock Media.
+overview: 'Artlist publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Album API, Artist API, Downloadable API, and 2 more. Tagged areas include Company, Music, Audio, Media, and Stock Media.
 
 
   Artlist''s developer surface includes documentation, API reference, developer console, getting-started guide, support, engineering blog, pricing, and 26 more developer resources.'
@@ -258,7 +258,7 @@ rate_limits:
   slug: artlist-rate-limits
 score:
   band: developing
-  composite: 44.9
+  composite: 45.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -270,11 +270,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 43.4
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 44.9
+  previous_composite: 45.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -285,8 +285,18 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

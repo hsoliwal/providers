@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 1
@@ -118,6 +118,11 @@ collections:
   name: Orkes Conductor REST Authentication Workflow Metadata API
   slug: open-orkes-workflow-metadata-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/orkes/refs/heads/main/capabilities/orkes-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/orkes-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/orkes/refs/heads/main/agentic-access/orkes-agentic-access.yml
   title: ''
@@ -178,7 +183,7 @@ network: true
 overview: 'Orkes publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Human Tasks API, Schedules API, and 5 more. Tagged areas include Microservices.
 
 
-  Orkes'' developer surface includes authentication, engineering blog, and 8 more developer resources.'
+  Orkes'' developer surface includes authentication, engineering blog, and 9 more developer resources.'
 plans:
 - name: Orkes Plans Pricing
   plan_count: 3
@@ -190,9 +195,9 @@ rate_limits:
   slug: orkes-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 28.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 31.0
     catalog_earned_first_party: 0.0
     catalog_gap: 84.0
@@ -202,11 +207,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 52.7
+    contract_quality: 47.6
     developer_ergonomics: 14.3
-    discoverability: 48.1
+    discoverability: 46.4
     operational_transparency: 10.5
-  previous_composite: 28.5
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +219,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

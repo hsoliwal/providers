@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.0
-  scored_at: '2026-09-20'
+  score: 23.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.myshyft.com
@@ -596,7 +596,7 @@ overview: 'Shyft publishes 56 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 8
 score:
   band: thin
-  composite: 28.9
+  composite: 27.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -608,11 +608,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 47.5
+    contract_quality: 42.8
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 28.9
+  previous_composite: 27.1
   provenance:
     conformance: derived
     contracts:
@@ -622,8 +622,14 @@ score:
       total: 56
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -649,5 +655,6 @@ tags:
 - Earned Wage Access
 - Human Resources
 - REST API
+- Scheduling
 website: https://myshyft.com/
 ---

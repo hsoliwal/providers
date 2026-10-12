@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST + GraphQL API for TokenBot copy-trading — manage exchange accounts, strategies, copiers, trades, notifications, rewards, withdrawals, API keys, and webhooks. API-key or secp256k1 signed-request a
@@ -193,7 +193,7 @@ layout: provider
 mcp_servers:
 - description: The TokenBot MCP server lets AI assistants interact with the TokenBot platform — exchanges, strategies, copiers, trades, and user context — as MCP tools, plus read-only resources and guided prompts.
   name: Mammoth Media MCP Server
-  slug: mammoth-media-mcp-server
+  slug: tokenbot
 modified: '2026-07-20'
 name: Mammoth Media
 nav: Providers
@@ -212,7 +212,7 @@ rate_limits:
   slug: mammoth-media-rate-limits
 score:
   band: developing
-  composite: 46.8
+  composite: 45.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 47.4
-  previous_composite: 46.8
+  previous_composite: 45.1
   provenance:
     conformance: derived
     mcp: first-party
@@ -238,9 +238,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

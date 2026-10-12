@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.6
-  scored_at: '2026-09-20'
+  score: 27.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 302
   human_in_the_loop: 1
@@ -59,7 +59,7 @@ apis:
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
   description: Endpoints accessible by passing your project-access-key in the header. This is injected whenever you login automatically.
-  name: Horizon Blockchain Games public API
+  name: Horizon Blockchain Games Public API
   slug: horizon-blockchain-games-public-api
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
@@ -69,7 +69,7 @@ apis:
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
   description: Endpoints that require a Sequence service token intended to be secret. You can manually generate one on Sequence Builder and pass it as a Bearer Token.
-  name: Horizon Blockchain Games secret API
+  name: Horizon Blockchain Games Secret API
   slug: horizon-blockchain-games-secret-api
 artifact_total: 15
 asyncapis:
@@ -251,7 +251,7 @@ modified: '2026-07-19'
 name: Horizon Blockchain Games
 nav: Providers
 network: true
-overview: 'Horizon Blockchain Games publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Marketplace API, public API, and 2 more. Tagged areas include Company, Consumer, Blockchain, Web3, and Gaming.
+overview: 'Horizon Blockchain Games publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Marketplace API, Public API, and 2 more. Tagged areas include Company, Consumer, Blockchain, Web3, and Gaming.
 
 
   The Horizon Blockchain Games catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -261,7 +261,7 @@ overview: 'Horizon Blockchain Games publishes 5 APIs on the [APIs.io](https://ap
 random_paper: 10
 score:
   band: developing
-  composite: 48.2
+  composite: 46.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -273,11 +273,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 53.7
     developer_ergonomics: 63.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 48.2
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -293,9 +293,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

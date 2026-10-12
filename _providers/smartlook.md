@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -58,7 +58,7 @@ apis:
 - baseURL: https://api.eu.smartlook.cloud
   baseurl_source: declared
   description: Upload mapping files for crash reports
-  name: Smartlook mappingFiles API
+  name: Smartlook Mapping Files API
   slug: smartlook-mappingfiles-api
 - baseURL: https://api.eu.smartlook.cloud
   baseurl_source: declared
@@ -107,6 +107,11 @@ collections:
   name: Smartlook REST Events Webhooks API
   slug: open-smartlook-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/smartlook/refs/heads/main/capabilities/smartlook-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/smartlook-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/smartlook/refs/heads/main/agentic-access/smartlook-agentic-access.yml
   title: ''
@@ -201,13 +206,13 @@ modified: '2026-06-13'
 name: Smartlook
 nav: Providers
 network: true
-overview: 'Smartlook publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Events API, Funnels API, mappingFiles API, and 4 more. Tagged areas include Product Analytics, Session Recording, Heatmaps, Funnels, and User Behavior.
+overview: 'Smartlook publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Events API, Funnels API, Mapping Files API, and 4 more. Tagged areas include Product Analytics, Session Recording, Heatmaps, Funnels, and User Behavior.
 
 
   The Smartlook catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Smartlook''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
+  Smartlook''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
 plans:
 - name: Smartlook Plans Pricing
   plan_count: 4
@@ -219,23 +224,23 @@ rate_limits:
   slug: smartlook-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 34.8
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 68.0
+    artifact_dirs: 14
+    catalog_earned: 66.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.0
+    catalog_gap: 48.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 15.2
-    contract_quality: 59.9
+    access_clarity: 36.3
+    contract_governance: 13.6
+    contract_quality: 55.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 36.9
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -243,8 +248,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

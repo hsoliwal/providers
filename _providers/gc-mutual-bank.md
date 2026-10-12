@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -207,7 +207,7 @@ modified: '2026-07-21T00:00:00Z'
 name: G&C Mutual Bank
 nav: Providers
 network: true
-overview: 'G&C Mutual Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Data Right.
+overview: 'G&C Mutual Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Data Right.
 
 
   G&C Mutual Bank''s developer surface includes authentication, documentation, support, engineering blog, and 16 more developer resources.'
@@ -219,7 +219,7 @@ scopes:
   summary_line: 9 scopes
 score:
   band: thin
-  composite: 31.6
+  composite: 28.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -231,9 +231,9 @@ score:
   facets:
     access_clarity: 5.3
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 29.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 31.6
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -258,9 +258,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 63.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -277,7 +277,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: gc-mutual-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

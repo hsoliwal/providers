@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Versioned (mob-api-v4) REST API for Dealerware fleet-management and courtesy/loaner mobility workflows: contracts, reservations, contactless check-in, customers, drivers, employees, dealerships, fleet'
@@ -135,7 +135,7 @@ overview: 'silvercar publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 3
 score:
   band: thin
-  composite: 30.4
+  composite: 30.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -147,13 +147,19 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 11.8
-  previous_composite: 30.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 30.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

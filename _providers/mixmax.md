@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.3
-  scored_at: '2026-09-20'
+  score: 47.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -238,9 +238,9 @@ description: Mixmax is an AI-native sales engagement and execution platform that
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mixmax.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP.
   name: Mixmax MCP Server
-  slug: mixmax-mcp-server
+  slug: mixmax
 modified: '2026-08-13'
 name: Mixmax
 nav: Providers
@@ -263,12 +263,12 @@ rate_limits:
   slug: mixmax-rate-limits
 scopes:
 - name: Mixmax Scopes
-  scope_count: 0
+  scope_count: 3
   slug: mixmax-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
-  band: developing
-  composite: 51.4
+  band: strong
+  composite: 54.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 57.0
@@ -282,9 +282,9 @@ score:
     contract_governance: 18.2
     contract_quality: 25.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 51.4
+  previous_composite: 54.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -295,8 +295,20 @@ score:
       total: 6
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

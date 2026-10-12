@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -215,14 +215,14 @@ modified: '2026-05-25'
 name: BMW ConnectedDrive
 nav: Providers
 network: true
-overview: 'BMW ConnectedDrive publishes 2 APIs on the [APIs.io](https://apis.io/) network: Containers API and Vehicles API. Tagged areas include Automotive, Connected Vehicles, Telematics, Vehicle Data, and CarData.
+overview: 'BMW ConnectedDrive publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Containers API, Vehicles API, and 2 more. Tagged areas include Automotive, Connected Vehicles, Telematics, Vehicle Data, and CarData.
 
 
   BMW ConnectedDrive''s developer surface includes authentication, developer portal, documentation, signup flow, engineering blog, YouTube channel, and 23 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 30.1
+  composite: 28.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -234,11 +234,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 33.3
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 2.6
-  previous_composite: 30.1
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -246,8 +246,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 26.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The WordPress core REST API served from the company''s marketing site. It is live, anonymous for published content, and self-describing: the discovery document at /wp-json/ lists 472 routes across 19 n'
@@ -140,9 +140,9 @@ description: 'Droplet Biosciences is a Cambridge, Massachusetts clinical-stage m
 image: https://dropletbiosci.com/wp-content/uploads/2022/10/cropped-Droplet-Favicon-270x270.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at dropletbiosci.com over streamable HTTP.
   name: Droplet Biosciences MCP Server
-  slug: droplet-biosciences-mcp-server
+  slug: droplet-biosciences-mcp-yml
 modified: '2026-08-12'
 name: Droplet Biosciences
 nav: Providers
@@ -167,7 +167,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 23.2
+  composite: 20.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -181,20 +181,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 69.2
     operational_transparency: 0.0
-  previous_composite: 23.2
+  previous_composite: 20.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

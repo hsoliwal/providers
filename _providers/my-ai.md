@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted Platform-as-a-Service REST API for Me Protocol — the backend behind the embeddable rewards SDKs. Authenticates SDK integrations with an API key and brokers reward issuance, redemption, and cros
@@ -126,7 +126,7 @@ overview: 'My AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 15
 score:
   band: emerging
-  composite: 16.4
+  composite: 16.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -140,17 +140,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 16.4
+  previous_composite: 16.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -177,5 +177,6 @@ tags:
 - AI Agents
 - Payments
 - Smart Contracts
+- Loyalty & Incentives
 website: https://meprotocol.io
 ---

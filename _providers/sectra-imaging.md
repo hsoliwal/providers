@@ -32,23 +32,28 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: 'Web-based access to imaging studies, series, and instances using the DICOM standard''s RESTful services - QIDO-RS (query), WADO-RS (retrieve), and STOW-RS (store). Sectra''s enterprise imaging platform '
   name: Sectra DICOMweb API
+  provenance: modeled
   slug: sectra-imaging-dicomweb-api
 - description: HL7 v2 messaging interface for exchanging orders, scheduling, worklist, and results/reports between Sectra PACS/RIS and surrounding EMR/RIS systems. This is a message-based (typically MLLP/HL7 v2) int
   name: Sectra HL7 Integration Interface
+  provenance: modeled
   slug: sectra-imaging-hl7-integration-interface
 - description: 'Clinical context synchronization using the FHIRcast standard, which Sectra helped originate (with Epic) and for which Sectra published the first open-source sandbox and reference implementation under '
   name: Sectra FHIRcast Interface
+  provenance: modeled
   slug: sectra-imaging-fhircast-interface
 - description: Web Content API for embedding third-party web content, results, and applications into the Sectra diagnostic viewer in patient/study context, and for launching Sectra in context from other systems. Thi
   name: Sectra Web Content API
+  provenance: modeled
   slug: sectra-imaging-web-content-api
 - description: IHE Cross-Enterprise Document Sharing (XDS/XDS-I) interface for registering, querying, and retrieving imaging documents and manifests across enterprise boundaries. A profile-based interoperability int
   name: Sectra IHE XDS Interface
+  provenance: modeled
   slug: sectra-imaging-xds-interface
 artifact_total: 7
 common:
@@ -102,7 +107,7 @@ overview: 'Sectra publishes 5 APIs on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: minimal
-  composite: 8.5
+  composite: 8.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 35.0
@@ -116,7 +121,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -126,15 +131,15 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 8.5
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

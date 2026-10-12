@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Partner-gated REST API used to trigger test runs, manage suites, and retrieve execution results from the Functionize Test Cloud. Endpoint surface, base URL, and authentication mechanism are documented
@@ -45,7 +45,7 @@ apis:
 - description: Generative-AI agent that authors new Functionize tests from natural language prompts and existing application context. Surfaced inside the Functionize web console; programmatic invocation is partner-g
   name: Functionize Architect (AI Test Authoring)
   slug: architect
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/functionize/refs/heads/main/security/functionize-domain-security.yml
@@ -91,6 +91,10 @@ finops:
   slug: functionize-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/functionize.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.functionize.com over HTTP.
+  name: Functionize MCP Server
+  slug: functionize
 modified: '2026-05-23'
 name: Functionize
 nav: Providers
@@ -110,27 +114,33 @@ rate_limits:
   slug: functionize-rate-limits
 score:
   band: emerging
-  composite: 19.3
+  composite: 16.1
   coverage:
     artifact_dirs: 8
-    catalog_earned: 59.0
+    catalog_earned: 52.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 62.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 74.1
-    operational_transparency: 21.1
-  previous_composite: 19.3
+    discoverability: 65.0
+    operational_transparency: 18.9
+  previous_composite: 16.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

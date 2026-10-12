@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: AI application firewall classify API. A Firewall client sends each sanitized classification input (user input, tool response, model output, or system prompt) with a hook label and optional tool name t
@@ -158,7 +158,7 @@ layout: provider
 mcp_servers:
 - description: 'Hosted, read-only, tenant-scoped MCP server that lets an agent read Silmaril Firewall security evidence (findings, metrics, suspicious users, investigation packets, traces) from an authorized tenant. '
   name: Silmaril MCP Server
-  slug: silmaril-mcp-server
+  slug: silmaril-firewall
 modified: '2026-07-21'
 name: Silmaril
 nav: Providers
@@ -170,7 +170,7 @@ overview: 'Silmaril publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 3
 score:
   band: thin
-  composite: 32.2
+  composite: 34.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -184,14 +184,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 32.2
+  previous_composite: 34.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

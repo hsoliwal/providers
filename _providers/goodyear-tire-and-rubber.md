@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -154,7 +154,7 @@ modified: '2026-05-19'
 name: Goodyear Tire & Rubber
 nav: Providers
 network: true
-overview: 'Goodyear Tire & Rubber publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Friction API, Service Tickets API, and 2 more. Tagged areas include Connected Vehicles, Fleet Management, IoT, Telematics, and Tires.
+overview: 'Goodyear Tire & Rubber publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Friction API, Service Tickets API, and 5 more. Tagged areas include Connected Vehicles, Fleet Management, IoT, Telematics, and Tires.
 
 
   Goodyear Tire & Rubber''s developer surface includes developer portal, engineering blog, and 6 more developer resources.'
@@ -184,8 +184,8 @@ rate_limits:
   name: Goodyear Tire And Rubber Rate Limits
   slug: goodyear-tire-and-rubber-rate-limits
 score:
-  band: thin
-  composite: 27.4
+  band: emerging
+  composite: 24.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 44.0
@@ -197,11 +197,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 27.4
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -209,8 +209,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

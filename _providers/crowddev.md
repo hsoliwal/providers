@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 1
@@ -179,6 +179,11 @@ collections:
   name: CDP → Akrites External Advisories Work Experiences API
   slug: open-crowddev-work-experiences-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/crowddev/refs/heads/main/capabilities/crowddev-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/crowddev-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -352,7 +357,7 @@ network: true
 overview: 'Crowd.dev publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Advisories API, Affiliations API, Contacts API, and 13 more. Tagged areas include Company, Community, Developer Relations, Developer Data Platform, and Identity Resolution.
 
 
-  Crowd.dev''s developer surface includes authentication, documentation, getting-started guide, API reference, support, signup flow, changelog, and 29 more developer resources.'
+  Crowd.dev''s developer surface includes authentication, documentation, getting-started guide, API reference, support, signup flow, changelog, and 30 more developer resources.'
 plans:
 - name: Crowddev Plans Pricing
   plan_count: 1
@@ -369,9 +374,9 @@ scopes:
   summary_line: 17 scopes · clientCredentials
 score:
   band: developing
-  composite: 53.2
+  composite: 54.2
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 60.0
     catalog_earned_first_party: 20.0
     catalog_gap: 55.0
@@ -381,11 +386,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 57.9
+    contract_quality: 52.1
     developer_ergonomics: 70.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 50.0
-  previous_composite: 53.2
+  previous_composite: 54.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -396,8 +401,14 @@ score:
       total: 16
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -419,7 +430,7 @@ tags:
 - Developer Relations
 - Developer Data Platform
 - Identity Resolution
-- Open-Source
+- Open Source
 - Community Data Platform
 - Open Source Intelligence
 website: https://crowd.dev

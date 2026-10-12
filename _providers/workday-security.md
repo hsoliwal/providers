@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -197,6 +197,11 @@ collections:
   name: Workday Security Workday Audit and Compliance Account Signons User Accounts API
   slug: open-workday-security-user-accounts-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workday-security/refs/heads/main/capabilities/workday-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workday-security-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -382,13 +387,13 @@ modified: '2026-09-16'
 name: Workday Security
 nav: Providers
 network: true
-overview: 'Workday Security publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Account Signons API, Audit Logs API, Authentication Configuration API, and 9 more. Tagged areas include Access Control, Audit, Authentication, Compliance, and Enterprise.
+overview: 'Workday Security publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Account Signons API, Audit Logs API, Authentication Configuration API, and 10 more. Tagged areas include Access Control, Audit, Authentication, Compliance, and Enterprise.
 
 
   The Workday Security catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Workday Security''s developer surface includes authentication, developer portal, getting-started guide, documentation, support, engineering blog, signup flow, and 18 more developer resources.'
+  Workday Security''s developer surface includes authentication, developer portal, getting-started guide, documentation, support, engineering blog, signup flow, and 19 more developer resources.'
 plans:
 - name: Workday Security Plans Pricing
   plan_count: 1
@@ -416,9 +421,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.9
+  composite: 44.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 50.3
     catalog_earned_first_party: 0.0
     catalog_gap: 64.8
@@ -428,11 +433,11 @@ score:
   facets:
     access_clarity: 56.6
     contract_governance: 9.8
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 34.5
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 42.9
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     contracts:
@@ -440,8 +445,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

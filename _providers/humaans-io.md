@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 0
@@ -120,7 +120,7 @@ apis:
   description: Work schedule patterns
   name: Humaans Working Patterns API
   slug: humaans-io-working-patterns-api
-artifact_total: 57
+artifact_total: 58
 collections:
 - collection_type: open
   name: API Collection
@@ -174,6 +174,11 @@ collections:
   name: Humaans Audit Events Working Patterns API
   slug: open-humaans-io-working-patterns-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/humaans-io/refs/heads/main/capabilities/humaans-io-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/humaans-io-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/humaans-io/refs/heads/main/agentic-access/humaans-io-agentic-access.yml
   title: ''
@@ -345,6 +350,10 @@ features:
 - 99.9% uptime SLA on the Enterprise plan
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/humaans-io.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.humaans.io over HTTP.
+  name: Humaans MCP Server
+  slug: humaans-io
 modified: '2026-05-25'
 name: Humaans
 nav: Providers
@@ -352,13 +361,13 @@ network: true
 overview: 'Humaans publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Audit Events API, Bank Accounts API, Companies API, and 12 more. Tagged areas include Human Resources, HRIS, People Operations, People Analytics, and Onboarding.
 
 
-  Humaans'' developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 28 more developer resources.'
+  Humaans'' developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 29 more developer resources.'
 random_paper: 20
 score:
   band: developing
-  composite: 45.5
+  composite: 46.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -368,9 +377,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 66.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -380,7 +389,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.5
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     contracts:
@@ -389,8 +398,14 @@ score:
       marker_coverage: 0.0
       total: 15
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -424,9 +439,9 @@ tags:
 - Performance Management
 - Time Off
 - Compensation
-- Workflow-Automation
+- Workflow Automation
 - AI Companion
-- Agentic AI
+- AI Agents
 - United Kingdom
 - London
 website: https://humaans.io

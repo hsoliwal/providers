@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -159,7 +159,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials/refreshToken/tokenExchange
 score:
   band: emerging
-  composite: 22.1
+  composite: 19.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -173,7 +173,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -183,7 +183,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 22.1
+  previous_composite: 19.0
   provenance:
     conformance: derived
   regulatory:
@@ -191,9 +191,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

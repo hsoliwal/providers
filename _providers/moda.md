@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: HTTP ingestion API for sending LLM/agent conversation events to Moda. Accepts batched events (conversation_id, role, message, plus token/model/trace metadata) over a single POST endpoint, authenticate
@@ -172,9 +172,9 @@ description: Moda is a continual-learning and observability layer for AI agents 
 image: https://avatars.githubusercontent.com/u/242691421?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP requiring an API key; 9 tools listed.
   name: Moda MCP Server
-  slug: moda-mcp-server
+  slug: moda
 modified: '2026-07-20'
 name: Moda
 nav: Providers
@@ -186,12 +186,12 @@ overview: 'Moda publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 21
 score:
   band: thin
-  composite: 35.5
+  composite: 35.6
   coverage:
     artifact_dirs: 17
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -200,15 +200,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 63.3
     operational_transparency: 18.4
-  previous_composite: 35.5
+  previous_composite: 35.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API that enables Cube to deliver data over HTTP to GraphQL-enabled data applications. Exposes measures, dimensions, segments, and filters defined in the Cube semantic layer for use in front-en
@@ -108,7 +108,7 @@ overview: 'Cube publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 19
 score:
   band: emerging
-  composite: 22.5
+  composite: 21.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -120,13 +120,19 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 36.2
+    contract_quality: 34.0
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
-  previous_composite: 22.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Appify platform's tenant-facing REST API. Appify's public pricing page lists "REST API access" among the standard capabilities included in a subscription. The API is served from the platform appli
@@ -114,7 +114,7 @@ overview: 'Appify publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 11
 score:
   band: emerging
-  composite: 12.4
+  composite: 11.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -128,11 +128,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 12.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -151,7 +157,7 @@ tags:
 - No-Code
 - Low-Code
 - Enterprise Software
-- Workflow-Automation
+- Workflow Automation
 - Artificial Intelligence
 - Integration
 - Field Service

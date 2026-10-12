@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: Heard (Heard Technologies, Inc.) is the financial management platform built specifically for therapists and wellness practitioners in private practice. Founded in 2019 and based in Seattle, Washington, Heard pairs easy-to-use software with a dedicated human team to handle bookkeeping, taxes, payroll, and business banking in a single subscription, so licensed mental health and allied health clinicians can focus on their clients. Heard serves solo and single-owner group practices across the United States, from newer sole proprietors to established S corporations, and connects with tools practices already use such as SimplePractice, TherapyNotes, Headway, Jane App, Stripe, and Square. Heard exposes no public developer API; this API Evangelist profile captures the company identity, its public web properties, and the published llms.txt.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/heard.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.joinheard.com over HTTP.
+  name: Heard MCP Server
+  slug: heard
 modified: '2026-07-19'
 name: Heard
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Heard is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 10
 score:
   band: emerging
-  composite: 12.7
+  composite: 13.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,14 +106,16 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 12.7
+  previous_composite: 13.8
   provenance:
     mcp: first-party
   regulatory:
@@ -117,9 +123,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 10.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 6.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +141,7 @@ tags:
 - Tax
 - Payroll
 - Banking
-- Financial-Services
+- Financial Services
 - Therapists
 - Private Practice
 - Mental Health

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -151,12 +151,12 @@ rate_limits:
   slug: greenchoice-rate-limits
 scopes:
 - name: Greenchoice Scopes
-  scope_count: 0
+  scope_count: 6
   slug: greenchoice-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes · authorization_code/client_credentials/device_code
 score:
-  band: thin
-  composite: 28.9
+  band: emerging
+  composite: 25.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -170,7 +170,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -180,7 +180,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 28.9
+  previous_composite: 25.8
   provenance:
     conformance: first-party
   regulatory:
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 63.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

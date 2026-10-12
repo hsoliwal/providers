@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Official hosted Model Context Protocol (MCP) server that acts as the task layer for AI agents. Exposes tools to add, get, update, complete, delete, move, assign, label, and search tasks and lists, plu
@@ -153,9 +153,9 @@ description: Superlist is an AI-powered task and list management application fro
 image: https://framerusercontent.com/assets/xlouachsGTVuJaHXsYmxxI66e2s.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.superlist.com over HTTP; 22 tools listed.
   name: Superlist MCP Server
-  slug: superlist-mcp-server
+  slug: superlist
 modified: '2026-07-21'
 name: Superlist
 nav: Providers
@@ -167,7 +167,7 @@ overview: 'Superlist publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 13
 score:
   band: thin
-  composite: 29.8
+  composite: 31.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -181,15 +181,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 29.8
+  previous_composite: 31.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

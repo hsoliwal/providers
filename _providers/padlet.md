@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 51.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -241,7 +241,7 @@ description: Padlet is a collaborative visual platform of boards and canvases ("
 image: https://elvis.padletcdn.com/1/atat/e_1/appBY8jxCUCf4JUUZ/tblANzywOAIDDHQsQ/recwXBCnX3ozCHYBU/fldKQAixAlmwWEnhk/0
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.padlet.com over HTTP.
   name: Padlet MCP Server
   slug: padlet-mcp-server
 modified: '2026-07-20'
@@ -259,7 +259,7 @@ rate_limits:
   slug: padlet-rate-limits
 score:
   band: developing
-  composite: 49.9
+  composite: 45.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -271,11 +271,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 45.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 49.9
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -291,9 +291,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

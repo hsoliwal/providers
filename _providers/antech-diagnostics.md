@@ -32,20 +32,24 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'Modeled partner-gated surface for submitting laboratory requisitions (test orders) electronically to Antech''s reference lab from a veterinary PIMS. Carries the ordering clinic, patient, and requested '
   name: Antech Lab Orders API
+  provenance: modeled
   slug: antech-diagnostics-lab-orders-api
 - description: 'Modeled partner-gated surface for delivering completed diagnostic results back to the ordering PIMS, where they land in the patient''s medical record. Results include analyte values, reference ranges, '
   name: Antech Lab Results API
+  provenance: modeled
   slug: antech-diagnostics-lab-results-api
 - description: Modeled patient and client demographic exchange that accompanies a requisition - species, breed, sex, and owner details are linked from the PIMS so results map back to the correct animal record. Not a
   name: Antech Patients API
+  provenance: modeled
   slug: antech-diagnostics-patients-api
 - description: Modeled reference surface exposing Antech's test catalog - test codes, panels, and species/breed reference data - so a PIMS can map its inventory items to the correct Antech tests. Modeled from docume
   name: Antech Reference Data & Test Catalog API
+  provenance: modeled
   slug: antech-diagnostics-reference-data-api
 artifact_total: 5
 common:
@@ -93,7 +97,7 @@ overview: 'Antech Diagnostics publishes 4 APIs on the [APIs.io](https://apis.io/
 random_paper: 0
 score:
   band: minimal
-  composite: 9.6
+  composite: 9.9
   coverage:
     artifact_dirs: 3
     catalog_earned: 35.0
@@ -107,17 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 9.6
+  previous_composite: 9.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,6 +68,11 @@ collections:
   name: Comeet Careers Positions API
   slug: open-comeet-positions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/comeet/refs/heads/main/capabilities/comeet-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/comeet-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/comeet/refs/heads/main/agentic-access/comeet-agentic-access.yml
   title: ''
@@ -151,13 +156,13 @@ modified: '2026-05-19'
 name: Comeet
 nav: Providers
 network: true
-overview: 'Comeet publishes 1 API on the [APIs.io](https://apis.io/) network: Positions API. Tagged areas include ATS, Candidates, Careers, Interviews, and Job.
+overview: 'Comeet publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Positions API, and 2 more. Tagged areas include Applicant Tracking, Candidates, Careers, Interviews, and Job.
 
 
   The Comeet catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Comeet''s developer surface includes authentication, developer portal, and 12 more developer resources.'
+  Comeet''s developer surface includes authentication, developer portal, and 13 more developer resources.'
 plans:
 - name: Comeet Plans Pricing
   plan_count: 3
@@ -191,9 +196,9 @@ rules:
   slug: comeet-rules
 score:
   band: thin
-  composite: 34.3
+  composite: 32.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.5
     catalog_earned_first_party: 0.0
     catalog_gap: 65.5
@@ -203,11 +208,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 58.5
+    contract_quality: 53.0
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 34.3
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
@@ -215,8 +220,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -234,7 +245,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: comeet
 tags:
-- ATS
+- Applicant Tracking
 - Candidates
 - Careers
 - Interviews

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.navigateai.co
@@ -234,14 +234,14 @@ modified: '2026-07-20'
 name: Navigate
 nav: Providers
 network: true
-overview: 'Navigate publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Access codes API, Assets API, Lennar API, and 13 more. Tagged areas include Company, PropTech, Construction, Real-Estate, and Artificial Intelligence.
+overview: 'Navigate publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Access codes API, Assets API, Lennar API, and 13 more. Tagged areas include Company, PropTech, Construction, Real Estate, and Artificial Intelligence.
 
 
   Navigate''s developer surface includes support and 11 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 30.4
+  composite: 30.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -253,11 +253,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 49.3
+    contract_quality: 44.4
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 30.4
+  previous_composite: 30.0
   provenance:
     conformance: derived
     contracts:
@@ -267,8 +267,14 @@ score:
       total: 16
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,7 +294,7 @@ tags:
 - Company
 - PropTech
 - Construction
-- Real-Estate
+- Real Estate
 - Artificial Intelligence
 - Field Service
 - Construction Technology

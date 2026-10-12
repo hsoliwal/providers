@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -215,7 +215,7 @@ overview: 'Lingopal publishes 4 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 18
 score:
   band: developing
-  composite: 40.2
+  composite: 39.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -227,11 +227,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 57.3
+    contract_quality: 51.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 40.2
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -242,8 +242,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

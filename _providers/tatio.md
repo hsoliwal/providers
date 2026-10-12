@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 2.2
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -76,21 +76,21 @@ description: TaTiO is a recruitment and candidate-assessment platform that repla
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tatio.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.tatio.io over HTTP; 7 tools listed.
   name: TaTiO MCP Server
-  slug: tatio-mcp-server
+  slug: tatio
 modified: '2026-07-21'
 name: TaTiO
 nav: Providers
 network: true
-overview: 'TaTiO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hiring, Recruitment, Candidate Assessment, and Job Simulations.
+overview: 'TaTiO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hiring, Recruiting, Candidate Assessment, and Job Simulations.
 
 
   TaTiO''s developer surface includes signup flow and 7 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 12.6
+  composite: 11.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -104,13 +104,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 12.6
+  previous_composite: 11.9
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -126,7 +132,7 @@ slug: tatio
 tags:
 - Company
 - Hiring
-- Recruitment
+- Recruiting
 - Candidate Assessment
 - Job Simulations
 - Human Resources

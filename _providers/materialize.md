@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.9
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -148,7 +148,7 @@ modified: '2026-05-29'
 name: Materialize
 nav: Providers
 network: true
-overview: 'Materialize publishes 2 APIs on the [APIs.io](https://apis.io/) network: Streaming Sources and Sinks (AsyncAPI) and Sql API. Tagged areas include Streaming, Data Warehouse, SQL, Real-Time, and PostgreSQL Compatible.
+overview: 'Materialize publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Streaming Sources and Sinks (AsyncAPI), Sql API, and 2 more. Tagged areas include Streaming, Data Warehouse, SQL, Real-Time, and PostgreSQL Compatible.
 
 
   The Materialize catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -178,7 +178,7 @@ rules:
   slug: materialize-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 36.1
+  composite: 34.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.8
@@ -190,11 +190,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 11.4
-    contract_quality: 54.8
+    contract_quality: 50.4
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 36.1
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +202,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

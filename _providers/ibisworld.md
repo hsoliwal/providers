@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -70,7 +70,7 @@ apis:
   description: Industry research reports and market intelligence data.
   name: IBISWorld Industry API
   slug: ibisworld-industry-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -94,6 +94,11 @@ collections:
   name: IBISWorld API
   slug: open-ibisworld
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ibisworld/refs/heads/main/capabilities/ibisworld-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ibisworld-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ibisworld/refs/heads/main/agentic-access/ibisworld-agentic-access.yml
   title: ''
@@ -151,6 +156,10 @@ finops:
   slug: ibisworld-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ibisworld.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ibisworld.com over HTTP.
+  name: IBISWorld MCP Server
+  slug: ibisworld
 modified: '2026-05-19'
 name: IBISWorld
 nav: Providers
@@ -161,7 +170,7 @@ overview: 'IBISWorld publishes 5 APIs on the [APIs.io](https://apis.io/) network
   The IBISWorld catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  IBISWorld''s developer surface includes authentication, developer portal, documentation, and 8 more developer resources.'
+  IBISWorld''s developer surface includes authentication, developer portal, documentation, and 9 more developer resources.'
 plans:
 - name: Ibisworld Plans Pricing
   plan_count: 3
@@ -189,9 +198,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 30.3
+  composite: 30.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -201,11 +210,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 53.2
+    contract_quality: 47.9
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 7.9
-  previous_composite: 30.3
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +223,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

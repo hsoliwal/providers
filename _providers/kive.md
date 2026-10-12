@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Kive MCP server is Kive''s programmable interface: an OAuth 2.1 protected Model Context Protocol endpoint that lets an authorized agent browse Kive workspaces, saved products, trained models, studi'
@@ -196,9 +196,9 @@ description: Kive is an AI product photography and campaign content platform for
 image: https://mcp.kive.ai/kive_logo_192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.kive.ai over HTTP.
   name: Kive MCP Server
-  slug: kive-mcp-server
+  slug: kive
 modified: '2026-07-19'
 name: Kive
 nav: Providers
@@ -223,7 +223,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.2
+  composite: 42.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 61.0
@@ -237,14 +237,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 40.2
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

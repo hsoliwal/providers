@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,6 +76,11 @@ collections:
   name: Dragos WorldView Indicators Tags API
   slug: open-dragos-tags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/dragos/refs/heads/main/capabilities/dragos-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dragos-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -232,16 +237,16 @@ modified: '2026-07-18'
 name: Dragos
 nav: Providers
 network: true
-overview: 'Dragos publishes 3 APIs on the [APIs.io](https://apis.io/) network: Indicators API, Products API, and Tags API. Tagged areas include Company, Cybersecurity, OT Security, ICS, and Threat Intelligence.
+overview: 'Dragos publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Indicators API, Products API, Tags API, and 1 more. Tagged areas include Company, Cybersecurity, OT Security, ICS, and Threat Intelligence.
 
 
-  Dragos'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 25 more developer resources.'
+  Dragos'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 26 more developer resources.'
 random_paper: 2
 score:
   band: developing
-  composite: 44.7
+  composite: 46.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -251,11 +256,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 44.4
+    contract_quality: 40.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 44.7
+  previous_composite: 46.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -266,8 +271,20 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

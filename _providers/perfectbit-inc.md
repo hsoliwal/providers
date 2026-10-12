@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -55,14 +55,14 @@ description: PerfectBit, Inc. is a Y Combinator-backed company that produces hig
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/perfectbit-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Perfectbit Inc
+name: Perfectbit
 nav: Providers
 network: true
-overview: Perfectbit Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Training Data, and Data Verification.
+overview: Perfectbit is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Training Data, and Data Verification.
 random_paper: 15
 score:
   band: minimal
-  composite: 5.7
+  composite: 4.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -76,11 +76,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 5.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -96,7 +102,7 @@ slug: perfectbit-inc
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Training Data
 - Data Verification
 - Y Combinator

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 3
@@ -125,6 +125,11 @@ collections:
   name: Archera.ai Commitment Plans Well-Known API
   slug: open-archera-well-known-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/archera/refs/heads/main/capabilities/archera-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/archera-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/archera/refs/heads/main/overlays/archera-openapi-overlay.yaml
   title: ''
@@ -259,15 +264,15 @@ layout: provider
 mcp_servers:
 - description: Archera operates and hosts a remote MCP (Model Context Protocol) server that connects an AI assistant to a user's Archera account — cloud commitments, cost data, and optimization recommendations. Stre
   name: Archera MCP Server
-  slug: archera-mcp-server
+  slug: archera
 modified: '2026-07-18'
 name: Archera
 nav: Providers
 network: true
-overview: 'Archera publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Commitment Plans API, Commitments API, Exchanges API, and 6 more. Tagged areas include Company, Developer Tools, FinOps, Cloud Cost Management, and Cloud Commitments.
+overview: 'Archera publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Commitment Plans API, Commitments API, Exchanges API, and 7 more. Tagged areas include Company, Developer Tools, FinOps, Cloud Cost Management, and Cloud Commitments.
 
 
-  Archera''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 21 more developer resources.'
+  Archera''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 22 more developer resources.'
 random_paper: 0
 scopes:
 - name: Archera Scopes
@@ -276,9 +281,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.8
+  composite: 44.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -288,11 +293,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 44.6
+    contract_quality: 40.1
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 41.8
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -303,8 +308,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -334,5 +345,6 @@ tags:
 - MCP
 - Azure
 - Google Cloud
+- Reserved Instances
 website: https://archera.ai
 ---

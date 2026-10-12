@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The private product API behind the Linzumi web workspace and the local Commander runner, served from serve.linzumi.com under a /api/v2 URI-versioned path. It is not a published developer API — there i
@@ -117,9 +117,9 @@ description: Linzumi is a Y Combinator (Spring 2026) company in San Francisco bu
 image: https://storage.googleapis.com/ployai/d195dfe3-6a0f-4051-8d67-1a4376685f60/user/3e1aeaf5-og-home-en.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: Linzumi MCP Server
-  slug: linzumi-mcp-server
+  slug: linzumi
 modified: '2026-07-19'
 name: Linzumi
 nav: Providers
@@ -131,7 +131,7 @@ overview: 'Linzumi publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 6
 score:
   band: emerging
-  composite: 15.7
+  composite: 14.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -145,13 +145,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 15.7
+  previous_composite: 14.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

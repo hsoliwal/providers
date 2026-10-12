@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -94,7 +94,7 @@ overview: 'HireArt is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 3
 score:
   band: emerging
-  composite: 16.6
+  composite: 16.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,11 +108,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 16.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.3
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

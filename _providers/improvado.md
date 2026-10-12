@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Workspace-scoped REST API for embedding Improvado's data extraction, transformation, and load pipeline into agency and platform products. Manages data sources, connections, accounts, extraction templa
@@ -256,14 +256,14 @@ description: Improvado is a marketing intelligence and AI-agent platform that co
 image: https://improvado.io/-/astro/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 83 tools listed.
   name: Improvado MCP Server
-  slug: improvado-mcp-server
+  slug: improvado-customer
 modified: '2026-09-16'
 name: Improvado
 nav: Providers
 network: true
-overview: 'Improvado publishes 1 API on the [APIs.io](https://apis.io/) network: Ask API. Tagged areas include Company, Marketing, Marketing Intelligence, Marketing Analytics, and Data Pipeline.
+overview: 'Improvado publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Ask API, and 2 more. Tagged areas include Company, Marketing, Marketing Intelligence, Marketing Analytics, and Data Pipeline.
 
 
   The Improvado catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -286,7 +286,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 62.5
+  composite: 65.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -298,11 +298,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 58.4
+    contract_quality: 53.4
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 62.5
+  previous_composite: 65.4
   provenance:
     conformance: first-party
     contracts:
@@ -312,8 +312,22 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

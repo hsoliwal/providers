@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -86,6 +86,10 @@ created: '2026-07-17'
 description: 'Grow Therapy is a mental-health platform that connects individuals with licensed therapists and prescribers, offering virtual and in-person talk therapy plus medication management in one insurance-integrated experience. The company operates a two-sided marketplace: a client-facing product for finding, booking, and paying for care (with insurance verification and an average session cost around $21 for covered clients) and a provider portal that gives clinicians scheduling, billing, telehealth, and practice-management tooling. Grow also partners with employers, physicians, and payors on B2B mental-health access. It was surfaced as a portfolio company of Menlo Ventures and added to the API Evangelist network; Grow Therapy publishes a public Statuspage but does not expose a public developer API, so this profile captures its company identity, operational transparency, and domain-security posture rather than API artifacts.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/grow-therapy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at growtherapy.com over HTTP.
+  name: Grow Therapy MCP Server
+  slug: grow-therapy
 modified: '2026-07-19'
 name: Grow Therapy
 nav: Providers
@@ -97,7 +101,7 @@ overview: 'Grow Therapy is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 3
 score:
   band: emerging
-  composite: 13.8
+  composite: 13.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -111,9 +115,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 13.8
+  previous_composite: 13.9
   provenance:
     mcp: first-party
   regulatory:
@@ -121,9 +125,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

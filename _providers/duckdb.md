@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: DuckDB ships as a library with first-class bindings for Python, R, Java (JDBC), Node.js, C/C++, Go, Rust, Swift, Julia, and the browser via DuckDB-Wasm. There is no network REST API; clients call Duck
@@ -125,7 +125,7 @@ modified: '2026-05-08'
 name: DuckDB
 nav: Providers
 network: true
-overview: 'DuckDB publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Database, Analytics, OLAP, Embedded, and Open-Source.
+overview: 'DuckDB publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Database, Analytics, OLAP, Embedded, and Open Source.
 
 
   DuckDB''s developer surface includes developer portal, engineering blog, and 15 more developer resources.'
@@ -139,8 +139,8 @@ rate_limits:
   name: Duckdb Rate Limits
   slug: duckdb-rate-limits
 score:
-  band: emerging
-  composite: 23.5
+  band: thin
+  composite: 29.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 46.0
@@ -154,11 +154,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 23.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 29.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,6 +185,6 @@ tags:
 - Analytics
 - OLAP
 - Embedded
-- Open-Source
+- Open Source
 website: https://duckdb.org/
 ---

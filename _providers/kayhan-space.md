@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 74
   human_in_the_loop: 0
@@ -369,7 +369,7 @@ scopes:
   summary_line: 1 scope · password/clientCredentials
 score:
   band: developing
-  composite: 42.5
+  composite: 43.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -381,11 +381,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 53.3
+    contract_quality: 48.2
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 42.5
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -396,8 +396,14 @@ score:
       total: 20
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

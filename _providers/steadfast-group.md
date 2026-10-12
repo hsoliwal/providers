@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.8
-  scored_at: '2026-09-20'
+  score: 42.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -239,7 +240,7 @@ modified: '2026-07-25'
 name: Steadfast Group
 nav: Providers
 network: true
-overview: 'Steadfast Group publishes 2 APIs on the [APIs.io](https://apis.io/) network: Address API and Risk API. Tagged areas include Insurance, Australia, Brokers, Insurance Broker Network, and General Insurance.
+overview: 'Steadfast Group publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Address API, Risk API, and 1 more. Tagged areas include Insurance, Australia, Brokers, Insurance Broker Network, and General Insurance.
 
 
   Steadfast Group''s developer surface includes engineering blog, legal docs, tooling, support, authentication, and 32 more developer resources.'
@@ -251,7 +252,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/implicit/deviceCode/password
 score:
   band: thin
-  composite: 32.6
+  composite: 29.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -265,7 +266,7 @@ score:
     contract_governance: 4.5
     contract_quality: 16.5
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -275,7 +276,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 32.6
+  previous_composite: 29.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -291,9 +292,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 65.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 0
@@ -277,7 +277,7 @@ description: The Hog is a real-time web intelligence API for AI agents and go-to
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-hog.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.thehog.ai.
   name: The Hog
   slug: the-hog
 modified: '2026-08-14'
@@ -299,12 +299,12 @@ rate_limits:
   slug: the-hog-rate-limits
 scopes:
 - name: The Hog Scopes
-  scope_count: 0
+  scope_count: 7
   slug: the-hog-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
   band: developing
-  composite: 49.3
+  composite: 50.6
   coverage:
     artifact_dirs: 25
     catalog_earned: 53.0
@@ -316,11 +316,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 52.1
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 49.3
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,8 +331,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -361,5 +367,6 @@ tags:
 - MCP
 - AI Agents
 - Y Combinator
+- A2A
 website: https://thehog.ai/
 ---

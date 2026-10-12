@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -153,7 +153,7 @@ modified: '2026-09-16'
 name: Europeana
 nav: Providers
 network: true
-overview: 'Europeana publishes 2 APIs on the [APIs.io](https://apis.io/) network: Record API and Search API. Tagged areas include Archives, Cultural Heritage, Europe, Libraries, and Museums.
+overview: 'Europeana publishes 2 APIs on the [APIs.io](https://apis.io/) network: Record API and Search API. Tagged areas include Archives, Cultural Heritage, Europe, Library, and Museums.
 
 
   Europeana''s developer surface includes authentication, developer portal, product news, changelog, getting-started guide, signup flow, and 11 more developer resources.'
@@ -168,7 +168,7 @@ rate_limits:
   slug: europeana-rate-limits
 score:
   band: developing
-  composite: 44.0
+  composite: 42.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 46.0
@@ -180,16 +180,16 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 67.9
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 44.0
+  previous_composite: 42.8
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +197,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Education & Research
+    regime_id: education
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,8 +225,9 @@ tags:
 - Archives
 - Cultural Heritage
 - Europe
-- Libraries
+- Library
 - Museums
 - Search
+- OAI-PMH
 website: https://europeana.eu
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -170,7 +170,7 @@ overview: 'RelationalAI is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 15
 score:
   band: developing
-  composite: 43.9
+  composite: 44.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -182,16 +182,28 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 73.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 43.9
+  previous_composite: 44.7
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,7 +231,7 @@ tags:
 - Semantic Layer
 - Snowflake
 - Graph Analytics
-- Machine-Learning
+- Machine Learning
 - Optimization
 - Reasoning
 - Artificial Intelligence

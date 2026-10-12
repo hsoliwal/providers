@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.1
-  scored_at: '2026-09-20'
+  score: 38.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://gateway.tollbit.com
@@ -110,6 +110,11 @@ collections:
   name: TollBit Auth Tokens Tollbit Subdomain API
   slug: open-tollbit-tollbit-subdomain-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tollbit/refs/heads/main/capabilities/tollbit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tollbit-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/tollbit/refs/heads/main/overlays/tollbit-openapi-overlay.yaml
   title: ''
@@ -247,13 +252,13 @@ overview: 'Tollbit publishes 6 APIs on the [APIs.io](https://apis.io/) network, 
   The Tollbit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Tollbit''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, support, engineering blog, and 19 more developer resources.'
+  Tollbit''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, support, engineering blog, and 20 more developer resources.'
 random_paper: 14
 score:
   band: developing
-  composite: 42.5
+  composite: 42.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -263,11 +268,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 61.0
-    developer_ergonomics: 58.3
-    discoverability: 75.9
+    contract_quality: 55.7
+    developer_ergonomics: 57.6
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 42.5
+  previous_composite: 42.0
   provenance:
     conformance: derived
     contracts:
@@ -277,8 +282,14 @@ score:
       total: 6
     mcp: first-party
     skills: unknown
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

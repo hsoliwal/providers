@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -441,7 +441,7 @@ modified: '2026-05-19'
 name: Adobe Illustrator
 nav: Providers
 network: true
-overview: 'Adobe Illustrator publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Application API, Artboards API, Documents API, and 6 more. Tagged areas include Creative Cloud, Design, Illustrator, and Vector Graphics.
+overview: 'Adobe Illustrator publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Application API, Artboards API, Documents API, and 8 more. Tagged areas include Creative Cloud, Design, Illustrator, and Vector Graphics.
 
 
   The Adobe Illustrator catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -481,7 +481,7 @@ rules:
   slug: adobe-illustrator-spectral-rules
 score:
   band: developing
-  composite: 44.3
+  composite: 45.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 56.5
@@ -493,11 +493,11 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 13.6
-    contract_quality: 54.9
+    contract_quality: 50.1
     developer_ergonomics: 27.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 55.3
-  previous_composite: 44.3
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     contracts:
@@ -505,8 +505,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

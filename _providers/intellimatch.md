@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -117,7 +117,7 @@ modified: '2026-09-13'
 name: IntelliMatch
 nav: Providers
 network: true
-overview: IntelliMatch is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Reconciliation, Financial-Services, Matching, Exception Management, and Banking.
+overview: IntelliMatch is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Reconciliation, Financial Services, Matching, Exception Management, and Banking.
 plans:
 - name: Intellimatch Plans Pricing
   plan_count: 0
@@ -129,7 +129,7 @@ rate_limits:
   slug: intellimatch-rate-limits
 score:
   band: minimal
-  composite: 7.1
+  composite: 7.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -143,9 +143,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 7.1
+  previous_composite: 7.3
   provenance:
     conformance: first-party
   regulatory:
@@ -153,9 +153,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 21.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,12 +173,12 @@ security:
 slug: intellimatch
 tags:
 - Reconciliation
-- Financial-Services
+- Financial Services
 - Matching
 - Exception Management
 - Banking
 - Treasury
-- Swift
+- SWIFT
 - Data Integrity
 website: https://www.fisglobal.com/products/fis-data-integrity-manager
 ---

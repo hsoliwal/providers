@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -101,7 +101,7 @@ modified: '2026-05-19'
 name: Federal Bureau of Investigation
 nav: Providers
 network: true
-overview: 'Federal Bureau of Investigation publishes 1 API on the [APIs.io](https://apis.io/) network: List API. Tagged areas include FBI and Federal-Government.
+overview: 'Federal Bureau of Investigation publishes 2 APIs on the [APIs.io](https://apis.io/) network, including List API, and 1 more. Tagged areas include FBI and Federal Government.
 
 
   Federal Bureau of Investigation''s developer surface includes documentation and 5 more developer resources.'
@@ -116,7 +116,7 @@ rate_limits:
   slug: federal-bureau-of-investigation-rate-limits
 score:
   band: emerging
-  composite: 21.9
+  composite: 21.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -128,11 +128,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 21.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 21.0
   provenance:
     agentic_access: derived
     contracts:
@@ -145,9 +150,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,6 +167,6 @@ security:
 slug: federal-bureau-of-investigation
 tags:
 - FBI
-- Federal-Government
+- Federal Government
 website: https://www.fbi.gov/
 ---

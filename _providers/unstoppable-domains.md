@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 89
   human_in_the_loop: 6
@@ -49,7 +49,7 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Manage your account details
-  name: Unstoppable Domains account API
+  name: Unstoppable Domains Account API
   slug: unstoppable-domains-account-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -69,7 +69,7 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Create and manage ICANN-required contacts for domain registration. Contacts represent individuals or organizations associated with domain roles (owner, admin, tech, billing). New contacts are automati
-  name: Unstoppable Domains contacts API
+  name: Unstoppable Domains Contacts API
   slug: unstoppable-domains-contacts-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -79,37 +79,37 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Create, read, update and delete DNS records for your domains. Also includes DNS metadata, nameserver management, and DNSSEC configuration.
-  name: Unstoppable Domains dns-records API
+  name: Unstoppable Domains Dns Records API
   slug: unstoppable-domains-dns-records-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: View and update the ICANN-required contacts (owner, admin, tech, billing) assigned to a specific domain.
-  name: Unstoppable Domains domain-contacts API
+  name: Unstoppable Domains Domain Contacts API
   slug: unstoppable-domains-domain-contacts-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: View and manage domain flags that control behavior and security settings such as DNS resolution, transfer locks, WHOIS privacy, and more.
-  name: Unstoppable Domains domain-flags API
+  name: Unstoppable Domains Domain Flags API
   slug: unstoppable-domains-domain-flags-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Comprehensive domain updates — modify nameservers, DNSSEC, contacts, flags, and DNS records in a single request.
-  name: Unstoppable Domains domain-management API
+  name: Unstoppable Domains Domain Management API
   slug: unstoppable-domains-domain-management-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Domain details/availability lookups and registration.
-  name: Unstoppable Domains domain_registration API
+  name: Unstoppable Domains Domain Registration API
   slug: unstoppable-domains-domain-registration-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Search for domain availability and retrieve details for one or more domains. Use the `$expand` parameter to include registration details and flags in the response.
-  name: Unstoppable Domains domain-search API
+  name: Unstoppable Domains Domain Search API
   slug: unstoppable-domains-domain-search-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Check transfer eligibility and retrieve authorization codes for transferring domains to another registrar.
-  name: Unstoppable Domains domain-transfers API
+  name: Unstoppable Domains Domain Transfers API
   slug: unstoppable-domains-domain-transfers-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -119,17 +119,17 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: 'Manage domains that are owned in external, self-custody wallets. The key difference between Custody and Self-Custody operations is that all Self-Custody operations require a signature from the domain '
-  name: Unstoppable Domains external_domains API
+  name: Unstoppable Domains External Domains API
   slug: unstoppable-domains-external-domains-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: 'Manage self-custody wallets to allow for management of self-custody domains. ## Verifying Self-Custody Wallets Before you can initiate self-custody operations, you must first [verify the self-custody '
-  name: Unstoppable Domains external_wallets API
+  name: Unstoppable Domains External Wallets API
   slug: unstoppable-domains-external-wallets-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Configure how your domains serve content on the web. Hosting configurations control what happens when someone visits your domain — whether it redirects to another URL or proxies content from another s
-  name: Unstoppable Domains hosting API
+  name: Unstoppable Domains Hosting API
   slug: unstoppable-domains-hosting-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -139,12 +139,12 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Browse and search the Unstoppable Domains secondary marketplace. Retrieve paginated listings of domains available for purchase from existing owners, with filtering by TLD and sorting options.
-  name: Unstoppable Domains marketplace API
+  name: Unstoppable Domains Marketplace API
   slug: unstoppable-domains-marketplace-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: All asynchronous processes handled by the API are represented as Operations. This includes registering a domain, updating a domain's records, changing a domain's owner, returning a domain and more.
-  name: Unstoppable Domains operations API
+  name: Unstoppable Domains Operations API
   slug: unstoppable-domains-operations-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -154,7 +154,7 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Search for owned domains
-  name: Unstoppable Domains owners API
+  name: Unstoppable Domains Owners API
   slug: unstoppable-domains-owners-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -164,7 +164,7 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Retrieve pricing information for domain registration, renewal, transfer, and restoration by domain name or TLD.
-  name: Unstoppable Domains pricing API
+  name: Unstoppable Domains Pricing API
   slug: unstoppable-domains-pricing-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -179,7 +179,7 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Search for owned entities
-  name: Unstoppable Domains search API
+  name: Unstoppable Domains Search API
   slug: unstoppable-domains-search-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
@@ -194,22 +194,22 @@ apis:
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Suggestions for finding available domains
-  name: Unstoppable Domains suggestions API
+  name: Unstoppable Domains Suggestions API
   slug: unstoppable-domains-suggestions-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Browse available top-level domains (TLDs), their details, and DNS security configuration.
-  name: Unstoppable Domains tlds API
+  name: Unstoppable Domains Tlds API
   slug: unstoppable-domains-tlds-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: Manage custody wallets used for storing and managing domains without any signature collection. These wallets provide the most streamlined way to interact with domains since the initial management requ
-  name: Unstoppable Domains wallets API
+  name: Unstoppable Domains Wallets API
   slug: unstoppable-domains-wallets-api
 - baseURL: https://api.unstoppabledomains.com/resolve
   baseurl_source: declared
   description: 'Manage webhooks used for asynchronous updates to your server. You can follow our getting started guide here: [Webhooks in the Partner API](https://docs.unstoppabledomains.com/domain-distribution-and-m'
-  name: Unstoppable Domains webhooks API
+  name: Unstoppable Domains Webhooks API
   slug: unstoppable-domains-webhooks-api
 artifact_total: 74
 collections:
@@ -412,7 +412,7 @@ modified: '2026-09-16'
 name: Unstoppable Domains
 nav: Providers
 network: true
-overview: 'Unstoppable Domains publishes 33 APIs on the [APIs.io](https://apis.io/) network, including account API, AI Lander API, Backorders API, and 30 more. Tagged areas include Web3, Blockchain, Domain Names, NFT Domains, and Crypto.
+overview: 'Unstoppable Domains publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Lander API, Backorders API, and 30 more. Tagged areas include Web3, Blockchain, Domain Names, NFT Domains, and Crypto.
 
 
   Unstoppable Domains'' developer surface includes authentication, documentation, API reference, sandbox, pricing, engineering blog, and 13 more developer resources.'
@@ -427,23 +427,23 @@ rate_limits:
   slug: unstoppable-domains-rate-limits
 score:
   band: developing
-  composite: 42.0
+  composite: 40.2
   coverage:
     artifact_dirs: 12
-    catalog_earned: 60.0
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 60.0
+    contract_quality: 54.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 26.3
-  previous_composite: 42.0
+    discoverability: 71.4
+    operational_transparency: 24.2
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     contracts:
@@ -451,8 +451,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 33
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

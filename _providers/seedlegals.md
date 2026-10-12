@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -111,7 +111,7 @@ layout: provider
 mcp_servers:
 - description: Hosted Model Context Protocol server operated by SeedLegals at https://api.seedlegals.com/mcp. Discovered via RFC 8414 OAuth Authorization Server Metadata and RFC 9728 OAuth Protected Resource Metadat
   name: SeedLegals MCP Server
-  slug: seedlegals-mcp-server
+  slug: seedlegals
 modified: '2026-07-21'
 name: SeedLegals
 nav: Providers
@@ -128,7 +128,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.4
+  composite: 22.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,14 +142,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 19.4
+  previous_composite: 22.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,6 +182,5 @@ tags:
 - Equity
 - Compliance
 - MCP
-- OpenID Connect
 website: https://seedlegals.com
 ---

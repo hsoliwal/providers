@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Fidor''s REST API for Customers, Accounts, Transfers, Transactions and Account Information, secured with OAuth2 (authorization-code flow). Now retired: the sandbox (*.sandbox.fidor.com) and production '
@@ -92,7 +92,7 @@ overview: 'Fidor Bank publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 21
 score:
   band: minimal
-  composite: 7.5
+  composite: 0.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -105,9 +105,9 @@ score:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 19.0
-    discoverability: 68.5
-    operational_transparency: 2.6
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -116,21 +116,22 @@ score:
     regions:
     - dach
     - europe
+  lifecycle: defunct
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
     owner: catalog
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 7.5
+  previous_composite: 0.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

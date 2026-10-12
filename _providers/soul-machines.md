@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Real-time WebSocket session API used by the Web SDK to connect a browser client to a Digital Person running on the Soul Machines session server. A session is authenticated with either an API key (conf
@@ -160,9 +160,9 @@ description: Soul Machines builds autonomously animated "Digital People" — AI-
 image: https://github.com/soulmachines.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.soulmachines.com over HTTP; 7 tools listed.
   name: Soul Machines MCP Server
-  slug: soul-machines-mcp-server
+  slug: soul-machines-site
 modified: '2026-07-21'
 name: Soul Machines
 nav: Providers
@@ -177,7 +177,7 @@ overview: 'Soul Machines publishes 2 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 16
 score:
   band: thin
-  composite: 35.6
+  composite: 36.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -189,15 +189,21 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 35.6
+  previous_composite: 36.0
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

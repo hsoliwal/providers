@@ -34,43 +34,43 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: The authorizations API from OpenLattice — 1 operation(s) for authorizations.
-  name: OpenLattice authorizations API
+  name: OpenLattice Authorizations API
   slug: openlattice-authorizations-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: API endpoints to reading and writing data.
-  name: OpenLattice data API
+  name: OpenLattice Data API
   slug: openlattice-data-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: API endpoints to the entity data model.
-  name: OpenLattice edm API
+  name: OpenLattice Edm API
   slug: openlattice-edm-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: API endpoints related to organizations.
-  name: OpenLattice organizations API
+  name: OpenLattice Organizations API
   slug: openlattice-organizations-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: API endpoints for permissions for organisations, roles and users.
-  name: OpenLattice permissions API
+  name: OpenLattice Permissions API
   slug: openlattice-permissions-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: The principal API from OpenLattice — 5 operation(s) for principal.
-  name: OpenLattice principal API
+  name: OpenLattice Principal API
   slug: openlattice-principal-api
 - baseURL: https://api.openlattice.com
   baseurl_source: declared
   description: API endpoints to search data.
-  name: OpenLattice search API
+  name: OpenLattice Search API
   slug: openlattice-search-api
 artifact_total: 20
 collections:
@@ -189,7 +189,7 @@ modified: '2026-07-20'
 name: OpenLattice
 nav: Providers
 network: true
-overview: 'OpenLattice publishes 7 APIs on the [APIs.io](https://apis.io/) network, including authorizations API, data API, edm API, and 4 more. Tagged areas include Company, Data Integration, Entity Data Model, Public Sector, and Analytics.
+overview: 'OpenLattice publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authorizations API, Data API, Edm API, and 4 more. Tagged areas include Company, Data Integration, Entity Data Model, Public Sector, and Analytics.
 
 
   OpenLattice''s developer surface includes pricing, authentication, and 15 more developer resources.'
@@ -207,7 +207,7 @@ rate_limits:
   slug: openlattice-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 31.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -215,15 +215,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.4
+  delta: 0.0
   facets:
     access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 43.9
+    contract_quality: 39.8
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 25.0
+  previous_composite: 31.8
   provenance:
     contracts:
       callable: 0.0
@@ -237,10 +237,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 11.1

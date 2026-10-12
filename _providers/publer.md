@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -282,7 +282,7 @@ modified: '2026-08-13'
 name: Publer
 nav: Providers
 network: true
-overview: 'Publer publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Analytics API, Competitors API, and 5 more. Tagged areas include Social-Media, Scheduling, Publishing, Content Management, and Marketing.
+overview: 'Publer publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Analytics API, Competitors API, and 5 more. Tagged areas include Social Media, Scheduling, Publishing, Content Management, and Marketing.
 
 
   Publer''s developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, support, pricing, and 26 more developer resources.'
@@ -297,12 +297,12 @@ rate_limits:
   slug: publer-rate-limits
 scopes:
 - name: Publer Scopes
-  scope_count: 0
+  scope_count: 5
   slug: publer-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 40.6
+  composite: 40.4
   coverage:
     artifact_dirs: 24
     catalog_earned: 64.0
@@ -314,11 +314,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 22.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 40.6
+  previous_composite: 40.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -329,8 +329,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -347,7 +353,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: publer
 tags:
-- Social-Media
+- Social Media
 - Scheduling
 - Publishing
 - Content Management

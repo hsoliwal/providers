@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 13
 common:
@@ -102,7 +102,7 @@ modified: '2026-06-03'
 name: Papa John's International
 nav: Providers
 network: true
-overview: Papa John's International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Food Service, Restaurant, QSR, Pizza, and Online Ordering.
+overview: Papa John's International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Food Service, Restaurant, Quick Service Restaurant, Pizza, and Online Ordering.
 plans:
 - name: Papa Johns International Plans Pricing
   plan_count: 1
@@ -114,7 +114,7 @@ rate_limits:
   slug: papa-johns-international-rate-limits
 score:
   band: minimal
-  composite: 8.7
+  composite: 7.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 34.0
@@ -128,11 +128,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 8.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +154,7 @@ slug: papa-johns-international
 tags:
 - Food Service
 - Restaurant
-- QSR
+- Quick Service Restaurant
 - Pizza
 - Online Ordering
 - Delivery

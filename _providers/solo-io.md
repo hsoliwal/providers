@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://portal.example.com/v1
@@ -111,7 +111,7 @@ apis:
 - baseURL: https://portal.example.com/v1
   baseurl_source: declared
   description: The APIs API from Solo.io — 5 operation(s) for apis.
-  name: Solo.io AP Is API
+  name: Solo.io APIs API
   slug: solo-io-apis-api
 artifact_total: 74
 asyncapis:
@@ -168,6 +168,11 @@ collections:
   name: GuardRail Webhook Webhooks API
   slug: open-solo-io-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/solo-io/refs/heads/main/capabilities/solo-io-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/solo-io-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -540,7 +545,7 @@ layout: provider
 mcp_servers:
 - description: First-party Solo.io MCP server that analyzes `istioctl bug-report` archives, identifies common Istio problems, and suggests remediation steps. It ships with a packaged agent skill (`/istio-report-asse
   name: Solo.io MCP Server
-  slug: soloio-mcp-server
+  slug: istio-bug-report-analyzer-mcp
 modified: '2026-08-08'
 name: Solo.io
 nav: Providers
@@ -551,7 +556,7 @@ overview: 'Solo.io publishes 15 APIs on the [APIs.io](https://apis.io/) network,
   The Solo.io catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Solo.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 49 more developer resources.'
+  Solo.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 50 more developer resources.'
 plans:
 - name: Solo Io Plans Pricing
   plan_count: 3
@@ -574,21 +579,21 @@ rules:
   slug: solo-io-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 62.4
+  composite: 63.0
   coverage:
-    artifact_dirs: 32
-    catalog_earned: 62.3
+    artifact_dirs: 33
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 65.8
-    contract_governance: 29.5
-    contract_quality: 69.7
+    contract_governance: 28.0
+    contract_quality: 64.5
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 52.6
   open_source:
     applies: true
@@ -603,8 +608,14 @@ score:
       total: 15
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -636,11 +647,11 @@ tags:
 - Istio
 - Envoy
 - AI Gateway
-- Agentic AI
+- AI Agents
 - MCP
 - Developer Portal
 - Cloud-Native
-- Open-Source
+- Open Source
 use_cases:
 - description: Replace legacy API gateways with a Kubernetes-native, Envoy-based gateway.
   name: API Gateway Modernization

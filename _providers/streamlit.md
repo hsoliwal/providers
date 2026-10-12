@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -81,6 +81,11 @@ collections:
   name: Streamlit Community Cloud Apps Workspaces API
   slug: open-streamlit-workspaces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/streamlit/refs/heads/main/capabilities/streamlit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/streamlit-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/streamlit/refs/heads/main/agentic-access/streamlit-agentic-access.yml
   title: ''
@@ -197,13 +202,13 @@ modified: '2026-05-19'
 name: Streamlit
 nav: Providers
 network: true
-overview: 'Streamlit publishes 3 APIs on the [APIs.io](https://apis.io/) network: Apps API, Secrets API, and Workspaces API. Tagged areas include Data Science, Machine-Learning, Open-Source, Python, and Web Applications.
+overview: 'Streamlit publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Secrets API, Workspaces API, and 1 more. Tagged areas include Data Science, Machine Learning, Open Source, Python, and Web Applications.
 
 
   The Streamlit catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Streamlit''s developer surface includes authentication, documentation, GitHub presence, engineering blog, changelog, signup flow, and 14 more developer resources.'
+  Streamlit''s developer surface includes authentication, documentation, GitHub presence, engineering blog, changelog, signup flow, and 15 more developer resources.'
 plans:
 - name: Streamlit Plans Pricing
   plan_count: 3
@@ -237,9 +242,9 @@ rules:
   slug: streamlit-rules
 score:
   band: developing
-  composite: 42.9
+  composite: 43.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 50.5
     catalog_earned_first_party: 0.0
     catalog_gap: 64.5
@@ -249,11 +254,11 @@ score:
   facets:
     access_clarity: 57.9
     contract_governance: 13.6
-    contract_quality: 57.1
+    contract_quality: 51.8
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 42.9
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     contracts:
@@ -261,8 +266,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -284,8 +295,8 @@ security:
 slug: streamlit
 tags:
 - Data Science
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Python
 - Web Applications
 website: https://streamlit.io

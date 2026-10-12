@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -137,7 +137,7 @@ modified: '2026-05-19'
 name: Hyperledger
 nav: Providers
 network: true
-overview: 'Hyperledger publishes 1 API on the [APIs.io](https://apis.io/) network: Eth API. Tagged areas include Blockchain, Distributed Ledger, Enterprise, Linux Foundation, and Smart Contracts.
+overview: 'Hyperledger publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Eth API, and 4 more. Tagged areas include Blockchain, Distributed Ledger, Enterprise, Linux Foundation, and Smart Contracts.
 
 
   The Hyperledger catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -166,7 +166,7 @@ rules:
   slug: hyperledger-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 25.2
+  composite: 22.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 44.3
@@ -178,11 +178,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 25.2
+  previous_composite: 22.4
   provenance:
     agentic_access: derived
     contracts:
@@ -190,8 +190,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

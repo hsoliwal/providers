@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: OpenAI-, Anthropic- and Gemini-compatible inference gateway. One API key and one base URL route requests across 131 listed models from 22 vendors, with cross-provider failover, prompt caching and per-
@@ -172,7 +172,7 @@ modified: '2026-08-26'
 name: PaleBlueDot.AI
 nav: Providers
 network: true
-overview: 'PaleBlueDot.AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine-Learning, LLM, Inference, and API Gateway.
+overview: 'PaleBlueDot.AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine Learning, LLM, Inference, and API Gateway.
 
 
   PaleBlueDot.AI''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, changelog, and 19 more developer resources.'
@@ -187,7 +187,7 @@ rate_limits:
   slug: palebluedotai-rate-limits
 score:
   band: developing
-  composite: 40.8
+  composite: 42.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 57.0
@@ -201,14 +201,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 40.8
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,7 +237,7 @@ security:
 slug: palebluedotai
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Inference
 - API Gateway

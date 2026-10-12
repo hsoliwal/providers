@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 created: '2024-01-15'
@@ -47,7 +47,7 @@ overview: Qube is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 11
 score:
   band: minimal
-  composite: 3.2
+  composite: 0.7
   coverage:
     artifact_dirs: 1
     catalog_earned: 17.0
@@ -61,7 +61,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 31.5
+    discoverability: 30.4
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -71,12 +71,15 @@ score:
       reason: no_resolvable_host
     - owner: catalog
       reason: never_enriched
-  previous_composite: 3.2
+  previous_composite: 0.7
   regulatory:
-    note: provider declares no identity tags; regime could not be determined
-    undetermined: true
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

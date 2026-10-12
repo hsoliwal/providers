@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Provides access to Bloomberg's extensive financial data including real-time quotes, historical data, reference data, and analytics.
@@ -172,7 +172,7 @@ modified: '2026-09-16'
 name: Bloomberg Data
 nav: Providers
 network: true
-overview: 'Bloomberg Data publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Financial-Services, Market Data, News, and Real-Time Data.
+overview: 'Bloomberg Data publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Financial Services, Market Data, News, and Real-Time Data.
 
 
   Bloomberg Data''s developer surface includes developer portal, documentation, support, authentication, API reference, and 20 more developer resources.'
@@ -192,7 +192,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.4
+  composite: 30.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 35.0
@@ -206,9 +206,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 33.4
+  previous_composite: 30.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -217,9 +217,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -242,7 +242,7 @@ security:
 slug: bloomberg-data
 tags:
 - Analytics
-- Financial-Services
+- Financial Services
 - Market Data
 - News
 - Real-Time Data

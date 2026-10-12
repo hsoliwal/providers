@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -185,7 +185,7 @@ modified: '2026-09-16'
 name: Bloomberg EMSX
 nav: Providers
 network: true
-overview: 'Bloomberg EMSX publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Brokers API, Field Lists API, Fills API, and 3 more. Tagged areas include Bloomberg, Execution Management, Financial-Services, Order Management, and Trading.
+overview: 'Bloomberg EMSX publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Brokers API, Field Lists API, Fills API, and 4 more. Tagged areas include Bloomberg, Execution Management, Financial Services, Order Management, and Trading.
 
 
   The Bloomberg EMSX catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -213,8 +213,8 @@ rules:
     warn: 3
   slug: bloomberg-emsx-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 38.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 44.3
@@ -226,11 +226,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 9.8
-    contract_quality: 63.8
+    contract_quality: 58.0
     developer_ergonomics: 42.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 42.4
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     contracts:
@@ -243,9 +243,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 61.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -268,7 +268,7 @@ slug: bloomberg-emsx
 tags:
 - Bloomberg
 - Execution Management
-- Financial-Services
+- Financial Services
 - Order Management
 - Trading
 website: https://bloomberg.com

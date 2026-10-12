@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -141,7 +141,7 @@ modified: '2026-05-19'
 name: OpenFIGI
 nav: Providers
 network: true
-overview: 'OpenFIGI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Filter API, Mapping API, and Search API. Tagged areas include Financial and Instruments.
+overview: 'OpenFIGI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Filter API, Mapping API, and Search API. Tagged areas include Finance and Instruments.
 
 
   OpenFIGI''s developer surface includes authentication, product news, signup flow, FAQ, engineering blog, and 7 more developer resources.'
@@ -156,7 +156,7 @@ rate_limits:
   slug: openfigi-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 33.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -168,11 +168,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 60.5
+    contract_quality: 54.8
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 58.9
     operational_transparency: 10.5
-  previous_composite: 35.0
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -180,8 +180,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -198,7 +204,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: openfigi
 tags:
-- Financial
+- Finance
 - Instruments
 website: https://www.openfigi.com/
 ---

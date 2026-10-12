@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -100,6 +100,11 @@ collections:
   name: Badger Maps API
   slug: open-badger-maps
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/badger-maps/refs/heads/main/capabilities/badger-maps-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/badger-maps-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/badger-maps/refs/heads/main/agentic-access/badger-maps-agentic-access.yml
   title: ''
@@ -268,7 +273,7 @@ overview: 'Badger Maps publishes 5 APIs on the [APIs.io](https://apis.io/) netwo
   The Badger Maps catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Badger Maps'' developer surface includes authentication, documentation, engineering blog, sandbox, API reference, getting-started guide, support, and 26 more developer resources.'
+  Badger Maps'' developer surface includes authentication, documentation, engineering blog, sandbox, API reference, getting-started guide, support, and 27 more developer resources.'
 plans:
 - name: Badger Maps Plans Pricing
   plan_count: 6
@@ -280,9 +285,9 @@ rate_limits:
   slug: badger-maps-rate-limits
 score:
   band: strong
-  composite: 57.4
+  composite: 57.1
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -292,11 +297,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 4.5
-    contract_quality: 66.8
+    contract_quality: 61.3
     developer_ergonomics: 48.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 57.9
-  previous_composite: 57.4
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -307,8 +312,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -11,7 +11,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.7
-  scored_at: '2026-09-20'
+  score: 40.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SCE's Customer Data Access (CDA) platform, through which a customer can authorize a registered third party to receive their electric usage and billing data. SCE states on its public third-party page t
@@ -188,14 +189,14 @@ modified: '2026-09-16'
 name: Southern California Edison
 nav: Providers
 network: true
-overview: 'Southern California Edison publishes 4 APIs on the [APIs.io](https://apis.io/) network, including DRPEP Portal API, Feature Services API, Query API, and 1 more. Tagged areas include Energy, United States, Utilities, Electricity, and Smart Metering.
+overview: 'Southern California Edison publishes 5 APIs on the [APIs.io](https://apis.io/) network, including DRPEP Portal API, Feature Services API, Query API, and 2 more. Tagged areas include Energy, United States, Utilities, Electricity, and Smart Metering.
 
 
   Southern California Edison''s developer surface includes developer portal, signup flow, documentation, support, authentication, and 19 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 30.3
+  composite: 28.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 32.0
@@ -209,7 +210,7 @@ score:
     contract_governance: 4.5
     contract_quality: 13.1
     developer_ergonomics: 44.6
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -218,7 +219,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.3
+  previous_composite: 28.0
   provenance:
     conformance: derived
     contracts:
@@ -232,9 +233,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

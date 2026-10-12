@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zenbu-2/refs/heads/main/security/zenbu-2-domain-security.yml
@@ -97,6 +97,10 @@ created: '2026-07-17'
 description: Zenbu is a Y Combinator (Spring 2026) developer-tools startup building a fully hackable desktop interface for managing AI coding agents. The macOS app is a customizable client for the "Pi" coding agent, letting developers run multiple agents in parallel across Git worktrees, review changes, and extend the app at runtime through plugins. Zenbu is built on Zenbu.js, the company's open-source TypeScript framework for building extensible ("hackable") applications, which handles plugin loading, cross-process state sync, RPC, and hot reloading. The framework and its scaffolding tooling are published to npm under the zenbu-labs organization. Zenbu does not currently expose a hosted HTTP/REST developer API; its developer surface is the client-side Zenbu.js framework, its plugin model, and its command-line scaffolders. Founded by Rob Pruzan (ex-Vercel Next.js core, co-author of React Scan).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zenbu-2.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.mintlify.app over HTTP; 3 tools listed.
+  name: Zenbu 2 MCP Server
+  slug: zenbu-2
 modified: '2026-07-21'
 name: Zenbu 2
 nav: Providers
@@ -108,7 +112,7 @@ overview: 'Zenbu 2 is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 5
 score:
   band: emerging
-  composite: 16.1
+  composite: 14.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -122,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 16.1
+  previous_composite: 14.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -147,7 +157,7 @@ tags:
 - AI Coding Agents
 - Framework
 - SDK
-- Open-Source
+- Open Source
 - Desktop Application
 - Y Combinator
 website: https://tryzenbu.dev/

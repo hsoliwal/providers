@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.4
-  scored_at: '2026-09-20'
+  score: 3.2
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -190,7 +190,7 @@ overview: 'Cask Data is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 15
 score:
   band: emerging
-  composite: 23.1
+  composite: 24.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 27.0
@@ -204,14 +204,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 65.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 23.1
+  previous_composite: 24.0
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,7 +246,7 @@ tags:
 - ETL
 - Big Data
 - Analytics
-- Open-Source
+- Open Source
 - Hadoop
 - CDAP
 website: https://cdap.io

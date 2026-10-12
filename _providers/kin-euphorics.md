@@ -14,7 +14,7 @@ agent_readiness:
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: true
+    agentic_access: unknown
     agentic_commerce: platform
     auth_clarity: served
     consent_identity: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 20.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Kin Euphorics Shopify storefront agent-commerce surface. Its UCP discovery document (/.well-known/ucp) advertises a Universal Commerce Protocol shopping service over MCP transport, supporting cata
@@ -113,9 +113,9 @@ description: 'Kin Euphorics is a non-alcoholic functional beverage company that 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kin-euphorics.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at kin-cocktails.myshopify.com over HTTP.
   name: UCP / MCP Shopping Server
-  slug: ucp-mcp-shopping-server
+  slug: kin-euphorics-shopping
 modified: '2026-07-19'
 name: Kin Euphorics
 nav: Providers
@@ -132,7 +132,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.6
+  composite: 22.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -146,13 +146,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 20.6
+  previous_composite: 22.6
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

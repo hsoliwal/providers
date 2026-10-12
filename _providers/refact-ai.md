@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Local HTTP/LSP API exposed by the Rust `refact-lsp` engine that runs inside the user''s IDE or as a standalone server. Implements the agent runtime: provider/model capabilities, chat command queueing, '
@@ -204,7 +204,7 @@ overview: 'Refact.ai publishes 2 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 18
 score:
   band: emerging
-  composite: 14.3
+  composite: 12.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -218,11 +218,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 14.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +254,7 @@ tags:
 - JetBrains
 - Self-Hosting
 - On-Premises
-- Open-Source
+- Open Source
 - LSP
 - MCP
 - Fine-Tuning

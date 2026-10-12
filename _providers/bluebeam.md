@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -184,7 +184,7 @@ modified: '2026-09-16'
 name: Bluebeam
 nav: Providers
 network: true
-overview: 'Bluebeam publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Markups API, Sessions API, and 1 more. Tagged areas include Construction, PDF, Project Management, and Documents.
+overview: 'Bluebeam publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Markups API, Sessions API, and 2 more. Tagged areas include Construction, PDF, Project Management, and Documents.
 
 
   The Bluebeam catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -218,7 +218,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 36.3
+  composite: 36.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 44.3
@@ -230,11 +230,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 59.0
+    contract_quality: 53.5
     developer_ergonomics: 47.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 26.3
-  previous_composite: 36.3
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     contracts:
@@ -242,8 +242,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

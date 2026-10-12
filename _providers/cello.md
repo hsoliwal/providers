@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 59.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -277,9 +277,9 @@ description: Cello is an all-in-one, AI-powered referral platform for SaaS compa
 image: https://cello.so/wp-content/uploads/2022/12/Group-174900-1.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.cello.so over HTTP requiring OAuth; 8 tools listed.
   name: Cello MCP Server
-  slug: cello-mcp-server
+  slug: cello
 modified: '2026-08-13'
 name: Cello
 nav: Providers
@@ -299,12 +299,12 @@ rate_limits:
   slug: cello-rate-limits
 scopes:
 - name: Cello Scopes
-  scope_count: 0
+  scope_count: 2
   slug: cello-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: strong
-  composite: 56.9
+  composite: 58.9
   coverage:
     artifact_dirs: 26
     catalog_earned: 49.0
@@ -316,11 +316,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 56.7
+    contract_quality: 51.1
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 56.9
+  previous_composite: 58.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -331,8 +331,20 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -357,5 +369,6 @@ tags:
 - Attribution
 - Partner Programs
 - Ai Enterprise Software
+- A2A
 website: https://www.cello.so/
 ---

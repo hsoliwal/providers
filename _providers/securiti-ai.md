@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -242,14 +242,14 @@ modified: '2026-05-25'
 name: Securiti
 nav: Providers
 network: true
-overview: 'Securiti is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Data Security, Data Privacy, AI Governance, AI Security, and DSPM.
+overview: 'Securiti is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Data Security, Privacy, AI Governance, AI Security, and DSPM.
 
 
   Securiti''s developer surface includes developer portal, documentation, signup flow, engineering blog, product news, YouTube channel, and 43 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 14.8
+  composite: 13.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -263,11 +263,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 14.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -282,7 +288,7 @@ security:
 slug: securiti-ai
 tags:
 - Data Security
-- Data Privacy
+- Privacy
 - AI Governance
 - AI Security
 - DSPM
@@ -310,7 +316,6 @@ tags:
 - Gencore AI
 - Agent Commander
 - LLM Firewalls
-- Vector Database
 - Knowledge Graph
 - Connectors
 - Hybrid Multicloud

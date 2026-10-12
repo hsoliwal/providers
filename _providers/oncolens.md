@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -159,12 +159,12 @@ rate_limits:
   slug: oncolens-rate-limits
 scopes:
 - name: Oncolens Scopes
-  scope_count: 0
+  scope_count: 14
   slug: oncolens-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 22.8
+  composite: 19.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -178,9 +178,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 22.8
+  previous_composite: 19.8
   provenance:
     conformance: first-party
   regulatory:
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 61.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A single GraphQL endpoint exposing the Accord data model — accords, stages, steps, stakeholders, playbooks, resources, summaries, engagement and CRM sync objects. The public reference documents 461 qu
@@ -181,7 +181,7 @@ mcp_servers:
   slug: accord-mcp-server
 - description: ''
   name: Accord MCP Server
-  slug: accord-mcp-server-2
+  slug: mcp
 modified: '2026-09-06'
 name: Accord
 nav: Providers
@@ -201,12 +201,12 @@ rate_limits:
   slug: accordacff-rate-limits
 scopes:
 - name: Accordacff Scopes
-  scope_count: 0
+  scope_count: 2
   slug: accordacff-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorization_code/refresh_token
 score:
   band: developing
-  composite: 39.6
+  composite: 43.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -220,20 +220,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.6
+  previous_composite: 43.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -267,7 +275,7 @@ tags:
 - CRM
 - GraphQL
 - MCP
-- agent-native
+- Agent-Native
 - Software-as-a-Service
 - Company
 website: https://inaccord.com/

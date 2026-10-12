@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -81,7 +81,7 @@ overview: 'Chestnut is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 20
 score:
   band: minimal
-  composite: 8.8
+  composite: 9.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -95,17 +95,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 8.8
+  previous_composite: 9.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 18.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -125,7 +125,7 @@ tags:
 - Insurance Distribution
 - Producer Management
 - Incentive Compensation
-- Agentic AI
+- AI Agents
 - MCP
 - API-First
 website: https://www.chestnutfi.com

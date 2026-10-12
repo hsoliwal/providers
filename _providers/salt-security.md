@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Salt Security API Protection Platform provides full lifecycle API security including automated API discovery, posture governance, real-time threat protection, and remediation insights. It uses AI '
@@ -166,7 +166,7 @@ rules:
   slug: salt-security-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 13.8
+  composite: 12.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 49.3
@@ -180,11 +180,17 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 2.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

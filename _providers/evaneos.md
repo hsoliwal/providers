@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -143,7 +143,7 @@ rate_limits:
   slug: evaneos-rate-limits
 score:
   band: emerging
-  composite: 14.4
+  composite: 14.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -157,7 +157,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -167,9 +167,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 14.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

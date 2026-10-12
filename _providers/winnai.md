@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'A live remote Model Context Protocol endpoint serving WINN.AI conversation data to agents. It is published nowhere on the company''s website — it was found by probing RFC 9728 OAuth protected-resource '
@@ -141,7 +141,7 @@ layout: provider
 mcp_servers:
 - description: WINN.AI publishes a remote Model Context Protocol endpoint at https://app.winn.ai/mcp. Its existence is not documented on the marketing site or in any developer portal — it was discovered by probing R
   name: WINN.AI MCP Server
-  slug: winnai-mcp-server
+  slug: winn-ai-mcp-server
 modified: '2026-08-13'
 name: Winn.ai
 nav: Providers
@@ -161,12 +161,12 @@ rate_limits:
   slug: winnai-rate-limits
 scopes:
 - name: Winnai Scopes
-  scope_count: 0
+  scope_count: 2
   slug: winnai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: thin
-  composite: 30.1
+  composite: 33.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 53.0
@@ -180,14 +180,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 21.1
-  previous_composite: 30.1
+  previous_composite: 33.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

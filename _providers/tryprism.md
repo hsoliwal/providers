@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -48,6 +48,10 @@ created: '2026-07-17'
 description: Prism (tryprism.com) is a San Francisco, Y Combinator-backed AI-powered recruiting agency that delivers qualified talent leads to hiring teams faster and more affordably than traditional recruiters. Clients describe the role they need to fill, Prism's AI handles sourcing, screening, and candidate outreach end-to-end, and clients interview only pre-screened candidates. Pricing is 15% of first-year salary per hire (versus the typical 20-30% agency fee) plus a retainer to initiate and prioritize the search, charged only when a hire is made. As of this profile Prism operates as a managed recruiting service and publishes no public developer API, SDK, documentation, or discovery surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tryprism.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at tryprism.com over HTTP.
+  name: Tryprism MCP Server
+  slug: tryprism
 modified: '2026-07-21'
 name: Tryprism
 nav: Providers
@@ -59,7 +63,7 @@ overview: 'Tryprism is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 4
 score:
   band: minimal
-  composite: 7.1
+  composite: 4.5
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -73,13 +77,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 7.1
+  previous_composite: 4.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

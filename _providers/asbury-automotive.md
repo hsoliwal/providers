@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Clicklane is Asbury Automotive's proprietary online vehicle purchase platform that enables customers to complete the full car buying process digitally, including vehicle selection, financing, trade-in
@@ -109,7 +109,7 @@ rate_limits:
   slug: asbury-automotive-rate-limits
 score:
   band: emerging
-  composite: 13.0
+  composite: 11.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -123,11 +123,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 13.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

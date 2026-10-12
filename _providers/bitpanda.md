@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,29 +33,29 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://developer.bitpanda.com
   baseurl_source: declared
   description: Asset metadata lookup
-  name: Bitpanda assets API
+  name: Bitpanda Assets API
   slug: bitpanda-assets-api
 - baseURL: https://developer.bitpanda.com
   baseurl_source: declared
   description: Live ticker prices
-  name: Bitpanda market-data API
+  name: Bitpanda Market Data API
   slug: bitpanda-market-data-api
 - baseURL: https://developer.bitpanda.com
   baseurl_source: declared
   description: Transaction history across all asset types
-  name: Bitpanda transactions API
+  name: Bitpanda Transactions API
   slug: bitpanda-transactions-api
 - baseURL: https://developer.bitpanda.com
   baseurl_source: declared
   description: Wallet balances across all asset types
-  name: Bitpanda wallets API
+  name: Bitpanda Wallets API
   slug: bitpanda-wallets-api
 artifact_total: 13
 collections:
@@ -222,19 +222,19 @@ layout: provider
 mcp_servers:
 - description: Official Bitpanda MCP server maintained by Bitpanda Labs. Connects MCP-compatible AI clients (Claude, Cursor, VS Code Copilot, Windsurf) to the Bitpanda Platform API for secure, read-only access to po
   name: Bitpanda MCP Server
-  slug: bitpanda-mcp-server
+  slug: bitpanda
 modified: '2026-07-18'
 name: Bitpanda
 nav: Providers
 network: true
-overview: 'Bitpanda publishes 4 APIs on the [APIs.io](https://apis.io/) network, including assets API, market-data API, transactions API, and 1 more. Tagged areas include Company, Cryptocurrency, Fintech, Trading, and Investing.
+overview: 'Bitpanda publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Market Data API, Transactions API, and 1 more. Tagged areas include Company, Cryptocurrency, Fintech, Trading, and Investing.
 
 
   Bitpanda''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 24 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 48.4
+  composite: 45.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 48.4
+  previous_composite: 45.6
   provenance:
     conformance: first-party
     contracts:
@@ -269,9 +269,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

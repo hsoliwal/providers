@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -144,7 +144,7 @@ modified: '2026-09-16'
 name: Internet Engineering Task Force
 nav: Providers
 network: true
-overview: 'Internet Engineering Task Force publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Framework API, Identity API, and 2 more. Tagged areas include Internet, Protocol, RFC, Standards, and Working Groups.
+overview: 'Internet Engineering Task Force publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Documents API, Framework API, Identity API, and 3 more. Tagged areas include Internet, Protocol, RFC, Standards, and Working Groups.
 
 
   The Internet Engineering Task Force catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -173,7 +173,7 @@ rules:
   slug: internet-engineering-task-force-rules
 score:
   band: thin
-  composite: 30.4
+  composite: 28.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 49.0
@@ -185,11 +185,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 47.1
+    contract_quality: 42.4
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 30.4
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -197,8 +197,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

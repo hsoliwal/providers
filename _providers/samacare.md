@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The private integration API behind the SamaCare prior authorization platform, used for two-way exchange of patient demographic data, clinical documentation and prior authorization status between SamaC
@@ -153,7 +153,7 @@ rate_limits:
   slug: samacare-rate-limits
 score:
   band: emerging
-  composite: 21.6
+  composite: 20.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -167,9 +167,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 21.6
+  previous_composite: 20.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -182,9 +182,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

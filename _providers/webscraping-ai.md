@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 65.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -281,14 +281,14 @@ description: WebScraping.AI is a web scraping API that returns the rendered HTML
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/webscraping-ai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.webscraping.ai; 7 tools listed.
   name: WebScraping.AI MCP Server
-  slug: webscrapingai-mcp-server
+  slug: webscraping-ai-mcp-yml
 modified: '2026-08-09'
 name: WebScraping.AI
 nav: Providers
 network: true
-overview: 'WebScraping.AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI API, HTML API, and 2 more. Tagged areas include Web Scraping, Data Extraction, Proxies, Artificial Intelligence, and Browser Automation.
+overview: 'WebScraping.AI publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI API, HTML API, and 3 more. Tagged areas include Web Scraping, Data Extraction, Proxies, Artificial Intelligence, and Browser Automation.
 
 
   WebScraping.AI''s developer surface includes authentication, CLI, sandbox, documentation, API reference, getting-started guide, developer console, and 33 more developer resources.'
@@ -303,7 +303,7 @@ rate_limits:
   slug: webscraping-ai-rate-limits
 score:
   band: strong
-  composite: 60.4
+  composite: 60.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 61.0
@@ -315,11 +315,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 52.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 60.4
+  previous_composite: 60.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -330,8 +330,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

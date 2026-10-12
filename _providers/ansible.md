@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -198,6 +198,11 @@ collections:
   name: Ansible Automation Controller API
   slug: open-ansible
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ansible/refs/heads/main/capabilities/ansible-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ansible-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -367,13 +372,13 @@ modified: '2026-09-16'
 name: Ansible
 nav: Providers
 network: true
-overview: 'Ansible publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Credentials API, Hosts API, and 9 more. Tagged areas include Ansible, Automation, Configuration Management, DevOps, and Infrastructure as Code.
+overview: 'Ansible publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Credentials API, Hosts API, and 13 more. Tagged areas include Ansible, Automation, Configuration Management, DevOps, and Infrastructure as Code.
 
 
   The Ansible catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Ansible''s developer surface includes authentication, developer portal, getting-started guide, documentation, engineering blog, support, training material, and 20 more developer resources.'
+  Ansible''s developer surface includes authentication, developer portal, getting-started guide, documentation, engineering blog, support, training material, and 21 more developer resources.'
 plans:
 - name: Ansible Plans Pricing
   plan_count: 3
@@ -396,23 +401,23 @@ rules:
   slug: ansible-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 47.3
+  composite: 47.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 62.3
+    artifact_dirs: 19
+    catalog_earned: 61.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 53.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 25.0
-    contract_quality: 53.7
+    contract_governance: 23.5
+    contract_quality: 49.0
     developer_ergonomics: 63.1
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 36.8
-  previous_composite: 47.3
+  previous_composite: 47.8
   provenance:
     agentic_access: derived
     contracts:
@@ -420,8 +425,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -447,7 +458,7 @@ tags:
 - Configuration Management
 - DevOps
 - Infrastructure as Code
-- Open-Source
+- Open Source
 - Orchestration
 - Red Hat
 use_cases:

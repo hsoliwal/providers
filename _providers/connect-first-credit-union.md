@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -95,19 +95,19 @@ modified: '2026-07-23'
 name: connectFirst Credit Union
 nav: Providers
 network: true
-overview: 'connectFirst Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Canada, Credit Union, and Alberta.
+overview: 'connectFirst Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Credit Union, and Alberta.
 
 
   connectFirst Credit Union''s developer surface includes authentication, engineering blog, and 8 more developer resources.'
 random_paper: 3
 scopes:
 - name: Connect First Credit Union Scopes
-  scope_count: 0
+  scope_count: 2
   slug: connect-first-credit-union-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorization_code
 score:
   band: emerging
-  composite: 14.9
+  composite: 13.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -121,7 +121,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -130,7 +130,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.9
+  previous_composite: 13.1
   provenance:
     conformance: derived
   regulatory:
@@ -138,9 +138,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 55.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -158,12 +158,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: connect-first-credit-union
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Credit Union
 - Alberta
 - Cooperative
-- Data Aggregation
 website: https://www.connectfirstcu.com/
 ---

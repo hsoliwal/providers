@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -234,7 +234,7 @@ modified: '2026-05-29'
 name: QuickNode
 nav: Providers
 network: true
-overview: 'QuickNode publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Core RPC API, Account API, Batch API, and 6 more. Tagged areas include Web3, Blockchain, RPC, Streams, and IPFS.
+overview: 'QuickNode publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Core RPC API, Account API, Batch API, and 9 more. Tagged areas include Web3, Blockchain, RPC, Streams, and IPFS.
 
 
   The QuickNode catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -274,7 +274,7 @@ rules:
   slug: quicknode-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.4
+  composite: 34.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 61.5
@@ -286,11 +286,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 58.8
+    contract_quality: 54.3
     developer_ergonomics: 26.2
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 34.4
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -298,8 +298,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -330,5 +336,8 @@ tags:
 - Streams
 - IPFS
 - Multi-Chain
+- Real-Time
+- A2A
+- Ethereum
 website: https://www.quicknode.com/
 ---

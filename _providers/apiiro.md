@@ -32,10 +32,34 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/mcp/apiiro-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/apiiro-mcp.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/hosts/apiiro-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/apiiro-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/vendors/apiiro-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/apiiro-vendors.yml
+- group: build
+  href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/packages/apiiro-packages.yml
+  title: ''
+  type: SDKs
+  url: packages/apiiro-packages.yml
+- group: operate
+  title: ''
+  type: Support
+  url: https://support.apiiro.com
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/apiiro/refs/heads/main/security/apiiro-trust-center.yml
   title: ''
@@ -130,10 +154,22 @@ common:
   title: ''
   type: Security
   url: security/apiiro-vulnerability-disclosure.yml
+coverage:
+  checked: '2026-10-05'
+  detail: Documentation redirects to login at identity.apiiro.com requiring authentication.
+  evidence:
+  - status: 307
+    url: https://docs.apiiro.com/openapi.json
+  reason: sales-gate
+  state: gated
 created: '2026-07-17'
 description: Apiiro is an Application Security Posture Management (ASPM) company that helps organizations secure modern and AI-assisted ("agentic") software development. Its AppSec Data Fabric ingests code, cloud, runtime, and pipeline signals to build a Risk Graph and Software Graph, and its Guardian Agent applies AI to triage and remediate risk across AI SAST, AI SCA, AI SPM, AI threat modeling, API security, secrets security, software supply chain security (SSCS), and autofix/prevention workflows. Apiiro is a cybersecurity portfolio company of Greylock. The product API and developer documentation are gated behind an Apiiro identity provider (identity.apiiro.com); this network profile is built from Apiiro's public marketing, security.txt, status, and trust surfaces.
 image: https://www.apiiro.com/
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.apiiro.com over HTTP.
+  name: Apiiro MCP Server
+  slug: apiiro
 modified: '2026-07-17'
 name: Apiiro
 nav: Providers
@@ -141,31 +177,37 @@ network: true
 overview: 'Apiiro is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Application Security, ASPM, and DevSecOps.
 
 
-  Apiiro''s developer surface includes documentation, engineering blog, CLI, signup flow, and 17 more developer resources.'
+  Apiiro''s developer surface includes support, documentation, engineering blog, CLI, signup flow, and 21 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 15.4
+  composite: 18.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.6
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 7.1
-    discoverability: 57.4
+    developer_ergonomics: 19.0
+    discoverability: 58.3
     operational_transparency: 28.9
   previous_composite: 15.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

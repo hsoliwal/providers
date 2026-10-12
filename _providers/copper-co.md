@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://api.copper.co/platform
@@ -355,14 +355,14 @@ description: Copper is an institutional digital asset infrastructure provider he
 image: https://cdn.sanity.io/images/ih0ldmk7/production/7362d67a23ba5de367175e92536225788ede190c-2400x1181.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.copper.co over HTTP; 3 tools listed.
   name: Copper.co MCP Server
-  slug: copperco-mcp-server
+  slug: copper-developer-portal
 modified: '2026-08-04'
 name: Copper.co
 nav: Providers
 network: true
-overview: 'Copper.co publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Address Book API, Blockchain API, and 15 more. Tagged areas include Company, Digital Asset Custody, Cryptocurrency, Financial-Services, and Institutional Finance.
+overview: 'Copper.co publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Address Book API, Blockchain API, and 15 more. Tagged areas include Company, Digital Asset Custody, Cryptocurrency, Financial Services, and Institutional Finance.
 
 
   The Copper.co catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -376,7 +376,7 @@ rate_limits:
   slug: copper-co-rate-limits
 score:
   band: strong
-  composite: 57.3
+  composite: 54.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 52.0
@@ -388,17 +388,19 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 4.5
-    contract_quality: 57.9
+    contract_quality: 53.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 63.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - switzerland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 57.3
+  previous_composite: 54.8
   provenance:
     conformance: derived
     contracts:
@@ -413,9 +415,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -443,7 +445,7 @@ tags:
 - Company
 - Digital Asset Custody
 - Cryptocurrency
-- Financial-Services
+- Financial Services
 - Institutional Finance
 - Prime Brokerage
 - Collateral Management
@@ -452,5 +454,6 @@ tags:
 - Staking
 - Blockchain
 - Treasury Management
+- A2A
 website: https://copper.co/
 ---

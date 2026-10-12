@@ -35,9 +35,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 5
+artifact_total: 6
 common:
 - group: company
   title: ''
@@ -159,6 +159,10 @@ description: 'Artificial Labs is a London-based insurance technology company bui
   is genuinely and demonstrably standards-forward is ACORD: it joined the ACORD Solutions Group Licensed Integrator Partner program in October 2023, builds Contract Builder and Smart Placement on a structured data model incorporating MRCv3, ACORD GRLC and the Lloyd''s Core Data Record, validates contracts pre-submission against MRCv3 and ACORD standards, and consumes the ACORD Transcriber API for automated data extraction. That is the honest shape of this record: real, working, standards-aligned insurance APIs that are invisible from outside the contractual relationship.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.artificial.io over HTTP.
+  name: Artificial Labs MCP Server
+  slug: artificial-labs
 modified: '2026-07-25'
 name: Artificial Labs
 nav: Providers
@@ -175,7 +179,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 32.0
+  composite: 28.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -189,7 +193,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -199,7 +203,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 32.0
+  previous_composite: 28.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -208,9 +212,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 80.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

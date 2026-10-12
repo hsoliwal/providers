@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The RESO Web API is the ratified transport standard for real estate data, defined as a profile of OData 4.0/4.01 (Web API Core 2.0.0 and 2.1.0). Servers MUST expose an OData XML metadata document at /
@@ -294,14 +294,14 @@ description: 'RESO, the Real Estate Standards Organization, is the United States
 image: https://www.reso.org/wp-content/uploads/2021/04/RESO-Logo-Fullname_Horizontal_Blue.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at services.reso.org; 10 tools listed.
   name: RESO MCP server manifest (hosted cloud server + local stdio server)
   slug: reso-mcp-server-manifest-hosted-cloud-server-local-stdio-server
 modified: '2026-07-26'
 name: RESO (Real Estate Standards Organization)
 nav: Providers
 network: true
-overview: 'RESO (Real Estate Standards Organization) publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, United States, RESO, MLS, and Property Listings.
+overview: 'RESO (Real Estate Standards Organization) publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, United States, RESO, MLS, and Property Listings.
 
 
   The RESO (Real Estate Standards Organization) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -311,7 +311,7 @@ overview: 'RESO (Real Estate Standards Organization) publishes 2 APIs on the [AP
 random_paper: 1
 score:
   band: developing
-  composite: 46.8
+  composite: 47.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 32.0
@@ -323,9 +323,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 80.4
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -334,13 +334,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 46.8
+  previous_composite: 47.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -358,7 +364,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: reso
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - RESO
 - MLS

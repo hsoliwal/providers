@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'A live, production API gateway at api.canadalife.com serving Canada Life''s partner, distributor and MGA integrations. It is fully gated: every business path probed (including /v1, /docs, /health, /ope'
@@ -173,7 +173,7 @@ scopes:
   summary_line: 36 scopes · clientCredentials/authorizationCode
 score:
   band: emerging
-  composite: 26.0
+  composite: 22.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,7 +196,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.0
+  previous_composite: 22.8
   provenance:
     conformance: first-party
   regulatory:
@@ -204,9 +204,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

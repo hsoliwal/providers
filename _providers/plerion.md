@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://au.api.plerion.com
@@ -147,6 +147,11 @@ collections:
   name: Plerion API Documentation Alerts Well-Architected frameworks API
   slug: open-plerion-well-architected-frameworks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/plerion/refs/heads/main/capabilities/plerion-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/plerion-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/plerion/refs/heads/main/overlays/plerion-openapi-overlay.yaml
   title: ''
@@ -294,13 +299,13 @@ network: true
 overview: 'Plerion publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Asset groups API, Assets API, and 10 more. Tagged areas include Company, Security, Cloud Security, CSPM, and Cloud Workload Protection.
 
 
-  Plerion''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 23 more developer resources.'
+  Plerion''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 24 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 46.3
+  composite: 47.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -310,11 +315,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 63.2
+    contract_quality: 57.3
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 46.3
+  previous_composite: 47.0
   provenance:
     conformance: derived
     contracts:
@@ -324,8 +329,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

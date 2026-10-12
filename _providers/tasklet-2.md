@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -124,14 +124,14 @@ modified: '2026-07-21'
 name: Tasklet
 nav: Providers
 network: true
-overview: 'Tasklet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Platform, Workflow-Automation, and Knowledge Work.
+overview: 'Tasklet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Platform, Workflow Automation, and Knowledge Work.
 
 
   Tasklet''s developer surface includes documentation, getting-started guide, engineering blog, changelog, pricing, signup flow, support, and 12 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 24.6
+  composite: 23.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -145,11 +145,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 24.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 23.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -166,7 +172,7 @@ tags:
 - Company
 - AI Agents
 - Agent Platform
-- Workflow-Automation
+- Workflow Automation
 - Knowledge Work
 - MCP
 - Integration

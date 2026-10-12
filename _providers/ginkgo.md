@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Async, job-polling REST API for running inference on public and Ginkgo-proprietary biological foundation models — protein/DNA masked language modeling and mean-embedding generation. Authenticated with
@@ -124,14 +124,14 @@ modified: '2026-07-19'
 name: Ginkgo Bioworks
 nav: Providers
 network: true
-overview: 'Ginkgo Bioworks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Synthetic Biology, Biotechnology, Artificial Intelligence, and Machine-Learning.
+overview: 'Ginkgo Bioworks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Synthetic Biology, Biotechnology, Artificial Intelligence, and Machine Learning.
 
 
   Ginkgo Bioworks'' developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, and 11 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 19.2
+  composite: 18.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -145,13 +145,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 19.2
+  previous_composite: 18.3
   provenance:
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,9 +179,9 @@ tags:
 - Synthetic Biology
 - Biotechnology
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Protein Models
 - Bioinformatics
-- Inference API
+- Inference
 website: https://www.ginkgobioworks.com
 ---

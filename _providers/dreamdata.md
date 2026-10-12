@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Segment-compatible event tracking API for capturing B2B customer journey events. Server-side events are POSTed as a batch to the HTTP endpoint with HTTP Basic auth (source API key as username, empty p
@@ -205,9 +205,9 @@ description: Dreamdata is a B2B revenue attribution and go-to-market data platfo
 image: http://static1.squarespace.com/static/60880c8985e48a388d33bd16/t/6821cbca7c756751d5f1473a/1748866920123/Activation+and+Attribution+for+B2B+Marketing.png?format=1500w
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.dreamdata.io over HTTP; 21 tools listed.
   name: Dreamdata MCP Server
-  slug: dreamdata-mcp-server
+  slug: dreamdata
 modified: '2026-08-13'
 name: Dreamdata
 nav: Providers
@@ -234,8 +234,8 @@ scopes:
   slug: dreamdata-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.5
+  band: strong
+  composite: 57.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -247,17 +247,27 @@ score:
   facets:
     access_clarity: 81.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 53.5
+  previous_composite: 57.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -292,5 +302,6 @@ tags:
 - Audience Activation
 - Analytics
 - MCP
+- Attribution
 website: https://dreamdata.io
 ---

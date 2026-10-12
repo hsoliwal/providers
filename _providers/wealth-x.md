@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://connect.wealthx.com/rest/v1
@@ -239,7 +239,7 @@ modified: '2026-08-14'
 name: Wealth-X
 nav: Providers
 network: true
-overview: 'Wealth-X publishes 3 APIs on the [APIs.io](https://apis.io/) network: Dossiers API, Reference API, and Search API. Tagged areas include Company, Wealth Intelligence, Data, UHNW, and Prospecting.
+overview: 'Wealth-X publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Dossiers API, Reference API, Search API, and 4 more. Tagged areas include Company, Wealth Intelligence, Data, UHNW, and Prospecting.
 
 
   Wealth-X''s developer surface includes documentation, API reference, developer portal, support, authentication, changelog, getting-started guide, and 26 more developer resources.'
@@ -259,7 +259,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 47.5
+  composite: 50.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 61.0
@@ -273,9 +273,9 @@ score:
     contract_governance: 18.2
     contract_quality: 13.9
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 47.5
+  previous_composite: 50.7
   provenance:
     conformance: first-party
     contracts:
@@ -285,8 +285,18 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -312,7 +322,7 @@ tags:
 - Data
 - UHNW
 - Prospecting
-- Financial-Services
+- Financial Services
 - CRM
 - People Data
 - Altrata

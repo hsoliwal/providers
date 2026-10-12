@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://events.knotch.it
@@ -188,7 +188,7 @@ modified: '2026-08-13'
 name: Knotch
 nav: Providers
 network: true
-overview: 'Knotch publishes 2 APIs on the [APIs.io](https://apis.io/) network: Events API and Health API. Tagged areas include Company, Content Intelligence, Content Marketing, Analytics, and Artificial Intelligence.
+overview: 'Knotch publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Events API, Health API, and 3 more. Tagged areas include Company, Content Intelligence, Content Marketing, Analytics, and Artificial Intelligence.
 
 
   Knotch''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, and 20 more developer resources.'
@@ -203,7 +203,7 @@ rate_limits:
   slug: knotch-rate-limits
 score:
   band: thin
-  composite: 36.4
+  composite: 35.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -215,16 +215,18 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.4
+  previous_composite: 35.5
   provenance:
     conformance: derived
     contracts:
@@ -234,8 +236,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

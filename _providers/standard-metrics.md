@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -47,47 +47,47 @@ apis:
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The budgets API from Standard Metrics — 1 operation(s) for budgets.
-  name: Standard Metrics budgets API
+  name: Standard Metrics Budgets API
   slug: standard-metrics-budgets-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The cap_table API from Standard Metrics — 10 operation(s) for cap_table.
-  name: Standard Metrics cap_table API
+  name: Standard Metrics Cap Table API
   slug: standard-metrics-cap-table-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The companies API from Standard Metrics — 3 operation(s) for companies.
-  name: Standard Metrics companies API
+  name: Standard Metrics Companies API
   slug: standard-metrics-companies-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The custom-columns API from Standard Metrics — 3 operation(s) for custom-columns.
-  name: Standard Metrics custom-columns API
+  name: Standard Metrics Custom Columns API
   slug: standard-metrics-custom-columns-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The documents API from Standard Metrics — 2 operation(s) for documents.
-  name: Standard Metrics documents API
+  name: Standard Metrics Documents API
   slug: standard-metrics-documents-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The firm-details API from Standard Metrics — 1 operation(s) for firm-details.
-  name: Standard Metrics firm-details API
+  name: Standard Metrics Firm Details API
   slug: standard-metrics-firm-details-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The funds API from Standard Metrics — 1 operation(s) for funds.
-  name: Standard Metrics funds API
+  name: Standard Metrics Funds API
   slug: standard-metrics-funds-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The information-reports API from Standard Metrics — 1 operation(s) for information-reports.
-  name: Standard Metrics information-reports API
+  name: Standard Metrics Information Reports API
   slug: standard-metrics-information-reports-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The information-requests API from Standard Metrics — 1 operation(s) for information-requests.
-  name: Standard Metrics information-requests API
+  name: Standard Metrics Information Requests API
   slug: standard-metrics-information-requests-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
@@ -97,7 +97,7 @@ apis:
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The notes API from Standard Metrics — 1 operation(s) for notes.
-  name: Standard Metrics notes API
+  name: Standard Metrics Notes API
   slug: standard-metrics-notes-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
@@ -107,12 +107,12 @@ apis:
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The users API from Standard Metrics — 1 operation(s) for users.
-  name: Standard Metrics users API
+  name: Standard Metrics Users API
   slug: standard-metrics-users-api
 - baseURL: https://api.standardmetrics.io/v1
   baseurl_source: declared
   description: The whoami API from Standard Metrics — 1 operation(s) for whoami.
-  name: Standard Metrics whoami API
+  name: Standard Metrics Whoami API
   slug: standard-metrics-whoami-api
 artifact_total: 36
 collections:
@@ -307,12 +307,12 @@ layout: provider
 mcp_servers:
 - description: Standard Metrics publishes two official remote MCP servers. The primary data server connects MCP-compatible clients (Claude, ChatGPT) directly to a firm's portfolio data via Streamable HTTP; the API-d
   name: Standard Metrics MCP Server
-  slug: standard-metrics-mcp-server
+  slug: standard-metrics-mcp-yml
 modified: '2026-09-16'
 name: Standard Metrics
 nav: Providers
 network: true
-overview: 'Standard Metrics publishes 14 APIs on the [APIs.io](https://apis.io/) network, including budgets API, cap_table API, companies API, and 11 more. Tagged areas include Company, Venture Capital, Private Equity, Portfolio-Management, and Financial Data.
+overview: 'Standard Metrics publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Budgets API, Cap Table API, Companies API, and 11 more. Tagged areas include Company, Venture Capital, Private Equity, Portfolio Management, and Financial Data.
 
 
   Standard Metrics'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, changelog, and 23 more developer resources.'
@@ -328,7 +328,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: strong
-  composite: 56.9
+  composite: 58.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 48.0
@@ -340,11 +340,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 54.2
+    contract_quality: 48.8
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 44.7
-  previous_composite: 56.9
+  previous_composite: 58.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -355,8 +355,18 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -380,7 +390,7 @@ tags:
 - Company
 - Venture Capital
 - Private Equity
-- Portfolio-Management
+- Portfolio Management
 - Financial Data
 - Investment Data
 - Cap Table

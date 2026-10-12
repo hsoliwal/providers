@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -139,7 +139,7 @@ layout: provider
 mcp_servers:
 - description: The DuploCloud MCP (Model Context Protocol) server exposes your DuploCloud HelpDesk as a set of tools that AI assistants can call directly to create tickets and manage workspaces, agents, skills, envi
   name: Duplo Cloud MCP Server
-  slug: duplo-cloud-mcp-server
+  slug: duplocloud
 modified: '2026-07-18'
 name: Duplo Cloud
 nav: Providers
@@ -151,7 +151,7 @@ overview: 'Duplo Cloud is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 6
 score:
   band: thin
-  composite: 33.2
+  composite: 34.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -165,14 +165,30 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 33.2
+  previous_composite: 34.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: fedramp
+    - jurisdiction: US
+      standard: hipaa
+    - jurisdiction: US
+      standard: hitrust
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -84,6 +84,11 @@ collections:
   name: StepZen Admin Account Endpoints API
   slug: open-stepzen-endpoints-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/stepzen/refs/heads/main/capabilities/stepzen-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/stepzen-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/stepzen/refs/heads/main/agentic-access/stepzen-agentic-access.yml
   title: ''
@@ -160,13 +165,13 @@ modified: '2026-05-19'
 name: StepZen
 nav: Providers
 network: true
-overview: 'StepZen publishes 3 APIs on the [APIs.io](https://apis.io/) network: Account API, API Keys API, and Endpoints API. Tagged areas include Backend Integration, GraphQL, API Gateway, REST to GraphQL, and IBM.
+overview: 'StepZen publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, API Keys API, Endpoints API, and 2 more. Tagged areas include Backend Integration, GraphQL, API Gateway, REST to GraphQL, and IBM.
 
 
   The StepZen catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  StepZen''s developer surface includes authentication, developer portal, documentation, and 7 more developer resources.'
+  StepZen''s developer surface includes authentication, developer portal, documentation, and 8 more developer resources.'
 plans:
 - name: Stepzen Plans Pricing
   plan_count: 3
@@ -200,9 +205,9 @@ rules:
   slug: stepzen-rules
 score:
   band: thin
-  composite: 33.1
+  composite: 31.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 53.5
     catalog_earned_first_party: 0.0
     catalog_gap: 61.5
@@ -212,11 +217,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 61.2
+    contract_quality: 55.6
     developer_ergonomics: 32.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 33.1
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -224,8 +229,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

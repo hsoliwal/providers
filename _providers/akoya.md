@@ -21,19 +21,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 21.1
+  scored_at: '2026-10-04'
 api_count: 11
 apis:
 - description: FDX-aligned REST endpoints returning the list of a consumer's permissioned accounts and detailed account information (account identifiers, type, status, nickname, and product details) for the accounts
@@ -243,7 +243,7 @@ rate_limits:
   slug: akoya-rate-limits
 score:
   band: developing
-  composite: 53.5
+  composite: 52.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 47.0
@@ -255,9 +255,9 @@ score:
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -266,7 +266,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.5
+  previous_composite: 52.0
   provenance:
     conformance: first-party
   regulatory:
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -308,5 +308,6 @@ tags:
 - FDX
 - Account Aggregation
 - United States
+- Data Aggregation
 website: https://akoya.com/
 ---

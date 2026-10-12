@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Margo defines an open standard specification for interoperability of edge applications, devices, and orchestration software in industrial automation. The specification is in pre-draft stage and includ
@@ -105,7 +105,7 @@ rate_limits:
   slug: margo-rate-limits
 score:
   band: emerging
-  composite: 14.3
+  composite: 12.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 36.0
@@ -119,11 +119,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 14.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

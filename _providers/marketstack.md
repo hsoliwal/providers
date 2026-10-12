@@ -11,7 +11,7 @@ access_model:
   trial: true
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: na
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.2
-  scored_at: '2026-09-20'
+  score: 27.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.marketstack.com/v2
@@ -253,7 +253,7 @@ description: Marketstack is a real-time, intraday, and historical stock market d
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/marketstack.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 1 tool listed.
   name: marketstack (community)
   slug: marketstack-community
 modified: '2026-07-22'
@@ -274,8 +274,8 @@ rate_limits:
   name: Marketstack Rate Limits
   slug: marketstack-rate-limits
 score:
-  band: strong
-  composite: 56.3
+  band: developing
+  composite: 53.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 61.0
@@ -287,11 +287,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 49.1
+    contract_quality: 44.2
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 47.4
-  previous_composite: 56.3
+  previous_composite: 53.4
   provenance:
     conformance: derived
     contracts:
@@ -299,16 +299,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 15
-    mcp: first-party
+    mcp: third-party
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'The first-party Wyze cloud API reached with a personal API Key and Key ID generated from the Wyze Developer API Console. Authentication posts credentials to auth-prod.api.wyze.com to exchange the key '
@@ -183,9 +183,9 @@ description: 'Wyze Labs, Inc. is a Kirkland, Washington consumer smart-home comp
 image: https://www.wyze.com/cdn/shop/files/Wyze_Ecosystem_Share.png?v=1781726389
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.wyze.com.
   name: Wyze MCP Server
-  slug: wyze-mcp-server
+  slug: wyze-mcp-yml
 modified: '2026-08-02'
 name: Wyze
 nav: Providers
@@ -202,7 +202,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/refreshToken
 score:
   band: thin
-  composite: 34.9
+  composite: 39.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -216,14 +216,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 28.9
-  previous_composite: 34.9
+  previous_composite: 39.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/goldbely/refs/heads/main/security/goldbely-domain-security.yml
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Goldbelly is a curated online marketplace for gourmet food and mail-order culinary gifts, shipping iconic meals, desserts, regional specialties, and artisanal products from renowned restaurants, bakeries, and celebrity chefs across the United States directly to consumers' doors. The platform partners with thousands of local and legendary food makers to make hard-to-get regional foods available nationwide, and operates a merchant program ("Sell on Goldbelly") plus corporate and subscription gifting. Goldbelly is a consumer e-commerce brand with no publicly documented developer API; this profile captures its public web, merchant, and corporate identity. It was surfaced as a portfolio company of a16z and added to the API Evangelist network.
 image: https://img.goldbelly.com/consumer/homepage/facebook-share-home.png?fit=crop&w=1200&h=630
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.goldbelly.com over HTTP.
+  name: Goldbelly MCP Server
+  slug: goldbely
 modified: '2026-07-19'
 name: Goldbelly
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Goldbelly is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 14
 score:
   band: emerging
-  composite: 13.4
+  composite: 13.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 13.4
+  previous_composite: 13.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Unity Cloud (Unity Platform) developer surface, documented publicly at docs.unitycloud.io as the Unity Platform SDK reference. A single GraphQL endpoint collates the schemas of every installed ext
@@ -188,7 +188,7 @@ overview: 'Codafication publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 20
 score:
   band: thin
-  composite: 35.7
+  composite: 34.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 32.0
@@ -200,9 +200,9 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -211,7 +211,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 35.7
+  previous_composite: 34.3
   provenance:
     conformance: first-party
   regulatory:
@@ -219,9 +219,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

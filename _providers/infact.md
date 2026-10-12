@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The HPZone GraphQL API exposes read access to the HPZone communicable-disease control record — cases, contacts, situations, enquiries, actions and contexts — over a single POST endpoint. Access is by '
@@ -117,12 +117,12 @@ rate_limits:
   slug: infact-rate-limits
 scopes:
 - name: Infact Scopes
-  scope_count: 0
+  scope_count: 2
   slug: infact-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · oauth2 client_credentials
 score:
   band: emerging
-  composite: 14.6
+  composite: 12.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 35.0
@@ -136,9 +136,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 14.6
+  previous_composite: 12.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -147,9 +147,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 42.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

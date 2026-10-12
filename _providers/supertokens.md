@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 2
@@ -44,53 +44,53 @@ agentic_access:
   summary_line: 31 operations · 20 acting · 2 human-in-the-loop
 api_count: 1
 apis:
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Email and password sign-up, sign-in, and password management
   name: SuperTokens Email Password API
   slug: supertokens-email-password-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Email verification token creation and validation
   name: SuperTokens Email Verification API
   slug: supertokens-email-verification-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Service health and version checks
   name: SuperTokens Health API
   slug: supertokens-health-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Tenant and app management
   name: SuperTokens Multi Tenancy API
   slug: supertokens-multi-tenancy-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Passwordless OTP and magic link authentication
   name: SuperTokens Passwordless API
   slug: supertokens-passwordless-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Session creation, verification, refresh, and revocation
   name: SuperTokens Sessions API
   slug: supertokens-sessions-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: Social/OAuth third-party provider authentication
   name: SuperTokens Third Party API
   slug: supertokens-third-party-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: User metadata storage and retrieval
   name: SuperTokens User Metadata API
   slug: supertokens-user-metadata-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: User role assignment and management
   name: SuperTokens User Roles API
   slug: supertokens-user-roles-api
-- baseURL: https://{supertokens-core-host}:{port}
-  baseurl_source: declared
+- baseURL_template: http://{host}:{port}
+  baseurl_source: spec_template
   description: User management and listing
   name: SuperTokens Users API
   slug: supertokens-users-api
@@ -133,6 +133,11 @@ collections:
   name: SuperTokens Core Driver Interface Email Password Users API
   slug: open-supertokens-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/supertokens/refs/heads/main/capabilities/supertokens-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/supertokens-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -322,13 +327,13 @@ modified: '2026-09-16'
 name: SuperTokens
 nav: Providers
 network: true
-overview: 'SuperTokens publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Email Password API, Email Verification API, Health API, and 7 more. Tagged areas include Authentication, Open-Source, Session Management, Social Login, and Passwordless.
+overview: 'SuperTokens publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Email Password API, Email Verification API, Health API, and 7 more. Tagged areas include Authentication, Open Source, Session Management, Social Login, and Passwordless.
 
 
   The SuperTokens catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SuperTokens'' developer surface includes authentication, engineering blog, and 6 more developer resources.'
+  SuperTokens'' developer surface includes authentication, engineering blog, and 7 more developer resources.'
 plans:
 - name: Supertokens Plans Pricing
   plan_count: 3
@@ -361,23 +366,23 @@ rules:
   slug: supertokens-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.9
+  composite: 40.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 80.0
+    artifact_dirs: 17
+    catalog_earned: 72.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.0
+    catalog_gap: 42.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 54.5
-    contract_quality: 62.4
+    contract_governance: 49.1
+    contract_quality: 56.9
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 36.8
-  previous_composite: 43.9
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -385,8 +390,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -400,7 +411,7 @@ security:
 slug: supertokens
 tags:
 - Authentication
-- Open-Source
+- Open Source
 - Session Management
 - Social Login
 - Passwordless
@@ -409,5 +420,6 @@ tags:
 - Multi-Tenancy
 - Node.js
 - Self-Hosted
+- Identity Federation
 website: https://{supertokens-core-host}:{port}
 ---

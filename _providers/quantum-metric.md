@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Quantum Metric is a continuous product design and digital experience intelligence platform that captures and quantifies every user session across web and mobile, replaying interactions and surfacing friction, errors, and conversion opportunities in real time so that product, engineering, and customer-experience teams can prioritize work by quantified business impact. The platform exposes data-export and integration APIs to customers within their authenticated instance; during enrichment no public, unauthenticated developer portal or OpenAPI definition was discoverable (developer.quantummetric.com and docs.quantummetric.com redirect to the marketing site and the help center returns a maintenance page).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quantum-metric.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.quantummetric.com over HTTP.
+  name: Quantum Metric MCP Server
+  slug: quantum-metric
 modified: '2026-07-20'
 name: Quantum Metric
 nav: Providers
@@ -94,7 +98,7 @@ overview: 'Quantum Metric is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 16
 score:
   band: minimal
-  composite: 10.2
+  composite: 9.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -108,14 +112,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 10.2
+  previous_composite: 9.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hitrust
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

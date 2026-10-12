@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 31.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -100,7 +100,7 @@ description: 'Prime Hydration, LLC is an American beverage company founded in 20
 image: https://drinkprime.com/cdn/shop/files/PRIME_Social_Sharing_Image_1200x.png?v=1734715820
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at drinkprime.com; 13 tools listed.
   name: PRIME Storefront UCP Shopping MCP Server
   slug: prime-storefront-ucp-shopping-mcp-server
 modified: '2026-08-26'
@@ -122,12 +122,12 @@ rate_limits:
   slug: prime-hydration-rate-limits
 scopes:
 - name: Prime Hydration Scopes
-  scope_count: 0
+  scope_count: 4
   slug: prime-hydration-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code (PKCE S256)
 score:
   band: emerging
-  composite: 21.4
+  composite: 24.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -141,16 +141,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 21.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 24.1
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

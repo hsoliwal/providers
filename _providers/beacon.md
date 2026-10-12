@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -136,7 +136,7 @@ overview: 'Beacon Biosignals is profiled on the [APIs.io](https://apis.io/) netw
 random_paper: 0
 score:
   band: emerging
-  composite: 21.0
+  composite: 20.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -150,9 +150,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 21.0
+  previous_composite: 20.2
   provenance:
     conformance: first-party
   regulatory:
@@ -160,9 +160,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,9 +183,9 @@ tags:
 - Brain Health
 - Sleep Medicine
 - Clinical Trials
-- Machine-Learning
+- Machine Learning
 - Medical Devices
-- Open-Source
+- Open Source
 - Julia
 website: https://beacon.bio/
 ---

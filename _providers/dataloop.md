@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Dataloop (Dell Data Orchestration Engine) platform REST API. Every part of the platform — projects, datasets, items, annotations, recipes and ontologies, tasks and assignments, packages, services,
@@ -196,14 +196,14 @@ description: 'Dataloop is an enterprise AI data platform for the full unstructur
 image: https://dataloop.ai/wp-content/uploads/2024/02/dataloop-logo-main.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 1 tool listed.
   name: Dataloop MCP Server
   slug: dataloop-mcp-server
 modified: '2026-08-04'
 name: DataLoop
 nav: Providers
 network: true
-overview: 'DataLoop publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine-Learning, Data Management, Data Annotation, and MLOps.
+overview: 'DataLoop publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine Learning, Data Management, Data Annotation, and MLOps.
 
 
   The DataLoop catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -213,7 +213,7 @@ overview: 'DataLoop publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 16
 score:
   band: developing
-  composite: 49.7
+  composite: 51.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -225,16 +225,26 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 60.5
-  previous_composite: 49.7
+  previous_composite: 51.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -261,11 +271,11 @@ security:
 slug: dataloop
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Data Management
 - Data Annotation
 - MLOps
-- Computer-Vision
+- Computer Vision
 - Generative AI
 - Data Labeling
 - Pipelines

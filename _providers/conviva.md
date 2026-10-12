@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Programmatic access to historical and real-time Conviva experience metrics by metric name, with optional group-by dimensions, saved or dimensional filters, KPI thresholds and sorting. Historical reque
@@ -221,7 +221,7 @@ layout: provider
 mcp_servers:
 - description: Conviva operates TWO hosted, remote-only Model Context Protocol servers. Neither can be run locally. Both are OAuth 2.1 protected resources implementing RFC 8414 + RFC 9728 discovery with dynamic clie
   name: Conviva MCP Server
-  slug: conviva-mcp-server
+  slug: conviva-mcp-yml
 modified: '2026-08-01'
 name: Conviva
 nav: Providers
@@ -245,7 +245,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.6
+  composite: 58.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 52.0
@@ -257,17 +257,29 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 81.6
-  previous_composite: 55.6
+  previous_composite: 58.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

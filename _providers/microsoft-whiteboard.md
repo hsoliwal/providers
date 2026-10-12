@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Microsoft Graph Whiteboard API enables developers to manage Microsoft Whiteboard resources programmatically. Applications can create whiteboards, manage participants, and export whiteboard content
@@ -95,7 +95,7 @@ modified: '2026-04-28'
 name: Microsoft Whiteboard
 nav: Providers
 network: true
-overview: 'Microsoft Whiteboard publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Microsoft, Microsoft-365, Visual Collaboration, and Whiteboard.
+overview: 'Microsoft Whiteboard publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Microsoft, Microsoft 365, Visual Collaboration, and Whiteboard.
 
 
   Microsoft Whiteboard''s developer surface includes developer portal, documentation, authentication, support, and 6 more developer resources.'
@@ -110,7 +110,7 @@ rate_limits:
   slug: microsoft-whiteboard-rate-limits
 score:
   band: emerging
-  composite: 20.6
+  composite: 21.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -124,11 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 20.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +154,7 @@ slug: microsoft-whiteboard
 tags:
 - Collaboration
 - Microsoft
-- Microsoft-365
+- Microsoft 365
 - Visual Collaboration
 - Whiteboard
 website: https://www.microsoft.com/en-us/microsoft-365/microsoft-whiteboard/digital-whiteboard-app

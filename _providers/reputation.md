@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -177,6 +177,11 @@ collections:
   name: Reputation Asset Library Users API
   slug: open-reputation-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/reputation/refs/heads/main/capabilities/reputation-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/reputation-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/reputation/refs/heads/main/agentic-access/reputation-agentic-access.yml
   title: ''
@@ -403,7 +408,7 @@ overview: 'Reputation publishes 16 APIs on the [APIs.io](https://apis.io/) netwo
   The Reputation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Reputation''s developer surface includes authentication, documentation, engineering blog, pricing, code examples, API reference, support, and 31 more developer resources.'
+  Reputation''s developer surface includes authentication, documentation, engineering blog, pricing, code examples, API reference, support, and 32 more developer resources.'
 plans:
 - name: Reputation Plans Pricing
   plan_count: 4
@@ -428,19 +433,19 @@ score:
   band: strong
   composite: 61.8
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 78.3
+    artifact_dirs: 29
+    catalog_earned: 76.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 36.8
+    catalog_gap: 38.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 93.4
-    contract_governance: 43.2
-    contract_quality: 71.6
+    contract_governance: 41.7
+    contract_quality: 65.3
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   previous_composite: 61.8
   provenance:
@@ -453,8 +458,22 @@ score:
       total: 16
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

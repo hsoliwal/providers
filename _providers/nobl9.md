@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for retrieving service level objective status, error budget consumption, and reliability metrics programmatically. Authentication uses a Nobl9 access token.
@@ -41,7 +41,7 @@ apis:
 - description: REST API for creating and managing SLO annotations to contextualize reliability data with deployments, incidents, and operational events.
   name: Nobl9 Annotations API
   slug: annotations-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/nobl9/refs/heads/main/security/nobl9-domain-security.yml
@@ -88,6 +88,10 @@ created: '2026-05-11'
 description: Nobl9 is a service-level objective (SLO) management platform that helps engineering and SRE teams define, measure, and act on reliability targets across cloud and observability tools. The platform aggregates data from Datadog, Prometheus, New Relic, Splunk, AWS CloudWatch, and other sources to compute error budgets and surface reliability insights. Nobl9 exposes a suite of REST APIs for managing SLOs, annotations, budget adjustments, audit logs, and reports using access token authentication.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nobl9.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at app.nobl9.com over HTTP.
+  name: Nobl9 MCP Server
+  slug: nobl9
 modified: '2026-05-11'
 name: Nobl9
 nav: Providers
@@ -99,7 +103,7 @@ overview: 'Nobl9 publishes 2 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: emerging
-  composite: 18.4
+  composite: 17.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -113,13 +117,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 18.4
+  previous_composite: 17.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

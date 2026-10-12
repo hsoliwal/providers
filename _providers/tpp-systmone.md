@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: TPP's local client-integration interface allowing an approved third-party application to interact with a running SystmOne client. Communication is performed with XML documents (validated against publi
@@ -139,7 +139,7 @@ overview: 'TPP (SystmOne) publishes 6 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 7
 score:
   band: emerging
-  composite: 24.5
+  composite: 23.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -153,7 +153,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,7 +163,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 24.5
+  previous_composite: 23.3
   provenance:
     conformance: first-party
   regulatory:
@@ -171,9 +171,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

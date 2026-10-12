@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://dev.imprint.co
@@ -316,7 +316,7 @@ modified: '2026-07-19'
 name: Imprint
 nav: Providers
 network: true
-overview: 'Imprint publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Customer Links API, Customer Sessions API, Customers API, and 12 more. Tagged areas include Company, Financial-Services, Fintech, Credit Cards, and Co-Branded Cards.
+overview: 'Imprint publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Customer Links API, Customer Sessions API, Customers API, and 12 more. Tagged areas include Company, Financial Services, Fintech, Credit Cards, and Co-Branded Cards.
 
 
   The Imprint catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -326,7 +326,7 @@ overview: 'Imprint publishes 15 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 1
 score:
   band: developing
-  composite: 49.7
+  composite: 46.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -338,11 +338,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 62.3
+    contract_quality: 57.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 49.7
+  previous_composite: 46.7
   provenance:
     conformance: derived
     contracts:
@@ -357,9 +357,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -381,7 +381,7 @@ security:
 slug: imprint
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Credit Cards
 - Co-Branded Cards

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -78,17 +78,17 @@ description: Rex Inc, operating as Rex.fit (BabylonAI Inc.), is a Y Combinator (
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rex-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Rex Inc
+name: Rex
 nav: Providers
 network: true
-overview: 'Rex Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Fitness, Nutrition, and Artificial Intelligence.
+overview: 'Rex is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Fitness, Nutrition, and Artificial Intelligence.
 
 
-  Rex Inc''s developer surface includes developer portal, engineering blog, support, and 6 more developer resources.'
+  Rex''s developer surface includes developer portal, engineering blog, support, and 6 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 12.4
+  composite: 12.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -102,17 +102,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 12.4
+  previous_composite: 12.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,7 +131,7 @@ tags:
 - Fitness
 - Nutrition
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Wearables
 - Y Combinator
 website: https://www.rex.fit

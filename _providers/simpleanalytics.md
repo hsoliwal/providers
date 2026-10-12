@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -50,17 +50,17 @@ apis:
   description: The Events API from Simple Analytics — server-side collection of custom events and page views, with customer-defined metadata, posted unauthenticated to the collection queue.
   name: Simple Analytics Events API
   slug: simpleanalytics-events-api
-- baseURL: https://simpleanalytics.com
+- baseURL: https://queue.simpleanalyticscdn.com
   baseurl_source: declared
   description: The Export API from Simple Analytics — raw, unsampled data point export (page views and events) as JSON or CSV over a date range, with per-field selection.
   name: Simple Analytics Export API
   slug: simpleanalytics-export-api
-- baseURL: https://simpleanalytics.com
+- baseURL: https://queue.simpleanalyticscdn.com
   baseurl_source: declared
   description: The Stats API from Simple Analytics — the aggregated dashboard statistics (pageviews, visitors, histogram, pages, countries, referrers, UTM and device breakdowns) as JSON for any tracked hostname.
   name: Simple Analytics Stats API
   slug: simpleanalytics-stats-api
-- baseURL: https://simpleanalytics.com
+- baseURL: https://queue.simpleanalyticscdn.com
   baseurl_source: declared
   description: The Websites API from Simple Analytics — the Admin surface for listing the websites in an account and adding a new one with timezone, visibility and label.
   name: Simple Analytics Websites API
@@ -280,7 +280,7 @@ rate_limits:
   slug: simpleanalytics-rate-limits
 score:
   band: strong
-  composite: 62.4
+  composite: 62.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 52.0
@@ -292,16 +292,16 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 62.4
+  previous_composite: 62.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -312,8 +312,18 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

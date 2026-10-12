@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: REST API for managing general ledger operations including journals, chartfields, budgets, and financial reporting.
@@ -103,7 +103,7 @@ modified: '2026-04-28'
 name: PeopleSoft Financials
 nav: Providers
 network: true
-overview: 'PeopleSoft Financials publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise, ERP, Financial, Oracle, and PeopleSoft.
+overview: 'PeopleSoft Financials publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise, ERP, Finance, Oracle, and PeopleSoft.
 
 
   PeopleSoft Financials'' developer surface includes authentication, developer portal, support, and 4 more developer resources.'
@@ -118,7 +118,7 @@ rate_limits:
   slug: peoplesoft-financials-rate-limits
 score:
   band: emerging
-  composite: 17.7
+  composite: 18.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 44.0
@@ -132,11 +132,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -152,7 +158,7 @@ slug: peoplesoft-financials
 tags:
 - Enterprise
 - ERP
-- Financial
+- Finance
 - Oracle
 - PeopleSoft
 website: https://www.oracle.com/applications/peoplesoft/

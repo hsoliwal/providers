@@ -17,7 +17,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.3
-  scored_at: '2026-09-20'
+  score: 39.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 3
@@ -66,7 +66,7 @@ apis:
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
   description: The extensions API from LambdaTest — 2 operation(s) for extensions.
-  name: LambdaTest extensions API
+  name: LambdaTest Extensions API
   slug: lambdatest-extensions-api
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
@@ -101,12 +101,12 @@ apis:
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
   description: The platforms API from LambdaTest — 1 operation(s) for platforms.
-  name: LambdaTest platforms API
+  name: LambdaTest Platforms API
   slug: lambdatest-platforms-api
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
   description: The prerun API from LambdaTest — 4 operation(s) for prerun.
-  name: LambdaTest prerun API
+  name: LambdaTest Prerun API
   slug: lambdatest-prerun-api
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
@@ -131,7 +131,7 @@ apis:
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
   description: The tunnel API from LambdaTest — 2 operation(s) for tunnel.
-  name: LambdaTest tunnel API
+  name: LambdaTest Tunnel API
   slug: lambdatest-tunnel-api
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
@@ -141,9 +141,9 @@ apis:
 - baseURL: https://api.lambdatest.com
   baseurl_source: declared
   description: The user-files API from LambdaTest — 3 operation(s) for user-files.
-  name: LambdaTest user-files API
+  name: LambdaTest User Files API
   slug: lambdatest-user-files-api
-artifact_total: 78
+artifact_total: 79
 collections:
 - collection_type: open
   name: API Collection
@@ -203,6 +203,11 @@ collections:
   name: TestMu AI SmartUI API Documentation Autoheal Command Logs user-files API
   slug: open-lambdatest-user-files-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lambdatest/refs/heads/main/capabilities/lambdatest-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lambdatest-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lambdatest/refs/heads/main/agentic-access/lambdatest-agentic-access.yml
   title: ''
@@ -307,17 +312,21 @@ jsonld:
   property_count: 38
   slug: lambdatest-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.lambdatest.com over HTTP.
+  name: LambdaTest MCP Server
+  slug: lambdatest
 modified: '2026-06-12'
 name: LambdaTest
 nav: Providers
 network: true
-overview: 'LambdaTest publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Autoheal Command Logs API, Build API, extensions API, and 15 more. Tagged areas include Testing, Cross-Browser Testing, Selenium, Cypress, and Playwright.
+overview: 'LambdaTest publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Autoheal Command Logs API, Build API, Extensions API, and 17 more. Tagged areas include Testing, Cross-Browser Testing, Selenium, Cypress, and Playwright.
 
 
   The LambdaTest catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  LambdaTest''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
+  LambdaTest''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Lambdatest Plans Pricing
   plan_count: 12
@@ -340,23 +349,23 @@ rules:
   slug: lambdatest-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 45.9
+  composite: 44.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 78.3
+    artifact_dirs: 19
+    catalog_earned: 75.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 39.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 9.8
-    contract_quality: 61.2
-    developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 42.1
-  previous_composite: 45.9
+    contract_quality: 55.8
+    developer_ergonomics: 30.2
+    discoverability: 68.3
+    operational_transparency: 38.9
+  previous_composite: 44.2
   provenance:
     agentic_access: derived
     contracts:
@@ -365,8 +374,14 @@ score:
       marker_coverage: 0.0
       total: 18
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

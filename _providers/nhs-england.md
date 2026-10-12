@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 0
@@ -149,7 +149,16 @@ apis:
   description: The ValueSet API from NHS England — 1 operation(s) for valueset.
   name: NHS England Value Set API
   slug: nhs-england-valueset-api
-artifact_total: 27
+- description: The NHS e-Referral Service combines electronic booking with a choice of place, date and time for first hospital or clinic appointments. The e-RS FHIR API enables clinical systems to integrate referral
+  name: e-Referral Service (e-RS) FHIR API
+  slug: e-referral-service
+- description: The Summary Care Record holds essential patient information from the GP record. The SCR API enables authorised health and care professionals to retrieve a patient's medication, allergies and adverse r
+  name: Summary Care Record (SCR) API
+  slug: summary-care-record
+- description: NHS login provides a single, secure way for citizens to access NHS digital services. The NHS login API enables relying parties to authenticate users, verify identity to a known level of assurance, and
+  name: NHS Login API
+  slug: nhs-login
+artifact_total: 30
 asyncapis:
 - description: ''
   name: Nhs England Webhooks
@@ -353,7 +362,7 @@ modified: '2026-07-24'
 name: NHS England
 nav: Providers
 network: true
-overview: 'NHS England publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Booking API, Callbacks API, Channels API, and 16 more. Tagged areas include Healthcare, United Kingdom, National Health System, FHIR, and HL7.
+overview: 'NHS England publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Booking API, Callbacks API, Channels API, and 22 more. Tagged areas include Healthcare, United Kingdom, National Health System, FHIR, and HL7.
 
 
   The NHS England catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -363,7 +372,7 @@ overview: 'NHS England publishes 19 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 3
 score:
   band: developing
-  composite: 49.6
+  composite: 46.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -371,13 +380,13 @@ score:
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.0
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 61.0
+    contract_quality: 55.9
     developer_ergonomics: 66.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -403,9 +412,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -436,5 +445,13 @@ tags:
 - Health Data
 - e-Prescribing
 - EHR
+- Clinical
+- Demographics
+- Government
+- Health
+- NHS
+- Open Data
+- Patient Records
+- Prescriptions
 website: https://digital.nhs.uk/
 ---

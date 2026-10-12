@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -244,7 +244,7 @@ overview: 'Carry1st publishes 4 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 11
 score:
   band: thin
-  composite: 31.3
+  composite: 30.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -258,14 +258,16 @@ score:
     contract_governance: 4.5
     contract_quality: 22.6
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 27.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-africa
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 31.3
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -281,9 +283,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -160,8 +160,8 @@ overview: 'Intrinsic is profiled on the [APIs.io](https://apis.io/) network. Tag
   Intrinsic''s developer surface includes documentation, GitHub presence, engineering blog, YouTube channel, and 21 more developer resources.'
 random_paper: 16
 score:
-  band: emerging
-  composite: 11.3
+  band: minimal
+  composite: 10.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 38.0
@@ -177,9 +177,15 @@ score:
     developer_ergonomics: 9.5
     discoverability: 50.0
     operational_transparency: 5.3
-  previous_composite: 11.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

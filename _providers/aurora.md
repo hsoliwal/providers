@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Ethereum-compatible JSON-RPC 2.0 API for the Aurora EVM network of virtual chains on NEAR. Exposes the standard eth_* method set over HTTPS (and WebSocket subscriptions) on public mainnet and testnet '
@@ -162,7 +162,7 @@ overview: 'Aurora publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 12
 score:
   band: emerging
-  composite: 25.3
+  composite: 26.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -176,13 +176,19 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 25.3
+  previous_composite: 26.1
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

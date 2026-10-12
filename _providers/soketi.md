@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Implements the Pusher protocol (channels, private channels, presence channels, encrypted channels) for drop-in compatibility with Pusher client SDKs. Server-side publish via REST, client-side subscrib
@@ -106,7 +106,7 @@ modified: '2026-05-08'
 name: Soketi
 nav: Providers
 network: true
-overview: 'Soketi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Time, WebSocket, Open-Source, Pusher Protocol, and Self-Host.
+overview: 'Soketi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Time, WebSocket, Open Source, Pusher Protocol, and Self-Host.
 
 
   Soketi''s developer surface includes developer portal, documentation, GitHub presence, and 9 more developer resources.'
@@ -121,7 +121,7 @@ rate_limits:
   slug: soketi-rate-limits
 score:
   band: emerging
-  composite: 15.7
+  composite: 14.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 45.0
@@ -135,11 +135,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 15.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -159,7 +165,7 @@ slug: soketi
 tags:
 - Real-Time
 - WebSocket
-- Open-Source
+- Open Source
 - Pusher Protocol
 - Self-Host
 - Drop-in

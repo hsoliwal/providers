@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -70,6 +70,11 @@ collections:
   name: Sophos Central SIEM Alerts Events API
   slug: open-sophos-events-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sophos/refs/heads/main/capabilities/sophos-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sophos-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/sophos/refs/heads/main/agentic-access/sophos-agentic-access.yml
   title: ''
@@ -171,7 +176,7 @@ overview: 'Sophos publishes 2 APIs on the [APIs.io](https://apis.io/) network: A
   The Sophos catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Sophos'' developer surface includes authentication, developer portal, documentation, support, engineering blog, pricing, and 9 more developer resources.'
+  Sophos'' developer surface includes authentication, developer portal, documentation, support, engineering blog, pricing, and 10 more developer resources.'
 plans:
 - name: Sophos Plans Pricing
   plan_count: 3
@@ -204,10 +209,10 @@ rules:
     warn: 6
   slug: sophos-rules
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 38.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 58.5
     catalog_earned_first_party: 0.0
     catalog_gap: 56.5
@@ -217,11 +222,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 61.2
+    contract_quality: 55.6
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 39.6
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     contracts:
@@ -229,8 +234,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

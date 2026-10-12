@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Single GraphQL endpoint serving the Data API (browse IP-NFTs, IPTs, and market data), the Tokenization API (mint IP-NFTs and fractionalize into IPTs), and the Labs API (manage research datarooms, file
@@ -135,7 +135,7 @@ layout: provider
 mcp_servers:
 - description: Hosted Model Context Protocol server that lets AI assistants query the Molecule DeSci ecosystem (IP Tokens, prices, project activity) in natural language. Streamable HTTP transport. Public endpoint is
   name: Molecule MCP Server
-  slug: molecule-mcp-server
+  slug: molecule
 modified: '2026-07-20'
 name: Molecule
 nav: Providers
@@ -147,7 +147,7 @@ overview: 'Molecule publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 18
 score:
   band: emerging
-  composite: 23.4
+  composite: 22.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 23.4
+  previous_composite: 22.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 28.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +203,7 @@ tags:
 - IP-NFT
 - Tokenization
 - Life Sciences
-- Biotech
+- Biotechnology
 - Research Funding
 - AI Agents
 - MCP

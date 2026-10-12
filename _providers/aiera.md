@@ -12,7 +12,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -23,8 +23,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.9
-  scored_at: '2026-09-20'
+  score: 41.8
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Aiera's hosted remote Model Context Protocol server, exposing the financial research corpus to LLMs and agentic workflows as roughly three dozen specialized tools across equities and financials, index
@@ -289,12 +289,12 @@ mcp_servers:
   slug: aiera-mcp-server
 - description: ''
   name: Aiera MCP Server
-  slug: aiera-mcp-server-2
+  slug: https-mcp-pub-aiera-com
 modified: '2026-09-14'
 name: Aiera
 nav: Providers
 network: true
-overview: 'Aiera publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Calendar API, Calendar v2 API, Calendars v1 API, and 18 more. Tagged areas include Financial Research, Earnings Calls, Transcripts, SEC Filings, and Market Data.
+overview: 'Aiera publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Calendar API, Calendar v2 API, Calendars v1 API, and 19 more. Tagged areas include Financial Research, Earnings Calls, Transcripts, SEC Filings, and Market Data.
 
 
   Aiera''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -309,12 +309,12 @@ rate_limits:
   slug: aiera-rate-limits
 scopes:
 - name: Aiera Scopes
-  scope_count: 0
+  scope_count: 3
   slug: aiera-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes · authorization_code
 score:
   band: developing
-  composite: 44.8
+  composite: 40.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -326,16 +326,18 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 56.8
+    contract_quality: 51.4
     developer_ergonomics: 60.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.8
+  previous_composite: 40.9
   provenance:
     conformance: derived
     contracts:
@@ -350,9 +352,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -377,8 +379,8 @@ tags:
 - Broker Research
 - Expert Networks
 - Speech-to-Text
-- Financial-Services
+- Financial Services
 - MCP
-- agent-native
+- Agent-Native
 website: https://aiera.com/
 ---

@@ -34,13 +34,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://public-api.cloverhealth.com
   baseurl_source: declared
   description: The fhir-r4-formulary-api API from Clover Health — 5 operation(s) for fhir-r4-formulary-api.
-  name: Clover Health fhir-r4-formulary-api
+  name: Clover Health Fhir R4 Formulary API
   slug: clover-health-fhir-r4-formulary-api-api
 - baseURL: https://public-api.cloverhealth.com
   baseurl_source: declared
@@ -177,14 +177,14 @@ modified: '2026-09-16'
 name: Clover Health
 nav: Providers
 network: true
-overview: 'Clover Health publishes 2 APIs on the [APIs.io](https://apis.io/) network: fhir-r4-formulary-api and FHIR R4 ProviderDirectory API. Tagged areas include Company, Healthcare, Health Insurance, Medicare Advantage, and FHIR.
+overview: 'Clover Health publishes 2 APIs on the [APIs.io](https://apis.io/) network: Fhir R4 Formulary API and FHIR R4 ProviderDirectory API. Tagged areas include Company, Healthcare, Health Insurance, Medicare Advantage, and FHIR.
 
 
   Clover Health''s developer surface includes documentation, API reference, signup flow, support, authentication, and 19 more developer resources.'
 random_paper: 6
 score:
-  band: developing
-  composite: 42.8
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -196,11 +196,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 42.8
+  previous_composite: 39.1
   provenance:
     conformance: derived
     contracts:
@@ -215,9 +215,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

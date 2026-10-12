@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -82,6 +82,10 @@ created: '2026-07-17'
 description: Zentist is a cloud-based revenue cycle management (RCM) platform built specifically for dental support organizations (DSOs) and multi-location dental practices. Its flagship product, Remit AI, uses artificial intelligence to automate electronic remittance advice (ERA) and explanation of benefits (EOB) parsing, payment posting, denial and adjustment categorization, and claims status tracking, while Cavi AR drives intelligent accounts-receivable follow-up. Executive dashboards deliver practice-level and organization-wide analytics. Trusted by more than 400 DSOs, Zentist reports doubling RCM productivity and cutting the cash-to-claim cycle in half within the first 100 days. This profile is maintained in the API Evangelist network; Zentist operates as a login-gated SaaS application with no public developer API surface at this time.
 image: https://avatars.githubusercontent.com/u/64710498?v=4
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.zentist.io over HTTP.
+  name: Zentist MCP Server
+  slug: zentist
 modified: '2026-07-21'
 name: Zentist
 nav: Providers
@@ -93,7 +97,7 @@ overview: 'Zentist is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 15
 score:
   band: emerging
-  composite: 11.3
+  composite: 11.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -107,9 +111,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 11.3
+  previous_composite: 11.5
   provenance:
     mcp: first-party
   regulatory:
@@ -117,9 +121,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 22.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

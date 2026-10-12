@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Binance.US REST API is the primary programmatic interface to the exchange. It exposes general system and exchange information, market and trade data (recent/aggregate/historical trades, order book
@@ -207,7 +207,7 @@ modified: '2026-08-07'
 name: Binance.US
 nav: Providers
 network: true
-overview: 'Binance.US publishes 2 APIs on the [APIs.io](https://apis.io/) network: WebSocket API and WebSocket Streams. Tagged areas include Company, Cryptocurrency, Digital Assets, Exchange, and Trading.
+overview: 'Binance.US publishes 3 APIs on the [APIs.io](https://apis.io/) network, including WebSocket API, WebSocket Streams, and 1 more. Tagged areas include Company, Cryptocurrency, Digital Assets, Exchange, and Trading.
 
 
   The Binance.US catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -221,7 +221,7 @@ rate_limits:
   slug: binance.us-rate-limits
 score:
   band: developing
-  composite: 52.6
+  composite: 49.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -233,11 +233,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 44.3
+    contract_quality: 42.2
     developer_ergonomics: 47.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 52.6
+  previous_composite: 49.9
   provenance:
     conformance: first-party
   regulatory:
@@ -245,9 +245,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -279,9 +279,10 @@ tags:
 - Exchange
 - Trading
 - Market Data
-- Financial-Services
+- Financial Services
 - WebSocket
 - Custody
 - Staking
+- Real-Time
 website: https://www.binance.us
 ---

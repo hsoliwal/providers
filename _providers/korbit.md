@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -271,7 +271,7 @@ layout: provider
 mcp_servers:
 - description: Korbit ships an official MCP server bundled inside the korbit-cli binary. It is a local stdio server (not a hosted/remote endpoint) that exposes every Korbit Open API v2 endpoint as an MCP tool, runni
   name: Korbit MCP Server
-  slug: korbit-mcp-server
+  slug: korbit
 modified: '2026-07-19'
 name: Korbit
 nav: Providers
@@ -290,7 +290,7 @@ rate_limits:
   slug: korbit-rate-limits
 score:
   band: thin
-  composite: 38.2
+  composite: 36.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -302,9 +302,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 65.8
+    contract_quality: 60.6
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -313,7 +313,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 38.2
+  previous_composite: 36.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -329,9 +329,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -354,9 +354,10 @@ tags:
 - Digital Assets
 - Trading
 - Market Data
-- Financial-Services
+- Financial Services
 - WebSocket
 - South Korea
 - Blockchain
+- Real-Time
 website: https://www.korbit.co.kr/
 ---

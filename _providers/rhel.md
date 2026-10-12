@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -96,6 +96,11 @@ collections:
   name: Red Hat Security Data Advisories Systems API
   slug: open-rhel-systems-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rhel/refs/heads/main/capabilities/rhel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rhel-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -272,7 +277,7 @@ overview: 'Red Hat Enterprise Linux publishes 5 APIs on the [APIs.io](https://ap
   The Red Hat Enterprise Linux catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Red Hat Enterprise Linux''s developer surface includes authentication, engineering blog, developer portal, documentation, support, and 22 more developer resources.'
+  Red Hat Enterprise Linux''s developer surface includes authentication, engineering blog, developer portal, documentation, support, and 23 more developer resources.'
 plans:
 - name: Rhel Plans Pricing
   plan_count: 7
@@ -310,26 +315,26 @@ scopes:
   summary_line: 1 scope · password
 score:
   band: developing
-  composite: 41.7
+  composite: 44.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 61.3
+    artifact_dirs: 19
+    catalog_earned: 60.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.8
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 44.7
-    contract_governance: 25.0
-    contract_quality: 55.1
+    contract_governance: 23.5
+    contract_quality: 50.1
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 41.7
+  previous_composite: 44.7
   provenance:
     agentic_access: derived
     contracts:
@@ -337,8 +342,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

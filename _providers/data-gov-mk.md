@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: CKAN Action API for data.gov.mk, a consistent JSON-over-HTTP interface over the national catalog. Standard actions include package_search, package_show, package_list, organization_list, group_list, an
@@ -68,7 +68,7 @@ overview: 'data.gov.mk publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 14
 score:
   band: minimal
-  composite: 5.5
+  composite: 6.5
   coverage:
     artifact_dirs: 1
     catalog_earned: 37.0
@@ -82,7 +82,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -95,15 +95,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 5.5
+  previous_composite: 6.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

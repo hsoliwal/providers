@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -178,7 +178,7 @@ overview: 'Orderly Health publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 14
 score:
   band: thin
-  composite: 38.0
+  composite: 35.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -190,11 +190,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 38.0
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -210,9 +210,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +235,7 @@ tags:
 - Provider Data
 - Provider Directory
 - Health Data
-- Machine-Learning
+- Machine Learning
 - Data Quality
 - Interoperability
 website: https://orderlyhealth.com

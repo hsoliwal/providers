@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -101,9 +101,9 @@ description: Kimba is an AI-powered sleep technology company building a bedside 
 image: https://cdn.shopify.com/s/files/1/0767/5949/8890/files/black_logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at kimba.ai over HTTP; 5 tools listed.
   name: Kimba UCP Shopping MCP
-  slug: kimba-ucp-shopping-mcp
+  slug: kimba-ucp-shopping
 modified: '2026-07-19'
 name: Kimba
 nav: Providers
@@ -120,7 +120,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.5
+  composite: 18.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -134,19 +134,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 20.5
+  previous_composite: 18.7
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

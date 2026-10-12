@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Grasp is a members-based, AI-powered learning platform based in London, England that builds personalized, AI-curated short courses. Learners discuss a goal with an AI mentor, which co-creates a syllabus and assembles a structured "learning path" from the clearest, most credible resources on the web - organized into focused, roughly hour-long lessons with clear outcomes and practice exercises. Grasp is delivered as a client-rendered React single-page app with a 14-day free trial and a single monthly membership; a selection of public courses and lessons is browsable without an account, and a sister product, Grasp Concepts, lives at concepts.grasp.study. Surfaced as a portfolio company of balderton-capital and point-nine.
 image: https://storage.googleapis.com/grasp-assets/images/opengraph/og-grasp.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.grasp.study over HTTP.
+  name: grasp MCP Server
+  slug: grasp
 modified: '2026-07-19'
 name: grasp
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'grasp is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 13
 score:
   band: emerging
-  composite: 12.0
+  composite: 11.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,15 +107,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 12.0
+  previous_composite: 11.4
   provenance:
     mcp: first-party
   regulatory:
@@ -119,9 +125,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

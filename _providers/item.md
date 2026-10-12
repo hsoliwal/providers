@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/item/refs/heads/main/security/item-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Item is an AI-native customer relationship management (CRM) platform, part of Y Combinator's Fall 2025 batch. It replaces the traditional CRM with an AI Assistant that handles daily work in plain language and customizable Agents that autonomously execute business processes across sales, support, and account management. Item connects to 100+ customer tools, gathers and enriches context automatically, discovers leads that match an ideal customer profile, and becomes a company's single source of truth for people, companies, and deals.
 image: https://amount-ice-79009593.figma.site/_assets/v11/62be4cb32de20247f21a11220e02ac7e234a4dd6.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.item.app over HTTP.
+  name: Item MCP Server
+  slug: item
 modified: '2026-07-19'
 name: Item
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Item is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 13
 score:
   band: emerging
-  composite: 11.8
+  composite: 11.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 11.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -115,7 +125,7 @@ tags:
 - Artificial Intelligence
 - AI Agents
 - Sales
-- Customer-Support
+- Customer Support
 - Y Combinator
 website: https://item.app
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 1
@@ -81,6 +81,11 @@ collections:
   name: Mailtrap Email Sending Inboxes Send API
   slug: open-mailtrap-send-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mailtrap/refs/heads/main/capabilities/mailtrap-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mailtrap-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -167,7 +172,7 @@ network: true
 overview: 'Mailtrap publishes 3 APIs on the [APIs.io](https://apis.io/) network: Inboxes API, Messages API, and Send API. Tagged areas include Email, Email Delivery, Email Sandbox, Email Testing, and Transactional Email.
 
 
-  Mailtrap''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, support, engineering blog, and 10 more developer resources.'
+  Mailtrap''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: Mailtrap Plans Pricing
   plan_count: 3
@@ -178,8 +183,8 @@ rate_limits:
   name: Mailtrap Rate Limits
   slug: mailtrap-rate-limits
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 37.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -191,11 +196,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 53.3
+    contract_quality: 48.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 39.7
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +208,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

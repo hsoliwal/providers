@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -302,7 +302,7 @@ modified: '2026-08-17'
 name: SantéVet
 nav: Providers
 network: true
-overview: 'SantéVet publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Appareil API, Civilite API, Contrat Raison Annulation API, and 23 more. Tagged areas include Insurance, Insurtech, Pet Insurance, Veterinary, and Consumer.
+overview: 'SantéVet publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Appareil API, Civilite API, Contrat Raison Annulation API, and 24 more. Tagged areas include Insurance, Insurtech, Pet Insurance, Veterinary, and Consumer.
 
 
   The SantéVet catalog on APIs.io includes 1 JSON-LD context.
@@ -320,7 +320,7 @@ rate_limits:
   slug: santevet-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 34.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 43.0
@@ -332,9 +332,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.3
     developer_ergonomics: 32.7
-    discoverability: 77.8
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -344,7 +344,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 37.3
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -360,9 +360,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

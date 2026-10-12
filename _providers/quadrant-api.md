@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,6 +62,11 @@ collections:
   name: Quadrant API
   slug: open-quadrant-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/capabilities/quadrant-api-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/quadrant-api-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/quadrant-api/refs/heads/main/agentic-access/quadrant-api-agentic-access.yml
   title: ''
@@ -96,7 +101,7 @@ network: true
 overview: 'Quadrant API publishes 1 API on the [APIs.io](https://apis.io/) network: v2 alerts API. Tagged areas include Alerts, Security, and Threat Intelligence.
 
 
-  Quadrant API''s developer surface includes authentication and 3 more developer resources.'
+  Quadrant API''s developer surface includes authentication and 4 more developer resources.'
 plans:
 - name: Quadrant Api Plans Pricing
   plan_count: 3
@@ -108,9 +113,9 @@ rate_limits:
   slug: quadrant-api-rate-limits
 score:
   band: emerging
-  composite: 25.9
+  composite: 23.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -120,11 +125,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 21.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 25.9
+  previous_composite: 23.9
   provenance:
     agentic_access: derived
     contracts:
@@ -132,8 +137,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

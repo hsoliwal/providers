@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-09-20'
+  score: 32.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -53,7 +53,7 @@ apis:
   description: The Plants API from Rime — 2 operation(s) for plants.
   name: Rime Plants API
   slug: rime-ai-plants-api
-artifact_total: 11
+artifact_total: 12
 collections:
 - collection_type: open
   name: API Collection
@@ -119,11 +119,15 @@ finops:
   slug: rime-ai-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rime-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.rime.ai over HTTP; 6 tools listed.
+  name: Rime MCP Server
+  slug: rime-ai
 modified: '2026-05-08'
 name: Rime
 nav: Providers
 network: true
-overview: 'Rime publishes 1 API on the [APIs.io](https://apis.io/) network: Plants API. Tagged areas include Artificial Intelligence, Voice, TTS, Real-Time, and Conversational.
+overview: 'Rime publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Plants API, and 1 more. Tagged areas include Artificial Intelligence, Voice, TTS, Real-Time, and Conversational AI.
 
 
   Rime''s developer surface includes authentication, engineering blog, documentation, and 7 more developer resources.'
@@ -138,7 +142,7 @@ rate_limits:
   slug: rime-ai-rate-limits
 score:
   band: thin
-  composite: 30.4
+  composite: 28.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -150,11 +154,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 30.4
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     contracts:
@@ -163,8 +167,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -185,6 +195,6 @@ tags:
 - Voice
 - TTS
 - Real-Time
-- Conversational
+- Conversational AI
 website: https://rime.ai/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -413,7 +413,7 @@ modified: '2026-05-19'
 name: Aladdin Studio
 nav: Providers
 network: true
-overview: 'Aladdin Studio publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Connections API, Datasets API, and 7 more. Tagged areas include Financial, Investment Management, Portfolio Analytics, Risk Management, and Asset Management.
+overview: 'Aladdin Studio publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Connections API, Datasets API, and 7 more. Tagged areas include Finance, Investment Management, Portfolio Analytics, Risk Management, and Asset Management.
 
 
   The Aladdin Studio catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -458,23 +458,23 @@ scopes:
   summary_line: 7 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 30.7
+  composite: 34.1
   coverage:
     artifact_dirs: 18
-    catalog_earned: 64.5
+    catalog_earned: 76.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 42.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 13.2
-    contract_governance: 28.8
-    contract_quality: 32.0
+    contract_governance: 27.3
+    contract_quality: 31.3
     developer_ergonomics: 54.8
-    discoverability: 50.0
+    discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 30.7
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
@@ -482,8 +482,14 @@ score:
       derived: 14
       marker_coverage: 100.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -499,7 +505,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: aladdin-studio
 tags:
-- Financial
+- Finance
 - Investment Management
 - Portfolio Analytics
 - Risk Management

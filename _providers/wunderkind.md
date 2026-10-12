@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -323,14 +323,14 @@ examples:
 image: https://avatars.githubusercontent.com/u/197307309?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 16 tools listed. A candidate, not confirmed as published by the provider.
   name: Wunderkind MCP Server
-  slug: wunderkind-mcp-server
+  slug: wunderkind
 modified: '2026-08-13'
 name: Wunderkind
 nav: Providers
 network: true
-overview: 'Wunderkind publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Email API, Id Resolution API, Identity API, and 3 more. Tagged areas include Company, Marketing, Personalization, Identity Resolution, and Email.
+overview: 'Wunderkind publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Email API, Id Resolution API, Identity API, and 4 more. Tagged areas include Company, Marketing, Personalization, Identity Resolution, and Email.
 
 
   The Wunderkind catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -348,7 +348,7 @@ rate_limits:
   slug: wunderkind-rate-limits
 score:
   band: strong
-  composite: 59.6
+  composite: 57.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 48.0
@@ -356,13 +356,13 @@ score:
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.5
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 58.1
+    contract_quality: 53.7
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 65.8
   previous_composite: 59.6
   provenance:
@@ -380,9 +380,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ modified: '2026-05-08'
 name: Rossum
 nav: Providers
 network: true
-overview: 'Rossum publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Annotations API, Authentication API, Queues API, and 2 more. Tagged areas include Artificial Intelligence, Document AI, IDP, Invoices, and OCR.
+overview: 'Rossum publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Annotations API, Authentication API, Queues API, and 4 more. Tagged areas include Artificial Intelligence, Document AI, IDP, Invoices, and OCR.
 
 
   Rossum''s developer surface includes authentication, engineering blog, documentation, pricing, GitHub presence, and 9 more developer resources.'
@@ -190,7 +190,7 @@ rate_limits:
   slug: rossum-rate-limits
 score:
   band: thin
-  composite: 30.7
+  composite: 29.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -202,11 +202,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 51.2
+    contract_quality: 46.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 30.7
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +214,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

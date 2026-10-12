@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://platform.aignostics.com/api/v1
@@ -201,14 +201,14 @@ description: 'Aignostics GmbH is a Berlin-based computational pathology company,
 image: https://cdn.prod.website-files.com/67adb01f31489469b513304a/67eec0230902714317f91424_ag-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Aignostics ships a runnable MCP server inside its Python SDK. `aignostics mcp run` starts a FastMCP server over stdio transport (MCP_TRANSPORT = "stdio" in utils/_mcp.py) named "Central Aignostics MCP
   name: Central Aignostics MCP Server
   slug: central-aignostics-mcp-server
 modified: '2026-09-14'
 name: Aignostics
 nav: Providers
 network: true
-overview: 'Aignostics publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Health, and Healthcare.
+overview: 'Aignostics publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Health, and Healthcare.
 
 
   The Aignostics catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -231,7 +231,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 54.0
+  composite: 50.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -243,9 +243,9 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 54.8
+    contract_quality: 50.1
     developer_ergonomics: 80.4
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -255,7 +255,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 54.0
+  previous_composite: 50.0
   provenance:
     conformance: derived
     contracts:
@@ -270,9 +270,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -294,7 +294,7 @@ slug: aignostics
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Health
 - Healthcare
 - Life Sciences

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 2
@@ -60,6 +60,11 @@ collections:
   name: Apache Zeppelin Notebook REST API
   slug: open-apache-zeppelin
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apache-zeppelin/refs/heads/main/capabilities/apache-zeppelin-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apache-zeppelin-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -157,10 +162,10 @@ modified: '2026-05-19'
 name: Apache Zeppelin
 nav: Providers
 network: true
-overview: 'Apache Zeppelin publishes 1 API on the [APIs.io](https://apis.io/) network: Notebook API. Tagged areas include Data Analytics, Interactive Computing, Notebooks, Visualization, and Open-Source.
+overview: 'Apache Zeppelin publishes 1 API on the [APIs.io](https://apis.io/) network: Notebook API. Tagged areas include Data Analytics, Interactive Computing, Notebooks, Visualization, and Open Source.
 
 
-  Apache Zeppelin''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 9 more developer resources.'
+  Apache Zeppelin''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 10 more developer resources.'
 plans:
 - name: Apache Zeppelin Plans Pricing
   plan_count: 3
@@ -172,7 +177,7 @@ rate_limits:
   slug: apache-zeppelin-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 33.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -184,14 +189,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 40.8
+    contract_quality: 37.1
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 34.6
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
@@ -199,8 +204,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -221,7 +232,8 @@ tags:
 - Interactive Computing
 - Notebooks
 - Visualization
-- Open-Source
+- Open Source
+- Data Visualization
 use_cases:
 - description: Exploratory data analysis with Spark SQL, Python, and R in a collaborative notebook.
   name: Interactive Data Exploration

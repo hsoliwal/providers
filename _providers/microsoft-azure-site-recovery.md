@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -72,6 +72,11 @@ collections:
   name: Azure Site Recovery REST API
   slug: open-microsoft-azure-site-recovery
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-site-recovery/refs/heads/main/capabilities/microsoft-azure-site-recovery-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-site-recovery-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -156,10 +161,10 @@ modified: '2026-09-16'
 name: Azure Site Recovery
 nav: Providers
 network: true
-overview: 'Azure Site Recovery publishes 2 APIs on the [APIs.io](https://apis.io/) network: RecoveryPlans API and ReplicationProtectedItems API. Tagged areas include Disaster Recovery, Replication, Business Continuity, and Failover.
+overview: 'Azure Site Recovery publishes 3 APIs on the [APIs.io](https://apis.io/) network, including RecoveryPlans API, ReplicationProtectedItems API, and 1 more. Tagged areas include Disaster Recovery, Replication, Business Continuity, and Failover.
 
 
-  Azure Site Recovery''s developer surface includes authentication, developer portal, pricing, documentation, getting-started guide, support, engineering blog, and 10 more developer resources.'
+  Azure Site Recovery''s developer surface includes authentication, developer portal, pricing, documentation, getting-started guide, support, engineering blog, and 11 more developer resources.'
 plans:
 - name: Microsoft Azure Site Recovery Plans Pricing
   plan_count: 3
@@ -176,9 +181,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 43.2
+  composite: 43.9
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -188,11 +193,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 47.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 43.2
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     contracts:
@@ -200,8 +205,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

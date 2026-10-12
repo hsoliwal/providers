@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -186,7 +186,7 @@ modified: '2026-05-19'
 name: Eclipse RDF4J
 nav: Providers
 network: true
-overview: 'Eclipse RDF4J publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Contexts API, Namespaces API, Protocol API, and 4 more. Tagged areas include Eclipse Foundation, Java, Linked Data, Open-Source, and RDF.
+overview: 'Eclipse RDF4J publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Contexts API, Namespaces API, Protocol API, and 4 more. Tagged areas include Eclipse Foundation, Java, Linked Data, Open Source, and RDF.
 
 
   Eclipse RDF4J''s developer surface includes getting-started guide, documentation, changelog, support, engineering blog, and 11 more developer resources.'
@@ -201,7 +201,7 @@ rate_limits:
   slug: eclipse-rdf4j-rate-limits
 score:
   band: thin
-  composite: 29.6
+  composite: 26.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -213,11 +213,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 43.6
+    contract_quality: 39.3
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 36.8
-  previous_composite: 29.6
+  previous_composite: 26.9
   provenance:
     agentic_access: derived
     contracts:
@@ -225,8 +225,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -242,7 +248,7 @@ tags:
 - Eclipse Foundation
 - Java
 - Linked Data
-- Open-Source
+- Open Source
 - RDF
 - Semantic Web
 - SPARQL

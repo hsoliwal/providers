@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -58,13 +58,13 @@ description: Pall Corporation is a filtration, separation, and purification solu
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pall.png
 layout: provider
 modified: '2026-04-28'
-name: Pall Corporation
+name: Pall
 nav: Providers
 network: true
-overview: 'Pall Corporation is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Filtration, Separation, Purification, and Industrial.
+overview: 'Pall is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Filtration, Separation, Purification, and Industrial.
 
 
-  Pall Corporation''s developer surface includes support and 3 more developer resources.'
+  Pall''s developer surface includes support and 3 more developer resources.'
 press:
 - date: ''
   title: US Fumbles AI Messaging Amid Global Competition
@@ -84,7 +84,7 @@ press:
 random_paper: 7
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 22.0
@@ -98,11 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

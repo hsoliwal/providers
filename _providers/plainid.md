@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Runtime Authorization (PDP permit/deny, policy resolution, user access token, cache invalidation), Management (policy/asset/application/mapper/identity CRUD, orchestration, SaaS vendors), and Administ
@@ -136,7 +136,7 @@ overview: 'PlainID publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: thin
-  composite: 29.1
+  composite: 28.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -150,19 +150,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 29.1
+  previous_composite: 28.5
   provenance:
     conformance: first-party
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

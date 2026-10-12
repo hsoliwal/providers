@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: bswift's partner-facing REST API, served from an AWS API Gateway at api.bswift.com. bswift publicly describes API coverage for demographics and employment data, with lifecycle domains (plan, rate, enr
@@ -132,7 +132,7 @@ overview: 'bswift publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 17
 score:
   band: emerging
-  composite: 23.8
+  composite: 22.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -146,9 +146,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 23.8
+  previous_composite: 22.0
   provenance:
     conformance: first-party
   regulatory:
@@ -162,9 +162,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 48.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

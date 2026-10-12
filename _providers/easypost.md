@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.6
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -199,7 +199,7 @@ modified: '2026-05-30'
 name: EasyPost
 nav: Providers
 network: true
-overview: 'EasyPost publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Addresses API, Parcels API, and 4 more. Tagged areas include Shipping, Logistics, Multi-Carrier, Tracking, and Labels.
+overview: 'EasyPost publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Addresses API, Parcels API, and 8 more. Tagged areas include Shipping, Logistics, Multi-Carrier, Tracking, and Labels.
 
 
   The EasyPost catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -229,7 +229,7 @@ rules:
   slug: easypost-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 35.4
+  composite: 34.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.5
@@ -241,11 +241,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 58.6
+    contract_quality: 54.2
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 35.4
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     contracts:
@@ -258,9 +258,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 25.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -96,14 +96,14 @@ modified: '2026-07-19'
 name: Hummingbird
 nav: Providers
 network: true
-overview: 'Hummingbird is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Compliance, RegTech, and Anti-Money Laundering.
+overview: 'Hummingbird is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Compliance, RegTech, and AML.
 
 
   Hummingbird''s developer surface includes support, engineering blog, changelog, signup flow, and 8 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 18.5
+  composite: 19.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -117,11 +117,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 26.3
-  previous_composite: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -147,7 +153,7 @@ tags:
 - Fintech
 - Compliance
 - RegTech
-- Anti-Money Laundering
+- AML
 - Financial Crime
 - Transaction Monitoring
 - Regulatory Reporting

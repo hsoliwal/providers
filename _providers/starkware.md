@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.8
-  scored_at: '2026-09-20'
+  score: 21.6
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The Starknet full-node JSON-RPC API (OpenRPC), covering read methods (blocks, transactions, state, classes, events, fees), write methods (add invoke/declare/deploy-account transactions), trace methods
@@ -181,7 +181,7 @@ layout: provider
 mcp_servers:
 - description: Official StarkWare MCP (Model Context Protocol) server that exposes all Starknet JSON-RPC v0.10.2+ read and trace methods as agent tools, letting an assistant read blocks, transactions, state, classes
   name: Starkware MCP Server
-  slug: starkware-mcp-server
+  slug: starknet
 modified: '2026-07-21'
 name: Starkware
 nav: Providers
@@ -196,7 +196,7 @@ overview: 'Starkware publishes 4 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: thin
-  composite: 38.7
+  composite: 37.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -208,17 +208,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 75.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 34.2
-  previous_composite: 38.7
+  previous_composite: 37.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

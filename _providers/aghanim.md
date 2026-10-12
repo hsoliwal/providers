@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 110
   human_in_the_loop: 1
@@ -418,7 +418,7 @@ overview: 'Aghanim publishes 27 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 21
 score:
   band: developing
-  composite: 48.5
+  composite: 46.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -430,11 +430,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 68.0
+    contract_quality: 62.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 48.5
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -454,9 +454,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

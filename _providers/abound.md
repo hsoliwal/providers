@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -295,7 +295,7 @@ modified: '2026-09-16'
 name: Abound
 nav: Providers
 network: true
-overview: 'Abound publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 1099-INT API, 1099-K API, 1099-MISC API, and 11 more. Tagged areas include Company, Tax, Tax Compliance, Regulatory Compliance, and Financial-Services.
+overview: 'Abound publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 1099-INT API, 1099-K API, 1099-MISC API, and 11 more. Tagged areas include Company, Tax, Tax Compliance, Regulatory Compliance, and Financial Services.
 
 
   The Abound catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -304,8 +304,8 @@ overview: 'Abound publishes 14 APIs on the [APIs.io](https://apis.io/) network, 
   Abound''s developer surface includes authentication, sandbox, and 21 more developer resources.'
 random_paper: 17
 score:
-  band: thin
-  composite: 30.9
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -316,12 +316,13 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 61.6
-    developer_ergonomics: 28.0
-    discoverability: 75.9
-    operational_transparency: 7.9
-  previous_composite: 30.9
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -337,9 +338,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -359,7 +360,7 @@ tags:
 - Tax
 - Tax Compliance
 - Regulatory Compliance
-- Financial-Services
+- Financial Services
 - Identity Verification
 - Government
 - Documents

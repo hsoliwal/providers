@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -128,7 +128,7 @@ modified: '2026-04-28'
 name: MLOps
 nav: Providers
 network: true
-overview: 'MLOps is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include AI Operations, CRISP-ML(Q), DevOps, Machine-Learning, and ML Engineering.
+overview: 'MLOps is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include AI Operations, CRISP-ML(Q), DevOps, Machine Learning, and ML Engineering.
 
 
   The MLOps catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
@@ -146,7 +146,7 @@ rules:
   slug: mlops-jsonschema-spectral-rules
 score:
   band: minimal
-  composite: 8.9
+  composite: 7.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 38.3
@@ -160,11 +160,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,7 +187,7 @@ tags:
 - AI Operations
 - CRISP-ML(Q)
 - DevOps
-- Machine-Learning
+- Machine Learning
 - ML Engineering
 - ML Governance
 - ML Pipelines

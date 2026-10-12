@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -200,7 +200,7 @@ modified: '2026-07-22'
 name: Intercontinental Exchange
 nav: Providers
 network: true
-overview: 'Intercontinental Exchange publishes 1 API on the [APIs.io](https://apis.io/) network: ICE Consolidated Feed API. Tagged areas include Commodities, Financial Exchanges, Market Data, NYSE, and Trading.
+overview: 'Intercontinental Exchange publishes 3 APIs on the [APIs.io](https://apis.io/) network, including ICE Consolidated Feed API, and 2 more. Tagged areas include Commodities, Financial Exchanges, Market Data, NYSE, and Trading.
 
 
   Intercontinental Exchange''s developer surface includes authentication, engineering blog, support, developer portal, and 21 more developer resources.'
@@ -231,7 +231,7 @@ rate_limits:
   slug: intercontinental-exchange-rate-limits
 score:
   band: developing
-  composite: 46.3
+  composite: 42.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 44.0
@@ -243,11 +243,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 48.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
-  previous_composite: 46.3
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -267,9 +267,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

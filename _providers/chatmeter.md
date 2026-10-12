@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for accessing and administrating all Chatmeter platform data including location listings, review management, social monitoring, surveys, and user administration. Uses JSON Web Token (JWT) aut
@@ -176,7 +176,7 @@ modified: '2026-08-13'
 name: Chatmeter
 nav: Providers
 network: true
-overview: 'Chatmeter publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Reputation Management, Local SEO, Listings Management, Review Management, and Social-Media.
+overview: 'Chatmeter publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Reputation Management, Local SEO, Listings Management, Review Management, and Social Media.
 
 
   The Chatmeter catalog on APIs.io includes 1 JSON-LD context.
@@ -194,7 +194,7 @@ rate_limits:
   slug: chatmeter-rate-limits
 score:
   band: thin
-  composite: 33.6
+  composite: 35.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.0
@@ -208,14 +208,20 @@ score:
     contract_governance: 18.2
     contract_quality: 6.7
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.6
+  previous_composite: 35.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -237,7 +243,7 @@ tags:
 - Local SEO
 - Listings Management
 - Review Management
-- Social-Media
+- Social Media
 - Multi-Location
 - Competitive Intelligence
 website: https://www.chatmeter.com

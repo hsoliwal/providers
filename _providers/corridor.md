@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -230,9 +230,9 @@ description: 'Corridor is a security company building the security layer for AI 
 image: https://www.corridor.dev/icon.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.corridor.dev over HTTP; 7 tools listed.
   name: Corridor MCP Server
-  slug: corridor-mcp-server
+  slug: corridor
 modified: '2026-07-18'
 name: Corridor
 nav: Providers
@@ -244,7 +244,7 @@ overview: 'Corridor publishes 6 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 10
 score:
   band: thin
-  composite: 33.7
+  composite: 35.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -258,9 +258,9 @@ score:
     contract_governance: 4.5
     contract_quality: 13.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 33.7
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,8 +271,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

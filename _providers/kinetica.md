@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'POST-only JSON REST API exposed by every Kinetica deployment on port 9191. Endpoints cover SQL execution (/execute/sql), record ingest and egress (/insert/records/json, /get/records/json), schema and '
@@ -212,10 +212,10 @@ description: Kinetica is a GPU-accelerated, real-time analytical database that u
 image: https://kinetica-web-assets.s3.us-east-1.amazonaws.com/assets/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.toolbelt.ai over HTTP; 5 tools listed.
   name: Kinetica MCP Server
-  slug: kinetica-mcp-server
-- description: ''
+  slug: toolbelt
+- description: Remote MCP server at kinetica.main-kill-isr.mintlify.me over HTTP; 3 tools listed.
   name: Kinetica Docs
   slug: kinetica-docs
 modified: '2026-08-04'
@@ -233,8 +233,8 @@ scopes:
   slug: kinetica-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: thin
-  composite: 37.6
+  band: developing
+  composite: 41.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -248,15 +248,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 28.9
-  previous_composite: 37.6
+  previous_composite: 41.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -290,7 +296,8 @@ tags:
 - Streaming
 - Data Infrastructure
 - MCP
-- agent-native
+- Agent-Native
 - RAG
+- A2A
 website: https://www.kinetica.com/
 ---

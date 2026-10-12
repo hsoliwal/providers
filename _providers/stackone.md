@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 49.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -189,7 +189,7 @@ apis:
   description: The Users API from StackOne — 2 operation(s) for users.
   name: StackOne Users API
   slug: stackone-users-api
-artifact_total: 274
+artifact_total: 275
 collections:
 - collection_type: postman
   name: Marketing Accounts API
@@ -330,6 +330,11 @@ collections:
   name: Marketing
   slug: open-stackone
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/stackone/refs/heads/main/capabilities/stackone-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/stackone-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -963,17 +968,21 @@ jsonld:
   property_count: 5
   slug: stackone-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.stackone.com over HTTP.
+  name: StackOne MCP Server
+  slug: stackone
 modified: '2026-05-19'
 name: StackOne
 nav: Providers
 network: true
-overview: 'StackOne publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Applications API, Campaigns API, and 19 more. Tagged areas include Integration and iPaaS.
+overview: 'StackOne publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Applications API, Campaigns API, and 30 more. Tagged areas include Integration and iPaaS.
 
 
   The StackOne catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  StackOne''s developer surface includes authentication, engineering blog, changelog, documentation, getting-started guide, pricing, and 32 more developer resources.'
+  StackOne''s developer surface includes authentication, engineering blog, changelog, documentation, getting-started guide, pricing, and 33 more developer resources.'
 plans:
 - name: Stackone Plans Pricing
   plan_count: 3
@@ -1006,9 +1015,9 @@ rules:
   slug: stackone-rules
 score:
   band: developing
-  composite: 46.9
+  composite: 46.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 47.3
     catalog_earned_first_party: 0.0
     catalog_gap: 67.8
@@ -1018,11 +1027,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 9.8
-    contract_quality: 57.6
+    contract_quality: 52.4
     developer_ergonomics: 54.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 44.7
-  previous_composite: 46.9
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     contracts:
@@ -1031,8 +1040,14 @@ score:
       marker_coverage: 0.0
       total: 22
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

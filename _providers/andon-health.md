@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth 2.0-authorized REST API that lets registered third-party applications read a consenting iHealth user's connected-device data (blood pressure and user-profile resources confirmed live). Developer
@@ -109,9 +109,9 @@ description: Andon Health Co., Ltd. is a Tianjin, China-based medical device man
 image: https://ihealthlabs.com/cdn/shop/files/iHealth_logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at ihealthlabs.com.
   name: Andon Health MCP Server
-  slug: andon-health-mcp-server
+  slug: andon-health-mcp-yml
 modified: '2026-07-17'
 name: Andon Health
 nav: Providers
@@ -123,12 +123,12 @@ overview: 'Andon Health publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 15
 scopes:
 - name: Andon Health Scopes
-  scope_count: 0
+  scope_count: 4
   slug: andon-health-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 22.4
+  composite: 20.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -142,20 +142,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 20.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

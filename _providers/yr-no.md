@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -52,17 +52,17 @@ apis:
 - baseURL: https://api.met.no/weatherapi/locationforecast/2.0/
   baseurl_source: declared
   description: Weather alert endpoints
-  name: Yr alerts API
+  name: Yr Alerts API
   slug: yr-no-alerts-api
 - baseURL: https://api.met.no/weatherapi/locationforecast/2.0/
   baseurl_source: declared
   description: Forecast data endpoints
-  name: Yr data API
+  name: Yr Data API
   slug: yr-no-data-api
 - baseURL: https://api.met.no/weatherapi/locationforecast/2.0/
   baseurl_source: declared
   description: Service metadata endpoints
-  name: Yr metadata API
+  name: Yr Metadata API
   slug: yr-no-metadata-api
 artifact_total: 22
 collections:
@@ -194,7 +194,7 @@ modified: '2026-06-13'
 name: Yr
 nav: Providers
 network: true
-overview: 'Yr publishes 3 APIs on the [APIs.io](https://apis.io/) network: alerts API, data API, and metadata API. Tagged areas include Weather, Forecast, Meteorology, Climate, and Norway.
+overview: 'Yr publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Data API, Metadata API, and 2 more. Tagged areas include Weather, Forecast, Meteorology, Climate, and Norway.
 
 
   The Yr catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -222,22 +222,22 @@ rules:
     warn: 4
   slug: yr-no-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.9
+  band: thin
+  composite: 39.0
   coverage:
     artifact_dirs: 15
-    catalog_earned: 62.3
+    catalog_earned: 61.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 53.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 52.6
+    access_clarity: 50.5
     contract_governance: 9.8
-    contract_quality: 58.6
+    contract_quality: 53.5
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -247,7 +247,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 42.9
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -260,9 +260,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

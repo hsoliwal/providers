@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for patient outreach, consent checking and auditing, record-location search, test-patient creation, and usage reporting, plus a FHIR R4 server ($everything) for standards-based access to a co
@@ -172,7 +172,7 @@ layout: provider
 mcp_servers:
 - description: 'Hosted Model Context Protocol server exposing a consented patient''s FHIR-based health record to AI agents through standardized tools, with per-patient data isolation and natural-language search. Also '
   name: HealthEx MCP Server
-  slug: healthex-mcp-server
+  slug: healthex
 modified: '2026-07-19'
 name: HealthEx
 nav: Providers
@@ -188,8 +188,8 @@ scopes:
   slug: healthex-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 36.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -203,9 +203,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 39.5
+  previous_composite: 36.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -219,9 +219,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 66.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

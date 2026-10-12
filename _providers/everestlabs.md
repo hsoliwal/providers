@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -70,18 +70,22 @@ created: '2026-07-17'
 description: EverestLabs builds AI, computer vision, and robotics for the recycling industry. Its RecycleOS platform identifies, tracks, and sorts recoverable materials on the conveyor lines of Materials Recovery Facilities (MRFs), giving recyclers, reclaimers, and packaging manufacturers analytics, bale tracing, plant optimization, and compliance reporting to increase recovery rates, cut labor costs, and verify recycled content. Headquartered in Fremont, California and backed by Sierra Ventures. EverestLabs does not currently publish a public developer API, SDK, or developer portal; this profile captures its public web, GitHub, and discovery surface.
 image: http://static1.squarespace.com/static/63bda5893fe1997b791a588a/t/658b448a5f037266c35eda3b/1703625870214/logo-black-pading.png?format=1500w
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.everestlabs.ai over HTTP.
+  name: EverestLabs MCP Server
+  slug: everestlabs
 modified: '2026-07-19'
 name: EverestLabs
 nav: Providers
 network: true
-overview: 'EverestLabs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Robotics, Recycling, and Computer-Vision.
+overview: 'EverestLabs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Robotics, Recycling, and Computer Vision.
 
 
   EverestLabs'' developer surface includes engineering blog, support, and 5 more developer resources.'
 random_paper: 18
 score:
   band: minimal
-  composite: 8.2
+  composite: 7.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -95,18 +99,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 8.2
+  previous_composite: 7.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,7 +136,7 @@ tags:
 - Artificial Intelligence
 - Robotics
 - Recycling
-- Computer-Vision
+- Computer Vision
 - Sustainability
 - Waste Management
 - Analytics

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted Model Context Protocol server that pipes a Jam's recording, console logs, network requests, user events, transcript, and metadata into AI coding tools (Claude, Cursor, VS Code). OAuth2 (PKCE) o
@@ -196,7 +196,7 @@ description: Jam is a bug-reporting and debugging-telemetry tool for software te
 image: https://storage.googleapis.com/jam-assets/jam-og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.jam.dev over HTTP; 22 tools listed.
   name: Jam
   slug: jam
 modified: '2026-07-19'
@@ -218,7 +218,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.3
+  composite: 52.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -230,17 +230,27 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 48.3
+  previous_composite: 52.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

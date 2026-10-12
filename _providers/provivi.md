@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The KeystoneJS 5 headless-CMS GraphQL backend that serves the provivi.com marketing site. It exposes 199 types, 83 query fields and 122 mutation fields covering the site's content model — Article, Pre
@@ -174,7 +174,7 @@ rate_limits:
   slug: provivi-rate-limits
 score:
   band: emerging
-  composite: 24.7
+  composite: 25.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -186,15 +186,21 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 0.0
-  previous_composite: 24.7
+  previous_composite: 25.4
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

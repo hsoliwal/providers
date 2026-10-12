@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Comprehensive set of REST APIs for managing conversations across messaging channels, including agent operations, consumer messaging, conversation history, and engagement events.
@@ -138,7 +138,7 @@ rate_limits:
   slug: liveperson-rate-limits
 score:
   band: emerging
-  composite: 19.8
+  composite: 19.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -152,11 +152,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 18.4
-  previous_composite: 19.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

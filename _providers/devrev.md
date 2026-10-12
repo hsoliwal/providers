@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The DevRev public REST API for managing works (issues/tickets), parts, accounts, articles, conversations, timeline entries, webhooks, and more. Resource-oriented URLs, JSON request/response bodies, PA
@@ -186,12 +186,12 @@ layout: provider
 mcp_servers:
 - description: DevRev ships an official local MCP server as part of the Airdrop/Airsync `chef-cli` toolchain. It is run locally over stdio (not a remote hosted endpoint) and is scoped to Airdrop metadata-mapping dev
   name: Devrev MCP Server
-  slug: devrev-mcp-server
+  slug: devrev-airsync-mcp
 modified: '2026-07-18'
 name: Devrev
 nav: Providers
 network: true
-overview: 'Devrev publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer-Support, Product Development, Issue Tracking, and Knowledge Base.
+overview: 'Devrev publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Support, Product Development, Issue Tracking, and Knowledge Base.
 
 
   The Devrev catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -205,7 +205,7 @@ rate_limits:
   slug: devrev-rate-limits
 score:
   band: developing
-  composite: 44.0
+  composite: 44.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -217,16 +217,22 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 65.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 44.0
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -249,7 +255,7 @@ security:
 slug: devrev
 tags:
 - Company
-- Customer-Support
+- Customer Support
 - Product Development
 - Issue Tracking
 - Knowledge Base

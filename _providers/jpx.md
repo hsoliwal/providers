@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Listed issue master, daily and morning-session OHLCV, minute bars and tick trades (add-on), earnings calendar, and weekly trading by investor type for Tokyo Stock Exchange equities, under /v2/equities
@@ -209,14 +209,14 @@ description: JPX (Japan Exchange Group) operates the Tokyo Stock Exchange, Osaka
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jpx.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 7 tools listed.
   name: JPX (Japan Exchange Group) MCP Server
-  slug: jpx-japan-exchange-group-mcp-server
+  slug: j-quants-doc-mcp
 modified: '2026-07-22'
 name: JPX (Japan Exchange Group)
 nav: Providers
 network: true
-overview: 'JPX (Japan Exchange Group) publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Stocks, Exchange, and Trading.
+overview: 'JPX (Japan Exchange Group) publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Stocks, Exchange, and Trading.
 
 
   JPX (Japan Exchange Group)''s developer surface includes CLI, authentication, changelog, release notes, getting-started guide, API reference, developer portal, and 24 more developer resources.'
@@ -231,7 +231,7 @@ rate_limits:
   slug: jpx-rate-limits
 score:
   band: developing
-  composite: 53.4
+  composite: 51.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 64.0
@@ -245,7 +245,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -254,7 +254,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 53.4
+  previous_composite: 51.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -264,9 +264,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -284,7 +284,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DMARC
 slug: jpx
 tags:
-- Financial
+- Finance
 - Market Data
 - Stocks
 - Exchange

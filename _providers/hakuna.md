@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -259,7 +259,7 @@ rate_limits:
   slug: hakuna-rate-limits
 score:
   band: thin
-  composite: 32.8
+  composite: 33.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -273,7 +273,7 @@ score:
     contract_governance: 4.5
     contract_quality: 17.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -283,7 +283,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 32.8
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,8 +294,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,6 +326,6 @@ tags:
 - Project Tracking
 - Software-as-a-Service
 - Switzerland
-- SME
+- Small Business
 website: https://www.hakuna.ch
 ---

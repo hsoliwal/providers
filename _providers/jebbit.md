@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -134,6 +134,11 @@ collections:
   name: Jebbit Auth Launch Links API
   slug: open-jebbit-launch-links-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jebbit/refs/heads/main/capabilities/jebbit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jebbit-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/jebbit/refs/heads/main/overlays/jebbit-openapi-overlay.yaml
   title: ''
@@ -321,7 +326,7 @@ overview: 'Jebbit publishes 10 APIs on the [APIs.io](https://apis.io/) network, 
   The Jebbit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Jebbit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 30 more developer resources.'
+  Jebbit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 31 more developer resources.'
 plans:
 - name: Jebbit Plans Pricing
   plan_count: 0
@@ -338,7 +343,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: developing
-  composite: 49.4
+  composite: 52.3
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -350,11 +355,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 61.7
+    contract_quality: 56.7
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 49.4
+  previous_composite: 52.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -365,8 +370,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

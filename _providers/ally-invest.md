@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -44,29 +44,9 @@ agentic_access:
   summary_line: 28 operations · 7 acting
 api_count: 1
 apis:
-- baseURL: https://api.ally.com/v1
-  baseurl_source: declared
-  description: 'The Ally Invest Orders API enables programmatic placement and management of equity and options orders for self-directed brokerage accounts. Orders are submitted using a FIXML-variant format. Supports '
-  name: Ally Invest Orders API
-  slug: ally-invest-orders-api
-- baseURL: https://api.ally.com/v1
-  baseurl_source: declared
-  description: The Ally Invest Market Data API provides access to real-time and delayed market data including equity and options quotes, option chains, option strikes and expirations, market news search, time-and-sa
-  name: Ally Invest Market Data API
-  slug: ally-invest-market-data-api
 - description: The Ally Invest Streaming API delivers real-time market quotes via a persistent HTTP streaming connection. Clients subscribe to one or more ticker symbols and receive continuous quote updates as marke
   name: Ally Invest Streaming Market Data API
   slug: ally-invest-streaming-api
-- baseURL: https://api.ally.com/v1
-  baseurl_source: declared
-  description: The Ally Invest Watchlists API allows programmatic creation and management of symbol watchlists associated with a member account. Supports listing all watchlists, creating new watchlists, retrieving w
-  name: Ally Invest Watchlists API
-  slug: ally-invest-watchlists-api
-- baseURL: https://api.ally.com/v1
-  baseurl_source: declared
-  description: The Ally Invest Member API provides access to the authenticated member's profile information including account identifiers and user details associated with the OAuth credentials.
-  name: Ally Invest Member API
-  slug: ally-invest-member-api
 - baseURL: https://api.ally.com/v1
   baseurl_source: declared
   description: Account balances, holdings, history, and portfolio data
@@ -74,17 +54,17 @@ apis:
   slug: ally-invest-accounts-api
 - baseURL: https://api.ally.com/v1
   baseurl_source: declared
-  description: Quotes, options, news, time-and-sales, and top lists
+  description: The Ally Invest Market Data API provides access to real-time and delayed market data including equity and options quotes, option chains, option strikes and expirations, market news search, time-and-sa
   name: Ally Invest Market Data API
   slug: ally-invest-market-data-api
 - baseURL: https://api.ally.com/v1
   baseurl_source: declared
-  description: Member profile and identity
+  description: The Ally Invest Member API provides access to the authenticated member's profile information including account identifiers and user details associated with the OAuth credentials.
   name: Ally Invest Member API
   slug: ally-invest-member-api
 - baseURL: https://api.ally.com/v1
   baseurl_source: declared
-  description: Order placement, preview, retrieval, and cancellation
+  description: 'The Ally Invest Orders API enables programmatic placement and management of equity and options orders for self-directed brokerage accounts. Orders are submitted using a FIXML-variant format. Supports '
   name: Ally Invest Orders API
   slug: ally-invest-orders-api
 - baseURL: https://api.ally.com/v1
@@ -94,10 +74,10 @@ apis:
   slug: ally-invest-utilities-api
 - baseURL: https://api.ally.com/v1
   baseurl_source: declared
-  description: Watchlist creation and symbol management
+  description: The Ally Invest Watchlists API allows programmatic creation and management of symbol watchlists associated with a member account. Supports listing all watchlists, creating new watchlists, retrieving w
   name: Ally Invest Watchlists API
   slug: ally-invest-watchlists-api
-artifact_total: 45
+artifact_total: 41
 collections:
 - collection_type: open
   name: API Collection
@@ -267,7 +247,7 @@ modified: '2026-06-13'
 name: Ally Invest
 nav: Providers
 network: true
-overview: 'Ally Invest publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Orders API, Market Data API, Watchlists API, and 7 more. Tagged areas include Brokerage, Investing, Trading, Finance, and Stocks.
+overview: 'Ally Invest publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Market Data API, Member API, and 4 more. Tagged areas include Brokerage, Investing, Trading, Finance, and Stocks.
 
 
   The Ally Invest catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -296,23 +276,23 @@ rules:
   slug: ally-invest-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 50.3
+  composite: 47.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 74.3
+    catalog_earned: 72.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.8
+    catalog_gap: 42.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 47.9
     contract_governance: 9.8
-    contract_quality: 64.6
+    contract_quality: 58.9
     developer_ergonomics: 54.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 50.3
+    discoverability: 66.1
+    operational_transparency: 31.1
+  previous_composite: 47.0
   provenance:
     agentic_access: derived
     contracts:
@@ -325,9 +305,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -351,6 +331,7 @@ tags:
 - Options
 - Market Data
 - Self-Directed
+- Financial Services
 use_cases:
 - description: Build automated trading systems that place and manage orders based on market signals
   name: Algorithmic Trading

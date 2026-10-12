@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 10
 common:
@@ -165,7 +165,7 @@ rate_limits:
   slug: aig-aerospace-rate-limits
 score:
   band: emerging
-  composite: 16.3
+  composite: 15.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -179,17 +179,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 16.3
+  previous_composite: 15.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 30.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

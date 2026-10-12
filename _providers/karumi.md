@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 59.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -62,7 +62,7 @@ apis:
   description: The Targets API from Karumi — 2 operation(s) for targets.
   name: Karumi Targets API
   slug: karumi-targets-api
-artifact_total: 13
+artifact_total: 12
 common:
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/karumi/refs/heads/main/agentic-access/karumi-agentic-access.yml
@@ -214,17 +214,14 @@ description: Karumi is an agentic demo platform that delivers personalized, AI-p
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/karumi.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.karumi.ai over HTTP requiring OAuth; 38 tools listed.
   name: Karumi MCP Server
-  slug: karumi-mcp-server
-- description: ''
-  name: Karumi MCP Server
-  slug: karumi-mcp-server-2
+  slug: karumi
 modified: '2026-09-16'
 name: Karumi
 nav: Providers
 network: true
-overview: 'Karumi publishes 3 APIs on the [APIs.io](https://apis.io/) network: Analytics API, Sessions API, and Targets API. Tagged areas include Company, AI Agents, Product Demos, Sales Enablement, and Go-To-Market.
+overview: 'Karumi publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Sessions API, Targets API, and 1 more. Tagged areas include Company, AI Agents, Product Demos, Sales Enablement, and Go-To-Market.
 
 
   Karumi''s developer surface includes documentation, API reference, authentication, engineering blog, pricing, signup flow, and 25 more developer resources.'
@@ -244,7 +241,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.5
+  composite: 43.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -256,11 +253,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 32.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 41.5
+  previous_composite: 43.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,8 +268,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -304,7 +307,7 @@ tags:
 - Video
 - Y Combinator
 - MCP
-- agent-native
+- Agent-Native
 - Analytics
 - Conversation Intelligence
 website: https://www.karumi.ai/

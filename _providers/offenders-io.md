@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -50,7 +50,7 @@ apis:
   description: The Search API from Offenders.io — 1 operation(s) for search.
   name: Offenders.io Search API
   slug: offenders-io-search-api
-artifact_total: 11
+artifact_total: 12
 collections:
 - collection_type: open
   name: API Collection
@@ -98,6 +98,10 @@ finops:
   slug: offenders-io-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/offenders-io.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.offenders.io over HTTP; 6 tools listed.
+  name: Offenders.io MCP Server
+  slug: offenders-io
 modified: '2026-05-19'
 name: Offenders.io
 nav: Providers
@@ -117,7 +121,7 @@ rate_limits:
   slug: offenders-io-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 29.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 41.0
@@ -129,11 +133,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 21.4
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 30.1
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -142,8 +146,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

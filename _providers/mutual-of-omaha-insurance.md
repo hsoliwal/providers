@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Mutual of Omaha's Workplace Solutions API program for group and voluntary benefits, delivered to brokers and employers through benefits administration platforms rather than a first-party developer por
@@ -164,7 +164,7 @@ rate_limits:
   slug: mutual-of-omaha-insurance-rate-limits
 score:
   band: emerging
-  composite: 12.9
+  composite: 13.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 32.0
@@ -178,22 +178,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 12.9
+  previous_composite: 13.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +214,7 @@ tags:
 - Employee Benefits
 - Benefits Administration
 - Group Insurance
-- Financial-Services
+- Financial Services
 - Annuities
 - Disability Insurance
 - Dental Insurance

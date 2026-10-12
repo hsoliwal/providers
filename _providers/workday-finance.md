@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -190,6 +190,11 @@ collections:
   name: Workday Finance Financial Management Accounts Worktags API
   slug: open-workday-finance-worktags-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workday-finance/refs/heads/main/capabilities/workday-finance-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workday-finance-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/workday-finance/refs/heads/main/agentic-access/workday-finance-agentic-access.yml
   title: ''
@@ -456,13 +461,13 @@ modified: '2026-05-19'
 name: Workday Finance
 nav: Providers
 network: true
-overview: 'Workday Finance publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Cost Centers API, Financial Periods API, and 6 more. Tagged areas include Accounting, Cloud, Enterprise, ERP, and Finance.
+overview: 'Workday Finance publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Cost Centers API, Financial Periods API, and 14 more. Tagged areas include Accounting, Cloud, Enterprise, ERP, and Finance.
 
 
   The Workday Finance catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Workday Finance''s developer surface includes authentication, developer portal, documentation, getting-started guide, developer console, signup flow, engineering blog, and 32 more developer resources.'
+  Workday Finance''s developer surface includes authentication, developer portal, documentation, getting-started guide, developer console, signup flow, engineering blog, and 33 more developer resources.'
 plans:
 - name: Workday Finance Plans Pricing
   plan_count: 1
@@ -496,23 +501,23 @@ rules:
   slug: workday-finance-rules
 score:
   band: developing
-  composite: 45.2
+  composite: 45.6
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 56.5
+    artifact_dirs: 21
+    catalog_earned: 56.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 59.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 55.3
-    contract_governance: 28.8
-    contract_quality: 64.7
+    contract_governance: 27.3
+    contract_quality: 59.6
     developer_ergonomics: 34.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 45.2
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     contracts:
@@ -520,8 +525,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

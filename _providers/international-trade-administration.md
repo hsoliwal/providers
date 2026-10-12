@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -170,7 +170,7 @@ modified: '2026-05-19'
 name: International Trade Administration
 nav: Providers
 network: true
-overview: 'International Trade Administration publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Consolidated Screening List API, Country Commercial Guides API, Customs Tariff API, and 3 more. Tagged areas include Compliance, Customs, Export, Federal-Government, and International Business.
+overview: 'International Trade Administration publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Consolidated Screening List API, Country Commercial Guides API, Customs Tariff API, and 3 more. Tagged areas include Compliance, Customs, Export, Federal Government, and International Business.
 
 
   The International Trade Administration catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -199,7 +199,7 @@ rules:
   slug: international-trade-administration-rules
 score:
   band: thin
-  composite: 37.2
+  composite: 34.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -211,11 +211,16 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 54.8
+    contract_quality: 49.3
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     contracts:
@@ -228,9 +233,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -251,7 +256,7 @@ tags:
 - Compliance
 - Customs
 - Export
-- Federal-Government
+- Federal Government
 - International Business
 - Screening List
 - Tariffs

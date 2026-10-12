@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: Free public REST API that returns whether a given crypto address is identified as sanctioned by OFAC, EU, or UN sanctions authorities. No commercial licence required; widely embedded by wallets, dApps
@@ -210,7 +210,7 @@ modified: '2026-08-27'
 name: Chainalysis
 nav: Providers
 network: true
-overview: 'Chainalysis publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Compliance, AML, KYT, Sanctions, and Investigations.
+overview: 'Chainalysis publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Compliance, AML, Transaction Monitoring, Sanctions, and Investigations.
 
 
   Chainalysis'' developer surface includes documentation, support, engineering blog, signup flow, authentication, and 23 more developer resources.'
@@ -224,8 +224,8 @@ rate_limits:
   name: Chainalysis Rate Limits
   slug: chainalysis-rate-limits
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 41.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 59.0
@@ -239,14 +239,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 50.0
-  previous_composite: 39.2
+  previous_composite: 41.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -274,11 +280,11 @@ slug: chainalysis
 tags:
 - Compliance
 - AML
-- KYT
+- Transaction Monitoring
 - Sanctions
 - Investigations
 - Blockchain Analytics
-- Risk
+- Risk Management
 - Crypto
 website: https://www.chainalysis.com/
 ---

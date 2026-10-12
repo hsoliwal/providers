@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SOAP web service for the ConcreteGO cloud dispatch platform. Uses an RSA public-key credential exchange (GetPublicKey) and a session login (Login/Login2) with a Sysdyne-issued AppID/AppKey, then submi
@@ -115,7 +115,7 @@ overview: 'Sysdyne Technologies publishes 1 API on the [APIs.io](https://apis.io
 random_paper: 13
 score:
   band: emerging
-  composite: 22.7
+  composite: 21.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -127,16 +127,22 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 22.7
+  previous_composite: 21.9
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

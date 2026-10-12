@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: Real-time and batch insurance eligibility and benefits verification, exchanging X12 270 inquiries and 271 responses to confirm coverage, plan details, copays, deductibles, and service-type benefits be
@@ -226,7 +226,7 @@ rate_limits:
   slug: waystar-rate-limits
 score:
   band: developing
-  composite: 46.2
+  composite: 43.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 58.0
@@ -240,20 +240,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 60.5
-  previous_composite: 46.2
+  previous_composite: 43.4
   provenance:
     conformance: first-party
     mcp: derived
   regulatory:
     applies: true
     matched_via: tags
-    regime: Health
-    regime_id: health
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Insurance
+    regime_id: insurance
+    score: 27.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -284,6 +284,6 @@ tags:
 - X12 EDI
 - Eligibility
 - Claims
-- Remittances
+- Health Insurance
 website: https://www.waystar.com/
 ---

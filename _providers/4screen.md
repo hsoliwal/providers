@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The production 4.screen API. Automakers and mobility service providers integrate it into infotainment and navigation systems to render 4.screen content in the vehicle, and the 4.screen customer portal
@@ -180,12 +180,12 @@ rate_limits:
   slug: 4screen-rate-limits
 scopes:
 - name: 4Screen Scopes
-  scope_count: 0
+  scope_count: 14
   slug: 4screen-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 20.7
+  composite: 24.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -199,7 +199,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -209,12 +209,18 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 20.7
+  previous_composite: 24.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

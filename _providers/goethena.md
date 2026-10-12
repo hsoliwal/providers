@@ -23,10 +23,10 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: verified
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.4
-  scored_at: '2026-09-20'
+  score: 44.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.goethena.com
@@ -224,9 +224,9 @@ description: Ethena (goethena.com) is an AI-powered compliance training and ethi
 image: https://www.goethena.com/wp-content/uploads/2025/12/Ethenas-Featured-Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.goethena.com over HTTP.
   name: Goethena MCP Server
-  slug: goethena-mcp-server
+  slug: goethena-wordpress
 modified: '2026-07-19'
 name: Goethena
 nav: Providers
@@ -241,7 +241,7 @@ overview: 'Goethena publishes 5 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 7
 score:
   band: developing
-  composite: 48.7
+  composite: 45.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -253,11 +253,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 70.5
+    contract_quality: 64.6
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 48.7
+  previous_composite: 45.3
   provenance:
     conformance: derived
     contracts:
@@ -265,16 +265,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -255,7 +255,7 @@ overview: 'Zest publishes 8 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 14
 score:
   band: developing
-  composite: 44.2
+  composite: 43.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 44.2
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -282,8 +282,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -244,14 +244,14 @@ modified: '2026-07-25'
 name: Open
 nav: Providers
 network: true
-overview: 'Open publishes 1 API on the [APIs.io](https://apis.io/) network: Policy API. Tagged areas include Insurance, Australia, Insurtech, Embedded Insurance, and Property and Casualty.
+overview: 'Open publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Policy API, and 1 more. Tagged areas include Insurance, Australia, Insurtech, Embedded Insurance, and Property and Casualty.
 
 
   Open''s developer surface includes documentation, API reference, authentication, status page, developer portal, getting-started guide, support, and 32 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 43.3
+  composite: 40.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -263,9 +263,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -274,7 +274,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 43.3
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -290,9 +290,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

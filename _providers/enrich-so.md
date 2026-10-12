@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -178,6 +178,11 @@ collections:
   name: Enrich API
   slug: open-enrich-so
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/capabilities/enrich-so-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/enrich-so-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/enrich-so/refs/heads/main/overlays/enrich-so-account-overlay.yaml
   title: ''
@@ -381,7 +386,7 @@ layout: provider
 mcp_servers:
 - description: 'Enrich operates a first-party REMOTE MCP server at https://mcp.enrich.so/mcp. It is a Streamable-HTTP MCP endpoint (Express, CORS-open, mcp-session-id exposed) that an MCP client can POST to directly '
   name: Enrich MCP Server
-  slug: enrich-mcp-server
+  slug: enrich-so-mcp-yml
 modified: '2026-09-16'
 name: Enrich
 nav: Providers
@@ -392,7 +397,7 @@ overview: 'Enrich publishes 18 APIs on the [APIs.io](https://apis.io/) network, 
   The Enrich catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Enrich''s developer surface includes authentication, documentation, engineering blog, changelog, API reference, getting-started guide, pricing, and 34 more developer resources.'
+  Enrich''s developer surface includes authentication, documentation, engineering blog, changelog, API reference, getting-started guide, pricing, and 35 more developer resources.'
 plans:
 - name: Enrich So Plans Pricing
   plan_count: 5
@@ -404,12 +409,12 @@ rate_limits:
   slug: enrich-so-rate-limits
 scopes:
 - name: Enrich So Scopes
-  scope_count: 0
+  scope_count: 1
   slug: enrich-so-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: strong
-  composite: 63.2
+  composite: 63.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 67.0
@@ -421,11 +426,11 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 18.2
-    contract_quality: 66.9
+    contract_quality: 61.0
     developer_ergonomics: 62.5
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 73.7
-  previous_composite: 63.2
+  previous_composite: 63.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -436,8 +441,14 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

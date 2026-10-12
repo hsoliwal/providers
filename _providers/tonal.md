@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -115,9 +115,9 @@ description: 'Tonal is a connected fitness company founded in 2013 by Aly Orady 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tonal.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at tonal.com over HTTP; 5 tools listed.
   name: Tonal MCP Server
-  slug: tonal-mcp-server
+  slug: tonal-storefront-ucp
 modified: '2026-07-21'
 name: Tonal
 nav: Providers
@@ -129,7 +129,7 @@ overview: 'Tonal is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 14
 score:
   band: emerging
-  composite: 18.7
+  composite: 17.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -143,25 +143,27 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.7
+  previous_composite: 17.9
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -286,7 +286,7 @@ modified: '2026-07-26'
 name: PropertyMe
 nav: Providers
 network: true
-overview: 'PropertyMe publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Connection API, Scope: Activities API, Scope: Bills API, and 3 more. Tagged areas include Real-Estate, Australia, Property Management, Rentals, and PropTech.
+overview: 'PropertyMe publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Connection API, Scope: Activities API, Scope: Bills API, and 3 more. Tagged areas include Real Estate, Australia, Property Management, Rentals, and PropTech.
 
 
   PropertyMe''s developer surface includes authentication, documentation, API reference, signup flow, pricing, support, engineering blog, and 34 more developer resources.'
@@ -298,7 +298,7 @@ scopes:
   summary_line: 20 scopes · authorizationCode/clientCredentials/deviceCode/ciba
 score:
   band: developing
-  composite: 44.5
+  composite: 41.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -310,9 +310,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 54.3
+    contract_quality: 49.1
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -322,7 +322,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 44.5
+  previous_composite: 41.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -357,7 +357,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: propertyme
 tags:
-- Real-Estate
+- Real Estate
 - Australia
 - Property Management
 - Rentals

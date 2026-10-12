@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -103,6 +103,11 @@ collections:
   slug: open-oracle-container-engine
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oracle-container-engine/refs/heads/main/capabilities/oracle-container-engine-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/oracle-container-engine-capability-edges.yml
+- group: other
   title: ''
   type: ParentCompany
   url: https://apis.io/providers/oracle/
@@ -165,10 +170,10 @@ modified: '2026-08-21'
 name: Oracle Container Engine for Kubernetes
 nav: Providers
 network: true
-overview: 'Oracle Container Engine for Kubernetes publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Add-ons API, Clusters API, Credentials API, and 3 more. Tagged areas include Cloud, Containers, Kubernetes, Oracle, and Orchestration.
+overview: 'Oracle Container Engine for Kubernetes publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Add-ons API, Clusters API, Credentials API, and 3 more. Tagged areas include Cloud, Containers, Kubernetes, Oracle, and Container Orchestration.
 
 
-  Oracle Container Engine for Kubernetes'' developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, signup flow, and 6 more developer resources.'
+  Oracle Container Engine for Kubernetes'' developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, signup flow, and 7 more developer resources.'
 plans:
 - name: Oracle Container Engine Plans Pricing
   plan_count: 3
@@ -179,8 +184,8 @@ rate_limits:
   name: Oracle Container Engine Rate Limits
   slug: oracle-container-engine-rate-limits
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 37.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -192,11 +197,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 49.0
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 39.6
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     contracts:
@@ -204,8 +209,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -226,6 +237,6 @@ tags:
 - Containers
 - Kubernetes
 - Oracle
-- Orchestration
+- Container Orchestration
 website: https://www.oracle.com/cloud/cloud-native/container-engine-kubernetes/
 ---

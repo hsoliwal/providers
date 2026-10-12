@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 80
   human_in_the_loop: 0
@@ -498,7 +498,7 @@ scopes:
   summary_line: 14 scopes · clientCredentials
 score:
   band: developing
-  composite: 48.9
+  composite: 50.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -510,11 +510,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 54.5
+    contract_quality: 49.4
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 48.9
+  previous_composite: 50.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -525,8 +525,14 @@ score:
       total: 35
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

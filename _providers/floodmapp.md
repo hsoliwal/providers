@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Authenticated flood forecasting and impact data delivered as GIS-native OGC WMS/WFS feeds, secured by AWS Cognito OAuth2/OIDC. Access is provisioned per customer; there is no public self-service devel
@@ -113,7 +113,7 @@ layout: provider
 mcp_servers:
 - description: 'FloodMapp''s public website exposes a Model Context Protocol (MCP) endpoint via the Wix Site MCP platform. It provides live, up-to-date public site content and business-solution APIs to AI agents with '
   name: FloodMapp MCP Server
-  slug: floodmapp-mcp-server
+  slug: floodmapp-site
 modified: '2026-07-19'
 name: FloodMapp
 nav: Providers
@@ -130,7 +130,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 20.2
+  composite: 22.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -144,14 +144,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 20.2
+  previous_composite: 22.6
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,7 +186,7 @@ tags:
 - GIS
 - Emergency Management
 - Climate Risk
-- Machine-Learning
+- Machine Learning
 - Hydrology
 website: https://www.floodmapp.com
 ---

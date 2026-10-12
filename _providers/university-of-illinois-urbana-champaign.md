@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 116
   human_in_the_loop: 3
@@ -334,7 +334,7 @@ modified: '2026-08-19'
 name: University of Illinois Urbana-Champaign
 nav: Providers
 network: true
-overview: 'University of Illinois Urbana-Champaign publishes 2 APIs on the [APIs.io](https://apis.io/) network: Rokwire Core Building Block API and Rokwire Gateway Building Block API. Tagged areas include University, Higher Education, Education, Public Research University, and United States.
+overview: 'University of Illinois Urbana-Champaign publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Rokwire Core Building Block API, Rokwire Gateway Building Block API, and 6 more. Tagged areas include University, Higher Education, Education, Public Research University, and United States.
 
 
   The University of Illinois Urbana-Champaign catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -378,7 +378,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 48.8
+  composite: 42.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 53.5
@@ -390,9 +390,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 31.8
-    contract_quality: 64.1
+    contract_quality: 58.7
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -401,7 +401,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.8
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -415,9 +415,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 79.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -450,6 +450,6 @@ tags:
 - OAI-PMH
 - Library
 - Research Computing
-- Open-Source
+- Open Source
 website: https://illinois.edu/
 ---

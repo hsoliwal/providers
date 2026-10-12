@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: Server-side JSON API for the Learnosity platform. Endpoint families cover Item bank content (Items, Questions, Features, Activities, Tags, Pools, Templates, Workflows), learner sessions and responses,
@@ -275,8 +275,8 @@ rate_limits:
   name: Learnosity Rate Limits
   slug: learnosity-rate-limits
 score:
-  band: strong
-  composite: 55.2
+  band: developing
+  composite: 51.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 52.0
@@ -288,11 +288,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 84.2
-  previous_composite: 55.2
+  previous_composite: 51.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -305,9 +305,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

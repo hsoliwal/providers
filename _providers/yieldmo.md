@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.1
-  scored_at: '2026-09-20'
+  score: 43.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JavaScript SDK providing publisher-side API methods for managing ad placements and requesting page views in single-page applications and infinite scroll implementations. Enables dynamic ad loading wit
@@ -90,6 +90,11 @@ collections:
   name: FastAPI
   slug: open-yieldmo-dcs-mcp
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/yieldmo/refs/heads/main/capabilities/yieldmo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/yieldmo-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -252,13 +257,13 @@ modified: '2026-08-12'
 name: Yieldmo
 nav: Providers
 network: true
-overview: 'Yieldmo publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Canned Reports API, Dcs API, Manage API, and 4 more. Tagged areas include Advertising, Programmatic, Native Advertising, Ad Exchange, and Publisher Monetization.
+overview: 'Yieldmo publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Canned Reports API, Dcs API, Manage API, and 8 more. Tagged areas include Advertising, Programmatic, Native Advertising, Ad Exchange, and Publisher Monetization.
 
 
   The Yieldmo catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Yieldmo''s developer surface includes documentation, engineering blog, pricing, authentication, sandbox, and 26 more developer resources.'
+  Yieldmo''s developer surface includes documentation, engineering blog, pricing, authentication, sandbox, and 27 more developer resources.'
 plans:
 - name: Yieldmo Plans Pricing
   plan_count: 3
@@ -275,9 +280,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.0
+  composite: 30.6
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 48.0
     catalog_earned_first_party: 0.0
     catalog_gap: 67.0
@@ -287,11 +292,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 4.5
-    contract_quality: 43.8
+    contract_quality: 39.8
     developer_ergonomics: 37.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 30.0
+  previous_composite: 30.6
   provenance:
     conformance: derived
     contracts:
@@ -301,8 +306,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

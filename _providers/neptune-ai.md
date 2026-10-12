@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Neptune REST API backs the Neptune Python client. It exposes runs, projects, fields, and metadata logging. Authentication uses an API token from the user profile.
@@ -112,7 +112,7 @@ modified: '2026-05-08'
 name: Neptune.ai
 nav: Providers
 network: true
-overview: Neptune.ai publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Machine-Learning, MLOps, Experiment Tracking, Foundation Models, and Acquired.
+overview: Neptune.ai publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Machine Learning, MLOps, Experiment Tracking, Foundation Models, and Acquired.
 plans:
 - name: Neptune Ai Plans Pricing
   plan_count: 1
@@ -124,7 +124,7 @@ rate_limits:
   slug: neptune-ai-rate-limits
 score:
   band: emerging
-  composite: 18.1
+  composite: 16.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -138,14 +138,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 18.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -159,7 +165,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: neptune-ai
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Experiment Tracking
 - Foundation Models

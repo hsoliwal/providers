@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -285,7 +285,7 @@ overview: 'Figure Technology Solutions publishes 8 APIs on the [APIs.io](https:/
 random_paper: 8
 score:
   band: developing
-  composite: 41.9
+  composite: 41.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -297,11 +297,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 54.9
+    contract_quality: 50.3
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 41.9
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -312,8 +312,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -339,6 +345,6 @@ tags:
 - Capital Markets
 - Blockchain
 - Loan Origination
-- Financial-Services
+- Financial Services
 website: https://www.figure.com/
 ---

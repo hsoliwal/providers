@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Part of Cuscal's CMS REST API family for card issuers. Enables instant digital card issuance and provisioning of cards into mobile and digital wallets (the 'Pays') for online and in-store transactions
@@ -140,7 +140,7 @@ overview: 'Cuscal publishes 3 APIs on the [APIs.io](https://apis.io/) network. T
 random_paper: 19
 score:
   band: thin
-  composite: 30.0
+  composite: 29.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -152,9 +152,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 25.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,7 +163,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.0
+  previous_composite: 29.1
   provenance:
     conformance: first-party
   regulatory:
@@ -171,9 +171,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 29.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -196,7 +196,7 @@ tags:
 - Open Banking
 - Consumer Data Right
 - Account-to-Account
-- Fraud
+- Fraud Prevention
 - Banking as a Service
 website: https://www.cuscal.com/
 ---

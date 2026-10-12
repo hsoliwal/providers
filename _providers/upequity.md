@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -93,7 +93,7 @@ modified: '2026-09-02'
 name: UpEquity
 nav: Providers
 network: true
-overview: 'UpEquity is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Mortgage, Lending, and Financial-Services.
+overview: 'UpEquity is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Mortgage, Lending, and Financial Services.
 
 
   UpEquity''s developer surface includes support and 9 more developer resources.'
@@ -108,7 +108,7 @@ rate_limits:
   slug: upequity-rate-limits
 score:
   band: minimal
-  composite: 8.7
+  composite: 9.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -122,17 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 8.7
+  previous_composite: 9.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 15.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -146,10 +146,10 @@ security:
 slug: upequity
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Mortgage
 - Lending
-- Financial-Services
+- Financial Services
 - PropTech
 - Home Buying
 - Title Insurance

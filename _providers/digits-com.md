@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -44,11 +44,6 @@ agentic_access:
   summary_line: 24 operations · 8 acting
 api_count: 2
 apis:
-- baseURL: https://connect.digits.com/v1
-  baseurl_source: declared
-  description: Receive event notifications from Digits at a configured webhook endpoint; Digits POSTs a JSON event body and expects a 2xx acknowledgment (WebhookService.receiveWebhookEvent).
-  name: Digits Webhooks API
-  slug: digits-com-webhooks-api
 - description: Model Context Protocol server that lets AI clients like ChatGPT and Claude connect directly to Digits to query the ledger in natural language. Discovery is published as an MCP Server Card at /.well-kn
   name: Digits MCP Server
   slug: digits-com-mcp-server
@@ -89,7 +84,7 @@ apis:
   slug: digits-com-transactions-api
 - baseURL: https://connect.digits.com/v1
   baseurl_source: declared
-  description: Event delivery to partner-configured endpoints.
+  description: Receive event notifications from Digits at a configured webhook endpoint; Digits POSTs a JSON event body and expects a 2xx acknowledgment (WebhookService.receiveWebhookEvent).
   name: Digits Webhooks API
   slug: digits-com-webhooks-api
 - baseURL: https://connect.digits.com/v1
@@ -107,7 +102,7 @@ apis:
   description: The .well Known API from Digits — 2 operation(s) for .well known.
   name: Digits .well Known API
   slug: digits-com-well-known-api
-artifact_total: 36
+artifact_total: 35
 asyncapis:
 - description: ''
   name: Digits Com Webhooks
@@ -153,6 +148,11 @@ collections:
   name: Digits Connect API
   slug: open-digits-com
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/capabilities/digits-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/digits-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/agentic-access/digits-com-agentic-access.yml
   title: ''
@@ -349,13 +349,13 @@ modified: '2026-08-08'
 name: Digits
 nav: Providers
 network: true
-overview: 'Digits publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Chart of Accounts API, Connections API, and 9 more. Tagged areas include Accounting, Bookkeeping, Finance, General Ledger, and Artificial Intelligence.
+overview: 'Digits publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Chart of Accounts API, Connections API, Financial Statements API, and 9 more. Tagged areas include Accounting, Bookkeeping, Finance, General Ledger, and Artificial Intelligence.
 
 
   The Digits catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Digits'' developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 33 more developer resources.'
+  Digits'' developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 34 more developer resources.'
 plans:
 - name: Digits Com Plans Pricing
   plan_count: 2
@@ -372,23 +372,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 53.5
+  composite: 53.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 56.0
+    artifact_dirs: 25
+    catalog_earned: 49.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 65.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 55.3
+    access_clarity: 53.2
     contract_governance: 18.2
-    contract_quality: 57.9
+    contract_quality: 52.9
     developer_ergonomics: 48.2
-    discoverability: 75.9
-    operational_transparency: 50.0
-  previous_composite: 53.5
+    discoverability: 64.3
+    operational_transparency: 47.9
+  previous_composite: 53.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -399,8 +399,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

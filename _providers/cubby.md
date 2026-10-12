@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Cubby Operator API is a JSON HTTP API — explicitly not RESTful — oriented around actions performed on system entities rather than transfer of state. Roughly 70 POST endpoints cover access codes, l
@@ -207,7 +207,7 @@ modified: '2026-08-11'
 name: Cubby
 nav: Providers
 network: true
-overview: 'Cubby publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Self Storage, Property Management, Facility Management, and Real-Estate.
+overview: 'Cubby publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Self Storage, Property Management, Facility Management, and Real Estate.
 
 
   The Cubby catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -230,7 +230,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.4
+  composite: 40.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -242,11 +242,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 45.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 43.4
+  previous_composite: 40.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -255,9 +255,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -279,7 +279,7 @@ tags:
 - Self Storage
 - Property Management
 - Facility Management
-- Real-Estate
+- Real Estate
 - Payments
 - Software-as-a-Service
 - Artificial Intelligence

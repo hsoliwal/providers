@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -203,6 +203,11 @@ collections:
   name: PlanetScale Platform Backups Webhooks API
   slug: open-planetscale-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/planetscale/refs/heads/main/capabilities/planetscale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/planetscale-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -351,13 +356,13 @@ modified: '2026-09-16'
 name: Planetscale
 nav: Providers
 network: true
-overview: 'Planetscale publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Backups API, Billing API, Bouncers API, and 14 more. Tagged areas include Application, Authorization, and Edge Computing.
+overview: 'Planetscale publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Backups API, Billing API, Bouncers API, and 17 more. Tagged areas include Database, MySQL, PostgreSQL, and Serverless.
 
 
   The Planetscale catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Planetscale''s developer surface includes authentication, engineering blog, and 7 more developer resources.'
+  Planetscale''s developer surface includes authentication, engineering blog, and 8 more developer resources.'
 plans:
 - name: Planetscale Plans Pricing
   plan_count: 5
@@ -391,9 +396,9 @@ rules:
   slug: planetscale-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 31.2
+  composite: 29.8
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 45.5
     catalog_earned_first_party: 0.0
     catalog_gap: 69.5
@@ -403,11 +408,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 69.9
+    contract_quality: 64.2
     developer_ergonomics: 19.0
-    discoverability: 44.4
+    discoverability: 42.9
     operational_transparency: 10.5
-  previous_composite: 31.2
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -415,8 +420,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -433,8 +444,9 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: planetscale
 tags:
-- Application
-- Authorization
-- Edge Computing
+- Database
+- MySQL
+- PostgreSQL
+- Serverless
 website: https://planetscale.com
 ---

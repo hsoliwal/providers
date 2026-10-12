@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -58,17 +58,17 @@ description: Carevision Inc. is an AI-powered digital health company whose platf
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/carevision-inc.png
 layout: provider
 modified: '2026-07-18'
-name: Carevision Inc.
+name: Carevision
 nav: Providers
 network: true
-overview: 'Carevision Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Wellness.
+overview: 'Carevision is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Wellness.
 
 
-  Carevision Inc.''s developer surface includes engineering blog, support, and 2 more developer resources.'
+  Carevision''s developer surface includes engineering blog, support, and 2 more developer resources.'
 random_paper: 4
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -82,17 +82,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 3.3
+  previous_composite: 3.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,7 +113,7 @@ tags:
 - Wellness
 - Cardiometabolic
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Remote Photoplethysmography
 - Screening
 - SDK

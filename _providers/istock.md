@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -102,6 +102,11 @@ collections:
   name: iStock API (Getty Images Platform)
   slug: open-istock
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/istock/refs/heads/main/capabilities/istock-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/istock-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/istock/refs/heads/main/agentic-access/istock-agentic-access.yml
   title: ''
@@ -164,7 +169,7 @@ network: true
 overview: 'iStock publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Countries API, Downloads API, Images API, and 3 more. Tagged areas include Stock Media, Image, Video, Illustrations, and Royalty-Free.
 
 
-  iStock''s developer surface includes authentication and 9 more developer resources.'
+  iStock''s developer surface includes authentication and 10 more developer resources.'
 plans:
 - name: Istock Plans Pricing
   plan_count: 3
@@ -176,9 +181,9 @@ rate_limits:
   slug: istock-rate-limits
 score:
   band: thin
-  composite: 29.1
+  composite: 27.8
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 45.0
     catalog_earned_first_party: 0.0
     catalog_gap: 70.0
@@ -188,11 +193,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 51.5
+    contract_quality: 46.3
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 29.1
+  previous_composite: 27.8
   provenance:
     agentic_access: derived
     contracts:
@@ -200,8 +205,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

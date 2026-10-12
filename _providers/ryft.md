@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://ingest.ryft.io
@@ -151,7 +151,7 @@ layout: provider
 mcp_servers:
 - description: 'Ryft MCP is a Model Context Protocol server that enriches AI agents with full lakehouse context - table metadata, query history, and domain knowledge - so agents can write accurate queries and answer '
   name: Ryft MCP Server
-  slug: ryft-mcp-server
+  slug: ryft
 modified: '2026-07-21'
 name: Ryft
 nav: Providers
@@ -163,7 +163,7 @@ overview: 'Ryft publishes 1 API on the [APIs.io](https://apis.io/) network: Inge
 random_paper: 13
 score:
   band: developing
-  composite: 42.2
+  composite: 42.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -175,11 +175,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 42.2
+  previous_composite: 42.5
   provenance:
     conformance: first-party
     contracts:
@@ -189,8 +189,20 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

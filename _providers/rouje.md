@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface for the Rouje storefront, implementing the Universal Commerce Protocol (UCP) over MCP: catalog search, cart, checkout, fulfillment, and order tools, with a buyer-approval'
@@ -102,9 +102,9 @@ description: 'Rouje is a Parisian ready-to-wear and beauty brand founded by Jean
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rouje.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.rouje.com over HTTP; 5 tools listed.
   name: Rouje MCP Server
-  slug: rouje-mcp-server
+  slug: rouje-ucp-shopping
 modified: '2026-07-21'
 name: Rouje
 nav: Providers
@@ -121,7 +121,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 16.4
+  composite: 19.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -135,14 +135,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 16.4
+  previous_composite: 19.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

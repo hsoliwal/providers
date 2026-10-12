@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -136,6 +136,10 @@ description: 'Stllr Network is an AI-powered user-generated-content (UGC) and cr
   routes, including TikTok and Google OAuth hand-offs — but it is an application backend with no published contract. Stllr has, by contrast, done deliberate agent-discovery work on its marketing surface: it serves a hand-written llms.txt and a robots.txt that explicitly allows OAI-SearchBot, ChatGPT-User, PerplexityBot, Claude-SearchBot, ClaudeBot and Google-Extended. Surfaced as a portfolio company of 500 Global and added to the API Evangelist network for enrichment.'
 image: https://cdn.prod.website-files.com/670e5530627adc7d7d0af0b3/68ff496a88d8e714a84367ae_image%205.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.stllr.network over HTTP; 6 tools listed.
+  name: Stllr Network MCP Server
+  slug: stllr-network
 modified: '2026-08-12'
 name: Stllr Network
 nav: Providers
@@ -155,7 +159,7 @@ rate_limits:
   slug: stllr-network-rate-limits
 score:
   band: emerging
-  composite: 22.8
+  composite: 22.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 39.0
@@ -169,7 +173,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,11 +182,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 22.8
+  previous_composite: 22.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -398,7 +398,7 @@ overview: 'Optibus publishes 26 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 4
 score:
   band: developing
-  composite: 45.1
+  composite: 45.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -410,11 +410,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 53.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 56.6
-  previous_composite: 45.1
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -425,8 +425,14 @@ score:
       total: 26
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

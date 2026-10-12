@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://platform-api.nabis.pro
@@ -298,7 +298,7 @@ rate_limits:
   slug: nabis-rate-limits
 score:
   band: developing
-  composite: 50.2
+  composite: 50.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 48.0
@@ -310,11 +310,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 54.1
+    contract_quality: 48.9
     developer_ergonomics: 63.7
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 63.2
-  previous_composite: 50.2
+  previous_composite: 50.0
   provenance:
     conformance: first-party
     contracts:
@@ -324,8 +324,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

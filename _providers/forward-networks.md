@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 121
   human_in_the_loop: 2
@@ -210,6 +210,11 @@ collections:
   name: 'Forward Networks: Complete Aliases Vulnerability Analysis API'
   slug: open-forward-networks-vulnerability-analysis-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/forward-networks/refs/heads/main/capabilities/forward-networks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/forward-networks-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -351,7 +356,7 @@ layout: provider
 mcp_servers:
 - description: Open-source MCP server (Go, stdio transport) published in the Forward Networks GitHub org. Exposes 54 tools plus 6 workflow prompts and a network-context resource, validated against the official Forwa
   name: Forward Networks MCP Server
-  slug: forward-networks-mcp-server
+  slug: forward-mcp
 modified: '2026-09-16'
 name: Forward Networks
 nav: Providers
@@ -359,13 +364,13 @@ network: true
 overview: 'Forward Networks publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Aliases API, Checks API, Classic Devices API, and 17 more. Tagged areas include Company, Networks, Network Automation, Network Digital Twin, and Network Security.
 
 
-  Forward Networks'' developer surface includes documentation, authentication, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  Forward Networks'' developer surface includes documentation, authentication, engineering blog, pricing, signup flow, and 25 more developer resources.'
 random_paper: 1
 score:
   band: developing
-  composite: 41.8
+  composite: 43.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -375,11 +380,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 50.3
+    contract_quality: 45.6
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 41.8
+  previous_composite: 43.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -390,8 +395,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

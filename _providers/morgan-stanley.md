@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: 'The institutional REST APIs on the Morgan Stanley API Platform let onboarded clients and third-party partners integrate Morgan Stanley data and services directly into their own systems and processes. '
@@ -164,7 +164,7 @@ modified: '2026-07-23'
 name: Morgan Stanley
 nav: Providers
 network: true
-overview: 'Morgan Stanley publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Investment Banking, Wealth Management, Brokerage, and Market Data.
+overview: 'Morgan Stanley publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Investment Banking, Wealth Management, Brokerage, and Market Data.
 
 
   Morgan Stanley''s developer surface includes documentation, engineering blog, getting-started guide, authentication, sandbox, and 16 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: morgan-stanley-rate-limits
 score:
   band: thin
-  composite: 29.3
+  composite: 27.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 42.0
@@ -209,7 +209,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -218,7 +218,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.3
+  previous_composite: 27.5
   provenance:
     conformance: first-party
   regulatory:
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,7 @@ security:
   summary_line: disclosure policy published
 slug: morgan-stanley
 tags:
-- Financial
+- Finance
 - Investment Banking
 - Wealth Management
 - Brokerage

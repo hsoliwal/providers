@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Job search app and website
@@ -66,11 +66,11 @@ modified: '2026-05-28'
 name: ZipRecruiter
 nav: Providers
 network: true
-overview: ZipRecruiter publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Job and Public APIs.
+overview: ZipRecruiter publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Job, Public APIs, Recruiting, Job Board, and Job Search.
 random_paper: 0
 score:
   band: minimal
-  composite: 7.6
+  composite: 6.9
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -84,11 +84,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -108,5 +114,9 @@ slug: ziprecruiter
 tags:
 - Job
 - Public APIs
+- Recruiting
+- Job Board
+- Job Search
+- Hiring
 website: https://www.ziprecruiter.com/publishers
 ---

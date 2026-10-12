@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 3
@@ -102,6 +102,11 @@ collections:
   name: Monid API
   slug: open-monid
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/monid/refs/heads/main/capabilities/monid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/monid-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/monid/refs/heads/main/agentic-access/monid-agentic-access.yml
   title: ''
@@ -232,7 +237,7 @@ network: true
 overview: 'Monid publishes 10 APIs on the [APIs.io](https://apis.io/) network, including API Keys API, Auth API, Controls API, and 7 more. Tagged areas include Company, Agents, MCP, Tools, and Data.
 
 
-  Monid''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, signup flow, and 18 more developer resources.'
+  Monid''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, engineering blog, signup flow, and 19 more developer resources.'
 random_paper: 7
 scopes:
 - name: Monid Scopes
@@ -241,9 +246,9 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.3
+  composite: 37.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -253,16 +258,18 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 55.4
+    contract_quality: 49.9
     developer_ergonomics: 66.7
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.3
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -273,8 +280,14 @@ score:
       total: 10
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

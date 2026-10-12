@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: GRIN's bi-directional REST API lets a brand's own software communicate with GRIN to synchronize creators, content, programs, and reporting data. Reference documentation is published on Stoplight at ap
@@ -178,9 +178,9 @@ description: GRIN is a creator management and influencer marketing platform for 
 image: https://grin.co/wp-content/uploads/2022/11/2022_GRIN_Logo_Black_Transparent-Bkgnd-small.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.grin.co over HTTP requiring OAuth.
   name: Grin MCP Server
-  slug: grin-mcp-server
+  slug: grin
 modified: '2026-08-13'
 name: Grin
 nav: Providers
@@ -205,7 +205,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 40.7
+  composite: 45.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -219,14 +219,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 40.7
+  previous_composite: 45.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -258,7 +264,7 @@ tags:
 - Creator Management
 - Affiliate Marketing
 - Marketing
-- Social-Media
+- Social Media
 - E-Commerce
 website: https://grin.co
 ---

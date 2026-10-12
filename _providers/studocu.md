@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -88,6 +88,10 @@ created: '2026-07-17'
 description: Studocu (operated by StudeerSnel B.V., Amsterdam) is a global online learning platform and study-materials marketplace where students access, share, and upload course documents, lecture notes, summaries, and exam prep across thousands of institutions and subjects. The platform layers AI study tools on top of its crowdsourced document library — an Ask AI chat, AI Notes generation, and an AI Quiz Generator — alongside course organization, study lists, and a Premium subscription for unlimited downloads and full document access. Backed by Partech and Point Nine, Studocu was added to the API Evangelist network as a portfolio company. It exposes no public developer API; this profile captures its public security, trust, and web-property surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/studocu.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.studocu.com over HTTP; 1 tool listed.
+  name: Studocu MCP Server
+  slug: studocu
 modified: '2026-07-21'
 name: Studocu
 nav: Providers
@@ -99,7 +103,7 @@ overview: 'Studocu is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 5
 score:
   band: minimal
-  composite: 7.0
+  composite: 6.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -113,9 +117,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 7.0
+  previous_composite: 6.8
   provenance:
     mcp: first-party
   regulatory:
@@ -123,9 +127,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

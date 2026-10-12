@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -94,9 +94,9 @@ description: 'MeetAndy (operated by MeetTomorrow Inc.) is an AI project assistan
 image: https://meetandy.ai/images/og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at hub.meetandy.ai over HTTP; 3 tools listed.
   name: MeetAndy MCP server
-  slug: meetandy-mcp-server
+  slug: meetandy
 modified: '2026-07-20'
 name: MeetAndy AI
 nav: Providers
@@ -108,7 +108,7 @@ overview: 'MeetAndy AI is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 2
 score:
   band: emerging
-  composite: 20.7
+  composite: 20.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -122,14 +122,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 18.4
-  previous_composite: 20.7
+  previous_composite: 20.3
   provenance:
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

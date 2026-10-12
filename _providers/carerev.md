@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The private application and partner-integration API behind the CareRev platform. api.carerev.com is a live, TLS-terminated API gateway (Istio/Envoy fronting a Ruby application) that serves the CareRev
@@ -137,7 +137,7 @@ overview: 'CareRev publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 18
 score:
   band: emerging
-  composite: 17.9
+  composite: 16.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -151,9 +151,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 10.5
-  previous_composite: 17.9
+  previous_composite: 16.9
   provenance:
     conformance: first-party
   regulatory:
@@ -165,9 +165,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 79
   human_in_the_loop: 4
@@ -192,6 +192,11 @@ collections:
   slug: open-datastax-vpc-peering-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/datastax/refs/heads/main/capabilities/datastax-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/datastax-capability-edges.yml
+- group: other
   title: ''
   type: ParentCompany
   url: https://apis.io/providers/ibm/
@@ -346,9 +351,9 @@ description: DataStax is the company behind Astra DB, a serverless, multi-cloud 
 image: https://www.datastax.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 19 tools listed.
   name: DataStax MCP Server
-  slug: datastax-mcp-server
+  slug: astra-db-mcp
 modified: '2026-07-18'
 name: DataStax
 nav: Providers
@@ -356,7 +361,7 @@ network: true
 overview: 'DataStax publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Access List API, Authentication API, Clone API, and 14 more. Tagged areas include Company, Enterprise, Database, Vector Database, and Cassandra.
 
 
-  DataStax''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, pricing, engineering blog, and 26 more developer resources.'
+  DataStax''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, pricing, engineering blog, and 27 more developer resources.'
 random_paper: 0
 scopes:
 - name: Datastax Scopes
@@ -365,9 +370,9 @@ scopes:
   summary_line: 15 scopes
 score:
   band: developing
-  composite: 46.7
+  composite: 46.4
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -377,11 +382,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 60.4
+    contract_quality: 54.8
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 46.7
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -392,8 +397,14 @@ score:
       total: 17
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -420,5 +431,6 @@ tags:
 - Serverless
 - Streaming
 - Developer Tools
+- Vector Search
 website: https://www.datastax.com
 ---

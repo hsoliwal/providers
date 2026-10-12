@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -60,6 +60,16 @@ collections:
   name: OneUptime API
   slug: open-oneuptime
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oneuptime/refs/heads/main/capabilities/oneuptime-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/oneuptime-capability-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oneuptime/refs/heads/main/vendor-facets/oneuptime-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/oneuptime-vendor-facets.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -131,10 +141,10 @@ modified: '2026-05-19'
 name: OneUptime
 nav: Providers
 network: true
-overview: 'OneUptime publishes 1 API on the [APIs.io](https://apis.io/) network: Projects API. Tagged areas include Observability and Open-Source.
+overview: 'OneUptime publishes 1 API on the [APIs.io](https://apis.io/) network: Projects API. Tagged areas include Observability and Open Source.
 
 
-  OneUptime''s developer surface includes documentation, engineering blog, and 12 more developer resources.'
+  OneUptime''s developer surface includes documentation, engineering blog, and 14 more developer resources.'
 plans:
 - name: Oneuptime Plans Pricing
   plan_count: 3
@@ -146,9 +156,9 @@ rate_limits:
   slug: oneuptime-rate-limits
 score:
   band: thin
-  composite: 33.3
+  composite: 31.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 31.0
     catalog_earned_first_party: 0.0
     catalog_gap: 84.0
@@ -158,14 +168,14 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 11.9
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 33.3
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     contracts:
@@ -173,8 +183,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -192,6 +208,6 @@ security:
 slug: oneuptime
 tags:
 - Observability
-- Open-Source
+- Open Source
 website: https://oneuptime.com
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -73,21 +73,21 @@ description: Percolata is a Palo Alto, California predictive-analytics company t
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/percolata.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.percolata.com over HTTP; 7 tools listed.
   name: Percolata MCP Server
-  slug: percolata-mcp-server
+  slug: percolata-site-mcp
 modified: '2026-07-20'
 name: Percolata
 nav: Providers
 network: true
-overview: 'Percolata is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, Analytics, Machine-Learning, and Predictive Analytics.
+overview: 'Percolata is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Retail, Analytics, Machine Learning, and Predictive Analytics.
 
 
   Percolata''s developer surface includes support and 6 more developer resources.'
 random_paper: 9
 score:
   band: minimal
-  composite: 6.1
+  composite: 4.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -101,13 +101,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 6.1
+  previous_composite: 4.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,7 +130,7 @@ tags:
 - Company
 - Retail
 - Analytics
-- Machine-Learning
+- Machine Learning
 - Predictive Analytics
 - Workforce Optimization
 - Marketing Optimization

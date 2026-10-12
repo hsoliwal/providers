@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -66,7 +66,7 @@ apis:
   description: On-site search across products, categories, brands, and content.
   name: Hello Retail Search API
   slug: hello-retail-search-api
-artifact_total: 16
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -130,6 +130,10 @@ finops:
   slug: hello-retail-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hello-retail.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at core.helloretail.com over HTTP.
+  name: Hello Retail MCP Server
+  slug: hello-retail
 modified: '2026-05-19'
 name: Hello Retail
 nav: Providers
@@ -149,7 +153,7 @@ rate_limits:
   slug: hello-retail-rate-limits
 score:
   band: thin
-  composite: 31.0
+  composite: 29.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 41.0
@@ -161,11 +165,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 19.0
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 31.0
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -174,8 +178,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

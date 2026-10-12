@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'Asynchronous bulk data API for downloading chlorophyll-fluorescence (ChF) and Gardin-indices data. Submit a query, poll its status, then download the result set as CSV. Supports control-area, device, '
@@ -173,7 +173,7 @@ modified: '2026-07-19'
 name: Gardin
 nav: Providers
 network: true
-overview: 'Gardin publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, AgriTech, Precision Agriculture, and Plant Health.
+overview: 'Gardin publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, AgTech, Precision Agriculture, and Plant Health.
 
 
   The Gardin catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -188,7 +188,7 @@ scopes:
   summary_line: 11 scopes
 score:
   band: developing
-  composite: 43.0
+  composite: 40.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -200,11 +200,16 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 43.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 40.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -213,9 +218,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +240,7 @@ slug: gardin
 tags:
 - Company
 - Agriculture
-- AgriTech
+- AgTech
 - Precision Agriculture
 - Plant Health
 - Photosynthesis

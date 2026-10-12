@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: WabtecONE is Wabtec's digital intelligence platform enabling railroads and industrial operators to connect embedded devices and transmit operational data to the cloud for analysis. The platform provid
@@ -104,16 +104,16 @@ jsonld:
   slug: westinghouse-air-brake-technologies-context
 layout: provider
 modified: '2026-05-03'
-name: Westinghouse Air Brake Technologies Corporation
+name: Wabtec
 nav: Providers
 network: true
-overview: 'Westinghouse Air Brake Technologies Corporation publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000.
+overview: 'Wabtec publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000.
 
 
-  The Westinghouse Air Brake Technologies Corporation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+  The Wabtec catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Westinghouse Air Brake Technologies Corporation''s developer surface includes developer portal, support, and 6 more developer resources.'
+  Wabtec''s developer surface includes developer portal, support, and 6 more developer resources.'
 plans:
 - name: Westinghouse Air Brake Technologies Plans Pricing
   plan_count: 3
@@ -142,7 +142,7 @@ rate_limits:
 rules:
 - effective_rule_count: 5
   extends: []
-  name: Westinghouse Air Brake Technologies Corporation API Rules
+  name: Wabtec API Rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -152,7 +152,7 @@ rules:
   slug: westinghouse-air-brake-technologies-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 19.3
+  composite: 18.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 52.3
@@ -166,11 +166,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 19.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

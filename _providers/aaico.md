@@ -12,7 +12,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: documented
     openapi_examples: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Opus REST API. Generate a workflow from a natural-language prompt, run a workflow as a "case" with populated inputs, upload files as case inputs through a presigned-URL flow, poll or receive a cal
@@ -180,7 +180,7 @@ modified: '2026-09-05'
 name: AppliedAI (AAICO)
 nav: Providers
 network: true
-overview: 'AppliedAI (AAICO) publishes 1 API on the [APIs.io](https://apis.io/) network: Opus Platform API. Tagged areas include Company, Artificial Intelligence, Workflow-Automation, Agents, and Enterprise.
+overview: 'AppliedAI (AAICO) publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Opus Platform API, and 1 more. Tagged areas include Company, Artificial Intelligence, Workflow Automation, Agents, and Enterprise.
 
 
   AppliedAI (AAICO)''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 22 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: aaico-rate-limits
 score:
   band: thin
-  composite: 39.2
+  composite: 38.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -209,9 +209,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 39.2
+  previous_composite: 38.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -221,9 +221,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,7 @@ slug: aaico
 tags:
 - Company
 - Artificial Intelligence
-- Workflow-Automation
+- Workflow Automation
 - Agents
 - Enterprise
 - Document Processing
@@ -260,5 +260,6 @@ tags:
 - Insurance
 - Healthcare
 - MCP
+- A2A
 website: https://www.aaico.com/
 ---

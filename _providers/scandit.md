@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: On-device Smart Data Capture SDK for barcode, MatrixScan, ID, Smart Label, Parser and Text capture, shipped as first-party client libraries for iOS, Android, Web, React Native, Flutter, Cordova, Capac
@@ -150,14 +150,14 @@ modified: '2026-07-21'
 name: Scandit
 nav: Providers
 network: true
-overview: 'Scandit publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Frontier Tech, Data Capture, Barcode Scanning, and Computer-Vision.
+overview: 'Scandit publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Frontier Tech, Data Capture, Barcode Scanning, and Computer Vision.
 
 
   Scandit''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, support, and 15 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 27.7
+  composite: 27.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -171,19 +171,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - switzerland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 27.7
+  previous_composite: 27.3
   provenance:
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,7 +213,7 @@ tags:
 - Frontier Tech
 - Data Capture
 - Barcode Scanning
-- Computer-Vision
+- Computer Vision
 - SDK
 - ID Verification
 - Retail

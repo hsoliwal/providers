@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 0
@@ -194,6 +194,11 @@ collections:
   name: SAP BRIM (Billing and Revenue Innovation Management) SAP BRIM Subscription Billing API
   slug: open-sap-brim-subscription-billing
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sap-brim-billing-and-revenue-innovation-management/refs/heads/main/capabilities/sap-brim-billing-and-revenue-innovation-management-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sap-brim-billing-and-revenue-innovation-management-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -538,13 +543,13 @@ modified: '2026-08-21'
 name: SAP BRIM (Billing and Revenue Innovation Management)
 nav: Providers
 network: true
-overview: 'SAP BRIM (Billing and Revenue Innovation Management) publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Balances API, Billing API, Charging API, and 7 more. Tagged areas include Billing, Enterprise, Order-to-Cash, Revenue Management, and SAP.
+overview: 'SAP BRIM (Billing and Revenue Innovation Management) publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Balances API, Billing API, Charging API, and 8 more. Tagged areas include Billing, Enterprise, Order-to-Cash, Revenue Management, and SAP.
 
 
   The SAP BRIM (Billing and Revenue Innovation Management) catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SAP BRIM (Billing and Revenue Innovation Management)''s developer surface includes authentication, developer portal, getting-started guide, support, engineering blog, documentation, Stack Overflow tag, and 42 more developer resources.'
+  SAP BRIM (Billing and Revenue Innovation Management)''s developer surface includes authentication, developer portal, getting-started guide, support, engineering blog, documentation, Stack Overflow tag, and 43 more developer resources.'
 plans:
 - name: Sap Brim Billing And Revenue Innovation Management Plans Pricing
   plan_count: 1
@@ -583,23 +588,23 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: developing
-  composite: 51.8
+  composite: 53.5
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 67.5
+    artifact_dirs: 21
+    catalog_earned: 66.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.5
+    catalog_gap: 48.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 47.4
-    contract_governance: 28.8
-    contract_quality: 69.4
+    contract_governance: 27.3
+    contract_quality: 63.3
     developer_ergonomics: 44.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 51.8
+  previous_composite: 53.5
   provenance:
     agentic_access: derived
     contracts:
@@ -607,8 +612,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

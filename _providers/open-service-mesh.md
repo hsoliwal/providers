@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Service mesh control plane for Kubernetes that implements the Service Mesh Interface (SMI) specification, providing traffic management, security, and observability for microservices via Envoy sidecar '
@@ -109,7 +109,7 @@ rate_limits:
   slug: open-service-mesh-rate-limits
 score:
   band: emerging
-  composite: 24.5
+  composite: 22.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -123,14 +123,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 24.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Listed in the Aviva API Developer Portal service catalogue as an API that calculates premiums for Aviva consumer Private Medical Insurance policies — the quote/rating verb of the Aviva Health API fami
@@ -159,13 +159,13 @@ description: 'Aviva plc is the United Kingdom''s largest insurer and one of the 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 modified: '2026-07-25'
-name: Aviva plc
+name: Aviva
 nav: Providers
 network: true
-overview: 'Aviva plc publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Property and Casualty, Life Insurance, and Health Insurance.
+overview: 'Aviva publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Property and Casualty, Life Insurance, and Health Insurance.
 
 
-  Aviva plc''s developer surface includes authentication, sandbox, documentation, getting-started guide, support, developer portal, engineering blog, and 17 more developer resources.'
+  Aviva''s developer surface includes authentication, sandbox, documentation, getting-started guide, support, developer portal, engineering blog, and 17 more developer resources.'
 random_paper: 19
 rate_limits:
 - limit_count: 2
@@ -173,7 +173,7 @@ rate_limits:
   slug: aviva-plc-rate-limits
 score:
   band: emerging
-  composite: 25.3
+  composite: 24.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 39.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -197,7 +197,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 25.3
+  previous_composite: 24.2
   provenance:
     conformance: first-party
   regulatory:
@@ -205,9 +205,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -232,7 +232,6 @@ tags:
 - Health Insurance
 - Claims
 - Underwriting
-- Brokers
 - Workplace Pensions
 - Carrier
 website: https://www.aviva.com/

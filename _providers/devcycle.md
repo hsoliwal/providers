@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 68
   human_in_the_loop: 60
@@ -337,6 +337,11 @@ collections:
   slug: open-devcycle-webhooks-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/devcycle/refs/heads/main/capabilities/devcycle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/devcycle-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/devcycle/refs/heads/main/overlays/devcycle-bucketing-overlay.yaml
   title: ''
   type: Overlay
@@ -523,9 +528,9 @@ description: DevCycle is an OpenFeature-native feature flag and feature manageme
 image: https://devcycle.com/social-default.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.devcycle.com; 22 tools listed.
   name: DevCycle MCP Server
-  slug: devcycle-mcp-server
+  slug: devcycle
 modified: '2026-09-16'
 name: DevCycle
 nav: Providers
@@ -536,13 +541,13 @@ overview: 'DevCycle publishes 25 APIs on the [APIs.io](https://apis.io/) network
   The DevCycle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  DevCycle''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, engineering blog, and 33 more developer resources.'
+  DevCycle''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, engineering blog, and 34 more developer resources.'
 random_paper: 11
 score:
   band: strong
-  composite: 58.5
+  composite: 60.1
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -552,11 +557,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 61.1
+    contract_quality: 56.0
     developer_ergonomics: 79.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 58.5
+  previous_composite: 60.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -567,8 +572,18 @@ score:
       total: 25
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

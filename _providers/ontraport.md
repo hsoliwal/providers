@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -287,7 +287,7 @@ modified: '2026-08-13'
 name: Ontraport
 nav: Providers
 network: true
-overview: 'Ontraport publishes 2 APIs on the [APIs.io](https://apis.io/) network: Metadata API and Objects API. Tagged areas include CRM, Marketing Automation, Email Marketing, E-Commerce, and Landing Pages.
+overview: 'Ontraport publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Metadata API, Objects API, and 2 more. Tagged areas include CRM, Marketing Automation, Email Marketing, E-Commerce, and Landing Pages.
 
 
   The Ontraport catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -305,12 +305,12 @@ rate_limits:
   slug: ontraport-rate-limits
 scopes:
 - name: Ontraport Scopes
-  scope_count: 0
+  scope_count: 1
   slug: ontraport-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: exemplar
-  composite: 67.6
+  band: strong
+  composite: 64.2
   coverage:
     artifact_dirs: 24
     catalog_earned: 57.0
@@ -322,11 +322,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 61.1
+    contract_quality: 56.1
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 67.6
+  previous_composite: 64.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -342,9 +342,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

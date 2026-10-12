@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-09-20'
+  score: 31.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://wdk-api.tether.io
@@ -248,9 +248,9 @@ description: Tether Operations Limited is the issuer of USD₮ (USDT), the large
 image: https://tether.io/wp-content/themes/tether-io-theme/assets/images/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 35 tools listed.
   name: Tether MCP Server
-  slug: tether-mcp-server
+  slug: wdk
 modified: '2026-08-05'
 name: Tether
 nav: Providers
@@ -266,7 +266,7 @@ rate_limits:
   slug: tether-rate-limits
 score:
   band: developing
-  composite: 53.2
+  composite: 50.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -278,11 +278,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 60.5
-  previous_composite: 53.2
+  previous_composite: 50.4
   provenance:
     conformance: derived
     contracts:
@@ -297,9 +297,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -331,6 +331,7 @@ tags:
 - Multi-Chain
 - Agents
 - MCP
-- Open-Source
+- Open Source
+- Stablecoin Issuance
 website: https://tether.io/
 ---

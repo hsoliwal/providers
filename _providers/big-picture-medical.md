@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -136,7 +136,7 @@ rate_limits:
   slug: big-picture-medical-rate-limits
 score:
   band: emerging
-  composite: 24.4
+  composite: 22.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -150,7 +150,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -160,7 +160,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 24.4
+  previous_composite: 22.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -175,9 +175,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 40.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

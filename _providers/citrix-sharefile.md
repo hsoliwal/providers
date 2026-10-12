@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -104,6 +104,11 @@ collections:
   name: Citrix ShareFile REST API v3
   slug: open-citrix-sharefile
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/capabilities/citrix-sharefile-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/citrix-sharefile-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/citrix-sharefile/refs/heads/main/agentic-access/citrix-sharefile-agentic-access.yml
   title: ''
@@ -164,16 +169,16 @@ modified: '2026-05-11'
 name: Citrix ShareFile
 nav: Providers
 network: true
-overview: 'Citrix ShareFile publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Groups API, Items API, and 3 more. Tagged areas include File Sharing, Document Workflow, Secure File Transfer, E-Signature, and Client Portal.
+overview: 'Citrix ShareFile publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Groups API, Items API, and 4 more. Tagged areas include File Sharing, Document Workflow, Secure File Transfer, E-Signature, and Client Portal.
 
 
-  Citrix ShareFile''s developer surface includes authentication, documentation, pricing, signup flow, and 8 more developer resources.'
+  Citrix ShareFile''s developer surface includes authentication, documentation, pricing, signup flow, and 9 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 31.6
+  composite: 30.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -183,11 +188,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 31.6
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
@@ -195,8 +200,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

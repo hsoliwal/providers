@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The developer surface of the Toucan AI cloud - server-side token generation (POST /embed/generate-token with an x-api-key header), embed delivery via web components loaded from /embed/embed.js, and an
@@ -175,9 +175,9 @@ description: Toucan Toco is a Paris-founded embedded analytics and data storytel
 image: https://www.toucantoco.com/hubfs/Embedded%20Analytics%20your%20users%20will%20love!.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at toucanai.cloud over HTTP; 1 tool listed.
   name: Toucan Toco MCP Server
-  slug: toucan-toco-mcp-server
+  slug: toucan-ai-tools
 modified: '2026-07-21'
 name: Toucan Toco
 nav: Providers
@@ -189,7 +189,7 @@ overview: 'Toucan Toco publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 9
 score:
   band: thin
-  composite: 35.4
+  composite: 37.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -203,14 +203,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 35.4
+  previous_composite: 37.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

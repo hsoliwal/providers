@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.3
-  scored_at: '2026-09-20'
+  score: 45.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -311,14 +311,14 @@ description: Arkestro is a predictive procurement orchestration platform for ent
 image: https://arkestro.com/wp-content/uploads/arkestro_logo_featured_default.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.arkestro.com over HTTP.
   name: Arkestro MCP Server
-  slug: arkestro-mcp-server
+  slug: arkestro
 modified: '2026-08-06'
 name: Arkestro
 nav: Providers
 network: true
-overview: 'Arkestro publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Awards API, business unit API, corporate categories API, and 10 more. Tagged areas include Procurement, Sourcing, Supply Chain, Spend Management, and eSourcing.
+overview: 'Arkestro publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Awards API, business unit API, corporate categories API, and 11 more. Tagged areas include Procurement, Sourcing, Supply Chain, Spend Management, and eSourcing.
 
 
   The Arkestro catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -333,7 +333,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 48.1
+  composite: 50.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -345,11 +345,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 65.7
+    contract_quality: 60.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 48.1
+  previous_composite: 50.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -360,8 +360,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

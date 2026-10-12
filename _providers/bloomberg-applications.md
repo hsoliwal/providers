@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Provides programmatic access to Bloomberg's financial market data including real-time and historical pricing, reference data, and analytics.
@@ -198,7 +198,7 @@ modified: '2026-09-16'
 name: Bloomberg Applications
 nav: Providers
 network: true
-overview: 'Bloomberg Applications publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise API, Financial Analytics, Financial-Services, Market Data, and Real-Time Data.
+overview: 'Bloomberg Applications publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise API, Financial Analytics, Financial Services, Market Data, and Real-Time Data.
 
 
   The Bloomberg Applications catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -216,12 +216,12 @@ rate_limits:
   slug: bloomberg-applications-rate-limits
 scopes:
 - name: Bloomberg Applications Scopes
-  scope_count: 0
+  scope_count: 3
   slug: bloomberg-applications-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
-  band: strong
-  composite: 54.5
+  band: developing
+  composite: 50.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 47.0
@@ -233,11 +233,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 60.5
-  previous_composite: 54.5
+  previous_composite: 50.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -246,9 +246,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -272,7 +272,7 @@ slug: bloomberg-applications
 tags:
 - Enterprise API
 - Financial Analytics
-- Financial-Services
+- Financial Services
 - Market Data
 - Real-Time Data
 website: https://bloomberg.com

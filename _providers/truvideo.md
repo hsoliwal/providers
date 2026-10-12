@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.truvideo.com
@@ -253,7 +253,7 @@ overview: 'TruVideo publishes 11 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 2
 score:
   band: thin
-  composite: 37.3
+  composite: 36.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -265,11 +265,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 37.3
+  previous_composite: 36.4
   provenance:
     conformance: derived
     contracts:
@@ -279,8 +279,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 2
@@ -46,12 +46,12 @@ apis:
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The annotation_configs API from Arize Phoenix — 3 operation(s) for annotation_configs.
-  name: Arize Phoenix annotation_configs API
+  name: Arize Phoenix Annotation Configs API
   slug: phoenix-annotation-configs-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The annotations API from Arize Phoenix — 3 operation(s) for annotations.
-  name: Arize Phoenix annotations API
+  name: Arize Phoenix Annotations API
   slug: phoenix-annotations-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
@@ -66,17 +66,17 @@ apis:
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The chat API from Arize Phoenix — 2 operation(s) for chat.
-  name: Arize Phoenix chat API
+  name: Arize Phoenix Chat API
   slug: phoenix-chat-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The datasets API from Arize Phoenix — 9 operation(s) for datasets.
-  name: Arize Phoenix datasets API
+  name: Arize Phoenix Datasets API
   slug: phoenix-datasets-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The experiments API from Arize Phoenix — 8 operation(s) for experiments.
-  name: Arize Phoenix experiments API
+  name: Arize Phoenix Experiments API
   slug: phoenix-experiments-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
@@ -86,12 +86,12 @@ apis:
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The projects API from Arize Phoenix — 2 operation(s) for projects.
-  name: Arize Phoenix projects API
+  name: Arize Phoenix Projects API
   slug: phoenix-projects-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The prompts API from Arize Phoenix — 8 operation(s) for prompts.
-  name: Arize Phoenix prompts API
+  name: Arize Phoenix Prompts API
   slug: phoenix-prompts-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
@@ -101,27 +101,27 @@ apis:
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The secrets API from Arize Phoenix — 1 operation(s) for secrets.
-  name: Arize Phoenix secrets API
+  name: Arize Phoenix Secrets API
   slug: phoenix-secrets-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The sessions API from Arize Phoenix — 5 operation(s) for sessions.
-  name: Arize Phoenix sessions API
+  name: Arize Phoenix Sessions API
   slug: phoenix-sessions-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The spans API from Arize Phoenix — 6 operation(s) for spans.
-  name: Arize Phoenix spans API
+  name: Arize Phoenix Spans API
   slug: phoenix-spans-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The traces API from Arize Phoenix — 4 operation(s) for traces.
-  name: Arize Phoenix traces API
+  name: Arize Phoenix Traces API
   slug: phoenix-traces-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
   description: The users API from Arize Phoenix — 3 operation(s) for users.
-  name: Arize Phoenix users API
+  name: Arize Phoenix Users API
   slug: phoenix-users-api
 - baseURL: https://app.phoenix.arize.com
   baseurl_source: declared
@@ -185,6 +185,11 @@ collections:
   name: Arize-Phoenix REST annotation_configs users API
   slug: open-phoenix-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/phoenix/refs/heads/main/capabilities/phoenix-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/phoenix-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/phoenix/refs/heads/main/agentic-access/phoenix-agentic-access.yml
   title: ''
@@ -299,13 +304,13 @@ modified: '2026-06-13'
 name: Arize Phoenix
 nav: Providers
 network: true
-overview: 'Arize Phoenix publishes 17 APIs on the [APIs.io](https://apis.io/) network, including annotation_configs API, annotations API, Arize Phoenix Version API, and 14 more. Tagged areas include LLM Observability, AI Evaluation, OpenTelemetry, Tracing, and LLMOps.
+overview: 'Arize Phoenix publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Annotation Configs API, Annotations API, Arize Phoenix Version API, and 14 more. Tagged areas include LLM Observability, AI Evaluation, OpenTelemetry, Tracing, and LLMOps.
 
 
   The Arize Phoenix catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Arize Phoenix''s developer surface includes documentation, engineering blog, pricing, and 9 more developer resources.'
+  Arize Phoenix''s developer surface includes documentation, engineering blog, pricing, and 10 more developer resources.'
 plans:
 - name: Phoenix Plans Pricing
   plan_count: 5
@@ -328,23 +333,23 @@ rules:
   slug: phoenix-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.7
+  composite: 40.3
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 93.3
+    artifact_dirs: 16
+    catalog_earned: 89.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 21.8
+    catalog_gap: 25.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 56.3
+    access_clarity: 46.8
+    contract_governance: 23.5
+    contract_quality: 51.5
     developer_ergonomics: 11.9
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 43.7
+    discoverability: 66.1
+    operational_transparency: 33.7
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -352,8 +357,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -372,7 +383,7 @@ tags:
 - Tracing
 - LLMOps
 - AI Monitoring
-- Open-Source
+- Open Source
 - Prompt Engineering
 - Datasets
 - Experiments

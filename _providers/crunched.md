@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/crunched/refs/heads/main/security/crunched-domain-security.yml
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Crunched is an AI Excel analyst for power users in management consulting, investment banking, private equity, and corporate finance. Working as a native Microsoft Excel add-in (Mac and PC) and a companion PowerPoint deck reviewer, it builds fully linked financial models (DCFs, LBOs, cohort and scenario analyses) from plain-English instructions, error-checks entire workbooks, extracts and structures data from PDFs and web sources, formats spreadsheets, and generates client-ready slides with full workbook context. Every edit is tracked with a full audit trail and cited sources. Founded by Philip Borge and Michael Sakowski (ex-McKinsey private equity), Crunched is ISO 27001 and SOC 2 Type II certified and GDPR compliant, and is backed by Y Combinator, First Round Capital, and 20VC. It is distributed through the Microsoft AppSource marketplace and does not currently publish a public developer API.
 image: https://www.usecrunched.com/Crunched_logo_new.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.usecrunched.com over HTTP; 3 tools listed.
+  name: Crunched MCP Server
+  slug: crunched
 modified: '2026-07-18'
 name: Crunched
 nav: Providers
@@ -94,7 +98,7 @@ overview: 'Crunched is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 8
 score:
   band: minimal
-  composite: 7.0
+  composite: 8.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,9 +112,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 7.0
+  previous_composite: 8.2
   provenance:
     mcp: first-party
   regulatory:
@@ -118,9 +122,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

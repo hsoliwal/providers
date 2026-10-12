@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -128,7 +128,7 @@ modified: '2026-05-19'
 name: Bureau of Justice Statistics
 nav: Providers
 network: true
-overview: 'Bureau of Justice Statistics publishes 3 APIs on the [APIs.io](https://apis.io/) network: Property Crime API, Victimization API, and Violent Crime API. Tagged areas include Crime, Federal-Government, Justice, Statistics, and Victimization.
+overview: 'Bureau of Justice Statistics publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Property Crime API, Victimization API, Violent Crime API, and 2 more. Tagged areas include Crime, Federal Government, Justice, Statistics, and Victimization.
 
 
   Bureau of Justice Statistics'' developer surface includes developer portal and 7 more developer resources.'
@@ -143,7 +143,7 @@ rate_limits:
   slug: bureau-of-justice-statistics-rate-limits
 score:
   band: emerging
-  composite: 19.5
+  composite: 18.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 33.0
@@ -155,11 +155,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 19.0
-    discoverability: 55.6
+    discoverability: 53.6
     operational_transparency: 7.9
-  previous_composite: 19.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 18.8
   provenance:
     agentic_access: derived
     contracts:
@@ -172,9 +177,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -189,7 +194,7 @@ security:
 slug: bureau-of-justice-statistics
 tags:
 - Crime
-- Federal-Government
+- Federal Government
 - Justice
 - Statistics
 - Victimization

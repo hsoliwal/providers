@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-09-20'
+  score: 24.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -91,6 +91,11 @@ collections:
   name: Rasa SDK - Action Server Endpoint Domain Tracker API
   slug: open-rasa-tracker-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rasa/refs/heads/main/capabilities/rasa-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rasa-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/rasa/refs/heads/main/overlays/rasa-action-server-overlay.yaml
   title: ''
@@ -226,13 +231,13 @@ network: true
 overview: 'Rasa publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Domain API, Model API, SDK Action Server Endpoint API, and 2 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, Chatbots, and Voice Assistant.
 
 
-  Rasa''s developer surface includes authentication, CLI, sandbox, changelog, documentation, API reference, quickstart, and 20 more developer resources.'
+  Rasa''s developer surface includes authentication, CLI, sandbox, changelog, documentation, API reference, quickstart, and 21 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 43.5
+  composite: 42.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -242,11 +247,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 85.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 43.5
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -257,8 +262,14 @@ score:
       total: 5
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -282,7 +293,7 @@ tags:
 - Voice Assistant
 - NLU
 - LLM
-- Machine-Learning
+- Machine Learning
 - Agents
 website: https://rasa.com
 ---

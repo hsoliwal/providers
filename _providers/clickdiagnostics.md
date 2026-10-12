@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -175,7 +175,7 @@ overview: 'mPower Social is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 0
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -189,14 +189,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 10.8
+  previous_composite: 10.3
   provenance:
     conformance: first-party
   regulatory:
@@ -204,9 +204,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,7 +226,7 @@ tags:
 - Digital Health
 - Health Information Systems
 - Global Health
-- Open-Source
+- Open Source
 - DHIS2
 - OpenMRS
 - FHIR

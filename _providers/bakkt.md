@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -343,8 +343,8 @@ overview: 'Bakkt publishes 17 APIs on the [APIs.io](https://apis.io/) network, i
   Bakkt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 22 more developer resources.'
 random_paper: 19
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -356,11 +356,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 60.6
+    contract_quality: 55.3
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 41.4
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -376,9 +376,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -405,5 +405,6 @@ tags:
 - Custody
 - Webhook
 - FIX Protocol
+- Web3
 website: https://bakkt.com
 ---

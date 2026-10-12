@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -88,6 +88,11 @@ collections:
   name: Spring Boot Admin Server API
   slug: open-spring-boot-admin-console
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spring-boot-admin-console/refs/heads/main/capabilities/spring-boot-admin-console-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spring-boot-admin-console-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -171,13 +176,13 @@ modified: '2026-05-19'
 name: Spring Boot Admin Console
 nav: Providers
 network: true
-overview: 'Spring Boot Admin Console publishes 3 APIs on the [APIs.io](https://apis.io/) network: Applications API, Events API, and Instances API. Tagged areas include Actuators, Administration, Java, Microservices, and Monitoring.
+overview: 'Spring Boot Admin Console publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Events API, Instances API, and 4 more. Tagged areas include Actuators, Administration, Java, Microservices, and Monitoring.
 
 
   The Spring Boot Admin Console catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spring Boot Admin Console''s developer surface includes engineering blog and 10 more developer resources.'
+  Spring Boot Admin Console''s developer surface includes engineering blog and 11 more developer resources.'
 plans:
 - name: Spring Boot Admin Console Plans Pricing
   plan_count: 1
@@ -210,10 +215,10 @@ rules:
     warn: 4
   slug: spring-boot-admin-console-rules
 score:
-  band: thin
-  composite: 28.4
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 54.5
     catalog_earned_first_party: 0.0
     catalog_gap: 60.5
@@ -223,11 +228,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 54.2
+    contract_quality: 49.5
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 28.4
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -235,8 +240,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

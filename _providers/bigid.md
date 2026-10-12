@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -95,7 +95,7 @@ apis:
   description: Configure recurring scan profiles.
   name: BigID Scan Profiles API
   slug: bigid-scan-profiles-api
-artifact_total: 87
+artifact_total: 88
 collections:
 - collection_type: postman
   name: BigID Authentication Actionable Insights API
@@ -170,6 +170,11 @@ collections:
   name: BigID Authentication Actionable Insights Scans API
   slug: open-bigid-scans-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bigid/refs/heads/main/capabilities/bigid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bigid-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -411,6 +416,10 @@ jsonld:
   property_count: 6
   slug: bigid-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.bigid.com over HTTP; 5 tools listed.
+  name: BigID MCP Server
+  slug: bigid
 modified: '2026-05-25'
 name: BigID
 nav: Providers
@@ -421,7 +430,7 @@ overview: 'BigID publishes 10 APIs on the [APIs.io](https://apis.io/) network, i
   The BigID catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  BigID''s developer surface includes authentication, getting-started guide, API reference, documentation, code examples, developer portal, engineering blog, and 29 more developer resources.'
+  BigID''s developer surface includes authentication, getting-started guide, API reference, documentation, code examples, developer portal, engineering blog, and 30 more developer resources.'
 plans:
 - name: Bigid Plans Pricing
   plan_count: 4
@@ -454,29 +463,31 @@ rules:
     warn: 4
   slug: bigid-rules
 score:
-  band: developing
-  composite: 54.0
+  band: strong
+  composite: 54.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 74.5
+    artifact_dirs: 19
+    catalog_earned: 71.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.5
+    catalog_gap: 43.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 76.3
-    contract_governance: 28.8
-    contract_quality: 66.9
+    access_clarity: 73.2
+    contract_governance: 27.3
+    contract_quality: 60.9
     developer_ergonomics: 60.7
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 54.0
+  previous_composite: 54.7
   provenance:
     agentic_access: derived
     contracts:
@@ -485,8 +496,14 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

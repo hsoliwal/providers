@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -294,14 +294,14 @@ description: b.well Connected Health is a Baltimore-based digital health platfor
 image: https://www.icanbwell.com/wp-content/uploads/2023/01/bwell-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.client-sandbox.icanbwell.com over HTTP; 31 tools listed.
   name: b.well MCP Server
-  slug: bwell-mcp-server
+  slug: bwell-mcp-fhir-agent
 modified: '2026-08-15'
 name: b.well
 nav: Providers
 network: true
-overview: 'b.well publishes 2 APIs on the [APIs.io](https://apis.io/) network: Users API and Webhook API. Tagged areas include Company, Health, Healthcare, Digital Health, and FHIR.
+overview: 'b.well publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Users API, Webhook API, and 3 more. Tagged areas include Company, Health, Healthcare, Digital Health, and FHIR.
 
 
   The b.well catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -323,8 +323,8 @@ scopes:
   slug: b-well-scopes
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
-  band: strong
-  composite: 56.7
+  band: developing
+  composite: 52.2
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -336,19 +336,21 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 62.4
+    contract_quality: 57.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 56.7
+  previous_composite: 52.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -364,9 +366,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 73.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

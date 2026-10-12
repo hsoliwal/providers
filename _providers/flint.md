@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -67,6 +67,11 @@ collections:
   name: Flint Agent Tasks API
   slug: open-flint-agent-tasks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/flint/refs/heads/main/capabilities/flint-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/flint-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -277,18 +282,18 @@ layout: provider
 mcp_servers:
 - description: Flint's official hosted remote MCP server (HTTP). Add it as a custom connector in Claude (claude.ai/settings/connectors), with `claude mcp add flint --transport http https://mcp.tryflint.com/mcp` in C
   name: Flint MCP Server
-  slug: flint-mcp-server
+  slug: flint
 modified: '2026-08-13'
 name: Flint
 nav: Providers
 network: true
-overview: 'Flint publishes 1 API on the [APIs.io](https://apis.io/) network: Agent Tasks API. Tagged areas include Company, Artificial Intelligence, Marketing, Landing Pages, and Agents.
+overview: 'Flint publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Agent Tasks API, and 1 more. Tagged areas include Company, Artificial Intelligence, Marketing, Landing Pages, and Agents.
 
 
   The Flint catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Flint''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, authentication, and 38 more developer resources.'
+  Flint''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, signup flow, authentication, and 39 more developer resources.'
 plans:
 - name: Flint Plans Pricing
   plan_count: 3
@@ -305,9 +310,9 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: strong
-  composite: 62.0
+  composite: 64.4
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -317,11 +322,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 64.4
+    contract_quality: 58.8
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 62.0
+  previous_composite: 64.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -332,8 +337,18 @@ score:
       total: 1
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

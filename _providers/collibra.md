@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: 'The Collibra Core REST API exposes the full Collibra Platform for programmatic management of communities, domains, assets, relations, attributes, tags, comments, workflows, and policies. The API uses '
@@ -149,7 +149,7 @@ overview: 'Collibra publishes 7 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 4
 score:
   band: emerging
-  composite: 12.5
+  composite: 11.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 35.0
@@ -163,11 +163,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 2.6
-  previous_composite: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/payna/refs/heads/main/security/payna-domain-security.yml
@@ -61,18 +61,22 @@ created: '2026-07-17'
 description: Payna is a compliance operating system for financial licensing that automates applications, renewals, maintenance, and monitoring across all 50 US states and jurisdictions. It tracks state statutes, NMLS procedures, and FinCEN requirements in real time, calculates filing deadlines backward from due dates, scores compliance posture against state examiner playbooks, automates document pre-fill and e-signature, and maintains a timestamped, queryable audit trail for examinations. Payna serves regulated financial sectors including money transmission, lending, mortgage, cryptocurrency/VASP, debt collection, loan origination, and insurance. It is a Y Combinator (W26) company; no public developer API is currently published.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/payna.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at app.payna.com over HTTP.
+  name: Payna MCP Server
+  slug: payna
 modified: '2026-07-20'
 name: Payna
 nav: Providers
 network: true
-overview: 'Payna is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, RegTech, Financial-Services, and Licensing.
+overview: 'Payna is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, RegTech, Financial Services, and Licensing.
 
 
   Payna''s developer surface includes support and 4 more developer resources.'
 random_paper: 9
 score:
   band: minimal
-  composite: 9.3
+  composite: 9.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,9 +90,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 9.3
+  previous_composite: 9.7
   provenance:
     mcp: first-party
   regulatory:
@@ -96,9 +100,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -115,7 +119,7 @@ tags:
 - Company
 - Compliance
 - RegTech
-- Financial-Services
+- Financial Services
 - Licensing
 - Money Transmission
 - Lending

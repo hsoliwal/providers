@@ -17,7 +17,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.5
-  scored_at: '2026-09-20'
+  score: 33.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -120,6 +120,11 @@ collections:
   name: Pandium Connector Calls Tenants API
   slug: open-pandium-tenants-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pandium/refs/heads/main/capabilities/pandium-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pandium-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -552,7 +557,7 @@ overview: 'Pandium publishes 6 APIs on the [APIs.io](https://apis.io/) network, 
   The Pandium catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Pandium''s developer surface includes authentication, engineering blog, FAQ, documentation, CLI, pricing, sandbox, and 37 more developer resources.'
+  Pandium''s developer surface includes authentication, engineering blog, FAQ, documentation, CLI, pricing, sandbox, and 38 more developer resources.'
 plans:
 - name: Pandium Plans Pricing
   plan_count: 2
@@ -575,23 +580,23 @@ rules:
   slug: pandium-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 63.7
+  composite: 64.7
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 66.3
+    artifact_dirs: 32
+    catalog_earned: 65.3
     catalog_earned_first_party: 8.0
-    catalog_gap: 48.8
+    catalog_gap: 49.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 76.3
     contract_governance: 14.4
-    contract_quality: 78.3
-    developer_ergonomics: 65.5
-    discoverability: 75.9
+    contract_quality: 71.9
+    developer_ergonomics: 64.8
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 63.7
+  previous_composite: 64.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -602,8 +607,14 @@ score:
       total: 6
     mcp: derived
     skills: unknown
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A first-party FFmpeg media-processing microservice Markerly runs on Google Cloud Run. It exposes two documented JSON/HTTP operations — a health check and a thumbnail generator that renders a JPEG fram
@@ -142,8 +142,8 @@ rate_limits:
   name: Markerly Rate Limits
   slug: markerly-rate-limits
 score:
-  band: thin
-  composite: 27.8
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -157,9 +157,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 27.8
+  previous_composite: 25.5
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +167,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -192,7 +192,7 @@ tags:
 - Marketing
 - Creator Economy
 - Advertising
-- Social-Media
+- Social Media
 - Advocacy
 - Media Processing
 - Public Sector

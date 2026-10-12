@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,7 +65,7 @@ overview: Talen Energy is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 17
 score:
   band: minimal
-  composite: 1.8
+  composite: 2.1
   coverage:
     artifact_dirs: 3
     catalog_earned: 19.0
@@ -79,17 +79,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 35.2
+    discoverability: 33.9
     operational_transparency: 0.0
-  previous_composite: 1.8
+  previous_composite: 2.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

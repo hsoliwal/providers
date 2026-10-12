@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: FBS's proprietary REST API over Flexmls MLS content. Documented services include Listings (plus photos, documents, floor plans, videos, virtual tours, open houses, rooms, units, history and rules), Co
@@ -235,7 +235,7 @@ modified: '2026-07-26'
 name: Spark Platform
 nav: Providers
 network: true
-overview: 'Spark Platform publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, United States, MLS, RESO, and Property Listings.
+overview: 'Spark Platform publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, United States, MLS, RESO, and Property Listings.
 
 
   The Spark Platform catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -253,8 +253,8 @@ scopes:
   slug: spark-platform-scopes
   summary_line: 7 scopes · authorizationCode
 score:
-  band: developing
-  composite: 52.2
+  band: strong
+  composite: 54.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 52.0
@@ -266,9 +266,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 69.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -277,11 +277,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.2
+  previous_composite: 54.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -299,7 +305,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: spark-platform
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - MLS
 - RESO

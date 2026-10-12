@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -92,7 +92,7 @@ apis:
   description: The Usage API from Sybilion — 1 operation(s) for usage.
   name: Sybilion Usage API
   slug: sybilion-usage-api
-artifact_total: 19
+artifact_total: 18
 collections:
 - collection_type: open
   name: Sybilion API
@@ -251,17 +251,14 @@ description: 'Sybilion is a decision layer for industrial companies, providing e
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sybilion.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.sybilion.dev over HTTP; 7 tools listed.
   name: Sybilion MCP Server
-  slug: sybilion-mcp-server
-- description: ''
-  name: Sybilion MCP Server
-  slug: sybilion-mcp-server-2
+  slug: sybilion
 modified: '2026-08-11'
 name: Sybilion
 nav: Providers
 network: true
-overview: 'Sybilion publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Categories API, Drivers API, and 6 more. Tagged areas include Industrial market intelligence, Commodity price forecasting, Economic Forecasting, Time-series forecasting, and Procurement.
+overview: 'Sybilion publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Categories API, Drivers API, and 7 more. Tagged areas include Industrial market intelligence, Commodity price forecasting, Economic Forecasting, Time-series forecasting, and Procurement.
 
 
   Sybilion''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 25 more developer resources.'
@@ -281,7 +278,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 44.2
+  composite: 45.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 61.0
@@ -293,11 +290,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 53.2
+    contract_quality: 47.9
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 44.2
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -308,8 +305,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -335,7 +338,7 @@ tags:
 - Trading analytics
 - AI decision support
 - MCP
-- agent-native
+- Agent-Native
 - Causal Inference
 - Anomaly Detection
 website: https://www.sybilion.com/

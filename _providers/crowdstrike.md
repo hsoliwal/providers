@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The CrowdStrike Falcon API — 1,463 documented operations across 128 service collections covering hosts, detections, incidents, real-time response, threat intelligence, cloud and container security, id
@@ -259,7 +259,7 @@ layout: provider
 mcp_servers:
 - description: 'CrowdStrike publishes falcon-mcp, a first-party open-source MCP server that connects agents to the Falcon platform. It is a LOCAL STDIO product: installed with uv/pip/uvx and run by the operator, auth'
   name: io.github.CrowdStrike/falcon-mcp
-  slug: iogithubcrowdstrikefalcon-mcp
+  slug: io-github-crowdstrike-falcon-mcp
 modified: '2026-09-19'
 name: CrowdStrike
 nav: Providers
@@ -286,8 +286,8 @@ scopes:
   slug: crowdstrike-scopes
   summary_line: 187 scopes
 score:
-  band: strong
-  composite: 62.4
+  band: exemplar
+  composite: 67.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 60.0
@@ -299,17 +299,23 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.3
     operational_transparency: 50.0
-  previous_composite: 62.4
+  previous_composite: 67.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 52.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

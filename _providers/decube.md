@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Decube Public API (BETA, v1) exposes a Data API (assets, glossary, lineage, monitors, ACL, reports, recon, custom attributes, virtual sources) and a Control API (users) for automating data catalog
@@ -175,9 +175,9 @@ description: Decube is a unified data trust platform that combines data observab
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/decube.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at connect.us1.decube.io over HTTP requiring OAuth; 32 tools listed.
   name: Decube MCP Server
-  slug: decube-mcp-server
+  slug: decube-mcp
 modified: '2026-07-18'
 name: Decube
 nav: Providers
@@ -192,7 +192,7 @@ overview: 'Decube publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: developing
-  composite: 49.2
+  composite: 51.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -204,16 +204,28 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 49.2
+  previous_composite: 51.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

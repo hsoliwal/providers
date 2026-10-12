@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,11 +48,6 @@ apis:
 - baseURL: https://api.openweathermap.org/data/3.0
   baseurl_source: spec
   description: The Air Pollution API provides current, forecast, and historical air pollution data for any coordinates on the globe. It returns the basic Air Quality Index along with concentrations of CO, NO, NO2, O
-  name: OpenWeather Air Pollution API
-  slug: openweather-air-pollution-api
-- baseURL: https://api.openweathermap.org/data/3.0
-  baseurl_source: spec
-  description: Current, forecast, and historical air pollution data.
   name: OpenWeather Air Pollution API
   slug: openweather-air-pollution-api
 - baseURL: https://api.openweathermap.org/data/3.0
@@ -146,11 +141,15 @@ finops:
   slug: openweather-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openweather.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.openweathermap.org over HTTP; 6 tools listed.
+  name: OpenWeather MCP Server
+  slug: openweather
 modified: '2026-05-19'
 name: OpenWeather
 nav: Providers
 network: true
-overview: 'OpenWeather publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Air Pollution API, One Call API, and 1 more. Tagged areas include Air Pollution, Air Quality, Climate, Forecasting, and Weather.
+overview: 'OpenWeather publishes 2 APIs on the [APIs.io](https://apis.io/) network: Air Pollution API and One Call API. Tagged areas include Air Pollution, Air Quality, Climate, Forecasting, and Weather.
 
 
   OpenWeather''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, FAQ, support, and 8 more developer resources.'
@@ -165,7 +164,7 @@ rate_limits:
   slug: openweather-rate-limits
 score:
   band: thin
-  composite: 38.9
+  composite: 38.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -177,11 +176,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 55.1
+    contract_quality: 49.6
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 10.5
-  previous_composite: 38.9
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     contracts:
@@ -190,8 +189,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

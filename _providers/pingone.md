@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -99,6 +99,11 @@ collections:
   name: PingOne Platform API
   slug: open-pingone
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pingone/refs/heads/main/capabilities/pingone-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pingone-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/pingone/refs/heads/main/agentic-access/pingone-agentic-access.yml
   title: ''
@@ -164,16 +169,16 @@ modified: '2026-09-16'
 name: PingOne
 nav: Providers
 network: true
-overview: 'PingOne publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Platform API, Applications API, Authentication API, and 3 more. Tagged areas include Identity, Authentication, Authorization, SSO, and Multi-Factor Authentication.
+overview: 'PingOne publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Platform API, Applications API, Authentication API, and 4 more. Tagged areas include Identity, Authentication, Authorization, SSO, and Multi-Factor Authentication.
 
 
-  PingOne''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
+  PingOne''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 34.1
+  composite: 33.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -183,11 +188,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 54.6
+    contract_quality: 49.4
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 34.1
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     contracts:
@@ -195,8 +200,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

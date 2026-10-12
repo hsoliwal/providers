@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-09-20'
+  score: 24.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 2
@@ -170,6 +170,11 @@ collections:
   name: London Stock Exchange Group LSEG World-Check One Api-Info Zfs API
   slug: open-london-stock-exchange-group-zfs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/london-stock-exchange-group/refs/heads/main/capabilities/london-stock-exchange-group-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/london-stock-exchange-group-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -333,10 +338,10 @@ modified: '2026-07-22'
 name: London Stock Exchange Group
 nav: Providers
 network: true
-overview: 'London Stock Exchange Group publishes 15 APIs on the [APIs.io](https://apis.io/) network, including LSEG World-Check One Case API, LSEG World-Check One Media-Check API, LSEG World-Check One Smart Filter API, and 12 more. Tagged areas include Financial, Stock Exchange, Market Data, KYC, and Compliance.
+overview: 'London Stock Exchange Group publishes 15 APIs on the [APIs.io](https://apis.io/) network, including LSEG World-Check One Case API, LSEG World-Check One Media-Check API, LSEG World-Check One Smart Filter API, and 12 more. Tagged areas include Finance, Stock Exchange, Market Data, KYC, and Compliance.
 
 
-  London Stock Exchange Group''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 26 more developer resources.'
+  London Stock Exchange Group''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 27 more developer resources.'
 plans:
 - name: London Stock Exchange Group Plans Pricing
   plan_count: 3
@@ -348,9 +353,9 @@ rate_limits:
   slug: london-stock-exchange-group-rate-limits
 score:
   band: developing
-  composite: 50.1
+  composite: 47.3
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -360,11 +365,16 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 50.9
+    contract_quality: 45.9
     developer_ergonomics: 73.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 50.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 47.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -380,9 +390,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -399,7 +409,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: london-stock-exchange-group
 tags:
-- Financial
+- Finance
 - Stock Exchange
 - Market Data
 - KYC

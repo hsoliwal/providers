@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Urbit ship HTTP API (Eyre channels) that powers Tlon Messenger. Clients authenticate to a ship with its +code access code, then poke and subscribe over a channel to send/read messages, manage grou
@@ -139,19 +139,19 @@ layout: provider
 mcp_servers:
 - description: First-party open-source MCP server (tloncorp/tlon-mcp-server) exposing ~30 tools for Tlon Messenger over a running Urbit ship; stdio or http transport.
   name: Tlon MCP Server
-  slug: tlon-mcp-server
+  slug: tlon-mcp
 modified: '2026-07-21'
-name: Tlon Corporation
+name: Tlon
 nav: Providers
 network: true
-overview: 'Tlon Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Messaging, Social, Urbit, and Self-Hosting.
+overview: 'Tlon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Messaging, Social, Urbit, and Self-Hosting.
 
 
-  Tlon Corporation''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, support, signup flow, and 14 more developer resources.'
+  Tlon''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, support, signup flow, and 14 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 25.0
+  composite: 24.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -165,14 +165,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 25.0
+  previous_composite: 24.3
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

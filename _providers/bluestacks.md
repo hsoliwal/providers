@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: OAuth 2.0 identity API for now.gg Login. Publishers exchange an authorization code for a token and refresh_token, verify id_token/token server-side, and read user profile and session information for t
@@ -212,7 +212,7 @@ modified: '2026-08-08'
 name: Bluestacks
 nav: Providers
 network: true
-overview: 'Bluestacks publishes 1 API on the [APIs.io](https://apis.io/) network: now.gg Payments Server API. Tagged areas include Company, Gaming, Cloud Gaming, Android, and Mobile.
+overview: 'Bluestacks publishes 2 APIs on the [APIs.io](https://apis.io/) network, including now.gg Payments Server API, and 1 more. Tagged areas include Company, Gaming, Cloud Gaming, Android, and Mobile.
 
 
   The Bluestacks catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -227,7 +227,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode/refreshToken
 score:
   band: developing
-  composite: 48.8
+  composite: 45.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -239,11 +239,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 44.8
+    contract_quality: 42.7
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 48.8
+  previous_composite: 45.8
   provenance:
     conformance: first-party
   regulatory:
@@ -251,9 +251,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

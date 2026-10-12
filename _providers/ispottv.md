@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for accessing iSpot.tv TV and video ad measurement data — airing occurrence, estimated spend, household and person-level impressions, attention metrics, OTT/streaming impressions, TV conversi
@@ -196,7 +196,7 @@ rate_limits:
   slug: ispottv-rate-limits
 score:
   band: developing
-  composite: 39.7
+  composite: 41.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -210,13 +210,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 60.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 39.7
+  previous_composite: 41.5
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

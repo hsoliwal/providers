@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Peer39 External API manages Custom Categories — contextual targeting and brand-safety lists of keywords, URLs, mobile apps or CTV apps — and syncs them to a connected DSP partner. Nine operations '
@@ -105,7 +105,7 @@ description: 'Peer39 is a contextual advertising and intelligence company that p
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/peer39.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 10 tools listed.
   name: Peer39 Custom Category MCP Server
   slug: peer39-custom-category-mcp-server
 modified: '2026-08-12'
@@ -127,7 +127,7 @@ rate_limits:
   slug: peer39-rate-limits
 score:
   band: emerging
-  composite: 21.2
+  composite: 22.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -141,14 +141,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 21.2
+  previous_composite: 22.2
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -235,7 +235,7 @@ modified: '2026-05-19'
 name: TiKV
 nav: Providers
 network: true
-overview: 'TiKV publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Configuration API, Debug API, Metrics API, and 2 more. Tagged areas include ACID, CNCF, Database, Distributed Systems, and Key-Value Store.
+overview: 'TiKV publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Configuration API, Debug API, Metrics API, and 5 more. Tagged areas include ACID, CNCF, Database, Distributed Systems, and Key-Value Store.
 
 
   The TiKV catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -274,8 +274,8 @@ rules:
     warn: 2
   slug: tikv-rules
 score:
-  band: thin
-  composite: 35.1
+  band: developing
+  composite: 39.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 51.5
@@ -287,11 +287,14 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 50.2
+    contract_quality: 45.7
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 34.2
-  previous_composite: 35.1
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     contracts:
@@ -299,8 +302,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,7 +327,7 @@ tags:
 - Database
 - Distributed Systems
 - Key-Value Store
-- Open-Source
+- Open Source
 - Rust
 website: https://tikv.org/
 ---

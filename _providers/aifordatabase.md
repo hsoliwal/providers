@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://app.aifordatabase.com/api/v1
@@ -106,6 +106,11 @@ asyncapis:
   name: Aifordatabase Webhooks
   slug: aifordatabase-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/aifordatabase/refs/heads/main/capabilities/aifordatabase-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/aifordatabase-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -203,9 +208,9 @@ description: 'AI for Database is a natural-language data layer for operational d
 image: https://www.aifordatabase.com/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 9 tools listed.
   name: AI for Database MCP Server
-  slug: ai-for-database-mcp-server
+  slug: aifordatabase-mcp
 modified: '2026-08-26'
 name: AI for Database
 nav: Providers
@@ -216,7 +221,7 @@ overview: 'AI for Database publishes 12 APIs on the [APIs.io](https://apis.io/) 
   The AI for Database catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  AI for Database''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 14 more developer resources.'
+  AI for Database''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
 plans:
 - name: Aifordatabase Plans Pricing
   plan_count: 3
@@ -228,9 +233,9 @@ rate_limits:
   slug: aifordatabase-rate-limits
 score:
   band: strong
-  composite: 60.3
+  composite: 60.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -240,11 +245,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 67.0
+    contract_quality: 61.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 39.5
-  previous_composite: 60.3
+  previous_composite: 60.2
   provenance:
     conformance: derived
     contracts:
@@ -254,8 +259,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -284,9 +295,9 @@ tags:
 - Text-to-SQL
 - Dashboards
 - Business Intelligence
-- Workflow-Automation
+- Workflow Automation
 - Alerts
-- agent-native
+- Agent-Native
 - llms-txt
 - OpenAPI
 - Webhook

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -155,9 +155,9 @@ description: Playroom (Playroom Kit) is a client-side developer platform for bui
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/playroom.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.joinplayroom.com over HTTP; 6 tools listed.
   name: Playroom MCP Server
-  slug: playroom-mcp-server
+  slug: playroom-docs
 modified: '2026-07-20'
 name: Playroom
 nav: Providers
@@ -169,7 +169,7 @@ overview: 'Playroom is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 3
 score:
   band: emerging
-  composite: 22.6
+  composite: 21.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -183,14 +183,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 56.5
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 26.3
-  previous_composite: 22.6
+  previous_composite: 21.7
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

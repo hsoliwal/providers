@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -170,12 +170,12 @@ rate_limits:
   slug: darrow-rate-limits
 scopes:
 - name: Darrow Scopes
-  scope_count: 0
+  scope_count: 14
   slug: darrow-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 23.0
+  composite: 20.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -189,9 +189,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
-  previous_composite: 23.0
+  previous_composite: 20.1
   provenance:
     conformance: first-party
   regulatory:
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.8
-  scored_at: '2026-09-20'
+  score: 37.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -60,7 +60,7 @@ apis:
   description: Templates represent reusable document signing forms with fields and signatures to be collected. It's possible to create unique template forms with fields and signatures using HTML or with tagged PDFs.
   name: DocuSeal Templates API
   slug: docuseal-templates-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: postman
   name: DocuSeal Submissions API
@@ -240,11 +240,15 @@ jsonld:
   property_count: 61
   slug: docuseal-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.docuseal.com over HTTP; 2 tools listed.
+  name: DocuSeal MCP Server
+  slug: docuseal
 modified: 2026-06-12
 name: DocuSeal
 nav: Providers
 network: true
-overview: 'DocuSeal publishes 3 APIs on the [APIs.io](https://apis.io/) network: Submissions API, Submitters API, and Templates API. Tagged areas include Document Signing, E-Signature, Electronic Signature, Document-Management, and PDF.
+overview: 'DocuSeal publishes 3 APIs on the [APIs.io](https://apis.io/) network: Submissions API, Submitters API, and Templates API. Tagged areas include Document Signing, E-Signature, Electronic Signature, Document Management, and PDF.
 
 
   The DocuSeal catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -273,23 +277,23 @@ rules:
   slug: docuseal-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 52.6
+  composite: 51.9
   coverage:
     artifact_dirs: 18
-    catalog_earned: 68.3
+    catalog_earned: 66.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.8
+    catalog_gap: 48.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 60.4
+    access_clarity: 54.7
+    contract_governance: 23.5
+    contract_quality: 55.2
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 52.6
+  previous_composite: 51.9
   provenance:
     agentic_access: derived
     contracts:
@@ -298,8 +302,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -327,10 +337,10 @@ tags:
 - Document Signing
 - E-Signature
 - Electronic Signature
-- Document-Management
+- Document Management
 - PDF
 - Templates
-- Open-Source
+- Open Source
 - Webhook
 - Embeddings
 website: https://www.docuseal.com/

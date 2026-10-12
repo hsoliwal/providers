@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL gateway providing stateful mock query and mutation access to the same dataset, with an interactive explorer.
@@ -173,12 +173,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Playground API — Free Stateful Mock REST & GraphQL Service MCP Server
-  slug: playground-api-free-stateful-mock-rest-graphql-service-mcp-server
+  slug: playground-mcp-yml
 modified: '2026-09-14'
 name: Playground API — Free Stateful Mock REST & GraphQL Service
 nav: Providers
 network: true
-overview: 'Playground API — Free Stateful Mock REST & GraphQL Service publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Avatars API, Comments API, and 6 more. Tagged areas include Developer Tools, Testing, Mock API, api-sandbox, and REST.
+overview: 'Playground API — Free Stateful Mock REST & GraphQL Service publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Avatars API, Comments API, and 7 more. Tagged areas include Developer Tools, Testing, Mock API, api-sandbox, and REST.
 
 
   Playground API — Free Stateful Mock REST & GraphQL Service''s developer surface includes getting-started guide, sandbox, authentication, and 16 more developer resources.'
@@ -193,7 +193,7 @@ rate_limits:
   slug: playground-rate-limits
 score:
   band: thin
-  composite: 32.5
+  composite: 31.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -205,11 +205,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 48.2
+    contract_quality: 44.3
     developer_ergonomics: 47.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 32.5
+  previous_composite: 31.5
   provenance:
     conformance: derived
     contracts:
@@ -219,8 +219,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

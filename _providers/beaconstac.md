@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 53.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API (v2.0) to programmatically create static and dynamic QR Codes across 20+ campaign types, apply design templates, generate codes in bulk from CSV/XLSX, manage Digital Business Cards, leads and
@@ -225,9 +225,9 @@ description: Beaconstac (now Uniqode) is a B2B SaaS platform for creating, custo
 image: https://cdn.prod.website-files.com/6669ecc72092c5122374cf32/6731094d55afbe708065f595_uniqode-opengraph.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.uniqode.com over HTTP requiring OAuth.
   name: Beaconstac MCP Server
-  slug: beaconstac-mcp-server
+  slug: uniqode
 modified: '2026-08-13'
 name: Beaconstac
 nav: Providers
@@ -255,7 +255,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: strong
-  composite: 57.8
+  composite: 54.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 57.8
+  previous_composite: 54.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -287,9 +287,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

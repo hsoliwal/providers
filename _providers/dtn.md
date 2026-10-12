@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -534,7 +534,7 @@ apis:
 - baseURL: https://point-forecast.weather.mg
   baseurl_source: declared
   description: Endpoints for the api/catalog resources
-  name: DTN AP Is API
+  name: DTN APIs API
   slug: dtn-apis-api
 artifact_total: 148
 asyncapis:
@@ -841,7 +841,7 @@ modified: '2026-09-16'
 name: DTN
 nav: Providers
 network: true
-overview: 'DTN publishes 98 APIs on the [APIs.io](https://apis.io/) network, including Account API, Agency API, Alerts API, and 95 more. Tagged areas include Weather, Agriculture, Energy, Market Data, and Aviation.
+overview: 'DTN publishes 99 APIs on the [APIs.io](https://apis.io/) network, including Account API, Agency API, Alerts API, and 96 more. Tagged areas include Weather, Agriculture, Energy, Market Data, and Aviation.
 
 
   The DTN catalog on APIs.io includes 2 event-driven AsyncAPI specifications, 1 JSON-LD context, and 1 Spectral governance ruleset.
@@ -874,24 +874,24 @@ scopes:
   slug: dtn-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 56.0
+  band: developing
+  composite: 52.5
   coverage:
     artifact_dirs: 28
-    catalog_earned: 55.3
+    catalog_earned: 58.3
     catalog_earned_first_party: 0.0
     catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 34.2
     contract_governance: 14.4
-    contract_quality: 65.7
+    contract_quality: 60.5
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 56.0
+  previous_composite: 52.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -907,9 +907,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -935,5 +935,6 @@ tags:
 - Forecasting
 - Observations
 - Commodities
+- Real-Time
 website: https://www.dtn.com/
 ---

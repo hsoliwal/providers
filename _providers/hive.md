@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 0
@@ -152,6 +152,11 @@ collections:
   name: Hive Public API
   slug: open-hive
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hive/refs/heads/main/capabilities/hive-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hive-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hive/refs/heads/main/agentic-access/hive-agentic-access.yml
   title: ''
@@ -211,14 +216,14 @@ modified: '2026-05-11'
 name: Hive
 nav: Providers
 network: true
-overview: 'Hive publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Agile Sprints API, Dashboard Widgets API, and 9 more. Tagged areas include Project Management, Task Management, Team Collaboration, Productivity, and Workflow-Automation.
+overview: 'Hive publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Agile Sprints API, Dashboard Widgets API, and 10 more. Tagged areas include Project Management, Task Management, Team Collaboration, Productivity, and Workflow Automation.
 
 
-  Hive''s developer surface includes authentication, engineering blog, documentation, API reference, signup flow, pricing, support, and 5 more developer resources.'
+  Hive''s developer surface includes authentication, engineering blog, documentation, API reference, signup flow, pricing, support, and 6 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 30.0
+  composite: 28.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -230,11 +235,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 25.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 30.0
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     contracts:
@@ -242,8 +247,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,7 +275,7 @@ tags:
 - Task Management
 - Team Collaboration
 - Productivity
-- Workflow-Automation
+- Workflow Automation
 - Time Tracking
 website: https://hive.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -102,6 +102,11 @@ collections:
   name: UKG Pro HCM API
   slug: open-ukg-pro
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/capabilities/ukg-pro-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ukg-pro-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ukg-pro/refs/heads/main/agentic-access/ukg-pro-agentic-access.yml
   title: ''
@@ -165,16 +170,16 @@ modified: '2026-05-11'
 name: UKG Pro
 nav: Providers
 network: true
-overview: 'UKG Pro publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Benefits API, Employment API, Pay API, and 2 more. Tagged areas include HCM, Human Resources, Payroll, Benefits Administration, and Talent Management.
+overview: 'UKG Pro publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Benefits API, Employment API, Pay API, and 5 more. Tagged areas include HCM, Human Resources, Payroll, Benefits Administration, and Talent Management.
 
 
-  UKG Pro''s developer surface includes authentication, documentation, pricing, support, and 9 more developer resources.'
+  UKG Pro''s developer surface includes authentication, documentation, pricing, support, and 10 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 24.8
+  composite: 22.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -184,11 +189,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 51.3
+    contract_quality: 46.2
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 24.8
+  previous_composite: 22.2
   provenance:
     agentic_access: derived
     contracts:
@@ -196,8 +201,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -254,7 +254,7 @@ layout: provider
 mcp_servers:
 - description: Beeper Desktop ships a built-in Model Context Protocol server that runs locally inside the Beeper Desktop app, exposing the user's unified chats, messages, contacts and accounts to MCP clients (Claude
   name: Beeper MCP Server
-  slug: beeper-mcp-server
+  slug: beeper
 modified: '2026-07-18'
 name: Beeper
 nav: Providers
@@ -274,7 +274,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 44.5
+  composite: 45.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 32.0
@@ -286,11 +286,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 57.9
+    contract_quality: 52.9
     developer_ergonomics: 66.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 44.5
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -301,8 +301,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -328,5 +334,6 @@ tags:
 - MCP
 - Desktop
 - Aggregator
+- Real-Time
 website: https://beeper.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 4
@@ -46,22 +46,22 @@ apis:
 - baseURL: https://api.orderly.org
   baseurl_source: declared
   description: The admin API from Orderly Network — 1 operation(s) for admin.
-  name: Orderly Network admin API
+  name: Orderly Network Admin API
   slug: orderly-network-admin-api
 - baseURL: https://api.orderly.org
   baseurl_source: declared
   description: The client API from Orderly Network — 1 operation(s) for client.
-  name: Orderly Network client API
+  name: Orderly Network Client API
   slug: orderly-network-client-api
 - baseURL: https://api.orderly.org
   baseurl_source: declared
   description: The private API from Orderly Network — 137 operation(s) for private.
-  name: Orderly Network private API
+  name: Orderly Network Private API
   slug: orderly-network-private-api
 - baseURL: https://api.orderly.org
   baseurl_source: declared
   description: The public API from Orderly Network — 97 operation(s) for public.
-  name: Orderly Network public API
+  name: Orderly Network Public API
   slug: orderly-network-public-api
 artifact_total: 14
 asyncapis:
@@ -230,14 +230,14 @@ description: Orderly Network is an omnichain, orderbook-based trading infrastruc
 image: https://raw.githubusercontent.com/OrderlyNetwork/documentation-public/main/logo/light.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.orderly.network; 10 tools listed.
   name: Orderly Network MCP Server
-  slug: orderly-network-mcp-server
+  slug: orderly
 modified: '2026-07-20'
 name: Orderly Network
 nav: Providers
 network: true
-overview: 'Orderly Network publishes 4 APIs on the [APIs.io](https://apis.io/) network, including admin API, client API, private API, and 1 more. Tagged areas include Company, Crypto, DeFi, Trading, and Perpetual Futures.
+overview: 'Orderly Network publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Client API, Private API, and 1 more. Tagged areas include Company, Crypto, DeFi, Trading, and Perpetual Futures.
 
 
   The Orderly Network catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -247,7 +247,7 @@ overview: 'Orderly Network publishes 4 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 8
 score:
   band: developing
-  composite: 45.8
+  composite: 44.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -259,11 +259,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 54.9
+    contract_quality: 50.3
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 45.8
+  previous_composite: 44.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -279,9 +279,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -308,5 +308,6 @@ tags:
 - Web3
 - Blockchain
 - Liquidity
+- Real-Time
 website: https://orderly.network/
 ---

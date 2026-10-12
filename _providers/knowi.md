@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -105,6 +105,11 @@ collections:
   name: Knowi Management Authentication Users API
   slug: open-knowi-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/knowi/refs/heads/main/capabilities/knowi-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/knowi-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/knowi/refs/heads/main/agentic-access/knowi-agentic-access.yml
   title: ''
@@ -180,7 +185,7 @@ network: true
 overview: 'Knowi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Dashboards API, Groups API, and 3 more. Tagged areas include AI Analytics, API Analytics, Business Intelligence, Data Visualization, and Embedded Analytics.
 
 
-  Knowi''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, support, and 8 more developer resources.'
+  Knowi''s developer surface includes authentication, documentation, engineering blog, pricing, signup flow, support, and 9 more developer resources.'
 plans:
 - name: Knowi Plans Pricing
   plan_count: 3
@@ -192,9 +197,9 @@ rate_limits:
   slug: knowi-rate-limits
 score:
   band: thin
-  composite: 31.8
+  composite: 30.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -204,11 +209,11 @@ score:
   facets:
     access_clarity: 30.3
     contract_governance: 0.0
-    contract_quality: 57.8
+    contract_quality: 52.4
     developer_ergonomics: 21.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 31.8
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
@@ -216,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

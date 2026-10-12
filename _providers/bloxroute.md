@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://uk.solana.dex.blxrbdn.com
@@ -176,7 +176,7 @@ layout: provider
 mcp_servers:
 - description: Official bloXroute hosted MCP server. Provides read-only access to bloXroute's public documentation and integration knowledge so agents can find endpoints, understand services, and generate integratio
   name: bloXroute MCP Server
-  slug: bloxroute-mcp-server
+  slug: bloxroute
 modified: '2026-07-18'
 name: bloXroute
 nav: Providers
@@ -195,7 +195,7 @@ rate_limits:
   slug: bloxroute-rate-limits
 score:
   band: thin
-  composite: 39.0
+  composite: 38.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -207,11 +207,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 44.8
+    contract_quality: 42.7
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 39.0
+  previous_composite: 38.6
   provenance:
     conformance: derived
     mcp: first-party
@@ -221,9 +221,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -251,5 +251,6 @@ tags:
 - Low Latency
 - Streaming
 - Infrastructure
+- Real-Time
 website: https://bloxroute.com/
 ---

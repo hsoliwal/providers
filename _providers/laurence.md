@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Laurence MCP is a hosted, remote Model Context Protocol server that exposes a read-only set of nine tools over a customer''s Amazon Advertising and Amazon Marketing Stream data — allowed ads profiles, '
@@ -170,7 +170,7 @@ layout: provider
 mcp_servers:
 - description: 'Laurence operates an official hosted, remote MCP server that brings a customer''s Amazon Advertising and Amazon Marketing Stream (AMS) data into Claude Code, Cursor, and Codex. The server is available '
   name: Laurence MCP Server
-  slug: laurence-mcp-server
+  slug: laurence
 modified: '2026-08-13'
 name: Laurence
 nav: Providers
@@ -190,12 +190,12 @@ rate_limits:
   slug: laurence-rate-limits
 scopes:
 - name: Laurence Scopes
-  scope_count: 0
+  scope_count: 4
   slug: laurence-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 23.0
+  composite: 25.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -209,15 +209,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 23.0
+  previous_composite: 25.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,7 +246,7 @@ tags:
 - Amazon
 - E-Commerce
 - Marketing
-- Machine-Learning
+- Machine Learning
 - Retail Media
 - MCP
 website: https://www.laurence.com

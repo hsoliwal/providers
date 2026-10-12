@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 23.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The private HTTP API behind the Micro Connect Open Platform (滴灌通开放平台), the enterprise console brands and merchants use to register, submit daily revenue and order detail reports, review data, manage a
@@ -154,7 +154,7 @@ modified: '2026-08-25'
 name: Micro Connect
 nav: Providers
 network: true
-overview: 'Micro Connect publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Capital Markets, Exchange, and Revenue-Based Financing.
+overview: 'Micro Connect publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Capital Markets, Exchange, and Revenue-Based Financing.
 
 
   Micro Connect''s developer surface includes engineering blog, support, pricing, authentication, and 14 more developer resources.'
@@ -169,12 +169,12 @@ rate_limits:
   slug: micro-connect-rate-limits
 scopes:
 - name: Micro Connect Scopes
-  scope_count: 0
+  scope_count: 10
   slug: micro-connect-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 10 scopes
 score:
   band: emerging
-  composite: 21.5
+  composite: 19.1
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -188,7 +188,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -197,7 +197,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 21.5
+  previous_composite: 19.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -206,9 +206,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 63.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -227,7 +227,7 @@ security:
 slug: micro-connect
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Capital Markets
 - Exchange
 - Revenue-Based Financing

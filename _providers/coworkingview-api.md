@@ -1,6 +1,6 @@
 ---
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -11,9 +11,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: verified
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 38.9
-  scored_at: '2026-09-20'
+  score: 34.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Hosted MCP server (Streamable HTTP) exposing 10 read-only tools for searching, comparing and fetching coworking spaces, market rates, locations, operators and guides. Independently health-verified on '
@@ -87,6 +87,11 @@ apis:
 artifact_total: 17
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/capabilities/coworkingview-api-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/coworkingview-api-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/coworkingview-api/refs/heads/main/overlays/coworkingview-api-openapi-overlay.yaml
   title: ''
   type: Overlay
@@ -132,7 +137,7 @@ modified: '2026-09-15'
 name: CoworkingView API
 nav: Providers
 network: true
-overview: CoworkingView API publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Config API, Facets API, Geo API, and 8 more. Tagged areas include Co-Working, Flexible Workspace, Real-Estate, Location Services, and Search.
+overview: CoworkingView API publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Config API, Facets API, Geo API, and 9 more. Tagged areas include Co-Working, Flexible Workspace, Real Estate, Location Services, and Search.
 plans:
 - name: Coworkingview Api Plans Pricing
   plan_count: 0
@@ -144,9 +149,9 @@ rate_limits:
   slug: coworkingview-api-rate-limits
 score:
   band: thin
-  composite: 28.8
+  composite: 27.7
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -156,11 +161,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 28.8
+  previous_composite: 27.7
   provenance:
     conformance: derived
     contracts:
@@ -170,8 +175,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -189,12 +200,12 @@ slug: coworkingview-api
 tags:
 - Co-Working
 - Flexible Workspace
-- Real-Estate
+- Real Estate
 - Location Services
 - Search
 - Comparison
 - MCP
-- agent-native
+- Agent-Native
 - Business
 website: https://coworkingview.com
 ---

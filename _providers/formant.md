@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 3
@@ -505,7 +505,7 @@ modified: '2026-09-16'
 name: Formant
 nav: Providers
 network: true
-overview: 'Formant publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Commands API, and Data Access API. Tagged areas include Robotics, Robot Fleet Management, Teleoperation, Observability, and Telemetry.
+overview: 'Formant publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Commands API, Data Access API, and 4 more. Tagged areas include Robotics, Robot Fleet Management, Teleoperation, Observability, and Telemetry.
 
 
   The Formant catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -536,7 +536,7 @@ rules:
   slug: formant-rules
 score:
   band: thin
-  composite: 33.2
+  composite: 31.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 46.3
@@ -548,11 +548,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 9.8
-    contract_quality: 62.6
+    contract_quality: 57.1
     developer_ergonomics: 40.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 33.2
+  previous_composite: 31.8
   provenance:
     agentic_access: derived
     contracts:
@@ -560,8 +560,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

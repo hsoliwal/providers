@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The SAFE REST API (v3) gives customers and partners programmatic access to the SAFE One platform: users, assets/technology, findings, risk scenarios, reports, audit-log export, and full lifecycle mana'
@@ -233,8 +233,8 @@ rate_limits:
   name: Safe Security Rate Limits
   slug: safe-security-rate-limits
 score:
-  band: thin
-  composite: 38.3
+  band: developing
+  composite: 41.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -246,16 +246,22 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 38.3
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

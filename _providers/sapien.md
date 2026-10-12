@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.6
-  scored_at: '2026-09-20'
+  score: 32.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 1
@@ -200,21 +200,21 @@ description: Sapien is the company behind Proof of Quality (PoQ), an open protoc
 image: https://docs.sapien.io/favicon.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sapien-poq.up.railway.app over HTTP; 27 tools listed.
   name: Sapien MCP Server
-  slug: sapien-mcp-server
+  slug: sapien-poq
 modified: '2026-07-21'
 name: Sapien
 nav: Providers
 network: true
-overview: 'Sapien publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Datapoints API, Projects API, System API, and 2 more. Tagged areas include Company, Artificial Intelligence, Data Quality, Data Labeling, and Machine-Learning.
+overview: 'Sapien publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Datapoints API, Projects API, System API, and 2 more. Tagged areas include Company, Artificial Intelligence, Data Quality, Data Labeling, and Machine Learning.
 
 
   Sapien''s developer surface includes authentication, documentation, getting-started guide, engineering blog, signup flow, and 18 more developer resources.'
 random_paper: 2
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -226,11 +226,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 44.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 39.4
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,8 +241,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -263,7 +269,7 @@ tags:
 - Artificial Intelligence
 - Data Quality
 - Data Labeling
-- Machine-Learning
+- Machine Learning
 - Human-in-the-Loop
 - Attestation
 - Blockchain

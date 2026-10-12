@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -154,17 +154,17 @@ description: Morgan, Lewis & Bockius LLP is a global Am Law 10 firm with approxi
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morgan-lewis.png
 layout: provider
 modified: '2026-05-23'
-name: Morgan, Lewis & Bockius LLP
+name: Morgan Lewis
 nav: Providers
 network: true
-overview: 'Morgan, Lewis & Bockius LLP is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Law Firms, Am Law 10, Employee Benefits, and Fintech.
+overview: 'Morgan Lewis is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Law Firms, Am Law 10, Employee Benefits, and Fintech.
 
 
-  Morgan, Lewis & Bockius LLP''s developer surface includes product news, engineering blog, YouTube channel, and 25 more developer resources.'
+  Morgan Lewis'' developer surface includes product news, engineering blog, YouTube channel, and 25 more developer resources.'
 random_paper: 5
 score:
   band: minimal
-  composite: 9.1
+  composite: 8.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 24.0
@@ -178,11 +178,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 44.4
+    discoverability: 43.8
     operational_transparency: 0.0
-  previous_composite: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

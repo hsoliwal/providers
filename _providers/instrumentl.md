@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Instrumentl's authenticated remote Model Context Protocol (MCP) server, exposing the grant-management platform to AI agents. Access is gated by OAuth 2.0 (authorization code + PKCE, dynamic client reg
@@ -140,9 +140,9 @@ description: Instrumentl is the all-in-one grant management platform for nonprof
 image: https://static-assets.instrumentl.com/assets/open-graph-image-7aeb77fce8b2e99a998345583d30006a4f24546304a720cb2a2c7c97372f6212.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.instrumentl.com over HTTP.
   name: Instrumentl MCP Server
-  slug: instrumentl-mcp-server
+  slug: instrumentl
 modified: '2026-07-19'
 name: Instrumentl
 nav: Providers
@@ -159,7 +159,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.4
+  composite: 25.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -173,13 +173,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 22.4
+  previous_composite: 25.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

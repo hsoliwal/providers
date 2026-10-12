@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 126
   human_in_the_loop: 4
@@ -51,7 +51,7 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The agents API from Nuclei — 4 operation(s) for agents.
-  name: Nuclei agents API
+  name: Nuclei Agents API
   slug: nuclei-agents-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -61,67 +61,67 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The assets API from Nuclei — 9 operation(s) for assets.
-  name: Nuclei assets API
+  name: Nuclei Assets API
   slug: nuclei-assets-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The automations API from Nuclei — 2 operation(s) for automations.
-  name: Nuclei automations API
+  name: Nuclei Automations API
   slug: nuclei-automations-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The billing API from Nuclei — 1 operation(s) for billing.
-  name: Nuclei billing API
+  name: Nuclei Billing API
   slug: nuclei-billing-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The chaos API from Nuclei — 3 operation(s) for chaos.
-  name: Nuclei chaos API
+  name: Nuclei Chaos API
   slug: nuclei-chaos-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The configurations API from Nuclei — 7 operation(s) for configurations.
-  name: Nuclei configurations API
+  name: Nuclei Configurations API
   slug: nuclei-configurations-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The deprecated API from Nuclei — 3 operation(s) for deprecated.
-  name: Nuclei deprecated API
+  name: Nuclei Deprecated API
   slug: nuclei-deprecated-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The domains API from Nuclei — 2 operation(s) for domains.
-  name: Nuclei domains API
+  name: Nuclei Domains API
   slug: nuclei-domains-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The elog API from Nuclei — 1 operation(s) for elog.
-  name: Nuclei elog API
+  name: Nuclei Elog API
   slug: nuclei-elog-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The enumeration API from Nuclei — 2 operation(s) for enumeration.
-  name: Nuclei enumeration API
+  name: Nuclei Enumeration API
   slug: nuclei-enumeration-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The enumerations API from Nuclei — 20 operation(s) for enumerations.
-  name: Nuclei enumerations API
+  name: Nuclei Enumerations API
   slug: nuclei-enumerations-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The export API from Nuclei — 4 operation(s) for export.
-  name: Nuclei export API
+  name: Nuclei Export API
   slug: nuclei-export-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The history API from Nuclei — 1 operation(s) for history.
-  name: Nuclei history API
+  name: Nuclei History API
   slug: nuclei-history-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The internal API from Nuclei — 33 operation(s) for internal.
-  name: Nuclei internal API
+  name: Nuclei Internal API
   slug: nuclei-internal-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -136,22 +136,22 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The results API from Nuclei — 7 operation(s) for results.
-  name: Nuclei results API
+  name: Nuclei Results API
   slug: nuclei-results-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The retests API from Nuclei — 2 operation(s) for retests.
-  name: Nuclei retests API
+  name: Nuclei Retests API
   slug: nuclei-retests-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The scan API from Nuclei — 5 operation(s) for scan.
-  name: Nuclei scan API
+  name: Nuclei Scan API
   slug: nuclei-scan-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The scan_log API from Nuclei — 3 operation(s) for scan_log.
-  name: Nuclei scan_log API
+  name: Nuclei Scan Log API
   slug: nuclei-scan-log-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -161,12 +161,12 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The stats API from Nuclei — 1 operation(s) for stats.
-  name: Nuclei stats API
+  name: Nuclei Stats API
   slug: nuclei-stats-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The tasks API from Nuclei — 2 operation(s) for tasks.
-  name: Nuclei tasks API
+  name: Nuclei Tasks API
   slug: nuclei-tasks-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -181,17 +181,17 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The template/v2 API from Nuclei — 1 operation(s) for template/v2.
-  name: Nuclei template/v2 API
+  name: Nuclei Template/v2 API
   slug: nuclei-template-v2-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The templates API from Nuclei — 12 operation(s) for templates.
-  name: Nuclei templates API
+  name: Nuclei Templates API
   slug: nuclei-templates-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The usage API from Nuclei — 1 operation(s) for usage.
-  name: Nuclei usage API
+  name: Nuclei Usage API
   slug: nuclei-usage-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -201,12 +201,12 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The users API from Nuclei — 12 operation(s) for users.
-  name: Nuclei users API
+  name: Nuclei Users API
   slug: nuclei-users-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The vuln API from Nuclei — 1 operation(s) for vuln.
-  name: Nuclei vuln API
+  name: Nuclei Vuln API
   slug: nuclei-vuln-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -223,7 +223,7 @@ apis:
   description: The oauth API from Nuclei — 5 operation(s) for oauth.
   name: Nuclei OAUTH API
   slug: nuclei-oauth-api
-artifact_total: 81
+artifact_total: 82
 collections:
 - collection_type: open
   name: API Collection
@@ -419,11 +419,15 @@ finops:
   slug: nuclei-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nuclei.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.projectdiscovery.io over HTTP; 7 tools listed.
+  name: Nuclei MCP Server
+  slug: nuclei
 modified: '2026-05-19'
 name: Nuclei
 nav: Providers
 network: true
-overview: 'Nuclei publishes 35 APIs on the [APIs.io](https://apis.io/) network, including agents API, Asset API, assets API, and 32 more. Tagged areas include Security Testing, Testing, Vulnerability Scanner, DAST, and Open-Source.
+overview: 'Nuclei publishes 36 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Asset API, Assets API, and 33 more. Tagged areas include Security Testing, Testing, Vulnerability Scanning, DAST, and Open Source.
 
 
   Nuclei''s developer surface includes authentication, documentation, engineering blog, and 14 more developer resources.'
@@ -438,7 +442,7 @@ rate_limits:
   slug: nuclei-rate-limits
 score:
   band: developing
-  composite: 41.9
+  composite: 41.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 41.0
@@ -450,14 +454,14 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 52.6
+    contract_quality: 47.6
     developer_ergonomics: 40.5
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 41.9
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -466,8 +470,14 @@ score:
       marker_coverage: 0.0
       total: 35
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -494,8 +504,9 @@ slug: nuclei
 tags:
 - Security Testing
 - Testing
-- Vulnerability Scanner
+- Vulnerability Scanning
 - DAST
-- Open-Source
+- Open Source
+- Vulnerability Management
 website: https://nuclei.projectdiscovery.io
 ---

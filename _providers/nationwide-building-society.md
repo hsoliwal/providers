@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: OBIE Read/Write Account and Transaction Information (AIS) API providing consented access to Nationwide account, balance, and transaction data for authorised third-party providers. FAPI-secured (OAuth2
@@ -233,7 +233,7 @@ modified: '2026-07-23'
 name: Nationwide Building Society
 nav: Providers
 network: true
-overview: 'Nationwide Building Society publishes 3 APIs on the [APIs.io](https://apis.io/) network: ATM API, Branch API, and PCA API. Tagged areas include Financial-Services, Banking, Building Society, Open Banking, and PSD2.
+overview: 'Nationwide Building Society publishes 7 APIs on the [APIs.io](https://apis.io/) network, including ATM API, Branch API, PCA API, and 4 more. Tagged areas include Financial Services, Banking, Building Society, Open Banking, and PSD2.
 
 
   Nationwide Building Society''s developer surface includes documentation, getting-started guide, support, signup flow, authentication, and 27 more developer resources.'
@@ -245,7 +245,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 43.6
+  composite: 40.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -257,9 +257,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 18.2
-    contract_quality: 40.4
+    contract_quality: 36.3
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -269,7 +269,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 43.6
+  previous_composite: 40.5
   provenance:
     conformance: first-party
     contracts:
@@ -284,9 +284,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 58.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -308,7 +308,7 @@ security:
   summary_line: security.txt · contact published
 slug: nationwide-building-society
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Building Society
 - Open Banking

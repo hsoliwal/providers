@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -153,6 +153,11 @@ collections:
   name: Azure Pipelines Build REST Artifacts Runs API
   slug: open-microsoft-azure-pipelines-runs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-pipelines/refs/heads/main/capabilities/microsoft-azure-pipelines-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-pipelines-capability-edges.yml
 - group: auth
   title: ''
   type: SecurityPolicy
@@ -280,10 +285,10 @@ modified: '2026-09-16'
 name: Azure Pipelines
 nav: Providers
 network: true
-overview: 'Azure Pipelines publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Artifacts API, Build Artifacts API, Build Definitions API, and 5 more. Tagged areas include Automation, Builds, CI/CD, Deployment, and DevOps.
+overview: 'Azure Pipelines publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Artifacts API, Build Artifacts API, Build Definitions API, and 8 more. Tagged areas include Automation, Builds, CI/CD, Deployment, and DevOps.
 
 
-  Azure Pipelines'' developer surface includes authentication, getting-started guide, developer portal, pricing, engineering blog, documentation, signup flow, and 21 more developer resources.'
+  Azure Pipelines'' developer surface includes authentication, getting-started guide, developer portal, pricing, engineering blog, documentation, signup flow, and 22 more developer resources.'
 plans:
 - name: Microsoft Azure Pipelines Plans Pricing
   plan_count: 6
@@ -295,9 +300,9 @@ rate_limits:
   slug: microsoft-azure-pipelines-rate-limits
 score:
   band: developing
-  composite: 51.0
+  composite: 49.9
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -307,11 +312,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 58.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 52.6
-  previous_composite: 51.0
+  previous_composite: 49.9
   provenance:
     agentic_access: derived
     contracts:
@@ -319,8 +324,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

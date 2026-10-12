@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 59.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -279,17 +279,17 @@ description: Independent third-party provider of Zillow-sourced U.S. residential
 image: https://zillapi.com/og.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.zillapi.com over HTTP requiring OAuth; 4 tools listed.
   name: Zillapi MCP Server
-  slug: zillapi-mcp-server
+  slug: zillapi
 - description: 'Zillow MCP for AI agents: property data, Zestimates & listings — 300+ fields per home. Free tier.'
   name: MCP registry server.json (com.zillapi/zillow-mcp)
-  slug: mcp-registry-serverjson-comzillapizillow-mcp
+  slug: mcp-registry-server-json-com-zillapi-zillow-mcp
 modified: '2026-09-11'
 name: Zillapi
 nav: Providers
 network: true
-overview: 'Zillapi publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Buildings API, Jobs API, and 4 more. Tagged areas include Real-Estate, PropTech, Property Data, Zillow, and Zestimate.
+overview: 'Zillapi publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account API, Buildings API, Jobs API, and 4 more. Tagged areas include Real Estate, PropTech, Property Data, Zillow, and Zestimate.
 
 
   The Zillapi catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -312,7 +312,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 61.7
+  composite: 63.8
   coverage:
     artifact_dirs: 26
     catalog_earned: 61.0
@@ -324,11 +324,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 66.3
+    contract_quality: 60.8
     developer_ergonomics: 64.3
-    discoverability: 87.0
+    discoverability: 85.0
     operational_transparency: 52.6
-  previous_composite: 61.7
+  previous_composite: 63.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -339,8 +339,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -361,7 +367,7 @@ security:
   summary_line: Hackerone · contact published
 slug: zillapi
 tags:
-- Real-Estate
+- Real Estate
 - PropTech
 - Property Data
 - Zillow

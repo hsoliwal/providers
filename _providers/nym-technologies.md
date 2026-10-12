@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://validator.nymtech.net/api
@@ -44,12 +44,12 @@ apis:
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
   description: The circulating-supply API from Nym Technologies — 3 operation(s) for circulating-supply.
-  name: Nym Technologies circulating-supply API
+  name: Nym Technologies Circulating Supply API
   slug: nym-technologies-circulating-supply-api
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
   description: The contract-cache API from Nym Technologies — 5 operation(s) for contract-cache.
-  name: Nym Technologies contract-cache API
+  name: Nym Technologies Contract Cache API
   slug: nym-technologies-contract-cache-api
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
@@ -79,12 +79,12 @@ apis:
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
   description: The network API from Nym Technologies — 7 operation(s) for network.
-  name: Nym Technologies network API
+  name: Nym Technologies Network API
   slug: nym-technologies-network-api
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
   description: The network-monitor-status API from Nym Technologies — 4 operation(s) for network-monitor-status.
-  name: Nym Technologies network-monitor-status API
+  name: Nym Technologies Network Monitor Status API
   slug: nym-technologies-network-monitor-status-api
 - baseURL: https://validator.nymtech.net/api
   baseurl_source: declared
@@ -391,14 +391,14 @@ modified: '2026-07-20'
 name: Nym Technologies
 nav: Providers
 network: true
-overview: 'Nym Technologies publishes 23 APIs on the [APIs.io](https://apis.io/) network, including API Status API, circulating-supply API, contract-cache API, and 20 more. Tagged areas include Company, Privacy, VPN, Mixnet, and Cryptography.
+overview: 'Nym Technologies publishes 23 APIs on the [APIs.io](https://apis.io/) network, including API Status API, Circulating Supply API, Contract Cache API, and 20 more. Tagged areas include Company, Privacy, VPN, Mixnet, and Cryptography.
 
 
   Nym Technologies'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, signup flow, and 28 more developer resources.'
 random_paper: 19
 score:
   band: developing
-  composite: 49.7
+  composite: 51.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -410,11 +410,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 40.3
+    contract_quality: 36.3
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 49.7
+  previous_composite: 51.3
   provenance:
     conformance: derived
     contracts:
@@ -424,8 +424,18 @@ score:
       total: 23
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

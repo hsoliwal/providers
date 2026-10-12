@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful API for programmatic access to Payhawk spend management features including expenses, corporate cards, transactions, employees, custom fields, fund accounts, bank statements, and webhook subscr
   name: Payhawk API
   slug: payhawk-api
-artifact_total: 8
+artifact_total: 9
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/payhawk/refs/heads/main/security/payhawk-trust-center.yml
@@ -125,6 +125,10 @@ jsonld:
   property_count: 0
   slug: payhawk-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.payhawk.com over HTTP.
+  name: Payhawk MCP Server
+  slug: payhawk
 modified: 2026-06-12
 name: Payhawk
 nav: Providers
@@ -147,23 +151,23 @@ rate_limits:
   slug: payhawk-rate-limits
 score:
   band: thin
-  composite: 32.6
+  composite: 30.8
   coverage:
     artifact_dirs: 9
-    catalog_earned: 68.0
+    catalog_earned: 66.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.0
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 32.6
+    discoverability: 68.3
+    operational_transparency: 29.5
+  previous_composite: 30.8
   provenance:
     mcp: first-party
   regulatory:
@@ -171,9 +175,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

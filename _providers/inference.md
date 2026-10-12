@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OpenAI-compatible inference API for open-source, frontier, and custom language models — chat completions, batch/async inference, function calling, structured outputs, and vision — authenticated with a
@@ -168,12 +168,12 @@ layout: provider
 mcp_servers:
 - description: 'The Inference MCP server lets compatible AI coding assistants query and operate Catalyst resources (projects, agents, models, datasets, rubrics, evals, training jobs, deployments, inferences, traces, '
   name: Inference MCP Server
-  slug: inference-mcp-server
+  slug: inference
 modified: '2026-07-19'
 name: Inference
 nav: Providers
 network: true
-overview: 'Inference publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, LLM, and Inference.
+overview: 'Inference publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, LLM, and Inference.
 
 
   The Inference catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -190,8 +190,8 @@ rate_limits:
   name: Inference Rate Limits
   slug: inference-rate-limits
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 54.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 61.0
@@ -203,16 +203,22 @@ score:
   facets:
     access_clarity: 80.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 53.6
+  previous_composite: 54.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -232,13 +238,12 @@ slug: inference
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Inference
 - Observability
 - Model Training
 - Model Deployment
 - MCP
-- Crypto Web3
 website: https://inference.net
 ---

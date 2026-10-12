@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatic trading on Public — manage brokerage accounts, pull portfolio and transaction history, retrieve market data (quotes, bars, option chains, greeks), and place, replace, and can
@@ -161,7 +161,7 @@ layout: provider
 mcp_servers:
 - description: Public's hosted, remote MCP server — described by Public as part of "the world's first agentic brokerage." Lets AI assistants query portfolios and place trades on a connected Public account across sto
   name: Public MCP Server
-  slug: public-mcp-server
+  slug: public
 modified: '2026-07-20'
 name: Public
 nav: Providers
@@ -178,7 +178,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: thin
-  composite: 38.4
+  composite: 36.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -192,9 +192,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 38.4
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -203,9 +203,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,7 +233,8 @@ tags:
 - Options
 - Crypto
 - Market Data
-- Agentic
+- AI Agents
 - MCP
+- Financial Services
 website: https://public.com
 ---

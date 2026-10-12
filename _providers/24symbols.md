@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -87,7 +87,7 @@ overview: '24Symbols is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 21
 score:
   band: emerging
-  composite: 13.2
+  composite: 13.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -101,7 +101,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 6.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -109,15 +109,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 13.2
+  previous_composite: 13.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 14.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

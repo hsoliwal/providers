@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 74
   human_in_the_loop: 0
@@ -472,7 +472,7 @@ overview: 'Cadana publishes 30 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 6
 score:
   band: developing
-  composite: 50.9
+  composite: 48.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -484,11 +484,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 63.3
+    contract_quality: 57.8
     developer_ergonomics: 68.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
-  previous_composite: 50.9
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -504,9 +504,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

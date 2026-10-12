@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Bikky provides push-button API integrations with leading POS, online ordering, loyalty, and marketing providers, sending data in real time for most POS and ordering sources and nightly for reservation
   name: Bikky Integrations
   slug: rest-api
-artifact_total: 5
+artifact_total: 6
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bikky/refs/heads/main/security/bikky-domain-security.yml
@@ -124,6 +124,10 @@ created: '2026-06-02'
 description: Bikky is a New York-based Customer Data Platform (CDP) built exclusively for large, multi-unit restaurant brands, serving thousands of locations for companies such as Bojangles, MOD Pizza, Dave's Hot Chicken, and Long John Silver's. By integrating with point-of-sale, online ordering, payment, and loyalty systems, Bikky builds a single source of truth on guests, cleaning, standardizing, and de-duplicating data to reveal behavior, frequency, lifetime value, and menu performance across channels. Bikky offers push-button API integrations with leading ordering, loyalty, and marketing providers, plus Snowflake data shares, SFTP, and CSV import for data exchange. It does not appear to publish a public, self-service developer API or documentation; integration and data access are arranged directly with Bikky.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bikky.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bikky.com over HTTP.
+  name: Bikky MCP Server
+  slug: bikky
 modified: '2026-08-13'
 name: Bikky
 nav: Providers
@@ -143,7 +147,7 @@ rate_limits:
   slug: bikky-rate-limits
 score:
   band: emerging
-  composite: 20.9
+  composite: 22.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -161,15 +165,23 @@ score:
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.9
+  previous_composite: 22.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -187,7 +187,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode/implicit/refreshToken
 score:
   band: thin
-  composite: 28.1
+  composite: 31.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -201,13 +201,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 44.7
-  previous_composite: 28.1
+  previous_composite: 31.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

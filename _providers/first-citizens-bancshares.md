@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: The Authorization API issues OAuth2 access tokens for the SVB commercial banking platform (now part of First Citizens). Partners exchange client credentials at /v1/security/oauth/token for a bearer to
@@ -184,7 +184,7 @@ modified: '2026-07-23'
 name: First Citizens BancShares
 nav: Providers
 network: true
-overview: 'First Citizens BancShares publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial-Services, Commercial Banking, Payments, and ACH.
+overview: 'First Citizens BancShares publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial Services, Commercial Banking, Payments, and ACH.
 
 
   The First Citizens BancShares catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -194,7 +194,7 @@ overview: 'First Citizens BancShares publishes 10 APIs on the [APIs.io](https://
 random_paper: 13
 score:
   band: thin
-  composite: 35.2
+  composite: 33.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -206,9 +206,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 21.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -217,7 +217,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.2
+  previous_composite: 33.6
   provenance:
     conformance: derived
   regulatory:
@@ -225,9 +225,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,7 @@ security:
 slug: first-citizens-bancshares
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Commercial Banking
 - Payments
 - ACH

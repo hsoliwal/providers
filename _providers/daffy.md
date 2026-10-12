@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/daffy/refs/heads/main/security/daffy-domain-security.yml
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: Daffy (the Daffy Charitable Fund) is a modern donor-advised fund (DAF) platform that helps people be more generous, more often. Co-founded by Adam Nash, Daffy lets members set aside money for charity, invest it tax-free across ETFs, individual stocks, and 300+ crypto assets, and then recommend grants to any of 1.7M+ eligible US charities on their own timeline. It offers flat-rate membership pricing starting at $3/month, family funds for up to 24 members, advisor integration, and Daffy for Work employer giving. Daffy Charitable Fund is a tax-exempt public charity under IRC 501(c)(3). Backed by Ribbit Capital, it operates as a consumer fintech app with no public developer API surface as of this profile.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/daffy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.daffy.org over HTTP.
+  name: Daffy MCP Server
+  slug: daffy
 modified: '2026-07-18'
 name: Daffy
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Daffy is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 16
 score:
   band: emerging
-  composite: 14.9
+  composite: 14.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -102,13 +106,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 14.9
+  previous_composite: 14.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

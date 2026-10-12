@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,44 +34,44 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.8
-  scored_at: '2026-09-20'
+  score: 43.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Login, logout and signup.
-  name: NewsBlur authentication API
+  name: NewsBlur Authentication API
   slug: newsblur-authentication-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Intelligence training classifiers.
-  name: NewsBlur classifiers API
+  name: NewsBlur Classifiers API
   slug: newsblur-classifiers-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Subscriptions, folders and organization.
-  name: NewsBlur feed-management API
+  name: NewsBlur Feed Management API
   slug: newsblur-feed-management-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Feed subscription, search and metadata.
-  name: NewsBlur feeds API
+  name: NewsBlur Feeds API
   slug: newsblur-feeds-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: OPML import and export.
-  name: NewsBlur import-export API
+  name: NewsBlur Import Export API
   slug: newsblur-import-export-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Blurblogs, sharing, following and comments.
-  name: NewsBlur social API
+  name: NewsBlur Social API
   slug: newsblur-social-api
 - baseURL: https://www.newsblur.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Reading, marking and starring stories.
-  name: NewsBlur stories API
+  name: NewsBlur Stories API
   slug: newsblur-stories-api
 artifact_total: 18
 collections:
@@ -212,35 +212,35 @@ layout: provider
 mcp_servers:
 - description: 'NewsBlur ships an official hosted Model Context Protocol (MCP) server that lets AI agents (Claude Desktop, Claude Code, Cursor, or any MCP-compatible client) interact with a user''s feeds, stories and '
   name: NewsBlur MCP Server
-  slug: newsblur-mcp-server
+  slug: newsblur
 modified: '2026-07-20'
 name: NewsBlur
 nav: Providers
 network: true
-overview: 'NewsBlur publishes 7 APIs on the [APIs.io](https://apis.io/) network, including authentication API, classifiers API, feed-management API, and 4 more. Tagged areas include Company, RSS, News, Feed Reader, and Aggregator.
+overview: 'NewsBlur publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Classifiers API, Feed Management API, and 4 more. Tagged areas include Company, RSS, News, Feed Reader, and Aggregator.
 
 
   NewsBlur''s developer surface includes documentation, API reference, support, engineering blog, signup flow, authentication, and 17 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 35.9
+  composite: 35.2
   coverage:
     artifact_dirs: 20
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 50.7
+    contract_quality: 45.7
     developer_ergonomics: 47.0
-    discoverability: 68.5
+    discoverability: 60.0
     operational_transparency: 2.6
-  previous_composite: 35.9
+  previous_composite: 35.2
   provenance:
     conformance: derived
     contracts:
@@ -250,8 +250,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -276,7 +282,7 @@ tags:
 - Social
 - Content
 - Media
-- Open-Source
+- Open Source
 - MCP
 website: https://www.newsblur.com/
 ---

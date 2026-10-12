@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -177,7 +177,7 @@ modified: '2026-05-19'
 name: Community Health Systems
 nav: Providers
 network: true
-overview: 'Community Health Systems publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Claims API, Formulary API, Patient API, and 1 more. Tagged areas include CMS-9115-F, FHIR, Healthcare, Hospitals, and Interoperability.
+overview: 'Community Health Systems publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Claims API, Formulary API, Patient API, and 2 more. Tagged areas include CMS-9115-F, FHIR, Healthcare, Hospitals, and Interoperability.
 
 
   The Community Health Systems catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -238,7 +238,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 31.5
+  composite: 28.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 53.5
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 55.1
+    contract_quality: 49.9
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 31.5
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -267,9 +267,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 42.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

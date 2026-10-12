@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -48,11 +48,11 @@ modified: '2026-07-21'
 name: Simility
 nav: Providers
 network: true
-overview: Simility is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Fraud Detection, Risk Management, and Machine-Learning.
+overview: Simility is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Fraud Prevention, Risk Management, and Machine Learning.
 random_paper: 4
 score:
   band: minimal
-  composite: 0.1
+  composite: 1.9
   coverage:
     artifact_dirs: 1
     catalog_earned: 27.0
@@ -66,7 +66,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -74,15 +74,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 0.1
+  previous_composite: 1.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -92,11 +92,10 @@ slug: simility
 tags:
 - Company
 - Artificial Intelligence
-- Fraud Detection
+- Fraud Prevention
 - Risk Management
-- Machine-Learning
+- Machine Learning
 - Payments
 - Security
-- Anti-Fraud
 website: http://www.simility.com
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -98,14 +98,14 @@ description: 'Urbint builds AI-powered operational resilience software for gas, 
 image: https://5737483.fs1.hubspotusercontent-na1.net/hubfs/5737483/MJTW%20Assets/dev/logos/urbint-logo@2x.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Urbint ships a real, first-party MCP server — but it serves the design system, not the product. It is bundled inside the @urbint/cl npm package as mcp-server/, built from TypeScript source, and run ov
   name: Urbint Component Library MCP Server
   slug: urbint-component-library-mcp-server
 modified: '2026-09-02'
 name: Urbint
 nav: Providers
 network: true
-overview: 'Urbint is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Utilities, Energy, Artificial Intelligence, and Machine-Learning.
+overview: 'Urbint is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Utilities, Energy, Artificial Intelligence, and Machine Learning.
 
 
   Urbint''s developer surface includes support and 13 more developer resources.'
@@ -120,7 +120,7 @@ rate_limits:
   slug: urbint-rate-limits
 score:
   band: emerging
-  composite: 17.0
+  composite: 15.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -134,9 +134,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 2.6
-  previous_composite: 17.0
+  previous_composite: 15.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -145,9 +145,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +164,7 @@ tags:
 - Utilities
 - Energy
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Worker Safety
 - Risk Management
 - Damage Prevention

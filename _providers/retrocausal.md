@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -79,14 +79,14 @@ modified: '2026-07-20'
 name: Retrocausal
 nav: Providers
 network: true
-overview: 'Retrocausal is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Artificial Intelligence, Computer-Vision, and Industrial IoT.
+overview: 'Retrocausal is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Artificial Intelligence, Computer Vision, and Industrial IoT.
 
 
   Retrocausal''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 13.9
+  composite: 14.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -100,13 +100,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 13.9
+  previous_composite: 14.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -127,7 +133,7 @@ tags:
 - Company
 - Manufacturing
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Industrial IoT
 - Assembly
 - Worker Safety

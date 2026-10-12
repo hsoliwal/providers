@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://beemaps.com/api/developer
@@ -201,7 +201,7 @@ layout: provider
 mcp_servers:
 - description: Bee Maps exposes an MCP Streamable HTTP endpoint on the Developer API that accepts JSON-RPC messages. Authentication is via the apiKey parameter (the same API key used for the REST Developer API).
   name: Hivemapper MCP Server
-  slug: hivemapper-mcp-server
+  slug: bee-maps
 modified: '2026-07-19'
 name: Hivemapper
 nav: Providers
@@ -213,7 +213,7 @@ overview: 'Hivemapper publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 17
 score:
   band: thin
-  composite: 36.9
+  composite: 37.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -227,9 +227,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.2
     developer_ergonomics: 80.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 36.9
+  previous_composite: 37.7
   provenance:
     conformance: derived
     contracts:
@@ -239,8 +239,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -265,7 +271,7 @@ tags:
 - Location
 - Street View
 - Mobility
-- Machine-Learning
+- Machine Learning
 - Web3
 website: https://hivemapper.com
 ---

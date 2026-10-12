@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 0
@@ -407,7 +407,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted Picsart Creative APIs Model Context Protocol (MCP) server. Lets AI editors and agent runtimes call Picsart Image, Video, and GenAI tools and read the docs directly. Remote Streamable H
   name: PicsArt (Socialin) MCP Server
-  slug: picsart-socialin-mcp-server
+  slug: picsart
 modified: '2026-07-20'
 name: PicsArt (Socialin)
 nav: Providers
@@ -423,7 +423,7 @@ rate_limits:
   slug: picsart-socialin-rate-limits
 score:
   band: developing
-  composite: 50.8
+  composite: 50.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 52.0
@@ -435,11 +435,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 54.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 50.8
+  previous_composite: 50.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -450,8 +450,14 @@ score:
       total: 23
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -476,7 +482,7 @@ tags:
 - Creative Tools
 - Image Processing
 - Background Removal
-- Machine-Learning
+- Machine Learning
 - Content Generation
 website: https://picsart.com/
 ---

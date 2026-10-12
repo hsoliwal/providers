@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 8.3
-  scored_at: '2026-09-20'
+  score: 6.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The REST API behind the Lifebit Platform (CloudOS): manage workspace projects, job queues, workflows/pipelines, Nextflow and Cromwell/WDL job submission and monitoring, interactive analysis sessions, '
@@ -216,7 +216,7 @@ overview: 'Lifebit Biotech publishes 1 API on the [APIs.io](https://apis.io/) ne
 random_paper: 18
 score:
   band: thin
-  composite: 34.2
+  composite: 33.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -230,12 +230,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 34.2
+  previous_composite: 33.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -244,9 +244,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

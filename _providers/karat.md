@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -31,11 +31,11 @@ agent_readiness:
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
-    spec_presence: true
+    spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.4
-  scored_at: '2026-09-20'
+  score: 3.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Karat''s GraphQL API for managing technical-interview hiring workflows: query candidacies, roles, groups and users; invite candidates into assessments; and bulk-update candidacy dispositions. Hosted pe'
@@ -161,11 +161,6 @@ common:
   title: ''
   type: LLMsTxt
   url: llms/karat-llms.txt
-- group: docs
-  href: https://raw.githubusercontent.com/api-evangelist/karat/refs/heads/main/graphql/karat-operations.graphql
-  title: ''
-  type: GraphQLOperations
-  url: graphql/karat-operations.graphql
 created: '2026-07-17'
 description: Karat Inc. is a Seattle-based technical interviewing platform that conducts standardized software engineering interviews for enterprise hiring teams through its community of trained Interview Engineers. Karat exposes a GraphQL API, hosted per-customer at https://{subdomain}.karat.io/api/v1/graphql, that lets talent and ATS systems programmatically manage roles and groups, look up users, invite candidates into assessments, retrieve candidacy statuses, code-challenge and interview results, and bulk-update candidacy dispositions. The API uses Bearer token authentication, Relay-style cursor pagination, and ships an example Python SDK and a Postman collection. Karat is SOC 2 Type II certified and certified under the EU-US, UK-US and Swiss-US Data Privacy Frameworks.
 image: https://karat.com/wp-content/themes/karat/assets/img/png/logo.png
@@ -177,28 +172,30 @@ network: true
 overview: 'Karat publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Technical Interviewing, Hiring, Recruiting, and Talent Assessment.
 
 
-  Karat''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 20 more developer resources.'
+  Karat''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 19 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 34.8
+  composite: 28.3
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.5
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 31.9
+    contract_quality: 0.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
@@ -207,9 +204,19 @@ score:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth-protected Model Context Protocol server exposing Numeric's close-automation toolkit to AI agents. Streamable-HTTP MCP endpoint at api.numeric.io/mcp, guarded by OAuth 2.0 / OIDC (auth.numeric.io
@@ -118,9 +118,9 @@ description: Numeric is an AI close-automation platform that unifies close manag
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/numeric.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.numeric.io over HTTP.
   name: Numeric MCP Server
-  slug: numeric-mcp-server
+  slug: numeric
 modified: '2026-07-20'
 name: Numeric
 nav: Providers
@@ -136,8 +136,8 @@ scopes:
   slug: numeric-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: emerging
-  composite: 24.0
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,15 +151,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 24.0
+  previous_composite: 26.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

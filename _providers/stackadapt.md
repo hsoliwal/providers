@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Read-only REST API for fetching reporting data across dimensions and metrics to analyze campaign performance. Write operations are deprecated; use the GraphQL API for write operations.
@@ -252,9 +252,9 @@ graphqls:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stackadapt.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.stackadapt.com over HTTP requiring OAuth.
   name: StackAdapt MCP Server
-  slug: stackadapt-mcp-server
+  slug: stackadapt
 modified: '2026-08-13'
 name: StackAdapt
 nav: Providers
@@ -282,7 +282,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials
 score:
   band: strong
-  composite: 62.0
+  composite: 65.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 55.0
@@ -294,17 +294,23 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 53.1
+    contract_quality: 51.0
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 28.9
-  previous_composite: 62.0
+  previous_composite: 65.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

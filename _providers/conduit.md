@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 52
   human_in_the_loop: 0
@@ -639,7 +639,7 @@ layout: provider
 mcp_servers:
 - description: 'Official hosted MCP server for the Conduit documentation. Connect any MCP client (Claude Code, Cursor, etc.) to search the docs. Verified live: an initialize handshake returns serverInfo fern-docs-mcp'
   name: Conduit MCP Server
-  slug: conduit-mcp-server
+  slug: fern-docs-mcp-server
 modified: '2026-09-16'
 name: Conduit
 nav: Providers
@@ -655,7 +655,7 @@ rate_limits:
   slug: conduit-rate-limits
 score:
   band: developing
-  composite: 51.6
+  composite: 53.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -667,11 +667,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 76.3
-  previous_composite: 51.6
+  previous_composite: 53.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -682,8 +682,14 @@ score:
       total: 52
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

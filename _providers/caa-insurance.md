@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.1
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -154,8 +154,8 @@ scopes:
   slug: caa-insurance-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 25.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -167,9 +167,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 32.0
+    contract_quality: 29.3
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,7 +178,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 28.3
+  previous_composite: 25.0
   provenance:
     conformance: derived
   regulatory:
@@ -186,9 +186,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +212,6 @@ tags:
 - Auto Insurance
 - Home Insurance
 - Carrier
-- Brokers
 - Personal Lines
 - Telematics
 - Partner Gated

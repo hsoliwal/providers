@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ modified: '2026-05-19'
 name: FINRA
 nav: Providers
 network: true
-overview: 'FINRA publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Async API, Datasets API, Metadata API, and 1 more. Tagged areas include Compliance, Financial, Regulations, Securities, and Market Data.
+overview: 'FINRA publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Async API, Datasets API, Metadata API, and 3 more. Tagged areas include Compliance, Finance, Regulations, Securities, and Market Data.
 
 
   FINRA''s developer surface includes authentication, documentation, getting-started guide, developer console, support, product news, engineering blog, and 10 more developer resources.'
@@ -190,7 +190,7 @@ rate_limits:
   slug: finra-rate-limits
 score:
   band: thin
-  composite: 37.6
+  composite: 35.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 44.0
@@ -202,11 +202,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 50.0
-    discoverability: 64.8
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 37.6
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -219,9 +219,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 43.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -239,7 +239,7 @@ security:
 slug: finra
 tags:
 - Compliance
-- Financial
+- Finance
 - Regulations
 - Securities
 - Market Data

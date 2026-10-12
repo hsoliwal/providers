@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The APHIS Public Search Tool provides public access to search APHIS program data, permits, and regulatory information related to animal and plant health programs.
@@ -203,7 +203,7 @@ modified: '2026-09-02'
 name: Animal and Plant Health Inspection Service
 nav: Providers
 network: true
-overview: 'Animal and Plant Health Inspection Service publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, Animal Health, Animal Welfare, Biotechnology, and Federal-Government.
+overview: 'Animal and Plant Health Inspection Service publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, Animal Health, Animal Welfare, Biotechnology, and Federal Government.
 
 
   Animal and Plant Health Inspection Service''s developer surface includes developer portal, support, documentation, getting-started guide, signup flow, authentication, and 26 more developer resources.'
@@ -218,12 +218,12 @@ rate_limits:
   slug: animal-and-plant-health-inspection-service-rate-limits
 scopes:
 - name: Animal And Plant Health Inspection Service Scopes
-  scope_count: 0
+  scope_count: 36
   slug: animal-and-plant-health-inspection-service-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 36 scopes
 score:
   band: thin
-  composite: 39.0
+  composite: 35.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 55.0
@@ -237,9 +237,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 31.6
-  previous_composite: 39.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 35.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -248,9 +253,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -272,7 +277,7 @@ tags:
 - Animal Health
 - Animal Welfare
 - Biotechnology
-- Federal-Government
+- Federal Government
 - Import Export
 - Permits
 - Pest Control

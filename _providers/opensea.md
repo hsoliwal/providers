@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -182,6 +182,11 @@ collections:
   name: OpenSea Account Endpoints Transaction Endpoints API
   slug: open-opensea-transaction-endpoints-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/opensea/refs/heads/main/capabilities/opensea-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/opensea-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -1190,13 +1195,13 @@ modified: '2026-06-13'
 name: OpenSea
 nav: Providers
 network: true
-overview: 'OpenSea publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Account Endpoints API, Analytics Endpoints API, Auth Endpoints API, and 13 more. Tagged areas include NFT, Marketplace, Web3, Blockchain, and Trading.
+overview: 'OpenSea publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Account Endpoints API, Analytics Endpoints API, Auth Endpoints API, and 14 more. Tagged areas include NFT, Marketplace, Web3, Blockchain, and Trading.
 
 
   The OpenSea catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  OpenSea''s developer surface includes authentication, CLI, support, engineering blog, and 14 more developer resources.'
+  OpenSea''s developer surface includes authentication, CLI, support, engineering blog, and 15 more developer resources.'
 plans:
 - name: Opensea Plans
   plan_count: 2
@@ -1219,23 +1224,23 @@ rules:
   slug: opensea-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 50.3
+  composite: 45.8
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 68.3
+    artifact_dirs: 18
+    catalog_earned: 66.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.8
+    catalog_gap: 48.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 47.9
     contract_governance: 9.8
-    contract_quality: 60.8
+    contract_quality: 55.1
     developer_ergonomics: 38.1
-    discoverability: 68.5
-    operational_transparency: 47.4
-  previous_composite: 50.3
+    discoverability: 66.1
+    operational_transparency: 44.2
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     contracts:
@@ -1248,9 +1253,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 61.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1277,5 +1282,7 @@ tags:
 - Blockchain
 - Trading
 - Digital Assets
+- A2A
+- Ethereum
 website: https://www.opensea.io/
 ---

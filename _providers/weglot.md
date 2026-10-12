@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -60,7 +60,7 @@ apis:
   description: The Translate API from Weglot — 1 operation(s) for translate.
   name: Weglot Translate API
   slug: weglot-translate-api
-artifact_total: 16
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -146,6 +146,10 @@ finops:
   slug: weglot-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/weglot.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.weglot.com over HTTP.
+  name: Weglot MCP Server
+  slug: weglot
 modified: '2026-06-21'
 name: Weglot
 nav: Providers
@@ -164,24 +168,24 @@ rate_limits:
   name: Weglot Rate Limits
   slug: weglot-rate-limits
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 38.3
   coverage:
     artifact_dirs: 13
-    catalog_earned: 64.0
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 44.2
     contract_governance: 0.0
-    contract_quality: 52.6
+    contract_quality: 47.3
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 39.6
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 38.3
   provenance:
     agentic_access: derived
     contracts:
@@ -190,8 +194,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

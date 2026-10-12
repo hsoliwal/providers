@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted MCP server exposing 18 tools for messaging, templates, campaigns, agents, analytics, and media. Auth via OAuth 2.0/PKCE or API key.
@@ -166,7 +166,7 @@ modified: '2026-09-15'
 name: RubiConnect
 nav: Providers
 network: true
-overview: 'RubiConnect publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Capabilities API, Messages API, and 1 more. Tagged areas include CPaaS, Communications APIs, Business Messaging, RCS, and WhatsApp Business.
+overview: 'RubiConnect publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Capabilities API, Messages API, and 2 more. Tagged areas include CPaaS, Communications APIs, Business Messaging, RCS, and WhatsApp Business.
 
 
   The RubiConnect catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -184,12 +184,12 @@ rate_limits:
   slug: rubiconnect-rate-limits
 scopes:
 - name: Rubiconnect Scopes
-  scope_count: 0
+  scope_count: 1
   slug: rubiconnect-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 36.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 35.0
@@ -201,11 +201,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.2
+    contract_quality: 54.1
     developer_ergonomics: 25.6
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 13.2
-  previous_composite: 40.4
+  previous_composite: 36.5
   provenance:
     conformance: derived
     contracts:
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

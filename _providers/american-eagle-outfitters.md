@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The one callable, machine-reachable surface in the American Eagle Outfitters estate: a Universal Commerce Protocol shopping server, transported over MCP, on the Unsubscribed brand storefront. Anonymou'
@@ -177,7 +177,7 @@ layout: provider
 mcp_servers:
 - description: 'American Eagle Outfitters exposes one live, anonymously reachable MCP endpoint across its estate: the Universal Commerce Protocol (UCP) shopping server on www.unsubscribed.com, the AEO brand storefron'
   name: Unsubscribed Commerce (UCP/MCP)
-  slug: unsubscribed-commerce-ucpmcp
+  slug: unsubscribed-commerce-ucp-mcp
 modified: '2026-09-02'
 name: American Eagle Outfitters
 nav: Providers
@@ -213,12 +213,12 @@ rate_limits:
   slug: american-eagle-outfitters-rate-limits
 scopes:
 - name: American Eagle Outfitters Scopes
-  scope_count: 0
+  scope_count: 4
   slug: american-eagle-outfitters-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 20.4
+  composite: 23.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -232,20 +232,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.4
+  previous_composite: 23.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

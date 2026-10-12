@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Connect a worker''s accounts and retrieve normalized income, employment, transactions, activity, assets, banking info, documents, and vehicle data across 70+ gig-economy, tax, payroll, and wallet data '
@@ -192,9 +192,9 @@ description: Rollee is an Open Finance / employment-data platform that lets fint
 image: https://www.getrollee.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at rollee-api-mcp.getrollee.com over HTTP.
   name: Rollee MCP Server
-  slug: rollee-mcp-server
+  slug: rollee-user-api
 modified: '2026-07-21'
 name: Rollee
 nav: Providers
@@ -209,7 +209,7 @@ overview: 'Rollee publishes 2 APIs on the [APIs.io](https://apis.io/) network. T
 random_paper: 5
 score:
   band: developing
-  composite: 46.5
+  composite: 44.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -221,11 +221,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 46.5
+  previous_composite: 44.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -237,11 +237,11 @@ score:
       standard: gdpr
     jurisdictions_satisfied: 1
     matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

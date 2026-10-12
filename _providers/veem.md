@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 27
@@ -46,72 +46,72 @@ apis:
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Attachment Controller
-  name: Veem attachment-controller API
+  name: Veem Attachment Controller API
   slug: veem-attachment-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Bank Account Controller
-  name: Veem bank-account-controller API
+  name: Veem Bank Account Controller API
   slug: veem-bank-account-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Beneficial Owner Information Controller
-  name: Veem beneficial-owner-information-controller API
+  name: Veem Beneficial Owner Information Controller API
   slug: veem-beneficial-owner-information-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Claimless Payment Controller
-  name: Veem claimless-payment-controller API
+  name: Veem Claimless Payment Controller API
   slug: veem-claimless-payment-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Contact Controller
-  name: Veem contact-controller API
+  name: Veem Contact Controller API
   slug: veem-contact-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: For managing crypto wallets, including balances, details, transactions and pay-ins
-  name: Veem crypto-wallet-controller API
+  name: Veem Crypto Wallet Controller API
   slug: veem-crypto-wallet-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Customer Controller
-  name: Veem customer-controller API
+  name: Veem Customer Controller API
   slug: veem-customer-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Exchange Rate Controller
-  name: Veem exchange-rate-controller API
+  name: Veem Exchange Rate Controller API
   slug: veem-exchange-rate-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Invoice Controller
-  name: Veem invoice-controller API
+  name: Veem Invoice Controller API
   slug: veem-invoice-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Meta Controller
-  name: Veem meta-controller API
+  name: Veem Meta Controller API
   slug: veem-meta-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Open Account Controller
-  name: Veem open-account-controller API
+  name: Veem Open Account Controller API
   slug: veem-open-account-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Payment Controller
-  name: Veem payment-controller API
+  name: Veem Payment Controller API
   slug: veem-payment-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Wallet Controller
-  name: Veem wallet-controller API
+  name: Veem Wallet Controller API
   slug: veem-wallet-controller-api
 - baseURL: https://api.veem.com
   baseurl_source: declared
   description: Webhook Controller
-  name: Veem webhook-controller API
+  name: Veem Webhook Controller API
   slug: veem-webhook-controller-api
 artifact_total: 34
 asyncapis:
@@ -165,6 +165,11 @@ collections:
   name: Veem API v1.2 attachment-controller webhook-controller API
   slug: open-veem-webhook-controller-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/capabilities/veem-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/veem-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/veem/refs/heads/main/overlays/veem-api-overlay.yaml
   title: ''
@@ -309,13 +314,13 @@ modified: '2026-07-21'
 name: Veem
 nav: Providers
 network: true
-overview: 'Veem publishes 14 APIs on the [APIs.io](https://apis.io/) network, including attachment-controller API, bank-account-controller API, beneficial-owner-information-controller API, and 11 more. Tagged areas include Payments, B2B Payments, Cross-Border Payments, Invoicing, and Wallets.
+overview: 'Veem publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Attachment Controller API, Bank Account Controller API, Beneficial Owner Information Controller API, and 11 more. Tagged areas include Payments, B2B Payments, Cross-Border Payments, Invoicing, and Wallets.
 
 
   The Veem catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Veem''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 24 more developer resources.'
+  Veem''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 25 more developer resources.'
 random_paper: 11
 scopes:
 - name: Veem Scopes
@@ -323,10 +328,10 @@ scopes:
   slug: veem-scopes
   summary_line: 1 scope · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 37.4
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -336,11 +341,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 55.9
+    contract_quality: 51.1
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.7
+  previous_composite: 37.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -356,9 +361,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

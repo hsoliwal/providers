@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -117,7 +117,7 @@ description: NexusOne, by Nexus Cognitive, is a composable open data architectur
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nexus-one.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: NexusOne describes MCP (Model Context Protocol) endpoint exposure as part of its "Composable Intelligence" layer, so AI agents can discover and act on governed data products across the estate. The MCP
   name: NexusOne MCP
   slug: nexusone-mcp
 modified: '2026-07-20'
@@ -131,7 +131,7 @@ overview: 'Nexus One is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 6
 score:
   band: emerging
-  composite: 16.9
+  composite: 17.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -145,19 +145,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.9
+  previous_composite: 17.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,6 +191,6 @@ tags:
 - Artificial Intelligence
 - Data Platform
 - Control Plane
-- Open-Source
+- Open Source
 website: https://www.nx1.io/
 ---

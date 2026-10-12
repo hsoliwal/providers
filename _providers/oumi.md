@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -132,19 +132,19 @@ layout: provider
 mcp_servers:
 - description: Oumi ships a first-party Model Context Protocol (MCP) server, `oumi-mcp`, introduced in the v0.8 release (May 2026) for integration with MCP-capable assistants such as Claude and Cursor. It exposes Ou
   name: Oumi MCP Server
-  slug: oumi-mcp-server
+  slug: oumi-mcp
 modified: '2026-07-20'
 name: Oumi
 nav: Providers
 network: true
-overview: 'Oumi is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Economic Health, Artificial Intelligence, Machine-Learning, and LLM.
+overview: 'Oumi is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Economic Health, Artificial Intelligence, Machine Learning, and LLM.
 
 
   Oumi''s developer surface includes developer portal, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 13 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 18.6
+  composite: 18.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -158,9 +158,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 18.6
+  previous_composite: 18.8
   provenance:
     mcp: first-party
   regulatory:
@@ -168,9 +168,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,12 +187,12 @@ tags:
 - Company
 - Economic Health
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Foundation Models
 - Fine-Tuning
 - Model Training
-- Open-Source
+- Open Source
 - MLOps
 - Developer Tools
 - Inference

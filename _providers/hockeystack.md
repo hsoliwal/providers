@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Version 1 of the HockeyStack Revenue Agents API. Attaches AI agents to companies and deals from the connected CRM, holds conversations with those agents, manages the tasks they generate, and reads the
@@ -199,9 +199,9 @@ description: 'HockeyStack is a B2B revenue and marketing data intelligence platf
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hockeystack.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'HockeyStack ships TWO distinct MCP surfaces: a hosted/remote "Omni" server bound to the app (OAuth, discovered July 2026 via RFC 9728 metadata that has since been withdrawn), and a locally-run stdio s'
   name: HockeyStack MCP Server
-  slug: hockeystack-mcp-server
+  slug: hockeystack-mcp-yml
 modified: '2026-08-13'
 name: HockeyStack
 nav: Providers
@@ -229,7 +229,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 41.5
+  composite: 43.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -241,16 +241,22 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 41.5
+  previous_composite: 43.6
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

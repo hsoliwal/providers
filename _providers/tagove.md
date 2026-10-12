@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for the Acquire (formerly Tagove) customer support platform: conversations/cases, messages, notes, contacts, companies, phone, chatbots, cards, analytics, knowledge base, and account settings'
@@ -157,7 +157,7 @@ modified: '2026-07-21'
 name: Tagove
 nav: Providers
 network: true
-overview: 'Tagove publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer-Support, Live Chat, Conversational, and Co-Browsing.
+overview: 'Tagove publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Support, Live Chat, Conversational AI, and Co-Browsing.
 
 
   The Tagove catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -167,7 +167,7 @@ overview: 'Tagove publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 8
 score:
   band: thin
-  composite: 37.0
+  composite: 36.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -179,15 +179,21 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 37.0
+  previous_composite: 36.8
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,9 +211,9 @@ security:
 slug: tagove
 tags:
 - Company
-- Customer-Support
+- Customer Support
 - Live Chat
-- Conversational
+- Conversational AI
 - Co-Browsing
 - Chatbots
 - Webhook

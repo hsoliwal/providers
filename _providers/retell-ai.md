@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.0
-  scored_at: '2026-09-20'
+  score: 30.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 1
@@ -435,7 +435,7 @@ apis:
   description: The Update Test Case Definition API from Retell AI — 1 operation(s) for update test case definition.
   name: Retell AI Update Test Case Definition API
   slug: retell-ai-update-test-case-definition-api
-artifact_total: 167
+artifact_total: 168
 asyncapis:
 - description: 'AsyncAPI 2.6 description of Retell AI''s publicly documented WebSocket surfaces. All events are sourced from the official Retell AI documentation (https://docs.retellai.com) and cover: * Custom LLM Web'
   name: Retell AI WebSocket APIs
@@ -754,11 +754,15 @@ finops:
   slug: retell-ai-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/retell-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.retellai.com over HTTP; 3 tools listed.
+  name: Retell AI MCP Server
+  slug: retell-ai
 modified: '2026-05-29'
 name: Retell AI
 nav: Providers
 network: true
-overview: 'Retell AI publishes 78 APIs on the [APIs.io](https://apis.io/) network, including Add Community Voice API, Add Knowledge Base Sources API, Agent Playground Completion API, and 75 more. Tagged areas include Artificial Intelligence, Voice, Agents, Real-Time, and Conversational.
+overview: 'Retell AI publishes 78 APIs on the [APIs.io](https://apis.io/) network, including Add Community Voice API, Add Knowledge Base Sources API, Agent Playground Completion API, and 75 more. Tagged areas include Artificial Intelligence, Voice, Agents, Real-Time, and Conversational AI.
 
 
   The Retell AI catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -791,23 +795,23 @@ rules:
   slug: retell-ai-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 40.4
   coverage:
     artifact_dirs: 16
-    catalog_earned: 55.8
+    catalog_earned: 58.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 59.3
+    catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 4.7
+  delta: 0.5
   facets:
     access_clarity: 63.2
     contract_governance: 11.4
-    contract_quality: 62.2
+    contract_quality: 56.8
     developer_ergonomics: 23.8
-    discoverability: 70.4
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 37.3
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     contracts:
@@ -816,8 +820,14 @@ score:
       marker_coverage: 0.0
       total: 78
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -838,6 +848,8 @@ tags:
 - Voice
 - Agents
 - Real-Time
-- Conversational
+- Conversational AI
+- Voice AI
+- Voice Agents
 website: https://www.retellai.com/
 ---

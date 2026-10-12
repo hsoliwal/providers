@@ -33,11 +33,12 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Altus Group publishes no public API, OpenAPI or developer program for ARGUS Developer. Probed 2026-09-06: no spec on any Altus host, no developer or docs subdomain resolves, and cloud.altusplatform.co'
   name: ARGUS Developer API
+  provenance: unpublished
   slug: argus-developer-api
 artifact_total: 23
 common:
@@ -170,7 +171,7 @@ modified: '2026-09-06'
 name: ARGUS Developer
 nav: Providers
 network: true
-overview: 'ARGUS Developer publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Altus Group, Commercial Real Estate, Development, Feasibility Analysis, and Real-Estate.
+overview: 'ARGUS Developer publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Altus Group, Commercial Real Estate, Development, Feasibility Analysis, and Real Estate.
 
 
   ARGUS Developer''s developer surface includes engineering blog, documentation, getting-started guide, developer portal, support, training material, changelog, and 13 more developer resources.'
@@ -185,7 +186,7 @@ rate_limits:
   slug: argus-developer-rate-limits
 score:
   band: thin
-  composite: 26.7
+  composite: 28.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -199,13 +200,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 26.7
+  previous_composite: 28.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -227,7 +234,7 @@ tags:
 - Commercial Real Estate
 - Development
 - Feasibility Analysis
-- Real-Estate
+- Real Estate
 use_cases:
 - description: Assess the financial viability of new development projects before committing capital.
   name: Development Feasibility

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Versioned REST API for managing third-party cyber risk — search and create third parties, answer inherent-risk scoping questions, apply tags, read inherent and residual risk profiles, and bulk-export '
@@ -124,14 +124,14 @@ modified: '2026-07-18'
 name: CyberGRX
 nav: Providers
 network: true
-overview: 'CyberGRX publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Third-Party Risk, Vendor Risk Management, and Risk Management.
+overview: 'CyberGRX publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Third-Party Risk Management, Risk Management, and GRC.
 
 
   CyberGRX''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, authentication, sandbox, and 9 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 17.8
+  composite: 17.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -145,14 +145,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 17.8
+  previous_composite: 17.0
   provenance:
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -172,8 +178,7 @@ slug: cybergrx
 tags:
 - Company
 - Cybersecurity
-- Third-Party Risk
-- Vendor Risk Management
+- Third-Party Risk Management
 - Risk Management
 - GRC
 - Security Assessment

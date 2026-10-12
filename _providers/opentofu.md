@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OpenTofu is a CLI-driven infrastructure-as-code tool forked from Terraform. The opentofu binary reads HashiCorp Configuration Language (HCL) configuration, plans changes, and applies them against clou
   name: OpenTofu CLI
   slug: opentofu-cli
-artifact_total: 6
+artifact_total: 7
 common:
 - group: operate
   title: ''
@@ -130,11 +130,14 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.opentofu.org over HTTP; 7 tools listed.
+  name: OpenTofu MCP Server
+  slug: opentofu
 modified: '2026-05-19'
 name: OpenTofu
 nav: Providers
 network: true
-overview: 'OpenTofu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud, DevOps, Infrastructure as Code, and Open-Source.
+overview: 'OpenTofu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud, DevOps, Infrastructure as Code, and Open Source.
 
 
   OpenTofu''s developer surface includes documentation, getting-started guide, engineering blog, changelog, and 15 more developer resources.'
@@ -149,7 +152,7 @@ rate_limits:
   slug: opentofu-rate-limits
 score:
   band: thin
-  composite: 27.6
+  composite: 26.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 31.0
@@ -163,16 +166,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 40.7
+    discoverability: 43.3
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 27.6
+  previous_composite: 26.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -189,6 +198,6 @@ tags:
 - Cloud
 - DevOps
 - Infrastructure as Code
-- Open-Source
+- Open Source
 website: https://opentofu.org/
 ---

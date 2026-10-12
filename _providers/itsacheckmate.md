@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -349,23 +349,23 @@ rules:
   slug: itsacheckmate-spectral-rules
 score:
   band: developing
-  composite: 42.0
+  composite: 40.6
   coverage:
     artifact_dirs: 18
-    catalog_earned: 87.5
+    catalog_earned: 84.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 30.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 28.8
+    access_clarity: 46.8
+    contract_governance: 27.3
     contract_quality: 22.3
     developer_ergonomics: 40.5
-    discoverability: 81.5
-    operational_transparency: 35.5
-  previous_composite: 42.0
+    discoverability: 78.6
+    operational_transparency: 32.4
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     contracts:
@@ -373,8 +373,14 @@ score:
       derived: 5
       marker_coverage: 100.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

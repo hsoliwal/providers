@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Spear is a developer platform focused on API development workflows, providing tools for API design, collaboration, and delivery through a unified workspace experience.
@@ -109,7 +109,7 @@ rules:
   slug: spear-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 13.8
+  composite: 12.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 47.3
@@ -123,11 +123,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

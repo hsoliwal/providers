@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.sommelier.finance
@@ -134,7 +134,7 @@ overview: 'Sommelier publishes 3 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 5
 score:
   band: thin
-  composite: 28.7
+  composite: 27.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -146,11 +146,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.1
+    contract_quality: 43.3
     developer_ergonomics: 39.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
-  previous_composite: 28.7
+  previous_composite: 27.4
   provenance:
     conformance: derived
     contracts:
@@ -160,8 +160,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,5 +193,7 @@ tags:
 - Vault
 - Yield
 - Analytics
+- Web3
+- Cryptocurrency
 website: https://www.somm.finance
 ---

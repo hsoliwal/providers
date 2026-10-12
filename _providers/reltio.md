@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Tenant-scoped REST API for the Reltio Context Intelligence Platform: entities, relations, interactions, reference data, load/export, data integration, workflow, hierarchy, statistics, and validation. '
@@ -175,7 +175,7 @@ description: Reltio is a cloud-native, AI-native master data management (MDM) an
 image: https://avatars.githubusercontent.com/u/3045483?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at dev.reltio.com; 45 tools listed.
   name: Reltio AgentFlow + Developer MCP Server
   slug: reltio-agentflow-developer-mcp-server
 modified: '2026-07-21'
@@ -189,7 +189,7 @@ overview: 'Reltio publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 17
 score:
   band: thin
-  composite: 36.4
+  composite: 38.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -203,15 +203,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 36.4
+  previous_composite: 38.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

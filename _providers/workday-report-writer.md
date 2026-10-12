@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -51,7 +51,7 @@ apis:
 - baseURL: https://wd2-impl-services1.workday.com/ccx/service
   baseurl_source: declared
   description: To view and maintain Agent Definitions with the Agent System of Record.
-  name: Workday Report Writer agentDefinition API
+  name: Workday Report Writer Agent Definition API
   slug: workday-report-writer-agentdefinition-api
 - baseURL: https://wd2-impl-services1.workday.com/ccx/service
   baseurl_source: declared
@@ -151,6 +151,11 @@ collections:
   name: Workday Report Writer Workday WQL API
   slug: open-workday-report-writer-wql
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workday-report-writer/refs/heads/main/capabilities/workday-report-writer-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workday-report-writer-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -303,13 +308,13 @@ modified: '2026-05-19'
 name: Workday Report Writer
 nav: Providers
 network: true
-overview: 'Workday Report Writer publishes 8 APIs on the [APIs.io](https://apis.io/) network, including agentDefinition API, Buckets API, Custom Reports API, and 5 more. Tagged areas include Analytics, Enterprise, ERP, Financial, and HRMS.
+overview: 'Workday Report Writer publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Agent Definition API, Buckets API, Custom Reports API, and 6 more. Tagged areas include Analytics, Enterprise, ERP, Finance, and HRMS.
 
 
   The Workday Report Writer catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Workday Report Writer''s developer surface includes authentication, developer portal, getting-started guide, documentation, sandbox, support, engineering blog, and 19 more developer resources.'
+  Workday Report Writer''s developer surface includes authentication, developer portal, getting-started guide, documentation, sandbox, support, engineering blog, and 20 more developer resources.'
 plans:
 - name: Workday Report Writer Plans Pricing
   plan_count: 1
@@ -332,26 +337,26 @@ rules:
   slug: workday-report-writer-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 53.0
+  composite: 52.7
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 51.3
+    artifact_dirs: 16
+    catalog_earned: 50.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.8
+    catalog_gap: 64.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 55.3
     contract_governance: 9.8
-    contract_quality: 62.5
+    contract_quality: 56.3
     developer_ergonomics: 56.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 42.1
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 53.0
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     contracts:
@@ -359,8 +364,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -391,7 +402,7 @@ tags:
 - Analytics
 - Enterprise
 - ERP
-- Financial
+- Finance
 - HRMS
 - Reporting
 - Software-as-a-Service

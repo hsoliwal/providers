@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Data-centric GRC REST API for IBM OpenPages, specified in terms of resources, their URIs, and the actions that can be performed on those URIs. Available as v1 and v2. The API is hosted per service ins
@@ -153,7 +153,7 @@ modified: '2026-08-21'
 name: OpenPages
 nav: Providers
 network: true
-overview: 'OpenPages publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, B2B, Governance, Risk, and Compliance.
+overview: 'OpenPages publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, B2B, Governance, Risk Management, and Compliance.
 
 
   The OpenPages catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -163,7 +163,7 @@ overview: 'OpenPages publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 16
 score:
   band: developing
-  composite: 46.3
+  composite: 47.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 32.0
@@ -175,15 +175,21 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 50.0
-  previous_composite: 46.3
+  previous_composite: 47.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,11 +214,10 @@ tags:
 - Company
 - B2B
 - Governance
-- Risk
+- Risk Management
 - Compliance
 - GRC
 - Regulatory Compliance
-- Risk Management
 - Enterprise Software
 - Watsonx
 - Audit

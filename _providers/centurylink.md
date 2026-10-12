@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: The Lumen Developer Center publishes Lumen's enterprise API catalog, including Location, Quoting, Ordering, Service Inventory, Billing, Outbound Notification, and Trouble Ticket APIs. All APIs use OAu
@@ -212,7 +212,7 @@ rate_limits:
   slug: centurylink-rate-limits
 score:
   band: thin
-  composite: 30.7
+  composite: 29.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 54.0
@@ -226,9 +226,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 23.7
-  previous_composite: 30.7
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -237,9 +237,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 43.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -266,7 +266,7 @@ tags:
 - Authentication
 - Quantum Fiber
 - SD-WAN
-- Telecom
+- Telecommunications
 - Fortune 500
 website: https://www.centurylink.com
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Archive''s public GraphQL API for programmatic access to creator and UGC workspace data — creators, social profiles, items (posts/reels/stories/videos), engagement history, content views, collections, '
@@ -196,7 +196,7 @@ layout: provider
 mcp_servers:
 - description: Archive operates an official hosted remote MCP server at https://app.archive.com/api/v2/mcp, discoverable via RFC 9728 protected-resource metadata (well-known/archive-technologies-oauth-protected-reso
   name: Archive Technologies MCP Server
-  slug: archive-technologies-mcp-server
+  slug: archive
 modified: '2026-08-13'
 name: Archive Technologies
 nav: Providers
@@ -221,7 +221,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 51.0
+  composite: 53.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 57.0
@@ -233,22 +233,28 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 46.8
+    contract_quality: 44.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 51.0
+  previous_composite: 53.2
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

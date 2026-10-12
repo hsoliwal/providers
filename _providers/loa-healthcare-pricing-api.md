@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted/remote MCP server 'LOA Healthcare Pricing' v1.0.0 over Streamable HTTP with 12 tools for CPT search, procedure suggestions, provider/hospital search, pricing estimates, market pricing, entity p
@@ -176,15 +176,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Loa Healthcare Pricing API MCP Server
-  slug: loa-healthcare-pricing-api-mcp-server
-- description: ''
+  slug: mcp
+- description: Remote MCP server at www.loacare.com requiring OAuth; 12 tools listed.
   name: LOA Healthcare Pricing
   slug: loa-healthcare-pricing
 modified: '2026-09-03'
 name: Loa Healthcare Pricing API
 nav: Providers
 network: true
-overview: 'Loa Healthcare Pricing API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Entities API, Entity Analytics API, Entity Updates API, and 1 more. Tagged areas include Healthcare, Price Transparency, medical pricing, Hospitals, and Providers.
+overview: 'Loa Healthcare Pricing API publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Entities API, Entity Analytics API, Entity Updates API, and 2 more. Tagged areas include Healthcare, Price Transparency, medical pricing, Hospitals, and Providers.
 
 
   Loa Healthcare Pricing API''s developer surface includes authentication, getting-started guide, pricing, signup flow, and 18 more developer resources.'
@@ -199,12 +199,12 @@ rate_limits:
   slug: loa-healthcare-pricing-api-rate-limits
 scopes:
 - name: Loa Healthcare Pricing Api Scopes
-  scope_count: 0
+  scope_count: 3
   slug: loa-healthcare-pricing-api-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: developing
-  composite: 50.4
+  composite: 47.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -216,11 +216,11 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
-    contract_quality: 52.2
+    contract_quality: 47.0
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 50.4
+  previous_composite: 47.0
   provenance:
     conformance: derived
     contracts:
@@ -235,9 +235,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,7 +264,7 @@ tags:
 - CPT
 - HCPCS
 - MCP
-- agent-native
+- Agent-Native
 - OpenAPI
 - llms-txt
 website: https://www.loacare.com

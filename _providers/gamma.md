@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic creation and management of gammas (presentations, documents, websites, and social posts). Asynchronous generate-and-poll workflow plus template, export, management, and analytics endpoint
   name: Gamma Generate API
   slug: gamma-generate-api
-artifact_total: 7
+artifact_total: 6
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/gamma/refs/heads/main/security/gamma-domain-security.yml
@@ -111,12 +111,9 @@ description: 'Gamma (Gamma Tech, Inc.) is an AI-native productivity platform for
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gamma.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.gamma.app over HTTP; 9 tools listed.
   name: Gamma MCP Server
-  slug: gamma-mcp-server
-- description: ''
-  name: Gamma MCP Server
-  slug: gamma-mcp-server-2
+  slug: gamma
 modified: '2026-07-19'
 name: Gamma
 nav: Providers
@@ -137,7 +134,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.5
+  composite: 36.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -151,14 +148,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 34.5
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

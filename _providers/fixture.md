@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://beta-api.fixture.app/api/v1
@@ -130,6 +130,11 @@ collections:
   name: Fixture Accounts Users API
   slug: open-fixture-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fixture/refs/heads/main/capabilities/fixture-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fixture-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/fixture/refs/heads/main/overlays/fixture-v1-overlay.yaml
   title: ''
@@ -263,7 +268,7 @@ description: Fixture is an AI-native CRM built for startups, backed by Y Combina
 image: https://fixture.app/logo-for-black.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at beta-api.fixture.app over HTTP.
   name: Fixture MCP
   slug: fixture-mcp
 modified: '2026-09-16'
@@ -273,7 +278,7 @@ network: true
 overview: 'Fixture publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Activities API, Contacts API, and 8 more. Tagged areas include Company, CRM, Sales, B2B, and Artificial Intelligence.
 
 
-  Fixture''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 22 more developer resources.'
+  Fixture''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 23 more developer resources.'
 random_paper: 5
 scopes:
 - name: Fixture Scopes
@@ -282,9 +287,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 45.4
+  composite: 46.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -294,11 +299,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 62.0
+    contract_quality: 56.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 45.4
+  previous_composite: 46.2
   provenance:
     conformance: derived
     contracts:
@@ -308,8 +313,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

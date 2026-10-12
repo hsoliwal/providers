@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 collections:
@@ -83,7 +83,7 @@ modified: '2026-09-07'
 name: Defense Contract Management Agency
 nav: Providers
 network: true
-overview: 'Defense Contract Management Agency is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Defense, Department of Defense, Contract Management, and Acquisition.
+overview: 'Defense Contract Management Agency is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Defense, Department of Defense, Contract Management, and Acquisition.
 
 
   Defense Contract Management Agency''s developer surface includes product news and 6 more developer resources.'
@@ -98,7 +98,7 @@ rate_limits:
   slug: defense-contract-management-agency-rate-limits
 score:
   band: minimal
-  composite: 5.7
+  composite: 6.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 30.0
@@ -112,17 +112,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 5.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 6.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,7 +141,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: defense-contract-management-agency
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Department of Defense
 - Contract Management

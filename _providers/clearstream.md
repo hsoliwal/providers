@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: 'Xact via SWIFT delivers settlement, custody, asset servicing and reporting messages over the SWIFTNet FIN network. The interface uses ISO 15022 MT messages today and is being migrated to ISO 20022 MX '
@@ -220,7 +220,7 @@ modified: '2026-09-05'
 name: Clearstream
 nav: Providers
 network: true
-overview: 'Clearstream publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Capital Markets, Collateral Management, Custody, Financial-Services, and ISO 15022.
+overview: 'Clearstream publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Capital Markets, Collateral Management, Custody, Financial Services, and ISO 15022.
 
 
   The Clearstream catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -255,23 +255,23 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 47.3
+  composite: 44.1
   coverage:
     artifact_dirs: 21
-    catalog_earned: 58.0
+    catalog_earned: 56.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.0
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 52.6
-    contract_governance: 63.6
+    contract_governance: 59.1
     contract_quality: 6.7
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 36.8
-  previous_composite: 47.3
+  previous_composite: 44.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -280,9 +280,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -303,12 +303,12 @@ tags:
 - Capital Markets
 - Collateral Management
 - Custody
-- Financial-Services
+- Financial Services
 - ISO 15022
 - ISO 20022
 - Post-Trade Infrastructure
 - Securities
 - Settlement
-- Swift
+- SWIFT
 website: https://www.clearstream.com/
 ---

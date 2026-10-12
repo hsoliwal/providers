@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 3
@@ -94,6 +94,11 @@ collections:
   name: Upbound API
   slug: open-upbound
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/upbound/refs/heads/main/capabilities/upbound-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/upbound-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/upbound/refs/heads/main/agentic-access/upbound-agentic-access.yml
   title: ''
@@ -188,7 +193,7 @@ overview: 'Upbound publishes 5 APIs on the [APIs.io](https://apis.io/) network, 
   The Upbound catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Upbound''s developer surface includes authentication, engineering blog, documentation, and 9 more developer resources.'
+  Upbound''s developer surface includes authentication, engineering blog, documentation, and 10 more developer resources.'
 plans:
 - name: Upbound Plans Pricing
   plan_count: 3
@@ -222,9 +227,9 @@ rules:
   slug: upbound-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 35.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -234,11 +239,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 67.1
+    contract_quality: 61.5
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 36.2
+  previous_composite: 35.2
   provenance:
     agentic_access: derived
     contracts:
@@ -246,8 +251,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

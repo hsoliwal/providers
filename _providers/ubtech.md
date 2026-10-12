@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: http://<robot-ip>:9090/v1
   baseurl_source: declared
   description: Receive data from remote device.
-  name: UBTech subscriptions API
+  name: UBTech Subscriptions API
   slug: ubtech-subscriptions-api
 artifact_total: 7
 asyncapis:
@@ -168,7 +168,7 @@ modified: '2026-07-21'
 name: UBTech
 nav: Providers
 network: true
-overview: 'UBTech publishes 1 API on the [APIs.io](https://apis.io/) network: subscriptions API. Tagged areas include Company, Robotics, Humanoid Robots, Education Technology, and Artificial Intelligence.
+overview: 'UBTech publishes 1 API on the [APIs.io](https://apis.io/) network: Subscriptions API. Tagged areas include Company, Robotics, Humanoid Robots, Education Technology, and Artificial Intelligence.
 
 
   The UBTech catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -178,7 +178,7 @@ overview: 'UBTech publishes 1 API on the [APIs.io](https://apis.io/) network: su
 random_paper: 19
 score:
   band: developing
-  composite: 43.5
+  composite: 39.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -190,16 +190,18 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 48.3
+    contract_quality: 44.3
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 43.5
+  previous_composite: 39.3
   provenance:
     conformance: derived
     contracts:
@@ -214,9 +216,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

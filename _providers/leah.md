@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -118,14 +118,14 @@ modified: '2026-07-19'
 name: Leah
 nav: Providers
 network: true
-overview: 'Leah is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Agentic AI, Contract Lifecycle Management, and Legal.
+overview: 'Leah is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Contract Lifecycle Management, and Legal.
 
 
   Leah''s developer surface includes engineering blog, support, YouTube channel, and 14 more developer resources.'
 random_paper: 14
 score:
   band: emerging
-  composite: 16.7
+  composite: 17.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -139,19 +139,33 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 16.7
+  previous_composite: 17.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,10 +185,10 @@ slug: leah
 tags:
 - Company
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 - Contract Lifecycle Management
 - Legal
-- Legal Technology
+- Legal Tech
 - Procurement
 - Source-to-Pay
 - Finance

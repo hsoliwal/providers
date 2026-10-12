@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -72,6 +72,11 @@ collections:
   name: TaskCall Incidents API
   slug: open-taskcall
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/taskcall/refs/heads/main/capabilities/taskcall-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/taskcall-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/taskcall/refs/heads/main/agentic-access/taskcall-agentic-access.yml
   title: ''
@@ -128,16 +133,16 @@ modified: '2026-05-11'
 name: TaskCall
 nav: Providers
 network: true
-overview: 'TaskCall publishes 2 APIs on the [APIs.io](https://apis.io/) network: Components API and Incidents API. Tagged areas include Incident Management, On-Call, Alerting, DevOps, and SRE.
+overview: 'TaskCall publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Components API, Incidents API, and 1 more. Tagged areas include Incident Management, On-Call, Alerting, DevOps, and SRE.
 
 
-  TaskCall''s developer surface includes authentication, documentation, pricing, signup flow, and 7 more developer resources.'
+  TaskCall''s developer surface includes authentication, documentation, pricing, signup flow, and 8 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 28.8
+  composite: 27.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -147,11 +152,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.8
+  previous_composite: 27.4
   provenance:
     agentic_access: derived
     contracts:
@@ -159,8 +164,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

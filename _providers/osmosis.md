@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -47,12 +47,12 @@ apis:
 - baseURL: https://api.osmosis.ai
   baseurl_source: declared
   description: Operations for enhancing agent interactions and decisions
-  name: Osmosis agent API
+  name: Osmosis Agent API
   slug: osmosis-agent-api
 - baseURL: https://api.osmosis.ai
   baseurl_source: declared
   description: Operations for managing the knowledge base
-  name: Osmosis knowledge API
+  name: Osmosis Knowledge API
   slug: osmosis-knowledge-api
 - baseURL: https://api.osmosis.ai
   baseurl_source: declared
@@ -78,6 +78,11 @@ collections:
   name: Osmosis Improvement agent Osmosis Agent Improvement API API
   slug: open-osmosis-osmosis-agent-improvement-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/capabilities/osmosis-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/osmosis-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/osmosis/refs/heads/main/overlays/osmosis-agent-improvement-overlay.yaml
   title: ''
@@ -223,24 +228,24 @@ layout: provider
 mcp_servers:
 - description: 'An open-source Model Context Protocol server that uses the Osmosis-Apply-1.7B model (served locally via Ollama) to merge code edits into files. Integrates into AI IDE / MCP-client workflows. Requires '
   name: Osmosis MCP Server
-  slug: osmosis-mcp-server
+  slug: codemerge
 modified: '2026-09-16'
 name: Osmosis
 nav: Providers
 network: true
-overview: 'Osmosis publishes 3 APIs on the [APIs.io](https://apis.io/) network: agent API, knowledge API, and Agent Improvement API. Tagged areas include Company, Artificial Intelligence, Reinforcement Learning, LLM, and Post-Training.
+overview: 'Osmosis publishes 3 APIs on the [APIs.io](https://apis.io/) network: Agent API, Knowledge API, and Agent Improvement API. Tagged areas include Company, Artificial Intelligence, Reinforcement Learning, LLM, and Post-Training.
 
 
   The Osmosis catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Osmosis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, CLI, and 23 more developer resources.'
+  Osmosis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, CLI, and 24 more developer resources.'
 random_paper: 11
 score:
   band: developing
-  composite: 43.9
+  composite: 43.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -250,11 +255,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 56.7
+    contract_quality: 51.8
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 43.9
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -265,8 +270,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -290,7 +301,7 @@ tags:
 - Post-Training
 - Model Training
 - Agents
-- Machine-Learning
+- Machine Learning
 - Developer Tools
 website: https://osmosis.ai/
 ---

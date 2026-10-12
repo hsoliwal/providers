@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: Streamable HTTP (JSON-RPC 2.0), stateless — one request, one response. POST only.
   name: LootRush MCP Server
-  slug: lootrush-mcp-server
+  slug: lootrush
 modified: '2026-07-20'
 name: LootRush
 nav: Providers
@@ -191,7 +191,7 @@ rate_limits:
   slug: lootrush-rate-limits
 score:
   band: thin
-  composite: 35.1
+  composite: 33.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 43.0
@@ -203,11 +203,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 47.0
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 21.1
-  previous_composite: 35.1
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -223,9 +223,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

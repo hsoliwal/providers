@@ -33,29 +33,36 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: Modeled logical service area for the people and organizations attached to a file - buyers, sellers, lenders, agents, and vendors - and their roles and mappings to partner-side identifiers. Delivered o
   name: ResWare Contacts API
+  provenance: modeled
   slug: resware-contacts-api
 - description: Modeled logical service area for creating and managing title/escrow files (orders) - the core transaction records that carry file number, property, parties, and status through the closing lifecycle. D
   name: ResWare Files & Orders API
+  provenance: modeled
   slug: resware-files-orders-api
 - description: Modeled logical service area for retrieving, uploading, and generating documents attached to a file - closing packages, executed documents, and auto-generated forms. In partner integrations this is th
   name: ResWare Documents API
+  provenance: modeled
   slug: resware-documents-api
 - description: Modeled logical service area for ResWare's action-based tasks and multi-directional workflow steps that drive a file through its lifecycle - creating, completing, and querying tasks. Delivered over Re
   name: ResWare Tasks API
+  provenance: modeled
   slug: resware-tasks-api
 - description: Modeled logical service area for escrow accounting - trust ledgers, receipts and disbursements, reconciliation, and remittance data tied to a file. Delivered over ResWare's gated SOAP/XML (WCF) partne
   name: ResWare Accounting API
+  provenance: modeled
   slug: resware-accounting-api
 - description: Modeled logical service area for reading and writing notes and activity entries on a file, used by partners to post status updates and messages back into ResWare. Delivered over ResWare's gated SOAP/X
   name: ResWare Notes API
+  provenance: modeled
   slug: resware-notes-api
 - description: Modeled logical service area for ResWare's partner-integration framework - the proxy/partner web-service messages that exchange orders, documents, and status with external vendors (signing/RON, record
   name: ResWare Partners API
+  provenance: modeled
   slug: resware-partners-api
 artifact_total: 8
 common:
@@ -101,14 +108,14 @@ modified: '2026-07-25'
 name: ResWare
 nav: Providers
 network: true
-overview: 'ResWare publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Title, Escrow, Real-Estate, Closing, and Title Production.
+overview: 'ResWare publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Title, Escrow, Real Estate, Closing, and Title Production.
 
 
   ResWare''s developer surface includes documentation and 7 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 8.4
+  composite: 6.7
   coverage:
     artifact_dirs: 3
     catalog_earned: 35.0
@@ -122,11 +129,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 8.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -142,7 +155,7 @@ slug: resware
 tags:
 - Title
 - Escrow
-- Real-Estate
+- Real Estate
 - Closing
 - Title Production
 - SOAP

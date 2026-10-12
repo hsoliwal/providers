@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -68,7 +68,7 @@ apis:
 - baseURL: https://api.wormholescan.io/api/v1
   baseurl_source: declared
   description: The wormholescan API from Wormhole — 64 operation(s) for wormholescan.
-  name: Wormhole wormholescan API
+  name: Wormhole Wormholescan API
   slug: wormhole-wormholescan-api
 artifact_total: 204
 collections:
@@ -725,7 +725,7 @@ modified: '2026-09-16'
 name: Wormhole
 nav: Providers
 network: true
-overview: 'Wormhole publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Guardian API, wormholescan API, and 1 more. Tagged areas include Cross-Chain, Blockchain, Interoperability, DeFi, and Token Transfers.
+overview: 'Wormhole publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Guardian API, Wormholescan API, and 5 more. Tagged areas include Cross-Chain, Blockchain, Interoperability, DeFi, and Token Transfers.
 
 
   The Wormhole catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -754,23 +754,23 @@ rules:
   slug: wormhole-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 32.3
+  composite: 28.9
   coverage:
     artifact_dirs: 14
-    catalog_earned: 51.3
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.8
+    catalog_gap: 64.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 9.8
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 32.3
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     contracts:
@@ -778,8 +778,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

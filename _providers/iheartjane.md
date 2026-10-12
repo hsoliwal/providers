@@ -32,14 +32,16 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Jane''s documented HTTP API (published as a Swagger UI at api.iheartjane.com/jane-api-docs) for retrieving live store menu products and for generating the access tokens used to authenticate downstream '
   name: Jane Menu Products API
+  provenance: modeled
   slug: iheartjane-menu-products-api
 - description: 'The Jane DM SDK is a TypeScript/JavaScript library (usable in client-side React/Angular/Vue and server-side Node.js/Express apps) that embeds MyHigh-powered personalization and publisher monetization '
   name: Jane Digital Merchandising SDK (Jane DM SDK)
+  provenance: modeled
   slug: iheartjane-digital-merchandising-sdk
 artifact_total: 3
 common:
@@ -79,7 +81,7 @@ overview: 'Jane (iHeartJane) publishes 2 APIs on the [APIs.io](https://apis.io/)
 random_paper: 17
 score:
   band: minimal
-  composite: 10.2
+  composite: 8.5
   coverage:
     artifact_dirs: 3
     catalog_earned: 37.0
@@ -93,11 +95,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 10.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

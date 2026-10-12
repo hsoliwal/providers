@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.1
-  scored_at: '2026-09-20'
+  score: 43.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -399,7 +400,7 @@ modified: '2026-07-20'
 name: NatWest Group
 nav: Providers
 network: true
-overview: 'NatWest Group publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Account Access API, Accounts API, Balances API, and 18 more. Tagged areas include Banking, Open Banking, Financial-Services, Payments, and PSD2.
+overview: 'NatWest Group publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Account Access API, Accounts API, Balances API, and 18 more. Tagged areas include Banking, Open Banking, Financial Services, Payments, and PSD2.
 
 
   NatWest Group''s developer surface includes changelog, sandbox, authentication, documentation, getting-started guide, engineering blog, support, and 31 more developer resources.'
@@ -411,7 +412,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 31.6
+  composite: 28.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -423,11 +424,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 49.3
+    contract_quality: 44.4
     developer_ergonomics: 8.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
-  previous_composite: 31.6
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -443,9 +444,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 58.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -468,7 +469,7 @@ slug: natwest
 tags:
 - Banking
 - Open Banking
-- Financial-Services
+- Financial Services
 - Payments
 - PSD2
 - FAPI

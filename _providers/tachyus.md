@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://your-organization.tachyus.com/api/v1
@@ -196,7 +196,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: thin
-  composite: 31.8
+  composite: 29.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -210,9 +210,9 @@ score:
     contract_governance: 4.5
     contract_quality: 16.7
     developer_ergonomics: 32.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 57.9
-  previous_composite: 31.8
+  previous_composite: 29.2
   provenance:
     conformance: derived
     contracts:
@@ -227,9 +227,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -252,7 +252,7 @@ tags:
 - Reservoir Management
 - Production Optimization
 - Emissions Management
-- Machine-Learning
+- Machine Learning
 - Analytics
 website: https://tachyus.com
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Kamal CLI (`kamal`) is the primary command-line interface for packaging, shipping, and operating containerized web apps across one or more SSH-reachable servers. It reads `config/deploy.yml` (plus
@@ -128,7 +128,7 @@ overview: 'Kamal publishes 2 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 6
 score:
   band: emerging
-  composite: 15.9
+  composite: 19.2
   coverage:
     artifact_dirs: 3
     catalog_earned: 32.0
@@ -142,11 +142,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 15.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  open_source:
+    applies: true
+    score: 65.0
+  previous_composite: 19.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -166,9 +175,9 @@ tags:
 - Containers
 - Zero Downtime
 - Rolling Deploys
-- Rail
+- Rails
 - Ruby
-- Open-Source
+- Open Source
 - 37signals
 - Basecamp
 - On-Premises

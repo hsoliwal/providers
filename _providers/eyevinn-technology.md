@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: The Eyevinn Open Source Cloud (OSC) REST API is the management plane for provisioning and operating service instances on the OSC platform. The API uses Personal Access Tokens (PATs) issued from app.os
@@ -59,7 +59,7 @@ apis:
 - description: A suite of experimental tools tracking the IETF Media Over QUIC working group, including `moqlivemock` (a Go publisher simulator) and `warp-player` (a CMAF media player over MoQ transport).
   name: Eyevinn Media Over QUIC (MoQ) Tools
   slug: moq-tools
-artifact_total: 44
+artifact_total: 45
 common:
 - group: operate
   title: ''
@@ -248,7 +248,10 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Eyevinn Technology MCP Server
-  slug: eyevinn-technology-mcp-server
+  slug: mcp-server
+- description: Remote MCP server at mcp.osaas.io over HTTP.
+  name: Eyevinn Technology MCP Server
+  slug: eyevinn-technology
 modified: '2026-05-25'
 name: Eyevinn Technology
 nav: Providers
@@ -260,7 +263,7 @@ overview: 'Eyevinn Technology publishes 8 APIs on the [APIs.io](https://apis.io/
 random_paper: 3
 score:
   band: thin
-  composite: 31.0
+  composite: 30.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 35.0
@@ -272,9 +275,9 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 78.6
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -284,11 +287,17 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 31.0
+  previous_composite: 30.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -319,7 +328,7 @@ tags:
 - HLS
 - Live Streaming
 - Media Over QUIC
-- Open-Source
+- Open Source
 - Open Source Cloud
 - OSC
 - Player Analytics

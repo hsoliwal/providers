@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 56.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 75
   human_in_the_loop: 0
@@ -676,14 +676,14 @@ description: Morningstar, Inc. (Nasdaq MORN) is a Chicago-based investment resea
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morningstar.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.morningstar.com over HTTP; 7 tools listed.
   name: Morningstar MCP Server
-  slug: morningstar-mcp-server
+  slug: morningstar
 modified: '2026-07-22'
 name: Morningstar
 nav: Providers
 network: true
-overview: 'Morningstar publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Time Series API, Screener APIs, and 13 more. Tagged areas include Financial, Market Data, Investing, Stocks, and Fund.
+overview: 'Morningstar publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Time Series API, Screener APIs, and 17 more. Tagged areas include Finance, Market Data, Investing, Stocks, and Fund.
 
 
   Morningstar''s developer surface includes authentication, developer portal, documentation, support, sandbox, API reference, getting-started guide, and 31 more developer resources.'
@@ -695,7 +695,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: developing
-  composite: 47.8
+  composite: 44.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 35.0
@@ -707,21 +707,23 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 56.5
+    contract_quality: 51.0
     developer_ergonomics: 73.8
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.8
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 99.1
       derived: 0
       marker_coverage: 0.0
       total: 116
@@ -732,9 +734,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 61.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -755,7 +757,7 @@ security:
   summary_line: Bugcrowd · contact published
 slug: morningstar
 tags:
-- Financial
+- Finance
 - Market Data
 - Investing
 - Stocks
@@ -765,5 +767,7 @@ tags:
 - Portfolio Analytics
 - Research
 - Index
+- Wealth Management
+- Financial Data
 website: https://www.morningstar.com/
 ---

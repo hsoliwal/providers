@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Request-for-Quote swap API for the Clipper DEX. Aggregators retrieve pool state (price feeds, k factor), request firm quotes, and sign quotes to obtain the EIP-2098 signature/calldata needed to execut
@@ -140,7 +140,7 @@ overview: 'Shipyard Software publishes 2 APIs on the [APIs.io](https://apis.io/)
 random_paper: 6
 score:
   band: thin
-  composite: 33.2
+  composite: 31.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -152,11 +152,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 33.2
+  previous_composite: 31.7
   provenance:
     conformance: first-party
   regulatory:
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

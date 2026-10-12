@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: WABCO's fleet management and telematics capabilities, now delivered through ZF's Commercial Vehicle Control Systems division. Provides remote diagnostics, vehicle connectivity, real-time fleet trackin
@@ -121,7 +121,7 @@ rate_limits:
   slug: wabco-holdings-rate-limits
 score:
   band: emerging
-  composite: 18.1
+  composite: 17.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 54.0
@@ -135,11 +135,17 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 20.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 18.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

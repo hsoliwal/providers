@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -146,6 +146,11 @@ collections:
   name: Oden Dashboards Targets API
   slug: open-oden-technologies-targets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/capabilities/oden-technologies-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/oden-technologies-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/oden-technologies/refs/heads/main/mcp/oden-technologies-mcp.yml
   title: ''
@@ -261,13 +266,13 @@ network: true
 overview: 'Oden Technologies publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Dashboards API, Intervals API, Machine Groups API, and 9 more. Tagged areas include Company, Manufacturing, Industrial IoT, Analytics, and Artificial Intelligence.
 
 
-  Oden Technologies'' developer surface includes documentation, API reference, engineering blog, support, authentication, and 18 more developer resources.'
+  Oden Technologies'' developer surface includes documentation, API reference, engineering blog, support, authentication, and 19 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 43.6
+  composite: 42.9
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -277,16 +282,18 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 59.1
+    contract_quality: 53.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 43.6
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -297,8 +304,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

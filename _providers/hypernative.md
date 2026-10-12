@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Hypernative REST API exposes the platform's monitoring, detection, screening and automated-response surface — including Screener address reputation (/assets/reputation/addresses), asset and watchl
@@ -143,7 +143,7 @@ rate_limits:
   slug: hypernative-rate-limits
 score:
   band: thin
-  composite: 30.8
+  composite: 30.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -155,15 +155,21 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 30.8
+  previous_composite: 30.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: derived
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://kusama-rpc.polkadot.io/
@@ -44,42 +44,42 @@ apis:
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The accounts API from Kusama — 11 operation(s) for accounts.
-  name: Kusama accounts API
+  name: Kusama Accounts API
   slug: kusama-accounts-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: Asset Hub Migration information
-  name: Kusama ahm API
+  name: Kusama Ahm API
   slug: kusama-ahm-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The blocks API from Kusama — 8 operation(s) for blocks.
-  name: Kusama blocks API
+  name: Kusama Blocks API
   slug: kusama-blocks-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The contracts API from Kusama — 1 operation(s) for contracts.
-  name: Kusama contracts API
+  name: Kusama Contracts API
   slug: kusama-contracts-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The coretime API from Kusama — 6 operation(s) for coretime.
-  name: Kusama coretime API
+  name: Kusama Coretime API
   slug: kusama-coretime-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: node connected to sidecar
-  name: Kusama node API
+  name: Kusama Node API
   slug: kusama-node-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: pallets employed in the runtime
-  name: Kusama pallets API
+  name: Kusama Pallets API
   slug: kusama-pallets-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The paras API from Kusama — 9 operation(s) for paras.
-  name: Kusama paras API
+  name: Kusama Paras API
   slug: kusama-paras-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
@@ -89,7 +89,7 @@ apis:
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: relay chain specific endpoints for asset hub
-  name: Kusama rc API
+  name: Kusama Rc API
   slug: kusama-rc-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
@@ -124,22 +124,22 @@ apis:
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The runtime API from Kusama — 5 operation(s) for runtime.
-  name: Kusama runtime API
+  name: Kusama Runtime API
   slug: kusama-runtime-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The staking API from Kusama — 4 operation(s) for staking.
-  name: Kusama staking API
+  name: Kusama Staking API
   slug: kusama-staking-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The trace API from Kusama — 4 operation(s) for trace.
-  name: Kusama trace API
+  name: Kusama Trace API
   slug: kusama-trace-api
 - baseURL: https://kusama-rpc.polkadot.io/
   baseurl_source: declared
   description: The transaction API from Kusama — 6 operation(s) for transaction.
-  name: Kusama transaction API
+  name: Kusama Transaction API
   slug: kusama-transaction-api
 artifact_total: 48
 asyncapis:
@@ -367,7 +367,7 @@ modified: '2026-07-19'
 name: Kusama
 nav: Providers
 network: true
-overview: 'Kusama publishes 21 APIs on the [APIs.io](https://apis.io/) network, including JSON-RPC API, accounts API, ahm API, and 18 more. Tagged areas include Company, Crypto, Blockchain, Web3, and Polkadot.
+overview: 'Kusama publishes 21 APIs on the [APIs.io](https://apis.io/) network, including JSON-RPC API, Accounts API, Ahm API, and 18 more. Tagged areas include Company, Crypto, Blockchain, Web3, and Polkadot.
 
 
   The Kusama catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -377,7 +377,7 @@ overview: 'Kusama publishes 21 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 4
 score:
   band: developing
-  composite: 47.6
+  composite: 48.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -389,11 +389,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 58.3
+    contract_quality: 53.9
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 47.6
+  previous_composite: 48.5
   provenance:
     conformance: derived
     contracts:
@@ -403,8 +403,14 @@ score:
       total: 20
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -435,5 +441,6 @@ tags:
 - Blockchain Data
 - Staking
 - Governance
+- Real-Time
 website: https://kusama.network/
 ---

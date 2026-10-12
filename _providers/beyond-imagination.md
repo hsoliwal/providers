@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -112,14 +112,14 @@ modified: '2026-08-02'
 name: Beyond Imagination
 nav: Providers
 network: true
-overview: 'Beyond Imagination is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Robotics, Humanoid Robots, Artificial Intelligence, and Machine-Learning.
+overview: 'Beyond Imagination is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Robotics, Humanoid Robots, Artificial Intelligence, and Machine Learning.
 
 
   Beyond Imagination''s developer surface includes product news, engineering blog, and 14 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 4.5
+  composite: 5.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -133,17 +133,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 4.5
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -161,7 +161,7 @@ tags:
 - Robotics
 - Humanoid Robots
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Manufacturing
 - Automation
 - Teleoperation

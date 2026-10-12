@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,10 +24,10 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.2
-  scored_at: '2026-09-20'
+  score: 35.3
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'Universal Commerce Protocol (UCP) shopping service, exposed over MCP at https://mudwtr.com/api/ucp/mcp. Server identifies itself as "universal-commerce" 0.1.0 speaking MCP protocol 2025-06-18 and UCP '
@@ -178,7 +178,7 @@ layout: provider
 mcp_servers:
 - description: MUD\WTR serves TWO live, remote Model Context Protocol servers from its own domain, both advertised in its robots.txt, /agents.md and /llms.txt. They are Shopify platform servers bound to this merchan
   name: Mud\Wtr MCP Server
-  slug: mudwtr-mcp-server
+  slug: mud-wtr-mcp-yml
 modified: '2026-08-26'
 name: Mud\Wtr
 nav: Providers
@@ -198,34 +198,40 @@ rate_limits:
   slug: mud-wtr-rate-limits
 scopes:
 - name: Mud Wtr Scopes
-  scope_count: 0
+  scope_count: 4
   slug: mud-wtr-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: thin
-  composite: 29.7
+  band: emerging
+  composite: 24.5
   coverage:
     artifact_dirs: 18
-    catalog_earned: 40.0
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 16.1
-    discoverability: 81.5
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 29.7
+  previous_composite: 24.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

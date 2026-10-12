@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -89,7 +89,7 @@ description: Xwing, Inc. is a San Francisco and Concord, California aviation com
 image: https://static.wixstatic.com/media/38a3e6_e4ab1806ac414f0181a3a0b1b32ee29f~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'www.xwing.com serves a live, unauthenticated Model Context Protocol endpoint at /_api/mcp. It is REAL and it answers — initialize and tools/list both returned HTTP 200 anonymously on 2026-09-04 — but '
   name: Site Visitor Assistant for site "Xwing"
   slug: site-visitor-assistant-for-site-xwing
 modified: '2026-09-04'
@@ -111,7 +111,7 @@ rate_limits:
   slug: xwing-rate-limits
 score:
   band: minimal
-  composite: 6.2
+  composite: 4.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -125,13 +125,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 0.0
-  previous_composite: 6.2
+  previous_composite: 4.9
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

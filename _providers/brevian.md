@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Brevian's hosted (remote) Model Context Protocol server, exposing revenue-execution context (knowledge, deals, conversations, pipeline) to MCP-capable agents. Access is gated by OAuth 2.1 (authorizati
@@ -136,7 +136,7 @@ layout: provider
 mcp_servers:
 - description: Brevian's hosted (remote) Model Context Protocol server for its Revenue Execution AI platform. Exposes Brevian knowledge, deals, and pipeline context to MCP-capable agents. Access is gated by OAuth 2.
   name: Brevian MCP Server
-  slug: brevian-mcp-server
+  slug: brevian
 modified: '2026-07-18'
 name: Brevian
 nav: Providers
@@ -153,7 +153,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 23.4
+  composite: 25.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -167,13 +167,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 23.4
+  previous_composite: 25.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

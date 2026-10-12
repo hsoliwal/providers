@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -85,6 +85,10 @@ created: '2026-07-17'
 description: Clerky is an online legal service that helps startup founders handle their legal paperwork safely and efficiently. Designed by startup attorneys formerly at a Silicon Valley law firm, Clerky provides software and guided workflows for Delaware incorporation and post-incorporation setup, fundraising (SAFEs, convertible notes, board consents), hiring (offer letters, consulting agreements, equity compensation), commercial documents (NDAs), and ongoing corporate maintenance. Clerky is a Y Combinator portfolio company. It is a legal document assistant rather than a law firm, and does not currently publish a public developer API, developer portal, or programmatic integrations.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clerky.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.clerky.com over HTTP.
+  name: Clerky MCP Server
+  slug: clerky
 modified: '2026-07-18'
 name: Clerky
 nav: Providers
@@ -96,7 +100,7 @@ overview: 'Clerky is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 12
 score:
   band: emerging
-  composite: 15.4
+  composite: 15.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -110,13 +114,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.4
+  previous_composite: 15.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

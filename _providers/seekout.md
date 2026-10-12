@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -113,7 +113,7 @@ layout: provider
 mcp_servers:
 - description: Hosted MCP server that exposes SeekOut's recruiting platform (1B+ candidate profiles across 6 data sources) to MCP-compatible AI assistants. 14 built-in recruiting workflows.
   name: SeekOut MCP
-  slug: seekout-mcp
+  slug: seekout
 modified: '2026-07-21'
 name: SeekOut
 nav: Providers
@@ -125,7 +125,7 @@ overview: 'SeekOut is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 20
 score:
   band: emerging
-  composite: 19.5
+  composite: 19.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -139,18 +139,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.5
+  previous_composite: 19.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

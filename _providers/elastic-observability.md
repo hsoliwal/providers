@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: templated
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-09-20'
+  score: 29.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -91,6 +91,11 @@ collections:
   name: Elastic Observability (APM Server) API
   slug: open-elastic-observability
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/elastic-observability/refs/heads/main/capabilities/elastic-observability-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/elastic-observability-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/elastic-observability/refs/heads/main/agentic-access/elastic-observability-agentic-access.yml
   title: ''
@@ -289,17 +294,17 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/elastic-observability.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at {KIBANA_URL} requiring an API key.
   name: Elastic Agent Builder MCP Server
   slug: elastic-agent-builder-mcp-server
 modified: '2026-08-29'
 name: Elastic Observability
 nav: Providers
 network: true
-overview: 'Elastic Observability publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Server Info API, agent config API, event intake API, and 1 more. Tagged areas include AIOps, Observability, APM, Logging, and Metrics.
+overview: 'Elastic Observability publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Server Info API, agent config API, event intake API, and 2 more. Tagged areas include AIOps, Observability, APM, Logging, and Metrics.
 
 
-  Elastic Observability''s developer surface includes authentication, documentation, changelog, CLI, sandbox, API reference, getting-started guide, and 34 more developer resources.'
+  Elastic Observability''s developer surface includes authentication, documentation, changelog, CLI, sandbox, API reference, getting-started guide, and 35 more developer resources.'
 plans:
 - name: Elastic Observability Plans Pricing
   plan_count: 2
@@ -311,9 +316,9 @@ rate_limits:
   slug: elastic-observability-rate-limits
 score:
   band: strong
-  composite: 58.4
+  composite: 59.5
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 43.0
     catalog_earned_first_party: 8.0
     catalog_gap: 72.0
@@ -323,11 +328,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 48.2
+    contract_quality: 43.4
     developer_ergonomics: 80.4
-    discoverability: 66.7
+    discoverability: 60.0
     operational_transparency: 52.6
-  previous_composite: 58.4
+  previous_composite: 59.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -338,8 +343,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

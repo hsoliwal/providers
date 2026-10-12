@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The UBIX Insights API enables programmatic access to AI-generated analytics, insights, and model outputs from the UBIX platform. Supports integration with existing business intelligence tools, CRM sys
@@ -84,7 +84,7 @@ modified: '2026-05-03'
 name: UBIX Labs
 nav: Providers
 network: true
-overview: 'UBIX Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Analytics, Machine-Learning, Data Integration, and No-Code.
+overview: 'UBIX Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Analytics, Machine Learning, Data Integration, and No-Code.
 
 
   The UBIX Labs catalog on APIs.io includes 1 JSON-LD context.
@@ -102,7 +102,7 @@ rate_limits:
   slug: ubix-rate-limits
 score:
   band: emerging
-  composite: 23.2
+  composite: 22.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 55.0
@@ -116,11 +116,17 @@ score:
     contract_governance: 0.0
     contract_quality: 14.7
     developer_ergonomics: 16.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
-  previous_composite: 23.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,7 +142,7 @@ slug: ubix
 tags:
 - Artificial Intelligence
 - Analytics
-- Machine-Learning
+- Machine Learning
 - Data Integration
 - No-Code
 - Enterprise

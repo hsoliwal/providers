@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 13
 common:
@@ -241,7 +241,7 @@ plans:
 random_paper: 3
 score:
   band: thin
-  composite: 27.6
+  composite: 27.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -255,16 +255,22 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 34.2
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 27.6
+  previous_composite: 27.5
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -288,7 +294,7 @@ tags:
 - Containers
 - Daemonless
 - OCI
-- Open-Source
+- Open Source
 - Rootless
 use_cases:
 - features:

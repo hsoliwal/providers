@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Standards-based on-device programmability in the PICOS network operating system. RESTCONF (RFC 8040) exposes OPTIONS/HEAD/GET/POST/PATCH/PUT/DELETE over YANG-modelled configuration and state at /restc
@@ -248,7 +248,7 @@ modified: '2026-09-16'
 name: Pica8
 nav: Providers
 network: true
-overview: 'Pica8 publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Backup API, Configuration API, Configuration File API, and 8 more. Tagged areas include Networking, Open Networking, Software Defined Networking, Network Automation, and Network Operating System.
+overview: 'Pica8 publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Backup API, Configuration API, Configuration File API, and 9 more. Tagged areas include Networking, Open Networking, Software Defined Networking, Network Automation, and Network Operating System.
 
 
   Pica8''s developer surface includes documentation, API reference, support, engineering blog, authentication, changelog, CLI, and 24 more developer resources.'
@@ -263,7 +263,7 @@ rate_limits:
   slug: pica8-rate-limits
 score:
   band: thin
-  composite: 33.7
+  composite: 34.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -277,9 +277,9 @@ score:
     contract_governance: 18.2
     contract_quality: 13.3
     developer_ergonomics: 54.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 33.7
+  previous_composite: 34.8
   provenance:
     conformance: first-party
     contracts:
@@ -289,8 +289,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

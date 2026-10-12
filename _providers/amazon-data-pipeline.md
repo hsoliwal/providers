@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -120,7 +120,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/amazon-data-pipeline/refs/heads/main/agentic-access/amazon-data-pipeline-agentic-access.yml
   title: ''
@@ -472,23 +472,23 @@ rules:
   slug: amazon-data-pipeline-spectral-rules
 score:
   band: developing
-  composite: 51.2
+  composite: 52.2
   coverage:
     artifact_dirs: 19
-    catalog_earned: 73.5
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 68.0
+    contract_governance: 27.3
+    contract_quality: 61.8
     developer_ergonomics: 44.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 51.2
+  previous_composite: 52.2
   provenance:
     agentic_access: derived
     contracts:
@@ -496,8 +496,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -538,5 +544,5 @@ use_cases:
   name: Data Lake Ingestion
 - description: Replicate DynamoDB tables or S3 data across AWS regions using scheduled pipeline copy activities for disaster recovery.
   name: Cross-Region Data Replication
-website: https://amazon.com
+website: https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/what-is-datapipeline.html
 ---

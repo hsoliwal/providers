@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Live, unauthenticated Model Context Protocol endpoint on the Les échappées storefront implementing the Universal Commerce Protocol (UCP) 2026-04-08. tools/list returns 13 tools with full JSON Schema i
@@ -193,9 +193,9 @@ description: 'Arlettie is a Paris-founded (1994) operator of invitation-only lux
 image: https://static.arlettie.com/website/header-logo-paris.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at lesechappees.arlettie.com; 13 tools listed.
   name: Arlettie MCP Server
-  slug: arlettie-mcp-server
+  slug: arlettie-mcp-yml
 modified: '2026-08-17'
 name: Arlettie
 nav: Providers
@@ -220,7 +220,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 27.9
+  composite: 30.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -234,15 +234,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 27.9
+  previous_composite: 30.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

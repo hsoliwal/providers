@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -235,7 +235,7 @@ modified: '2026-09-02'
 name: AmeriCorps
 nav: Providers
 network: true
-overview: 'AmeriCorps publishes 3 APIs on the [APIs.io](https://apis.io/) network: Catalog API, Datasets API, and Metadata API. Tagged areas include Federal-Government, National Service, Volunteerism, Community Development, and Civic Engagement.
+overview: 'AmeriCorps publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Datasets API, Metadata API, and 1 more. Tagged areas include Federal Government, National Service, Volunteerism, Community Development, and Civic Engagement.
 
 
   AmeriCorps'' developer surface includes authentication, developer portal, getting-started guide, and 23 more developer resources.'
@@ -250,7 +250,7 @@ rate_limits:
   slug: americorps-rate-limits
 score:
   band: developing
-  composite: 43.5
+  composite: 39.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -262,11 +262,16 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 43.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -282,9 +287,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -306,7 +311,7 @@ security:
   summary_line: security.txt · contact published
 slug: americorps
 tags:
-- Federal-Government
+- Federal Government
 - National Service
 - Volunteerism
 - Community Development

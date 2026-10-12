@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 419
   human_in_the_loop: 12
@@ -356,7 +356,7 @@ description: Socotra is a cloud-native insurance core platform that lets carrier
 image: https://www.socotra.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp-sandbox.socotra.com over HTTP; 27 tools listed.
   name: Socotra
   slug: socotra
 modified: '2026-07-21'
@@ -373,7 +373,7 @@ overview: 'Socotra publishes 18 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 15
 score:
   band: developing
-  composite: 53.2
+  composite: 50.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -385,11 +385,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 4.5
-    contract_quality: 48.7
+    contract_quality: 44.8
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 53.2
+  previous_composite: 50.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -405,9 +405,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -437,5 +437,6 @@ tags:
 - Claims
 - Underwriting
 - MCP
+- Invoicing
 website: https://socotra.com
 ---

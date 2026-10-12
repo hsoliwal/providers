@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://openbanking.api.rabobank.com.au/public/cds-au/v1/banking/products
@@ -209,7 +209,7 @@ modified: '2026-07-21'
 name: Rabobank Australia
 nav: Providers
 network: true
-overview: 'Rabobank Australia publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Rabobank Australia publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Rabobank Australia''s developer surface includes authentication, API reference, documentation, support, and 18 more developer resources.'
@@ -221,7 +221,7 @@ scopes:
   summary_line: 10 scopes
 score:
   band: thin
-  composite: 37.7
+  composite: 34.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -233,9 +233,9 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -244,7 +244,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 37.7
+  previous_composite: 34.7
   provenance:
     conformance: first-party
     contracts:
@@ -259,9 +259,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 54.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -278,7 +278,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: rabobank-australia
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

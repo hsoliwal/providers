@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,14 +65,14 @@ modified: '2026-04-28'
 name: National Institute of Mental Health
 nav: Providers
 network: true
-overview: 'National Institute of Mental Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Health, Mental Health, and Research.
+overview: 'National Institute of Mental Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Health, Mental Health, and Research.
 
 
   National Institute of Mental Health''s developer surface includes developer portal and 4 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 4.6
+  composite: 5.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 22.0
@@ -86,17 +86,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 2.6
-  previous_composite: 4.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 5.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -110,7 +115,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: national-institute-of-mental-health
 tags:
-- Federal-Government
+- Federal Government
 - Health
 - Mental Health
 - Research

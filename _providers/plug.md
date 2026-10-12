@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 46
   human_in_the_loop: 0
@@ -202,6 +202,11 @@ collections:
   name: Documentação Malga 3DS2 Malga Webhooks API
   slug: open-plug-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/plug/refs/heads/main/capabilities/plug-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/plug-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -379,19 +384,19 @@ modified: '2026-07-20'
 name: Malga
 nav: Providers
 network: true
-overview: 'Malga publishes 18 APIs on the [APIs.io](https://apis.io/) network, including 3DS2 Malga API, Cards API, Charges API, and 15 more. Tagged areas include Company, Payments, Payment Orchestration, Payment Gateway, and Fintech.
+overview: 'Malga publishes 19 APIs on the [APIs.io](https://apis.io/) network, including 3DS2 Malga API, Cards API, Charges API, and 16 more. Tagged areas include Company, Payments, Payment Orchestration, Payment Gateway, and Fintech.
 
 
   The Malga catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Malga''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, changelog, authentication, and 29 more developer resources.'
+  Malga''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, changelog, authentication, and 30 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 49.7
+  composite: 47.2
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -401,9 +406,9 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 64.8
+    contract_quality: 59.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -412,7 +417,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 49.7
+  previous_composite: 47.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -428,9 +433,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

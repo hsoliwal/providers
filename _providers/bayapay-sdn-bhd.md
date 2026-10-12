@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -76,9 +76,9 @@ description: BayaPay Sdn Bhd is a Malaysian fintech (incorporated 2021, registra
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bayapay-sdn-bhd.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.bayapay.com over HTTP; 7 tools listed.
   name: BayaPay Wix Site MCP
-  slug: bayapay-wix-site-mcp
+  slug: bayapay-site-mcp
 modified: '2026-07-18'
 name: Bayapay Sdn Bhd
 nav: Providers
@@ -90,7 +90,7 @@ overview: 'Bayapay Sdn Bhd is profiled on the [APIs.io](https://apis.io/) networ
 random_paper: 8
 score:
   band: minimal
-  composite: 9.3
+  composite: 9.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -104,7 +104,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -113,17 +113,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 9.3
+  previous_composite: 9.9
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

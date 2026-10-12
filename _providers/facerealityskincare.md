@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Shopify-hosted commerce surface for the Face Reality Skincare store. Exposes a hosted Storefront MCP server for catalog search, product lookup, and cart building, a UCP merchant profile for agent-driv
@@ -105,7 +105,7 @@ layout: provider
 mcp_servers:
 - description: Face Reality Skincare runs on Shopify, which exposes a hosted Storefront MCP server at https://facerealityskincare.com/api/mcp. A live JSON-RPC initialize handshake reports serverInfo name "storefront
   name: Face Reality Skincare MCP Server
-  slug: face-reality-skincare-mcp-server
+  slug: storefront-renderer
 modified: '2026-07-19'
 name: Face Reality Skincare
 nav: Providers
@@ -122,7 +122,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: emerging
-  composite: 16.7
+  composite: 19.4
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -136,15 +136,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 13.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 16.7
+  previous_composite: 19.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: API Spyder is a SaaS-based, agentless external discovery service that provides an attacker's view into an organization's public-facing API hosts, hosting providers, and API-specific exposures includin
@@ -180,7 +180,7 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cequence.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.aigateway.cequence.ai over HTTP requiring OAuth; 25 tools listed.
   name: Cequence AI Gateway MCP
   slug: cequence-ai-gateway-mcp
 modified: '2026-09-05'
@@ -206,8 +206,8 @@ scopes:
   slug: cequence-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: thin
-  composite: 38.2
+  band: developing
+  composite: 42.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 50.0
@@ -221,15 +221,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 72.2
+    discoverability: 72.5
     operational_transparency: 44.7
-  previous_composite: 38.2
+  previous_composite: 42.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -264,7 +270,7 @@ tags:
 - Business Logic Abuse
 - CNAPP
 - Cybersecurity
-- Fraud
+- Fraud Prevention
 - Unified API Protection
 website: https://www.cequence.ai/
 ---

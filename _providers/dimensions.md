@@ -13,7 +13,6 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -27,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.9
-  scored_at: '2026-09-20'
+  score: 37.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -255,12 +254,12 @@ layout: provider
 mcp_servers:
 - description: 'Digital Science publishes first-party MCP servers for Dimensions. The flagship is the Dimensions Analytics MCP — an open-source (MIT) local stdio server on npm that exposes 27 tools plus 10 resources '
   name: Dimensions MCP Server
-  slug: dimensions-mcp-server
+  slug: dimensions-mcp-yml
 modified: '2026-09-06'
 name: Dimensions
 nav: Providers
 network: true
-overview: 'Dimensions publishes 2 APIs on the [APIs.io](https://apis.io/) network: Authentication API and Query API. Tagged areas include Analytics, Research, Publications, Grants, and Patents.
+overview: 'Dimensions publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Query API, and 1 more. Tagged areas include Analytics, Research, Publications, Grants, and Patents.
 
 
   Dimensions'' developer surface includes authentication, documentation, support, engineering blog, API reference, getting-started guide, changelog, and 30 more developer resources.'
@@ -275,12 +274,12 @@ rate_limits:
   slug: dimensions-rate-limits
 scopes:
 - name: Dimensions Scopes
-  scope_count: 0
+  scope_count: 1
   slug: dimensions-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code/refresh_token
 score:
   band: developing
-  composite: 51.3
+  composite: 47.9
   coverage:
     artifact_dirs: 26
     catalog_earned: 48.0
@@ -292,14 +291,14 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 63.2
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 51.3
+  previous_composite: 47.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -308,16 +307,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Health
+    regime_id: health
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

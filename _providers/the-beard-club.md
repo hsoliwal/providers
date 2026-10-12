@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Native Shopify Universal Commerce Protocol (UCP 2026-04-08) shopping service, exposed as a Model Context Protocol endpoint for agent-driven commerce — catalog search, cart, checkout, fulfillment, disc
@@ -107,9 +107,9 @@ description: 'The Beard Club is a men''s grooming and beard-care brand selling b
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-beard-club.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at thebeardclub.com over HTTP; 5 tools listed.
   name: The Beard Club MCP Server
-  slug: the-beard-club-mcp-server
+  slug: the-beard-club-ucp-shopping
 modified: '2026-07-21'
 name: The Beard Club
 nav: Providers
@@ -126,7 +126,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 18.6
+  composite: 21.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -140,15 +140,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 18.6
+  previous_composite: 21.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

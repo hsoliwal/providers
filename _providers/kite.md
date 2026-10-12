@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: EVM-compatible JSON-RPC interface for Kite Chain mainnet (chain ID 2366, native token KITE), available over HTTPS and WSS from a global endpoint plus Virginia, Tokyo, and Ireland regional endpoints.
@@ -182,7 +182,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Kite MCP Server
-  slug: kite-mcp-server
+  slug: kite-mcp-yml
 modified: '2026-07-19'
 name: Kite
 nav: Providers
@@ -194,7 +194,7 @@ overview: 'Kite publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 11
 score:
   band: thin
-  composite: 34.3
+  composite: 33.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -208,9 +208,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 34.2
-  previous_composite: 34.3
+  previous_composite: 33.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

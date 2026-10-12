@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -69,6 +69,11 @@ collections:
   name: Azure Database for PostgreSQL REST API
   slug: open-microsoft-azure-postgresql
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-postgresql/refs/heads/main/capabilities/microsoft-azure-postgresql-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-postgresql-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-postgresql/refs/heads/main/agentic-access/microsoft-azure-postgresql-agentic-access.yml
   title: ''
@@ -145,10 +150,10 @@ modified: '2026-05-19'
 name: Azure Database for PostgreSQL
 nav: Providers
 network: true
-overview: 'Azure Database for PostgreSQL publishes 2 APIs on the [APIs.io](https://apis.io/) network: Operations API and Servers API. Tagged areas include Database, Managed Database, Open-Source, PostgreSQL, and Relational.
+overview: 'Azure Database for PostgreSQL publishes 2 APIs on the [APIs.io](https://apis.io/) network: Operations API and Servers API. Tagged areas include Database, Managed Database, Open Source, PostgreSQL, and Relational.
 
 
-  Azure Database for PostgreSQL''s developer surface includes authentication, developer portal, pricing, documentation, signup flow, support, and 9 more developer resources.'
+  Azure Database for PostgreSQL''s developer surface includes authentication, developer portal, pricing, documentation, signup flow, support, and 10 more developer resources.'
 plans:
 - name: Microsoft Azure Postgresql Plans Pricing
   plan_count: 3
@@ -165,9 +170,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 45.1
+  composite: 45.6
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -177,11 +182,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 47.6
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 10.5
-  previous_composite: 45.1
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     contracts:
@@ -189,8 +194,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -209,7 +220,7 @@ slug: microsoft-azure-postgresql
 tags:
 - Database
 - Managed Database
-- Open-Source
+- Open Source
 - PostgreSQL
 - Relational
 website: https://azure.microsoft.com/en-us/products/postgresql

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -260,7 +260,7 @@ rate_limits:
   slug: lengow-rate-limits
 score:
   band: strong
-  composite: 60.8
+  composite: 62.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 57.0
@@ -272,9 +272,9 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -284,7 +284,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 60.8
+  previous_composite: 62.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -295,8 +295,18 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

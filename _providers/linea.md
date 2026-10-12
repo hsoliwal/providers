@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -59,7 +59,13 @@ apis:
   description: ERC-20 token metadata and information
   name: Linea Tokens API
   slug: linea-tokens-api
-artifact_total: 40
+- description: Public JSON-RPC endpoint for the Linea Sepolia testnet (chain ID 59141), used for application development, prover-changes testing, and bridge integration before deploying to mainnet.
+  name: Linea Sepolia Testnet JSON-RPC
+  slug: sepolia-rpc
+- description: Official TypeScript SDK for interacting with Linea — message-service helpers, bridge claim flows, and L1/L2 utility methods used by app developers and bridge integrators.
+  name: Linea SDK
+  slug: linea-sdk
+artifact_total: 42
 collections:
 - collection_type: open
   name: API Collection
@@ -153,6 +159,14 @@ common:
   title: ''
   type: FinOps
   url: finops/linea-finops.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://docs.linea.build/api
+- group: company
+  title: ''
+  type: Blog
+  url: https://linea.build/blog
 created: '2026-06-13'
 description: 'Linea is ConsenSys'' ZK-EVM Layer 2 network built on Ethereum, offering low fees, fast finality, and full EVM compatibility. Developers access on-chain data through three complementary API surfaces: a public JSON-RPC endpoint (rpc.linea.build) supporting all standard Ethereum methods plus Linea-specific extensions (linea_estimateGas, linea_getProof), a REST Token API (token-api.linea.build) for ERC-20 token metadata and price history, and the Lineascan block explorer API (Etherscan V2-compatible) for transactions, blocks, addresses, token transfers, event logs, and contract verification across Linea Mainnet (chainId 59144) and Sepolia testnet (chainId 59141).'
 examples:
@@ -220,13 +234,13 @@ modified: '2026-09-16'
 name: Linea
 nav: Providers
 network: true
-overview: 'Linea publishes 2 APIs on the [APIs.io](https://apis.io/) network: Prices API and Tokens API. Tagged areas include Blockchain, Ethereum, Layer 2, zkEVM, and Web3.
+overview: 'Linea publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Prices API, Tokens API, and 4 more. Tagged areas include Blockchain, Ethereum, Layer 2, zkEVM, and Web3.
 
 
   The Linea catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Linea''s developer surface includes developer portal, documentation, API reference, getting-started guide, pricing, and 14 more developer resources.'
+  Linea''s developer surface includes developer portal, documentation, API reference, getting-started guide, pricing, engineering blog, and 15 more developer resources.'
 plans:
 - name: Linea Plans
   plan_count: 8
@@ -249,22 +263,22 @@ rules:
   slug: linea-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 48.9
+  composite: 48.0
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 78.3
+    artifact_dirs: 15
+    catalog_earned: 75.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 39.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.9
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 9.8
-    contract_quality: 61.7
-    developer_ergonomics: 54.8
-    discoverability: 68.5
-    operational_transparency: 34.2
+    contract_quality: 57.4
+    developer_ergonomics: 57.1
+    discoverability: 66.1
+    operational_transparency: 31.1
   previous_composite: 48.9
   provenance:
     agentic_access: derived
@@ -273,8 +287,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

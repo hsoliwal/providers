@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -84,10 +84,15 @@ collections:
   name: Amazon Managed Grafana Tags Workspaces API
   slug: open-amazon-managed-grafana-workspaces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-managed-grafana/refs/heads/main/capabilities/amazon-managed-grafana-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-managed-grafana-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/grafana/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -1348,13 +1353,13 @@ modified: '2026-09-16'
 name: Amazon Managed Grafana
 nav: Providers
 network: true
-overview: 'Amazon Managed Grafana publishes 3 APIs on the [APIs.io](https://apis.io/) network: Tags API, Versions API, and Workspaces API. Tagged areas include Dashboards, Monitoring, Observability, and Visualization.
+overview: 'Amazon Managed Grafana publishes 3 APIs on the [APIs.io](https://apis.io/) network: Tags API, Versions API, and Workspaces API. Tagged areas include Dashboards, Monitoring, Observability, Visualization, and Data Visualization.
 
 
   The Amazon Managed Grafana catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Managed Grafana''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 14 more developer resources.'
+  Amazon Managed Grafana''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 15 more developer resources.'
 plans:
 - name: Amazon Managed Grafana Plans Pricing
   plan_count: 3
@@ -1388,21 +1393,21 @@ rules:
   slug: amazon-managed-grafana-spectral-rules
 score:
   band: developing
-  composite: 51.9
+  composite: 53.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 67.5
+    artifact_dirs: 19
+    catalog_earned: 71.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.5
+    catalog_gap: 43.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.0
   facets:
     access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 72.8
+    contract_governance: 27.3
+    contract_quality: 66.7
     developer_ergonomics: 46.4
-    discoverability: 59.3
+    discoverability: 66.1
     operational_transparency: 26.3
   previous_composite: 51.9
   provenance:
@@ -1412,8 +1417,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1442,6 +1453,7 @@ tags:
 - Monitoring
 - Observability
 - Visualization
+- Data Visualization
 use_cases:
 - description: Visualize AWS infrastructure metrics from CloudWatch, EC2, RDS, and other services in unified dashboards.
   name: Infrastructure Monitoring
@@ -1453,5 +1465,5 @@ use_cases:
   name: Business Metrics Dashboards
 - description: Visualize security findings and compliance metrics from AWS Security Hub and GuardDuty.
   name: Security and Compliance Monitoring
-website: https://amazon.com
+website: https://aws.amazon.com/grafana/
 ---

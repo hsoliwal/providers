@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven commerce for the 99 Counties Shopify store via the Universal Commerce Protocol over MCP — catalog search, cart, checkout, fulfillment, and buyer-approved order completion.
@@ -124,9 +124,9 @@ description: 99 Counties is a regenerative-agriculture meat company selling 100%
 image: https://cdn.shopify.com/s/files/1/0350/7175/4378/files/Beef_Sub_Nav_f7d12905-6f5c-4d2a-a699-a144b387aabc.jpg?v=1665766002
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at 99counties.com over HTTP; 5 tools listed.
   name: 99 Counties MCP Server
-  slug: 99-counties-mcp-server
+  slug: 99-counties-ucp
 modified: '2026-07-17'
 name: 99 Counties
 nav: Providers
@@ -143,7 +143,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.7
+  composite: 24.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -157,15 +157,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 21.7
+  previous_composite: 24.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

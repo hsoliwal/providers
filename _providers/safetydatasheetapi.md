@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API that extracts structured data from Safety Data Sheet PDFs, returning normalized 16-section records as JSON/XML/CSV. Includes synchronous single-document extraction, async bulk jobs with webho
@@ -59,9 +59,9 @@ created: '2026-09-16'
 description: A REST API by SafetyDataSheetAPI (a product of DscvryAI) that converts Safety Data Sheet PDFs into normalized 16-section structured records (product identity, GHS/H&P statements, composition, exposure controls/PPE, tox/eco data, disposal, transport, regulatory, revision metadata) output as JSON, XML, and CSV with confidence scores and warnings. Supports OCR for scanned PDFs, multilingual input, custom schema mapping, and bulk/webhook async flows.
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server requiring an API key; 3 tools listed. A candidate, not confirmed as published by the provider.
   name: Safety Data Sheet (SDS/MSDS) Extraction API MCP Server
-  slug: safety-data-sheet-sdsmsds-extraction-api-mcp-server
+  slug: safetydatasheetapi-mcp-yml
 modified: '2026-09-16'
 name: Safety Data Sheet (SDS/MSDS) Extraction API
 nav: Providers
@@ -78,7 +78,7 @@ rate_limits:
   slug: safetydatasheetapi-rate-limits
 score:
   band: emerging
-  composite: 20.2
+  composite: 17.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 47.0
@@ -90,15 +90,21 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 0.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 0.0
-  previous_composite: 20.2
+  previous_composite: 17.8
   provenance:
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

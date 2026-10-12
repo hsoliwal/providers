@@ -14,7 +14,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -25,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
@@ -36,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.7
-  scored_at: '2026-09-20'
+  score: 41.6
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: Aidbox's HL7 FHIR REST API for creating, reading, updating, deleting, and searching clinical and administrative resources. Supports FHIR R4 (4.0.1), R5, and R6, with standard FHIR interactions, transa
@@ -257,9 +258,9 @@ description: Aidbox is a production-ready FHIR platform and clinical data backen
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 9 tools listed.
   name: Aidbox MCP Server
-  slug: aidbox-mcp-server
+  slug: aidbox-mcp
 modified: '2026-08-14'
 name: Aidbox
 nav: Providers
@@ -287,7 +288,7 @@ scopes:
   summary_line: 12 scopes · authorizationCode/clientCredentials/implicit/password
 score:
   band: strong
-  composite: 61.8
+  composite: 57.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -299,9 +300,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 46.3
+    contract_quality: 44.2
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 60.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -310,7 +311,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 61.8
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -326,9 +327,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 71.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

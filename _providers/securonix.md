@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.5
-  scored_at: '2026-09-20'
+  score: 41.2
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The documented SNYPR / Unified Defense SIEM web-service surface reached at /ws on the tenant host — token generation and validation, incident management and actions, activity, asset, geolocation, list
@@ -460,14 +460,14 @@ json_schemas:
   slug: securonix-connectorinfo.schema
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.securonix.com requiring OAuth.
   name: Securonix MCP (www.securonix.com)
-  slug: securonix-mcp-wwwsecuronixcom
+  slug: securonix-mcp-www-securonix-com
 modified: '2026-08-26'
 name: Securonix
 nav: Providers
 network: true
-overview: 'Securonix publishes 50 APIs on the [APIs.io](https://apis.io/) network, including Adversaries API, Assets API, Attachments (Files) API, and 47 more. Tagged areas include Security, SIEM, UEBA, SOAR, and Threat Intelligence.
+overview: 'Securonix publishes 52 APIs on the [APIs.io](https://apis.io/) network, including Adversaries API, Assets API, Attachments (Files) API, and 49 more. Tagged areas include Security, SIEM, UEBA, SOAR, and Threat Intelligence.
 
 
   Securonix''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 26 more developer resources.'
@@ -482,7 +482,7 @@ rate_limits:
   slug: securonix-rate-limits
 score:
   band: thin
-  composite: 34.5
+  composite: 35.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -494,11 +494,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 53.3
     developer_ergonomics: 8.9
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 18.4
-  previous_composite: 34.5
+  previous_composite: 35.2
   provenance:
     conformance: derived
     contracts:
@@ -506,10 +506,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 50
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

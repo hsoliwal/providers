@@ -35,9 +35,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/admagica-ai/refs/heads/main/security/admagica-ai-domain-security.yml
@@ -109,6 +109,10 @@ created: '2026-07-17'
 description: AdMagica.ai is an AI-powered creative advertising platform founded in 2023 and headquartered in London, United Kingdom, that helps e-commerce brands, marketers, and creators generate high-performing ad creatives and manage campaigns at scale. Its "AI marketing agents" automate ad-creative generation, campaign management, and multi-channel publishing to networks such as Meta, Google, LinkedIn, and Instagram, replacing expensive agency and design workflows with template-driven, product-specific ad production. The platform is an end-user marketing SaaS; it currently publishes no public developer API, OpenAPI, or developer documentation. This profile was surfaced as a portfolio company of 500 Global and enriched from the company's public website.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/admagica-ai.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.admagica.ai over HTTP.
+  name: AdMagica AI MCP Server
+  slug: admagica-ai
 modified: '2026-08-12'
 name: AdMagica AI
 nav: Providers
@@ -128,7 +132,7 @@ rate_limits:
   slug: admagica-ai-rate-limits
 score:
   band: emerging
-  composite: 19.0
+  composite: 19.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 39.0
@@ -142,19 +146,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 19.0
+  previous_composite: 19.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

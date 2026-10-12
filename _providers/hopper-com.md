@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -71,6 +71,7 @@ apis:
   slug: hopper-com-sessions-api
 - description: Consumer mobile and web app for booking flights, hotels, homes, and cars. Pioneered price prediction, Price Freeze, and flexible cancellation for end travelers. No public API.
   name: Hopper Consumer App
+  provenance: unpublished
   slug: consumer-app
 - description: Hopper Technology Solutions lodging e-commerce platform that gives partners access to global hotel inventory with conversion-optimized UX and merchandising. Partner-gated; integration via HTS sales.
   name: HTS Stays
@@ -114,6 +115,11 @@ collections:
   name: Airline Analytics Sessions API
   slug: open-hopper-com-sessions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hopper-com/refs/heads/main/capabilities/hopper-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hopper-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hopper-com/refs/heads/main/agentic-access/hopper-com-agentic-access.yml
   title: ''
@@ -205,35 +211,37 @@ modified: '2026-05-25'
 name: Hopper
 nav: Providers
 network: true
-overview: 'Hopper publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Authentication API, Cancel For Any Reason (CFAR) API, and 2 more. Tagged areas include Travel, Travel Fintech, Price Prediction, Cancel For Any Reason, and Disruption Guarantee.
+overview: 'Hopper publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Authentication API, Cancel For Any Reason (CFAR) API, and 9 more. Tagged areas include Travel, Travel Fintech, Price Prediction, Cancel For Any Reason, and Disruption Guarantee.
 
 
-  Hopper''s developer surface includes authentication, GitHub presence, engineering blog, and 17 more developer resources.'
+  Hopper''s developer surface includes authentication, GitHub presence, engineering blog, and 18 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 31.5
+  composite: 28.5
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 37.0
+    artifact_dirs: 9
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 55.0
+    contract_quality: 49.5
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 58.0
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.5
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +249,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,6 +286,6 @@ tags:
 - Ancillary Revenue
 - B2B
 - Loyalty
-- Agentic AI
+- AI Agents
 website: https://www.hopper.com
 ---

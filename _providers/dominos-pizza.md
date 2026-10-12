@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -91,7 +91,7 @@ modified: '2026-06-02'
 name: Domino's Pizza
 nav: Providers
 network: true
-overview: 'Domino''s Pizza is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Food Service, Restaurant, QSR, and Online Ordering.
+overview: 'Domino''s Pizza is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Food Service, Restaurant, Quick Service Restaurant, and Online Ordering.
 
 
   Domino''s Pizza''s developer surface includes developer portal, engineering blog, code examples, and 7 more developer resources.'
@@ -106,7 +106,7 @@ rate_limits:
   slug: dominos-pizza-rate-limits
 score:
   band: emerging
-  composite: 13.2
+  composite: 11.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 29.0
@@ -118,13 +118,19 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 19.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 7.9
-  previous_composite: 13.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +146,7 @@ slug: dominos-pizza
 tags:
 - Food Service
 - Restaurant
-- QSR
+- Quick Service Restaurant
 - Online Ordering
 website: https://www.dominos.com
 ---

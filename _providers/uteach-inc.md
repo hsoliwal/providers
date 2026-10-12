@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -140,20 +140,20 @@ description: Uteach is an all-in-one online teaching platform and LMS that lets 
 image: https://d35v9chtr4gec.cloudfront.net/uteach/assets/android-icon-512x512-mask.png
 layout: provider
 modified: '2026-07-21'
-name: Uteach, Inc.
+name: Uteach
 nav: Providers
 network: true
-overview: 'Uteach, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, E-Learning, LMS, and Online Courses.
+overview: 'Uteach is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, E-Learning, LMS, and Online Courses.
 
 
-  The Uteach, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The Uteach catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Uteach, Inc.''s developer surface includes pricing, engineering blog, support, signup flow, FAQ, YouTube channel, authentication, and 15 more developer resources.'
+  Uteach''s developer surface includes pricing, engineering blog, support, signup flow, FAQ, YouTube channel, authentication, and 15 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 37.1
+  composite: 33.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -165,11 +165,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 37.1
+  previous_composite: 33.7
   provenance:
     conformance: first-party
   regulatory:
@@ -181,9 +181,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

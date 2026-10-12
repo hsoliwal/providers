@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -116,7 +116,7 @@ modified: '2026-09-05'
 name: 8percent
 nav: Providers
 network: true
-overview: '8percent is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Lending, and P2P Lending.
+overview: '8percent is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Lending, and P2P Lending.
 
 
   8percent''s developer surface includes engineering blog, support, and 12 more developer resources.'
@@ -131,7 +131,7 @@ rate_limits:
   slug: 8percent-rate-limits
 score:
   band: minimal
-  composite: 7.9
+  composite: 6.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -145,7 +145,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -154,9 +154,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 7.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +176,7 @@ security:
 slug: 8percent
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Lending
 - P2P Lending

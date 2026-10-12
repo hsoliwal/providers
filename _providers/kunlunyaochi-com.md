@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'The agent-to-agent surface named in the company''s A2A agent card: a JSON-RPC 2.0 endpoint exposing 16 methods — ping, discover, agent/register, agent/search-agent, agent/email, agent/probe, chat/send,'
@@ -176,17 +176,17 @@ description: Kunlun Yaochi (昆仑瑶池) is an AI-agent registry and agent-memo
 image: https://kunlunyaochi.com/klyc-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at kunlunyaochi.com over SSE requiring an API key; 8 tools listed.
   name: 昆仑社区 - Kunlun v3.0
-  slug: 昆仑社区-kunlun-v30
+  slug: kunlun-v3-0
 modified: '2026-09-19'
-name: 沈阳百事通网络科技有限公司
+name: 昆仑瑶池 (Kunlun Yaochi)
 nav: Providers
 network: true
-overview: '沈阳百事通网络科技有限公司 publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Registry, A2A, and MCP.
+overview: '昆仑瑶池 (Kunlun Yaochi) publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Registry, A2A, and MCP.
 
 
-  沈阳百事通网络科技有限公司''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, authentication, and 22 more developer resources.'
+  昆仑瑶池 (Kunlun Yaochi)''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, authentication, and 22 more developer resources.'
 plans:
 - name: Kunlunyaochi Com Plans Pricing
   plan_count: 3
@@ -198,30 +198,43 @@ rate_limits:
   slug: kunlunyaochi-com-rate-limits
 score:
   band: thin
-  composite: 37.6
+  composite: 39.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 60.0
     catalog_earned_first_party: 20.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 32.6
+  delta: 0.0
   facets:
     access_clarity: 55.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 47.4
-  previous_composite: 5.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - greater-china
+  previous_composite: 39.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

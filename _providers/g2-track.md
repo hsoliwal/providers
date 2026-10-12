@@ -24,7 +24,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: G2 Track, the SaaS spend management product BetterCloud acquired from G2 on 2024-03-12 and now sells as BetterCloud Spend Optimization — spend monitoring, contract tracking, license reclamation and us
@@ -202,7 +202,7 @@ rate_limits:
   slug: g2-track-rate-limits
 score:
   band: developing
-  composite: 42.5
+  composite: 45.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 48.0
@@ -216,14 +216,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 42.5
+  previous_composite: 45.4
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

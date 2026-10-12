@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'VOLTHA (Virtual Optical Line Termination Hardware Abstraction) is an open source platform that virtualizes multi-vendor Passive Optical Network (PON) hardware, exposing a vendor-agnostic gRPC API for '
@@ -101,7 +101,7 @@ modified: '2026-04-28'
 name: LF Broadband
 nav: Providers
 network: true
-overview: 'LF Broadband publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Broadband, Linux Foundation, Networking, Telecom, and PON.
+overview: 'LF Broadband publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Broadband, Linux Foundation, Networking, Telecommunications, and PON.
 
 
   LF Broadband''s developer surface includes documentation, support, engineering blog, and 8 more developer resources.'
@@ -116,7 +116,7 @@ rate_limits:
   slug: lf-broadband-rate-limits
 score:
   band: emerging
-  composite: 12.7
+  composite: 13.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -130,20 +130,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 12.7
+  previous_composite: 13.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -160,9 +160,9 @@ tags:
 - Broadband
 - Linux Foundation
 - Networking
-- Telecom
+- Telecommunications
 - PON
-- Open-Source
+- Open Source
 - SDN
 website: https://lfbroadband.org/
 ---

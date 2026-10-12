@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'Cloud-to-cloud API that connects Empatica Health Monitoring Platform data to a sponsor''s or CRO''s own clinical trial systems in real time. Documented capabilities: participant onboarding from external'
@@ -193,8 +193,8 @@ rate_limits:
   name: Empatica Rate Limits
   slug: empatica-rate-limits
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 38.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 47.0
@@ -208,9 +208,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 26.3
-  previous_composite: 40.0
+  previous_composite: 38.5
   provenance:
     conformance: first-party
   regulatory:
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

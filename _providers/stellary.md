@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Hosted remote MCP server (streamable HTTP) exposing board read/write, cockpit supervision, agent runtime, and auto-registered plugin tools. Bearer-authenticated. Listed in the official MCP registry as
@@ -191,8 +191,8 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Stellary MCP Server
-  slug: stellary-mcp-server
-- description: ''
+  slug: mcp
+- description: Remote MCP server at api.stellary.co requiring OAuth.
   name: Stellary Project Management MCP Server
   slug: stellary-project-management-mcp-server
 modified: '2026-09-01'
@@ -214,12 +214,12 @@ rate_limits:
   slug: stellary-rate-limits
 scopes:
 - name: Stellary Scopes
-  scope_count: 0
+  scope_count: 8
   slug: stellary-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 8 scopes
 score:
   band: developing
-  composite: 39.7
+  composite: 43.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 53.0
@@ -233,15 +233,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 39.7
+  previous_composite: 43.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

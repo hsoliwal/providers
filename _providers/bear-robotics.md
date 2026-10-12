@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 1
@@ -267,7 +267,7 @@ modified: '2026-08-06'
 name: Bear Robotics
 nav: Providers
 network: true
-overview: 'Bear Robotics publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Carti API, Fleet Management API, Localization & Navigation API, and 5 more. Tagged areas include Robotics, Autonomous Mobile Robots, Fleet Management, Hospitality, and Food Service.
+overview: 'Bear Robotics publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Carti API, Fleet Management API, Localization & Navigation API, and 6 more. Tagged areas include Robotics, Autonomous Mobile Robots, Fleet Management, Hospitality, and Food Service.
 
 
   The Bear Robotics catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -277,7 +277,7 @@ overview: 'Bear Robotics publishes 8 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 4
 score:
   band: developing
-  composite: 45.2
+  composite: 45.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -289,16 +289,18 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.2
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -309,8 +311,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

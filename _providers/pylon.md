@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   name: Pylon API
   slug: open-pylon
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pylon/refs/heads/main/capabilities/pylon-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pylon-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/pylon/refs/heads/main/agentic-access/pylon-agentic-access.yml
   title: ''
@@ -189,10 +194,10 @@ modified: '2026-06-20'
 name: Pylon
 nav: Providers
 network: true
-overview: 'Pylon publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Contacts API, Custom Fields API, and 6 more. Tagged areas include Customer-Support, Customer Operations, Ticketing, Knowledge Base, and B2B.
+overview: 'Pylon publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Contacts API, Custom Fields API, and 6 more. Tagged areas include Customer Support, Customer Operations, Ticketing, Knowledge Base, and B2B.
 
 
-  Pylon''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Pylon''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Pylon Plans Pricing
   plan_count: 4
@@ -204,23 +209,23 @@ rate_limits:
   slug: pylon-rate-limits
 score:
   band: developing
-  composite: 42.2
+  composite: 39.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 12
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 44.2
     contract_governance: 0.0
-    contract_quality: 53.1
+    contract_quality: 48.1
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 42.2
+    discoverability: 66.1
+    operational_transparency: 28.4
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     contracts:
@@ -228,8 +233,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -250,7 +261,7 @@ security:
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
 slug: pylon
 tags:
-- Customer-Support
+- Customer Support
 - Customer Operations
 - Ticketing
 - Knowledge Base

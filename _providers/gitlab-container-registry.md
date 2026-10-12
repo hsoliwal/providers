@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -69,6 +69,11 @@ collections:
   name: GitLab Container Registry API
   slug: open-gitlab-container-registry
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gitlab-container-registry/refs/heads/main/capabilities/gitlab-container-registry-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gitlab-container-registry-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gitlab-container-registry/refs/heads/main/agentic-access/gitlab-container-registry-agentic-access.yml
   title: ''
@@ -149,7 +154,7 @@ overview: 'GitLab Container Registry publishes 2 APIs on the [APIs.io](https://a
   The GitLab Container Registry catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  GitLab Container Registry''s developer surface includes authentication, documentation, pricing, engineering blog, and 10 more developer resources.'
+  GitLab Container Registry''s developer surface includes authentication, documentation, pricing, engineering blog, and 11 more developer resources.'
 plans:
 - name: Gitlab Container Registry Plans Pricing
   plan_count: 3
@@ -177,9 +182,9 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 35.4
+  composite: 36.4
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -189,11 +194,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 31.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 35.4
+  previous_composite: 36.4
   provenance:
     agentic_access: derived
     contracts:
@@ -201,8 +206,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

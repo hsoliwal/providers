@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -91,14 +91,14 @@ modified: '2026-07-21'
 name: TradeDepot
 nav: Providers
 network: true
-overview: 'TradeDepot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Applicative Saas, B2B Commerce, Retail Distribution, and FMCG.
+overview: 'TradeDepot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Applicative Saas, B2B Commerce, Retail Distribution, and Consumer Packaged Goods.
 
 
   TradeDepot''s developer surface includes engineering blog, authentication, and 8 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 9.1
+  composite: 8.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -112,7 +112,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -121,9 +121,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,7 +151,7 @@ tags:
 - Applicative Saas
 - B2B Commerce
 - Retail Distribution
-- FMCG
+- Consumer Packaged Goods
 - E-Commerce
 - Mobile SDKs
 - Africa

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The ElectronX FIX API provides programmatic access to the exchange through three session types: Order Entry (submit, modify, cancel orders and receive execution reports), Market Data (real-time prices'
@@ -131,7 +131,7 @@ overview: 'Electronx publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 12
 score:
   band: thin
-  composite: 31.3
+  composite: 29.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 32.0
@@ -145,9 +145,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 15.8
-  previous_composite: 31.3
+  previous_composite: 29.6
   provenance:
     conformance: first-party
   regulatory:
@@ -155,9 +155,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,7 +181,7 @@ tags:
 - Power Derivatives
 - Trading
 - Exchange
-- Financial-Services
+- Financial Services
 - FIX API
 - Market Data
 - Futures

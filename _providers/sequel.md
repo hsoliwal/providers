@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.introvoke.com/api/v1
@@ -50,7 +50,7 @@ apis:
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
   description: Calls to managing companies
-  name: Sequel company API
+  name: Sequel Company API
   slug: sequel-company-api
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
@@ -70,7 +70,7 @@ apis:
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
   description: Calls to managing events
-  name: Sequel event API
+  name: Sequel Event API
   slug: sequel-event-api
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
@@ -90,12 +90,12 @@ apis:
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
   description: Calls to managing networking hubs
-  name: Sequel networking API
+  name: Sequel Networking API
   slug: sequel-networking-api
 - baseURL: https://api.introvoke.com/api/v1
   baseurl_source: declared
   description: The platform API from Sequel — 2 operation(s) for platform.
-  name: Sequel platform API
+  name: Sequel Platform API
   slug: sequel-platform-api
 artifact_total: 33
 asyncapis:
@@ -324,12 +324,12 @@ layout: provider
 mcp_servers:
 - description: Official Sequel MCP server. Makes event transcripts and audience/engagement data a native data source inside MCP-capable AI tools (the product page names Claude, ChatGPT, Microsoft Copilot and Gemini)
   name: Sequel MCP Server
-  slug: sequel-mcp-server
+  slug: sequel
 modified: '2026-08-13'
 name: Sequel
 nav: Providers
 network: true
-overview: 'Sequel publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Client API, company API, and 9 more. Tagged areas include Company, Webinars, Virtual Events, Live Streaming, and Video.
+overview: 'Sequel publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Client API, Company API, and 9 more. Tagged areas include Company, Webinars, Virtual Events, Live Streaming, and Video.
 
 
   The Sequel catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -352,7 +352,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 58.5
+  composite: 60.6
   coverage:
     artifact_dirs: 25
     catalog_earned: 49.0
@@ -364,11 +364,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 62.0
+    contract_quality: 56.6
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 58.5
+  previous_composite: 60.6
   provenance:
     conformance: derived
     contracts:
@@ -378,8 +378,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

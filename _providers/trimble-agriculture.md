@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -229,7 +229,7 @@ modified: '2026-05-19'
 name: Trimble Agriculture
 nav: Providers
 network: true
-overview: 'Trimble Agriculture publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Boundaries API, Crop Zones API, Equipment Activities API, and 7 more. Tagged areas include Agriculture, Farming, IoT, Precision Agriculture, and Field Management.
+overview: 'Trimble Agriculture publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Boundaries API, Crop Zones API, Equipment Activities API, and 8 more. Tagged areas include Agriculture, Farming, IoT, Precision Agriculture, and Field Management.
 
 
   The Trimble Agriculture catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -269,7 +269,7 @@ rules:
   slug: trimble-agriculture-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 34.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 56.5
@@ -281,11 +281,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
-    contract_quality: 60.8
+    contract_quality: 55.5
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 35.1
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     contracts:
@@ -293,8 +293,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -322,5 +328,6 @@ tags:
 - Field Management
 - Prescriptions
 - Telematics
+- AgTech
 website: https://agriculture.trimble.com/
 ---

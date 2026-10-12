@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -137,7 +137,7 @@ modified: '2026-09-16'
 name: Arrow Electronics
 nav: Providers
 network: true
-overview: 'Arrow Electronics publishes 1 API on the [APIs.io](https://apis.io/) network: En API. Tagged areas include Electronics, Components, Supply Chain, Procurement, and Distribution.
+overview: 'Arrow Electronics publishes 2 APIs on the [APIs.io](https://apis.io/) network, including En API, and 1 more. Tagged areas include Electronics, Components, Supply Chain, Procurement, and Distribution.
 
 
   Arrow Electronics'' developer surface includes developer portal, getting-started guide, support, and 8 more developer resources.'
@@ -168,7 +168,7 @@ rate_limits:
   slug: arrow-electronics-rate-limits
 score:
   band: thin
-  composite: 32.2
+  composite: 30.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 44.0
@@ -180,11 +180,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 32.2
+  previous_composite: 30.9
   provenance:
     agentic_access: derived
     contracts:
@@ -192,8 +192,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

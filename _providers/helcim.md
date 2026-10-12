@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -104,6 +104,11 @@ collections:
   name: The Helcim API
   slug: open-helcim-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/helcim/refs/heads/main/capabilities/helcim-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/helcim-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -299,15 +304,15 @@ overview: 'Helcim publishes 9 APIs on the [APIs.io](https://apis.io/) network, i
   The Helcim catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Helcim''s developer surface includes authentication, documentation, API reference, getting-started guide, sandbox, changelog, pricing, and 33 more developer resources.'
+  Helcim''s developer surface includes authentication, documentation, API reference, getting-started guide, sandbox, changelog, pricing, and 34 more developer resources.'
 random_paper: 10
 rate_limits:
 - limit_count: 3
   name: Helcim Rate Limits
   slug: helcim-rate-limits
 score:
-  band: strong
-  composite: 55.8
+  band: developing
+  composite: 52.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -319,9 +324,9 @@ score:
   facets:
     access_clarity: 48.7
     contract_governance: 18.2
-    contract_quality: 57.0
-    developer_ergonomics: 45.8
-    discoverability: 75.9
+    contract_quality: 52.1
+    developer_ergonomics: 45.4
+    discoverability: 73.2
     operational_transparency: 77.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -330,7 +335,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 55.8
+  previous_composite: 52.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -346,9 +351,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 55.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 5
@@ -216,6 +216,11 @@ collections:
   name: Lightrun Actions Watched packages API
   slug: open-lightrun-watched-packages-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lightrun/refs/heads/main/capabilities/lightrun-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lightrun-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -384,7 +389,7 @@ layout: provider
 mcp_servers:
 - description: Connect AI assistants to live runtime context for production debugging.
   name: Lightrun MCP Server
-  slug: lightrun-mcp-server
+  slug: com-lightrun-mcp-server
 modified: '2026-09-16'
 name: Lightrun
 nav: Providers
@@ -395,7 +400,7 @@ overview: 'Lightrun publishes 20 APIs on the [APIs.io](https://apis.io/) network
   The Lightrun catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lightrun''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 28 more developer resources.'
+  Lightrun''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 29 more developer resources.'
 random_paper: 19
 scopes:
 - name: Lightrun Scopes
@@ -403,8 +408,8 @@ scopes:
   slug: lightrun-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 55.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -416,11 +421,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 54.7
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 54.2
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -431,8 +436,14 @@ score:
       total: 20
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

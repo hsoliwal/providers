@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted, embeddable account-linking experience that lets a consumer authenticate to their financial institution and permission data sharing, returning the linked accounts to the partner application.
@@ -390,7 +390,7 @@ modified: '2026-07-23'
 name: Finicity
 nav: Providers
 network: true
-overview: 'Finicity publishes 35 APIs on the [APIs.io](https://apis.io/) network, including Account Validation Assistance API, Accounts API, Accounts (Simple) API, and 32 more. Tagged areas include Financial-Services, Data Aggregation, Open Finance, Open Banking, and FDX.
+overview: 'Finicity publishes 41 APIs on the [APIs.io](https://apis.io/) network, including Account Validation Assistance API, Accounts API, Accounts (Simple) API, and 38 more. Tagged areas include Financial Services, Data Aggregation, Open Finance, Open Banking, and FDX.
 
 
   The Finicity catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -400,7 +400,7 @@ overview: 'Finicity publishes 35 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 5
 score:
   band: developing
-  composite: 49.7
+  composite: 47.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -412,9 +412,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 65.6
+    contract_quality: 59.9
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -423,7 +423,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 49.7
+  previous_composite: 47.2
   provenance:
     conformance: derived
     contracts:
@@ -442,9 +442,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 41.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -461,7 +461,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: finicity
 tags:
-- Financial-Services
+- Financial Services
 - Data Aggregation
 - Open Finance
 - Open Banking

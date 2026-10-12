@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -321,7 +321,7 @@ modified: '2026-09-16'
 name: Bloomberg Buyside Enterprise Solutions
 nav: Providers
 network: true
-overview: 'Bloomberg Buyside Enterprise Solutions publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Allocations API, Benchmarks API, Blotters API, and 19 more. Tagged areas include Analytics, Asset Management, Buy-Side, Enterprise Solutions, and Financial-Services.
+overview: 'Bloomberg Buyside Enterprise Solutions publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Allocations API, Benchmarks API, Blotters API, and 21 more. Tagged areas include Analytics, Asset Management, Buy-Side, Enterprise Solutions, and Financial Services.
 
 
   The Bloomberg Buyside Enterprise Solutions catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -349,8 +349,8 @@ rules:
     warn: 4
   slug: bloomberg-buyside-enterprise-solutions-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.4
+  band: thin
+  composite: 38.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 52.3
@@ -362,11 +362,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 9.8
-    contract_quality: 61.7
+    contract_quality: 55.9
     developer_ergonomics: 38.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 42.4
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     contracts:
@@ -379,9 +379,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 61.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -406,9 +406,9 @@ tags:
 - Asset Management
 - Buy-Side
 - Enterprise Solutions
-- Financial-Services
+- Financial Services
 - Market Data
-- Portfolio-Management
+- Portfolio Management
 - Trading
 website: https://bloomberg.com
 ---

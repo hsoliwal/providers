@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -120,7 +120,7 @@ layout: provider
 mcp_servers:
 - description: Supper exposes a hosted, remote MCP server so any MCP-compatible AI assistant (Claude, Claude Code, etc.) can query a company's connected data in natural language, grounded in Supper's semantic model.
   name: Supper MCP Server
-  slug: supper-mcp-server
+  slug: supper
 modified: '2026-07-21'
 name: Supper
 nav: Providers
@@ -132,7 +132,7 @@ overview: 'Supper is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 11
 score:
   band: emerging
-  composite: 20.3
+  composite: 22.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -146,14 +146,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 20.3
+  previous_composite: 22.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

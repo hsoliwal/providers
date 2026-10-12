@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Single task-based endpoint for image, video, audio, 3D, and text inference across 400K+ models, reachable over HTTP, WebSocket, and Server-Sent Events.
@@ -185,21 +185,21 @@ description: Runware is a unified AI inference platform — "one API for all AI"
 image: https://runware.ai/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.runware.ai over HTTP; 8 tools listed.
   name: Runware MCP Server
-  slug: runware-mcp-server
+  slug: runware
 modified: '2026-07-21'
 name: Runware
 nav: Providers
 network: true
-overview: 'Runware publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Inference, and Image-Generation.
+overview: 'Runware publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Inference, and Image Generation.
 
 
   Runware''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, pricing, signup flow, and 24 more developer resources.'
 random_paper: 2
 score:
   band: developing
-  composite: 41.0
+  composite: 43.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -213,15 +213,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 41.0
+  previous_composite: 43.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -249,9 +259,9 @@ slug: runware
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Inference
-- Image-Generation
+- Image Generation
 - Video Generation
 - Audio Generation
 - Text Generation

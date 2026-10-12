@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.precision.dext.com
@@ -205,8 +205,8 @@ rate_limits:
   name: Dext Rate Limits
   slug: dext-rate-limits
 score:
-  band: strong
-  composite: 54.5
+  band: developing
+  composite: 51.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -218,11 +218,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 54.5
+  previous_composite: 51.2
   provenance:
     conformance: derived
     contracts:
@@ -237,9 +237,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

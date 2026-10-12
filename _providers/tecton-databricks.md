@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the Tecton feature platform - the Feature Service (low-latency online feature retrieval, e.g. POST /api/v1/feature-service/get-features), the Ingest API, the Metadata API, and SCIM 2.0 pr
@@ -160,21 +160,21 @@ description: 'Tecton is a feature platform (feature store) for machine learning 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tecton-databricks.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 5 tools listed.
   name: Tecton (Databricks) MCP Server
-  slug: tecton-databricks-mcp-server
+  slug: tecton-mcp
 modified: '2026-07-21'
 name: Tecton (Databricks)
 nav: Providers
 network: true
-overview: 'Tecton (Databricks) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Infrastructure, Feature Store, Feature Platform, and Machine-Learning.
+overview: 'Tecton (Databricks) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Infrastructure, Feature Store, Feature Platform, and Machine Learning.
 
 
   Tecton (Databricks)''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, CLI, and 18 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 33.8
+  composite: 35.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -188,14 +188,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 33.8
+  previous_composite: 35.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,7 +227,7 @@ tags:
 - AI Infrastructure
 - Feature Store
 - Feature Platform
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Real-Time
 - Databricks

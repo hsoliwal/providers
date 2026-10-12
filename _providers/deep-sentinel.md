@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the Deep Sentinel store. A live, anonymous Model Context Protocol endpoint exposing thirteen catalog, cart, checkout and order tools, implementing the Universal Co
@@ -159,9 +159,9 @@ description: 'Deep Sentinel is a US security company that pairs on-camera AI wit
 image: https://www.deepsentinel.com/wp-content/uploads/2018/01/cropped-DS_Primary_Logo_Negative_RGB-Large-Favicon-300x300.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.deepsentinel.com.
   name: Deep Sentinel MCP Server
-  slug: deep-sentinel-mcp-server
+  slug: deep-sentinel-mcp-yml
 modified: '2026-08-12'
 name: Deep Sentinel
 nav: Providers
@@ -182,7 +182,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 23.7
+  composite: 24.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -196,15 +196,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 23.7
+  previous_composite: 24.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +234,7 @@ tags:
 - Video Surveillance
 - Home Security
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Monitoring
 - IoT
 - Commerce

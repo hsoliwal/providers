@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.9
-  scored_at: '2026-09-20'
+  score: 0.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Aqwire Connect (Access) API is a developer-facing payments API that lets merchants integrate their application with Aqwire to create cross-border payment transactions. The reference documentation '
@@ -89,14 +89,14 @@ modified: '2026-07-20'
 name: Qwikwire
 nav: Providers
 network: true
-overview: 'Qwikwire publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Real-Estate, and Fintech.
+overview: 'Qwikwire publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Real Estate, and Fintech.
 
 
   Qwikwire''s developer surface includes API reference, signup flow, support, and 7 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -110,7 +110,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -119,15 +119,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 10.4
+  previous_composite: 10.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -144,7 +144,7 @@ tags:
 - Company
 - Payments
 - Cross-Border Payments
-- Real-Estate
+- Real Estate
 - Fintech
 - Philippines
 - Multi-Currency

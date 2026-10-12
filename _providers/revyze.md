@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.4
-  scored_at: '2026-09-20'
+  score: 17.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.revyze.fr
@@ -200,8 +200,8 @@ overview: 'Revyze publishes 10 APIs on the [APIs.io](https://apis.io/) network, 
   Revyze''s developer surface includes authentication and 11 more developer resources.'
 random_paper: 17
 score:
-  band: thin
-  composite: 27.9
+  band: emerging
+  composite: 25.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -213,9 +213,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 47.9
+    contract_quality: 43.9
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -225,7 +225,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 27.9
+  previous_composite: 25.4
   provenance:
     contracts:
       callable: 0.0
@@ -237,9 +237,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

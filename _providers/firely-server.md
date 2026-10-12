@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -327,14 +327,14 @@ modified: '2026-09-16'
 name: Firely
 nav: Providers
 network: true
-overview: 'Firely publishes 2 APIs on the [APIs.io](https://apis.io/) network: Catalog API and Simplifier.net FHIR Package API. Tagged areas include FHIR, HL7, Healthcare, Health IT, and Interoperability.
+overview: 'Firely publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Simplifier.net FHIR Package API, and 1 more. Tagged areas include FHIR, HL7, Healthcare, Health IT, and Interoperability.
 
 
   Firely''s developer surface includes developer portal, documentation, tooling, code examples, pricing, signup flow, training material, and 48 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 27.8
+  composite: 26.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -346,17 +346,19 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.6
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - netherlands
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - benelux
     - europe
-  previous_composite: 27.8
+  previous_composite: 26.8
   provenance:
     agentic_access: derived
     contracts:
@@ -369,9 +371,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

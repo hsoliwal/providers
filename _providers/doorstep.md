@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -107,14 +107,14 @@ modified: '2026-07-18'
 name: Doorstep
 nav: Providers
 network: true
-overview: 'Doorstep is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Delivery, Last-Mile Logistics, Indoor Positioning, and Location Tracking.
+overview: 'Doorstep is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Delivery, Last Mile Delivery, Indoor Positioning, and Location Tracking.
 
 
   Doorstep''s developer surface includes documentation, getting-started guide, support, authentication, and 11 more developer resources.'
 random_paper: 0
 score:
   band: emerging
-  composite: 21.3
+  composite: 21.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -128,11 +128,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -152,7 +158,7 @@ slug: doorstep
 tags:
 - Company
 - Delivery
-- Last-Mile Logistics
+- Last Mile Delivery
 - Indoor Positioning
 - Location Tracking
 - Mobile SDK

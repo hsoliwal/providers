@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.3
-  scored_at: '2026-09-20'
+  score: 27.2
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Publisher ingest API for the Gist Content Network. Lets publisher partners push articles to ProRata in real time (`POST /ingest/article`) or in bulk for archival backfill (`POST /ingest/multiple_artic
@@ -242,7 +242,7 @@ modified: '2026-08-12'
 name: Gist
 nav: Providers
 network: true
-overview: 'Gist publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Health API, Publishers API, and 4 more. Tagged areas include Company, Artificial Intelligence, Generative AI, Advertising, and Marketing.
+overview: 'Gist publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Health API, Publishers API, and 6 more. Tagged areas include Company, Artificial Intelligence, Generative AI, Advertising, and Marketing.
 
 
   Gist''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, sandbox, authentication, and 23 more developer resources.'
@@ -257,7 +257,7 @@ rate_limits:
   slug: gist-rate-limits
 score:
   band: developing
-  composite: 40.3
+  composite: 39.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -269,11 +269,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 50.6
+    contract_quality: 45.6
     developer_ergonomics: 62.5
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 23.7
-  previous_composite: 40.3
+  previous_composite: 39.8
   provenance:
     conformance: derived
     contracts:
@@ -283,8 +283,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -315,6 +321,6 @@ tags:
 - Content Licensing
 - Media
 - RAG
-- Advertising Technology
+- AdTech
 website: https://gist.ai
 ---

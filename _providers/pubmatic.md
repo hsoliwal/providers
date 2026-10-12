@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.3
-  scored_at: '2026-09-20'
+  score: 34.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'PubMatic''s Model Context Protocol (MCP) server — the company''s public agent-facing API surface for programmatic advertising. It exposes four published tools over JSON-RPC 2.0: deal_management (create '
@@ -265,7 +265,7 @@ description: 'PubMatic is a Redwood City, California-headquartered independent t
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pubmatic.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.pubmatic.com over HTTP requiring OAuth; 4 tools listed.
   name: PubMatic MCP Server
   slug: pubmatic-mcp-server
 modified: '2026-08-13'
@@ -286,8 +286,8 @@ rate_limits:
   name: Pubmatic Rate Limits
   slug: pubmatic-rate-limits
 score:
-  band: emerging
-  composite: 25.8
+  band: thin
+  composite: 27.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -301,20 +301,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.8
+  previous_composite: 27.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -348,6 +356,6 @@ tags:
 - Identity
 - Curation
 - Auction Packages
-- Agentic AI
+- AI Agents
 website: https://pubmatic.com
 ---

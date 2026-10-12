@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -85,7 +85,7 @@ overview: 'Pensive is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 14
 score:
   band: emerging
-  composite: 14.0
+  composite: 12.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -99,17 +99,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 14.0
+  previous_composite: 12.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

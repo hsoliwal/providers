@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 15.0
+  scored_at: '2026-10-04'
 api_count: 11
 apis:
 - description: The Agora Video Calling API enables real-time, interactive video communication with sub-200ms global latency. Supports one-to-one calls, group calls, and multi-host scenarios across mobile, web, deskt
@@ -68,7 +68,7 @@ apis:
 - description: The Agora Analytics API surfaces quality, performance, and usage metrics for all RTC, signaling, chat, and recording sessions. Provides call inspector, real-time dashboards, geographic performance, an
   name: Agora Analytics API
   slug: agora-analytics-api
-artifact_total: 42
+artifact_total: 43
 common:
 - group: operate
   title: ''
@@ -280,6 +280,10 @@ integrations:
 - description: Native engine plugins for in-game voice, video, and signaling.
   name: Unity and Unreal Engine
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.agora.io over HTTP; 4 tools listed.
+  name: Agora MCP Server
+  slug: agora-io
 modified: '2026-05-25'
 name: Agora
 nav: Providers
@@ -305,13 +309,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
   previous_composite: 30.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -348,6 +358,7 @@ tags:
 - Cloud Recording
 - WebRTC
 - Communications Platform
+- Real-Time
 use_cases:
 - description: HIPAA-aligned video visits, secure messaging, and AI-assisted clinical workflows between patients and providers.
   name: Telehealth and Remote Care

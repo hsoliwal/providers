@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.7
-  scored_at: '2026-09-20'
+  score: 32.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Rhone's agent-facing commerce surface, implementing the Universal Commerce Protocol over MCP (JSON-RPC 2.0). Thirteen tools cover catalog search and lookup, product detail, cart create / update / canc
@@ -111,9 +111,9 @@ description: 'Rhone Apparel, Inc. is a direct-to-consumer men''s premium perform
 image: https://rhone.myshopify.com/cdn/shop/files/Discount_auto_applied_1200x.png?v=1733928390
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at rhone.myshopify.com over HTTP; 13 tools listed.
   name: Rhone Apparel MCP Server
-  slug: rhone-apparel-mcp-server
+  slug: rhone-ucp
 modified: '2026-08-26'
 name: Rhone Apparel
 nav: Providers
@@ -133,12 +133,12 @@ rate_limits:
   slug: rhone-apparel-rate-limits
 scopes:
 - name: Rhone Apparel Scopes
-  scope_count: 0
+  scope_count: 4
   slug: rhone-apparel-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 19.1
+  composite: 20.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -152,15 +152,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 19.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 20.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

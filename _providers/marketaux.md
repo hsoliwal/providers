@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.marketaux.com/v1
@@ -209,7 +209,7 @@ rate_limits:
   slug: marketaux-rate-limits
 score:
   band: developing
-  composite: 43.6
+  composite: 42.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 61.0
@@ -223,9 +223,9 @@ score:
     contract_governance: 4.5
     contract_quality: 17.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 43.6
+  previous_composite: 42.0
   provenance:
     conformance: derived
     contracts:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -65,7 +65,7 @@ apis:
   description: Cross-encoder reranking
   name: Jina AI Reranker API
   slug: jina-ai-reranker-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -92,6 +92,11 @@ collections:
   name: Jina AI Reranker API
   slug: open-jina-ai-reranker
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/capabilities/jina-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jina-ai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/jina-ai/refs/heads/main/agentic-access/jina-ai-agentic-access.yml
   title: ''
@@ -155,14 +160,17 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.jina.ai over HTTP; 22 tools listed.
+  name: Jina AI MCP Server
+  slug: jina-ai
 modified: '2026-05-19'
 name: Jina AI
 nav: Providers
 network: true
-overview: 'Jina AI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Embeddings API, Reader API, and 1 more. Tagged areas include Artificial Intelligence, Embeddings, Machine-Learning, Reranking, and Search.
+overview: 'Jina AI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Embeddings API, Reader API, and 1 more. Tagged areas include Artificial Intelligence, Embeddings, Machine Learning, Reranking, and Search.
 
 
-  Jina AI''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, and 7 more developer resources.'
+  Jina AI''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, and 8 more developer resources.'
 plans:
 - name: Jina Ai Plans Pricing
   plan_count: 5
@@ -174,9 +182,9 @@ rate_limits:
   slug: jina-ai-rate-limits
 score:
   band: thin
-  composite: 34.3
+  composite: 32.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 49.0
     catalog_earned_first_party: 0.0
     catalog_gap: 66.0
@@ -186,11 +194,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 48.7
     developer_ergonomics: 31.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 34.3
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
@@ -199,8 +207,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -219,7 +233,7 @@ slug: jina-ai
 tags:
 - Artificial Intelligence
 - Embeddings
-- Machine-Learning
+- Machine Learning
 - Reranking
 - Search
 website: https://jina.ai

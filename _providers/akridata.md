@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Programmatic access to Akridata Data Explorer via the first-party Python SDK (akride) and ingest CLI: data/dataset registration, catalog operations, explore and analyze jobs, image-based similarity se'
@@ -128,14 +128,14 @@ modified: '2026-07-17'
 name: Akridata
 nav: Providers
 network: true
-overview: 'Akridata publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer-Vision, Data Curation, and Machine-Learning.
+overview: 'Akridata publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer Vision, Data Curation, and Machine Learning.
 
 
   Akridata''s developer surface includes documentation, getting-started guide, engineering blog, pricing, support, signup flow, CLI, and 11 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 26.6
+  composite: 26.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -149,11 +149,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 48.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 26.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,9 +179,9 @@ slug: akridata
 tags:
 - Company
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Data Curation
-- Machine-Learning
+- Machine Learning
 - Visual Inspection
 - Data Explorer
 - MLOps

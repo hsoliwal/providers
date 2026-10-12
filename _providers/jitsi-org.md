@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Browser-side JavaScript API (also called the External API) that embeds a Jitsi Meet conference into any web page through an iframe. Exposes the JitsiMeetExternalAPI constructor with commands (executeC
@@ -278,14 +278,14 @@ modified: '2026-05-25'
 name: Jitsi
 nav: Providers
 network: true
-overview: 'Jitsi publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Video Conferencing, WebRTC, Real-Time Communication, Open-Source, and Voice.
+overview: 'Jitsi publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Video Conferencing, WebRTC, Real-Time Communication, Open Source, and Voice.
 
 
   Jitsi''s developer surface includes developer portal, sandbox, documentation, getting-started guide, signup flow, pricing, tooling, and 33 more developer resources.'
 random_paper: 18
 score:
   band: thin
-  composite: 33.5
+  composite: 33.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -297,13 +297,19 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 73.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 28.9
-  previous_composite: 33.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 33.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -329,7 +335,7 @@ tags:
 - Video Conferencing
 - WebRTC
 - Real-Time Communication
-- Open-Source
+- Open Source
 - Voice
 - Video
 - SIP

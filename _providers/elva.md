@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public, no-auth REST API for scoring OpenAPI documents. GET /api/review/checks returns the full set of checks; POST /api/review scores a submitted OpenAPI document with category scores, per-check brea
@@ -135,7 +135,7 @@ description: 'API management platform for the agentic era: reads repos to build 
 image: https://getelva.ai/opengraph-image
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.getelva.ai requiring OAuth.
   name: Elva MCP
   slug: elva-mcp
 modified: '2026-09-07'
@@ -160,7 +160,7 @@ rate_limits:
   slug: elva-rate-limits
 score:
   band: developing
-  composite: 49.5
+  composite: 50.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 61.0
@@ -172,16 +172,26 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 49.5
+  previous_composite: 50.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

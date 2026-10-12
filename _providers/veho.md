@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 1
@@ -48,42 +48,42 @@ apis:
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Labels
-  name: Veho labels API
+  name: Veho Labels API
   slug: veho-labels-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Manifests
-  name: Veho manifests API
+  name: Veho Manifests API
   slug: veho-manifests-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Merchants
-  name: Veho merchants API
+  name: Veho Merchants API
   slug: veho-merchants-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Orders
-  name: Veho orders API
+  name: Veho Orders API
   slug: veho-orders-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Packages
-  name: Veho packages API
+  name: Veho Packages API
   slug: veho-packages-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Quotes
-  name: Veho quotes API
+  name: Veho Quotes API
   slug: veho-quotes-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Webhooks
-  name: Veho webhooks API
+  name: Veho Webhooks API
   slug: veho-webhooks-api
 - baseURL: https://api.shipveho.com/v2
   baseurl_source: declared
   description: Serviceable Zips
-  name: Veho zips API
+  name: Veho Zips API
   slug: veho-zips-api
 artifact_total: 31
 asyncapis:
@@ -305,7 +305,7 @@ modified: '2026-07-21'
 name: Veho
 nav: Providers
 network: true
-overview: 'Veho publishes 8 APIs on the [APIs.io](https://apis.io/) network, including labels API, manifests API, merchants API, and 5 more. Tagged areas include Company, Logistics, Shipping, Last Mile Delivery, and Package Tracking.
+overview: 'Veho publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Labels API, Manifests API, Merchants API, and 5 more. Tagged areas include Company, Logistics, Shipping, Last Mile Delivery, and Package Tracking.
 
 
   The Veho catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -315,7 +315,7 @@ overview: 'Veho publishes 8 APIs on the [APIs.io](https://apis.io/) network, inc
 random_paper: 16
 score:
   band: strong
-  composite: 54.8
+  composite: 56.1
   coverage:
     artifact_dirs: 25
     catalog_earned: 37.0
@@ -327,11 +327,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 69.2
+    contract_quality: 63.4
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 54.8
+  previous_composite: 56.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -342,8 +342,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

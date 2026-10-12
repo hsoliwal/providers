@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -98,17 +98,17 @@ description: 'Huma Technologies Inc. operates Huma Finance, described as the fir
 image: https://huma.finance/favicon.ico
 layout: provider
 modified: '2026-07-19'
-name: Huma Technologies Inc.
+name: Huma Technologies
 nav: Providers
 network: true
-overview: 'Huma Technologies Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PayFi, DeFi, Payments, and Lending.
+overview: 'Huma Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PayFi, DeFi, Payments, and Lending.
 
 
-  Huma Technologies Inc.''s developer surface includes documentation, signup flow, support, and 10 more developer resources.'
+  Huma Technologies'' developer surface includes documentation, signup flow, support, and 10 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 9.7
+  composite: 10.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -122,17 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 9.7
+  previous_composite: 10.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,48 +35,48 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides endpoints to access to commands sent to the submission API
-  name: Interhyp commands API
+  name: Interhyp Commands API
   slug: interhyp-commands-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: access to submission documents
-  name: Interhyp documents API
+  name: Interhyp Documents API
   slug: interhyp-documents-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides endpoints for financing application resources not associate to a specific financing partner
-  name: Interhyp financing-application API
+  name: Interhyp Financing Application API
   slug: interhyp-financing-application-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides basic info about service status and version of the submission API specs used
-  name: Interhyp info API
+  name: Interhyp Info API
   slug: interhyp-info-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides endpoints to access submission logbook
-  name: Interhyp logbook API
+  name: Interhyp Logbook API
   slug: interhyp-logbook-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides endpoints for pre-submission resources associated with a specific financing partner
-  name: Interhyp pre-submission-checks API
+  name: Interhyp Pre Submission Checks API
   slug: interhyp-pre-submission-checks-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: access to submission protocol
-  name: Interhyp protocol API
+  name: Interhyp Protocol API
   slug: interhyp-protocol-api
 - baseURL: https://api.interhyp.de/submission/v2
   baseurl_source: declared
   description: provides endpoints for submission resources associated with a specific financing partner
-  name: Interhyp submissions API
+  name: Interhyp Submissions API
   slug: interhyp-submissions-api
 artifact_total: 19
 collections:
@@ -232,14 +232,14 @@ modified: '2026-07-19'
 name: Interhyp
 nav: Providers
 network: true
-overview: 'Interhyp publishes 8 APIs on the [APIs.io](https://apis.io/) network, including commands API, documents API, financing-application API, and 5 more. Tagged areas include Company, Fintech, Mortgage, Lending, and Baufinanzierung.
+overview: 'Interhyp publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Commands API, Documents API, Financing Application API, and 5 more. Tagged areas include Company, Fintech, Mortgage, Lending, and Baufinanzierung.
 
 
   Interhyp''s developer surface includes documentation, getting-started guide, changelog, signup flow, support, authentication, sandbox, and 18 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 43.6
+  composite: 41.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -251,9 +251,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -263,7 +263,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 43.6
+  previous_composite: 41.7
   provenance:
     conformance: derived
     contracts:
@@ -278,9 +278,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -302,7 +302,7 @@ tags:
 - Mortgage
 - Lending
 - Baufinanzierung
-- Real-Estate
+- Real Estate
 - Banking
 - Germany
 - API-First

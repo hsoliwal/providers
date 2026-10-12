@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: true
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -192,7 +192,7 @@ overview: 'Parafi publishes 4 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 11
 score:
   band: developing
-  composite: 44.4
+  composite: 42.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -204,11 +204,11 @@ score:
   facets:
     access_clarity: 57.1
     contract_governance: 4.5
-    contract_quality: 44.0
+    contract_quality: 39.6
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 44.4
+  previous_composite: 42.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -224,9 +224,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

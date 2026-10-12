@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for programmatically managing FlutterFlow projects: list projects, list and export partitioned project YAML files, validate YAML before applying, and update a project by YAML. Used to automat'
@@ -184,7 +184,7 @@ layout: provider
 mcp_servers:
 - description: Official FlutterFlow AI MCP server. Exposes FlutterFlow's Project APIs to an MCP-compatible agent (Claude Code, Gemini CLI, Codex) so it can read and modify a FlutterFlow project using real project co
   name: FlutterFlow MCP Server
-  slug: flutterflow-mcp-server
+  slug: flutterflow-ai
 modified: '2026-07-19'
 name: FlutterFlow
 nav: Providers
@@ -196,7 +196,7 @@ overview: 'FlutterFlow publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 4
 score:
   band: thin
-  composite: 36.1
+  composite: 37.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -210,14 +210,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 36.1
+  previous_composite: 37.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

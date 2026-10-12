@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -66,7 +66,7 @@ apis:
   description: The Suggested Radius API from PredictHQ — 1 operation(s) for suggested radius.
   name: PredictHQ Suggested Radius API
   slug: predicthq-suggested-radius-api
-artifact_total: 16
+artifact_total: 17
 collections:
 - collection_type: open
   name: API Collection
@@ -170,11 +170,15 @@ finops:
   slug: predicthq-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/predicthq.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.predicthq.com over HTTP.
+  name: PredictHQ MCP Server
+  slug: predicthq
 modified: '2026-05-19'
 name: PredictHQ
 nav: Providers
 network: true
-overview: 'PredictHQ publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Features API, Places API, and 1 more. Tagged areas include Demand Intelligence, Event, Forecasting, Machine-Learning, and Real-World Events.
+overview: 'PredictHQ publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Features API, Places API, and 1 more. Tagged areas include Demand Intelligence, Event, Forecasting, Machine Learning, and Real-World Events.
 
 
   PredictHQ''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, engineering blog, support, and 11 more developer resources.'
@@ -188,8 +192,8 @@ rate_limits:
   name: Predicthq Rate Limits
   slug: predicthq-rate-limits
 score:
-  band: developing
-  composite: 39.9
+  band: thin
+  composite: 38.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 44.0
@@ -201,11 +205,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 48.8
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 23.7
-  previous_composite: 39.9
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +218,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -235,7 +245,7 @@ tags:
 - Demand Intelligence
 - Event
 - Forecasting
-- Machine-Learning
+- Machine Learning
 - Real-World Events
 website: https://www.predicthq.com/
 ---

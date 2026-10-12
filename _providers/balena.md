@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -48,19 +48,9 @@ apis:
 - description: The balenaCloud REST API is the primary interface to the balena platform. It exposes resources for devices, fleets (applications), releases, environment variables, organizations, and user accounts wit
   name: Balena Cloud API
   slug: balena-cloud-api
-- baseURL: https://api.balena-cloud.com/v7
-  baseurl_source: declared
-  description: Provision, inspect, configure, and remove devices in balenaCloud, including environment variables, tags, status, and OS information.
-  name: Balena Devices API
-  slug: balena-devices-api
 - description: Manage balena fleets, formerly known as applications, that group devices and releases for deployment.
   name: Balena Fleets (Applications) API
   slug: balena-fleets-api
-- baseURL: https://api.balena-cloud.com/v7
-  baseurl_source: declared
-  description: Manage container-based releases and their assets, pinning, and rollout across a fleet.
-  name: Balena Releases API
-  slug: balena-releases-api
 - description: On-device REST API exposed by balena Supervisor for local control of containers, application state, host configuration, reboot, shutdown, and update checks.
   name: Balena Supervisor API
   slug: balena-supervisor-api
@@ -76,15 +66,15 @@ apis:
   slug: balena-device-tags-api
 - baseURL: https://api.balena-cloud.com/v7
   baseurl_source: declared
-  description: IoT devices managed by balena
+  description: Provision, inspect, configure, and remove devices in balenaCloud, including environment variables, tags, status, and OS information.
   name: Balena Devices API
   slug: balena-devices-api
 - baseURL: https://api.balena-cloud.com/v7
   baseurl_source: declared
-  description: Container image releases
+  description: Manage container-based releases and their assets, pinning, and rollout across a fleet.
   name: Balena Releases API
   slug: balena-releases-api
-artifact_total: 23
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -206,7 +196,7 @@ modified: '2026-05-23'
 name: Balena
 nav: Providers
 network: true
-overview: 'Balena publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Devices API, Releases API, Applications API, and 3 more. Tagged areas include Containers, Device Management, Edge, Embedded Linux, and Fleet Management.
+overview: 'Balena publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Device Tags API, Devices API, and 4 more. Tagged areas include Containers, Device Management, Edge, Embedded Linux, and Fleet Management.
 
 
   Balena''s developer surface includes authentication, documentation, CLI, GitHub presence, engineering blog, pricing, support, and 14 more developer resources.'
@@ -221,23 +211,23 @@ rate_limits:
   slug: balena-rate-limits
 score:
   band: developing
-  composite: 49.2
+  composite: 49.3
   coverage:
     artifact_dirs: 12
-    catalog_earned: 56.0
+    catalog_earned: 54.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 68.4
+    access_clarity: 66.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 42.9
-    discoverability: 75.9
-    operational_transparency: 57.9
-  previous_composite: 49.2
+    discoverability: 73.2
+    operational_transparency: 55.8
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     contracts:
@@ -245,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

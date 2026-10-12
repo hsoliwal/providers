@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -93,7 +93,7 @@ overview: 'CardinalOps is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 2
 score:
   band: emerging
-  composite: 19.1
+  composite: 20.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -107,13 +107,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 19.1
+  previous_composite: 20.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,6 +145,6 @@ tags:
 - Threat Detection
 - MITRE ATT&CK
 - Detection Posture Management
-- Agentic AI
+- AI Agents
 website: https://cardinalops.com/
 ---

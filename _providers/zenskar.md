@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Zenskar's REST API for billing, contracts, usage metering, invoicing, payments, credit notes, and accounting/revenue recognition (166+ documented operations).
@@ -140,9 +140,9 @@ description: Zenskar is an AI-native revenue automation and usage-based billing 
 image: https://zenskar.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 103 tools listed.
   name: Zenskar MCP Server
-  slug: zenskar-mcp-server
+  slug: zenskar
 modified: '2026-07-21'
 name: Zenskar
 nav: Providers
@@ -157,7 +157,7 @@ overview: 'Zenskar publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 18
 score:
   band: thin
-  composite: 34.1
+  composite: 35.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -169,16 +169,22 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 34.1
+  previous_composite: 35.1
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Remote Model Context Protocol server operated by HackNotice, speaking JSON-RPC 2.0 over Streamable HTTP at https://mcp.hacknotice.com:13330/mcp. It publishes 80 tools across third-party, first-party, '
@@ -88,6 +88,11 @@ asyncapis:
   name: Hacknotice Webhooks
   slug: hacknotice-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hacknotice/refs/heads/main/capabilities/hacknotice-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hacknotice-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -251,20 +256,20 @@ description: HackNotice is an external threat-intelligence and cyber-risk platfo
 image: https://hacknotice.com/wp-content/uploads/2022/12/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.hacknotice.com:13330 over streamable HTTP requiring an API key; 80 tools listed.
   name: HackNotice MCP Server
-  slug: hacknotice-mcp-server
+  slug: hacknotice
 modified: '2026-09-16'
 name: HackNotice
 nav: Providers
 network: true
-overview: 'HackNotice publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, All Business Accounts API, Calc endpoints API, and 5 more. Tagged areas include Company, Security, Threat Intelligence, Cybersecurity, and Dark Web Monitoring.
+overview: 'HackNotice publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, All Business Accounts API, Calc endpoints API, and 6 more. Tagged areas include Company, Security, Threat Intelligence, Cybersecurity, and Dark Web Monitoring.
 
 
   The HackNotice catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  HackNotice''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+  HackNotice''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
 plans:
 - name: Hacknotice Plans Pricing
   plan_count: 4
@@ -276,7 +281,7 @@ rate_limits:
   slug: hacknotice-rate-limits
 score:
   band: developing
-  composite: 51.3
+  composite: 51.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 57.0
@@ -288,16 +293,18 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 65.6
+    contract_quality: 60.0
     developer_ergonomics: 49.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 51.3
+  previous_composite: 51.2
   provenance:
     conformance: derived
     contracts:
@@ -307,8 +314,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -332,8 +345,7 @@ tags:
 - Dark Web Monitoring
 - Data Breaches
 - Credential Monitoring
-- Third-Party Risk
-- Vendor Risk Management
+- Third-Party Risk Management
 - Vulnerability Management
 - Ransomware
 - Security Assessments

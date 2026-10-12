@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Git command-line interface for version control operations.
@@ -102,14 +102,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/git.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.githubcopilot.com.
   name: Git MCP Server
-  slug: git-mcp-server
+  slug: git-mcp-yml
 modified: '2026-06-20'
 name: Git
 nav: Providers
 network: true
-overview: 'Git publishes 3 APIs on the [APIs.io](https://apis.io/) network: GitHub API, GitLab API, and Gitea API. Tagged areas include Distributed, Git, Open-Source, Source Code Management, and Version Control.
+overview: 'Git publishes 4 APIs on the [APIs.io](https://apis.io/) network, including GitHub API, GitLab API, Gitea API, and 1 more. Tagged areas include Distributed, Git, Open Source, Source Code Management, and Version Control.
 
 
   Git''s developer surface includes documentation and 8 more developer resources.'
@@ -124,7 +124,7 @@ rate_limits:
   slug: git-rate-limits
 score:
   band: thin
-  composite: 27.6
+  composite: 28.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 44.0
@@ -136,16 +136,22 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 28.6
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 27.6
+  previous_composite: 28.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -169,7 +175,7 @@ slug: git
 tags:
 - Distributed
 - Git
-- Open-Source
+- Open Source
 - Source Code Management
 - Version Control
 website: https://git-scm.com/

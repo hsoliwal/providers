@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted control plane the RunAnywhere SDKs talk to for model delivery, extraction, versioning, and configuration. Authenticated with an API key supplied at SDK initialization. No public OpenAPI is publ
   name: RunAnywhere Control Plane API
   slug: runanywhere-control-plane-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/runanywhere/refs/heads/main/security/runanywhere-domain-security.yml
@@ -101,18 +101,22 @@ created: '2026-07-17'
 description: RunAnywhere is a Y Combinator (W2026) infrastructure company building the layer for deploying fast, private, multimodal AI on-device at scale. It ships one open-source C++ core runtime with native bindings for Swift, Kotlin, React Native, Flutter, and the browser, plus hand-written GPU/NPU inference engines (MetalRT for Apple GPUs, QHexRT for Qualcomm Hexagon NPUs) that run LLM, VLM, speech-to-text, text-to-speech, and embedding workloads locally. The SDKs handle model delivery, extraction, storage management, versioning, and observability, and support hybrid routing that tries on-device inference first before optionally falling back to the cloud. A hosted control plane (api.runanywhere.ai) manages model delivery and configuration via API key.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/runanywhere.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.runanywhere.ai over HTTP; 3 tools listed.
+  name: RunAnywhere MCP Server
+  slug: runanywhere
 modified: '2026-07-21'
 name: RunAnywhere
 nav: Providers
 network: true
-overview: 'RunAnywhere publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, On-Device AI, Inference, Machine-Learning, and SDK.
+overview: 'RunAnywhere publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, On-Device AI, Inference, Machine Learning, and SDK.
 
 
   RunAnywhere''s developer surface includes documentation, getting-started guide, engineering blog, support, CLI, and 8 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 22.1
+  composite: 21.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -126,13 +130,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 22.1
+  previous_composite: 21.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -149,7 +159,7 @@ tags:
 - Company
 - On-Device AI
 - Inference
-- Machine-Learning
+- Machine Learning
 - SDK
 - Mobile
 - Edge AI

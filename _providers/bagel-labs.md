@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -90,14 +90,14 @@ modified: '2026-07-18'
 name: Bagel Labs
 nav: Providers
 network: true
-overview: 'Bagel Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Artificial Intelligence, Machine-Learning, and Diffusion Models.
+overview: 'Bagel Labs is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Artificial Intelligence, Machine Learning, and Diffusion Models.
 
 
   Bagel Labs'' developer surface includes documentation, engineering blog, and 9 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 9.8
+  composite: 8.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -111,11 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 9.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +138,7 @@ tags:
 - Company
 - Ai Data
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Diffusion Models
 - Generative AI
 - Distributed Training

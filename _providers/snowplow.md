@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -209,7 +209,7 @@ modified: '2026-05-19'
 name: Snowplow
 nav: Providers
 network: true
-overview: 'Snowplow publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Data Products API, and Data Structures API. Tagged areas include Analytics Platform, Behavioral Data, Data Collection, Data Engineering, and Data Pipeline.
+overview: 'Snowplow publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Products API, Data Structures API, and 1 more. Tagged areas include Analytics Platform, Behavioral Data, Data Collection, Data Engineering, and Data Pipeline.
 
 
   The Snowplow catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -249,7 +249,7 @@ rules:
   slug: snowplow-rules
 score:
   band: developing
-  composite: 41.7
+  composite: 40.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 56.5
@@ -261,11 +261,11 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 13.6
-    contract_quality: 65.3
+    contract_quality: 59.5
     developer_ergonomics: 39.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 41.7
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -273,8 +273,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -301,6 +307,6 @@ tags:
 - Data Engineering
 - Data Pipeline
 - Event Tracking
-- Open-Source
+- Open Source
 website: https://snowplow.io
 ---

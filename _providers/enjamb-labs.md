@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -81,6 +81,10 @@ created: '2026-07-17'
 description: Enjamb Labs builds an AI-agent platform for pharmaceutical drug development. Its browser-based "integrated research environment" runs specialized agents across the full R&D lifecycle -- clinical evidence synthesis, trial design and statistical programming, and regulatory submission preparation -- while connecting to the systems pharma teams already use (Benchling, Veeva, Medidata, SAS) so no data migration is required. The workspace bundles Word/Excel/PowerPoint editors, Python and R compute environments, and 100+ scientific integrations, and emphasizes auditability, traceability, and human review, keeping each output attached to its sources, files, code, and decisions. Backed by Y Combinator and Founders, Inc., Enjamb reports early usage across major pharmaceutical companies including Johnson & Johnson, Merck, AbbVie, Bristol Myers Squibb, and Sanofi.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/enjamb-labs.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.enjamb.ai over HTTP.
+  name: Enjamb Labs MCP Server
+  slug: enjamb-labs
 modified: '2026-07-19'
 name: Enjamb Labs
 nav: Providers
@@ -92,7 +96,7 @@ overview: 'Enjamb Labs is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 6
 score:
   band: emerging
-  composite: 11.6
+  composite: 11.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -106,9 +110,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 11.6
+  previous_composite: 11.7
   provenance:
     mcp: first-party
   regulatory:
@@ -116,9 +120,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

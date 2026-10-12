@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -82,6 +82,11 @@ collections:
   name: API reference Download blocklist Scan transaction API
   slug: open-blowfish-scan-transaction-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/blowfish/refs/heads/main/capabilities/blowfish-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/blowfish-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/blowfish/refs/heads/main/overlays/blowfish-v20230308-overlay.yaml
   title: ''
@@ -217,13 +222,13 @@ network: true
 overview: 'Blowfish publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Download blocklist API, Scan domain API, Scan message API, and 1 more. Tagged areas include Company, Security, Web3, Blockchain, and Wallets.
 
 
-  Blowfish''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, pricing, support, and 20 more developer resources.'
+  Blowfish''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, pricing, support, and 21 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 35.3
+  composite: 33.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 38.3
     catalog_earned_first_party: 0.0
     catalog_gap: 76.8
@@ -233,11 +238,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 8.3
-    contract_quality: 59.2
+    contract_quality: 53.3
     developer_ergonomics: 41.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.3
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -253,9 +258,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 29.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

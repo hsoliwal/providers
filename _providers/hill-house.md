@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -91,7 +91,7 @@ description: Hill House Home is a digital-first lifestyle brand that brings beau
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hill-house.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at hillhousehome.com over HTTP; 5 tools listed.
   name: Hill House Home Storefront MCP
   slug: hill-house-home-storefront-mcp
 modified: '2026-07-19'
@@ -110,7 +110,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 14.3
+  composite: 16.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -124,13 +124,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 14.3
+  previous_composite: 16.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

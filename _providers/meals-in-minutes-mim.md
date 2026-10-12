@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -117,7 +117,7 @@ layout: provider
 mcp_servers:
 - description: Meals In Minutes runs on Shopify and natively exposes a Universal Commerce Protocol (UCP) agent-commerce surface. A hosted MCP server accepts JSON-RPC POSTs at https://mealsinminutes.co/api/ucp/mcp (C
   name: Meals In Minutes UCP MCP
-  slug: meals-in-minutes-ucp-mcp
+  slug: meals-in-minutes-mim-ucp
 modified: '2026-07-20'
 name: Meals In Minutes, MIM
 nav: Providers
@@ -134,7 +134,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.0
+  composite: 22.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -148,15 +148,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 20.0
+  previous_composite: 22.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

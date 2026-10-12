@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OpenEBS is an open source Container Native Storage solution that provides persistent storage for Kubernetes workloads. It enables dynamic provisioning of storage using containerized storage controller
@@ -114,7 +114,7 @@ modified: '2026-04-28'
 name: OpenEBS
 nav: Providers
 network: true
-overview: 'OpenEBS publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud-Native, Containers, Kubernetes, Open-Source, and Persistent Storage.
+overview: 'OpenEBS publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud-Native, Containers, Kubernetes, Open Source, and Persistent Storage.
 
 
   OpenEBS''s developer surface includes documentation, engineering blog, and 13 more developer resources.'
@@ -128,8 +128,8 @@ rate_limits:
   name: Openebs Rate Limits
   slug: openebs-rate-limits
 score:
-  band: thin
-  composite: 27.4
+  band: emerging
+  composite: 25.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 41.0
@@ -143,14 +143,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 27.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 25.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -167,7 +173,7 @@ tags:
 - Cloud-Native
 - Containers
 - Kubernetes
-- Open-Source
+- Open Source
 - Persistent Storage
 - Storage
 website: https://openebs.io/

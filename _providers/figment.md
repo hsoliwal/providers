@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 87
   human_in_the_loop: 1
@@ -444,12 +444,12 @@ layout: provider
 mcp_servers:
 - description: Model Context Protocol endpoint served at Figment's documentation host. A GET returns "This URL can only be accessed with a MCP client." (HTTP 200, text/html); a JSON-RPC POST returns HTTP 401 with {"
   name: Figment MCP Server
-  slug: figment-mcp-server
+  slug: figment-docs
 modified: '2026-08-04'
 name: Figment
 nav: Providers
 network: true
-overview: 'Figment publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Aptos API, Avalanche API, and 21 more. Tagged areas include Staking, Blockchain, Digital Assets, Proof of Stake, and Validator.
+overview: 'Figment publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Aptos API, Avalanche API, and 22 more. Tagged areas include Staking, Blockchain, Digital Assets, Proof of Stake, and Validator.
 
 
   Figment''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 34 more developer resources.'
@@ -460,7 +460,7 @@ rate_limits:
   slug: figment-rate-limits
 score:
   band: developing
-  composite: 47.8
+  composite: 49.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -472,11 +472,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 48.4
+    contract_quality: 43.5
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 47.8
+  previous_composite: 49.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -487,8 +487,14 @@ score:
       total: 24
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

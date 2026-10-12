@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -68,7 +68,7 @@ apis:
   description: The Workspaces API from VidMob — 1 operation(s) for workspaces.
   name: VidMob Workspaces API
   slug: vidmob-workspaces-api
-artifact_total: 17
+artifact_total: 16
 collections:
 - collection_type: open
   name: API Collection
@@ -234,17 +234,14 @@ description: Vidmob is a creative data platform that connects creative productio
 image: https://vidmob.com/hubfs/VM_FaviconArtboard%201.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.vidmob.com over HTTP.
   name: VidMob MCP Server
-  slug: vidmob-mcp-server
-- description: ''
-  name: VidMob MCP Server
-  slug: vidmob-mcp-server-2
+  slug: vidmob
 modified: '2026-08-05'
 name: VidMob
 nav: Providers
 network: true
-overview: 'VidMob publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Media API, Organization API, Scoring API, and 1 more. Tagged areas include Creative Intelligence, creative-data, Advertising, Marketing, and Media Measurement.
+overview: 'VidMob publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Media API, Organization API, Scoring API, and 2 more. Tagged areas include Creative Intelligence, creative-data, Advertising, Marketing, and Media Measurement.
 
 
   VidMob''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -256,7 +253,7 @@ scopes:
   summary_line: 12 scopes · authorizationCode/refreshToken/jwtBearer
 score:
   band: developing
-  composite: 39.8
+  composite: 41.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -268,11 +265,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 55.0
+    contract_quality: 49.5
     developer_ergonomics: 49.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 18.4
-  previous_composite: 39.8
+  previous_composite: 41.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -283,8 +280,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -311,11 +314,11 @@ tags:
 - Marketing
 - Media Measurement
 - Video
-- Computer-Vision
+- Computer Vision
 - Creative Analytics
 - AdTech
 - MCP
-- agent-native
+- Agent-Native
 - MarTech
 website: https://vidmob.com/
 ---

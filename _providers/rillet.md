@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 61
   human_in_the_loop: 0
@@ -440,7 +440,7 @@ layout: provider
 mcp_servers:
 - description: Rillet's official remote MCP server exposes the same features as the Rillet Public API, letting AI assistants (Claude Desktop, Claude Code, Cursor) operate on a Rillet account. Tool access is scoped t
   name: Rillet MCP Server
-  slug: rillet-mcp-server
+  slug: rillet-mcp
 modified: '2026-07-21'
 name: Rillet
 nav: Providers
@@ -460,7 +460,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 47.5
+  composite: 49.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -472,11 +472,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 63.2
+    contract_quality: 58.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 19.7
-  previous_composite: 47.5
+  previous_composite: 49.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -487,8 +487,18 @@ score:
       total: 29
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.dispatch.me
@@ -276,7 +276,7 @@ overview: 'Dispatch publishes 11 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: thin
-  composite: 37.0
+  composite: 38.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -290,9 +290,9 @@ score:
     contract_governance: 4.5
     contract_quality: 23.5
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 37.0
+  previous_composite: 38.1
   provenance:
     conformance: derived
     contracts:
@@ -302,8 +302,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -26,8 +26,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface for the Poppy Hand-Crafted Popcorn storefront, implementing the Universal Commerce Protocol (UCP) 2026-04-08 over MCP. Thirteen tools cover catalog search and lookup,
@@ -127,7 +127,7 @@ description: 'Poppy Hand-Crafted Popcorn is a woman-owned gourmet snack maker fo
 image: https://cdn.shopify.com/s/files/1/0424/8387/6008/files/New_Bags_Collections_-_web_banner.jpg?v=1704995950
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at poppyhandcraftedpopcorn.com; 13 tools listed.
   name: Poppy Hand-Crafted Popcorn UCP Commerce MCP Server
   slug: poppy-hand-crafted-popcorn-ucp-commerce-mcp-server
 modified: '2026-08-26'
@@ -149,12 +149,12 @@ rate_limits:
   slug: poppy-handcrafted-popcorn-rate-limits
 scopes:
 - name: Poppy Handcrafted Popcorn Scopes
-  scope_count: 0
+  scope_count: 4
   slug: poppy-handcrafted-popcorn-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: thin
-  composite: 28.6
+  composite: 31.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -168,15 +168,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 28.6
+  previous_composite: 31.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

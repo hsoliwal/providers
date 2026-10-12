@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -185,7 +185,7 @@ modified: '2026-05-29'
 name: Capital.com Public API
 nav: Providers
 network: true
-overview: 'Capital.com Public API publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Capital.com WebSocket API, Accounts API, General API, and 5 more. Tagged areas include CFD, Commodities, Cryptocurrency, Financial, and Forex.
+overview: 'Capital.com Public API publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Capital.com WebSocket API, Accounts API, General API, and 5 more. Tagged areas include CFD, Commodities, Cryptocurrency, Finance, and Forex.
 
 
   The Capital.com Public API catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -215,7 +215,7 @@ rules:
   slug: capital-com-public-api-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 33.4
+  composite: 31.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 48.5
@@ -227,11 +227,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 63.1
+    contract_quality: 58.3
     developer_ergonomics: 25.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 33.4
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     contracts:
@@ -244,9 +244,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 40.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -270,7 +270,7 @@ tags:
 - CFD
 - Commodities
 - Cryptocurrency
-- Financial
+- Finance
 - Forex
 - Indices
 - Market Data
@@ -278,5 +278,6 @@ tags:
 - Streaming
 - Trading
 - WebSocket
+- Real-Time
 website: https://capital.com/
 ---

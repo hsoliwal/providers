@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://revamp-api.edfapay.com
@@ -104,6 +104,11 @@ collections:
   name: Edfapay Payment Gateway Branch Management User Management API
   slug: open-edfapay-inc-user-management-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/edfapay-inc/refs/heads/main/capabilities/edfapay-inc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/edfapay-inc-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/edfapay-inc/refs/heads/main/overlays/edfapay-inc-revamp-overlay.yaml
   title: ''
@@ -256,20 +261,20 @@ description: EdfaPay is a Saudi fintech and payment-technology company offering 
 image: https://files.readme.io/89700fae642aef272b5162ed82daf2f2ececcb418693c2307830e1a0e3f7fa2e-EdfaPay-Logo.svg
 layout: provider
 modified: '2026-07-19'
-name: EdfaPay, Inc.
+name: EdfaPay
 nav: Providers
 network: true
-overview: 'EdfaPay, Inc. publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Branch Management API, Merchant Management API, Partner Management API, and 4 more. Tagged areas include Company, Payments, Payment Gateway, Fintech, and SoftPOS.
+overview: 'EdfaPay publishes 7 APIs on the [APIs.io](https://apis.io/) network, including EdfaPay, Inc. Branch Management API, EdfaPay, Inc. Merchant Management API, EdfaPay, Inc. Partner Management API, and 4 more. Tagged areas include Company, Payments, Payment Gateway, Fintech, and SoftPOS.
 
 
-  The EdfaPay, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The EdfaPay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  EdfaPay, Inc.''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 25 more developer resources.'
+  EdfaPay''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 26 more developer resources.'
 random_paper: 11
 score:
   band: developing
-  composite: 53.3
+  composite: 49.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -281,9 +286,9 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 63.9
+    contract_quality: 58.6
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -292,7 +297,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 53.3
+  previous_composite: 49.2
   provenance:
     conformance: first-party
     contracts:
@@ -307,9 +312,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -338,5 +343,6 @@ tags:
 - Apple Pay
 - Saudi Arabia
 - Merchant Onboarding
+- MENA
 website: https://edfapay.com
 ---

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -223,7 +223,7 @@ modified: '2026-05-08'
 name: Weights & Biases
 nav: Providers
 network: true
-overview: 'Weights & Biases publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Costs API, Feedback API, and 6 more. Tagged areas include Machine-Learning, MLOps, Experiment Tracking, Model Registry, and Generative AI.
+overview: 'Weights & Biases publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Costs API, Feedback API, and 8 more. Tagged areas include Machine Learning, MLOps, Experiment Tracking, Model Registry, and Generative AI.
 
 
   Weights & Biases'' developer surface includes authentication, developer portal, pricing, and 14 more developer resources.'
@@ -238,7 +238,7 @@ rate_limits:
   slug: weights-and-biases-rate-limits
 score:
   band: developing
-  composite: 42.6
+  composite: 41.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 44.0
@@ -250,14 +250,14 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 51.9
+    contract_quality: 46.7
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 42.6
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     contracts:
@@ -265,8 +265,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -287,7 +293,7 @@ security:
   summary_line: disclosure policy published
 slug: weights-and-biases
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Experiment Tracking
 - Model Registry

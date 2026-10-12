@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The accounts API from NEAR Protocol — 1 operation(s) for accounts.
-  name: NEAR Protocol accounts API
+  name: NEAR Protocol Accounts API
   slug: near-accounts-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -182,7 +182,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The fungible-tokens API from NEAR Protocol — 3 operation(s) for fungible-tokens.
-  name: NEAR Protocol fungible-tokens API
+  name: NEAR Protocol Fungible Tokens API
   slug: near-fungible-tokens-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -302,12 +302,12 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The non-fungible-tokens API from NEAR Protocol — 2 operation(s) for non-fungible-tokens.
-  name: NEAR Protocol non-fungible-tokens API
+  name: NEAR Protocol Non Fungible Tokens API
   slug: near-non-fungible-tokens-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The public-key API from NEAR Protocol — 4 operation(s) for public-key.
-  name: NEAR Protocol public-key API
+  name: NEAR Protocol Public Key API
   slug: near-public-key-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -322,7 +322,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The staking API from NEAR Protocol — 2 operation(s) for staking.
-  name: NEAR Protocol staking API
+  name: NEAR Protocol Staking API
   slug: near-staking-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -332,7 +332,7 @@ apis:
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
   description: The system API from NEAR Protocol — 2 operation(s) for system.
-  name: NEAR Protocol system API
+  name: NEAR Protocol System API
   slug: near-system-api
 - baseURL: https://rpc.mainnet.near.org
   baseurl_source: declared
@@ -561,7 +561,7 @@ modified: '2026-09-16'
 name: NEAR Protocol
 nav: Providers
 network: true
-overview: 'NEAR Protocol publishes 60 APIs on the [APIs.io](https://apis.io/) network, including accounts API, Block API, Block Effects API, and 57 more. Tagged areas include Blockchain, Web3, NEAR, NFT, and Tokens.
+overview: 'NEAR Protocol publishes 60 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Block API, Block Effects API, and 57 more. Tagged areas include Blockchain, Web3, NEAR, NFT, and Tokens.
 
 
   NEAR Protocol''s developer surface includes authentication and 3 more developer resources.'
@@ -591,20 +591,20 @@ score:
   composite: 25.4
   coverage:
     artifact_dirs: 10
-    catalog_earned: 38.0
+    catalog_earned: 50.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 77.0
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
-    contract_quality: 44.0
+    contract_quality: 39.6
     developer_ergonomics: 21.4
-    discoverability: 50.0
+    discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 25.4
+  previous_composite: 24.9
   provenance:
     agentic_access: derived
     contracts:
@@ -612,8 +612,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 60
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

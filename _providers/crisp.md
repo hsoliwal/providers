@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-09-20'
+  score: 27.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -60,7 +60,7 @@ apis:
   description: The Website API from Crisp — 3 operation(s) for website.
   name: Crisp Website API
   slug: crisp-website-api
-artifact_total: 15
+artifact_total: 16
 asyncapis:
 - description: 'AsyncAPI description of Crisp''s two realtime delivery surfaces: * **Web Hooks (v1)** — HTTP POST callbacks delivered to a subscriber URL registered on a Crisp website or Crisp plugin. Payload envelope'
   name: Crisp Realtime Surface (Webhooks + RTM)
@@ -142,6 +142,10 @@ finops:
   slug: crisp-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crisp.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.crisp.chat over HTTP; 26 tools listed.
+  name: Crisp MCP Server
+  slug: crisp
 modified: '2026-05-30'
 name: Crisp
 nav: Providers
@@ -176,7 +180,7 @@ rules:
   slug: crisp-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 30.6
+  composite: 29.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 42.8
@@ -188,11 +192,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 11.4
-    contract_quality: 58.3
+    contract_quality: 53.9
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 15.8
-  previous_composite: 30.6
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -201,8 +205,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -224,5 +234,6 @@ tags:
 - Help Desk
 - Messaging
 - Chatbots
+- Real-Time
 website: https://crisp.chat/
 ---

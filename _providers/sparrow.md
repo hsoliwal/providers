@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 common:
@@ -181,12 +181,12 @@ rate_limits:
   slug: sparrow-rate-limits
 scopes:
 - name: Sparrow Scopes
-  scope_count: 0
+  scope_count: 14
   slug: sparrow-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
-  band: emerging
-  composite: 22.5
+  band: thin
+  composite: 27.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -200,13 +200,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 22.5
+  previous_composite: 27.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: CA
+      standard: pipeda
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 52.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

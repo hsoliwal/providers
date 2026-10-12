@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -83,6 +83,11 @@ collections:
   name: TeamOhana Public Discovery SCIM API
   slug: open-teamohana-scim-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/teamohana/refs/heads/main/capabilities/teamohana-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/teamohana-capability-edges.yml
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/teamohana/refs/heads/main/openapi/_original/teamohana-openapi-original.json
   title: ''
@@ -213,7 +218,7 @@ network: true
 overview: 'TeamOhana publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Discovery API, Headcount API, Scenario API, and 1 more. Tagged areas include Company, Human Resources, Headcount Management, Headcount Planning, and Workforce Planning.
 
 
-  TeamOhana''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, signup flow, support, and 19 more developer resources.'
+  TeamOhana''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, signup flow, support, and 20 more developer resources.'
 random_paper: 18
 rate_limits:
 - limit_count: 1
@@ -221,9 +226,9 @@ rate_limits:
   slug: teamohana-rate-limits
 score:
   band: developing
-  composite: 47.8
+  composite: 49.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -233,11 +238,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 52.8
+    contract_quality: 47.8
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 47.8
+  previous_composite: 49.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -248,8 +253,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

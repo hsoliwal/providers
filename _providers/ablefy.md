@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.8
-  scored_at: '2026-09-20'
+  score: 6.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The ablefy API lets sellers automate access to their store data (orders, products, payments, and customers) using seller-generated access tokens, complemented by webhooks for event notifications. The '
@@ -94,7 +94,7 @@ overview: 'ablefy publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 11
 score:
   band: emerging
-  composite: 15.3
+  composite: 15.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -108,7 +108,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -118,15 +118,15 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 15.3
+  previous_composite: 15.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

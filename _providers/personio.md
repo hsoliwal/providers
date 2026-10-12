@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
   description: Manage event webhook subscriptions.
   name: Personio Webhooks API
   slug: personio-webhooks-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -97,6 +97,11 @@ collections:
   name: Personio Public API v2
   slug: open-personio
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/personio/refs/heads/main/capabilities/personio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/personio-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/personio/refs/heads/main/agentic-access/personio-agentic-access.yml
   title: ''
@@ -149,20 +154,24 @@ created: '2026-05-11'
 description: Personio is a European HR management and recruiting platform serving small and mid-sized businesses with a unified HRIS covering employee records, absence management, time tracking, payroll preparation, performance, and applicant tracking. The platform is headquartered in Munich and is widely adopted across Germany, Austria, Switzerland, the UK, the Netherlands, and Spain. Personio exposes a Public API at api.personio.de that supports Bearer token authentication via Client ID/Secret (v1 token endpoint and v2 OAuth 2.0 client credentials flow), with webhooks now available for Person entity events.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/personio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.personio.de over HTTP.
+  name: Personio MCP Server
+  slug: personio
 modified: '2026-05-11'
 name: Personio
 nav: Providers
 network: true
-overview: 'Personio publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Absence Periods API, Auth API, Persons API, and 2 more. Tagged areas include Human Resources, HRIS, Recruiting, Applicant Tracking, and Absence Management.
+overview: 'Personio publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Absence Periods API, Auth API, Persons API, and 3 more. Tagged areas include Human Resources, HRIS, Recruiting, Applicant Tracking, and Absence Management.
 
 
-  Personio''s developer surface includes authentication, documentation, pricing, signup flow, and 7 more developer resources.'
+  Personio''s developer surface includes authentication, documentation, pricing, signup flow, and 8 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 29.4
+  composite: 27.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -172,17 +181,19 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 29.4
+  previous_composite: 27.7
   provenance:
     agentic_access: derived
     contracts:
@@ -191,8 +202,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

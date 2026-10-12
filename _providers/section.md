@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/section/refs/heads/main/security/section-domain-security.yml
@@ -73,6 +73,10 @@ created: '2026-07-17'
 description: Section AI (formerly Section School) is an enterprise AI training and adoption platform that helps large organizations turn AI investment into measurable workforce transformation and ROI. Its two products are Section HQ, a command center for Heads of AI to track usage, measure "AI fitness," surface real-time insights, and manage transformation roadmaps; and Section Coach, personalized AI coaching that delivers skills training, certification programs, and workflow identification to employees and teams. Section also runs AI transformation planning, leadership coaching, AI strategy support, workflow automation, and agentic AI workshops for enterprises of 100+ employees, with customers including Johnson & Johnson, Nike, Okta, Unilever, Mercer, and Publicis. Backed by General Catalyst and led by founder Greg Shove. As of this profile the company exposes a web/app product surface (app.sectionai.com) but publishes no public developer API, OpenAPI, or documentation.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/section.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sectionai.com over HTTP.
+  name: Section AI MCP Server
+  slug: section
 modified: '2026-07-21'
 name: Section AI
 nav: Providers
@@ -84,7 +88,7 @@ overview: 'Section AI is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 9
 score:
   band: emerging
-  composite: 13.3
+  composite: 13.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -98,13 +102,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 13.3
+  previous_composite: 13.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

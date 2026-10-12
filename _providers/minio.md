@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: S3-compatible object storage REST API implementing Amazon S3 bucket and object operations (put/get/list/delete objects, multipart uploads, versioning, object locking, lifecycle, replication), authenti
@@ -204,7 +204,7 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server for interacting with MinIO / AIStor object stores. Ships as a container image; runs read-only by default and gates write, delete, and admin operations behind exp
   name: MinIO MCP Server
-  slug: minio-mcp-server
+  slug: aistor
 modified: '2026-07-20'
 name: MinIO
 nav: Providers
@@ -219,7 +219,7 @@ overview: 'MinIO publishes 2 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 12
 score:
   band: developing
-  composite: 48.7
+  composite: 50.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -231,16 +231,22 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 48.7
+  previous_composite: 50.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

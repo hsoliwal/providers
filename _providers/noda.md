@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -89,14 +89,14 @@ modified: '2026-07-20'
 name: Noda
 nav: Providers
 network: true
-overview: 'Noda is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Agentic AI, Building Operations, and Commercial Real Estate.
+overview: 'Noda is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, AI Agents, Building Operations, and Commercial Real Estate.
 
 
   Noda''s developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 0
 score:
   band: emerging
-  composite: 17.5
+  composite: 16.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -110,9 +110,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 17.5
+  previous_composite: 16.3
   provenance:
     conformance: first-party
   regulatory:
@@ -120,9 +120,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +138,7 @@ slug: noda
 tags:
 - Company
 - Enterprise
-- Agentic AI
+- AI Agents
 - Building Operations
 - Commercial Real Estate
 - Energy Management

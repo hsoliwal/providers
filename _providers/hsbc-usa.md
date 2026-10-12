@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: HSBC group corporate transaction-banking API for initiating outbound payments programmatically, documented on HSBC's Developer Portal and available to wholesale clients including HSBC USA corporate re
@@ -126,14 +126,14 @@ modified: '2026-07-23'
 name: HSBC USA
 nav: Providers
 network: true
-overview: 'HSBC USA publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Corporate Banking, and Transaction Banking.
+overview: 'HSBC USA publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Corporate Banking, and Transaction Banking.
 
 
   HSBC USA''s developer surface includes engineering blog, signup flow, documentation, support, and 13 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 16.7
+  composite: 16.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -147,7 +147,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -156,15 +156,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.7
+  previous_composite: 16.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 20.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -182,7 +182,7 @@ security:
   summary_line: Bugcrowd · security.txt · contact published
 slug: hsbc-usa
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Corporate Banking

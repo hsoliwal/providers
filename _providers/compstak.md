@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -82,6 +82,10 @@ created: '2026-07-17'
 description: CompStak is a commercial real estate (CRE) data platform, founded in 2012, that crowdsources and verifies lease comps, sale comps, loan data, and property data from a network of tens of thousands of brokers and appraisers across US markets. Its products include CompStak One (an all-in-one CRE data platform), CompStak Exchange, CompStak AI, and a contact-sales Data API offering Market Insights, Property Insights, Space Insights, and Property Standardization. CompStak was surfaced as a portfolio company of 500 Global and Canaan Partners and added to the API Evangelist network. Its developer surface is enterprise/contact-sales only — there is no public self-serve developer portal, OpenAPI specification, SDK, or API reference.
 image: https://compstak.com/wp-content/uploads/2024/11/big-homepage-image-6-margins-1024x665.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.compstak.com over HTTP.
+  name: Compstak MCP Server
+  slug: compstak
 modified: '2026-07-18'
 name: Compstak
 nav: Providers
@@ -93,7 +97,7 @@ overview: 'Compstak is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 8
 score:
   band: emerging
-  composite: 13.4
+  composite: 13.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -107,13 +111,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 13.4
+  previous_composite: 13.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

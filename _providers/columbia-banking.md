@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: First-party commercial and treasury-management API product from Columbia Bank, providing programmatic access to banking data and operations for integration with financial software and ERP platforms. D
@@ -84,14 +84,14 @@ modified: '2026-07-24'
 name: Columbia Bank
 nav: Providers
 network: true
-overview: 'Columbia Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Regional Bank, and Commercial Banking.
+overview: 'Columbia Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Regional Bank, and Commercial Banking.
 
 
   Columbia Bank''s developer surface includes documentation, engineering blog, support, and 5 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 8.4
+  composite: 9.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -105,7 +105,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -114,15 +114,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 8.4
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -136,13 +136,12 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: columbia-banking
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Commercial Banking
 - Treasury Management
 - Open Finance
-- Data Aggregation
 website: https://www.columbiabank.com/
 ---

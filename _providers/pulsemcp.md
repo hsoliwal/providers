@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public v0.1 API for browsing MCP servers, server versions, and ecosystem metadata in the PulseMCP Registry. Implements the Generic MCP Registry API specification with PulseMCP enrichments (popularity,
@@ -181,7 +181,7 @@ layout: provider
 mcp_servers:
 - description: 'PulseMCP authors and maintains 32 MCP servers — 4 "productionized" under the @pulsemcp/ npm scope and 28 "experimental" under unscoped npm names. EVERY ONE OF THEM IS A LOCAL STDIO SERVER distributed '
   name: PulseMCP MCP Server
-  slug: pulsemcp-mcp-server
+  slug: pulsemcp-mcp-yml
 modified: '2026-08-13'
 name: PulseMCP
 nav: Providers
@@ -201,7 +201,7 @@ rate_limits:
   slug: pulsemcp-rate-limits
 score:
   band: thin
-  composite: 34.8
+  composite: 35.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -215,15 +215,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 34.8
+  previous_composite: 35.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

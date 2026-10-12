@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -296,9 +296,9 @@ jsonld:
   slug: brandfolder-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.smartsheet.com over HTTP; 6 tools listed.
   name: Brandfolder MCP Server
-  slug: brandfolder-mcp-server
+  slug: smartsheet-developer-portal-docs-mcp
 modified: 2026-08-13
 name: Brandfolder
 nav: Providers
@@ -321,7 +321,7 @@ rate_limits:
   slug: brandfolder-rate-limits
 score:
   band: strong
-  composite: 55.8
+  composite: 57.4
   coverage:
     artifact_dirs: 26
     catalog_earned: 56.0
@@ -333,11 +333,11 @@ score:
   facets:
     access_clarity: 82.9
     contract_governance: 4.5
-    contract_quality: 66.5
+    contract_quality: 61.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 55.8
+  previous_composite: 57.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,8 +348,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

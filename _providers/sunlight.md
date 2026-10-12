@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Sunlight''s REST/JSON:API for managing education-spending groups: create groups, invite registered and unregistered users, edit individual member budgets (credits/transactions), list orders, and read t'
@@ -113,7 +113,7 @@ overview: 'Sunlight publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 20
 score:
   band: emerging
-  composite: 18.0
+  composite: 16.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -127,9 +127,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 18.0
+  previous_composite: 16.8
   provenance:
     conformance: first-party
   regulatory:
@@ -137,9 +137,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

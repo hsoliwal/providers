@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hook/refs/heads/main/security/hook-trust-center.yml
@@ -99,6 +99,10 @@ created: '2026-07-17'
 description: Hook is a London-based software company building AI agents for customer success (CS) teams. Its platform integrates product usage, revenue, support, and sales data to build a 360-degree view of each account, then uses predictive models to forecast churn, renewals, net revenue retention (NRR), and expansion up to six months ahead. Named agents such as Echo and Activator surface account insights and automate the administrative work CS teams would otherwise do by hand, helping subscription businesses reduce churn and grow expansion revenue without adding headcount. Hook is a SaaS product used by customer success and revenue teams; it is not a public developer API, so this profile enriches company identity and security posture rather than API artifacts. Surfaced as a venture-portfolio lead and added to the API Evangelist network.
 image: https://hook.co/en/opengraph-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hook.co over HTTP.
+  name: Hook MCP Server
+  slug: hook
 modified: '2026-07-19'
 name: Hook
 nav: Providers
@@ -110,7 +114,7 @@ overview: 'Hook is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 15
 score:
   band: emerging
-  composite: 16.5
+  composite: 17.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -124,19 +128,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 16.5
+  previous_composite: 17.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

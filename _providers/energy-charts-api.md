@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -46,22 +46,22 @@ apis:
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Import/export values
-  name: Energy Charts API import_export API
+  name: Energy Charts API Import Export API
   slug: energy-charts-api-import-export-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Query power values
-  name: Energy Charts API power API
+  name: Energy Charts API Power API
   slug: energy-charts-api-power-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Query price values
-  name: Energy Charts API prices API
+  name: Energy Charts API Prices API
   slug: energy-charts-api-prices-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Renewable shares
-  name: Energy Charts API ren_share API
+  name: Energy Charts API Ren Share API
   slug: energy-charts-api-ren-share-api
 artifact_total: 15
 collections:
@@ -114,7 +114,7 @@ modified: '2026-05-19'
 name: Energy Charts API
 nav: Providers
 network: true
-overview: Energy Charts API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including import_export API, power API, prices API, and 1 more. Tagged areas include Energy, Electricity, Renewables, Grid, and Europe.
+overview: Energy Charts API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Import Export API, Power API, Prices API, and 1 more. Tagged areas include Energy, Electricity, Renewables, Grid, and Europe.
 plans:
 - name: Energy Charts Api Plans Pricing
   plan_count: 3
@@ -126,7 +126,7 @@ rate_limits:
   slug: energy-charts-api-rate-limits
 score:
   band: emerging
-  composite: 20.1
+  composite: 19.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 40.0
@@ -138,16 +138,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 48.0
+    contract_quality: 43.2
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 20.1
+  previous_composite: 19.1
   provenance:
     agentic_access: derived
     contracts:
@@ -160,9 +160,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 57.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -302,12 +302,12 @@ layout: provider
 mcp_servers:
 - description: Generate AI music from a style description and optional lyrics. Submit a task, poll it, collect the rendered audio.
   name: Lacuna MCP Server
-  slug: lacuna-mcp-server
+  slug: lacuna
 modified: '2026-09-11'
 name: Lacuna
 nav: Providers
 network: true
-overview: 'Lacuna publishes 3 APIs on the [APIs.io](https://apis.io/) network: Music API Events, Music API, and Account API. Tagged areas include AI Music, Music Generation, AI Song Generator, AI Lyrics Generator, and Audio.
+overview: 'Lacuna publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Music API Events, Music API, Account API, and 2 more. Tagged areas include AI Music, Music Generation, AI Song Generator, AI Lyrics Generator, and Audio.
 
 
   The Lacuna catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -330,7 +330,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.0
+  composite: 64.9
   coverage:
     artifact_dirs: 28
     catalog_earned: 61.0
@@ -342,11 +342,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 58.8
+    contract_quality: 53.8
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 63.0
+  previous_composite: 64.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -357,8 +357,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

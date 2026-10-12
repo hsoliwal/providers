@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -61,6 +61,10 @@ created: '2026-07-17'
 description: DailyMealz is a Saudi Arabia-based meal subscription service that delivers fresh daily lunches and full-day meal plans sourced from a network of more than sixty partner restaurants. Subscribers choose a package (healthy, keto, diet, and similar options), select meals from a rotating menu, and control delivery timing through the DailyMealz mobile app. The company also operates a DailyMealz for Business offering for corporate meal programs. It was surfaced as a portfolio company of 500 Global and added to the API Evangelist network for enrichment; DailyMealz is an app-first consumer brand and publishes no public developer API surface, documentation portal, or API specifications as of this profiling round.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dailymealz.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dailymealz.com over HTTP.
+  name: DailyMealz MCP Server
+  slug: dailymealz
 modified: '2026-07-18'
 name: DailyMealz
 nav: Providers
@@ -72,7 +76,7 @@ overview: 'DailyMealz is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 12
 score:
   band: minimal
-  composite: 8.5
+  composite: 7.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -86,7 +90,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -95,11 +99,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 8.5
+  previous_composite: 7.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

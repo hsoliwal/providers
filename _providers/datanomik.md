@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -294,7 +294,7 @@ overview: 'Datanomik publishes 10 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 6
 score:
   band: developing
-  composite: 47.1
+  composite: 44.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -306,9 +306,9 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 52.7
+    contract_quality: 47.4
     developer_ergonomics: 57.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -317,7 +317,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 47.1
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -337,9 +337,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

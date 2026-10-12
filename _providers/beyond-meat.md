@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,14 +73,14 @@ modified: '2026-07-18'
 name: Beyond Meat
 nav: Providers
 network: true
-overview: 'Beyond Meat is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Food, Plant-Based, and CPG.
+overview: 'Beyond Meat is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Food, Plant-Based, and Consumer Packaged Goods.
 
 
   Beyond Meat''s developer surface includes engineering blog and 6 more developer resources.'
 random_paper: 9
 score:
   band: minimal
-  composite: 9.7
+  composite: 9.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,16 +94,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -121,8 +129,9 @@ tags:
 - Consumer
 - Food
 - Plant-Based
-- CPG
+- Consumer Packaged Goods
 - Sustainability
 - Retail
+- Food and Beverage
 website: https://www.beyondmeat.com
 ---

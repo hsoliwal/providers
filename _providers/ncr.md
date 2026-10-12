@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -139,15 +139,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://www.ncr.com
-- group: company
-  title: ''
-  type: Website
   url: https://www.ncrvoyix.com/
-- group: company
-  title: ''
-  type: Website
-  url: https://www.ncratleos.com/
 - group: start
   title: ''
   type: DeveloperPortal
@@ -484,16 +476,16 @@ jsonld:
   slug: ncr-voyix-commerce-platform-context
 layout: provider
 modified: '2026-06-02'
-name: NCR
+name: NCR Voyix
 nav: Providers
 network: true
-overview: 'NCR publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Category API, Order API, and 4 more. Tagged areas include Restaurant, Retail, Banking, ATM, and Point-of-Sale.
+overview: 'NCR Voyix publishes 7 APIs on the [APIs.io](https://apis.io/) network, including NCR Catalog API, NCR Category API, NCR Order API, and 4 more. Tagged areas include Restaurant, Retail, Banking, Point-of-Sale, and Commerce.
 
 
-  The NCR catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
+  The NCR Voyix catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  NCR''s developer surface includes authentication, documentation, and 17 more developer resources.'
+  NCR Voyix''s developer surface includes authentication, documentation, and 15 more developer resources.'
 plans:
 - name: Ncr Plans Pricing
   plan_count: 2
@@ -531,7 +523,7 @@ rate_limits:
 rules:
 - effective_rule_count: 5
   extends: []
-  name: NCR API Rules
+  name: NCR Voyix API Rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -542,7 +534,7 @@ rules:
 - effective_rule_count: 50
   extends:
   - spectral:oas
-  name: NCR API Rules
+  name: NCR Voyix API Rules
   rule_count: 9
   severity_counts:
     error: 1
@@ -552,7 +544,7 @@ rules:
   slug: ncr-spectral-rules
 - effective_rule_count: 37
   extends: []
-  name: NCR API Rules
+  name: NCR Voyix API Rules
   rule_count: 37
   severity_counts:
     error: 11
@@ -562,23 +554,23 @@ rules:
   slug: ncr-voyix-commerce-platform-spectral-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 33.1
   coverage:
     artifact_dirs: 21
-    catalog_earned: 79.5
+    catalog_earned: 77.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.5
+    catalog_gap: 37.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
-    contract_governance: 28.8
+    access_clarity: 26.8
+    contract_governance: 27.3
     contract_quality: 25.9
     developer_ergonomics: 34.5
-    discoverability: 81.5
-    operational_transparency: 23.7
-  previous_composite: 33.9
+    discoverability: 78.6
+    operational_transparency: 21.6
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -591,9 +583,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 21.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -613,9 +605,8 @@ tags:
 - Restaurant
 - Retail
 - Banking
-- ATM
 - Point-of-Sale
 - Commerce
 - Fortune 500
-website: https://www.ncr.com
+website: https://www.ncrvoyix.com/
 ---

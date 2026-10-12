@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -216,7 +216,7 @@ rate_limits:
   slug: podcastindex-rate-limits
 score:
   band: thin
-  composite: 28.4
+  composite: 26.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -228,14 +228,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 56.7
+    contract_quality: 51.3
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 28.4
+  previous_composite: 26.2
   provenance:
     agentic_access: derived
     contracts:
@@ -248,9 +248,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: The Content API is Prismic's primary read surface. It queries published documents from a repository with a bracketed filter language (`q`), orderings, locale selection, link expansion (`fetchLinks`) a
@@ -259,14 +259,14 @@ graphqls:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prismic.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.prismic.io over HTTP requiring OAuth; 16 tools listed.
   name: Prismic MCP Server
   slug: prismic-mcp-server
 modified: 2026-08-13
 name: Prismic
 nav: Providers
 network: true
-overview: 'Prismic publishes 1 API on the [APIs.io](https://apis.io/) network: Types API. Tagged areas include GraphQL, Headless CMS, Content Management, Page Builder, and JAMstack.
+overview: 'Prismic publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Types API, and 7 more. Tagged areas include GraphQL, Headless CMS, Content Management, Page Builder, and JAMstack.
 
 
   The Prismic catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -284,7 +284,7 @@ rate_limits:
   slug: prismic-rate-limits
 score:
   band: exemplar
-  composite: 68.9
+  composite: 71.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 64.0
@@ -296,17 +296,23 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 47.9
+    contract_quality: 45.8
     developer_ergonomics: 90.5
-    discoverability: 88.9
+    discoverability: 86.7
     operational_transparency: 84.2
-  previous_composite: 68.9
+  previous_composite: 71.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

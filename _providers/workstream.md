@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://public-api.workstream.us
@@ -138,6 +138,11 @@ collections:
   name: Workstream Public Applicants Team Members API
   slug: open-workstream-team-members-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/capabilities/workstream-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/workstream-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/workstream/refs/heads/main/security/workstream-domain-security.yml
   title: ''
@@ -216,7 +221,7 @@ network: true
 overview: 'Workstream publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Applicants API, Authorization API, Company Roles API, and 9 more. Tagged areas include Company, Human Resources, Hiring, Payroll, and Onboarding.
 
 
-  Workstream''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 9 more developer resources.'
+  Workstream''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 10 more developer resources.'
 random_paper: 3
 scopes:
 - name: Workstream Scopes
@@ -227,7 +232,7 @@ score:
   band: developing
   composite: 42.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -237,9 +242,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 49.8
+    contract_quality: 44.8
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   previous_composite: 42.7
   provenance:
@@ -248,8 +253,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

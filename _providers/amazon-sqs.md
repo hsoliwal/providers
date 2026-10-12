@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -105,7 +105,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/sqs/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -437,7 +437,7 @@ rules:
   slug: amazon-sqs-spectral-rules
 score:
   band: strong
-  composite: 57.4
+  composite: 58.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 50.5
@@ -449,11 +449,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 13.6
-    contract_quality: 72.1
+    contract_quality: 66.3
     developer_ergonomics: 70.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 44.7
-  previous_composite: 57.4
+  previous_composite: 58.7
   provenance:
     agentic_access: derived
     contracts:
@@ -461,8 +461,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -503,5 +509,5 @@ use_cases:
   name: Work Queue Distribution
 - description: Queue batch processing jobs and manage their execution across distributed compute resources.
   name: Batch Job Orchestration
-website: https://amazon.com
+website: https://aws.amazon.com/sqs/
 ---

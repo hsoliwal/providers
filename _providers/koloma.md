@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A Model Context Protocol (MCP) endpoint served from the Koloma California regional website at https://www.kolomacalifornia.com/_api/mcp and advertised in that host's own llms.txt. The endpoint is prov
@@ -119,9 +119,9 @@ description: Koloma is a Denver, Colorado based natural (geologic) hydrogen expl
 image: https://www.koloma.com/wp-content/uploads/2025/06/koloma-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.kolomacalifornia.com over HTTP; 9 tools listed.
   name: Koloma MCP Server
-  slug: koloma-mcp-server
+  slug: koloma-california-site
 modified: '2026-08-01'
 name: Koloma
 nav: Providers
@@ -133,7 +133,7 @@ overview: 'Koloma publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 5
 score:
   band: emerging
-  composite: 17.0
+  composite: 16.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -147,20 +147,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 17.0
+  previous_composite: 16.2
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 28.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

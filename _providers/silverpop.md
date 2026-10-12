@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -330,7 +330,7 @@ rules:
   slug: silverpop-rules
 score:
   band: strong
-  composite: 63.3
+  composite: 60.0
   coverage:
     artifact_dirs: 25
     catalog_earned: 72.5
@@ -342,11 +342,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 31.8
-    contract_quality: 59.9
+    contract_quality: 54.4
     developer_ergonomics: 48.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 63.3
+  previous_composite: 60.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -361,9 +361,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

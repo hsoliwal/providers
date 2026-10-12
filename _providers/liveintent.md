@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -96,6 +96,11 @@ collections:
   name: LiveIntent Privacy Management API
   slug: open-liveintent-privacy
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/liveintent/refs/heads/main/capabilities/liveintent-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/liveintent-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/liveintent/refs/heads/main/agentic-access/liveintent-agentic-access.yml
   title: ''
@@ -240,13 +245,13 @@ modified: '2026-08-12'
 name: LiveIntent
 nav: Providers
 network: true
-overview: 'LiveIntent publishes 7 APIs on the [APIs.io](https://apis.io/) network, including API references API, Audiences API, Eventtrackers API, and 4 more. Tagged areas include Company, Advertising, AdTech, Identity, and Email Marketing.
+overview: 'LiveIntent publishes 9 APIs on the [APIs.io](https://apis.io/) network, including API references API, Audiences API, Eventtrackers API, and 6 more. Tagged areas include Company, Advertising, AdTech, Identity, and Email Marketing.
 
 
   The LiveIntent catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  LiveIntent''s developer surface includes authentication, engineering blog, support, documentation, API reference, signup flow, sandbox, and 22 more developer resources.'
+  LiveIntent''s developer surface includes authentication, engineering blog, support, documentation, API reference, signup flow, sandbox, and 23 more developer resources.'
 plans:
 - name: Liveintent Plans Pricing
   plan_count: 0
@@ -258,9 +263,9 @@ rate_limits:
   slug: liveintent-rate-limits
 score:
   band: developing
-  composite: 43.0
+  composite: 42.1
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -270,11 +275,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
-    contract_quality: 61.4
+    contract_quality: 56.0
     developer_ergonomics: 58.9
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
-  previous_composite: 43.0
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -284,8 +289,20 @@ score:
       marker_coverage: 0.0
       total: 7
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

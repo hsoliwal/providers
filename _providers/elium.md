@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: templated
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.0
-  scored_at: '2026-09-20'
+  score: 25.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Elium's single GraphQL endpoint, served per tenant at https://{platform}.elium.com/graphql. 17 queries, 206 mutations and 18 subscriptions over 1128 type definitions, covering stories (content), space
@@ -207,14 +207,14 @@ description: 'Elium is a European enterprise knowledge-management SaaS platform,
 image: https://elium.com/logos/elium-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at {platform}.elium.com over HTTP requiring OAuth; 3 tools listed.
   name: Elium MCP Server
-  slug: elium-mcp-server
+  slug: elium
 modified: '2026-08-17'
 name: Elium
 nav: Providers
 network: true
-overview: 'Elium publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Software-as-a-Service, Knowledge-Management, Knowledge Base, and Enterprise Search.
+overview: 'Elium publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Software-as-a-Service, Knowledge Management, Knowledge Base, and Enterprise Search.
 
 
   The Elium catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -237,7 +237,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/password
 score:
   band: developing
-  composite: 50.8
+  composite: 53.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -249,22 +249,30 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.9
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - belgium
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 50.8
+  previous_composite: 53.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -292,7 +300,7 @@ slug: elium
 tags:
 - Company
 - Software-as-a-Service
-- Knowledge-Management
+- Knowledge Management
 - Knowledge Base
 - Enterprise Search
 - AI Search

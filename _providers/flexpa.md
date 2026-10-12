@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -49,21 +49,74 @@ apis:
   baseurl_source: declared
   description: The Access Tokens API from Flexpa — 1 operation(s) for access tokens.
   name: Flexpa Access Tokens API
+  phrasing_intents:
+  - id: token
+    intent: Exchange a code or refresh an access token
+    question: What do I send to Flexpa to swap a Link authorization code and PKCE verifier for a Patient Access Token?
+  phrasing_ops: 1
   slug: flexpa-access-tokens-api
 - baseURL: https://api.flexpa.com
   baseurl_source: declared
   description: The Claims Data API from Flexpa — 5 operation(s) for claims data.
   name: Flexpa Claims Data API
+  phrasing_intents:
+  - id: patientEverything
+    intent: Get every record for a patient
+    question: Can I pull every resource in a patient's compartment in a single call instead of searching each type?
+  - id: patientSummary
+    intent: Generate an International Patient Summary
+    question: Can I generate an International Patient Summary (IPS) document for a connected patient?
+  - id: patientPdf
+    intent: Export a patient's health data as a PDF
+    question: Can I export a patient's health data as a printable PDF?
+  - id: searchExplanationOfBenefit
+    intent: Search a patient's insurance claims
+    question: How do I list a patient's health insurance claims as ExplanationOfBenefit resources?
+  - id: readExplanationOfBenefit
+    intent: Get one insurance claim
+    question: Can I open a single ExplanationOfBenefit by its resource ID to see the full claim detail?
+  phrasing_ops: 5
   slug: flexpa-claims-data-api
 - baseURL: https://api.flexpa.com
   baseurl_source: declared
   description: The FHIR API from Flexpa — 8 operation(s) for fhir.
   name: Flexpa FHIR API
+  phrasing_intents:
+  - id: getCapabilityStatement
+    intent: Check which FHIR resources the server supports
+    question: Which FHIR resources and operations does the Flexpa server support?
+  - id: searchPatient
+    intent: Search patients by identifier
+    question: Can I find a Patient resource using an identifier such as a member ID?
+  - id: readPatient
+    intent: Get a patient's demographic record
+    question: How do I read one patient's demographics once I have their Patient ID?
+  - id: searchCoverage
+    intent: Search a patient's insurance coverage
+    question: Which health insurance plans cover a given patient?
+  - id: readCoverage
+    intent: Get one insurance coverage record
+    question: What plan, payer and period does one specific Coverage resource describe?
+  - id: searchPractitioner
+    intent: Look up individual healthcare providers
+    question: Can I look up an individual doctor by NPI number?
+  - id: searchOrganization
+    intent: Look up healthcare organizations
+    question: Can I find hospitals or clinics by organizational NPI?
+  - id: runViewDefinition
+    intent: Extract tabular data with a ViewDefinition
+    question: Can I flatten FHIR resources into rows and columns using a SQL-on-FHIR ViewDefinition?
+  phrasing_ops: 8
   slug: flexpa-fhir-api
 - baseURL: https://api.flexpa.com
   baseurl_source: declared
   description: The Link API from Flexpa — 1 operation(s) for link.
   name: Flexpa Link API
+  phrasing_intents:
+  - id: authorize
+    intent: Start a patient's health plan authorization
+    question: Where do I send a patient so they can pick their health insurance plan and authorize my app in Flexpa Link?
+  phrasing_ops: 1
   slug: flexpa-link-api
 artifact_total: 20
 asyncapis:
@@ -288,9 +341,9 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flexpa.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Flexpa ships two first-party remote MCP servers on api.flexpa.com. The patient MCP server (/mcp) is OAuth-protected and exposes a patient''s claims and clinical record as tools; the Endpoint Directory '
   name: Flexpa MCP Server
-  slug: flexpa-mcp-server
+  slug: flexpa-mcp-yml
 modified: '2026-08-14'
 name: Flexpa
 nav: Providers
@@ -313,12 +366,12 @@ rate_limits:
   slug: flexpa-rate-limits
 scopes:
 - name: Flexpa Scopes
-  scope_count: 0
+  scope_count: 2
   slug: flexpa-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: exemplar
-  composite: 72.4
+  composite: 67.8
   coverage:
     artifact_dirs: 28
     catalog_earned: 64.0
@@ -330,11 +383,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 51.7
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 72.4
+  previous_composite: 67.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -350,9 +403,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 47.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 1
@@ -49,59 +49,59 @@ apis:
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Benefits (entitlements) attached to products.
-  name: Polar benefits API
+  name: Polar Benefits API
   slug: polar-sh-benefits-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Hosted checkout sessions and reusable checkout links.
-  name: Polar checkouts API
+  name: Polar Checkouts API
   slug: polar-sh-checkouts-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Customer-facing portal endpoints (Customer Session token).
-  name: Polar customer_portal API
+  name: Polar Customer Portal API
   slug: polar-sh-customer-portal-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Customers, external IDs, and aggregated customer state.
-  name: Polar customers API
+  name: Polar Customers API
   slug: polar-sh-customers-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Usage event ingestion for metered billing.
-  name: Polar events API
+  name: Polar Events API
   slug: polar-sh-events-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: License key issuance, validation, and activation.
-  name: Polar license_keys API
+  name: Polar License Keys API
   slug: polar-sh-license-keys-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Usage meters aggregating ingested events.
-  name: Polar meters API
+  name: Polar Meters API
   slug: polar-sh-meters-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Orders, invoices, and receipts.
-  name: Polar orders API
+  name: Polar Orders API
   slug: polar-sh-orders-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Product catalog and embedded pricing.
-  name: Polar products API
+  name: Polar Products API
   slug: polar-sh-products-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Recurring subscriptions.
-  name: Polar subscriptions API
+  name: Polar Subscriptions API
   slug: polar-sh-subscriptions-api
 - baseURL: https://api.polar.sh/v1
   baseurl_source: declared
   description: Webhook endpoint management and deliveries.
-  name: Polar webhooks API
+  name: Polar Webhooks API
   slug: polar-sh-webhooks-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: open
   name: API Collection
@@ -143,6 +143,11 @@ collections:
   name: Polar API
   slug: open-polar-sh
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/polar-sh/refs/heads/main/capabilities/polar-sh-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/polar-sh-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/polar-sh/refs/heads/main/agentic-access/polar-sh-agentic-access.yml
   title: ''
@@ -201,14 +206,18 @@ finops:
   slug: polar-sh-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/polar-sh.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.polar.sh over HTTP.
+  name: Polar MCP Server
+  slug: polar-sh
 modified: '2026-06-21'
 name: Polar
 nav: Providers
 network: true
-overview: 'Polar publishes 11 APIs on the [APIs.io](https://apis.io/) network, including benefits API, checkouts API, customer_portal API, and 8 more. Tagged areas include Billing, Payments, Merchant of Record, Monetization, and Subscription.
+overview: 'Polar publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Benefits API, Checkouts API, Customer Portal API, and 8 more. Tagged areas include Billing, Payments, Merchant of Record, Monetization, and Subscription.
 
 
-  Polar''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Polar''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Polar Sh Plans Pricing
   plan_count: 6
@@ -220,23 +229,23 @@ rate_limits:
   slug: polar-sh-rate-limits
 score:
   band: thin
-  composite: 36.6
+  composite: 35.0
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 25.0
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 36.6
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -250,9 +259,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

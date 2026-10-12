@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Node.js is a JavaScript runtime built on Chrome's V8 engine that powers server-side applications and tooling across the JavaScript ecosystem.
@@ -133,7 +133,7 @@ rate_limits:
   slug: openjs-foundation-rate-limits
 score:
   band: emerging
-  composite: 17.2
+  composite: 16.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -147,11 +147,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 39.5
-  previous_composite: 17.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

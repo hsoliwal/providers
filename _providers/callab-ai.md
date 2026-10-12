@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Callab AI's REST API, documented at docs.callab.ai/api-reference, is organized around REST principles with predictable resource-oriented URLs, standard HTTP verbs, and standard HTTP response codes for
@@ -131,7 +131,7 @@ overview: 'Callab AI publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 18
 score:
   band: emerging
-  composite: 14.9
+  composite: 15.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -145,14 +145,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 14.9
+  previous_composite: 15.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -174,7 +186,7 @@ tags:
 - Voice Agents
 - Call Automation
 - PBX
-- Customer-Support
+- Customer Support
 - AI Agents
 website: https://callab.ai
 ---

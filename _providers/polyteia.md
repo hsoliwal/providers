@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -209,7 +209,7 @@ overview: 'Polyteia publishes 1 API on the [APIs.io](https://apis.io/) network: 
 random_paper: 13
 score:
   band: developing
-  composite: 52.5
+  composite: 48.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -221,9 +221,9 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 59.9
+    contract_quality: 53.9
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -233,7 +233,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 52.5
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -253,9 +253,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

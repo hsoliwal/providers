@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 68
   human_in_the_loop: 2
@@ -159,6 +159,11 @@ collections:
   name: Vijil Console API (Combined) agent-configurations webhooks API
   slug: open-vijil-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vijil/refs/heads/main/capabilities/vijil-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vijil-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -312,7 +317,7 @@ layout: provider
 mcp_servers:
 - description: 'Official MCP server for the Vijil AI trust platform. Distributed as the `vijil-mcp` PyPI package, it exposes the Vijil Console CLI surface as MCP tools (stdio transport) for Claude Code and other MCP '
   name: Vijil MCP Server
-  slug: vijil-mcp-server
+  slug: vijil
 modified: '2026-07-21'
 name: Vijil
 nav: Providers
@@ -320,13 +325,13 @@ network: true
 overview: 'Vijil publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agent Environment API, Diamond API, Dome API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Security, and AI Safety.
 
 
-  Vijil''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, signup flow, support, and 25 more developer resources.'
+  Vijil''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, signup flow, support, and 26 more developer resources.'
 random_paper: 14
 score:
   band: developing
-  composite: 47.8
+  composite: 48.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -336,11 +341,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 44.2
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 13.2
-  previous_composite: 47.8
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -351,8 +356,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

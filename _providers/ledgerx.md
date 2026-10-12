@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.ledgerx.com
@@ -154,7 +154,7 @@ modified: '2026-07-19'
 name: LedgerX (MIAX Derivatives Exchange)
 nav: Providers
 network: true
-overview: 'LedgerX (MIAX Derivatives Exchange) publishes 1 API on the [APIs.io](https://apis.io/) network: MIAXdx Market Data and Account API. Tagged areas include Company, Enterprise, Financial-Services, Derivatives, and Trading.
+overview: 'LedgerX (MIAX Derivatives Exchange) publishes 2 APIs on the [APIs.io](https://apis.io/) network, including MIAXdx Market Data and Account API, and 1 more. Tagged areas include Company, Enterprise, Financial Services, Derivatives, and Trading.
 
 
   The LedgerX (MIAX Derivatives Exchange) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -168,7 +168,7 @@ rate_limits:
   slug: ledgerx-rate-limits
 score:
   band: thin
-  composite: 33.9
+  composite: 32.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -180,11 +180,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 44.8
+    contract_quality: 42.7
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 33.9
+  previous_composite: 32.8
   provenance:
     conformance: first-party
   regulatory:
@@ -192,9 +192,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 36.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,7 +214,7 @@ slug: ledgerx
 tags:
 - Company
 - Enterprise
-- Financial-Services
+- Financial Services
 - Derivatives
 - Trading
 - Cryptocurrency
@@ -223,5 +223,6 @@ tags:
 - Market Data
 - WebSocket
 - Regulated Markets
+- Real-Time
 website: https://app.ledgerx.com
 ---

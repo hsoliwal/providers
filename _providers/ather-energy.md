@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -159,9 +159,9 @@ description: 'Ather Energy Limited is a Bengaluru-based Indian electric two-whee
 image: https://www.atherenergy.com/images/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.atherenergy.com over HTTP; 5 tools listed.
   name: Ather Energy MCP Server
-  slug: ather-energy-mcp-server
+  slug: ather-shop-ucp
 modified: '2026-07-31'
 name: Ather Energy
 nav: Providers
@@ -173,7 +173,7 @@ overview: 'Ather Energy publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 17
 score:
   band: emerging
-  composite: 21.7
+  composite: 20.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -187,7 +187,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,19 +196,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 21.7
+  previous_composite: 20.5
   provenance:
     agentic_access: first-party
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

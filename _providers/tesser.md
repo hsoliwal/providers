@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.tesser.xyz
@@ -65,7 +65,7 @@ apis:
 - baseURL: https://api.tesser.xyz
   baseurl_source: declared
   description: The health API from Tesser — 2 operation(s) for health.
-  name: Tesser health API
+  name: Tesser Health API
   slug: tesser-health-api
 - baseURL: https://api.tesser.xyz
   baseurl_source: declared
@@ -105,7 +105,7 @@ apis:
 - baseURL: https://api.tesser.xyz
   baseurl_source: declared
   description: The webhooks API from Tesser — 6 operation(s) for webhooks.
-  name: Tesser webhooks API
+  name: Tesser Webhooks API
   slug: tesser-webhooks-api
 artifact_total: 33
 asyncapis:
@@ -304,7 +304,7 @@ layout: provider
 mcp_servers:
 - description: The Tesser MCP server exposes every public Tesser API endpoint as a tool that AI agents can discover and invoke over Streamable HTTP. It is also modeled in the OpenAPI as the POST /v1/mcp operation (o
   name: Tesser MCP Server
-  slug: tesser-mcp-server
+  slug: tesser-payments
 modified: '2026-07-21'
 name: Tesser
 nav: Providers
@@ -319,7 +319,7 @@ overview: 'Tesser publishes 14 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 2
 score:
   band: developing
-  composite: 47.3
+  composite: 45.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -331,16 +331,18 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 53.4
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.3
+  previous_composite: 45.7
   provenance:
     conformance: derived
     contracts:
@@ -355,9 +357,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

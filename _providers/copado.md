@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -167,8 +167,8 @@ overview: 'Copado is profiled on the [APIs.io](https://apis.io/) network. Tagged
   Copado''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, CLI, and 19 more developer resources.'
 random_paper: 14
 score:
-  band: thin
-  composite: 38.1
+  band: developing
+  composite: 40.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -182,13 +182,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 67.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 44.7
-  previous_composite: 38.1
+  previous_composite: 40.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

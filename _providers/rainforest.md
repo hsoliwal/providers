@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 1
@@ -315,6 +315,11 @@ collections:
   name: Authentication ACH Returns Sessions API
   slug: open-rainforest-sessions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rainforest/refs/heads/main/capabilities/rainforest-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rainforest-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -508,13 +513,13 @@ overview: 'Rainforest publishes 23 APIs on the [APIs.io](https://apis.io/) netwo
   The Rainforest catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Rainforest''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 32 more developer resources.'
+  Rainforest''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 33 more developer resources.'
 random_paper: 7
 score:
   band: strong
-  composite: 57.9
+  composite: 54.3
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -524,11 +529,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 63.5
+    contract_quality: 58.0
     developer_ergonomics: 50.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 46.1
-  previous_composite: 57.9
+  previous_composite: 54.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -544,9 +549,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

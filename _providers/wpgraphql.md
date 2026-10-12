@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Extendable GraphQL API for WordPress that exposes posts, pages, custom post types, users, menus, taxonomies, media, and settings as GraphQL types and connections. Supports queries, mutations, and subs
@@ -104,14 +104,14 @@ modified: '2026-06-14'
 name: WPGraphQL
 nav: Providers
 network: true
-overview: 'WPGraphQL publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include GraphQL, WordPress, Headless CMS, Content Management, and Open-Source.
+overview: 'WPGraphQL publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include GraphQL, WordPress, Headless CMS, Content Management, and Open Source.
 
 
   WPGraphQL''s developer surface includes documentation, engineering blog, pricing, and 9 more developer resources.'
 random_paper: 14
 score:
-  band: thin
-  composite: 26.8
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -123,13 +123,19 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 26.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 25.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -147,7 +153,7 @@ tags:
 - WordPress
 - Headless CMS
 - Content Management
-- Open-Source
+- Open Source
 - Plugins
 - Decoupled WordPress
 website: https://www.wpgraphql.com/

@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The public HTTP interface (agent/gateway API) for reading state from and submitting calls to Internet Computer canisters, consumed by the @dfinity agent libraries, the Rust ic-agent, and the icp/dfx C
   name: Internet Computer HTTP Interface
   slug: internet-computer-http-interface
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -119,6 +119,10 @@ created: '2026-07-17'
 description: The DFINITY Foundation is a Swiss-based not-for-profit research organization that created and stewards the Internet Computer Protocol (ICP), a public, decentralized "frontier cloud" that hosts software and data entirely inside a mathematical network protocol. Applications run as canisters (WebAssembly smart contracts with persistent state, native HTTP, and a reverse gas model paid in Cycles) that are tamperproof, unstoppable, and free from vendor lock-in. ICP uses Chain Key cryptography and Chain Fusion to transact natively on Bitcoin and Ethereum without bridges, and is governed on-network by the Network Nervous System (NNS). DFINITY publishes first-party developer tooling — JavaScript/TypeScript agent libraries under the @dfinity npm scope, Rust agent and Canister Developer Kit crates, the icp/dfx CLIs, and an AI agent skills library — plus a public HTTP interface for reading from and calling canisters.
 image: https://github.com/dfinity.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.internetcomputer.org over HTTP.
+  name: DFINITY MCP Server
+  slug: dfinity
 modified: '2026-07-18'
 name: DFINITY
 nav: Providers
@@ -130,7 +134,7 @@ overview: 'DFINITY publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: emerging
-  composite: 22.0
+  composite: 21.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -144,14 +148,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 22.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - switzerland
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 21.3
   provenance:
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

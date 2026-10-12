@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -259,14 +259,14 @@ description: 'Nexar is a physical-AI infrastructure company that operates one of
 image: https://cdn.prod.website-files.com/6714bce7188a12cb895149f5/68f0ac403e8da1fec926cec2_social%20sharing.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at getnexar.com over HTTP; 1 tool listed.
   name: Nexar MCP Server
-  slug: nexar-mcp-server
+  slug: nexar-storefront
 modified: '2026-08-26'
 name: Nexar
 nav: Providers
 network: true
-overview: 'Nexar publishes 6 APIs on the [APIs.io](https://apis.io/) network, including CityStream™ Live Feed API V4 API, Get a collection of road signs API, Get a collection of work zones API, and 3 more. Tagged areas include Company, Mapping, Geospatial, Transportation, and Computer-Vision.
+overview: 'Nexar publishes 6 APIs on the [APIs.io](https://apis.io/) network, including CityStream™ Live Feed API V4 API, Get a collection of road signs API, Get a collection of work zones API, and 3 more. Tagged areas include Company, Mapping, Geospatial, Transportation, and Computer Vision.
 
 
   Nexar''s developer surface includes documentation, API reference, signup flow, support, engineering blog, authentication, CLI, and 30 more developer resources.'
@@ -286,7 +286,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.7
+  composite: 37.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -298,11 +298,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 15.8
-  previous_composite: 35.7
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -313,8 +313,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -339,11 +345,11 @@ tags:
 - Mapping
 - Geospatial
 - Transportation
-- Computer-Vision
+- Computer Vision
 - Autonomous Vehicles
 - Smart Cities
 - Imagery
 - Road Data
-- Machine-Learning
+- Machine Learning
 website: https://www.nexar-ai.com/
 ---

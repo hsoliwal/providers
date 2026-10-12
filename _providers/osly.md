@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -20,19 +20,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.9
-  scored_at: '2026-09-20'
+  score: 3.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The workflow list, detail and execution surface behind Osly, as documented by the company's own first-party TypeScript SDK. Two REST reads (GET /workflows, GET /workflows/{id}) authenticated with an X
@@ -155,7 +155,7 @@ modified: '2026-08-14'
 name: Osly
 nav: Providers
 network: true
-overview: 'Osly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Workflow-Automation, No-Code, and Agents.
+overview: 'Osly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Workflow Automation, No-Code, and Agents.
 
 
   Osly''s developer surface includes signup flow, support, engineering blog, documentation, CLI, authentication, and 17 more developer resources.'
@@ -170,7 +170,7 @@ rate_limits:
   slug: osly-rate-limits
 score:
   band: emerging
-  composite: 17.6
+  composite: 17.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -184,14 +184,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 17.6
+  previous_composite: 17.4
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +217,7 @@ slug: osly
 tags:
 - Company
 - Artificial Intelligence
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 - Agents
 - Lead Generation

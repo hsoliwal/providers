@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Read-only REST API over the BetaList startup directory. Three documented collections — startups (list + detail, filterable by region_id and market_id), regions (list + detail), and markets (list; mark
@@ -192,7 +192,7 @@ rate_limits:
   slug: betalist-rate-limits
 score:
   band: emerging
-  composite: 23.8
+  composite: 24.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -206,14 +206,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 23.8
+  previous_composite: 24.9
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

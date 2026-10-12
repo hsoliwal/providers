@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -134,19 +134,19 @@ layout: provider
 mcp_servers:
 - description: Rerun ships a first-party local (stdio) MCP server that lets LLM agents see and interact with a running Rerun Viewer. Introduced in Rerun 0.34.0 (2026-07-06) and exposed through the bundled CLI as `re
   name: Rerun MCP Server
-  slug: rerun-mcp-server
+  slug: rerun-mcp-yml
 modified: '2026-07-20'
 name: Rerun
 nav: Providers
 network: true
-overview: 'Rerun is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Dev Tools Ai, Robotics, Computer-Vision, and Physical AI.
+overview: 'Rerun is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Dev Tools Ai, Robotics, Computer Vision, and Physical AI.
 
 
   Rerun''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 13 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 25.1
+  composite: 24.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -160,14 +160,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 25.1
+  previous_composite: 24.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,11 +190,11 @@ tags:
 - Company
 - Dev Tools Ai
 - Robotics
-- Computer-Vision
+- Computer Vision
 - Physical AI
 - Data Visualization
 - SDK
-- Open-Source
+- Open Source
 - MCP
 website: https://rerun.io
 ---

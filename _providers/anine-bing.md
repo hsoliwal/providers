@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -104,7 +104,7 @@ layout: provider
 mcp_servers:
 - description: Live Universal Commerce Protocol (UCP, ucp.dev) shopping MCP endpoint for the Anine Bing Shopify storefront. Enables agent-driven catalog search, cart, and buyer-approved checkout. This is Shopify's n
   name: Anine Bing UCP shopping MCP
-  slug: anine-bing-ucp-shopping-mcp
+  slug: anine-bing-ucp-shopping
 modified: '2026-07-17'
 name: Anine Bing
 nav: Providers
@@ -121,7 +121,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.2
+  composite: 17.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -135,19 +135,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.2
+  previous_composite: 17.4
   provenance:
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

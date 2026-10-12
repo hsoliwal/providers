@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The anonymous Model Context Protocol endpoint ZBiotics serves on its own domain, implementing the Universal Commerce Protocol dev.ucp.shopping service at version 2026-08-25. tools/list answers without
@@ -147,7 +147,7 @@ description: 'ZBiotics is a San Francisco biotechnology company that makes the w
 image: https://zbiotics.com/cdn/shop/files/zbiotics-logo.svg?v=1714027569
 layout: provider
 mcp_servers:
-- description: ''
+- description: ZBiotics exposes a live Model Context Protocol server on its own domain at /api/ucp/mcp. It implements the Universal Commerce Protocol (UCP) dev.ucp.shopping service and answers tools/list and initial
   name: ZBiotics Universal Commerce (UCP) MCP Server
   slug: zbiotics-universal-commerce-ucp-mcp-server
 modified: '2026-09-05'
@@ -169,12 +169,12 @@ rate_limits:
   slug: zbiotics-rate-limits
 scopes:
 - name: Zbiotics Scopes
-  scope_count: 0
+  scope_count: 4
   slug: zbiotics-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: thin
-  composite: 32.6
+  composite: 30.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -188,21 +188,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 32.6
+  previous_composite: 30.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

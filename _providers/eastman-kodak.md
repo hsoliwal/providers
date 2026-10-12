@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -171,7 +171,7 @@ rate_limits:
   slug: eastman-kodak-rate-limits
 score:
   band: emerging
-  composite: 16.8
+  composite: 18.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -185,13 +185,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 15.8
-  previous_composite: 16.8
+  previous_composite: 18.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

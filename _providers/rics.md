@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -334,7 +334,7 @@ modified: '2026-07-26'
 name: RICS (Royal Institution of Chartered Surveyors)
 nav: Providers
 network: true
-overview: 'RICS (Royal Institution of Chartered Surveyors) publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Azure Storage API, Ola Merchant Post API, Payment API, and 4 more. Tagged areas include Real-Estate, United Kingdom, Industry Body, Valuation, and Standards.
+overview: 'RICS (Royal Institution of Chartered Surveyors) publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Azure Storage API, Ola Merchant Post API, Payment API, and 4 more. Tagged areas include Real Estate, United Kingdom, Industry Body, Valuation, and Standards.
 
 
   RICS (Royal Institution of Chartered Surveyors)''s developer surface includes authentication, changelog, code examples, engineering blog, support, signup flow, pricing, and 43 more developer resources.'
@@ -346,7 +346,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 33.9
+  composite: 35.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 35.0
@@ -358,9 +358,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 47.1
+    contract_quality: 42.7
     developer_ergonomics: 28.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -373,7 +373,7 @@ score:
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 33.9
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -384,8 +384,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -402,7 +408,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: rics
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - Industry Body
 - Valuation

@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: served
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.2
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Core API for AutoCAD automation, drawing manipulation, and entity management.
@@ -240,9 +240,9 @@ integrations:
   name: Power BI
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at autodesk-platform-services.github.io.
   name: AutoCAD MCP Server
-  slug: autocad-mcp-server
+  slug: autocad-mcp-yml
 modified: '2026-06-20'
 name: AutoCAD
 nav: Providers
@@ -267,7 +267,7 @@ scopes:
   summary_line: 16 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 43.9
+  composite: 47.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -279,16 +279,22 @@ score:
   facets:
     access_clarity: 61.8
     contract_governance: 18.2
-    contract_quality: 6.7
-    developer_ergonomics: 66.7
-    discoverability: 88.9
+    contract_quality: 6.5
+    developer_ergonomics: 66.0
+    discoverability: 85.7
     operational_transparency: 42.1
-  previous_composite: 43.9
+  previous_composite: 47.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.3
-  scored_at: '2026-09-20'
+  score: 4.1
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://api.fhir.nhsd.healthdirect.org.au/v4
@@ -202,14 +202,14 @@ modified: '2026-07-24T18:00:00Z'
 name: Healthdirect Australia
 nav: Providers
 network: true
-overview: 'Healthdirect Australia publishes 1 API on the [APIs.io](https://apis.io/) network: NHSD FHIR API. Tagged areas include Healthcare, Australia, FHIR, HL7, and Interoperability.
+overview: 'Healthdirect Australia publishes 5 APIs on the [APIs.io](https://apis.io/) network, including NHSD FHIR API, and 4 more. Tagged areas include Healthcare, Australia, FHIR, HL7, and Interoperability.
 
 
   Healthdirect Australia''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, authentication, and 23 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 38.4
+  composite: 36.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 35.0
@@ -222,8 +222,8 @@ score:
     access_clarity: 42.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 70.8
-    discoverability: 72.2
+    developer_ergonomics: 70.4
+    discoverability: 69.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -232,7 +232,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 38.4
+  previous_composite: 36.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -242,9 +242,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

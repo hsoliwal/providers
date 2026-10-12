@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 81
   human_in_the_loop: 4
@@ -306,9 +306,9 @@ description: SEDNA is the operating system for shipping — a communications and
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sedna.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.sedna.com over HTTP.
   name: SEDNA MCP Server
-  slug: sedna-mcp-server
+  slug: sedna
 modified: '2026-09-16'
 name: SEDNA
 nav: Providers
@@ -324,8 +324,8 @@ scopes:
   slug: sedna-scopes
   summary_line: 53 scopes · clientCredentials
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 40.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -337,11 +337,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 52.2
+    contract_quality: 47.3
     developer_ergonomics: 33.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 37.8
+  previous_composite: 40.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -352,8 +352,14 @@ score:
       total: 17
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

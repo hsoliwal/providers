@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The GoGift REST API for buying and sending digital gift cards. Five documented operations cover the purchase flow end to end: filter the product catalogue, read a product and its purchasable inventory'
@@ -222,12 +222,12 @@ rate_limits:
   slug: gogift-rate-limits
 scopes:
 - name: Gogift Scopes
-  scope_count: 0
+  scope_count: 11
   slug: gogift-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 11 scopes
 score:
   band: developing
-  composite: 45.8
+  composite: 43.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -239,11 +239,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 56.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 45.8
+  previous_composite: 43.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -252,9 +252,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -279,5 +279,6 @@ tags:
 - Commerce
 - Payments
 - Employee Recognition
+- Loyalty & Incentives
 website: https://global.gogift.com/
 ---

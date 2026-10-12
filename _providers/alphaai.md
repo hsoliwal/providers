@@ -12,7 +12,8 @@ access_model:
   trial: true
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: na
     mcp_server: verified
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 68.5
-  scored_at: '2026-09-20'
+  score: 66.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -66,7 +67,7 @@ apis:
   description: Active equity, crypto, and foreign symbols (tickers).
   name: AlphaAI Symbols API
   slug: alphaai-symbols-api
-artifact_total: 16
+artifact_total: 15
 asyncapis:
 - description: ''
   name: Alphaai Webhooks
@@ -270,15 +271,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: AlphaAI MCP Server
-  slug: alphaai-mcp-server
-- description: A first-party hosted MCP server over Streamable HTTP, registered in the official Model Context Protocol registry and protected by a properly advertised OAuth 2.1 authorization server with RFC 7591 dyn
-  name: AlphaAI MCP Server
-  slug: alphaai-mcp-server-2
+  slug: mcp
 modified: '2026-08-11'
 name: AlphaAI
 nav: Providers
 network: true
-overview: 'AlphaAI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Calendar API, News API, and Symbols API. Tagged areas include Financial News, Stock Market, SEC Filings, Insider Trading, and Fintech.
+overview: 'AlphaAI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Calendar API, News API, Symbols API, and 2 more. Tagged areas include Financial News, Stock Market, SEC Filings, Insider Trading, and Fintech.
 
 
   The AlphaAI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -301,7 +299,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 71.3
+  composite: 66.7
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -313,11 +311,11 @@ score:
   facets:
     access_clarity: 59.2
     contract_governance: 4.5
-    contract_quality: 69.1
+    contract_quality: 63.3
     developer_ergonomics: 88.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 84.2
-  previous_composite: 71.3
+  previous_composite: 66.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -333,9 +331,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 71.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

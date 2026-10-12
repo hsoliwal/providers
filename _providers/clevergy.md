@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 0
@@ -173,6 +173,11 @@ asyncapis:
   name: Clevergy Webhooks
   slug: clevergy-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/capabilities/clevergy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/clevergy-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/clevergy/refs/heads/main/overlays/clevergy-connect-api-overlay.yaml
   title: ''
@@ -330,13 +335,13 @@ modified: '2026-08-17'
 name: Clevergy
 nav: Providers
 network: true
-overview: 'Clevergy publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Access control API, Connections API, Contracts API, and 20 more. Tagged areas include Company, Climate Tech, Energy, Energy Management, and Utilities.
+overview: 'Clevergy publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Access control API, Connections API, Contracts API, and 22 more. Tagged areas include Company, Climate Tech, Energy, Energy Management, and Utilities.
 
 
   The Clevergy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Clevergy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, FAQ, and 26 more developer resources.'
+  Clevergy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, FAQ, and 27 more developer resources.'
 plans:
 - name: Clevergy Plans Pricing
   plan_count: 2
@@ -348,9 +353,9 @@ rate_limits:
   slug: clevergy-rate-limits
 score:
   band: developing
-  composite: 54.2
+  composite: 51.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -360,9 +365,9 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 4.5
-    contract_quality: 62.8
+    contract_quality: 57.6
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -372,7 +377,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 54.2
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -388,9 +393,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 43.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -416,7 +421,7 @@ tags:
 - Solar
 - Home Energy
 - Battery Storage
-- Electric Vehicle Charging
+- EV Charging
 - Smart Home
 - Sustainability
 - Spain

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ overview: 'AlgoDriven publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 11
 score:
   band: thin
-  composite: 35.1
+  composite: 34.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -187,11 +187,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.1
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -202,8 +202,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

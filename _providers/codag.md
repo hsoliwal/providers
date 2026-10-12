@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 3
@@ -66,7 +66,7 @@ apis:
 - baseURL: https://api.codag.ai
   baseurl_source: declared
   description: The billing API from Codag — 4 operation(s) for billing.
-  name: Codag billing API
+  name: Codag Billing API
   slug: codag-billing-api
 - baseURL: https://api.codag.ai
   baseurl_source: declared
@@ -201,6 +201,11 @@ collections:
   name: infra-logs templater Activate Whoami API
   slug: open-codag-whoami-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/codag/refs/heads/main/capabilities/codag-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/codag-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/codag/refs/heads/main/overlays/codag-openapi-overlay.yaml
   title: ''
@@ -358,9 +363,9 @@ description: Codag is a Y Combinator (Summer 2026) developer-tools company build
 image: https://codag.ai/socialpreview.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 3 tools listed.
   name: Codag MCP Server
-  slug: codag-mcp-server
+  slug: codag
 modified: '2026-07-18'
 name: Codag
 nav: Providers
@@ -368,13 +373,13 @@ network: true
 overview: 'Codag publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Activate API, Admin API, Anonymous API, and 16 more. Tagged areas include Company, Developer Tools, Logging, Observability, and Log Compression.
 
 
-  Codag''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 26 more developer resources.'
+  Codag''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 27 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 46.1
+  composite: 47.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -384,11 +389,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 42.3
+    contract_quality: 38.1
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 46.1
+  previous_composite: 47.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -399,8 +404,14 @@ score:
       total: 19
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

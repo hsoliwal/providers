@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 65
   human_in_the_loop: 0
@@ -258,6 +258,11 @@ collections:
   name: Demand Accounts Target Groups (Batch) API
   slug: open-cint-target-groups-batch-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cint/refs/heads/main/capabilities/cint-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cint-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -405,13 +410,13 @@ overview: 'Cint publishes 25 APIs on the [APIs.io](https://apis.io/) network, in
   The Cint catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Cint''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, authentication, and 22 more developer resources.'
+  Cint''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, authentication, and 23 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 52.5
+  composite: 52.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -421,11 +426,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 63.8
+    contract_quality: 58.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 52.5
+  previous_composite: 52.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -436,8 +441,14 @@ score:
       total: 25
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

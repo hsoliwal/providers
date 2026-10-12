@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -235,7 +235,7 @@ modified: '2026-05-19'
 name: IBM MQ
 nav: Providers
 network: true
-overview: 'IBM MQ publishes 10 APIs on the [APIs.io](https://apis.io/) network, including JMS API, Channels API, Installations API, and 7 more. Tagged areas include Async, Enterprise, Integration, Messaging, and Middleware.
+overview: 'IBM MQ publishes 11 APIs on the [APIs.io](https://apis.io/) network, including JMS API, Channels API, Installations API, and 8 more. Tagged areas include Async, Enterprise, Integration, Messaging, and Middleware.
 
 
   The IBM MQ catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -284,8 +284,8 @@ rules:
     warn: 0
   slug: ibm-mq-rules
 score:
-  band: developing
-  composite: 39.3
+  band: thin
+  composite: 39.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 45.5
@@ -297,11 +297,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 66.1
+    contract_quality: 61.4
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 39.3
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -309,8 +309,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -337,5 +343,6 @@ tags:
 - Messaging
 - Middleware
 - Queues
+- Real-Time
 website: https://www.ibm.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 66.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -236,7 +236,7 @@ layout: provider
 mcp_servers:
 - description: Hosted remote MCP server for Allowance. Add https://mcp.useallowance.com to any MCP-compatible agent as a remote server; the MCP client opens a browser to sign in to Allowance, after which the agent c
   name: Allowance MCP Server
-  slug: allowance-mcp-server
+  slug: allowance
 modified: '2026-07-17'
 name: Allowance
 nav: Providers
@@ -255,8 +255,8 @@ scopes:
   slug: allowance-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: strong
-  composite: 55.0
+  band: developing
+  composite: 52.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -268,11 +268,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 60.8
+    contract_quality: 55.5
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 55.0
+  previous_composite: 52.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -288,9 +288,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

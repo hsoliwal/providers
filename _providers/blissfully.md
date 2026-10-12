@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -225,7 +225,7 @@ modified: '2026-05-19'
 name: Blissfully
 nav: Providers
 network: true
-overview: 'Blissfully publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Pricing API, Products API, Vendors API, and 1 more. Tagged areas include Procurement, SaaS Discovery, SaaS Management, Software Procurement, and Spend Optimization.
+overview: 'Blissfully publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Pricing API, Products API, Vendors API, and 4 more. Tagged areas include Procurement, SaaS Discovery, SaaS Management, Software Procurement, and Spend Optimization.
 
 
   The Blissfully catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -265,7 +265,7 @@ rules:
   slug: blissfully-spectral-rules
 score:
   band: thin
-  composite: 27.7
+  composite: 29.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 57.5
@@ -279,9 +279,9 @@ score:
     contract_governance: 13.6
     contract_quality: 22.4
     developer_ergonomics: 23.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 27.7
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -289,8 +289,14 @@ score:
       derived: 5
       marker_coverage: 100.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

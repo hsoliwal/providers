@@ -14,7 +14,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 56.5
-  scored_at: '2026-09-20'
+  score: 56.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -47,52 +47,52 @@ apis:
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The accounts object represents the information associated with an account entity and returns a list of account information.The accounts list endpoint is cached and not updated as frequently as the acc
-  name: Hedera accounts API
+  name: Hedera Accounts API
   slug: hedera-accounts-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The airdrops API from Hedera — 2 operation(s) for airdrops.
-  name: Hedera airdrops API
+  name: Hedera Airdrops API
   slug: hedera-airdrops-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The balance object represents the balance of accounts on the Hedera network.
-  name: Hedera balances API
+  name: Hedera Balances API
   slug: hedera-balances-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The blocks API from Hedera — 2 operation(s) for blocks.
-  name: Hedera blocks API
+  name: Hedera Blocks API
   slug: hedera-blocks-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The contracts objects represents the information associated with contract entities.The contracts list endpoint is cached and not updated as frequently as the contract lookup by a specific ID endpoint.
-  name: Hedera contracts API
+  name: Hedera Contracts API
   slug: hedera-contracts-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The network API from Hedera — 6 operation(s) for network.
-  name: Hedera network API
+  name: Hedera Network API
   slug: hedera-network-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The schedules object represents the information associated with a schedule entity.The schedules list endpoints is cached and not updated as frequently as the schedule lookup by a specific ID endpoint.
-  name: Hedera schedules API
+  name: Hedera Schedules API
   slug: hedera-schedules-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The tokens object represents the information associated with a token entity and returns a list of token information.The tokens list endpoint is cached and not updated as frequently as the token lookup
-  name: Hedera tokens API
+  name: Hedera Tokens API
   slug: hedera-tokens-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The topics object represents the information associated with a topic entity and returns topic messages information.
-  name: Hedera topics API
+  name: Hedera Topics API
   slug: hedera-topics-api
 - baseURL: https://mainnet.mirrornode.hedera.com
   baseurl_source: declared
   description: The transaction object represents the transactions processed on the Hedera network.
-  name: Hedera transactions API
+  name: Hedera Transactions API
   slug: hedera-transactions-api
 artifact_total: 220
 collections:
@@ -810,7 +810,7 @@ modified: '2026-07-12'
 name: Hedera
 nav: Providers
 network: true
-overview: 'Hedera publishes 10 APIs on the [APIs.io](https://apis.io/) network, including accounts API, airdrops API, balances API, and 7 more. Tagged areas include Hedera, Distributed Ledger, Blockchain, DLT, and Hashgraph.
+overview: 'Hedera publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Airdrops API, Balances API, and 7 more. Tagged areas include Hedera, Distributed Ledger, Blockchain, DLT, and Hashgraph.
 
 
   The Hedera catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -839,23 +839,23 @@ rules:
   slug: hedera-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 40.6
   coverage:
     artifact_dirs: 17
-    catalog_earned: 63.3
+    catalog_earned: 61.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 53.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 60.5
+    access_clarity: 57.4
     contract_governance: 9.8
-    contract_quality: 51.2
-    developer_ergonomics: 33.3
-    discoverability: 68.5
-    operational_transparency: 26.3
-  previous_composite: 42.3
+    contract_quality: 46.1
+    developer_ergonomics: 32.6
+    discoverability: 68.3
+    operational_transparency: 24.2
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     contracts:
@@ -864,8 +864,14 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

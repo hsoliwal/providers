@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -247,7 +247,7 @@ rules:
   slug: codehooks-rules
 score:
   band: developing
-  composite: 41.7
+  composite: 41.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 53.5
@@ -259,11 +259,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 13.6
-    contract_quality: 67.3
+    contract_quality: 62.3
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 41.7
+  previous_composite: 41.5
   provenance:
     agentic_access: derived
     contracts:
@@ -271,8 +271,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

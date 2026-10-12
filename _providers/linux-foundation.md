@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: LFX is the Linux Foundation's developer and community platform offering insights, tooling, and project lifecycle management for open source contributors and member organizations.
@@ -82,7 +82,7 @@ modified: '2026-07-25'
 name: Linux Foundation
 nav: Providers
 network: true
-overview: 'Linux Foundation publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Linux Foundation, Non-Profit, Open-Source, Technology, and LFX.
+overview: 'Linux Foundation publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Linux Foundation, Non-Profit, Open Source, Technology, and LFX.
 
 
   Linux Foundation''s developer surface includes documentation and 5 more developer resources.'
@@ -97,7 +97,7 @@ rate_limits:
   slug: linux-foundation-rate-limits
 score:
   band: emerging
-  composite: 12.7
+  composite: 11.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -111,11 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +141,7 @@ slug: linux-foundation
 tags:
 - Linux Foundation
 - Non-Profit
-- Open-Source
+- Open Source
 - Technology
 - LFX
 website: https://www.linuxfoundation.org/

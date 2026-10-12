@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Asynchronous short-form video generation REST API. Submit a template id and a prompt to POST /v1/videos, receive a job id, and collect the finished render either by polling GET /v1/videos/{id} or by s
@@ -195,9 +195,9 @@ description: 'Bluma is a San Francisco-based AI company (Y Combinator Fall 2025)
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bluma.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.getbluma.com.
   name: Bluma MCP Server
-  slug: bluma-mcp-server
+  slug: bluma-mcp-yml
 modified: '2026-08-12'
 name: Bluma
 nav: Providers
@@ -225,7 +225,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 56.8
+  composite: 58.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 61.0
@@ -237,22 +237,30 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.8
+  previous_composite: 58.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -278,7 +286,7 @@ tags:
 - Marketing
 - Content Creation
 - Short-Form Video
-- Social-Media
+- Social Media
 - Generative AI
 - Creative Tools
 - Text-to-Speech

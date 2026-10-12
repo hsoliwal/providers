@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
@@ -32,14 +32,14 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-09-20'
+  score: 28.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://aggregator.walrus-mainnet.walrus.space
   baseurl_source: declared
   description: The routes API from Walrus Protocol — 9 operation(s) for routes.
-  name: Walrus Protocol routes API
+  name: Walrus Protocol Routes API
   slug: walrus-protocol-routes-api
 artifact_total: 5
 collections:
@@ -209,14 +209,14 @@ modified: '2026-07-21'
 name: Walrus Protocol
 nav: Providers
 network: true
-overview: 'Walrus Protocol publishes 1 API on the [APIs.io](https://apis.io/) network: routes API. Tagged areas include Company, Infrastructure, Storage, Decentralized Storage, and Blockchain.
+overview: 'Walrus Protocol publishes 1 API on the [APIs.io](https://apis.io/) network: Routes API. Tagged areas include Company, Infrastructure, Storage, Decentralized Storage, and Blockchain.
 
 
   Walrus Protocol''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, changelog, and 26 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 45.3
+  composite: 44.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -228,11 +228,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 49.8
+    contract_quality: 44.8
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 45.3
+  previous_composite: 44.8
   provenance:
     conformance: derived
     contracts:
@@ -242,8 +242,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

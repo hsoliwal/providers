@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/gambit/refs/heads/main/security/gambit-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Gambit Security is an Israeli cyber-resilience company, founded in 2024 by Unit 8200 veterans Alon Gromakov (CEO), Sa'ar Elias (CPO) and May Kogan (CTO), that emerged from stealth in February 2026 with $61M in seed and Series A funding from Cyberstarts, Kleiner Perkins and Spark Capital. Its product, Balens, is an AI-native autonomous resilience platform that continuously maps every resource in an environment into end-to-end business applications, revealing dependencies, backup coverage and immutability, detecting infrastructure drift, scoring Cyber Resilience Posture Management (CRPM) and validating real-world recovery paths against ransomware and outages. It also automates compliance evidence for frameworks such as DORA, NIST CSF and SOX. Gambit does not currently publish a public developer API, OpenAPI, or developer portal.
 image: https://cdn.prod.website-files.com/69944dd945f20ca4a27a7c47/699abf4a5a9155ff8e4ffb89_pink%20mark.avif
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.gambit.security over HTTP.
+  name: Gambit MCP Server
+  slug: gambit
 modified: '2026-07-19'
 name: Gambit
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Gambit is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 12
 score:
   band: minimal
-  composite: 9.7
+  composite: 9.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,7 +94,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -99,11 +103,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 9.7
+  previous_composite: 9.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

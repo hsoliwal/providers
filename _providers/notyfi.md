@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 3
@@ -47,27 +47,27 @@ apis:
 - baseURL: https://api.notyfi.com/api/v1
   baseurl_source: declared
   description: The account API from Notyfi — 3 operation(s) for account.
-  name: Notyfi account API
+  name: Notyfi Account API
   slug: notyfi-account-api
 - baseURL: https://api.notyfi.com/api/v1
   baseurl_source: declared
   description: The billing API from Notyfi — 3 operation(s) for billing.
-  name: Notyfi billing API
+  name: Notyfi Billing API
   slug: notyfi-billing-api
 - baseURL: https://api.notyfi.com/api/v1
   baseurl_source: declared
   description: The keys API from Notyfi — 2 operation(s) for keys.
-  name: Notyfi keys API
+  name: Notyfi Keys API
   slug: notyfi-keys-api
 - baseURL: https://api.notyfi.com/api/v1
   baseurl_source: declared
   description: The trackers API from Notyfi — 6 operation(s) for trackers.
-  name: Notyfi trackers API
+  name: Notyfi Trackers API
   slug: notyfi-trackers-api
 - baseURL: https://api.notyfi.com/api/v1
   baseurl_source: declared
   description: The webhooks API from Notyfi — 4 operation(s) for webhooks.
-  name: Notyfi webhooks API
+  name: Notyfi Webhooks API
   slug: notyfi-webhooks-api
 artifact_total: 16
 asyncapis:
@@ -94,6 +94,11 @@ collections:
   name: Notyfi account webhooks API
   slug: open-notyfi-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/notyfi/refs/heads/main/capabilities/notyfi-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/notyfi-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -201,26 +206,26 @@ description: 'Notyfi is a natural-language monitoring and notification service b
 image: https://notyfi.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.notyfi.com over HTTP; 6 tools listed.
   name: Notyfi
   slug: notyfi
 modified: '2026-09-16'
 name: Notyfi
 nav: Providers
 network: true
-overview: 'Notyfi publishes 5 APIs on the [APIs.io](https://apis.io/) network, including account API, billing API, keys API, and 2 more. Tagged areas include Company, Notification, Monitoring, Webhook, and Real-Time.
+overview: 'Notyfi publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Billing API, Keys API, and 2 more. Tagged areas include Company, Notification, Monitoring, Webhook, and Real-Time.
 
 
   The Notyfi catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Notyfi''s developer surface includes documentation, API reference, pricing, signup flow, authentication, and 17 more developer resources.'
+  Notyfi''s developer surface includes documentation, API reference, pricing, signup flow, authentication, and 18 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 25.9
+  composite: 24.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -230,11 +235,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 58.9
+    contract_quality: 54.0
     developer_ergonomics: 13.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 25.9
+  previous_composite: 24.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -245,8 +250,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

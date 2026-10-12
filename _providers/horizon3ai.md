@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 48.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The NodeZero API is a publicly accessible GraphQL API that exposes a subset of the Horizon3.ai Portal: schedule and control autonomous pentest operations, and read pentests, ops, weaknesses, attack pa'
@@ -210,7 +210,7 @@ layout: provider
 mcp_servers:
 - description: Horizon3.ai-hosted Model Context Protocol server exposing NodeZero data and actions to MCP-compliant agents. Backs onto the same NodeZero platform as the GraphQL API. Secured with OAuth 2.1 (PKCE) via
   name: Horizon3.ai MCP Server
-  slug: horizon3ai-mcp-server
+  slug: horizon3ai
 modified: '2026-07-19'
 name: Horizon3.ai
 nav: Providers
@@ -230,7 +230,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.0
+  composite: 49.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -242,17 +242,27 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 46.0
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: cmmc
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

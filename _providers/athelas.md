@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 28.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -238,7 +238,7 @@ modified: '2026-07-18'
 name: Athelas
 nav: Providers
 network: true
-overview: 'Athelas publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Patients API, Prescribers API, and 2 more. Tagged areas include Company, Healthcare, Remote Patient Monitoring, Electronic Health Records, and FHIR.
+overview: 'Athelas publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Patients API, Prescribers API, and 3 more. Tagged areas include Company, Healthcare, Remote Patient Monitoring, Electronic Health Records, and FHIR.
 
 
   The Athelas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -253,7 +253,7 @@ scopes:
   summary_line: 31 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 53.6
+  composite: 47.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -265,11 +265,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 63.8
+    contract_quality: 58.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 53.6
+  previous_composite: 47.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -289,9 +289,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 87.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 51.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

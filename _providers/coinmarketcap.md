@@ -27,19 +27,19 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Single REST API spanning Cryptocurrency endpoints (listings, quotes, OHLCV, market pairs, historical), Exchange endpoints (listings, quotes, market pairs), DEX/on-chain data (networks, dexes, spot pai
   name: CoinMarketCap Pro API
   slug: pro-api
-artifact_total: 5
+artifact_total: 6
 common:
 - group: company
   title: ''
@@ -97,6 +97,10 @@ finops:
   slug: coinmarketcap-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coinmarketcap.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.coinmarketcap.com over HTTP.
+  name: CoinMarketCap MCP Server
+  slug: coinmarketcap
 modified: '2026-09-16'
 name: CoinMarketCap
 nav: Providers
@@ -116,7 +120,7 @@ rate_limits:
   slug: coinmarketcap-rate-limits
 score:
   band: emerging
-  composite: 15.7
+  composite: 16.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 46.0
@@ -130,9 +134,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 22.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 15.7
+  previous_composite: 16.5
   provenance:
     mcp: first-party
   regulatory:
@@ -140,9 +144,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -161,7 +165,6 @@ tags:
 - Market Data
 - Rankings
 - DEX
-- Exchange
 - Cryptocurrency
 website: https://coinmarketcap.com
 ---

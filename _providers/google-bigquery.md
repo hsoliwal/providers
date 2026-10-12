@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -142,6 +142,11 @@ collections:
   name: Google BigQuery Datasets Tables API
   slug: open-google-bigquery-tables-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/google-bigquery/refs/heads/main/capabilities/google-bigquery-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-bigquery-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -316,13 +321,13 @@ modified: '2026-05-19'
 name: Google BigQuery
 nav: Providers
 network: true
-overview: 'Google BigQuery publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Jobs API, Models API, and 4 more. Tagged areas include Analytics, Big Data, Cloud, Data Warehouse, and Serverless.
+overview: 'Google BigQuery publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Jobs API, Models API, and 8 more. Tagged areas include Analytics, Big Data, Cloud, Data Warehouse, and Serverless.
 
 
   The Google BigQuery catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Google BigQuery''s developer surface includes authentication, getting-started guide, pricing, developer console, CLI, support, and 11 more developer resources.'
+  Google BigQuery''s developer surface includes authentication, getting-started guide, pricing, developer console, CLI, support, and 12 more developer resources.'
 plans:
 - name: Google Bigquery Plans Pricing
   plan_count: 6
@@ -350,23 +355,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.8
+  composite: 43.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 59.3
+    artifact_dirs: 19
+    catalog_earned: 58.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.8
+    catalog_gap: 56.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 67.9
+    contract_quality: 61.5
     developer_ergonomics: 53.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 42.8
+  previous_composite: 43.5
   provenance:
     agentic_access: derived
     contracts:
@@ -374,8 +379,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.legend.trade/ws
@@ -197,7 +197,7 @@ overview: 'LegendTrade publishes 5 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 7
 score:
   band: developing
-  composite: 42.9
+  composite: 40.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 60.7
+    contract_quality: 55.8
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 42.9
+  previous_composite: 40.7
   provenance:
     conformance: derived
     contracts:
@@ -228,9 +228,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -257,5 +257,6 @@ tags:
 - Market Data
 - Hyperliquid
 - WebSocket
+- Real-Time
 website: https://www.legend.trade/
 ---

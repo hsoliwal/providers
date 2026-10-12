@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -113,7 +113,7 @@ modified: '2026-07-25'
 name: Wingstop
 nav: Providers
 network: true
-overview: 'Wingstop is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Restaurant, QSR, Fast Food, Online Ordering, and Mobile Ordering.
+overview: 'Wingstop is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Restaurant, Quick Service Restaurant, Fast Food, Online Ordering, and Mobile Ordering.
 
 
   Wingstop''s developer surface includes signup flow, support, and 13 more developer resources.'
@@ -128,7 +128,7 @@ rate_limits:
   slug: wingstop-rate-limits
 score:
   band: minimal
-  composite: 10.9
+  composite: 9.3
   coverage:
     artifact_dirs: 6
     catalog_earned: 34.0
@@ -142,11 +142,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 10.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -161,7 +167,7 @@ security:
 slug: wingstop
 tags:
 - Restaurant
-- QSR
+- Quick Service Restaurant
 - Fast Food
 - Online Ordering
 - Mobile Ordering

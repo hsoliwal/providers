@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Secure Redact Account Projects API
   slug: open-pimloc-projects-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/capabilities/pimloc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pimloc-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/pimloc/refs/heads/main/agentic-access/pimloc-agentic-access.yml
   title: ''
@@ -247,13 +252,13 @@ overview: 'Pimloc publishes 5 APIs on the [APIs.io](https://apis.io/) network, i
   The Pimloc catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Pimloc''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
+  Pimloc''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 25 more developer resources.'
 random_paper: 6
 score:
   band: developing
-  composite: 48.9
+  composite: 49.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -263,11 +268,16 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 58.3
+    contract_quality: 53.2
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 48.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 49.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -278,8 +288,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

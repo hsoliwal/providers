@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -114,14 +114,14 @@ modified: '2026-07-19'
 name: Hireology
 nav: Providers
 network: true
-overview: 'Hireology is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, ATS, Recruiting, and Hiring.
+overview: 'Hireology is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Applicant Tracking, Recruiting, and Hiring.
 
 
   Hireology''s developer surface includes engineering blog, pricing, signup flow, support, and 12 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 20.4
+  composite: 19.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -135,17 +135,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 20.4
+  previous_composite: 19.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +165,7 @@ slug: hireology
 tags:
 - Company
 - Ai Apps
-- ATS
+- Applicant Tracking
 - Recruiting
 - Hiring
 - Human Resources

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -236,9 +236,9 @@ description: VoiceGenie (Ori Labs Ltd.) is a conversational voice AI platform fo
 image: https://voicegenie.ai/images/vg_logo_name.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 7 tools listed. A candidate, not confirmed as published by the provider.
   name: VoiceGenie MCP Server
-  slug: voicegenie-mcp-server
+  slug: voicegenie
 modified: '2026-08-14'
 name: VoiceGenie
 nav: Providers
@@ -261,7 +261,7 @@ rate_limits:
   slug: voicegenie-rate-limits
 score:
   band: developing
-  composite: 52.7
+  composite: 52.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -273,11 +273,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 52.7
+  previous_composite: 52.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -288,8 +288,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -313,7 +319,7 @@ tags:
 - Voice Agents
 - Telephony
 - Call Center
-- Customer-Support
+- Customer Support
 - Lead Generation
 - Webhook
 website: https://voicegenie.ai

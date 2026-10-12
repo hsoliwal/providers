@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: v2 REST API for submitting candidate screening checks and retrieving report findings (person, profiles, posts, web content, summary, and signed PDF). Bearer-token auth; report completion via HTTP call
@@ -176,7 +176,7 @@ modified: '2026-07-19'
 name: Fama
 nav: Providers
 network: true
-overview: 'Fama publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Employment Screening, Background Checks, Human Resources, and Social-Media.
+overview: 'Fama publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Employment Screening, Background Checks, Human Resources, and Social Media.
 
 
   The Fama catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -190,7 +190,7 @@ rate_limits:
   slug: fama-rate-limits
 score:
   band: developing
-  composite: 45.4
+  composite: 45.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -202,17 +202,27 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 45.4
+  previous_composite: 45.2
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,8 +248,8 @@ tags:
 - Employment Screening
 - Background Checks
 - Human Resources
-- Social-Media
-- Risk
+- Social Media
+- Risk Management
 - Compliance
 - Artificial Intelligence
 website: https://fama.io

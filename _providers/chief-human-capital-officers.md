@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The CHCO Council publishes its charter, leadership roster, working group output, policy memoranda, and federal human capital guidance through chcoc.gov (now hosted under opm.gov). The Council does not
@@ -153,7 +153,7 @@ modified: '2026-09-05'
 name: Chief Human Capital Officers Council
 nav: Providers
 network: true
-overview: 'Chief Human Capital Officers Council publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include CHCO, Federal-Government, HR Policy, Human Capital, and Human Resources.
+overview: 'Chief Human Capital Officers Council publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include CHCO, Federal Government, HR Policy, Human Capital, and Human Resources.
 
 
   Chief Human Capital Officers Council''s developer surface includes support and 14 more developer resources.'
@@ -168,7 +168,7 @@ rate_limits:
   slug: chief-human-capital-officers-rate-limits
 score:
   band: emerging
-  composite: 15.8
+  composite: 14.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 35.0
@@ -182,17 +182,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 66.7
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 15.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 14.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +216,7 @@ security:
 slug: chief-human-capital-officers
 tags:
 - CHCO
-- Federal-Government
+- Federal Government
 - HR Policy
 - Human Capital
 - Human Resources

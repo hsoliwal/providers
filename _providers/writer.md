@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://api.writer.com/v1
   baseurl_source: declared
   description: The template API from Writer — 4 operation(s) for template.
-  name: Writer template API
+  name: Writer Template API
   slug: writer-template-api
 - baseURL: https://api.writer.com/v1
   baseurl_source: declared
@@ -191,7 +191,7 @@ rate_limits:
   slug: writer-rate-limits
 score:
   band: thin
-  composite: 31.3
+  composite: 29.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -203,11 +203,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 54.8
+    contract_quality: 49.5
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 31.3
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -215,8 +215,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -239,5 +245,6 @@ tags:
 - Content Generation
 - Palmyra
 - Agents
+- Foundation Models
 website: https://writer.com/
 ---

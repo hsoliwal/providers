@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic access to the Lumigo observability platform, authenticated with an API token (x-api-key header) generated in Lumigo Settings. Host confirmed live (returns 401 without credentials); no pub
@@ -170,7 +170,7 @@ layout: provider
 mcp_servers:
 - description: Lumigo Copilot MCP server for IDE integration. Lets agents in VS Code (GitHub Copilot), Cursor, JetBrains, Eclipse, and Xcode investigate and resolve production issues from the editor via natural-lang
   name: Lumigo MCP Server
-  slug: lumigo-mcp-server
+  slug: lumigo-copilot
 modified: '2026-07-20'
 name: Lumigo
 nav: Providers
@@ -185,7 +185,7 @@ overview: 'Lumigo publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 15
 score:
   band: developing
-  composite: 46.4
+  composite: 47.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -197,16 +197,28 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 46.4
+  previous_composite: 47.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

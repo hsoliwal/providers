@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 54
   human_in_the_loop: 2
@@ -170,6 +170,11 @@ collections:
   name: Versapay Ecommerce API
   slug: open-versapay-ecommerce-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/versapay/refs/heads/main/capabilities/versapay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/versapay-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/versapay/refs/heads/main/overlays/versapay-api-reference-overlay.yaml
   title: ''
@@ -333,7 +338,7 @@ overview: 'Versapay publishes 22 APIs on the [APIs.io](https://apis.io/) network
   The Versapay catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Versapay''s developer surface includes authentication, sandbox, documentation, API reference, engineering blog, signup flow, and 26 more developer resources.'
+  Versapay''s developer surface includes authentication, sandbox, documentation, API reference, engineering blog, signup flow, and 27 more developer resources.'
 random_paper: 17
 scopes:
 - name: Versapay Scopes
@@ -341,10 +346,10 @@ scopes:
   slug: versapay-scopes
   summary_line: 5 scopes · authorizationCode/clientCredentials/password
 score:
-  band: strong
-  composite: 58.0
+  band: developing
+  composite: 53.5
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -354,9 +359,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 54.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -365,7 +370,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 58.0
+  previous_composite: 53.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -381,9 +386,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 75.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

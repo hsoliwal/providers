@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: AI Habitat simulation framework for embodied AI research, including Habitat-Sim (high-performance 3D simulator) and Habitat-Lab (modular training library). Supports navigation, manipulation, and human
@@ -325,7 +325,7 @@ modified: '2026-08-30'
 name: AI Habitat
 nav: Providers
 network: true
-overview: 'AI Habitat publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Simulation, Embodied AI, Robotics, and Computer-Vision.
+overview: 'AI Habitat publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Simulation, Embodied AI, Robotics, and Computer Vision.
 
 
   The AI Habitat catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -354,27 +354,33 @@ rules:
   slug: ai-habitat-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 34.4
   coverage:
     artifact_dirs: 21
-    catalog_earned: 54.3
+    catalog_earned: 53.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.8
+    catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 7.9
-    contract_governance: 25.0
+    contract_governance: 23.5
     contract_quality: 14.7
     developer_ergonomics: 73.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 39.5
-  previous_composite: 34.8
+  previous_composite: 34.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -396,10 +402,10 @@ tags:
 - Simulation
 - Embodied AI
 - Robotics
-- Computer-Vision
+- Computer Vision
 - Reinforcement Learning
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Research
 use_cases:
 - description: Train and evaluate AI agents on point-goal, object-goal, and image-goal navigation tasks in 3D environments.

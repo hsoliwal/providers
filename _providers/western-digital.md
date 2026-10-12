@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -251,7 +251,7 @@ rules:
   slug: western-digital-rules
 score:
   band: developing
-  composite: 41.1
+  composite: 40.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 50.5
@@ -263,11 +263,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
-    contract_quality: 64.9
+    contract_quality: 59.3
     developer_ergonomics: 47.6
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 13.2
-  previous_composite: 41.1
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -275,8 +275,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

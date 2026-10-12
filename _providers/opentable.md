@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Restricted REST API for approved partners covering restaurant content, availability, reservations, and CRM. Access is granted through the OpenTable Partner Portal under contractual agreement.
@@ -152,7 +152,7 @@ modified: '2026-06-03'
 name: OpenTable
 nav: Providers
 network: true
-overview: 'OpenTable publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Hospitality, Reservations, and Restaurant.
+overview: 'OpenTable publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Hospitality, Reservations, Restaurant, and Booking.
 
 
   OpenTable''s developer surface includes documentation, pricing, support, FAQ, tooling, engineering blog, and 13 more developer resources.'
@@ -167,7 +167,7 @@ rate_limits:
   slug: opentable-rate-limits
 score:
   band: emerging
-  composite: 23.2
+  composite: 22.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 34.0
@@ -181,11 +181,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 44.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 23.7
-  previous_composite: 23.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -202,6 +208,7 @@ tags:
 - Hospitality
 - Reservations
 - Restaurant
+- Booking
 use_cases:
 - description: Third-party apps and sites embed availability and booking flows to let diners reserve tables without leaving the partner experience.
   name: Embedded Restaurant Booking

@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.2
-  scored_at: '2026-09-20'
+  score: 27.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://api.cirrusidentity.com/logs/v1
   baseurl_source: declared
   description: The endpoints API from Cirrus Identity — 2 operation(s) for endpoints.
-  name: Cirrus Identity endpoints API
+  name: Cirrus Identity Endpoints API
   slug: cirrus-identity-endpoints-api
 artifact_total: 8
 collections:
@@ -197,14 +197,14 @@ modified: '2026-09-16'
 name: Cirrus Identity
 nav: Providers
 network: true
-overview: 'Cirrus Identity publishes 1 API on the [APIs.io](https://apis.io/) network: endpoints API. Tagged areas include Company, Identity, Authentication, SSO, and SAML.
+overview: 'Cirrus Identity publishes 1 API on the [APIs.io](https://apis.io/) network: Endpoints API. Tagged areas include Company, Identity, Authentication, SSO, and SAML.
 
 
   Cirrus Identity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 23 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 49.5
+  composite: 44.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 38.3
@@ -216,11 +216,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 8.3
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 49.5
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -236,9 +236,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

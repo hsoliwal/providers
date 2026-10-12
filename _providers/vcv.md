@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,44 +33,44 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The chatbot API from VCV — 2 operation(s) for chatbot.
-  name: VCV chatbot API
+  name: VCV Chatbot API
   slug: vcv-chatbot-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The companies API from VCV — 1 operation(s) for companies.
-  name: VCV companies API
+  name: VCV Companies API
   slug: vcv-companies-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The countries API from VCV — 2 operation(s) for countries.
-  name: VCV countries API
+  name: VCV Countries API
   slug: vcv-countries-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The enumeration API from VCV — 3 operation(s) for enumeration.
-  name: VCV enumeration API
+  name: VCV Enumeration API
   slug: vcv-enumeration-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The integration API from VCV — 7 operation(s) for integration.
-  name: VCV integration API
+  name: VCV Integration API
   slug: vcv-integration-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The interview API from VCV — 3 operation(s) for interview.
-  name: VCV interview API
+  name: VCV Interview API
   slug: vcv-interview-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The invite API from VCV — 2 operation(s) for invite.
-  name: VCV invite API
+  name: VCV Invite API
   slug: vcv-invite-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
@@ -80,47 +80,47 @@ apis:
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The limits API from VCV — 1 operation(s) for limits.
-  name: VCV limits API
+  name: VCV Limits API
   slug: vcv-limits-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The response API from VCV — 12 operation(s) for response.
-  name: VCV response API
+  name: VCV Response API
   slug: vcv-response-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The survey API from VCV — 4 operation(s) for survey.
-  name: VCV survey API
+  name: VCV Survey API
   slug: vcv-survey-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The tags API from VCV — 4 operation(s) for tags.
-  name: VCV tags API
+  name: VCV Tags API
   slug: vcv-tags-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The test API from VCV — 4 operation(s) for test.
-  name: VCV test API
+  name: VCV Test API
   slug: vcv-test-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The users API from VCV — 2 operation(s) for users.
-  name: VCV users API
+  name: VCV Users API
   slug: vcv-users-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The vacancy API from VCV — 23 operation(s) for vacancy.
-  name: VCV vacancy API
+  name: VCV Vacancy API
   slug: vcv-vacancy-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The videointerview API from VCV — 4 operation(s) for videointerview.
-  name: VCV videointerview API
+  name: VCV Videointerview API
   slug: vcv-videointerview-api
 - baseURL: https://my.vcv.ai
   baseurl_source: declared
   description: The webhook API from VCV — 2 operation(s) for webhook.
-  name: VCV webhook API
+  name: VCV Webhook API
   slug: vcv-webhook-api
 artifact_total: 38
 asyncapis:
@@ -183,6 +183,11 @@ collections:
   name: VCV chatbot webhook API
   slug: open-vcv-webhook-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vcv/refs/heads/main/capabilities/vcv-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vcv-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -309,19 +314,19 @@ modified: '2026-07-21'
 name: VCV
 nav: Providers
 network: true
-overview: 'VCV publishes 17 APIs on the [APIs.io](https://apis.io/) network, including chatbot API, companies API, countries API, and 14 more. Tagged areas include Company, Recruiting, Human Resources, Video Interviews, and Talent Acquisition.
+overview: 'VCV publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Chatbot API, Companies API, Countries API, and 14 more. Tagged areas include Company, Recruiting, Human Resources, Video Interviews, and Talent Acquisition.
 
 
   The VCV catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  VCV''s developer surface includes documentation, API reference, pricing, engineering blog, signup flow, support, authentication, and 19 more developer resources.'
+  VCV''s developer surface includes documentation, API reference, pricing, engineering blog, signup flow, support, authentication, and 20 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 41.9
+  composite: 41.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -331,11 +336,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 62.1
+    contract_quality: 57.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 41.9
+  previous_composite: 41.2
   provenance:
     conformance: derived
     contracts:
@@ -345,8 +350,14 @@ score:
       total: 17
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

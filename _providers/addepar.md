@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JSON:API-based REST API for portfolio management, transactions, positions, the ownership graph (entities/groups), attributes, benchmarks, files, jobs, billing, reporting, and administration on the Add
@@ -114,7 +114,7 @@ modified: '2026-07-17'
 name: Addepar
 nav: Providers
 network: true
-overview: 'Addepar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Wealth Management, Portfolio-Management, and Investment Management.
+overview: 'Addepar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Wealth Management, Portfolio Management, and Investment Management.
 
 
   Addepar''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, and 10 more developer resources.'
@@ -125,12 +125,12 @@ rate_limits:
   slug: addepar-rate-limits
 scopes:
 - name: Addepar Scopes
-  scope_count: 0
+  scope_count: 22
   slug: addepar-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 22 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.9
+  composite: 36.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -144,14 +144,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 33.9
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,7 +182,7 @@ tags:
 - Company
 - Fintech
 - Wealth Management
-- Portfolio-Management
+- Portfolio Management
 - Investment Management
 - Financial Data
 - JSON:API

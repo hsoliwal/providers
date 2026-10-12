@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -83,14 +83,14 @@ modified: '2026-07-23'
 name: Prospera Credit Union
 nav: Providers
 network: true
-overview: 'Prospera Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Canada, Credit Union, and Cooperative.
+overview: 'Prospera Credit Union is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Credit Union, and Cooperative.
 
 
   Prospera Credit Union''s developer surface includes YouTube channel, support, and 7 more developer resources.'
 random_paper: 20
 score:
   band: minimal
-  composite: 5.3
+  composite: 6.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -104,7 +104,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -113,15 +113,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 5.3
+  previous_composite: 6.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +135,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DMARC
 slug: prospera-credit-union
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Credit Union
@@ -144,6 +144,5 @@ tags:
 - Interac
 - Open Banking
 - Consumer-Driven Banking
-- Data Aggregation
 website: https://www.prospera.ca/
 ---

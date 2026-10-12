@@ -24,10 +24,10 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
-    mcp_server: platform
+    mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 36.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 1
@@ -49,102 +49,102 @@ apis:
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The alerts API from Socket — 6 operation(s) for alerts.
-  name: Socket alerts API
+  name: Socket Alerts API
   slug: socket-alerts-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The api-tokens API from Socket — 6 operation(s) for api-tokens.
-  name: Socket api-tokens API
+  name: Socket API Tokens API
   slug: socket-api-tokens-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The audit-log API from Socket — 1 operation(s) for audit-log.
-  name: Socket audit-log API
+  name: Socket Audit Log API
   slug: socket-audit-log-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The dependencies API from Socket — 2 operation(s) for dependencies.
-  name: Socket dependencies API
+  name: Socket Dependencies API
   slug: socket-dependencies-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The deprecated API from Socket — 17 operation(s) for deprecated.
-  name: Socket deprecated API
+  name: Socket Deprecated API
   slug: socket-deprecated-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The diff-scans API from Socket — 7 operation(s) for diff-scans.
-  name: Socket diff-scans API
+  name: Socket Diff Scans API
   slug: socket-diff-scans-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The fixes API from Socket — 1 operation(s) for fixes.
-  name: Socket fixes API
+  name: Socket Fixes API
   slug: socket-fixes-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The full-scans API from Socket — 13 operation(s) for full-scans.
-  name: Socket full-scans API
+  name: Socket Full Scans API
   slug: socket-full-scans-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The license-policy API from Socket — 4 operation(s) for license-policy.
-  name: Socket license-policy API
+  name: Socket License Policy API
   slug: socket-license-policy-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The metadata API from Socket — 5 operation(s) for metadata.
-  name: Socket metadata API
+  name: Socket Metadata API
   slug: socket-metadata-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The org-settings API from Socket — 2 operation(s) for org-settings.
-  name: Socket org-settings API
+  name: Socket Org Settings API
   slug: socket-org-settings-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The org-snapshots API from Socket — 1 operation(s) for org-snapshots.
-  name: Socket org-snapshots API
+  name: Socket Org Snapshots API
   slug: socket-org-snapshots-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The packages API from Socket — 2 operation(s) for packages.
-  name: Socket packages API
+  name: Socket Packages API
   slug: socket-packages-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The repo-labels API from Socket — 5 operation(s) for repo-labels.
-  name: Socket repo-labels API
+  name: Socket Repo Labels API
   slug: socket-repo-labels-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The repos API from Socket — 2 operation(s) for repos.
-  name: Socket repos API
+  name: Socket Repos API
   slug: socket-repos-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The security-policy API from Socket — 1 operation(s) for security-policy.
-  name: Socket security-policy API
+  name: Socket Security Policy API
   slug: socket-security-policy-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The telemetry API from Socket — 1 operation(s) for telemetry.
-  name: Socket telemetry API
+  name: Socket Telemetry API
   slug: socket-telemetry-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The threat-feed API from Socket — 1 operation(s) for threat-feed.
-  name: Socket threat-feed API
+  name: Socket Threat Feed API
   slug: socket-threat-feed-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The triage API from Socket — 2 operation(s) for triage.
-  name: Socket triage API
+  name: Socket Triage API
   slug: socket-triage-api
 - baseURL: https://api.socket.dev/v0
   baseurl_source: declared
   description: The webhooks API from Socket — 2 operation(s) for webhooks.
-  name: Socket webhooks API
+  name: Socket Webhooks API
   slug: socket-webhooks-api
 artifact_total: 49
 asyncapis:
@@ -216,6 +216,11 @@ collections:
   name: API Endpoints alerts webhooks API
   slug: open-socket-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/socket/refs/heads/main/capabilities/socket-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/socket-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/socket/refs/heads/main/overlays/socket-api-overlay.yaml
   title: ''
@@ -389,13 +394,13 @@ modified: '2026-07-21'
 name: Socket
 nav: Providers
 network: true
-overview: 'Socket publishes 20 APIs on the [APIs.io](https://apis.io/) network, including alerts API, api-tokens API, audit-log API, and 17 more. Tagged areas include Company, Security, Software Supply Chain Security, Dependency Scanning, and Software Composition Analysis.
+overview: 'Socket publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, API Tokens API, Audit Log API, and 17 more. Tagged areas include Company, Security, Software Supply Chain Security, Dependency Scanning, and Software Composition Analysis.
 
 
   The Socket catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Socket''s developer surface includes documentation, getting-started guide, API reference, support, authentication, changelog, CLI, and 28 more developer resources.'
+  Socket''s developer surface includes documentation, getting-started guide, API reference, support, authentication, changelog, CLI, and 29 more developer resources.'
 random_paper: 11
 rate_limits:
 - limit_count: 0
@@ -408,9 +413,9 @@ scopes:
   summary_line: 34 scopes
 score:
   band: developing
-  composite: 42.5
+  composite: 43.6
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -420,11 +425,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 60.9
+    contract_quality: 55.6
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 56.6
-  previous_composite: 42.5
+  previous_composite: 43.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -435,8 +440,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

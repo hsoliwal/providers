@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 36.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
   description: Runtime statistics endpoints
   name: OpenSERP Stats API
   slug: openserp-stats-api
-artifact_total: 13
+artifact_total: 12
 asyncapis:
 - description: ''
   name: Openserp Monitor Webhooks
@@ -299,15 +299,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: OpenSERP MCP Server
-  slug: openserp-mcp-server
-- description: Model Context Protocol server for OpenSERP OSS and OpenSERP Cloud. Exposes live SERP search, multi-engine search, image search, single and batch URL extraction, usage and engine-listing tools.
-  name: OpenSERP MCP Server
-  slug: openserp-mcp-server-2
+  slug: mcp-json
 modified: '2026-08-10'
 name: OpenSERP
 nav: Providers
 network: true
-overview: 'OpenSERP publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Docs API, Health API, Mega API, and 2 more. Tagged areas include Company, Search, SERP, Search API, and Web Scraping.
+overview: 'OpenSERP publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Docs API, Health API, Mega API, and 3 more. Tagged areas include Company, Search, SERP, Search API, and Web Scraping.
 
 
   The OpenSERP catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -329,9 +326,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 51.3
+    contract_quality: 47.2
     developer_ergonomics: 78.0
-    discoverability: 87.0
+    discoverability: 81.7
     operational_transparency: 26.3
   open_source:
     applies: true
@@ -347,8 +344,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -373,7 +376,7 @@ tags:
 - Content Extraction
 - AI Grounding
 - Rank Tracking
-- Open-Source
+- Open Source
 - Developer Tools
 website: https://openserp.org
 ---

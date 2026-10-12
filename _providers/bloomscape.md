@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bloomscape/refs/heads/main/security/bloomscape-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Bloomscape is a direct-to-consumer houseplant company that grows plants in its own greenhouses and ships them fully grown directly to customers' doors, bypassing traditional retail and nursery supply chains. Alongside houseplants, it sells planters, plant-care accessories, and gifting options, and backs every order with its Grow-How team of horticultural experts plus a plant guarantee. The company was surfaced as a portfolio company of General Catalyst and added to the API Evangelist network. Bloomscape operates a consumer e-commerce storefront and publishes no public developer API, SDK, or documented developer surface at this time; this profile captures its public web, support, and legal properties along with a domain-security probe.
 image: https://bloomscape.com/apple-touch-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bloomscape.com over HTTP.
+  name: Bloomscape MCP Server
+  slug: bloomscape
 modified: '2026-07-18'
 name: Bloomscape
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Bloomscape is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 5
 score:
   band: minimal
-  composite: 10.6
+  composite: 10.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.6
+  previous_composite: 10.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

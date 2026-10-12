@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Microsoft Sway is a presentation and storytelling application that enables creating interactive, web-based content. While Sway has limited direct API access, it integrates with Microsoft 365 for embed
@@ -82,7 +82,7 @@ modified: '2026-04-28'
 name: Microsoft Sway
 nav: Providers
 network: true
-overview: 'Microsoft Sway publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Content Creation, Microsoft, Microsoft-365, Presentations, and Storytelling.
+overview: 'Microsoft Sway publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Content Creation, Microsoft, Microsoft 365, Presentations, and Storytelling.
 
 
   Microsoft Sway''s developer surface includes developer portal, support, and 5 more developer resources.'
@@ -97,7 +97,7 @@ rate_limits:
   slug: microsoft-sway-rate-limits
 score:
   band: emerging
-  composite: 20.2
+  composite: 19.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -111,11 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 20.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,7 +137,7 @@ slug: microsoft-sway
 tags:
 - Content Creation
 - Microsoft
-- Microsoft-365
+- Microsoft 365
 - Presentations
 - Storytelling
 website: https://www.microsoft.com/en-us/microsoft-365/sway/flow

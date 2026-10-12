@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A live, anonymously reachable Model Context Protocol server published on Eko Health's own www.ekohealth.com host, implementing the Shopify storefront / Universal Commerce Protocol (UCP) shopping servi
@@ -167,9 +167,9 @@ description: 'Eko Health Inc. is an Oakland, California digital health company t
 image: https://www.ekohealth.com/cdn/shop/files/eko-logo_1.svg?v=1743130101&width=500
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.ekohealth.com over HTTP; 5 tools listed.
   name: Eko Health MCP Server
-  slug: eko-health-mcp-server
+  slug: eko-health-storefront
 modified: '2026-08-04'
 name: Eko Health
 nav: Providers
@@ -189,8 +189,8 @@ scopes:
   slug: eko-health-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: developing
-  composite: 41.7
+  band: thin
+  composite: 38.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -204,12 +204,12 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 41.7
+  previous_composite: 38.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 66.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

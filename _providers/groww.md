@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -291,8 +291,8 @@ scopes:
   slug: groww-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 57.5
+  band: developing
+  composite: 53.5
   coverage:
     artifact_dirs: 25
     catalog_earned: 57.0
@@ -304,9 +304,9 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
-    contract_quality: 53.4
+    contract_quality: 48.1
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -315,7 +315,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 57.5
+  previous_composite: 53.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,9 +331,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

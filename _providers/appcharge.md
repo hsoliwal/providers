@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 62.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 45
   human_in_the_loop: 0
@@ -433,7 +433,7 @@ layout: provider
 mcp_servers:
 - description: Appcharge ships an official hosted MCP server. It is declared in the public appcharge-skills repo (.mcp.json) and advertised by the Claude/Cursor plugin manifests. The endpoint is live (returns 401 "M
   name: Appcharge MCP Server
-  slug: appcharge-mcp-server
+  slug: appcharge
 modified: '2026-07-18'
 name: Appcharge
 nav: Providers
@@ -457,7 +457,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 66.0
+  composite: 61.8
   coverage:
     artifact_dirs: 27
     catalog_earned: 45.0
@@ -469,11 +469,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 66.0
+    contract_quality: 60.6
     developer_ergonomics: 67.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 66.0
+  previous_composite: 61.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -489,9 +489,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

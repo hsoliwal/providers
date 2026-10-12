@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.9
-  scored_at: '2026-09-20'
+  score: 5.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Model Context Protocol server that Code Biotherapeutics' corporate website exposes at https://www.codebiotx.com/_api/mcp. It is the Wix platform site MCP server, served from the company's own host
@@ -109,7 +109,7 @@ description: Code Biotherapeutics (Code Bio) is a privately held genetic medicin
 image: https://static.wixstatic.com/media/9d709e_2d584e2635c94c1ca0de7d62d7cda343~mv2.jpg/v1/fill/w_960,h_504,al_c/9d709e_2d584e2635c94c1ca0de7d62d7cda343~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP; 9 tools listed.
   name: Code Bio Site MCP Server
   slug: code-bio-site-mcp-server
 modified: '2026-08-09'
@@ -123,7 +123,7 @@ overview: 'Code Biotherapeutics publishes 1 API on the [APIs.io](https://apis.io
 random_paper: 21
 score:
   band: emerging
-  composite: 22.0
+  composite: 20.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -137,26 +137,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 22.0
+  previous_composite: 20.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

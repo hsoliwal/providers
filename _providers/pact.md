@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -97,6 +97,11 @@ collections:
   name: Pact Broker API
   slug: open-pact
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pact/refs/heads/main/capabilities/pact-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pact-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -172,10 +177,10 @@ modified: '2026-04-28'
 name: Pact
 nav: Providers
 network: true
-overview: 'Pact publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Index API, Pacticipants API, Pacts API, and 2 more. Tagged areas include Contract Testing, Open-Source, and Testing.
+overview: 'Pact publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Index API, Pacticipants API, Pacts API, and 3 more. Tagged areas include Contract Testing, Open Source, and Testing.
 
 
-  Pact''s developer surface includes authentication, documentation, engineering blog, and 12 more developer resources.'
+  Pact''s developer surface includes authentication, documentation, engineering blog, and 13 more developer resources.'
 plans:
 - name: Pact Plans Pricing
   plan_count: 3
@@ -187,9 +192,9 @@ rate_limits:
   slug: pact-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 33.2
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -199,14 +204,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 47.7
+    contract_quality: 42.9
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 35.0
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -214,8 +219,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -233,7 +244,7 @@ security:
 slug: pact
 tags:
 - Contract Testing
-- Open-Source
+- Open Source
 - Testing
 website: https://pact.io
 ---

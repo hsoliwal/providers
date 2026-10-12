@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -115,14 +115,14 @@ modified: '2026-08-04'
 name: DiversyFund
 nav: Providers
 network: true
-overview: 'DiversyFund is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Investing, Private Markets, and Fixed Income.
+overview: 'DiversyFund is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Investing, Private Markets, and Fixed Income.
 
 
   DiversyFund''s developer surface includes engineering blog, support, signup flow, legal docs, and 13 more developer resources.'
 random_paper: 15
 score:
   band: emerging
-  composite: 11.9
+  composite: 11.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -136,11 +136,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -155,7 +161,7 @@ security:
 slug: diversyfund
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Investing
 - Private Markets
 - Fixed Income

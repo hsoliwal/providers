@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: WebSocket API for AI image inference powered by the RunWare / DiffusionMaster platform. Supports text-to-image and image-to-image generation, model / LoRA selection, ControlNet, inpainting, outpaintin
@@ -126,14 +126,14 @@ modified: '2026-07-20'
 name: PicFinder
 nav: Providers
 network: true
-overview: 'PicFinder publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Image-Generation, and Generative AI.
+overview: 'PicFinder publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Image Generation, and Generative AI.
 
 
   PicFinder''s developer surface includes documentation, API reference, signup flow, support, authentication, and 12 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 19.7
+  composite: 19.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -147,13 +147,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 19.7
+  previous_composite: 19.8
   provenance:
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,8 +179,8 @@ slug: picfinder
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
-- Image-Generation
+- Machine Learning
+- Image Generation
 - Generative AI
 - Text-to-Image
 - Image to Image

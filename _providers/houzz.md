@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Official Houzz commerce API for third-party marketplace partners. Lets sellers and vendors sync product catalog/listings, update inventory levels and pricing, and retrieve and manage orders. Access is
@@ -103,7 +103,7 @@ overview: 'Houzz publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 4
 score:
   band: emerging
-  composite: 21.0
+  composite: 21.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -117,11 +117,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 21.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

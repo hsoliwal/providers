@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -133,14 +133,14 @@ modified: '2026-08-09'
 name: Closinglock
 nav: Providers
 network: true
-overview: 'Closinglock is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Title Insurance, Fraud Prevention, Payments, and Identity Verification.
+overview: 'Closinglock is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Title Insurance, Fraud Prevention, Payments, and Identity Verification.
 
 
   Closinglock''s developer surface includes engineering blog, support, signup flow, and 12 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 12.4
+  composite: 12.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -154,9 +154,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 12.4
+  previous_composite: 12.5
   provenance:
     conformance: first-party
   regulatory:
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,12 +184,12 @@ security:
   summary_line: Hackerone · security.txt · contact published
 slug: closinglock
 tags:
-- Real-Estate
+- Real Estate
 - Title Insurance
 - Fraud Prevention
 - Payments
 - Identity Verification
-- Document-Management
+- Document Management
 - Fintech
 - Compliance
 - Security

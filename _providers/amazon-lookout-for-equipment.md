@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -65,10 +65,15 @@ collections:
   name: Amazon Lookout for Equipment API
   slug: open-amazon-lookout-for-equipment
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-equipment/refs/heads/main/capabilities/amazon-lookout-for-equipment-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-lookout-for-equipment-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/lookout-for-equipment/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -209,13 +214,13 @@ modified: '2026-09-16'
 name: Amazon Lookout for Equipment
 nav: Providers
 network: true
-overview: 'Amazon Lookout for Equipment publishes 1 API on the [APIs.io](https://apis.io/) network: Datasets API. Tagged areas include Equipment Monitoring, Industrial IoT, Machine-Learning, and Predictive Maintenance.
+overview: 'Amazon Lookout for Equipment publishes 1 API on the [APIs.io](https://apis.io/) network: Datasets API. Tagged areas include Equipment Monitoring, Industrial IoT, Machine Learning, and Predictive Maintenance.
 
 
   The Amazon Lookout for Equipment catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Lookout for Equipment''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 15 more developer resources.'
+  Amazon Lookout for Equipment''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 16 more developer resources.'
 plans:
 - name: Amazon Lookout For Equipment Plans Pricing
   plan_count: 3
@@ -249,23 +254,23 @@ rules:
   slug: amazon-lookout-for-equipment-spectral-rules
 score:
   band: developing
-  composite: 50.1
+  composite: 50.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 65.5
+    artifact_dirs: 19
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 67.3
+    contract_governance: 27.3
+    contract_quality: 61.0
     developer_ergonomics: 44.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 50.1
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     contracts:
@@ -273,8 +278,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -301,7 +312,7 @@ slug: amazon-lookout-for-equipment
 tags:
 - Equipment Monitoring
 - Industrial IoT
-- Machine-Learning
+- Machine Learning
 - Predictive Maintenance
 use_cases:
 - description: Detect early warning signs of equipment failures in manufacturing machinery.
@@ -312,5 +323,5 @@ use_cases:
   name: Mining Equipment Health
 - description: Detect anomalies in HVAC systems to prevent equipment failures in buildings.
   name: HVAC System Monitoring
-website: https://amazon.com
+website: https://aws.amazon.com/lookout-for-equipment/
 ---

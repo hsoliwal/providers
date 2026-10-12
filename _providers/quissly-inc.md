@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Quissly's REST API powers AI product search (QSearch) and the conversational shopping assistant (QChat) for any e-commerce platform, alongside native Shopify, WooCommerce and CS-Cart plugins.
@@ -134,13 +134,13 @@ description: Quissly, Inc. is a Delaware-based SaaS company building an AI-power
 image: https://quissly.com/images/og-default.png
 layout: provider
 modified: '2026-07-20'
-name: Quissly Inc.
+name: Quissly
 nav: Providers
 network: true
-overview: 'Quissly Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Search, Artificial Intelligence, and Conversational Commerce.
+overview: 'Quissly publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Search, Artificial Intelligence, and Conversational Commerce.
 
 
-  Quissly Inc.''s developer surface includes documentation, pricing, signup flow, engineering blog, changelog, and 15 more developer resources.'
+  Quissly''s developer surface includes documentation, pricing, signup flow, engineering blog, changelog, and 15 more developer resources.'
 plans:
 - name: Quissly Inc Plans
   plan_count: 10
@@ -148,7 +148,7 @@ plans:
 random_paper: 9
 score:
   band: thin
-  composite: 29.0
+  composite: 29.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 49.0
@@ -162,16 +162,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 29.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

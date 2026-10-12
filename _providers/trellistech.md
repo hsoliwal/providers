@@ -34,18 +34,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.trellistech.com/api/v1
   baseurl_source: declared
   description: Trellis property contracts generated from Hono/Zod schemas.
-  name: Trellis properties API
+  name: Trellis Properties API
   slug: trellistech-properties-api
 - baseURL: https://app.trellistech.com/api/v1
   baseurl_source: declared
   description: Trellis task contracts generated from Hono/Zod schemas.
-  name: Trellis tasks API
+  name: Trellis Tasks API
   slug: trellistech-tasks-api
 artifact_total: 8
 collections:
@@ -174,14 +174,14 @@ modified: '2026-07-21'
 name: Trellis
 nav: Providers
 network: true
-overview: 'Trellis publishes 2 APIs on the [APIs.io](https://apis.io/) network: properties API and tasks API. Tagged areas include Company, Property Management, Vacation Rentals, Short-Term Rental, and AI Agents.
+overview: 'Trellis publishes 2 APIs on the [APIs.io](https://apis.io/) network: Properties API and Tasks API. Tagged areas include Company, Property Management, Vacation Rentals, Short-Term Rental, and AI Agents.
 
 
   Trellis'' developer surface includes CLI, changelog, documentation, API reference, getting-started guide, engineering blog, signup flow, and 16 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 42.6
+  composite: 42.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -193,11 +193,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 42.6
+  previous_composite: 42.2
   provenance:
     conformance: derived
     contracts:
@@ -207,8 +207,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

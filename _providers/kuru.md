@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-09-20'
+  score: 30.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://ws.kuru.io
@@ -209,7 +209,7 @@ rate_limits:
   slug: kuru-rate-limits
 score:
   band: developing
-  composite: 48.9
+  composite: 47.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 39.0
@@ -221,11 +221,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 54.8
+    contract_quality: 49.3
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 48.9
+  previous_composite: 47.0
   provenance:
     conformance: first-party
     contracts:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 35.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

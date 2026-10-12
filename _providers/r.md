@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -193,7 +193,7 @@ modified: '2026-05-19'
 name: R
 nav: Providers
 network: true
-overview: 'R publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Badges API, Downloads API, Packages API, and 2 more. Tagged areas include R, Statistics, Data Science, Open-Source, and Programming Language.
+overview: 'R publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Badges API, Downloads API, Packages API, and 2 more. Tagged areas include R, Statistics, Data Science, Open Source, and Programming Language.
 
 
   The R catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -232,8 +232,8 @@ rules:
     warn: 10
   slug: r-spectral-rules
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 25.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 58.5
@@ -245,11 +245,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 55.8
+    contract_quality: 51.0
     developer_ergonomics: 16.7
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 28.0
+  previous_composite: 25.9
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +257,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -275,7 +281,7 @@ tags:
 - R
 - Statistics
 - Data Science
-- Open-Source
+- Open Source
 - Programming Language
 website: https://www.r-project.org/
 ---

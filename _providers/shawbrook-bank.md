@@ -11,7 +11,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.8
-  scored_at: '2026-09-20'
+  score: 38.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -336,7 +337,7 @@ modified: '2026-07-23'
 name: Shawbrook Bank
 nav: Providers
 network: true
-overview: 'Shawbrook Bank publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial-Services, Banking, Savings, Specialist Lending, and Open Banking.
+overview: 'Shawbrook Bank publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, ATM API, and 31 more. Tagged areas include Financial Services, Banking, Savings, Specialist Lending, and Open Banking.
 
 
   Shawbrook Bank''s developer surface includes authentication, engineering blog, support, and 20 more developer resources.'
@@ -348,7 +349,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 34.2
+  composite: 30.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 35.0
@@ -360,9 +361,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 52.1
+    contract_quality: 46.9
     developer_ergonomics: 30.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -372,7 +373,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 34.2
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -391,9 +392,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 65.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -410,7 +411,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: shawbrook-bank
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Savings
 - Specialist Lending

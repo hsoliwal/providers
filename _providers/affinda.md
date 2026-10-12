@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -25,7 +25,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.0
-  scored_at: '2026-09-20'
+  score: 54.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 146
   human_in_the_loop: 0
@@ -208,7 +208,7 @@ arazzos:
 - description: List an organization's workspaces, then pull a daily credit-consumption report scoped to the first workspace.
   name: Affinda Workspace Usage Report
   slug: affinda-workspace-usage-report-workflow
-artifact_total: 123
+artifact_total: 124
 collections:
 - collection_type: postman
   name: Affinda Annotations API
@@ -694,6 +694,10 @@ jsonld:
   property_count: 10
   slug: affinda-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.affinda.com over HTTP.
+  name: Affinda MCP Server
+  slug: affinda
 modified: '2026-05-25'
 name: Affinda
 nav: Providers
@@ -738,23 +742,23 @@ rules:
   slug: affinda-rules
 score:
   band: strong
-  composite: 63.7
+  composite: 60.4
   coverage:
     artifact_dirs: 21
-    catalog_earned: 76.5
+    catalog_earned: 73.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.5
+    catalog_gap: 41.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 72.4
+    access_clarity: 69.2
     contract_governance: 13.6
-    contract_quality: 69.6
-    developer_ergonomics: 79.8
-    discoverability: 64.8
-    operational_transparency: 57.9
-  previous_composite: 63.7
+    contract_quality: 63.5
+    developer_ergonomics: 79.0
+    discoverability: 65.0
+    operational_transparency: 55.8
+  previous_composite: 60.4
   provenance:
     agentic_access: derived
     contracts:
@@ -768,9 +772,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -802,7 +806,7 @@ tags:
 - Document Extraction
 - Document Classification
 - Document Splitting
-- Recruitment
+- Recruiting
 - Banking
 - Insurance
 - Logistics

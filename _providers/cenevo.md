@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 207
   human_in_the_loop: 0
@@ -791,7 +791,7 @@ overview: 'Cenevo publishes 75 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 2
 score:
   band: developing
-  composite: 43.9
+  composite: 41.8
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -803,11 +803,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 52.7
+    contract_quality: 48.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 43.9
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -823,9 +823,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

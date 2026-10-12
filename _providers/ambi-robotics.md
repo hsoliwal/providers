@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -146,7 +146,7 @@ overview: 'Ambi Robotics is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 3
 score:
   band: emerging
-  composite: 13.3
+  composite: 12.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 38.0
@@ -160,11 +160,17 @@ score:
     contract_governance: 0.0
     contract_quality: 14.7
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 15.8
-  previous_composite: 13.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,7 +190,7 @@ tags:
 - Parcel Sortation
 - Parcel Induction
 - Logistics
-- Last Mile
+- Last Mile Delivery
 - Middle Mile
 - Reverse Logistics
 - Warehouse Automation
@@ -192,7 +198,7 @@ tags:
 - Postal Automation
 - Foundation Models
 - Sim2Real
-- Computer-Vision
+- Computer Vision
 - Fleet Management
 - AmbiOS
 - AmbiSort

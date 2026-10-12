@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -153,7 +153,7 @@ overview: 'Labster is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 1
 score:
   band: thin
-  composite: 33.3
+  composite: 29.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -167,9 +167,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 33.3
+  previous_composite: 29.8
   provenance:
     conformance: first-party
   regulatory:
@@ -177,9 +177,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

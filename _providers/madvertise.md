@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: JSON ad-request endpoint (mobile.mng-ads.com) that returns a single ad (banner, interstitial, native) for a given placement, device User-Agent, SDK version and consent signal. GET or POST.
@@ -184,9 +184,9 @@ description: Madvertise is a mobile advertising and monetization brand now opera
 image: https://www.azerion.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 6 tools listed.
   name: Improve Digital Publisher MCP Server (Azerion; targets the sibling 360Yield inventory API)
-  slug: improve-digital-publisher-mcp-server-azerion-targets-the-sibling-360yield-inventory-api
+  slug: improvedigital-mcp-server
 modified: '2026-08-12'
 name: Madvertise
 nav: Providers
@@ -206,7 +206,7 @@ rate_limits:
   slug: madvertise-rate-limits
 score:
   band: thin
-  composite: 33.9
+  composite: 34.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 35.0
@@ -220,14 +220,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 33.9
+  previous_composite: 34.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: coppa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

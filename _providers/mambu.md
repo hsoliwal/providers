@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Mambu's REST API v2 for core banking — clients, loan accounts, deposit accounts, transactions, and related resources. Tenant-scoped host, HTTPS Basic or apikey auth, Idempotency-Key supported for writ
@@ -146,9 +146,9 @@ description: Mambu is a SaaS cloud banking platform — a composable, API-first 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mambu.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 2 tools listed.
   name: Mambu MCP Server
-  slug: mambu-mcp-server
+  slug: mmcp
 modified: '2026-07-20'
 name: Mambu
 nav: Providers
@@ -163,7 +163,7 @@ overview: 'Mambu publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 2
 score:
   band: thin
-  composite: 36.0
+  composite: 35.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -175,11 +175,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 36.0
+  previous_composite: 35.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

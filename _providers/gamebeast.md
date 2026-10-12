@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Gamebeast platform surface consumed through the engine SDKs (Roblox/Luau, Unity/C#) and a JS/TS backend SDK, plus a server-to-server key surface for analytics, query, GDPR deletion, and marker met
@@ -149,7 +149,7 @@ overview: 'Gamebeast publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 13
 score:
   band: thin
-  composite: 29.7
+  composite: 30.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -163,11 +163,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 29.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 30.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

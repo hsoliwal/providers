@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 0
@@ -212,12 +212,12 @@ layout: provider
 mcp_servers:
 - description: Official hosted (remote) Higgsfield MCP server. Exposes the full Higgsfield generation platform (30+ video and image models — Veo 3.1, Sora 2, Kling 3.0, Seedance 2.0, and more) to MCP-capable agents.
   name: Higgsfield MCP Server
-  slug: higgsfield-mcp-server
+  slug: higgsfield
 modified: '2026-07-19'
 name: Higgsfield
 nav: Providers
 network: true
-overview: 'Higgsfield publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Video Generation, and Image-Generation.
+overview: 'Higgsfield publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Video Generation, and Image Generation.
 
 
   The Higgsfield catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -227,7 +227,7 @@ overview: 'Higgsfield publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: developing
-  composite: 45.2
+  composite: 46.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -239,18 +239,24 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 45.2
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -275,8 +281,8 @@ tags:
 - Artificial Intelligence
 - Generative AI
 - Video Generation
-- Image-Generation
-- Machine-Learning
+- Image Generation
+- Machine Learning
 - Media
 - Content Creation
 - Developer API

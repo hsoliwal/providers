@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Client's panel API docs Advertisers User API
   slug: open-rtbhouse-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rtbhouse/refs/heads/main/capabilities/rtbhouse-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rtbhouse-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/rtbhouse/refs/heads/main/agentic-access/rtbhouse-agentic-access.yml
   title: ''
@@ -251,7 +256,7 @@ overview: 'RTB House publishes 5 APIs on the [APIs.io](https://apis.io/) network
   The RTB House catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  RTB House''s developer surface includes authentication, documentation, engineering blog, API reference, support, CLI, changelog, and 20 more developer resources.'
+  RTB House''s developer surface includes authentication, documentation, engineering blog, API reference, support, CLI, changelog, and 21 more developer resources.'
 plans:
 - name: Rtbhouse Plans Pricing
   plan_count: 1
@@ -274,9 +279,9 @@ rules:
   slug: rtbhouse-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 44.5
+  composite: 43.8
   coverage:
-    artifact_dirs: 29
+    artifact_dirs: 30
     catalog_earned: 62.3
     catalog_earned_first_party: 8.0
     catalog_gap: 52.8
@@ -286,11 +291,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 14.4
-    contract_quality: 54.3
+    contract_quality: 49.6
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 44.5
+  previous_composite: 43.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -301,8 +306,18 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

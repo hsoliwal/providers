@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 2
@@ -241,7 +241,7 @@ overview: 'Ardent publishes 6 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 0
 score:
   band: developing
-  composite: 43.2
+  composite: 42.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -253,11 +253,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.6
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 43.2
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -268,8 +268,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

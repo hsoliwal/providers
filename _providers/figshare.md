@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 81
   human_in_the_loop: 2
@@ -47,47 +47,47 @@ apis:
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The altmetric API from Figshare — 1 operation(s) for altmetric.
-  name: Figshare altmetric API
+  name: Figshare Altmetric API
   slug: figshare-altmetric-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The articles API from Figshare — 34 operation(s) for articles.
-  name: Figshare articles API
+  name: Figshare Articles API
   slug: figshare-articles-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The authors API from Figshare — 2 operation(s) for authors.
-  name: Figshare authors API
+  name: Figshare Authors API
   slug: figshare-authors-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The collections API from Figshare — 21 operation(s) for collections.
-  name: Figshare collections API
+  name: Figshare Collections API
   slug: figshare-collections-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The institutions API from Figshare — 20 operation(s) for institutions.
-  name: Figshare institutions API
+  name: Figshare Institutions API
   slug: figshare-institutions-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The other API from Figshare — 7 operation(s) for other.
-  name: Figshare other API
+  name: Figshare Other API
   slug: figshare-other-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The profiles API from Figshare — 2 operation(s) for profiles.
-  name: Figshare profiles API
+  name: Figshare Profiles API
   slug: figshare-profiles-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The projects API from Figshare — 17 operation(s) for projects.
-  name: Figshare projects API
+  name: Figshare Projects API
   slug: figshare-projects-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
   description: The symplectic API from Figshare — 5 operation(s) for symplectic.
-  name: Figshare symplectic API
+  name: Figshare Symplectic API
   slug: figshare-symplectic-api
 - baseURL: https://api.figshare.com/v2
   baseurl_source: declared
@@ -328,7 +328,7 @@ modified: '2026-06-12'
 name: Figshare
 nav: Providers
 network: true
-overview: 'Figshare publishes 10 APIs on the [APIs.io](https://apis.io/) network, including altmetric API, articles API, authors API, and 7 more. Tagged areas include Research Data, Data Repository, Open Science, DOI, and Datasets.
+overview: 'Figshare publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Altmetric API, Articles API, Authors API, and 7 more. Tagged areas include Research Data, Research Repository, Open Science, DOI, and Datasets.
 
 
   The Figshare catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -362,23 +362,23 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 50.9
+  composite: 45.7
   coverage:
     artifact_dirs: 19
-    catalog_earned: 90.3
+    catalog_earned: 86.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 24.8
+    catalog_gap: 28.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 73.2
+    access_clarity: 46.8
+    contract_governance: 23.5
+    contract_quality: 66.9
     developer_ergonomics: 17.9
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 50.9
+    discoverability: 66.1
+    operational_transparency: 46.8
+  previous_composite: 45.7
   provenance:
     agentic_access: derived
     contracts:
@@ -391,9 +391,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -411,7 +411,7 @@ security:
 slug: figshare
 tags:
 - Research Data
-- Data Repository
+- Research Repository
 - Open Science
 - DOI
 - Datasets
@@ -419,5 +419,6 @@ tags:
 - File Storage
 - Open Access
 - Figshare
+- OAI-PMH
 website: https://figshare.com/
 ---

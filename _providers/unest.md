@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/unest/refs/heads/main/security/unest-domain-security.yml
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: UNest is a Los Angeles-based fintech app that helps parents and families save and invest for their children's futures through UTMA/UGMA custodial investment accounts, with brand rewards contributions, gifting, financial literacy content, and term life insurance offered through Ladder. UNest Advisers, LLC is an SEC-registered investment adviser, with brokerage through UNest Securities, LLC (FINRA/SIPC) and clearing through Apex Clearing. The company is a consumer mobile-app business and publishes no public developer API, though its site ships a real llms.txt. Surfaced as a 500 Global portfolio company in the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/unest.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.unest.co over HTTP.
+  name: UNest MCP Server
+  slug: unest
 modified: '2026-07-21'
 name: UNest
 nav: Providers
@@ -94,7 +98,7 @@ overview: 'UNest is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 9
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -108,14 +112,16 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 12.6
+  previous_composite: 12.9
   provenance:
     mcp: first-party
   regulatory:
@@ -123,9 +129,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

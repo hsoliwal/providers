@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The GeniusAPI Suite is Claim Genius''s REST integration layer over its AI vehicle-inspection products. Documented flow: generate a JWT via /api/auth/token using an API ID and secret, upload JPG/PNG/MP4'
@@ -128,14 +128,14 @@ modified: '2026-08-09'
 name: Claim Genius
 nav: Providers
 network: true
-overview: 'Claim Genius publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurance Claims, Insurance Underwriting, Artificial Intelligence, and Computer-Vision.
+overview: 'Claim Genius publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurance Claims, Insurance Underwriting, Artificial Intelligence, and Computer Vision.
 
 
   Claim Genius'' developer surface includes support, engineering blog, authentication, and 11 more developer resources.'
 random_paper: 4
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 32.0
@@ -149,9 +149,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 10.8
+  previous_composite: 10.3
   provenance:
     conformance: first-party
   regulatory:
@@ -159,9 +159,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 25.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,7 +183,7 @@ tags:
 - Insurance Claims
 - Insurance Underwriting
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Vehicle Inspection
 - Automotive
 - Claims Automation

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -68,6 +68,11 @@ collections:
   name: iCIMS Workflows API
   slug: open-icims
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/capabilities/icims-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/icims-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/icims/refs/heads/main/agentic-access/icims-agentic-access.yml
   title: ''
@@ -128,10 +133,10 @@ modified: '2026-05-19'
 name: iCIMS
 nav: Providers
 network: true
-overview: 'iCIMS publishes 1 API on the [APIs.io](https://apis.io/) network: Workflows API. Tagged areas include Applicant Tracking, Human Resources, Recruiting, and Talent Acquisition.
+overview: 'iCIMS publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Workflows API, and 2 more. Tagged areas include Applicant Tracking, Human Resources, Recruiting, and Talent Acquisition.
 
 
-  iCIMS''s developer surface includes authentication, developer portal, documentation, support, engineering blog, and 6 more developer resources.'
+  iCIMS''s developer surface includes authentication, developer portal, documentation, support, engineering blog, and 7 more developer resources.'
 plans:
 - name: Icims Plans Pricing
   plan_count: 3
@@ -143,9 +148,9 @@ rate_limits:
   slug: icims-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 28.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -155,11 +160,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 33.3
-    discoverability: 55.6
+    discoverability: 53.6
     operational_transparency: 10.5
-  previous_composite: 30.2
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -167,8 +172,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

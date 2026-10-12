@@ -15,7 +15,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: served
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -34,119 +34,119 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.8
-  scored_at: '2026-09-20'
+  score: 49.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to access rules
-  name: Opal Security access-rules API
+  name: Opal Security Access Rules API
   slug: opal-security-access-rules-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to apps
-  name: Opal Security apps API
+  name: Opal Security Apps API
   slug: opal-security-apps-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to bundles
-  name: Opal Security bundles API
+  name: Opal Security Bundles API
   slug: opal-security-bundles-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to configuration templates
-  name: Opal Security configuration-templates API
+  name: Opal Security Configuration Templates API
   slug: opal-security-configuration-templates-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to request reviewer delegations
-  name: Opal Security delegations API
+  name: Opal Security Delegations API
   slug: opal-security-delegations-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to event streaming connections
-  name: Opal Security event-streams API
+  name: Opal Security Event Streams API
   slug: opal-security-event-streams-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to events
-  name: Opal Security events API
+  name: Opal Security Events API
   slug: opal-security-events-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to group bindings
-  name: Opal Security group-bindings API
+  name: Opal Security Group Bindings API
   slug: opal-security-group-bindings-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to groups
-  name: Opal Security groups API
+  name: Opal Security Groups API
   slug: opal-security-groups-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to IDP group mappings
-  name: Opal Security idp-group-mappings API
+  name: Opal Security Idp Group Mappings API
   slug: opal-security-idp-group-mappings-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to message channels
-  name: Opal Security message-channels API
+  name: Opal Security Message Channels API
   slug: opal-security-message-channels-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to non-human identities
-  name: Opal Security non-human-identities API
+  name: Opal Security Non Human Identities API
   slug: opal-security-non-human-identities-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to on-call schedules
-  name: Opal Security on-call-schedules API
+  name: Opal Security On Call Schedules API
   slug: opal-security-on-call-schedules-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to OpalQuery
-  name: Opal Security opal-queries API
+  name: Opal Security Opal Queries API
   slug: opal-security-opal-queries-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to owners
-  name: Opal Security owners API
+  name: Opal Security Owners API
   slug: opal-security-owners-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to requests
-  name: Opal Security requests API
+  name: Opal Security Requests API
   slug: opal-security-requests-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to resources
-  name: Opal Security resources API
+  name: Opal Security Resources API
   slug: opal-security-resources-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to sessions
-  name: Opal Security sessions API
+  name: Opal Security Sessions API
   slug: opal-security-sessions-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to tags
-  name: Opal Security tags API
+  name: Opal Security Tags API
   slug: opal-security-tags-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to API tokens
-  name: Opal Security tokens API
+  name: Opal Security Tokens API
   slug: opal-security-tokens-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to UARs
-  name: Opal Security uars API
+  name: Opal Security Uars API
   slug: opal-security-uars-api
 - baseURL: https://api.opal.dev/v1
   baseurl_source: declared
   description: Operations related to users
-  name: Opal Security users API
+  name: Opal Security Users API
   slug: opal-security-users-api
 artifact_total: 51
 asyncapis:
@@ -224,6 +224,11 @@ collections:
   name: Opal access-rules users API
   slug: open-opal-security-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/capabilities/opal-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/opal-security-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/opal-security/refs/heads/main/overlays/opal-security-openapi-overlay.yaml
   title: ''
@@ -363,24 +368,24 @@ layout: provider
 mcp_servers:
 - description: Opal Security hosts three specialized, self-hosted Model Context Protocol (MCP) servers that let AI agents interact with the Opal access-management platform through its REST API. All servers use strea
   name: Opal Security MCP Server
-  slug: opal-security-mcp-server
+  slug: opal-security-mcp-yml
 modified: '2026-07-20'
 name: Opal Security
 nav: Providers
 network: true
-overview: 'Opal Security publishes 22 APIs on the [APIs.io](https://apis.io/) network, including access-rules API, apps API, bundles API, and 19 more. Tagged areas include Company, Cybersecurity, Access Management, Identity and Access Management, and Least Privilege.
+overview: 'Opal Security publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Access Rules API, Apps API, Bundles API, and 19 more. Tagged areas include Company, Cybersecurity, Access Management, Identity and Access Management, and Least Privilege.
 
 
   The Opal Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Opal Security''s developer surface includes authentication, CLI, changelog, documentation, API reference, getting-started guide, engineering blog, and 22 more developer resources.'
+  Opal Security''s developer surface includes authentication, CLI, changelog, documentation, API reference, getting-started guide, engineering blog, and 23 more developer resources.'
 random_paper: 19
 score:
   band: developing
-  composite: 51.5
+  composite: 51.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -390,11 +395,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 68.6
-    developer_ergonomics: 73.8
-    discoverability: 75.9
+    contract_quality: 62.9
+    developer_ergonomics: 73.1
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 51.5
+  previous_composite: 51.6
   provenance:
     conformance: derived
     contracts:
@@ -404,8 +409,14 @@ score:
       total: 22
     mcp: first-party
     skills: unknown
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

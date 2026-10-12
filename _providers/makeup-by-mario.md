@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -26,8 +27,8 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
-    mcp_server: documented
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.8
-  scored_at: '2026-09-20'
+  score: 41.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -216,7 +217,7 @@ layout: provider
 mcp_servers:
 - description: 'MAKEUP BY MARIO serves TWO live MCP endpoints from its own storefront host, and BOTH answer an anonymous JSON-RPC tools/list with HTTP 200 and full JSON Schema input contracts. The Shopify Storefront '
   name: Makeup by Mario MCP Server
-  slug: makeup-by-mario-mcp-server
+  slug: makeup-by-mario-mcp-yml
 modified: '2026-08-25'
 name: Makeup by Mario
 nav: Providers
@@ -236,12 +237,12 @@ rate_limits:
   slug: makeup-by-mario-rate-limits
 scopes:
 - name: Makeup By Mario Scopes
-  scope_count: 0
+  scope_count: 4
   slug: makeup-by-mario-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: thin
-  composite: 31.5
+  composite: 27.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -253,23 +254,31 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.5
+  previous_composite: 27.9
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

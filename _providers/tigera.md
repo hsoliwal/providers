@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,10 +24,10 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
-    idempotency: documented
-    mcp_server: verified
+    idempotency: derived
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.2
-  scored_at: '2026-09-20'
+  score: 39.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Goldmane is the Calico flow aggregation and network-observability service introduced in Calico Open Source 3.30. It exposes a gRPC API for querying aggregated flow data — List for point-in-time querie
@@ -307,12 +308,12 @@ layout: provider
 mcp_servers:
 - description: Tigera publishes a remote Model Context Protocol server on its primary marketing host. It was not found in any MCP registry or in the Tigera documentation — it was discovered by probing /.well-known/*
   name: Tigera MCP Server
-  slug: tigera-mcp-server
+  slug: tigera
 modified: '2026-08-05'
 name: Tigera
 nav: Providers
 network: true
-overview: 'Tigera publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Projectcalico Org API, Projectcalico Org V3 API, Version API, and 1 more. Tagged areas include Company, Kubernetes, Networking, Network Security, and Container Security.
+overview: 'Tigera publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Projectcalico Org API, Projectcalico Org V3 API, Version API, and 4 more. Tagged areas include Company, Kubernetes, Networking, Network Security, and Container Security.
 
 
   The Tigera catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -326,8 +327,8 @@ scopes:
   slug: tigera-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: developing
-  composite: 52.4
+  band: strong
+  composite: 55.9
   coverage:
     artifact_dirs: 23
     catalog_earned: 32.0
@@ -339,14 +340,14 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 49.5
+    contract_quality: 45.7
     developer_ergonomics: 73.2
     discoverability: 66.7
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 85.0
-  previous_composite: 52.4
+  previous_composite: 55.9
   provenance:
     conformance: derived
     contracts:
@@ -354,10 +355,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -392,6 +399,6 @@ tags:
 - Microsegmentation
 - Zero Trust
 - eBPF
-- Open-Source
+- Open Source
 website: https://www.tigera.io/
 ---

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -97,6 +97,11 @@ collections:
   name: Eppo Cloud REST API
   slug: open-eppo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/eppo/refs/heads/main/capabilities/eppo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/eppo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/eppo/refs/heads/main/agentic-access/eppo-agentic-access.yml
   title: ''
@@ -164,10 +169,10 @@ modified: '2026-05-08'
 name: Eppo
 nav: Providers
 network: true
-overview: 'Eppo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Allocations API, Assignments API, Experiments API, and 2 more. Tagged areas include Experimentation, Feature Flags, A/B Testing, Analytics, and Statistics.
+overview: 'Eppo publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Allocations API, Assignments API, Experiments API, and 3 more. Tagged areas include Experimentation, Feature Flags, A/B Testing, Analytics, and Statistics.
 
 
-  Eppo''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  Eppo''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Eppo Plans Pricing
   plan_count: 1
@@ -178,10 +183,10 @@ rate_limits:
   name: Eppo Rate Limits
   slug: eppo-rate-limits
 score:
-  band: thin
-  composite: 26.9
+  band: emerging
+  composite: 25.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -191,11 +196,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 52.9
+    contract_quality: 47.9
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 26.9
+  previous_composite: 25.7
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +208,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

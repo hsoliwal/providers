@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -117,7 +117,7 @@ overview: 'dClimate is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 21
 score:
   band: emerging
-  composite: 21.4
+  composite: 20.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -131,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 21.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -159,5 +165,6 @@ tags:
 - Data Marketplace
 - Zarr
 - STAC
+- Web3
 website: https://dclimate.net
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 22
 common:
@@ -197,12 +197,12 @@ rate_limits:
   slug: american-international-rate-limits
 scopes:
 - name: American International Scopes
-  scope_count: 0
+  scope_count: 13
   slug: american-international-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 13 scopes
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 24.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -216,14 +216,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.2
+  previous_composite: 24.0
   provenance:
     conformance: first-party
   regulatory:
@@ -231,9 +231,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -260,7 +260,7 @@ tags:
 - Cyber Insurance
 - Commercial Insurance
 - Global Insurance
-- Financial-Services
+- Financial Services
 - Reinsurance
 - Fortune 500
 use_cases:

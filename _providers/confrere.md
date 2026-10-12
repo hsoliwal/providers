@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -194,7 +194,7 @@ overview: 'Confrere publishes 2 APIs on the [APIs.io](https://apis.io/) network:
 random_paper: 16
 score:
   band: thin
-  composite: 38.8
+  composite: 36.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 32.0
@@ -206,11 +206,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 47.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 38.8
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

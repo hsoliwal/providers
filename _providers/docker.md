@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 4
@@ -212,6 +212,11 @@ collections:
   name: Docker Engine API
   slug: open-docker
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/docker/refs/heads/main/capabilities/docker-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/docker-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/docker/refs/heads/main/agentic-access/docker-agentic-access.yml
   title: ''
@@ -431,7 +436,7 @@ network: true
 overview: 'Docker publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Config API, Container API, Distribution API, and 12 more. Tagged areas include Cloud, Containers, Developer Tools, DevOps, and Infrastructure.
 
 
-  Docker''s developer surface includes documentation, engineering blog, pricing, signup flow, changelog, CLI, and 36 more developer resources.'
+  Docker''s developer surface includes documentation, engineering blog, pricing, signup flow, changelog, CLI, and 37 more developer resources.'
 plans:
 - name: Docker Plans Pricing
   plan_count: 3
@@ -443,9 +448,9 @@ rate_limits:
   slug: docker-rate-limits
 score:
   band: developing
-  composite: 41.0
+  composite: 41.1
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 36.0
     catalog_earned_first_party: 0.0
     catalog_gap: 79.0
@@ -455,11 +460,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 42.2
+    contract_quality: 38.0
     developer_ergonomics: 31.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 42.1
-  previous_composite: 41.0
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -469,8 +474,14 @@ score:
       marker_coverage: 0.0
       total: 15
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

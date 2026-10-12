@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: Sail Batches API Responses API API
   slug: open-sail-responses-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sail/refs/heads/main/capabilities/sail-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sail-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sail/refs/heads/main/overlays/sail-openapi-overlay.yaml
   title: ''
@@ -224,24 +229,24 @@ layout: provider
 mcp_servers:
 - description: Sail's official hosted documentation MCP server. Connects agents to Sail's docs so they can answer questions about models, pricing, completion windows, and Sailbox setup while building or migrating to
   name: Sail MCP Server
-  slug: sail-mcp-server
+  slug: sail-docs
 modified: '2026-09-16'
 name: Sail
 nav: Providers
 network: true
-overview: 'Sail publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Batches API, Chat Completions API, Messages API, and 2 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, LLM, and Inference.
+overview: 'Sail publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Batches API, Chat Completions API, Messages API, and 2 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, LLM, and Inference.
 
 
   The Sail catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Sail''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 20 more developer resources.'
+  Sail''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 21 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 46.2
+  composite: 44.9
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -251,11 +256,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 63.2
+    contract_quality: 57.7
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 46.2
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -266,8 +271,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -286,7 +297,7 @@ slug: sail
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - Inference
 - Agents

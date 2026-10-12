@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -341,7 +341,7 @@ modified: '2026-07-23'
 name: Hampden & Co
 nav: Providers
 network: true
-overview: 'Hampden & Co publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial-Services, Banking, Private Banking, Open Banking, and PSD2.
+overview: 'Hampden & Co publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 26 more. Tagged areas include Financial Services, Banking, Private Banking, Open Banking, and PSD2.
 
 
   Hampden & Co''s developer surface includes authentication, documentation, signup flow, engineering blog, support, API reference, and 23 more developer resources.'
@@ -352,8 +352,8 @@ scopes:
   slug: hampden-and-co-scopes
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 42.5
+  band: thin
+  composite: 38.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -365,9 +365,9 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -377,7 +377,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 42.5
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -397,9 +397,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 77.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -416,7 +416,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: hampden-and-co
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Private Banking
 - Open Banking

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST Product API (v2) to query marketing data from connected data sources, with synchronous and asynchronous query execution, plus a Management API for API keys, saved queries, teams, data-source logi
@@ -222,9 +222,9 @@ description: Supermetrics is a marketing intelligence platform that automates th
 image: https://supermetrics.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.supermetrics.com over HTTP.
   name: Supermetrics MCP Server
-  slug: supermetrics-mcp-server
+  slug: supermetrics
 modified: '2026-08-13'
 name: Supermetrics
 nav: Providers
@@ -248,8 +248,8 @@ scopes:
   slug: supermetrics-scopes
   summary_line: 13 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.1
+  band: strong
+  composite: 57.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 61.0
@@ -263,15 +263,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 78.9
-  previous_composite: 53.1
+  previous_composite: 57.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The private Django REST API that backs the AAK Tele-Science platform. The application frontend at aakscience.com preconnects to django.aakscience.com, and the company runs a drf-yasg (Swagger) schema '
@@ -110,13 +110,13 @@ description: AAK Tele-Science, Inc. (aakscience.com) is a Davis, California soft
 image: https://aakscience.com/aak.webp
 layout: provider
 modified: '2026-09-05'
-name: AAK Tele-Science, Inc.
+name: AAK Tele-Science
 nav: Providers
 network: true
-overview: 'AAK Tele-Science, Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Research, Science, Collaboration, and Analytics.
+overview: 'AAK Tele-Science publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Research, Science, Collaboration, and Analytics.
 
 
-  AAK Tele-Science, Inc.''s developer surface includes pricing, signup flow, support, engineering blog, and 10 more developer resources.'
+  AAK Tele-Science''s developer surface includes pricing, signup flow, support, engineering blog, and 10 more developer resources.'
 plans:
 - name: Aaktelescienceinc Plans Pricing
   plan_count: 0
@@ -128,7 +128,7 @@ rate_limits:
   slug: aaktelescienceinc-rate-limits
 score:
   band: minimal
-  composite: 8.5
+  composite: 6.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -142,11 +142,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 8.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +170,7 @@ tags:
 - Science
 - Collaboration
 - Analytics
-- Machine-Learning
+- Machine Learning
 - Software-as-a-Service
 - Data
 website: https://aakscience.com

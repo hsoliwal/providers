@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -342,7 +342,7 @@ rate_limits:
   slug: slope-rate-limits
 score:
   band: developing
-  composite: 47.7
+  composite: 45.4
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -354,11 +354,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 63.7
+    contract_quality: 58.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 43.4
-  previous_composite: 47.7
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -374,9 +374,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

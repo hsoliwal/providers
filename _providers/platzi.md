@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,24 +34,24 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
   description: The auth API from Platzi — 3 operation(s) for auth.
-  name: Platzi auth API
+  name: Platzi Auth API
   slug: platzi-auth-api
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
   description: The categories API from Platzi — 4 operation(s) for categories.
-  name: Platzi categories API
+  name: Platzi Categories API
   slug: platzi-categories-api
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
   description: The files API from Platzi — 2 operation(s) for files.
-  name: Platzi files API
+  name: Platzi Files API
   slug: platzi-files-api
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
@@ -61,12 +61,12 @@ apis:
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
   description: The products API from Platzi — 5 operation(s) for products.
-  name: Platzi products API
+  name: Platzi Products API
   slug: platzi-products-api
 - baseURL: https://api.escuelajs.co/api/v1
   baseurl_source: declared
   description: The users API from Platzi — 3 operation(s) for users.
-  name: Platzi users API
+  name: Platzi Users API
   slug: platzi-users-api
 artifact_total: 15
 collections:
@@ -209,14 +209,14 @@ modified: '2026-07-20'
 name: Platzi
 nav: Providers
 network: true
-overview: 'Platzi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including auth API, categories API, files API, and 3 more. Tagged areas include Company, Education, E-Commerce, Product, and Mock API.
+overview: 'Platzi publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Categories API, Files API, and 3 more. Tagged areas include Company, Education, E-Commerce, Product, and Mock API.
 
 
   Platzi''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, authentication, sandbox, and 17 more developer resources.'
 random_paper: 0
 score:
-  band: developing
-  composite: 41.1
+  band: thin
+  composite: 38.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -228,11 +228,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 39.5
+    contract_quality: 35.9
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 41.1
+  previous_composite: 38.0
   provenance:
     conformance: derived
     contracts:
@@ -247,9 +247,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

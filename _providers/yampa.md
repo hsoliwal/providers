@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -100,6 +100,10 @@ created: '2026-07-17'
 description: Yampa is a Paris-based B2B platform for deploying and operating fleets of autonomous AI agents that handle customer service end-to-end across voice, chat, email, ticketing, and messaging channels. Its Y.core orchestration platform provides a visual workflow builder, guardrails, a knowledge layer, multichannel orchestration, QA and auditing tools, and observability, with connectors to CRMs, helpdesks, and telephony systems (Salesforce, Zendesk, Intercom, Twilio, Genesys, and others). Founded in 2024 by Marin Huet, Baptiste Saintot, and Patrice Mazoyer, Yampa raised a ~EUR 3M seed led by Partech and emphasizes sovereign EU-hosted infrastructure with GDPR and SOC 2 aligned security. Developer documentation at docs.yampa.ai is gated behind an access code; the public status page lists an API component alongside chat, email, calls, and console services.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/yampa.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.yampa.ai over HTTP.
+  name: Yampa MCP Server
+  slug: yampa
 modified: '2026-07-21'
 name: Yampa
 nav: Providers
@@ -111,7 +115,7 @@ overview: 'Yampa is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 8
 score:
   band: emerging
-  composite: 15.7
+  composite: 15.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -125,7 +129,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -135,11 +139,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 15.7
+  previous_composite: 15.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

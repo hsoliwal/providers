@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: AsyncAPI 2.6 description of Talkdesk's publicly documented outbound webhook surface, covering the Events API (partner-app lifecycle), the Webhook Trigger API (Talkdesk Connections triggers for call/ag
@@ -112,7 +112,7 @@ rules:
   slug: talkdesk-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 27.3
+  composite: 27.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 36.5
@@ -124,13 +124,19 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 13.6
-    contract_quality: 45.8
+    contract_quality: 43.8
     developer_ergonomics: 20.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 27.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 27.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,5 +163,6 @@ tags:
 - Customer Experience
 - Digital Connect
 - AppConnect
+- Customer Service
 website: https://www.talkdesk.com
 ---

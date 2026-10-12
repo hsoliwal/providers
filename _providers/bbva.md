@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: PSD2-compliant account information service (AIS) API for Spain. Allows authorized third parties to access customer payment account information including account lists, balances, transaction history, a
@@ -153,7 +153,7 @@ modified: '2026-07-25'
 name: BBVA
 nav: Providers
 network: true
-overview: 'BBVA publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial-Services, Open Banking, PSD2, and Spain.
+overview: 'BBVA publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial Services, Open Banking, PSD2, and Spain.
 
 
   The BBVA catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -182,21 +182,21 @@ rules:
   slug: bbva-spectral-rules
 score:
   band: thin
-  composite: 28.6
+  composite: 28.2
   coverage:
     artifact_dirs: 12
-    catalog_earned: 70.0
+    catalog_earned: 68.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.0
+    catalog_gap: 46.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 54.5
+    contract_governance: 49.1
     contract_quality: 10.7
     developer_ergonomics: 40.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -208,15 +208,15 @@ score:
     - europe
     - france-iberia
     - latin-america
-  previous_composite: 28.6
+  previous_composite: 28.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 19.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,7 +231,7 @@ security:
 slug: bbva
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Open Banking
 - PSD2
 - Spain

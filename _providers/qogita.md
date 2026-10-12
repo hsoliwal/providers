@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Qogita's REST API for retailers and integration partners on api.qogita.com, covering catalog, ordering, and fulfilment workflows. Documented via the developer portal (hosted on Notion).
@@ -126,9 +126,9 @@ description: Qogita is Europe's B2B wholesale marketplace for the health and bea
 image: https://www.qogita.com/
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.qogita.com over HTTP.
   name: Qogita Staff MCP - Production
-  slug: qogita-staff-mcp-production
+  slug: qogita-staff-mcp---production
 modified: '2026-07-20'
 name: Qogita
 nav: Providers
@@ -145,7 +145,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 23.7
+  composite: 21.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -159,9 +159,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 23.7
+  previous_composite: 21.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -170,9 +170,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

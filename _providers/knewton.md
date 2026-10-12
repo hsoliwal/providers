@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Knewton Enterprise Platform REST API (v0) that partner learning applications integrate with to deliver continuously adaptive learning. Partners create anonymized user accounts, establish learning '
@@ -181,7 +181,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 32.1
+  composite: 28.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -195,9 +195,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 32.1
+  previous_composite: 28.2
   provenance:
     conformance: derived
     mcp: derived
@@ -207,9 +207,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,7 +233,7 @@ tags:
 - EdTech
 - Adaptive Learning
 - Learning Analytics
-- Machine-Learning
+- Machine Learning
 - Recommendations
 - Courseware
 - Higher Education

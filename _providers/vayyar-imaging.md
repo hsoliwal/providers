@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-facing commerce surface of the Walabot DIY storefront (walabot.com, a Shopify store operated by Vayyar): unauthenticated read-only product JSON endpoints (/products/{handle}.json, /collections/{'
@@ -120,7 +120,7 @@ layout: provider
 mcp_servers:
 - description: 'Vayyar''s Walabot DIY storefront (walabot.com, a Shopify store) operates a live agent-commerce MCP endpoint as part of its Universal Commerce Protocol (UCP) implementation. The UCP merchant profile at '
   name: Vayyar Imaging MCP Server
-  slug: vayyar-imaging-mcp-server
+  slug: walabot-storefront-ucp
 modified: '2026-07-21'
 name: Vayyar Imaging
 nav: Providers
@@ -136,8 +136,8 @@ scopes:
   slug: vayyar-imaging-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 24.4
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,20 +151,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 26.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 24.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

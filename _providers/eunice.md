@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/eunice/refs/heads/main/security/eunice-domain-security.yml
@@ -91,6 +91,10 @@ created: '2026-07-17'
 description: Eunice is a London-based AI fintech building institutional-grade due diligence and monitoring infrastructure for digital assets and private markets. Its platform automates token due diligence, classification, risk analysis, and disclosure requirements — including an AI-powered MiCA whitepaper library for streamlining compliance with the EU's Markets in Crypto-Assets Regulation — and delivers insights through a dashboard and API to exchanges, funds, custodians, issuers, and regulators. Founded in 2021 by Yi Luo, a second-time fintech entrepreneur and former VC, Eunice raised $8M in combined Seed and Pre-Seed funding led by Moonfire Ventures and Speedinvest with participation from Openspace Ventures in 2026, and counts Coinbase, Crypto.com, Copper, and Zodia Custody among its clients.
 image: https://framerusercontent.com/assets/Ep1Xh8MWpsASZ3okbXOWDZjNc.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.eunice.ai over HTTP.
+  name: Eunice MCP Server
+  slug: eunice
 modified: '2026-07-19'
 name: Eunice
 nav: Providers
@@ -102,7 +106,7 @@ overview: 'Eunice is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 17
 score:
   band: emerging
-  composite: 12.9
+  composite: 12.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -116,19 +120,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 12.9
+  previous_composite: 12.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

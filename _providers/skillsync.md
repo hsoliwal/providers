@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -116,7 +116,7 @@ layout: provider
 mcp_servers:
 - description: 'Skillsync ships an official Model Context Protocol server as a subcommand of its CLI binary: `skl mcp`, running over stdio (no hosted URL, no port). Connect it to Claude Code, Claude Desktop, or Curso'
   name: Skillsync MCP server
-  slug: skillsync-mcp-server
+  slug: skl
 modified: '2026-07-21'
 name: Skillsync
 nav: Providers
@@ -128,7 +128,7 @@ overview: 'Skillsync is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 20
 score:
   band: emerging
-  composite: 22.6
+  composite: 22.9
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -142,14 +142,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 22.6
+  previous_composite: 22.9
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -174,7 +180,7 @@ tags:
 - Coding Assistants
 - MCP
 - CLI
-- Knowledge-Management
+- Knowledge Management
 - Y Combinator
 website: https://skillsync.com
 ---

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -325,7 +325,7 @@ modified: '2026-07-25'
 name: Swisscom
 nav: Providers
 network: true
-overview: 'Swisscom publishes 3 APIs on the [APIs.io](https://apis.io/) network: Process: create API, Process: read API, and Signatures API. Tagged areas include Telecommunications, Switzerland, Mobile Network Operator, Broadband, and Network APIs.
+overview: 'Swisscom publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Process: create API, Process: read API, Signatures API, and 11 more. Tagged areas include Telecommunications, Switzerland, Mobile Network Operator, Broadband, and Network APIs.
 
 
   The Swisscom catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -340,7 +340,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials
 score:
   band: strong
-  composite: 64.9
+  composite: 59.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -352,9 +352,9 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 67.2
+    contract_quality: 61.3
     developer_ergonomics: 75.6
-    discoverability: 87.0
+    discoverability: 83.9
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -364,7 +364,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 64.9
+  previous_composite: 59.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -384,9 +384,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 83.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

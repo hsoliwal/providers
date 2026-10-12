@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 asyncapis:
@@ -235,7 +235,7 @@ rate_limits:
   slug: orum-com-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 49.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 35.0
@@ -247,15 +247,21 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 52.6
-  previous_composite: 47.6
+  previous_composite: 49.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

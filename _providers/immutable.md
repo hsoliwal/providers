@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Passport is Immutable's authentication and embedded-wallet product. Its OpenID Connect provider publishes anonymous discovery documents at auth.immutable.com, exposing the authorization, token, device
@@ -339,7 +339,7 @@ modified: '2026-08-23'
 name: Immutable
 nav: Providers
 network: true
-overview: 'Immutable publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Chains API, Collections API, and 13 more. Tagged areas include Company, Gaming, Blockchain, NFT, and Web3.
+overview: 'Immutable publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Chains API, Collections API, and 14 more. Tagged areas include Company, Gaming, Blockchain, NFT, and Web3.
 
 
   The Immutable catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -357,12 +357,12 @@ rate_limits:
   slug: immutable-rate-limits
 scopes:
 - name: Immutable Scopes
-  scope_count: 0
+  scope_count: 14
   slug: immutable-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
-  band: exemplar
-  composite: 68.4
+  band: strong
+  composite: 64.4
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -374,11 +374,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 59.8
+    contract_quality: 54.7
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 92.1
-  previous_composite: 68.4
+  previous_composite: 64.4
   provenance:
     conformance: first-party
     contracts:
@@ -393,9 +393,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -432,5 +432,6 @@ tags:
 - Customer Data Platform
 - Authentication
 - Developer Platform
+- A2A
 website: https://www.immutable.com
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Move Money Transfer is First Horizon's RESTful payments-initiation API for Treasury Management clients, used to originate and manage funds transfers programmatically from an ERP, accounting, or treasu
@@ -189,14 +189,14 @@ modified: '2026-07-23'
 name: First Horizon
 nav: Providers
 network: true
-overview: 'First Horizon publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include United States, Banking, Financial-Services, Treasury Management, and API Banking.
+overview: 'First Horizon publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include United States, Banking, Financial Services, Treasury Management, and API Banking.
 
 
   First Horizon''s developer surface includes documentation, authentication, and 29 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 11.4
+  composite: 11.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 35.0
@@ -210,7 +210,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 15.5
-    discoverability: 72.2
+    discoverability: 70.5
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -219,7 +219,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.4
+  previous_composite: 11.6
   provenance:
     conformance: first-party
   regulatory:
@@ -227,9 +227,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 21.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +248,7 @@ slug: first-horizon
 tags:
 - United States
 - Banking
-- Financial-Services
+- Financial Services
 - Treasury Management
 - API Banking
 - ACH

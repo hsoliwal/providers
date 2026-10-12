@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Hosted MCP server (Streamable HTTP) with ~20 tools for deploying and managing always-on apps. Uses OAuth 2.1 with PKCE and dynamic client registration; usable by any account holder from Claude Code, C
@@ -166,9 +166,9 @@ description: Agent-native deployment/hosting platform. An AI coding agent ships 
 image: https://www.spocket.dev/brand/spocket-wordmark.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.spocket.dev over HTTP; 20 tools listed.
   name: Spocket MCP Server
-  slug: spocket-mcp-server
+  slug: spocket
 modified: '2026-08-09'
 name: Spocket
 nav: Providers
@@ -188,8 +188,8 @@ scopes:
   slug: spocket-scopes
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 37.2
+  band: developing
+  composite: 39.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -203,15 +203,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 37.2
+  previous_composite: 39.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

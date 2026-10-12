@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -330,7 +330,7 @@ rate_limits:
   slug: autoderm-ai-dermatology-api-rate-limits
 score:
   band: strong
-  composite: 63.5
+  composite: 60.5
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -342,11 +342,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 56.0
+    contract_quality: 50.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 63.5
+  previous_composite: 60.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -362,9 +362,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -393,7 +393,7 @@ tags:
 - White Label
 - Healthcare
 - Medical AI
-- Computer-Vision
+- Computer Vision
 - Medical Devices
 - ICD-10
 - image-classification

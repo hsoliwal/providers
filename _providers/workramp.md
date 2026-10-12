@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 0
@@ -402,8 +402,8 @@ rate_limits:
   name: Workramp Rate Limits
   slug: workramp-rate-limits
 score:
-  band: exemplar
-  composite: 67.7
+  band: strong
+  composite: 62.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 60.0
@@ -415,11 +415,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 66.7
+    contract_quality: 61.6
     developer_ergonomics: 33.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 63.2
-  previous_composite: 67.7
+  previous_composite: 62.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -435,9 +435,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

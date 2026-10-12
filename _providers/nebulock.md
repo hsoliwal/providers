@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 1
@@ -89,6 +89,11 @@ collections:
   name: Nebulock Public Entities Rules API
   slug: open-nebulock-rules-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nebulock/refs/heads/main/capabilities/nebulock-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nebulock-capability-edges.yml
 - group: docs
   title: ''
   type: Documentation
@@ -211,13 +216,13 @@ network: true
 overview: 'Nebulock publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Entities API, Findings API, Hunts API, and 1 more. Tagged areas include Company, Security, Threat Hunting, Threat Detection, and Security Operations.
 
 
-  Nebulock''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 18 more developer resources.'
+  Nebulock''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 19 more developer resources.'
 random_paper: 15
 score:
   band: thin
-  composite: 29.5
+  composite: 28.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -227,11 +232,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 4.5
-    contract_quality: 54.3
+    contract_quality: 49.0
     developer_ergonomics: 32.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 29.5
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -242,8 +247,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

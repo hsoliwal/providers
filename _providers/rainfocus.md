@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The RainFocus RESTful integration API. Requests are dispatched against api.rainfocus.com and are keyed on an apiProfile identifier - a named API Profile configured per customer in the RainFocus Integr
@@ -152,7 +152,7 @@ layout: provider
 mcp_servers:
 - description: RainFocus Nexus MCP Profiles is a first-party, hosted, remote Model Context Protocol server for live event data. It was announced on 7 July 2026 and RainFocus describes it as "the first native MCP wit
   name: RainFocus MCP Server
-  slug: rainfocus-mcp-server
+  slug: rainfocus-nexus-mcp
 modified: '2026-08-26'
 name: RainFocus
 nav: Providers
@@ -172,12 +172,12 @@ rate_limits:
   slug: rainfocus-rate-limits
 scopes:
 - name: Rainfocus Scopes
-  scope_count: 0
+  scope_count: 1
   slug: rainfocus-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 28.2
+  composite: 32.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -191,14 +191,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 28.2
+  previous_composite: 32.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

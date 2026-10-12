@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -72,6 +72,10 @@ created: '2026-07-17'
 description: Boards is a mobile-first collaboration and duplication platform for network marketing and direct sales teams. It lets leaders turn what works for them into a simple, repeatable system that new team members can follow, sharing content, training, and workflows so a business can scale beyond its founder. The product centers on team alignment, faster onboarding of new members, and giving distributors a single place with everything they need to succeed, alongside a Success Academy for training and a brand and referral program. Boards is backed by Bessemer Venture Partners. It publishes no public API, developer portal, or SDKs; its surface is a consumer web and mobile app.
 image: https://static.wixstatic.com/media/b17a8e_2378b409375446ae9013da01e9db7260~mv2.jpg/v1/fill/w_2400,h_1260,al_c/b17a8e_2378b409375446ae9013da01e9db7260~mv2.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.boards.com over HTTP.
+  name: Boards MCP Server
+  slug: boards
 modified: '2026-07-18'
 name: Boards
 nav: Providers
@@ -83,7 +87,7 @@ overview: 'Boards is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 19
 score:
   band: emerging
-  composite: 13.3
+  composite: 12.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -97,13 +101,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 13.3
+  previous_composite: 12.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

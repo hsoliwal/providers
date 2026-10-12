@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.0
-  scored_at: '2026-09-20'
+  score: 47.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for Tallyfy workflow automation. Organization-scoped resources (/organizations/{org_id}/checklists, /runs, /tasks, ...) with Bearer-token auth (personal, application, or OAuth 2.0 access toke
@@ -185,12 +185,12 @@ layout: provider
 mcp_servers:
 - description: 'Official public, hosted Tallyfy MCP server. Every tool calls the public Tallyfy REST API on behalf of the authenticated user, so an assistant only ever sees data the signed-in user is allowed to see. '
   name: Tallyfy MCP Server
-  slug: tallyfy-mcp-server
+  slug: tallyfy
 modified: '2026-07-21'
 name: Tallyfy
 nav: Providers
 network: true
-overview: 'Tallyfy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workflow-Automation, Business Process Management, SOPs, and Task.
+overview: 'Tallyfy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workflow Automation, Business Process Management, SOPs, and Task.
 
 
   The Tallyfy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -204,7 +204,7 @@ rate_limits:
   slug: tallyfy-rate-limits
 score:
   band: developing
-  composite: 45.2
+  composite: 46.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -216,16 +216,22 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 45.2
+  previous_composite: 46.7
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +254,7 @@ security:
 slug: tallyfy
 tags:
 - Company
-- Workflow-Automation
+- Workflow Automation
 - Business Process Management
 - SOPs
 - Task

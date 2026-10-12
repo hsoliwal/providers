@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'OAuth 2.0 REST API for programmatic access to Burner line management, messaging (SMS/MMS) and configuration, plus a webhook system for real-time event notifications. Requests use `Authorization: Beare'
@@ -153,7 +153,7 @@ overview: 'Burner publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 16
 score:
   band: thin
-  composite: 39.2
+  composite: 37.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -165,11 +165,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.2
+  previous_composite: 37.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -178,9 +178,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 34.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

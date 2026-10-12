@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth2 / OpenID-Connect secured API to discover bookable resources and book and manage patient appointments for a clinic. Versioned in the URL path (booking v3, auth v2).
@@ -139,7 +139,7 @@ scopes:
   summary_line: 10 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 29.4
+  composite: 26.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -153,7 +153,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,7 +163,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 29.4
+  previous_composite: 26.5
   provenance:
     conformance: first-party
   regulatory:
@@ -171,9 +171,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

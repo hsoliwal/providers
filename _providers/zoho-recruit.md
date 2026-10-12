@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing candidates, contacts, clients, job openings, interviews, attachments, notes, and custom modules in Zoho Recruit. Requests are authenticated with OAuth 2.0 tokens issued by the do
@@ -68,6 +68,11 @@ collections:
   name: Zoho Recruit Zoho Recruit API API
   slug: open-zoho-recruit-zoho-recruit-api-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zoho-recruit/refs/heads/main/capabilities/zoho-recruit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zoho-recruit-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zoho-recruit/refs/heads/main/security/zoho-recruit-vulnerability-disclosure.yml
   title: ''
@@ -114,16 +119,16 @@ modified: '2026-09-16'
 name: Zoho Recruit
 nav: Providers
 network: true
-overview: 'Zoho Recruit publishes 3 APIs on the [APIs.io](https://apis.io/) network: Candidates API, Job Openings API, and Zoho Recruit API. Tagged areas include ATS, Recruiting, Recruitment CRM, Human Resources, and Zoho.
+overview: 'Zoho Recruit publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Candidates API, Job Openings API, Zoho Recruit API, and 1 more. Tagged areas include Applicant Tracking, Recruiting, Recruitment CRM, Human Resources, and Zoho.
 
 
-  Zoho Recruit''s developer surface includes documentation, pricing, signup flow, engineering blog, and 5 more developer resources.'
+  Zoho Recruit''s developer surface includes documentation, pricing, signup flow, engineering blog, and 6 more developer resources.'
 random_paper: 5
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 23.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -133,19 +138,25 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 26.5
+  previous_composite: 23.9
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -162,7 +173,7 @@ security:
   summary_line: security.txt · contact published
 slug: zoho-recruit
 tags:
-- ATS
+- Applicant Tracking
 - Recruiting
 - Recruitment CRM
 - Human Resources

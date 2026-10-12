@@ -34,43 +34,43 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The core API from Goodays — 22 operation(s) for core.
-  name: Goodays core API
+  name: Goodays Core API
   slug: goodays-core-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The dashboard API from Goodays — 1 operation(s) for dashboard.
-  name: Goodays dashboard API
+  name: Goodays Dashboard API
   slug: goodays-dashboard-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The events API from Goodays — 5 operation(s) for events.
-  name: Goodays events API
+  name: Goodays Events API
   slug: goodays-events-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The response API from Goodays — 9 operation(s) for response.
-  name: Goodays response API
+  name: Goodays Response API
   slug: goodays-response-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The session API from Goodays — 1 operation(s) for session.
-  name: Goodays session API
+  name: Goodays Session API
   slug: goodays-session-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The solicitation API from Goodays — 3 operation(s) for solicitation.
-  name: Goodays solicitation API
+  name: Goodays Solicitation API
   slug: goodays-solicitation-api
 - baseURL: https://api.goodays.co/v2
   baseurl_source: declared
   description: The stats API from Goodays — 8 operation(s) for stats.
-  name: Goodays stats API
+  name: Goodays Stats API
   slug: goodays-stats-api
 artifact_total: 17
 collections:
@@ -231,14 +231,14 @@ modified: '2026-07-19'
 name: Goodays
 nav: Providers
 network: true
-overview: 'Goodays publishes 7 APIs on the [APIs.io](https://apis.io/) network, including core API, dashboard API, events API, and 4 more. Tagged areas include Company, Customer Experience, Customer Feedback, Voice of the Customer, and Surveys.
+overview: 'Goodays publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Core API, Dashboard API, Events API, and 4 more. Tagged areas include Company, Customer Experience, Customer Feedback, Voice of the Customer, and Surveys.
 
 
   Goodays'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, and 21 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 33.9
+  composite: 34.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -250,17 +250,19 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 4.5
-    contract_quality: 47.1
+    contract_quality: 42.4
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 33.9
+  previous_composite: 34.0
   provenance:
     conformance: derived
     contracts:
@@ -270,8 +272,18 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

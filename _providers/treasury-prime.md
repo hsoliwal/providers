@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -219,7 +219,7 @@ modified: '2026-05-08'
 name: Treasury Prime
 nav: Providers
 network: true
-overview: 'Treasury Prime publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Businesses API, Cards API, and 6 more. Tagged areas include Fintech, Backend-as-a-Service, Banking, Payments, and Card Issuing.
+overview: 'Treasury Prime publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Businesses API, Cards API, and 8 more. Tagged areas include Fintech, Banking as a Service, Banking, Payments, and Card Issuing.
 
 
   Treasury Prime''s developer surface includes getting-started guide, authentication, engineering blog, and 14 more developer resources.'
@@ -234,7 +234,7 @@ rate_limits:
   slug: treasury-prime-rate-limits
 score:
   band: thin
-  composite: 37.6
+  composite: 36.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 44.0
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 51.8
+    contract_quality: 46.8
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 37.6
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
@@ -263,9 +263,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -283,10 +283,11 @@ security:
 slug: treasury-prime
 tags:
 - Fintech
-- Backend-as-a-Service
+- Banking as a Service
 - Banking
 - Payments
 - Card Issuing
 - ACH
+- Embedded Finance
 website: https://www.treasuryprime.com/
 ---

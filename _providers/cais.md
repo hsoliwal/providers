@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: CAIS operates a remote Model Context Protocol server at https://mcp.caisgroup.com/mcp, announced 2026-05-19 as the first surface of the company's "Alts Engine" strategy and initially available to a se
@@ -164,12 +164,12 @@ layout: provider
 mcp_servers:
 - description: 'CAIS runs an official remote MCP server at https://mcp.caisgroup.com/mcp, announced 2026-05-19 alongside an integration with Anthropic''s Claude. Per the announcement, "By launching as a Model Context '
   name: CAIS MCP Server
-  slug: cais-mcp-server
+  slug: cais
 modified: '2026-08-01'
 name: CAIS
 nav: Providers
 network: true
-overview: 'CAIS publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Alternative Investments, Wealth Management, Financial-Services, and Fintech.
+overview: 'CAIS publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Alternative Investments, Wealth Management, Financial Services, and Fintech.
 
 
   CAIS''s developer surface includes authentication, documentation, support, engineering blog, signup flow, and 21 more developer resources.'
@@ -180,8 +180,8 @@ scopes:
   slug: cais-scopes
   summary_line: 12 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 24.2
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -195,19 +195,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.2
+  previous_composite: 26.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +236,7 @@ tags:
 - Company
 - Alternative Investments
 - Wealth Management
-- Financial-Services
+- Financial Services
 - Fintech
 - Private Markets
 - Asset Management

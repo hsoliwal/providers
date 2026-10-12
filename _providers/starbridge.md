@@ -11,7 +11,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: conformant
     agent_skills: true
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -33,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 65.1
-  scored_at: '2026-09-20'
+  score: 62.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://dashboard.starbridge.ai
@@ -297,12 +298,12 @@ rate_limits:
   slug: starbridge-rate-limits
 scopes:
 - name: Starbridge Scopes
-  scope_count: 0
+  scope_count: 1
   slug: starbridge-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code/device_code
 score:
-  band: strong
-  composite: 59.2
+  band: developing
+  composite: 53.4
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -314,11 +315,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 63.5
+    contract_quality: 57.9
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 59.2
+  previous_composite: 53.4
   provenance:
     conformance: first-party
     contracts:
@@ -333,9 +334,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 74.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -366,5 +367,6 @@ tags:
 - Procurement
 - Buyer Intelligence
 - MCP
+- A2A
 website: https://starbridge.ai
 ---

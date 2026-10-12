@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: API for publishing streams of records to Kafka topics.
@@ -111,7 +111,7 @@ modified: '2026-05-30'
 name: Apache Kafka
 nav: Providers
 network: true
-overview: 'Apache Kafka publishes 2 APIs on the [APIs.io](https://apis.io/) network: Kafka Producer API and Kafka Consumer API. Tagged areas include Distributed Systems, Event-Driven, Messaging, Real-Time, and Streaming.
+overview: 'Apache Kafka publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Kafka Producer API, Kafka Consumer API, and 3 more. Tagged areas include Distributed Systems, Event-Driven, Messaging, Real-Time, and Streaming.
 
 
   The Apache Kafka catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -141,7 +141,7 @@ rules:
   slug: kafka-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 29.3
+  composite: 28.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 48.5
@@ -153,13 +153,19 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 45.8
+    contract_quality: 43.8
     developer_ergonomics: 26.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 29.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 28.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

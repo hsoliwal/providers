@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.reachware.com
@@ -60,6 +60,11 @@ collections:
   name: Reach Pay Cards Payments API
   slug: open-reachware-inc-payments-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/reachware-inc/refs/heads/main/capabilities/reachware-inc-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/reachware-inc-capability-edges.yml
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/reachware-inc/refs/heads/main/openapi/_original/reachware-inc-reachpay-openapi.yml
   title: ''
@@ -166,19 +171,19 @@ description: Reachware is an Integration Platform as a Service (iPaaS) that lets
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reachware-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Reachware Inc.
+name: Reachware
 nav: Providers
 network: true
-overview: 'Reachware Inc. publishes 2 APIs on the [APIs.io](https://apis.io/) network: Cards API and Payments API. Tagged areas include Company, Payments, iPaaS, Integration, and Fintech.
+overview: 'Reachware publishes 2 APIs on the [APIs.io](https://apis.io/) network: Inc. Cards API and Inc. Payments API. Tagged areas include Company, Payments, iPaaS, Integration, and Fintech.
 
 
-  Reachware Inc.''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, and 16 more developer resources.'
+  Reachware''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, and 17 more developer resources.'
 random_paper: 7
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 36.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -188,9 +193,9 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -199,7 +204,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 40.0
+  previous_composite: 36.9
   provenance:
     conformance: first-party
     contracts:
@@ -214,9 +219,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 53.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

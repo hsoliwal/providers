@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The REST API behind Ticket Fairy''s ticket-buying experience: events, ticket types, time slots, add-ons, promo codes, cart, checkout, payment, orders, issued tickets and face-value resale, plus OAuth t'
@@ -176,8 +176,8 @@ rate_limits:
   name: The Ticket Fairy Rate Limits
   slug: the-ticket-fairy-rate-limits
 score:
-  band: thin
-  composite: 26.7
+  band: emerging
+  composite: 25.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -191,9 +191,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 26.7
+  previous_composite: 25.4
   provenance:
     conformance: first-party
   regulatory:
@@ -201,9 +201,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

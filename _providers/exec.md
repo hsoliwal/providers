@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -313,8 +313,8 @@ rate_limits:
   name: Exec Rate Limits
   slug: exec-rate-limits
 score:
-  band: exemplar
-  composite: 69.7
+  band: strong
+  composite: 65.2
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -326,11 +326,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 66.9
+    contract_quality: 61.3
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 69.7
+  previous_composite: 65.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -343,12 +343,12 @@ score:
     skills: first-party
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -376,7 +376,7 @@ tags:
 - Roleplay
 - Coaching
 - Learning
-- Knowledge-Management
+- Knowledge Management
 - LMS
 website: https://www.exec.com
 ---

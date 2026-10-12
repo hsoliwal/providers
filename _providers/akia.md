@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Akia's REST API (version 3, with version 4 resources for mini apps and reservations) for creating and searching customers and reservations, sending guest messages, reading properties, generating and r
@@ -187,9 +187,9 @@ description: Akia (The Akia Syndicate) is a San Francisco based hospitality tech
 image: https://www.akia.com/icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sys.akia.ai over HTTP.
   name: Akia MCP Server
-  slug: akia-mcp-server
+  slug: akia
 modified: '2026-08-06'
 name: Akia
 nav: Providers
@@ -209,7 +209,7 @@ scopes:
   summary_line: 16 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.1
+  composite: 49.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -221,16 +221,22 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 46.1
+  previous_composite: 49.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

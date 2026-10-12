@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.4
-  scored_at: '2026-09-20'
+  score: 39.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'First-party hosted Model Context Protocol server that exposes the same ad index to AI assistants (Claude, Codex, Cursor, Gemini). Streamable HTTP at https://api.adsmom.com/mcp, protected by OAuth 2.0 '
@@ -248,17 +248,17 @@ description: Adsmom (SIA Adsmom) is a Latvia-based AI-powered ad intelligence pl
 image: https://adsmom.com/og-default.png
 layout: provider
 mcp_servers:
-- description: ''
-  name: Adsmom Inc. MCP Server
-  slug: adsmom-inc-mcp-server
+- description: Remote MCP server at api.adsmom.com over streamable HTTP.
+  name: Adsmom MCP Server
+  slug: adsmom
 modified: '2026-09-16'
-name: Adsmom Inc.
+name: Adsmom
 nav: Providers
 network: true
-overview: 'Adsmom Inc. publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Account API, Analytics · Google API, Analytics · Meta API, and 11 more. Tagged areas include Company, Advertising, Ad Intelligence, Competitive Intelligence, and Marketing.
+overview: 'Adsmom publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Inc. Account API, Inc. Analytics · Google API, Inc. Analytics · Meta API, and 12 more. Tagged areas include Company, Advertising, Ad Intelligence, Competitive Intelligence, and Marketing.
 
 
-  Adsmom Inc.''s developer surface includes documentation, API reference, authentication, engineering blog, pricing, signup flow, and 22 more developer resources.'
+  Adsmom''s developer surface includes documentation, API reference, authentication, engineering blog, pricing, signup flow, and 22 more developer resources.'
 plans:
 - name: Adsmom Inc Plans
   plan_count: 3
@@ -270,12 +270,12 @@ rate_limits:
   slug: adsmom-inc-rate-limits
 scopes:
 - name: Adsmom Inc Scopes
-  scope_count: 0
+  scope_count: 4
   slug: adsmom-inc-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: developing
-  composite: 40.4
+  composite: 41.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 51.0
@@ -287,11 +287,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 18.2
-    contract_quality: 44.6
+    contract_quality: 40.1
     developer_ergonomics: 32.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 40.4
+  previous_composite: 41.6
   provenance:
     conformance: first-party
     contracts:
@@ -301,8 +301,14 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -330,7 +336,7 @@ tags:
 - OpenAPI
 - REST
 - Analytics
-- Social-Media
-- agent-native
+- Social Media
+- Agent-Native
 website: https://adsmom.com
 ---

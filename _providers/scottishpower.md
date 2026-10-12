@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The legacy Opendatasoft Search API v1.0 still served alongside Explore v2.1 on the SP Energy Networks Open Data Portal. Verified anonymously on 2026-07-27: GET /api/datasets/1.0/search/?rows=1 returne'
@@ -254,7 +254,7 @@ modified: '2026-07-27'
 name: ScottishPower
 nav: Providers
 network: true
-overview: 'ScottishPower publishes 2 APIs on the [APIs.io](https://apis.io/) network: Catalog API and Dataset API. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
+overview: 'ScottishPower publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Dataset API, and 1 more. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
 
 
   ScottishPower''s developer surface includes authentication, changelog, code examples, API reference, getting-started guide, signup flow, documentation, and 32 more developer resources.'
@@ -265,7 +265,7 @@ rate_limits:
   slug: scottishpower-rate-limits
 score:
   band: developing
-  composite: 42.7
+  composite: 40.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -279,7 +279,7 @@ score:
     contract_governance: 4.5
     contract_quality: 17.0
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -289,7 +289,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 42.7
+  previous_composite: 40.2
   provenance:
     conformance: derived
     contracts:
@@ -304,9 +304,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 52.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Asynchronous speech-to-text transcription API that turns audio and video into text with high accuracy. Supports batch, real-time, and human-in-the-loop transcription, multipart and remote-URL submissi
@@ -49,7 +49,7 @@ apis:
 - description: LLM-ready API that connects LLMs, agents, and AI applications to S&P Global's trusted data through flexible retrieval, Adaptive Retrieval data agents, a Python library (kensho-kfinance), and a hosted,
   name: Kensho LLM-ready API (kfinance)
   slug: kensho-llm-ready-api-kfinance
-artifact_total: 11
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Kensho Scribe Webhooks
@@ -190,15 +190,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Kensho MCP Server
-  slug: kensho-mcp-server
-- description: Official hosted Model Context Protocol (MCP) server for the Kensho / S&P Global LLM-ready API (kfinance). Exposes S&P Global's trusted financial data to LLMs and agents. Verified via RFC 9728 protecte
-  name: Kensho MCP Server
-  slug: kensho-mcp-server-2
+  slug: mcp
 modified: '2026-07-19'
 name: Kensho
 nav: Providers
 network: true
-overview: 'Kensho publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Financial Data, and Speech-to-Text.
+overview: 'Kensho publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Financial Data, and Speech-to-Text.
 
 
   The Kensho catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -213,7 +210,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: developing
-  composite: 43.2
+  composite: 44.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -225,17 +222,23 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 43.2
+  previous_composite: 44.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -259,7 +262,7 @@ slug: kensho
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Financial Data
 - Speech-to-Text
 - Transcription

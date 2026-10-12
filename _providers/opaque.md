@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.<your-subdomain>/v2.5
@@ -259,14 +259,14 @@ modified: '2026-08-04'
 name: OPAQUE
 nav: Providers
 network: true
-overview: 'OPAQUE publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Asset Configs API, Auth API, Datasets API, and 8 more. Tagged areas include Confidential Computing, confidential-ai, AI Governance, Data Privacy, and Trusted Execution Environment.
+overview: 'OPAQUE publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Asset Configs API, Auth API, Datasets API, and 8 more. Tagged areas include Confidential Computing, confidential-ai, AI Governance, Privacy, and Trusted Execution Environment.
 
 
   OPAQUE''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 19 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 41.7
+  composite: 42.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -278,11 +278,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 47.8
+    contract_quality: 43.0
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 41.7
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     contracts:
@@ -292,8 +292,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -313,7 +319,7 @@ tags:
 - Confidential Computing
 - confidential-ai
 - AI Governance
-- Data Privacy
+- Privacy
 - Trusted Execution Environment
 - Attestation
 - Agentic Workflows

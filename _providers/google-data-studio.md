@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -106,6 +106,11 @@ collections:
   name: Google Data Studio Assets Reports API
   slug: open-google-data-studio-reports-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/google-data-studio/refs/heads/main/capabilities/google-data-studio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-data-studio-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -276,13 +281,13 @@ modified: '2026-05-19'
 name: Google Data Studio
 nav: Providers
 network: true
-overview: 'Google Data Studio publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Embedding API, Permissions API, and 1 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data, and Reporting.
+overview: 'Google Data Studio publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Embedding API, Permissions API, and 3 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data, and Reporting.
 
 
   The Google Data Studio catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Google Data Studio''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, changelog, and 24 more developer resources.'
+  Google Data Studio''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, changelog, and 25 more developer resources.'
 plans:
 - name: Google Data Studio Plans Pricing
   plan_count: 6
@@ -310,9 +315,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 47.2
+  composite: 48.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 52.3
     catalog_earned_first_party: 0.0
     catalog_gap: 62.8
@@ -322,11 +327,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 9.8
-    contract_quality: 59.0
+    contract_quality: 53.7
     developer_ergonomics: 56.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 42.1
-  previous_composite: 47.2
+  previous_composite: 48.8
   provenance:
     agentic_access: derived
     contracts:
@@ -334,8 +339,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

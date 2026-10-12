@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -183,12 +183,12 @@ rate_limits:
   slug: prompt-rate-limits
 scopes:
 - name: Prompt Scopes
-  scope_count: 0
+  scope_count: 14
   slug: prompt-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
-  band: thin
-  composite: 27.5
+  band: emerging
+  composite: 24.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -202,9 +202,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 31.6
-  previous_composite: 27.5
+  previous_composite: 24.6
   provenance:
     conformance: first-party
   regulatory:
@@ -212,9 +212,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

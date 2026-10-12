@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://integration.liberateinc.io
@@ -189,7 +189,7 @@ overview: 'Liberate Innovations publishes 2 APIs on the [APIs.io](https://apis.i
 random_paper: 3
 score:
   band: thin
-  composite: 34.3
+  composite: 33.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -203,9 +203,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.1
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 7.9
-  previous_composite: 34.3
+  previous_composite: 33.0
   provenance:
     conformance: derived
     contracts:
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

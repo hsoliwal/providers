@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Discovery APIs to search and find information about titles in a library's OverDrive collection — Library Account, Search, Metadata, and Library Availability.
@@ -141,14 +141,14 @@ modified: '2026-07-20'
 name: OverDrive
 nav: Providers
 network: true
-overview: 'OverDrive publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Books, Libraries, Ebooks, and Audiobooks.
+overview: 'OverDrive publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Books, Library, Ebooks, and Audiobooks.
 
 
   OverDrive''s developer surface includes documentation, API reference, getting-started guide, authentication, support, signup flow, and 13 more developer resources.'
 random_paper: 14
 score:
-  band: thin
-  composite: 27.3
+  band: emerging
+  composite: 25.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 40.0
@@ -162,9 +162,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 21.1
-  previous_composite: 27.3
+  previous_composite: 25.3
   provenance:
     conformance: derived
     mcp: derived
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 42.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +199,7 @@ slug: overdrive
 tags:
 - Company
 - Books
-- Libraries
+- Library
 - Ebooks
 - Audiobooks
 - Digital Media

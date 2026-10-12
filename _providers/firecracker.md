@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 1
@@ -201,6 +201,11 @@ collections:
   name: Firecracker Actions Vsock API
   slug: open-firecracker-vsock-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/firecracker/refs/heads/main/capabilities/firecracker-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/firecracker-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -282,10 +287,10 @@ modified: '2026-09-16'
 name: Firecracker
 nav: Providers
 network: true
-overview: 'Firecracker publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Balloon API, Boot Source API, and 16 more. Tagged areas include Containers, MicroVM, Open-Source, Serverless, and Virtualization.
+overview: 'Firecracker publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Balloon API, Boot Source API, and 16 more. Tagged areas include Containers, MicroVM, Open Source, Serverless, and Virtualization.
 
 
-  Firecracker''s developer surface includes documentation, getting-started guide, changelog, FAQ, engineering blog, and 12 more developer resources.'
+  Firecracker''s developer surface includes documentation, getting-started guide, changelog, FAQ, engineering blog, and 13 more developer resources.'
 plans:
 - name: Firecracker Plans Pricing
   plan_count: 3
@@ -297,9 +302,9 @@ rate_limits:
   slug: firecracker-rate-limits
 score:
   band: thin
-  composite: 37.5
+  composite: 34.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -309,14 +314,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 42.1
+    contract_quality: 37.9
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 37.5
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -324,8 +329,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 19
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -335,7 +346,7 @@ slug: firecracker
 tags:
 - Containers
 - MicroVM
-- Open-Source
+- Open Source
 - Serverless
 - Virtualization
 - KVM

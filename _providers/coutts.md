@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -355,7 +355,7 @@ modified: '2026-07-23'
 name: Coutts
 nav: Providers
 network: true
-overview: 'Coutts publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial-Services, Banking, Private Bank, Wealth Management, and Open Banking.
+overview: 'Coutts publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 26 more. Tagged areas include Financial Services, Banking, Private Bank, Wealth Management, and Open Banking.
 
 
   Coutts'' developer surface includes authentication, documentation, sandbox, engineering blog, support, getting-started guide, and 28 more developer resources.'
@@ -367,7 +367,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 39.1
+  composite: 35.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -379,9 +379,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -391,7 +391,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 39.1
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -407,9 +407,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 68.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -430,7 +430,7 @@ security:
   summary_line: Bugcrowd · security.txt · contact published
 slug: coutts
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Private Bank
 - Wealth Management

@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.2
-  scored_at: '2026-09-20'
+  score: 27.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -265,7 +265,7 @@ overview: 'CodaMetrix publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 16
 score:
   band: thin
-  composite: 39.1
+  composite: 37.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -279,14 +279,16 @@ score:
     contract_governance: 18.2
     contract_quality: 16.5
     developer_ergonomics: 37.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.1
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -302,9 +304,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -334,7 +336,7 @@ tags:
 - Revenue Cycle Management
 - Clinical Documentation
 - Healthcare AI
-- Machine-Learning
+- Machine Learning
 - Natural Language Processing
 - EHR Integration
 - Status

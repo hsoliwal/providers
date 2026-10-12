@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: A Prometheus-compatible read API for querying Embrace metrics with PromQL. Standard Embrace metrics and any Custom Metrics an organization has created are queryable across one app, several apps, or ev
@@ -221,7 +221,7 @@ layout: provider
 mcp_servers:
 - description: The Embrace MCP server exposes an organization's real-user mobile and web observability data — apps, crashes, exceptions, logs, sessions, spans and network endpoints — to MCP-capable AI assistants. Sh
   name: Embrace MCP Server
-  slug: embrace-mcp-server
+  slug: embrace
 modified: '2026-08-12'
 name: Embrace
 nav: Providers
@@ -249,7 +249,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 61.4
+  composite: 65.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 64.0
@@ -261,17 +261,23 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 73.2
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 73.7
-  previous_composite: 61.4
+  previous_composite: 65.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

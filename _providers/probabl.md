@@ -23,7 +23,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: verified
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-09-20'
+  score: 34.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.skore.probabl.ai
@@ -78,6 +78,11 @@ apis:
   slug: probabl-readiness-api
 artifact_total: 13
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/probabl/refs/heads/main/capabilities/probabl-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/probabl-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/probabl/refs/heads/main/overlays/probabl-skore-hub-overlay.yaml
   title: ''
@@ -187,17 +192,17 @@ description: 'Probabl (styled ":probabl.") is the French, Inria-spun-out company
 image: https://avatars.githubusercontent.com/u/135336812?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.skore.probabl.ai requiring an API key.
   name: Probabl MCP Server
-  slug: probabl-mcp-server
+  slug: probabl-mcp-yml
 modified: '2026-09-16'
 name: Probabl
 nav: Providers
 network: true
-overview: 'Probabl publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Anthropic Compatible Agent API, Health API, Identity API, and 5 more. Tagged areas include Company, Open-Source, Machine-Learning, Data Science, and scikit-learn.
+overview: 'Probabl publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Anthropic Compatible Agent API, Health API, Identity API, and 5 more. Tagged areas include Company, Open Source, Machine Learning, Data Science, and scikit-learn.
 
 
-  Probabl''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, CLI, and 16 more developer resources.'
+  Probabl''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, CLI, and 17 more developer resources.'
 plans:
 - name: Probabl Plans Pricing
   plan_count: 0
@@ -209,9 +214,9 @@ rate_limits:
   slug: probabl-rate-limits
 score:
   band: developing
-  composite: 41.5
+  composite: 41.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -221,9 +226,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 46.4
+    contract_quality: 41.9
     developer_ergonomics: 71.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -233,7 +238,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 41.5
+  previous_composite: 41.4
   provenance:
     conformance: derived
     contracts:
@@ -243,8 +248,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -262,8 +273,8 @@ security:
 slug: probabl
 tags:
 - Company
-- Open-Source
-- Machine-Learning
+- Open Source
+- Machine Learning
 - Data Science
 - scikit-learn
 - MLOps

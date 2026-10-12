@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.4
-  scored_at: '2026-09-20'
+  score: 15.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce API for Debut's direct-to-consumer skincare brand DEINDE. It is a Shopify-hosted Universal Commerce Protocol (UCP) service exposed over MCP at https://www.deinde.com/api/ucp/
@@ -168,7 +168,7 @@ description: 'Debut (Debut Biotechnology, Inc.) is a San Diego, California biote
 image: https://cdn.prod.website-files.com/697a5ef4d9ca0a3187500d0b/697a5ef4d9ca0a3187500d47_Debut-Favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over streamable HTTP; 13 tools listed.
   name: DEINDE Commerce (UCP MCP)
   slug: deinde-commerce-ucp-mcp
 modified: '2026-08-12'
@@ -190,12 +190,12 @@ rate_limits:
   slug: debut-rate-limits
 scopes:
 - name: Debut Scopes
-  scope_count: 0
+  scope_count: 4
   slug: debut-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 20.1
+  composite: 22.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -209,15 +209,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.3
     operational_transparency: 0.0
-  previous_composite: 20.1
+  previous_composite: 22.2
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Bulk contact matching and enrichment. A customer creates a dataset, uploads a UTF-8 CSV of contacts as a dataset-file via a multipart upload, and Aidentified matches and enriches every record once. Th
@@ -164,14 +164,14 @@ description: Aidentified is a Wealth Network Intelligence platform for financial
 image: https://cdn.prod.website-files.com/684cc996f51fd9e61fd926ba/684f6ebd6781811cd93569ed_logo-aidentified-cube-grad-webclip.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.aidentified.com over HTTP requiring OAuth.
   name: Aidentified MCP Server
-  slug: aidentified-mcp-server
+  slug: aidentified
 modified: '2026-09-14'
 name: Aidentified
 nav: Providers
 network: true
-overview: 'Aidentified publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Enrichment, Wealth Management, Financial-Services, and Relationship Intelligence.
+overview: 'Aidentified publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Enrichment, Wealth Management, Financial Services, and Relationship Intelligence.
 
 
   Aidentified''s developer surface includes documentation, support, pricing, signup flow, authentication, CLI, and 22 more developer resources.'
@@ -186,12 +186,12 @@ rate_limits:
   slug: aidentified-rate-limits
 scopes:
 - name: Aidentified Scopes
-  scope_count: 0
+  scope_count: 6
   slug: aidentified-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes
 score:
-  band: thin
-  composite: 36.5
+  band: developing
+  composite: 40.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -205,19 +205,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.5
+  previous_composite: 40.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -241,7 +249,7 @@ tags:
 - Company
 - Data Enrichment
 - Wealth Management
-- Financial-Services
+- Financial Services
 - Relationship Intelligence
 - Sales Intelligence
 - Prospecting

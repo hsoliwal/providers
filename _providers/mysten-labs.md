@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 50.7
-  scored_at: '2026-09-20'
+  score: 48.6
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Sui full-node JSON-RPC API (OpenRPC 1.2.6) for reading objects, coins, balances, events, checkpoints, dynamic fields, and system state, and for dry-running/executing transaction blocks. 56 methods
@@ -205,7 +205,7 @@ layout: provider
 mcp_servers:
 - description: 'The official Sui documentation MCP server (kapa.ai-powered) for up-to-date answers grounded in Sui docs. Referenced by the Mysten Labs agent-skills repo as the recommended MCP server to query for Sui '
   name: Mysten Labs MCP Server
-  slug: mysten-labs-mcp-server
+  slug: sui-docs
 modified: '2026-07-20'
 name: Mysten Labs
 nav: Providers
@@ -220,7 +220,7 @@ overview: 'Mysten Labs publishes 3 APIs on the [APIs.io](https://apis.io/) netwo
 random_paper: 13
 score:
   band: developing
-  composite: 42.7
+  composite: 42.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -232,17 +232,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 60.5
-  previous_composite: 42.7
+  previous_composite: 42.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Workspace-scoped REST API to list templates, create presentations from templates, generate presentations from a prompt (asynchronous, poll-to-complete), upload reference files to ground generation, fe
@@ -191,9 +191,9 @@ description: 'Chronicle is an AI presentation platform (chroniclehq.com) that tu
 image: https://cms.chroniclehq.com/wp-content/uploads/2026/02/og.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.chroniclehq.com over HTTP; 8 tools listed.
   name: Chronicle MCP Server
-  slug: chronicle-mcp-server
+  slug: chronicle
 modified: '2026-07-18'
 name: Chronicle
 nav: Providers
@@ -208,8 +208,8 @@ rate_limits:
   name: Chronicle Rate Limits
   slug: chronicle-rate-limits
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 41.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -223,15 +223,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 38.8
+  previous_composite: 41.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

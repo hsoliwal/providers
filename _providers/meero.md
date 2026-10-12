@@ -29,7 +29,7 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.5
-  scored_at: '2026-09-20'
+  score: 41.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.car-cutter.com
@@ -220,14 +220,14 @@ description: 'Meero is the Paris-founded AI visual-content company that rebrande
 image: https://www.carcutter.com/wp-content/themes/carcutter/img/car-cutter-logo-25.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.carcutter.com requiring OAuth.
   name: CarCutter MCP Server
   slug: carcutter-mcp-server
 modified: '2026-08-25'
 name: Meero
 nav: Providers
 network: true
-overview: 'Meero publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Asynchronous API, Feature API, Synchronous API, and 1 more. Tagged areas include Automotive, Image, Artificial Intelligence, Computer-Vision, and Photography.
+overview: 'Meero publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Asynchronous API, Feature API, Synchronous API, and 1 more. Tagged areas include Automotive, Image, Artificial Intelligence, Computer Vision, and Photography.
 
 
   Meero''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 26 more developer resources.'
@@ -242,12 +242,12 @@ rate_limits:
   slug: meero-rate-limits
 scopes:
 - name: Meero Scopes
-  scope_count: 0
+  scope_count: 1
   slug: meero-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 42.5
+  composite: 42.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -259,11 +259,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 56.9
+    contract_quality: 51.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 42.5
+  previous_composite: 42.4
   provenance:
     conformance: derived
     contracts:
@@ -271,10 +271,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -294,7 +300,7 @@ tags:
 - Automotive
 - Image
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Photography
 - Media Processing
 - E-Commerce

@@ -21,10 +21,10 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.2
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 3
@@ -203,7 +203,7 @@ overview: 'Lightning Social Ventures publishes 3 APIs on the [APIs.io](https://a
 random_paper: 7
 score:
   band: thin
-  composite: 30.5
+  composite: 28.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -215,9 +215,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 47.0
+    contract_quality: 43.1
     developer_ergonomics: 13.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -227,7 +227,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 30.5
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -236,16 +236,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

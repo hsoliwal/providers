@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/collabra/refs/heads/main/security/collabra-domain-security.yml
@@ -61,6 +61,10 @@ created: '2026-07-17'
 description: Collabra (Collabra Pty Ltd, ABN 35 672 933 818) is an Australian enterprise AI automation company whose platform combines robotic process automation with large language models to run back-office operations — contract review, revenue assurance, financial operations, vendor management, data processing, and compliance monitoring. Its product suite is CollabraCore (isolated, segmented data-protection workspaces), CollabraGuard (an AI-safety layer that constrains LLM output to prevent hallucinations and errors while logging every action), and CollabraFlow (a rapid build-test-deploy environment for automation workflows). The public tagline is "AI you can trust to run your operations". As of this profile Collabra is a demo-led SaaS with no public developer API, SDK, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/collabra.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.collabra.ai over HTTP.
+  name: Collabra MCP Server
+  slug: collabra
 modified: '2026-07-18'
 name: Collabra
 nav: Providers
@@ -72,7 +76,7 @@ overview: 'Collabra is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 18
 score:
   band: minimal
-  composite: 10.2
+  composite: 9.9
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -86,7 +90,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -95,11 +99,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 10.2
+  previous_composite: 9.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.2
-  scored_at: '2026-09-20'
+  score: 40.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 87
   human_in_the_loop: 0
@@ -389,8 +389,8 @@ scopes:
   slug: lawmatics-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 52.7
+  band: strong
+  composite: 55.9
   coverage:
     artifact_dirs: 27
     catalog_earned: 71.0
@@ -403,10 +403,10 @@ score:
     access_clarity: 85.5
     contract_governance: 18.2
     contract_quality: 32.5
-    developer_ergonomics: 54.2
-    discoverability: 68.5
+    developer_ergonomics: 53.7
+    discoverability: 66.1
     operational_transparency: 55.3
-  previous_composite: 52.7
+  previous_composite: 55.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -417,8 +417,18 @@ score:
       total: 27
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -442,7 +452,7 @@ tags:
 - Marketing Automation
 - Matter Management
 - E-Signature
-- Workflow-Automation
+- Workflow Automation
 - Legal Tech
 - Time and Billing
 - Webhook

@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.5
-  scored_at: '2026-09-20'
+  score: 45.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -49,52 +49,52 @@ apis:
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: The analytics API from Paragraph — 2 operation(s) for analytics.
-  name: Paragraph analytics API
+  name: Paragraph Analytics API
   slug: paragraph-analytics-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: The auth API from Paragraph — 2 operation(s) for auth.
-  name: Paragraph auth API
+  name: Paragraph Auth API
   slug: paragraph-auth-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: Operations related to tokenized content
-  name: Paragraph coins API
+  name: Paragraph Coins API
   slug: paragraph-coins-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: The discover API from Paragraph — 3 operation(s) for discover.
-  name: Paragraph discover API
+  name: Paragraph Discover API
   slug: paragraph-discover-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: The emails API from Paragraph — 1 operation(s) for emails.
-  name: Paragraph emails API
+  name: Paragraph Emails API
   slug: paragraph-emails-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: The me API from Paragraph — 1 operation(s) for me.
-  name: Paragraph me API
+  name: Paragraph Me API
   slug: paragraph-me-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: Operations related to posts and content
-  name: Paragraph posts API
+  name: Paragraph Posts API
   slug: paragraph-posts-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: Operations related to publications
-  name: Paragraph publications API
+  name: Paragraph Publications API
   slug: paragraph-publications-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: Operations related to subscriber management (requires API key)
-  name: Paragraph subscribers API
+  name: Paragraph Subscribers API
   slug: paragraph-subscribers-api
 - baseURL: https://public.api.paragraph.com/api
   baseurl_source: declared
   description: Operations related to users and authors
-  name: Paragraph users API
+  name: Paragraph Users API
   slug: paragraph-users-api
 artifact_total: 28
 collections:
@@ -300,14 +300,14 @@ description: Paragraph is a web3-native publishing and newsletter platform where
 image: https://paragraph.com/og.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.paragraph.com over HTTP; 20 tools listed.
   name: Paragraph MCP Server
-  slug: paragraph-mcp-server
+  slug: paragraph
 modified: '2026-08-13'
 name: Paragraph
 nav: Providers
 network: true
-overview: 'Paragraph publishes 10 APIs on the [APIs.io](https://apis.io/) network, including analytics API, auth API, coins API, and 7 more. Tagged areas include Company, Publishing, Newsletters, Web3, and Content.
+overview: 'Paragraph publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Coins API, and 7 more. Tagged areas include Company, Publishing, Newsletters, Web3, and Content.
 
 
   Paragraph''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 28 more developer resources.'
@@ -322,12 +322,12 @@ rate_limits:
   slug: paragraph-rate-limits
 scopes:
 - name: Paragraph Scopes
-  scope_count: 0
+  scope_count: 2
   slug: paragraph-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: strong
-  composite: 57.0
+  composite: 58.3
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -339,11 +339,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 58.3
+    contract_quality: 52.7
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 57.0
+  previous_composite: 58.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -354,8 +354,14 @@ score:
       total: 10
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

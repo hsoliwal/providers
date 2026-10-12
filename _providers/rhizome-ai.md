@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://rhizomeai.com/api
@@ -181,7 +181,7 @@ rate_limits:
   slug: rhizome-ai-rate-limits
 score:
   band: thin
-  composite: 34.9
+  composite: 33.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -195,9 +195,9 @@ score:
     contract_governance: 4.5
     contract_quality: 15.5
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 34.9
+  previous_composite: 33.6
   provenance:
     conformance: derived
     contracts:
@@ -212,9 +212,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

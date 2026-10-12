@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST access to live, vetted India job openings. `GET /jobs` searches by keyword (`q`), Indian city or state (`location`), posting age in days (`days`, 1–365) and result count (`limit`, 1–20, default 1
@@ -52,19 +52,19 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Jobvetta MCP Server
-  slug: jobvetta-mcp-server
+  slug: mcp
 modified: '2026-08-02'
 name: Jobvetta
 nav: Providers
 network: true
-overview: 'Jobvetta publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Job, Recruitment, Job Search, India, and Employment.
+overview: 'Jobvetta publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Job, Recruiting, Job Search, India, and Employment.
 
 
   Jobvetta''s developer surface includes documentation, signup flow, and 1 more developer resources.'
 random_paper: 5
 score:
   band: minimal
-  composite: 10.5
+  composite: 7.7
   coverage:
     artifact_dirs: 3
     catalog_earned: 32.0
@@ -78,7 +78,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -87,11 +87,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 10.5
+  previous_composite: 7.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -101,12 +107,12 @@ screenshot: https://raw.githubusercontent.com/api-evangelist/jobvetta/refs/heads
 slug: jobvetta
 tags:
 - Job
-- Recruitment
+- Recruiting
 - Job Search
 - India
 - Employment
 - MCP
-- agent-native
+- Agent-Native
 - Developer Tools
 website: https://www.jobvetta.com
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -54,14 +54,14 @@ description: Merklebase provides data-driven infrastructure for institutional di
 image: https://image.typedream.com/cdn-cgi/image/width=144,height=144,quality=100,fit=crop/https://api.typedream.com/v0/document/public/ee8109df-e243-482b-9ad1-2021b09157ff/2qQeVkcJM0hvkeTEJcOWBadeVTe_mb.png
 layout: provider
 modified: '2026-07-20'
-name: Merklebase, Inc.
+name: Merklebase
 nav: Providers
 network: true
-overview: Merklebase, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Digital Assets, Cryptocurrency, Portfolio-Management, and Risk Management.
+overview: Merklebase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Digital Assets, Cryptocurrency, Portfolio Management, and Risk Management.
 random_paper: 2
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -75,11 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -96,9 +102,9 @@ tags:
 - Company
 - Digital Assets
 - Cryptocurrency
-- Portfolio-Management
+- Portfolio Management
 - Risk Management
-- Financial-Services
+- Financial Services
 - Institutional Finance
 - Data Management
 website: https://merklebase.io

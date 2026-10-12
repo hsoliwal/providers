@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -133,7 +133,7 @@ layout: provider
 mcp_servers:
 - description: 'Official Readyset MCP server ("Readyset AI"). Exposes a running Readyset caching engine over the Model Context Protocol so AI assistants can inspect caches, query performance, and replication health, '
   name: Readyset MCP server (Readyset AI)
-  slug: readyset-mcp-server-readyset-ai
+  slug: readyset
 modified: '2026-07-20'
 name: ReadySet
 nav: Providers
@@ -145,7 +145,7 @@ overview: 'ReadySet is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 7
 score:
   band: emerging
-  composite: 21.2
+  composite: 20.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -159,14 +159,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 37.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 21.2
+  previous_composite: 20.1
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

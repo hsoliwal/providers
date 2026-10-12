@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: na
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: verified
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.5
-  scored_at: '2026-09-20'
+  score: 39.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -205,7 +205,7 @@ modified: '2026-08-28'
 name: Sex Offenders API
 nav: Providers
 network: true
-overview: 'Sex Offenders API publishes 1 API on the [APIs.io](https://apis.io/) network: Sex Offenders API. Tagged areas include Sex Offenders, Public Safety, Crime Data, Background Checks, and Criminal Justice.
+overview: 'Sex Offenders API publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Sex Offenders API, and 1 more. Tagged areas include Sex Offenders, Public Safety, Crime Data, Background Checks, and Criminal Justice.
 
 
   Sex Offenders API''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, support, signup flow, and 20 more developer resources.'
@@ -220,7 +220,7 @@ rate_limits:
   slug: sex-offenders-api-rate-limits
 score:
   band: developing
-  composite: 50.1
+  composite: 46.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 48.0
@@ -232,11 +232,11 @@ score:
   facets:
     access_clarity: 67.1
     contract_governance: 4.5
-    contract_quality: 59.9
+    contract_quality: 53.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 50.1
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -245,16 +245,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -279,8 +279,8 @@ tags:
 - Criminal Justice
 - Government Data
 - Geospatial
-- Real-Estate
-- Risk
+- Real Estate
+- Risk Management
 - People Data
 website: https://www.crimeometer.com/
 ---

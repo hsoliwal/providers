@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The ION Factory OS GraphQL API. A single GraphQL endpoint for reading and writing manufacturing data in ION: Runs, Procedures, Parts, mBOM/aBOM, inventory, notifications, and webhook subscriptions. Au'
@@ -182,7 +182,7 @@ layout: provider
 mcp_servers:
 - description: First Resonance publishes an official hosted MCP (Model Context Protocol) server that lets AI agents operate ION Factory OS. It is currently in beta and available on staging only; production is not ye
   name: First Resonance MCP Server
-  slug: first-resonance-mcp-server
+  slug: ion
 modified: '2026-07-19'
 name: First Resonance
 nav: Providers
@@ -197,7 +197,7 @@ overview: 'First Resonance publishes 1 API on the [APIs.io](https://apis.io/) ne
 random_paper: 15
 score:
   band: developing
-  composite: 46.2
+  composite: 46.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -209,17 +209,23 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 46.2
+  previous_composite: 46.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 9.7
-  scored_at: '2026-09-20'
+  score: 8.5
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.datahub.remax.eu/external
@@ -174,21 +174,21 @@ description: 'RE/MAX Holdings, Inc. (NYSE: RMAX, SIC 6531, Denver, Colorado) is 
 image: https://remax.eu/wp-content/uploads/2026/03/REMAX-Balloon-RGB.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.remax.eu over HTTP.
   name: RE/MAX MCP Server
-  slug: remax-mcp-server
+  slug: remax-eu-wordpress-mcp
 modified: '2026-07-26'
 name: RE/MAX
 nav: Providers
 network: true
-overview: 'RE/MAX publishes 2 APIs on the [APIs.io](https://apis.io/) network: Europe Datahub API and Europe Listings API. Tagged areas include Real-Estate, United States, Brokerage, Property Listings, and MLS.
+overview: 'RE/MAX publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Europe Datahub API, Europe Listings API, and 1 more. Tagged areas include Real Estate, United States, Brokerage, Property Listings, and MLS.
 
 
   RE/MAX''s developer surface includes authentication, sandbox, engineering blog, documentation, and 21 more developer resources.'
 random_paper: 14
 score:
   band: emerging
-  composite: 18.7
+  composite: 18.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -202,7 +202,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -211,19 +211,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.7
+  previous_composite: 18.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -241,7 +241,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: re-max
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - Brokerage
 - Property Listings

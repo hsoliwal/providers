@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 0
@@ -370,7 +370,7 @@ modified: '2026-07-21'
 name: Sikoia
 nav: Providers
 network: true
-overview: 'Sikoia publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Adverse Media API, Affordability Insights API, Authentication API, and 16 more. Tagged areas include Company, Financial-Services, Identity Verification, KYC, and KYB.
+overview: 'Sikoia publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Adverse Media API, Affordability Insights API, Authentication API, and 16 more. Tagged areas include Company, Financial Services, Identity Verification, KYC, and KYB.
 
 
   The Sikoia catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -383,8 +383,8 @@ rate_limits:
   name: Sikoia Rate Limits
   slug: sikoia-rate-limits
 score:
-  band: strong
-  composite: 55.3
+  band: developing
+  composite: 53.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -396,11 +396,16 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 65.6
+    contract_quality: 60.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 68.4
-  previous_composite: 55.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -416,9 +421,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -436,7 +441,7 @@ security:
 slug: sikoia
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Identity Verification
 - KYC
 - KYB

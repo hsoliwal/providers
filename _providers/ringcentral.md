@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 250
   human_in_the_loop: 47
@@ -45,41 +45,21 @@ agentic_access:
   summary_line: 487 operations · 250 acting · 47 human-in-the-loop
 api_count: 1
 apis:
-- baseURL: https://platform.ringcentral.com
-  baseurl_source: spec
-  description: The RingCentral SMS API supports targeted and bulk SMS and MMS with deep insights and regulatory compliance built in. It supports sending and receiving messages, A2P 10DLC registration, message status
-  name: RingCentral SMS API
-  slug: ringcentral-sms-api
 - description: The RingCentral Team Messaging API enables developers to build chatbots, send notifications, and create add-ins within RingCentral Team Messaging (formerly Glip). It supports posting messages, managin
   name: RingCentral Team Messaging API
   slug: ringcentral-team-messaging-api
 - description: 'The RingCentral Video API powers high-quality, secure video meetings in the browser without requiring a downloaded app. It exposes endpoints for scheduling meetings, joining/embedding video sessions, '
   name: RingCentral Video API
   slug: ringcentral-video-api
-- baseURL: https://platform.ringcentral.com
-  baseurl_source: spec
-  description: The RingCentral Fax API enables developers to add programmable and customizable fax sending and receiving capabilities to applications, including multi-attachment support, scheduled delivery, and inbo
-  name: RingCentral Fax API
-  slug: ringcentral-fax-api
 - description: The RingCentral Data API helps customers manage and ensure regulatory compliance with call data, message data, and video recordings, supporting bulk export, archival, and supervisory retrieval workflo
   name: RingCentral Data API
   slug: ringcentral-data-api
 - description: The RingCentral Audio and Video AI API exposes speech-to-text, summarization, and conversational analytics on call and meeting media, enabling developers to extract transcripts, action items, and insi
   name: RingCentral Audio and Video AI API
   slug: ringcentral-ai-api
-- baseURL: https://platform.ringcentral.com
-  baseurl_source: spec
-  description: The RingCentral Call Log API provides historical call data, recordings, and synchronization endpoints used to power analytics, billing, and compliance retention systems.
-  name: RingCentral Call Log API
-  slug: ringcentral-call-log-api
 - description: The RingCentral Call Analytics API exposes aggregated metrics, KPIs, and reporting endpoints for inbound and outbound calling activity at the user, queue, department, and account levels.
   name: RingCentral Call Analytics API
   slug: ringcentral-call-analytics-api
-- baseURL: https://platform.ringcentral.com
-  baseurl_source: spec
-  description: 'The RingCentral Presence API exposes real-time and historical presence/availability state for users and call queues, including DND, telephony state, and meeting status, with subscription-based change '
-  name: RingCentral Presence API
-  slug: ringcentral-presence-api
 - description: The RingCentral Voicemail API enables retrieval, playback, and management of voicemail messages, including transcripts, attachments, and read/unread state.
   name: RingCentral Voicemail API
   slug: ringcentral-voicemail-api
@@ -162,7 +142,7 @@ apis:
   slug: ringcentral-call-handling-rules-api
 - baseURL: https://platform.ringcentral.com
   baseurl_source: spec
-  description: The Call Log API from RingCentral — 8 operation(s) for call log.
+  description: The RingCentral Call Log API provides historical call data, recordings, and synchronization endpoints used to power analytics, billing, and compliance retention systems.
   name: RingCentral Call Log API
   slug: ringcentral-call-log-api
 - baseURL: https://platform.ringcentral.com
@@ -242,7 +222,7 @@ apis:
   slug: ringcentral-external-contacts-api
 - baseURL: https://platform.ringcentral.com
   baseurl_source: spec
-  description: The Fax API from RingCentral — 2 operation(s) for fax.
+  description: The RingCentral Fax API enables developers to add programmable and customizable fax sending and receiving capabilities to applications, including multi-attachment support, scheduled delivery, and inbo
   name: RingCentral Fax API
   slug: ringcentral-fax-api
 - baseURL: https://platform.ringcentral.com
@@ -357,7 +337,7 @@ apis:
   slug: ringcentral-posts-api
 - baseURL: https://platform.ringcentral.com
   baseurl_source: spec
-  description: The Presence API from RingCentral — 5 operation(s) for presence.
+  description: 'The RingCentral Presence API exposes real-time and historical presence/availability state for users and call queues, including DND, telephony state, and meeting status, with subscription-based change '
   name: RingCentral Presence API
   slug: ringcentral-presence-api
 - baseURL: https://platform.ringcentral.com
@@ -407,7 +387,7 @@ apis:
   slug: ringcentral-site-administration-api
 - baseURL: https://platform.ringcentral.com
   baseurl_source: spec
-  description: The SMS API from RingCentral — 2 operation(s) for sms.
+  description: The RingCentral SMS API supports targeted and bulk SMS and MMS with deep insights and regulatory compliance built in. It supports sending and receiving messages, A2P 10DLC registration, message status
   name: RingCentral SMS API
   slug: ringcentral-sms-api
 - baseURL: https://platform.ringcentral.com
@@ -511,7 +491,7 @@ arazzos:
 - description: Create a webinar, add a scheduled session to it, register an attendee, and read the registrant back for their join link.
   name: RingCentral Create a Webinar, Schedule a Session, and Register an Attendee
   slug: ringcentral-webinar-registration-workflow
-artifact_total: 265
+artifact_total: 261
 asyncapis:
 - description: AsyncAPI 2.6 description of the asynchronous event surface exposed by the RingCentral Subscription API. RingCentral delivers events from the RingCentral platform to subscribers via two documented tran
   name: RingCentral Subscriptions and Event Notifications
@@ -1246,14 +1226,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ringcentral.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at appconnect.labs.ringcentral.com over HTTP.
   name: RingCentral App Connect MCP
   slug: ringcentral-app-connect-mcp
 modified: '2026-06-20'
 name: RingCentral
 nav: Providers
 network: true
-overview: 'RingCentral publishes 79 APIs on the [APIs.io](https://apis.io/) network, including SMS API, Fax API, Call Log API, and 76 more. Tagged areas include Communications, UCaaS, Voice, Video, and Contact Center.
+overview: 'RingCentral publishes 84 APIs on the [APIs.io](https://apis.io/) network, including Webhooks and Subscriptions API, Adaptive Cards API, API Info API, and 81 more. Tagged areas include Communications, UCaaS, Voice, Video, and Contact Center.
 
 
   The RingCentral catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -1291,23 +1271,23 @@ scopes:
   summary_line: 38 scopes · authorizationCode
 score:
   band: strong
-  composite: 64.1
+  composite: 61.5
   coverage:
     artifact_dirs: 31
-    catalog_earned: 55.5
+    catalog_earned: 58.5
     catalog_earned_first_party: 24.0
     catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 7.8
+  delta: 0.5
   facets:
     access_clarity: 64.5
     contract_governance: 18.2
-    contract_quality: 62.6
+    contract_quality: 58.1
     developer_ergonomics: 67.9
-    discoverability: 44.4
+    discoverability: 48.2
     operational_transparency: 73.7
-  previous_composite: 56.3
+  previous_composite: 61.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1322,10 +1302,10 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 54.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 32.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 27.8
@@ -1353,5 +1333,7 @@ tags:
 - SMS
 - Messaging
 - Fax
+- Telecommunications
+- Real-Time
 website: https://www.ringcentral.com/
 ---

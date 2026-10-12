@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The machine-consumable surface of the Grubbly Farms Shopify storefront: a hosted Storefront MCP server for agentic product discovery and cart/checkout, plus a Customer Account OpenID Connect / OAuth 2'
@@ -109,9 +109,9 @@ description: 'Grubbly Farms is a direct-to-consumer backyard-poultry brand that 
 image: https://cdn.shopify.com/s/files/1/1407/3744/files/MicrosoftTeams-image_5.png?v=1743713875
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at grubblyfarms.com over HTTP; 5 tools listed.
   name: Grubbly Farms MCP Server
-  slug: grubbly-farms-mcp-server
+  slug: grubbly-farms-storefront
 modified: '2026-07-19'
 name: Grubbly Farms
 nav: Providers
@@ -128,7 +128,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.7
+  composite: 22.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -142,14 +142,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 19.7
+  previous_composite: 22.5
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -52,11 +52,11 @@ modified: '2026-07-18'
 name: Call Levels
 nav: Providers
 network: true
-overview: Call Levels is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Market Data, and Price Alerts.
+overview: Call Levels is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Market Data, and Price Alerts.
 random_paper: 8
 score:
   band: minimal
-  composite: 0.0
+  composite: 1.7
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -70,7 +70,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -85,15 +85,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 0.0
+  previous_composite: 1.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -103,12 +103,12 @@ screenshot: https://raw.githubusercontent.com/api-evangelist/call-levels/refs/he
 slug: call-levels
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Market Data
 - Price Alerts
 - Notification
-- Portfolio-Management
+- Portfolio Management
 - Investing
 - Singapore
 website: https://call-levels.com

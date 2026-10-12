@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -138,6 +138,11 @@ collections:
   name: Employment Hero REST API
   slug: open-employment-hero
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/employment-hero/refs/heads/main/capabilities/employment-hero-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/employment-hero-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/employment-hero/refs/heads/main/agentic-access/employment-hero-agentic-access.yml
   title: ''
@@ -207,10 +212,10 @@ modified: '2026-05-11'
 name: Employment Hero
 nav: Providers
 network: true
-overview: 'Employment Hero publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Certifications API, Cost Centres API, and 7 more. Tagged areas include Human Resources, HRIS, Payroll, Recruitment, and Employee Benefits.
+overview: 'Employment Hero publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Certifications API, Cost Centres API, and 9 more. Tagged areas include Human Resources, HRIS, Payroll, Recruiting, and Employee Benefits.
 
 
-  Employment Hero''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
+  Employment Hero''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 10 more developer resources.'
 random_paper: 11
 scopes:
 - name: Employment Hero Scopes
@@ -219,9 +224,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.6
+  composite: 33.5
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -231,11 +236,18 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 52.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 33.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - anz
+  previous_composite: 33.5
   provenance:
     agentic_access: derived
     contracts:
@@ -243,8 +255,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -268,8 +286,9 @@ tags:
 - Human Resources
 - HRIS
 - Payroll
-- Recruitment
+- Recruiting
 - Employee Benefits
 - Workforce Management
+- Australia
 website: https://employmenthero.com
 ---

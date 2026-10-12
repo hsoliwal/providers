@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/realm/refs/heads/main/security/realm-domain-security.yml
@@ -61,18 +61,22 @@ created: '2026-07-17'
 description: Realm is a consumer home-technology company that gives homeowners data-driven insights about their property's value and its renovation potential. The Realm platform combines public property records, permits, zoning, comparable sales, and neighborhood data into personalized recommendations that show which home improvement projects will add the most value, what they are likely to cost, and how they affect a home's estimated worth over time. Marketed at realmhome.com as "Home Renovation Planning & Home Value Insights," the product is delivered as a consumer-facing web and mobile experience rather than a developer platform. Realm was backed by venture investors including DCVC and GGV Capital and is tracked in the API Evangelist network as a company profile.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/realm.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.realmhome.com over HTTP.
+  name: Realm MCP Server
+  slug: realm
 modified: '2026-07-20'
 name: Realm
 nav: Providers
 network: true
-overview: 'Realm is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Property Data, Home Improvement, and Home Valuation.
+overview: 'Realm is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Property Data, Home Improvement, and Home Valuation.
 
 
   Realm''s developer surface includes engineering blog and 4 more developer resources.'
 random_paper: 1
 score:
   band: minimal
-  composite: 9.7
+  composite: 9.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -86,13 +90,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 9.7
+  previous_composite: 9.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -107,7 +117,7 @@ security:
 slug: realm
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Property Data
 - Home Improvement
 - Home Valuation

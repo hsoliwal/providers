@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for programmatic access to core Strise functionality — search companies and persons, screen for PEP/sanctions/ownership, run reviews, manage a monitoring portfolio, and subscribe to webhoo
@@ -179,7 +179,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted, remote MCP server that exposes a curated subset of the Strise Connect (GraphQL) platform to Claude and other MCP-aware assistants. Built on Connect. Destructive tools are flagged dest
   name: Strise MCP Server
-  slug: strise-mcp-server
+  slug: strise
 modified: '2026-07-21'
 name: Strise
 nav: Providers
@@ -194,7 +194,7 @@ overview: 'Strise publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 6
 score:
   band: developing
-  composite: 47.1
+  composite: 48.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -206,23 +206,35 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - norway
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 47.1
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -128,9 +128,9 @@ description: 'dltHub is the company behind dlt (data load tool), the open-source
 image: https://dlthub.com/api/og?title=dltHub&kind=default
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: dltHub MCP Server
-  slug: dlthub-mcp-server
+  slug: dlt
 modified: '2026-07-18'
 name: dltHub
 nav: Providers
@@ -142,7 +142,7 @@ overview: 'dltHub is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 5
 score:
   band: thin
-  composite: 27.7
+  composite: 27.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -156,13 +156,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 27.7
+  previous_composite: 27.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -182,9 +188,9 @@ tags:
 - ETL
 - Data Pipeline
 - Python
-- Open-Source
+- Open Source
 - Data Integration
-- Agentic
+- AI Agents
 - MCP
 website: https://dlthub.com/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 5
@@ -156,6 +156,11 @@ collections:
   name: Replica Analytics Terminal API
   slug: open-replicas-terminal-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/replicas/refs/heads/main/capabilities/replicas-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/replicas-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/replicas/refs/heads/main/overlays/replicas-openapi-overlay.yaml
   title: ''
@@ -300,7 +305,7 @@ layout: provider
 mcp_servers:
 - description: Official Replicas MCP server for managing cloud workspaces (replicas) for AI coding agents from MCP clients such as Claude Desktop, Claude Code, and Poke.
   name: Replicas MCP Server
-  slug: replicas-mcp-server
+  slug: replicas
 modified: '2026-07-20'
 name: Replicas
 nav: Providers
@@ -311,13 +316,13 @@ overview: 'Replicas publishes 13 APIs on the [APIs.io](https://apis.io/) network
   The Replicas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Replicas'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, GitHub presence, and 23 more developer resources.'
+  Replicas'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, GitHub presence, and 24 more developer resources.'
 random_paper: 15
 score:
   band: developing
-  composite: 50.8
+  composite: 51.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -327,11 +332,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 64.5
+    contract_quality: 59.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 50.8
+  previous_composite: 51.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -342,8 +347,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

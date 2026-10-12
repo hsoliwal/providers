@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.8
-  scored_at: '2026-09-20'
+  score: 6.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for full programmatic access to TrueContext (ProntoForms) forms, submissions, users, and dispatch, available on the Elite tier. Supports HTTP GET/POST for bidirectional data, webhooks to push
@@ -161,14 +161,14 @@ modified: '2026-07-21'
 name: TrueContext
 nav: Providers
 network: true
-overview: 'TrueContext publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Field Service, Mobile Forms, Workflow-Automation, and Data Collection.
+overview: 'TrueContext publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Field Service, Mobile Forms, Workflow Automation, and Data Collection.
 
 
   TrueContext''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 19 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 34.8
+  composite: 36.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -182,13 +182,25 @@ score:
     contract_governance: 18.2
     contract_quality: 5.2
     developer_ergonomics: 48.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 34.8
+  previous_composite: 36.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -213,7 +225,7 @@ tags:
 - Company
 - Field Service
 - Mobile Forms
-- Workflow-Automation
+- Workflow Automation
 - Data Collection
 - Field Intelligence
 - Low-Code

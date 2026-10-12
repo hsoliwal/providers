@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -72,9 +72,9 @@ description: Glen is a Y Combinator (Summer 2026) startup building a shared orga
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/glen.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: Glen MCP Server
-  slug: glen-mcp-server
+  slug: glen
 modified: '2026-07-19'
 name: Glen
 nav: Providers
@@ -86,7 +86,7 @@ overview: 'Glen is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 4
 score:
   band: emerging
-  composite: 12.3
+  composite: 11.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -100,13 +100,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.3
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 11.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,7 +130,7 @@ tags:
 - AI Agents
 - MCP
 - Organizational Memory
-- Knowledge-Management
+- Knowledge Management
 - Developer Tools
 - Y Combinator
 website: https://tryglen.com/

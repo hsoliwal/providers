@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Launches, feeds and reads results from Business Processes (BPs) and Manual Tasks on the Work.AI platform. Covers the BP lifecycle (draft, processing, paused, completed) with create/start/pause/stop ac
@@ -174,7 +174,7 @@ modified: '2026-09-04'
 name: WorkFusion
 nav: Providers
 network: true
-overview: 'WorkFusion publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, Financial Crime Compliance, Anti-Money Laundering, Sanctions Screening, and KYC.
+overview: 'WorkFusion publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AI Agents, Financial Crime Compliance, AML, Sanctions Screening, and KYC.
 
 
   WorkFusion''s developer surface includes documentation, API reference, support, engineering blog, changelog, authentication, YouTube channel, and 18 more developer resources.'
@@ -189,7 +189,7 @@ rate_limits:
   slug: workfusion-rate-limits
 score:
   band: thin
-  composite: 28.8
+  composite: 27.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -203,9 +203,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 28.8
+  previous_composite: 27.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -239,13 +239,13 @@ slug: workfusion
 tags:
 - AI Agents
 - Financial Crime Compliance
-- Anti-Money Laundering
+- AML
 - Sanctions Screening
 - KYC
 - Transaction Monitoring
 - Adverse Media Monitoring
 - Intelligent Document Processing
-- Robotic Process Automation
+- RPA
 - Banking
 website: https://www.workfusion.com/
 ---

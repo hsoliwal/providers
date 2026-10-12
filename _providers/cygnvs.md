@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -129,7 +129,7 @@ overview: 'CYGNVS is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 6
 score:
   band: emerging
-  composite: 19.5
+  composite: 19.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -143,11 +143,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 26.3
-  previous_composite: 19.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

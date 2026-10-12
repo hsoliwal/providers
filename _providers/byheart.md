@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -101,9 +101,9 @@ description: ByHeart is a US infant-nutrition company founded in 2016 that makes
 image: https://www.byheart.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shopify.com over HTTP.
   name: ByHeart MCP Server
-  slug: byheart-mcp-server
+  slug: shopify-customer-account-mcp
 modified: '2026-07-18'
 name: ByHeart
 nav: Providers
@@ -120,7 +120,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.4
+  composite: 20.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -134,9 +134,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 22.4
+  previous_composite: 20.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -145,9 +145,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

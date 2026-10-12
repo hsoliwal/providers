@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The SLB (Schlumberger) API provides access to platform services and data for enterprise integration and automation.
@@ -75,7 +75,7 @@ modified: '2026-04-19'
 name: SLB (Schlumberger)
 nav: Providers
 network: true
-overview: SLB (Schlumberger) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy and Oilfield Services.
+overview: SLB (Schlumberger) publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Oilfield Services, and Oil and Gas.
 plans:
 - name: Schlumberger Plans Pricing
   plan_count: 1
@@ -86,8 +86,8 @@ rate_limits:
   name: Schlumberger Rate Limits
   slug: schlumberger-rate-limits
 score:
-  band: emerging
-  composite: 11.0
+  band: minimal
+  composite: 10.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 39.0
@@ -101,17 +101,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 11.0
+  previous_composite: 10.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,5 +131,6 @@ slug: schlumberger
 tags:
 - Energy
 - Oilfield Services
+- Oil and Gas
 website: https://www.slb.com
 ---

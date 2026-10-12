@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -312,7 +312,7 @@ modified: '2026-07-21'
 name: Spot AI
 nav: Providers
 network: true
-overview: 'Spot AI publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Appliances API, Audio API, and 12 more. Tagged areas include Company, Video, Physical Security, Surveillance, and Computer-Vision.
+overview: 'Spot AI publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Appliances API, Audio API, and 12 more. Tagged areas include Company, Video, Physical Security, Surveillance, and Computer Vision.
 
 
   The Spot AI catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -322,7 +322,7 @@ overview: 'Spot AI publishes 15 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 19
 score:
   band: developing
-  composite: 45.9
+  composite: 46.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -334,11 +334,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 64.2
+    contract_quality: 58.7
     developer_ergonomics: 39.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 21.1
-  previous_composite: 45.9
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -349,8 +349,18 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -375,7 +385,7 @@ tags:
 - Video
 - Physical Security
 - Surveillance
-- Computer-Vision
+- Computer Vision
 - Artificial Intelligence
 - Camera
 - Analytics

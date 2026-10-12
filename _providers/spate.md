@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Spate API surface is reached at api.spate.nyc. Its only publicly discoverable contract is a remote Model Context Protocol server at https://api.spate.nyc/mcp, which answers anonymous initialize an
@@ -191,7 +191,7 @@ layout: provider
 mcp_servers:
 - description: Spate operates a live, remote Model Context Protocol server at https://api.spate.nyc/mcp that exposes its consumer trend intelligence — the Spate popularity index, TikTok and Reddit time series, categ
   name: Spate MCP Server
-  slug: spate-mcp-server
+  slug: spate-api
 modified: '2026-08-13'
 name: Spate
 nav: Providers
@@ -211,12 +211,12 @@ rate_limits:
   slug: spate-rate-limits
 scopes:
 - name: Spate Scopes
-  scope_count: 0
+  scope_count: 1
   slug: spate-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 30.7
+  composite: 35.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -230,15 +230,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 30.7
+  previous_composite: 35.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

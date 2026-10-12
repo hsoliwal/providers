@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -160,9 +160,9 @@ description: Flow AI builds infrastructure for embedding schema-aware, determini
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flow-ai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: flowai-harness can expose its runtime tools as Model Context Protocol (MCP) servers, so an MCP-aware client (Claude, IDEs, agents) can call the data-agent tools defined in a Flow AI runtime. This is a
   name: Flow AI MCP Server
-  slug: flow-ai-mcp-server
+  slug: flowai-harness
 modified: '2026-07-19'
 name: Flow AI
 nav: Providers
@@ -174,7 +174,7 @@ overview: 'Flow AI is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 5
 score:
   band: thin
-  composite: 32.2
+  composite: 33.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -188,15 +188,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 80.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 32.2
+  previous_composite: 33.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

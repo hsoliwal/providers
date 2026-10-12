@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Shopify-served Universal Commerce Protocol MCP endpoint for the JOLYN store, enabling buyer-approved agent-driven catalog search, cart, and checkout. Advertised in /.well-known/ucp and documented in /
@@ -93,9 +93,9 @@ description: 'JOLYN is an athletic swimwear and apparel brand for competitive an
 image: https://cdn.shopify.com/s/files/1/0703/0099/files/JOLYN-LOGO-Black.png?height=628&pad_color=ffffff&v=1708450946&width=1200
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at jolyn.com over HTTP; 5 tools listed.
   name: JOLYN MCP Server
-  slug: jolyn-mcp-server
+  slug: jolyn-ucp-shopping
 modified: '2026-07-19'
 name: JOLYN
 nav: Providers
@@ -112,7 +112,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 14.2
+  composite: 16.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 14.2
+  previous_composite: 16.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

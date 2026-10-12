@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -195,7 +195,7 @@ modified: '2026-05-19'
 name: Veriff
 nav: Providers
 network: true
-overview: 'Veriff publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Attempts API, Decisions API, Media API, and 3 more. Tagged areas include KYC, Identity Verification, Biometrics, Fraud Prevention, and AML.
+overview: 'Veriff publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Attempts API, Decisions API, Media API, and 12 more. Tagged areas include KYC, Identity Verification, Biometrics, Fraud Prevention, and AML.
 
 
   Veriff''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 8 more developer resources.'
@@ -210,7 +210,7 @@ rate_limits:
   slug: veriff-rate-limits
 score:
   band: thin
-  composite: 28.2
+  composite: 27.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 49.0
@@ -222,11 +222,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 28.2
+  previous_composite: 27.1
   provenance:
     agentic_access: derived
     contracts:
@@ -234,8 +234,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

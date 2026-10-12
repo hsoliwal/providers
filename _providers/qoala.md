@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.8
-  scored_at: '2026-09-20'
+  score: 36.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -55,7 +55,7 @@ apis:
   description: Policy API documentation consist of create policy, get policy detail or status, policy cancellation and policy activation.
   name: Qoala API Specification API
   slug: qoala-api-specification-api
-artifact_total: 11
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Qoala Webhooks
@@ -231,10 +231,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Qoala MCP Server
-  slug: qoala-mcp-server
-- description: ''
-  name: Qoala for Enterprise
-  slug: qoala-for-enterprise
+  slug: mcp
 modified: '2026-08-05'
 name: Qoala
 nav: Providers
@@ -249,7 +246,7 @@ overview: 'Qoala publishes 2 APIs on the [APIs.io](https://apis.io/) network: Au
 random_paper: 20
 score:
   band: thin
-  composite: 38.2
+  composite: 35.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -261,9 +258,9 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 62.8
+    contract_quality: 57.3
     developer_ergonomics: 38.7
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -272,7 +269,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 38.2
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -288,9 +285,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 31.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -314,7 +311,7 @@ tags:
 - Claims
 - Southeast Asia
 - Indonesia
-- Financial-Services
+- Financial Services
 - Partner API
 website: https://qoala.com/
 ---

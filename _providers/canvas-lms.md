@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-09-20'
+  score: 32.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -66,51 +66,152 @@ apis:
   baseurl_source: declared
   description: Root and sub-accounts that own the Canvas tenancy hierarchy
   name: Canvas LMS Accounts API
+  phrasing_intents:
+  - id: listAccounts
+    intent: List the Canvas accounts I can view or manage
+    question: Which Canvas accounts do I have admin access to?
+  - id: getAccount
+    intent: Look up one Canvas account
+    question: What details does Canvas hold about a single account or sub-account?
+  - id: listCoursesInAccount
+    intent: List the active courses in an account
+    question: Which active courses live under a given account or sub-account?
+  phrasing_ops: 3
   slug: canvas-lms-accounts-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Assignments, due dates, submission types, and grading
   name: Canvas LMS Assignments API
+  phrasing_intents:
+  - id: listAssignments
+    intent: List the assignments in a course
+    question: What assignments are set in my Canvas course?
+  - id: createAssignment
+    intent: Create a new assignment in a course
+    question: How do I add a new assignment to a Canvas course through the API?
+  - id: getAssignment
+    intent: Get the details of one assignment
+    question: What are the due date and point value of a specific assignment?
+  - id: updateAssignment
+    intent: Edit an existing assignment
+    question: How do I change the due date of an assignment that already exists?
+  - id: deleteAssignment
+    intent: Delete an assignment from a course
+    question: How do I remove an assignment I no longer need from a course?
+  phrasing_ops: 5
   slug: canvas-lms-assignments-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: The Canvas Course resource and its lifecycle
   name: Canvas LMS Courses API
+  phrasing_intents:
+  - id: listCoursesInAccount
+    intent: List an account's active courses
+    question: Which active courses belong to a particular account?
+  - id: listCourses
+    intent: List the courses I am enrolled in
+    question: What courses am I enrolled in on Canvas?
+  - id: getCourse
+    intent: Get the details of one course
+    question: What settings and details does a single course have?
+  - id: updateCourse
+    intent: Update a course's settings
+    question: How do I rename a course or change its start and end dates?
+  - id: deleteCourse
+    intent: Conclude or delete a course
+    question: How do I conclude a course at the end of the term?
+  - id: listCourseUsers
+    intent: List the people in a course
+    question: Who is on the roster of a Canvas course?
+  phrasing_ops: 6
   slug: canvas-lms-courses-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Discussion topics and entries
   name: Canvas LMS Discussions API
+  phrasing_intents:
+  - id: listDiscussionTopics
+    intent: List the discussion topics in a course
+    question: What discussion threads are open in my Canvas course?
+  phrasing_ops: 1
   slug: canvas-lms-discussions-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Student, teacher, TA, observer, and designer enrollments within a course or section
   name: Canvas LMS Enrollments API
+  phrasing_intents:
+  - id: listCourseEnrollments
+    intent: List the enrollments in a course
+    question: Which enrollments exist in a course and what role does each have?
+  - id: enrollUser
+    intent: Enroll a user in a course
+    question: How do I add a student to a Canvas course?
+  phrasing_ops: 2
   slug: canvas-lms-enrollments-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Course/user/group files and folders
   name: Canvas LMS Files API
+  phrasing_intents:
+  - id: listCourseFiles
+    intent: List the files in a course
+    question: What files have been uploaded to my Canvas course?
+  phrasing_ops: 1
   slug: canvas-lms-files-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Course modules and module items
   name: Canvas LMS Modules API
+  phrasing_intents:
+  - id: listModules
+    intent: List the modules in a course
+    question: How is a Canvas course organized into modules?
+  phrasing_ops: 1
   slug: canvas-lms-modules-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Learning outcomes and outcome results
   name: Canvas LMS Outcomes API
+  phrasing_intents:
+  - id: listOutcomeGroups
+    intent: List the outcome groups in an account
+    question: What learning outcome groups are defined for an account?
+  phrasing_ops: 1
   slug: canvas-lms-outcomes-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: Student submissions, grades, and submission comments
   name: Canvas LMS Submissions API
+  phrasing_intents:
+  - id: listSubmissions
+    intent: List all submissions for an assignment
+    question: Who has turned in a given assignment so far?
+  - id: getSubmission
+    intent: Get one student's submission
+    question: What did a particular student submit for an assignment?
+  - id: gradeSubmission
+    intent: Grade or comment on a submission
+    question: How do I post a grade for a student's submission?
+  phrasing_ops: 3
   slug: canvas-lms-submissions-api
 - baseURL: https://<canvas-install-url>/api/v1
   baseurl_source: declared
   description: User accounts, profiles, and per-user resources
   name: Canvas LMS Users API
+  phrasing_intents:
+  - id: listCourseUsers
+    intent: List a course's users
+    question: Which users are enrolled in a given course?
+  - id: getUser
+    intent: Look up a user by ID
+    question: What does Canvas store about a specific user account?
+  - id: getSelf
+    intent: Get the signed-in user's account
+    question: Which Canvas user is my API token acting as?
+  - id: getSelfProfile
+    intent: Get the signed-in user's profile
+    question: What does my Canvas profile show, like my bio, avatar and primary email?
+  phrasing_ops: 4
   slug: canvas-lms-users-api
 arazzos:
 - description: List courses in an account, read one course's detail, then conclude it.
@@ -704,7 +805,7 @@ modified: '2026-06-20'
 name: Canvas LMS
 nav: Providers
 network: true
-overview: 'Canvas LMS publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Canvas Live Events, Accounts API, Assignments API, and 8 more. Tagged areas include Learning Management, Education, EdTech, LMS, and LTI.
+overview: 'Canvas LMS publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Canvas Live Events, Accounts API, Assignments API, and 13 more. Tagged areas include Learning Management, Education, EdTech, LMS, and LTI.
 
 
   The Canvas LMS catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -738,23 +839,23 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 73.9
+  composite: 67.5
   coverage:
     artifact_dirs: 32
-    catalog_earned: 77.3
+    catalog_earned: 76.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 37.8
+    catalog_gap: 38.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
-    access_clarity: 73.7
+    access_clarity: 70.5
     contract_governance: 14.4
-    contract_quality: 72.4
+    contract_quality: 68.1
     developer_ergonomics: 82.1
-    discoverability: 61.1
-    operational_transparency: 68.4
-  previous_composite: 73.9
+    discoverability: 64.3
+    operational_transparency: 65.3
+  previous_composite: 66.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -769,9 +870,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 85.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -803,7 +904,7 @@ tags:
 - LTI
 - Higher Education
 - K-12
-- Open-Source
+- Open Source
 - AGPL
 - Canvas
 website: https://www.instructure.com/

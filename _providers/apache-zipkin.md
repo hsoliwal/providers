@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -46,22 +46,22 @@ apis:
 - baseURL_template: http://{host}:{port}/api/v2
   baseurl_source: spec_template
   description: Tag key/value autocompletion
-  name: Apache Zipkin autocomplete API
+  name: Apache Zipkin Autocomplete API
   slug: apache-zipkin-autocomplete-api
 - baseURL_template: http://{host}:{port}/api/v2
   baseurl_source: spec_template
   description: Service discovery and dependency links
-  name: Apache Zipkin services API
+  name: Apache Zipkin Services API
   slug: apache-zipkin-services-api
 - baseURL_template: http://{host}:{port}/api/v2
   baseurl_source: spec_template
   description: Ingest spans and query span names
-  name: Apache Zipkin spans API
+  name: Apache Zipkin Spans API
   slug: apache-zipkin-spans-api
 - baseURL_template: http://{host}:{port}/api/v2
   baseurl_source: spec_template
   description: Query trace data
-  name: Apache Zipkin traces API
+  name: Apache Zipkin Traces API
   slug: apache-zipkin-traces-api
 artifact_total: 31
 collections:
@@ -84,6 +84,11 @@ collections:
   name: Zipkin API
   slug: open-apache-zipkin
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apache-zipkin/refs/heads/main/capabilities/apache-zipkin-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apache-zipkin-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -184,10 +189,10 @@ modified: '2026-04-19'
 name: Apache Zipkin
 nav: Providers
 network: true
-overview: 'Apache Zipkin publishes 4 APIs on the [APIs.io](https://apis.io/) network, including autocomplete API, services API, spans API, and 1 more. Tagged areas include Distributed Tracing, Microservices, Monitoring, Observability, and Open-Source.
+overview: 'Apache Zipkin publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Autocomplete API, Services API, Spans API, and 1 more. Tagged areas include Distributed Tracing, Microservices, Monitoring, Observability, and Open Source.
 
 
-  Apache Zipkin''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 10 more developer resources.'
+  Apache Zipkin''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 11 more developer resources.'
 plans:
 - name: Apache Zipkin Plans Pricing
   plan_count: 3
@@ -199,9 +204,9 @@ rate_limits:
   slug: apache-zipkin-rate-limits
 score:
   band: thin
-  composite: 39.1
+  composite: 37.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -211,14 +216,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 43.4
+    contract_quality: 39.0
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 85.0
-  previous_composite: 39.1
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     contracts:
@@ -226,8 +231,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -244,7 +255,7 @@ tags:
 - Microservices
 - Monitoring
 - Observability
-- Open-Source
+- Open Source
 use_cases:
 - description: Identify bottlenecks and slow service calls in distributed architectures.
   name: Microservices Latency Troubleshooting

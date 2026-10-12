@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -48,17 +48,17 @@ apis:
 - baseURL: https://api.openverse.org/v1
   baseurl_source: declared
   description: These are endpoints pertaining to audio files.
-  name: Openverse audio API
+  name: Openverse Audio API
   slug: openverse-audio-api
 - baseURL: https://api.openverse.org/v1
   baseurl_source: declared
   description: Openverse provides free and open access to the Openverse API to anonymous and registered users. [Refer to the API documentation site for information on how to register](https://api.openverse.org/v1/#t
-  name: Openverse auth API
+  name: Openverse Auth API
   slug: openverse-auth-api
 - baseURL: https://api.openverse.org/v1
   baseurl_source: declared
   description: These are endpoints pertaining to images.
-  name: Openverse images API
+  name: Openverse Images API
   slug: openverse-images-api
 artifact_total: 92
 collections:
@@ -374,7 +374,7 @@ modified: '2026-09-16'
 name: Openverse
 nav: Providers
 network: true
-overview: 'Openverse publishes 3 APIs on the [APIs.io](https://apis.io/) network: audio API, auth API, and images API. Tagged areas include Image, Audio, Creative Commons, Open Media, and Search.
+overview: 'Openverse publishes 3 APIs on the [APIs.io](https://apis.io/) network: Audio API, Auth API, and Images API. Tagged areas include Image, Audio, Creative Commons, Open Media, and Search.
 
 
   The Openverse catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
@@ -402,27 +402,27 @@ rules:
     warn: 4
   slug: openverse-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 41.9
+  band: thin
+  composite: 39.0
   coverage:
     artifact_dirs: 17
-    catalog_earned: 63.3
+    catalog_earned: 62.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 9.8
-    contract_quality: 60.3
+    contract_quality: 54.8
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 41.9
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -435,9 +435,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

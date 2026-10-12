@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -129,7 +129,7 @@ rate_limits:
   slug: synergysuite-rate-limits
 score:
   band: emerging
-  composite: 17.7
+  composite: 18.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 25.0
@@ -143,13 +143,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 15.8
-  previous_composite: 17.7
+  previous_composite: 18.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -168,7 +178,7 @@ tags:
 - Hospitality
 - Restaurant Management
 - Back Of House
-- Inventory Management
+- Inventory
 - Food Safety
 - Workforce Scheduling
 - Point Of Sale Integration

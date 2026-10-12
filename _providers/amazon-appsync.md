@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -122,10 +122,15 @@ collections:
   name: Amazon AppSync Api Keys Types API
   slug: open-amazon-appsync-types-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/capabilities/amazon-appsync-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-appsync-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/appsync/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/amazon-appsync/refs/heads/main/overlays/amazon-appsync-openapi-overlay.yaml
   title: ''
@@ -874,7 +879,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Amazon AppSync MCP Server
-  slug: amazon-appsync-mcp-server
+  slug: amazon-appsync-mcp-yml
 modified: '2026-09-16'
 name: Amazon AppSync
 nav: Providers
@@ -885,7 +890,7 @@ overview: 'Amazon AppSync publishes 9 APIs on the [APIs.io](https://apis.io/) ne
   The Amazon AppSync catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon AppSync''s developer surface includes authentication and 11 more developer resources.'
+  Amazon AppSync''s developer surface includes authentication and 12 more developer resources.'
 random_paper: 5
 rules:
 - effective_rule_count: 6
@@ -911,23 +916,23 @@ rules:
   slug: amazon-appsync-spectral-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 30.3
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 54.5
+    artifact_dirs: 22
+    catalog_earned: 53.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.5
+    catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 33.3
-    contract_quality: 77.3
+    contract_governance: 31.8
+    contract_quality: 70.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 0.0
-  previous_composite: 31.8
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -937,8 +942,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -970,5 +981,5 @@ use_cases:
 - Build offline-capable mobile apps with automatic conflict resolution
 - Expose DynamoDB tables, Lambda functions, and OpenSearch as GraphQL APIs
 - Implement federated GraphQL across multiple teams with Merged APIs
-website: https://amazon.com
+website: https://aws.amazon.com/appsync/
 ---

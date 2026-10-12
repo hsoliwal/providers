@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -363,8 +363,8 @@ overview: 'lemon.markets publishes 17 APIs on the [APIs.io](https://apis.io/) ne
   lemon.markets'' developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, changelog, support, and 27 more developer resources.'
 random_paper: 0
 score:
-  band: developing
-  composite: 41.0
+  band: thin
+  composite: 38.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -376,9 +376,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 60.2
+    contract_quality: 55.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 30.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -388,7 +388,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 41.0
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -404,9 +404,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

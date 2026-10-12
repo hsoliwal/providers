@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Hosted Model Context Protocol server (15 tools) plus REST API for compiling and querying codebase context: architecture overviews, code maps, file and symbol documentation, source retrieval, changelog'
@@ -144,9 +144,9 @@ description: Driver is an AI platform that compiles exhaustive, structured conte
 image: https://www.driver.ai/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.us1.driverai.com over HTTP; 15 tools listed.
   name: Driver MCP Server
-  slug: driver-mcp-server
+  slug: driver-mcp
 modified: '2026-07-18'
 name: Driver
 nav: Providers
@@ -163,7 +163,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 29.1
+  composite: 32.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -177,14 +177,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 29.1
+  previous_composite: 32.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

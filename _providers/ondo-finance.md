@@ -25,7 +25,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: verified
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.5
-  scored_at: '2026-09-20'
+  score: 37.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 59
   human_in_the_loop: 3
@@ -431,7 +431,7 @@ rate_limits:
   slug: ondo-finance-rate-limits
 score:
   band: developing
-  composite: 52.8
+  composite: 49.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 48.0
@@ -443,11 +443,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.9
+    contract_quality: 49.4
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 65.8
-  previous_composite: 52.8
+  previous_composite: 49.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -463,9 +463,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -496,6 +496,6 @@ tags:
 - Perpetual Futures
 - Market Data
 - Blockchain
-- Financial-Services
+- Financial Services
 website: https://ondo.finance/
 ---

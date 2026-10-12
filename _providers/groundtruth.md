@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 63
   human_in_the_loop: 0
@@ -137,7 +137,7 @@ apis:
   description: The Users API from GroundTruth — 4 operation(s) for users.
   name: GroundTruth Users API
   slug: groundtruth-users-api
-artifact_total: 28
+artifact_total: 27
 collections:
 - collection_type: open
   name: Ads Manager API
@@ -146,6 +146,11 @@ collections:
   name: Groundtruth Reporting API
   slug: open-groundtruth-reporting
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/groundtruth/refs/heads/main/capabilities/groundtruth-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/groundtruth-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/groundtruth/refs/heads/main/security/groundtruth-domain-security.yml
   title: ''
@@ -285,20 +290,17 @@ description: 'GroundTruth is a location-intelligence performance advertising pla
 image: https://www.groundtruth.com/wp-content/uploads/2026/06/GroundTruth-Featured-Image.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.groundtruth.com over HTTP.
   name: GroundTruth MCP Server
-  slug: groundtruth-mcp-server
-- description: ''
-  name: GroundTruth MCP Server
-  slug: groundtruth-mcp-server-2
+  slug: groundtruth-docs
 modified: '2026-08-12'
 name: GroundTruth
 nav: Providers
 network: true
-overview: 'GroundTruth publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Ad Groups API, Audiences API, and 15 more. Tagged areas include Company, MarTech, Advertising, Location Intelligence, and Marketing.
+overview: 'GroundTruth publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Ad Groups API, Audiences API, and 16 more. Tagged areas include Company, MarTech, Advertising, Location Intelligence, and Marketing.
 
 
-  GroundTruth''s developer surface includes documentation, API reference, signup flow, engineering blog, support, getting-started guide, authentication, and 22 more developer resources.'
+  GroundTruth''s developer surface includes documentation, API reference, signup flow, engineering blog, support, getting-started guide, authentication, and 23 more developer resources.'
 plans:
 - name: Groundtruth Plans Pricing
   plan_count: 0
@@ -310,7 +312,7 @@ rate_limits:
   slug: groundtruth-rate-limits
 score:
   band: thin
-  composite: 39.1
+  composite: 38.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -322,11 +324,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 51.1
+    contract_quality: 46.1
     developer_ergonomics: 57.7
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 0.0
-  previous_composite: 39.1
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -337,8 +339,14 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

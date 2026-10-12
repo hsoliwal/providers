@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-09-20'
+  score: 30.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -230,7 +230,7 @@ overview: 'Hibachi publishes 3 APIs on the [APIs.io](https://apis.io/) network: 
 random_paper: 8
 score:
   band: thin
-  composite: 38.9
+  composite: 38.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -244,9 +244,9 @@ score:
     contract_governance: 18.2
     contract_quality: 24.6
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 38.9
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -262,9 +262,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -291,5 +291,6 @@ tags:
 - Stablecoins
 - WebSocket
 - Blockchain
+- Real-Time
 website: https://hibachi.xyz/
 ---

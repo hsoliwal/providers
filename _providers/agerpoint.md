@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Live REST/JSON API behind Agerpoint Cloud and the Agerpoint Capture apps, served from cloudapi.agerpoint.com on ASP.NET Core (Kestrel). Resource families observed on the public first-party web client '
@@ -158,12 +158,12 @@ rate_limits:
   slug: agerpoint-rate-limits
 scopes:
 - name: Agerpoint Scopes
-  scope_count: 0
+  scope_count: 14
   slug: agerpoint-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 18.7
+  composite: 20.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -177,13 +177,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 18.7
+  previous_composite: 20.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,7 +214,7 @@ tags:
 - Point Cloud
 - Carbon Measurement
 - Forestry
-- Machine-Learning
+- Machine Learning
 - Spatial Analytics
 - Company
 website: https://www.agerpoint.com

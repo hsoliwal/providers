@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/caliber-fitness/refs/heads/main/security/caliber-fitness-domain-security.yml
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: 'Caliber Fitness, Inc. is a consumer strength-training and fitness-coaching company behind the Caliber: Strength Training app (iOS and Android). Caliber combines data-driven resistance-training and nutrition programming, a library of 600+ exercises, workout tracking, and one-on-one video coaching from certified personal trainers across free, Caliber Plus, and Premium Coaching tiers. Founded by Justin Fauci and Chris Muir, the company is backed by Trinity Ventures. Caliber operates as a consumer mobile app and coaching service; it does not publish a public developer API, developer portal, or OpenAPI at this time. This profile tracks its public web, legal, and membership surface within the API Evangelist network.'
 image: https://caliberstrong.com/wp-content/uploads/2022/02/caliber_open_graph.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.caliberstrong.com over HTTP.
+  name: Caliber Fitness MCP Server
+  slug: caliber-fitness
 modified: '2026-07-18'
 name: Caliber Fitness
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Caliber Fitness is profiled on the [APIs.io](https://apis.io/) networ
 random_paper: 13
 score:
   band: emerging
-  composite: 15.2
+  composite: 15.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,9 +106,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.2
+  previous_composite: 15.3
   provenance:
     mcp: first-party
   regulatory:
@@ -112,9 +116,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

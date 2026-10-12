@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -144,7 +144,7 @@ modified: '2026-05-19'
 name: Arthur J. Gallagher
 nav: Providers
 network: true
-overview: 'Arthur J. Gallagher publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Access Groups API, Alarms API, Cardholders API, and 1 more. Tagged areas include Insurance, Brokerage, Risk Management, Claims Management, and Security.
+overview: 'Arthur J. Gallagher publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Access Groups API, Alarms API, Cardholders API, and 2 more. Tagged areas include Insurance, Brokerage, Risk Management, Claims Management, and Security.
 
 
   Arthur J. Gallagher''s developer surface includes developer portal, documentation, and 5 more developer resources.'
@@ -175,7 +175,7 @@ rate_limits:
   slug: arthur-j-gallagher-rate-limits
 score:
   band: emerging
-  composite: 20.1
+  composite: 19.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -187,11 +187,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 20.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 19.7
   provenance:
     agentic_access: derived
     contracts:
@@ -204,9 +209,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -227,6 +232,7 @@ tags:
 - Security
 - Benefits
 - Fortune 1000
+- Employee Benefits
 use_cases:
 - description: Technology partners integrate Command Centre REST API to build visitor management systems, CCTV integrations, and security operations center dashboards.
   name: Physical Security Integration

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OpenAI-compatible REST API covering chat/completions, image generation, video generation, and model listing (plus Anthropic Messages and OpenAI Responses formats). Key-authenticated via Bearer token.
@@ -137,9 +137,9 @@ description: An OpenAI-compatible AI API gateway/aggregator fronting 50+ text, i
 image: https://docs.toapis.com/logo/light.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.toapis.com; 3 tools listed.
   name: ToAPIs MCP Server
-  slug: toapis-mcp-server
+  slug: toapis-mcp-yml
 modified: '2026-09-07'
 name: ToAPIs
 nav: Providers
@@ -162,7 +162,7 @@ rate_limits:
   slug: toapis-rate-limits
 score:
   band: developing
-  composite: 43.7
+  composite: 44.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 46.0
@@ -174,17 +174,23 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 70.4
+    discoverability: 70.0
     operational_transparency: 42.1
-  previous_composite: 43.7
+  previous_composite: 44.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,8 +214,9 @@ tags:
 - Model Routing
 - provider failover
 - Text Generation
-- Image-Generation
+- Image Generation
 - Video Generation
 - Developer Tools
+- A2A
 website: https://toapis.com
 ---

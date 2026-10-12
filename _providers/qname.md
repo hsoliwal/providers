@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.5
-  scored_at: '2026-09-20'
+  score: 9.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Approval-gated REST API for WHOIS/RDAP lookups: GET /api/whois/{domain} (single), POST /api/whois/batch (batch), and GET /api/domain-traffic (traffic). Requires an admin-approved API key (qname_ prefi'
@@ -146,9 +146,9 @@ created: '2026-09-13'
 description: QName AI (qname.ai) is a domain-research workspace whose WHOIS/RDAP capability is exposed programmatically through a small, approval-gated REST API and an agent-native CLI (@qname/cli). It offers authenticated single-domain and batch WHOIS/domain lookups plus a domain-traffic scope, consumable via the CLI, an installable Agent Skill, or direct REST calls.
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server requiring an API key; 3 tools listed. A candidate, not confirmed as published by the provider.
   name: QName AI WHOIS API MCP Server
-  slug: qname-ai-whois-api-mcp-server
+  slug: qname-mcp-yml
 modified: '2026-09-14'
 name: QName AI WHOIS API
 nav: Providers
@@ -168,12 +168,12 @@ rate_limits:
   slug: qname-rate-limits
 score:
   band: emerging
-  composite: 25.8
+  composite: 26.0
   coverage:
     artifact_dirs: 17
-    catalog_earned: 35.0
+    catalog_earned: 30.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    catalog_gap: 85.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -182,15 +182,21 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 72.2
+    discoverability: 60.7
     operational_transparency: 23.7
-  previous_composite: 25.8
+  previous_composite: 26.0
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

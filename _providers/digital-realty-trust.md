@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -52,14 +52,14 @@ modified: '2026-05-05'
 name: Digital Realty Trust
 nav: Providers
 network: true
-overview: 'Digital Realty Trust is profiled on the [APIs.io](https://apis.io/) network.
+overview: 'Digital Realty Trust is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Data Center, Colocation, and Interconnection.
 
 
   Digital Realty Trust''s developer surface includes engineering blog and 1 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 3.1
+  composite: 0.6
   coverage:
     artifact_dirs: 2
     catalog_earned: 14.0
@@ -73,7 +73,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 25.9
+    discoverability: 25.0
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -83,12 +83,15 @@ score:
       reason: no_resolvable_host
     - owner: catalog
       reason: never_enriched
-  previous_composite: 3.1
+  previous_composite: 0.6
   regulatory:
-    note: provider declares no identity tags; regime could not be determined
-    undetermined: true
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -96,4 +99,8 @@ score:
     reason: no_specs
 screenshot: https://raw.githubusercontent.com/api-evangelist/digital-realty-trust/refs/heads/main/screenshots/digital-realty-trust-2026-06-20T180025.png
 slug: digital-realty-trust
+tags:
+- Data Center
+- Colocation
+- Interconnection
 ---

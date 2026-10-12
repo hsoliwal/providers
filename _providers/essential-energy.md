@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 4
@@ -227,7 +227,7 @@ overview: 'Essential Energy publishes 3 APIs on the [APIs.io](https://apis.io/) 
 random_paper: 13
 score:
   band: thin
-  composite: 30.1
+  composite: 28.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 41.3
@@ -239,9 +239,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 22.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 47.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -250,7 +250,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.1
+  previous_composite: 28.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -260,9 +260,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 41.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://diaspora.social/api/v1
@@ -321,24 +321,24 @@ layout: provider
 mcp_servers:
 - description: 'A candidate Model Context Protocol tool surface for the diaspora* API. The decentralized design shapes the whole server: a pod host is not configuration that can be baked in once, it is a required par'
   name: Diaspora MCP Server
-  slug: diaspora-mcp-server
+  slug: diaspora-mcp-yml
 modified: '2026-07-20'
 name: Diaspora
 nav: Providers
 network: true
-overview: 'Diaspora publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Aspects API, Comments API, Contacts API, and 11 more. Tagged areas include Company, Social, Social Networking, Decentralized, and Federated.
+overview: 'Diaspora publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Aspects API, Comments API, Contacts API, and 11 more. Tagged areas include Company, Social, Social Network, Decentralized, and Federated.
 
 
   Diaspora''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 28 more developer resources.'
 random_paper: 15
 scopes:
 - name: Diaspora Scopes
-  scope_count: 0
+  scope_count: 16
   slug: diaspora-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 16 scopes
 score:
   band: developing
-  composite: 41.3
+  composite: 42.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -350,11 +350,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 41.3
+  previous_composite: 42.2
   provenance:
     conformance: derived
     contracts:
@@ -364,8 +364,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -388,10 +394,10 @@ slug: diaspora
 tags:
 - Company
 - Social
-- Social Networking
+- Social Network
 - Decentralized
 - Federated
-- Open-Source
+- Open Source
 - Privacy
 - Fediverse
 - Messaging

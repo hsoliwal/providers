@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Payrails' REST API for payment orchestration — executions and payment actions (authorize, confirm, capture, cancel, refund, payout), instruments and tokens, the PCI vault, providers and workflow confi
@@ -223,7 +223,7 @@ overview: 'Payrails publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 11
 score:
   band: developing
-  composite: 52.7
+  composite: 48.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -235,11 +235,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 48.7
-  previous_composite: 52.7
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -253,9 +253,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 78.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -286,7 +286,7 @@ tags:
 - Payment Orchestration
 - Fintech
 - Tokenization
-- Fraud
+- Fraud Prevention
 - Disputes
 - Reconciliation
 - Checkout

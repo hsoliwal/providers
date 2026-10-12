@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -250,14 +250,14 @@ description: 'Yardi Canada Ltd. is the Canadian subsidiary of Yardi Systems, Inc
 image: https://www.yardi.com/wp-content/themes/cmw-standard-v2-theme/images/icons/apple-touch-icon-152x152.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Yardi ships a real, first-party, hosted MCP server — the Yardi Virtuoso Connector — and it is the single most important correction to the earlier reading of this provider. Yardi publishes no OpenAPI, '
   name: Yardi Virtuoso
   slug: yardi-virtuoso
 modified: '2026-07-26'
 name: Yardi Canada
 nav: Providers
 network: true
-overview: 'Yardi Canada publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Components API, Incidents API, Maintenance API, and 1 more. Tagged areas include Real-Estate, Canada, Property Management, Rentals, and Commercial Real Estate.
+overview: 'Yardi Canada publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Components API, Incidents API, Maintenance API, and 4 more. Tagged areas include Real Estate, Canada, Property Management, Rentals, and Commercial Real Estate.
 
 
   Yardi Canada''s developer surface includes documentation, authentication, changelog, support, legal docs, engineering blog, product news, and 29 more developer resources.'
@@ -269,7 +269,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 60.1
+  composite: 55.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 32.0
@@ -281,9 +281,9 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 50.9
+    contract_quality: 45.8
     developer_ergonomics: 42.3
-    discoverability: 59.3
+    discoverability: 60.8
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -292,7 +292,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 60.1
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -312,9 +312,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 75.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -336,7 +336,7 @@ security:
   summary_line: SOC 2 (annual), SOC 1 (biannual), SSAE 18, PCI, HIPAA, Sarbanes-Oxley, CSA STAR Level 2, FIPS 140-2 (key management)
 slug: yardi-canada
 tags:
-- Real-Estate
+- Real Estate
 - Canada
 - Property Management
 - Rentals

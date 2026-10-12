@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'HTTP+JSON REST API for the Parse Platform: object CRUD and queries, users and sessions, roles, files, analytics and push. Parse Server is self-hosted, so the base URL is the operator''s own Parse Serve'
@@ -180,7 +180,7 @@ modified: '2026-07-20'
 name: Parse
 nav: Providers
 network: true
-overview: 'Parse publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backend-as-a-Service, Mobile, Open-Source, and REST API.
+overview: 'Parse publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backend-as-a-Service, Mobile, Open Source, and REST API.
 
 
   The Parse catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -190,7 +190,7 @@ overview: 'Parse publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 11
 score:
   band: thin
-  composite: 37.2
+  composite: 37.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -202,16 +202,22 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 37.2
+  previous_composite: 37.3
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -236,7 +242,7 @@ tags:
 - Company
 - Backend-as-a-Service
 - Mobile
-- Open-Source
+- Open Source
 - REST API
 - Database
 - Authentication

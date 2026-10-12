@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -63,6 +63,11 @@ collections:
   name: Apache Mesos Operator HTTP API
   slug: open-apache-mesos
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apache-mesos/refs/heads/main/capabilities/apache-mesos-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apache-mesos-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -160,10 +165,10 @@ modified: '2026-09-16'
 name: Apache Mesos
 nav: Providers
 network: true
-overview: 'Apache Mesos publishes 1 API on the [APIs.io](https://apis.io/) network: Apache Mesos Operator HTTP API. Tagged areas include Cluster Management, Distributed Systems, Resource Management, Scheduling, and Retired.
+overview: 'Apache Mesos publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Apache Mesos Operator HTTP API, and 1 more. Tagged areas include Cluster Management, Distributed Systems, Resource Management, Scheduling, and Retired.
 
 
-  Apache Mesos'' developer surface includes developer portal, documentation, engineering blog, and 10 more developer resources.'
+  Apache Mesos'' developer surface includes developer portal, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Apache Mesos Plans Pricing
   plan_count: 3
@@ -175,9 +180,9 @@ rate_limits:
   slug: apache-mesos-rate-limits
 score:
   band: thin
-  composite: 28.4
+  composite: 27.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -187,14 +192,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 28.4
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +207,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

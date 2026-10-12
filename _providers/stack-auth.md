@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.9
-  scored_at: '2026-09-20'
+  score: 29.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -126,7 +126,7 @@ apis:
   description: The Webhooks API from Stack Auth — 1 operation(s) for webhooks.
   name: Stack Auth Webhooks API
   slug: stack-auth-webhooks-api
-artifact_total: 39
+artifact_total: 40
 collections:
 - collection_type: open
   name: API Collection
@@ -242,11 +242,15 @@ finops:
   slug: stack-auth-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.stack-auth.com over HTTP; 2 tools listed.
+  name: Stack Auth MCP Server
+  slug: stack-auth
 modified: '2026-09-16'
 name: Stack Auth
 nav: Providers
 network: true
-overview: 'Stack Auth publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Connected Accounts API, Contact Channels API, and 11 more. Tagged areas include Authentication, User Management, Open-Source, Self-Hosted, and Identity.
+overview: 'Stack Auth publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Connected Accounts API, Contact Channels API, and 16 more. Tagged areas include Authentication, User Management, Open Source, Self-Hosted, and Identity.
 
 
   Stack Auth''s developer surface includes authentication, documentation, GitHub presence, pricing, engineering blog, and 9 more developer resources.'
@@ -261,23 +265,23 @@ rate_limits:
   slug: stack-auth-rate-limits
 score:
   band: emerging
-  composite: 25.5
+  composite: 24.1
   coverage:
     artifact_dirs: 14
-    catalog_earned: 56.0
+    catalog_earned: 54.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 37.4
     contract_governance: 0.0
     contract_quality: 1.8
     developer_ergonomics: 23.8
-    discoverability: 75.9
-    operational_transparency: 42.1
-  previous_composite: 25.5
+    discoverability: 75.0
+    operational_transparency: 40.0
+  previous_composite: 24.1
   provenance:
     agentic_access: derived
     contracts:
@@ -286,8 +290,14 @@ score:
       marker_coverage: 0.0
       total: 13
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -306,10 +316,11 @@ slug: stack-auth
 tags:
 - Authentication
 - User Management
-- Open-Source
+- Open Source
 - Self-Hosted
 - Identity
 - Organization
 - RBAC
+- A2A
 website: https://stack-auth.com/
 ---

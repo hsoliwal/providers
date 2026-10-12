@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Legacy marketplace/collections API — obtain a JWT with your API key and secret, then manage NFT collections and in-platform tokens for token checkout.
@@ -44,47 +44,47 @@ apis:
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The assets API from Tweed — 5 operation(s) for assets.
-  name: Tweed assets API
+  name: Tweed Assets API
   slug: tweed-assets-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The audit-event-mappings API from Tweed — 1 operation(s) for audit-event-mappings.
-  name: Tweed audit-event-mappings API
+  name: Tweed Audit Event Mappings API
   slug: tweed-audit-event-mappings-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The auth API from Tweed — 3 operation(s) for auth.
-  name: Tweed auth API
+  name: Tweed Auth API
   slug: tweed-auth-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The blockchains API from Tweed — 4 operation(s) for blockchains.
-  name: Tweed blockchains API
+  name: Tweed Blockchains API
   slug: tweed-blockchains-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The checkout API from Tweed — 4 operation(s) for checkout.
-  name: Tweed checkout API
+  name: Tweed Checkout API
   slug: tweed-checkout-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The contracts API from Tweed — 5 operation(s) for contracts.
-  name: Tweed contracts API
+  name: Tweed Contracts API
   slug: tweed-contracts-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The items API from Tweed — 5 operation(s) for items.
-  name: Tweed items API
+  name: Tweed Items API
   slug: tweed-items-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The payouts API from Tweed — 4 operation(s) for payouts.
-  name: Tweed payouts API
+  name: Tweed Payouts API
   slug: tweed-payouts-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The platform-webhooks API from Tweed — 3 operation(s) for platform-webhooks.
-  name: Tweed platform-webhooks API
+  name: Tweed Platform Webhooks API
   slug: tweed-platform-webhooks-api
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
@@ -94,7 +94,7 @@ apis:
 - baseURL: https://api-v2.prod.paytweed.com
   baseurl_source: declared
   description: The tickets API from Tweed — 1 operation(s) for tickets.
-  name: Tweed tickets API
+  name: Tweed Tickets API
   slug: tweed-tickets-api
 artifact_total: 27
 asyncapis:
@@ -139,6 +139,11 @@ collections:
   name: Tweed assets tickets API
   slug: open-tweed-tickets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tweed/refs/heads/main/capabilities/tweed-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tweed-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/tweed/refs/heads/main/overlays/tweed-api-v2-overlay.yaml
   title: ''
@@ -250,19 +255,19 @@ modified: '2026-07-21'
 name: Tweed
 nav: Providers
 network: true
-overview: 'Tweed publishes 11 APIs on the [APIs.io](https://apis.io/) network, including assets API, audit-event-mappings API, auth API, and 8 more. Tagged areas include Company, Payments, Crypto, Wallets, and NFT.
+overview: 'Tweed publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Audit Event Mappings API, Auth API, and 9 more. Tagged areas include Company, Payments, Crypto, Wallets, and NFT.
 
 
   The Tweed catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Tweed''s developer surface includes documentation, API reference, getting-started guide, pricing, authentication, sandbox, and 16 more developer resources.'
+  Tweed''s developer surface includes documentation, API reference, getting-started guide, pricing, authentication, sandbox, and 17 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 38.3
+  composite: 36.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -272,11 +277,11 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 4.5
-    contract_quality: 50.6
+    contract_quality: 46.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 38.3
+  previous_composite: 36.7
   provenance:
     conformance: derived
     contracts:
@@ -291,9 +296,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

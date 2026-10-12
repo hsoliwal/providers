@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for requesting delivery quotes, booking on-demand and scheduled deliveries, managing and canceling deliveries, and tracking drivers in real time via webhooks or long polling.
@@ -158,7 +158,7 @@ modified: '2026-07-18'
 name: Curri
 nav: Providers
 network: true
-overview: 'Curri publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Delivery, Logistics, and Last Mile.
+overview: 'Curri publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Vertical Software, Delivery, Logistics, and Last Mile Delivery.
 
 
   The Curri catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -168,7 +168,7 @@ overview: 'Curri publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 21
 score:
   band: developing
-  composite: 42.2
+  composite: 43.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -180,17 +180,23 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 42.2
+  previous_composite: 43.4
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -216,7 +222,7 @@ tags:
 - Vertical Software
 - Delivery
 - Logistics
-- Last Mile
+- Last Mile Delivery
 - Freight
 - Construction
 - Supply Chain

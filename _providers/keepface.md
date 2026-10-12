@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The public server-side affiliate tracking API for Keepface. Brands POST sale and refund events from their own backend (or from Shopify, or from the browser JS pixel) and Keepface attributes them to th
@@ -204,14 +204,14 @@ description: KeepFace is an all-in-one influencer marketing platform that helps 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/keepface.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.keepface.com over HTTP requiring an API key; 94 tools listed.
   name: KeepFace MCP Server
-  slug: keepface-mcp-server
+  slug: keepface
 modified: '2026-08-13'
 name: KeepFace
 nav: Providers
 network: true
-overview: 'KeepFace publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Influencer Marketing, Creator Economy, Marketing, and Social-Media.
+overview: 'KeepFace publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Influencer Marketing, Creator Economy, Marketing, and Social Media.
 
 
   The KeepFace catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -234,7 +234,7 @@ scopes:
   summary_line: 11 scopes
 score:
   band: thin
-  composite: 37.1
+  composite: 38.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -246,16 +246,22 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 37.1
+  previous_composite: 38.0
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -277,7 +283,7 @@ tags:
 - Influencer Marketing
 - Creator Economy
 - Marketing
-- Social-Media
+- Social Media
 - Affiliate Marketing
 - Advocacy
 - Campaign Management

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: Shepherd is a coordination layer for AI coding agents. The MCP server is a thin stdio client that forwards agent tool calls to a Shepherd hub (Fastify + Postgres), letting a fleet of agents across ses
   name: Shepherd MCP server
-  slug: shepherd-mcp-server
+  slug: shepherd
 modified: '2026-07-19'
 name: Korso
 nav: Providers
@@ -187,7 +187,7 @@ overview: 'Korso is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 8
 score:
   band: thin
-  composite: 28.6
+  composite: 30.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -201,15 +201,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 28.6
+  previous_composite: 30.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -236,7 +242,7 @@ tags:
 - Agents
 - MCP
 - Developer Tools
-- Open-Source
+- Open Source
 - Agent Coordination
 - Y Combinator
 website: https://korsoai.com/

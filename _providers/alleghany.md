@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -87,10 +87,10 @@ description: Alleghany Corporation is a holding company engaged in property and 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alleghany.png
 layout: provider
 modified: '2026-05-23'
-name: Alleghany Corporation
+name: Alleghany
 nav: Providers
 network: true
-overview: Alleghany Corporation is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Reinsurance, Property and Casualty, Specialty Insurance, and Excess and Surplus.
+overview: Alleghany is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Reinsurance, Property and Casualty, Specialty Insurance, and Excess and Surplus.
 press:
 - date: ''
   title: Familiarity, similarity driving Berkshire's Alleghany deal
@@ -110,7 +110,7 @@ press:
 random_paper: 3
 score:
   band: minimal
-  composite: 3.0
+  composite: 3.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -124,17 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 3.0
+  previous_composite: 3.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -154,7 +154,7 @@ tags:
 - Specialty Insurance
 - Excess and Surplus
 - Surety
-- Financial-Services
+- Financial Services
 - Holding Company
 - Berkshire Hathaway Subsidiary
 - Toys And Collectibles

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 1
@@ -75,7 +75,7 @@ apis:
   description: Register callbacks for transcription lifecycle events.
   name: Trint Webhooks API
   slug: trint-webhooks-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -160,6 +160,10 @@ finops:
   slug: trint-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trint.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.trint.com over HTTP.
+  name: Trint MCP Server
+  slug: trint
 modified: '2026-07-11'
 name: Trint
 nav: Providers
@@ -181,24 +185,24 @@ rate_limits:
   name: Trint Rate Limits
   slug: trint-rate-limits
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 37.3
   coverage:
     artifact_dirs: 13
-    catalog_earned: 64.0
+    catalog_earned: 62.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 51.0
+    catalog_gap: 52.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 2.1
+  delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 38.6
+    discoverability: 68.3
+    operational_transparency: 28.4
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     contracts:
@@ -207,8 +211,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

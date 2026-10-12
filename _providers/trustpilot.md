@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -135,6 +135,11 @@ collections:
   name: Trustpilot Business Units Invitations API
   slug: open-trustpilot-invitations-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trustpilot/refs/heads/main/capabilities/trustpilot-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trustpilot-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -311,13 +316,13 @@ modified: '2026-05-19'
 name: Trustpilot
 nav: Providers
 network: true
-overview: 'Trustpilot publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Business Units API, Conversations API, Images API, and 5 more. Tagged areas include Consumer Reviews, Reviews, Trust, Ratings, and Business Profiles.
+overview: 'Trustpilot publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Business Units API, Conversations API, Images API, and 6 more. Tagged areas include Consumer Reviews, Reviews, Trust, Ratings, and Business Profiles.
 
 
   The Trustpilot catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Trustpilot''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, changelog, support, and 18 more developer resources.'
+  Trustpilot''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, changelog, support, and 19 more developer resources.'
 plans:
 - name: Trustpilot Plans Pricing
   plan_count: 5
@@ -356,9 +361,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 48.9
+  composite: 51.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 60.5
     catalog_earned_first_party: 0.0
     catalog_gap: 54.5
@@ -368,11 +373,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 13.6
-    contract_quality: 57.7
+    contract_quality: 52.4
     developer_ergonomics: 39.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 48.9
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     contracts:
@@ -380,8 +385,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Credit-metered Identification endpoints that convert anonymous web signals (IP addresses) into business identifiers — POST /ip_to_company, POST /ip_to_hem (hashed email, ranked by confidence) and POST
@@ -49,7 +49,7 @@ apis:
 - description: 'The RB2B JavaScript pixel installed in a site header (or via Google Tag Manager / Segment / RudderStack / Shopify / Webflow / WordPress / HubSpot CMS / Wix / Next.js / React / Angular) is the primary '
   name: RB2B Pixel and Destination Webhooks
   slug: rb2b-pixel-webhooks
-artifact_total: 12
+artifact_total: 11
 asyncapis:
 - description: ''
   name: Rb2B Webhooks
@@ -248,10 +248,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: RB2B MCP Server
-  slug: rb2b-mcp-server
-- description: RB2B publishes a first-party local (stdio) MCP server, @rb2b/rb2b-apis-mcp, that exposes the RB2B Identity / Enrichment API Partner Program surface (https://api.rb2b.com/api/v1) as 19 MCP tools for Cl
-  name: RB2B MCP Server
-  slug: rb2b-mcp-server-2
+  slug: rb2b-apis-mcp
 modified: '2026-08-12'
 name: RB2B
 nav: Providers
@@ -274,7 +271,7 @@ rate_limits:
   slug: rb2b-rate-limits
 score:
   band: strong
-  composite: 58.2
+  composite: 59.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 60.0
@@ -286,17 +283,29 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 58.2
+  previous_composite: 59.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: wss://api.sanaslt.com/v3/stream
@@ -45,7 +45,7 @@ apis:
 - description: Server-side C++17 and Python SDK for real-time speech enhancement, accent translation, and language translation. Applications initialize the SDK with an API key, create an audio processor for a chosen
   name: Sanas Speech AI SDK
   slug: sanas-speech-ai-sdk
-artifact_total: 6
+artifact_total: 7
 asyncapis:
 - description: 'Real-time speech-to-speech translation over a single persistent WebSocket connection. Supports consecutive and simultaneous modes. Modeled by API Evangelist from the published Sanas WebSocket API and '
   name: Sanas Stream API
@@ -171,11 +171,15 @@ created: '2026-07-17'
 description: Sanas is a real-time speech AI platform that removes communication barriers through accent translation, language translation, speech enhancement, and speech intelligence. Its developer platform exposes these capabilities as a server-side SDK (C++17 and Python) plus a persistent WebSocket Stream API for real-time speech-to-speech translation, letting teams add real-time speech processing to voice-agent and contact-center pipelines they already run. Models are billed per minute and run on Sanas Cloud or self-hosted infrastructure, serving healthcare, financial services, retail, travel, and telecommunications customers.
 image: https://www.sanas.ai/static-image.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at developer.sanas.ai over HTTP; 3 tools listed.
+  name: Sanas MCP Server
+  slug: sanas
 modified: '2026-07-21'
 name: Sanas
 nav: Providers
 network: true
-overview: 'Sanas publishes 1 API on the [APIs.io](https://apis.io/) network: Stream API. Tagged areas include Company, Speech AI, Voice AI, Accent Translation, and Language Translation.
+overview: 'Sanas publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Stream API, and 1 more. Tagged areas include Company, Speech AI, Voice AI, Accent Translation, and Language Translation.
 
 
   The Sanas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -185,7 +189,7 @@ overview: 'Sanas publishes 1 API on the [APIs.io](https://apis.io/) network: Str
 random_paper: 6
 score:
   band: developing
-  composite: 46.4
+  composite: 47.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -197,16 +201,30 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 44.8
+    contract_quality: 42.7
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 46.4
+  previous_composite: 47.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,5 +256,6 @@ tags:
 - SDK
 - WebSocket
 - Contact Center
+- Real-Time
 website: https://sanas.ai
 ---

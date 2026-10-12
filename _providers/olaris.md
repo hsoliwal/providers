@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Unauthenticated remote Model Context Protocol endpoint served from Olaris' own host at https://www.myolaris.com/_api/mcp. It is the Wix platform Site MCP — provisioned by the website platform, not a f
@@ -91,7 +91,7 @@ description: Olaris, Inc. is a precision-medicine diagnostics company in Framing
 image: https://static.wixstatic.com/media/e0d525_f21b71a783bf417e951f6808527da944~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.myolaris.com over HTTP; 9 tools listed.
   name: Olaris Site MCP
   slug: olaris-site-mcp
 modified: '2026-08-26'
@@ -113,7 +113,7 @@ rate_limits:
   slug: olaris-rate-limits
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -127,19 +127,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 10.4
+  previous_composite: 10.3
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +162,7 @@ tags:
 - Diagnostics
 - Precision Medicine
 - Metabolomics
-- Machine-Learning
+- Machine Learning
 - Biomarkers
 - Laboratory
 - Transplant

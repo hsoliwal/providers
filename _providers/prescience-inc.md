@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -78,17 +78,17 @@ description: Prescience, Inc. is a Y Combinator (Summer 2026) health benefits pl
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prescience-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Prescience Inc
+name: Prescience
 nav: Providers
 network: true
-overview: 'Prescience Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Insurance, Employee Benefits, and Insurance.
+overview: 'Prescience is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Insurance, Employee Benefits, and Insurance.
 
 
-  Prescience Inc''s developer surface includes signup flow and 8 more developer resources.'
+  Prescience''s developer surface includes signup flow and 8 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 13.7
+  composite: 13.1
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -102,17 +102,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 13.7
+  previous_composite: 13.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 28.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +132,7 @@ tags:
 - Employee Benefits
 - Insurance
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Startups
 - Y Combinator
 website: https://www.getprescience.com

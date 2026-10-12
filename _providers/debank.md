@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -228,7 +228,7 @@ modified: '2026-08-12'
 name: DeBank
 nav: Providers
 network: true
-overview: 'DeBank publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account API, App Protocol API, Chain API, and 7 more. Tagged areas include Web3, DeFi, Blockchain, Crypto, and Portfolio Tracking.
+overview: 'DeBank publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Account API, App Protocol API, Chain API, and 8 more. Tagged areas include Web3, DeFi, Blockchain, Crypto, and Portfolio Tracking.
 
 
   DeBank''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, support, changelog, and 18 more developer resources.'
@@ -248,7 +248,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.3
+  composite: 34.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -260,11 +260,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 43.3
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 37.3
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -280,9 +280,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for accessing Paycor employees, payroll, benefits, time, and organizational data. Uses OAuth 2.0 authorization code flow with authorization at secure.paycor.com/connect/authorize and tokens i
@@ -88,7 +88,7 @@ overview: 'Paycor publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 16
 score:
   band: emerging
-  composite: 12.7
+  composite: 11.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -102,11 +102,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.3
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

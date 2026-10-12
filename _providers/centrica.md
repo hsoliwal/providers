@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.dev.fieldops.centrica.com/api/v1/identity
@@ -212,7 +212,7 @@ rate_limits:
   slug: centrica-rate-limits
 score:
   band: developing
-  composite: 51.9
+  composite: 48.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 57.0
@@ -224,9 +224,9 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 4.5
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -237,7 +237,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 51.9
+  previous_composite: 48.2
   provenance:
     conformance: derived
     contracts:
@@ -252,9 +252,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 52.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

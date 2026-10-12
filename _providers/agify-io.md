@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -51,7 +51,7 @@ apis:
   description: Predict a person's age from their first name
   name: Agify.io Age Prediction API
   slug: agify-io-age-prediction-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -135,11 +135,15 @@ jsonld:
   property_count: 3
   slug: agify-io-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.agify.io over HTTP; 1 tool listed.
+  name: Agify.io MCP Server
+  slug: agify-io
 modified: '2026-05-19'
 name: Agify.io
 nav: Providers
 network: true
-overview: 'Agify.io publishes 1 API on the [APIs.io](https://apis.io/) network: Age Prediction API. Tagged areas include Age Prediction, Name Analysis, Demographics, and REST API.
+overview: 'Agify.io publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Age Prediction API, and 1 more. Tagged areas include Age Prediction, Name Analysis, Demographics, and REST API.
 
 
   The Agify.io catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -168,7 +172,7 @@ rules:
   slug: agify-io-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 21.0
+  composite: 20.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.3
@@ -184,7 +188,7 @@ score:
     developer_ergonomics: 19.0
     discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 21.0
+  previous_composite: 20.3
   provenance:
     agentic_access: derived
     contracts:
@@ -193,8 +197,14 @@ score:
       marker_coverage: 100.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

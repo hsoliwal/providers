@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 26.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A remote Model Context Protocol server published by Plotly that lets AI agents search and read the Dash documentation directly. Exposes list_pages, search_pages and get_page_as_markdown. Authenticated
@@ -221,9 +221,9 @@ description: Plotly is a Montreal-based data visualization and analytics company
 image: https://plotly.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at dash.plotly.com over HTTP requiring OAuth; 3 tools listed.
   name: Plotly MCP Server
-  slug: plotly-mcp-server
+  slug: plotly-dash-documentation
 modified: '2026-08-26'
 name: Plotly
 nav: Providers
@@ -243,12 +243,12 @@ rate_limits:
   slug: plotly-rate-limits
 scopes:
 - name: Plotly Scopes
-  scope_count: 0
+  scope_count: 4
   slug: plotly-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code/refresh_token/device_code/client_credentials
 score:
   band: developing
-  composite: 44.7
+  composite: 49.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -262,19 +262,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.7
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -305,7 +313,7 @@ tags:
 - Analytics
 - Data Apps
 - Business Intelligence
-- Open-Source
+- Open Source
 - Python
 - JavaScript
 - Charts

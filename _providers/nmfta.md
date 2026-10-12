@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Standards for Carrier APIs
@@ -193,7 +193,7 @@ overview: 'NMFTA publishes 9 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 6
 score:
   band: emerging
-  composite: 22.0
+  composite: 18.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -205,19 +205,25 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.8
     developer_ergonomics: 19.0
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 2.6
-  previous_composite: 22.0
+  previous_composite: 18.4
   provenance:
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -232,7 +238,6 @@ tags:
 - Freight
 - Full Truckload
 - LTL
-- Less-Than-Truckload
 - Logistics
 - NMFTA
 - OpenAPI

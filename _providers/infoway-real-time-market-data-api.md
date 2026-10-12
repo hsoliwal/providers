@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: wss://data.infoway.io/ws
@@ -210,14 +210,14 @@ description: 'Infoway is a real-time and historical financial market-data provid
 image: https://infoway.io/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 17 tools listed.
   name: Infoway Real-time Market Data API MCP Server
-  slug: infoway-real-time-market-data-api-mcp-server
+  slug: infoway
 modified: '2026-08-09'
 name: Infoway Real-time Market Data API
 nav: Providers
 network: true
-overview: 'Infoway Real-time Market Data API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Infoway WebSocket Streaming API, Common API, Crypto API, and 1 more. Tagged areas include stock-api, forex-api, crypto-api, commodities-api, and futures-api.
+overview: 'Infoway Real-time Market Data API publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Infoway WebSocket Streaming API, Common API, Crypto API, and 2 more. Tagged areas include stock-api, forex-api, crypto-api, commodities-api, and futures-api.
 
 
   The Infoway Real-time Market Data API catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -231,7 +231,7 @@ rate_limits:
   slug: infoway-real-time-market-data-api-rate-limits
 score:
   band: developing
-  composite: 46.9
+  composite: 45.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -243,11 +243,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 55.6
+    contract_quality: 51.4
     developer_ergonomics: 67.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 46.9
+  previous_composite: 45.1
   provenance:
     conformance: derived
     contracts:
@@ -262,9 +262,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -293,5 +293,6 @@ tags:
 - Financial Data
 - Fintech
 - Historical Data
+- Real-Time
 website: https://www.infoway.io/
 ---

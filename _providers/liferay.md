@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -62,6 +62,11 @@ collections:
   name: Liferay Roles API
   slug: open-liferay
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/liferay/refs/heads/main/capabilities/liferay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/liferay-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -110,10 +115,10 @@ modified: '2026-09-16'
 name: Liferay
 nav: Providers
 network: true
-overview: 'Liferay publishes 1 API on the [APIs.io](https://apis.io/) network: Roles API. Tagged areas include Open-Source, Digital Experience, DXP, Roles, and User.
+overview: 'Liferay publishes 1 API on the [APIs.io](https://apis.io/) network: Roles API. Tagged areas include Open Source, Digital Experience, DXP, Roles, and User.
 
 
-  Liferay''s developer surface includes authentication, engineering blog, and 6 more developer resources.'
+  Liferay''s developer surface includes authentication, engineering blog, and 7 more developer resources.'
 plans:
 - name: Liferay Plans Pricing
   plan_count: 3
@@ -125,9 +130,9 @@ rate_limits:
   slug: liferay-rate-limits
 score:
   band: emerging
-  composite: 25.4
+  composite: 24.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -137,11 +142,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 43.5
+    contract_quality: 39.2
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 25.4
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -149,8 +154,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -171,7 +182,7 @@ security:
   summary_line: security.txt · contact published
 slug: liferay
 tags:
-- Open-Source
+- Open Source
 - Digital Experience
 - DXP
 - Roles

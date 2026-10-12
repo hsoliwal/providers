@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OpenAI-compatible HTTP API for enterprise LLM inference across GLM, Qwen, MiniMax, DeepSeek and Kimi. Contract-gated — the base URL and credentials are issued per contract, and no OpenAPI definition i
@@ -54,14 +54,14 @@ modified: '2026-08-17'
 name: SteadyGateway
 nav: Providers
 network: true
-overview: 'SteadyGateway publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise AI gateway, LLM Inference, Model Routing, OpenAI-compatible API, and AI Infrastructure.
+overview: 'SteadyGateway publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise AI gateway, Inference, Model Routing, OpenAI-compatible API, and AI Infrastructure.
 
 
   SteadyGateway''s developer surface includes documentation, pricing, and 2 more developer resources.'
 random_paper: 18
 score:
   band: minimal
-  composite: 9.7
+  composite: 7.2
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -75,11 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 9.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -89,7 +95,7 @@ screenshot: https://raw.githubusercontent.com/api-evangelist/steadygateway/refs/
 slug: steadygateway
 tags:
 - Enterprise AI gateway
-- LLM Inference
+- Inference
 - Model Routing
 - OpenAI-compatible API
 - AI Infrastructure
@@ -100,6 +106,6 @@ tags:
 - Kimi
 - MiniMax
 - contract-only
-- agent-native
+- Agent-Native
 website: https://steadygateway.com
 ---

@@ -23,19 +23,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: HailoRT is Hailo's production runtime library for the Hailo-8, Hailo-10 and Hailo-15 device families. It is a host-side, user-space C/C++ library with a Python binding (pyHailoRT), a hailortcli comman
@@ -166,7 +166,7 @@ modified: '2026-08-22'
 name: Hailo
 nav: Providers
 network: true
-overview: 'Hailo publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine-Learning, Semiconductors, Edge Computing, and Computer-Vision.
+overview: 'Hailo publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Machine Learning, Semiconductors, Edge Computing, and Computer Vision.
 
 
   Hailo''s developer surface includes documentation, API reference, support, engineering blog, CLI, changelog, authentication, and 17 more developer resources.'
@@ -181,7 +181,7 @@ rate_limits:
   slug: hailo-rate-limits
 score:
   band: thin
-  composite: 33.1
+  composite: 33.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 32.0
@@ -193,22 +193,30 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 66.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 33.1
+  previous_composite: 33.3
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -226,10 +234,10 @@ security:
 slug: hailo
 tags:
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Semiconductors
 - Edge Computing
-- Computer-Vision
+- Computer Vision
 - Inference
 - Embedded Systems
 - Video Analytics

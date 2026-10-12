@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Medpace Holdings API provides access to platform services and data for enterprise integration and automation.
@@ -74,7 +74,7 @@ modified: '2026-04-19'
 name: Medpace Holdings
 nav: Providers
 network: true
-overview: 'Medpace Holdings publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Clinical Research, CRO, and Biotech.
+overview: 'Medpace Holdings publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Clinical Research, CRO, and Biotechnology.
 
 
   Medpace Holdings'' developer surface includes engineering blog and 4 more developer resources.'
@@ -89,7 +89,7 @@ rate_limits:
   slug: medpace-holdings-rate-limits
 score:
   band: minimal
-  composite: 10.3
+  composite: 10.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 39.0
@@ -103,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 10.3
+  previous_composite: 10.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -129,6 +129,6 @@ slug: medpace-holdings
 tags:
 - Clinical Research
 - CRO
-- Biotech
+- Biotechnology
 website: https://www.medpace.com
 ---

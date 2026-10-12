@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.evervault.com
@@ -140,6 +140,11 @@ collections:
   name: Evervault Webhooks API
   slug: open-evervault-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/evervault/refs/heads/main/capabilities/evervault-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/evervault-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/evervault/refs/heads/main/overlays/evervault-openapi-overlay.yaml
   title: ''
@@ -318,13 +323,13 @@ overview: 'Evervault publishes 4 APIs on the [APIs.io](https://apis.io/) network
   The Evervault catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Evervault''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 29 more developer resources.'
+  Evervault''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 30 more developer resources.'
 random_paper: 0
 score:
   band: strong
-  composite: 61.4
+  composite: 57.4
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -334,11 +339,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 62.9
+    contract_quality: 57.7
     developer_ergonomics: 76.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 61.4
+  previous_composite: 57.4
   provenance:
     conformance: first-party
     contracts:
@@ -359,9 +364,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

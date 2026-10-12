@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -81,6 +81,11 @@ collections:
   name: Google Looker API
   slug: open-openapi
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/google-looker/refs/heads/main/capabilities/google-looker-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-looker-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -166,13 +171,13 @@ modified: '2026-09-16'
 name: Google Looker
 nav: Providers
 network: true
-overview: 'Google Looker publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Looks API, and Users API. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Reporting.
+overview: 'Google Looker publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Looks API, Users API, and 1 more. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Reporting.
 
 
   The Google Looker catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Google Looker''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, release notes, and 10 more developer resources.'
+  Google Looker''s developer surface includes authentication, developer portal, getting-started guide, engineering blog, release notes, and 11 more developer resources.'
 plans:
 - name: Google Looker Plans Pricing
   plan_count: 4
@@ -206,9 +211,9 @@ rules:
   slug: google-looker-spectral-rules
 score:
   band: developing
-  composite: 44.9
+  composite: 45.6
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 48.5
     catalog_earned_first_party: 0.0
     catalog_gap: 66.5
@@ -218,11 +223,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 13.6
-    contract_quality: 56.5
+    contract_quality: 51.4
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 31.6
-  previous_composite: 44.9
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

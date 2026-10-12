@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Core PyTorch library for tensor computation and deep learning.
@@ -102,7 +102,7 @@ modified: '2026-04-28'
 name: PyTorch
 nav: Providers
 network: true
-overview: 'PyTorch publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Deep Learning, Machine-Learning, Neural Networks, and Open-Source.
+overview: 'PyTorch publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Deep Learning, Machine Learning, Neural Networks, and Open Source.
 
 
   PyTorch''s developer surface includes engineering blog, getting-started guide, and 7 more developer resources.'
@@ -117,7 +117,7 @@ rate_limits:
   slug: pytorch-rate-limits
 score:
   band: emerging
-  composite: 16.7
+  composite: 15.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 39.0
@@ -131,11 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 55.6
+    discoverability: 53.6
     operational_transparency: 10.5
-  previous_composite: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -151,9 +157,9 @@ slug: pytorch
 tags:
 - Artificial Intelligence
 - Deep Learning
-- Machine-Learning
+- Machine Learning
 - Neural Networks
-- Open-Source
+- Open Source
 - Python
 website: https://pytorch.org
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -149,9 +149,9 @@ description: Natoma is an enterprise Model Context Protocol (MCP) platform that 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/natoma.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Natoma is an enterprise MCP platform: it hosts managed and remote Model Context Protocol servers and exposes a catalog of 100+ verified MCP server connectors that AI clients (ChatGPT, Claude, Cursor, '
   name: Natoma MCP Server
-  slug: natoma-mcp-server
+  slug: natoma
 modified: '2026-07-20'
 name: Natoma
 nav: Providers
@@ -163,7 +163,7 @@ overview: 'Natoma is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 2
 score:
   band: thin
-  composite: 33.8
+  composite: 35.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -177,14 +177,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 33.8
+  previous_composite: 35.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

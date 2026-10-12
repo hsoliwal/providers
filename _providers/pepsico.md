@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -128,7 +128,7 @@ rate_limits:
   slug: pepsico-rate-limits
 score:
   band: emerging
-  composite: 25.1
+  composite: 22.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 39.0
@@ -140,11 +140,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 25.1
+  previous_composite: 22.9
   provenance:
     agentic_access: derived
     contracts:
@@ -152,8 +152,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,5 +182,6 @@ tags:
 - Retail
 - Supply Chain
 - Fortune 100
+- Food and Beverage
 website: https://www.pepsico.com
 ---

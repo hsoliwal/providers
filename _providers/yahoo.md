@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: The Fantasy Sports APIs provide URIs used to access fantasy sports data, supporting retrieval of Fantasy Football, Baseball, Basketball and Hockey data including game, league, team, player, roster and
@@ -210,7 +210,7 @@ modified: '2026-08-28'
 name: Yahoo
 nav: Providers
 network: true
-overview: 'Yahoo publishes 1 API on the [APIs.io](https://apis.io/) network: DSP Traffic API. Tagged areas include Advertising, Programmatic Advertising, DSP, Fantasy Sports, and Sports Data.
+overview: 'Yahoo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including DSP Traffic API, and 4 more. Tagged areas include Advertising, Programmatic Advertising, DSP, Fantasy Sports, and Sports Data.
 
 
   Yahoo''s developer surface includes documentation, getting-started guide, signup flow, support, engineering blog, authentication, changelog, and 24 more developer resources.'
@@ -241,12 +241,12 @@ rate_limits:
   slug: yahoo-rate-limits
 scopes:
 - name: Yahoo Scopes
-  scope_count: 0
+  scope_count: 4
   slug: yahoo-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: developing
-  composite: 39.5
+  composite: 42.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 55.0
@@ -260,14 +260,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 68.4
-  previous_composite: 39.5
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

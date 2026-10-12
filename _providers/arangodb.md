@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 146
   human_in_the_loop: 5
@@ -233,6 +233,11 @@ collections:
   slug: open-arangodb-views-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/capabilities/arangodb-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/arangodb-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/arangodb/refs/heads/main/overlays/arangodb-core-overlay.yaml
   title: ''
   type: Overlay
@@ -384,23 +389,23 @@ description: ArangoDB (now operating as Arango) is the company behind the open-s
 image: https://arango.ai/wp-content/uploads/2026/03/arango-home-social-horz-2026.03-compress.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: ArangoDB MCP Server
-  slug: arangodb-mcp-server
+  slug: arangodb
 modified: '2026-08-02'
 name: ArangoDB
 nav: Providers
 network: true
-overview: 'ArangoDB publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Administration API, Analyzers API, Authentication API, and 19 more. Tagged areas include Company, Database, Graph Database, Multi-Model Database, and NoSQL.
+overview: 'ArangoDB publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Administration API, Analyzers API, Authentication API, and 21 more. Tagged areas include Company, Database, Graph Database, Multi-Model Database, and NoSQL.
 
 
-  ArangoDB''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 25 more developer resources.'
+  ArangoDB''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 26 more developer resources.'
 random_paper: 16
 score:
   band: developing
-  composite: 47.2
+  composite: 46.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -410,11 +415,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 47.0
+    contract_quality: 42.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 47.2
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -425,8 +430,14 @@ score:
       total: 22
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

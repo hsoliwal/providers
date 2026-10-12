@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -106,14 +106,14 @@ modified: '2026-07-21'
 name: Unframe AI
 nav: Providers
 network: true
-overview: 'Unframe AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Enterprise AI, Agentic AI, and AI Agents.
+overview: 'Unframe AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Enterprise AI, AI Agents, and Workflow Automation.
 
 
   Unframe AI''s developer surface includes engineering blog, support, and 12 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 18.4
+  composite: 20.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -127,13 +127,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 18.4
+  previous_composite: 20.3
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -158,9 +168,8 @@ tags:
 - Company
 - Ai Ml
 - Enterprise AI
-- Agentic AI
 - AI Agents
-- Workflow-Automation
+- Workflow Automation
 - Voice Agents
 website: https://www.unframe.ai/
 ---

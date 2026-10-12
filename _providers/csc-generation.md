@@ -24,7 +24,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.1
-  scored_at: '2026-09-20'
+  score: 16.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Backcountry, a CSC Generation brand, publishes a Universal Commerce Protocol merchant profile at its own /.well-known/ucp declaring UCP 2026-01-23 with both REST and MCP transports for the shopping se
@@ -127,9 +127,9 @@ description: CSC Generation is an AI-native retail holding company that acquires
 image: https://www.cscgeneration.com/lovable-uploads/eccc3cb7-1376-4c88-a582-2a4ca479b43e.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: CSC Generation does not publish a corporate MCP server, but two of its portfolio brands advertise live Model Context Protocol endpoints through Universal Commerce Protocol (UCP) merchant profiles serv
   name: CSC Generation MCP Server
-  slug: csc-generation-mcp-server
+  slug: csc-generation-mcp-yml
 modified: '2026-08-01'
 name: CSC Generation
 nav: Providers
@@ -141,7 +141,7 @@ overview: 'CSC Generation publishes 2 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 18
 score:
   band: emerging
-  composite: 18.6
+  composite: 19.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -155,15 +155,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 18.6
+  previous_composite: 19.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

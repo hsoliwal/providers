@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 1
@@ -48,142 +48,142 @@ apis:
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_actions API from Middesk — 2 operation(s) for subpackage_actions.
-  name: Middesk subpackage_actions API
+  name: Middesk Subpackage Actions API
   slug: middesk-subpackage-actions-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_agents API from Middesk — 2 operation(s) for subpackage_agents.
-  name: Middesk subpackage_agents API
+  name: Middesk Subpackage Agents API
   slug: middesk-subpackage-agents-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_applications API from Middesk — 1 operation(s) for subpackage_applications.
-  name: Middesk subpackage_applications API
+  name: Middesk Subpackage Applications API
   slug: middesk-subpackage-applications-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_businessBatches API from Middesk — 3 operation(s) for subpackage_businessbatches.
-  name: Middesk subpackage_businessBatches API
+  name: Middesk Subpackage Business Batches API
   slug: middesk-subpackage-businessbatches-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_businesses API from Middesk — 3 operation(s) for subpackage_businesses.
-  name: Middesk subpackage_businesses API
+  name: Middesk Subpackage Businesses API
   slug: middesk-subpackage-businesses-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_companies API from Middesk — 1 operation(s) for subpackage_companies.
-  name: Middesk subpackage_companies API
+  name: Middesk Subpackage Companies API
   slug: middesk-subpackage-companies-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_connections API from Middesk — 1 operation(s) for subpackage_connections.
-  name: Middesk subpackage_connections API
+  name: Middesk Subpackage Connections API
   slug: middesk-subpackage-connections-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_documents API from Middesk — 3 operation(s) for subpackage_documents.
-  name: Middesk subpackage_documents API
+  name: Middesk Subpackage Documents API
   slug: middesk-subpackage-documents-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_identities API from Middesk — 1 operation(s) for subpackage_identities.
-  name: Middesk subpackage_identities API
+  name: Middesk Subpackage Identities API
   slug: middesk-subpackage-identities-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_informationRequests API from Middesk — 1 operation(s) for subpackage_informationrequests.
-  name: Middesk subpackage_informationRequests API
+  name: Middesk Subpackage Information Requests API
   slug: middesk-subpackage-informationrequests-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_jurisdictions API from Middesk — 2 operation(s) for subpackage_jurisdictions.
-  name: Middesk subpackage_jurisdictions API
+  name: Middesk Subpackage Jurisdictions API
   slug: middesk-subpackage-jurisdictions-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_liens API from Middesk — 2 operation(s) for subpackage_liens.
-  name: Middesk subpackage_liens API
+  name: Middesk Subpackage Liens API
   slug: middesk-subpackage-liens-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_lienTerminations API from Middesk — 1 operation(s) for subpackage_lienterminations.
-  name: Middesk subpackage_lienTerminations API
+  name: Middesk Subpackage Lien Terminations API
   slug: middesk-subpackage-lienterminations-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_mail API from Middesk — 2 operation(s) for subpackage_mail.
-  name: Middesk subpackage_mail API
+  name: Middesk Subpackage Mail API
   slug: middesk-subpackage-mail-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_monitoring API from Middesk — 2 operation(s) for subpackage_monitoring.
-  name: Middesk subpackage_monitoring API
+  name: Middesk Subpackage Monitoring API
   slug: middesk-subpackage-monitoring-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_orders API from Middesk — 3 operation(s) for subpackage_orders.
-  name: Middesk subpackage_orders API
+  name: Middesk Subpackage Orders API
   slug: middesk-subpackage-orders-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_policyResults API from Middesk — 1 operation(s) for subpackage_policyresults.
-  name: Middesk subpackage_policyResults API
+  name: Middesk Subpackage Policy Results API
   slug: middesk-subpackage-policyresults-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_prefill API from Middesk — 1 operation(s) for subpackage_prefill.
-  name: Middesk subpackage_prefill API
+  name: Middesk Subpackage Prefill API
   slug: middesk-subpackage-prefill-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_questions API from Middesk — 1 operation(s) for subpackage_questions.
-  name: Middesk subpackage_questions API
+  name: Middesk Subpackage Questions API
   slug: middesk-subpackage-questions-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_registrationRequests API from Middesk — 3 operation(s) for subpackage_registrationrequests.
-  name: Middesk subpackage_registrationRequests API
+  name: Middesk Subpackage Registration Requests API
   slug: middesk-subpackage-registrationrequests-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_reviews API from Middesk — 1 operation(s) for subpackage_reviews.
-  name: Middesk subpackage_reviews API
+  name: Middesk Subpackage Reviews API
   slug: middesk-subpackage-reviews-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_runs API from Middesk — 4 operation(s) for subpackage_runs.
-  name: Middesk subpackage_runs API
+  name: Middesk Subpackage Runs API
   slug: middesk-subpackage-runs-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_signals API from Middesk — 2 operation(s) for subpackage_signals.
-  name: Middesk subpackage_signals API
+  name: Middesk Subpackage Signals API
   slug: middesk-subpackage-signals-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_threads API from Middesk — 2 operation(s) for subpackage_threads.
-  name: Middesk subpackage_threads API
+  name: Middesk Subpackage Threads API
   slug: middesk-subpackage-threads-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_timeline API from Middesk — 1 operation(s) for subpackage_timeline.
-  name: Middesk subpackage_timeline API
+  name: Middesk Subpackage Timeline API
   slug: middesk-subpackage-timeline-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_tinMatch API from Middesk — 1 operation(s) for subpackage_tinmatch.
-  name: Middesk subpackage_tinMatch API
+  name: Middesk Subpackage Tin Match API
   slug: middesk-subpackage-tinmatch-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_webhooks API from Middesk — 3 operation(s) for subpackage_webhooks.
-  name: Middesk subpackage_webhooks API
+  name: Middesk Subpackage Webhooks API
   slug: middesk-subpackage-webhooks-api
 - baseURL: https://api.middesk.com/v1/
   baseurl_source: declared
   description: The subpackage_websites API from Middesk — 1 operation(s) for subpackage_websites.
-  name: Middesk subpackage_websites API
+  name: Middesk Subpackage Websites API
   slug: middesk-subpackage-websites-api
 artifact_total: 88
 collections:
@@ -433,7 +433,7 @@ modified: 2026-06-13
 name: Middesk
 nav: Providers
 network: true
-overview: 'Middesk publishes 28 APIs on the [APIs.io](https://apis.io/) network, including subpackage_actions API, subpackage_agents API, subpackage_applications API, and 25 more. Tagged areas include Business Verification, KYB, Know Your Business, Identity Verification, and Compliance.
+overview: 'Middesk publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Subpackage Actions API, Subpackage Agents API, Subpackage Applications API, and 25 more. Tagged areas include Business Verification, KYB, Identity Verification, Compliance, and EIN Validation.
 
 
   The Middesk catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -458,23 +458,23 @@ rules:
   slug: middesk-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 43.1
+  composite: 41.1
   coverage:
     artifact_dirs: 16
-    catalog_earned: 66.3
+    catalog_earned: 65.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.8
+    catalog_gap: 49.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 9.8
-    contract_quality: 58.1
+    contract_quality: 53.1
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 43.1
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     contracts:
@@ -482,8 +482,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 28
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -502,7 +508,6 @@ slug: middesk
 tags:
 - Business Verification
 - KYB
-- Know Your Business
 - Identity Verification
 - Compliance
 - EIN Validation

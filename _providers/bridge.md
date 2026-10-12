@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.6
-  scored_at: '2026-09-20'
+  score: 36.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 0
@@ -249,6 +249,11 @@ collections:
   slug: open-bridge-webhooks-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bridge/refs/heads/main/capabilities/bridge-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bridge-capability-edges.yml
+- group: other
   title: ''
   type: ParentCompany
   url: https://apis.io/providers/stripe/
@@ -415,7 +420,7 @@ overview: 'Bridge publishes 24 APIs on the [APIs.io](https://apis.io/) network, 
   The Bridge catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bridge''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 26 more developer resources.'
+  Bridge''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 27 more developer resources.'
 random_paper: 5
 scopes:
 - name: Bridge Scopes
@@ -424,9 +429,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 50.0
+  composite: 46.8
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -436,11 +441,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 65.7
+    contract_quality: 60.3
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 50.0
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -456,9 +461,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

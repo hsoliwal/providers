@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 29.7
-  scored_at: '2026-09-20'
+  score: 27.5
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.happycabbage.ai
@@ -239,7 +239,7 @@ modified: '2026-09-16'
 name: Happy Cabbage Analytics
 nav: Providers
 network: true
-overview: 'Happy Cabbage Analytics publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Blockout Dates API, Daily Sales Metadata API, Identity API, and 11 more. Tagged areas include Cannabis, Retail, Inventory Management, Analytics, and Purchasing.
+overview: 'Happy Cabbage Analytics publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Blockout Dates API, Daily Sales Metadata API, Identity API, and 11 more. Tagged areas include Cannabis, Retail, Inventory, Analytics, and Purchasing.
 
 
   Happy Cabbage Analytics'' developer surface includes documentation, API reference, engineering blog, support, signup flow, changelog, authentication, and 19 more developer resources.'
@@ -254,7 +254,7 @@ rate_limits:
   slug: happy-cabbage-analytics-rate-limits
 score:
   band: thin
-  composite: 36.0
+  composite: 35.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -266,16 +266,18 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 58.6
+    contract_quality: 53.1
     developer_ergonomics: 37.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.0
+  previous_composite: 35.1
   provenance:
     conformance: derived
     contracts:
@@ -285,8 +287,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -305,13 +313,13 @@ slug: happy-cabbage-analytics
 tags:
 - Cannabis
 - Retail
-- Inventory Management
+- Inventory
 - Analytics
 - Purchasing
 - Point-of-Sale
 - Wholesale
 - Demand Forecasting
 - Supply Chain
-- agent-native
+- Agent-Native
 website: https://www.happycabbage.io/
 ---

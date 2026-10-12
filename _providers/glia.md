@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The Glia platform REST API. Serves operators, sites, engagements, queues and reporting resources over api.glia.com (US) and api.glia.eu (EU). Authentication is a bearer token minted from an API key id
@@ -211,9 +211,9 @@ description: Glia (formerly SaleMove) is a digital customer service and applied-
 image: https://cdn.prod.website-files.com/680f1550811d9719bdbcf21b/680f7b6051475b02b05d75c6_logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 23 tools listed.
   name: Glia MCP Server
-  slug: glia-mcp-server
+  slug: glia-functions-cli
 modified: '2026-08-04'
 name: Glia
 nav: Providers
@@ -225,7 +225,7 @@ overview: 'Glia publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 17
 score:
   band: developing
-  composite: 41.0
+  composite: 39.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -239,9 +239,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 41.0
+  previous_composite: 39.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -256,9 +256,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -289,7 +289,7 @@ tags:
 - Contact Center
 - Banking
 - Credit Union
-- Financial-Services
+- Financial Services
 - Conversational AI
 - Voice
 - Co-Browsing

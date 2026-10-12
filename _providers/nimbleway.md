@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -302,7 +302,7 @@ layout: provider
 mcp_servers:
 - description: Official Nimble MCP Server. Exposes Nimble's full web data platform (search, extract, map, crawl, structured-data agents) as MCP tools to any compatible AI client. Listed on Azure MCP Center, Databric
   name: Nimbleway MCP Server
-  slug: nimbleway-mcp-server
+  slug: nimble-mcp-server
 modified: '2026-07-20'
 name: Nimbleway
 nav: Providers
@@ -318,7 +318,7 @@ rate_limits:
   slug: nimbleway-rate-limits
 score:
   band: strong
-  composite: 55.1
+  composite: 55.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -330,11 +330,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
-  previous_composite: 55.1
+  previous_composite: 55.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -345,8 +345,20 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

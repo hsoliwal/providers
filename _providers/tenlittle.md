@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -91,9 +91,9 @@ description: Ten Little is a direct-to-consumer children's footwear and essentia
 image: https://tenlittle.com/cdn/shop/t/47/assets/social_preview_1024x.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shopify.com over HTTP.
   name: Ten Little MCP Server
-  slug: ten-little-mcp-server
+  slug: shopify-customer-account-mcp
 modified: '2026-07-21'
 name: Ten Little
 nav: Providers
@@ -110,7 +110,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 14.3
+  composite: 16.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -124,13 +124,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 14.3
+  previous_composite: 16.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

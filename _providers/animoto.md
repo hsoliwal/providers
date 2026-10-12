@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Animoto API is a partner-facing RESTful web service for programmatically directing and rendering videos from images, video clips, music and text. The host is live and authenticating (HTTP Basic, r
@@ -173,7 +173,7 @@ rate_limits:
   slug: animoto-rate-limits
 score:
   band: thin
-  composite: 32.6
+  composite: 34.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 44.0
@@ -187,19 +187,31 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.6
+  previous_composite: 34.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -223,7 +235,7 @@ tags:
 - Video Editing
 - Slideshow
 - Marketing
-- Social-Media
+- Social Media
 - Content Creation
 - Software-as-a-Service
 website: https://animoto.com/

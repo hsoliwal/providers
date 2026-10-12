@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted, remote Model Context Protocol server that lets an AI assistant create finished video and image ads from a plain-language brief. Streamable HTTP transport with browser-based OAuth 2.0 (PKCE + d
@@ -139,7 +139,7 @@ layout: provider
 mcp_servers:
 - description: Notch turns a product page and plain-language brief into a finished video or image ad. Connect it over MCP to create, review, and edit ads from your AI chat. Ads created over MCP land in the user's No
   name: Sesame Labs MCP Server
-  slug: sesame-labs-mcp-server
+  slug: notch
 modified: '2026-08-13'
 name: Sesame Labs
 nav: Providers
@@ -159,7 +159,7 @@ rate_limits:
   slug: sesame-labs-rate-limits
 score:
   band: thin
-  composite: 32.2
+  composite: 33.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -173,14 +173,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 32.2
+  previous_composite: 33.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -122,9 +122,9 @@ description: 'Chill.com is a natural-supplements and wellness marketplace — a 
 image: https://chill.com/cdn/shop/files/A_Marketplace_to_Help_You_Beat_Stress_and_Live_Better._Simple.png?v=1750163758
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at chill.com over HTTP; 5 tools listed.
   name: Chill MCP Server
-  slug: chill-mcp-server
+  slug: chill-ucp-shopping
 modified: '2026-07-18'
 name: Chill
 nav: Providers
@@ -141,7 +141,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 24.2
+  composite: 22.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -155,21 +155,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 24.2
+  previous_composite: 22.3
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

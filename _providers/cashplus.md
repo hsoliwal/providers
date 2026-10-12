@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -47,11 +47,6 @@ apis:
 - description: First-party partner API for authentication and registration against the Cashplus/Zempler developer platform, used to obtain credentials and tokens before calling the proprietary Accounts, Payments, Ap
   name: Cashplus Identity API
   slug: cashplus-identity-api
-- baseURL: /open-banking/v3.1/aisp
-  baseurl_source: spec
-  description: First-party partner API to retrieve real-time account details and current balance for Cashplus/Zempler business and personal current accounts, for reconciliation and financial analysis. Requires a dir
-  name: Cashplus Accounts API
-  slug: cashplus-accounts-api
 - description: First-party partner API to create applications that open new Cashplus/Zempler current accounts programmatically, enabling embedded account onboarding within partner platforms. Requires a direct commer
   name: Cashplus Applications API
   slug: cashplus-applications-api
@@ -63,23 +58,13 @@ apis:
   slug: cashplus-payments-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
-  description: First-party partner API to query the catalogue of Cashplus/Zempler banking products. Requires a direct commercial relationship with the bank.
-  name: Cashplus Products API
-  slug: cashplus-products-api
-- baseURL: /open-banking/v3.1/aisp
-  baseurl_source: spec
-  description: First-party partner API to search and filter transactions on Cashplus/Zempler accounts, for reconciliation and reporting. Requires a direct commercial relationship with the bank.
-  name: Cashplus Transactions API
-  slug: cashplus-transactions-api
-- baseURL: /open-banking/v3.1/aisp
-  baseurl_source: spec
   description: The Account Access API from Cashplus Bank — 2 operation(s) for account access.
   name: Cashplus Bank Account Access API
   slug: cashplus-account-access-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
-  description: The Accounts API from Cashplus Bank — 2 operation(s) for accounts.
-  name: Cashplus Bank Accounts API
+  description: First-party partner API to retrieve real-time account details and current balance for Cashplus/Zempler business and personal current accounts, for reconciliation and financial analysis. Requires a dir
+  name: Cashplus Accounts API
   slug: cashplus-accounts-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
@@ -153,8 +138,8 @@ apis:
   slug: cashplus-payment-details-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
-  description: The Products API from Cashplus Bank — 2 operation(s) for products.
-  name: Cashplus Bank Products API
+  description: First-party partner API to query the catalogue of Cashplus/Zempler banking products. Requires a direct commercial relationship with the bank.
+  name: Cashplus Products API
   slug: cashplus-products-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
@@ -173,10 +158,10 @@ apis:
   slug: cashplus-statements-api
 - baseURL: /open-banking/v3.1/aisp
   baseurl_source: spec
-  description: The Transactions API from Cashplus Bank — 3 operation(s) for transactions.
-  name: Cashplus Bank Transactions API
+  description: First-party partner API to search and filter transactions on Cashplus/Zempler accounts, for reconciliation and reporting. Requires a direct commercial relationship with the bank.
+  name: Cashplus Transactions API
   slug: cashplus-transactions-api
-artifact_total: 35
+artifact_total: 32
 collections:
 - collection_type: open
   name: Account and Transaction API Specification
@@ -344,7 +329,7 @@ modified: '2026-09-16'
 name: Cashplus Bank
 nav: Providers
 network: true
-overview: 'Cashplus Bank publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Cashplus Accounts API, Cashplus Products API, Cashplus Transactions API, and 21 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Cashplus Bank publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Account Access API, Cashplus Accounts API, Balances API, and 22 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Cashplus Bank''s developer surface includes authentication, documentation, engineering blog, legal docs, support, and 27 more developer resources.'
@@ -355,8 +340,8 @@ scopes:
   slug: cashplus-scopes
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 41.0
+  band: thin
+  composite: 37.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -368,9 +353,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 49.3
+    contract_quality: 44.4
     developer_ergonomics: 47.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -380,7 +365,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 41.0
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -400,9 +385,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 70.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -419,7 +404,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: cashplus
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

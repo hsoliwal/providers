@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Air Products and Chemicals provides industrial, specialty, and process gases including hydrogen, helium, nitrogen, oxygen, argon, and carbon dioxide. The company also offers gas generation equipment, '
@@ -244,7 +244,7 @@ rules:
   slug: air-products-and-chemicals-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.5
+  composite: 28.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 50.3
@@ -258,9 +258,14 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
-  previous_composite: 29.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 28.2
   provenance:
     conformance: first-party
   regulatory:
@@ -268,9 +273,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

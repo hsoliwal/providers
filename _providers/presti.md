@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/presti/refs/heads/main/security/presti-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Presti (operated by Teker AI SAS, France) is an AI agent platform for automated product image and video production at scale. eCommerce teams, retailers, and brands write plain-language briefs — attaching product images, packshots, CSVs, or inspiration URLs — and Presti generates studio-quality product staging, 360-degree spins, image-to-video, close-ups, variants, dimension overlays, and infographics, then routes them through a collaborative review-and-approval workspace. It orchestrates multiple third-party generative models (Google Gemini and Veo, OpenAI GPT Image, Flux, Kling, Seedance, Grok, Photoroom) and encodes visual identity via reusable Brand Skills. API access is offered on the Enterprise plan but is not publicly documented.
 image: https://cdn.prod.website-files.com/69a91c9a68fd25dc91b9ed09/69aec8ad1535208895c1e43c_Generated%20Image%20February%2002%2C%202026%20-%2010_25AM%202%20(1).avif
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.presti.ai over HTTP.
+  name: Presti MCP Server
+  slug: presti
 modified: '2026-07-20'
 name: Presti
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Presti is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 3
 score:
   band: minimal
-  composite: 10.7
+  composite: 9.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.7
+  previous_composite: 9.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -116,7 +126,7 @@ tags:
 - Generative AI
 - E-Commerce
 - Product Photography
-- Image-Generation
+- Image Generation
 - Video Generation
 - Retail
 website: https://presti.ai/

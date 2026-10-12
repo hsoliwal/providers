@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OAuth 2.0 authorization server that fronts the SiFive Cloud Services (SCS) portal at scs.sifive.com, where SiFive Core Designer and the rest of the SiFive development tooling are delivered. It pub
@@ -187,7 +187,7 @@ layout: provider
 mcp_servers:
 - description: SiFive Cloud Services advertises "mcp:read" and "mcp:write" in the scopes_supported array of its live RFC 8414 OAuth 2.0 Authorization Server Metadata. That is the provider's own machine-readable stat
   name: SiFive MCP Server
-  slug: sifive-mcp-server
+  slug: sifive-cloud-services
 modified: '2026-08-05'
 name: SiFive
 nav: Providers
@@ -204,7 +204,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.0
+  composite: 33.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -218,14 +218,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 13.2
-  previous_composite: 30.0
+  previous_composite: 33.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

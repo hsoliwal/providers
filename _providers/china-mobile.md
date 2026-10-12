@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -252,7 +252,7 @@ modified: '2026-07-25'
 name: China Mobile
 nav: Providers
 network: true
-overview: 'China Mobile publishes 3 APIs on the [APIs.io](https://apis.io/) network: Application Development API, Device Management API, and Voice Call Service API. Tagged areas include Telecommunications, China, Mobile Network Operator, Network APIs, and CAMARA.
+overview: 'China Mobile publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Application Development API, Device Management API, Voice Call Service API, and 4 more. Tagged areas include Telecommunications, China, Mobile Network Operator, Network APIs, and CAMARA.
 
 
   The China Mobile catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
@@ -261,8 +261,8 @@ overview: 'China Mobile publishes 3 APIs on the [APIs.io](https://apis.io/) netw
   China Mobile''s developer surface includes developer portal, documentation, API reference, getting-started guide, support, pricing, signup flow, and 27 more developer resources.'
 random_paper: 4
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 32.0
@@ -276,7 +276,7 @@ score:
     contract_governance: 18.2
     contract_quality: 22.0
     developer_ergonomics: 70.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -285,7 +285,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 41.2
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -301,9 +301,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

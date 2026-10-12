@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Client-facing REST API for PremiaLab's portfolio analytics, quantitative strategy database, and risk reporting platform. Protected by OAuth2/OpenID Connect; access is provisioned for institutional cli
@@ -90,7 +90,7 @@ modified: '2026-07-20'
 name: PremiaLab
 nav: Providers
 network: true
-overview: 'PremiaLab publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Investment Management, and Risk Analytics.
+overview: 'PremiaLab publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Investment Management, and Risk Analytics.
 
 
   PremiaLab''s developer surface includes authentication, engineering blog, support, and 6 more developer resources.'
@@ -102,7 +102,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: emerging
-  composite: 14.9
+  composite: 16.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -116,11 +116,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -139,7 +145,7 @@ security:
 slug: premialab
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Investment Management
 - Risk Analytics

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -183,7 +183,7 @@ modified: '2026-05-19'
 name: Quandl (Nasdaq Data Link)
 nav: Providers
 network: true
-overview: 'Quandl (Nasdaq Data Link) publishes 3 APIs on the [APIs.io](https://apis.io/) network: Databases API, Datasets API, and Tables API. Tagged areas include Finance, Market Data, Economic Data, Time Series, and Streaming.
+overview: 'Quandl (Nasdaq Data Link) publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Databases API, Datasets API, Tables API, and 2 more. Tagged areas include Finance, Market Data, Economic Data, Time Series, and Streaming.
 
 
   The Quandl (Nasdaq Data Link) catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -212,7 +212,7 @@ rules:
   slug: quandl-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 39.0
+  composite: 37.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 50.3
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 9.8
-    contract_quality: 61.2
+    contract_quality: 55.6
     developer_ergonomics: 60.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 39.0
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -241,9 +241,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -83,7 +83,7 @@ overview: 'Clinc is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 15
 score:
   band: minimal
-  composite: 3.6
+  composite: 4.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -97,17 +97,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 10.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 3.6
+  previous_composite: 4.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -120,8 +120,8 @@ tags:
 - Natural Language Processing
 - Virtual Assistant
 - Banking
-- Financial-Services
+- Financial Services
 - Chatbots
-- Machine-Learning
+- Machine Learning
 website: https://clinc.com/
 ---

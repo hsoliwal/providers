@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Bearer-authenticated REST/JSON API for listing brands and retrieving full brand detail including color palettes, website, social links, and metadata.
@@ -35,7 +35,7 @@ apis:
 - description: Hosted streamable-HTTP MCP server exposing read-only brand tools, account tools, resources, and prompts. Auth via OAuth 2.1 or Bearer secret key. Registry name io.motomarks/mcp.
   name: MCP Server
   slug: mcp-server
-artifact_total: 11
+artifact_total: 10
 common:
 - group: company
   title: ''
@@ -151,10 +151,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Motomarks MCP Server
-  slug: motomarks-mcp-server
-- description: Official hosted Model Context Protocol server for the Motomarks car-logo API and image CDN. Streamable-HTTP transport at https://motomarks.io/api/mcp, MCP Registry name io.motomarks/mcp. Anonymous ses
-  name: Motomarks MCP Server
-  slug: motomarks-mcp-server-2
+  slug: mcp
 modified: '2026-09-09'
 name: Motomarks
 nav: Providers
@@ -178,8 +175,8 @@ scopes:
   slug: motomarks-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 38.2
+  band: developing
+  composite: 41.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 64.0
@@ -193,15 +190,21 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 60.5
-  previous_composite: 38.2
+  previous_composite: 41.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -230,7 +233,7 @@ tags:
 - Image
 - CDN
 - Developer Tools
-- agent-native
+- Agent-Native
 - MCP
 - Reference Data
 website: https://motomarks.io

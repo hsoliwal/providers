@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -80,7 +80,7 @@ apis:
   description: Event subscription and notification management
   name: SignNow Webhooks API
   slug: signnow-webhooks-api
-artifact_total: 37
+artifact_total: 38
 collections:
 - collection_type: postman
   name: SignNow REST Authentication API
@@ -131,6 +131,11 @@ collections:
   name: SignNow REST API
   slug: open-signnow
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/signnow/refs/heads/main/capabilities/signnow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/signnow-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -230,17 +235,20 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp-server.signnow.com over HTTP.
+  name: SignNow MCP Server
+  slug: signnow
 modified: '2026-05-19'
 name: SignNow
 nav: Providers
 network: true
-overview: 'SignNow publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Documents API, Envelopes API, and 4 more. Tagged areas include E-Signature, Document-Management, Electronic Signature, and Workflow-Automation.
+overview: 'SignNow publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Documents API, Envelopes API, and 4 more. Tagged areas include E-Signature, Document Management, Electronic Signature, and Workflow Automation.
 
 
   The SignNow catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SignNow''s developer surface includes authentication, documentation, release notes, pricing, engineering blog, and 11 more developer resources.'
+  SignNow''s developer surface includes authentication, documentation, release notes, pricing, engineering blog, and 12 more developer resources.'
 plans:
 - name: Signnow Plans Pricing
   plan_count: 3
@@ -274,9 +282,9 @@ rules:
   slug: signnow-rules
 score:
   band: developing
-  composite: 43.1
+  composite: 42.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 53.5
     catalog_earned_first_party: 0.0
     catalog_gap: 61.5
@@ -286,11 +294,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
-    contract_quality: 60.1
+    contract_quality: 54.6
     developer_ergonomics: 45.2
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 36.8
-  previous_composite: 43.1
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     contracts:
@@ -299,8 +307,14 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,8 +332,8 @@ security:
 slug: signnow
 tags:
 - E-Signature
-- Document-Management
+- Document Management
 - Electronic Signature
-- Workflow-Automation
+- Workflow Automation
 website: https://www.signnow.com/
 ---

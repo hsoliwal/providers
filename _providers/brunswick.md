@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -70,13 +70,13 @@ description: 'Brunswick Corporation is a global leader in marine recreation and 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brunswick.png
 layout: provider
 modified: '2026-04-21'
-name: Brunswick Corporation
+name: Brunswick
 nav: Providers
 network: true
-overview: 'Brunswick Corporation is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Boat Manufacturing, Boating, Connectivity, Electrification, and Marine.
+overview: 'Brunswick is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Boat Manufacturing, Boating, Connectivity, Electrification, and Marine.
 
 
-  Brunswick Corporation''s developer surface includes engineering blog and 6 more developer resources.'
+  Brunswick''s developer surface includes engineering blog and 6 more developer resources.'
 press:
 - date: ''
   title: Brunswick Corporation Named to Newsweek's Most Trustworthy Companies in America 2026 List for Fourth Consecutive Year
@@ -105,7 +105,7 @@ press:
 random_paper: 16
 score:
   band: minimal
-  composite: 9.7
+  composite: 9.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -119,16 +119,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

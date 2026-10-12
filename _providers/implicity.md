@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Implicity markets a "comprehensive API and integration framework for seamless data exchange with core hospital systems" and bidirectional EHR integration to hospital IT teams. The API host api.implici
@@ -162,7 +162,7 @@ rate_limits:
   slug: implicity-rate-limits
 score:
   band: emerging
-  composite: 25.5
+  composite: 23.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -176,7 +176,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -186,7 +186,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 25.5
+  previous_composite: 23.9
   provenance:
     conformance: first-party
   regulatory:
@@ -200,9 +200,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

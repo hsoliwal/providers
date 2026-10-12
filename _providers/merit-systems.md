@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.2
-  scored_at: '2026-09-20'
+  score: 25.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -242,9 +242,9 @@ description: 'Merit Systems builds the infrastructure for open agentic commerce 
 image: https://agentcash.dev/logo-light-striped.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at x402scan.com.
   name: Merit Systems MCP Server
-  slug: merit-systems-mcp-server
+  slug: merit-systems-mcp-yml
 modified: '2026-07-20'
 name: Merit Systems
 nav: Providers
@@ -256,7 +256,7 @@ overview: 'Merit Systems publishes 6 APIs on the [APIs.io](https://apis.io/) net
 random_paper: 18
 score:
   band: developing
-  composite: 47.4
+  composite: 45.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -268,11 +268,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 39.5
+    contract_quality: 36.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 47.4
+  previous_composite: 45.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -288,9 +288,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -315,7 +315,8 @@ tags:
 - MCP
 - Stablecoins
 - API Discovery
-- Open-Source
+- Open Source
 - Developer Tools
+- Fintech
 website: https://merit.systems
 ---

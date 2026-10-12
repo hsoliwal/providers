@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -95,6 +95,11 @@ collections:
   name: api-partners Applicants Webhook Subscriptions API
   slug: open-uncapped-webhook-subscriptions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/uncapped/refs/heads/main/capabilities/uncapped-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/uncapped-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/uncapped/refs/heads/main/overlays/uncapped-partners-overlay.yaml
   title: ''
@@ -212,13 +217,13 @@ overview: 'Uncapped publishes 5 APIs on the [APIs.io](https://apis.io/) network,
   The Uncapped catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Uncapped''s developer surface includes authentication, documentation, getting-started guide, API reference, changelog, sandbox, and 16 more developer resources.'
+  Uncapped''s developer surface includes authentication, documentation, getting-started guide, API reference, changelog, sandbox, and 17 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 31.9
+  composite: 30.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -228,11 +233,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 66.3
+    contract_quality: 60.8
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 31.9
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -243,8 +248,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

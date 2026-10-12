@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Elysium Health's storefront implements the Universal Commerce Protocol (UCP) for agent-driven commerce, discoverable at https://www.elysiumhealth.com/.well-known/ucp. The merchant profile advertises t
@@ -167,9 +167,9 @@ description: Elysium Health is a New York-based consumer longevity and healthspa
 image: https://www.elysiumhealth.com/cdn/shop/files/share_image_a1a0fd7d-58c0-4fe1-9193-9ca03a2dfcae.png?v=1629386234
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.elysiumhealth.com over HTTP; 5 tools listed.
   name: Elysium Health MCP Server
-  slug: elysium-health-mcp-server
+  slug: elysium-health-ucp-shopping
 modified: '2026-07-20'
 name: Elysium Health
 nav: Providers
@@ -186,7 +186,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.0
+  composite: 32.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -200,26 +200,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.0
+  previous_composite: 32.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

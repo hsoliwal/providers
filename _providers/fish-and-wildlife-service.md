@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Environmental Conservation Online System (ECOS) is the USFWS portal for threatened and endangered species data, critical habitat designations, recovery plans, and Section 7 consultations. ECOS exp
@@ -89,7 +89,7 @@ modified: '2026-07-25'
 name: U.S. Fish and Wildlife Service
 nav: Providers
 network: true
-overview: U.S. Fish and Wildlife Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Conservation, Endangered Species, Federal-Government, Fisheries, and Wildlife.
+overview: U.S. Fish and Wildlife Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Conservation, Endangered Species, Federal Government, Fisheries, and Wildlife.
 plans:
 - name: Fish And Wildlife Service Plans Pricing
   plan_count: 3
@@ -100,8 +100,8 @@ rate_limits:
   name: Fish And Wildlife Service Rate Limits
   slug: fish-and-wildlife-service-rate-limits
 score:
-  band: minimal
-  composite: 10.8
+  band: emerging
+  composite: 11.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -115,17 +115,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 10.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 11.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -141,7 +146,7 @@ slug: fish-and-wildlife-service
 tags:
 - Conservation
 - Endangered Species
-- Federal-Government
+- Federal Government
 - Fisheries
 - Wildlife
 website: https://www.fws.gov

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'RESTful API (v3) for managing assets and retrieving attack-surface and scan data — surface-monitoring domains and IPs, IP addresses, technologies, ports, breaches, and cloud connectors. Authenticates '
@@ -176,9 +176,9 @@ description: Detectify is an External Attack Surface Management (EASM) and Dynam
 image: https://d35ayjp87i0qx4.cloudfront.net/detectify_global.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: detectify MCP Server
-  slug: detectify-mcp-server
+  slug: detectify
 modified: '2026-07-18'
 name: detectify
 nav: Providers
@@ -193,7 +193,7 @@ overview: 'detectify publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 15
 score:
   band: developing
-  composite: 40.8
+  composite: 41.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -205,16 +205,26 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 40.8
+  previous_composite: 41.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

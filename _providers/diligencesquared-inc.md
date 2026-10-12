@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/diligencesquared-inc/refs/heads/main/security/diligencesquared-inc-domain-security.yml
@@ -77,18 +77,22 @@ created: '2026-07-17'
 description: DiligenceSquared is an AI-powered commercial due diligence and market research platform serving private equity firms, credit investors, and corporate clients. It deploys AI voice agents to run hundreds of simultaneous investor-grade expert interviews, then organizes the findings into structured, fully source-traceable market intelligence for investment decision-making. Backed by Y Combinator, the company operates a customer web application at app.diligencesquared.com and publishes a Vanta-hosted trust center. As of this enrichment pass it exposes no public developer API, OpenAPI, SDK, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/diligencesquared-inc.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at platform.diligencesquared.com over HTTP.
+  name: Diligencesquared MCP Server
+  slug: diligencesquared-inc
 modified: '2026-07-18'
-name: Diligencesquared Inc
+name: Diligencesquared
 nav: Providers
 network: true
-overview: 'Diligencesquared Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Due Diligence, Market Research, Private Equity, and Artificial Intelligence.
+overview: 'Diligencesquared is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Due Diligence, Market Research, Private Equity, and Artificial Intelligence.
 
 
-  Diligencesquared Inc''s developer surface includes signup flow, support, and 7 more developer resources.'
+  Diligencesquared''s developer surface includes signup flow, support, and 7 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 10.5
+  composite: 10.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,13 +106,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 10.5
+  previous_composite: 10.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

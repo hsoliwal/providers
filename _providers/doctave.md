@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -86,6 +86,11 @@ collections:
   name: Doctave Deployments Sites API
   slug: open-doctave-sites-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/capabilities/doctave-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/doctave-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/doctave/refs/heads/main/agentic-access/doctave-agentic-access.yml
   title: ''
@@ -155,7 +160,7 @@ overview: 'Doctave publishes 4 APIs on the [APIs.io](https://apis.io/) network, 
   The Doctave catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Doctave''s developer surface includes authentication, documentation, engineering blog, pricing, and 5 more developer resources.'
+  Doctave''s developer surface includes authentication, documentation, engineering blog, pricing, and 6 more developer resources.'
 plans:
 - name: Doctave Plans Pricing
   plan_count: 3
@@ -178,9 +183,9 @@ rules:
   slug: doctave-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 32.5
+  composite: 31.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 47.3
     catalog_earned_first_party: 0.0
     catalog_gap: 67.8
@@ -190,11 +195,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 62.6
+    contract_quality: 57.2
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 32.5
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +207,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/silq/refs/heads/main/security/silq-domain-security.yml
@@ -70,6 +70,10 @@ created: '2026-07-17'
 description: Silq (OneSilq) is a digital freight forwarder delivering fast, transparent global shipping and supply-chain services. Offerings span ocean freight (full container load, less-than-container load and shared container load), air freight, buyer's consolidation, cargo value protection, customs brokerage and trucking/drayage, plus quality-control inspections across China, India, Vietnam, Indonesia and Bangladesh. The platform layers real-time shipment visibility, live ocean-carrier freight rates, expert trade advisory and built-in risk protection for importers and small shippers.
 image: https://cdn.prod.website-files.com/68dac20637579522c9947199/6908e4696e517fcd80315386_Meta%20Image.avif
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.onesilq.com over HTTP.
+  name: Silq MCP Server
+  slug: silq
 modified: '2026-07-21'
 name: Silq
 nav: Providers
@@ -81,7 +85,7 @@ overview: 'Silq is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 1
 score:
   band: emerging
-  composite: 13.1
+  composite: 12.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -95,13 +99,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 13.1
+  previous_composite: 12.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

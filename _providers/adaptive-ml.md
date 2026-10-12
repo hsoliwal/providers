@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   name: concorde artifacts::rest Recipes API
   slug: open-adaptive-ml-recipes-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/adaptive-ml/refs/heads/main/capabilities/adaptive-ml-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/adaptive-ml-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -274,13 +279,13 @@ overview: 'Adaptive ML publishes 9 APIs on the [APIs.io](https://apis.io/) netwo
   The Adaptive ML catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Adaptive ML''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 22 more developer resources.'
+  Adaptive ML''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 23 more developer resources.'
 random_paper: 8
 score:
   band: developing
-  composite: 40.4
+  composite: 39.6
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -290,11 +295,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 50.4
+    contract_quality: 46.2
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 40.4
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -305,8 +310,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

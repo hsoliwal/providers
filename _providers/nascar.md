@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 1
@@ -103,7 +103,7 @@ apis:
   description: The Weekend API from NASCAR — 3 operation(s) for weekend.
   name: NASCAR Weekend API
   slug: nascar-weekend-api
-artifact_total: 31
+artifact_total: 32
 collections:
 - collection_type: open
   name: API Collection
@@ -186,6 +186,10 @@ finops:
   slug: nascar-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nascar.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nascar.com over HTTP.
+  name: NASCAR MCP Server
+  slug: nascar
 modified: '2026-05-19'
 name: NASCAR
 nav: Providers
@@ -205,7 +209,7 @@ rate_limits:
   slug: nascar-rate-limits
 score:
   band: thin
-  composite: 28.9
+  composite: 28.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -217,11 +221,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 45.6
+    contract_quality: 41.0
     developer_ergonomics: 16.7
-    discoverability: 64.8
+    discoverability: 65.0
     operational_transparency: 7.9
-  previous_composite: 28.9
+  previous_composite: 28.4
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +234,14 @@ score:
       marker_coverage: 0.0
       total: 13
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

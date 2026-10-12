@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Highspot REST API provides programmatic access to the Highspot sales enablement platform, enabling management of content (spots and items), users, groups, pitches, domain settings, and analytics. '
@@ -213,7 +213,7 @@ mcp_servers:
   slug: highspot-mcp-server
 - description: ''
   name: Highspot MCP Server
-  slug: highspot-mcp-server-2
+  slug: https-www-highspot-com-product-mcp-server
 modified: '2026-08-14'
 name: Highspot
 nav: Providers
@@ -238,7 +238,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 40.7
+  composite: 44.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 60.0
@@ -252,14 +252,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 40.7
+  previous_composite: 44.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

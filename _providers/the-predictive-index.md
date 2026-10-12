@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://integrations.predictiveindex.com
@@ -79,6 +79,11 @@ collections:
   name: The Predictive Index Integration Behavioral Assessments Jobs API
   slug: open-the-predictive-index-jobs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/the-predictive-index/refs/heads/main/capabilities/the-predictive-index-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/the-predictive-index-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -199,13 +204,13 @@ overview: 'The Predictive Index publishes 4 APIs on the [APIs.io](https://apis.i
   The The Predictive Index catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  The Predictive Index''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 17 more developer resources.'
+  The Predictive Index''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 18 more developer resources.'
 random_paper: 16
 score:
   band: developing
-  composite: 44.1
+  composite: 43.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -215,11 +220,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 57.4
+    contract_quality: 52.4
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 44.1
+  previous_composite: 43.6
   provenance:
     contracts:
       callable: 100.0
@@ -228,8 +233,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

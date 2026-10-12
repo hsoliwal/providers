@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -145,7 +145,7 @@ overview: 'Latent Labs is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 11
 score:
   band: minimal
-  composite: 9.3
+  composite: 9.4
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -159,22 +159,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 10.7
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.3
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +201,7 @@ tags:
 - Antibodies
 - Macrocycles
 - Protein Binders
-- Biotech
+- Biotechnology
 - Pharmaceuticals
 - Life Sciences
 - AlphaFold

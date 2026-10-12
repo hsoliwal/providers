@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.youscan.io/api/external
@@ -113,6 +113,11 @@ collections:
   name: YouScan Data Import Webhook API
   slug: open-youscan-webhook-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/capabilities/youscan-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/youscan-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/youscan/refs/heads/main/security/youscan-trust-center.yml
   title: ''
@@ -279,7 +284,7 @@ overview: 'YouScan publishes 8 APIs on the [APIs.io](https://apis.io/) network, 
   The YouScan catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  YouScan''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 26 more developer resources.'
+  YouScan''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 27 more developer resources.'
 plans:
 - name: Youscan Plans Pricing
   plan_count: 2
@@ -291,9 +296,9 @@ rate_limits:
   slug: youscan-rate-limits
 score:
   band: strong
-  composite: 56.9
+  composite: 57.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 53.0
     catalog_earned_first_party: 16.0
     catalog_gap: 62.0
@@ -303,11 +308,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 66.2
+    contract_quality: 60.4
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 56.9
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     contracts:
@@ -317,8 +322,18 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

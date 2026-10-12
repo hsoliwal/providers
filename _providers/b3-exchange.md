@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - baseURL: https://developers.b3.com.br:8065
@@ -263,7 +263,7 @@ modified: '2026-07-22'
 name: B3 (Brasil Bolsa Balcão)
 nav: Providers
 network: true
-overview: 'B3 (Brasil Bolsa Balcão) publishes 8 APIs on the [APIs.io](https://apis.io/) network, including B3 Investor Area (Área do Investidor) APIs, B3 Tesouro Direto APIs, B3 OTC (Balcão) APIs, and 5 more. Tagged areas include Financial, Market Data, Stocks, Trading, and Exchange.
+overview: 'B3 (Brasil Bolsa Balcão) publishes 10 APIs on the [APIs.io](https://apis.io/) network, including B3 Investor Area (Área do Investidor) APIs, B3 Tesouro Direto APIs, B3 OTC (Balcão) APIs, and 7 more. Tagged areas include Finance, Market Data, Stocks, Trading, and Exchange.
 
 
   B3 (Brasil Bolsa Balcão)''s developer surface includes developer portal, documentation, support, authentication, sandbox, changelog, API reference, and 21 more developer resources.'
@@ -274,8 +274,8 @@ scopes:
   slug: b3-exchange-scopes
   summary_line: 2 scopes · clientCredentials/password
 score:
-  band: developing
-  composite: 42.0
+  band: thin
+  composite: 38.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -287,9 +287,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 63.7
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -298,7 +298,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 42.0
+  previous_composite: 38.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -308,9 +308,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -332,7 +332,7 @@ security:
   summary_line: security.txt · contact published
 slug: b3-exchange
 tags:
-- Financial
+- Finance
 - Market Data
 - Stocks
 - Trading

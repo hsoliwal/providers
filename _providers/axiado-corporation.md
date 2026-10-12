@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The SecureStack Application Development Kit is Axiado's public API for building secure applications on the AX3000 / AX2000 TCU family. It exposes thread-safe engine interfaces for crypto (AES, SHA/SHA
@@ -173,17 +173,17 @@ description: Axiado Corporation is a San Jose, California semiconductor company 
 image: https://axiado.com/wp-content/uploads/2024/07/AXIADO_HORIZONTAL_PRIMARY.png
 layout: provider
 modified: '2026-07-31'
-name: Axiado Corporation
+name: Axiado
 nav: Providers
 network: true
-overview: 'Axiado Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Semiconductors, Hardware Security, Platform Security, Data-Center, and Cybersecurity.
+overview: 'Axiado publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Semiconductors, Hardware Security, Platform Security, Data Center, and Cybersecurity.
 
 
-  Axiado Corporation''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 23 more developer resources.'
+  Axiado''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 23 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 23.8
+  composite: 24.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 32.0
@@ -197,13 +197,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 23.8
+  previous_composite: 24.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -224,7 +230,7 @@ tags:
 - Semiconductors
 - Hardware Security
 - Platform Security
-- Data-Center
+- Data Center
 - Cybersecurity
 - Baseboard Management Controller
 - Root of Trust

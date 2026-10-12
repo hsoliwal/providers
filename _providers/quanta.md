@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -70,6 +70,10 @@ created: '2026-07-17'
 description: Quanta is a San Francisco-based accounting services company built for SaaS businesses, pairing expert human accountants with proprietary software that "shows its work." The platform delivers continuous accounting and reconciliation, explainable financial reporting through its agentic reporting layer (Prism), SaaS revenue and accounts-receivable insights, and real-time visibility into cash, burn, and runway alongside department-level spend tracking. Quanta is a managed-services and software product for finance teams rather than a developer-facing API provider; it publishes no public API, developer portal, SDKs, or OpenAPI at this time. It was surfaced as a portfolio company of Accel and Homebrew and added to the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/quanta.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.usequanta.com over HTTP.
+  name: Quanta MCP Server
+  slug: quanta
 modified: '2026-07-20'
 name: Quanta
 nav: Providers
@@ -81,7 +85,7 @@ overview: 'Quanta is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 12
 score:
   band: emerging
-  composite: 12.6
+  composite: 13.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -95,18 +99,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 12.6
+  previous_composite: 13.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

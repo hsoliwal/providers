@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Part of the Marquee developer platform, the Content Services API lets institutional clients programmatically consume client-focused Goldman Sachs content and commentary across equity, fixed income, cu
@@ -173,7 +173,7 @@ modified: '2026-07-23'
 name: Goldman Sachs
 nav: Providers
 network: true
-overview: 'Goldman Sachs publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial, Investment Banking, Money Center, and Institutional.
+overview: 'Goldman Sachs publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Finance, Investment Banking, Money Center, and Institutional.
 
 
   The Goldman Sachs catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -191,7 +191,7 @@ rate_limits:
   slug: goldman-sachs-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 35.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 42.0
@@ -203,9 +203,9 @@ score:
   facets:
     access_clarity: 30.3
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 40.5
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -214,7 +214,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.9
+  previous_composite: 35.6
   provenance:
     conformance: derived
   regulatory:
@@ -222,9 +222,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 34.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,7 +243,7 @@ security:
 slug: goldman-sachs
 tags:
 - Banking
-- Financial
+- Finance
 - Investment Banking
 - Money Center
 - Institutional

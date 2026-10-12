@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.1
-  scored_at: '2026-09-20'
+  score: 20.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 18
@@ -221,20 +221,20 @@ description: 'steute Technologies GmbH & Co. KG is a German industrial technolog
 image: https://www.steute.com/_assets/0fec2969a2bae73d42576ee80ea2af42/Icons/icon.png
 layout: provider
 modified: '2026-07-21'
-name: steute Technologies GmbH & Co. KG
+name: steute Technologies
 nav: Providers
 network: true
-overview: 'steute Technologies GmbH & Co. KG publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Access Point API, Auth API, History API, and 4 more. Tagged areas include Company, Industrial, Manufacturing, IIoT, and Wireless.
+overview: 'steute Technologies publishes 7 APIs on the [APIs.io](https://apis.io/) network, including GmbH & Co. KG Access Point API, GmbH & Co. KG Auth API, GmbH & Co. KG History API, and 4 more. Tagged areas include Company, Industrial, Manufacturing, Industrial IoT, and Wireless.
 
 
-  The steute Technologies GmbH & Co. KG catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The steute Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  steute Technologies GmbH & Co. KG''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 16 more developer resources.'
+  steute Technologies'' developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 16 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 38.5
+  composite: 36.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 58.3
+    contract_quality: 53.6
     developer_ergonomics: 49.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 31.6
-  previous_composite: 38.5
+  previous_composite: 36.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -266,9 +266,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,7 +288,7 @@ tags:
 - Company
 - Industrial
 - Manufacturing
-- IIoT
+- Industrial IoT
 - Wireless
 - Sensors
 - Switches

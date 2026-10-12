@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 58.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -378,12 +378,12 @@ rate_limits:
   slug: rocketreach-rate-limits
 scopes:
 - name: Rocketreach Scopes
-  scope_count: 0
+  scope_count: 1
   slug: rocketreach-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code/refresh_token
 score:
   band: strong
-  composite: 59.8
+  composite: 62.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 52.0
@@ -395,16 +395,18 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 66.4
+    contract_quality: 60.6
     developer_ergonomics: 57.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 40.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 59.8
+  previous_composite: 62.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -415,8 +417,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

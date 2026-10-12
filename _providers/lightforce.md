@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The public OpenID Connect / OAuth 2.0 identity surface that fronts the LightForce Doctor Portal. Published as a live OIDC discovery document at id.lightforceortho.com/.well-known/openid-configuration,
@@ -136,8 +136,8 @@ scopes:
   slug: lightforce-scopes
   summary_line: 14 scopes · authorizationCode
 score:
-  band: thin
-  composite: 28.3
+  band: emerging
+  composite: 25.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -151,9 +151,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.3
+  previous_composite: 25.7
   provenance:
     conformance: first-party
   regulatory:
@@ -165,9 +165,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -193,5 +193,8 @@ tags:
 - 3D Printing
 - Digital Manufacturing
 - Identity
+- Healthcare
+- Dental
+- Manufacturing
 website: https://lf.co
 ---

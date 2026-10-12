@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -92,7 +92,7 @@ description: 'Lord & Taylor is one of the oldest American department-store appar
 image: https://www.lordandtaylor.com/cdn/shop/files/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.lordandtaylor.com.
   name: Lord & Taylor Shopify MCP servers (Storefront + Customer Account)
   slug: lord-taylor-shopify-mcp-servers-storefront-customer-account
 modified: '2026-07-20'
@@ -111,7 +111,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.1
+  composite: 18.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -125,14 +125,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 18.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol shopping service on Andium's merchandise storefront, exposed as a Model Context Protocol endpoint over JSON-RPC 2.0. Thirteen tools cover catalog search and lookup, pro
@@ -158,9 +158,9 @@ description: Andium is a New York City based industrial IoT company that combine
 image: https://images.prismic.io/andium/a928cac3-dcf8-4940-b631-975802d4ceb0_meta-image-whole-site.jpg?auto=compress,format
 layout: provider
 mcp_servers:
-- description: ''
+- description: Andium publishes one live, anonymous Model Context Protocol endpoint — the Universal Commerce Protocol (UCP) shopping service on its merchandise storefront at shop.andium.com. It is the only callable,
   name: Andium Store UCP/MCP
-  slug: andium-store-ucpmcp
+  slug: andium-store-ucp
 modified: '2026-08-06'
 name: Andium
 nav: Providers
@@ -176,8 +176,8 @@ scopes:
   slug: andium-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 27.1
+  band: emerging
+  composite: 24.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -191,21 +191,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 2.6
-  previous_composite: 27.1
+  previous_composite: 24.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -230,7 +230,7 @@ tags:
 - Remote Monitoring
 - Methane Detection
 - Emissions
-- Computer-Vision
+- Computer Vision
 - Edge Computing
 - Commerce
 - MCP

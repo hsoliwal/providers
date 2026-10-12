@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.5
-  scored_at: '2026-09-20'
+  score: 9.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Elk''s own server surface, served by its Nuxt runtime at https://elk.zone/api. Four endpoints: list the Mastodon-compatible instances offered in the sign-in picker, build the instance authorize URL, co'
@@ -132,7 +132,7 @@ modified: '2026-08-27'
 name: Elk
 nav: Providers
 network: true
-overview: 'Elk publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fediverse, Mastodon, Open-Source, Social Networking, and Social-Media.
+overview: 'Elk publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fediverse, Mastodon, Open Source, Social Network, and Social Media.
 
 
   Elk''s developer surface includes support, documentation, getting-started guide, changelog, and 14 more developer resources.'
@@ -152,7 +152,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.1
+  composite: 30.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -166,18 +166,24 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 28.1
+  previous_composite: 30.0
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,9 +207,9 @@ slug: elk
 tags:
 - Fediverse
 - Mastodon
-- Open-Source
-- Social Networking
-- Social-Media
+- Open Source
+- Social Network
+- Social Media
 - Web-Client
 - Progressive Web App
 - Authentication

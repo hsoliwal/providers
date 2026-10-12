@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -82,11 +82,15 @@ created: '2026-07-17'
 description: Sumary is a Denmark-based fintech building an AI-native workflow engine for finance and accounting teams. Its platform layers autonomous accounting agents, anomaly detection, and on-demand reporting over a company's existing accounting systems — automating reconciliations and variance explanations, validating transactions to catch errors and potential fraud, and generating management reports, margin analyses, and cost breakdowns for bookkeepers, controllers, CFOs, and finance leaders. The company raised a $4.2M (27M DKK) pre-seed round led by byFounders with participation from Partech and Tenity. No public API, developer portal, or OpenAPI surface has been located; this profile captures the company's web, trust, and domain-security surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sumary.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sumary.com over HTTP.
+  name: Sumary MCP Server
+  slug: sumary
 modified: '2026-07-21'
 name: Sumary
 nav: Providers
 network: true
-overview: 'Sumary is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Accounting, and Automation.
+overview: 'Sumary is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Accounting, and Automation.
 
 
   Sumary''s developer surface includes engineering blog, support, and 8 more developer resources.'
@@ -107,7 +111,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -120,8 +124,14 @@ score:
   previous_composite: 14.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +150,7 @@ security:
 slug: sumary
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Accounting
 - Automation

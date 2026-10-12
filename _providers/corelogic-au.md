@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 26
 apis:
 - baseURL: https://access.api.cotality.com.au
@@ -380,7 +380,7 @@ modified: '2026-07-26'
 name: CoreLogic Australia
 nav: Providers
 network: true
-overview: 'CoreLogic Australia publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Access API, Property Details API, Property Services API, and 7 more. Tagged areas include Real-Estate, Australia, Property Data, Valuation, and AVM.
+overview: 'CoreLogic Australia publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Access API, Property Details API, Property Services API, and 23 more. Tagged areas include Real Estate, Australia, Property Data, Valuation, and AVM.
 
 
   The CoreLogic Australia catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -399,7 +399,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials/implicit
 score:
   band: thin
-  composite: 27.6
+  composite: 29.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 35.0
@@ -411,9 +411,9 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 18.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -422,13 +422,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 27.6
+  previous_composite: 29.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -450,7 +456,7 @@ security:
   summary_line: Hackerone
 slug: corelogic-au
 tags:
-- Real-Estate
+- Real Estate
 - Australia
 - Property Data
 - Valuation

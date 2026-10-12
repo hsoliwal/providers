@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.leminnow.com
@@ -193,7 +193,7 @@ plans:
 random_paper: 18
 score:
   band: thin
-  composite: 36.1
+  composite: 37.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -207,9 +207,9 @@ score:
     contract_governance: 4.5
     contract_quality: 12.4
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.1
+  previous_composite: 37.2
   provenance:
     conformance: derived
     contracts:
@@ -219,8 +219,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

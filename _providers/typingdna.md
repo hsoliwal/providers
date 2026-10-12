@@ -36,23 +36,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.typingdna.com
   baseurl_source: declared
   description: Advanced routes for customisation
-  name: TypingDNA advanced API
+  name: TypingDNA Advanced API
   slug: typingdna-advanced-api
 - baseURL: https://api.typingdna.com
   baseurl_source: declared
   description: Optional routes
-  name: TypingDNA optional API
+  name: TypingDNA Optional API
   slug: typingdna-optional-api
 - baseURL: https://api.typingdna.com
   baseurl_source: declared
   description: Main routes
-  name: TypingDNA standard API
+  name: TypingDNA Standard API
   slug: typingdna-standard-api
 artifact_total: 11
 collections:
@@ -69,6 +69,11 @@ collections:
   name: TypingDNA - Authentication API Documentation advanced standard API
   slug: open-typingdna-standard-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/typingdna/refs/heads/main/capabilities/typingdna-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/typingdna-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/typingdna/refs/heads/main/overlays/typingdna-authentication-api-overlay.yaml
   title: ''
@@ -240,10 +245,10 @@ modified: '2026-07-21'
 name: TypingDNA
 nav: Providers
 network: true
-overview: 'TypingDNA publishes 3 APIs on the [APIs.io](https://apis.io/) network: advanced API, optional API, and standard API. Tagged areas include Company, Authentication, Biometrics, Typing Biometrics, and Two-Factor Authentication.
+overview: 'TypingDNA publishes 3 APIs on the [APIs.io](https://apis.io/) network: Advanced API, Optional API, and Standard API. Tagged areas include Company, Authentication, Biometrics, Typing Biometrics, and Two-Factor Authentication.
 
 
-  TypingDNA''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 29 more developer resources.'
+  TypingDNA''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 30 more developer resources.'
 random_paper: 6
 scopes:
 - name: Typingdna Scopes
@@ -251,10 +256,10 @@ scopes:
   slug: typingdna-scopes
   summary_line: 3 scopes · authorizationCode/refreshToken/deviceCode/jwtBearer
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 55.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -264,11 +269,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 57.8
+    contract_quality: 52.0
     developer_ergonomics: 78.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 18.4
-  previous_composite: 53.4
+  previous_composite: 55.3
   provenance:
     conformance: first-party
     contracts:
@@ -278,8 +283,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

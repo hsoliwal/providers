@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The NPP API Framework defines the mandatory technical approach and data attributes for APIs built on the New Payments Platform, aligned to the ISO 20022 messaging standard. NPP Australia does not itse
@@ -164,7 +164,7 @@ overview: 'NPP Australia (AP+) publishes 3 APIs on the [APIs.io](https://apis.io
 random_paper: 3
 score:
   band: thin
-  composite: 30.6
+  composite: 29.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -178,7 +178,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 60.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -187,7 +187,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 30.6
+  previous_composite: 29.7
   provenance:
     conformance: first-party
   regulatory:
@@ -195,9 +195,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,7 +225,7 @@ tags:
 - Account-to-Account
 - ISO 20022
 - Payment Scheme
-- Rail
+- Rails
 - PayTo
 - PayID
 - Open Banking

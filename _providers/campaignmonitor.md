@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing email campaigns, subscriber lists, transactional emails, segments, journeys, templates, and campaign performance analytics.
@@ -265,12 +265,12 @@ rate_limits:
   slug: campaignmonitor-rate-limits
 scopes:
 - name: Campaignmonitor Scopes
-  scope_count: 0
+  scope_count: 12
   slug: campaignmonitor-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 12 scopes
 score:
-  band: exemplar
-  composite: 70.0
+  band: strong
+  composite: 66.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 68.0
@@ -282,11 +282,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 51.9
+    contract_quality: 49.4
     developer_ergonomics: 57.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 76.3
-  previous_composite: 70.0
+  previous_composite: 66.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -299,9 +299,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 73.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -76,9 +76,9 @@ description: SAVA (sava.health) is a health-monitoring company developing a mini
 image: https://static.wixstatic.com/media/aaa55f_2da7a13e2e4f419c87e476acfc59b6a7~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.sava.health over HTTP; 7 tools listed.
   name: SAVA Site MCP (Wix)
-  slug: sava-site-mcp-wix
+  slug: sava-site-mcp
 modified: '2026-07-21'
 name: SAVA
 nav: Providers
@@ -104,19 +104,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   previous_composite: 12.9
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

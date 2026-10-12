@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Programmatic access to Tracxn''s private-market database. Version 3.0 is current and version 2.2 is formally announced for deprecation. A uniform JSON-over-HTTPS contract: every data endpoint is a POST'
@@ -210,7 +210,7 @@ modified: '2026-08-14'
 name: Tracxn
 nav: Providers
 network: true
-overview: 'Tracxn publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cloud Saas, Market Intelligence, Private Markets, and Venture Capital.
+overview: 'Tracxn publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cloud Saas, Market Intelligence, Private Markets, and Venture Capital.
 
 
   Tracxn''s developer surface includes documentation, getting-started guide, pricing, signup flow, support, FAQ, engineering blog, and 27 more developer resources.'
@@ -225,12 +225,12 @@ rate_limits:
   slug: tracxn-rate-limits
 scopes:
 - name: Tracxn Scopes
-  scope_count: 0
+  scope_count: 1
   slug: tracxn-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
-  band: thin
-  composite: 37.2
+  band: developing
+  composite: 39.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -244,15 +244,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 37.2
+  previous_composite: 39.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

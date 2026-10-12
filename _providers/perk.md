@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'REST API for Perk travel, expense, invoice, trip, cost-center, event, and card data. Authenticate with an account API key (customers) or OAuth 2.0 (partners); send Api-Version: 1.'
@@ -209,12 +209,12 @@ overview: 'Perk publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 16
 scopes:
 - name: Perk Scopes
-  scope_count: 0
+  scope_count: 5
   slug: perk-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 43.4
+  composite: 45.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -226,17 +226,23 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 57.9
-  previous_composite: 43.4
+  previous_composite: 45.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

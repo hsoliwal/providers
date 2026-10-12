@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -115,14 +115,14 @@ modified: '2026-07-19'
 name: Hamsa
 nav: Providers
 network: true
-overview: 'Hamsa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Blockchain, Payments, and Tokenization.
+overview: 'Hamsa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Blockchain, Payments, and Tokenization.
 
 
   Hamsa''s developer surface includes documentation, API reference, engineering blog, authentication, and 12 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 19.9
+  composite: 19.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -136,14 +136,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 27.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.9
+  previous_composite: 19.1
   provenance:
     conformance: first-party
   regulatory:
@@ -151,9 +153,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -172,7 +174,7 @@ security:
 slug: hamsa
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Blockchain
 - Payments
 - Tokenization

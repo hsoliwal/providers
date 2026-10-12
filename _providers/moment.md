@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST and WebSocket API for fixed-income reference data, evaluated pricing, order books, analytics, order/RFQ execution, and portfolio optimization.
@@ -158,7 +158,7 @@ overview: 'Moment publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 18
 score:
   band: thin
-  composite: 26.7
+  composite: 26.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -170,11 +170,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 26.7
+  previous_composite: 26.6
   provenance:
     mcp: derived
     skills: derived
@@ -183,9 +183,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +212,7 @@ tags:
 - Investment Management
 - Wealth Management
 - Brokerage
-- Financial-Services
+- Financial Services
 - Fintech
 website: https://moment.com
 ---

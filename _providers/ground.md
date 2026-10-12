@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -173,7 +173,7 @@ rate_limits:
   slug: ground-rate-limits
 score:
   band: emerging
-  composite: 20.3
+  composite: 19.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -187,11 +187,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 20.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

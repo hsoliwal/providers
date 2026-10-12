@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -81,6 +81,10 @@ created: '2026-07-17'
 description: TravelJoy is software for travel advisors and agencies — a client CRM, itinerary and proposal builder, secure payment collection, forms and questionnaires, and automated client communication combined in one platform. Travel professionals use it to manage trips, capture and nurture leads, send branded proposals, gather traveler details, and collect payments. Surfaced as a portfolio company of GV (Google Ventures) and added to the API Evangelist network. As of this enrichment pass TravelJoy publishes no public API, developer portal, or SDK program; this profile tracks its identity and public web properties for discovery.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/traveljoy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at traveljoy.com over HTTP; 17 tools listed.
+  name: TravelJoy MCP Server
+  slug: traveljoy
 modified: '2026-07-21'
 name: TravelJoy
 nav: Providers
@@ -92,7 +96,7 @@ overview: 'TravelJoy is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 2
 score:
   band: emerging
-  composite: 14.8
+  composite: 15.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -106,9 +110,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 7.9
-  previous_composite: 14.8
+  previous_composite: 15.5
   provenance:
     mcp: first-party
   regulatory:
@@ -116,9 +120,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

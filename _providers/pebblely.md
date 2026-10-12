@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: AI-powered product photo generation API. Create stunning product photos without Photoshop skills. Includes background creation, background removal, and bulk image generation capabilities.
@@ -82,7 +82,7 @@ modified: '2026-04-28'
 name: Pebblely
 nav: Providers
 network: true
-overview: 'Pebblely publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, AI Photography, Image-Generation, and Product Photos.
+overview: 'Pebblely publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, AI Photography, Image Generation, and Product Photos.
 
 
   Pebblely''s developer surface includes documentation, signup flow, engineering blog, and 4 more developer resources.'
@@ -97,7 +97,7 @@ rate_limits:
   slug: pebblely-rate-limits
 score:
   band: emerging
-  composite: 13.0
+  composite: 11.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 36.0
@@ -111,11 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 13.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,7 +137,7 @@ slug: pebblely
 tags:
 - Artificial Intelligence
 - AI Photography
-- Image-Generation
+- Image Generation
 - Product Photos
 website: https://pebblely.com/
 ---

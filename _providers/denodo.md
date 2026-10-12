@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: false
@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.1
-  scored_at: '2026-09-20'
+  score: 16.8
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The Solution Manager REST API provides programmatic access to administer the Denodo Platform across environments and clusters. It exposes endpoints for cluster lifecycle management, environment config
@@ -56,6 +56,55 @@ apis:
   slug: scheduler-rest-api
 artifact_total: 13
 common:
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://www.denodo.com/terms-of-use
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://www.denodo.com/privacy-notice
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/finops/denodo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/denodo-finops.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/rate-limits/denodo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/denodo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/plans/denodo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/denodo-plans-pricing.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/llms/denodo-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/denodo-llms.txt
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/hosts/denodo-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/denodo-hosts.yml
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://www.denodo.com/about-us/newsroom/in-the-media
+- group: start
+  title: ''
+  type: Login
+  url: https://www.denodo.com/en/user/login
+- group: other
+  title: ''
+  type: Leadership
+  url: https://www.denodo.com/en/about-us/leadership
+- group: operate
+  title: ''
+  type: ChangeLog
+  url: https://www.denodo.com/en/denodo-platform/whats-new
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/security/denodo-domain-security.yml
   title: ''
@@ -89,22 +138,10 @@ common:
   title: ''
   type: Express Edition
   url: https://www.denodo.com/en/denodo-platform/free-trials
-- group: commercial
-  title: ''
-  type: Pricing
-  url: https://www.denodo.com/en/pricing
 - group: operate
   title: ''
   type: Support
   url: https://support.denodo.com/
-- group: operate
-  title: ''
-  type: StatusPage
-  url: https://www.denodo.com/en/legal/denodo-trust-center
-- group: company
-  title: ''
-  type: Blog
-  url: https://www.denodo.com/en/blog
 - group: other
   title: ''
   type: Customers
@@ -121,18 +158,6 @@ common:
   title: ''
   type: GitHubOrganization
   url: https://github.com/denodo
-- group: commercial
-  title: ''
-  type: TermsOfService
-  url: https://www.denodo.com/en/legal/legal-notice
-- group: commercial
-  title: ''
-  type: PrivacyPolicy
-  url: https://www.denodo.com/en/legal/privacy-policy
-- group: auth
-  title: ''
-  type: Security
-  url: https://www.denodo.com/en/legal/denodo-trust-center
 - group: design
   href: https://raw.githubusercontent.com/api-evangelist/denodo/refs/heads/main/json-ld/denodo-context.jsonld
   title: ''
@@ -168,13 +193,13 @@ modified: '2026-05-19'
 name: Denodo
 nav: Providers
 network: true
-overview: 'Denodo publishes 1 API on the [APIs.io](https://apis.io/) network: Data Catalog REST API. Tagged areas include Data Catalog, Data Fabric, Data Mesh, Data Virtualization, and GraphQL.
+overview: 'Denodo publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Data Catalog REST API, and 5 more. Tagged areas include Data Catalog, Data Fabric, Data Mesh, Data Virtualization, and GraphQL.
 
 
   The Denodo catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Denodo''s developer surface includes developer portal, documentation, pricing, support, engineering blog, training material, and 16 more developer resources.'
+  Denodo''s developer surface includes changelog, developer portal, documentation, support, training material, and 22 more developer resources.'
 plans:
 - name: Denodo Plans Pricing
   plan_count: 3
@@ -186,25 +211,33 @@ rate_limits:
   slug: denodo-rate-limits
 score:
   band: thin
-  composite: 28.7
+  composite: 32.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 59.0
+    artifact_dirs: 17
+    catalog_earned: 58.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 56.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.8
   facets:
-    access_clarity: 15.8
-    contract_governance: 15.2
-    contract_quality: 33.3
-    developer_ergonomics: 33.3
-    discoverability: 74.1
-    operational_transparency: 10.5
+    access_clarity: 28.9
+    contract_governance: 13.6
+    contract_quality: 30.7
+    developer_ergonomics: 32.6
+    discoverability: 82.1
+    operational_transparency: 26.3
   previous_composite: 28.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  provenance:
+    mcp: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

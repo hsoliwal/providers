@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.voygr.tech
@@ -164,7 +164,7 @@ modified: '2026-08-14'
 name: VOYGR
 nav: Providers
 network: true
-overview: 'VOYGR publishes 2 APIs on the [APIs.io](https://apis.io/) network: Calls API and Core API. Tagged areas include Company, Location Intelligence, POI Data, Data Enrichment, and Data Validation.
+overview: 'VOYGR publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Calls API, Core API, and 1 more. Tagged areas include Company, Location Intelligence, POI Data, Data Enrichment, and Data Validation.
 
 
   VOYGR''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, CLI, and 16 more developer resources.'
@@ -179,7 +179,7 @@ rate_limits:
   slug: voygr-rate-limits
 score:
   band: developing
-  composite: 53.5
+  composite: 53.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 61.0
@@ -191,16 +191,18 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 47.3
+    contract_quality: 42.6
     developer_ergonomics: 76.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.5
+  previous_composite: 53.4
   provenance:
     conformance: derived
     contracts:
@@ -210,8 +212,14 @@ score:
       total: 2
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

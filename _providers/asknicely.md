@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: AskNicely's remote Model Context Protocol server, exposing Ask NiceAI's tools — NPS summaries, survey responses, leaderboards and more — to external AI clients such as Claude. Served per tenant at htt
@@ -255,12 +255,12 @@ layout: provider
 mcp_servers:
 - description: AskNicely ships a first-party remote MCP server that exposes Ask NiceAI — its in-product AI assistant — to external MCP clients. It is served per tenant at https://{domain}.asknice.ly/mcp and is docum
   name: AskNicely MCP Server
-  slug: asknicely-mcp-server
+  slug: asknicely
 modified: '2026-08-06'
 name: AskNicely
 nav: Providers
 network: true
-overview: 'AskNicely publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, In-App Surveys API, Responses API, and 2 more. Tagged areas include Company, Customer Experience, NPS, Surveys, and Feedback.
+overview: 'AskNicely publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, In-App Surveys API, Responses API, and 3 more. Tagged areas include Company, Customer Experience, NPS, Surveys, and Feedback.
 
 
   The AskNicely catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -279,7 +279,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 66.1
+  composite: 61.9
   coverage:
     artifact_dirs: 25
     catalog_earned: 49.0
@@ -291,11 +291,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 69.5
+    contract_quality: 63.7
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 81.6
-  previous_composite: 66.1
+  previous_composite: 61.9
   provenance:
     conformance: derived
     contracts:
@@ -314,9 +314,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 65.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -63,12 +63,12 @@ overview: Zumba Fitness is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 10
 scopes:
 - name: Zumba Fitness Scopes
-  scope_count: 0
+  scope_count: 3
   slug: zumba-fitness-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: minimal
-  composite: 6.3
+  composite: 7.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 22.0
@@ -82,13 +82,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
-  previous_composite: 6.3
+  previous_composite: 7.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

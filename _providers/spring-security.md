@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 2
@@ -132,6 +132,11 @@ collections:
   name: Spring Server Authorization Token API
   slug: open-spring-security-token-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spring-security/refs/heads/main/capabilities/spring-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spring-security-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -229,13 +234,13 @@ modified: '2026-09-16'
 name: Spring Security
 nav: Providers
 network: true
-overview: 'Spring Security publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Client Management API, Device API, and 5 more. Tagged areas include Authentication, Authorization, Java, JWT, and OpenID Connect.
+overview: 'Spring Security publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Client Management API, Device API, and 9 more. Tagged areas include Authentication, Authorization, Java, JWT, and OpenID Connect.
 
 
   The Spring Security catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spring Security''s developer surface includes authentication, engineering blog, changelog, and 13 more developer resources.'
+  Spring Security''s developer surface includes authentication, engineering blog, changelog, and 14 more developer resources.'
 plans:
 - name: Spring Security Plans Pricing
   plan_count: 1
@@ -269,9 +274,9 @@ rules:
   slug: spring-security-rules
 score:
   band: thin
-  composite: 35.0
+  composite: 37.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 54.5
     catalog_earned_first_party: 0.0
     catalog_gap: 60.5
@@ -281,11 +286,14 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 51.2
+    contract_quality: 46.8
     developer_ergonomics: 42.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 35.0
+  open_source:
+    applies: true
+    score: 65.0
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -293,8 +301,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

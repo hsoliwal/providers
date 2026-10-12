@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -156,7 +156,7 @@ rate_limits:
   slug: calorie-ninjas-rate-limits
 score:
   band: thin
-  composite: 38.5
+  composite: 37.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -168,11 +168,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 38.5
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     contracts:
@@ -180,8 +180,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

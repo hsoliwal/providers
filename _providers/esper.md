@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://foo-api.esper.cloud/api
@@ -271,7 +271,7 @@ overview: 'Esper publishes 13 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 15
 score:
   band: developing
-  composite: 47.0
+  composite: 47.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -283,11 +283,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 56.4
+    contract_quality: 51.6
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 47.0
+  previous_composite: 47.6
   provenance:
     conformance: derived
     contracts:
@@ -297,8 +297,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

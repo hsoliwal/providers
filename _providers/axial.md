@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -116,14 +116,14 @@ modified: '2026-08-06'
 name: Axial Networks
 nav: Providers
 network: true
-overview: 'Axial Networks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mergers and Acquisitions, Private Capital, Deal Sourcing, and Financial-Services.
+overview: 'Axial Networks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mergers and Acquisitions, Private Capital, Deal Sourcing, and Financial Services.
 
 
   Axial Networks'' developer surface includes engineering blog and 12 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 12.6
+  composite: 13.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -137,22 +137,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 12.6
+  previous_composite: 13.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +172,7 @@ tags:
 - Mergers and Acquisitions
 - Private Capital
 - Deal Sourcing
-- Financial-Services
+- Financial Services
 - Middle Market
 - Investment Banking
 - Marketplace

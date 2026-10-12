@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing Swiftype search engines, indexing documents, controlling the web crawler and domains, running search and autocomplete queries, and retrieving query/click analytics. Authenticated
@@ -130,9 +130,9 @@ description: Swiftype is a hosted site-search and app-search platform founded in
 image: https://swiftype.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 10 tools listed. A candidate, not confirmed as published by the provider.
   name: Swiftype MCP Server
-  slug: swiftype-mcp-server
+  slug: swiftype-site-search
 modified: '2026-09-16'
 name: Swiftype
 nav: Providers
@@ -148,7 +148,7 @@ rate_limits:
   slug: swiftype-rate-limits
 score:
   band: emerging
-  composite: 20.5
+  composite: 20.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -162,14 +162,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 20.5
+  previous_composite: 20.4
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

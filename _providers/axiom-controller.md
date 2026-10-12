@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 26.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -79,6 +79,11 @@ collections:
   name: Axiom Ingest Controller API
   slug: open-axiom-controller
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/axiom-controller/refs/heads/main/capabilities/axiom-controller-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/axiom-controller-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -183,10 +188,10 @@ modified: '2026-05-19'
 name: Axiom Controller
 nav: Providers
 network: true
-overview: 'Axiom Controller publishes 3 APIs on the [APIs.io](https://apis.io/) network: Datasets API, Edge API, and Ingest API. Tagged areas include Analytics, Cloud-Native, Logging, Monitoring, and Observability.
+overview: 'Axiom Controller publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Edge API, Ingest API, and 1 more. Tagged areas include Analytics, Cloud-Native, Logging, Monitoring, and Observability.
 
 
-  Axiom Controller''s developer surface includes developer portal, authentication, engineering blog, pricing, documentation, getting-started guide, and 9 more developer resources.'
+  Axiom Controller''s developer surface includes developer portal, authentication, engineering blog, pricing, documentation, getting-started guide, and 10 more developer resources.'
 plans:
 - name: Axiom Controller Plans Pricing
   plan_count: 3
@@ -198,9 +203,9 @@ rate_limits:
   slug: axiom-controller-rate-limits
 score:
   band: thin
-  composite: 38.8
+  composite: 37.7
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 49.0
     catalog_earned_first_party: 0.0
     catalog_gap: 66.0
@@ -210,11 +215,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 44.2
-    developer_ergonomics: 40.5
-    discoverability: 74.1
+    contract_quality: 39.8
+    developer_ergonomics: 39.8
+    discoverability: 70.0
     operational_transparency: 26.3
-  previous_composite: 38.8
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     contracts:
@@ -222,8 +227,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

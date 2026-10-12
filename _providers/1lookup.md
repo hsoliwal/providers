@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'RESTful API over HTTPS covering all 1Lookup products (phone/email/IP validation, fraud, enrichment, B2B data, SEO intelligence). API-key Bearer auth (sk_live_ keys, organization-scoped), JSON bodies, '
@@ -50,7 +50,7 @@ apis:
 - description: Machine-readable content indexes (llms.txt and llms-full.txt) for AI and answer engines, indexing the free tools, every product page, the comparison pages and the key site sections.
   name: 1Lookup LLMs Index
   slug: 1lookup-llms-index
-artifact_total: 13
+artifact_total: 12
 asyncapis:
 - description: ''
   name: 1Lookup Webhooks
@@ -250,15 +250,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: 1Lookup MCP Server
-  slug: 1lookup-mcp-server
-- description: '1Lookup ships a first-party hosted (remote) MCP connector at https://app.1lookup.io/api/mcp. It is a URL-only integration — no SDK, no pasted API key — authorized with OAuth 2.1 (authorization code + '
-  name: 1Lookup MCP Server
-  slug: 1lookup-mcp-server-2
+  slug: mcp
 modified: '2026-08-14'
 name: 1Lookup
 nav: Providers
 network: true
-overview: '1Lookup publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Phone Validation, Email Validation, IP Intelligence, Fraud and Risk, and Data Enrichment.
+overview: '1Lookup publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Phone Validation, Email Verification, IP Intelligence, Fraud and Risk, and Data Enrichment.
 
 
   The 1Lookup catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -281,29 +278,35 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 61.6
+  composite: 64.2
   coverage:
     artifact_dirs: 21
-    catalog_earned: 64.0
+    catalog_earned: 59.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 56.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 66.1
-    discoverability: 92.6
+    discoverability: 81.7
     operational_transparency: 50.0
-  previous_composite: 61.6
+  previous_composite: 64.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -330,7 +333,7 @@ security:
 slug: 1lookup
 tags:
 - Phone Validation
-- Email Validation
+- Email Verification
 - IP Intelligence
 - Fraud and Risk
 - Data Enrichment

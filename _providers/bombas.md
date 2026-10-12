@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: platform
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.5
-  scored_at: '2026-09-20'
+  score: 22.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the Bombas Shopify storefront. The store publishes a Universal Commerce Protocol merchant profile at https://shop.bombas.com/.well-known/ucp declaring UCP versions
@@ -85,9 +85,9 @@ description: 'Bombas is a New York City based direct-to-consumer comfort apparel
 image: https://avatars.githubusercontent.com/u/30065139?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.bombas.com over HTTP; 13 tools listed.
   name: Bombas MCP Server
-  slug: bombas-mcp-server
+  slug: bombas-ucp-shopping
 modified: '2026-07-31'
 name: Bombas
 nav: Providers
@@ -104,7 +104,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.6
+  composite: 25.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -118,15 +118,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 22.6
+  previous_composite: 25.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

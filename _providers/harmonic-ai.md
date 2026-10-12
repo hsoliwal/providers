@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 58.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 70
   human_in_the_loop: 0
@@ -52,7 +52,7 @@ apis:
 - description: Hosted, agent-native MCP server exposing 40+ tools for enrichment, search, saved searches, lists, investors, network mapping, batch lookup, custom fields, and team. Listed in the Claude Connector stor
   name: Harmonic MCP Server
   slug: harmonic-mcp-server
-artifact_total: 22
+artifact_total: 21
 asyncapis:
 - description: ''
   name: Harmonic Ai Event Surface
@@ -244,17 +244,14 @@ description: Startup discovery and intelligence platform built on a proprietary 
 image: https://cdn.prod.website-files.com/6107b1101d4d3e748743f234/65f31ad2b4ac6cf0cb8bd691_og-img.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.api.harmonic.ai over HTTP; 23 tools listed.
   name: Harmonic.ai MCP Server
-  slug: harmonicai-mcp-server
-- description: ''
-  name: Harmonic.ai MCP Server
-  slug: harmonicai-mcp-server-2
+  slug: harmonic
 modified: '2026-08-14'
 name: Harmonic.ai
 nav: Providers
 network: true
-overview: 'Harmonic.ai publishes 1 API on the [APIs.io](https://apis.io/) network: Harmonic REST & GraphQL API. Tagged areas include Startup Intelligence, Venture Capital, Company Data, People Data, and investor-data.
+overview: 'Harmonic.ai publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Harmonic REST & GraphQL API, and 1 more. Tagged areas include Startup Intelligence, Venture Capital, Company Data, People Data, and investor-data.
 
 
   The Harmonic.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -276,8 +273,8 @@ scopes:
   slug: harmonic-ai-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: developing
-  composite: 51.7
+  band: strong
+  composite: 55.0
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -289,11 +286,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 52.7
+    contract_quality: 48.6
     developer_ergonomics: 32.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 51.7
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -304,8 +301,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -337,6 +340,6 @@ tags:
 - Market Intelligence
 - GraphQL
 - MCP
-- agent-native
+- Agent-Native
 website: https://www.harmonic.ai/
 ---

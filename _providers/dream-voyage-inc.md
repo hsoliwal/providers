@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,14 +62,14 @@ description: Dream Voyage Inc. is an AI-driven consumer studio founded in 2023 a
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dream-voyage-inc.png
 layout: provider
 modified: '2026-07-18'
-name: Dream Voyage Inc.
+name: Dream Voyage
 nav: Providers
 network: true
-overview: Dream Voyage Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Consumer App, Mobile, and Astrology.
+overview: Dream Voyage is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Consumer App, Mobile, and Astrology.
 random_paper: 14
 score:
   band: minimal
-  composite: 1.5
+  composite: 2.6
   coverage:
     artifact_dirs: 2
     catalog_earned: 27.0
@@ -83,17 +83,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 1.5
+  previous_composite: 2.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -88,7 +88,7 @@ apis:
   description: The Tickets API from Freshservice — 2 operation(s) for tickets.
   name: Freshservice Tickets API
   slug: freshservice-tickets-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: open
   name: API Collection
@@ -121,6 +121,11 @@ collections:
   name: Freshservice API v2
   slug: open-freshservice
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/capabilities/freshservice-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/freshservice-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/freshservice/refs/heads/main/agentic-access/freshservice-agentic-access.yml
   title: ''
@@ -182,20 +187,24 @@ created: '2026-05-11'
 description: Freshservice is Freshworks' cloud-based IT service management (ITSM) and enterprise service management platform, covering ticketing, problem, change and release management, asset and configuration management, and a self-service portal. The Freshservice REST API provides JSON-over-HTTP access to tickets, problems, changes, assets, agents, requesters, and the service catalog for ITSM automation and integration.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freshservice.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.freshservice.com over HTTP.
+  name: Freshservice MCP Server
+  slug: freshservice
 modified: '2026-05-11'
 name: Freshservice
 nav: Providers
 network: true
-overview: 'Freshservice publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Assets API, Changes API, and 5 more. Tagged areas include ITSM, Help Desk, Ticketing, Asset Management, and Change Management.
+overview: 'Freshservice publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Assets API, Changes API, and 6 more. Tagged areas include ITSM, Help Desk, Ticketing, Asset Management, and Change Management.
 
 
-  Freshservice''s developer surface includes authentication, documentation, signup flow, pricing, support, and 8 more developer resources.'
+  Freshservice''s developer surface includes authentication, documentation, signup flow, pricing, support, and 9 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 33.4
+  composite: 33.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -205,11 +214,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 33.4
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -218,8 +227,14 @@ score:
       marker_coverage: 0.0
       total: 8
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

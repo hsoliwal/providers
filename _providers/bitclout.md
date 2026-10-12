@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The HTTP API served by every DeSo node. It exposes transaction-construction endpoints (social, financial, NFT, DAO/token, associations, derived keys) and read/data endpoints (users, posts, profiles, N
@@ -130,7 +130,7 @@ layout: provider
 mcp_servers:
 - description: 'Official DeSo Protocol Model Context Protocol (MCP) server for DeSo blockchain development. Provides API documentation exploration, SDK guidance, code generation, architecture explanation, repository '
   name: BitClout MCP Server
-  slug: bitclout-mcp-server
+  slug: deso-mcp
 modified: '2026-07-18'
 name: BitClout
 nav: Providers
@@ -142,7 +142,7 @@ overview: 'BitClout publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 12
 score:
   band: emerging
-  composite: 22.7
+  composite: 22.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -156,14 +156,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 22.7
+  previous_composite: 22.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

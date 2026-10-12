@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://backend.openenvoy.io/public/api/v1
@@ -151,7 +151,7 @@ rate_limits:
   slug: openenvoy-rate-limits
 score:
   band: developing
-  composite: 48.8
+  composite: 48.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -163,11 +163,11 @@ score:
   facets:
     access_clarity: 63.2
     contract_governance: 0.0
-    contract_quality: 55.8
-    developer_ergonomics: 54.2
-    discoverability: 75.9
+    contract_quality: 50.2
+    developer_ergonomics: 53.7
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 48.8
+  previous_composite: 48.1
   provenance:
     conformance: derived
     contracts:
@@ -177,8 +177,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -205,5 +211,6 @@ tags:
 - Artificial Intelligence
 - ERP Integration
 - Spend Management
+- Procurement
 website: https://www.openenvoy.com/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -210,7 +210,7 @@ modified: '2026-07-20'
 name: Pruna AI
 nav: Providers
 network: true
-overview: 'Pruna AI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Content Delivery API, File Management API, and Predictions API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Image-Generation, and Video Generation.
+overview: 'Pruna AI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Content Delivery API, File Management API, and Predictions API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Image Generation, and Video Generation.
 
 
   Pruna AI''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, support, and 21 more developer resources.'
@@ -221,7 +221,7 @@ rate_limits:
   slug: pruna-ai-rate-limits
 score:
   band: developing
-  composite: 46.1
+  composite: 45.4
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -233,11 +233,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 52.7
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 46.1
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -248,8 +248,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -268,8 +274,8 @@ slug: pruna-ai
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
-- Image-Generation
+- Machine Learning
+- Image Generation
 - Video Generation
 - Generative AI
 - Model Optimization

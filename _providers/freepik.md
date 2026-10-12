@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -75,7 +75,7 @@ apis:
   description: Generate video from images or text.
   name: Freepik Video Generation API
   slug: freepik-video-generation-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -145,11 +145,15 @@ finops:
   slug: freepik-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freepik.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.freepik.com over HTTP.
+  name: Freepik MCP Server
+  slug: freepik
 modified: '2026-05-19'
 name: Freepik
 nav: Providers
 network: true
-overview: 'Freepik publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Image Editing API, Image Generation API, and 3 more. Tagged areas include Artificial Intelligence, Graphics, Illustrations, Image-Generation, and Photos.
+overview: 'Freepik publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Image Editing API, Image Generation API, and 3 more. Tagged areas include Artificial Intelligence, Graphics, Illustrations, Image Generation, and Photos.
 
 
   Freepik''s developer surface includes authentication, documentation, signup flow, and 5 more developer resources.'
@@ -164,7 +168,7 @@ rate_limits:
   slug: freepik-rate-limits
 score:
   band: thin
-  composite: 30.3
+  composite: 28.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 46.0
@@ -176,11 +180,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 30.3
+  previous_composite: 28.3
   provenance:
     agentic_access: derived
     contracts:
@@ -189,8 +193,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -210,7 +220,7 @@ tags:
 - Artificial Intelligence
 - Graphics
 - Illustrations
-- Image-Generation
+- Image Generation
 - Photos
 - Video Generation
 website: https://www.freepik.com/

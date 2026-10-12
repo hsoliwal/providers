@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Core numerical computing library for Python providing multi-dimensional arrays and mathematical functions.
@@ -74,7 +74,7 @@ modified: '2026-04-28'
 name: NumPy
 nav: Providers
 network: true
-overview: 'NumPy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Data Science, Machine-Learning, Numerical Analysis, Open-Source, and Python Library.
+overview: 'NumPy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Data Science, Machine Learning, Numerical Analysis, Open Source, and Python Library.
 
 
   NumPy''s developer surface includes documentation, changelog, and 3 more developer resources.'
@@ -89,7 +89,7 @@ rate_limits:
   slug: numpy-rate-limits
 score:
   band: emerging
-  composite: 15.8
+  composite: 16.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -103,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 15.8
+  previous_composite: 16.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -128,9 +128,9 @@ security:
 slug: numpy
 tags:
 - Data Science
-- Machine-Learning
+- Machine Learning
 - Numerical Analysis
-- Open-Source
+- Open Source
 - Python Library
 - Scientific Computing
 website: https://numpy.org/

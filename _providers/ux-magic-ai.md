@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -121,9 +121,9 @@ description: UXMagic (UX Magic AI) is an AI UI/UX design platform that turns tex
 image: https://uxmagic.ai/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.uxmagic.ai over HTTP; 19 tools listed.
   name: UX Magic AI MCP Server
-  slug: ux-magic-ai-mcp-server
+  slug: uxmagic
 modified: '2026-07-21'
 name: UX Magic AI
 nav: Providers
@@ -135,7 +135,7 @@ overview: 'UX Magic AI is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 8
 score:
   band: emerging
-  composite: 23.2
+  composite: 23.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -149,13 +149,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 23.2
+  previous_composite: 23.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

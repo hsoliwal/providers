@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.1
-  scored_at: '2026-09-20'
+  score: 32.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.moosend.com/v3
@@ -62,6 +62,11 @@ collections:
   name: Moosend API
   slug: open-moosend
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/moosend/refs/heads/main/capabilities/moosend-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/moosend-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/moosend/refs/heads/main/authentication/moosend-authentication.yml
   title: ''
@@ -257,7 +262,7 @@ overview: 'Moosend publishes 4 APIs on the [APIs.io](https://apis.io/) network, 
   The Moosend catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Moosend''s developer surface includes authentication, documentation, API reference, support, signup flow, engineering blog, pricing, and 31 more developer resources.'
+  Moosend''s developer surface includes authentication, documentation, API reference, support, signup flow, engineering blog, pricing, and 32 more developer resources.'
 plans:
 - name: Moosend Plans Pricing
   plan_count: 5
@@ -269,9 +274,9 @@ rate_limits:
   slug: moosend-rate-limits
 score:
   band: strong
-  composite: 65.8
+  composite: 62.1
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 72.0
     catalog_earned_first_party: 24.0
     catalog_gap: 43.0
@@ -281,11 +286,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 60.5
+    contract_quality: 55.0
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
-  previous_composite: 65.8
+  previous_composite: 62.1
   provenance:
     conformance: derived
     contracts:
@@ -300,9 +305,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 56.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

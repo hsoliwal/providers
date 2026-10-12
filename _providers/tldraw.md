@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The tldraw SDK is a React component library for embedding an infinite canvas with drawing tools, shapes, text, arrows, selection, accessibility, and theming. Used in production by Google, Shopify, Cli
@@ -139,7 +139,7 @@ rate_limits:
   slug: tldraw-rate-limits
 score:
   band: emerging
-  composite: 19.3
+  composite: 17.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -153,11 +153,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 19.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://app.visotrust.com/api/v1
@@ -50,52 +50,52 @@ apis:
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-chat-rest-resource API from VISO Trust (Protecht) — 1 operation(s) for client-api-chat-rest-resource.
-  name: VISO Trust (Protecht) client-api-chat-rest-resource API
+  name: VISO Trust (Protecht) Client API Chat Rest Resource API
   slug: viso-trust-protecht-client-api-chat-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-context-type-rest-resource API from VISO Trust (Protecht) — 1 operation(s) for client-api-context-type-rest-resource.
-  name: VISO Trust (Protecht) client-api-context-type-rest-resource API
+  name: VISO Trust (Protecht) Client API Context Type Rest Resource API
   slug: viso-trust-protecht-client-api-context-type-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-data-type-rest-resource API from VISO Trust (Protecht) — 1 operation(s) for client-api-data-type-rest-resource.
-  name: VISO Trust (Protecht) client-api-data-type-rest-resource API
+  name: VISO Trust (Protecht) Client API Data Type Rest Resource API
   slug: viso-trust-protecht-client-api-data-type-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-external-intelligence-report-rest-resource API from VISO Trust (Protecht) — 8 operation(s) for client-api-external-intelligence-report-rest-resource.
-  name: VISO Trust (Protecht) client-api-external-intelligence-report-rest-resource API
+  name: VISO Trust (Protecht) Client API External Intelligence Report Rest Resource API
   slug: viso-trust-protecht-client-api-external-intelligence-report-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-questionnaire-rest-resource API from VISO Trust (Protecht) — 2 operation(s) for client-api-questionnaire-rest-resource.
-  name: VISO Trust (Protecht) client-api-questionnaire-rest-resource API
+  name: VISO Trust (Protecht) Client API Questionnaire Rest Resource API
   slug: viso-trust-protecht-client-api-questionnaire-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-relationship-rest-resource API from VISO Trust (Protecht) — 11 operation(s) for client-api-relationship-rest-resource.
-  name: VISO Trust (Protecht) client-api-relationship-rest-resource API
+  name: VISO Trust (Protecht) Client API Relationship Rest Resource API
   slug: viso-trust-protecht-client-api-relationship-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-user-rest-resource API from VISO Trust (Protecht) — 2 operation(s) for client-api-user-rest-resource.
-  name: VISO Trust (Protecht) client-api-user-rest-resource API
+  name: VISO Trust (Protecht) Client API User Rest Resource API
   slug: viso-trust-protecht-client-api-user-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-vendor-directory-rest-resource API from VISO Trust (Protecht) — 1 operation(s) for client-api-vendor-directory-rest-resource.
-  name: VISO Trust (Protecht) client-api-vendor-directory-rest-resource API
+  name: VISO Trust (Protecht) Client API Vendor Directory Rest Resource API
   slug: viso-trust-protecht-client-api-vendor-directory-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-vendor-risk-summary-rest-resource API from VISO Trust (Protecht) — 2 operation(s) for client-api-vendor-risk-summary-rest-resource.
-  name: VISO Trust (Protecht) client-api-vendor-risk-summary-rest-resource API
+  name: VISO Trust (Protecht) Client API Vendor Risk Summary Rest Resource API
   slug: viso-trust-protecht-client-api-vendor-risk-summary-rest-resource-api
 - baseURL: https://app.visotrust.com/api/v1
   baseurl_source: declared
   description: The client-api-webhook-rest-resource API from VISO Trust (Protecht) — 2 operation(s) for client-api-webhook-rest-resource.
-  name: VISO Trust (Protecht) client-api-webhook-rest-resource API
+  name: VISO Trust (Protecht) Client API Webhook Rest Resource API
   slug: viso-trust-protecht-client-api-webhook-rest-resource-api
 artifact_total: 30
 asyncapis:
@@ -143,6 +143,11 @@ collections:
   name: VISO TRUST API Documentation client-api-assessment-rest-resource client-api-webhook-rest-resource API
   slug: open-viso-trust-protecht-client-api-webhook-rest-resource-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/viso-trust-protecht/refs/heads/main/capabilities/viso-trust-protecht-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/viso-trust-protecht-capability-edges.yml
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/viso-trust-protecht/refs/heads/main/openapi/_original/viso-trust-protecht-openapi-original.json
   title: ''
@@ -250,26 +255,26 @@ description: VISO TRUST is an AI-powered third-party risk management (TPRM) plat
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/viso-trust-protecht.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.visotrust.com over SSE.
   name: VISO Trust (Protecht) MCP Server
-  slug: viso-trust-protecht-mcp-server
+  slug: viso-trust
 modified: '2026-07-21'
 name: VISO Trust (Protecht)
 nav: Providers
 network: true
-overview: 'VISO Trust (Protecht) publishes 12 APIs on the [APIs.io](https://apis.io/) network, including client-api-assessment-rest-resource API, client-api-audit-log-rest-resource API, client-api-chat-rest-resource API, and 9 more. Tagged areas include Company, Security, Third-Party Risk Management, Vendor Risk Management, and TPRM.
+overview: 'VISO Trust (Protecht) publishes 12 APIs on the [APIs.io](https://apis.io/) network, including client-api-assessment-rest-resource API, client-api-audit-log-rest-resource API, Client API Chat Rest Resource API, and 9 more. Tagged areas include Company, Security, Third-Party Risk Management, GRC, and Cybersecurity.
 
 
   The VISO Trust (Protecht) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  VISO Trust (Protecht)''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, and 16 more developer resources.'
+  VISO Trust (Protecht)''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, and 17 more developer resources.'
 random_paper: 10
 score:
   band: developing
-  composite: 40.6
+  composite: 40.0
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -279,11 +284,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 56.6
+    contract_quality: 51.8
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 40.6
+  previous_composite: 40.0
   provenance:
     conformance: derived
     contracts:
@@ -293,8 +298,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,8 +329,6 @@ tags:
 - Company
 - Security
 - Third-Party Risk Management
-- Vendor Risk Management
-- TPRM
 - GRC
 - Cybersecurity
 - Compliance

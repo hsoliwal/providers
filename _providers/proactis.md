@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 10
 apis:
 - description: Configure the accounting structures that spend is coded against — departments, cost centers, cost accounts and cost dimensions, plus department addresses. Master data, so records are created with POST
@@ -231,12 +231,12 @@ rate_limits:
   slug: proactis-rate-limits
 scopes:
 - name: Proactis Scopes
-  scope_count: 0
+  scope_count: 6
   slug: proactis-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes · clientCredentials
 score:
   band: developing
-  composite: 51.4
+  composite: 54.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 55.0
@@ -248,16 +248,22 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 53.2
+    contract_quality: 50.5
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 57.9
-  previous_composite: 51.4
+  previous_composite: 54.0
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

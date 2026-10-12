@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -326,7 +326,7 @@ layout: provider
 mcp_servers:
 - description: ProcessOut publishes an official, hosted (remote) Model Context Protocol server that gives AI code editors (Cursor, Windsurf) and assistants (Claude Desktop) direct access to the ProcessOut API and do
   name: ProcessOut MCP Server
-  slug: processout-mcp-server
+  slug: processout
 modified: '2026-07-20'
 name: ProcessOut
 nav: Providers
@@ -344,8 +344,8 @@ rate_limits:
   name: Processout Rate Limits
   slug: processout-rate-limits
 score:
-  band: strong
-  composite: 55.7
+  band: developing
+  composite: 50.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 45.0
@@ -357,11 +357,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 60.5
-  previous_composite: 55.7
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -381,9 +381,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 78.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -410,7 +410,7 @@ tags:
 - Tokenization
 - Checkout
 - Reconciliation
-- Fraud
+- Fraud Prevention
 - 3D Secure
 - Company
 website: https://www.processout.com/

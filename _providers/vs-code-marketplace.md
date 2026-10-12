@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -230,7 +230,7 @@ rules:
   slug: vs-code-marketplace-rules
 score:
   band: thin
-  composite: 38.6
+  composite: 37.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 47.5
@@ -242,11 +242,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
-    contract_quality: 54.2
+    contract_quality: 49.1
     developer_ergonomics: 38.1
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 28.9
-  previous_composite: 38.6
+  previous_composite: 37.6
   provenance:
     agentic_access: derived
     contracts:
@@ -254,8 +254,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

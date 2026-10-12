@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -188,7 +188,7 @@ modified: '2026-05-19'
 name: vLex
 nav: Providers
 network: true
-overview: 'vLex publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Anonymization API, Citations API, Classification API, and 2 more. Tagged areas include Artificial Intelligence, Classification, Legal Research, Legal Tech, and Natural Language Processing.
+overview: 'vLex publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Anonymization API, Citations API, Classification API, and 3 more. Tagged areas include Artificial Intelligence, Classification, Legal Research, Legal Tech, and Natural Language Processing.
 
 
   The vLex catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -228,7 +228,7 @@ rules:
   slug: vlex-rules
 score:
   band: thin
-  composite: 38.1
+  composite: 37.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 54.5
@@ -240,11 +240,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 13.6
-    contract_quality: 66.3
+    contract_quality: 60.4
     developer_ergonomics: 45.2
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 38.1
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -252,8 +252,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

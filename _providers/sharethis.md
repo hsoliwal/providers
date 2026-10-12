@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.1
-  scored_at: '2026-09-20'
+  score: 40.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public, unauthenticated GET endpoint returning aggregate social sharing metrics for any URL — clicks and shares broken out per network (facebook, twitter, linkedin, pinterest, whatsapp and dozens more
@@ -234,7 +234,7 @@ modified: '2026-08-27'
 name: ShareThis
 nav: Providers
 network: true
-overview: 'ShareThis publishes 6 APIs on the [APIs.io](https://apis.io/) network, including AI Summary API, Apps API, Audience API, and 3 more. Tagged areas include Company, Social Sharing, Website Tools, Audience Data, and Advertising Technology.
+overview: 'ShareThis publishes 8 APIs on the [APIs.io](https://apis.io/) network, including AI Summary API, Apps API, Audience API, and 5 more. Tagged areas include Company, Social Sharing, Website Tools, Audience Data, and AdTech.
 
 
   ShareThis'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -249,12 +249,12 @@ rate_limits:
   slug: sharethis-rate-limits
 scopes:
 - name: Sharethis Scopes
-  scope_count: 0
+  scope_count: 1
   slug: sharethis-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 45.6
+  composite: 47.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -266,11 +266,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 45.6
+  previous_composite: 47.1
   provenance:
     conformance: first-party
     contracts:
@@ -280,8 +280,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -302,7 +308,7 @@ tags:
 - Social Sharing
 - Website Tools
 - Audience Data
-- Advertising Technology
+- AdTech
 - Analytics
 - Consent Management
 - Publishing

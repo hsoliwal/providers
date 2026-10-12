@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -262,14 +262,14 @@ description: NeverBounce is an email verification and list cleaning service — 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/neverbounce.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.neverbounce.com.
   name: NeverBounce Developer Docs MCP
   slug: neverbounce-developer-docs-mcp
 modified: '2026-08-13'
 name: NeverBounce
 nav: Providers
 network: true
-overview: 'NeverBounce publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Account API, Jobs API, Single API, and 1 more. Tagged areas include Email Verification, Email Validation, Email Hygiene, Deliverability, and Marketing.
+overview: 'NeverBounce publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Jobs API, Single API, and 2 more. Tagged areas include Email Verification, Email Hygiene, Deliverability, Marketing, and List Cleaning.
 
 
   The NeverBounce catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -299,9 +299,9 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 57.7
+    contract_quality: 52.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 81.6
   previous_composite: 58.6
   provenance:
@@ -314,8 +314,14 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -333,12 +339,12 @@ security:
 slug: neverbounce
 tags:
 - Email Verification
-- Email Validation
 - Email Hygiene
 - Deliverability
 - Marketing
 - List Cleaning
 - Data Quality
 - ZoomInfo
+- Email
 website: https://www.neverbounce.com
 ---

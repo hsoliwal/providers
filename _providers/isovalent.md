@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -49,22 +49,22 @@ apis:
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The bgp API from Isovalent — 3 operation(s) for bgp.
-  name: Isovalent bgp API
+  name: Isovalent Bgp API
   slug: isovalent-bgp-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The connectivity API from Isovalent — 2 operation(s) for connectivity.
-  name: Isovalent connectivity API
+  name: Isovalent Connectivity API
   slug: isovalent-connectivity-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The daemon API from Isovalent — 9 operation(s) for daemon.
-  name: Isovalent daemon API
+  name: Isovalent Daemon API
   slug: isovalent-daemon-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The endpoint API from Isovalent — 6 operation(s) for endpoint.
-  name: Isovalent endpoint API
+  name: Isovalent Endpoint API
   slug: isovalent-endpoint-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
@@ -74,22 +74,22 @@ apis:
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The ipam API from Isovalent — 2 operation(s) for ipam.
-  name: Isovalent ipam API
+  name: Isovalent Ipam API
   slug: isovalent-ipam-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The policy API from Isovalent — 10 operation(s) for policy.
-  name: Isovalent policy API
+  name: Isovalent Policy API
   slug: isovalent-policy-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The prefilter API from Isovalent — 1 operation(s) for prefilter.
-  name: Isovalent prefilter API
+  name: Isovalent Prefilter API
   slug: isovalent-prefilter-api
 - baseURL: unix:///var/run/cilium/cilium.sock
   baseurl_source: declared
   description: The service API from Isovalent — 2 operation(s) for service.
-  name: Isovalent service API
+  name: Isovalent Service API
   slug: isovalent-service-api
 artifact_total: 24
 collections:
@@ -124,6 +124,11 @@ collections:
   name: Cilium bgp service API
   slug: open-isovalent-service-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/isovalent/refs/heads/main/capabilities/isovalent-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/isovalent-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -303,14 +308,14 @@ modified: '2026-08-19'
 name: Isovalent
 nav: Providers
 network: true
-overview: 'Isovalent publishes 9 APIs on the [APIs.io](https://apis.io/) network, including bgp API, connectivity API, daemon API, and 6 more. Tagged areas include Company, Networking, Kubernetes, eBPF, and Security.
+overview: 'Isovalent publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Bgp API, Connectivity API, Daemon API, and 7 more. Tagged areas include Company, Networking, Kubernetes, eBPF, and Security.
 
 
-  Isovalent''s developer surface includes CLI, authentication, changelog, sandbox, documentation, API reference, getting-started guide, and 30 more developer resources.'
+  Isovalent''s developer surface includes CLI, authentication, changelog, sandbox, documentation, API reference, getting-started guide, and 31 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 40.7
+  composite: 41.1
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -322,11 +327,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 40.5
+    contract_quality: 36.5
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 40.7
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -337,8 +342,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

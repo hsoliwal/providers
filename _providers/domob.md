@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Domob's mobile ad exchange, supporting RTB, PMP, PD and PDB buying. Listed on the Domob developer platform's API docking page with a docking document updated 2025-06-13, but that document is hosted on
@@ -205,7 +205,7 @@ modified: '2026-08-12'
 name: domob
 nav: Providers
 network: true
-overview: 'domob publishes 1 API on the [APIs.io](https://apis.io/) network: Reporting API. Tagged areas include Company, Advertising, Mobile, AdTech, and Marketing.
+overview: 'domob publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Reporting API, and 1 more. Tagged areas include Company, Advertising, Mobile, AdTech, and Marketing.
 
 
   domob''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
@@ -220,7 +220,7 @@ rate_limits:
   slug: domob-rate-limits
 score:
   band: developing
-  composite: 43.5
+  composite: 43.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -232,9 +232,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 59.2
+    contract_quality: 53.3
     developer_ergonomics: 69.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -243,7 +243,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 43.5
+  previous_composite: 43.1
   provenance:
     conformance: derived
     contracts:
@@ -253,8 +253,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

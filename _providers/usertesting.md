@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.use2.usertesting.com
@@ -272,7 +272,7 @@ layout: provider
 mcp_servers:
 - description: UserTesting ships an official MCP server, currently in limited early access. Per the product page, it connects UserTesting to Claude, ChatGPT, Figma Make, and other MCP clients so teams can recruit pa
   name: UserTesting MCP Server
-  slug: usertesting-mcp-server
+  slug: usertesting
 modified: '2026-07-21'
 name: UserTesting
 nav: Providers
@@ -293,7 +293,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 48.6
+  composite: 51.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 39.0
@@ -305,11 +305,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 52.0
     developer_ergonomics: 43.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 48.6
+  previous_composite: 51.4
   provenance:
     conformance: derived
     contracts:
@@ -319,8 +319,22 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

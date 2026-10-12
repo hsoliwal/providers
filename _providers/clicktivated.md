@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -126,7 +126,7 @@ modified: '2026-08-12'
 name: Clicktivated
 nav: Providers
 network: true
-overview: 'Clicktivated is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Interactive Video, Shoppable Video, and Advertising Technology.
+overview: 'Clicktivated is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Interactive Video, Shoppable Video, and AdTech.
 
 
   Clicktivated''s developer surface includes engineering blog, support, and 12 more developer resources.'
@@ -141,7 +141,7 @@ rate_limits:
   slug: clicktivated-rate-limits
 score:
   band: minimal
-  composite: 9.8
+  composite: 9.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -155,13 +155,19 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 9.8
+  previous_composite: 9.5
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,7 +189,7 @@ tags:
 - Video
 - Interactive Video
 - Shoppable Video
-- Advertising Technology
+- AdTech
 - First-Party Data
 - Retail
 - Tourism

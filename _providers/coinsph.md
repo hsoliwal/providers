@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-09-20'
+  score: 33.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 63
   human_in_the_loop: 0
@@ -432,7 +432,7 @@ overview: 'Coins.ph publishes 26 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 8
 score:
   band: developing
-  composite: 53.4
+  composite: 50.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -444,9 +444,9 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 64.7
+    contract_quality: 58.9
     developer_ergonomics: 54.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -455,12 +455,12 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 53.4
+  previous_composite: 50.5
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 96.2
       derived: 0
       marker_coverage: 0.0
       total: 26
@@ -471,9 +471,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

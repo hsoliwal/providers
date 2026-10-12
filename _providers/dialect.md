@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -279,7 +279,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server for Dialect. Gives agents access to Blinks creation, the Standard Blinks Library (40+ protocol integrations), the Markets API (real-time rates, TVL, protocol metrics), the A
   name: Dialect MCP Server
-  slug: dialect-mcp-server
+  slug: dialect
 modified: '2026-07-18'
 name: Dialect
 nav: Providers
@@ -294,7 +294,7 @@ overview: 'Dialect publishes 9 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 0
 score:
   band: developing
-  composite: 48.2
+  composite: 45.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -306,11 +306,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 61.0
+    contract_quality: 55.7
     developer_ergonomics: 68.5
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 26.3
-  previous_composite: 48.2
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -326,9 +326,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

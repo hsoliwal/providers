@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Saia Inc API provides access to platform services and data for enterprise integration and automation.
@@ -67,10 +67,10 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/saia.png
 layout: provider
 modified: '2026-04-19'
-name: Saia Inc
+name: Saia
 nav: Providers
 network: true
-overview: Saia Inc publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Freight, Trucking, and Logistics.
+overview: Saia publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Freight, Trucking, and Logistics.
 plans:
 - name: Saia Plans Pricing
   plan_count: 1
@@ -81,8 +81,8 @@ rate_limits:
   name: Saia Rate Limits
   slug: saia-rate-limits
 score:
-  band: emerging
-  composite: 11.0
+  band: minimal
+  composite: 9.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 34.0
@@ -96,11 +96,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 5.3
-  previous_composite: 11.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

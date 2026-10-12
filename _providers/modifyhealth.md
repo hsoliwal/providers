@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 27.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface for the ModifyHealth store. A Universal Commerce Protocol (UCP) service exposed over MCP at https://modifyhealth.com/api/ucp/mcp, serving 13 unauthenticated tools for
@@ -161,9 +161,9 @@ description: 'ModifyHealth is a US direct-to-consumer medically tailored meal de
 image: https://modifyhealth.com/cdn/shop/files/MOD_Icon_Circle_KO_Green_400px_32x32.png?v=1623949729
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at modifyhealth.com over HTTP; 13 tools listed.
   name: ModifyHealth MCP Server
-  slug: modifyhealth-mcp-server
+  slug: modifyhealth-ucp
 modified: '2026-08-26'
 name: ModifyHealth
 nav: Providers
@@ -188,7 +188,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 32.6
+  composite: 30.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -202,21 +202,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 32.6
+  previous_composite: 30.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

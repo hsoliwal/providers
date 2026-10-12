@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -57,11 +57,11 @@ modified: '2026-07-25'
 name: Vector Express v2.0
 nav: Providers
 network: true
-overview: Vector Express v2.0 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Documents And Productivity and Public APIs.
+overview: Vector Express v2.0 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Public APIs, File Conversion, and Vector Graphics.
 random_paper: 6
 score:
   band: minimal
-  composite: 3.9
+  composite: 2.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 17.0
@@ -75,11 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 38.9
+    discoverability: 37.5
     operational_transparency: 0.0
-  previous_composite: 3.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 2.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -93,7 +99,8 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: vector-express-v2-0
 tags:
-- Documents And Productivity
 - Public APIs
+- File Conversion
+- Vector Graphics
 website: https://vector.express
 ---

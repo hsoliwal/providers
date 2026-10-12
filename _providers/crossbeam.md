@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.4
-  scored_at: '2026-09-20'
+  score: 46.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Read (and timeline-write) access to Crossbeam Ecosystem Intelligence — partners, populations, reports/overlaps, and real-time signals — via a versioned REST API secured with OAuth 2.0. Requires an Aut
@@ -236,9 +236,9 @@ description: 'Crossbeam is the leading Ecosystem-Led Growth (ELG) platform: a se
 image: https://cdn.prod.website-files.com/66955639e4d4a6eebd7168b9/67659cb901d6d8f4eb2bd567_crossbeam_opengraph.avif
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 9 tools listed.
   name: Crossbeam MCP Server
-  slug: crossbeam-mcp-server
+  slug: crossbeam
 modified: '2026-08-14'
 name: Crossbeam
 nav: Providers
@@ -266,7 +266,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: strong
-  composite: 59.4
+  composite: 62.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -278,17 +278,29 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 52.6
-  previous_composite: 59.4
+  previous_composite: 62.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

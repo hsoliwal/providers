@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -137,21 +137,21 @@ description: Obot AI (formerly Acorn Labs) builds an open-source MCP Gateway and
 image: https://obot.ai/wp-content/uploads/2026/05/obot_linkedin_01-1500x396-2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Obot is itself an MCP Gateway / platform — its core product is the hosting, cataloguing, and governance of Model Context Protocol servers. Rather than a single hosted MCP endpoint, Obot provides an MC
   name: Obot MCP Server
-  slug: obot-mcp-server
+  slug: obot-mcp-yml
 modified: '2026-07-20'
 name: Obot
 nav: Providers
 network: true
-overview: 'Obot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, MCP, AI Agents, MCP Gateway, and Open-Source.
+overview: 'Obot is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, MCP, AI Agents, MCP Gateway, and Open Source.
 
 
   Obot''s developer surface includes developer portal, documentation, getting-started guide, engineering blog, support, authentication, CLI, and 14 more developer resources.'
 random_paper: 18
 score:
   band: thin
-  composite: 28.8
+  composite: 30.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -165,14 +165,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 28.9
-  previous_composite: 28.8
+  previous_composite: 30.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -198,7 +204,7 @@ tags:
 - MCP
 - AI Agents
 - MCP Gateway
-- Open-Source
+- Open Source
 - Agent Governance
 - Access Control
 - Developer Tools

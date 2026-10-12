@@ -27,16 +27,16 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 17.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The hosted OAuth authorization broker FuseWP operates at auth.fusewp.com. The self-hosted FuseWP plugin cannot safely hold OAuth client secrets for the partner platforms it connects to, so it delegate
@@ -167,9 +167,9 @@ description: 'FuseWP is a WordPress automation plugin from the FuseWP Team (Prop
 image: https://fusewp.com/wp-content/uploads/2023/06/fusewp-wordpress-plugin.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at fusewp.com.
   name: FuseWP MCP Server
-  slug: fusewp-mcp-server
+  slug: fusewp-mcp-yml
 modified: '2026-08-12'
 name: FuseWP
 nav: Providers
@@ -193,8 +193,8 @@ scopes:
   slug: fusewp-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 37.4
+  band: developing
+  composite: 40.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -208,14 +208,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 37.4
+  previous_composite: 40.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

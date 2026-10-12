@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Automated, programmatic access to the same AI creative-evaluation engine behind the Brainsuite application. Partners and enterprise customers upload assets (or supply asset URLs), declare attributes s
@@ -124,12 +124,12 @@ rate_limits:
   slug: aimpower-rate-limits
 scopes:
 - name: Aimpower Scopes
-  scope_count: 0
+  scope_count: 4
   slug: aimpower-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 30.0
+  composite: 31.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -143,7 +143,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -153,12 +153,22 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 30.0
+  previous_composite: 31.6
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

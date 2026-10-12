@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for generating, stamping, downloading, and cancelling CFDI 4.0 electronic invoices, payroll receipts, payment complements, and related Mexican tax documents, plus management of clients, produ
@@ -148,14 +148,14 @@ modified: '2026-07-19'
 name: Facturama
 nav: Providers
 network: true
-overview: 'Facturama publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Electronic Invoicing, CFDI, E-Invoicing, and Mexico.
+overview: 'Facturama publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Invoicing, CFDI, Mexico, and Tax Compliance.
 
 
   Facturama''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 33.3
+  composite: 33.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -169,7 +169,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,11 +178,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 33.3
+  previous_composite: 33.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,9 +207,8 @@ security:
 slug: facturama
 tags:
 - Company
-- Electronic Invoicing
-- CFDI
 - E-Invoicing
+- CFDI
 - Mexico
 - Tax Compliance
 - SAT

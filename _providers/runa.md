@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -234,7 +234,7 @@ rules:
   slug: runa-spectral-rules
 score:
   band: developing
-  composite: 42.3
+  composite: 40.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 61.5
@@ -246,11 +246,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 13.6
-    contract_quality: 67.2
+    contract_quality: 61.2
     developer_ergonomics: 41.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 42.3
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     contracts:
@@ -263,9 +263,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -291,5 +291,6 @@ tags:
 - Payments
 - Incentives
 - Payouts
+- Loyalty & Incentives
 website: https://www.runa.io/
 ---

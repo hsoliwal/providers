@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -98,6 +98,11 @@ collections:
   name: IFS Cloud ERP Finance Work Orders API
   slug: open-ifs-work-orders-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ifs/refs/heads/main/capabilities/ifs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ifs-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ifs/refs/heads/main/agentic-access/ifs-agentic-access.yml
   title: ''
@@ -265,13 +270,13 @@ modified: '2026-09-13'
 name: IFS
 nav: Providers
 network: true
-overview: 'IFS publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Finance API, Inventory API, Procurement API, and 1 more. Tagged areas include ERP, Field Service, Asset Management, Manufacturing, and Energy.
+overview: 'IFS publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Finance API, Inventory API, Procurement API, and 4 more. Tagged areas include ERP, Field Service, Asset Management, Manufacturing, and Energy.
 
 
   The IFS catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  IFS''s developer surface includes authentication, engineering blog, developer portal, documentation, API reference, getting-started guide, support, and 25 more developer resources.'
+  IFS''s developer surface includes authentication, engineering blog, developer portal, documentation, API reference, getting-started guide, support, and 26 more developer resources.'
 plans:
 - name: Ifs Plans Pricing
   plan_count: 0
@@ -298,10 +303,10 @@ scopes:
   slug: ifs-scopes
   summary_line: 2 scopes · clientCredentials/authorizationCode/authorizationCode+PKCE/password
 score:
-  band: strong
-  composite: 54.3
+  band: developing
+  composite: 49.4
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 54.3
     catalog_earned_first_party: 0.0
     catalog_gap: 60.8
@@ -311,9 +316,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 28.0
-    contract_quality: 73.8
+    contract_quality: 68.3
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -323,7 +328,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 54.3
+  previous_composite: 49.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -337,9 +342,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 70.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

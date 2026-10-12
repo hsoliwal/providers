@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -106,6 +106,11 @@ collections:
   name: HCP Vault Secrets API
   slug: open-hcp
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/capabilities/hcp-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hcp-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/hcp/refs/heads/main/agentic-access/hcp-agentic-access.yml
   title: ''
@@ -161,10 +166,10 @@ modified: '2026-05-19'
 name: HashiCorp Cloud Platform
 nav: Providers
 network: true
-overview: 'HashiCorp Cloud Platform publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Gateway API, Integrations API, and 2 more. Tagged areas include Cloud, Infrastructure, DevOps, Secrets Management, and Service Networking.
+overview: 'HashiCorp Cloud Platform publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Gateway API, Integrations API, and 6 more. Tagged areas include Cloud, Infrastructure, DevOps, Secrets Management, and Service Networking.
 
 
-  HashiCorp Cloud Platform''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
+  HashiCorp Cloud Platform''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Hcp Plans Pricing
   plan_count: 6
@@ -192,9 +197,9 @@ rate_limits:
   slug: hcp-rate-limits
 score:
   band: thin
-  composite: 32.1
+  composite: 30.0
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 49.0
     catalog_earned_first_party: 0.0
     catalog_gap: 66.0
@@ -204,11 +209,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
-  previous_composite: 32.1
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -216,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

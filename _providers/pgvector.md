@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.8
-  scored_at: '2026-09-20'
+  score: 1.6
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -135,7 +135,7 @@ modified: '2026-08-27'
 name: pgvector
 nav: Providers
 network: true
-overview: 'pgvector is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Vector Database, Database, Open-Source, and PostgreSQL.
+overview: 'pgvector is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Vector Database, Database, Open Source, and PostgreSQL.
 
 
   pgvector''s developer surface includes documentation, API reference, getting-started guide, support, changelog, and 15 more developer resources.'
@@ -146,7 +146,7 @@ plans:
 random_paper: 16
 score:
   band: emerging
-  composite: 16.4
+  composite: 14.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -160,15 +160,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 42.3
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 16.4
+  previous_composite: 14.5
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 4.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,10 +186,11 @@ tags:
 - Artificial Intelligence
 - Vector Database
 - Database
-- Open-Source
+- Open Source
 - PostgreSQL
 - Search
 - Embeddings
 - Extensions
 - Company
+- Vector Search
 ---

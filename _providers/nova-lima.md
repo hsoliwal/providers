@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Resource-oriented REST API (v1.0) for Runrun.it work and project management: tasks, projects, boards, clients, teams, users, comments, documents, evaluations, and time-worked reporting. JSON, ISO 8601'
@@ -153,9 +153,9 @@ description: Runrun.it (headquartered in Nova Lima, Brazil, and backed by 500 Gl
 image: https://runrun.it/static/images/logo_1200X630.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at runrun.it over HTTP.
   name: Nova Lima MCP Server
-  slug: nova-lima-mcp-server
+  slug: runrun-it
 modified: '2026-07-20'
 name: Nova Lima
 nav: Providers
@@ -179,7 +179,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 34.0
+  composite: 35.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -191,9 +191,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -202,12 +202,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 34.0
+  previous_composite: 35.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

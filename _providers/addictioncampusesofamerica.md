@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 coverage:
@@ -64,7 +64,7 @@ overview: Addiction Campuses of America is profiled on the [APIs.io](https://api
 random_paper: 15
 score:
   band: minimal
-  composite: 1.8
+  composite: 2.6
   coverage:
     artifact_dirs: 1
     catalog_earned: 25.0
@@ -78,7 +78,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -86,15 +86,15 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 1.8
+  previous_composite: 2.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

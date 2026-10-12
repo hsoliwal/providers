@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: RESTful API for managing storage volumes, disk groups, and storage operations.
@@ -116,7 +116,7 @@ modified: '2026-09-16'
 name: Veritas Volume Manager
 nav: Providers
 network: true
-overview: 'Veritas Volume Manager publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Disaster Recovery, Enterprise Storage, Filesystem, Storage, and Volume Management.
+overview: 'Veritas Volume Manager publishes 7 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 6 more. Tagged areas include Disaster Recovery, Enterprise Storage, Filesystem, Storage, and Volume Management.
 
 
   Veritas Volume Manager''s developer surface includes developer portal, getting-started guide, changelog, engineering blog, support, and 6 more developer resources.'
@@ -131,7 +131,7 @@ rate_limits:
   slug: veritas-volume-manager-rate-limits
 score:
   band: thin
-  composite: 38.6
+  composite: 39.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -143,13 +143,19 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 64.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 31.6
-  previous_composite: 38.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 39.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

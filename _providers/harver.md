@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 28.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -46,42 +46,42 @@ apis:
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The accounts API from Harver — 16 operation(s) for accounts.
-  name: Harver accounts API
+  name: Harver Accounts API
   slug: harver-accounts-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The applications API from Harver — 12 operation(s) for applications.
-  name: Harver applications API
+  name: Harver Applications API
   slug: harver-applications-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The candidate-statuses API from Harver — 1 operation(s) for candidate-statuses.
-  name: Harver candidate-statuses API
+  name: Harver Candidate Statuses API
   slug: harver-candidate-statuses-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The candidateApplications API from Harver — 1 operation(s) for candidateapplications.
-  name: Harver candidateApplications API
+  name: Harver Candidate Applications API
   slug: harver-candidateapplications-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The scheduling API from Harver — 2 operation(s) for scheduling.
-  name: Harver scheduling API
+  name: Harver Scheduling API
   slug: harver-scheduling-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The user-profile API from Harver — 3 operation(s) for user-profile.
-  name: Harver user-profile API
+  name: Harver User Profile API
   slug: harver-user-profile-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The vacancies API from Harver — 6 operation(s) for vacancies.
-  name: Harver vacancies API
+  name: Harver Vacancies API
   slug: harver-vacancies-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
   description: The webhook API from Harver — 1 operation(s) for webhook.
-  name: Harver webhook API
+  name: Harver Webhook API
   slug: harver-webhook-api
 - baseURL: https://api.harver.com/api/v1.0/
   baseurl_source: declared
@@ -125,6 +125,11 @@ collections:
   name: Harver Public accounts webhook API
   slug: open-harver-webhook-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/harver/refs/heads/main/capabilities/harver-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/harver-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -254,19 +259,19 @@ modified: '2026-07-19'
 name: Harver
 nav: Providers
 network: true
-overview: 'Harver publishes 9 APIs on the [APIs.io](https://apis.io/) network, including accounts API, applications API, candidate-statuses API, and 6 more. Tagged areas include Company, Human Resources, Recruiting, Hiring, and Talent Intelligence.
+overview: 'Harver publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Applications API, Candidate Statuses API, and 6 more. Tagged areas include Company, Human Resources, Recruiting, Hiring, and Talent Intelligence.
 
 
   The Harver catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Harver''s developer surface includes documentation, API reference, engineering blog, support, authentication, sandbox, and 20 more developer resources.'
+  Harver''s developer surface includes documentation, API reference, engineering blog, support, authentication, sandbox, and 21 more developer resources.'
 random_paper: 10
 score:
   band: developing
   composite: 41.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -276,9 +281,9 @@ score:
   facets:
     access_clarity: 14.5
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 51.0
     developer_ergonomics: 43.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   previous_composite: 41.3
   provenance:
@@ -291,8 +296,20 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 28.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

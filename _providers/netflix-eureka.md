@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 2
@@ -76,6 +76,11 @@ collections:
   name: Netflix Eureka REST Applications VIP API
   slug: open-netflix-eureka-vip-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/capabilities/netflix-eureka-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/netflix-eureka-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/netflix-eureka/refs/heads/main/agentic-access/netflix-eureka-agentic-access.yml
   title: ''
@@ -120,7 +125,7 @@ network: true
 overview: 'Netflix Eureka publishes 3 APIs on the [APIs.io](https://apis.io/) network: Applications API, Instances API, and VIP API. Tagged areas include Cloud-Native, Failover, Java, Load Balancing, and Microservices.
 
 
-  Netflix Eureka''s developer surface includes documentation, getting-started guide, FAQ, and 4 more developer resources.'
+  Netflix Eureka''s developer surface includes documentation, getting-started guide, FAQ, and 5 more developer resources.'
 plans:
 - name: Netflix Eureka Plans Pricing
   plan_count: 3
@@ -132,9 +137,9 @@ rate_limits:
   slug: netflix-eureka-rate-limits
 score:
   band: emerging
-  composite: 25.9
+  composite: 22.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -144,11 +149,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 46.0
+    contract_quality: 41.4
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 25.9
+  previous_composite: 22.2
   provenance:
     agentic_access: derived
     contracts:
@@ -156,8 +161,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

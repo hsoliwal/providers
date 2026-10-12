@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: 'The core Lucky Cart API. POST /cart/ticket submits a validated shopping cart — cart identifier, shopper identifier, gross and net amounts, and product lines — and Lucky Cart determines whether a game '
@@ -171,7 +171,7 @@ rate_limits:
   slug: lucky-cart-rate-limits
 score:
   band: emerging
-  composite: 24.2
+  composite: 26.0
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -185,7 +185,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -195,11 +195,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 24.2
+  previous_composite: 26.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -224,7 +230,7 @@ tags:
 - Advertising
 - Personalization
 - Loyalty
-- CPG
+- Consumer Packaged Goods
 - Grocery
 - Promotions
 - Gamification

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -83,18 +83,22 @@ created: '2026-07-17'
 description: Symmetrical.ai is a Polish-British HR and payroll fintech, founded in 2019 in Warsaw with offices in London and Barcelona and backed by Partech. It provides payroll and HR bureau outsourcing plus an HR platform automating wage calculation, digital document management, onboarding, leave and time tracking, and real-time analytics, alongside employee financial wellbeing tools such as earned-wage / salary-on-demand access. Symmetrical is ISO/IEC 27001 certified. The company operates an authentication-gated developer documentation portal (developer.symmetrical.ai) but publishes no public OpenAPI, API reference, or SDKs; this profile captures its public identity plus probed security posture.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/symmetrical.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.symmetrical.ai over HTTP.
+  name: Symmetrical MCP Server
+  slug: symmetrical
 modified: '2026-07-21'
 name: Symmetrical
 nav: Providers
 network: true
-overview: 'Symmetrical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Payroll, Human Resources, and Fintech.
+overview: 'Symmetrical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Payroll, Human Resources, and Fintech.
 
 
   Symmetrical''s developer surface includes engineering blog, pricing, signup flow, and 7 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 18.2
+  composite: 19.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -108,7 +112,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -118,12 +122,18 @@ score:
     regions:
     - cee
     - europe
-  previous_composite: 18.2
+  previous_composite: 19.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +148,7 @@ security:
 slug: symmetrical
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Payroll
 - Human Resources
 - Fintech

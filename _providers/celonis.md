@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 5
@@ -242,6 +242,11 @@ collections:
   slug: open-celonis-triggers-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/capabilities/celonis-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/celonis-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/celonis/refs/heads/main/overlays/celonis-knowledge-model-overlay.yaml
   title: ''
   type: Overlay
@@ -416,7 +421,7 @@ description: Celonis is the process intelligence and process mining company. Its
 image: https://delivery-p141552-e1488202.adobeaemcloud.com/adobe/assets/urn:aaid:aem:df855fa1-2c83-4a48-8cad-536a7d5cb952/as/Meta_Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: Celonis Agent Tools (MCP) Asset
   slug: celonis-agent-tools-mcp-asset
 modified: '2026-09-16'
@@ -429,7 +434,7 @@ overview: 'Celonis publishes 17 APIs on the [APIs.io](https://apis.io/) network,
   The Celonis catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Celonis'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
+  Celonis'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
 random_paper: 1
 scopes:
 - name: Celonis Scopes
@@ -438,9 +443,9 @@ scopes:
   summary_line: 2 scopes
 score:
   band: strong
-  composite: 61.1
+  composite: 62.4
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -450,11 +455,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 66.2
+    contract_quality: 61.0
     developer_ergonomics: 81.5
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 50.0
-  previous_composite: 61.1
+  previous_composite: 62.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -465,8 +470,14 @@ score:
       total: 17
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -493,8 +504,9 @@ tags:
 - Process Intelligence
 - Data
 - Analytics
-- Machine-Learning
+- Machine Learning
 - AI Agents
 - Enterprise
+- Workflow Automation
 website: https://www.celonis.com
 ---

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 11
 common:
@@ -135,7 +135,7 @@ modified: '2026-07-25'
 name: USAA
 nav: Providers
 network: true
-overview: 'USAA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Insurance, Military Finance, and Open Banking.
+overview: 'USAA is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Insurance, Military Finance, and Open Banking.
 
 
   The USAA catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -180,7 +180,7 @@ rules:
   slug: usaa-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 18.9
+  composite: 18.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.3
@@ -194,7 +194,7 @@ score:
     contract_governance: 28.0
     contract_quality: 10.7
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -203,7 +203,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.9
+  previous_composite: 18.6
   provenance:
     conformance: first-party
   regulatory:
@@ -211,9 +211,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 29.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -235,7 +235,7 @@ security:
   summary_line: Bugcrowd · security.txt · contact published
 slug: usaa
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Insurance
 - Military Finance

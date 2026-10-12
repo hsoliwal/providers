@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Remote Model Context Protocol server exposing 74 tools across six categories (plan and operate, build and ship, Company Brain, audience growth, sell and support, run the company) — the same tools Resu
@@ -184,9 +184,9 @@ description: 'Result is a Y Combinator (Spring 2026) all-in-one business operati
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/result.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.result.dev over HTTP requiring OAuth.
   name: Result MCP Server
-  slug: result-mcp-server
+  slug: result
 modified: '2026-08-13'
 name: Result
 nav: Providers
@@ -211,7 +211,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 45.9
+  composite: 43.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 60.0
@@ -225,9 +225,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 21.1
-  previous_composite: 45.9
+  previous_composite: 43.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -236,9 +236,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -138,6 +138,11 @@ collections:
   name: Kanban Tool API v3
   slug: open-kanban
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kanban/refs/heads/main/capabilities/kanban-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kanban-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kanban/refs/heads/main/agentic-access/kanban-agentic-access.yml
   title: ''
@@ -188,10 +193,10 @@ modified: '2026-05-19'
 name: Kanban Tool
 nav: Providers
 network: true
-overview: 'Kanban Tool publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Attachments API, Attachments.json API, Boards API, and 7 more. Tagged areas include Agile, Boards, Kanban, Project Management, and Task Management.
+overview: 'Kanban Tool publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Attachments API, Attachments.json API, Boards API, and 9 more. Tagged areas include Agile, Boards, Kanban, Project Management, and Task Management.
 
 
-  Kanban Tool''s developer surface includes engineering blog, pricing, signup flow, support, and 5 more developer resources.'
+  Kanban Tool''s developer surface includes engineering blog, pricing, signup flow, support, and 6 more developer resources.'
 plans:
 - name: Kanban Plans Pricing
   plan_count: 3
@@ -203,9 +208,9 @@ rate_limits:
   slug: kanban-rate-limits
 score:
   band: thin
-  composite: 33.0
+  composite: 31.2
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 44.0
     catalog_earned_first_party: 0.0
     catalog_gap: 71.0
@@ -215,11 +220,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 38.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 33.0
+  previous_composite: 31.2
   provenance:
     agentic_access: derived
     contracts:
@@ -227,8 +232,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

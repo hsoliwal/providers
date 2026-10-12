@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.0
-  scored_at: '2026-09-20'
+  score: 5.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Pomerium is an identity-aware reverse proxy that enables secure, zero-trust access to internal applications without a VPN.
@@ -97,7 +97,7 @@ rate_limits:
   slug: pomerium-rate-limits
 score:
   band: minimal
-  composite: 10.5
+  composite: 9.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 31.0
@@ -111,11 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 40.7
+    discoverability: 40.0
     operational_transparency: 10.5
-  previous_composite: 10.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

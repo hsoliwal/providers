@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -89,6 +89,11 @@ collections:
   name: Express Gateway Admin API
   slug: open-express-gateway
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/express-gateway/refs/heads/main/capabilities/express-gateway-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/express-gateway-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/express-gateway/refs/heads/main/agentic-access/express-gateway-agentic-access.yml
   title: ''
@@ -223,10 +228,10 @@ modified: '2026-09-07'
 name: Express Gateway
 nav: Providers
 network: true
-overview: 'Express Gateway publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Credentials API, Scopes API, and 1 more. Tagged areas include API Composition, API Gateway, BFF, Open-Source, and Microservices.
+overview: 'Express Gateway publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Credentials API, Scopes API, and 2 more. Tagged areas include API Composition, API Gateway, BFF, Open Source, and Microservices.
 
 
-  Express Gateway''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, CLI, and 19 more developer resources.'
+  Express Gateway''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, CLI, and 20 more developer resources.'
 plans:
 - name: Express Gateway Plans Pricing
   plan_count: 0
@@ -243,9 +248,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 35.4
+  composite: 35.7
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -255,11 +260,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 48.3
+    contract_quality: 43.8
     developer_ergonomics: 56.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 23.7
-  previous_composite: 35.4
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -270,8 +275,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -291,7 +302,7 @@ tags:
 - API Composition
 - API Gateway
 - BFF
-- Open-Source
+- Open Source
 - Microservices
 - Authentication
 - Node.js

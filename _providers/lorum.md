@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.fuse.me
@@ -268,8 +268,8 @@ overview: 'Lorum publishes 10 APIs on the [APIs.io](https://apis.io/) network, i
   Lorum''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, engineering blog, support, and 20 more developer resources.'
 random_paper: 9
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -281,11 +281,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 61.4
+    contract_quality: 56.1
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 40.8
+  previous_composite: 39.2
   provenance:
     conformance: derived
     contracts:
@@ -300,9 +300,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

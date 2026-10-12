@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth2-secured wealth-data API covering the Connect flow (connectors, sessions, SCA resolution), Credentials, Entities, Aggregation, and Letters, returning standardized portfolios, investments, accoun
@@ -184,7 +184,7 @@ layout: provider
 mcp_servers:
 - description: Model Context Protocol server giving AI assistants direct access to multi-bank investment data through Flanks. Covers the Connect flow, credential management, and portfolio/investment data retrieval.
   name: Flanks MCP Server
-  slug: flanks-mcp-server
+  slug: flanks
 modified: '2026-07-19'
 name: Flanks
 nav: Providers
@@ -196,7 +196,7 @@ overview: 'Flanks publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 1
 score:
   band: thin
-  composite: 29.7
+  composite: 28.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -210,15 +210,17 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - spain
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 29.7
+  previous_composite: 28.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -233,9 +235,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

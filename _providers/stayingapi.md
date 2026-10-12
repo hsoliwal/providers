@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 59.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -292,7 +292,7 @@ modified: '2026-08-09'
 name: StayingAPI
 nav: Providers
 network: true
-overview: 'StayingAPI publishes 3 APIs on the [APIs.io](https://apis.io/) network: Account API, Data API, and Jobs API. Tagged areas include Travel, Hospitality, accommodation-data, hotel-api, and Vacation Rentals.
+overview: 'StayingAPI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Data API, Jobs API, and 2 more. Tagged areas include Travel, Hospitality, accommodation-data, hotel-api, and Vacation Rentals.
 
 
   StayingAPI''s developer surface includes authentication, changelog, sandbox, developer console, documentation, API reference, getting-started guide, and 34 more developer resources.'
@@ -312,7 +312,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 63.6
+  composite: 64.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -324,11 +324,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 76.2
-    discoverability: 87.0
+    discoverability: 85.0
     operational_transparency: 73.7
-  previous_composite: 63.6
+  previous_composite: 64.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -339,8 +339,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -373,7 +379,7 @@ tags:
 - Reviews
 - REST
 - MCP
-- agent-native
+- Agent-Native
 - OpenAPI
 website: https://www.stayingapi.com/
 ---

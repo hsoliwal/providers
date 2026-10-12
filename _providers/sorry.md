@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.sorryapp.com/v1
@@ -82,6 +82,11 @@ collections:
   name: Sorry Status Page Subscribers API
   slug: open-sorry-subscribers-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sorry/refs/heads/main/capabilities/sorry-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sorry-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sorry/refs/heads/main/security/sorry-vulnerability-disclosure.yml
   title: ''
@@ -178,7 +183,7 @@ overview: 'Sorry publishes 5 APIs on the [APIs.io](https://apis.io/) network, in
   The Sorry catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Sorry''s developer surface includes developer portal, documentation, pricing, engineering blog, terms of service, and 9 more developer resources.'
+  Sorry''s developer surface includes developer portal, documentation, pricing, engineering blog, terms of service, and 10 more developer resources.'
 plans:
 - name: Sorry Plans Pricing
   plan_count: 3
@@ -212,9 +217,9 @@ rules:
   slug: sorry-rules
 score:
   band: developing
-  composite: 43.1
+  composite: 41.6
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -224,19 +229,25 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 68.3
+    contract_quality: 62.6
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 43.1
+  previous_composite: 41.6
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

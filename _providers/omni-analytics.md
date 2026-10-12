@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Omni REST API provides programmatic access to an Omni instance: models, topics, views and fields; documents, dashboards and folders; query execution and scheduling; users, groups and permissions; '
@@ -182,7 +182,7 @@ layout: provider
 mcp_servers:
 - description: 'Official Omni MCP server for natural language querying across your datasets, scoped to specific models and respecting user permissions. Configured via AI Hub > MCP. Works with Claude, ChatGPT, Cursor '
   name: Omni Analytics MCP Server
-  slug: omni-analytics-mcp-server
+  slug: omni
 modified: '2026-09-16'
 name: Omni Analytics
 nav: Providers
@@ -194,7 +194,7 @@ overview: 'Omni Analytics publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 18
 score:
   band: developing
-  composite: 41.3
+  composite: 42.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -208,15 +208,29 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 41.3
+  previous_composite: 42.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

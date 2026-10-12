@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -61,14 +61,14 @@ modified: '2026-04-28'
 name: Joint Fire Science Program
 nav: Providers
 network: true
-overview: 'Joint Fire Science Program is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Fire Science, Fires, Wildfire, and Research.
+overview: 'Joint Fire Science Program is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Fire Science, Fires, Wildfire, and Research.
 
 
   Joint Fire Science Program''s developer surface includes documentation and 3 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 4.4
+  composite: 4.7
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -82,17 +82,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 4.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 4.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -106,7 +111,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: joint-fire-science-program
 tags:
-- Federal-Government
+- Federal Government
 - Fire Science
 - Fires
 - Wildfire

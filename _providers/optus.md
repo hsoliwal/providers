@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -334,7 +334,7 @@ modified: '2026-07-25'
 name: Optus
 nav: Providers
 network: true
-overview: 'Optus publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Delete Multiple Lists API, Documentation API, Lists API, and 6 more. Tagged areas include Telecommunications, Australia, Mobile Network Operator, Messaging, and SMS.
+overview: 'Optus publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Delete Multiple Lists API, Documentation API, Lists API, and 12 more. Tagged areas include Telecommunications, Australia, Mobile Network Operator, Messaging, and SMS.
 
 
   The Optus catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -344,7 +344,7 @@ overview: 'Optus publishes 9 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 21
 score:
   band: developing
-  composite: 53.9
+  composite: 50.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 35.0
@@ -356,9 +356,9 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 52.2
     developer_ergonomics: 56.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -367,7 +367,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 53.9
+  previous_composite: 50.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -383,9 +383,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

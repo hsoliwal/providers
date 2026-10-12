@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -93,6 +93,10 @@ description: Cars24 (CARS24 Services Private Limited) is one of India's largest 
   profile captures its identity, agent-facing llms.txt, and security posture.
 image: https://www.cars24.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.cars24.com over HTTP; 2 tools listed.
+  name: Cars24 MCP Server
+  slug: cars24
 modified: '2026-07-18'
 name: Cars24
 nav: Providers
@@ -104,7 +108,7 @@ overview: 'Cars24 is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 21
 score:
   band: emerging
-  composite: 12.7
+  composite: 13.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -118,7 +122,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -127,11 +131,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 12.7
+  previous_composite: 13.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

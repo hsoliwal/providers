@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Vymo's enterprise platform API, used by banks, insurers and asset managers to push leads into Vymo, sync users and hierarchies, read activity and engagement records, and connect Vymo to CRM and core s
@@ -116,7 +116,7 @@ modified: '2026-08-13'
 name: Vymo
 nav: Providers
 network: true
-overview: 'Vymo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Tech, Sales Engagement, Financial-Services, and Insurance.
+overview: 'Vymo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Tech, Sales Engagement, Financial Services, and Insurance.
 
 
   Vymo''s developer surface includes engineering blog, support, and 10 more developer resources.'
@@ -131,7 +131,7 @@ rate_limits:
   slug: vymo-rate-limits
 score:
   band: minimal
-  composite: 5.4
+  composite: 6.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -145,22 +145,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 5.4
+  previous_composite: 6.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -177,7 +179,7 @@ tags:
 - Company
 - Sales Tech
 - Sales Engagement
-- Financial-Services
+- Financial Services
 - Insurance
 - Distribution Management
 - CRM

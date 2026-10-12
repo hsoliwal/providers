@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -69,6 +69,11 @@ collections:
   name: Azure Machine Learning REST API
   slug: open-microsoft-azure-machine-learning
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-machine-learning/refs/heads/main/capabilities/microsoft-azure-machine-learning-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-machine-learning-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -169,10 +174,10 @@ modified: '2026-05-19'
 name: Azure Machine Learning
 nav: Providers
 network: true
-overview: 'Azure Machine Learning publishes 2 APIs on the [APIs.io](https://apis.io/) network: Operations API and Workspaces API. Tagged areas include Artificial Intelligence, Azure, Machine-Learning, MLOps, and Model Deployment.
+overview: 'Azure Machine Learning publishes 2 APIs on the [APIs.io](https://apis.io/) network: Operations API and Workspaces API. Tagged areas include Artificial Intelligence, Azure, Machine Learning, MLOps, and Model Deployment.
 
 
-  Azure Machine Learning''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, support, and 9 more developer resources.'
+  Azure Machine Learning''s developer surface includes authentication, developer portal, documentation, pricing, engineering blog, support, and 10 more developer resources.'
 plans:
 - name: Microsoft Azure Machine Learning Plans Pricing
   plan_count: 3
@@ -189,9 +194,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 47.9
+  composite: 48.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -201,11 +206,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 64.3
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 26.3
-  previous_composite: 47.9
+  previous_composite: 48.1
   provenance:
     agentic_access: derived
     contracts:
@@ -213,8 +218,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -233,7 +244,7 @@ slug: microsoft-azure-machine-learning
 tags:
 - Artificial Intelligence
 - Azure
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Model Deployment
 - Model Training

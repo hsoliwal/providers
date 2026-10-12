@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing subscription lifecycle data, retrieving SaaS financial metrics (MRR, churn, ARPU, LTV), and accessing customer and engagement data on the ProfitWell Metrics (Paddle) platform. Au
@@ -101,7 +101,7 @@ overview: 'ProfitWell publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 18
 score:
   band: emerging
-  composite: 15.0
+  composite: 14.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -115,11 +115,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

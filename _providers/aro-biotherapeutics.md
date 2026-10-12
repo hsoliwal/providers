@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, anonymously reachable Model Context Protocol endpoint served from Aro Biotherapeutics' own host and advertised in the site's llms.txt. It is provided by the Wix platform, not built by Aro — it
@@ -92,7 +92,7 @@ description: Aro Biotherapeutics is a Philadelphia-based biotechnology company d
 image: https://static.wixstatic.com/media/55e8e9_a8e1814d42074178825df49af5a75963~mv2.jpg/v1/fill/w_1851,h_930,al_c/55e8e9_a8e1814d42074178825df49af5a75963~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.arobiotx.com over HTTP; 9 tools listed.
   name: ARO Live
   slug: aro-live
 modified: '2026-08-06'
@@ -106,7 +106,7 @@ overview: 'Aro Biotherapeutics publishes 1 API on the [APIs.io](https://apis.io/
 random_paper: 20
 score:
   band: emerging
-  composite: 19.7
+  composite: 18.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -120,25 +120,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.7
+  previous_composite: 18.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

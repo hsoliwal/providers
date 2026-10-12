@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Event Notification API pushes real-time campaign event data to a customer-owned callback URL. Register a callback, verify it, then subscribe it to any of the 26 supported event types across email,
@@ -339,7 +339,7 @@ modified: '2026-09-16'
 name: Responsys
 nav: Providers
 network: true
-overview: 'Responsys publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Account API, Attachments API, Campaign Attributes API, and 22 more. Tagged areas include Company, Marketing, Email Marketing, Marketing Automation, and Campaign Management.
+overview: 'Responsys publishes 27 APIs on the [APIs.io](https://apis.io/) network, including Account API, Attachments API, Campaign Attributes API, and 24 more. Tagged areas include Company, Marketing, Email Marketing, Marketing Automation, and Campaign Management.
 
 
   The Responsys catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -357,7 +357,7 @@ rate_limits:
   slug: responsys-rate-limits
 score:
   band: developing
-  composite: 51.8
+  composite: 49.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -369,11 +369,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 4.5
-    contract_quality: 43.4
+    contract_quality: 40.2
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 68.4
-  previous_composite: 51.8
+  previous_composite: 49.2
   provenance:
     conformance: derived
     contracts:
@@ -388,9 +388,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

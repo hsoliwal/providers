@@ -11,7 +11,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.5
-  scored_at: '2026-09-20'
+  score: 38.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.litmushiring.com/api/v1
@@ -67,6 +66,11 @@ collections:
   name: Litmus Hiring REST Invites Submissions API
   slug: open-litmus-hiring-submissions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/litmus-hiring/refs/heads/main/capabilities/litmus-hiring-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/litmus-hiring-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/litmus-hiring/refs/heads/main/overlays/litmus-hiring-overlay.yaml
   title: ''
@@ -171,15 +175,15 @@ layout: provider
 mcp_servers:
 - description: Official hosted Model Context Protocol server for the Litmus hiring platform. Connects Claude Desktop, Claude Code, or Cursor (via Clerk OAuth) and headless/automation clients (via a `litmus_sk_...` A
   name: Litmus Hiring MCP Server
-  slug: litmus-hiring-mcp-server
+  slug: litmus
 modified: '2026-07-20'
 name: Litmus Hiring
 nav: Providers
 network: true
-overview: 'Litmus Hiring publishes 3 APIs on the [APIs.io](https://apis.io/) network: Invites API, Roles API, and Submissions API. Tagged areas include Company, Hiring, Recruitment, Technical Assessment, and Developer Hiring.
+overview: 'Litmus Hiring publishes 3 APIs on the [APIs.io](https://apis.io/) network: Invites API, Roles API, and Submissions API. Tagged areas include Company, Hiring, Recruiting, Technical Assessment, and Developer Hiring.
 
 
-  Litmus Hiring''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 16 more developer resources.'
+  Litmus Hiring''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 17 more developer resources.'
 random_paper: 14
 scopes:
 - name: Litmus Hiring Scopes
@@ -188,9 +192,9 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 36.5
+  composite: 37.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -200,11 +204,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 36.5
+  previous_composite: 37.8
   provenance:
     conformance: derived
     contracts:
@@ -214,8 +218,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -234,7 +244,7 @@ slug: litmus-hiring
 tags:
 - Company
 - Hiring
-- Recruitment
+- Recruiting
 - Technical Assessment
 - Developer Hiring
 - MCP

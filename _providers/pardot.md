@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -263,7 +263,7 @@ modified: '2026-08-21'
 name: Salesforce Marketing Cloud Account Engagement (Pardot)
 nav: Providers
 network: true
-overview: 'Salesforce Marketing Cloud Account Engagement (Pardot) publishes 1 API on the [APIs.io](https://apis.io/) network: Objects API. Tagged areas include Marketing Automation, B2B Marketing, Lead Generation, Email Marketing, and Salesforce.
+overview: 'Salesforce Marketing Cloud Account Engagement (Pardot) publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Objects API, and 2 more. Tagged areas include Marketing Automation, B2B Marketing, Lead Generation, Email Marketing, and Salesforce.
 
 
   Salesforce Marketing Cloud Account Engagement (Pardot)''s developer surface includes authentication, documentation, pricing, signup flow, sandbox, API reference, getting-started guide, and 34 more developer resources.'
@@ -283,7 +283,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 55.0
+  composite: 59.1
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -297,9 +297,9 @@ score:
     contract_governance: 18.2
     contract_quality: 16.0
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
-  previous_composite: 55.0
+  previous_composite: 59.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -310,8 +310,18 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

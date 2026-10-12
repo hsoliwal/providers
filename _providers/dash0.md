@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 67
   human_in_the_loop: 1
@@ -197,6 +197,11 @@ collections:
   name: Dash0 Edge Collectors Query Telemetry API
   slug: open-dash0-query-telemetry-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/capabilities/dash0-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dash0-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/dash0/refs/heads/main/overlays/dash0-openapi-overlay.yaml
   title: ''
@@ -390,9 +395,9 @@ description: Dash0 is an OpenTelemetry-native observability platform for enginee
 image: https://www.dash0.com/images/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.<region>.aws.dash0.com over HTTP.
   name: Dash0 MCP Server
-  slug: dash0-mcp-server
+  slug: dash0
 modified: '2026-09-16'
 name: Dash0
 nav: Providers
@@ -403,7 +408,7 @@ overview: 'Dash0 publishes 18 APIs on the [APIs.io](https://apis.io/) network, i
   The Dash0 catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Dash0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 34 more developer resources.'
+  Dash0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 35 more developer resources.'
 random_paper: 2
 scopes:
 - name: Dash0 Scopes
@@ -412,9 +417,9 @@ scopes:
   summary_line: 1 scope · authorizationCode/refreshToken
 score:
   band: strong
-  composite: 59.9
+  composite: 63.1
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -424,11 +429,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 58.7
+    contract_quality: 53.9
     developer_ergonomics: 69.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 59.9
+  previous_composite: 63.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -439,8 +444,18 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -475,5 +490,6 @@ tags:
 - Prometheus
 - DevOps
 - Company
+- A2A
 website: https://www.dash0.com/
 ---

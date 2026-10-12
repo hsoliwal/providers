@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Live GraphQL endpoint backing the Let''s Do This consumer marketplace. Discovered by probe, not published as a developer product: no documentation, no published schema, no documented authentication and'
   name: Let's Do This GraphQL (undocumented)
   slug: lets-do-this-graphql-undocumented
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lets-do-this/refs/heads/main/security/lets-do-this-domain-security.yml
@@ -62,6 +62,10 @@ created: '2026-07-17'
 description: 'Let''s Do This is an endurance-events marketplace where participants discover and register for mass-participation sport — marathons, road races, trail runs, triathlons, obstacle races and cycling events — across the United Kingdom and the United States. The platform covers event discovery, entry purchase and entry management, team entries, memberships, referral credits and discount codes, and it works with event organisers and charity partners who list and sell places through it. Backed by EQT Ventures. As of July 2026 Let''s Do This publishes no public API program: there is no developer portal, API documentation, machine-readable specification, SDK or webhook surface. A live but undocumented GraphQL endpoint backs the consumer marketplace with introspection disabled.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lets-do-this.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.letsdothis.com over HTTP; 1 tool listed.
+  name: Let's Do This MCP Server
+  slug: lets-do-this
 modified: '2026-07-19'
 name: Let's Do This
 nav: Providers
@@ -70,7 +74,7 @@ overview: Let's Do This publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 15
 score:
   band: minimal
-  composite: 8.6
+  composite: 7.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -84,13 +88,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 8.6
+  previous_composite: 7.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

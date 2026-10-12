@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic access to per-game data (character, ranking, match, and metadata) for Nexon titles. Authenticated with a per-application API key sent in the x-nxopen-api-key HTTP header. Versioned resour
@@ -94,17 +94,17 @@ description: Nexon (operated by Nexon Korea Co., Ltd.) is a global video game pu
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nexon-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Nexon Inc
+name: Nexon
 nav: Providers
 network: true
-overview: 'Nexon Inc publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Gaming, Video Games, and Game Data.
+overview: 'Nexon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Gaming, Video Games, and Game Data.
 
 
-  Nexon Inc''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 5 more developer resources.'
+  Nexon''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, authentication, and 5 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 22.6
+  composite: 22.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -118,11 +118,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 22.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

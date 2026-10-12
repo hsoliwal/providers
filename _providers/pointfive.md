@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -125,7 +125,7 @@ layout: provider
 mcp_servers:
 - description: The PointFive MCP Server brings cloud cost optimization intelligence directly into AI development environments (Claude, Cursor, ChatGPT) via the Model Context Protocol. Users only access data they can
   name: Pointfive MCP Server
-  slug: pointfive-mcp-server
+  slug: pointfive
 modified: '2026-07-20'
 name: Pointfive
 nav: Providers
@@ -142,7 +142,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.8
+  composite: 25.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -156,14 +156,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 22.8
+  previous_composite: 25.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

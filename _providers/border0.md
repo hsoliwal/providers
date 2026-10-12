@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 4
@@ -170,6 +170,11 @@ collections:
   name: Border0 Audit Actions Users API
   slug: open-border0-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/border0/refs/heads/main/capabilities/border0-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/border0-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/border0/refs/heads/main/overlays/border0-openapi-overlay.yaml
   title: ''
@@ -322,13 +327,13 @@ network: true
 overview: 'Border0 publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Audit Actions API, Client API, Connect API, and 12 more. Tagged areas include Zero Trust, Network Access, Security, Identity and Access Management, and Infrastructure.
 
 
-  Border0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 24 more developer resources.'
+  Border0''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 25 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 45.3
+  composite: 45.9
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -338,11 +343,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.7
+    contract_quality: 49.4
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 45.3
+  previous_composite: 45.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -353,8 +358,14 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

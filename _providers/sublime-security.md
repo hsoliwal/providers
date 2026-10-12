@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 48
   human_in_the_loop: 0
@@ -182,6 +182,11 @@ collections:
   name: Multi-Tenancy API (BETA) BinExplode User Reports API
   slug: open-sublime-security-user-reports-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sublime-security/refs/heads/main/capabilities/sublime-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sublime-security-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -312,13 +317,13 @@ overview: 'Sublime Security publishes 16 APIs on the [APIs.io](https://apis.io/)
   The Sublime Security catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Sublime Security''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 19 more developer resources.'
+  Sublime Security''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, CLI, and 20 more developer resources.'
 random_paper: 14
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 39.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -328,11 +333,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 4.5
-    contract_quality: 59.8
+    contract_quality: 55.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 39.6
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -343,8 +348,14 @@ score:
       total: 16
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

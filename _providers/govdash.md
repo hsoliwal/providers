@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 asyncapis:
@@ -149,8 +149,8 @@ overview: 'Govdash is profiled on the [APIs.io](https://apis.io/) network. Tagge
   Govdash''s developer surface includes documentation, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
 random_paper: 0
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 37.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -162,11 +162,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 41.2
+  previous_composite: 37.4
   provenance:
     conformance: first-party
   regulatory:
@@ -174,9 +174,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

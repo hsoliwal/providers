@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.5
-  scored_at: '2026-09-20'
+  score: 45.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://public.api.serval.com
@@ -151,14 +151,14 @@ description: Serval is an AI-native IT service management (ITSM) platform for mo
 image: https://framerusercontent.com/images/V6k6fFCAJ2d3ZHM9P4chDQnDbY.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at public.api.serval.com over HTTP; 4 tools listed.
   name: Serval MCP Server
-  slug: serval-mcp-server
+  slug: serval
 modified: '2026-09-16'
 name: Serval
 nav: Providers
 network: true
-overview: 'Serval publishes 1 API on the [APIs.io](https://apis.io/) network: Auth API. Tagged areas include Company, ITSM, Help Desk, Workflow-Automation, and AI Agents.
+overview: 'Serval publishes 1 API on the [APIs.io](https://apis.io/) network: Auth API. Tagged areas include Company, ITSM, Help Desk, Workflow Automation, and AI Agents.
 
 
   The Serval catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -173,7 +173,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 47.3
+  composite: 49.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -185,11 +185,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 59.1
+    contract_quality: 54.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 47.3
+  previous_composite: 49.5
   provenance:
     conformance: derived
     contracts:
@@ -198,8 +198,14 @@ score:
       marker_coverage: 0.0
       total: 1
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -223,7 +229,7 @@ tags:
 - Company
 - ITSM
 - Help Desk
-- Workflow-Automation
+- Workflow Automation
 - AI Agents
 - Access Management
 - Employee Support

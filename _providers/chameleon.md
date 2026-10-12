@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -193,6 +193,11 @@ collections:
   name: Chameleon REST API
   slug: open-chameleon
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/chameleon/refs/heads/main/capabilities/chameleon-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/chameleon-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/chameleon/refs/heads/main/agentic-access/chameleon-agentic-access.yml
   title: ''
@@ -281,13 +286,13 @@ modified: '2026-08-08'
 name: Chameleon
 nav: Providers
 network: true
-overview: 'Chameleon publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Alert Groups API, Companies API, Deliveries API, and 14 more. Tagged areas include Product, In-App Guidance, Onboarding, Surveys, and Analytics.
+overview: 'Chameleon publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Alert Groups API, Companies API, Deliveries API, and 15 more. Tagged areas include Product, In-App Guidance, Onboarding, Surveys, and Analytics.
 
 
   The Chameleon catalog on APIs.io includes 1 JSON-LD context.
 
 
-  Chameleon''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
+  Chameleon''s developer surface includes authentication, documentation, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Chameleon Plans Pricing
   plan_count: 1
@@ -299,9 +304,9 @@ rate_limits:
   slug: chameleon-rate-limits
 score:
   band: thin
-  composite: 32.7
+  composite: 32.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 47.0
     catalog_earned_first_party: 0.0
     catalog_gap: 68.0
@@ -311,11 +316,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.7
     developer_ergonomics: 11.9
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 32.7
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
@@ -323,8 +328,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

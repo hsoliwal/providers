@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://gpt-oss.cray-lm.com
@@ -222,14 +222,14 @@ modified: '2026-08-02'
 name: TensorWave
 nav: Providers
 network: true
-overview: 'TensorWave publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Generate API, Health API, Open AI API, and 2 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Cloud Computing, and GPU.
+overview: 'TensorWave publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Generate API, Health API, Open AI API, and 2 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, Cloud Computing, and GPU.
 
 
   TensorWave''s developer surface includes documentation, getting-started guide, support, engineering blog, CLI, changelog, and 23 more developer resources.'
 random_paper: 2
 score:
   band: developing
-  composite: 46.9
+  composite: 48.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -241,16 +241,18 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 46.9
+  previous_composite: 48.0
   provenance:
     conformance: first-party
     contracts:
@@ -260,8 +262,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,13 +296,13 @@ slug: tensorwave
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Cloud Computing
 - GPU
 - Infrastructure
 - Inference
 - Model Training
 - High Performance Computing
-- Data-Center
+- Data Center
 website: https://tensorwave.com/
 ---

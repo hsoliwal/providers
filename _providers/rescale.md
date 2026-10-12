@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Rescale's token-authenticated REST API (v2) for creating, submitting, monitoring and managing simulation jobs, uploading and downloading files, listing available software (analyses) and hardware (core
@@ -159,7 +159,7 @@ layout: provider
 mcp_servers:
 - description: Rescale hosts an official remote MCP server over HTTP, letting any MCP-compatible client (Claude Code, Claude Desktop, Cursor, VS Code Copilot, Windsurf, Gemini CLI) drive the Rescale platform in natu
   name: Rescale MCP Server
-  slug: rescale-mcp-server
+  slug: rescale
 modified: '2026-07-20'
 name: Rescale
 nav: Providers
@@ -171,7 +171,7 @@ overview: 'Rescale publishes 2 APIs on the [APIs.io](https://apis.io/) network. 
 random_paper: 9
 score:
   band: thin
-  composite: 32.5
+  composite: 34.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -185,14 +185,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 32.5
+  previous_composite: 34.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

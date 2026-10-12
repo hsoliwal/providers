@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -133,7 +133,7 @@ modified: '2026-05-19'
 name: US Citizenship and Immigration Services
 nav: Providers
 network: true
-overview: 'US Citizenship and Immigration Services publishes 2 APIs on the [APIs.io](https://apis.io/) network: Case Status API and FOIA Requests API. Tagged areas include Federal-Government, Immigration, Citizenship, Case Status, and FOIA.
+overview: 'US Citizenship and Immigration Services publishes 2 APIs on the [APIs.io](https://apis.io/) network: Case Status API and FOIA Requests API. Tagged areas include Federal Government, Immigration, Citizenship, Case Status, and FOIA.
 
 
   The US Citizenship and Immigration Services catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -176,8 +176,8 @@ scopes:
   slug: us-citizenship-and-immigration-services-scopes
   summary_line: 3 scopes · clientCredentials
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 35.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 57.3
@@ -189,11 +189,16 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 65.3
+    contract_quality: 59.3
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 39.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -206,9 +211,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -225,7 +230,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: us-citizenship-and-immigration-services
 tags:
-- Federal-Government
+- Federal Government
 - Immigration
 - Citizenship
 - Case Status

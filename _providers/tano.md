@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -90,6 +90,11 @@ collections:
   name: Tano Public Brand Signups Events API
   slug: open-tano-events-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tano/refs/heads/main/capabilities/tano-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tano-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tano/refs/heads/main/skills/tano-agents.md
   title: ''
@@ -122,23 +127,23 @@ created: '2026-07-17'
 description: Tano is a company surfaced as a portfolio company of seedcamp and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at tano.ai over streamable HTTP; 6 tools listed.
   name: Tano
   slug: tano
 modified: '2026-07-17'
 name: Tano
 nav: Providers
 network: true
-overview: 'Tano publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Brand Signups API, Contact API, Creator Signups API, and 2 more. Tagged areas include Company.
+overview: 'Tano publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Brand Signups API, Contact API, Creator Signups API, and 2 more. Tagged areas include Company and A2A.
 
 
-  Tano''s developer surface includes support and 5 more developer resources.'
+  Tano''s developer surface includes support and 6 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 17.8
+  composite: 14.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 15.0
     catalog_earned_first_party: 0.0
     catalog_gap: 100.0
@@ -148,11 +153,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 51.8
+    contract_quality: 46.6
     developer_ergonomics: 1.8
-    discoverability: 35.2
+    discoverability: 38.3
     operational_transparency: 0.0
-  previous_composite: 17.8
+  previous_composite: 14.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -163,8 +168,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -182,5 +193,6 @@ security:
 slug: tano
 tags:
 - Company
+- A2A
 website: http://tano.ai
 ---

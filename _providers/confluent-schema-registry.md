@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-09-20'
+  score: 26.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Confluent Schema Registry API
   slug: open-schema-registry
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/capabilities/confluent-schema-registry-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/confluent-schema-registry-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/agentic-access/confluent-schema-registry-agentic-access.yml
   title: ''
@@ -184,7 +189,7 @@ overview: 'Confluent Schema Registry publishes 5 APIs on the [APIs.io](https://a
   The Confluent Schema Registry catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Confluent Schema Registry''s developer surface includes documentation, getting-started guide, API reference, GitHub presence, engineering blog, pricing, and 9 more developer resources.'
+  Confluent Schema Registry''s developer surface includes documentation, getting-started guide, API reference, GitHub presence, engineering blog, pricing, and 10 more developer resources.'
 plans:
 - name: Confluent Schema Registry Plans Pricing
   plan_count: 3
@@ -218,23 +223,23 @@ rules:
   slug: confluent-schema-registry-rules
 score:
   band: thin
-  composite: 34.7
+  composite: 33.4
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 59.5
+    artifact_dirs: 16
+    catalog_earned: 58.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.5
+    catalog_gap: 56.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 50.2
-    developer_ergonomics: 38.1
-    discoverability: 66.7
+    contract_quality: 45.7
+    developer_ergonomics: 37.4
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 34.7
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -242,8 +247,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -292,8 +303,8 @@ tags:
 - Confluent
 - Data Governance
 - Data Streaming
-- JSON-Schema
-- Open-Source
+- JSON Schema
+- Open Source
 - Protobuf
 - REST
 - Schema Evolution

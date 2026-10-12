@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -157,7 +157,7 @@ modified: '2026-05-19'
 name: Microsoft OneNote
 nav: Providers
 network: true
-overview: 'Microsoft OneNote publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Notebooks API, Pages API, SectionGroups API, and 1 more. Tagged areas include Microsoft, Microsoft-365, Notebooks, Notes, and Productivity.
+overview: 'Microsoft OneNote publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Notebooks API, Pages API, SectionGroups API, and 1 more. Tagged areas include Microsoft, Microsoft 365, Notebooks, Notes, and Productivity.
 
 
   Microsoft OneNote''s developer surface includes authentication, developer portal, documentation, changelog, support, and 9 more developer resources.'
@@ -172,7 +172,7 @@ rate_limits:
   slug: microsoft-onenote-rate-limits
 score:
   band: thin
-  composite: 39.2
+  composite: 38.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -184,11 +184,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 50.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 26.3
-  previous_composite: 39.2
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -196,8 +196,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -215,7 +221,7 @@ security:
 slug: microsoft-onenote
 tags:
 - Microsoft
-- Microsoft-365
+- Microsoft 365
 - Notebooks
 - Notes
 - Productivity

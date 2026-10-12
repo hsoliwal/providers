@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://indexing.googleapis.com/v3
   baseurl_source: declared
   description: The urlNotifications API from Google Indexing — 1 operation(s) for urlnotifications.
-  name: Google Indexing urlNotifications API
+  name: Google Indexing URL Notifications API
   slug: google-indexing-urlnotifications-api
 - baseURL: https://indexing.googleapis.com/v3
   baseurl_source: declared
@@ -276,7 +276,7 @@ modified: '2026-08-13'
 name: Google Indexing
 nav: Providers
 network: true
-overview: 'Google Indexing publishes 2 APIs on the [APIs.io](https://apis.io/) network: urlNotifications API and urlNotifications:publish API. Tagged areas include Crawling, Google, Indexing, Search, and SEO.
+overview: 'Google Indexing publishes 2 APIs on the [APIs.io](https://apis.io/) network: URL Notifications API and urlNotifications:publish API. Tagged areas include Crawling, Google, Indexing, Search, and SEO.
 
 
   The Google Indexing catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -321,23 +321,23 @@ scopes:
   summary_line: 1 scope · jwt-bearer/authorizationCode
 score:
   band: strong
-  composite: 62.3
+  composite: 64.2
   coverage:
     artifact_dirs: 29
-    catalog_earned: 78.5
+    catalog_earned: 77.9
     catalog_earned_first_party: 20.0
-    catalog_gap: 36.5
+    catalog_gap: 37.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
-    contract_quality: 66.7
+    contract_quality: 60.5
     developer_ergonomics: 69.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 76.3
-  previous_composite: 62.3
+  previous_composite: 64.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,8 +348,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

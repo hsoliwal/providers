@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -193,21 +193,21 @@ description: Lightbend, Inc. (dba Akka) is the company behind the Akka agentic s
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lightbend.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Lightbend MCP Server
-  slug: lightbend-mcp-server
+  slug: akka
 modified: '2026-07-19'
 name: Lightbend
 nav: Providers
 network: true
-overview: 'Lightbend is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Infrastructure, Agentic AI, Actor Model, and Distributed Systems.
+overview: 'Lightbend is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Infrastructure, AI Agents, Actor Model, and Distributed Systems.
 
 
   Lightbend''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 27 more developer resources.'
 random_paper: 21
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 40.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -221,14 +221,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 52.6
-  previous_composite: 37.8
+  previous_composite: 40.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -256,7 +262,7 @@ slug: lightbend
 tags:
 - Company
 - AI Infrastructure
-- Agentic AI
+- AI Agents
 - Actor Model
 - Distributed Systems
 - Reactive

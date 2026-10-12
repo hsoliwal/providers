@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -124,7 +124,7 @@ overview: 'Lindus Health is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 10
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -138,9 +138,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
-  previous_composite: 12.6
+  previous_composite: 12.0
   provenance:
     conformance: derived
   regulatory:
@@ -148,9 +148,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -172,7 +172,7 @@ tags:
 - CRO
 - Life Sciences
 - Pharmaceuticals
-- Biotech
+- Biotechnology
 - CDISC
 - Patient Recruitment
 website: https://www.lindushealth.com/

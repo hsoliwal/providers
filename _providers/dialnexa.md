@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 61.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.dialnexa.com
@@ -285,12 +285,12 @@ rate_limits:
   slug: dialnexa-rate-limits
 scopes:
 - name: Dialnexa Scopes
-  scope_count: 0
+  scope_count: 4
   slug: dialnexa-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: strong
-  composite: 59.8
+  composite: 61.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 55.0
@@ -302,11 +302,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 66.6
+    contract_quality: 61.0
     developer_ergonomics: 78.6
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 39.5
-  previous_composite: 59.8
+  previous_composite: 61.2
   provenance:
     conformance: derived
     contracts:
@@ -316,8 +316,14 @@ score:
       total: 13
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

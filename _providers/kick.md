@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Kick's programmatic surface — a hosted MCP server and CLI executing against the Kick REST API under the same auth, workspace, permission, and audit checks as the web app. No public OpenAPI is publishe
@@ -162,7 +162,7 @@ description: Kick is a self-driving, agentic bookkeeping platform for business o
 image: https://use.kick.co/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at use.kick.co over HTTP; 39 tools listed.
   name: Kick
   slug: kick
 modified: '2026-07-19'
@@ -181,7 +181,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.4
+  composite: 37.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -195,14 +195,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 34.4
+  previous_composite: 37.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

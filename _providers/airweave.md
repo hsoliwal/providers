@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 60.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -49,7 +49,7 @@ apis:
 - baseURL: https://api.airweave.ai
   baseurl_source: declared
   description: The collections API from Airweave — 2 operation(s) for collections.
-  name: Airweave collections API
+  name: Airweave Collections API
   slug: airweave-collections-api
 - baseURL: https://api.airweave.ai
   baseurl_source: declared
@@ -59,17 +59,17 @@ apis:
 - baseURL: https://api.airweave.ai
   baseurl_source: declared
   description: The source-connections API from Airweave — 5 operation(s) for source-connections.
-  name: Airweave source-connections API
+  name: Airweave Source Connections API
   slug: airweave-source-connections-api
 - baseURL: https://api.airweave.ai
   baseurl_source: declared
   description: The sources API from Airweave — 2 operation(s) for sources.
-  name: Airweave sources API
+  name: Airweave Sources API
   slug: airweave-sources-api
 - baseURL: https://api.airweave.ai
   baseurl_source: declared
   description: The webhooks API from Airweave — 5 operation(s) for webhooks.
-  name: Airweave webhooks API
+  name: Airweave Webhooks API
   slug: airweave-webhooks-api
 artifact_total: 17
 asyncapis:
@@ -96,6 +96,11 @@ collections:
   name: API Reference collections webhooks API
   slug: open-airweave-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/airweave/refs/heads/main/capabilities/airweave-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/airweave-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -244,20 +249,20 @@ description: Airweave is an open-source (MIT) context-retrieval layer that lets 
 image: https://github.com/airweave-ai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.airweave.ai over HTTP; 2 tools listed.
   name: Airweave MCP Server
-  slug: airweave-mcp-server
+  slug: airweave
 modified: '2026-07-17'
 name: Airweave
 nav: Providers
 network: true
-overview: 'Airweave publishes 5 APIs on the [APIs.io](https://apis.io/) network, including collections API, collections > search API, source-connections API, and 2 more. Tagged areas include Company, Artificial Intelligence, Search, RAG, and Retrieval.
+overview: 'Airweave publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Collections API, collections > search API, Source Connections API, and 2 more. Tagged areas include Company, Artificial Intelligence, Search, RAG, and Retrieval.
 
 
   The Airweave catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Airweave''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, pricing, and 24 more developer resources.'
+  Airweave''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, pricing, and 25 more developer resources.'
 random_paper: 16
 rate_limits:
 - limit_count: 3
@@ -265,9 +270,9 @@ rate_limits:
   slug: airweave-rate-limits
 score:
   band: developing
-  composite: 48.6
+  composite: 48.2
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -277,11 +282,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.9
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 48.6
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -292,8 +297,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live GraphQL endpoint at api.dayforward.com/graphql that backs the Dayforward consumer application. Observed responding to GraphQL over HTTP POST (an empty operation returns a GRAPHQL_VALIDATION_FAI
@@ -108,14 +108,14 @@ modified: '2026-08-04'
 name: Dayforward
 nav: Providers
 network: true
-overview: 'Dayforward publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Life Insurance, Insurtech, and Financial-Services.
+overview: 'Dayforward publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Life Insurance, Insurtech, and Financial Services.
 
 
   Dayforward''s developer surface includes signup flow, support, FAQ, and 11 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 6.9
+  composite: 7.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -129,14 +129,16 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 6.9
+  previous_composite: 7.1
   provenance:
     conformance: derived
   regulatory:
@@ -144,9 +146,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +166,7 @@ tags:
 - Insurance
 - Life Insurance
 - Insurtech
-- Financial-Services
+- Financial Services
 - Underwriting
 - Policy Administration
 - Software-as-a-Service

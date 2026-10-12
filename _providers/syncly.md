@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -195,7 +195,7 @@ description: Syncly is an AI-native social and customer intelligence platform (b
 image: https://framerusercontent.com/images/eVsReqyksUv6paQaME2J7epX8.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.syncly.app over HTTP.
   name: Syncly Social MCP Server
   slug: syncly-social-mcp-server
 modified: '2026-09-16'
@@ -222,7 +222,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 44.1
+  composite: 46.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -234,11 +234,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 44.1
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -249,8 +249,18 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

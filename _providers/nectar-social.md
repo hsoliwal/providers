@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Remote Model Context Protocol server exposing Nectar Social''s social content and analytics to AI agents over JSON-RPC 2.0 (Streamable HTTP). OAuth-protected: an anonymous tools/list returns HTTP 401 w'
@@ -44,7 +44,7 @@ apis:
 - description: The OAuth 2.0 authorization server and platform REST API named by the MCP server's protected-resource metadata. Publishes 18 scopes covering content, analytics, community, inbox, campaigns, competitor
   name: Nectar Social Platform API (Beta)
   slug: nectar-social-platform-api-beta
-artifact_total: 11
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Nectar Social Webhooks
@@ -152,17 +152,14 @@ description: 'Nectar Social is an AI "social operating system" for consumer bran
 image: https://cdn.prod.website-files.com/6831e07f7427f0c59b8b2a7b/6837117d77fca09e24ab5ba0_Frame%201912056558.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.nectarsocial.com over HTTP requiring OAuth.
   name: Nectar Social MCP Server
-  slug: nectar-social-mcp-server
-- description: ''
-  name: Nectar Social MCP Server
-  slug: nectar-social-mcp-server-2
+  slug: nectar-social
 modified: '2026-08-13'
 name: Nectar Social
 nav: Providers
 network: true
-overview: 'Nectar Social publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Social-Media, Community Management, and Social Listening.
+overview: 'Nectar Social publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Social Media, Community Management, and Social Listening.
 
 
   The Nectar Social catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -185,7 +182,7 @@ scopes:
   summary_line: 18 scopes · authorizationCode
 score:
   band: thin
-  composite: 26.9
+  composite: 28.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -197,21 +194,29 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.9
+  previous_composite: 28.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 33.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -234,7 +239,7 @@ slug: nectar-social
 tags:
 - Company
 - Artificial Intelligence
-- Social-Media
+- Social Media
 - Community Management
 - Social Listening
 - Influencer Marketing

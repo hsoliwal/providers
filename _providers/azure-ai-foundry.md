@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.7
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -105,6 +105,11 @@ collections:
   name: Azure AI Foundry Model Inference REST API
   slug: open-azure-ai-foundry
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/azure-ai-foundry/refs/heads/main/capabilities/azure-ai-foundry-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/azure-ai-foundry-capability-edges.yml
 - group: start
   title: ''
   type: Portal
@@ -189,15 +194,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Microsoft Azure AI Foundry MCP Server
-  slug: microsoft-azure-ai-foundry-mcp-server
+  slug: ai-foundry-isv-mcp-agent
 modified: '2026-05-11'
 name: Microsoft Azure AI Foundry
 nav: Providers
 network: true
-overview: 'Microsoft Azure AI Foundry publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Chat Completions API, Completions API, Embeddings API, and 4 more. Tagged areas include Artificial Intelligence, Generative AI, AI Agents, Foundation Models, and Machine-Learning.
+overview: 'Microsoft Azure AI Foundry publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Chat Completions API, Completions API, Embeddings API, and 5 more. Tagged areas include Artificial Intelligence, Generative AI, AI Agents, Foundation Models, and Machine Learning.
 
 
-  Microsoft Azure AI Foundry''s developer surface includes developer portal, support, authentication, documentation, pricing, signup flow, engineering blog, and 11 more developer resources.'
+  Microsoft Azure AI Foundry''s developer surface includes developer portal, support, authentication, documentation, pricing, signup flow, engineering blog, and 12 more developer resources.'
 random_paper: 12
 scopes:
 - name: Azure Ai Foundry Scopes
@@ -206,9 +211,9 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 44.2
+  composite: 45.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -218,11 +223,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 50.0
+    contract_quality: 45.0
     developer_ergonomics: 52.4
-    discoverability: 83.3
+    discoverability: 78.3
     operational_transparency: 18.4
-  previous_composite: 44.2
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -256,8 +267,9 @@ tags:
 - Generative AI
 - AI Agents
 - Foundation Models
-- Machine-Learning
+- Machine Learning
 - Cloud
 - Azure
+- A2A
 website: https://azure.microsoft.com/en-us/products/ai-foundry/
 ---

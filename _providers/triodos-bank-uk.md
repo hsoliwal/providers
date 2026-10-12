@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 50
   human_in_the_loop: 1
@@ -273,7 +273,7 @@ modified: '2026-07-23'
 name: Triodos Bank UK
 nav: Providers
 network: true
-overview: 'Triodos Bank UK publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account Information Service API, Authorization Endpoint API, Client Registration Endpoint API, and 7 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and XS2A.
+overview: 'Triodos Bank UK publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account Information Service API, Authorization Endpoint API, Client Registration Endpoint API, and 7 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and XS2A.
 
 
   Triodos Bank UK''s developer surface includes authentication, sandbox, changelog, API reference, signup flow, documentation, getting-started guide, and 28 more developer resources.'
@@ -285,7 +285,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 46.5
+  composite: 41.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -297,9 +297,9 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 43.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -309,7 +309,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 46.5
+  previous_composite: 41.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -333,9 +333,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 94.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 59.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -356,7 +356,7 @@ security:
   summary_line: security.txt · contact published
 slug: triodos-bank-uk
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

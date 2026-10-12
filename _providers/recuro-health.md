@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Recuro Health's member and provider identity surface, an Auth0-hosted OpenID Connect / OAuth 2.0 authorization server. The OIDC discovery document, the RFC 8414 authorization-server metadata and the J
@@ -165,8 +165,8 @@ scopes:
   slug: recuro-health-scopes
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 23.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -180,9 +180,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 26.5
+  previous_composite: 23.9
   provenance:
     conformance: first-party
   regulatory:
@@ -196,9 +196,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -231,6 +231,5 @@ tags:
 - Employee Benefits
 - Health Plans
 - Identity
-- OpenID Connect
 website: https://recurohealth.com/
 ---

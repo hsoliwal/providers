@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted, OAuth 2.1-secured Model Context Protocol server that lets agents run read-only structured queries against a tenant's endpoint and agent observability data (schema discovery + analytics query),
@@ -130,9 +130,9 @@ description: Prelude Security is now Origin, an endpoint AI observability platfo
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prelude.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.prod.originhq.com over HTTP; 2 tools listed.
   name: Prelude MCP Server
-  slug: prelude-mcp-server
+  slug: origin
 modified: '2026-07-20'
 name: Prelude
 nav: Providers
@@ -143,8 +143,8 @@ overview: 'Prelude publishes 1 API on the [APIs.io](https://apis.io/) network. T
   Prelude''s developer surface includes documentation, getting-started guide, support, engineering blog, changelog, pricing, authentication, and 12 more developer resources.'
 random_paper: 5
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -158,14 +158,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 32.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 25.3
+  previous_composite: 26.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

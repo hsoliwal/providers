@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 15.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted, authenticated Model Context Protocol server for managing assessments, reviewing candidates, and analyzing hiring data. Streamable-HTTP transport; Bearer MeritFirst API key (mf_) required.
@@ -100,7 +100,7 @@ layout: provider
 mcp_servers:
 - description: Connect to MeritFirst to manage assessments, review candidates, and analyze hiring data.
   name: Meritfirst MCP Server
-  slug: meritfirst-mcp-server
+  slug: us-meritfirst-mcp
 modified: '2026-07-20'
 name: Meritfirst
 nav: Providers
@@ -112,7 +112,7 @@ overview: 'Meritfirst publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 19
 score:
   band: emerging
-  composite: 12.7
+  composite: 12.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 12.7
+  previous_composite: 12.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

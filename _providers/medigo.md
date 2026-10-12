@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -210,7 +210,7 @@ overview: 'Medigo publishes 6 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 13
 score:
   band: thin
-  composite: 38.1
+  composite: 35.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -222,17 +222,19 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 54.7
+    contract_quality: 50.0
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 38.1
+  previous_composite: 35.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -248,9 +250,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

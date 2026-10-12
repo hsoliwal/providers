@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Simple REST API exposing the full Connect The Dots relationship graph — reachable people and companies, warm paths to a target (including natural-language and stage-filtered path search), recent job c
@@ -166,12 +166,12 @@ overview: 'Connect The Dots publishes 1 API on the [APIs.io](https://apis.io/) n
 random_paper: 7
 scopes:
 - name: Ctd Scopes
-  scope_count: 0
+  scope_count: 2
   slug: ctd-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · authorization_code
 score:
   band: thin
-  composite: 29.1
+  composite: 33.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -185,14 +185,26 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 29.1
+  previous_composite: 33.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

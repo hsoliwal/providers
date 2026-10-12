@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -106,7 +106,7 @@ rate_limits:
   slug: fanduel-rate-limits
 score:
   band: minimal
-  composite: 9.4
+  composite: 8.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 34.0
@@ -120,11 +120,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,5 +154,6 @@ tags:
 - Casinos
 - Gaming
 - Regulated
+- Sports
 website: https://www.fanduel.com/
 ---

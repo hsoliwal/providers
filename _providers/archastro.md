@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: true
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.5
-  scored_at: '2026-09-20'
+  score: 34.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 51
   human_in_the_loop: 0
@@ -56,7 +56,7 @@ apis:
 - baseURL: https://developers.archastro.ai
   baseurl_source: declared
   description: The auth API from Archastro — 9 operation(s) for auth.
-  name: Archastro auth API
+  name: Archastro Auth API
   slug: archastro-auth-api
 - baseURL: https://developers.archastro.ai
   baseurl_source: declared
@@ -66,7 +66,7 @@ apis:
 - baseURL: https://developers.archastro.ai
   baseurl_source: declared
   description: The s2s API from Archastro — 2 operation(s) for s2s.
-  name: Archastro s2s API
+  name: Archastro S2s API
   slug: archastro-s2s-api
 - baseURL: https://developers.archastro.ai
   baseurl_source: declared
@@ -273,7 +273,7 @@ modified: '2026-07-18'
 name: Archastro
 nav: Providers
 network: true
-overview: 'Archastro publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activity Feed API, Agents API, auth API, and 7 more. Tagged areas include Company, AI Agents, Agentic, Developer Platform, and Automation.
+overview: 'Archastro publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activity Feed API, Agents API, Auth API, and 7 more. Tagged areas include Company, AI Agents, Developer Platform, Automation, and Integration.
 
 
   The Archastro catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -283,7 +283,7 @@ overview: 'Archastro publishes 10 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 21
 score:
   band: developing
-  composite: 45.3
+  composite: 45.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -295,11 +295,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 56.5
+    contract_quality: 51.8
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 45.3
+  previous_composite: 45.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -310,8 +310,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -330,7 +336,6 @@ slug: archastro
 tags:
 - Company
 - AI Agents
-- Agentic
 - Developer Platform
 - Automation
 - Integration

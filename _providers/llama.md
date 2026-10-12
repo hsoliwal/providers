@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Meta's hosted REST API providing access to Llama large language models for chat completions, text generation, and embeddings. Authentication is via API key issued through llama.developer.meta.com.
@@ -96,7 +96,7 @@ modified: '2026-04-28'
 name: Llama
 nav: Providers
 network: true
-overview: 'Llama publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, LLM, Machine-Learning, Meta, and Open-Source.
+overview: 'Llama publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, LLM, Machine Learning, Meta, and Open Source.
 
 
   Llama''s developer surface includes documentation, developer portal, and 6 more developer resources.'
@@ -111,7 +111,7 @@ rate_limits:
   slug: llama-rate-limits
 score:
   band: emerging
-  composite: 16.2
+  composite: 14.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 44.0
@@ -125,11 +125,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 14.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -145,9 +151,10 @@ slug: llama
 tags:
 - Artificial Intelligence
 - LLM
-- Machine-Learning
+- Machine Learning
 - Meta
-- Open-Source
+- Open Source
 - Natural Language Processing
+- Foundation Models
 website: https://www.llama.com/
 ---

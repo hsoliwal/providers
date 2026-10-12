@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.6
-  scored_at: '2026-09-20'
+  score: 17.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the Fruitist (Agrovision) direct-to-consumer store. It is a Universal Commerce Protocol 2026-08-25 service exposed over MCP at https://shop.fruitist.com/api/ucp/mc
@@ -133,14 +133,14 @@ description: 'Agrovision — rebranded to Fruitist in April 2025 — is a vertic
 image: https://cdn.prod.website-files.com/67eb354a3bfe8fdee496f42f/67ec64d28ebae3f8761dd62f_e6fc4a7ca608233e7083f589ede8cac1_og.jpeg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.fruitist.com; 13 tools listed.
   name: Fruitist Store UCP Commerce MCP
   slug: fruitist-store-ucp-commerce-mcp
 modified: '2026-09-13'
 name: Agrovision
 nav: Providers
 network: true
-overview: 'Agrovision publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, Food and Beverage, Consumer Packaged Goods, and Agriculture Technology.
+overview: 'Agrovision publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, Food and Beverage, Consumer Packaged Goods, and AgTech.
 
 
   Agrovision''s developer surface includes support, engineering blog, signup flow, pricing, authentication, and 16 more developer resources.'
@@ -155,12 +155,12 @@ rate_limits:
   slug: agrovision-rate-limits
 scopes:
 - name: Agrovision Scopes
-  scope_count: 0
+  scope_count: 4
   slug: agrovision-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: emerging
-  composite: 25.6
+  band: thin
+  composite: 28.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 45.0
@@ -174,20 +174,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.6
+  previous_composite: 28.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,7 +216,7 @@ tags:
 - Agriculture
 - Food and Beverage
 - Consumer Packaged Goods
-- Agriculture Technology
+- AgTech
 - E-Commerce
 - Retail
 - Supply Chain

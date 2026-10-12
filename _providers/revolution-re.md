@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -85,18 +85,22 @@ created: '2026-07-17'
 description: Revolution RE (RevRE) is a data intelligence platform for the multifamily real estate industry. It transforms disconnected property, operational, and financial data from property management systems into standardized, actionable insight via interactive BI dashboards, AI-driven benchmarking, and ETL standardization. Its suite includes a BI Tool for portfolio performance, Data Plus for AI insights and market benchmarks, an ETL & standardization layer that cleans and normalizes PMS data, and data licensing covering submarket rent, occupancy, and expense benchmarks across 25+ U.S. markets. RevRE serves 500k+ units across the U.S. and Canada, is trusted by 20 of the NMHC top 50 property managers, holds a 4.9/5 rating on G2, and is SOC 2 audited. A developer/API layer for partners building on the standardized multifamily data layer is announced as "launching soon".
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revolution-re.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.revolutionre.com over HTTP.
+  name: Revolution RE MCP Server
+  slug: revolution-re
 modified: '2026-07-20'
 name: Revolution RE
 nav: Providers
 network: true
-overview: 'Revolution RE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Multifamily, and Data Intelligence.
+overview: 'Revolution RE is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Multifamily, and Data Intelligence.
 
 
   Revolution RE''s developer surface includes documentation, engineering blog, pricing, support, and 7 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -110,13 +114,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 18.2
+  previous_composite: 18.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +145,7 @@ security:
 slug: revolution-re
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Multifamily
 - Data Intelligence

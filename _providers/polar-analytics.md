@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Hosted Model Context Protocol server that doubles as Polar's HTTP API surface; invoke tools at POST https://api.polaranalytics.com/mcp/tool/<tool_name> with a Bearer API key. Exposes 8 tools for gener
@@ -148,7 +148,7 @@ description: Polar Analytics is an all-in-one data analytics and AI platform pur
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/polar-analytics.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.polaranalytics.com over HTTP; 8 tools listed.
   name: Polar Headless MCP
   slug: polar-headless-mcp
 modified: '2026-07-20'
@@ -162,7 +162,7 @@ overview: 'Polar Analytics publishes 2 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 15
 score:
   band: thin
-  composite: 30.3
+  composite: 32.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -176,15 +176,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 30.3
+  previous_composite: 32.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

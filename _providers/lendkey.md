@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
@@ -44,12 +44,12 @@ apis:
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: The applications API from LendKey — 1 operation(s) for applications.
-  name: LendKey applications API
+  name: LendKey Applications API
   slug: lendkey-applications-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: The auth API from LendKey — 1 operation(s) for auth.
-  name: LendKey auth API
+  name: LendKey Auth API
   slug: lendkey-auth-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
@@ -69,17 +69,17 @@ apis:
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: The email API from LendKey — 2 operation(s) for email.
-  name: LendKey email API
+  name: LendKey Email API
   slug: lendkey-email-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: Internal API operations for request logging
-  name: LendKey internal API
+  name: LendKey Internal API
   slug: lendkey-internal-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: The leads API from LendKey — 1 operation(s) for leads.
-  name: LendKey leads API
+  name: LendKey Leads API
   slug: lendkey-leads-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
@@ -99,7 +99,7 @@ apis:
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
   description: The onboarding API from LendKey — 1 operation(s) for onboarding.
-  name: LendKey onboarding API
+  name: LendKey Onboarding API
   slug: lendkey-onboarding-api
 - baseURL: https://proxy.kong.lkeyprod.com/integration/
   baseurl_source: declared
@@ -288,7 +288,7 @@ modified: '2026-07-19'
 name: LendKey
 nav: Providers
 network: true
-overview: 'LendKey publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Application Contracts API, applications API, auth API, and 12 more. Tagged areas include Company, Fintech, Lending, Loans, and Student Loans.
+overview: 'LendKey publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Application Contracts API, Applications API, Auth API, and 12 more. Tagged areas include Company, Fintech, Lending, Loans, and Student Loans.
 
 
   The LendKey catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -303,7 +303,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 48.6
+  composite: 44.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -315,11 +315,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 60.6
+    contract_quality: 55.3
     developer_ergonomics: 54.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 48.6
+  previous_composite: 44.5
   provenance:
     conformance: derived
     contracts:
@@ -334,9 +334,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 70.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -361,7 +361,7 @@ tags:
 - Credit Union
 - Banking
 - Loan Origination
-- Financial-Services
+- Financial Services
 - Payments
 - E-Signature
 - Treasury

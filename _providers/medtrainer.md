@@ -29,7 +29,7 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: verified
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.0
-  scored_at: '2026-09-20'
+  score: 43.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.medtrainer.com
@@ -235,7 +235,7 @@ description: 'MedTrainer is a healthcare workforce compliance software company t
 image: https://medtrainer.com/wp-content/uploads/2023/04/MedTrainerLogo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: MedTrainer serves a live, OAuth-protected remote MCP endpoint from its WordPress marketing site at medtrainer.com. It was discovered through RFC 9728 protected-resource metadata at https://medtrainer.
   name: MedTrainer MCP Server (WordPress MCP Adapter)
   slug: medtrainer-mcp-server-wordpress-mcp-adapter
 modified: '2026-09-16'
@@ -262,7 +262,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 60.1
+  composite: 55.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 60.1
+  previous_composite: 55.9
   provenance:
     conformance: first-party
     contracts:
@@ -286,16 +286,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 66.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

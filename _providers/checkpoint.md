@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -214,6 +214,11 @@ collections:
   name: Check Point CloudGuard Access Rules System API
   slug: open-checkpoint-system-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/checkpoint/refs/heads/main/capabilities/checkpoint-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/checkpoint-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/checkpoint/refs/heads/main/agentic-access/checkpoint-agentic-access.yml
   title: ''
@@ -317,13 +322,13 @@ modified: '2026-05-19'
 name: Check Point
 nav: Providers
 network: true
-overview: 'Check Point publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Access Rules API, Cloud Accounts API, Compliance API, and 14 more. Tagged areas include Cloud Security, Cybersecurity, Endpoint Security, Firewall, and Identity Awareness.
+overview: 'Check Point publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Access Rules API, Cloud Accounts API, Compliance API, and 18 more. Tagged areas include Cloud Security, Cybersecurity, Endpoint Security, Firewall, and Identity Awareness.
 
 
   The Check Point catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Check Point''s developer surface includes authentication, documentation, support, engineering blog, GitHub presence, and 12 more developer resources.'
+  Check Point''s developer surface includes authentication, documentation, support, engineering blog, GitHub presence, and 13 more developer resources.'
 plans:
 - name: Checkpoint Plans Pricing
   plan_count: 1
@@ -346,9 +351,9 @@ rules:
   slug: checkpoint-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 35.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 50.3
     catalog_earned_first_party: 0.0
     catalog_gap: 64.8
@@ -358,20 +363,26 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 9.8
-    contract_quality: 53.7
+    contract_quality: 47.7
     developer_ergonomics: 28.6
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 10.5
-  previous_composite: 36.4
+  previous_composite: 35.9
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 66.7
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: The Rental business line of the EHI API Marketplace, covering Enterprise Rent-A-Car's network of neighborhood and airport branches. The public overview page describes the capabilities as vehicle renta
@@ -168,8 +168,8 @@ scopes:
   slug: enterprise-mobility-scopes
   summary_line: 14 scopes · authorizationCode
 score:
-  band: thin
-  composite: 27.3
+  band: emerging
+  composite: 24.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -183,7 +183,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -192,7 +192,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.3
+  previous_composite: 24.1
   provenance:
     conformance: first-party
   regulatory:
@@ -200,9 +200,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

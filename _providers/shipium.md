@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -100,7 +100,7 @@ rate_limits:
   slug: shipium-rate-limits
 score:
   band: minimal
-  composite: 5.4
+  composite: 6.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 29.0
@@ -114,17 +114,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 48.1
+    discoverability: 46.4
     operational_transparency: 5.3
-  previous_composite: 5.4
+  previous_composite: 6.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

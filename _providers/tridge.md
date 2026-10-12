@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Tridge advertises a commercial API for integrating its global agri-food price and trade data into a customer's own systems ("the most comprehensive and powerful API to allow you to integrate our globa
@@ -135,7 +135,7 @@ rate_limits:
   slug: tridge-rate-limits
 score:
   band: emerging
-  composite: 19.3
+  composite: 18.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -149,17 +149,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 19.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - south-korea
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 18.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 43.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,7 +192,7 @@ tags:
 - Sourcing
 - Analytics
 - Price Data
-- Intelligence
 - Artificial Intelligence
+- Market Intelligence
 website: https://www.tridge.com/
 ---

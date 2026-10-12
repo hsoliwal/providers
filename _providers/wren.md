@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.wren.co
@@ -117,7 +117,7 @@ overview: Wren publishes 7 APIs on the [APIs.io](https://apis.io/) network, incl
 random_paper: 4
 score:
   band: minimal
-  composite: 6.0
+  composite: 3.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 17.0
@@ -131,17 +131,23 @@ score:
     contract_governance: 0.0
     contract_quality: 14.4
     developer_ergonomics: 0.0
-    discoverability: 31.5
+    discoverability: 30.4
     operational_transparency: 0.0
-  previous_composite: 6.0
+  previous_composite: 3.6
   provenance:
     contracts:
       callable: 100.0
       derived: 7
       marker_coverage: 100.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

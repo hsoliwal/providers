@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -109,12 +109,20 @@ common:
   title: ''
   type: DomainSecurity
   url: security/ntop-domain-security.yml
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://docs.ntop.com/Product-Documentation/ntop-core/readme.md
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.ntop.com/resources/
 created: '2026-07-17'
 description: 'nTop (formerly nTopology) is computational design and engineering software for advanced and additive manufacturing. Its field-driven, implicit modeling engine lets engineers build reusable, logic-driven design workflows and systematically explore hundreds of design variants with manufacturing constraints, performance requirements, and simulation built in — spanning lattices, conformal structures, design-for-additive-manufacturing, and topology-informed optimization across aerospace, automotive, medical, and industrial applications. Beyond the desktop application, nTop exposes a developer surface: the nTop Core SDK (a native Windows DLL with C++, .NET, and Python bindings for querying implicit bodies), nTop Automate for headless workflow automation, extensive Mintlify-hosted documentation, and a public documentation MCP server for agent-based retrieval.'
 image: https://cdn.sanity.io/images/g5181r9i/production/069fbd12b0f03c5edc56d199e6eab2d66940f5ba-1200x627.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.ntop.com over HTTP; 3 tools listed.
   name: nTop
   slug: ntop
 modified: '2026-07-20'
@@ -124,11 +132,11 @@ network: true
 overview: 'nTop is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Computational Design, Additive Manufacturing, and Engineering Software.
 
 
-  nTop''s developer surface includes documentation, API reference, getting-started guide, changelog, support, engineering blog, signup flow, and 10 more developer resources.'
+  nTop''s developer surface includes documentation, API reference, getting-started guide, changelog, support, engineering blog, signup flow, and 12 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 22.8
+  composite: 22.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -142,13 +150,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 22.8
+  previous_composite: 22.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,5 +185,10 @@ tags:
 - CAD
 - Design Automation
 - SDK
+- Engineering
+- Generative Design
+- Simulation
+- Manufacturing Software
+- Aerospace
 website: https://www.ntop.com/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 246
   human_in_the_loop: 0
@@ -564,9 +564,9 @@ description: Patsnap is an AI-native innovation intelligence platform for patent
 image: https://www.patsnap.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Patsnap operates a hosted (remote) MCP surface as part of the Eureka Open Platform. Each MCP server is a domain-scoped bundle of Patsnap tools (patent search, life-sciences, R&D intelligence) that age
   name: Patsnap MCP Server
-  slug: patsnap-mcp-server
+  slug: patsnap-eureka
 modified: '2026-09-16'
 name: Patsnap
 nav: Providers
@@ -578,7 +578,7 @@ overview: 'Patsnap publishes 47 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 11
 score:
   band: developing
-  composite: 48.9
+  composite: 44.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -590,11 +590,16 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 5.3
-  previous_composite: 48.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -610,9 +615,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

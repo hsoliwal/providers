@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Marmot Development Kit is Komodo Health's developer surface — a Python SDK and `komodo` CLI published to PyPI that handle OAuth 2.0 authentication, account selection, service-principal credentials
@@ -195,7 +195,7 @@ layout: provider
 mcp_servers:
 - description: The Komodo MCP server connects AI assistants (Cursor, VS Code Copilot, Claude Desktop) to a customer's Komodo-managed Snowflake warehouse for schema exploration and SQL assistance, and to the Komodo A
   name: Komodo Health MCP Server
-  slug: komodo-health-mcp-server
+  slug: komodo
 modified: '2026-08-15'
 name: Komodo Health
 nav: Providers
@@ -219,8 +219,8 @@ scopes:
   slug: komodo-health-scopes
   summary_line: 14 scopes · deviceCode/clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 38.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -234,9 +234,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 40.8
+  previous_composite: 38.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -246,9 +246,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -102,7 +102,7 @@ description: 'MORI (Baby Mori) is a UK-based, online-first baby and children''s 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mori.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at babymori.com.
   name: MORI Storefront MCP
   slug: mori-storefront-mcp
 modified: '2026-07-20'
@@ -116,12 +116,12 @@ overview: 'MORI is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 21
 scopes:
 - name: Mori Scopes
-  scope_count: 0
+  scope_count: 4
   slug: mori-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 16.3
+  composite: 19.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -135,15 +135,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 16.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 19.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +181,7 @@ tags:
 - Direct to Consumer
 - Shopify
 - MCP
-- agent-native
+- Agent-Native
 - Universal Commerce Protocol
 website: https://babymori.com
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Provides access to Dietagram's extensive food database and nutritional standards for integrating nutrition data into applications.
@@ -74,7 +74,7 @@ rate_limits:
   slug: nutrition-exercise-api-rate-limits
 score:
   band: minimal
-  composite: 9.4
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 36.0
@@ -88,17 +88,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 9.4
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

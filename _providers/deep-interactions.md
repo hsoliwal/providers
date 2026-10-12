@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -68,7 +68,7 @@ overview: 'Deep Interactions is profiled on the [APIs.io](https://apis.io/) netw
 random_paper: 20
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -82,11 +82,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -109,6 +115,5 @@ tags:
 - Low-Code
 - LLM
 - Y Combinator
-- Startups
 website: https://deepinteractions.ai/
 ---

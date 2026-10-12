@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The developer surface of the Virtualitics AI Platform. Developers author AI Apps in Python with the Virtualitics SDK (App, Step, Page, Section, Card, Elements, Assets, LLM/Iris, Store, Audit, Triggers
@@ -176,7 +176,7 @@ modified: '2026-09-04'
 name: Virtualitics
 nav: Providers
 network: true
-overview: 'Virtualitics publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Data Analytics, Data Visualization, and Machine-Learning.
+overview: 'Virtualitics publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Data Analytics, Data Visualization, and Machine Learning.
 
 
   Virtualitics'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 22 more developer resources.'
@@ -190,8 +190,8 @@ rate_limits:
   name: Virtualitics Rate Limits
   slug: virtualitics-rate-limits
 score:
-  band: developing
-  composite: 40.5
+  band: thin
+  composite: 36.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 32.0
@@ -203,11 +203,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 71.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 40.5
+  previous_composite: 36.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -247,7 +247,7 @@ tags:
 - Artificial Intelligence
 - Data Analytics
 - Data Visualization
-- Machine-Learning
+- Machine Learning
 - Defense
 - Government
 - Python

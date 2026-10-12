@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -94,7 +94,7 @@ layout: provider
 mcp_servers:
 - description: Shopify Storefront MCP server for the Duroflex (duroflexworld.com) online store. Exposes catalog search, cart management, product lookup, and shop policy/FAQ retrieval to AI agents. Hosted and operate
   name: Duroflexworld Storefront MCP
-  slug: duroflexworld-storefront-mcp
+  slug: duroflexworld-storefront
 modified: '2026-07-18'
 name: Duroflexworld
 nav: Providers
@@ -111,7 +111,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 13.8
+  composite: 15.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -125,7 +125,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -134,11 +134,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 13.8
+  previous_composite: 15.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 1
@@ -102,6 +102,11 @@ collections:
   name: OneLogin API
   slug: open-onelogin
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/onelogin/refs/heads/main/capabilities/onelogin-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/onelogin-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/onelogin/refs/heads/main/agentic-access/onelogin-agentic-access.yml
   title: ''
@@ -156,7 +161,7 @@ network: true
 overview: 'OneLogin publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Apps API, MFA API, Roles API, and 3 more. Tagged areas include Identity, Access Management, SSO, Multi-Factor Authentication, and SAML.
 
 
-  OneLogin''s developer surface includes authentication, documentation, engineering blog, and 6 more developer resources.'
+  OneLogin''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
 plans:
 - name: Onelogin Plans Pricing
   plan_count: 3
@@ -168,9 +173,9 @@ rate_limits:
   slug: onelogin-rate-limits
 score:
   band: thin
-  composite: 32.4
+  composite: 30.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -180,11 +185,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 52.6
+    contract_quality: 47.7
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.4
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
@@ -192,8 +197,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

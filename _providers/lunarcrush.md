@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'REST API for LunarCrush social and market intelligence. Endpoints cover trending topics, categories, creators, posts, coins, stocks, and NFTs, including summary snapshots, historical time series, top '
@@ -149,7 +149,7 @@ description: 'LunarCrush is a real-time social intelligence platform for crypto,
 image: https://lunarcrush.com/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at lunarcrush.ai over HTTP; 15 tools listed.
   name: LunarCrush MCP
   slug: lunarcrush-mcp
 modified: '2026-07-20'
@@ -163,7 +163,7 @@ overview: 'LunarCrush publishes 2 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 17
 score:
   band: thin
-  composite: 29.2
+  composite: 28.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -177,9 +177,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 29.2
+  previous_composite: 28.5
   provenance:
     conformance: derived
     mcp: first-party
@@ -189,9 +189,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,7 +214,7 @@ tags:
 - Cryptocurrency
 - Stocks
 - Sentiment Analysis
-- Social-Media
+- Social Media
 - Market Data
 - Analytics
 - AI Agents

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 common:
@@ -146,7 +146,7 @@ description: Clarisights is an enterprise marketing analytics platform that unif
 image: https://clarisights.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at clarisights.com over HTTP; 6 tools listed.
   name: Clarisights Marketing Data MCP
   slug: clarisights-marketing-data-mcp
 modified: '2026-08-13'
@@ -167,8 +167,8 @@ rate_limits:
   name: Clarisights Rate Limits
   slug: clarisights-rate-limits
 score:
-  band: emerging
-  composite: 25.7
+  band: thin
+  composite: 27.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -182,15 +182,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 25.7
+  previous_composite: 27.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

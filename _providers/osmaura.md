@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -197,7 +197,7 @@ rate_limits:
   slug: osmaura-rate-limits
 score:
   band: developing
-  composite: 44.3
+  composite: 41.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 53.6
+    contract_quality: 48.2
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 44.3
+  previous_composite: 41.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -229,9 +229,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 0
@@ -546,7 +546,7 @@ rate_limits:
   slug: currencycloud-rate-limits
 score:
   band: strong
-  composite: 59.4
+  composite: 57.2
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -558,11 +558,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 60.8
+    contract_quality: 55.6
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 81.6
-  previous_composite: 59.4
+  previous_composite: 57.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -582,9 +582,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -130,9 +130,9 @@ description: Enterpret is a customer intelligence platform that unifies feedback
 image: https://cdn.prod.website-files.com/69e6b779dbc68d6b76294ae1/69e6b779dbc68d6b76294e12_1200x630%20Open%20Graph.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at wisdom-api.enterpret.com over HTTP; 7 tools listed.
   name: Enterpret MCP Server
-  slug: enterpret-mcp-server
+  slug: enterpret
 modified: '2026-07-19'
 name: Enterpret
 nav: Providers
@@ -144,7 +144,7 @@ overview: 'Enterpret is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 17
 score:
   band: thin
-  composite: 32.0
+  composite: 33.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -158,14 +158,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 31.6
-  previous_composite: 32.0
+  previous_composite: 33.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

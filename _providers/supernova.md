@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -156,7 +156,7 @@ layout: provider
 mcp_servers:
 - description: Supernova ships Model Context Protocol (MCP) endpoints as part of its "Context Intelligence" layer — feeding AI coding and design agents scoped, governed context from a design system (design tokens, c
   name: Supernova MCP Server
-  slug: supernova-mcp-server
+  slug: supernova
 modified: '2026-07-21'
 name: Supernova
 nav: Providers
@@ -168,7 +168,7 @@ overview: 'Supernova is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 5
 score:
   band: thin
-  composite: 29.7
+  composite: 31.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -182,15 +182,27 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 40.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 34.2
-  previous_composite: 29.7
+  previous_composite: 31.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

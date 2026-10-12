@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://fulfillment.noyo.com
@@ -685,7 +685,7 @@ overview: 'Noyo publishes 64 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 13
 score:
   band: developing
-  composite: 43.3
+  composite: 41.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -697,11 +697,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 59.8
+    contract_quality: 54.8
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 43.3
+  previous_composite: 41.0
   provenance:
     conformance: derived
     contracts:
@@ -716,9 +716,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

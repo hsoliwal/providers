@@ -34,23 +34,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.makeswift.com
   baseurl_source: declared
   description: The locale API from Makeswift — 3 operation(s) for locale.
-  name: Makeswift locale API
+  name: Makeswift Locale API
   slug: makeswift-locale-api
 - baseURL: https://api.makeswift.com
   baseurl_source: declared
   description: The page API from Makeswift — 2 operation(s) for page.
-  name: Makeswift page API
+  name: Makeswift Page API
   slug: makeswift-page-api
 - baseURL: https://api.makeswift.com
   baseurl_source: declared
   description: The site API from Makeswift — 3 operation(s) for site.
-  name: Makeswift site API
+  name: Makeswift Site API
   slug: makeswift-site-api
 artifact_total: 10
 collections:
@@ -177,19 +177,19 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Makeswift MCP Server
-  slug: makeswift-mcp-server
+  slug: makeswift-mcp-yml
 modified: '2026-07-20'
 name: Makeswift
 nav: Providers
 network: true
-overview: 'Makeswift publishes 3 APIs on the [APIs.io](https://apis.io/) network: locale API, page API, and site API. Tagged areas include Company, Visual Page Builder, Website Builder, Next.js, and Headless CMS.
+overview: 'Makeswift publishes 3 APIs on the [APIs.io](https://apis.io/) network: Locale API, Page API, and Site API. Tagged areas include Company, Visual Page Builder, Website Builder, Next.js, and Headless CMS.
 
 
   Makeswift''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 16 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 44.8
+  composite: 43.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -201,11 +201,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 52.4
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 44.8
+  previous_composite: 43.2
   provenance:
     conformance: derived
     contracts:
@@ -215,8 +215,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

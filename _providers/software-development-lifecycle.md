@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: APIs for agile planning, backlog management, sprint tracking, roadmapping, and team capacity planning tools used in the planning phase of the software development lifecycle.
@@ -136,7 +136,7 @@ modified: '2026-05-02'
 name: Software Development Lifecycle
 nav: Providers
 network: true
-overview: 'Software Development Lifecycle publishes 1 API on the [APIs.io](https://apis.io/) network: Code and Review APIs. Tagged areas include Development Process, Project Management, Quality Assurance, Software Engineering, and DevOps.
+overview: 'Software Development Lifecycle publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Code and Review APIs, and 6 more. Tagged areas include Development Process, Project Management, Quality Assurance, Software Engineering, and DevOps.
 
 
   The Software Development Lifecycle catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -165,7 +165,7 @@ rules:
   slug: software-development-lifecycle-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 25.0
+  composite: 24.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 63.3
@@ -177,13 +177,19 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 41.3
+    contract_quality: 38.7
     developer_ergonomics: 9.5
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

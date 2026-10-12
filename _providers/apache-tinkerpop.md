@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Gremlin Server provides WebSocket and HTTP endpoints for submitting Gremlin traversals to a remote graph database. The HTTP API accepts POST requests with Gremlin traversal strings or bytecode at '
@@ -159,7 +159,7 @@ rate_limits:
   slug: apache-tinkerpop-rate-limits
 score:
   band: thin
-  composite: 31.6
+  composite: 31.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -173,14 +173,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 31.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +209,7 @@ tags:
 - Gremlin
 - OLAP
 - OLTP
-- Open-Source
+- Open Source
 use_cases:
 - description: Build and query knowledge graphs for entity relationship modeling.
   name: Knowledge Graphs

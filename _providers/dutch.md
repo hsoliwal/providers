@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -98,7 +98,7 @@ overview: 'Dutch is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 8
 score:
   band: emerging
-  composite: 17.0
+  composite: 16.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -112,7 +112,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -120,15 +120,15 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 17.0
+  previous_composite: 16.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

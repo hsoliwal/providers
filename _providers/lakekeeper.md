@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 42.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: '{scheme}://{host}/lakekeeper/v1'
@@ -111,6 +111,11 @@ asyncapis:
   name: Lakekeeper Events
   slug: lakekeeper-events
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/capabilities/lakekeeper-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lakekeeper-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lakekeeper/refs/heads/main/security/lakekeeper-domain-security.yml
   title: ''
@@ -263,13 +268,13 @@ modified: '2026-08-27'
 name: Lakekeeper
 nav: Providers
 network: true
-overview: 'Lakekeeper publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Generic Table (Data) API, Authorization API, Catalog API, and 10 more. Tagged areas include Apache Iceberg, Data Catalog, Lakehouse, Open-Source, and Rust.
+overview: 'Lakekeeper publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Generic Table (Data) API, Authorization API, Catalog API, and 10 more. Tagged areas include Apache Iceberg, Data Catalog, Lakehouse, Open Source, and Rust.
 
 
   The Lakekeeper catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lakekeeper''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 24 more developer resources.'
+  Lakekeeper''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 25 more developer resources.'
 plans:
 - name: Lakekeeper Plans Pricing
   plan_count: 3
@@ -286,7 +291,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: strong
-  composite: 54.6
+  composite: 55.3
   coverage:
     artifact_dirs: 24
     catalog_earned: 52.0
@@ -298,11 +303,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 54.4
     developer_ergonomics: 80.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 54.6
+  previous_composite: 55.3
   provenance:
     conformance: first-party
     contracts:
@@ -312,8 +317,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -333,7 +344,7 @@ tags:
 - Apache Iceberg
 - Data Catalog
 - Lakehouse
-- Open-Source
+- Open Source
 - Rust
 - Data Governance
 - Access Control

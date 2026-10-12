@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -46,77 +46,77 @@ apis:
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Manage connected bank accounts. Bank accounts are created automatically when a bank link enrollment is completed.
-  name: Astrada bank-accounts API
+  name: Astrada Bank Accounts API
   slug: astrada-bank-accounts-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Manage bank enrollment links. A bank link represents an invitation for a user to connect their bank account via Plaid.
-  name: Astrada bank-links API
+  name: Astrada Bank Links API
   slug: astrada-bank-links-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Manage bank subscriptions (Plaid connections). A subscription represents an active connection to a financial institution.
-  name: Astrada bank-subscriptions API
+  name: Astrada Bank Subscriptions API
   slug: astrada-bank-subscriptions-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Access bank transactions synced from connected accounts. Transactions are ingested via Plaid and can be matched against card transactions.
-  name: Astrada bank-transactions API
+  name: Astrada Bank Transactions API
   slug: astrada-bank-transactions-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: BIN Lookup
-  name: Astrada bin-lookup API
+  name: Astrada Bin Lookup API
   slug: astrada-bin-lookup-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Card resource
-  name: Astrada card API
+  name: Astrada Card API
   slug: astrada-card-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Card Subscription resource
-  name: Astrada card-subscription API
+  name: Astrada Card Subscription API
   slug: astrada-card-subscription-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Card Verification
-  name: Astrada card-verification API
+  name: Astrada Card Verification API
   slug: astrada-card-verification-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Enrollment methods resource
-  name: Astrada enrollment-methods API
+  name: Astrada Enrollment Methods API
   slug: astrada-enrollment-methods-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Network bulk feed resource
-  name: Astrada network-bulk-feeds API
+  name: Astrada Network Bulk Feeds API
   slug: astrada-network-bulk-feeds-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Subaccount resource
-  name: Astrada subaccounts API
+  name: Astrada Subaccounts API
   slug: astrada-subaccounts-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Access transaction matches between bank and card transactions, including confidence scores and match reasoning.
-  name: Astrada transaction-matches API
+  name: Astrada Transaction Matches API
   slug: astrada-transaction-matches-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Transaction messages resource
-  name: Astrada transaction-messages API
+  name: Astrada Transaction Messages API
   slug: astrada-transaction-messages-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Transaction resource
-  name: Astrada transactions API
+  name: Astrada Transactions API
   slug: astrada-transactions-api
 - baseURL: https://api.astrada.co
   baseurl_source: declared
   description: Manage webhooks
-  name: Astrada webhooks API
+  name: Astrada Webhooks API
   slug: astrada-webhooks-api
 artifact_total: 54
 asyncapis:
@@ -221,6 +221,11 @@ collections:
   name: Astrada bank-accounts webhooks API
   slug: open-astrada-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/astrada/refs/heads/main/capabilities/astrada-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/astrada-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/astrada/refs/heads/main/overlays/astrada-openapi-overlay.yaml
   title: ''
@@ -390,13 +395,13 @@ modified: '2026-07-18'
 name: Astrada
 nav: Providers
 network: true
-overview: 'Astrada publishes 15 APIs on the [APIs.io](https://apis.io/) network, including bank-accounts API, bank-links API, bank-subscriptions API, and 12 more. Tagged areas include Company, Fintech, Payments, Card Data, and Transaction Data.
+overview: 'Astrada publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Bank Links API, Bank Subscriptions API, and 12 more. Tagged areas include Company, Fintech, Payments, Card Data, and Transaction Data.
 
 
   The Astrada catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
 
 
-  Astrada''s developer surface includes developer portal, documentation, API reference, getting-started guide, engineering blog, support, signup flow, and 28 more developer resources.'
+  Astrada''s developer surface includes developer portal, documentation, API reference, getting-started guide, engineering blog, support, signup flow, and 29 more developer resources.'
 random_paper: 10
 scopes:
 - name: Astrada Scopes
@@ -405,9 +410,9 @@ scopes:
   summary_line: 34 scopes · implicit
 score:
   band: strong
-  composite: 59.8
+  composite: 54.7
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -417,11 +422,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 63.4
+    contract_quality: 58.1
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 59.8
+  previous_composite: 54.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -443,9 +448,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 84.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

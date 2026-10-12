@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 1
@@ -160,6 +160,11 @@ collections:
   name: CodeProject.AI Server Articles Vision-Scene API
   slug: open-codeproject-vision-scene-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/codeproject/refs/heads/main/capabilities/codeproject-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/codeproject-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -263,13 +268,13 @@ modified: '2026-05-19'
 name: CodeProject
 nav: Providers
 network: true
-overview: 'CodeProject publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Articles API, Audio API, ForumMessages API, and 10 more. Tagged areas include Artificial Intelligence, Articles, Community, Computer-Vision, and Developer Community.
+overview: 'CodeProject publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Articles API, Audio API, ForumMessages API, and 10 more. Tagged areas include Artificial Intelligence, Articles, Community, Computer Vision, and Developer Community.
 
 
   The CodeProject catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  CodeProject''s developer surface includes authentication, documentation, code examples, support, developer portal, GitHub presence, and 14 more developer resources.'
+  CodeProject''s developer surface includes authentication, documentation, code examples, support, developer portal, GitHub presence, and 15 more developer resources.'
 plans:
 - name: Codeproject Plans Pricing
   plan_count: 3
@@ -298,32 +303,38 @@ scopes:
   summary_line: 1 scope · clientCredentials/authorizationCode/implicit
 score:
   band: developing
-  composite: 45.9
+  composite: 45.4
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 69.0
+    artifact_dirs: 13
+    catalog_earned: 67.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.0
+    catalog_gap: 47.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 54.5
-    contract_quality: 53.9
+    contract_governance: 49.1
+    contract_quality: 46.1
     developer_ergonomics: 42.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 45.9
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -343,7 +354,7 @@ tags:
 - Artificial Intelligence
 - Articles
 - Community
-- Computer-Vision
+- Computer Vision
 - Developer Community
 - Face Recognition
 - Forums

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -112,9 +112,9 @@ description: 'Duckbill is an AI-plus-human task-completion service that executes
 image: https://getduckbill.com/preview.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.getduckbill.com over HTTP requiring OAuth.
   name: Duckbill MCP Server
-  slug: duckbill-mcp-server
+  slug: duckbill
 modified: '2026-07-18'
 name: Duckbill
 nav: Providers
@@ -131,7 +131,7 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: emerging
-  composite: 21.0
+  composite: 22.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -145,13 +145,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 21.0
+  previous_composite: 22.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

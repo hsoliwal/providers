@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Anonymous Model Context Protocol endpoint served from the Doctor Anywhere Thailand site (Wix Site MCP). Advertised in the site llms.txt; an unauthenticated tools/list returns nine tools covering busin
@@ -143,9 +143,9 @@ description: Doctor Anywhere is a Singapore-headquartered, tech-led regional hea
 image: https://doctoranywhere.com/wp-content/uploads/2025/06/cropped-DA-Tab-logo-02.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at doctoranywhere.co.th; 9 tools listed.
   name: Doctor Anywhere MCP Server
-  slug: doctor-anywhere-mcp-server
+  slug: doctor-anywhere-mcp-yml
 modified: '2026-08-04'
 name: Doctor Anywhere
 nav: Providers
@@ -157,7 +157,7 @@ overview: 'Doctor Anywhere publishes 3 APIs on the [APIs.io](https://apis.io/) n
 random_paper: 1
 score:
   band: emerging
-  composite: 24.0
+  composite: 23.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -171,7 +171,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -180,19 +180,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 24.0
+  previous_composite: 23.0
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

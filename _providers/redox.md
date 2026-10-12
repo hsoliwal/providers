@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Redox's modern FHIR API for exchanging clinical and administrative healthcare data across the Redox network using HL7 FHIR resources and notifications, authenticated with OAuth2.
@@ -363,7 +363,7 @@ layout: provider
 mcp_servers:
 - description: 'Redox MCP server: an open, model-agnostic gateway for managing, configuring, monitoring, and automating a Redox organization (built on the Redox Platform API) via any MCP-compatible AI client (Claude,'
   name: Redox MCP Server
-  slug: redox-mcp-server
+  slug: redox
 modified: '2026-08-14'
 name: Redox
 nav: Providers
@@ -391,7 +391,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 61.8
+  composite: 57.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 43.0
@@ -403,16 +403,18 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 61.8
+  previous_composite: 57.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -429,9 +431,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 47.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -64,6 +64,10 @@ created: '2026-07-17'
 description: Harbor Lab is an AI-powered port cost and disbursement account (DA) management platform for the maritime industry, headquartered in Athens, Greece. Its cloud software helps shipowners, ship managers, charterers, and port agents manage port calls, validate and approve disbursement accounts, benchmark and negotiate port service pricing across a marketplace of thousands of port service providers, and automate payment and settlement — improving operational efficiency, digitizing the process, and delivering cost transparency across port cost management. The company is backed by Speedinvest, VentureFriends, Atomico, and others. As of this profile Harbor Lab exposes a web dashboard product only; no public API, developer portal, or documentation surface was found.
 image: https://dashboard.harborlab.com/img/pwa/logo-192x192.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.harborlab.com over HTTP; 9 tools listed.
+  name: Harbor Lab MCP Server
+  slug: harbor-lab
 modified: '2026-07-19'
 name: Harbor Lab
 nav: Providers
@@ -74,8 +78,8 @@ overview: 'Harbor Lab is profiled on the [APIs.io](https://apis.io/) network. Ta
   Harbor Lab''s developer surface includes engineering blog, support, and 4 more developer resources.'
 random_paper: 18
 score:
-  band: emerging
-  composite: 11.9
+  band: minimal
+  composite: 10.9
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -89,7 +93,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -97,11 +101,17 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 11.9
+  previous_composite: 10.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

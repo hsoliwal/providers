@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: TJX Companies requires EDI compliance for all resale vendors, supporting purchase orders (850), purchase order acknowledgements (855), advanced shipping notices (856), invoices (810), motor carrier lo
@@ -42,7 +42,7 @@ apis:
 - description: The TJX SupplierOne portal enables diverse supplier registration, certification tracking, and quarterly Tier II program reporting. Suppliers can complete vendor applications, provide business document
   name: TJX SupplierOne Diversity Portal
   slug: tjx-supplierone
-artifact_total: 25
+artifact_total: 26
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tjx/refs/heads/main/security/tjx-domain-security.yml
@@ -109,6 +109,10 @@ integrations:
 - description: EDI integration solution for TJX trading partner compliance.
   name: Cleo
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.spscommerce.com over HTTP.
+  name: TJX Companies MCP Server
+  slug: tjx
 modified: '2026-07-25'
 name: TJX Companies
 nav: Providers
@@ -144,7 +148,7 @@ rate_limits:
   slug: tjx-rate-limits
 score:
   band: emerging
-  composite: 13.4
+  composite: 12.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 39.0
@@ -158,18 +162,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.4
+  previous_composite: 12.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

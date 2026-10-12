@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: PlexTrac's JWT-authenticated REST API (v1 and v2) for managing clients, reports, findings, assets, and content-library writeups, along with tenant/RBAC administration and outbound webhooks. The base U
@@ -111,20 +111,20 @@ description: PlexTrac is a penetration test reporting and proactive exposure man
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/plextrac-llc.png
 layout: provider
 modified: '2026-07-20'
-name: PlexTrac, LLC
+name: PlexTrac
 nav: Providers
 network: true
-overview: 'PlexTrac, LLC publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Penetration Testing, Vulnerability Management, and Security Reporting.
+overview: 'PlexTrac publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Penetration Testing, Vulnerability Management, and Security Reporting.
 
 
-  The PlexTrac, LLC catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The PlexTrac catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  PlexTrac, LLC''s developer surface includes documentation, API reference, support, engineering blog, pricing, and 9 more developer resources.'
+  PlexTrac''s developer surface includes documentation, API reference, support, engineering blog, pricing, and 9 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 40.2
+  composite: 42.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -136,16 +136,22 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 40.2
+  previous_composite: 42.2
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

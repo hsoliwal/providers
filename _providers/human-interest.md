@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Partner GraphQL API for onboarding 401(k)/403(b) retirement plans, OpenID Connect single sign-on, and webhook event subscriptions.
@@ -156,8 +156,8 @@ overview: 'Human Interest publishes 1 API on the [APIs.io](https://apis.io/) net
   Human Interest''s developer surface includes documentation, pricing, signup flow, support, engineering blog, authentication, and 15 more developer resources.'
 random_paper: 8
 score:
-  band: thin
-  composite: 38.5
+  band: developing
+  composite: 40.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -169,15 +169,27 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 38.5
+  previous_composite: 40.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: glba
+    jurisdictions_satisfied: 1
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 3
@@ -489,7 +489,7 @@ modified: '2026-08-08'
 name: Bullish
 nav: Providers
 network: true
-overview: 'Bullish publishes 30 APIs on the [APIs.io](https://apis.io/) network, including Deprecated Features and APIs, WebSocket Multi-Order Book API, WebSocket Anonymous Trades API, and 27 more. Tagged areas include Digital Assets, Cryptocurrency, Exchange, Trading, and Derivatives.
+overview: 'Bullish publishes 32 APIs on the [APIs.io](https://apis.io/) network, including Deprecated Features and APIs, WebSocket Multi-Order Book API, WebSocket Anonymous Trades API, and 29 more. Tagged areas include Digital Assets, Cryptocurrency, Exchange, Trading, and Derivatives.
 
 
   The Bullish catalog on APIs.io includes 6 event-driven AsyncAPI specifications.
@@ -503,7 +503,7 @@ rate_limits:
   slug: bullish-rate-limits
 score:
   band: strong
-  composite: 65.1
+  composite: 60.8
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -515,11 +515,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 62.3
+    contract_quality: 57.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 84.2
-  previous_composite: 65.1
+  previous_composite: 60.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -535,9 +535,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 73.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -569,8 +569,9 @@ tags:
 - Derivatives
 - Custody
 - Market Data
-- Financial-Services
+- Financial Services
 - Institutional
 - FIX
+- Real-Time
 website: https://www.bullish.com/us/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Associated Bank surfaces core-banking integration through its core provider, Jack Henry, via the jXchange SOAP API platform. Documented services for this institution include Account History Search, Ac
@@ -88,14 +88,14 @@ modified: '2026-07-24'
 name: Associated Bank
 nav: Providers
 network: true
-overview: 'Associated Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Regional Bank, and Commercial Banking.
+overview: 'Associated Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Regional Bank, and Commercial Banking.
 
 
   Associated Bank''s developer surface includes changelog, engineering blog, support, and 6 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 11.4
+  composite: 12.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 32.0
@@ -109,7 +109,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -118,15 +118,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.4
+  previous_composite: 12.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -140,12 +140,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: associated-banc-corp
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Commercial Banking
-- Data Aggregation
 - Open Finance
 website: https://www.associatedbank.com/
 ---

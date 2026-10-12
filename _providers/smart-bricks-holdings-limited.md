@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -66,17 +66,17 @@ description: Smart Bricks Holdings Limited operates Smart Bricks, an AI-powered 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smart-bricks-holdings-limited.png
 layout: provider
 modified: '2026-07-21'
-name: Smart Bricks Holdings Limited
+name: Smart Bricks
 nav: Providers
 network: true
-overview: 'Smart Bricks Holdings Limited is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Artificial Intelligence, and Investment.
+overview: 'Smart Bricks is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Artificial Intelligence, and Investment.
 
 
-  Smart Bricks Holdings Limited''s developer surface includes signup flow, engineering blog, and 4 more developer resources.'
+  Smart Bricks'' developer surface includes signup flow, engineering blog, and 4 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 12.3
+  composite: 11.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,11 +90,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 12.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -109,7 +115,7 @@ security:
 slug: smart-bricks-holdings-limited
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Artificial Intelligence
 - Investment

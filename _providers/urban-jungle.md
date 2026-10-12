@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -141,7 +141,7 @@ overview: 'Urban Jungle is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 16
 score:
   band: minimal
-  composite: 9.1
+  composite: 9.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -155,7 +155,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -165,7 +165,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 9.1
+  previous_composite: 9.4
   provenance:
     conformance: first-party
   regulatory:
@@ -177,9 +177,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

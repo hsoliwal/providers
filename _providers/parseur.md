@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.1
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 1
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://api.parseur.com
   baseurl_source: declared
   description: The async API from Parseur — 7 operation(s) for async.
-  name: Parseur async API
+  name: Parseur Async API
   slug: parseur-async-api
 - baseURL: https://api.parseur.com
   baseurl_source: declared
@@ -226,14 +226,14 @@ modified: '2026-05-25'
 name: Parseur
 nav: Providers
 network: true
-overview: 'Parseur publishes 6 APIs on the [APIs.io](https://apis.io/) network, including async API, Bootstrap API, Document API, and 3 more. Tagged areas include Artificial Intelligence, Document Parsing, Document Processing, Document Extraction, and Email Parsing.
+overview: 'Parseur publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Async API, Bootstrap API, Document API, and 3 more. Tagged areas include Artificial Intelligence, Document Parsing, Document Processing, Document Extraction, and Email Parsing.
 
 
   Parseur''s developer surface includes authentication, developer portal, signup flow, documentation, engineering blog, pricing, GitHub presence, and 21 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 41.1
+  composite: 40.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -245,11 +245,16 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 56.3
+    contract_quality: 51.0
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 39.5
-  previous_composite: 41.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     contracts:
@@ -257,8 +262,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

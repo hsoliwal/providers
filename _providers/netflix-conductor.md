@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -126,7 +126,7 @@ modified: '2026-05-19'
 name: Netflix Conductor
 nav: Providers
 network: true
-overview: 'Netflix Conductor publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Metadata API, Tasks API, and 1 more. Tagged areas include Event-Driven, Microservices, Netflix, Open-Source, and Orchestration.
+overview: 'Netflix Conductor publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Events API, Metadata API, Tasks API, and 1 more. Tagged areas include Event-Driven, Microservices, Netflix, Open Source, and Orchestration.
 
 
   Netflix Conductor''s developer surface includes documentation, getting-started guide, GitHub presence, engineering blog, and 3 more developer resources.'
@@ -141,7 +141,7 @@ rate_limits:
   slug: netflix-conductor-rate-limits
 score:
   band: emerging
-  composite: 24.2
+  composite: 21.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 41.0
@@ -153,11 +153,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 48.8
+    contract_quality: 44.2
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 24.2
+  previous_composite: 21.4
   provenance:
     agentic_access: derived
     contracts:
@@ -165,8 +165,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -182,7 +188,7 @@ tags:
 - Event-Driven
 - Microservices
 - Netflix
-- Open-Source
+- Open Source
 - Orchestration
 - Workflows
 website: https://conductor-oss.org/

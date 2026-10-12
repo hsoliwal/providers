@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Lugg''s partner/developer REST API for embedding on-demand moving and delivery: OAuth2 authentication, quotes, bookings, multi-stop booking flows, schedules, and webhook endpoints, with a documented sa'
@@ -108,7 +108,7 @@ modified: '2026-07-20'
 name: Lugg
 nav: Providers
 network: true
-overview: 'Lugg publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Logistics, Delivery, Moving, and Last Mile.
+overview: 'Lugg publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Logistics, Delivery, Moving, and Last Mile Delivery.
 
 
   The Lugg catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -118,7 +118,7 @@ overview: 'Lugg publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 13
 score:
   band: thin
-  composite: 28.5
+  composite: 27.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -130,13 +130,19 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 28.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 27.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -158,7 +164,7 @@ tags:
 - Logistics
 - Delivery
 - Moving
-- Last Mile
+- Last Mile Delivery
 - Transportation
 - On-Demand
 - Webhook

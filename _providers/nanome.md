@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API to create workspaces, load molecular structures, create and rename scenes, and add visualization components. Bearer-token auth. Powers the MARA workspace builder, the official Nanome MCP serv
@@ -155,9 +155,9 @@ description: Nanome is a collaborative workspace for drug discovery — molecula
 image: https://nanome.ai/MR_preview.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 5 tools listed.
   name: Nanome MCP Server
-  slug: nanome-mcp-server
+  slug: nanome
 modified: '2026-07-20'
 name: Nanome
 nav: Providers
@@ -169,7 +169,7 @@ overview: 'Nanome publishes 2 APIs on the [APIs.io](https://apis.io/) network. T
 random_paper: 0
 score:
   band: thin
-  composite: 28.3
+  composite: 26.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -183,9 +183,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 28.3
+  previous_composite: 26.8
   provenance:
     conformance: derived
     mcp: first-party
@@ -195,9 +195,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -127,17 +127,17 @@ description: Saul Ewing LLP is a U.S.-based law firm founded in 1921 as Saul, Ew
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/saul-ewing.png
 layout: provider
 modified: '2026-05-23'
-name: Saul Ewing LLP
+name: Saul Ewing
 nav: Providers
 network: true
-overview: 'Saul Ewing LLP is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Law Firms, Litigation, Corporate, and Mergers and Acquisitions.
+overview: 'Saul Ewing is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Law Firms, Litigation, Corporate, and Mergers and Acquisitions.
 
 
-  Saul Ewing LLP''s developer surface includes product news, engineering blog, GitHub presence, and 18 more developer resources.'
+  Saul Ewing''s developer surface includes product news, engineering blog, GitHub presence, and 18 more developer resources.'
 random_paper: 8
 score:
   band: minimal
-  composite: 3.9
+  composite: 4.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 24.0
@@ -151,17 +151,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 44.4
+    discoverability: 43.8
     operational_transparency: 5.3
-  previous_composite: 3.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 4.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,7 +186,7 @@ tags:
 - Corporate
 - Mergers and Acquisitions
 - Bankruptcy
-- Real-Estate
+- Real Estate
 - Public Finance
 - Life Sciences
 - Intellectual Property

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST + gRPC API for querying features from the Chalk Context Engine — online single-row queries, bulk (feather/Arrow) queries, and asynchronous offline dataset generation — plus deployment of feature '
@@ -184,7 +184,7 @@ modified: '2026-07-18'
 name: Chalk
 nav: Providers
 network: true
-overview: 'Chalk publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Machine-Learning, Feature Store, Artificial Intelligence, and Data Platform.
+overview: 'Chalk publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Machine Learning, Feature Store, Artificial Intelligence, and Data Platform.
 
 
   Chalk''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, changelog, authentication, and 23 more developer resources.'
@@ -195,8 +195,8 @@ scopes:
   slug: chalk-scopes
   summary_line: 3 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 42.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -210,14 +210,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 38.8
+  previous_composite: 42.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,7 +246,7 @@ security:
 slug: chalk
 tags:
 - Company
-- Machine-Learning
+- Machine Learning
 - Feature Store
 - Artificial Intelligence
 - Data Platform

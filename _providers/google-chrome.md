@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -385,7 +385,7 @@ modified: '2026-09-16'
 name: Google Chrome
 nav: Providers
 network: true
-overview: 'Google Chrome publishes 6 APIs on the [APIs.io](https://apis.io/) network, including App Details API, Reports API, Telemetry Devices API, and 3 more. Tagged areas include Browser, Chrome Extensions, Developer Tools, and Web Platform.
+overview: 'Google Chrome publishes 15 APIs on the [APIs.io](https://apis.io/) network, including App Details API, Reports API, Telemetry Devices API, and 12 more. Tagged areas include Browser, Chrome Extensions, Developer Tools, and Web Platform.
 
 
   The Google Chrome catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -419,7 +419,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.2
+  composite: 47.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.3
@@ -431,11 +431,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 9.8
-    contract_quality: 68.6
+    contract_quality: 62.8
     developer_ergonomics: 59.5
-    discoverability: 38.9
+    discoverability: 37.5
     operational_transparency: 42.1
-  previous_composite: 46.2
+  previous_composite: 47.5
   provenance:
     agentic_access: derived
     contracts:
@@ -443,8 +443,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

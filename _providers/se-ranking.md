@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://api.seranking.com
   baseurl_source: declared
   description: '# Backlinks API This collection of requests allows you to conduct a comprehensive analysis of the backlink profile for any given target, whether it''s a root domain, a specific host (subdomain), or a p'
-  name: SE Ranking backlinks API
+  name: SE Ranking Backlinks API
   slug: se-ranking-backlinks-api
 - baseURL: https://api.seranking.com
   baseurl_source: declared
@@ -115,6 +115,11 @@ collections:
   name: SE Ranking Data Account & system Website Audit API
   slug: open-se-ranking-website-audit-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/se-ranking/refs/heads/main/capabilities/se-ranking-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/se-ranking-capability-edges.yml
 - group: commercial
   title: ''
   type: License
@@ -334,20 +339,20 @@ jsonld:
   slug: se-ranking-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.seranking.com over streamable HTTP requiring OAuth; 217 tools listed.
   name: SE Ranking MCP Server
-  slug: se-ranking-mcp-server
+  slug: se-ranking
 modified: '2026-08-13'
 name: SE Ranking
 nav: Providers
 network: true
-overview: 'SE Ranking publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data API, Project API, Account & system API, and 6 more. Tagged areas include SEO, Keyword Research, Rank Tracking, Backlinks, and Competitor Analysis.
+overview: 'SE Ranking publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Data API, Project API, Account & system API, and 7 more. Tagged areas include SEO, Keyword Research, Rank Tracking, Backlinks, and Competitor Analysis.
 
 
   The SE Ranking catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  SE Ranking''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 32 more developer resources.'
+  SE Ranking''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 33 more developer resources.'
 plans:
 - name: Se Ranking Plans Pricing
   plan_count: 6
@@ -375,9 +380,9 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 60.4
+  composite: 61.8
   coverage:
-    artifact_dirs: 29
+    artifact_dirs: 30
     catalog_earned: 75.3
     catalog_earned_first_party: 24.0
     catalog_gap: 39.8
@@ -387,11 +392,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 14.4
-    contract_quality: 59.2
+    contract_quality: 53.8
     developer_ergonomics: 66.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 57.9
-  previous_composite: 60.4
+  previous_composite: 61.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -402,8 +407,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

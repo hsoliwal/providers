@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful management API for the CTERA Portal. Exposes a uniform object namespace (users, devices, folders, and more) where each object is addressed by a unique URI, using GET/PUT/POST/DELETE verbs. Aut
@@ -157,7 +157,7 @@ layout: provider
 mcp_servers:
 - description: 'CTERA publishes two official, open-source (Apache-2.0) Model Context Protocol servers that give AI agents file-and-folder management over the CTERA Intelligent Data Platform: one for the CTERA Portal '
   name: CTERA MCP Server
-  slug: ctera-mcp-server
+  slug: ctera-mcp-yml
 modified: '2026-07-18'
 name: CTERA
 nav: Providers
@@ -169,7 +169,7 @@ overview: 'CTERA publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 21
 score:
   band: thin
-  composite: 27.5
+  composite: 28.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -183,15 +183,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 27.5
+  previous_composite: 28.5
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

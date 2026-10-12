@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -343,8 +343,8 @@ rate_limits:
   name: Pverify Rate Limits
   slug: pverify-rate-limits
 score:
-  band: strong
-  composite: 55.4
+  band: developing
+  composite: 52.8
   coverage:
     artifact_dirs: 27
     catalog_earned: 69.0
@@ -356,11 +356,11 @@ score:
   facets:
     access_clarity: 61.8
     contract_governance: 33.3
-    contract_quality: 61.8
+    contract_quality: 56.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 55.4
+  previous_composite: 52.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -374,11 +374,11 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Health
-    regime_id: health
-    score: 27.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Insurance
+    regime_id: insurance
+    score: 19.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -413,5 +413,6 @@ tags:
 - Patient Estimation
 - HIPAA
 - Dental
+- Health Insurance
 website: https://www.pverify.com
 ---

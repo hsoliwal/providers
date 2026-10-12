@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Obtain and configure machine data from the DataPlatform, Proemion's API-first telematics cloud. Secured with OAuth2 client credentials (OpenID Connect / Keycloak).
@@ -45,7 +45,7 @@ apis:
 - description: Integrate the CANlink mobile 10000 telematics control unit with other platforms over an HTTPS/WebSocket protobuf API (CLM10000 protocol).
   name: Proemion CANlink mobile 10000 API
   slug: proemion-canlink-mobile-10000-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/proemion/refs/heads/main/security/proemion-vulnerability-disclosure.yml
@@ -169,6 +169,10 @@ created: '2026-07-17'
 description: Proemion is a telematics provider for off-highway and heavy equipment OEMs, embedding data collection directly into the machine down to the ECU across CAN and Ethernet networks. Its API-first DataPlatform telematics cloud, DataPortal web application, Machine Companion app, ProInsights analytics, and Mixed Fleet Telematics let manufacturers and fleet operators obtain, configure, and analyze machine data. Proemion also ships Telematics Control Units (CAN/Ethernet gateways), CANlink displays, and wired CAN interfaces, and exposes a REST API, an AEMP/ISO 15143-3 standard export, and the CANlink mobile 10000 protobuf device API. It serves construction, agriculture, material handling, municipal services, and ground-support-equipment markets.
 image: https://avatars.githubusercontent.com/u/18528816?v=4
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.proemion.com over HTTP.
+  name: Proemion MCP Server
+  slug: proemion
 modified: '2026-07-20'
 name: Proemion
 nav: Providers
@@ -185,7 +189,7 @@ scopes:
   summary_line: 12 scopes · clientCredentials
 score:
   band: thin
-  composite: 34.7
+  composite: 37.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 35.0
@@ -197,16 +201,22 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 57.1
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 28.9
-  previous_composite: 34.7
+  previous_composite: 37.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

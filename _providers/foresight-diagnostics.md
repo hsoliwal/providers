@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -137,7 +137,7 @@ rate_limits:
   slug: foresight-diagnostics-rate-limits
 score:
   band: emerging
-  composite: 14.2
+  composite: 13.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -151,9 +151,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 14.2
+  previous_composite: 13.3
   provenance:
     conformance: first-party
   regulatory:
@@ -161,9 +161,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

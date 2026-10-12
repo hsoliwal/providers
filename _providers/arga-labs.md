@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public REST API for Arga's testing infrastructure — provision digital twins, deploy branches/PRs into sandboxes, run browser-agent validations, save and replay tests, manage scenarios (seed data), and
@@ -158,9 +158,9 @@ description: Arga Labs provides testing infrastructure for AI agents and agent-f
 image: https://www.argalabs.com/logo_black.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.argalabs.com over HTTP; 19 tools listed.
   name: Arga Labs MCP Server
-  slug: arga-labs-mcp-server
+  slug: arga-context
 modified: '2026-07-18'
 name: Arga Labs
 nav: Providers
@@ -172,7 +172,7 @@ overview: 'Arga Labs publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 16
 score:
   band: emerging
-  composite: 17.3
+  composite: 16.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -186,14 +186,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 17.3
+  previous_composite: 16.6
   provenance:
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

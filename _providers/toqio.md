@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 17
 apis:
 - baseURL: https://api.toq.io/wallet/api
@@ -104,7 +104,7 @@ apis:
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
   description: The compliance-controller API from Toqio — 1 operation(s) for compliance-controller.
-  name: Toqio compliance-controller API
+  name: Toqio Compliance Controller API
   slug: toqio-compliance-controller-api
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
@@ -219,7 +219,7 @@ apis:
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
   description: The onboarding-controller API from Toqio — 2 operation(s) for onboarding-controller.
-  name: Toqio onboarding-controller API
+  name: Toqio Onboarding Controller API
   slug: toqio-onboarding-controller-api
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
@@ -229,7 +229,7 @@ apis:
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
   description: The pre-signed-url-controller API from Toqio — 1 operation(s) for pre-signed-url-controller.
-  name: Toqio pre-signed-url-controller API
+  name: Toqio Pre Signed URL Controller API
   slug: toqio-pre-signed-url-controller-api
 - baseURL: https://api.toq.io/wallet/api
   baseurl_source: declared
@@ -599,7 +599,7 @@ scopes:
   summary_line: 3 scopes · clientCredentials/password
 score:
   band: developing
-  composite: 51.4
+  composite: 47.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -611,11 +611,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 52.2
     developer_ergonomics: 49.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 22.4
-  previous_composite: 51.4
+  previous_composite: 47.2
   provenance:
     conformance: first-party
     contracts:
@@ -634,9 +634,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -661,6 +661,6 @@ tags:
 - Corporate Banking
 - Lending
 - Compliance
-- SME
+- Small Business
 website: https://toqio.co
 ---

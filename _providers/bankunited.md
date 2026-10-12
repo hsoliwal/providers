@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: BankUnited's first-party developer portal ("API Experience Hub"), a Salesforce Experience Cloud site backed by MuleSoft Anypoint Exchange. Provides self-service developer registration, OAuth applicati
@@ -126,7 +126,7 @@ modified: '2026-07-23'
 name: BankUnited
 nav: Providers
 network: true
-overview: 'BankUnited publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Regional Bank, and Commercial Banking.
+overview: 'BankUnited publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Regional Bank, and Commercial Banking.
 
 
   BankUnited''s developer surface includes authentication, signup flow, developer portal, engineering blog, and 13 more developer resources.'
@@ -137,8 +137,8 @@ scopes:
   slug: bankunited-scopes
   summary_line: 36 scopes · authorizationCode
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 24.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -152,7 +152,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -161,7 +161,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.2
+  previous_composite: 24.1
   provenance:
     conformance: first-party
   regulatory:
@@ -169,9 +169,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 60.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -189,12 +189,11 @@ security:
   summary_line: TLSv1.2 · HSTS · DMARC
 slug: bankunited
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Commercial Banking
 - Open Finance
-- Developer Portal
 website: https://www.bankunited.com/
 ---

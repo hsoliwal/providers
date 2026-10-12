@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.0
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, anonymous Model Context Protocol endpoint served from the Scripta Insights marketing host and advertised in the company's own /llms.txt. It is the stock Wix Site MCP server (platform-authored,
@@ -136,7 +136,7 @@ description: 'Scripta Insights is a Boston-founded healthcare technology company
 image: https://static.wixstatic.com/media/670dfe_c1d7cfb976094245b56a0862497fe945~mv2.jpg/v1/fill/w_2500,h_1312,al_c/670dfe_c1d7cfb976094245b56a0862497fe945~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Scripta Insights serves a live, anonymous Model Context Protocol endpoint from its own marketing host at https://www.scriptainsights.com/_api/mcp. It is advertised in the provider''s own /llms.txt. An '
   name: Scripta Insights Site MCP
   slug: scripta-insights-site-mcp
 modified: '2026-08-26'
@@ -158,7 +158,7 @@ rate_limits:
   slug: scripta-insights-rate-limits
 score:
   band: emerging
-  composite: 24.1
+  composite: 22.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -172,12 +172,12 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 24.1
+  previous_composite: 22.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     jurisdictions:
@@ -189,9 +189,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: OSHA's own API for electronically submitting establishment injury and illness records — Form 300A summaries and Form 300/301 case data — under 29 CFR 1904.41. Nine documented operations across establi
@@ -195,7 +195,7 @@ rate_limits:
   slug: osha-rate-limits
 score:
   band: thin
-  composite: 37.8
+  composite: 35.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -209,9 +209,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 37.8
+  previous_composite: 35.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

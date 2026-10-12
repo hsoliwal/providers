@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: true
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-09-20'
+  score: 24.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the KASKO insurance platform. All platform functionality and data is accessible via the API, covering the Quote, Offer, Payment and Policy insurance transaction flow plus a Data API for d
@@ -149,7 +149,7 @@ layout: provider
 mcp_servers:
 - description: 'The KASKO marketing site (www.kasko.io) is built on Wix and exposes a live, unauthenticated Wix Site MCP endpoint advertised in its /llms.txt. The server provides Wix''s generic site tools for agentic '
   name: KASKO Site MCP (Wix) manifest
-  slug: kasko-site-mcp-wix-manifest
+  slug: kasko-site
 modified: '2026-07-19'
 name: Kasko
 nav: Providers
@@ -164,7 +164,7 @@ overview: 'Kasko publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 9
 score:
   band: developing
-  composite: 42.6
+  composite: 40.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -176,14 +176,14 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 42.6
+  previous_composite: 40.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     jurisdictions:
@@ -193,9 +193,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

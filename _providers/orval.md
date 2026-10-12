@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Orval generates TypeScript API clients, TanStack Query/SWR hooks, Angular services, SolidStart primitives, Hono server handlers, Zod and Effect schemas, MSW mocks, and MCP servers from OpenAPI v3 or S
@@ -197,7 +197,7 @@ rate_limits:
   slug: orval-rate-limits
 score:
   band: thin
-  composite: 31.6
+  composite: 38.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 41.0
@@ -209,16 +209,25 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 60.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 44.7
-  previous_composite: 31.6
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 38.4
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,8 +252,9 @@ tags:
 - TypeScript
 - Developer Tools
 - CLI
-- Open-Source
+- Open Source
 - Mocking
 - Schema Validation
+- SDK Generation
 website: https://orval.dev
 ---

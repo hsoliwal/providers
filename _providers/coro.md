@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Coro's REST API (v1) for managing workspaces, subscriptions, tickets, devices, protected users, portal users, usage, audit logs, and webhooks across the Coro cybersecurity platform. OAuth 2.0 client-c
@@ -161,7 +161,7 @@ layout: provider
 mcp_servers:
 - description: Coro publishes an official, hosted MCP (Model Context Protocol) server that acts as a secure intermediary between an organization's AI tools and Coro's workspace security data. The MCP server authenti
   name: Coro MCP Server
-  slug: coro-mcp-server
+  slug: coro
 modified: '2026-07-18'
 name: Coro
 nav: Providers
@@ -176,7 +176,7 @@ overview: 'Coro publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 17
 score:
   band: developing
-  composite: 42.7
+  composite: 44.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -188,16 +188,28 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 42.7
+  previous_composite: 44.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

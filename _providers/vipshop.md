@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Signed, service-based JSON API for vendors, developers, and ISVs to integrate with VIPShop's e-commerce systems — orders, commodities/products, inventory, warehouse & logistics, marketplace, multi-cha
@@ -134,7 +134,7 @@ overview: 'VIPShop publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 7
 score:
   band: emerging
-  composite: 25.3
+  composite: 24.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -148,7 +148,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -157,9 +157,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 25.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 24.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

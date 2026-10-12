@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Epic's HL7 FHIR R4 (4.0.1) REST API, aligned to the US Core implementation guides and exposing 59 resource types (Patient, Encounter, Observation, Condition, MedicationRequest, DiagnosticReport, Docum
@@ -255,7 +255,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 64.1
+  composite: 59.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 60.0
@@ -267,9 +267,9 @@ score:
   facets:
     access_clarity: 55.3
     contract_governance: 18.2
-    contract_quality: 46.3
+    contract_quality: 44.2
     developer_ergonomics: 63.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -278,7 +278,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 64.1
+  previous_composite: 59.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -288,9 +288,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 77.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

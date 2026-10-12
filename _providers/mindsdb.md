@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SQL-over-HTTP query engine plus RESTful resources for projects, databases, knowledge bases, tables, views, files, jobs, and AI agents. Self-hosted by default (http://127.0.0.1:47334); MindsDB Cloud is
@@ -150,19 +150,19 @@ layout: provider
 mcp_servers:
 - description: MindsDB ships a first-party MCP (Model Context Protocol) server built into the MindsDB engine. It exposes the MindsDB query surface to MCP clients (Claude Desktop, OpenAI, Cursor) so agents can run SQ
   name: MindsDB MCP Server
-  slug: mindsdb-mcp-server
+  slug: mindsdb-mcp-yml
 modified: '2026-07-20'
 name: MindsDB
 nav: Providers
 network: true
-overview: 'MindsDB publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, AI Agents, and Data.
+overview: 'MindsDB publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, AI Agents, and Data.
 
 
   MindsDB''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 16 more developer resources.'
 random_paper: 11
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -176,14 +176,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 25.9
+  previous_composite: 26.5
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -203,13 +209,13 @@ slug: mindsdb
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - AI Agents
 - Data
 - Database
 - SQL
 - Knowledge Base
 - MCP
-- Open-Source
+- Open Source
 website: https://mindshub.ai
 ---

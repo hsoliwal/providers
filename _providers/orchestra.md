@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/orchestra/refs/heads/main/security/orchestra-domain-security.yml
@@ -57,18 +57,22 @@ created: '2026-07-17'
 description: Orchestra is an agentic operations platform for drug development and life sciences R&D organizations. The software helps biotech and pharmaceutical teams unify planning, automate operations, and reduce the risks that derail breakthrough science by creating centralized roadmaps across leadership, programs, and scientific groups, applying AI agents to operational automation, and delivering data-driven decision support across scenarios, planning, and CRO management. Orchestra is a portfolio company of 8vc and is tracked in the API Evangelist network as a company profile. As of this enrichment pass the company operates a marketing and product site only and publishes no public developer API, OpenAPI specification, or developer portal.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orchestra.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.orchestra.bio over HTTP.
+  name: Orchestra MCP Server
+  slug: orchestra
 modified: '2026-07-20'
 name: Orchestra
 nav: Providers
 network: true
-overview: 'Orchestra is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Drug Development, R&D Operations, and Biotech.
+overview: 'Orchestra is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Drug Development, R&D Operations, and Biotechnology.
 
 
   Orchestra''s developer surface includes engineering blog, support, and 2 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 4.7
+  composite: 5.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -82,9 +86,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 4.7
+  previous_composite: 5.4
   provenance:
     mcp: first-party
   regulatory:
@@ -92,9 +96,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -112,7 +116,7 @@ tags:
 - Life Sciences
 - Drug Development
 - R&D Operations
-- Biotech
+- Biotechnology
 - Pharmaceuticals
 - AI Agents
 - Operations Platform

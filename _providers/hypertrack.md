@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://v3.api.hypertrack.com
@@ -240,7 +240,7 @@ description: HyperTrack is a location-intelligence platform for shift work, fiel
 image: https://hypertrack.com/images/og-home.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server requiring an API key; 21 tools listed.
   name: HyperTrack MCP Server
   slug: hypertrack-mcp-server
 modified: '2026-08-22'
@@ -265,7 +265,7 @@ rate_limits:
   slug: hypertrack-rate-limits
 score:
   band: strong
-  composite: 59.8
+  composite: 59.3
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -277,11 +277,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 67.1
+    contract_quality: 61.5
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 42.1
-  previous_composite: 59.8
+  previous_composite: 59.3
   provenance:
     conformance: derived
     contracts:
@@ -291,8 +291,14 @@ score:
       total: 10
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

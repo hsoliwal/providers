@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 83
   human_in_the_loop: 7
@@ -47,102 +47,102 @@ apis:
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The array API from Gencove — 1 operation(s) for array.
-  name: Gencove array API
+  name: Gencove Array API
   slug: gencove-array-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The basespace API from Gencove — 6 operation(s) for basespace.
-  name: Gencove basespace API
+  name: Gencove Basespace API
   slug: gencove-basespace-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The batch API from Gencove — 1 operation(s) for batch.
-  name: Gencove batch API
+  name: Gencove Batch API
   slug: gencove-batch-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The billing API from Gencove — 1 operation(s) for billing.
-  name: Gencove billing API
+  name: Gencove Billing API
   slug: gencove-billing-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The explorer API from Gencove — 10 operation(s) for explorer.
-  name: Gencove explorer API
+  name: Gencove Explorer API
   slug: gencove-explorer-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The file API from Gencove — 2 operation(s) for file.
-  name: Gencove file API
+  name: Gencove File API
   slug: gencove-file-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The firstmile API from Gencove — 2 operation(s) for firstmile.
-  name: Gencove firstmile API
+  name: Gencove Firstmile API
   slug: gencove-firstmile-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The invitation API from Gencove — 3 operation(s) for invitation.
-  name: Gencove invitation API
+  name: Gencove Invitation API
   slug: gencove-invitation-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The jwt API from Gencove — 4 operation(s) for jwt.
-  name: Gencove jwt API
+  name: Gencove JWT API
   slug: gencove-jwt-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The mfa API from Gencove — 4 operation(s) for mfa.
-  name: Gencove mfa API
+  name: Gencove Mfa API
   slug: gencove-mfa-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The notification API from Gencove — 1 operation(s) for notification.
-  name: Gencove notification API
+  name: Gencove Notification API
   slug: gencove-notification-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The organization API from Gencove — 5 operation(s) for organization.
-  name: Gencove organization API
+  name: Gencove Organization API
   slug: gencove-organization-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The pipeline API from Gencove — 5 operation(s) for pipeline.
-  name: Gencove pipeline API
+  name: Gencove Pipeline API
   slug: gencove-pipeline-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The project API from Gencove — 34 operation(s) for project.
-  name: Gencove project API
+  name: Gencove Project API
   slug: gencove-project-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The role API from Gencove — 1 operation(s) for role.
-  name: Gencove role API
+  name: Gencove Role API
   slug: gencove-role-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The s3 API from Gencove — 5 operation(s) for s3.
-  name: Gencove s3 API
+  name: Gencove S3 API
   slug: gencove-s3-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The sample API from Gencove — 17 operation(s) for sample.
-  name: Gencove sample API
+  name: Gencove Sample API
   slug: gencove-sample-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The social API from Gencove — 3 operation(s) for social.
-  name: Gencove social API
+  name: Gencove Social API
   slug: gencove-social-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The upload API from Gencove — 7 operation(s) for upload.
-  name: Gencove upload API
+  name: Gencove Upload API
   slug: gencove-upload-api
 - baseURL: https://api.gencove.com/api/v2/
   baseurl_source: declared
   description: The user API from Gencove — 12 operation(s) for user.
-  name: Gencove user API
+  name: Gencove User API
   slug: gencove-user-api
 artifact_total: 45
 asyncapis:
@@ -374,7 +374,7 @@ modified: '2026-07-19'
 name: Gencove
 nav: Providers
 network: true
-overview: 'Gencove publishes 20 APIs on the [APIs.io](https://apis.io/) network, including array API, basespace API, batch API, and 17 more. Tagged areas include Company, Health, Genomics, Sequencing, and Bioinformatics.
+overview: 'Gencove publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Array API, Basespace API, Batch API, and 17 more. Tagged areas include Company, Health, Genomics, Sequencing, and Bioinformatics.
 
 
   The Gencove catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -383,8 +383,8 @@ overview: 'Gencove publishes 20 APIs on the [APIs.io](https://apis.io/) network,
   Gencove''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 26 more developer resources.'
 random_paper: 17
 score:
-  band: strong
-  composite: 56.1
+  band: developing
+  composite: 53.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -396,11 +396,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.6
+    contract_quality: 54.4
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 56.1
+  previous_composite: 53.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -416,9 +416,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

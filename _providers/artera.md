@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Artera's outbound SMS API, marketed to health systems and Artera Marketplace vendors as the SendMessage API. It sends real-time text messages to patients from the health system's trusted Artera number
@@ -236,7 +236,7 @@ rate_limits:
   slug: artera-rate-limits
 score:
   band: developing
-  composite: 52.8
+  composite: 50.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 56.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 52.8
+  previous_composite: 50.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -269,9 +269,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -304,6 +304,6 @@ tags:
 - Health IT
 - EHR Integration
 - FHIR
-- Agentic AI
+- AI Agents
 website: https://artera.io/
 ---

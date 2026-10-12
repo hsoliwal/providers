@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 45
   human_in_the_loop: 0
@@ -138,6 +138,11 @@ collections:
   name: Mode Account Verify API
   slug: open-mode-verify-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mode/refs/heads/main/capabilities/mode-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mode-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -265,13 +270,13 @@ network: true
 overview: 'Mode publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Account API, Audit Logs API, Data Sources API, and 8 more. Tagged areas include Company, Enterprise, Business Intelligence, Analytics, and Data.
 
 
-  Mode''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 19 more developer resources.'
+  Mode''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 20 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 43.0
+  composite: 42.7
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -281,11 +286,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 55.1
+    contract_quality: 49.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 43.0
+  previous_composite: 42.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -296,8 +301,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

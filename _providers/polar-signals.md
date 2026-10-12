@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: gRPC/Connect API for managing Polar Signals Cloud organizations, projects, service accounts, tokens, roles/RBAC, rate limits, and billing, plus a Parca-compatible profiling data plane for uploading an
@@ -191,7 +191,7 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server that lets AI assistants (Claude, Cursor, Copilot, Gemini) query Polar Signals continuous-profiling data using natural language, discover projects and profile typ
   name: Polar Signals MCP Server
-  slug: polar-signals-mcp-server
+  slug: polar-signals
 modified: '2026-07-20'
 name: Polar Signals
 nav: Providers
@@ -208,7 +208,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 41.4
+  composite: 44.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -220,17 +220,23 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 41.4
+  previous_composite: 44.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

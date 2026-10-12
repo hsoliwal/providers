@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 74
   human_in_the_loop: 1
@@ -200,6 +200,11 @@ collections:
   name: Coolify
   slug: open-coolify
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/coolify/refs/heads/main/capabilities/coolify-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/coolify-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -340,16 +345,16 @@ modified: '2026-05-25'
 name: Coolify
 nav: Providers
 network: true
-overview: 'Coolify publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Cloud Tokens API, Databases API, and 15 more. Tagged areas include Platform-as-a-Service, Self-Hosting, Deployment, Open-Source, and Containers.
+overview: 'Coolify publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Cloud Tokens API, Databases API, and 16 more. Tagged areas include Platform-as-a-Service, Self-Hosting, Deployment, Open Source, and Containers.
 
 
-  Coolify''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 20 more developer resources.'
+  Coolify''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 21 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 45.1
+  composite: 44.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -359,11 +364,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 61.3
+    contract_quality: 55.8
     developer_ergonomics: 64.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 21.1
-  previous_composite: 45.1
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     contracts:
@@ -371,8 +376,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 18
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -392,7 +403,7 @@ tags:
 - Platform-as-a-Service
 - Self-Hosting
 - Deployment
-- Open-Source
+- Open Source
 - Containers
 - Docker
 website: https://www.coolify.io/

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 1
@@ -223,7 +223,7 @@ modified: '2026-07-20'
 name: Ondemand
 nav: Providers
 network: true
-overview: 'Ondemand publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Config API, Execute API, and 3 more. Tagged areas include Company, Artificial Intelligence, Machine-Learning, RAG, and Agents.
+overview: 'Ondemand publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Config API, Execute API, and 3 more. Tagged areas include Company, Artificial Intelligence, Machine Learning, RAG, and Agents.
 
 
   The Ondemand catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -237,7 +237,7 @@ rate_limits:
   slug: ondemand-rate-limits
 score:
   band: thin
-  composite: 35.9
+  composite: 34.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 49.0
@@ -249,11 +249,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 60.2
+    contract_quality: 55.0
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 35.9
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -264,8 +264,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -284,13 +290,13 @@ slug: ondemand
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - RAG
 - Agents
 - LLM
 - Platform-as-a-Service
 - Chat
-- Workflow-Automation
+- Workflow Automation
 - Vector Search
 website: https://www.on-demand.io/
 ---

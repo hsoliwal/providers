@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 2.2
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -103,21 +103,21 @@ description: Lastro is a Brazilian proptech company building artificial intellig
 image: https://static.wixstatic.com/media/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg/v1/fit/w_2500,h_1330,al_c/f95461_58b762df582a4769ac134f3de7a902a9%7Emv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.lastro.co over HTTP; 9 tools listed.
   name: Lastro MCP Server
-  slug: lastro-mcp-server
+  slug: lastro
 modified: '2026-07-19'
 name: Lastro
 nav: Providers
 network: true
-overview: 'Lastro is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real-Estate, Artificial Intelligence, and Brazil.
+overview: 'Lastro is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real Estate, Artificial Intelligence, and Brazil.
 
 
   Lastro''s developer surface includes engineering blog, support, and 12 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 14.7
+  composite: 14.4
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -131,7 +131,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -140,11 +140,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 14.7
+  previous_composite: 14.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -160,7 +166,7 @@ slug: lastro
 tags:
 - Company
 - PropTech
-- Real-Estate
+- Real Estate
 - Artificial Intelligence
 - Brazil
 - Lead Management

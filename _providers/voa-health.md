@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://integration.voa.health/v1
@@ -187,7 +187,7 @@ overview: 'VOA Health publishes 2 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 11
 score:
   band: thin
-  composite: 31.5
+  composite: 30.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -201,7 +201,7 @@ score:
     contract_governance: 18.2
     contract_quality: 14.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -210,7 +210,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 31.5
+  previous_composite: 30.4
   provenance:
     conformance: first-party
     contracts:
@@ -229,9 +229,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 27.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

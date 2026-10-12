@@ -27,19 +27,19 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The official React component package for embedding the Excalidraw canvas. Provides programmatic control over scene state, libraries, and serialized JSON. There is no Excalidraw REST API; integrations '
   name: '@excalidraw/excalidraw npm Package'
   slug: excalidraw-npm-package
-artifact_total: 5
+artifact_total: 6
 common:
 - group: operate
   title: ''
@@ -109,11 +109,15 @@ finops:
   slug: excalidraw-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/excalidraw.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.excalidraw.com over HTTP; 5 tools listed.
+  name: Excalidraw MCP Server
+  slug: excalidraw
 modified: '2026-05-08'
 name: Excalidraw
 nav: Providers
 network: true
-overview: 'Excalidraw publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Whiteboard, Diagramming, Open-Source, and Drawing.
+overview: 'Excalidraw publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Collaboration, Whiteboard, Diagramming, Open Source, and Drawing.
 
 
   Excalidraw''s developer surface includes documentation, engineering blog, and 12 more developer resources.'
@@ -128,7 +132,7 @@ rate_limits:
   slug: excalidraw-rate-limits
 score:
   band: emerging
-  composite: 15.3
+  composite: 17.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -142,13 +146,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 15.3
+  open_source:
+    applies: true
+    score: 50.0
+  previous_composite: 17.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +178,7 @@ tags:
 - Collaboration
 - Whiteboard
 - Diagramming
-- Open-Source
+- Open Source
 - Drawing
 website: https://excalidraw.com/
 ---

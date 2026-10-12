@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -91,6 +91,10 @@ created: '2026-07-17'
 description: 'Brisk Teaching is a K-12 education technology company that integrates AI directly into the tools teachers already use. Its platform spans three connected products: the Brisk Extension (which brings AI into Google Docs, Slides, PDFs, and YouTube), Brisk Boost (a safe, teacher-controlled, student-facing AI workspace), and Brisk Next (a web-based planning and instruction hub). Brisk helps educators give feedback, create instructional materials, change reading levels, inspect student writing, and generate presentations, lesson plans, rubrics, quizzes, IEP goals, and math problems. The company is backed by Bessemer Venture Partners. Brisk publishes an llms.txt for AI representation and a public status page, but does not currently expose a public developer API, SDKs, or API documentation. This API Evangelist profile tracks its public surface.'
 image: https://cdn.prod.website-files.com/64d233e71a07f45ec32b6736/6780bf59fb4ba3b1a43e0110_1e13962bed2d2fb05d889a3eb47fc3ba_Open%20graph%205.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.briskteaching.com over HTTP.
+  name: Brisk Teaching MCP Server
+  slug: brisk-teaching
 modified: '2026-07-18'
 name: Brisk Teaching
 nav: Providers
@@ -102,7 +106,7 @@ overview: 'Brisk Teaching is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 11
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -116,9 +120,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 7.9
-  previous_composite: 15.6
+  previous_composite: 15.0
   provenance:
     mcp: first-party
   regulatory:
@@ -126,9 +130,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

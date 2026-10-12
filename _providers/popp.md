@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for the Popp recruitment conversation engine — conversations, campaigns, documents, analysis, scheduling/calendar, and workflow automation, authenticated with an x-api-key + x-organization-id
@@ -135,12 +135,12 @@ layout: provider
 mcp_servers:
 - description: Popp AI hosts a remote MCP server that lets AI code editors (Cursor, Windsurf) and general-purpose agents (Claude Desktop) interact directly with the Popp API and documentation. Provides direct API ac
   name: Popp MCP Server
-  slug: popp-mcp-server
+  slug: popp-api
 modified: '2026-07-20'
 name: Popp
 nav: Providers
 network: true
-overview: 'Popp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruitment, Staffing, Hiring, and Conversational AI.
+overview: 'Popp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Staffing, Hiring, and Conversational AI.
 
 
   The Popp catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -150,7 +150,7 @@ overview: 'Popp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 7
 score:
   band: thin
-  composite: 29.0
+  composite: 29.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -162,16 +162,22 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 7.9
-  previous_composite: 29.0
+  previous_composite: 29.3
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -190,7 +196,7 @@ security:
 slug: popp
 tags:
 - Company
-- Recruitment
+- Recruiting
 - Staffing
 - Hiring
 - Conversational AI

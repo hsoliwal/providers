@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: flavored
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 60.3
-  scored_at: '2026-09-20'
+  score: 58.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 73
   human_in_the_loop: 0
@@ -578,9 +579,9 @@ description: Curlec (Razorpay Curlec) is a Malaysian online payment solution and
 image: https://curlec.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.razorpay.com over HTTP.
   name: Curlec MCP Server
-  slug: curlec-mcp-server
+  slug: razorpay
 modified: '2026-07-18'
 name: Curlec
 nav: Providers
@@ -600,7 +601,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
   band: strong
-  composite: 62.8
+  composite: 58.4
   coverage:
     artifact_dirs: 26
     catalog_earned: 37.0
@@ -612,9 +613,9 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 65.9
+    contract_quality: 60.3
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -623,7 +624,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 62.8
+  previous_composite: 58.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -639,9 +640,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 75.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -670,5 +671,6 @@ tags:
 - FPX
 - Webhook
 - Razorpay
+- A2A
 website: https://curlec.com
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -273,7 +273,7 @@ modified: '2026-09-12'
 name: Genome
 nav: Providers
 network: true
-overview: 'Genome publishes 2 APIs on the [APIs.io](https://apis.io/) network: Host-to-Host API and Payouts API. Tagged areas include Finance, Payments, Banking, Open Banking, and PSD2.
+overview: 'Genome publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Host-to-Host API, Payouts API, and 6 more. Tagged areas include Finance, Payments, Banking, Open Banking, and PSD2.
 
 
   The Genome catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -291,7 +291,7 @@ rate_limits:
   slug: genome-rate-limits
 score:
   band: strong
-  composite: 57.5
+  composite: 55.4
   coverage:
     artifact_dirs: 25
     catalog_earned: 52.0
@@ -303,16 +303,16 @@ score:
   facets:
     access_clarity: 86.8
     contract_governance: 0.0
-    contract_quality: 59.7
+    contract_quality: 54.6
     developer_ergonomics: 73.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 57.5
+  previous_composite: 55.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -328,9 +328,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

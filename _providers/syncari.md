@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: REST API for embedding and automating Syncari. Covers instance provisioning, synapse create/test/activate, entity and field pipeline authoring, validation and publishing, Quick Start install, schema (
@@ -213,7 +213,7 @@ mcp_servers:
   slug: syncari-mcp-server
 - description: ''
   name: Syncari MCP Server
-  slug: syncari-mcp-server-2
+  slug: mcp
 modified: '2026-08-29'
 name: Syncari
 nav: Providers
@@ -241,7 +241,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 51.1
+  composite: 53.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -253,16 +253,22 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 51.1
+  previous_composite: 53.9
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -293,7 +299,7 @@ tags:
 - Data Governance
 - Embedded Integration
 - MCP
-- agent-native
+- Agent-Native
 - Revenue Operations
 - Data Synchronization
 website: https://syncari.com/

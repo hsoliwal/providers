@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -125,7 +125,7 @@ overview: 'iambuddy.com is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 0
 score:
   band: emerging
-  composite: 21.1
+  composite: 20.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -139,9 +139,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 0.0
-  previous_composite: 21.1
+  previous_composite: 20.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -150,9 +150,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 36.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

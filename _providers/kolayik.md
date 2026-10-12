@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 29.0
-  scored_at: '2026-09-20'
+  score: 26.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 1
@@ -145,6 +145,11 @@ collections:
   name: Kolay Public Approval Process Unit API
   slug: open-kolayik-unit-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kolayik/refs/heads/main/capabilities/kolayik-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kolayik-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kolayik/refs/heads/main/overlays/kolayik-public-api-overlay.yaml
   title: ''
@@ -337,7 +342,7 @@ network: true
 overview: 'KolayIK publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Approval Process API, Calendar API, Expense API, and 8 more. Tagged areas include Company, Human Resources, Payroll, HCM, and Employee Management.
 
 
-  KolayIK''s developer surface includes documentation, API reference, signup flow, pricing, support, engineering blog, changelog, and 34 more developer resources.'
+  KolayIK''s developer surface includes documentation, API reference, signup flow, pricing, support, engineering blog, changelog, and 35 more developer resources.'
 random_paper: 8
 score:
   band: developing
@@ -353,9 +358,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -375,8 +380,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

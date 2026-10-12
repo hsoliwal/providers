@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -132,7 +132,7 @@ overview: 'Merico is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 1
 score:
   band: thin
-  composite: 38.8
+  composite: 39.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -144,15 +144,21 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 38.8
+  previous_composite: 39.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,7 +182,7 @@ tags:
 - DevOps
 - DORA Metrics
 - Software Analytics
-- Open-Source
+- Open Source
 - Data Platform
 website: https://www.devinsight.ai
 ---

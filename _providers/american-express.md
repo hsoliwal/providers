@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: 'The American Express Token Service (AETS) API allows developers to securely tokenize cardholder data, providing a layer of security for online transactions. By generating unique tokens that represent '
@@ -233,7 +233,7 @@ modified: '2026-07-23'
 name: American Express
 nav: Providers
 network: true
-overview: 'American Express publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Credit Cards, Financial-Services, Payments, Card Network, and Tokenization.
+overview: 'American Express publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Credit Cards, Financial Services, Payments, Card Network, and Tokenization.
 
 
   American Express'' developer surface includes developer portal, documentation, engineering blog, support, signup flow, getting-started guide, authentication, and 21 more developer resources.'
@@ -264,7 +264,7 @@ rate_limits:
   slug: american-express-rate-limits
 score:
   band: emerging
-  composite: 21.1
+  composite: 20.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 42.0
@@ -278,7 +278,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -287,7 +287,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.1
+  previous_composite: 20.5
   provenance:
     conformance: first-party
   regulatory:
@@ -299,9 +299,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 34.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -320,7 +320,7 @@ security:
 slug: american-express
 tags:
 - Credit Cards
-- Financial-Services
+- Financial Services
 - Payments
 - Card Network
 - Tokenization

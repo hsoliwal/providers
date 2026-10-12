@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Arrow Flight is a high-performance RPC framework built on gRPC for transferring large datasets using the Arrow columnar format. It enables efficient bulk data transport between services with client li
@@ -218,7 +218,7 @@ rate_limits:
   slug: apache-arrow-rate-limits
 score:
   band: thin
-  composite: 29.6
+  composite: 29.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -232,14 +232,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 29.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -264,7 +270,7 @@ tags:
 - gRPC
 - In-Memory
 - IPC
-- Open-Source
+- Open Source
 - Python
 use_cases:
 - description: Share large analytical datasets between Python, R, Java, and other runtimes without serialization overhead.

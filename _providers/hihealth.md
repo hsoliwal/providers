@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The embedded credit-card API that powers hi.health. Partners issue and manage cards, cardholders, transactions, receipts, payments, statements and external transfers, with OAuth2 client-credentials au
@@ -198,9 +198,9 @@ description: 'hi.health is a cashless, real-time claims and payments platform fo
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hihealth.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at partner.getpliant.com.
   name: hi.health MCP Server
-  slug: hihealth-mcp-server
+  slug: hihealth-mcp-yml
 modified: '2026-07-19'
 name: hi.health
 nav: Providers
@@ -224,7 +224,7 @@ scopes:
   summary_line: 3 scopes
 score:
   band: developing
-  composite: 53.0
+  composite: 48.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -236,11 +236,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 39.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 69.7
-  previous_composite: 53.0
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -249,9 +249,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 80.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

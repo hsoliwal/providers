@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -59,7 +59,7 @@ apis:
   description: The Webhook API from Fillout — 2 operation(s) for webhook.
   name: Fillout Webhook API
   slug: fillout-webhook-api
-artifact_total: 13
+artifact_total: 14
 collections:
 - collection_type: open
   name: API Collection
@@ -140,11 +140,15 @@ finops:
   slug: fillout-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fillout.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.fillout.com over HTTP.
+  name: Fillout MCP Server
+  slug: fillout
 modified: '2026-05-08'
 name: Fillout
 nav: Providers
 network: true
-overview: 'Fillout publishes 2 APIs on the [APIs.io](https://apis.io/) network: Forms API and Webhook API. Tagged areas include Forms, Surveys, No-Code, Airtable, and Notion.
+overview: 'Fillout publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Forms API, Webhook API, and 1 more. Tagged areas include Forms, Surveys, No-Code, Airtable, and Notion.
 
 
   Fillout''s developer surface includes authentication, documentation, pricing, engineering blog, and 9 more developer resources.'
@@ -159,7 +163,7 @@ rate_limits:
   slug: fillout-rate-limits
 score:
   band: thin
-  composite: 33.1
+  composite: 31.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -171,11 +175,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 52.7
+    contract_quality: 47.4
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 10.5
-  previous_composite: 33.1
+  previous_composite: 31.2
   provenance:
     agentic_access: derived
     contracts:
@@ -184,8 +188,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

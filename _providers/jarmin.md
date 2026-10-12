@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/jarmin/refs/heads/main/security/jarmin-trust-center.yml
@@ -63,15 +63,19 @@ description: Jarmin is a Y Combinator-backed company building autonomous "AI emp
   or API documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jarmin.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.jarmin.ai over HTTP.
+  name: Jarmin MCP Server
+  slug: jarmin
 modified: '2026-07-19'
 name: Jarmin
 nav: Providers
 network: true
-overview: Jarmin is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic Systems, and Machine-Learning.
+overview: Jarmin is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic Systems, and Machine Learning.
 random_paper: 3
 score:
-  band: minimal
-  composite: 10.8
+  band: emerging
+  composite: 11.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -85,13 +89,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.8
+  previous_composite: 11.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,7 +123,7 @@ tags:
 - Artificial Intelligence
 - AI Agents
 - Agentic Systems
-- Machine-Learning
+- Machine Learning
 - Automation
 - AI Employees
 - Y Combinator

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -67,6 +67,11 @@ collections:
   name: Relace Code Repo API
   slug: open-relace-repo-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/relace/refs/heads/main/capabilities/relace-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/relace-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -208,7 +213,7 @@ description: Relace builds purpose-built AI models and infrastructure for coding
 image: https://framerusercontent.com/images/D6XFBAXygf3ZHyjrXSmLmItnPI.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 1 tool listed.
   name: Relace MCP Server
   slug: relace-mcp-server
 modified: '2026-07-21'
@@ -218,13 +223,13 @@ network: true
 overview: 'Relace publishes 2 APIs on the [APIs.io](https://apis.io/) network: Code API and Repo API. Tagged areas include Company, Artificial Intelligence, Coding Agents, Code Generation, and Developer Tools.
 
 
-  Relace''s developer surface includes documentation, API reference, getting-started guide, quickstart, signup flow, pricing, engineering blog, and 23 more developer resources.'
+  Relace''s developer surface includes documentation, API reference, getting-started guide, quickstart, signup flow, pricing, engineering blog, and 24 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 46.2
+  composite: 46.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -234,11 +239,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 46.2
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -249,8 +254,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,8 +283,9 @@ tags:
 - Coding Agents
 - Code Generation
 - Developer Tools
-- Machine-Learning
+- Machine Learning
 - Code Search
 - LLM
+- Foundation Models
 website: https://relace.ai
 ---

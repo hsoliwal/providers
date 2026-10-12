@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://rpc.cosmos.network
@@ -231,7 +231,7 @@ overview: 'Tendermint publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 4
 score:
   band: thin
-  composite: 39.2
+  composite: 38.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -243,11 +243,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 53.8
+    contract_quality: 49.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 39.2
+  previous_composite: 38.8
   provenance:
     conformance: derived
     contracts:
@@ -257,8 +257,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

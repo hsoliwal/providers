@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The WeWork Partner API exposes the company''s global workspace inventory to integrators so that Supply Partners (third-party operators contributing spaces to WeWork) and Demand Partners (resellers and '
@@ -40,6 +40,7 @@ apis:
   slug: partner-api
 - description: WeWork Workplace is the company's SaaS workplace-management platform sold to enterprises and landlords to manage flexible-office space across owned, leased, and partner locations. The product is refer
   name: WeWork Workplace
+  provenance: unpublished
   slug: workplace
 artifact_total: 3
 common:
@@ -140,14 +141,14 @@ modified: '2026-09-16'
 name: WeWork
 nav: Providers
 network: true
-overview: 'WeWork publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Co-Working, Flexible Workspace, Real-Estate, Workspace Booking, and Workplace Management.
+overview: 'WeWork publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Co-Working, Flexible Workspace, Real Estate, Workspace Booking, and Workplace Management.
 
 
   WeWork''s developer surface includes developer portal, documentation, API reference, getting-started guide, release notes, authentication, signup flow, and 15 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 20.7
+  composite: 21.2
   coverage:
     artifact_dirs: 3
     catalog_earned: 32.0
@@ -161,11 +162,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 34.5
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 18.4
-  previous_composite: 20.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,7 +188,7 @@ slug: wework
 tags:
 - Co-Working
 - Flexible Workspace
-- Real-Estate
+- Real Estate
 - Workspace Booking
 - Workplace Management
 - Booking

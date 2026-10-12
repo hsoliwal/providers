@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 7.6
-  scored_at: '2026-09-20'
+  score: 5.4
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 7
 common:
@@ -251,7 +251,7 @@ overview: 'Ausgrid is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 3
 score:
   band: emerging
-  composite: 26.0
+  composite: 24.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 28.3
@@ -263,9 +263,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 8.3
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 47.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -274,7 +274,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 26.0
+  previous_composite: 24.2
   provenance:
     conformance: derived
     skills: derived
@@ -283,9 +283,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 41.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

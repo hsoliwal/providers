@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -251,7 +251,7 @@ overview: 'Snappr publishes 9 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 0
 score:
   band: thin
-  composite: 37.4
+  composite: 38.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -265,9 +265,9 @@ score:
     contract_governance: 4.5
     contract_quality: 22.2
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 37.4
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -278,8 +278,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

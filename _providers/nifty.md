@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -89,7 +89,7 @@ apis:
   description: The Webhooks API from Nifty — 1 operation(s) for webhooks.
   name: Nifty Webhooks API
   slug: nifty-webhooks-api
-artifact_total: 25
+artifact_total: 26
 collections:
 - collection_type: open
   name: API Collection
@@ -125,6 +125,11 @@ collections:
   name: Nifty PM API
   slug: open-nifty
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nifty/refs/heads/main/capabilities/nifty-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nifty-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nifty/refs/heads/main/agentic-access/nifty-agentic-access.yml
   title: ''
@@ -186,6 +191,10 @@ created: '2026-05-11'
 description: Nifty is an AI-powered project management platform that consolidates roadmaps, tasks, documentation, discussions, and reporting into a single application for teams across engineering, marketing, sales, and product. The platform offers Gantt charts, multiple task views (Kanban, List, Timeline, Calendar, Swimlane), built-in discussions, document creation, and Orbit AI automation. Nifty's REST API uses OAuth 2.0 with Bearer token authentication for programmatic access to projects, tasks, documents, files, and team data.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nifty.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.niftypm.com over HTTP.
+  name: Nifty MCP Server
+  slug: nifty
 modified: '2026-05-11'
 name: Nifty
 nav: Providers
@@ -193,13 +202,13 @@ network: true
 overview: 'Nifty publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Documents API, Files API, and 6 more. Tagged areas include Project Management, Task Management, Collaboration, Productivity, and Roadmaps.
 
 
-  Nifty''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
+  Nifty''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 31.7
+  composite: 31.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -209,11 +218,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 46.3
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 31.7
+  previous_composite: 31.4
   provenance:
     agentic_access: derived
     contracts:
@@ -222,8 +231,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

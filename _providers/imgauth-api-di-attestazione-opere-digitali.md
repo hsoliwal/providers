@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Hosted, zero-install MCP server (Streamable HTTP, protocol 2025-06-18) exposing the attestation service to MCP-capable agents. The eight tools were read live from tools/list on 2026-08-11: service_sta'
@@ -112,7 +112,7 @@ apis:
   description: The Verify API from imgauth — API di attestazione opere digitali — 1 operation(s) for verify.
   name: imgauth — API di attestazione opere digitali Verify API
   slug: imgauth-api-di-attestazione-opere-digitali-verify-api
-artifact_total: 24
+artifact_total: 23
 collections:
 - collection_type: open
   name: imgauth — API di attestazione opere digitali
@@ -299,15 +299,12 @@ layout: provider
 mcp_servers:
 - description: ''
   name: imgauth — API di attestazione opere digitali MCP Server
-  slug: imgauth-api-di-attestazione-opere-digitali-mcp-server
-- description: ''
-  name: imgauth — API di attestazione opere digitali MCP Server
-  slug: imgauth-api-di-attestazione-opere-digitali-mcp-server-2
+  slug: mcp
 modified: '2026-08-11'
 name: imgauth — API di attestazione opere digitali
 nav: Providers
 network: true
-overview: 'imgauth — API di attestazione opere digitali publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Badge API, C API, and 11 more. Tagged areas include digital notarization, Timestamping, proof-of-existence, Content Authenticity, and Provenance.
+overview: 'imgauth — API di attestazione opere digitali publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Badge API, C API, and 12 more. Tagged areas include digital notarization, Timestamping, proof-of-existence, Content Authenticity, and Provenance.
 
 
   imgauth — API di attestazione opere digitali''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, support, and 31 more developer resources.'
@@ -322,7 +319,7 @@ rate_limits:
   slug: imgauth-api-di-attestazione-opere-digitali-rate-limits
 score:
   band: strong
-  composite: 64.1
+  composite: 65.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 61.0
@@ -334,11 +331,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 53.2
+    contract_quality: 47.9
     developer_ergonomics: 70.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 76.3
-  previous_composite: 64.1
+  previous_composite: 65.7
   provenance:
     conformance: first-party
     contracts:
@@ -348,8 +345,18 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

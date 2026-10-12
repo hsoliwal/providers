@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -93,6 +93,11 @@ collections:
   name: Azure Database for MySQL REST API
   slug: open-microsoft-azure-mysql
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-mysql/refs/heads/main/capabilities/microsoft-azure-mysql-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-mysql-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-mysql/refs/heads/main/agentic-access/microsoft-azure-mysql-agentic-access.yml
   title: ''
@@ -193,10 +198,10 @@ modified: '2026-05-19'
 name: Azure Database for MySQL
 nav: Providers
 network: true
-overview: 'Azure Database for MySQL publishes 2 APIs on the [APIs.io](https://apis.io/) network: Operations API and Servers API. Tagged areas include Database, Flexible Server, Managed Database, MySQL, and Open-Source.
+overview: 'Azure Database for MySQL publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Operations API, Servers API, and 8 more. Tagged areas include Database, Flexible Server, Managed Database, MySQL, and Open Source.
 
 
-  Azure Database for MySQL''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, support, engineering blog, and 14 more developer resources.'
+  Azure Database for MySQL''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, support, engineering blog, and 15 more developer resources.'
 plans:
 - name: Microsoft Azure Mysql Plans Pricing
   plan_count: 3
@@ -213,9 +218,9 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: developing
-  composite: 52.6
+  composite: 53.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 49.0
     catalog_earned_first_party: 0.0
     catalog_gap: 66.0
@@ -225,11 +230,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 49.0
+    contract_quality: 44.1
     developer_ergonomics: 61.9
-    discoverability: 88.9
+    discoverability: 85.7
     operational_transparency: 42.1
-  previous_composite: 52.6
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +242,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -259,7 +270,7 @@ tags:
 - Flexible Server
 - Managed Database
 - MySQL
-- Open-Source
+- Open Source
 - Relational Database
 website: https://azure.microsoft.com/en-us/products/mysql
 ---

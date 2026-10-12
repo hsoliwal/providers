@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -118,8 +118,8 @@ overview: 'Telepresence is profiled on the [APIs.io](https://apis.io/) network. 
   Telepresence''s developer surface includes documentation, changelog, and 13 more developer resources.'
 random_paper: 3
 score:
-  band: minimal
-  composite: 10.4
+  band: emerging
+  composite: 18.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -133,11 +133,20 @@ score:
     contract_governance: 0.0
     contract_quality: 6.7
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 10.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 18.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -156,6 +165,6 @@ tags:
 - Kubernetes
 - Local Development
 - Microservices
-- Open-Source
+- Open Source
 website: https://telepresence.io/
 ---

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://partners-api.thriveglobal.com
@@ -47,37 +47,37 @@ apis:
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Partner authentication
-  name: Thrive Global auth API
+  name: Thrive Global Auth API
   slug: thrive-global-auth-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Microsteps, challenges, courses, podcasts, and journey videos
-  name: Thrive Global content API
+  name: Thrive Global Content API
   slug: thrive-global-content-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Guided meditations — video sessions for relaxation, sleep, and stress management
-  name: Thrive Global meditations API
+  name: Thrive Global Meditations API
   slug: thrive-global-meditations-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Chronic condition programs (e.g. GLP-1 Companion)
-  name: Thrive Global programs API
+  name: Thrive Global Programs API
   slug: thrive-global-programs-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Thrive Reset video and audio content
-  name: Thrive Global resets API
+  name: Thrive Global Resets API
   slug: thrive-global-resets-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Search the full Thrive content library (premium capability — contact your Thrive Global representative to enable)
-  name: Thrive Global search API
+  name: Thrive Global Search API
   slug: thrive-global-search-api
 - baseURL: https://partners-api.thriveglobal.com
   baseurl_source: declared
   description: Articles, role model stories, and recipes
-  name: Thrive Global stories API
+  name: Thrive Global Stories API
   slug: thrive-global-stories-api
 artifact_total: 21
 collections:
@@ -233,19 +233,19 @@ layout: provider
 mcp_servers:
 - description: Thrive Global operates an official remote MCP server at https://mcp.thriveglobal.com/mcp (Streamable HTTP with SSE fallback), documented on the Thrive Global Partner API Portal. Each user authenticate
   name: Thrive Global MCP Server
-  slug: thrive-global-mcp-server
+  slug: thrive
 modified: '2026-07-21'
 name: Thrive Global
 nav: Providers
 network: true
-overview: 'Thrive Global publishes 8 APIs on the [APIs.io](https://apis.io/) network, including audio experiences API, auth API, content API, and 5 more. Tagged areas include Company, Consumer, Wellness, Wellbeing, and Behavior Change.
+overview: 'Thrive Global publishes 8 APIs on the [APIs.io](https://apis.io/) network, including audio experiences API, Auth API, Content API, and 5 more. Tagged areas include Company, Consumer, Wellness, Wellbeing, and Behavior Change.
 
 
   Thrive Global''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, sandbox, and 19 more developer resources.'
 random_paper: 8
 score:
-  band: developing
-  composite: 40.6
+  band: thin
+  composite: 38.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -257,11 +257,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 57.7
+    contract_quality: 51.9
     developer_ergonomics: 28.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 40.6
+  previous_composite: 38.0
   provenance:
     conformance: derived
     contracts:
@@ -276,9 +276,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

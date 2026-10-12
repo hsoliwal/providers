@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -58,17 +58,17 @@ description: Cerberus Tech, Inc. (C7 Security) is a Central Asian cybersecurity 
 image: https://c7-security.com/favicon.ico
 layout: provider
 modified: '2026-07-18'
-name: Cerberus Tech, Inc.
+name: C7 Security
 nav: Providers
 network: true
-overview: 'Cerberus Tech, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, Penetration Testing, and Red Teaming.
+overview: 'C7 Security is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, Penetration Testing, and Red Teaming.
 
 
-  Cerberus Tech, Inc.''s developer surface includes engineering blog, support, and 2 more developer resources.'
+  C7 Security''s developer surface includes engineering blog, support, and 2 more developer resources.'
 random_paper: 11
 score:
   band: minimal
-  composite: 6.4
+  composite: 4.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -82,11 +82,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 6.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

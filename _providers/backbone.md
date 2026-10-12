@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -83,9 +83,9 @@ description: Backbone is a mobile gaming company that makes the Backbone One con
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/backbone.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at backbone.com over HTTP; 5 tools listed.
   name: Backbone MCP Server
-  slug: backbone-mcp-server
+  slug: backbone-ucp-shopping
 modified: '2026-07-18'
 name: Backbone
 nav: Providers
@@ -97,7 +97,7 @@ overview: 'Backbone is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 7
 score:
   band: emerging
-  composite: 13.3
+  composite: 14.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -111,13 +111,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 13.3
+  previous_composite: 14.0
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

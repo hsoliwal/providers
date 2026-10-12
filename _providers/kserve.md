@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -80,6 +80,11 @@ collections:
   name: KServe Inference Protocol
   slug: open-kserve
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kserve/refs/heads/main/capabilities/kserve-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kserve-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kserve/refs/heads/main/agentic-access/kserve-agentic-access.yml
   title: ''
@@ -126,10 +131,10 @@ modified: '2026-09-16'
 name: KServe
 nav: Providers
 network: true
-overview: 'KServe publishes 3 APIs on the [APIs.io](https://apis.io/) network: Health API, Inference Protocol API, and Models API. Tagged areas include Inference, Kubernetes, Machine-Learning, MLOps, and Model Serving.
+overview: 'KServe publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Health API, Inference Protocol API, Models API, and 1 more. Tagged areas include Inference, Kubernetes, Machine Learning, MLOps, and Model Serving.
 
 
-  KServe''s developer surface includes authentication, documentation, getting-started guide, engineering blog, and 4 more developer resources.'
+  KServe''s developer surface includes authentication, documentation, getting-started guide, engineering blog, and 5 more developer resources.'
 plans:
 - name: Kserve Plans Pricing
   plan_count: 3
@@ -141,9 +146,9 @@ rate_limits:
   slug: kserve-rate-limits
 score:
   band: thin
-  composite: 29.6
+  composite: 26.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -153,11 +158,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 44.9
+    contract_quality: 40.4
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 29.6
+  previous_composite: 26.7
   provenance:
     agentic_access: derived
     contracts:
@@ -165,8 +170,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -181,7 +192,7 @@ slug: kserve
 tags:
 - Inference
 - Kubernetes
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Model Serving
 website: https://kserve.github.io/website/

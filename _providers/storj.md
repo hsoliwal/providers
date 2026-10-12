@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Decentralized Open-Source Cloud Storage
@@ -61,11 +61,11 @@ modified: '2026-05-28'
 name: Storj
 nav: Providers
 network: true
-overview: Storj publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud Storage And File Sharing and Public APIs.
+overview: Storj publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Public APIs, Storage, Object Storage, Cloud Storage, and S3 Compatible.
 random_paper: 12
 score:
   band: minimal
-  composite: 7.6
+  composite: 6.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -79,11 +79,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 7.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -97,7 +103,11 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: storj
 tags:
-- Cloud Storage And File Sharing
 - Public APIs
+- Storage
+- Object Storage
+- Cloud Storage
+- S3 Compatible
+- Decentralized Storage
 website: https://docs.storj.io/dcs/
 ---

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -49,22 +49,22 @@ apis:
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to chains, such as list all chains.
-  name: Zerion chains API
+  name: Zerion Chains API
   slug: zerion-chains-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to decentralized applications, such as list them all, search or get by ID.
-  name: Zerion dapps API
+  name: Zerion Dapps API
   slug: zerion-dapps-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to fungible assets, such as list them all, search or get by ID.
-  name: Zerion fungibles API
+  name: Zerion Fungibles API
   slug: zerion-fungibles-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to gas.
-  name: Zerion gas API
+  name: Zerion Gas API
   slug: zerion-gas-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
@@ -74,7 +74,7 @@ apis:
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to swapping and bridging assets.
-  name: Zerion swap API
+  name: Zerion Swap API
   slug: zerion-swap-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
@@ -84,7 +84,7 @@ apis:
 - baseURL: https://api.zerion.io
   baseurl_source: declared
   description: Operations related to wallets, such as portfolio charts, positions, and transactions.
-  name: Zerion wallets API
+  name: Zerion Wallets API
   slug: zerion-wallets-api
 - baseURL: https://api.zerion.io
   baseurl_source: declared
@@ -162,6 +162,11 @@ collections:
   name: REST chains wallets API
   slug: open-zerion-wallets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zerion/refs/heads/main/capabilities/zerion-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zerion-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -331,18 +336,18 @@ layout: provider
 mcp_servers:
 - description: Official hosted Model Context Protocol server exposing the full Zerion API documentation and OpenAPI spec to AI tools. Once connected, an assistant can search the docs and spec in real time while gene
   name: Zerion MCP Server
-  slug: zerion-mcp-server
+  slug: zerion-api
 modified: '2026-07-21'
 name: Zerion
 nav: Providers
 network: true
-overview: 'Zerion publishes 9 APIs on the [APIs.io](https://apis.io/) network, including chains API, dapps API, fungibles API, and 6 more. Tagged areas include Company, Web3, Blockchain, Cryptocurrency, and DeFi.
+overview: 'Zerion publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Chains API, Dapps API, Fungibles API, and 6 more. Tagged areas include Company, Web3, Blockchain, Cryptocurrency, and DeFi.
 
 
   The Zerion catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Zerion''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 28 more developer resources.'
+  Zerion''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, engineering blog, authentication, and 29 more developer resources.'
 plans:
 - name: Zerion Plans
   plan_count: 5
@@ -354,9 +359,9 @@ rate_limits:
   slug: zerion-rate-limits
 score:
   band: strong
-  composite: 62.9
+  composite: 60.8
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -366,11 +371,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 65.7
+    contract_quality: 59.9
     developer_ergonomics: 69.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 68.4
-  previous_composite: 62.9
+  previous_composite: 60.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -386,9 +391,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

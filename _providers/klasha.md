@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Collect payments from customers in Africa via card, bank transfer, USSD, M-Pesa, mobile money and the Klasha wallet, including charge validation, refunds and exchange rates.
@@ -224,8 +224,8 @@ overview: 'Klasha publishes 5 APIs on the [APIs.io](https://apis.io/) network. T
   Klasha''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, engineering blog, authentication, and 26 more developer resources.'
 random_paper: 12
 score:
-  band: strong
-  composite: 54.8
+  band: developing
+  composite: 51.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -237,16 +237,16 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 75.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 54.8
+  previous_composite: 51.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -256,9 +256,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -290,6 +290,6 @@ tags:
 - Foreign Exchange
 - Virtual Accounts
 - Checkout
-- Financial-Services
+- Financial Services
 website: https://www.klasha.com
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Order and retrieve property profiles (RSI, peril risks, flags, Partner Connect), manage PropertyPulse monitoring, and query PropertyNow datasets by address or coordinates. Bearer-token authenticated; '
@@ -112,7 +112,7 @@ overview: 'BetterView Marketplace publishes 1 API on the [APIs.io](https://apis.
 random_paper: 7
 score:
   band: emerging
-  composite: 13.3
+  composite: 13.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -126,9 +126,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 13.3
+  previous_composite: 13.4
   provenance:
     mcp: derived
     skills: derived
@@ -137,9 +137,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 18.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -164,6 +164,6 @@ tags:
 - Geospatial
 - Underwriting
 - Property Data
-- Risk
+- Risk Management
 website: https://betterview.com
 ---

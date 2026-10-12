@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.3
-  scored_at: '2026-09-20'
+  score: 23.1
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - baseURL: https://enterprise.api.trato.io
@@ -237,7 +237,7 @@ overview: 'Trato publishes 5 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 4
 score:
   band: thin
-  composite: 36.1
+  composite: 37.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -251,9 +251,9 @@ score:
     contract_governance: 4.5
     contract_quality: 20.5
     developer_ergonomics: 64.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 36.1
+  previous_composite: 37.1
   provenance:
     conformance: derived
     contracts:
@@ -263,8 +263,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -286,8 +292,8 @@ tags:
 - Contract Lifecycle Management
 - Electronic Signature
 - Legal Tech
-- Document-Management
-- Workflow-Automation
+- Document Management
+- Workflow Automation
 - Legal
 website: https://trato.io
 ---

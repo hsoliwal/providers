@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 65.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 63
   human_in_the_loop: 1
@@ -297,9 +297,9 @@ created: '2026-07-17'
 description: 'Meow is a company surfaced as a portfolio company of qed-investors and added to the API Evangelist network as a stub for enrichment. Sector: banking. This profile is a lead awaiting the enrichment pipeline.'
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.meow.com over HTTP; 47 tools listed.
   name: Meow MCP Server
-  slug: meow-mcp-server
+  slug: meow
 modified: '2026-07-17'
 name: Meow
 nav: Providers
@@ -316,7 +316,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 25.8
+  composite: 23.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 20.0
@@ -328,11 +328,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 68.7
+    contract_quality: 62.9
     developer_ergonomics: 1.8
-    discoverability: 44.4
+    discoverability: 46.7
     operational_transparency: 0.0
-  previous_composite: 25.8
+  previous_composite: 23.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,9 +348,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

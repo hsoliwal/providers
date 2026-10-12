@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The core REST API for the Atlan platform, providing programmatic access to all platform capabilities including asset management, data lineage, glossary terms, classifications, custom metadata, persona
@@ -45,7 +45,7 @@ apis:
 - description: Real-time event webhooks that capture and deliver notifications when metadata changes occur within the Atlan platform, enabling downstream integrations, automation pipelines, and event-driven governan
   name: Atlan Webhooks API
   slug: atlan-webhooks-api
-artifact_total: 10
+artifact_total: 11
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/atlan/refs/heads/main/security/atlan-vulnerability-disclosure.yml
@@ -121,6 +121,10 @@ jsonld:
   property_count: 29
   slug: atlan-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.atlan.com over HTTP.
+  name: Atlan MCP Server
+  slug: atlan
 modified: '2026-06-13'
 name: Atlan
 nav: Providers
@@ -143,27 +147,33 @@ rate_limits:
   slug: atlan-rate-limits
 score:
   band: thin
-  composite: 37.1
+  composite: 36.7
   coverage:
     artifact_dirs: 10
-    catalog_earned: 66.0
+    catalog_earned: 64.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.0
+    catalog_gap: 50.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 0.0
-    contract_quality: 48.9
+    contract_quality: 46.8
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 21.1
-  previous_composite: 37.1
+  previous_composite: 36.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,9 +34,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/cuemath/refs/heads/main/security/cuemath-domain-security.yml
@@ -119,6 +119,10 @@ created: '2026-08-11'
 description: Cuemath is an India-headquartered education technology company founded in 2013 by Manan Khurma that delivers live, one-to-one online math tutoring to students in grades K through 12 across more than 80 countries. Its MathFit framework and LEAP learning platform pair certified tutors with an interactive, gamified curriculum aligned to US Common Core standards, spanning arithmetic, algebra, geometry, pre-calculus, AP calculus and standardized test preparation. Cuemath sells directly to families as a subscription tutoring product; it operates a consumer web and mobile application rather than a developer platform, and publishes no public API, SDK or developer portal.
 image: https://d138zd1ktt9iqe.cloudfront.net/static/website-v3/math-fit-teaser-16-9.webp
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.cuemath.com over HTTP.
+  name: Cuemath MCP Server
+  slug: cuemath
 modified: '2026-08-11'
 name: Cuemath
 nav: Providers
@@ -138,7 +142,7 @@ rate_limits:
   slug: cuemath-rate-limits
 score:
   band: emerging
-  composite: 16.2
+  composite: 15.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -152,9 +156,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 16.2
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - india
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 15.8
   provenance:
     mcp: first-party
   regulatory:
@@ -162,9 +171,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -281,7 +281,7 @@ modified: '2026-08-06'
 name: Agora Data
 nav: Providers
 network: true
-overview: 'Agora Data publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Health API, Hooks API, Import API, and 7 more. Tagged areas include Company, Auto Finance, Automotive, Lending, and Financial-Services.
+overview: 'Agora Data publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Health API, Hooks API, Import API, and 7 more. Tagged areas include Company, Auto Finance, Automotive, Lending, and Financial Services.
 
 
   The Agora Data catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -296,7 +296,7 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: thin
-  composite: 37.3
+  composite: 38.5
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -308,11 +308,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 47.8
+    contract_quality: 43.8
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 37.3
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -323,8 +323,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -345,7 +351,7 @@ tags:
 - Auto Finance
 - Automotive
 - Lending
-- Financial-Services
+- Financial Services
 - Fintech
 - Loan Origination
 - Data Analytics

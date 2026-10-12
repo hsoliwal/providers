@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OAuth 2.0 protected API behind the Lingvist learning platform. Lingvist publishes no reference documentation for it; the authorization, token and user-profile endpoints are documented in Lingvist'
@@ -154,8 +154,8 @@ scopes:
   slug: lingvist-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: thin
-  composite: 29.1
+  band: emerging
+  composite: 25.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -169,14 +169,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
     - estonia
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
-  previous_composite: 29.1
+  previous_composite: 25.2
   provenance:
     conformance: first-party
   regulatory:
@@ -184,9 +184,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -209,7 +209,7 @@ tags:
 - Language Learning
 - EdTech
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Spaced Repetition
 - Mobile
 - Estonia

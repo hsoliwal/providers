@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 294
   human_in_the_loop: 3
@@ -990,7 +990,7 @@ modified: '2026-09-16'
 name: Elastic Path
 nav: Providers
 network: true
-overview: 'Elastic Path publishes 99 APIs on the [APIs.io](https://apis.io/) network, including Account Addresses API, Account Authentication Settings API, Account Cart Associations API, and 96 more. Tagged areas include Commerce, Headless Commerce, Composable Commerce, E-Commerce, and B2B.
+overview: 'Elastic Path publishes 100 APIs on the [APIs.io](https://apis.io/) network, including Account Addresses API, Account Authentication Settings API, Account Cart Associations API, and 97 more. Tagged areas include Commerce, Headless Commerce, Composable Commerce, E-Commerce, and B2B.
 
 
   The Elastic Path catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -1022,23 +1022,23 @@ rules:
   slug: elastic-path-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.2
+  composite: 49.4
   coverage:
     artifact_dirs: 18
-    catalog_earned: 57.3
+    catalog_earned: 69.1
     catalog_earned_first_party: 12.0
-    catalog_gap: 57.8
+    catalog_gap: 45.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.5
   facets:
     access_clarity: 50.0
     contract_governance: 9.8
-    contract_quality: 64.4
+    contract_quality: 59.2
     developer_ergonomics: 33.3
-    discoverability: 50.0
-    operational_transparency: 52.6
-  previous_composite: 42.9
+    discoverability: 71.4
+    operational_transparency: 49.5
+  previous_composite: 48.9
   provenance:
     agentic_access: derived
     contracts:
@@ -1051,10 +1051,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 38.9

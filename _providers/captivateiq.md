@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.captivateiq.com/ciq/v1/
@@ -170,6 +170,11 @@ collections:
   name: CaptivateIQ Attribute Worksheets Users API
   slug: open-captivateiq-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/captivateiq/refs/heads/main/capabilities/captivateiq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/captivateiq-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/captivateiq/refs/heads/main/mcp/captivateiq-mcp.yml
   title: ''
@@ -331,7 +336,7 @@ network: true
 overview: 'CaptivateIQ publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Attribute Worksheets API, Audit Logs API, Commission Plans API, and 13 more. Tagged areas include Company, Cloud Saas, Sales Commissions, Incentive Compensation Management, and Sales Performance Management.
 
 
-  CaptivateIQ''s developer surface includes documentation, API reference, getting-started guide, changelog, engineering blog, pricing, support, and 26 more developer resources.'
+  CaptivateIQ''s developer surface includes documentation, API reference, getting-started guide, changelog, engineering blog, pricing, support, and 27 more developer resources.'
 plans:
 - name: Captivateiq Plans Pricing
   plan_count: 0
@@ -343,14 +348,14 @@ rate_limits:
   slug: captivateiq-rate-limits
 scopes:
 - name: Captivateiq Scopes
-  scope_count: 0
+  scope_count: 1
   slug: captivateiq-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 47.2
+  composite: 49.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -360,11 +365,11 @@ score:
   facets:
     access_clarity: 48.7
     contract_governance: 18.2
-    contract_quality: 51.6
+    contract_quality: 46.8
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 47.2
+  previous_composite: 49.9
   provenance:
     conformance: first-party
     contracts:
@@ -374,8 +379,20 @@ score:
       total: 16
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: sox
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 43.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

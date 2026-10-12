@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: Returns customer profile information for Zurich policyholders through the ConnectZ open insurance framework. Used by partners and aggregators that need normalized customer attributes to support cross-
@@ -132,14 +132,14 @@ modified: '2026-05-16'
 name: Zurich Insurance
 nav: Providers
 network: true
-overview: 'Zurich Insurance publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Financial, Property and Casualty, Open Insurance, and API Platform.
+overview: 'Zurich Insurance publishes 12 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Finance, Property and Casualty, Open Insurance, and API Platform.
 
 
   Zurich Insurance''s developer surface includes developer portal, documentation, and 5 more developer resources.'
 random_paper: 2
 score:
   band: minimal
-  composite: 7.4
+  composite: 8.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 32.0
@@ -153,17 +153,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 2.6
-  previous_composite: 7.4
+  previous_composite: 8.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -178,7 +178,7 @@ security:
 slug: zurich-insurance
 tags:
 - Insurance
-- Financial
+- Finance
 - Property and Casualty
 - Open Insurance
 - API Platform

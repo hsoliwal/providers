@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The API host point.me operates behind its consumer search product and its Gateway embedded platform. https://api.point.me/ returns HTTP 200 text/plain "Flight Search APIs"; every other path probed (/o
@@ -159,7 +159,7 @@ layout: provider
 mcp_servers:
 - description: point.me ships no Model Context Protocol server — neither a remote endpoint nor a local stdio package. No candidate tool list is derived either, because point.me publishes no OpenAPI to derive one fro
   name: POINT.ME MCP Server
-  slug: pointme-mcp-server
+  slug: point-me-mcp-yml
 modified: '2026-08-26'
 name: POINT.ME
 nav: Providers
@@ -179,12 +179,12 @@ rate_limits:
   slug: point-me-rate-limits
 scopes:
 - name: Point Me Scopes
-  scope_count: 0
+  scope_count: 14
   slug: point-me-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: thin
-  composite: 34.7
+  composite: 32.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -198,9 +198,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 0.0
-  previous_composite: 34.7
+  previous_composite: 32.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -209,9 +209,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -239,5 +239,6 @@ tags:
 - Banking
 - Search
 - Company
+- Loyalty & Incentives
 website: https://www.point.me/
 ---

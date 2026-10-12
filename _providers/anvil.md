@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -68,7 +68,7 @@ apis:
   description: The Generate Pdf API from Anvil — 1 operation(s) for generate pdf.
   name: Anvil Generate Pdf API
   slug: anvil-generate-pdf-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -209,11 +209,15 @@ jsonld:
   property_count: 24
   slug: anvil-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.useanvil.com over HTTP.
+  name: Anvil MCP Server
+  slug: anvil
 modified: '2026-06-13'
 name: Anvil
 nav: Providers
 network: true
-overview: 'Anvil publishes 2 APIs on the [APIs.io](https://apis.io/) network: Fill API and Generate Pdf API. Tagged areas include PDF, PDF Filling, PDF Generation, E-Signature, and Document Automation.
+overview: 'Anvil publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Fill API, Generate Pdf API, and 4 more. Tagged areas include PDF, PDF Filling, PDF Generation, E-Signature, and Document Automation.
 
 
   The Anvil catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -242,23 +246,23 @@ rules:
   slug: anvil-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.0
+  composite: 46.8
   coverage:
     artifact_dirs: 19
-    catalog_earned: 75.3
+    catalog_earned: 72.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.8
+    catalog_gap: 42.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 9.8
-    contract_quality: 69.0
+    contract_quality: 63.7
     developer_ergonomics: 38.1
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 49.0
+    discoverability: 68.3
+    operational_transparency: 49.5
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     contracts:
@@ -267,8 +271,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

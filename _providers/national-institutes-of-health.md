@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -111,7 +111,7 @@ modified: '2026-05-19'
 name: National Institutes of Health
 nav: Providers
 network: true
-overview: 'National Institutes of Health publishes 2 APIs on the [APIs.io](https://apis.io/) network: Projects API and Publications API. Tagged areas include Federal-Government, Health, Research, Funding, and Publications.
+overview: 'National Institutes of Health publishes 2 APIs on the [APIs.io](https://apis.io/) network: Projects API and Publications API. Tagged areas include Federal Government, Health, Research, Funding, and Publications.
 
 
   National Institutes of Health''s developer surface includes developer portal and 6 more developer resources.'
@@ -126,7 +126,7 @@ rate_limits:
   slug: national-institutes-of-health-rate-limits
 score:
   band: emerging
-  composite: 25.6
+  composite: 24.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 46.0
@@ -138,11 +138,16 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 25.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 24.7
   provenance:
     agentic_access: derived
     contracts:
@@ -155,9 +160,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -171,7 +176,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: national-institutes-of-health
 tags:
-- Federal-Government
+- Federal Government
 - Health
 - Research
 - Funding

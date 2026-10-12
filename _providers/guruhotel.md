@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -70,6 +70,10 @@ created: '2026-07-17'
 description: 'GuruHotel is AI-native direct-booking infrastructure for independent hotels: an AI-powered hotel website builder, a conversion-optimized direct booking engine, and a Stripe-powered payment-orchestration platform that turns a hotel''s official website into a commission-free direct booking channel with real-time inventory, multi-currency checkout and a guest-first experience. Founded in 2019, GuruHotel is trusted by 1000+ hotels, serves 200,000+ guests a year and processes $15M+ in annual gross booking value across the United States, Mexico, the Caribbean and Europe. It connects to hotel PMS platforms directly (Cloudbeds) and through Channex (280+ PMS incl. Mews, apaleo, Oracle OPERA Cloud, Guesty, Hostaway), plus Google for Hotels. GuruHotel is a portfolio company of 500 Global and Anthemis.'
 image: https://guruhotel.com/images/brand/guruhotel-logo.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at guruhotel.com over HTTP; 6 tools listed.
+  name: GuruHotel MCP Server
+  slug: guruhotel
 modified: '2026-07-19'
 name: GuruHotel
 nav: Providers
@@ -81,7 +85,7 @@ overview: 'GuruHotel is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 1
 score:
   band: minimal
-  composite: 7.1
+  composite: 8.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -95,9 +99,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 7.1
+  previous_composite: 8.5
   provenance:
     mcp: first-party
   regulatory:
@@ -105,9 +109,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

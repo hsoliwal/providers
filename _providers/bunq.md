@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -237,7 +237,7 @@ rate_limits:
   slug: bunq-rate-limits
 score:
   band: thin
-  composite: 37.7
+  composite: 36.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -249,9 +249,9 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -261,7 +261,7 @@ score:
     regions:
     - benelux
     - europe
-  previous_composite: 37.7
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     contracts:
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

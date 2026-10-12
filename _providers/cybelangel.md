@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - baseURL: https://platform.cybelangel.com/api
@@ -107,6 +107,11 @@ apis:
   slug: cybelangel-workspaces-api
 artifact_total: 19
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cybelangel/refs/heads/main/capabilities/cybelangel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cybelangel-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/cybelangel/refs/heads/main/overlays/cybelangel-platform-reports-overlay.yaml
   title: ''
@@ -316,7 +321,7 @@ network: true
 overview: 'CybelAngel publishes 13 APIs on the [APIs.io](https://apis.io/) network, including ADM Inventory API, Alerts API, Asset API, and 10 more. Tagged areas include Company, Cybersecurity, Threat Intelligence, external-attack-surface-management, and data-breach-prevention.
 
 
-  CybelAngel''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, signup flow, and 36 more developer resources.'
+  CybelAngel''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, signup flow, and 37 more developer resources.'
 plans:
 - name: Cybelangel Plans Pricing
   plan_count: 0
@@ -333,28 +338,30 @@ scopes:
   summary_line: 10 scopes · clientCredentials
 score:
   band: strong
-  composite: 54.3
+  composite: 59.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 39.0
+    artifact_dirs: 23
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 76.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 60.7
+    contract_quality: 54.9
     developer_ergonomics: 62.5
-    discoverability: 50.0
+    discoverability: 71.4
     operational_transparency: 60.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 54.3
+  previous_composite: 58.9
   provenance:
     conformance: first-party
     contracts:
@@ -364,8 +371,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

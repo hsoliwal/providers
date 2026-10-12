@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -119,9 +119,9 @@ description: 'JubileeTV (by Caavo) is a US consumer remote-caregiving system tha
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jubilee-tv.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at getjubileetv.com over HTTP; 5 tools listed.
   name: Jubilee TV MCP Server
-  slug: jubilee-tv-mcp-server
+  slug: jubilee-tv-ucp-shopping
 modified: '2026-08-08'
 name: Jubilee TV
 nav: Providers
@@ -138,7 +138,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.1
+  composite: 25.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -152,15 +152,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 22.1
+  previous_composite: 25.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: HTTP RPC-style API for age gates, age verification, verifiable parental consent, k-ID sessions, and permission management. Methods take the form https://game-api.k-id.com/api/v1/{method} with bearer A
@@ -192,7 +192,7 @@ overview: 'k-ID publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 5
 score:
   band: developing
-  composite: 42.7
+  composite: 43.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -204,17 +204,23 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 42.7
+  previous_composite: 43.9
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -244,7 +250,7 @@ tags:
 - Child Safety
 - Identity
 - Privacy
-- Regulatory Technology
+- RegTech
 - Gaming
 website: https://www.k-id.com/
 ---

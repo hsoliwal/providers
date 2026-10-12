@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted, OAuth-secured Model Context Protocol (MCP) server that gives AI agents access to YouArt's catalog of 60+ image, video, audio, and TTS models plus its node-based workflow builder, asset library
@@ -100,19 +100,19 @@ layout: provider
 mcp_servers:
 - description: Hosted Model Context Protocol server for YouArt. Lets AI clients generate and edit images, create video and audio, and assemble multi-model creative workflows using the same YouArt account, credits, a
   name: Youart MCP Server
-  slug: youart-mcp-server
+  slug: youart
 modified: '2026-07-21'
 name: Youart
 nav: Providers
 network: true
-overview: 'Youart publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Image-Generation, and Video Generation.
+overview: 'Youart publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Generative AI, Image Generation, and Video Generation.
 
 
   Youart''s developer surface includes documentation, API reference, pricing, support, authentication, and 7 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 21.5
+  composite: 21.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -126,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 21.5
+  previous_composite: 21.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -153,7 +159,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Generative AI
-- Image-Generation
+- Image Generation
 - Video Generation
 - Text-to-Speech
 - Creative Tools

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 69
   human_in_the_loop: 10
@@ -296,6 +296,11 @@ collections:
   name: systemd Varlink Interfaces (io.systemd.*)
   slug: open-varlink
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/systemd/refs/heads/main/capabilities/systemd-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/systemd-capability-edges.yml
 - group: build
   title: ''
   type: CodeOfConduct
@@ -531,13 +536,13 @@ modified: '2026-05-23'
 name: systemd
 nav: Providers
 network: true
-overview: 'systemd publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Boot API, Cache API, Cgroups API, and 22 more. Tagged areas include Boot, Cgroups, Containers, D-Bus, and Init.
+overview: 'systemd publishes 34 APIs on the [APIs.io](https://apis.io/) network, including Boot API, Cache API, Cgroups API, and 31 more. Tagged areas include Boot, Cgroups, Containers, D-Bus, and Init.
 
 
   The systemd catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  systemd''s developer surface includes documentation, release notes, changelog, tooling, and 37 more developer resources.'
+  systemd''s developer surface includes documentation, release notes, changelog, tooling, and 38 more developer resources.'
 random_paper: 7
 rules:
 - effective_rule_count: 5
@@ -563,23 +568,26 @@ rules:
   slug: systemd-rules
 score:
   band: thin
-  composite: 27.7
+  composite: 30.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 49.5
+    artifact_dirs: 13
+    catalog_earned: 54.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.5
+    catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 28.8
-    contract_quality: 49.4
+    contract_governance: 27.3
+    contract_quality: 45.0
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 27.7
+  open_source:
+    applies: true
+    score: 65.0
+  previous_composite: 30.1
   provenance:
     agentic_access: derived
     contracts:
@@ -587,8 +595,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 25
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -611,7 +625,7 @@ tags:
 - Linux
 - Logging
 - Networks
-- Open-Source
+- Open Source
 - PID 1
 - Service Manager
 - System

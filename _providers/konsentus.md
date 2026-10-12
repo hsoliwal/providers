@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -204,14 +204,14 @@ modified: '2026-05-25'
 name: Konsentus
 nav: Providers
 network: true
-overview: 'Konsentus publishes 1 API on the [APIs.io](https://apis.io/) network: PSP Checking Service API. Tagged areas include Open Banking, Open Finance, PSD2, PSD3, and FiDA.
+overview: 'Konsentus publishes 3 APIs on the [APIs.io](https://apis.io/) network, including PSP Checking Service API, and 2 more. Tagged areas include Open Banking, Open Finance, PSD2, PSD3, and FiDA.
 
 
   Konsentus'' developer surface includes authentication, developer portal, documentation, getting-started guide, release notes, support, FAQ, and 21 more developer resources.'
 random_paper: 12
 score:
   band: thin
-  composite: 37.1
+  composite: 35.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -223,11 +223,16 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 57.8
+    contract_quality: 52.0
     developer_ergonomics: 54.8
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 18.4
-  previous_composite: 37.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -240,9 +245,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 25.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,6 +275,6 @@ tags:
 - eIDAS
 - Trust Services
 - Regulatory Checking
-- Financial-Services
+- Financial Services
 website: https://www.konsentus.com/
 ---

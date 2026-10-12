@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://{subdomain}.fellow.app/api/v1
@@ -198,9 +198,9 @@ description: 'Fellow is an AI meeting assistant and meeting-management platform 
 image: https://framerusercontent.com/assets/J0X2qL3rwf819TDwjCc8iG9UjUk.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at fellow.app over HTTP; 5 tools listed.
   name: Fellow MCP Server
-  slug: fellow-mcp-server
+  slug: fellow
 modified: '2026-07-19'
 name: Fellow
 nav: Providers
@@ -224,7 +224,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 46.9
+  composite: 49.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -236,17 +236,31 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 46.9
+  previous_composite: 49.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

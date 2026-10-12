@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/parkhub/refs/heads/main/security/parkhub-trust-center.yml
@@ -71,6 +71,10 @@ created: '2026-03-16'
 description: Parkhub provided parking management and payment processing APIs for parking operators and venues. Parkhub has been acquired and the parkhub.com domain now redirects to JustPark Business. Public API documentation is no longer available.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/parkhub.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.justpark.com over HTTP; 1 tool listed.
+  name: Parkhub MCP Server
+  slug: parkhub
 modified: '2026-04-28'
 name: Parkhub
 nav: Providers
@@ -82,7 +86,7 @@ overview: 'Parkhub is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 1
 score:
   band: minimal
-  composite: 5.6
+  composite: 6.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 22.0
@@ -96,9 +100,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 40.7
+    discoverability: 43.3
     operational_transparency: 2.6
-  previous_composite: 5.6
+  previous_composite: 6.1
   provenance:
     mcp: first-party
   regulatory:
@@ -106,9 +110,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

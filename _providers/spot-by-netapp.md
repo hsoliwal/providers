@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -165,6 +165,11 @@ collections:
   name: Spot by NetApp API
   slug: open-spot-by-netapp
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spot-by-netapp/refs/heads/main/capabilities/spot-by-netapp-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spot-by-netapp-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -289,7 +294,7 @@ overview: 'Spot by NetApp publishes 10 APIs on the [APIs.io](https://apis.io/) n
   The Spot by NetApp catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Spot by NetApp''s developer surface includes authentication, developer portal, documentation, GitHub presence, CLI, developer console, engineering blog, and 13 more developer resources.'
+  Spot by NetApp''s developer surface includes authentication, developer portal, documentation, GitHub presence, CLI, developer console, engineering blog, and 14 more developer resources.'
 plans:
 - name: Spot By Netapp Plans Pricing
   plan_count: 3
@@ -323,9 +328,9 @@ rules:
   slug: spot-by-netapp-rules
 score:
   band: developing
-  composite: 43.6
+  composite: 42.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 58.5
     catalog_earned_first_party: 0.0
     catalog_gap: 56.5
@@ -335,11 +340,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 61.9
+    contract_quality: 56.6
     developer_ergonomics: 77.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 43.6
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     contracts:
@@ -347,8 +352,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

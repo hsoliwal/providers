@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Initiate a payment request, redirect the shopper to Coda's hosted payment page, receive the transaction completion notification, and check transaction status. Available as v1.0 (API key per title/coun
@@ -227,8 +227,8 @@ overview: 'Coda Payments publishes 4 APIs on the [APIs.io](https://apis.io/) net
   Coda Payments'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 27 more developer resources.'
 random_paper: 13
 score:
-  band: strong
-  composite: 56.8
+  band: developing
+  composite: 53.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -240,16 +240,18 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 56.8
+  previous_composite: 53.6
   provenance:
     conformance: first-party
   regulatory:
@@ -263,9 +265,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 65.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -297,7 +299,7 @@ tags:
 - Gaming
 - Digital Goods
 - Carrier Billing
-- E-Wallets
+- Digital Wallet
 - Payouts
 - Southeast Asia
 - Monetization

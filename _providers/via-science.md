@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'VIA''s OpenID Connect / OAuth 2.0 identity layer, operated on a VIA-run Keycloak server. It is the only machine-readable contract VIA publishes: each product realm serves an anonymous OIDC discovery do'
@@ -172,12 +172,12 @@ rate_limits:
   slug: via-science-rate-limits
 scopes:
 - name: Via Science Scopes
-  scope_count: 0
+  scope_count: 12
   slug: via-science-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 12 scopes
 score:
   band: thin
-  composite: 33.7
+  composite: 35.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -191,14 +191,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 33.7
+  previous_composite: 35.9
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

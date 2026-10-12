@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JWT-authenticated REST API on Graphistry Hub for authentication (token obtain/refresh/verify), dataset and file upload, and visualization datasets, powering GPU-accelerated graph rendering and sharing
@@ -126,7 +126,7 @@ layout: provider
 mcp_servers:
 - description: GPU-accelerated graph visualization and analytics for LLMs using Graphistry and MCP. Community-maintained (not a first-party Graphistry product).
   name: Graphistry MCP Server
-  slug: graphistry-mcp-server
+  slug: graphistry-mcp
 modified: '2026-07-19'
 name: Graphistry
 nav: Providers
@@ -138,7 +138,7 @@ overview: 'Graphistry publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 1
 score:
   band: emerging
-  composite: 22.8
+  composite: 21.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -152,13 +152,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 22.8
+  previous_composite: 21.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -183,7 +189,7 @@ tags:
 - Network Analysis
 - Data Visualization
 - Graph Query
-- Machine-Learning
+- Machine Learning
 - Cybersecurity
 website: https://www.graphistry.com/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -286,7 +286,7 @@ modified: '2026-04-23'
 name: Apache Cassandra
 nav: Providers
 network: true
-overview: 'Apache Cassandra publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Cassandra REST API (Stargate), Columns API, Indexes API, and 4 more. Tagged areas include Apache, Big Data, Database, Distributed, and NoSQL.
+overview: 'Apache Cassandra publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Cassandra REST API (Stargate), Columns API, Indexes API, and 9 more. Tagged areas include Apache, Big Data, Database, Distributed, and NoSQL.
 
 
   Apache Cassandra''s developer surface includes authentication, documentation, getting-started guide, GitHub presence, engineering blog, Stack Overflow tag, YouTube channel, and 24 more developer resources.'
@@ -301,7 +301,7 @@ rate_limits:
   slug: cassandra-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 38.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 41.0
@@ -313,11 +313,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 33.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 23.7
-  previous_composite: 34.2
+  open_source:
+    applies: true
+    score: 75.0
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     contracts:
@@ -325,8 +328,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -352,7 +361,7 @@ tags:
 - Database
 - Distributed
 - NoSQL
-- Open-Source
+- Open Source
 use_cases:
 - name: Event Logging
 - name: IoT Telemetry

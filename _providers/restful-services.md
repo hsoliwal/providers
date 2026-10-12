@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: A curated collection of standards, conventions, and best practices for building RESTful APIs, including HAL, JSON:API, Siren, Collection+JSON, and HATEOAS patterns.
@@ -131,7 +131,7 @@ rules:
   slug: restful-services-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 17.9
+  composite: 16.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 55.3
@@ -145,11 +145,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 16.7
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 17.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

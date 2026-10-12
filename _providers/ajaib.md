@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -212,14 +212,14 @@ modified: '2026-08-06'
 name: Ajaib
 nav: Providers
 network: true
-overview: 'Ajaib publishes 3 APIs on the [APIs.io](https://apis.io/) network: Market Info API, Spot Trading API, and Wallet API. Tagged areas include Company, Financial-Services, Investing, Brokerage, and Trading.
+overview: 'Ajaib publishes 3 APIs on the [APIs.io](https://apis.io/) network: Market Info API, Spot Trading API, and Wallet API. Tagged areas include Company, Financial Services, Investing, Brokerage, and Trading.
 
 
   Ajaib''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 21 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 32.9
+  composite: 31.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -233,7 +233,7 @@ score:
     contract_governance: 4.5
     contract_quality: 15.3
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -242,7 +242,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 32.9
+  previous_composite: 31.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -258,9 +258,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -282,7 +282,7 @@ security:
 slug: ajaib
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Investing
 - Brokerage
 - Trading

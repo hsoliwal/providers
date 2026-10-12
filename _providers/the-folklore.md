@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven commerce surface for The Folklore's Shopify storefront, implementing the Universal Commerce Protocol over an MCP endpoint with buyer-approved checkout, plus read-only storefront JSON endp
@@ -127,9 +127,9 @@ description: 'The Folklore is a commerce platform and B2B wholesale marketplace 
 image: https://thefolklore.com/cdn/shop/files/TheFolklore_Logo_Marketplace_B1__digital_430x_cbbbe0ff-35cb-4e95-b54c-dd5a61ad01d2.webp?v=1733852909
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at thefolklore.com; 6 tools listed.
   name: The Folklore MCP Server
-  slug: the-folklore-mcp-server
+  slug: the-folklore-ucp
 modified: '2026-07-21'
 name: The Folklore
 nav: Providers
@@ -145,8 +145,8 @@ scopes:
   slug: the-folklore-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.9
+  band: thin
+  composite: 28.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -160,15 +160,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 25.9
+  previous_composite: 28.6
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

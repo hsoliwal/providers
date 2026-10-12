@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 9.4
-  scored_at: '2026-09-20'
+  score: 7.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'A REST/JSON API hosted on Azure API Management for pairing and driving takepayments card machines (Move5000, PAX A920 Pro) from an integrated app or POS. Documented operations include Authentication, '
@@ -179,7 +179,7 @@ overview: 'takepayments publishes 1 API on the [APIs.io](https://apis.io/) netwo
 random_paper: 4
 score:
   band: thin
-  composite: 33.9
+  composite: 31.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -193,7 +193,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -203,7 +203,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.9
+  previous_composite: 31.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -212,9 +212,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -202,7 +202,7 @@ modified: '2026-05-30'
 name: OddsJam
 nav: Providers
 network: true
-overview: 'OddsJam publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Fixtures API, Futures API, Grader API, and 9 more. Tagged areas include Odds, Sports Betting, and Sportsbook.
+overview: 'OddsJam publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Fixtures API, Futures API, Grader API, and 9 more. Tagged areas include Odds, Sports Betting, Sportsbook, Real-Time, and Sports.
 
 
   The OddsJam catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -232,23 +232,23 @@ rules:
   slug: oddsjam-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 28.2
+  composite: 28.0
   coverage:
     artifact_dirs: 13
-    catalog_earned: 39.8
+    catalog_earned: 44.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.3
+    catalog_gap: 70.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
     contract_governance: 11.4
-    contract_quality: 55.7
+    contract_quality: 50.9
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 28.2
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     contracts:
@@ -256,8 +256,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -281,5 +287,7 @@ tags:
 - Odds
 - Sports Betting
 - Sportsbook
+- Real-Time
+- Sports
 website: https://oddsjam.com/
 ---

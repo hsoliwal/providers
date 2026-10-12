@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -96,6 +96,11 @@ collections:
   name: Breathe HR REST API
   slug: open-breathe-hr
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/breathe-hr/refs/heads/main/capabilities/breathe-hr-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/breathe-hr-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/breathe-hr/refs/heads/main/agentic-access/breathe-hr-agentic-access.yml
   title: ''
@@ -151,16 +156,16 @@ modified: '2026-05-11'
 name: Breathe HR
 nav: Providers
 network: true
-overview: 'Breathe HR publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Absences API, Account API, Employees API, and 2 more. Tagged areas include Human Resources, HRIS, Employee Management, Absence Management, and Holiday Tracking.
+overview: 'Breathe HR publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Absences API, Account API, Employees API, and 3 more. Tagged areas include Human Resources, HRIS, Employee Management, Absence Management, and Holiday Tracking.
 
 
-  Breathe HR''s developer surface includes authentication, documentation, pricing, signup flow, support, and 6 more developer resources.'
+  Breathe HR''s developer surface includes authentication, documentation, pricing, signup flow, support, and 7 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 31.7
+  composite: 29.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -170,9 +175,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -182,7 +187,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 31.7
+  previous_composite: 29.2
   provenance:
     agentic_access: derived
     contracts:
@@ -190,8 +195,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -213,7 +224,7 @@ tags:
 - Employee Management
 - Absence Management
 - Holiday Tracking
-- SMB
+- Small Business
 - United Kingdom
 website: https://www.breathehr.com
 ---

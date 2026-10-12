@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Single GraphQL API for the Edvisor.io education-recruitment platform, covering students, quotes, school offerings, enrollments, invoices, and agency/school company management. Bearer API-key authentic
@@ -196,7 +196,7 @@ overview: 'Edvisor.io publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 12
 score:
   band: developing
-  composite: 49.7
+  composite: 46.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -208,11 +208,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 49.0
+    contract_quality: 46.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 49.7
+  previous_composite: 46.3
   provenance:
     conformance: derived
     mcp: derived
@@ -226,9 +226,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

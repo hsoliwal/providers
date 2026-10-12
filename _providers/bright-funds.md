@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -130,7 +130,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/clientCredentials
 score:
   band: emerging
-  composite: 20.5
+  composite: 24.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -144,13 +144,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 20.5
+  previous_composite: 24.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,6 +187,5 @@ tags:
 - Donations
 - Volunteering
 - Authentication
-- OpenID Connect
 website: https://www.brightfunds.org/
 ---

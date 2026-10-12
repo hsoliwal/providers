@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The external API of the Federated Wireless Spectrum Controller, the cloud platform that manages CBRS spectrum assignment, CBSD lifecycle, monitoring and compliance. The Spectrum Controller web applica
@@ -214,7 +214,7 @@ layout: provider
 mcp_servers:
 - description: Federated Wireless publishes a remote Model Context Protocol server on its primary company host, federatedwireless.ai. It is not announced in any Federated Wireless documentation, press release or MCP
   name: Federated Wireless MCP Server
-  slug: federated-wireless-mcp-server
+  slug: federated-wireless
 modified: '2026-08-12'
 name: Federated Wireless
 nav: Providers
@@ -238,8 +238,8 @@ scopes:
   slug: federated-wireless-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 25.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -253,25 +253,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 81.5
+    discoverability: 80.8
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.6
+  previous_composite: 25.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

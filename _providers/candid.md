@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -77,7 +77,7 @@ apis:
   description: Operations for searching the Candid nonprofit database.
   name: Candid Search API
   slug: candid-search-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -159,11 +159,15 @@ finops:
   slug: candid-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/candid.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.candid.org over HTTP.
+  name: Candid MCP Server
+  slug: candid
 modified: '2026-05-19'
 name: Candid
 nav: Providers
 network: true
-overview: 'Candid publishes 2 APIs on the [APIs.io](https://apis.io/) network: Lookup API and Search API. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
+overview: 'Candid publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Lookup API, Search API, and 7 more. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
 
 
   Candid''s developer surface includes authentication, support, and 12 more developer resources.'
@@ -178,7 +182,7 @@ rate_limits:
   slug: candid-rate-limits
 score:
   band: thin
-  composite: 33.3
+  composite: 31.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 49.0
@@ -190,11 +194,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 26.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 33.3
+  previous_composite: 31.7
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +207,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

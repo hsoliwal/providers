@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -100,7 +100,7 @@ apis:
   description: The Webhooks API from Groove — 2 operation(s) for webhooks.
   name: Groove Webhooks API
   slug: groove-webhooks-api
-artifact_total: 29
+artifact_total: 30
 asyncapis:
 - description: AsyncAPI 2.6 description of Groove's webhook surface as documented for the legacy Groove REST API v1. Groove enables customers to register webhook subscriptions through `POST https://api.groovehq.com/
   name: Groove Webhooks
@@ -140,6 +140,11 @@ collections:
   name: Groove REST API v1
   slug: open-groove
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/capabilities/groove-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/groove-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/groove/refs/heads/main/agentic-access/groove-agentic-access.yml
   title: ''
@@ -195,17 +200,21 @@ graphqls:
   slug: groove-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/groove.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.groovehq.com over HTTP.
+  name: Groove MCP Server
+  slug: groove
 modified: '2026-05-30'
 name: Groove
 nav: Providers
 network: true
-overview: 'Groove publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Agents API, Attachments API, and 7 more. Tagged areas include Customer-Support, Help Desk, Shared Inbox, Knowledge Base, and Conversations.
+overview: 'Groove publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Agents API, Attachments API, and 9 more. Tagged areas include Customer Support, Help Desk, Shared Inbox, Knowledge Base, and Conversations.
 
 
   The Groove catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Groove''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, GitHub presence, and 5 more developer resources.'
+  Groove''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, GitHub presence, and 6 more developer resources.'
 random_paper: 20
 rules:
 - effective_rule_count: 35
@@ -221,7 +230,7 @@ rules:
   slug: groove-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 33.8
+  composite: 32.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.8
@@ -233,11 +242,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 11.4
-    contract_quality: 56.6
+    contract_quality: 52.3
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 5.3
-  previous_composite: 33.8
+  previous_composite: 32.1
   provenance:
     agentic_access: derived
     contracts:
@@ -246,8 +255,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,7 +279,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: groove
 tags:
-- Customer-Support
+- Customer Support
 - Help Desk
 - Shared Inbox
 - Knowledge Base

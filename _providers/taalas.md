@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -202,14 +202,14 @@ modified: '2026-08-02'
 name: Taalas
 nav: Providers
 network: true
-overview: 'Taalas publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Models API, Monitoring API, and 1 more. Tagged areas include Company, Artificial Intelligence, AI Inference, Semiconductors, and AI Accelerators.
+overview: 'Taalas publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Models API, Monitoring API, and 1 more. Tagged areas include Company, Artificial Intelligence, Inference, Semiconductors, and AI Accelerators.
 
 
   Taalas'' developer surface includes documentation, API reference, signup flow, support, engineering blog, authentication, and 20 more developer resources.'
 random_paper: 14
 score:
   band: thin
-  composite: 33.3
+  composite: 32.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 40.0
@@ -221,16 +221,18 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 44.4
+    contract_quality: 40.0
     developer_ergonomics: 31.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.3
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,8 +243,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -261,12 +269,11 @@ slug: taalas
 tags:
 - Company
 - Artificial Intelligence
-- AI Inference
+- Inference
 - Semiconductors
 - AI Accelerators
 - LLM
 - Llama
-- Inference API
 - OpenAI-Compatible
 - Hardware
 - Deep Tech

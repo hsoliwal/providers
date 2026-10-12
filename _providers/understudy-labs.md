@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -140,6 +140,11 @@ collections:
   name: Understudy Desktop Agent Capabilities Supervision API
   slug: open-understudy-labs-supervision-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/understudy-labs/refs/heads/main/capabilities/understudy-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/understudy-labs-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/understudy-labs/refs/heads/main/overlays/understudy-labs-desktop-api-overlay.yaml
   title: ''
@@ -274,23 +279,23 @@ description: Understudy Labs (YC S26) is an LLM gateway and model-optimization p
 image: https://bookface-images.s3.amazonaws.com/small_logos/034b1bab6d92bd99439aee47bf2312630046798c.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 6 tools listed.
   name: Understudy Labs MCP Server
-  slug: understudy-labs-mcp-server
+  slug: understudy-explore
 modified: '2026-07-21'
 name: Understudy Labs
 nav: Providers
 network: true
-overview: 'Understudy Labs publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Capabilities API, Conversations API, Downloads API, and 7 more. Tagged areas include Artificial Intelligence, LLM Gateway, Machine-Learning, Open-Source, and Model Routing.
+overview: 'Understudy Labs publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Capabilities API, Conversations API, Downloads API, and 9 more. Tagged areas include Artificial Intelligence, LLM Gateway, Machine Learning, Open Source, and Model Routing.
 
 
-  Understudy Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, CLI, and 21 more developer resources.'
+  Understudy Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, CLI, and 22 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 43.2
+  composite: 42.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -300,11 +305,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 47.8
+    contract_quality: 43.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 43.2
+  previous_composite: 42.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -315,8 +320,14 @@ score:
       total: 10
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -335,8 +346,8 @@ slug: understudy-labs
 tags:
 - Artificial Intelligence
 - LLM Gateway
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Model Routing
 - Evaluation
 - Fine-Tuning

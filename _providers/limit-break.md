@@ -23,7 +23,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: documented
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 12.2
-  scored_at: '2026-09-20'
+  score: 9.8
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 27
 common:
@@ -186,7 +186,7 @@ overview: 'Limit Break is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 5
 score:
   band: thin
-  composite: 31.5
+  composite: 32.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -200,17 +200,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 35.0
-  previous_composite: 31.5
+  previous_composite: 32.3
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

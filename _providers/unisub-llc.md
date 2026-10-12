@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -98,17 +98,17 @@ graphqls:
 image: https://app.unisub.io/assets/unisub-logo-vertical.svg
 layout: provider
 modified: '2026-07-21'
-name: Unisub LLC
+name: Unisub
 nav: Providers
 network: true
-overview: 'Unisub LLC is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cryptocurrency, Subscription, and Recurring Billing.
+overview: 'Unisub is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cryptocurrency, Subscription, and Recurring Billing.
 
 
-  Unisub LLC''s developer surface includes engineering blog, pricing, support, and 9 more developer resources.'
+  Unisub''s developer surface includes engineering blog, pricing, support, and 9 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 18.7
+  composite: 19.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -120,19 +120,19 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 18.7
+  previous_composite: 19.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

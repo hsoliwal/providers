@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 19.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'An authenticated Model Context Protocol (MCP) endpoint served from Aera Technology''s own corporate WordPress host. Anonymous discovery works: the site publishes RFC 9728 protected-resource metadata an'
@@ -157,9 +157,9 @@ description: Aera Technology is the Decision Intelligence company behind Aera De
 image: https://www.aeratechnology.com/wp-content/uploads/2025/11/aera-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.aeratechnology.com over HTTP.
   name: Aera Technology MCP Server
-  slug: aera-technology-mcp-server
+  slug: aera-technology
 modified: '2026-08-06'
 name: Aera Technology
 nav: Providers
@@ -175,8 +175,8 @@ scopes:
   slug: aera-technology-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: emerging
-  composite: 24.4
+  band: thin
+  composite: 28.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -190,14 +190,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 24.4
+  previous_composite: 28.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa-cpra
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

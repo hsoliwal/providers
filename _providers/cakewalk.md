@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Cakewalk Open API is a REST API for building custom access-governance workflows and integrations. It exposes users, user groups, work apps, accesses, permission levels, requests, tasks, policies, '
@@ -174,9 +174,9 @@ description: 'Cakewalk is the agentic access management platform for fast-moving
 image: https://www.getcakewalk.io/favicon-v2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.getcakewalk.io over HTTP requiring OAuth; 12 tools listed.
   name: Cakewalk MCP Server
-  slug: cakewalk-mcp-server
+  slug: cakewalk-mcp
 modified: '2026-07-18'
 name: Cakewalk
 nav: Providers
@@ -199,8 +199,8 @@ scopes:
   slug: cakewalk-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 39.2
+  band: developing
+  composite: 41.4
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -212,17 +212,27 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 39.2
+  previous_composite: 41.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

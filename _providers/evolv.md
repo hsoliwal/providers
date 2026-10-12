@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://participants.evolv.ai
@@ -168,7 +168,7 @@ modified: '2026-08-13'
 name: Evolv
 nav: Providers
 network: true
-overview: 'Evolv publishes 1 API on the [APIs.io](https://apis.io/) network: Participant API. Tagged areas include Experimentation, Optimization, Personalization, A/B Testing, and Machine-Learning.
+overview: 'Evolv publishes 1 API on the [APIs.io](https://apis.io/) network: Participant API. Tagged areas include Experimentation, Optimization, Personalization, A/B Testing, and Machine Learning.
 
 
   Evolv''s developer surface includes documentation, CLI, authentication, sandbox, changelog, and 17 more developer resources.'
@@ -183,7 +183,7 @@ rate_limits:
   slug: evolv-rate-limits
 score:
   band: thin
-  composite: 26.7
+  composite: 26.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -195,17 +195,23 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 6.7
-    developer_ergonomics: 66.1
-    discoverability: 75.9
+    contract_quality: 6.5
+    developer_ergonomics: 65.6
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 26.7
+  previous_composite: 26.3
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -227,7 +233,7 @@ tags:
 - Optimization
 - Personalization
 - A/B Testing
-- Machine-Learning
+- Machine Learning
 - Conversion Rate Optimization
 - Experience Optimization
 - Analytics

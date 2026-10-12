@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 1
@@ -216,7 +216,7 @@ modified: '2026-09-16'
 name: Jupyter
 nav: Providers
 network: true
-overview: 'Jupyter publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Config API, Contents API, Server REST API, and 6 more. Tagged areas include Data Science, Education, Interactive Computing, Notebooks, and Python.
+overview: 'Jupyter publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Config API, Contents API, Server REST API, and 9 more. Tagged areas include Data Science, Education, Interactive Computing, Notebooks, and Python.
 
 
   Jupyter''s developer surface includes documentation, engineering blog, support, YouTube channel, and 13 more developer resources.'
@@ -231,7 +231,7 @@ rate_limits:
   slug: jupyter-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 28.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -243,14 +243,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 40.8
+    contract_quality: 37.1
     developer_ergonomics: 16.7
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 30.2
+  previous_composite: 28.9
   provenance:
     agentic_access: derived
     contracts:
@@ -263,9 +263,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

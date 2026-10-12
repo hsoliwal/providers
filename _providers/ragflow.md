@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The RAGFlow RESTful HTTP API — 95 documented operations under /api/v1, authenticated with a tenant API key carried as a bearer token. Covers dataset management, document upload / parse / ingest, chunk
@@ -245,7 +245,7 @@ rate_limits:
   slug: ragflow-rate-limits
 score:
   band: developing
-  composite: 45.6
+  composite: 47.8
   coverage:
     artifact_dirs: 20
     catalog_earned: 61.0
@@ -259,15 +259,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 73.7
-  previous_composite: 45.6
+  previous_composite: 47.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -295,9 +301,9 @@ tags:
 - Search
 - Vector Database
 - Document Processing
-- Knowledge-Management
+- Knowledge Management
 - Agents
-- Open-Source
+- Open Source
 - LLM
 - MCP
 website: https://ragflow.io/

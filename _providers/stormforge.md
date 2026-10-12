@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'StormForge Optimize Live is a Kubernetes resource rightsizing product that uses machine learning to automatically generate CPU and memory recommendations for container workloads. An agent deployed to '
@@ -127,7 +127,7 @@ modified: '2026-05-02'
 name: StormForge
 nav: Providers
 network: true
-overview: 'StormForge publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud Cost Optimization, DevOps, FinOps, Kubernetes, and Machine-Learning.
+overview: 'StormForge publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud Cost Optimization, DevOps, FinOps, Kubernetes, and Machine Learning.
 
 
   The StormForge catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -156,7 +156,7 @@ rules:
   slug: stormforge-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 23.7
+  composite: 22.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 52.3
@@ -170,11 +170,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 23.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -192,7 +198,7 @@ tags:
 - DevOps
 - FinOps
 - Kubernetes
-- Machine-Learning
+- Machine Learning
 - Resource Management
 - Rightsizing
 website: https://www.stormforge.io/

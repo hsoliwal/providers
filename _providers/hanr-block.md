@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.6
-  scored_at: '2026-09-20'
+  score: 15.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The partner-facing H&R Block integration surface — tax-data import from financial institutions, payroll providers and employer solutions. No public contract, reference or portal is reachable: api.hrbl'
@@ -143,7 +143,7 @@ modified: '2026-09-14'
 name: H&R Block
 nav: Providers
 network: true
-overview: 'H&R Block publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Tax Preparation, Financial-Services, Fortune 1000, Identity, and Authentication.
+overview: 'H&R Block publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Tax Preparation, Financial Services, Fortune 1000, Identity, and Authentication.
 
 
   H&R Block''s developer surface includes support, engineering blog, authentication, and 16 more developer resources.'
@@ -158,12 +158,12 @@ rate_limits:
   slug: hanr-block-rate-limits
 scopes:
 - name: Hanr Block Scopes
-  scope_count: 0
+  scope_count: 7
   slug: hanr-block-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
-  band: emerging
-  composite: 23.4
+  band: thin
+  composite: 26.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 44.0
@@ -177,14 +177,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 23.4
+  previous_composite: 26.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -207,11 +213,11 @@ security:
 slug: hanr-block
 tags:
 - Tax Preparation
-- Financial-Services
+- Financial Services
 - Fortune 1000
 - Identity
 - Authentication
-- OpenID Connect
 - Consumer Software
+- Tax
 website: https://www.hrblock.com
 ---

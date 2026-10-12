@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.9
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -203,7 +203,7 @@ modified: '2026-05-30'
 name: Jotform
 nav: Providers
 network: true
-overview: 'Jotform publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Folder API, Form API, Label API, and 5 more. Tagged areas include Forms, Surveys, No-Code, Data Collection, and Workflows.
+overview: 'Jotform publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Folder API, Form API, Label API, and 7 more. Tagged areas include Forms, Surveys, No-Code, Data Collection, and Workflows.
 
 
   The Jotform catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -233,7 +233,7 @@ rules:
   slug: jotform-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 37.4
+  composite: 36.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 50.5
@@ -245,16 +245,16 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 57.7
+    contract_quality: 53.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 37.4
+  previous_composite: 36.3
   provenance:
     agentic_access: derived
     contracts:
@@ -262,8 +262,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

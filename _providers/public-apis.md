@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -120,7 +120,7 @@ modified: '2026-05-19'
 name: Public APIs
 nav: Providers
 network: true
-overview: 'Public APIs publishes 3 APIs on the [APIs.io](https://apis.io/) network: Categories API, Entries API, and Health API. Tagged areas include API Aggregation, API Directory, API Discovery, Free APIs, and Open-Source.'
+overview: Public APIs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Categories API, Entries API, Health API, and 1 more. Tagged areas include API Aggregation, API Directory, API Discovery, Free APIs, and Open Source.
 plans:
 - name: Public Apis Plans Pricing
   plan_count: 3
@@ -132,7 +132,7 @@ rate_limits:
   slug: public-apis-rate-limits
 score:
   band: emerging
-  composite: 20.4
+  composite: 17.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 35.0
@@ -144,11 +144,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 44.9
+    contract_quality: 40.4
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 20.4
+  open_source:
+    applies: true
+    score: 25.0
+  previous_composite: 17.3
   provenance:
     agentic_access: derived
     contracts:
@@ -156,8 +159,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,5 +179,5 @@ tags:
 - API Directory
 - API Discovery
 - Free APIs
-- Open-Source
+- Open Source
 ---

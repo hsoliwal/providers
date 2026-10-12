@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -61,6 +61,10 @@ created: '2026-07-17'
 description: Pop.in is a consumer social gaming platform that connects people through real-time multiplayer games including Spades, Hearts, Dominoes, Liar's Dice, crosswords, Pop Quiz trivia, and Just Chatting. Delivered as iOS and Android apps plus a web play surface at play.pop.in, the service reports over 100M downloads and 20M active users with a 4.75+ average rating. The company is backed by 500 Global and was surfaced through its portfolio; it operates a purely consumer-facing product and publishes no public developer, API, or documentation surface at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/popin.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pop.in over HTTP.
+  name: Pop.in MCP Server
+  slug: popin
 modified: '2026-07-20'
 name: Pop.in
 nav: Providers
@@ -72,7 +76,7 @@ overview: 'Pop.in is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 0
 score:
   band: emerging
-  composite: 11.8
+  composite: 11.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,13 +90,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 11.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

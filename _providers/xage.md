@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -125,7 +125,7 @@ description: Xage Security is a Palo Alto, California zero trust access and prot
 image: https://xage.com/wp-content/uploads/2023/07/cropped-Xage-Favicon-192x192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at xage.com requiring OAuth.
   name: Xage Security Website MCP Server
   slug: xage-security-website-mcp-server
 modified: '2026-09-04'
@@ -147,12 +147,12 @@ rate_limits:
   slug: xage-rate-limits
 scopes:
 - name: Xage Scopes
-  scope_count: 0
+  scope_count: 1
   slug: xage-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 13.1
+  composite: 15.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -166,14 +166,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 52.5
     operational_transparency: 0.0
-  previous_composite: 13.1
+  previous_composite: 15.6
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

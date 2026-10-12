@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 44
   human_in_the_loop: 10
@@ -281,9 +281,9 @@ description: PlanSource is a benefits administration and employee-benefits engag
 image: https://plansource.com/wp-content/uploads/2026/01/ps_social-share-img.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.plansource.com over HTTP.
   name: PlanSource MCP Server
-  slug: plansource-mcp-server
+  slug: plansource-developer-docs
 modified: '2026-09-16'
 name: PlanSource
 nav: Providers
@@ -300,7 +300,7 @@ scopes:
   summary_line: 8 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 50.0
+  composite: 45.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -312,11 +312,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 63.0
+    contract_quality: 56.9
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 50.0
+  previous_composite: 45.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

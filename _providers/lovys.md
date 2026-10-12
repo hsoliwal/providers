@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Partner/reseller REST API to embed Lovys insurance products — real-time quotes, plans/pricing/coverage, customer data, policy purchase and activation, and policy lifecycle/renewals across home, smartp
@@ -108,7 +108,7 @@ overview: 'Lovys publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 1
 score:
   band: emerging
-  composite: 16.2
+  composite: 16.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -122,17 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 16.2
+  previous_composite: 16.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 18.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

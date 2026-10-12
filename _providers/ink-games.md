@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The GraphQL contract served by INK Games' Strapi headless CMS, which supplies the content rendered on www.inkgames.com. Schema introspection is enabled and unauthenticated, so the complete type system
@@ -143,7 +143,7 @@ layout: provider
 mcp_servers:
 - description: MCP posture for INK Games. No MCP server exists — not hosted, not packaged, not announced. No candidate tool list is derived because there is no reachable operation to derive one from.
   name: INK Games MCP Server
-  slug: ink-games-mcp-server
+  slug: ink-games-mcp-yml
 modified: '2026-08-23'
 name: INK Games
 nav: Providers
@@ -163,7 +163,7 @@ rate_limits:
   slug: ink-games-rate-limits
 score:
   band: emerging
-  composite: 19.8
+  composite: 19.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -175,11 +175,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 19.8
+  previous_composite: 19.3
   provenance:
     conformance: derived
     mcp: derived
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

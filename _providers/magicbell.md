@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 80
   human_in_the_loop: 0
@@ -49,17 +49,17 @@ apis:
 - baseURL: https://api.magicbell.com/v2
   baseurl_source: declared
   description: The integrations API from MagicBell — 42 operation(s) for integrations.
-  name: MagicBell integrations API
+  name: MagicBell Integrations API
   slug: magicbell-integrations-api
 - baseURL: https://api.magicbell.com/v2
   baseurl_source: declared
   description: The project API from MagicBell — 52 operation(s) for project.
-  name: MagicBell project API
+  name: MagicBell Project API
   slug: magicbell-project-api
 - baseURL: https://api.magicbell.com/v2
   baseurl_source: declared
   description: The user API from MagicBell — 20 operation(s) for user.
-  name: MagicBell user API
+  name: MagicBell User API
   slug: magicbell-user-api
 artifact_total: 55
 collections:
@@ -300,7 +300,7 @@ modified: '2026-06-12'
 name: MagicBell
 nav: Providers
 network: true
-overview: 'MagicBell publishes 4 APIs on the [APIs.io](https://apis.io/) network, including REST API v1, integrations API, project API, and 1 more. Tagged areas include Notification, Push Notifications, In-App Notifications, Email, and SMS.
+overview: 'MagicBell publishes 4 APIs on the [APIs.io](https://apis.io/) network, including REST API v1, Integrations API, Project API, and 1 more. Tagged areas include Notification, Push Notifications, In-App Notifications, Email, and SMS.
 
 
   The MagicBell catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -329,23 +329,23 @@ rules:
   slug: magicbell-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 51.4
+  composite: 48.3
   coverage:
     artifact_dirs: 15
-    catalog_earned: 80.3
+    catalog_earned: 77.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 34.8
+    catalog_gap: 37.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 52.4
+    access_clarity: 54.7
+    contract_governance: 23.5
+    contract_quality: 47.7
     developer_ergonomics: 35.7
-    discoverability: 68.5
-    operational_transparency: 57.9
-  previous_composite: 51.4
+    discoverability: 66.1
+    operational_transparency: 54.7
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     contracts:
@@ -358,9 +358,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 30.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

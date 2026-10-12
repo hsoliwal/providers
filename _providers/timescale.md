@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.4
-  scored_at: '2026-09-20'
+  score: 29.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 5
@@ -142,6 +142,11 @@ collections:
   name: Tiger Cloud VP Cs API
   slug: open-timescale-vpcs-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/timescale/refs/heads/main/capabilities/timescale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/timescale-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/timescale/refs/heads/main/agentic-access/timescale-agentic-access.yml
   title: ''
@@ -349,23 +354,23 @@ description: Timescale — rebranded as Tiger Data in 2025 — is the PostgreSQL
 image: https://www.tigerdata.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.tigerdata.com.
   name: Timescale MCP Server
-  slug: timescale-mcp-server
+  slug: timescale-mcp-yml
 modified: '2026-08-05'
 name: Timescale
 nav: Providers
 network: true
-overview: 'Timescale publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Feedback API, and 8 more. Tagged areas include Company, Database, PostgreSQL, Time Series, and Analytics.
+overview: 'Timescale publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Feedback API, and 9 more. Tagged areas include Company, Database, PostgreSQL, Time Series, and Analytics.
 
 
-  Timescale''s developer surface includes authentication, CLI, changelog, release notes, sandbox, developer console, documentation, and 38 more developer resources.'
+  Timescale''s developer surface includes authentication, CLI, changelog, release notes, sandbox, developer console, documentation, and 39 more developer resources.'
 random_paper: 5
 score:
-  band: developing
-  composite: 53.3
+  band: strong
+  composite: 54.9
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -375,11 +380,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 51.1
+    contract_quality: 46.0
     developer_ergonomics: 82.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 53.3
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -390,8 +395,22 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -425,6 +444,6 @@ tags:
 - Data Platform
 - Vector Search
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://www.tigerdata.com/
 ---

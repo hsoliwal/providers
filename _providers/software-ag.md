@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 2
@@ -65,10 +65,10 @@ apis:
   description: API portal publishing operations
   name: Software AG Publishing API
   slug: software-ag-publishing-api
-- baseURL: https://www.softwareag.com/
-  baseurl_source: declared
+- baseURL: http://localhost:5555/rest/apigateway
+  baseurl_source: spec
   description: API lifecycle management operations
-  name: Software AG AP Is API
+  name: Software AG APIs API
   slug: software-ag-apis-api
 artifact_total: 25
 collections:
@@ -91,6 +91,11 @@ collections:
   name: webMethods API Gateway Service Management API
   slug: open-webmethods-api-gateway
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/software-ag/refs/heads/main/capabilities/software-ag-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/software-ag-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -202,13 +207,13 @@ modified: '2026-08-21'
 name: Software AG
 nav: Providers
 network: true
-overview: 'Software AG publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Policies API, Publishing API, and 1 more. Tagged areas include API Management, Enterprise Integration, iPaaS, webMethods, and Integration Platform.
+overview: 'Software AG publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Policies API, Publishing API, and 3 more. Tagged areas include API Management, Enterprise Integration, iPaaS, webMethods, and Integration Platform.
 
 
   The Software AG catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Software AG''s developer surface includes support, signup flow, authentication, developer portal, documentation, engineering blog, and 13 more developer resources.'
+  Software AG''s developer surface includes support, signup flow, authentication, developer portal, documentation, engineering blog, and 14 more developer resources.'
 plans:
 - name: Software Ag Plans Pricing
   plan_count: 1
@@ -241,26 +246,26 @@ rules:
   slug: webmethods-api-gateway-rules
 score:
   band: thin
-  composite: 34.0
+  composite: 32.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 61.3
+    artifact_dirs: 19
+    catalog_earned: 60.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.8
+    catalog_gap: 54.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 26.3
-    contract_governance: 25.0
-    contract_quality: 63.8
+    contract_governance: 23.5
+    contract_quality: 58.3
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 34.0
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -268,8 +273,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

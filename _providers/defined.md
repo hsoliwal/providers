@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Codex is Defined''s unified GraphQL API for real-time blockchain data: token prices, OHLCV bars, trades, liquidity pools, holders, wallet analytics, prediction markets and launchpad data across 100+ EV'
@@ -174,7 +174,7 @@ layout: provider
 mcp_servers:
 - description: Codex (Defined's developer API) operates an official remote, hosted MCP server that lets AI coding tools search and reference the Codex GraphQL API documentation — queries, subscriptions, types and gu
   name: Defined MCP Server
-  slug: defined-mcp-server
+  slug: codex-docs
 modified: '2026-07-18'
 name: Defined
 nav: Providers
@@ -189,7 +189,7 @@ overview: 'Defined publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 15
 score:
   band: developing
-  composite: 50.9
+  composite: 49.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -201,11 +201,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 50.9
+  previous_composite: 49.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -215,9 +215,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

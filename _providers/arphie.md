@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Arphie's remote Model Context Protocol server. It exposes Arphie projects, workload and project-volume metrics, and the company's agentic chat engine to MCP clients such as Claude, ChatGPT, Cursor, an
@@ -154,7 +154,7 @@ description: Arphie is an AI-powered knowledge activation platform that helps go
 image: https://cdn.prod.website-files.com/672fc2345132970736914ada/67313797c7d6407f3b2c8a39_Arphie%20Social.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.arphie.ai over HTTP requiring OAuth.
   name: Arphie MCP
   slug: arphie-mcp
 modified: '2026-08-13'
@@ -181,7 +181,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 29.6
+  composite: 33.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -195,14 +195,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 29.6
+  previous_composite: 33.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -230,7 +236,7 @@ tags:
 - Sales Enablement
 - RFP Automation
 - Security Questionnaires
-- Knowledge-Management
+- Knowledge Management
 - Go-To-Market
 - MCP
 - Agents

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: HappyCo's gRPC API for property inspections, reports, templates, accounts, users, partner account provisioning, assets, folders, and streaming events.
@@ -184,7 +184,7 @@ modified: '2026-07-19'
 name: HappyCo
 nav: Providers
 network: true
-overview: 'HappyCo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real-Estate, Property Management, and Inspection.
+overview: 'HappyCo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real Estate, Property Management, and Inspection.
 
 
   The HappyCo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -194,7 +194,7 @@ overview: 'HappyCo publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 8
 score:
   band: developing
-  composite: 44.9
+  composite: 46.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -206,17 +206,23 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 44.9
+  previous_composite: 46.0
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -240,7 +246,7 @@ slug: happyco
 tags:
 - Company
 - PropTech
-- Real-Estate
+- Real Estate
 - Property Management
 - Inspection
 - Maintenance

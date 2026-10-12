@@ -14,7 +14,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 28.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -346,7 +346,7 @@ modified: '2026-08-15'
 name: Human API
 nav: Providers
 network: true
-overview: 'Human API publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Connect API, Orders API, and 4 more. Tagged areas include Healthcare, United States, Health Data, EHR, and Interoperability.
+overview: 'Human API publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Connect API, Orders API, and 5 more. Tagged areas include Healthcare, United States, Health Data, EHR, and Interoperability.
 
 
   The Human API catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -363,8 +363,8 @@ rate_limits:
   name: Human Api Rate Limits
   slug: human-api-rate-limits
 score:
-  band: strong
-  composite: 55.7
+  band: developing
+  composite: 51.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -376,9 +376,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 62.5
+    contract_quality: 57.0
     developer_ergonomics: 67.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -387,7 +387,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 55.7
+  previous_composite: 51.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -407,9 +407,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

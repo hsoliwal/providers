@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://openbank.newcastlepermanent.com.au/cds-au/v1/banking/products
@@ -267,7 +267,7 @@ modified: '2026-07-21'
 name: Newcastle Permanent Building Society
 nav: Providers
 network: true
-overview: 'Newcastle Permanent Building Society publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 6 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Newcastle Permanent Building Society publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 6 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Newcastle Permanent Building Society''s developer surface includes getting-started guide, documentation, API reference, sandbox, authentication, support, and 23 more developer resources.'
@@ -278,8 +278,8 @@ scopes:
   slug: newcastle-permanent-scopes
   summary_line: 12 scopes · authorizationCode
 score:
-  band: developing
-  composite: 44.1
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -291,9 +291,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.3
     developer_ergonomics: 35.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -304,7 +304,7 @@ score:
     - anz
     - europe
     - united-kingdom-ireland
-  previous_composite: 44.1
+  previous_composite: 39.2
   provenance:
     conformance: derived
     contracts:
@@ -323,9 +323,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 87.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 54.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -342,7 +342,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: newcastle-permanent
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

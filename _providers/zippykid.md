@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 48.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 93
   human_in_the_loop: 7
@@ -47,22 +47,22 @@ apis:
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The account API from ZippyKid — 4 operation(s) for account.
-  name: ZippyKid account API
+  name: ZippyKid Account API
   slug: zippykid-account-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The activity API from ZippyKid — 2 operation(s) for activity.
-  name: ZippyKid activity API
+  name: ZippyKid Activity API
   slug: zippykid-activity-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The auth API from ZippyKid — 2 operation(s) for auth.
-  name: ZippyKid auth API
+  name: ZippyKid Auth API
   slug: zippykid-auth-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The collaborators API from ZippyKid — 8 operation(s) for collaborators.
-  name: ZippyKid collaborators API
+  name: ZippyKid Collaborators API
   slug: zippykid-collaborators-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
@@ -72,17 +72,17 @@ apis:
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The mu-plugins API from ZippyKid — 2 operation(s) for mu-plugins.
-  name: ZippyKid mu-plugins API
+  name: ZippyKid Mu Plugins API
   slug: zippykid-mu-plugins-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The sites API from ZippyKid — 88 operation(s) for sites.
-  name: ZippyKid sites API
+  name: ZippyKid Sites API
   slug: zippykid-sites-api
 - baseURL: https://my.pressable.com/v1
   baseurl_source: declared
   description: The zones API from ZippyKid — 5 operation(s) for zones.
-  name: ZippyKid zones API
+  name: ZippyKid Zones API
   slug: zippykid-zones-api
 artifact_total: 23
 asyncapis:
@@ -118,6 +118,11 @@ collections:
   name: Pressable API Documentation (v1) account zones API
   slug: open-zippykid-zones-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zippykid/refs/heads/main/capabilities/zippykid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zippykid-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -260,20 +265,20 @@ description: ZippyKid is the company behind Pressable, a managed WordPress hosti
 image: https://i0.wp.com/pressable.com/wp-content/uploads/2024/07/dk-pressable-hosting.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pressable.com over HTTP.
   name: ZippyKid MCP Server
-  slug: zippykid-mcp-server
+  slug: pressable
 modified: '2026-07-21'
 name: ZippyKid
 nav: Providers
 network: true
-overview: 'ZippyKid publishes 8 APIs on the [APIs.io](https://apis.io/) network, including account API, activity API, auth API, and 5 more. Tagged areas include Company, WordPress, Managed Hosting, WordPress Hosting, and Web Hosting.
+overview: 'ZippyKid publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Account API, Activity API, Auth API, and 5 more. Tagged areas include Company, WordPress, Managed Hosting, WordPress Hosting, and Web Hosting.
 
 
   The ZippyKid catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ZippyKid''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
+  ZippyKid''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 24 more developer resources.'
 random_paper: 4
 scopes:
 - name: Zippykid Scopes
@@ -282,9 +287,9 @@ scopes:
   summary_line: 13 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 47.4
+  composite: 48.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -294,11 +299,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 60.3
+    contract_quality: 55.2
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 47.4
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -309,8 +314,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

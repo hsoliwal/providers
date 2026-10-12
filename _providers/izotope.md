@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -236,9 +236,9 @@ description: 'iZotope is a Cambridge, Massachusetts audio software company found
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/izotope.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.izotope.com over HTTP; 13 tools listed.
   name: iZotope MCP Server
-  slug: izotope-mcp-server
+  slug: universal-commerce
 modified: '2026-08-12'
 name: iZotope
 nav: Providers
@@ -263,12 +263,12 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 27.9
+  composite: 29.8
   coverage:
     artifact_dirs: 19
-    catalog_earned: 45.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -277,16 +277,22 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 66.7
     operational_transparency: 23.7
-  previous_composite: 27.9
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -311,12 +317,11 @@ tags:
 - Mastering
 - Audio Restoration
 - Audio Repair
-- Post Production
+- Post-Production
 - Plugins
 - VST
 - AudioUnit
 - AAX
-- DSP
 - AI Audio
 - Machine Learning Audio
 - Vocal Processing
@@ -325,5 +330,6 @@ tags:
 - MCP
 - E-Commerce
 - Boris FX
+- Digital Signal Processing
 website: https://www.izotope.com
 ---

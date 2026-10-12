@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Overledger APIs provide a single unified interface for building cross-ledger applications, including endpoints for accounts, addresses, keys, balances, transactions, smart contracts (deploy, read, wri
@@ -93,7 +93,7 @@ rate_limits:
   slug: quant-rate-limits
 score:
   band: emerging
-  composite: 19.1
+  composite: 18.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -107,11 +107,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 19.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

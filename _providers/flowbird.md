@@ -32,20 +32,24 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Start, stop, extend, and query active and historical parking sessions across pay-station, mobile-app, and permit channels, and expose real-time session state to enforcement and occupancy consumers. En
   name: Flowbird HUB Parking Sessions API
+  provenance: modeled
   slug: flowbird-hub-parking-sessions-api
 - description: 'Configure and read parking tariffs, pricing rules, and rights (digital permits, subscriptions, and eligibility) consistently across every sales channel. Flowbird documents that tariffs and rights can '
   name: Flowbird HUB Tariffs and Rights API
+  provenance: modeled
   slug: flowbird-hub-tariffs-rights-api
 - description: Retrieve the inventory, configuration, health/status, and collection (coin, card, and cash) data for Flowbird pay stations and terminals managed by the central platform. Endpoints are modeled from Flo
   name: Flowbird HUB Pay Stations API
+  provenance: modeled
   slug: flowbird-hub-pay-stations-api
 - description: Read parking and mobility payment transactions and revenue/reporting data across channels for reconciliation and analytics, with role-based access and ownership filters. Endpoints are modeled from Flo
   name: Flowbird HUB Transactions API
+  provenance: modeled
   slug: flowbird-hub-transactions-api
 artifact_total: 5
 common:
@@ -89,7 +93,7 @@ overview: 'Flowbird publishes 4 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 21
 score:
   band: minimal
-  composite: 7.2
+  composite: 7.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -103,17 +107,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 7.2
+  previous_composite: 7.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

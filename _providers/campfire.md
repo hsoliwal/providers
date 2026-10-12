@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.7
-  scored_at: '2026-09-20'
+  score: 55.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 233
   human_in_the_loop: 2
@@ -66,7 +67,7 @@ apis:
 - baseURL: https://api.meetcampfire.com
   baseurl_source: declared
   description: The coa API from Campfire — 1 operation(s) for coa.
-  name: Campfire coa API
+  name: Campfire Coa API
   slug: campfire-coa-api
 - baseURL: https://api.meetcampfire.com
   baseurl_source: declared
@@ -149,6 +150,11 @@ collections:
   name: Campfire Developer APIs Accounts Payable Settings API
   slug: open-campfire-settings-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/campfire/refs/heads/main/capabilities/campfire-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/campfire-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -304,7 +310,7 @@ overview: 'Campfire publishes 12 APIs on the [APIs.io](https://apis.io/) network
   The Campfire catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Campfire''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 23 more developer resources.'
+  Campfire''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, support, engineering blog, and 24 more developer resources.'
 random_paper: 3
 scopes:
 - name: Campfire Scopes
@@ -313,9 +319,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 50.3
+  composite: 52.2
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -325,11 +331,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 56.3
+    contract_quality: 51.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 50.3
+  previous_composite: 52.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -340,8 +346,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

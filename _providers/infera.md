@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/infera/refs/heads/main/security/infera-trust-center.yml
@@ -75,15 +75,19 @@ created: '2026-07-17'
 description: Infera is an AI-native laboratory automation platform (Y Combinator, Spring 2026) that converts plain-English descriptions of experiments into validated, instrument-ready runs across the lab instruments a team already owns. It compiles protocols into vendor-specific scripts for liquid handlers, plate readers, mass spectrometers, thermocyclers and centrifuges (Opentrons, Hamilton, Tecan and others), limits AI to initial drafts while keeping downstream steps deterministic and fully checkable, supports both automated and manual bench procedures, and maintains an end-to-end audit trail of protocols and runs. Founded in San Francisco by Troy Zhang and Chloe Sow.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/infera.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.infera.bio over HTTP.
+  name: Infera MCP Server
+  slug: infera
 modified: '2026-07-19'
 name: Infera
 nav: Providers
 network: true
-overview: Infera is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laboratory Automation, Biotech, Life Sciences, and Artificial Intelligence.
+overview: Infera is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laboratory Automation, Biotechnology, Life Sciences, and Artificial Intelligence.
 random_paper: 13
 score:
   band: emerging
-  composite: 15.6
+  composite: 14.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -97,9 +101,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 15.6
+  previous_composite: 14.8
   provenance:
     mcp: first-party
   regulatory:
@@ -107,9 +111,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -133,7 +137,7 @@ slug: infera
 tags:
 - Company
 - Laboratory Automation
-- Biotech
+- Biotechnology
 - Life Sciences
 - Artificial Intelligence
 - Protocol

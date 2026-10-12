@@ -34,31 +34,31 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
-- baseURL: https://ironcorelabs.com
-  baseurl_source: declared
+- baseURL: http://localhost:3000/api
+  baseurl_source: spec
   description: Assignments between KMS configurations and tenants
   name: IronCore Labs Configuration Assignment API
   slug: ironcore-labs-configuration-assignment-api
-- baseURL: https://ironcorelabs.com
-  baseurl_source: declared
+- baseURL: http://localhost:3000/api
+  baseurl_source: spec
   description: KMS configurations from different providers (AWS, Azure, GCP, Thales)
   name: IronCore Labs KMS Configuration API
   slug: ironcore-labs-kms-configuration-api
-- baseURL: https://ironcorelabs.com
-  baseurl_source: declared
+- baseURL: http://localhost:3000/api
+  baseurl_source: spec
   description: Label shared between service account configs and tenants. Controls where KMS configurations can be sent.
   name: IronCore Labs Tag API
   slug: ironcore-labs-tag-api
-- baseURL: https://ironcorelabs.com
-  baseurl_source: declared
+- baseURL: http://localhost:3000/api
+  baseurl_source: spec
   description: Vendor tenants managed by the Config Broker
   name: IronCore Labs Tenant API
   slug: ironcore-labs-tenant-api
-- baseURL: https://ironcorelabs.com
-  baseurl_source: declared
+- baseURL: http://localhost:3000/api
+  baseurl_source: spec
   description: Tenant secrets created by the TSP and stored in the Config Broker
   name: IronCore Labs Tenant Secret API
   slug: ironcore-labs-tenant-secret-api
@@ -83,6 +83,11 @@ collections:
   name: Vendor API Bridge Configuration Assignment Tenant Secret API
   slug: open-ironcore-labs-tenant-secret-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ironcore-labs/refs/heads/main/capabilities/ironcore-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ironcore-labs-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/ironcore-labs/refs/heads/main/overlays/ironcore-labs-vendor-bridge-overlay.yaml
   title: ''
@@ -250,28 +255,28 @@ modified: '2026-07-19'
 name: IronCore Labs
 nav: Providers
 network: true
-overview: 'IronCore Labs publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Configuration Assignment API, KMS Configuration API, Tag API, and 2 more. Tagged areas include Company, Encryption, Data Privacy, Security, and Application-Layer Encryption.
+overview: 'IronCore Labs publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Configuration Assignment API, KMS Configuration API, Tag API, and 2 more. Tagged areas include Company, Encryption, Privacy, Security, and Application-Layer Encryption.
 
 
-  IronCore Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, authentication, and 28 more developer resources.'
+  IronCore Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, authentication, and 29 more developer resources.'
 random_paper: 8
 score:
   band: developing
   composite: 52.6
   coverage:
     artifact_dirs: 20
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 56.7
+    contract_quality: 51.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 52.6
   previous_composite: 52.6
   provenance:
@@ -283,8 +288,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -311,13 +322,12 @@ slug: ironcore-labs
 tags:
 - Company
 - Encryption
-- Data Privacy
+- Privacy
 - Security
 - Application-Layer Encryption
 - Key Management
 - Cryptography
 - Artificial Intelligence
-- Vector Database
 - Software-as-a-Service
 website: https://ironcorelabs.com/
 ---

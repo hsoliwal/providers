@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -107,6 +107,11 @@ collections:
   name: Amazon Systems Manager
   slug: open-amazon-systems-manager
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-systems-manager/refs/heads/main/capabilities/amazon-systems-manager-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-systems-manager-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -227,7 +232,7 @@ overview: 'Amazon Systems Manager publishes 5 APIs on the [APIs.io](https://apis
   The Amazon Systems Manager catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Systems Manager''s developer surface includes developer portal, documentation, support, developer console, signup flow, and 14 more developer resources.'
+  Amazon Systems Manager''s developer surface includes developer portal, documentation, support, developer console, signup flow, and 15 more developer resources.'
 plans:
 - name: Amazon Systems Manager Plans Pricing
   plan_count: 3
@@ -261,23 +266,23 @@ rules:
   slug: amazon-systems-manager-spectral-rules
 score:
   band: developing
-  composite: 47.2
+  composite: 47.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 55.5
+    artifact_dirs: 18
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.5
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 48.3
+    contract_governance: 27.3
+    contract_quality: 43.8
     developer_ergonomics: 44.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 47.2
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     contracts:
@@ -285,8 +290,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

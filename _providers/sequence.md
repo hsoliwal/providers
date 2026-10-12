@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-09-20'
+  score: 22.4
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - baseURL: https://mainnet-indexer.sequence.app
@@ -51,7 +51,7 @@ apis:
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
   description: Endpoints accessible by passing your project-access-key in the header. This is injected whenever you login automatically.
-  name: Sequence public API
+  name: Sequence Public API
   slug: sequence-public-api
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
@@ -61,7 +61,7 @@ apis:
 - baseURL: https://mainnet-indexer.sequence.app
   baseurl_source: declared
   description: Endpoints that require a Sequence service token intended to be secret. You can manually generate one on Sequence Builder and pass it as a Bearer Token.
-  name: Sequence secret API
+  name: Sequence Secret API
   slug: sequence-secret-api
 artifact_total: 14
 asyncapis:
@@ -236,7 +236,7 @@ modified: '2026-07-21'
 name: Sequence
 nav: Providers
 network: true
-overview: 'Sequence publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Marketplace API, public API, and 2 more. Tagged areas include Company, Web3, Blockchain, Wallets, and Payments.
+overview: 'Sequence publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Marketplace API, Public API, and 2 more. Tagged areas include Company, Web3, Blockchain, Wallets, and Payments.
 
 
   The Sequence catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -246,7 +246,7 @@ overview: 'Sequence publishes 5 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 21
 score:
   band: developing
-  composite: 41.2
+  composite: 39.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -258,11 +258,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 58.8
+    contract_quality: 53.7
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 41.2
+  previous_composite: 39.8
   provenance:
     conformance: derived
     contracts:
@@ -277,9 +277,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

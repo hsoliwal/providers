@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -104,7 +104,7 @@ apis:
   description: The Token Unlocks API from Messari — 2 operation(s) for token unlocks.
   name: Messari Token Unlocks API
   slug: messari-token-unlocks-api
-artifact_total: 31
+artifact_total: 32
 collections:
 - collection_type: open
   name: API Collection
@@ -208,11 +208,15 @@ finops:
   slug: messari-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/messari.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.messari.io over HTTP.
+  name: Messari MCP Server
+  slug: messari
 modified: '2026-09-16'
 name: Messari
 nav: Providers
 network: true
-overview: 'Messari publishes 11 APIs on the [APIs.io](https://apis.io/) network, including AI API, Assets API, Datasets API, and 8 more. Tagged areas include Web3, Crypto, Research, Analytics, and Asset Data.
+overview: 'Messari publishes 12 APIs on the [APIs.io](https://apis.io/) network, including AI API, Assets API, Datasets API, and 9 more. Tagged areas include Web3, Crypto, Research, Analytics, and Asset Data.
 
 
   Messari''s developer surface includes authentication, developer portal, documentation, pricing, GitHub presence, and 7 more developer resources.'
@@ -227,7 +231,7 @@ rate_limits:
   slug: messari-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 28.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -239,11 +243,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 29.9
+  previous_composite: 28.1
   provenance:
     agentic_access: derived
     contracts:
@@ -252,8 +256,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

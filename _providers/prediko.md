@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Prediko''s public REST API for inventory operations: manage orders and deliveries, read SKUs and procurement suggestions, manage bill-of-materials and production consumption, and sync suppliers and war'
@@ -163,14 +163,14 @@ modified: '2026-07-20'
 name: Prediko
 nav: Providers
 network: true
-overview: 'Prediko publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Inventory Management, Demand Forecasting, Supply Chain, and E-Commerce.
+overview: 'Prediko publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Inventory, Demand Forecasting, Supply Chain, and E-Commerce.
 
 
   Prediko''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, support, changelog, and 18 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 29.2
+  composite: 30.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -184,14 +184,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 29.2
+  previous_composite: 30.3
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,7 +220,7 @@ security:
 slug: prediko
 tags:
 - Company
-- Inventory Management
+- Inventory
 - Demand Forecasting
 - Supply Chain
 - E-Commerce

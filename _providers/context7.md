@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: The Refresh API from Context7 — 1 operation(s) for refresh.
   name: Context7 Refresh API
   slug: context7-refresh-api
-artifact_total: 21
+artifact_total: 22
 collections:
 - collection_type: open
   name: API Collection
@@ -168,11 +168,15 @@ finops:
   slug: context7-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/context7.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.context7.com over HTTP; 2 tools listed.
+  name: Context7 MCP Server
+  slug: context7
 modified: '2026-05-19'
 name: Context7
 nav: Providers
 network: true
-overview: 'Context7 publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Add API, Context API, Libs API, and 2 more. Tagged areas include Artificial Intelligence, Context, Documentation, LLM, and MCP.
+overview: 'Context7 publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Add API, Context API, Libs API, and 4 more. Tagged areas include Artificial Intelligence, Context, Documentation, LLM, and MCP.
 
 
   Context7''s developer surface includes authentication, documentation, pricing, and 11 more developer resources.'
@@ -187,7 +191,7 @@ rate_limits:
   slug: context7-rate-limits
 score:
   band: thin
-  composite: 33.5
+  composite: 32.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 44.0
@@ -199,14 +203,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 47.6
+    contract_quality: 42.9
     developer_ergonomics: 21.4
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 60.0
-  previous_composite: 33.5
+  previous_composite: 32.5
   provenance:
     agentic_access: derived
     contracts:
@@ -215,8 +219,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

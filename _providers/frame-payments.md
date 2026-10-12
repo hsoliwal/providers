@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Frame REST API for payments, payouts, accounts, KYC/identity, disputes, subscriptions, invoices, and usage-based billing. Bearer secret-key auth over HTTPS; page-based pagination; HMAC-SHA256 sign
@@ -179,7 +179,7 @@ modified: '2026-07-19'
 name: Frame Payments
 nav: Providers
 network: true
-overview: 'Frame Payments publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Financial-Services, Fintech, and KYC.
+overview: 'Frame Payments publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Financial Services, Fintech, and KYC.
 
 
   The Frame Payments catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -189,7 +189,7 @@ overview: 'Frame Payments publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 19
 score:
   band: developing
-  composite: 51.4
+  composite: 48.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -201,11 +201,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 83.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 51.4
+  previous_composite: 48.5
   provenance:
     conformance: first-party
     skills: first-party
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 60.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -236,11 +236,11 @@ slug: frame-payments
 tags:
 - Company
 - Payments
-- Financial-Services
+- Financial Services
 - Fintech
 - KYC
 - Compliance
-- Fraud Detection
+- Fraud Prevention
 - Billing
 - Payouts
 - Identity Verification

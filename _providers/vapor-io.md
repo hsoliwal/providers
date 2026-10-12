@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Synse Server exposes a uniform HTTP and WebSocket API for reading from and writing to physical and virtual devices through protocol-specific plugins. The same 18 operations are available over both tra
@@ -179,7 +179,7 @@ modified: '2026-09-02'
 name: Vapor IO
 nav: Providers
 network: true
-overview: 'Vapor IO publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Edge Computing, Data-Center, Colocation, and Infrastructure.
+overview: 'Vapor IO publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Edge Computing, Data Center, Colocation, and Infrastructure.
 
 
   The Vapor IO catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -197,7 +197,7 @@ rate_limits:
   slug: vapor-io-rate-limits
 score:
   band: developing
-  composite: 39.3
+  composite: 39.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -209,17 +209,23 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 39.3
+  previous_composite: 39.7
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,7 +244,7 @@ slug: vapor-io
 tags:
 - Company
 - Edge Computing
-- Data-Center
+- Data Center
 - Colocation
 - Infrastructure
 - Device Management
@@ -246,7 +252,7 @@ tags:
 - Telemetry
 - IoT
 - gRPC
-- Open-Source
+- Open Source
 - Kubernetes
 website: https://www.vapor.io/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -259,12 +259,12 @@ layout: provider
 mcp_servers:
 - description: 'CallRail publishes a hosted Model Context Protocol server documented in the MCP section of the v3 API reference. It is a read-only interface by default (a separate set of write tools is also exposed) '
   name: CallRail MCP Server
-  slug: callrail-mcp-server
+  slug: callrail
 modified: '2026-08-14'
 name: CallRail
 nav: Providers
 network: true
-overview: 'CallRail publishes 2 APIs on the [APIs.io](https://apis.io/) network: Accounts API and Calls API. Tagged areas include Call Tracking, Conversation Intelligence, Marketing Attribution, Lead Tracking, and Telephony.
+overview: 'CallRail publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Calls API, and 2 more. Tagged areas include Call Tracking, Conversation Intelligence, Marketing Attribution, Lead Tracking, and Telephony.
 
 
   The CallRail catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -282,7 +282,7 @@ rate_limits:
   slug: callrail-rate-limits
 score:
   band: developing
-  composite: 51.3
+  composite: 50.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -294,11 +294,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 60.4
+    contract_quality: 55.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 65.8
-  previous_composite: 51.3
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -309,8 +309,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -342,5 +348,6 @@ tags:
 - Telephony
 - Analytics
 - Form Tracking
+- Attribution
 website: https://www.callrail.com
 ---

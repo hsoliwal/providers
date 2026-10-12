@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.ev.energy/v2
@@ -277,9 +277,9 @@ description: ev.energy is a London- and Palo-Alto-based smart electric-vehicle c
 image: https://cdn.prod.website-files.com/6278ea1f9c10c9550411fdd7/627a9ce3111e36661da5018c_ev-logo-256px.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.ev.energy; 6 tools listed.
   name: ev.energy API Docs MCP Server
-  slug: evenergy-api-docs-mcp-server
+  slug: ev-energy-api-docs-mcp-server
 modified: '2026-08-12'
 name: ev.energy
 nav: Providers
@@ -306,8 +306,8 @@ scopes:
   slug: ev-energy-scopes
   summary_line: 35 scopes
 score:
-  band: strong
-  composite: 57.0
+  band: developing
+  composite: 52.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -319,11 +319,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 64.5
+    contract_quality: 58.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 57.0
+  previous_composite: 52.2
   provenance:
     conformance: first-party
     contracts:
@@ -338,9 +338,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 71.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

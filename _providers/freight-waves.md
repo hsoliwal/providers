@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.9
-  scored_at: '2026-09-20'
+  score: 48.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -208,7 +208,7 @@ layout: provider
 mcp_servers:
 - description: FreightWaves hosts a remote MCP server exposing SONAR freight-market intelligence to agents. The endpoint is protected by OAuth 2.1 (bearer) with the mcp:read scope; unauthenticated requests return 40
   name: Freight Waves MCP Server
-  slug: freight-waves-mcp-server
+  slug: freightwaves
 modified: '2026-07-19'
 name: Freight Waves
 nav: Providers
@@ -229,7 +229,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 38.9
+  composite: 37.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 48.0
@@ -243,9 +243,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.5
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 23.7
-  previous_composite: 38.9
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -261,9 +261,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

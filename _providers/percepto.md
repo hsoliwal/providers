@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The HTTP API behind the Percepto AIM (Autonomous Inspection and Monitoring) console at drones.percepto.co. The application is a Django/Django-REST-Framework deployment: /api/schema/ and /api/docs/ are'
@@ -128,7 +128,7 @@ modified: '2026-08-26'
 name: Percepto
 nav: Providers
 network: true
-overview: 'Percepto publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Drones, Robotics, Industrial Inspection, Autonomous Systems, and Computer-Vision.
+overview: 'Percepto publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Drones, Robotics, Industrial Inspection, Autonomous Systems, and Computer Vision.
 
 
   Percepto''s developer surface includes engineering blog, support, signup flow, and 11 more developer resources.'
@@ -143,7 +143,7 @@ rate_limits:
   slug: percepto-rate-limits
 score:
   band: emerging
-  composite: 19.0
+  composite: 17.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -157,7 +157,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -166,7 +166,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 19.0
+  previous_composite: 17.9
   provenance:
     conformance: first-party
   regulatory:
@@ -174,9 +174,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 27.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,7 +194,7 @@ tags:
 - Robotics
 - Industrial Inspection
 - Autonomous Systems
-- Computer-Vision
+- Computer Vision
 - Asset Monitoring
 - Energy
 - Oil and Gas

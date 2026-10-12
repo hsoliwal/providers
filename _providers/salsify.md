@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.4
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -319,14 +319,14 @@ graphqls:
 image: https://www.salsify.com/hubfs/Salsify%20-%20Product%20Experience%20Management%20PXM%20-%20Feature%20Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.salsify.com over HTTP.
   name: Salsify MCP Server
-  slug: salsify-mcp-server
+  slug: salsify
 modified: '2026-08-02'
 name: Salsify
 nav: Providers
 network: true
-overview: 'Salsify publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Digital Assets API, Export Runs API, Imports API, and 6 more. Tagged areas include Company, Product Experience Management, Product Information Management, Digital Asset Management, and Commerce.
+overview: 'Salsify publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Digital Assets API, Export Runs API, Imports API, and 8 more. Tagged areas include Company, Product Experience Management, Product Information Management, Digital Asset Management, and Commerce.
 
 
   The Salsify catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -345,7 +345,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 56.1
+  composite: 59.0
   coverage:
     artifact_dirs: 25
     catalog_earned: 48.0
@@ -357,11 +357,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 60.9
+    contract_quality: 55.6
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 73.7
-  previous_composite: 56.1
+  previous_composite: 59.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -372,8 +372,20 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-09-20'
+  score: 31.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -274,9 +274,9 @@ description: Fipto is a Paris-based enterprise stablecoin payments and multi-cur
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server requiring an API key; 3 tools listed.
   name: Fipto MCP Server
-  slug: fipto-mcp-server
+  slug: fipto
 modified: '2026-08-17'
 name: Fipto
 nav: Providers
@@ -299,7 +299,7 @@ rate_limits:
   slug: fipto-rate-limits
 score:
   band: developing
-  composite: 52.7
+  composite: 48.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -311,17 +311,19 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 57.5
+    contract_quality: 52.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 52.7
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -345,9 +347,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 68.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

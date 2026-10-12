@@ -24,7 +24,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-09-20'
+  score: 33.1
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.carmd.com/
@@ -159,7 +159,7 @@ modified: '2026-08-27'
 name: CarMD
 nav: Providers
 network: true
-overview: 'CarMD publishes 1 API on the [APIs.io](https://apis.io/) network: Vehicle API. Tagged areas include Automobiles, Cars, Diagnostics, Vehicles, and Automotive.
+overview: 'CarMD publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Vehicle API, and 2 more. Tagged areas include Automobiles, Cars, Vehicles, Automotive, and OBD-II.
 
 
   CarMD''s developer surface includes engineering blog, support, authentication, and 16 more developer resources.'
@@ -174,12 +174,12 @@ rate_limits:
   slug: carmd-rate-limits
 scopes:
 - name: Carmd Scopes
-  scope_count: 0
+  scope_count: 4
   slug: carmd-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 33.1
+  composite: 28.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 51.0
@@ -191,17 +191,23 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 21.1
-  previous_composite: 33.1
+  previous_composite: 28.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,12 +227,12 @@ slug: carmd
 tags:
 - Automobiles
 - Cars
-- Diagnostics
 - Vehicles
 - Automotive
 - OBD-II
 - Agentic Commerce
 - MCP
 - E-Commerce
+- Vehicle Diagnostics
 website: https://carmd.com/
 ---

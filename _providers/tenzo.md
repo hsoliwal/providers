@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Public REST API for accessing restaurant analytics data — locations, areas, sales, and forecast data — secured with OAuth 2.0 Bearer tokens. Partners integrate via the Authorization Code flow to pull '
@@ -132,7 +132,7 @@ layout: provider
 mcp_servers:
 - description: The Tenzo MCP server gives AI assistants read-only access to restaurant analytics, reviews, and manager logs through natural language. Users authorize with their Tenzo account via OAuth on first conne
   name: Tenzo MCP Server
-  slug: tenzo-mcp-server
+  slug: tenzo
 modified: '2026-07-21'
 name: Tenzo
 nav: Providers
@@ -149,7 +149,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 27.1
+  composite: 29.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -163,14 +163,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 27.1
+  previous_composite: 29.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -96,9 +96,9 @@ description: 'Innovist is an Accel-backed, science-backed direct-to-consumer per
 image: https://innovist.com/cdn/shop/files/1200_628.png?v=1724222722
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at innovist.com over HTTP; 5 tools listed.
   name: Innovist MCP Server
-  slug: innovist-mcp-server
+  slug: innovist-ucp-shopping
 modified: '2026-07-19'
 name: Innovist
 nav: Providers
@@ -115,7 +115,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.1
+  composite: 17.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -129,13 +129,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 15.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - india
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 17.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

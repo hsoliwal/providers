@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Banyan's OAuth2 REST API for submitting receipt and transaction data, retrieving enriched (item-level) transactions, managing card-linked-offer campaigns/offers/activations, receipt search, consumer c
@@ -154,7 +154,7 @@ overview: 'Banyan Systems publishes 1 API on the [APIs.io](https://apis.io/) net
 random_paper: 18
 score:
   band: thin
-  composite: 32.0
+  composite: 30.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -166,11 +166,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 32.0
+  previous_composite: 30.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -179,9 +179,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 32.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -208,5 +208,6 @@ tags:
 - Payments
 - Data Collaboration
 - Webhook
+- Data Enrichment
 website: https://www.banyan.com/
 ---

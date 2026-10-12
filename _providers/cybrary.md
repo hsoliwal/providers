@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 39.8
-  scored_at: '2026-09-20'
+  score: 37.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -226,7 +226,7 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 44.2
+  composite: 39.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 45.0
@@ -240,9 +240,9 @@ score:
     contract_governance: 18.2
     contract_quality: 15.5
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 44.2
+  previous_composite: 39.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -258,9 +258,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 75.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

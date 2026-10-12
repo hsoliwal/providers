@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 asyncapis:
@@ -113,7 +113,7 @@ overview: 'PayNearMe is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 16
 score:
   band: thin
-  composite: 33.3
+  composite: 31.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -125,11 +125,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 33.3
+  previous_composite: 31.2
   provenance:
     conformance: first-party
   regulatory:
@@ -137,9 +137,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

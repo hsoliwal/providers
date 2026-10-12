@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -58,17 +58,17 @@ description: Miruvor AI Inc. is an early-stage deep-tech AI research lab buildin
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/miruvor-ai-inc.png
 layout: provider
 modified: '2026-07-20'
-name: Miruvor AI Inc.
+name: Miruvor AI
 nav: Providers
 network: true
-overview: 'Miruvor AI Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Neuromorphic Computing, and Continual Learning.
+overview: 'Miruvor AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Neuromorphic Computing, and Continual Learning.
 
 
-  Miruvor AI Inc.''s developer surface includes support and 3 more developer resources.'
+  Miruvor AI''s developer surface includes support and 3 more developer resources.'
 random_paper: 8
 score:
   band: minimal
-  composite: 6.0
+  composite: 4.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -82,11 +82,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 6.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -102,7 +108,7 @@ slug: miruvor-ai-inc
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Neuromorphic Computing
 - Continual Learning
 - Spiking Neural Networks

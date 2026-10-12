@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - baseURL: https://porter.revinate.com
@@ -212,12 +212,12 @@ rate_limits:
   slug: revinate-rate-limits
 scopes:
 - name: Revinate Scopes
-  scope_count: 0
+  scope_count: 14
   slug: revinate-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 45.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -229,11 +229,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 43.1
+  previous_composite: 45.0
   provenance:
     conformance: derived
     contracts:
@@ -243,8 +243,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

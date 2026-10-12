@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -361,7 +361,7 @@ rate_limits:
   slug: ripio-rate-limits
 score:
   band: strong
-  composite: 61.5
+  composite: 58.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -373,16 +373,16 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 59.6
+    contract_quality: 54.8
     developer_ergonomics: 64.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 72.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 61.5
+  previous_composite: 58.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -398,9 +398,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

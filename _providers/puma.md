@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -211,14 +211,14 @@ modified: '2026-05-11'
 name: Puma
 nav: Providers
 network: true
-overview: 'Puma publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Gc API, Gc Stats API, Halt API, and 7 more. Tagged areas include Web Server, Ruby, Rack, Application Server, and HTTP.
+overview: 'Puma publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Gc API, Gc Stats API, Halt API, and 8 more. Tagged areas include Web Server, Ruby, Rack, Application Server, and HTTP.
 
 
   Puma''s developer surface includes authentication, documentation, and 14 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 28.8
+  composite: 33.9
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -230,11 +230,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 28.8
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     contracts:
@@ -242,8 +245,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -266,6 +275,6 @@ tags:
 - Rack
 - Application Server
 - HTTP
-- Open-Source
+- Open Source
 website: https://puma.io
 ---

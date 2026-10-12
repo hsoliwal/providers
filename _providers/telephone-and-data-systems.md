@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: TDS Telecom provides high-speed broadband, video, and voice services to residential and business customers across more than 900 rural and suburban communities in 30 states. TDS Telecom delivers fiber-
@@ -123,7 +123,7 @@ rate_limits:
   slug: telephone-and-data-systems-rate-limits
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 49.0
@@ -137,17 +137,17 @@ score:
     contract_governance: 0.0
     contract_quality: 6.7
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 5.3
-  previous_composite: 12.6
+  previous_composite: 12.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 15.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

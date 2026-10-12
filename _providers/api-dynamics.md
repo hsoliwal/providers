@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The APIDynamics platform provides AI-driven API security and observability including API discovery, traffic analysis, real-time risk scoring, adaptive MFA, Zero Trust enforcement, shadow/zombie API de
@@ -134,9 +134,9 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/api-dynamics.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.apidynamics.com over HTTP; 9 tools listed.
   name: API Dynamics MCP Server
-  slug: api-dynamics-mcp-server
+  slug: apidynamics-site-mcp
 modified: '2026-09-02'
 name: API Dynamics
 nav: Providers
@@ -156,7 +156,7 @@ rate_limits:
   slug: api-dynamics-rate-limits
 score:
   band: emerging
-  composite: 23.1
+  composite: 23.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 35.0
@@ -172,12 +172,18 @@ score:
     developer_ergonomics: 50.0
     discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 23.1
+  previous_composite: 23.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

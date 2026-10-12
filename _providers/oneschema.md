@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 91
   human_in_the_loop: 0
@@ -553,7 +553,7 @@ layout: provider
 mcp_servers:
 - description: Hosted, read-only MCP server that gives AI coding assistants direct access to OneSchema API specifications and product guides.
   name: Oneschema MCP Server
-  slug: oneschema-mcp-server
+  slug: oneschema
 modified: '2026-07-20'
 name: Oneschema
 nav: Providers
@@ -568,7 +568,7 @@ overview: 'Oneschema publishes 28 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 1
 score:
   band: strong
-  composite: 62.2
+  composite: 63.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -580,11 +580,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 69.2
+    contract_quality: 63.4
     developer_ergonomics: 74.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 52.6
-  previous_composite: 62.2
+  previous_composite: 63.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -595,8 +595,22 @@ score:
       total: 28
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

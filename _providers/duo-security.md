@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -111,6 +111,11 @@ collections:
   slug: open-duo-security-webauthn-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/duo-security/refs/heads/main/capabilities/duo-security-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/duo-security-capability-edges.yml
+- group: other
   title: ''
   type: ParentCompany
   url: https://apis.io/providers/cisco/
@@ -171,10 +176,10 @@ modified: '2026-08-19'
 name: Duo Security
 nav: Providers
 network: true
-overview: 'Duo Security publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk API, Bypass Codes API, Groups API, and 4 more. Tagged areas include Authentication, MFA, Zero Trust, and Identity.
+overview: 'Duo Security publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bulk API, Bypass Codes API, Groups API, and 4 more. Tagged areas include Authentication, MFA, Zero Trust, Identity, and Identity Federation.
 
 
-  Duo Security''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Duo Security''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Duo Security Plans Pricing
   plan_count: 3
@@ -186,21 +191,21 @@ rate_limits:
   slug: duo-security-rate-limits
 score:
   band: thin
-  composite: 28.4
+  composite: 28.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 36.0
+    artifact_dirs: 12
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 53.0
+    contract_quality: 47.8
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 57.1
     operational_transparency: 10.5
   previous_composite: 28.4
   provenance:
@@ -210,8 +215,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -240,5 +251,6 @@ tags:
 - MFA
 - Zero Trust
 - Identity
+- Identity Federation
 website: https://duo.com
 ---

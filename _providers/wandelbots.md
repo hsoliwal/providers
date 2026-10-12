@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Cell-based robot-control API for the Wandelbots NOVA platform: motion planning, controller management, motion-group state, trajectory execution (WebSocket) and program running. Path-versioned (v1 lega'
@@ -153,9 +153,9 @@ description: Wandelbots is a German industrial-robotics software company whose N
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wandelbots.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.wandelbots.com.
   name: Wandelbots MCP Server
-  slug: wandelbots-mcp-server
+  slug: wandelbots-mcp-yml
 modified: '2026-07-21'
 name: Wandelbots
 nav: Providers
@@ -167,7 +167,7 @@ overview: 'Wandelbots publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 19
 score:
   band: emerging
-  composite: 25.8
+  composite: 25.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -181,14 +181,25 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 25.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 25.9
   provenance:
     conformance: derived
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

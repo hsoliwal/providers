@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -93,6 +93,11 @@ collections:
   name: Inflection Inference API
   slug: open-inflection
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/inflection/refs/heads/main/capabilities/inflection-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/inflection-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/inflection/refs/heads/main/agentic-access/inflection-agentic-access.yml
   title: ''
@@ -159,7 +164,7 @@ network: true
 overview: 'Inflection AI publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Discovery API, Embeddings API, and 2 more. Tagged areas include Artificial Intelligence, LLM, Personal AI, PI, and Foundation Models.
 
 
-  Inflection AI''s developer surface includes authentication, documentation, and 9 more developer resources.'
+  Inflection AI''s developer surface includes authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Inflection Plans Pricing
   plan_count: 3
@@ -175,10 +180,10 @@ scopes:
   slug: inflection-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: thin
-  composite: 26.8
+  band: emerging
+  composite: 26.1
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -188,11 +193,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 44.6
+    contract_quality: 40.2
     developer_ergonomics: 25.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 26.8
+  previous_composite: 26.1
   provenance:
     agentic_access: derived
     contracts:
@@ -200,8 +205,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SLayer is Motley's open-core, agent-first semantic layer and query engine. Agents and applications describe measures, dimensions, and filters and SLayer compiles and runs the correct SQL across many d
@@ -190,7 +190,7 @@ layout: provider
 mcp_servers:
 - description: SLayer runs as a Model Context Protocol (MCP) server so AI agents (Claude, Cursor, etc.) can discover and query data conversationally. It exposes the same tools across two transports.
   name: Motley MCP Server
-  slug: motley-mcp-server
+  slug: motley-mcp-yml
 modified: '2026-07-20'
 name: Motley
 nav: Providers
@@ -207,7 +207,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: thin
-  composite: 35.6
+  composite: 38.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -221,10 +221,12 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - switzerland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
@@ -232,13 +234,19 @@ score:
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 35.6
+  previous_composite: 38.3
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

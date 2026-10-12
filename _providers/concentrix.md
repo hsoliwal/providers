@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Headless flow-execution API for iX Hello Customer v2. Starts a stateful conversational session against an authored flow, sends user turns into it, reads accumulated session variables, and terminates t
@@ -216,7 +216,7 @@ rate_limits:
   slug: concentrix-rate-limits
 score:
   band: thin
-  composite: 38.0
+  composite: 37.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -228,16 +228,22 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 26.3
-  previous_composite: 38.0
+  previous_composite: 37.9
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

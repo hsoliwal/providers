@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 1.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -199,7 +199,7 @@ overview: 'MosaicML is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 17
 score:
   band: emerging
-  composite: 20.9
+  composite: 20.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -211,18 +211,26 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -133,14 +133,14 @@ modified: '2026-07-26'
 name: Douglas Elliman
 nav: Providers
 network: true
-overview: 'Douglas Elliman is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, United States, Brokerage, Property Listings, and MLS.
+overview: 'Douglas Elliman is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, United States, Brokerage, Property Listings, and MLS.
 
 
   Douglas Elliman''s developer surface includes engineering blog and 20 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 11.7
+  composite: 11.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -154,7 +154,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,7 +163,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.7
+  previous_composite: 11.6
   provenance:
     conformance: first-party
   regulatory:
@@ -171,9 +171,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 31.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -187,7 +187,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: douglas-elliman
 tags:
-- Real-Estate
+- Real Estate
 - United States
 - Brokerage
 - Property Listings

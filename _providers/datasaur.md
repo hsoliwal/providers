@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 asyncapis:
@@ -184,7 +184,7 @@ modified: '2026-07-18'
 name: Datasaur
 nav: Providers
 network: true
-overview: 'Datasaur is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise Saas, Data Labeling, Artificial Intelligence, and Machine-Learning.
+overview: 'Datasaur is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise Saas, Data Labeling, Artificial Intelligence, and Machine Learning.
 
 
   The Datasaur catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -194,7 +194,7 @@ overview: 'Datasaur is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 17
 score:
   band: developing
-  composite: 47.8
+  composite: 48.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 27.0
@@ -206,17 +206,29 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 42.1
-  previous_composite: 47.8
+  previous_composite: 48.7
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -242,7 +254,7 @@ tags:
 - Enterprise Saas
 - Data Labeling
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - LLM
 - NLP
 - Data Annotation

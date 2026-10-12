@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -243,6 +243,11 @@ collections:
   name: Trellix EDR Action History Threats API
   slug: open-trellix-threats-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trellix/refs/heads/main/capabilities/trellix-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trellix-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -477,13 +482,13 @@ modified: '2026-05-19'
 name: Trellix
 nav: Providers
 network: true
-overview: 'Trellix publishes 14 APIs on the [APIs.io](https://apis.io/) network, including ePO API, Action History API, Affected Hosts API, and 11 more. Tagged areas include Cloud Security, Cybersecurity, Endpoint Security, Threat Detection, and Threat Intelligence.
+overview: 'Trellix publishes 27 APIs on the [APIs.io](https://apis.io/) network, including ePO API, Action History API, Affected Hosts API, and 24 more. Tagged areas include Cloud Security, Cybersecurity, Endpoint Security, Threat Detection, and Threat Intelligence.
 
 
   The Trellix catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Trellix''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, signup flow, engineering blog, and 28 more developer resources.'
+  Trellix''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, signup flow, engineering blog, and 29 more developer resources.'
 plans:
 - name: Trellix Plans Pricing
   plan_count: 1
@@ -517,9 +522,9 @@ rules:
   slug: trellix-spectral-rules
 score:
   band: developing
-  composite: 43.6
+  composite: 43.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 57.8
     catalog_earned_first_party: 0.0
     catalog_gap: 57.3
@@ -529,11 +534,11 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 17.4
-    contract_quality: 62.6
+    contract_quality: 56.9
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 43.6
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     contracts:
@@ -541,8 +546,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

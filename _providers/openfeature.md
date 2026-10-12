@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -59,6 +59,11 @@ collections:
   name: OpenFeature Remote Evaluation Protocol (OFREP) OFREP Core API
   slug: open-openfeature-ofrep-core-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/openfeature/refs/heads/main/capabilities/openfeature-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/openfeature-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -109,7 +114,7 @@ network: true
 overview: 'OpenFeature publishes 1 API on the [APIs.io](https://apis.io/) network: OFREP Core API. Tagged areas include Cloud-Native, Feature Flags, Feature Management, Incubating, and SDK.
 
 
-  OpenFeature''s developer surface includes authentication, documentation, engineering blog, and 5 more developer resources.'
+  OpenFeature''s developer surface includes authentication, documentation, engineering blog, and 6 more developer resources.'
 plans:
 - name: Openfeature Plans Pricing
   plan_count: 3
@@ -121,9 +126,9 @@ rate_limits:
   slug: openfeature-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 28.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -133,11 +138,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 58.5
+    contract_quality: 52.7
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 30.2
+  previous_composite: 28.0
   provenance:
     agentic_access: derived
     contracts:
@@ -145,8 +150,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Remote Model Context Protocol server exposing 64 read-only tools over FERMAT commerce data — product catalog, funnel analytics, ad performance, destination insights, experiments, session and behaviora
@@ -204,14 +204,14 @@ description: FERMÀT is an AI-native commerce platform that consolidates the sho
 image: https://www.fermatcommerce.com/assets/marketing/brand/open-graph.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.fermatcommerce.com requiring OAuth; 64 tools listed.
   name: Fermat Platform (External)
   slug: fermat-platform-external
 modified: '2026-08-13'
 name: Fermat
 nav: Providers
 network: true
-overview: 'Fermat publishes 1 API on the [APIs.io](https://apis.io/) network: Pixel v2. Tagged areas include Company, Commerce, E-Commerce, Personalization, and Analytics.
+overview: 'Fermat publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Pixel v2, and 1 more. Tagged areas include Company, Commerce, E-Commerce, Personalization, and Analytics.
 
 
   The Fermat catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -229,7 +229,7 @@ rate_limits:
   slug: fermat-rate-limits
 score:
   band: developing
-  composite: 40.7
+  composite: 41.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -241,17 +241,29 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 15.8
-  previous_composite: 40.7
+  previous_composite: 41.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

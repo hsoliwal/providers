@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The XS2A API is the server-side endpoint set used by TPPs and merchants to create and control Open Banking sessions and flows under PSD2. The XS2A API drives Account Information Services (AIS) for ret
@@ -185,7 +185,7 @@ overview: 'Klarna Kosma publishes 6 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 7
 score:
   band: emerging
-  composite: 25.2
+  composite: 24.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 40.0
@@ -197,19 +197,19 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 54.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 5.3
-  previous_composite: 25.2
+  previous_composite: 24.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 32.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -152,6 +152,11 @@ collections:
   name: npm Hooks Downloads Trusted Publishers API
   slug: open-npm-trusted-publishers-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/npm/refs/heads/main/capabilities/npm-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/npm-capability-edges.yml
 - group: auth
   title: ''
   type: SecurityPolicy
@@ -311,13 +316,13 @@ modified: '2026-05-19'
 name: npm
 nav: Providers
 network: true
-overview: 'npm publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Registry API, Hooks API, Downloads API, and 5 more. Tagged areas include Packages, JavaScript, Node.js, Package Management, and Registry.
+overview: 'npm publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Registry API, Hooks API, Downloads API, and 7 more. Tagged areas include Packages, JavaScript, Node.js, Package Management, and Registry.
 
 
   The npm catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  npm''s developer surface includes authentication, developer portal, documentation, engineering blog, support, and 14 more developer resources.'
+  npm''s developer surface includes authentication, developer portal, documentation, engineering blog, support, and 15 more developer resources.'
 plans:
 - name: Npm Plans Pricing
   plan_count: 4
@@ -351,23 +356,23 @@ rules:
   slug: npm-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.3
+  composite: 49.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 56.5
+    artifact_dirs: 19
+    catalog_earned: 55.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 59.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 50.0
     contract_governance: 13.6
-    contract_quality: 74.7
+    contract_quality: 68.8
     developer_ergonomics: 39.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 39.5
-  previous_composite: 49.3
+  previous_composite: 49.8
   provenance:
     agentic_access: derived
     contracts:
@@ -375,8 +380,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

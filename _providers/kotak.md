@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Kotak Mahindra Bank enterprise open-banking API platform. A curated corporate banking API stack of 39 published API products across six categories — Account Services, Payment Services, Collection '
@@ -148,14 +148,14 @@ modified: '2026-07-19'
 name: Kotak Mahindra Bank
 nav: Providers
 network: true
-overview: 'Kotak Mahindra Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Financial-Services, Open Banking, and Payments.
+overview: 'Kotak Mahindra Bank publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Financial Services, Open Banking, and Payments.
 
 
   Kotak Mahindra Bank''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, FAQ, sandbox, and 15 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 27.2
+  composite: 26.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -169,7 +169,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -178,7 +178,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 27.2
+  previous_composite: 26.7
   provenance:
     conformance: first-party
   regulatory:
@@ -190,9 +190,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -212,7 +212,7 @@ slug: kotak
 tags:
 - Company
 - Banking
-- Financial-Services
+- Financial Services
 - Open Banking
 - Payments
 - Collection

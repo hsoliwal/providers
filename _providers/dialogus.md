@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -78,14 +78,14 @@ modified: '2026-07-18'
 name: Dialogus
 nav: Providers
 network: true
-overview: 'Dialogus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Voice Agents, AI Agents, Conversational AI, and Customer-Support.
+overview: 'Dialogus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Voice Agents, AI Agents, Conversational AI, and Customer Support.
 
 
   Dialogus'' developer surface includes support and 7 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 15.3
+  composite: 16.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,18 +99,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.3
+  previous_composite: 16.3
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -128,7 +136,7 @@ tags:
 - Voice Agents
 - AI Agents
 - Conversational AI
-- Customer-Support
+- Customer Support
 - Contact Center
 - Collection
 - Compliance

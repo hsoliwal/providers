@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing rental properties, tenants, leases, maintenance requests, accounting, and online rent payment processing on the TenantCloud platform.
@@ -105,7 +105,7 @@ modified: '2026-06-13'
 name: TenantCloud
 nav: Providers
 network: true
-overview: 'TenantCloud publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real-Estate, Rentals, Tenant Management, and Lease Management.
+overview: 'TenantCloud publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real Estate, Rentals, Tenant Management, and Lease Management.
 
 
   TenantCloud''s developer surface includes pricing, engineering blog, release notes, support, signup flow, getting-started guide, and 7 more developer resources.'
@@ -116,7 +116,7 @@ rate_limits:
   slug: rate-limits
 score:
   band: emerging
-  composite: 22.7
+  composite: 23.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 40.0
@@ -128,19 +128,19 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 17.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 31.6
-  previous_composite: 22.7
+  previous_composite: 23.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -155,7 +155,7 @@ security:
 slug: tenantcloud
 tags:
 - Property Management
-- Real-Estate
+- Real Estate
 - Rentals
 - Tenant Management
 - Lease Management

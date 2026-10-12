@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Receive vehicle data and send commands to the vehicle. Vehicle data covers status, diagnostics, statistics, and metadata — including odometer, fuel amount, tyre pressures, brake status, engine status,
@@ -204,14 +204,14 @@ modified: '2026-09-16'
 name: Volvo Cars
 nav: Providers
 network: true
-overview: 'Volvo Cars publishes 3 APIs on the [APIs.io](https://apis.io/) network: Connected Vehicle API, Energy API, and Location API. Tagged areas include Automotive, Connected Vehicles, Electric Vehicles, Telematics, and Android Automotive.
+overview: 'Volvo Cars publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Connected Vehicle API, Energy API, Location API, and 1 more. Tagged areas include Automotive, Connected Vehicles, Electric Vehicles, Telematics, and Android Automotive.
 
 
   Volvo Cars'' developer surface includes developer portal, documentation, getting-started guide, engineering blog, code examples, tooling, support, and 22 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 29.7
+  composite: 29.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -223,9 +223,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 50.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -235,9 +235,15 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 29.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 29.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

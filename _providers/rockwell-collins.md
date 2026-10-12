@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 1
@@ -51,37 +51,37 @@ apis:
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: The airports API from Rockwell Collins — 17 operation(s) for airports.
-  name: Rockwell Collins airports API
+  name: Rockwell Collins Airports API
   slug: rockwell-collins-airports-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: AeroAPI alerting can be used to configure and receive real-time alerts on key flight events. With customizable alerting offered by our alert endpoints, AeroAPI empowers users to selectively pick vario
-  name: Rockwell Collins alerts API
+  name: Rockwell Collins Alerts API
   slug: rockwell-collins-alerts-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: The flights API from Rockwell Collins — 11 operation(s) for flights.
-  name: Rockwell Collins flights API
+  name: Rockwell Collins Flights API
   slug: rockwell-collins-flights-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: 'Foresight endpoints provide access to FlightAware''s Foresight predictive models and predictions for key events. Our advanced machine learning (ML) models identify key influencing factors for a flight '
-  name: Rockwell Collins foresight API
+  name: Rockwell Collins Foresight API
   slug: rockwell-collins-foresight-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: The history API from Rockwell Collins — 5 operation(s) for history.
-  name: Rockwell Collins history API
+  name: Rockwell Collins History API
   slug: rockwell-collins-history-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: The miscellaneous API from Rockwell Collins — 6 operation(s) for miscellaneous.
-  name: Rockwell Collins miscellaneous API
+  name: Rockwell Collins Miscellaneous API
   slug: rockwell-collins-miscellaneous-api
 - baseURL: https://aeroapi.flightaware.com/aeroapi
   baseurl_source: declared
   description: The operators API from Rockwell Collins — 8 operation(s) for operators.
-  name: Rockwell Collins operators API
+  name: Rockwell Collins Operators API
   slug: rockwell-collins-operators-api
 artifact_total: 29
 collections:
@@ -235,7 +235,7 @@ modified: '2026-05-19'
 name: Rockwell Collins
 nav: Providers
 network: true
-overview: 'Rockwell Collins publishes 7 APIs on the [APIs.io](https://apis.io/) network, including airports API, alerts API, flights API, and 4 more. Tagged areas include Avionics, Aerospace, Defense, Aviation, and Flight Deck.
+overview: 'Rockwell Collins publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Airports API, Alerts API, Flights API, and 5 more. Tagged areas include Avionics, Aerospace, Defense, Aviation, and Flight Deck.
 
 
   The Rockwell Collins catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -291,26 +291,31 @@ rules:
   slug: rockwell-collins-rules
 score:
   band: thin
-  composite: 38.1
+  composite: 36.6
   coverage:
     artifact_dirs: 18
-    catalog_earned: 63.5
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 63.9
+    contract_governance: 27.3
+    contract_quality: 58.4
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 38.1
+  previous_composite: 36.6
   provenance:
     agentic_access: derived
     contracts:
@@ -318,8 +323,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

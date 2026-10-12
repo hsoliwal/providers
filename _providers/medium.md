@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -282,12 +282,12 @@ rules:
   slug: medium-jsonschema-spectral-rules
 scopes:
 - name: Medium Scopes
-  scope_count: 0
+  scope_count: 4
   slug: medium-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: thin
-  composite: 37.6
+  composite: 37.7
   coverage:
     artifact_dirs: 26
     catalog_earned: 48.3
@@ -299,11 +299,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 14.4
-    contract_quality: 57.9
+    contract_quality: 52.5
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 37.6
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -314,8 +314,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

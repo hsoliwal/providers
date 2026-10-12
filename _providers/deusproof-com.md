@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.2
-  scored_at: '2026-09-20'
+  score: 16.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 1
@@ -42,7 +42,7 @@ apis:
 - description: 'Agent2Agent surface: a signed (JWS EdDSA, kid = the register''s did:key) A2A 1.0 agent card at https://deusproof.com/.well-known/agent-card.json declaring JSONRPC at /a2a/jsonrpc and HTTP+JSON at /a2a/'
   name: DEUSPROOF A2A Agent
   slug: deusproof-a2a-agent
-artifact_total: 10
+artifact_total: 9
 common:
 - group: company
   title: ''
@@ -228,12 +228,9 @@ description: 'DEUSPROOF is a free public register of AI agents and a forensic no
 image: https://deusproof.com/icons/icon-512.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'DEUSPROOF ships the same MCP server two ways: a hosted Streamable HTTP endpoint at https://deusproof.com/mcp (the apex host — also the website, the REST /api and the A2A /a2a host) that answers initia'
   name: DEUSPROOF MCP Server
-  slug: deusproof-mcp-server
-- description: ''
-  name: DEUSPROOF MCP endpoint (Streamable HTTP)
-  slug: deusproof-mcp-endpoint-streamable-http
+  slug: deusproof-com-mcp-yml
 modified: '2026-09-19'
 name: DEUSPROOF
 nav: Providers
@@ -253,7 +250,7 @@ rate_limits:
   slug: deusproof-com-rate-limits
 score:
   band: thin
-  composite: 34.8
+  composite: 37.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 56.0
@@ -261,23 +258,36 @@ score:
     catalog_gap: 59.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 32.0
+  delta: 0.0
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 26.3
-  previous_composite: 2.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -304,7 +314,7 @@ tags:
 - x402
 - Decentralized Identity
 - Content Authenticity
-- agent-native
+- Agent-Native
 - United States
 website: https://deusproof.com/
 ---

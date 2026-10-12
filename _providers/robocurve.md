@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -109,8 +109,8 @@ overview: 'Robocurve is profiled on the [APIs.io](https://apis.io/) network. Tag
   Robocurve''s developer surface includes documentation, API reference, quickstart, support, CLI, changelog, and 7 more developer resources.'
 random_paper: 15
 score:
-  band: emerging
-  composite: 11.9
+  band: minimal
+  composite: 10.2
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -124,11 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 11.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -147,8 +153,8 @@ tags:
 - Physical AI
 - Evaluation
 - Benchmarks
-- Open-Source
-- Machine-Learning
+- Open Source
+- Machine Learning
 - Vision Language Action
 website: https://robocurve.org
 ---

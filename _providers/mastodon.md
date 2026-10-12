@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: This is an OpenAPI for the Mastodon API.
@@ -102,7 +102,7 @@ modified: '2026-05-30'
 name: Mastodon
 nav: Providers
 network: true
-overview: 'Mastodon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open-Source and Social Network.
+overview: 'Mastodon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open Source, Social Network, Real-Time, and Social.
 
 
   The Mastodon catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -132,7 +132,7 @@ rules:
   slug: mastodon-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 29.6
+  composite: 28.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.8
@@ -144,19 +144,25 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 11.4
-    contract_quality: 42.3
+    contract_quality: 39.2
     developer_ergonomics: 40.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 29.6
+  previous_composite: 28.0
   provenance:
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +176,9 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: mastodon
 tags:
-- Open-Source
+- Open Source
 - Social Network
+- Real-Time
+- Social
 website: https://www.joinmastodon.org/
 ---

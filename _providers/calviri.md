@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An anonymous Model Context Protocol endpoint served from Calviri's own host at https://www.calviri.com/_api/mcp. It is the standard Wix "Site Visitor Assistant" server that the Wix platform provisions
@@ -118,7 +118,7 @@ layout: provider
 mcp_servers:
 - description: Calviri serves a live, anonymous Model Context Protocol endpoint from its own host at https://www.calviri.com/_api/mcp. The endpoint is PLATFORM-PROVIDED by Wix (calviri.com is a Wix site) rather than
   name: Calviri MCP Server
-  slug: calviri-mcp-server
+  slug: calviri-site-visitor-assistant
 modified: '2026-08-09'
 name: Calviri
 nav: Providers
@@ -130,7 +130,7 @@ overview: 'Calviri publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 20
 score:
   band: minimal
-  composite: 9.4
+  composite: 9.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -144,19 +144,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 0.0
-  previous_composite: 9.4
+  previous_composite: 9.5
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

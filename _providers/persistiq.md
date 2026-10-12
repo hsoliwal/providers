@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -136,6 +136,11 @@ collections:
   name: PersistIQ Campaigns Users API
   slug: open-persistiq-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/persistiq/refs/heads/main/capabilities/persistiq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/persistiq-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/persistiq/refs/heads/main/skills/persistiq-handle-campaign-replies.md
   title: ''
@@ -302,7 +307,7 @@ overview: 'PersistIQ publishes 12 APIs on the [APIs.io](https://apis.io/) networ
   The PersistIQ catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  PersistIQ''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 26 more developer resources.'
+  PersistIQ''s developer surface includes changelog, authentication, documentation, API reference, getting-started guide, support, engineering blog, and 27 more developer resources.'
 plans:
 - name: Persistiq Plans Pricing
   plan_count: 0
@@ -314,9 +319,9 @@ rate_limits:
   slug: persistiq-rate-limits
 score:
   band: developing
-  composite: 49.8
+  composite: 49.6
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -326,11 +331,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 59.3
+    contract_quality: 54.2
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 49.8
+  previous_composite: 49.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -341,8 +346,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

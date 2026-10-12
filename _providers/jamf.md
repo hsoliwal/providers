@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The modern Jamf Pro API, built on the OpenAPI 3.0 standard, for programmatically managing computers, mobile devices, policies, groups, inventory, and configuration on a Jamf Pro instance. Authenticate
@@ -191,14 +191,14 @@ description: 'Jamf is the standard in managing and securing Apple devices at sca
 image: https://www.jamf.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.jamf.com over HTTP; 2 tools listed.
   name: JAMF MCP Server
-  slug: jamf-mcp-server
+  slug: jamf-developer
 modified: '2026-07-19'
 name: JAMF
 nav: Providers
 network: true
-overview: 'JAMF publishes 1 API on the [APIs.io](https://apis.io/) network: Pro API. Tagged areas include Company, Apple Device Management, MDM, Endpoint Security, and Mobile Device Management.
+overview: 'JAMF publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Pro API, and 2 more. Tagged areas include Company, Apple Device Management, MDM, Endpoint Security, and Mobile Device Management.
 
 
   The JAMF catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -208,7 +208,7 @@ overview: 'JAMF publishes 1 API on the [APIs.io](https://apis.io/) network: Pro 
 random_paper: 18
 score:
   band: developing
-  composite: 48.3
+  composite: 50.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.0
@@ -220,16 +220,22 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 42.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 52.6
-  previous_composite: 48.3
+  previous_composite: 50.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

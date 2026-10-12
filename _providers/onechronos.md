@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Order entry and execution for the OneChronos US equities dark ATS over a modern variant of the FIX 4.2 protocol. Standard and Target orders, and Expressive Bids, are submitted electronically via FIX o
@@ -119,14 +119,14 @@ modified: '2026-07-20'
 name: OneChronos
 nav: Providers
 network: true
-overview: 'OneChronos publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Capital Markets, Trading, and Stocks.
+overview: 'OneChronos publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Capital Markets, Trading, and Stocks.
 
 
   OneChronos'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, and 9 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 21.5
+  composite: 21.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 35.0
@@ -140,9 +140,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 2.6
-  previous_composite: 21.5
+  previous_composite: 21.7
   provenance:
     conformance: first-party
   regulatory:
@@ -150,9 +150,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -167,7 +167,7 @@ security:
 slug: onechronos
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Capital Markets
 - Trading
 - Stocks

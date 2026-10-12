@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -137,7 +137,7 @@ modified: '2026-09-16'
 name: Infura
 nav: Providers
 network: true
-overview: 'Infura publishes 2 APIs on the [APIs.io](https://apis.io/) network: JSON-RPC API and (MetaMask Developer) JSON RPC API. Tagged areas include Web3, Blockchain, RPC, Infrastructure, and MetaMask.
+overview: 'Infura publishes 6 APIs on the [APIs.io](https://apis.io/) network, including JSON-RPC API, (MetaMask Developer) JSON RPC API, and 4 more. Tagged areas include Web3, Blockchain, RPC, Infrastructure, and MetaMask.
 
 
   The Infura catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -167,7 +167,7 @@ rules:
   slug: infura-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 29.7
   coverage:
     artifact_dirs: 13
     catalog_earned: 50.5
@@ -179,11 +179,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 60.7
+    contract_quality: 55.9
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 31.8
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -191,8 +191,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -215,5 +221,7 @@ tags:
 - Infrastructure
 - MetaMask
 - ConsenSys
+- Real-Time
+- Ethereum
 website: https://www.infura.io/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: US Central Command (CENTCOM) does not offer a public developer API. Public information resources include press releases, news articles, official statements, and media content accessible through the of
@@ -67,7 +67,7 @@ modified: '2026-05-03'
 name: US Central Command
 nav: Providers
 network: true
-overview: 'US Central Command publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Military, Department of Defense, and National Security.
+overview: 'US Central Command publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Military, Department of Defense, and National Security.
 
 
   The US Central Command catalog on APIs.io includes 1 JSON-LD context.'
@@ -82,7 +82,7 @@ rate_limits:
   slug: us-central-command-rate-limits
 score:
   band: emerging
-  composite: 13.6
+  composite: 13.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 44.0
@@ -96,17 +96,22 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 7.9
-  previous_composite: 13.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 13.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -120,7 +125,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: us-central-command
 tags:
-- Federal-Government
+- Federal Government
 - Military
 - Department of Defense
 - National Security

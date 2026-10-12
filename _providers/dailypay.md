@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: verified
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 50.5
-  scored_at: '2026-09-20'
+  score: 48.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -285,9 +286,9 @@ description: DailyPay is an on-demand pay (earned wage access) platform that let
 image: https://developer.dailypay.com/static/svgs/dp_text.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.dailypay.com.
   name: DailyPay MCP Server
-  slug: dailypay-mcp-server
+  slug: dailypay-mcp-yml
 modified: '2026-08-01'
 name: DailyPay
 nav: Providers
@@ -303,8 +304,8 @@ scopes:
   slug: dailypay-scopes
   summary_line: 5 scopes · clientCredentials/authorizationCode
 score:
-  band: strong
-  composite: 57.3
+  band: developing
+  composite: 53.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -316,11 +317,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 55.5
+    contract_quality: 50.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 57.3
+  previous_composite: 53.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -336,9 +337,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -369,7 +370,7 @@ tags:
 - Human Resources
 - Earned Wage Access
 - On-Demand Pay
-- Financial-Services
+- Financial Services
 - Fintech
 - Money Transfer
 - Benefits

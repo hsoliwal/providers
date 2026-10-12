@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.3
-  scored_at: '2026-09-20'
+  score: 18.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The OBIE Read/Write Account and Transaction Information (AISP) standard for reading account, balance and transaction data. FAPI-secured with OAuth2/OIDC, mutual-TLS and PSD2 strong customer authentica
@@ -153,14 +153,14 @@ modified: '2026-07-23'
 name: Principality Building Society
 nav: Providers
 network: true
-overview: 'Principality Building Society publishes 6 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 3 more. Tagged areas include Financial-Services, Banking, Building Society, Savings, and Mortgage.
+overview: 'Principality Building Society publishes 9 APIs on the [APIs.io](https://apis.io/) network, including ATM API, BCA API, Branch API, and 6 more. Tagged areas include Financial Services, Banking, Building Society, Savings, and Mortgage.
 
 
   Principality Building Society''s developer surface includes authentication, product news, support, and 11 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 35.9
+  composite: 34.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -172,9 +172,9 @@ score:
   facets:
     access_clarity: 57.1
     contract_governance: 4.5
-    contract_quality: 39.5
+    contract_quality: 35.5
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 65.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -184,7 +184,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.9
+  previous_composite: 34.6
   provenance:
     conformance: derived
     contracts:
@@ -197,9 +197,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -217,7 +217,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: principality-building-society
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Building Society
 - Savings

@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.6
-  scored_at: '2026-09-20'
+  score: 30.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -53,17 +53,17 @@ apis:
 - baseURL: https://api.community.com/webhooks/v1/community
   baseurl_source: declared
   description: The member-data API from Community — 4 operation(s) for member-data.
-  name: Community member-data API
+  name: Community Member Data API
   slug: community-member-data-api
 - baseURL: https://api.community.com/webhooks/v1/community
   baseurl_source: declared
   description: The messaging API from Community — 1 operation(s) for messaging.
-  name: Community messaging API
+  name: Community Messaging API
   slug: community-messaging-api
 - baseURL: https://api.community.com/webhooks/v1/community
   baseurl_source: declared
   description: The tags API from Community — 4 operation(s) for tags.
-  name: Community tags API
+  name: Community Tags API
   slug: community-tags-api
 artifact_total: 16
 asyncapis:
@@ -239,7 +239,7 @@ modified: '2026-08-13'
 name: Community
 nav: Providers
 network: true
-overview: 'Community publishes 3 APIs on the [APIs.io](https://apis.io/) network: member-data API, messaging API, and tags API. Tagged areas include Messaging, SMS, Communications, Conversational, and Marketing.
+overview: 'Community publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Member Data API, Messaging API, Tags API, and 1 more. Tagged areas include Messaging, SMS, Communications, Marketing, and Creators.
 
 
   The Community catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -261,8 +261,8 @@ scopes:
   slug: community-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 58.2
+  band: developing
+  composite: 54.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 59.3
+    contract_quality: 54.2
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 58.2
+  previous_composite: 54.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -294,9 +294,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 65.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,7 +320,6 @@ tags:
 - Messaging
 - SMS
 - Communications
-- Conversational
 - Marketing
 - Creators
 - Webhook

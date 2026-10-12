@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -214,7 +214,7 @@ overview: 'Manage BGL publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 3
 score:
   band: thin
-  composite: 29.9
+  composite: 28.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -228,9 +228,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 29.9
+  previous_composite: 28.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -250,9 +250,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

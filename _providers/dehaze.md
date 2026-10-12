@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -72,18 +72,18 @@ description: dehaze is a Munich-area (Fürstenfeldbruck, Germany) healthtech com
 image: https://static.wixstatic.com/media/2f3c0d_42767967d90a40f58e3c1dc8c413b9a4~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.dehaze.de over HTTP; 7 tools listed.
   name: dehaze MCP Server
-  slug: dehaze-mcp-server
+  slug: dehaze
 modified: '2026-07-18'
 name: dehaze
 nav: Providers
 network: true
-overview: dehaze is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health Tech, Artificial Intelligence, Machine-Learning, and Digital Health.
+overview: dehaze is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health Tech, Artificial Intelligence, Machine Learning, and Digital Health.
 random_paper: 9
 score:
   band: minimal
-  composite: 4.1
+  composite: 4.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -97,7 +97,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -107,17 +107,17 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 4.1
+  previous_composite: 4.7
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +134,7 @@ tags:
 - Company
 - Health Tech
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Digital Health
 - Chronic Disease
 - Diagnostics

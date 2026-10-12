@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -87,6 +87,11 @@ collections:
   name: lit-api-server
   slug: open-lit-protocol-core-v1
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/lit-protocol/refs/heads/main/capabilities/lit-protocol-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/lit-protocol-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/lit-protocol/refs/heads/main/agentic-access/lit-protocol-agentic-access.yml
   title: ''
@@ -269,13 +274,13 @@ modified: '2026-05-08'
 name: Lit Protocol
 nav: Providers
 network: true
-overview: 'Lit Protocol publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Account Management API, Actions API, Billing API, and 1 more. Tagged areas include Web3, Key Management, MPC, Programmable Keys, and Lit Actions.
+overview: 'Lit Protocol publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account Management API, Actions API, Billing API, and 2 more. Tagged areas include Web3, Key Management, MPC, Programmable Keys, and Lit Actions.
 
 
   The Lit Protocol catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Lit Protocol''s developer surface includes engineering blog and 9 more developer resources.'
+  Lit Protocol''s developer surface includes engineering blog and 10 more developer resources.'
 plans:
 - name: Lit Protocol Plans Pricing
   plan_count: 2
@@ -298,9 +303,9 @@ rules:
   slug: lit-protocol-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 23.3
+  composite: 20.7
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 47.3
     catalog_earned_first_party: 0.0
     catalog_gap: 67.8
@@ -310,11 +315,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 9.8
-    contract_quality: 36.7
+    contract_quality: 33.1
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 23.3
+  previous_composite: 20.7
   provenance:
     agentic_access: derived
     contracts:
@@ -322,8 +327,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

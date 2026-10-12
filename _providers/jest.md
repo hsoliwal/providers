@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Core testing framework API for writing and running tests, including globals, expect assertions, mock functions, and configuration options.
@@ -99,7 +99,7 @@ rate_limits:
   slug: jest-rate-limits
 score:
   band: emerging
-  composite: 15.3
+  composite: 13.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -113,11 +113,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 15.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

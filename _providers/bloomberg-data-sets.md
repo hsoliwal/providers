@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Bloomberg Open API (BLPAPI) provides programmatic access to Bloomberg's market data, reference data, historical data and intraday tick data. It is an event-driven session protocol rather than an H
@@ -199,7 +199,7 @@ modified: '2026-09-16'
 name: Bloomberg Data Sets
 nav: Providers
 network: true
-overview: 'Bloomberg Data Sets publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Datasets, Financial-Services, Market Data, and Reference Data.
+overview: 'Bloomberg Data Sets publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Datasets, Financial Services, Market Data, and Reference Data.
 
 
   Bloomberg Data Sets'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, CLI, authentication, and 24 more developer resources.'
@@ -218,8 +218,8 @@ scopes:
   slug: bloomberg-data-sets-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 36.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 35.0
@@ -233,9 +233,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 31.6
-  previous_composite: 39.5
+  previous_composite: 36.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -244,9 +244,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,7 +270,7 @@ slug: bloomberg-data-sets
 tags:
 - Analytics
 - Datasets
-- Financial-Services
+- Financial Services
 - Market Data
 - Reference Data
 - Historical Data

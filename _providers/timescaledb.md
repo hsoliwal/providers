@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 3
@@ -95,6 +95,11 @@ collections:
   name: Tiger Cloud API
   slug: open-timescaledb
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/timescaledb/refs/heads/main/capabilities/timescaledb-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/timescaledb-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -276,13 +281,13 @@ modified: '2026-05-19'
 name: TimescaleDB / Tiger Data
 nav: Providers
 network: true
-overview: 'TimescaleDB / Tiger Data publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Read Replica Sets API, and 2 more. Tagged areas include Database, Time Series, PostgreSQL, Open-Source, and Cloud.
+overview: 'TimescaleDB / Tiger Data publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Auth API, Read Replica Sets API, and 3 more. Tagged areas include Database, Time Series, PostgreSQL, Open Source, and Cloud.
 
 
   The TimescaleDB / Tiger Data catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  TimescaleDB / Tiger Data''s developer surface includes documentation, pricing, GitHub presence, developer console, and 15 more developer resources.'
+  TimescaleDB / Tiger Data''s developer surface includes documentation, pricing, GitHub presence, developer console, and 16 more developer resources.'
 plans:
 - name: Timescaledb Plans Pricing
   plan_count: 6
@@ -305,9 +310,9 @@ rules:
   slug: timescaledb-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.2
+  composite: 33.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.3
     catalog_earned_first_party: 0.0
     catalog_gap: 65.8
@@ -317,11 +322,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 9.8
-    contract_quality: 50.1
+    contract_quality: 45.1
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 39.5
-  previous_composite: 35.2
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     contracts:
@@ -329,8 +334,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -354,7 +365,7 @@ tags:
 - Database
 - Time Series
 - PostgreSQL
-- Open-Source
+- Open Source
 - Cloud
 - Hypertables
 - Continuous Aggregates

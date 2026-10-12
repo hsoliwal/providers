@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Accept payments globally across 900+ local payment methods including cards, bank transfers, eWallets and cash.
@@ -120,7 +120,7 @@ rate_limits:
   slug: rapyd-rate-limits
 score:
   band: minimal
-  composite: 9.8
+  composite: 10.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 42.0
@@ -134,17 +134,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
-  previous_composite: 9.8
+  previous_composite: 10.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -163,5 +163,6 @@ tags:
 - Cross-Border
 - Cards
 - Wallets
+- Cross-Border Payments
 website: https://www.rapyd.net/
 ---

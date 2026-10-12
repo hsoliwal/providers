@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://developers.balad.tech/
@@ -236,16 +236,16 @@ description: BALAD CORP (Balad) is a Cairo-based fintech providing cross-border 
 image: https://www.balad.me/images/og-default.png
 layout: provider
 modified: '2026-07-18'
-name: BALAD CORP
+name: BALAD
 nav: Providers
 network: true
-overview: 'BALAD CORP publishes 7 APIs on the [APIs.io](https://apis.io/) network, including APIs/Authentication API, APIs/Core/Balance API, APIs/Core/Exchange rate API, and 4 more. Tagged areas include Company, Payments, Remittances, Cross-Border Payments, and Fintech.
+overview: 'BALAD publishes 7 APIs on the [APIs.io](https://apis.io/) network, including CORP APIs/Authentication API, CORP APIs/Core/Balance API, CORP APIs/Core/Exchange rate API, and 4 more. Tagged areas include Company, Payments, Remittances, Cross-Border Payments, and Fintech.
 
 
-  The BALAD CORP catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The BALAD catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  BALAD CORP''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, and 21 more developer resources.'
+  BALAD''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, and 21 more developer resources.'
 random_paper: 13
 scopes:
 - name: Balad Corp Scopes
@@ -254,7 +254,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 37.5
+  composite: 35.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -266,9 +266,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 58.2
+    contract_quality: 53.2
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -277,7 +277,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 37.5
+  previous_composite: 35.2
   provenance:
     conformance: derived
     contracts:
@@ -292,9 +292,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 43.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

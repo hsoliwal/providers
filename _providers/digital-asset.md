@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - baseURL: https://api.utilities.digitalasset.com
@@ -235,14 +235,14 @@ modified: '2026-08-04'
 name: Digital Asset
 nav: Providers
 network: true
-overview: 'Digital Asset publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Common API, Operator API, Public API, and 1 more. Tagged areas include Blockchain, Tokenization, Digital Assets, Financial-Services, and Distributed Ledger.
+overview: 'Digital Asset publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Common API, Operator API, Public API, and 1 more. Tagged areas include Blockchain, Tokenization, Digital Assets, Financial Services, and Distributed Ledger.
 
 
   Digital Asset''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 26 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 46.8
+  composite: 47.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -254,11 +254,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 46.4
+    contract_quality: 41.8
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 46.8
+  previous_composite: 47.7
   provenance:
     conformance: derived
     contracts:
@@ -268,8 +268,14 @@ score:
       total: 4
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -297,12 +303,13 @@ tags:
 - Blockchain
 - Tokenization
 - Digital Assets
-- Financial-Services
+- Financial Services
 - Distributed Ledger
 - Smart Contracts
 - Capital Markets
 - Canton Network
 - Daml
 - Stablecoins
+- A2A
 website: https://www.digitalasset.com/
 ---

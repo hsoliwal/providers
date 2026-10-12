@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -74,6 +74,10 @@ created: '2026-07-17'
 description: Pluang is an Indonesian multi-asset investment and trading platform that lets retail users invest across a single app in US stocks and ETFs (fractional from $1), Indonesian stocks, cryptocurrencies with staking, mutual funds (Reksa Dana), physical gold and silver, options, and leveraged crypto futures. Features include Auto Invest dollar-cost averaging, the Pocket portfolio bundling tool, TradingView-powered charting, USD yield products, and the Aura AI recommendation assistant. Pluang operates under OJK and Bappebti regulatory oversight across its subsidiaries and reports 12M+ users. It exposes no public developer API; this profile captures its public web, legal, and security surface. Surfaced as an accel portfolio company and enriched by the API Evangelist pipeline.
 image: https://image-cdn.pluang.com/web/og-banners/homePage.webp
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pluang.com over HTTP.
+  name: Pluang MCP Server
+  slug: pluang
 modified: '2026-07-20'
 name: Pluang
 nav: Providers
@@ -84,8 +88,8 @@ overview: 'Pluang is profiled on the [APIs.io](https://apis.io/) network. Tagged
   Pluang''s developer surface includes support, engineering blog, and 6 more developer resources.'
 random_paper: 9
 score:
-  band: minimal
-  composite: 10.9
+  band: emerging
+  composite: 11.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -99,7 +103,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -108,7 +112,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 10.9
+  previous_composite: 11.6
   provenance:
     mcp: first-party
   regulatory:
@@ -116,9 +120,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -14,7 +14,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.9
-  scored_at: '2026-09-20'
+  score: 37.8
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -368,7 +367,7 @@ modified: '2026-07-27'
 name: Green Button Alliance
 nav: Providers
 network: true
-overview: 'Green Button Alliance publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Application Information API, Authorization API, Batch API, and 5 more. Tagged areas include Energy, United States, Utilities, Electricity, and Gas.
+overview: 'Green Button Alliance publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Application Information API, Authorization API, Batch API, and 6 more. Tagged areas include Energy, United States, Utilities, Electricity, and Gas.
 
 
   The Green Button Alliance catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -386,8 +385,8 @@ scopes:
   slug: green-button-alliance-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 55.3
+  band: developing
+  composite: 50.9
   coverage:
     artifact_dirs: 26
     catalog_earned: 45.0
@@ -399,9 +398,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 33.3
-    contract_quality: 61.2
+    contract_quality: 56.3
     developer_ergonomics: 54.2
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -410,7 +409,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 55.3
+  previous_composite: 50.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -426,9 +425,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 64.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

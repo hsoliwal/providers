@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,24 +33,24 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 19.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.tindie.com/api/v1
   baseurl_source: declared
   description: A seller's orders (authenticated).
-  name: Tindie order API
+  name: Tindie Order API
   slug: tindie-order-api
 - baseURL: https://www.tindie.com/api/v1
   baseurl_source: declared
   description: Line items within a seller's orders (authenticated).
-  name: Tindie orderitem API
+  name: Tindie Orderitem API
   slug: tindie-orderitem-api
 - baseURL: https://www.tindie.com/api/v1
   baseurl_source: declared
   description: Store product listings (public read).
-  name: Tindie product API
+  name: Tindie Product API
   slug: tindie-product-api
 artifact_total: 10
 collections:
@@ -162,14 +162,14 @@ modified: '2026-07-21'
 name: Tindie
 nav: Providers
 network: true
-overview: 'Tindie publishes 3 APIs on the [APIs.io](https://apis.io/) network: order API, orderitem API, and product API. Tagged areas include Company, Marketplace, Hardware, Electronics, and Maker.
+overview: 'Tindie publishes 3 APIs on the [APIs.io](https://apis.io/) network: Order API, Orderitem API, and Product API. Tagged areas include Company, Marketplace, Hardware, Electronics, and Maker.
 
 
   Tindie''s developer surface includes API reference, support, engineering blog, authentication, and 14 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 28.7
+  composite: 27.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -181,11 +181,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 24.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 28.7
+  previous_composite: 27.9
   provenance:
     conformance: derived
     contracts:
@@ -195,8 +195,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

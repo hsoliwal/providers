@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 1
@@ -132,6 +132,11 @@ collections:
   name: Wove External Authentication Webhooks API
   slug: open-wove-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/wove/refs/heads/main/capabilities/wove-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/wove-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/wove/refs/heads/main/agentic-access/wove-agentic-access.yml
   title: ''
@@ -172,7 +177,7 @@ network: true
 overview: 'Wove publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Documents API, Query Bank API, and 7 more. Tagged areas include Company.
 
 
-  Wove''s developer surface includes authentication and 5 more developer resources.'
+  Wove''s developer surface includes authentication and 6 more developer resources.'
 random_paper: 9
 rate_limits:
 - limit_count: 2
@@ -185,9 +190,9 @@ scopes:
   summary_line: 9 scopes · clientCredentials
 score:
   band: emerging
-  composite: 25.0
+  composite: 25.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 25.0
     catalog_earned_first_party: 8.0
     catalog_gap: 90.0
@@ -197,11 +202,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 60.4
+    contract_quality: 54.6
     developer_ergonomics: 11.9
-    discoverability: 38.9
+    discoverability: 37.5
     operational_transparency: 21.1
-  previous_composite: 25.0
+  previous_composite: 25.9
   provenance:
     agentic_access: derived
     contracts:
@@ -209,8 +214,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

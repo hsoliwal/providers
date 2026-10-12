@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-09-20'
+  score: 36.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -273,7 +273,7 @@ modified: '2026-07-26'
 name: Landgate
 nav: Providers
 network: true
-overview: 'Landgate publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Discovery API, Organizations API, and 6 more. Tagged areas include Real-Estate, Australia, Land Registry, Title, and Valuation.
+overview: 'Landgate publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Datasets API, Discovery API, Organizations API, and 7 more. Tagged areas include Real Estate, Australia, Land Registry, Title, and Valuation.
 
 
   Landgate''s developer surface includes documentation, pricing, support, developer portal, authentication, changelog, engineering blog, and 26 more developer resources.'
@@ -284,8 +284,8 @@ scopes:
   slug: landgate-scopes
   summary_line: 6 scopes · authorizationCode
 score:
-  band: developing
-  composite: 40.8
+  band: thin
+  composite: 36.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -299,7 +299,7 @@ score:
     contract_governance: 4.5
     contract_quality: 14.5
     developer_ergonomics: 47.0
-    discoverability: 85.2
+    discoverability: 82.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -308,7 +308,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 40.8
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -324,9 +324,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 79.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -344,7 +344,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: landgate
 tags:
-- Real-Estate
+- Real Estate
 - Australia
 - Land Registry
 - Title

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: na
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.9
-  scored_at: '2026-09-20'
+  score: 34.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.verdigris.co/data/v4
@@ -260,8 +260,8 @@ scopes:
   slug: verdigris-technologies-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 40.3
+  band: thin
+  composite: 36.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -273,11 +273,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 40.3
+  previous_composite: 36.5
   provenance:
     conformance: derived
     contracts:
@@ -292,9 +292,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API (v3) for the Fiddler AI Observability platform — projects, models, applications, events, traces/sessions/spans, evaluators, alert rules, guardrails, custom metrics, and jobs. Resource-oriente
@@ -170,14 +170,14 @@ created: '2026-07-17'
 description: Fiddler AI is an enterprise AI Observability and Security platform — an "AI Control Plane" for AI agents, LLM applications, and traditional ML models. It delivers unified monitoring, real-time guardrails (safety, hallucination/faithfulness, and PII/sensitive-data detection), evaluation and experiments, drift and performance tracking, LLM-as-a-Judge custom evaluators, alerting, and governance/compliance across the AI lifecycle. Fiddler exposes a REST API (v3), an official Python client (fiddler-client), OpenTelemetry-native ingestion, and a remote MCP server for agent-native access to observability data.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: fiddler.ai MCP Server
-  slug: fiddlerai-mcp-server
+  slug: fiddler-genai
 modified: '2026-07-19'
 name: fiddler.ai
 nav: Providers
 network: true
-overview: 'fiddler.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Observability, Machine-Learning, LLM, and Model Monitoring.
+overview: 'fiddler.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Observability, Machine Learning, LLM, and Model Monitoring.
 
 
   The fiddler.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -187,7 +187,7 @@ overview: 'fiddler.ai publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 8
 score:
   band: developing
-  composite: 46.6
+  composite: 47.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 35.0
@@ -199,16 +199,26 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 72.2
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 46.6
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -232,7 +242,7 @@ slug: fiddlerai
 tags:
 - Company
 - AI Observability
-- Machine-Learning
+- Machine Learning
 - LLM
 - Model Monitoring
 - Guardrails

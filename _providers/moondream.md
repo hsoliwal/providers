@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 5
@@ -210,14 +210,14 @@ modified: '2026-07-20'
 name: Moondream
 nav: Providers
 network: true
-overview: 'Moondream publishes 2 APIs on the [APIs.io](https://apis.io/) network: OpenAI Compatibility API and Skills API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Computer-Vision, and Vision Language Model.
+overview: 'Moondream publishes 2 APIs on the [APIs.io](https://apis.io/) network: OpenAI Compatibility API and Skills API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Computer Vision, and Vision Language Model.
 
 
   Moondream''s developer surface includes authentication, changelog, documentation, API reference, getting-started guide, engineering blog, pricing, and 23 more developer resources.'
 random_paper: 16
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 40.3
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -231,9 +231,9 @@ score:
     contract_governance: 18.2
     contract_quality: 14.5
     developer_ergonomics: 69.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 38.8
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -244,8 +244,18 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -264,8 +274,8 @@ slug: moondream
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - Vision Language Model
 - Object Detection
 - Image Captioning

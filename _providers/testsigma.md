@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API to manage Testsigma entities (projects, applications, environments, elements, uploads, test plans) and to trigger and poll test-plan executions remotely. Authenticated with a Bearer API Key.
@@ -192,7 +192,7 @@ overview: 'Testsigma publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 9
 score:
   band: developing
-  composite: 41.2
+  composite: 43.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -206,14 +206,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 41.2
+  previous_composite: 43.6
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -247,6 +259,6 @@ tags:
 - DevOps
 - Continuous Integration
 - Software Quality
-- Agentic AI
+- AI Agents
 website: https://testsigma.com/
 ---

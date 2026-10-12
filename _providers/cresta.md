@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Cresta's production API host. https://api.cresta.com resolves and answers anonymously with a gRPC-JSON transcoding gateway error envelope ({"code":2,"httpStatus":500,"message":"the requested gRPC meth
@@ -319,7 +319,7 @@ rate_limits:
   slug: cresta-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 31.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 45.0
@@ -333,14 +333,20 @@ score:
     contract_governance: 18.2
     contract_quality: 10.7
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 28.9
-  previous_composite: 30.1
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

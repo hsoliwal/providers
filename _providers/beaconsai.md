@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, first-party Model Context Protocol server exposing a Beacons creator's own data to an agent. Discovered through the RFC 9728 Protected Resource Metadata document Beacons serves at https://beac
@@ -144,12 +144,12 @@ description: Beacons.ai is an all-in-one creator business platform for creators,
 image: https://beacons.ai/_framerusercontent/assets/xYEVVu9ePuRZMJOTTdnZi0MEUEM.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at beacons.ai over streamable HTTP requiring OAuth.
   name: Beacons Creator MCP
   slug: beacons-creator-mcp
 - description: ''
   name: Beacons.ai MCP Server
-  slug: beaconsai-mcp-server
+  slug: mcp
 modified: '2026-08-13'
 name: Beacons.ai
 nav: Providers
@@ -169,12 +169,12 @@ rate_limits:
   slug: beaconsai-rate-limits
 scopes:
 - name: Beaconsai Scopes
-  scope_count: 0
+  scope_count: 1
   slug: beaconsai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 33.3
+  composite: 36.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -188,14 +188,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 33.3
+  previous_composite: 36.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -224,6 +230,6 @@ tags:
 - Creator Monetization
 - Influencer Software
 - MCP
-- agent-native
+- Agent-Native
 website: https://beacons.ai
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The HealthEquity API provides access to platform services and data for enterprise integration and automation.
@@ -71,7 +71,7 @@ modified: '2026-04-19'
 name: HealthEquity
 nav: Providers
 network: true
-overview: HealthEquity publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, HSA, and Benefits.
+overview: HealthEquity publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, HSA, Benefits, and Employee Benefits.
 plans:
 - name: Healthequity Plans Pricing
   plan_count: 1
@@ -83,7 +83,7 @@ rate_limits:
   slug: healthequity-rate-limits
 score:
   band: minimal
-  composite: 10.6
+  composite: 10.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 39.0
@@ -97,17 +97,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 10.6
+  previous_composite: 10.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -128,5 +128,6 @@ tags:
 - Healthcare
 - HSA
 - Benefits
+- Employee Benefits
 website: https://www.healthequity.com
 ---

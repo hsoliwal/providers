@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -84,6 +84,11 @@ collections:
   name: Flower Shop Network JSON API
   slug: open-flower-shop-network
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/capabilities/flower-shop-network-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/flower-shop-network-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/flower-shop-network/refs/heads/main/agentic-access/flower-shop-network-agentic-access.yml
   title: ''
@@ -125,7 +130,7 @@ network: true
 overview: 'Flower Shop Network publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Florists API, Orders API, and 1 more. Tagged areas include Florists, Flowers, Wire Orders, and Point-of-Sale.
 
 
-  Flower Shop Network''s developer surface includes documentation, engineering blog, and 4 more developer resources.'
+  Flower Shop Network''s developer surface includes documentation, engineering blog, and 5 more developer resources.'
 plans:
 - name: Flower Shop Network Plans Pricing
   plan_count: 3
@@ -137,9 +142,9 @@ rate_limits:
   slug: flower-shop-network-rate-limits
 score:
   band: emerging
-  composite: 22.8
+  composite: 20.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -149,11 +154,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 44.2
+    contract_quality: 39.8
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 22.8
+  previous_composite: 20.1
   provenance:
     agentic_access: derived
     contracts:
@@ -161,8 +166,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

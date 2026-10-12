@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Cardless partner API surface used by brands to embed a co-branded credit card program: partner authentication (Basic-auth exchange of a partner-signed JWT for a bearer access token), application s'
@@ -141,14 +141,14 @@ description: Cardless, Inc. is a San Francisco fintech that operates an embedded
 image: https://framerusercontent.com/images/hm4RTByVdin3oyQTHY2rMm9doQ.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.cardless.com over HTTP; 3 tools listed.
   name: Cardless Docs
   slug: cardless-docs
 modified: '2026-08-01'
 name: Cardless
 nav: Providers
 network: true
-overview: 'Cardless publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fintech, Credit Cards, and Card Issuing.
+overview: 'Cardless publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fintech, Credit Cards, and Card Issuing.
 
 
   Cardless'' developer surface includes documentation, engineering blog, support, signup flow, authentication, and 15 more developer resources.'
@@ -160,7 +160,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials/refreshToken
 score:
   band: emerging
-  composite: 22.1
+  composite: 20.1
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -174,9 +174,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 22.1
+  previous_composite: 20.1
   provenance:
     conformance: derived
     mcp: first-party
@@ -185,9 +185,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -206,7 +206,7 @@ security:
 slug: cardless
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Credit Cards
 - Card Issuing

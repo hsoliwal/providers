@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for building and operating conversational voice AI agents — create and manage agents, place outbound calls, run CSV batch campaigns, wire inbound numbers and SIP trunks, purchase/search phone
@@ -205,7 +205,7 @@ layout: provider
 mcp_servers:
 - description: Official remote MCP server (Streamable HTTP) wrapping the Bolna voice AI REST API. Manage voice agents, phone numbers, batches, and outbound calls from any MCP client. Authenticate with a Bolna API ke
   name: Bolna MCP Server
-  slug: bolna-mcp-server
+  slug: bolna
 modified: '2026-07-18'
 name: Bolna
 nav: Providers
@@ -224,7 +224,7 @@ rate_limits:
   slug: bolna-rate-limits
 score:
   band: developing
-  composite: 49.6
+  composite: 49.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -236,17 +236,23 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 49.6
+  previous_composite: 49.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

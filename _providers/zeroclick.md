@@ -34,9 +34,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -130,6 +130,10 @@ created: '2026-07-17'
 description: ZeroClick is the agent-first storefront and transaction layer that lets businesses sell directly to AI agents. It turns any existing API or offering into an agent-purchasable service, publishing a machine-readable storefront so agents can discover it and adding agent identity, agent-native payment rails (x402 and MPP, the Machine Payments Protocol), signed proxying, and per-transaction analytics in front of the seller's unchanged upstream API. Sellers keep their product, pricing, and customer experience, add a small guard to billed endpoints via the @zeroclickai/sellers SDK, and settle revenue to their own connected Stripe account. ZeroClick launched in July 2026, raised $55M, is backed by Forerunner Ventures, and is a product of the People's Internet Experiment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zeroclick.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.zeroclick.ai over HTTP.
+  name: Zeroclick MCP Server
+  slug: zeroclick
 modified: '2026-07-21'
 name: Zeroclick
 nav: Providers
@@ -141,7 +145,7 @@ overview: 'Zeroclick is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 20
 score:
   band: emerging
-  composite: 20.6
+  composite: 19.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -155,9 +159,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 20.6
+  previous_composite: 19.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -166,9 +170,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

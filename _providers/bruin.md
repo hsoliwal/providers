@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -159,7 +159,7 @@ layout: provider
 mcp_servers:
 - description: Bruin ships an official MCP server built into the CLI. Running `bruin mcp` starts a local stdio Model Context Protocol server that extends AI agents to query data, compare tables, ingest data, build p
   name: Bruin MCP Server
-  slug: bruin-mcp-server
+  slug: bruin
 modified: '2026-07-18'
 name: Bruin
 nav: Providers
@@ -171,7 +171,7 @@ overview: 'Bruin is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 16
 score:
   band: thin
-  composite: 32.4
+  composite: 34.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -185,15 +185,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 28.9
-  previous_composite: 32.4
+  previous_composite: 34.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,6 +235,6 @@ tags:
 - Data Quality
 - CLI
 - MCP
-- Open-Source
+- Open Source
 website: https://getbruin.com/
 ---

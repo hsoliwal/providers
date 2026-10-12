@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -197,7 +197,7 @@ modified: '2026-05-19'
 name: Energy Information Administration
 nav: Providers
 network: true
-overview: 'Energy Information Administration publishes 10 APIs on the [APIs.io](https://apis.io/) network, including CO2 Emissions API, Coal API, Discovery API, and 7 more. Tagged areas include Energy, Federal-Government, and Open Data.
+overview: 'Energy Information Administration publishes 10 APIs on the [APIs.io](https://apis.io/) network, including CO2 Emissions API, Coal API, Discovery API, and 7 more. Tagged areas include Energy, Federal Government, and Open Data.
 
 
   Energy Information Administration''s developer surface includes authentication, documentation, signup flow, engineering blog, and 8 more developer resources.'
@@ -212,7 +212,7 @@ rate_limits:
   slug: energy-information-administration-rate-limits
 score:
   band: thin
-  composite: 30.3
+  composite: 28.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -224,11 +224,16 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 30.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 28.6
   provenance:
     agentic_access: derived
     contracts:
@@ -241,9 +246,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -262,7 +267,7 @@ security:
 slug: energy-information-administration
 tags:
 - Energy
-- Federal-Government
+- Federal Government
 - Open Data
 website: https://www.eia.gov
 ---

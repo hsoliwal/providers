@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,19 +34,19 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.1
-  scored_at: '2026-09-20'
+  score: 46.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.seltz.ai
   baseurl_source: declared
   description: Answer operations
-  name: Seltz answer API
+  name: Seltz Answer API
   slug: seltz-answer-api
 - baseURL: https://api.seltz.ai
   baseurl_source: declared
   description: Search operations
-  name: Seltz search API
+  name: Seltz Search API
   slug: seltz-search-api
 artifact_total: 9
 collections:
@@ -183,19 +183,19 @@ layout: provider
 mcp_servers:
 - description: Official Seltz MCP server. Native integration for Claude Desktop, Cursor, VS Code, Windsurf, and other MCP-compatible AI tools. Remote HTTP/SSE server.
   name: Seltz MCP Server
-  slug: seltz-mcp-server
+  slug: seltz
 modified: '2026-07-21'
 name: Seltz
 nav: Providers
 network: true
-overview: 'Seltz publishes 2 APIs on the [APIs.io](https://apis.io/) network: answer API and search API. Tagged areas include Company, Web Search, AI Infrastructure, Retrieval, and RAG.
+overview: 'Seltz publishes 2 APIs on the [APIs.io](https://apis.io/) network: Answer API and Search API. Tagged areas include Company, Web Search, AI Infrastructure, Retrieval, and RAG.
 
 
   Seltz''s developer surface includes documentation, API reference, getting-started guide, sandbox, pricing, signup flow, engineering blog, and 19 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 42.5
+  composite: 42.6
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -207,16 +207,18 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 42.5
+  previous_composite: 42.6
   provenance:
     conformance: derived
     contracts:
@@ -226,8 +228,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

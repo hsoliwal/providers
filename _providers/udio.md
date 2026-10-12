@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -96,7 +96,7 @@ rate_limits:
   slug: udio-rate-limits
 score:
   band: minimal
-  composite: 8.8
+  composite: 7.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 34.0
@@ -110,11 +110,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 5.3
-  previous_composite: 8.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,5 +138,6 @@ tags:
 - Audio
 - Generative
 - Songs
+- Music
 website: https://www.udio.com/
 ---

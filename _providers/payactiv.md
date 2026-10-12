@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Access-as-a-Service is Payactiv's API-driven infrastructure for embedding Earned Wage Access, debit and payroll card programs, instant payouts, and HCM workforce-data workflows into a partner platform
@@ -137,14 +137,14 @@ modified: '2026-08-04'
 name: PayActiv
 nav: Providers
 network: true
-overview: 'PayActiv publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Earned Wage Access, Payments, and Payroll.
+overview: 'PayActiv publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Earned Wage Access, Payments, and Payroll.
 
 
   PayActiv''s developer surface includes documentation, signup flow, support, engineering blog, and 13 more developer resources.'
 random_paper: 7
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 24.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -158,9 +158,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 26.5
+  previous_composite: 24.9
   provenance:
     conformance: first-party
   regulatory:
@@ -172,9 +172,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -193,7 +193,7 @@ security:
 slug: payactiv
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Earned Wage Access
 - Payments
 - Payroll

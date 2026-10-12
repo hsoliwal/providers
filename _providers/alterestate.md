@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-09-20'
+  score: 41.9
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://secure.alterestate.com/api/v1
@@ -203,12 +203,12 @@ layout: provider
 mcp_servers:
 - description: Official AlterEstate hosted MCP server (branded "Brik"/alterai). Discovered via the RFC 9728 protected-resource document. Requires an OAuth 2.0 bearer token (scope "mcp"); an unauthenticated POST retu
   name: AlterEstate MCP Server
-  slug: alterestate-mcp-server
+  slug: alterestate-alterai
 modified: '2026-07-17'
 name: AlterEstate
 nav: Providers
 network: true
-overview: 'AlterEstate publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Developments API, Leads API, and 2 more. Tagged areas include Company, Real-Estate, CRM, Property Management, and Lead Management.
+overview: 'AlterEstate publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Developments API, Leads API, and 2 more. Tagged areas include Company, Real Estate, CRM, Property Management, and Lead Management.
 
 
   AlterEstate''s developer surface includes documentation, API reference, authentication, engineering blog, support, pricing, signup flow, and 18 more developer resources.'
@@ -220,7 +220,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 30.3
+  composite: 32.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -234,14 +234,14 @@ score:
     contract_governance: 4.5
     contract_quality: 13.9
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 30.3
+  previous_composite: 32.7
   provenance:
     conformance: derived
     contracts:
@@ -251,8 +251,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -270,7 +276,7 @@ security:
 slug: alterestate
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - CRM
 - Property Management
 - Lead Management

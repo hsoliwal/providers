@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Core Kotlin standard library with collections, I/O, and utility functions.
@@ -42,7 +42,7 @@ apis:
 - description: Library support for Kotlin coroutines with async/await patterns.
   name: Kotlin Coroutines API
   slug: coroutines
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/kotlin/refs/heads/main/security/kotlin-domain-security.yml
@@ -85,6 +85,10 @@ finops:
   slug: kotlin-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kotlin.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.kotlinlang.org over HTTP; 2 tools listed.
+  name: Kotlin MCP Server
+  slug: kotlin
 modified: '2026-04-28'
 name: Kotlin
 nav: Providers
@@ -104,7 +108,7 @@ rate_limits:
   slug: kotlin-rate-limits
 score:
   band: emerging
-  composite: 15.5
+  composite: 14.0
   coverage:
     artifact_dirs: 9
     catalog_earned: 41.0
@@ -120,11 +124,17 @@ score:
     developer_ergonomics: 21.4
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 15.5
+  previous_composite: 14.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -252,7 +252,7 @@ modified: '2026-05-19'
 name: HMRC UK Tax Authority
 nav: Providers
 network: true
-overview: 'HMRC UK Tax Authority publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Liabilities API, Obligations API, Payments API, and 1 more. Tagged areas include Government, Making Tax Digital, Regulatory, Tax, and United Kingdom.
+overview: 'HMRC UK Tax Authority publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Liabilities API, Obligations API, Payments API, and 5 more. Tagged areas include Government, Making Tax Digital, Regulatory, Tax, and United Kingdom.
 
 
   The HMRC UK Tax Authority catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -286,7 +286,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.6
+  composite: 40.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 54.3
@@ -298,9 +298,9 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 9.8
-    contract_quality: 61.9
+    contract_quality: 56.3
     developer_ergonomics: 56.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -310,7 +310,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.6
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -323,9 +323,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 61.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

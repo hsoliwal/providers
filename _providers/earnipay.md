@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-09-20'
+  score: 25.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 50
   human_in_the_loop: 50
@@ -258,7 +258,7 @@ overview: 'Earnipay publishes 13 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 21
 score:
   band: emerging
-  composite: 23.3
+  composite: 22.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -270,9 +270,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.9
+    contract_quality: 44.3
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -281,7 +281,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 23.3
+  previous_composite: 22.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -297,9 +297,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -326,6 +326,6 @@ tags:
 - Fintech
 - Nigeria
 - Payments
-- Financial-Services
+- Financial Services
 website: https://earnipay.com/
 ---

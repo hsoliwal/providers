@@ -4,7 +4,7 @@ agent_readiness:
   dimensions:
     agent_card: conformant
     agent_skills: true
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -22,8 +22,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 51.6
-  scored_at: '2026-09-20'
+  score: 53.4
+  scored_at: '2026-10-04'
+agentic_access:
+- acting_count: 148
+  human_in_the_loop: 4
+  name: Gr4Vy Agentic Access
+  operation_count: 263
+  slug: gr4vy-agentic-access
+  summary_line: 263 operations · 148 acting · 4 human-in-the-loop
 api_count: 4
 apis:
 - description: 'Hosted, unauthenticated Model Context Protocol server over the Gr4vy documentation: search, read-only docs filesystem queries and a docs-feedback tool. It does not execute payment operations.'
@@ -334,12 +341,27 @@ apis:
   description: Endpoints related to webhooks to integrate Gr4vy with payment services webhooks functionality.
   name: Gr4vy Webhooks API
   slug: gr4vy-webhooks-api
-artifact_total: 69
+artifact_total: 70
 asyncapis:
 - description: ''
   name: Gr4Vy Webhooks
   slug: gr4vy-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gr4vy/refs/heads/main/capabilities/gr4vy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gr4vy-capability-edges.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/gr4vy/refs/heads/main/agentic-access/gr4vy-agentic-access.yml
+  title: ''
+  type: AgenticAccess
+  url: agentic-access/gr4vy-agentic-access.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/gr4vy/refs/heads/main/llms/gr4vy-website-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/gr4vy-website-llms.txt
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/gr4vy/refs/heads/main/overlays/gr4vy-openapi-overlay.yaml
   title: ''
@@ -502,13 +524,13 @@ modified: '2026-09-20'
 name: Gr4vy
 nav: Providers
 network: true
-overview: 'Gr4vy publishes 61 APIs on the [APIs.io](https://apis.io/) network, including 3DS scenarios API, Account Updater API, Anti Fraud Service Definitions API, and 58 more. Tagged areas include Payments, Payment Orchestration, Fintech, Checkout, and Tokenization.
+overview: 'Gr4vy publishes 62 APIs on the [APIs.io](https://apis.io/) network, including 3DS scenarios API, Account Updater API, Anti Fraud Service Definitions API, and 59 more. Tagged areas include Payments, Payment Orchestration, Fintech, Checkout, and Tokenization.
 
 
   The Gr4vy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Gr4vy''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 26 more developer resources.'
+  Gr4vy''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, changelog, engineering blog, and 29 more developer resources.'
 plans:
 - name: Gr4Vy Plans Pricing
   plan_count: 0
@@ -525,22 +547,25 @@ scopes:
   summary_line: 86 scopes · password
 score:
   band: strong
-  composite: 65.0
+  composite: 62.4
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 35.0
+    artifact_dirs: 26
+    catalog_earned: 48.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 80.0
+    catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 0.5
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 66.1
+    contract_quality: 60.6
     developer_ergonomics: 90.5
-    discoverability: 57.4
+    discoverability: 80.0
     operational_transparency: 73.7
+  previous_composite: 61.9
   provenance:
+    agentic_access: derived
     conformance: first-party
     contracts:
       callable: 63.9
@@ -558,9 +583,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 84.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -581,9 +607,10 @@ tags:
 - Checkout
 - Tokenization
 - Vault
-- Fraud
+- Fraud Prevention
 - 3D Secure
 - Webhook
 - Commerce
+- A2A
 website: https://gr4vy.com/
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Agent2Agent 1.0 surface of Co-Legal's public legal/fiscal assistant. The agent card at https://agent.co-legal.be/.well-known/agent-card.json (version 1.27.9, JWS ES256-signed, verified against /.well-
@@ -32,7 +32,7 @@ apis:
 - description: Remote Model Context Protocol server at https://agent.co-legal.be/mcp (Streamable HTTP, POST only, negotiated protocol version 2025-06-18, serverInfo colegal-legal-lookup 1.27.9). initialize and tools
   name: Co-Legal Legal Lookup MCP Server
   slug: co-legal-legal-lookup-mcp-server
-artifact_total: 10
+artifact_total: 9
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/co-legal-be/refs/heads/main/security/co-legal-be-vulnerability-disclosure.yml
@@ -217,23 +217,20 @@ description: 'Co-Legal B.V. is a Dutch company (KvK 42135345, Delft) building AI
 image: https://co-legal.be/assets/icon-512.png
 layout: provider
 mcp_servers:
-- description: ''
-  name: Co-Legal B.V. MCP Server
-  slug: co-legal-bv-mcp-server
-- description: ''
-  name: Co-Legal MCP endpoint (Streamable HTTP)
-  slug: co-legal-mcp-endpoint-streamable-http
+- description: 'Co-Legal operates ONE remote MCP server at https://agent.co-legal.be/mcp — the same Cloud Run host that serves its A2A agent card and JSON-RPC endpoint. It is POST-only Streamable HTTP (a GET returns '
+  name: Co-Legal MCP Server
+  slug: co-legal-be-mcp-yml
 - description: ''
   name: MCP discovery pointer
   slug: mcp-discovery-pointer
 modified: '2026-09-19'
-name: Co-Legal B.V.
+name: Co-Legal
 nav: Providers
 network: true
-overview: 'Co-Legal B.V. publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Legal Research, Tax, Case Law, and Legislation.
+overview: 'Co-Legal publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Legal Research, Tax, Case Law, and Legislation.
 
 
-  Co-Legal B.V.''s developer surface includes documentation, API reference, getting-started guide, FAQ, support, engineering blog, pricing, and 33 more developer resources.'
+  Co-Legal''s developer surface includes documentation, API reference, getting-started guide, FAQ, support, engineering blog, pricing, and 33 more developer resources.'
 plans:
 - name: Co Legal Be Plans Pricing
   plan_count: 1
@@ -244,31 +241,46 @@ rate_limits:
   name: Co Legal Be Rate Limits
   slug: co-legal-be-rate-limits
 score:
-  band: thin
-  composite: 36.2
+  band: developing
+  composite: 42.3
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 53.0
     catalog_earned_first_party: 16.0
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 33.4
+  delta: 0.0
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 2.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - belgium
+    - netherlands
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - benelux
+    - europe
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 57.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -300,7 +312,7 @@ tags:
 - European Union
 - A2A
 - MCP
-- agent-native
+- Agent-Native
 - Artificial Intelligence
 - Legal Tech
 website: https://co-legal.be/

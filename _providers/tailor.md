@@ -15,7 +15,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -26,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -37,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.5
-  scored_at: '2026-09-20'
+  score: 38.3
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'The Tailor Platform control plane. A single tailor.v1.OperatorService with 254 RPCs covering organizations, folders, teams, access grants, IP restrictions, workspaces, applications and every platform '
@@ -265,12 +264,12 @@ rate_limits:
   slug: tailor-rate-limits
 scopes:
 - name: Tailor Scopes
-  scope_count: 0
+  scope_count: 2
   slug: tailor-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
-  band: developing
-  composite: 53.0
+  band: strong
+  composite: 54.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 48.0
@@ -282,17 +281,23 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 65.8
-  previous_composite: 53.0
+  previous_composite: 54.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -323,7 +328,7 @@ tags:
 - Retail
 - E-Commerce
 - Supply Chain
-- Inventory Management
+- Inventory
 - GraphQL
 - gRPC
 - Low-Code

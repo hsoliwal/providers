@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,102 +48,102 @@ apis:
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns amendment data from the API
-  name: Congress.gov API amendments API
+  name: Congress.gov API Amendments API
   slug: congress-gov-amendments-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns bill data from the API
-  name: Congress.gov API bill API
+  name: Congress.gov API Bill API
   slug: congress-gov-bill-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns bound Congressional Record data from the API
-  name: Congress.gov API bound-congressional-record API
+  name: Congress.gov API Bound Congressional Record API
   slug: congress-gov-bound-congressional-record-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns committee data from the API
-  name: Congress.gov API committee API
+  name: Congress.gov API Committee API
   slug: congress-gov-committee-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns committee meeting data from the API
-  name: Congress.gov API committee-meeting API
+  name: Congress.gov API Committee Meeting API
   slug: congress-gov-committee-meeting-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns committee print data from the API
-  name: Congress.gov API committee-print API
+  name: Congress.gov API Committee Print API
   slug: congress-gov-committee-print-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns committee report data from the API
-  name: Congress.gov API committee-report API
+  name: Congress.gov API Committee Report API
   slug: congress-gov-committee-report-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns congress and congressional sessions data from the API
-  name: Congress.gov API congress API
+  name: Congress.gov API Congress API
   slug: congress-gov-congress-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns Congressional Record data from the API
-  name: Congress.gov API congressional-record API
+  name: Congress.gov API Congressional Record API
   slug: congress-gov-congressional-record-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns Congressional Research Service (CRS) report data from the API
-  name: Congress.gov API crsreport API
+  name: Congress.gov API Crsreport API
   slug: congress-gov-crsreport-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns daily Congressional Record data from the API
-  name: Congress.gov API daily-congressional-record API
+  name: Congress.gov API Daily Congressional Record API
   slug: congress-gov-daily-congressional-record-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns hearing data from the API
-  name: Congress.gov API hearing API
+  name: Congress.gov API Hearing API
   slug: congress-gov-hearing-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns House communication data from the API
-  name: Congress.gov API house-communication API
+  name: Congress.gov API House Communication API
   slug: congress-gov-house-communication-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns House requirement data from the API
-  name: Congress.gov API house-requirement API
+  name: Congress.gov API House Requirement API
   slug: congress-gov-house-requirement-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: '[BETA] Returns House of Representatives roll call vote data from the API'
-  name: Congress.gov API house-vote API
+  name: Congress.gov API House Vote API
   slug: congress-gov-house-vote-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns member data from the API
-  name: Congress.gov API member API
+  name: Congress.gov API Member API
   slug: congress-gov-member-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns nomination data from the API
-  name: Congress.gov API nomination API
+  name: Congress.gov API Nomination API
   slug: congress-gov-nomination-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns Senate communication data from the API
-  name: Congress.gov API senate-communication API
+  name: Congress.gov API Senate Communication API
   slug: congress-gov-senate-communication-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns summaries data from the API
-  name: Congress.gov API summaries API
+  name: Congress.gov API Summaries API
   slug: congress-gov-summaries-api
 - baseURL: https://api.congress.gov/v3
   baseurl_source: declared
   description: Returns treaty data from the API
-  name: Congress.gov API treaty API
+  name: Congress.gov API Treaty API
   slug: congress-gov-treaty-api
 artifact_total: 192
 collections:
@@ -726,7 +726,7 @@ modified: '2026-06-13'
 name: Congress.gov API
 nav: Providers
 network: true
-overview: 'Congress.gov API publishes 20 APIs on the [APIs.io](https://apis.io/) network, including amendments API, bill API, bound-congressional-record API, and 17 more. Tagged areas include Government, Legislative, Congress, Bills, and Amendments.
+overview: 'Congress.gov API publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Amendments API, Bill API, Bound Congressional Record API, and 17 more. Tagged areas include Government, Legislative, Congress, Bills, and Amendments.
 
 
   The Congress.gov API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -755,23 +755,23 @@ rules:
   slug: congress-gov-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 46.2
+  composite: 43.0
   coverage:
     artifact_dirs: 17
-    catalog_earned: 71.3
+    catalog_earned: 69.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.8
+    catalog_gap: 45.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 52.6
+    access_clarity: 50.5
     contract_governance: 9.8
-    contract_quality: 54.5
+    contract_quality: 49.6
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 46.2
+    discoverability: 66.1
+    operational_transparency: 49.5
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     contracts:
@@ -784,9 +784,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -814,5 +814,6 @@ tags:
 - Nominations
 - Congressional Record
 - US Federal
+- Government Data
 website: https://www.congress.gov/
 ---

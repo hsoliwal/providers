@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface served natively on the Shopify-powered Urtopia storefront: UCP discovery at /.well-known/ucp, MCP tools for catalog search, product details, cart management, policies/FAQ'
@@ -101,9 +101,9 @@ description: 'Urtopia designs and sells smart carbon-fiber electric bikes, pairi
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/urtopia.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at newurtopia.com over HTTP; 5 tools listed.
   name: Urtopia MCP Server
-  slug: urtopia-mcp-server
+  slug: urtopia-storefront
 modified: '2026-07-21'
 name: Urtopia
 nav: Providers
@@ -120,7 +120,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.7
+  composite: 22.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -134,14 +134,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 19.7
+  previous_composite: 22.4
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

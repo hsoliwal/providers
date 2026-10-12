@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -152,6 +152,11 @@ collections:
   name: Twice Admin API Keys Webhooks API
   slug: open-rentle-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rentle/refs/heads/main/capabilities/rentle-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rentle-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/rentle/refs/heads/main/skills/rentle-create-order.md
   title: ''
@@ -263,13 +268,13 @@ overview: 'Rentle publishes 13 APIs on the [APIs.io](https://apis.io/) network, 
   The Rentle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Rentle''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 15 more developer resources.'
+  Rentle''s developer surface includes documentation, API reference, support, engineering blog, pricing, signup flow, changelog, and 16 more developer resources.'
 random_paper: 12
 score:
   band: developing
   composite: 39.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -279,9 +284,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 54.0
+    contract_quality: 49.4
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
   previous_composite: 39.6
   provenance:
@@ -294,8 +299,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 11.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Artillery Cloud is the hosted platform behind the open source Artillery CLI: it runs distributed load and Playwright E2E tests at scale across AWS Lambda, AWS Fargate and Azure ACI, stores and retains'
@@ -251,7 +251,7 @@ modified: '2026-09-07'
 name: Artillery
 nav: Providers
 network: true
-overview: 'Artillery publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Load Testing, Performance Testing, Open-Source, Testing, and DevOps.
+overview: 'Artillery publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Load Testing, Performance Testing, Open Source, Testing, and DevOps.
 
 
   Artillery''s developer surface includes engineering blog, developer portal, documentation, changelog, pricing, API reference, getting-started guide, and 33 more developer resources.'
@@ -266,7 +266,7 @@ rate_limits:
   slug: artillery-rate-limits
 score:
   band: strong
-  composite: 54.7
+  composite: 57.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 64.0
@@ -280,18 +280,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 68.4
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 54.7
+  previous_composite: 57.4
   provenance:
     conformance: first-party
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -319,7 +325,7 @@ slug: artillery
 tags:
 - Load Testing
 - Performance Testing
-- Open-Source
+- Open Source
 - Testing
 - DevOps
 - Node.js

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.yokoy.ai/v1/organizations/{organizationId}
@@ -219,6 +219,11 @@ collections:
   slug: open-yokoy-user-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/yokoy/refs/heads/main/capabilities/yokoy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/yokoy-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/yokoy/refs/heads/main/overlays/yokoy-openapi-overlay.yaml
   title: ''
   type: Overlay
@@ -338,7 +343,7 @@ network: true
 overview: 'Yokoy publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Card account API, Company card API, Cost center API, and 19 more. Tagged areas include Company, Spend Management, Expense Management, Invoice Management, and Finance Automation.
 
 
-  Yokoy''s developer surface includes documentation, API reference, getting-started guide, support, changelog, authentication, and 18 more developer resources.'
+  Yokoy''s developer surface includes documentation, API reference, getting-started guide, support, changelog, authentication, and 19 more developer resources.'
 random_paper: 21
 scopes:
 - name: Yokoy Scopes
@@ -346,10 +351,10 @@ scopes:
   slug: yokoy-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 41.8
+  band: thin
+  composite: 38.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -359,11 +364,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
-    contract_quality: 55.5
+    contract_quality: 50.2
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 41.8
+  previous_composite: 38.3
   provenance:
     conformance: first-party
     contracts:
@@ -382,9 +387,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

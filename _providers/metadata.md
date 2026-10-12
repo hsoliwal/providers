@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 54.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://mcp-server.metadata.io
@@ -147,7 +147,7 @@ description: 'Metadata (metadata.io) is a B2B marketing automation and demand-ge
 image: https://metadata.io/wp-content/uploads/2025/06/IMG-20250618-WA0007.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp-server.metadata.io; 141 tools listed.
   name: Metadata MCP Server (MetadataONE)
   slug: metadata-mcp-server-metadataone
 modified: '2026-08-12'
@@ -169,12 +169,12 @@ rate_limits:
   slug: metadata-rate-limits
 scopes:
 - name: Metadata Scopes
-  scope_count: 0
+  scope_count: 7
   slug: metadata-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
   band: developing
-  composite: 43.1
+  composite: 45.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -186,11 +186,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 41.5
+    contract_quality: 37.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 43.1
+  previous_composite: 45.1
   provenance:
     conformance: derived
     contracts:
@@ -200,8 +200,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

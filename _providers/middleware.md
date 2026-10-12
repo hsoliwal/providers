@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Middleware Public API provides programmatic access to observability data including metrics, logs, traces, events, alerts, and dashboards, enabling integration of monitoring and observability into '
   name: Middleware API
   slug: middleware-api
-artifact_total: 8
+artifact_total: 9
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/middleware/refs/heads/main/security/middleware-trust-center.yml
@@ -114,6 +114,10 @@ jsonld:
   property_count: 1
   slug: middleware-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.middleware.io over HTTP.
+  name: Middleware MCP Server
+  slug: middleware
 modified: '2026-04-28'
 name: Middleware
 nav: Providers
@@ -135,8 +139,8 @@ rate_limits:
   name: Middleware Rate Limits
   slug: middleware-rate-limits
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 27.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 51.0
@@ -150,13 +154,19 @@ score:
     contract_governance: 0.0
     contract_quality: 6.7
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 25.3
+  previous_composite: 27.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

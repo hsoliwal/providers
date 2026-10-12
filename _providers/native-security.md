@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/native-security/refs/heads/main/security/native-security-domain-security.yml
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Native Security is a cloud security control plane that unifies security posture and enforcement across AWS, Azure, Google Cloud, and OCI. The platform translates security intent expressed in natural language into enforceable architectural controls, shifting teams from reactive detection toward proactive, secure-by-design defense using built-in cloud security primitives. Capabilities include multi-cloud policy enforcement from a single definition, automated organization topology discovery and mapping, architectural segmentation and perimeter enforcement, AI-agent guardrails through architectural boundaries, and compliance automation with audit readiness. Native Security is backed by General Catalyst. As of this profile the company exposes no public developer API, SDK, or OpenAPI surface; product documentation and the application console sit behind authentication.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/native-security.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.native.security over HTTP.
+  name: Native Security MCP Server
+  slug: native-security
 modified: '2026-07-20'
 name: Native Security
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Native Security is profiled on the [APIs.io](https://apis.io/) networ
 random_paper: 18
 score:
   band: emerging
-  composite: 15.1
+  composite: 15.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.1
+  previous_composite: 15.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -135,6 +135,11 @@ collections:
   name: Wealthbox CRM API
   slug: open-wealthbox
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/wealthbox/refs/heads/main/capabilities/wealthbox-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/wealthbox-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/wealthbox/refs/heads/main/agentic-access/wealthbox-agentic-access.yml
   title: ''
@@ -201,10 +206,10 @@ modified: '2026-05-11'
 name: Wealthbox
 nav: Providers
 network: true
-overview: 'Wealthbox publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Activity API, Contacts API, Events API, and 7 more. Tagged areas include CRM, Financial Advisors, Wealth Management, Contact Management, and Workflow-Automation.
+overview: 'Wealthbox publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Activity API, Contacts API, Events API, and 8 more. Tagged areas include CRM, Financial Advisors, Wealth Management, Contact Management, and Workflow Automation.
 
 
-  Wealthbox''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
+  Wealthbox''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 9 more developer resources.'
 random_paper: 6
 scopes:
 - name: Wealthbox Scopes
@@ -213,9 +218,9 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 29.8
+  composite: 30.8
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -225,11 +230,11 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.7
     developer_ergonomics: 17.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 29.8
+  previous_composite: 30.8
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +242,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -267,7 +278,7 @@ tags:
 - Financial Advisors
 - Wealth Management
 - Contact Management
-- Workflow-Automation
+- Workflow Automation
 - Software-as-a-Service
 website: https://www.wealthbox.com
 ---

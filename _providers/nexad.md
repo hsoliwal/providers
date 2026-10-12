@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 132
   human_in_the_loop: 124
@@ -226,9 +226,9 @@ description: 'Nexad (About Intelligence, Inc.) is an AI-native advertising compa
 image: https://docs.nex.ad/img/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.soku.ai over HTTP.
   name: Nexad MCP Server
-  slug: nexad-mcp-server
+  slug: soku
 modified: '2026-08-13'
 name: Nexad
 nav: Providers
@@ -248,7 +248,7 @@ rate_limits:
   slug: nexad-rate-limits
 score:
   band: developing
-  composite: 43.6
+  composite: 45.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 44.0
@@ -264,14 +264,20 @@ score:
     developer_ergonomics: 78.6
     discoverability: 66.7
     operational_transparency: 28.9
-  previous_composite: 43.6
+  previous_composite: 45.5
   provenance:
     agentic_access: derived
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

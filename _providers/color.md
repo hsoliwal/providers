@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: false
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.7
-  scored_at: '2026-09-20'
+  score: 41.5
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.color.com/api/v1/external
@@ -242,7 +243,7 @@ rate_limits:
   slug: color-rate-limits
 score:
   band: developing
-  composite: 52.6
+  composite: 49.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -254,11 +255,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 54.3
+    contract_quality: 48.9
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 52.6
+  previous_composite: 49.0
   provenance:
     conformance: first-party
     contracts:
@@ -279,9 +280,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

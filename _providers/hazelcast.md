@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -164,8 +164,8 @@ rate_limits:
   name: Hazelcast Rate Limits
   slug: hazelcast-rate-limits
 score:
-  band: thin
-  composite: 26.4
+  band: emerging
+  composite: 23.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -177,11 +177,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 40.8
+    contract_quality: 36.7
     developer_ergonomics: 28.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 26.4
+  previous_composite: 23.7
   provenance:
     agentic_access: derived
     contracts:
@@ -189,8 +189,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

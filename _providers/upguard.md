@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 1
@@ -47,87 +47,87 @@ apis:
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The breaches API from UpGuard — 5 operation(s) for breaches.
-  name: UpGuard breaches API
+  name: UpGuard Breaches API
   slug: upguard-breaches-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The bulk API from UpGuard — 4 operation(s) for bulk.
-  name: UpGuard bulk API
+  name: UpGuard Bulk API
   slug: upguard-bulk-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The dataleaks API from UpGuard — 2 operation(s) for dataleaks.
-  name: UpGuard dataleaks API
+  name: UpGuard Dataleaks API
   slug: upguard-dataleaks-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The domains API from UpGuard — 3 operation(s) for domains.
-  name: UpGuard domains API
+  name: UpGuard Domains API
   slug: upguard-domains-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The labels API from UpGuard — 1 operation(s) for labels.
-  name: UpGuard labels API
+  name: UpGuard Labels API
   slug: upguard-labels-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The notifications API from UpGuard — 1 operation(s) for notifications.
-  name: UpGuard notifications API
+  name: UpGuard Notifications API
   slug: upguard-notifications-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The organisation API from UpGuard — 1 operation(s) for organisation.
-  name: UpGuard organisation API
+  name: UpGuard Organisation API
   slug: upguard-organisation-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The reports API from UpGuard — 3 operation(s) for reports.
-  name: UpGuard reports API
+  name: UpGuard Reports API
   slug: upguard-reports-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The risks API from UpGuard — 13 operation(s) for risks.
-  name: UpGuard risks API
+  name: UpGuard Risks API
   slug: upguard-risks-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The subsidiaries API from UpGuard — 8 operation(s) for subsidiaries.
-  name: UpGuard subsidiaries API
+  name: UpGuard Subsidiaries API
   slug: upguard-subsidiaries-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The threatmonitoring API from UpGuard — 9 operation(s) for threatmonitoring.
-  name: UpGuard threatmonitoring API
+  name: UpGuard Threatmonitoring API
   slug: upguard-threatmonitoring-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The trust_exchange API from UpGuard — 15 operation(s) for trust_exchange.
-  name: UpGuard trust_exchange API
+  name: UpGuard Trust Exchange API
   slug: upguard-trust-exchange-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The typosquat API from UpGuard — 2 operation(s) for typosquat.
-  name: UpGuard typosquat API
+  name: UpGuard Typosquat API
   slug: upguard-typosquat-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The userrisk API from UpGuard — 15 operation(s) for userrisk.
-  name: UpGuard userrisk API
+  name: UpGuard Userrisk API
   slug: upguard-userrisk-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The vendors API from UpGuard — 32 operation(s) for vendors.
-  name: UpGuard vendors API
+  name: UpGuard Vendors API
   slug: upguard-vendors-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The vulnerabilities API from UpGuard — 2 operation(s) for vulnerabilities.
-  name: UpGuard vulnerabilities API
+  name: UpGuard Vulnerabilities API
   slug: upguard-vulnerabilities-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
   description: The webhooks API from UpGuard — 3 operation(s) for webhooks.
-  name: UpGuard webhooks API
+  name: UpGuard Webhooks API
   slug: upguard-webhooks-api
 - baseURL: https://cyber-risk.upguard.com/api/public
   baseurl_source: declared
@@ -198,6 +198,11 @@ collections:
   name: UpGuard CyberRisk breaches webhooks API
   slug: open-upguard-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/upguard/refs/heads/main/capabilities/upguard-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/upguard-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/upguard/refs/heads/main/overlays/upguard-cyberrisk-overlay.yaml
   title: ''
@@ -361,19 +366,19 @@ modified: '2026-07-21'
 name: UpGuard
 nav: Providers
 network: true
-overview: 'UpGuard publishes 18 APIs on the [APIs.io](https://apis.io/) network, including breaches API, bulk API, dataleaks API, and 15 more. Tagged areas include Company, Cybersecurity, Third-Party Risk Management, Attack Surface Management, and Vendor Risk.
+overview: 'UpGuard publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Breaches API, Bulk API, Dataleaks API, and 15 more. Tagged areas include Company, Cybersecurity, Third-Party Risk Management, Attack Surface Management, and Vendor Risk.
 
 
   The UpGuard catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  UpGuard''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 27 more developer resources.'
+  UpGuard''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
 random_paper: 12
 score:
   band: developing
-  composite: 50.4
+  composite: 51.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -383,11 +388,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 60.3
+    contract_quality: 55.1
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 50.4
+  previous_composite: 51.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -398,8 +403,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -432,5 +443,6 @@ tags:
 - Security Ratings
 - Data Leaks
 - Threat Intelligence
+- Risk Management
 website: https://www.upguard.com
 ---

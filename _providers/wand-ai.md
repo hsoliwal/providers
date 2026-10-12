@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: A public, unauthenticated JSON API served by the Wand platform status page. It reports overall platform health, the four Wand products and the twenty-two production services behind them, plus thirty-d
@@ -146,7 +146,7 @@ modified: '2026-09-04'
 name: Wand
 nav: Providers
 network: true
-overview: 'Wand publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic AI, and Enterprise Software.
+overview: 'Wand publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Enterprise Software, and Workforce Automation.
 
 
   Wand''s developer surface includes engineering blog, authentication, and 20 more developer resources.'
@@ -161,12 +161,12 @@ rate_limits:
   slug: wand-ai-rate-limits
 scopes:
 - name: Wand Ai Scopes
-  scope_count: 0
+  scope_count: 11
   slug: wand-ai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 11 scopes
 score:
   band: emerging
-  composite: 21.2
+  composite: 24.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -180,14 +180,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
-  previous_composite: 21.2
+  previous_composite: 24.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +217,6 @@ tags:
 - Company
 - Artificial Intelligence
 - AI Agents
-- Agentic AI
 - Enterprise Software
 - Workforce Automation
 - Orchestration

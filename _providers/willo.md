@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   name: Willo Integration API V2
   slug: open-willo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/willo/refs/heads/main/capabilities/willo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/willo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/willo/refs/heads/main/agentic-access/willo-agentic-access.yml
   title: ''
@@ -209,10 +214,10 @@ modified: '2026-07-10'
 name: Willo
 nav: Providers
 network: true
-overview: 'Willo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Child Organisations API, Departments API, Interview Templates API, and 6 more. Tagged areas include Video Interviewing, Recruitment, Human Resources, ATS, and Screening.
+overview: 'Willo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Child Organisations API, Departments API, Interview Templates API, and 6 more. Tagged areas include Video Interviewing, Recruiting, Human Resources, Applicant Tracking, and Screening.
 
 
-  Willo''s developer surface includes authentication, documentation, signup flow, support, changelog, engineering blog, and 10 more developer resources.'
+  Willo''s developer surface includes authentication, documentation, signup flow, support, changelog, engineering blog, and 11 more developer resources.'
 plans:
 - name: Willo Plans Pricing
   plan_count: 4
@@ -224,23 +229,23 @@ rate_limits:
   slug: willo-rate-limits
 score:
   band: developing
-  composite: 46.1
+  composite: 43.0
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 64.0
+    artifact_dirs: 11
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 44.2
     contract_governance: 0.0
-    contract_quality: 59.6
+    contract_quality: 54.0
     developer_ergonomics: 41.7
-    discoverability: 68.5
-    operational_transparency: 55.3
-  previous_composite: 46.1
+    discoverability: 66.1
+    operational_transparency: 52.1
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     contracts:
@@ -248,8 +253,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -271,9 +282,9 @@ security:
 slug: willo
 tags:
 - Video Interviewing
-- Recruitment
+- Recruiting
 - Human Resources
-- ATS
+- Applicant Tracking
 - Screening
 - Async Video
 website: https://www.willo.video/

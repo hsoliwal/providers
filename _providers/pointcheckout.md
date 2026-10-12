@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.paymennt.com/mer/v2.0/
@@ -80,6 +80,11 @@ collections:
   name: Merchant Branches Webhooks API
   slug: open-pointcheckout-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pointcheckout/refs/heads/main/capabilities/pointcheckout-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pointcheckout-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/pointcheckout/refs/heads/main/overlays/pointcheckout-merchant-api-overlay.yaml
   title: ''
@@ -228,13 +233,13 @@ overview: 'PointCheckout publishes 4 APIs on the [APIs.io](https://apis.io/) net
   The PointCheckout catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  PointCheckout''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, quickstart, support, and 22 more developer resources.'
+  PointCheckout''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, quickstart, support, and 23 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 51.7
+  composite: 48.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -244,11 +249,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 61.1
+    contract_quality: 55.8
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 51.7
+  previous_composite: 48.2
   provenance:
     conformance: first-party
     contracts:
@@ -263,9 +268,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

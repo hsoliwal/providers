@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'REST API exposing 20+ resources for compliance management: Controls, Policies, Policy Versions, Programs, Risks, Proof, Test Results, Issues, Tasks, Task Statuses, Questionnaires, Custom Apps, Labels,'
@@ -100,7 +100,7 @@ modified: '2026-05-08'
 name: Hyperproof
 nav: Providers
 network: true
-overview: 'Hyperproof publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include GRC, Compliance, Risk, Audit, and SOC 2.
+overview: 'Hyperproof publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include GRC, Compliance, Risk Management, Audit, and SOC 2.
 
 
   Hyperproof''s developer surface includes engineering blog and 9 more developer resources.'
@@ -114,8 +114,8 @@ rate_limits:
   name: Hyperproof Rate Limits
   slug: hyperproof-rate-limits
 score:
-  band: emerging
-  composite: 11.8
+  band: minimal
+  composite: 10.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 39.0
@@ -129,11 +129,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 11.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -149,7 +155,7 @@ slug: hyperproof
 tags:
 - GRC
 - Compliance
-- Risk
+- Risk Management
 - Audit
 - SOC 2
 website: https://hyperproof.io/

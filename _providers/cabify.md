@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -46,7 +46,7 @@ apis:
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: Operations for managing the delivery lifecycle. Use these endpoints to trigger a shipment, cancel an active delivery, or check whether a pickup location falls within an operating area.
-  name: Cabify delivery API
+  name: Cabify Delivery API
   slug: cabify-delivery-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
@@ -56,7 +56,7 @@ apis:
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: A hub is a physical location (such as a warehouse or store) where parcels are stored until they are ready to be picked up by a driver. You can reference a hub in pickup or drop-off information using i
-  name: Cabify hubs API
+  name: Cabify Hubs API
   slug: cabify-hubs-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
@@ -66,7 +66,7 @@ apis:
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: The label API from Cabify — 1 operation(s) for label.
-  name: Cabify label API
+  name: Cabify Label API
   slug: cabify-label-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
@@ -76,7 +76,7 @@ apis:
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: A parcel is the package you need to ship. Each parcel is identified by a unique ID and contains a pickup point (where the driver collects the package) and a drop-off point (the destination). Parcels m
-  name: Cabify parcels API
+  name: Cabify Parcels API
   slug: cabify-parcels-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
@@ -86,27 +86,27 @@ apis:
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: The shipment API from Cabify — 2 operation(s) for shipment.
-  name: Cabify shipment API
+  name: Cabify Shipment API
   slug: cabify-shipment-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: The shipping_types API from Cabify — 1 operation(s) for shipping_types.
-  name: Cabify shipping_types API
+  name: Cabify Shipping Types API
   slug: cabify-shipping-types-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: Track the real-time status and location of your parcels at any point during their delivery.
-  name: Cabify status API
+  name: Cabify Status API
   slug: cabify-status-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: The users API from Cabify — 4 operation(s) for users.
-  name: Cabify users API
+  name: Cabify Users API
   slug: cabify-users-api
 - baseURL: https://cabify.com/api/v4
   baseurl_source: declared
   description: Subscribe to event-driven notifications to receive live updates about parcel status changes, location updates, and proof of delivery codes.
-  name: Cabify webhooks API
+  name: Cabify Webhooks API
   slug: cabify-webhooks-api
 artifact_total: 32
 asyncapis:
@@ -313,7 +313,7 @@ modified: '2026-07-18'
 name: Cabify
 nav: Providers
 network: true
-overview: 'Cabify publishes 13 APIs on the [APIs.io](https://apis.io/) network, including delivery API, Estimates API, hubs API, and 10 more. Tagged areas include Company, Transportation, Ride Hailing, Mobility, and Logistics.
+overview: 'Cabify publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Delivery API, Estimates API, Hubs API, and 10 more. Tagged areas include Company, Transportation, Ride Hailing, Mobility, and Logistics.
 
 
   The Cabify catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -323,7 +323,7 @@ overview: 'Cabify publishes 13 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 6
 score:
   band: developing
-  composite: 52.8
+  composite: 53.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -335,17 +335,19 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 64.6
+    contract_quality: 59.1
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - spain
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 52.8
+  previous_composite: 53.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -356,8 +358,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

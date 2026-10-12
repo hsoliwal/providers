@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.9
-  scored_at: '2026-09-20'
+  score: 20.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -61,7 +61,7 @@ apis:
   description: Magic user metadata and session management
   name: Magic Users API
   slug: magic-link-users-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: API Collection
@@ -76,6 +76,11 @@ collections:
   name: Magic Admin API
   slug: open-magic-link
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/magic-link/refs/heads/main/capabilities/magic-link-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/magic-link-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/magic-link/refs/heads/main/agentic-access/magic-link-agentic-access.yml
   title: ''
@@ -126,14 +131,18 @@ finops:
   slug: magic-link-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/magic-link.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.magic.link over HTTP; 3 tools listed.
+  name: Magic MCP Server
+  slug: magic-link
 modified: '2026-05-08'
 name: Magic
 nav: Providers
 network: true
-overview: 'Magic publishes 2 APIs on the [APIs.io](https://apis.io/) network: Client API and Users API. Tagged areas include Web3, Wallets, Authentication, Embedded Wallets, and MPC.
+overview: 'Magic publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Client API, Users API, and 2 more. Tagged areas include Web3, Wallets, Authentication, Embedded Wallets, and MPC.
 
 
-  Magic''s developer surface includes authentication, engineering blog, and 7 more developer resources.'
+  Magic''s developer surface includes authentication, engineering blog, and 8 more developer resources.'
 plans:
 - name: Magic Link Plans Pricing
   plan_count: 4
@@ -145,9 +154,9 @@ rate_limits:
   slug: magic-link-rate-limits
 score:
   band: emerging
-  composite: 12.7
+  composite: 13.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 45.0
     catalog_earned_first_party: 0.0
     catalog_gap: 70.0
@@ -159,9 +168,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 5.3
-  previous_composite: 12.7
+  previous_composite: 13.4
   provenance:
     agentic_access: derived
     contracts:
@@ -175,9 +184,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

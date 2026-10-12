@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Falcon's RESTful embedded-finance API for card issuance, lending, and program management. All responses are JSON; authentication is a JWT bearer token obtained from a client-id/client-secret login, wi
@@ -135,14 +135,14 @@ modified: '2026-07-19'
 name: Falcon
 nav: Providers
 network: true
-overview: 'Falcon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Financial-Services, Banking, and Payments.
+overview: 'Falcon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure, Financial Services, Banking, and Payments.
 
 
   Falcon''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 12 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 19.6
+  composite: 18.5
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -156,7 +156,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 32.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -165,7 +165,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 19.6
+  previous_composite: 18.5
   provenance:
     conformance: first-party
   regulatory:
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 43.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -195,7 +195,7 @@ slug: falcon
 tags:
 - Company
 - Infrastructure
-- Financial-Services
+- Financial Services
 - Banking
 - Payments
 - Credit Cards

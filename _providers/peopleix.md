@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The hosted, remote Model Context Protocol server through which peopleIX exposes a customer's People Intelligence knowledge layer to agents such as Claude, ChatGPT and Copilot. A JSON-RPC POST to https
@@ -143,7 +143,7 @@ description: peopleIX is a People Intelligence platform for HR leaders, built an
 image: https://www.peopleix.com/opengraph-image
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.peopleix.com over streamable HTTP.
   name: peopleIX MCP
   slug: peopleix-mcp
 modified: '2026-08-14'
@@ -165,12 +165,12 @@ rate_limits:
   slug: peopleix-rate-limits
 scopes:
 - name: Peopleix Scopes
-  scope_count: 0
+  scope_count: 2
   slug: peopleix-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: emerging
-  composite: 20.5
+  composite: 22.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -184,7 +184,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -194,12 +194,22 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 20.5
+  previous_composite: 22.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

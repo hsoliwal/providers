@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -122,7 +122,7 @@ rate_limits:
   slug: zoe-financial-rate-limits
 score:
   band: emerging
-  composite: 21.7
+  composite: 20.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -136,9 +136,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 21.7
+  previous_composite: 20.3
   provenance:
     conformance: first-party
   regulatory:
@@ -146,9 +146,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -167,8 +167,8 @@ tags:
 - Investment Management
 - Registered Investment Adviser
 - Brokerage
-- Financial-Services
-- Portfolio-Management
+- Financial Services
+- Portfolio Management
 - Fintech
 website: https://zoefinancial.com/
 ---

@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The production JSON API behind the Sdui school-communication platform, serving the Sdui web app, the iOS/Android clients and the WebUntis messenger integration. Every resource path probed (/v1/users, '
@@ -135,7 +135,7 @@ description: Sdui is a Koblenz, Germany based education-technology company (Sdui
 image: https://sdui.de/wp-content/uploads/2024/02/Sdui-Gruppe-Logo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sdui.de requiring OAuth.
   name: Sdui Website MCP Server
   slug: sdui-website-mcp-server
 modified: '2026-08-26'
@@ -157,12 +157,12 @@ rate_limits:
   slug: sdui-rate-limits
 scopes:
 - name: Sdui Scopes
-  scope_count: 0
+  scope_count: 1
   slug: sdui-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorization_code
 score:
-  band: thin
-  composite: 27.7
+  band: emerging
+  composite: 23.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -176,7 +176,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -186,10 +186,10 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 27.7
+  previous_composite: 23.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     jurisdictions:
@@ -199,9 +199,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 75.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

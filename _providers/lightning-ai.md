@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'The Lightning AI control-plane API used by the lightning-sdk Python SDK, the @lightningai/sdk JavaScript SDK and the lightning CLI to programmatically manage platform resources: Studios, Jobs, Deploym'
@@ -195,7 +195,7 @@ modified: '2026-07-19'
 name: Lightning AI
 nav: Providers
 network: true
-overview: 'Lightning AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Machine-Learning, GPU Cloud, and Model Inference.
+overview: 'Lightning AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Machine Learning, GPU Cloud, and Model Inference.
 
 
   Lightning AI''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, pricing, and 24 more developer resources.'
@@ -209,13 +209,13 @@ rate_limits:
   name: Lightning Ai Rate Limits
   slug: lightning-ai-rate-limits
 score:
-  band: thin
-  composite: 27.2
+  band: emerging
+  composite: 26.0
   coverage:
     artifact_dirs: 18
-    catalog_earned: 49.0
+    catalog_earned: 44.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -224,13 +224,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 34.2
-  previous_composite: 27.2
+  previous_composite: 26.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,13 +256,13 @@ slug: lightning-ai
 tags:
 - Company
 - Ai Ml
-- Machine-Learning
+- Machine Learning
 - GPU Cloud
 - Model Inference
 - Model Training
 - Developer Platform
 - Sandbox
 - LLM APIs
-- Open-Source
+- Open Source
 website: https://lightning.ai/
 ---

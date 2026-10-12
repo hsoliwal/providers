@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.4
-  scored_at: '2026-09-20'
+  score: 20.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Universal Commerce Protocol shopping service True Botanicals serves at its own domain. A POST to /api/ucp/mcp answers an unauthenticated MCP tools/list with 13 tools — search_catalog, lookup_catal
@@ -150,9 +150,9 @@ description: True Botanicals is a clean-luxury skincare company selling clinical
 image: https://truebotanicals.com/cdn/shop/files/TB_True_Botanicals_f873166b-61da-41ce-8c3d-ea2ab3565a12.png?v=1772667499
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at truebotanicals.com over HTTP; 13 tools listed.
   name: True Botanicals MCP Server
-  slug: true-botanicals-mcp-server
+  slug: true-botanicals-ucp-shopping
 modified: '2026-08-30'
 name: True Botanicals
 nav: Providers
@@ -172,12 +172,12 @@ rate_limits:
   slug: true-botanicals-rate-limits
 scopes:
 - name: True Botanicals Scopes
-  scope_count: 0
+  scope_count: 4
   slug: true-botanicals-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 24.1
+  band: thin
+  composite: 26.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -191,15 +191,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 24.1
+  previous_composite: 26.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

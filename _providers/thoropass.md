@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: OAuth 2.0-secured Partner API for programmatic access to Thoropass audits, evidence requests, controls, monitoring alerts, devices, change requests, training records and vulnerability data, plus a hos
@@ -135,9 +135,9 @@ description: Thoropass is an auditor-led, AI-powered compliance and audit automa
 image: https://cdn.prod.website-files.com/6891db6efb3a962d3fcde7ae/689b377ec946ba9bb8d243f7_Thoropass_Website_OrO-Way-Hero-1.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.thoropass.com over HTTP.
   name: Thoropass MCP Server
-  slug: thoropass-mcp-server
+  slug: thoropass
 modified: '2026-07-21'
 name: Thoropass
 nav: Providers
@@ -154,7 +154,7 @@ scopes:
   summary_line: 24 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.0
+  composite: 24.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -168,14 +168,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 17.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 22.0
+  previous_composite: 24.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

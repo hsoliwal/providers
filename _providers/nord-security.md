@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: Remote MCP server that lets any MCP-compatible assistant query the NordStellar platform in natural language. Clients connect through the open-source nordstellar-mcp auth proxy (PyPI, run via uvx, or a
@@ -204,7 +204,7 @@ apis:
   description: Utility endpoints for supporting zero-knowledge functionalities, such as retrieving salts. These operations are essential for the proper functioning of zero-knowledge security features.
   name: Nord Security Utility Endpoints API
   slug: nord-security-utility-endpoints-api
-artifact_total: 49
+artifact_total: 48
 collections:
 - collection_type: open
   name: Company Risk Scoring API
@@ -470,17 +470,14 @@ description: Nord Security is a Lithuania-founded digital security and privacy c
 image: https://res.cloudinary.com/nordsec/image/upload/q_auto,f_auto/v1/nord-security-web/global/meta/social-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at platform-mcp.nordstellar.com over HTTP; 4 tools listed.
   name: Nord Security MCP Server
-  slug: nord-security-mcp-server
-- description: ''
-  name: Nord Security MCP Server
-  slug: nord-security-mcp-server-2
+  slug: nordstellar
 modified: '2026-08-01'
 name: Nord Security
 nav: Providers
 network: true
-overview: 'Nord Security publishes 30 APIs on the [APIs.io](https://apis.io/) network, including API User Management API, Applications API, AUC API, and 27 more. Tagged areas include Cybersecurity, Threat Intelligence, Dark Web Monitoring, Attack Surface Management, and Breach Intelligence.
+overview: 'Nord Security publishes 35 APIs on the [APIs.io](https://apis.io/) network, including API User Management API, Applications API, AUC API, and 32 more. Tagged areas include Cybersecurity, Threat Intelligence, Dark Web Monitoring, Attack Surface Management, and Breach Intelligence.
 
 
   Nord Security''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 45 more developer resources.'
@@ -491,26 +488,26 @@ rate_limits:
   slug: nord-security-rate-limits
 score:
   band: strong
-  composite: 54.8
+  composite: 56.9
   coverage:
     artifact_dirs: 21
-    catalog_earned: 37.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.6
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 31.6
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 54.8
+  previous_composite: 56.4
   provenance:
     conformance: derived
     contracts:
@@ -520,8 +517,14 @@ score:
       total: 30
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

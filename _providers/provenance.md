@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public Cosmos SDK REST (LCD / gRPC-gateway), gRPC, and Tendermint RPC interface to the Provenance Blockchain. Query and broadcast transactions against the marker, metadata, exchange, ledger, name, att
@@ -137,14 +137,14 @@ modified: '2026-07-20'
 name: Provenance
 nav: Providers
 network: true
-overview: 'Provenance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Financial-Services, Tokenization, and Real World Assets.
+overview: 'Provenance publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Financial Services, Tokenization, and Real World Assets.
 
 
   Provenance''s developer surface includes documentation, API reference, getting-started guide, support, changelog, authentication, and 13 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 29.6
+  composite: 28.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -156,16 +156,22 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 29.6
+  previous_composite: 28.8
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,7 +191,7 @@ slug: provenance
 tags:
 - Company
 - Blockchain
-- Financial-Services
+- Financial Services
 - Tokenization
 - Real World Assets
 - Cosmos SDK

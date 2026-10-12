@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,18 +65,22 @@ created: '2026-07-17'
 description: DatologyAI is a data curation and optimization platform that automatically identifies, prioritizes, and curates training data at petabyte scale so teams can train machine learning and foundation models that are better, faster, and smaller. Founded on the principle that "models are what they eat," its research-driven pipeline improves model quality while cutting compute cost and training time, and is used by AI labs and enterprises building frontier open models. The company is venture-backed by Amplify Partners and Felicis. DatologyAI operates as an enterprise, contact-sales service and does not currently publish a public developer API, SDKs, or documentation portal.
 image: https://www.datologyai.com/api/media/file/open_graph-1200x630.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.datologyai.com over HTTP.
+  name: DatologyAI MCP Server
+  slug: datologyai
 modified: '2026-07-18'
 name: DatologyAI
 nav: Providers
 network: true
-overview: 'DatologyAI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Data Curation, Machine-Learning, and Training Data.
+overview: 'DatologyAI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Data Curation, Machine Learning, and Training Data.
 
 
   DatologyAI''s developer surface includes engineering blog, support, and 4 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 10.6
+  composite: 10.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.6
+  previous_composite: 10.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,7 +123,7 @@ tags:
 - Company
 - Ai Ml
 - Data Curation
-- Machine-Learning
+- Machine Learning
 - Training Data
 - Foundation Models
 - Data Optimization

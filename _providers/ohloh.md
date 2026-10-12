@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The REST API for Black Duck Open Hub (formerly Ohloh). Returns XML wrapped in a <response> root element that always carries a <status> (success/failed) and an <error> on failure. Requests append .xml '
@@ -121,7 +121,7 @@ modified: '2026-07-20'
 name: Ohloh
 nav: Providers
 network: true
-overview: 'Ohloh publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Open-Source, Open Source Directory, Code Analytics, and Software Composition.
+overview: 'Ohloh publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Open Source, Open Source Directory, Code Analytics, and Software Composition.
 
 
   Ohloh''s developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, and 11 more developer resources.'
@@ -132,12 +132,12 @@ rate_limits:
   slug: ohloh-rate-limits
 score:
   band: emerging
-  composite: 26.0
+  composite: 25.5
   coverage:
     artifact_dirs: 10
-    catalog_earned: 45.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -146,14 +146,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 23.7
-  previous_composite: 26.0
+  previous_composite: 25.5
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -172,11 +178,11 @@ security:
 slug: ohloh
 tags:
 - Company
-- Open-Source
+- Open Source
 - Open Source Directory
 - Code Analytics
 - Software Composition
-- Developer Data
+- DEVELOPER DATA
 - Project
 - Contributors
 - Black Duck

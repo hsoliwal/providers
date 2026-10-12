@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -139,14 +139,14 @@ modified: '2026-05-16'
 name: Lenovo
 nav: Providers
 network: true
-overview: 'Lenovo publishes 2 APIs on the [APIs.io](https://apis.io/) network: Inventory API and Sessions API. Tagged areas include Data-Center, Hardware, Infrastructure, Personal Computers, and Servers.
+overview: 'Lenovo publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Inventory API, Sessions API, and 1 more. Tagged areas include Data Center, Hardware, Infrastructure, Personal Computers, and Servers.
 
 
   Lenovo''s developer surface includes authentication, product news, engineering blog, and 11 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 24.9
+  composite: 22.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -158,11 +158,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.1
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 2.6
-  previous_composite: 24.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - china
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 22.8
   provenance:
     agentic_access: derived
     contracts:
@@ -170,8 +175,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -188,7 +199,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: lenovo
 tags:
-- Data-Center
+- Data Center
 - Hardware
 - Infrastructure
 - Personal Computers

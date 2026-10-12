@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Core API for defining and executing distributed tasks in Celery. Supports task decorators, retries, timeouts, rate limiting, and custom task classes.
@@ -228,7 +228,7 @@ modified: '2026-09-05'
 name: Celery
 nav: Providers
 network: true
-overview: 'Celery publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Asynchronous, Distributed Systems, Message Queue, Open-Source, and Python.
+overview: 'Celery publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Asynchronous, Distributed Systems, Message Queue, Open Source, and Python.
 
 
   The Celery catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -246,7 +246,7 @@ rate_limits:
   slug: celery-rate-limits
 score:
   band: thin
-  composite: 39.0
+  composite: 39.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 38.0
@@ -258,16 +258,22 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 42.1
-  previous_composite: 39.0
+  previous_composite: 39.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -292,8 +298,9 @@ tags:
 - Asynchronous
 - Distributed Systems
 - Message Queue
-- Open-Source
+- Open Source
 - Python
 - Task Queue
+- Real-Time
 website: https://docs.celeryq.dev/
 ---

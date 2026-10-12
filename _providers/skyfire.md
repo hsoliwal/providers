@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for AI-agent identity and payments. Buyer agents create kya, pay, and kya-pay tokens; seller agents introspect and charge tokens and manage seller services; enterprises manage users. Authenti
@@ -171,21 +171,21 @@ description: Skyfire is the open identity and payments layer for AI agents. It l
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/skyfire.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.skyfire.xyz over HTTP.
   name: Skyfire MCP Server
-  slug: skyfire-mcp-server
+  slug: skyfire
 modified: '2026-07-21'
 name: Skyfire
 nav: Providers
 network: true
-overview: 'Skyfire publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agent Payments, Identity, and Payments.
+overview: 'Skyfire publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Agentic Payments, Identity, and Payments.
 
 
   Skyfire''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, authentication, and 20 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 27.2
+  composite: 26.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -199,9 +199,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 27.2
+  previous_composite: 26.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -211,9 +211,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,7 +233,7 @@ slug: skyfire
 tags:
 - Company
 - AI Agents
-- Agent Payments
+- Agentic Payments
 - Identity
 - Payments
 - Authentication

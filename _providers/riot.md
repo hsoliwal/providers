@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -143,6 +143,11 @@ collections:
   name: Riot Webhook Events API
   slug: open-riot-webhook-events-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/riot/refs/heads/main/capabilities/riot-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/riot-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/riot/refs/heads/main/mcp/riot-mcp.yml
   title: ''
@@ -322,7 +327,7 @@ overview: 'Riot publishes 9 APIs on the [APIs.io](https://apis.io/) network, inc
   The Riot catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Riot''s developer surface includes documentation, API reference, engineering blog, support, pricing, changelog, authentication, and 29 more developer resources.'
+  Riot''s developer surface includes documentation, API reference, engineering blog, support, pricing, changelog, authentication, and 30 more developer resources.'
 random_paper: 6
 rate_limits:
 - limit_count: 0
@@ -335,9 +340,9 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 50.5
+  composite: 52.3
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -347,9 +352,9 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 18.2
-    contract_quality: 64.2
+    contract_quality: 58.8
     developer_ergonomics: 47.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -359,7 +364,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 50.5
+  previous_composite: 52.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -370,8 +375,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 38.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

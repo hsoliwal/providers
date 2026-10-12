@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/datagrail/refs/heads/main/security/datagrail-domain-security.yml
@@ -106,18 +106,22 @@ description: DataGrail is a San Francisco-based data privacy platform founded in
   alongside an open-source ecosystem on GitHub that includes mobile Consent SDKs for iOS and Android, a Google Tag Manager consent template, and a Terraform AWS ECS module for deploying Request Manager Agents. The company serves enterprise customers including Salesforce, HubSpot, Okta, Netgear, and Dexcom, advertises 2,000+ pre-built integrations across CRM, marketing, communications, HR, data, e-commerce, and support platforms, holds patents on its Live Data Map and Smart Verification technology, is SOC 2 and ISO certified, and is backed by Felicis Ventures, HubSpot Ventures, Okta Ventures, Basis Set Ventures, Cloud Apps Capital, Operator Collective, Thomson Reuters Ventures, and Third Point Ventures.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/datagrail.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at acme.datagrail.io over HTTP.
+  name: DataGrail MCP Server
+  slug: datagrail
 modified: '2026-05-25'
 name: DataGrail
 nav: Providers
 network: true
-overview: 'DataGrail is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Privacy, Data Privacy, Privacy Operations, Compliance, and GDPR.
+overview: 'DataGrail is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Privacy, Privacy Operations, Compliance, GDPR, and CCPA.
 
 
   DataGrail''s developer surface includes documentation, API reference, status page, changelog, engineering blog, GitHub presence, support, and 9 more developer resources.'
 random_paper: 13
 score:
   band: emerging
-  composite: 15.4
+  composite: 14.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -131,18 +135,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.4
+  previous_composite: 14.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +169,6 @@ security:
 slug: datagrail
 tags:
 - Privacy
-- Data Privacy
 - Privacy Operations
 - Compliance
 - GDPR

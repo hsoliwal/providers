@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -72,7 +72,7 @@ apis:
   description: Available AI model listing
   name: Sync Labs Models API
   slug: sync-labs-models-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: open
   name: API Collection
@@ -186,11 +186,15 @@ jsonld:
   property_count: 22
   slug: sync-labs-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sync.so over HTTP.
+  name: Sync Labs MCP Server
+  slug: sync-labs
 modified: '2026-05-19'
 name: Sync Labs
 nav: Providers
 network: true
-overview: 'Sync Labs publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Batch API, Generate API, and 1 more. Tagged areas include Artificial Intelligence, Content Localization, Dubbing, Lip Sync, and Media.
+overview: 'Sync Labs publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Batch API, Generate API, and 3 more. Tagged areas include Artificial Intelligence, Content Localization, Dubbing, Lip Sync, and Media.
 
 
   The Sync Labs catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -229,8 +233,8 @@ rules:
     warn: 5
   slug: sync-labs-rules
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 38.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 53.5
@@ -242,11 +246,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 13.6
-    contract_quality: 61.7
+    contract_quality: 56.1
     developer_ergonomics: 35.7
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 39.4
+  previous_composite: 38.0
   provenance:
     agentic_access: derived
     contracts:
@@ -255,8 +259,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

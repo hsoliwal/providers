@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -327,7 +327,7 @@ modified: '2026-07-23'
 name: Chase UK
 nav: Providers
 network: true
-overview: 'Chase UK publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Chase UK publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Chase UK''s developer surface includes authentication, documentation, getting-started guide, support, sandbox, and 23 more developer resources.'
@@ -338,8 +338,8 @@ scopes:
   slug: chase-uk-scopes
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 37.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 35.0
@@ -351,9 +351,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 47.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -363,7 +363,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 41.2
+  previous_composite: 37.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -383,9 +383,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 67.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -402,7 +402,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: chase-uk
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

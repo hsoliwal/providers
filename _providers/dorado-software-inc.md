@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -62,17 +62,17 @@ description: Dorado Software, Inc. is a Roseville, California infrastructure man
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dorado-software-inc.png
 layout: provider
 modified: '2026-07-18'
-name: Dorado Software Inc
+name: Dorado Software
 nav: Providers
 network: true
-overview: 'Dorado Software Inc is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure Management, Network Management, DCIM, and Orchestration.
+overview: 'Dorado Software is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Infrastructure Management, Network Management, DCIM, and Orchestration.
 
 
-  Dorado Software Inc''s developer surface includes support, engineering blog, and 3 more developer resources.'
+  Dorado Software''s developer surface includes support, engineering blog, and 3 more developer resources.'
 random_paper: 20
 score:
   band: minimal
-  composite: 8.5
+  composite: 7.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,11 +86,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -110,7 +116,7 @@ tags:
 - DCIM
 - Orchestration
 - Monitoring
-- Data-Center
+- Data Center
 - AIOps
 website: http://www.doradosoftware.com/
 ---

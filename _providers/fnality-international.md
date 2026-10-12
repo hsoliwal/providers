@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -125,7 +125,7 @@ modified: '2026-08-16'
 name: Fnality International
 nav: Providers
 network: true
-overview: 'Fnality International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Financial-Services, Settlement, and Wholesale Banking.
+overview: 'Fnality International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Financial Services, Settlement, and Wholesale Banking.
 
 
   Fnality International''s developer surface includes engineering blog, support, and 13 more developer resources.'
@@ -140,7 +140,7 @@ rate_limits:
   slug: fnality-international-rate-limits
 score:
   band: minimal
-  composite: 6.0
+  composite: 6.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -154,23 +154,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 6.0
+  previous_composite: 6.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 15.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -186,7 +188,7 @@ slug: fnality-international
 tags:
 - Company
 - Payments
-- Financial-Services
+- Financial Services
 - Settlement
 - Wholesale Banking
 - Distributed Ledger

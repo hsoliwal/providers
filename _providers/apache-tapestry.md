@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Tapestry Component API provides Java annotations and interfaces for building reusable web components. Components are defined by a Java class and an HTML template file. The API includes @Component,
@@ -127,7 +127,7 @@ modified: '2026-04-19'
 name: Apache Tapestry
 nav: Providers
 network: true
-overview: 'Apache Tapestry publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Component-Based, Java, Web Applications, Web Framework, and Open-Source.
+overview: 'Apache Tapestry publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Component-Based, Java, Web Applications, Web Framework, and Open Source.
 
 
   Apache Tapestry''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, and 8 more developer resources.'
@@ -142,7 +142,7 @@ rate_limits:
   slug: apache-tapestry-rate-limits
 score:
   band: thin
-  composite: 27.4
+  composite: 27.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 41.0
@@ -156,14 +156,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 27.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 27.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,7 +191,7 @@ tags:
 - Java
 - Web Applications
 - Web Framework
-- Open-Source
+- Open Source
 - AJAX
 use_cases:
 - description: Large-scale enterprise applications with reusable component libraries.

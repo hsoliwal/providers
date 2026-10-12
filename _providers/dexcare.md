@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 12
 apis:
 - description: RESTful service for accessing business information and performing actions against DexCare-managed healthcare environments. The umbrella reference covering the Patient and Reporting surfaces, which are
@@ -309,7 +309,7 @@ modified: '2026-08-15'
 name: DexCare
 nav: Providers
 network: true
-overview: 'DexCare publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Assignmentqualifiers API, External API, Modalities API, and 16 more. Tagged areas include Company, Healthcare, Health IT, Patient Access, and Scheduling.
+overview: 'DexCare publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Assignmentqualifiers API, External API, Modalities API, and 17 more. Tagged areas include Company, Healthcare, Health IT, Patient Access, and Scheduling.
 
 
   DexCare''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 28 more developer resources.'
@@ -324,7 +324,7 @@ rate_limits:
   slug: dexcare-rate-limits
 score:
   band: developing
-  composite: 50.1
+  composite: 47.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -336,11 +336,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 55.2
+    contract_quality: 49.7
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 50.1
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     contracts:
@@ -359,9 +359,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

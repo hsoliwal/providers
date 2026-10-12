@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -164,14 +164,14 @@ modified: '2026-05-11'
 name: Apache Solr
 nav: Providers
 network: true
-overview: 'Apache Solr publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Collections API, CollectionsAdminHandler API, Config API, and 4 more. Tagged areas include Search, Enterprise Search, Full-Text Search, Open-Source, and Lucene.
+overview: 'Apache Solr publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Collections API, CollectionsAdminHandler API, Config API, and 5 more. Tagged areas include Search, Enterprise Search, Full-Text Search, Open Source, and Lucene.
 
 
   Apache Solr''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 6 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 22.9
+  composite: 21.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -183,11 +183,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 44.9
+    contract_quality: 40.4
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 22.9
+  previous_composite: 21.8
   provenance:
     agentic_access: derived
     contracts:
@@ -195,8 +195,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -220,7 +226,7 @@ tags:
 - Search
 - Enterprise Search
 - Full-Text Search
-- Open-Source
+- Open Source
 - Lucene
 - Indexing
 website: https://solr.apache.org/

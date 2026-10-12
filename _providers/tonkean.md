@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 asyncapis:
@@ -137,7 +137,7 @@ modified: '2026-07-21'
 name: Tonkean
 nav: Providers
 network: true
-overview: 'Tonkean is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Process Orchestration, Workflow-Automation, and No-Code.
+overview: 'Tonkean is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Process Orchestration, Workflow Automation, and No-Code.
 
 
   The Tonkean catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -147,7 +147,7 @@ overview: 'Tonkean is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 4
 score:
   band: developing
-  composite: 40.5
+  composite: 40.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -159,15 +159,27 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 46.8
+    contract_quality: 44.2
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 42.1
-  previous_composite: 40.5
+  previous_composite: 40.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -188,7 +200,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Process Orchestration
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 - Enterprise
 - Procurement

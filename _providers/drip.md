@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -143,6 +143,11 @@ collections:
   name: Drip REST API
   slug: open-drip
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/drip/refs/heads/main/capabilities/drip-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/drip-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/drip/refs/heads/main/agentic-access/drip-agentic-access.yml
   title: ''
@@ -315,18 +320,18 @@ layout: provider
 mcp_servers:
 - description: 'Drip operates a real, reachable remote MCP server at https://api.getdrip.com/mcp. It is discoverable the standards-compliant way: the API host publishes RFC 9728 OAuth protected-resource metadata nami'
   name: Drip MCP Server
-  slug: drip-mcp-server
+  slug: drip
 modified: '2026-08-13'
 name: Drip
 nav: Providers
 network: true
-overview: 'Drip publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Broadcasts API, Campaigns API, and 7 more. Tagged areas include Email Marketing, Marketing Automation, E-Commerce, Customer Engagement, and Campaigns.
+overview: 'Drip publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Broadcasts API, Campaigns API, and 9 more. Tagged areas include Email Marketing, Marketing Automation, E-Commerce, Customer Engagement, and Campaigns.
 
 
   The Drip catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Drip''s developer surface includes authentication, documentation, signup flow, pricing, support, engineering blog, API reference, and 29 more developer resources.'
+  Drip''s developer surface includes authentication, documentation, signup flow, pricing, support, engineering blog, API reference, and 30 more developer resources.'
 plans:
 - name: Drip Plans Pricing
   plan_count: 0
@@ -338,14 +343,14 @@ rate_limits:
   slug: drip-rate-limits
 scopes:
 - name: Drip Scopes
-  scope_count: 0
+  scope_count: 2
   slug: drip-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
-  band: developing
-  composite: 53.1
+  band: strong
+  composite: 55.5
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -355,11 +360,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 57.7
+    contract_quality: 52.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 68.4
-  previous_composite: 53.1
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -370,8 +375,14 @@ score:
       total: 10
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

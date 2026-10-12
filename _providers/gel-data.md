@@ -22,7 +22,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: documented
     openapi_examples: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.3
-  scored_at: '2026-09-20'
+  score: 9.9
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -154,19 +154,19 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server that gives AI coding agents access to a Gel database. Also installs Gel rules files, the TypeScript query builder, and the Python query builder/ORM into the curr
   name: Gel Data MCP Server
-  slug: gel-data-mcp-server
+  slug: gel-mcp
 modified: '2026-07-19'
 name: Gel Data
 nav: Providers
 network: true
-overview: 'Gel Data is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Open-Source, Database, PostgreSQL, and Graph Database.
+overview: 'Gel Data is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Open Source, Database, PostgreSQL, and Graph Database.
 
 
   Gel Data''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 18 more developer resources.'
 random_paper: 19
 score:
   band: thin
-  composite: 31.9
+  composite: 32.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -180,14 +180,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 26.3
-  previous_composite: 31.9
+  previous_composite: 32.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -206,7 +212,7 @@ security:
 slug: gel-data
 tags:
 - Company
-- Open-Source
+- Open Source
 - Database
 - PostgreSQL
 - Graph Database

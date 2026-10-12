@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -105,9 +105,9 @@ description: Evinced is an AI-powered digital accessibility platform that automa
 image: https://res.cloudinary.com/evinced-inc/image/upload/v1704822647/Evinced_logo_500x500_1_621d40d1d4.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Evinced publishes two first-party MCP servers that let AI coding agents (Cursor, Claude, VS Code, Continue) run Evinced's AI-powered accessibility analysis and remediation against web and mobile apps.
   name: evinced MCP Server
-  slug: evinced-mcp-server
+  slug: evinced-mcp-yml
 modified: '2026-07-19'
 name: evinced
 nav: Providers
@@ -119,7 +119,7 @@ overview: 'evinced is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 8
 score:
   band: emerging
-  composite: 20.3
+  composite: 20.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -133,13 +133,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 20.3
+  previous_composite: 20.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

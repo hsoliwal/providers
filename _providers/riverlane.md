@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Bearer-token cloud service backing the Deltakit SDK. Exposes the compute-heavy and proprietary parts of the QEC workflow that do not run locally: leakage noise generation and simulation, decoding with'
@@ -195,7 +195,7 @@ overview: 'Riverlane publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 0
 score:
   band: thin
-  composite: 31.9
+  composite: 33.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -209,16 +209,22 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 31.9
+  previous_composite: 33.4
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -248,7 +254,7 @@ tags:
 - GraphQL
 - Simulation
 - Research Tools
-- Open-Source
+- Open Source
 - HPC
 website: https://www.riverlane.com/
 ---

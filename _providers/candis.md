@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.candis.io
@@ -90,6 +90,11 @@ collections:
   name: Candis Core Data Reimbursements API
   slug: open-candis-reimbursements-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/candis/refs/heads/main/capabilities/candis-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/candis-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -233,9 +238,9 @@ description: Candis is a Berlin-based fintech (founded 2015) offering an AI-driv
 image: https://assets.my.candis.io/open_graph/CANDIS-UI.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developer.candis.io over HTTP; 16 tools listed.
   name: Candis MCP Server
-  slug: candis-mcp-server
+  slug: candis
 modified: '2026-07-18'
 name: Candis
 nav: Providers
@@ -243,7 +248,7 @@ network: true
 overview: 'Candis publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Core Data API, Exports API, Invoices API, and 3 more. Tagged areas include Company, Fintech, Accounts Payable, Spend Management, and Invoice Management.
 
 
-  Candis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 23 more developer resources.'
+  Candis'' developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 24 more developer resources.'
 random_paper: 10
 rate_limits:
 - limit_count: 1
@@ -256,9 +261,9 @@ scopes:
   summary_line: 13 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.5
+  composite: 43.2
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -268,9 +273,9 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -280,7 +285,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 42.5
+  previous_composite: 43.2
   provenance:
     conformance: first-party
     contracts:
@@ -290,8 +295,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

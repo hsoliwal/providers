@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.6
-  scored_at: '2026-09-20'
+  score: 35.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -325,7 +325,7 @@ modified: '2026-07-23'
 name: Tandem Bank
 nav: Providers
 network: true
-overview: 'Tandem Bank publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial-Services, Banking, Open Banking, PSD2, and OBIE.
+overview: 'Tandem Bank publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account Access Consents API, Accounts API, Balances API, and 25 more. Tagged areas include Financial Services, Banking, Open Banking, PSD2, and OBIE.
 
 
   Tandem Bank''s developer surface includes authentication, getting-started guide, engineering blog, support, and 24 more developer resources.'
@@ -336,8 +336,8 @@ scopes:
   slug: tandem-bank-scopes
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 36.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 35.0
@@ -349,9 +349,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 58.9
-    discoverability: 72.2
+    discoverability: 70.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -361,7 +361,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 39.7
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -381,9 +381,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 65.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -400,7 +400,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: tandem-bank
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Open Banking
 - PSD2

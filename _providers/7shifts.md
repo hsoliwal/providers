@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.1
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -173,6 +173,11 @@ collections:
   name: 7shifts API
   slug: open-7shifts
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/7shifts/refs/heads/main/capabilities/7shifts-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/7shifts-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/7shifts/refs/heads/main/agentic-access/7shifts-agentic-access.yml
   title: ''
@@ -402,7 +407,7 @@ overview: '7shifts publishes 15 APIs on the [APIs.io](https://apis.io/) network,
   The 7shifts catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  7shifts'' developer surface includes authentication, documentation, API reference, pricing, signup flow, support, and 15 more developer resources.'
+  7shifts'' developer surface includes authentication, documentation, API reference, pricing, signup flow, support, and 16 more developer resources.'
 plans:
 - name: 7Shifts Plans Pricing
   plan_count: 4
@@ -441,23 +446,23 @@ scopes:
   summary_line: 18 scopes · clientCredentials
 score:
   band: developing
-  composite: 48.9
+  composite: 48.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 80.5
+    artifact_dirs: 19
+    catalog_earned: 78.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 34.5
+    catalog_gap: 37.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 46.1
-    contract_governance: 28.8
-    contract_quality: 56.2
+    access_clarity: 42.9
+    contract_governance: 27.3
+    contract_quality: 51.3
     developer_ergonomics: 34.5
-    discoverability: 75.9
-    operational_transparency: 43.4
-  previous_composite: 48.9
+    discoverability: 73.2
+    operational_transparency: 41.3
+  previous_composite: 48.4
   provenance:
     agentic_access: derived
     contracts:
@@ -465,8 +470,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 15
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

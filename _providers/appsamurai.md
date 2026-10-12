@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: http://api.appsamurai.com
@@ -279,7 +279,7 @@ rate_limits:
   slug: appsamurai-rate-limits
 score:
   band: developing
-  composite: 52.8
+  composite: 53.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 52.0
@@ -291,11 +291,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 53.9
+    contract_quality: 49.1
     developer_ergonomics: 55.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 34.2
-  previous_composite: 52.8
+  previous_composite: 53.4
   provenance:
     conformance: first-party
     contracts:
@@ -305,8 +305,14 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -95,6 +95,11 @@ collections:
   name: Hotjar REST Authentication User Lookup API
   slug: open-hotjar-user-lookup-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/hotjar/refs/heads/main/capabilities/hotjar-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/hotjar-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -215,13 +220,13 @@ modified: '2026-09-16'
 name: Hotjar
 nav: Providers
 network: true
-overview: 'Hotjar publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Survey Responses API, Surveys API, and 1 more. Tagged areas include Analytics, Surveys, Tracking, Personalization, and Segmentation.
+overview: 'Hotjar publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Survey Responses API, Surveys API, and 4 more. Tagged areas include Analytics, Surveys, Tracking, Personalization, and Segmentation.
 
 
   The Hotjar catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Hotjar''s developer surface includes authentication and 8 more developer resources.'
+  Hotjar''s developer surface includes authentication and 9 more developer resources.'
 plans:
 - name: Hotjar Plans Pricing
   plan_count: 6
@@ -244,9 +249,9 @@ rules:
   slug: hotjar-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 29.2
+  composite: 27.8
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 45.3
     catalog_earned_first_party: 0.0
     catalog_gap: 69.8
@@ -256,11 +261,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 61.1
+    contract_quality: 55.3
     developer_ergonomics: 21.4
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 5.3
-  previous_composite: 29.2
+  previous_composite: 27.8
   provenance:
     agentic_access: derived
     contracts:
@@ -268,8 +273,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

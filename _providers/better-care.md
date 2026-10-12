@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Better Platform''s clinical data repository exposes the openEHR ITS-REST API (EHR, COMPOSITION, DIRECTORY, CONTRIBUTION, TEMPLATE/definition and QUERY/AQL resources) plus Better''s own web-template and '
@@ -163,7 +163,7 @@ rate_limits:
   slug: better-care-rate-limits
 score:
   band: emerging
-  composite: 21.7
+  composite: 21.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 32.0
@@ -177,7 +177,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -185,7 +185,7 @@ score:
     regions:
     - cee
     - europe
-  previous_composite: 21.7
+  previous_composite: 21.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -194,9 +194,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -220,7 +220,7 @@ tags:
 - Electronic Health Records
 - Clinical Data
 - Interoperability
-- HL7 FHIR
+- FHIR
 - Medication Management
 - Digital Health
 - Low-Code

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -184,7 +184,7 @@ modified: '2026-04-28'
 name: Prestmit
 nav: Providers
 network: true
-overview: 'Prestmit publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, General API, Gift Cards - Buy API, and 3 more. Tagged areas include Bills, Crypto, Fintech, Gift Cards, and Payments.
+overview: 'Prestmit publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, General API, Gift Cards - Buy API, and 4 more. Tagged areas include Bills, Crypto, Fintech, Gift Cards, and Payments.
 
 
   Prestmit''s developer surface includes authentication, developer portal, documentation, sandbox, signup flow, engineering blog, support, and 9 more developer resources.'
@@ -199,7 +199,7 @@ rate_limits:
   slug: prestmit-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 29.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 41.0
@@ -211,11 +211,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 39.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 7.9
-  previous_composite: 29.9
+  previous_composite: 29.1
   provenance:
     agentic_access: derived
     contracts:
@@ -228,9 +228,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: ASTM Compass is the subscription digital library and workflow platform that delivers ASTM standards alongside third-party publisher content (AASHTO, API, BSI, etc.), books, journals, papers, and video
@@ -238,7 +238,7 @@ rules:
   slug: astm-international-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 14.0
+  composite: 13.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 46.3
@@ -252,16 +252,22 @@ score:
     contract_governance: 9.8
     contract_quality: 14.7
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - global
-  previous_composite: 14.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

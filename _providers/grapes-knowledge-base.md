@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -154,7 +154,7 @@ modified: '2026-05-19'
 name: Grapes Knowledge Base
 nav: Providers
 network: true
-overview: 'Grapes Knowledge Base publishes 3 APIs on the [APIs.io](https://apis.io/) network: Agents API, Datasets API, and Projects API. Tagged areas include Knowledge-Management, Knowledge Base, Data Management, Automation, and HATEOAS.
+overview: 'Grapes Knowledge Base publishes 3 APIs on the [APIs.io](https://apis.io/) network: Agents API, Datasets API, and Projects API. Tagged areas include Knowledge Management, Knowledge Base, Data Management, Automation, and HATEOAS.
 
 
   The Grapes Knowledge Base catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -183,7 +183,7 @@ rules:
   slug: grapes-knowledge-base-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 30.7
+  composite: 29.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 52.3
@@ -195,11 +195,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 55.8
+    contract_quality: 50.7
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 18.4
-  previous_composite: 30.7
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -207,8 +207,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -225,7 +231,7 @@ security:
   summary_line: TLSv1.3 · HSTS
 slug: grapes-knowledge-base
 tags:
-- Knowledge-Management
+- Knowledge Management
 - Knowledge Base
 - Data Management
 - Automation

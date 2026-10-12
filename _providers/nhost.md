@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 39
   human_in_the_loop: 1
@@ -58,59 +58,59 @@ apis:
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: User authentication operations including sign-in, sign-up, and various authentication methods (email/password, passwordless, OAuth, WebAuthn, MFA)
-  name: Nhost authentication API
+  name: Nhost Authentication API
   slug: nhost-authentication-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: API documentation
-  name: Nhost documentation API
+  name: Nhost Documentation API
   slug: nhost-documentation-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: These operations are not intended to be used directly by clients and should be excluded from client SDKs
-  name: Nhost excludeme API
+  name: Nhost Excludeme API
   slug: nhost-excludeme-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: File management operations
-  name: Nhost files API
+  name: Nhost Files API
   slug: nhost-files-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: Administrative operations
-  name: Nhost operations API
+  name: Nhost Operations API
   slug: nhost-operations-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: Security-related operations including Personal Access Tokens, WebAuthn management, account elevation, and account linking
-  name: Nhost security API
+  name: Nhost Security API
   slug: nhost-security-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: Session management operations including token refresh, verification, and sign-out
-  name: Nhost session API
+  name: Nhost Session API
   slug: nhost-session-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: Storage operations and presigned URLs
-  name: Nhost storage API
+  name: Nhost Storage API
   slug: nhost-storage-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: System operations including health checks, service version, and public key endpoints
-  name: Nhost system API
+  name: Nhost System API
   slug: nhost-system-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: User profile and account management operations including email/password changes, MFA configuration, and profile updates
-  name: Nhost user API
+  name: Nhost User API
   slug: nhost-user-api
 - baseURL: https://{subdomain}.nhost.run/v1/graphql
   baseurl_source: declared
   description: Email and ticket verification operations for confirming user actions
-  name: Nhost verification API
+  name: Nhost Verification API
   slug: nhost-verification-api
-artifact_total: 43
+artifact_total: 44
 collections:
 - collection_type: open
   name: API Collection
@@ -149,6 +149,11 @@ collections:
   name: Nhost authentication verification API
   slug: open-nhost-verification-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nhost/refs/heads/main/capabilities/nhost-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nhost-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nhost/refs/heads/main/agentic-access/nhost-agentic-access.yml
   title: ''
@@ -268,17 +273,21 @@ jsonld:
   property_count: 4
   slug: nhost-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nhost.io over HTTP.
+  name: Nhost MCP Server
+  slug: nhost
 modified: '2026-06-12'
 name: Nhost
 nav: Providers
 network: true
-overview: 'Nhost publishes 11 APIs on the [APIs.io](https://apis.io/) network, including authentication API, documentation API, excludeme API, and 8 more. Tagged areas include GraphQL, PostgreSQL, Authentication, File Storage, and Serverless Functions.
+overview: 'Nhost publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Documentation API, Excludeme API, and 11 more. Tagged areas include GraphQL, PostgreSQL, Authentication, File Storage, and Serverless Functions.
 
 
   The Nhost catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Nhost''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
+  Nhost''s developer surface includes authentication, documentation, engineering blog, pricing, and 15 more developer resources.'
 plans:
 - name: Nhost Plans Pricing
   plan_count: 4
@@ -303,19 +312,19 @@ score:
   band: developing
   composite: 42.1
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 64.5
+    artifact_dirs: 20
+    catalog_earned: 63.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 51.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 57.9
+    access_clarity: 54.7
     contract_governance: 13.6
-    contract_quality: 60.7
+    contract_quality: 56.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 13.2
   previous_composite: 42.1
   provenance:
@@ -326,8 +335,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -358,8 +373,9 @@ tags:
 - File Storage
 - Serverless Functions
 - Real-Time
-- Open-Source
+- Open Source
 - Firebase Alternative
 - Backend-as-a-Service
+- Passwordless
 website: https://nhost.io/
 ---

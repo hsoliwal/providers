@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Industrial edge data platform for device connectivity, industrial DataOps, edge intelligence, and analytics. Around 871 endpoints in the 4.0.x line; most endpoints are REST while newer areas (DeviceHu
@@ -180,14 +180,14 @@ modified: '2026-07-20'
 name: Litmus Automation
 nav: Providers
 network: true
-overview: 'Litmus Automation publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Industrial IoT, Edge Computing, and IIoT.
+overview: 'Litmus Automation publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Industrial IoT, Edge Computing, and Unified Namespace.
 
 
   Litmus Automation''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 41.2
+  composite: 42.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.0
@@ -201,14 +201,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 42.1
-  previous_composite: 41.2
+  previous_composite: 42.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -234,7 +240,6 @@ tags:
 - Manufacturing
 - Industrial IoT
 - Edge Computing
-- IIoT
 - Unified Namespace
 - MQTT
 - DataOps

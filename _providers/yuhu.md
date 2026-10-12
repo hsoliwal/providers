@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API (v1) for integration partners to synchronize property-management data with Yuhu: companies, sites/projects, buildings, unit types, units, site staff, roles and permissions, leases, tenants, s'
@@ -152,7 +152,7 @@ modified: '2026-09-16'
 name: Yuhu
 nav: Providers
 network: true
-overview: 'Yuhu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Property Management, PropTech, Real-Estate, and Multifamily.
+overview: 'Yuhu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Property Management, PropTech, Real Estate, and Multifamily.
 
 
   Yuhu''s developer surface includes documentation, API reference, signup flow, pricing, support, engineering blog, authentication, and 16 more developer resources.'
@@ -163,7 +163,7 @@ rate_limits:
   slug: yuhu-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 29.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -177,9 +177,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 29.9
+  previous_composite: 29.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +211,7 @@ tags:
 - Company
 - Property Management
 - PropTech
-- Real-Estate
+- Real Estate
 - Multifamily
 - Rentals
 - Leasing

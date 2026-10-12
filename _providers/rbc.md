@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: Self-serve informational API on the RBC External Developer Portal that accepts a postal code or keyword search and returns the address and hours of operation of the closest RBC branch, or a list of ne
@@ -129,14 +129,14 @@ modified: '2026-07-23'
 name: Royal Bank of Canada
 nav: Providers
 network: true
-overview: 'Royal Bank of Canada publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Canada, Big Six, and Payments.
+overview: 'Royal Bank of Canada publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Big Six, and Payments.
 
 
   Royal Bank of Canada''s developer surface includes documentation, engineering blog, getting-started guide, signup flow, API reference, and 8 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 20.5
+  composite: 20.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 35.0
@@ -150,7 +150,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -159,15 +159,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.5
+  previous_composite: 20.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -181,13 +181,12 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: rbc
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Big Six
 - Payments
 - Interac
 - Open Banking
-- Developer Portal
 website: https://www.rbc.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The public JSON backend of DCAA's Field Audit Office Branch Locator. It resolves the DCAA field audit office cognizant over a contractor from a CAGE code (searchType 0), a SAM.gov Unique Entity Identi
@@ -139,7 +139,7 @@ modified: '2026-09-07'
 name: Defense Contract Audit Agency
 nav: Providers
 network: true
-overview: 'Defense Contract Audit Agency publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Defense, Department of Defense, Audit, and Contract Audit.
+overview: 'Defense Contract Audit Agency publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Defense, Department of Defense, Audit, and Contract Audit.
 
 
   Defense Contract Audit Agency''s developer surface includes authentication, support, and 15 more developer resources.'
@@ -159,7 +159,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.4
+  composite: 22.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -173,9 +173,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 25.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 22.3
   provenance:
     conformance: first-party
     mcp: derived
@@ -184,9 +189,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -204,12 +209,12 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: defense-contract-audit-agency
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Department of Defense
 - Audit
 - Contract Audit
-- Financial
+- Finance
 - Government Contracting
 - CAGE Code
 - Unique Entity Identifier

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.1
-  scored_at: '2026-09-20'
+  score: 36.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.uselemma.ai
@@ -79,6 +79,11 @@ collections:
   name: Lemma Platform Artifacts Traces API
   slug: open-uselemma-traces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/uselemma/refs/heads/main/capabilities/uselemma-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/uselemma-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/uselemma/refs/heads/main/overlays/uselemma-platform-overlay.yaml
   title: ''
@@ -207,7 +212,7 @@ layout: provider
 mcp_servers:
 - description: Lemma operates an official remote MCP server at https://api.uselemma.ai/mcp (Streamable HTTP transport), authenticated with a project API key sent as an Authorization Bearer header. It gives coding ag
   name: Lemma MCP Server
-  slug: lemma-mcp-server
+  slug: lemma
 modified: '2026-07-21'
 name: Lemma
 nav: Providers
@@ -218,13 +223,13 @@ overview: 'Lemma publishes 4 APIs on the [APIs.io](https://apis.io/) network, in
   The Lemma catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Lemma''s developer surface includes documentation, getting-started guide, engineering blog, changelog, support, authentication, and 20 more developer resources.'
+  Lemma''s developer surface includes documentation, getting-started guide, engineering blog, changelog, support, authentication, and 21 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 43.2
+  composite: 42.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -234,11 +239,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 61.7
+    contract_quality: 56.4
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 43.2
+  previous_composite: 42.5
   provenance:
     conformance: derived
     contracts:
@@ -248,8 +253,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

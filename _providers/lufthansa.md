@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -189,7 +189,7 @@ modified: '2026-05-19'
 name: Lufthansa
 nav: Providers
 network: true
-overview: 'Lufthansa publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Cargo API, Offers API, Operations API, and 1 more. Tagged areas include Airlines, Travel, Aviation, and Flights.
+overview: 'Lufthansa publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Cargo API, Offers API, Operations API, and 5 more. Tagged areas include Airlines, Travel, Aviation, and Flights.
 
 
   The Lufthansa catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -223,7 +223,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 29.9
+  composite: 29.3
   coverage:
     artifact_dirs: 17
     catalog_earned: 42.3
@@ -235,11 +235,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 9.8
-    contract_quality: 50.9
+    contract_quality: 45.8
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 29.9
+  previous_composite: 29.3
   provenance:
     agentic_access: derived
     contracts:
@@ -247,8 +247,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

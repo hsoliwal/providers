@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -149,6 +149,11 @@ collections:
   name: Nomos Authentication Usage API
   slug: open-nomos-usage-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nomos/refs/heads/main/capabilities/nomos-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nomos-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/nomos/refs/heads/main/overlays/nomos-openapi-overlay.yaml
   title: ''
@@ -284,7 +289,7 @@ overview: 'Nomos publishes 12 APIs on the [APIs.io](https://apis.io/) network, i
   The Nomos catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Nomos'' developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, changelog, and 20 more developer resources.'
+  Nomos'' developer surface includes documentation, API reference, getting-started guide, signup flow, authentication, changelog, and 21 more developer resources.'
 random_paper: 6
 scopes:
 - name: Nomos Scopes
@@ -293,9 +298,9 @@ scopes:
   summary_line: 2 scopes
 score:
   band: developing
-  composite: 47.2
+  composite: 43.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -305,9 +310,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 63.0
+    contract_quality: 57.5
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -317,7 +322,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 47.2
+  previous_composite: 43.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -333,9 +338,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

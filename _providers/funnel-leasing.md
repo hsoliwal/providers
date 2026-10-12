@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Single-customer integration API for the Funnel leasing platform — create prospects in the CRM, schedule property tours/appointments, and process lease applications. Resources include Appointments, Com
@@ -133,7 +133,7 @@ modified: '2026-07-19'
 name: Funnel Leasing
 nav: Providers
 network: true
-overview: 'Funnel Leasing publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Property Management, and Multifamily.
+overview: 'Funnel Leasing publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Property Management, and Multifamily.
 
 
   The Funnel Leasing catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -143,7 +143,7 @@ overview: 'Funnel Leasing publishes 2 APIs on the [APIs.io](https://apis.io/) ne
 random_paper: 2
 score:
   band: thin
-  composite: 36.0
+  composite: 35.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -155,15 +155,21 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 36.0
+  previous_composite: 35.9
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -182,7 +188,7 @@ security:
 slug: funnel-leasing
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Property Management
 - Multifamily

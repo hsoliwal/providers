@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -186,7 +186,7 @@ modified: '2026-05-19'
 name: Stanley Black & Decker
 nav: Providers
 network: true
-overview: 'Stanley Black & Decker publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Batteries API, Jobsites API, and 2 more. Tagged areas include Tools, Hardware, Manufacturing, IoT, and Connected Tools.
+overview: 'Stanley Black & Decker publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Batteries API, Jobsites API, and 3 more. Tagged areas include Tools, Hardware, Manufacturing, IoT, and Connected Tools.
 
 
   The Stanley Black & Decker catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -242,7 +242,7 @@ rules:
   slug: stanley-black-and-decker-rules
 score:
   band: thin
-  composite: 35.1
+  composite: 35.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 43.5
@@ -254,11 +254,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 13.6
-    contract_quality: 59.6
+    contract_quality: 54.2
     developer_ergonomics: 33.3
-    discoverability: 44.4
+    discoverability: 42.9
     operational_transparency: 10.5
-  previous_composite: 35.1
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -266,8 +266,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

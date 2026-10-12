@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 108
   human_in_the_loop: 12
@@ -57,82 +57,82 @@ apis:
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The audit-log API from Maia-analytics — 1 operation(s) for audit-log.
-  name: Maia-analytics audit-log API
+  name: Maia-analytics Audit Log API
   slug: maia-analytics-audit-log-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The auth API from Maia-analytics — 8 operation(s) for auth.
-  name: Maia-analytics auth API
+  name: Maia-analytics Auth API
   slug: maia-analytics-auth-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The chat API from Maia-analytics — 8 operation(s) for chat.
-  name: Maia-analytics chat API
+  name: Maia-analytics Chat API
   slug: maia-analytics-chat-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The dial API from Maia-analytics — 8 operation(s) for dial.
-  name: Maia-analytics dial API
+  name: Maia-analytics Dial API
   slug: maia-analytics-dial-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The enrichment API from Maia-analytics — 17 operation(s) for enrichment.
-  name: Maia-analytics enrichment API
+  name: Maia-analytics Enrichment API
   slug: maia-analytics-enrichment-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The example-projects API from Maia-analytics — 9 operation(s) for example-projects.
-  name: Maia-analytics example-projects API
+  name: Maia-analytics Example Projects API
   slug: maia-analytics-example-projects-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The favorite API from Maia-analytics — 2 operation(s) for favorite.
-  name: Maia-analytics favorite API
+  name: Maia-analytics Favorite API
   slug: maia-analytics-favorite-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The feature-flags API from Maia-analytics — 3 operation(s) for feature-flags.
-  name: Maia-analytics feature-flags API
+  name: Maia-analytics Feature Flags API
   slug: maia-analytics-feature-flags-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The filters API from Maia-analytics — 1 operation(s) for filters.
-  name: Maia-analytics filters API
+  name: Maia-analytics Filters API
   slug: maia-analytics-filters-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The geographies API from Maia-analytics — 1 operation(s) for geographies.
-  name: Maia-analytics geographies API
+  name: Maia-analytics Geographies API
   slug: maia-analytics-geographies-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The internal API from Maia-analytics — 50 operation(s) for internal.
-  name: Maia-analytics internal API
+  name: Maia-analytics Internal API
   slug: maia-analytics-internal-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The internal-knowledge API from Maia-analytics — 4 operation(s) for internal-knowledge.
-  name: Maia-analytics internal-knowledge API
+  name: Maia-analytics Internal Knowledge API
   slug: maia-analytics-internal-knowledge-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The internal-projects API from Maia-analytics — 1 operation(s) for internal-projects.
-  name: Maia-analytics internal-projects API
+  name: Maia-analytics Internal Projects API
   slug: maia-analytics-internal-projects-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The internal-skills API from Maia-analytics — 4 operation(s) for internal-skills.
-  name: Maia-analytics internal-skills API
+  name: Maia-analytics Internal Skills API
   slug: maia-analytics-internal-skills-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The knowledge API from Maia-analytics — 2 operation(s) for knowledge.
-  name: Maia-analytics knowledge API
+  name: Maia-analytics Knowledge API
   slug: maia-analytics-knowledge-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The layer API from Maia-analytics — 3 operation(s) for layer.
-  name: Maia-analytics layer API
+  name: Maia-analytics Layer API
   slug: maia-analytics-layer-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
@@ -142,72 +142,72 @@ apis:
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The map API from Maia-analytics — 4 operation(s) for map.
-  name: Maia-analytics map API
+  name: Maia-analytics Map API
   slug: maia-analytics-map-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The notes API from Maia-analytics — 2 operation(s) for notes.
-  name: Maia-analytics notes API
+  name: Maia-analytics Notes API
   slug: maia-analytics-notes-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The project API from Maia-analytics — 15 operation(s) for project.
-  name: Maia-analytics project API
+  name: Maia-analytics Project API
   slug: maia-analytics-project-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The project-lock API from Maia-analytics — 2 operation(s) for project-lock.
-  name: Maia-analytics project-lock API
+  name: Maia-analytics Project Lock API
   slug: maia-analytics-project-lock-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The query API from Maia-analytics — 1 operation(s) for query.
-  name: Maia-analytics query API
+  name: Maia-analytics Query API
   slug: maia-analytics-query-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The saved-contacts API from Maia-analytics — 7 operation(s) for saved-contacts.
-  name: Maia-analytics saved-contacts API
+  name: Maia-analytics Saved Contacts API
   slug: maia-analytics-saved-contacts-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The share API from Maia-analytics — 17 operation(s) for share.
-  name: Maia-analytics share API
+  name: Maia-analytics Share API
   slug: maia-analytics-share-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The skills API from Maia-analytics — 2 operation(s) for skills.
-  name: Maia-analytics skills API
+  name: Maia-analytics Skills API
   slug: maia-analytics-skills-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The stats API from Maia-analytics — 1 operation(s) for stats.
-  name: Maia-analytics stats API
+  name: Maia-analytics Stats API
   slug: maia-analytics-stats-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The table API from Maia-analytics — 12 operation(s) for table.
-  name: Maia-analytics table API
+  name: Maia-analytics Table API
   slug: maia-analytics-table-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The user-events API from Maia-analytics — 1 operation(s) for user-events.
-  name: Maia-analytics user-events API
+  name: Maia-analytics User Events API
   slug: maia-analytics-user-events-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The users API from Maia-analytics — 7 operation(s) for users.
-  name: Maia-analytics users API
+  name: Maia-analytics Users API
   slug: maia-analytics-users-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The workspace API from Maia-analytics — 9 operation(s) for workspace.
-  name: Maia-analytics workspace API
+  name: Maia-analytics Workspace API
   slug: maia-analytics-workspace-api
 - baseURL: https://api.maia-analytics.com
   baseurl_source: declared
   description: The workspaces API from Maia-analytics — 18 operation(s) for workspaces.
-  name: Maia-analytics workspaces API
+  name: Maia-analytics Workspaces API
   slug: maia-analytics-workspaces-api
 artifact_total: 72
 collections:
@@ -429,7 +429,7 @@ modified: '2026-09-16'
 name: Maia-analytics
 nav: Providers
 network: true
-overview: 'Maia-analytics publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Ah API, audit-log API, and 31 more. Tagged areas include Company, Developer Tools, Geospatial, GIS, and Location Intelligence.
+overview: 'Maia-analytics publishes 33 APIs on the [APIs.io](https://apis.io/) network, including Ah API, Audit Log API, and 31 more. Tagged areas include Company, Developer Tools, Geospatial, GIS, and Location Intelligence.
 
 
   Maia-analytics'' developer surface includes pricing, documentation, API reference, authentication, and 19 more developer resources.'
@@ -443,7 +443,7 @@ plans:
 random_paper: 13
 score:
   band: developing
-  composite: 40.5
+  composite: 40.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -451,15 +451,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 8.5
+  delta: 0.0
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 50.7
+    contract_quality: 45.8
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 32.0
+  previous_composite: 40.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -470,9 +470,15 @@ score:
       total: 33
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0

@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Get and set activities, health data and more
   name: Tredict
   slug: tredict
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tredict/refs/heads/main/security/tredict-domain-security.yml
@@ -61,23 +61,27 @@ created: '2026-05-28'
 description: Get and set activities, health data and more
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tredict.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.tredict.com over HTTP.
+  name: Tredict MCP Server
+  slug: tredict
 modified: '2026-05-28'
 name: Tredict
 nav: Providers
 network: true
-overview: 'Tredict publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Sports And Fitness and Public APIs.
+overview: 'Tredict publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Public APIs, Fitness, and Workout Tracking.
 
 
   Tredict''s developer surface includes engineering blog and 3 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 8.1
+  composite: 5.9
   coverage:
     artifact_dirs: 5
-    catalog_earned: 27.0
+    catalog_earned: 22.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -86,13 +90,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 50.0
     operational_transparency: 0.0
-  previous_composite: 8.1
+  previous_composite: 5.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -106,7 +116,8 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: tredict
 tags:
-- Sports And Fitness
 - Public APIs
+- Fitness
+- Workout Tracking
 website: https://www.tredict.com/blog/oauth_docs/
 ---

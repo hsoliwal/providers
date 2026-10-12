@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -134,6 +134,11 @@ collections:
   name: UpKeep API
   slug: open-upkeep
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/upkeep/refs/heads/main/capabilities/upkeep-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/upkeep-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/upkeep/refs/heads/main/agentic-access/upkeep-agentic-access.yml
   title: ''
@@ -223,7 +228,7 @@ overview: 'UpKeep publishes 10 APIs on the [APIs.io](https://apis.io/) network, 
   The UpKeep catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  UpKeep''s developer surface includes authentication, engineering blog, documentation, and 8 more developer resources.'
+  UpKeep''s developer surface includes authentication, engineering blog, documentation, and 9 more developer resources.'
 plans:
 - name: Upkeep Plans Pricing
   plan_count: 3
@@ -257,9 +262,9 @@ rules:
   slug: upkeep-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 35.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 61.5
     catalog_earned_first_party: 0.0
     catalog_gap: 53.5
@@ -269,11 +274,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 67.1
+    contract_quality: 61.5
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 36.2
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -281,8 +286,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

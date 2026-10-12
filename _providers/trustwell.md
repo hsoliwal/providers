@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -227,7 +227,7 @@ modified: '2026-05-19'
 name: Trustwell
 nav: Providers
 network: true
-overview: 'Trustwell publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Compliance API, Products API, Quality API, and 3 more. Tagged areas include Food Industry, Food Safety, Nutrition, Supply Chain, and Food Labeling.
+overview: 'Trustwell publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Compliance API, Products API, Quality API, and 5 more. Tagged areas include Food Industry, Food Safety, Nutrition, Supply Chain, and Food Labeling.
 
 
   The Trustwell catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -267,7 +267,7 @@ rules:
   slug: trustwell-rules
 score:
   band: thin
-  composite: 38.3
+  composite: 39.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 56.5
@@ -279,11 +279,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 13.6
-    contract_quality: 59.0
+    contract_quality: 53.6
     developer_ergonomics: 33.3
-    discoverability: 68.5
+    discoverability: 67.9
     operational_transparency: 5.3
-  previous_composite: 38.3
+  previous_composite: 39.0
   provenance:
     agentic_access: derived
     contracts:
@@ -291,8 +291,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

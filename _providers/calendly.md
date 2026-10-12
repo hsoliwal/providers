@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 1
@@ -113,7 +113,7 @@ apis:
   description: Endpoints for creating, listing, retrieving, and deleting webhook subscriptions that receive real-time event notifications.
   name: Calendly Webhook Subscriptions API
   slug: calendly-webhook-subscriptions-api
-artifact_total: 42
+artifact_total: 43
 asyncapis:
 - description: 'The Calendly Webhook API enables developers to receive real-time notifications when scheduling events occur in Calendly. By creating webhook subscriptions, applications can automatically receive data '
   name: Calendly Webhook Events
@@ -162,6 +162,11 @@ collections:
   name: Calendly Scheduling Activity Log Webhook Subscriptions API
   slug: open-calendly-webhook-subscriptions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/capabilities/calendly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/calendly-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/calendly/refs/heads/main/agentic-access/calendly-agentic-access.yml
   title: ''
@@ -265,17 +270,21 @@ jsonld:
   property_count: 9
   slug: calendly-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.calendly.com over HTTP.
+  name: Calendly MCP Server
+  slug: calendly
 modified: '2026-05-19'
 name: Calendly
 nav: Providers
 network: true
-overview: 'Calendly publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Webhook API, Activity Log API, Availability API, and 10 more. Tagged areas include Appointments, Automation, Booking, Calendar, and Meetings.
+overview: 'Calendly publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Webhook API, Activity Log API, Availability API, and 11 more. Tagged areas include Appointments, Automation, Booking, Calendar, and Meetings.
 
 
   The Calendly catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Calendly''s developer surface includes authentication, developer portal, documentation, engineering blog, and 14 more developer resources.'
+  Calendly''s developer surface includes authentication, developer portal, documentation, engineering blog, and 15 more developer resources.'
 plans:
 - name: Calendly Plans Pricing
   plan_count: 4
@@ -309,9 +318,9 @@ rules:
   slug: calendly-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 39.9
+  composite: 40.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 54.5
     catalog_earned_first_party: 0.0
     catalog_gap: 60.5
@@ -321,11 +330,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 13.6
-    contract_quality: 67.6
+    contract_quality: 62.5
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 39.9
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     contracts:
@@ -334,8 +343,14 @@ score:
       marker_coverage: 0.0
       total: 12
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

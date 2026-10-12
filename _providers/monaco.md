@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 62.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 35
   human_in_the_loop: 0
@@ -153,6 +153,11 @@ collections:
   name: Monaco Public Accounts Users API
   slug: open-monaco-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/monaco/refs/heads/main/capabilities/monaco-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/monaco-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/monaco/refs/heads/main/overlays/monaco-openapi-overlay.yaml
   title: ''
@@ -285,9 +290,9 @@ description: Monaco is an AI-native revenue platform for startups that replaces 
 image: https://www.monaco.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.monaco.com over HTTP requiring OAuth; 24 tools listed.
   name: Monaco MCP Server
-  slug: monaco-mcp-server
+  slug: monaco
 modified: '2026-08-13'
 name: Monaco
 nav: Providers
@@ -295,7 +300,7 @@ network: true
 overview: 'Monaco publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Audiences API, Auth API, and 10 more. Tagged areas include Company, CRM, Sales, Revenue Operations, and Artificial Intelligence.
 
 
-  Monaco''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 22 more developer resources.'
+  Monaco''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 23 more developer resources.'
 plans:
 - name: Monaco Plans Pricing
   plan_count: 0
@@ -312,9 +317,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 47.2
+  composite: 49.6
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -324,11 +329,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 56.3
+    contract_quality: 50.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 47.2
+  previous_composite: 49.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -339,8 +344,14 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -380,5 +391,6 @@ tags:
 - Audiences
 - Sales Engagement
 - Agents
+- A2A
 website: https://www.monaco.com
 ---

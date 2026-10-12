@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Phone.com v4 ("Phoenix") JSON REST API for managing accounts, extensions, devices, phone numbers, call routing, media, messaging (SMS/fax), and event webhooks. OAuth 2.0 secured.
@@ -200,12 +200,12 @@ overview: 'Phone Com publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 0
 scopes:
 - name: Phone Com Scopes
-  scope_count: 0
+  scope_count: 4
   slug: phone-com-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · oauth2
 score:
   band: developing
-  composite: 50.5
+  composite: 47.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -217,11 +217,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 50.5
+  previous_composite: 47.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -231,9 +231,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 65.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

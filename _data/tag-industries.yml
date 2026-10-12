@@ -372,7 +372,6 @@
   - testing
   - quality assurance
   - low-code
-  - no-code
   - version control
   - repository
   - distributed systems
@@ -511,17 +510,11 @@
   - smart contracts
   - nft
   - digital assets
-  - tokens
   - tokenization
   - stablecoins
   - stablecoin
   - staking
-  - wallet
-  - wallets
-  - digital wallet
   - decentralized
-  - exchange
-  - liquidity
 - slug: government
   name: Government & Public Sector
   icon: account_balance
@@ -562,8 +555,10 @@
   - live streaming
   - broadcasting
   - photography
-- slug: venture-capital
-  name: Venture Capital & Investing
+- slug: investing
+  name: Investing & Venture Capital
+  renamed_from:
+  - venture-capital
   icon: trending_up
   description: The firms allocating capital and the platforms moving it — venture and private equity, brokerages, trading, market data, and wealth management.
   tags:
@@ -586,8 +581,6 @@
   - hedge fund
   - family office
   - crowdfunding
-  - startups
-  - venture backed
 - slug: telecommunications
   name: Telecommunications & Connectivity
   icon: cell_tower
@@ -867,11 +860,21 @@
   - drones
   - uav
   - industrial automation
-  - automation
   - warehouse automation
-  - simulation
   - teleoperation
   - humanoid
+  - industrial robotics
+  - collaborative robots
+  - humanoid robots
+  - embodied ai
+  - autonomous mobile robots
+  - ros
+  - ros 2
+  - autonomous driving
+  - robotaxi
+  - unmanned aerial systems
+  - unmanned aerial vehicles
+  - uas
 - slug: marketing-advertising
   name: Marketing & Advertising
   icon: campaign
@@ -1325,12 +1328,22 @@
   - tickets
   exclude:
   - catch-that-bus
+  - crossenagage
+  - druva
   - freshservice
   - halp
   - harmony
+  - ilert
+  - kaseya
+  - moogsoft
+  - news-break
   - pylon
+  - servicenow
   - shohoz
   - sysaid
+  - togai
+  - zendesk
+  - zenoss
   - zoho-desk
 - slug: payments
   name: Payments & Money Movement

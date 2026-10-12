@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The core Thymeleaf template engine library providing HTML, XML, TEXT, JavaScript, and CSS template mode processing. Includes the Standard Dialect with th:text, th:each, th:if, th:unless, th:switch, th
@@ -117,7 +117,7 @@ modified: '2026-05-03'
 name: Thymeleaf
 nav: Providers
 network: true
-overview: 'Thymeleaf publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include HTML, Java, Open-Source, Server-Side Rendering, and Spring.
+overview: 'Thymeleaf publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include HTML, Java, Open Source, Server-Side Rendering, and Spring.
 
 
   The Thymeleaf catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -146,7 +146,7 @@ rules:
   slug: thymeleaf-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 22.2
+  composite: 21.2
   coverage:
     artifact_dirs: 11
     catalog_earned: 58.3
@@ -160,11 +160,17 @@ score:
     contract_governance: 9.8
     contract_quality: 14.7
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 22.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -180,7 +186,7 @@ slug: thymeleaf
 tags:
 - HTML
 - Java
-- Open-Source
+- Open Source
 - Server-Side Rendering
 - Spring
 - Spring Boot

@@ -12,7 +12,7 @@ access_model:
   trial: true
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 28.2
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://app.tadeus.net/api/integration/v1
@@ -243,7 +243,7 @@ rate_limits:
   slug: tadeus-api-rate-limits
 score:
   band: developing
-  composite: 46.4
+  composite: 46.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 46.0
@@ -255,11 +255,11 @@ score:
   facets:
     access_clarity: 80.3
     contract_governance: 18.2
-    contract_quality: 47.6
+    contract_quality: 43.2
     developer_ergonomics: 49.4
-    discoverability: 70.4
+    discoverability: 70.0
     operational_transparency: 0.0
-  previous_composite: 46.4
+  previous_composite: 46.8
   provenance:
     conformance: first-party
     contracts:
@@ -269,8 +269,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

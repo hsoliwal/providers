@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Agency (agency.inc) builds Kai, an autonomous AI co-worker for customer success — an AI agent that works a company's entire book of B2B SaaS accounts, monitoring product usage, surfacing churn and expansion signals early, and running personalized onboarding, adoption, and renewal outreach so revenue and customer-success teams have command over their book. Agency raised a $20M Series A led by Menlo Ventures with participation from Sequoia Capital, Felicis, Snowflake Ventures, and Databricks Ventures. It is a demo-led enterprise product and does not currently publish a public API or developer program; this profile captures its identity and security posture.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/agency.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.agency.inc over HTTP.
+  name: Agency MCP Server
+  slug: agency
 modified: '2026-07-17'
 name: Agency
 nav: Providers
@@ -94,7 +98,7 @@ overview: 'Agency is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 15
 score:
   band: emerging
-  composite: 14.6
+  composite: 15.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,13 +112,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 13.2
-  previous_composite: 14.6
+  previous_composite: 15.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

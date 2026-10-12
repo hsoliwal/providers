@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -57,6 +57,10 @@ created: '2026-07-17'
 description: 'Le Collectionist is a French luxury travel and villa-rental marketplace that curates high-end vacation homes and provides concierge services for guests, alongside a revenue-management offering for property owners and a commission-based referral program for travel agencies. Surfaced as a portfolio company of Partech and added to the API Evangelist network, the company operates a consumer booking website, an owner portal, and a travel magazine, but publishes no public developer API, developer portal, or programmatic partner integration at this time. Sector: Marketplace / Travel & Hospitality.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/le-collectionist.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.lecollectionist.com over HTTP; 1 tool listed.
+  name: Le Collectionist MCP Server
+  slug: le-collectionist
 modified: '2026-07-20'
 name: Le Collectionist
 nav: Providers
@@ -68,7 +72,7 @@ overview: 'Le Collectionist is profiled on the [APIs.io](https://apis.io/) netwo
 random_paper: 8
 score:
   band: minimal
-  composite: 6.4
+  composite: 5.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -82,7 +86,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -92,11 +96,17 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 6.4
+  previous_composite: 5.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

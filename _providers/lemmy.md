@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 1
@@ -274,7 +274,7 @@ modified: '2026-06-13'
 name: Lemmy
 nav: Providers
 network: true
-overview: 'Lemmy publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Account API, Admin API, Authentication API, and 11 more. Tagged areas include Communities, Federated, Fediverse, Link Aggregator, and Open-Source.
+overview: 'Lemmy publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Account API, Admin API, Authentication API, and 11 more. Tagged areas include Community, Federated, Fediverse, Link Aggregator, and Open Source.
 
 
   The Lemmy catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -303,23 +303,26 @@ rules:
   slug: lemmy-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 46.5
+  composite: 41.8
   coverage:
     artifact_dirs: 16
-    catalog_earned: 93.3
+    catalog_earned: 89.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 21.8
+    catalog_gap: 25.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 77.0
+    access_clarity: 36.3
+    contract_governance: 23.5
+    contract_quality: 70.8
     developer_ergonomics: 11.9
-    discoverability: 68.5
-    operational_transparency: 60.5
-  previous_composite: 46.5
+    discoverability: 66.1
+    operational_transparency: 57.4
+  open_source:
+    applies: true
+    score: 25.0
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -327,8 +330,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -345,11 +354,11 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: lemmy
 tags:
-- Communities
+- Community
 - Federated
 - Fediverse
 - Link Aggregator
-- Open-Source
+- Open Source
 - Social Network
 website: https://join-lemmy.org
 ---

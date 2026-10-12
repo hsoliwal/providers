@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: HTTPX is a fully featured HTTP client library for Python 3 with sync and async APIs, HTTP/1.1 and HTTP/2 support. It is consumed as a Python package rather than as a hosted API service.
@@ -115,7 +115,7 @@ rules:
   slug: httpx-rules
 score:
   band: emerging
-  composite: 19.1
+  composite: 19.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -129,20 +129,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 19.1
+  previous_composite: 19.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

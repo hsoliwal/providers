@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Automate and schedule predictive query training and batch predictions. Retrain a predictive query (re-ingesting data from the source), trigger recurring batch predictions, monitor job status and evalu
@@ -188,14 +188,14 @@ description: Kumo.AI builds predictive AI for relational data. Its flagship mode
 image: https://avatars.githubusercontent.com/u/83320328?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at kumo-sdk-public.s3.us-west-2.amazonaws.com.
   name: Kumo.AI MCP Server
-  slug: kumoai-mcp-server
+  slug: kumoai-mcp-yml
 modified: '2026-07-19'
 name: Kumo.AI
 nav: Providers
 network: true
-overview: 'Kumo.AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Predictive Analytics, and Graph Neural Networks.
+overview: 'Kumo.AI publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Predictive Analytics, and Graph Neural Networks.
 
 
   Kumo.AI''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, authentication, changelog, and 23 more developer resources.'
@@ -206,7 +206,7 @@ rate_limits:
   slug: kumoai-rate-limits
 score:
   band: thin
-  composite: 35.5
+  composite: 37.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -220,18 +220,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 35.5
+  previous_composite: 37.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -259,7 +265,7 @@ slug: kumoai
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Predictive Analytics
 - Graph Neural Networks
 - Foundation Models

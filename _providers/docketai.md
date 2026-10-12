@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Docket's hosted, read-only remote Model Context Protocol server. It exposes Demand Capture Agents and their performance, captured visitors and leads, engaged accounts, conversation summaries with qual
   name: Docket Demand MCP
   slug: docket-demand-mcp
-artifact_total: 9
+artifact_total: 8
 common:
 - group: company
   title: ''
@@ -178,12 +178,9 @@ description: 'Docket (docket.io, formerly Docket AI on docketai.com) is an Agent
 image: https://www.docket.io/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at demand-mcp.app.docketai.com over HTTP requiring OAuth.
   name: Docket Demand MCP
   slug: docket-demand-mcp
-- description: ''
-  name: Docket MCP Server
-  slug: docket-mcp-server
 modified: '2026-08-13'
 name: Docket
 nav: Providers
@@ -207,8 +204,8 @@ scopes:
   slug: docketai-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: thin
-  composite: 37.8
+  band: developing
+  composite: 41.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -222,14 +219,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 37.8
+  previous_composite: 41.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

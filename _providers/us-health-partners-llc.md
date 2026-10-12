@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -84,17 +84,17 @@ description: US Health Partners (USHP) is a physician-led national cardiovascula
 image: https://cdn.prod.website-files.com/650945f38bc322ab5b6c0159/650a79163a58ca2491900530_logo%20(3).png
 layout: provider
 modified: '2026-07-21'
-name: US Health Partners, LLC
+name: US Health Partners
 nav: Providers
 network: true
-overview: 'US Health Partners, LLC is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Cardiology, Cardiovascular Care, and Physician Network.
+overview: 'US Health Partners is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Cardiology, Cardiovascular Care, and Physician Network.
 
 
-  US Health Partners, LLC''s developer surface includes support and 9 more developer resources.'
+  US Health Partners'' developer surface includes support and 9 more developer resources.'
 random_paper: 13
 score:
   band: minimal
-  composite: 10.7
+  composite: 10.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,17 +108,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 10.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 10.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

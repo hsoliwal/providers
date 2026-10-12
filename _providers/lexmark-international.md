@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,7 +73,7 @@ modified: '2026-04-28'
 name: Lexmark International
 nav: Providers
 network: true
-overview: 'Lexmark International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Printing, Imaging, IoT, Managed Print Services, and Document-Management.
+overview: 'Lexmark International is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Printing, Imaging, IoT, Managed Print Services, and Document Management.
 
 
   Lexmark International''s developer surface includes support and 6 more developer resources.'
@@ -96,7 +96,7 @@ press:
 random_paper: 1
 score:
   band: minimal
-  composite: 6.3
+  composite: 4.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -110,11 +110,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 6.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +138,7 @@ tags:
 - Imaging
 - IoT
 - Managed Print Services
-- Document-Management
+- Document Management
 - Fortune 1000
 website: https://www.lexmark.com
 ---

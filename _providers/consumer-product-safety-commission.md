@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -140,7 +140,7 @@ modified: '2026-05-19'
 name: Consumer Product Safety Commission
 nav: Providers
 network: true
-overview: 'Consumer Product Safety Commission publishes 1 API on the [APIs.io](https://apis.io/) network: Recalls API. Tagged areas include Consumer Protection, Federal-Government, Hazards, Open Data, and Product Safety.
+overview: 'Consumer Product Safety Commission publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Recalls API, and 1 more. Tagged areas include Consumer Protection, Federal Government, Hazards, Open Data, and Product Safety.
 
 
   The Consumer Product Safety Commission catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
@@ -177,7 +177,7 @@ rules:
   slug: consumer-product-safety-commission-rules
 score:
   band: emerging
-  composite: 25.6
+  composite: 23.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 47.5
@@ -189,11 +189,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 53.1
+    contract_quality: 48.1
     developer_ergonomics: 16.7
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 7.9
-  previous_composite: 25.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 23.9
   provenance:
     agentic_access: derived
     contracts:
@@ -206,9 +211,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -223,7 +228,7 @@ security:
 slug: consumer-product-safety-commission
 tags:
 - Consumer Protection
-- Federal-Government
+- Federal Government
 - Hazards
 - Open Data
 - Product Safety

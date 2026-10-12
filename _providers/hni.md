@@ -25,7 +25,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 27.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Hearth & Home Technologies storefront implements the Universal Commerce Protocol (UCP) over an anonymous Model Context Protocol endpoint. A tools/list probe on 2026-09-13 returned 13 tools — searc
@@ -143,17 +143,17 @@ description: 'HNI Corporation (NYSE: HNI) is a manufacturer founded in 1944 and 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hni.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at hearthnhome.com requiring OAuth; 13 tools listed.
   name: Hearth & Home Technologies Agent Commerce MCP Server
   slug: hearth-home-technologies-agent-commerce-mcp-server
 modified: '2026-09-13'
-name: HNI Corporation
+name: HNI
 nav: Providers
 network: true
-overview: 'HNI Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000, Manufacturing, Office Furniture, Workplace, and Building Products.
+overview: 'HNI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 1000, Manufacturing, Office Furniture, Workplace, and Building Products.
 
 
-  HNI Corporation''s developer surface includes authentication and 19 more developer resources.'
+  HNI''s developer surface includes authentication and 19 more developer resources.'
 plans:
 - name: Hni Plans Pricing
   plan_count: 0
@@ -181,12 +181,12 @@ rate_limits:
   slug: hni-rate-limits
 scopes:
 - name: Hni Scopes
-  scope_count: 0
+  scope_count: 4
   slug: hni-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: emerging
-  composite: 14.4
+  composite: 16.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -200,20 +200,28 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.4
+  previous_composite: 16.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

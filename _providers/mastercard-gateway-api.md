@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -128,7 +128,7 @@ modified: '2026-09-16'
 name: Mastercard Gateway API
 nav: Providers
 network: true
-overview: 'Mastercard Gateway API publishes 1 API on the [APIs.io](https://apis.io/) network: Merchant API. Tagged areas include Credit Cards, Gateways, Payment Processing, and Payments.
+overview: 'Mastercard Gateway API publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Merchant API, and 1 more. Tagged areas include Credit Cards, Gateways, Payment Processing, and Payments.
 
 
   Mastercard Gateway API''s developer surface includes authentication, developer portal, signup flow, support, and 8 more developer resources.'
@@ -143,7 +143,7 @@ rate_limits:
   slug: mastercard-gateway-api-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 36.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 41.0
@@ -155,11 +155,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 38.1
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 37.3
+  previous_composite: 36.1
   provenance:
     agentic_access: derived
     contracts:
@@ -172,9 +172,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 1
@@ -194,7 +194,7 @@ modified: '2026-05-19'
 name: Unum
 nav: Providers
 network: true
-overview: 'Unum publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Billing API, Eligibility API, and 3 more. Tagged areas include Insurance, Benefits Administration, HR Integration, Disability Insurance, and Life Insurance.
+overview: 'Unum publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Billing API, Eligibility API, and 5 more. Tagged areas include Insurance, Benefits Administration, HR Integration, Disability Insurance, and Life Insurance.
 
 
   The Unum catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -255,7 +255,7 @@ scopes:
   summary_line: 9 scopes · clientCredentials
 score:
   band: thin
-  composite: 36.0
+  composite: 32.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 59.5
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 66.0
+    contract_quality: 60.4
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 36.0
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     contracts:
@@ -284,9 +284,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 51.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -309,5 +309,6 @@ tags:
 - Disability Insurance
 - Life Insurance
 - Fortune 500
+- Employee Benefits
 website: https://www.unum.com
 ---

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://farmer.vuestorefront.cloud
@@ -50,7 +50,7 @@ apis:
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The flush_cache API from Alokai (formerly Vue Storefront) — 1 operation(s) for flush_cache.
-  name: Alokai (formerly Vue Storefront) flush_cache API
+  name: Alokai (formerly Vue Storefront) Flush Cache API
   slug: alokai-formerly-vue-storefront-flush-cache-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
@@ -65,37 +65,37 @@ apis:
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace} API from Alokai (formerly Vue Storefront) — 1 operation(s) for instance/{namespace}.
-  name: Alokai (formerly Vue Storefront) instance/{namespace} API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace} API
   slug: alokai-formerly-vue-storefront-instance-namespace-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/exists API from Alokai (formerly Vue Storefront) — 1 operation(s) for instance/{namespace}/exists.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/exists API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/exists API
   slug: alokai-formerly-vue-storefront-instance-namespace-exists-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/ingresses API from Alokai (formerly Vue Storefront) — 2 operation(s) for instance/{namespace}/ingresses.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/ingresses API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/ingresses API
   slug: alokai-formerly-vue-storefront-instance-namespace-ingresses-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/kube_config API from Alokai (formerly Vue Storefront) — 2 operation(s) for instance/{namespace}/kube_config.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/kube_config API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/kube Config API
   slug: alokai-formerly-vue-storefront-instance-namespace-kube-config-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/pod API from Alokai (formerly Vue Storefront) — 1 operation(s) for instance/{namespace}/pod.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/pod API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/pod API
   slug: alokai-formerly-vue-storefront-instance-namespace-pod-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/pod/{pod} API from Alokai (formerly Vue Storefront) — 1 operation(s) for instance/{namespace}/pod/{pod}.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/pod/{pod} API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/pod/{pod} API
   slug: alokai-formerly-vue-storefront-instance-namespace-pod-pod-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
   description: The instance/{namespace}/pod/{pod}/log API from Alokai (formerly Vue Storefront) — 1 operation(s) for instance/{namespace}/pod/{pod}/log.
-  name: Alokai (formerly Vue Storefront) instance/{namespace}/pod/{pod}/log API
+  name: Alokai (formerly Vue Storefront) Instance/{namespace}/pod/{pod}/log API
   slug: alokai-formerly-vue-storefront-instance-namespace-pod-pod-log-api
 - baseURL: https://farmer.vuestorefront.cloud
   baseurl_source: declared
@@ -187,6 +187,11 @@ collections:
   name: farmer cdn v2.2/instance/{namespace}/pods API
   slug: open-alokai-formerly-vue-storefront-v2-2-instance-namespace-pods-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/alokai-formerly-vue-storefront/refs/heads/main/capabilities/alokai-formerly-vue-storefront-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/alokai-formerly-vue-storefront-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/alokai-formerly-vue-storefront/refs/heads/main/mcp/alokai-formerly-vue-storefront-mcp.yml
   title: ''
@@ -321,16 +326,16 @@ modified: '2026-07-17'
 name: Alokai (formerly Vue Storefront)
 nav: Providers
 network: true
-overview: 'Alokai (formerly Vue Storefront) publishes 18 APIs on the [APIs.io](https://apis.io/) network, including cdn API, deploy_check API, flush_cache API, and 15 more. Tagged areas include Company, Software-as-a-Service, E-Commerce, Composable Commerce, and Headless Commerce.
+overview: 'Alokai (formerly Vue Storefront) publishes 18 APIs on the [APIs.io](https://apis.io/) network, including cdn API, deploy_check API, Flush Cache API, and 15 more. Tagged areas include Company, Software-as-a-Service, E-Commerce, Composable Commerce, and Headless Commerce.
 
 
-  Alokai (formerly Vue Storefront)''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 21 more developer resources.'
+  Alokai (formerly Vue Storefront)''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 22 more developer resources.'
 random_paper: 6
 score:
   band: developing
   composite: 46.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -340,9 +345,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 44.0
+    contract_quality: 39.9
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
   previous_composite: 46.5
   provenance:
@@ -354,8 +359,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

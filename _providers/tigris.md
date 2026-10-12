@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -57,18 +57,18 @@ created: '2026-07-17'
 description: Tigris is a company surfaced as a portfolio company of a16z, general-catalyst and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.storage.dev.
   name: Tigris MCP Server
-  slug: tigris-mcp-server
+  slug: tigris-mcp-yml
 modified: '2026-07-17'
 name: Tigris
 nav: Providers
 network: true
-overview: Tigris is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
+overview: Tigris is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company and A2A.
 random_paper: 20
 score:
   band: minimal
-  composite: 7.0
+  composite: 5.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 20.0
@@ -82,7 +82,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 1.8
-    discoverability: 44.4
+    discoverability: 46.7
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -90,13 +90,19 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 7.0
+  previous_composite: 5.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -118,4 +124,5 @@ security:
 slug: tigris
 tags:
 - Company
+- A2A
 ---

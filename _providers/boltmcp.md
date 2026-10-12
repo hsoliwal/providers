@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The MCP server the BoltMCP Helm chart deploys into the customer's own Kubernetes cluster. Customers define their own servers and tools through the BoltMCP dashboard, so the tool surface is tenant-defi
@@ -137,7 +137,7 @@ description: 'BoltMCP is a UK company (BoltMCP Limited) selling a self-hosted pl
 image: https://www.boltmcp.io/boltmcp-logo/icon/icon-mark-light-original.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at server.{global.domain} over HTTP requiring OAuth.
   name: BoltMCP MCP Server
   slug: boltmcp-mcp-server
 modified: '2026-09-14'
@@ -164,7 +164,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 22.2
+  composite: 22.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -178,15 +178,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 22.2
+  previous_composite: 22.7
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

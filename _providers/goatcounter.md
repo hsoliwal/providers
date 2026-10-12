@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -301,7 +301,7 @@ rate_limits:
   slug: goatcounter-rate-limits
 score:
   band: developing
-  composite: 52.0
+  composite: 52.7
   coverage:
     artifact_dirs: 25
     catalog_earned: 56.0
@@ -313,11 +313,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 4.5
-    contract_quality: 50.0
+    contract_quality: 45.0
     developer_ergonomics: 61.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 52.6
-  previous_composite: 52.0
+  previous_composite: 52.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -328,8 +328,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -355,7 +361,7 @@ tags:
 - Privacy
 - Statistics
 - Web Analytics
-- Open-Source
+- Open Source
 - Self-Hosted
 - Event
 - Data Export

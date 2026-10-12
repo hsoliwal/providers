@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -109,7 +109,7 @@ overview: 'Path Robotics is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 1
 score:
   band: minimal
-  composite: 7.7
+  composite: 7.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 35.0
@@ -123,17 +123,17 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 5.3
-  previous_composite: 7.7
+  previous_composite: 7.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -158,12 +158,12 @@ tags:
 - World Models
 - Obsidian
 - Weld World Model
-- Computer-Vision
+- Computer Vision
 - LiDAR
 - Defense
 - Shipbuilding
 - Energy Infrastructure
-- Data-Center
+- Data Center
 - Heavy Industry
 - Hardware
 - Columbus Ohio

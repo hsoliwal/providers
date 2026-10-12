@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -77,7 +77,7 @@ common:
   type: PrivacyPolicy
   url: https://www.nustar-energy.com/privacy-policy/
 created: '2025-01-01'
-description: NuStar Energy is one of the largest independent liquids terminal and pipeline operators in the United States, transporting and storing crude oil, refined products, and renewable fuels. NuStar does not currently publish public APIs or developer resources.
+description: NuStar Energy was one of the largest independent liquids terminal and pipeline operators in the United States, transporting and storing crude oil, refined products, and renewable fuels. Sunoco LP completed its acquisition of NuStar on 3 May 2024, and nustarenergy.com now redirects to sunocolp.com. NuStar published no public APIs or developer resources.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nustar-energy.png
 layout: provider
 modified: '2026-04-28'
@@ -107,7 +107,7 @@ press:
 random_paper: 0
 score:
   band: minimal
-  composite: 5.0
+  composite: 5.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -121,7 +121,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -129,15 +129,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 5.0
+  previous_composite: 5.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 5.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 3.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -150,5 +150,6 @@ tags:
 - Storage
 - Terminal
 - Fortune 1000
+- Acquired
 website: https://www.nustar-energy.com
 ---

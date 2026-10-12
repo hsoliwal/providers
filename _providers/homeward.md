@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -197,14 +197,14 @@ modified: '2026-07-19'
 name: Homeward
 nav: Providers
 network: true
-overview: 'Homeward publishes 3 APIs on the [APIs.io](https://apis.io/) network: Buybox API, Finalization API, and Offer Requests API. Tagged areas include Company, Real-Estate, Home Finance, Mortgage, and PropTech.
+overview: 'Homeward publishes 3 APIs on the [APIs.io](https://apis.io/) network: Buybox API, Finalization API, and Offer Requests API. Tagged areas include Company, Real Estate, Home Finance, Mortgage, and PropTech.
 
 
   Homeward''s developer surface includes documentation, API reference, engineering blog, support, authentication, and 19 more developer resources.'
 random_paper: 19
 score:
-  band: emerging
-  composite: 26.0
+  band: thin
+  composite: 27.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -218,14 +218,16 @@ score:
     contract_governance: 4.5
     contract_quality: 13.6
     developer_ergonomics: 51.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 26.0
+  previous_composite: 27.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -236,8 +238,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -255,7 +263,7 @@ security:
 slug: homeward
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Home Finance
 - Mortgage
 - PropTech

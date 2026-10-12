@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Terra Security operates an agentic-AI-powered continuous offensive security (penetration testing) platform. Founded in 2024 and based in Tel Aviv, Terra runs a swarm of AI agents with a human-on-the-loop workflow that continuously validates every attack surface — web and internal applications, external and internal networks, and AI systems such as LLMs, copilots, MCP servers, and autonomous agents (AI red teaming). The platform compresses multi-week legacy pentests into hours, produces verified (low-noise) findings, and generates audit-ready evidence for SOC 2, ISO 27001, and HIPAA programs. Terra raised a $30M Series A led by Felicis in 2025. Terra publishes no public developer API; this profile captures the company's public web surface and security posture.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/terra.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.terra.security over HTTP.
+  name: Terra MCP Server
+  slug: terra
 modified: '2026-07-21'
 name: Terra
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Terra is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 14
 score:
   band: emerging
-  composite: 13.0
+  composite: 12.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -103,18 +107,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 13.0
+  previous_composite: 12.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,6 +145,6 @@ tags:
 - Offensive Security
 - Red Teaming
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 website: https://terra.security
 ---

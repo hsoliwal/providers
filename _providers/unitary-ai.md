@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.unitary.ai/v1
@@ -55,7 +55,7 @@ apis:
 - baseURL: https://api.unitary.ai/v1
   baseurl_source: declared
   description: The moderation API from Unitary AI — 1 operation(s) for moderation.
-  name: Unitary AI moderation API
+  name: Unitary AI Moderation API
   slug: unitary-ai-moderation-api
 - baseURL: https://api.unitary.ai/v1
   baseurl_source: declared
@@ -212,7 +212,7 @@ overview: 'Unitary AI publishes 5 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 15
 score:
   band: thin
-  composite: 33.4
+  composite: 33.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -224,17 +224,19 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 4.5
-    contract_quality: 56.0
+    contract_quality: 51.2
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.4
+  previous_composite: 33.1
   provenance:
     conformance: derived
     contracts:
@@ -244,8 +246,18 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -271,8 +283,8 @@ tags:
 - Content Moderation
 - Trust and Safety
 - Artificial Intelligence
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - Video
 - Virtual Agents
 website: https://www.unitary.ai/

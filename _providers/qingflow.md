@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 asyncapis:
 - description: ''
   name: Qingflow Webhooks
@@ -99,6 +99,10 @@ created: '2026-07-17'
 description: Qingflow (轻流) is an AI-powered no-code and low-code business management platform that lets enterprises build digital operations systems — forms, workflows and approval processes, portals, reports, data management, and automation — without writing code. Its Open Platform exposes OpenAPI interfaces, an outbound Webhook connector, single sign-on / account integration, and no-code connectors (Q-Linker, Q-Source) for pushing and collecting data across systems such as DingTalk, WeChat Work, and Feishu. Qingflow also ships AI features (QingClaw assistant, QingBuilder one-sentence app generation) and prebuilt ERP/CRM/OA/project-management solution templates. The company is backed by Qiming Venture Partners.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qingflow.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.qingflow.com over HTTP.
+  name: qingflow MCP Server
+  slug: qingflow
 modified: '2026-07-20'
 name: qingflow
 nav: Providers
@@ -113,7 +117,7 @@ overview: 'qingflow is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 13
 score:
   band: thin
-  composite: 28.3
+  composite: 26.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -125,9 +129,9 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 32.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -136,11 +140,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 28.3
+  previous_composite: 26.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

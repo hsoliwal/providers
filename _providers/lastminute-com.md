@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/lastminute-com/refs/heads/main/security/lastminute-com-domain-security.yml
@@ -114,6 +114,10 @@ created: '2026-07-17'
 description: 'lastminute.com N.V. (SIX Swiss Exchange: LMN) is a European travel-tech group and the regional leader in dynamic holiday packages, operating an online travel agency portfolio that includes lastminute.com, Volagratis, Rumbo, Bravofly, Weg.de, Jetcost and Hotelscan alongside the Forward media/advertising business. The group sells flights, hotels and packaged travel across a global network, and runs an engineering organisation that publishes an open technology blog and a Stoplight-hosted API portal at developers.lastminute.com. That portal is a real partner-facing API surface, but its projects are not anonymously readable — API reference content sits behind a workspace sign-in, so lastminute.com currently exposes no public OpenAPI, SDK, or self-service developer onboarding path.'
 image: https://res.cloudinary.com/lastminute-contenthub/v1/DAM/Logos%20%2B%20fonts/SVG/corporate%20website/lastminute
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.lastminute.com over HTTP; 8 tools listed.
+  name: lastminute.com MCP Server
+  slug: lastminute-com
 modified: '2026-07-19'
 name: lastminute.com
 nav: Providers
@@ -125,7 +129,7 @@ overview: 'lastminute.com is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 6
 score:
   band: emerging
-  composite: 12.7
+  composite: 12.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -139,18 +143,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 12.7
+  previous_composite: 12.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

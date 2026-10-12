@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 22.7
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - baseURL: https://status.empowerly.com/api/v2
@@ -228,7 +228,7 @@ rate_limits:
   slug: empowerly-rate-limits
 score:
   band: thin
-  composite: 33.9
+  composite: 30.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -242,9 +242,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 33.9
+  previous_composite: 30.2
   provenance:
     conformance: derived
     contracts:
@@ -259,9 +259,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

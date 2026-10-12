@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -155,7 +155,7 @@ rate_limits:
   slug: peaxy-rate-limits
 score:
   band: emerging
-  composite: 20.1
+  composite: 18.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -169,9 +169,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 20.1
+  previous_composite: 18.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -180,9 +180,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 32.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -207,6 +207,6 @@ tags:
 - Defense
 - Analytics
 - Data Management
-- Machine-Learning
+- Machine Learning
 website: https://peaxy.net/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -424,7 +424,7 @@ layout: provider
 mcp_servers:
 - description: LeanData ships a hosted, remote BookIt MCP server, announced in the Q2 2026 release. It exposes BookIt scheduling and operational data to any MCP client (Claude, ChatGPT, Agentforce, Cursor) and is au
   name: LeanData BookIt MCP (remote, https://mcp.leandata.com/mcp)
-  slug: leandata-bookit-mcp-remote-httpsmcpleandatacommcp
+  slug: leandata-bookit-mcp
 modified: '2026-08-13'
 name: LeanData
 nav: Providers
@@ -449,7 +449,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 58.6
+  composite: 61.7
   coverage:
     artifact_dirs: 25
     catalog_earned: 63.0
@@ -461,23 +461,35 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 47.4
+    contract_quality: 42.3
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 80.8
     operational_transparency: 50.0
-  previous_composite: 58.6
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 88.9
       derived: 0
       marker_coverage: 0.0
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

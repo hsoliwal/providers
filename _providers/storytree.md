@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -69,9 +69,9 @@ description: 'Storytree Inc. is a Palo Alto consumer photo company, backed by 50
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/storytree.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.simpleprints.com over HTTP; 7 tools listed.
   name: Storytree MCP Server
-  slug: storytree-mcp-server
+  slug: simpleprints-site
 modified: '2026-07-21'
 name: Storytree
 nav: Providers
@@ -80,7 +80,7 @@ overview: Storytree is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 19
 score:
   band: minimal
-  composite: 5.7
+  composite: 4.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -94,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 5.7
+  previous_composite: 4.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

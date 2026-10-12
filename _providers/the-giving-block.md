@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.6
-  scored_at: '2026-09-20'
+  score: 10.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful JSON API for accepting crypto, stock, and card donations on behalf of nonprofits in The Giving Block network. Provides organization management, currency and exchange-rate lookups, crypto depos
@@ -147,7 +147,7 @@ overview: 'The Giving Block publishes 1 API on the [APIs.io](https://apis.io/) n
 random_paper: 16
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 18.2
+  previous_composite: 18.1
   provenance:
     conformance: derived
     mcp: derived
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -203,5 +203,6 @@ tags:
 - Stock Donations
 - Webhook
 - Widgets
+- Web3
 website: https://thegivingblock.com
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -271,7 +271,7 @@ modified: '2026-05-19'
 name: Truist Financial
 nav: Providers
 network: true
-overview: 'Truist Financial publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Commercial Accounts API, Commercial Transactions API, and 1 more. Tagged areas include Banking, Financial-Services, Open Banking, Commercial Banking, and Personal Banking.
+overview: 'Truist Financial publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Commercial Accounts API, Commercial Transactions API, and 5 more. Tagged areas include Banking, Financial Services, Open Banking, Commercial Banking, and Personal Banking.
 
 
   The Truist Financial catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -316,7 +316,7 @@ scopes:
   summary_line: 4 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 45.9
+  composite: 42.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 62.5
@@ -328,16 +328,18 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 31.8
-    contract_quality: 63.3
+    contract_quality: 57.7
     developer_ergonomics: 19.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 45.9
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -351,9 +353,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 63.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -372,7 +374,7 @@ security:
 slug: truist-financial
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Open Banking
 - Commercial Banking
 - Personal Banking

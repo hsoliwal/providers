@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 7
 apis:
 - description: The Custody API in the Northern Trust API Store gives institutional clients programmatic access to global custody data — holdings, positions, safekept assets, settlements, and account-level custody in
@@ -186,8 +186,8 @@ scopes:
   slug: northern-trust-scopes
   summary_line: 10 scopes · authorizationCode
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 25.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -199,9 +199,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 13.1
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -210,7 +210,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.6
+  previous_composite: 25.4
   provenance:
     conformance: first-party
   regulatory:
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 50.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,7 +243,7 @@ tags:
 - Wealth Management
 - Asset Servicing
 - Asset Management
-- Financial-Services
+- Financial Services
 - United States
 website: https://www.northerntrust.com
 ---

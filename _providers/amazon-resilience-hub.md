@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -206,7 +206,7 @@ rate_limits:
   slug: amazon-resilience-hub-rate-limits
 score:
   band: thin
-  composite: 33.8
+  composite: 35.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 44.0
@@ -220,9 +220,9 @@ score:
     contract_governance: 0.0
     contract_quality: 14.5
     developer_ergonomics: 42.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 33.8
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +230,14 @@ score:
       derived: 7
       marker_coverage: 100.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

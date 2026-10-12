@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -100,6 +100,10 @@ created: '2026-07-17'
 description: Hello Patient builds AI agents (branded "Mia") for patient conversations across voice, text, and web chat, helping healthcare practices automate their front office, back office, and patient-growth workflows. Mia handles 24/7 appointment scheduling, insurance verification, and patient intake on the front office; revenue-cycle (RCM) follow-up and no-show recovery on the back office; and lead conversion, patient recall, and targeted outreach for growth. The platform serves dentistry, dermatology, ENT, mental health, optometry, primary care, urgent care, veterinary, and consumer-health practices, and integrates with EHR and practice systems including ModMed, AdvancedMD, NextGen, eClinicalWorks, Athena Health, Veradigm, Zenoti, and others. Hello Patient is HIPAA compliant and SOC 2 Type 2 certified. It is backed by 8VC and Scale Venture Partners. No public developer API is documented at this time; this profile is maintained by the API Evangelist network.
 image: https://cdn.prod.website-files.com/67363ec98e673c430a5d5eeb/6871773ed05ac7f7b4c6f785_OG%20-%20Home.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hellopatient.com over HTTP.
+  name: Hello Patient MCP Server
+  slug: hello-patient
 modified: '2026-07-19'
 name: Hello Patient
 nav: Providers
@@ -111,7 +115,7 @@ overview: 'Hello Patient is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 14
 score:
   band: emerging
-  composite: 16.6
+  composite: 16.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -125,9 +129,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 16.6
+  previous_composite: 16.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -144,9 +148,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

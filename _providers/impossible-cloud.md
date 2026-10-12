@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -74,6 +74,11 @@ collections:
   name: Impossible Cloud Management Console public Distributors Partners API
   slug: open-impossible-cloud-partners-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/impossible-cloud/refs/heads/main/capabilities/impossible-cloud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/impossible-cloud-capability-edges.yml
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/impossible-cloud/refs/heads/main/openapi/_original/impossible-cloud-management-console-openapi-original.json
   title: ''
@@ -209,11 +214,11 @@ network: true
 overview: 'Impossible Cloud publishes 3 APIs on the [APIs.io](https://apis.io/) network: Distributors API, Integrations API, and Partners API. Tagged areas include Company, Cloud, Object Storage, S3, and Storage.
 
 
-  Impossible Cloud''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 21 more developer resources.'
+  Impossible Cloud''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 22 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 46.6
+  composite: 47.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -225,17 +230,19 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 51.7
+    contract_quality: 46.9
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 46.6
+  previous_composite: 47.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -245,8 +252,18 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

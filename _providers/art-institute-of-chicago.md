@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -458,7 +458,7 @@ modified: '2026-05-29'
 name: Art Institute of Chicago
 nav: Providers
 network: true
-overview: 'Art Institute of Chicago publishes 37 APIs on the [APIs.io](https://apis.io/) network, including Agent Roles API, Agent Types API, Agents API, and 34 more. Tagged areas include Art And Design, Museums, Open Data, Cultural Heritage, and IIIF.
+overview: 'Art Institute of Chicago publishes 39 APIs on the [APIs.io](https://apis.io/) network, including Agent Roles API, Agent Types API, Agents API, and 36 more. Tagged areas include Museums, Open Data, Cultural Heritage, IIIF, and Public APIs.
 
 
   The Art Institute of Chicago catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -498,23 +498,23 @@ rules:
   slug: art-institute-of-chicago-rules
 score:
   band: thin
-  composite: 36.3
+  composite: 33.7
   coverage:
     artifact_dirs: 15
-    catalog_earned: 64.5
+    catalog_earned: 65.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 49.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
-    access_clarity: 21.1
+    access_clarity: 18.9
     contract_governance: 13.6
-    contract_quality: 67.3
+    contract_quality: 61.4
     developer_ergonomics: 23.8
-    discoverability: 70.4
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.3
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     contracts:
@@ -527,9 +527,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -543,12 +543,12 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: art-institute-of-chicago
 tags:
-- Art And Design
 - Museums
 - Open Data
 - Cultural Heritage
 - IIIF
 - Public APIs
-- Open-Source
+- Open Source
+- Art
 website: https://api.artic.edu/docs/
 ---

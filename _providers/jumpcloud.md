@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -94,6 +94,11 @@ collections:
   name: JumpCloud API V1
   slug: open-jumpcloud
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/capabilities/jumpcloud-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/jumpcloud-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/jumpcloud/refs/heads/main/agentic-access/jumpcloud-agentic-access.yml
   title: ''
@@ -153,14 +158,14 @@ modified: '2026-09-16'
 name: JumpCloud
 nav: Providers
 network: true
-overview: 'JumpCloud publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Application Templates API, Applications API, Command Results API, and 1 more. Tagged areas include Identity, Directory Services, SSO, MFA, and Device Management.
+overview: 'JumpCloud publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Application Templates API, Applications API, Command Results API, and 4 more. Tagged areas include Identity, Directory Services, SSO, MFA, and Device Management.
 
 
-  JumpCloud''s developer surface includes authentication, documentation, support, signup flow, pricing, engineering blog, and 6 more developer resources.'
+  JumpCloud''s developer surface includes authentication, documentation, support, signup flow, pricing, engineering blog, and 7 more developer resources.'
 random_paper: 11
 score:
   band: thin
-  composite: 31.8
+  composite: 29.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -172,11 +177,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 56.5
+    contract_quality: 51.2
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 31.8
+  previous_composite: 29.6
   provenance:
     agentic_access: derived
     contracts:
@@ -184,8 +189,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -211,5 +222,6 @@ tags:
 - IT Operations
 - Zero Trust
 - Identity Federation
+- Identity and Access Management
 website: https://jumpcloud.com
 ---

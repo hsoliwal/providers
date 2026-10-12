@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://lastmile.milenow.com/index.php
@@ -314,7 +314,7 @@ plans:
 random_paper: 5
 score:
   band: developing
-  composite: 43.9
+  composite: 43.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -326,11 +326,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 56.8
+    contract_quality: 51.9
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 43.9
+  previous_composite: 43.1
   provenance:
     conformance: derived
     contracts:
@@ -340,8 +340,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.silentpush.com/api/v1/merge-api/
@@ -201,14 +201,14 @@ description: Silent Push is a preemptive cyber defense company that maps adversa
 image: https://www.silentpush.com/wp-content/uploads/Silent-Push-Logo-@2x.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.silentpush.com over HTTP requiring OAuth; 33 tools listed.
   name: Silent Push MCP Server
-  slug: silent-push-mcp-server
+  slug: silent-push
 modified: '2026-08-27'
 name: Silent Push
 nav: Providers
 network: true
-overview: 'Silent Push publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Threat Intelligence, Cybersecurity, and DNS.
+overview: 'Silent Push publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Threat Intelligence, Cybersecurity, and DNS.
 
 
   Silent Push''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, CLI, and 24 more developer resources.'
@@ -223,7 +223,7 @@ rate_limits:
   slug: silent-push-rate-limits
 score:
   band: thin
-  composite: 37.2
+  composite: 39.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 45.0
@@ -236,15 +236,21 @@ score:
     access_clarity: 42.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 76.2
-    discoverability: 75.9
+    developer_ergonomics: 75.7
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 37.2
+  previous_composite: 39.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

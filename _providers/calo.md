@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -74,6 +74,10 @@ created: '2026-07-17'
 description: Calo is a food-tech company founded in Bahrain in 2019 that operates a personalized meal-subscription and delivery service. Nutritionist-designed, chef-prepared meals are portioned to each customer's health goals and lifestyle, with 80+ new meal options rotated weekly and flexible pause/cancel anytime. Built by chefs, nutritionists, and software engineers around proprietary nutritional algorithms, Calo has expanded to seven markets across the GCC and beyond (Saudi Arabia, United Arab Emirates, Kuwait, Qatar, Bahrain, and Oman), ordered through its consumer apps. Calo is backed by 500 Global. It is a consumer-facing product with no public developer API or documented client SDKs.
 image: https://api-blog.calo.app/wp-content/uploads/2023/11/calo-og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.calo.app over HTTP.
+  name: Calo MCP Server
+  slug: calo
 modified: '2026-07-18'
 name: Calo
 nav: Providers
@@ -85,7 +89,7 @@ overview: 'Calo is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 19
 score:
   band: emerging
-  composite: 12.9
+  composite: 13.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -99,9 +103,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 12.9
+  previous_composite: 13.1
   provenance:
     mcp: first-party
   regulatory:
@@ -109,9 +113,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

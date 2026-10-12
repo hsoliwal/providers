@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -52,37 +52,37 @@ apis:
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The deposit API from Dopex — 3 operation(s) for deposit.
-  name: Dopex deposit API
+  name: Dopex Deposit API
   slug: dopex-deposit-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The exercise API from Dopex — 2 operation(s) for exercise.
-  name: Dopex exercise API
+  name: Dopex Exercise API
   slug: dopex-exercise-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The option-markets API from Dopex — 2 operation(s) for option-markets.
-  name: Dopex option-markets API
+  name: Dopex Option Markets API
   slug: dopex-option-markets-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The purchase API from Dopex — 3 operation(s) for purchase.
-  name: Dopex purchase API
+  name: Dopex Purchase API
   slug: dopex-purchase-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The stats API from Dopex — 7 operation(s) for stats.
-  name: Dopex stats API
+  name: Dopex Stats API
   slug: dopex-stats-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The strikes-chain API from Dopex — 1 operation(s) for strikes-chain.
-  name: Dopex strikes-chain API
+  name: Dopex Strikes Chain API
   slug: dopex-strikes-chain-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
   description: The withdraw API from Dopex — 1 operation(s) for withdraw.
-  name: Dopex withdraw API
+  name: Dopex Withdraw API
   slug: dopex-withdraw-api
 - baseURL: https://api.stryke.xyz
   baseurl_source: declared
@@ -229,7 +229,7 @@ modified: '2026-06-14'
 name: Dopex
 nav: Providers
 network: true
-overview: 'Dopex publishes 8 APIs on the [APIs.io](https://apis.io/) network, including deposit API, exercise API, option-markets API, and 5 more. Tagged areas include DeFi, Decentralized Options, SSOV, Options Exchange, and Arbitrum.
+overview: 'Dopex publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Deposit API, Exercise API, Option Markets API, and 7 more. Tagged areas include DeFi, Decentralized Options, SSOV, Options Exchange, and Arbitrum.
 
 
   The Dopex catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -258,23 +258,23 @@ rules:
   slug: dopex-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 30.1
+  composite: 26.9
   coverage:
     artifact_dirs: 15
-    catalog_earned: 48.3
+    catalog_earned: 47.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.8
+    catalog_gap: 67.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 9.8
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 16.7
-    discoverability: 63.0
+    discoverability: 60.7
     operational_transparency: 21.1
-  previous_composite: 30.1
+  previous_composite: 26.9
   provenance:
     agentic_access: derived
     contracts:
@@ -282,8 +282,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

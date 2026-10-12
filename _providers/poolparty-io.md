@@ -12,7 +12,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
@@ -23,8 +23,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.0
-  scored_at: '2026-09-20'
+  score: 40.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 29
   human_in_the_loop: 14
@@ -43,7 +43,7 @@ apis:
 - description: 'Unauthenticated, read-only JSON routes under https://www.poolparty.io/api that the provider names as the "source of truth" for agents: the agent manifest (/agent/manifest, schema poolparty.agent.manif'
   name: PoolParty Public Manifest API
   slug: poolparty-public-manifest-api
-artifact_total: 11
+artifact_total: 10
 asyncapis:
 - description: ''
   name: Poolparty Io Events
@@ -186,12 +186,9 @@ description: 'PoolParty is a founder-led (Adam Byrne) broadcast-style media plat
 image: https://www.poolparty.io/poolparty-logo-cyan.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: PoolParty operates ONE remote MCP server at https://www.poolparty.io/api/mcp — the same Vercel origin as its website, A2A endpoint and public JSON manifests. It is Streamable HTTP, POST-only (a GET re
   name: PoolParty MCP Server
-  slug: poolparty-mcp-server
-- description: ''
-  name: PoolParty MCP endpoint (Streamable HTTP)
-  slug: poolparty-mcp-endpoint-streamable-http
+  slug: poolparty-io-mcp-yml
 modified: '2026-09-19'
 name: PoolParty
 nav: Providers
@@ -214,7 +211,7 @@ rate_limits:
   slug: poolparty-io-rate-limits
 score:
   band: developing
-  composite: 40.0
+  composite: 39.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 60.0
@@ -226,18 +223,24 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 81.5
+    discoverability: 81.7
     operational_transparency: 26.3
-  previous_composite: 40.0
+  previous_composite: 39.5
   provenance:
     agentic_access: derived
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -264,6 +267,6 @@ tags:
 - Creator Economy
 - Web3
 - Airtime
-- agent-native
+- Agent-Native
 website: https://www.poolparty.io/
 ---

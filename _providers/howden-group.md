@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -136,7 +136,7 @@ overview: 'Howden Group is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 15
 score:
   band: emerging
-  composite: 17.8
+  composite: 16.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -150,7 +150,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -160,7 +160,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 17.8
+  previous_composite: 16.8
   provenance:
     conformance: first-party
   regulatory:
@@ -168,9 +168,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

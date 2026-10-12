@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -245,7 +245,7 @@ modified: '2026-08-29'
 name: ScrapingAnt
 nav: Providers
 network: true
-overview: 'ScrapingAnt publishes 3 APIs on the [APIs.io](https://apis.io/) network: Scraping API, Usage API, and General API. Tagged areas include Data Extraction, Proxies, Scraping, Web Scraping, and Headless Browser.
+overview: 'ScrapingAnt publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Scraping API, Usage API, General API, and 2 more. Tagged areas include Data Extraction, Proxies, Scraping, Web Scraping, and Headless Browser.
 
 
   ScrapingAnt''s developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 26 more developer resources.'
@@ -272,9 +272,9 @@ score:
   facets:
     access_clarity: 72.4
     contract_governance: 4.5
-    contract_quality: 51.2
+    contract_quality: 47.3
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
   previous_composite: 51.2
   provenance:
@@ -287,8 +287,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

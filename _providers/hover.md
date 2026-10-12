@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for creating and managing property capture jobs, retrieving 3D models and measurement deliverables, inspections, estimates, instant-design leads, and webhooks. OAuth 2.0 authenticated. Versio
@@ -135,9 +135,9 @@ description: HOVER turns smartphone photos of a property into an accurate, inter
 image: https://hover.to/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at developers.hover.to over HTTP.
   name: HOVER MCP Server
-  slug: hover-mcp-server
+  slug: hoverapi
 modified: '2026-07-19'
 name: HOVER
 nav: Providers
@@ -156,7 +156,7 @@ rate_limits:
   slug: hover-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 45.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -168,11 +168,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 47.6
+  previous_composite: 45.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -181,9 +181,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

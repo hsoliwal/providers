@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: A live Cantaloupe Image Server exposing the International Image Interoperability Framework (IIIF) Image API 2.x over the scanned NSW land record images behind the Historical Land Records Viewer. Verif
@@ -240,7 +240,7 @@ modified: '2026-07-26'
 name: NSW Land Registry Services
 nav: Providers
 network: true
-overview: 'NSW Land Registry Services publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Australia, Land Registry, Title, and Conveyancing.
+overview: 'NSW Land Registry Services publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Australia, Land Registry, Title, and Conveyancing.
 
 
   The NSW Land Registry Services catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -250,7 +250,7 @@ overview: 'NSW Land Registry Services publishes 3 APIs on the [APIs.io](https://
 random_paper: 0
 score:
   band: developing
-  composite: 49.5
+  composite: 46.9
   coverage:
     artifact_dirs: 17
     catalog_earned: 45.0
@@ -262,9 +262,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 33.3
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 45.2
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -273,7 +273,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 49.5
+  previous_composite: 46.9
   provenance:
     conformance: first-party
   regulatory:
@@ -281,9 +281,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -301,7 +301,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC
 slug: nsw-land-registry
 tags:
-- Real-Estate
+- Real Estate
 - Australia
 - Land Registry
 - Title

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.5
-  scored_at: '2026-09-20'
+  score: 25.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 0
@@ -46,67 +46,67 @@ apis:
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The access_requests API from Rhythms — 3 operation(s) for access_requests.
-  name: Rhythms access_requests API
+  name: Rhythms Access Requests API
   slug: rhythms-access-requests-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The chat_refresh_threads API from Rhythms — 1 operation(s) for chat_refresh_threads.
-  name: Rhythms chat_refresh_threads API
+  name: Rhythms Chat Refresh Threads API
   slug: rhythms-chat-refresh-threads-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The connector_requests API from Rhythms — 1 operation(s) for connector_requests.
-  name: Rhythms connector_requests API
+  name: Rhythms Connector Requests API
   slug: rhythms-connector-requests-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The data_sources API from Rhythms — 1 operation(s) for data_sources.
-  name: Rhythms data_sources API
+  name: Rhythms Data Sources API
   slug: rhythms-data-sources-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The documents API from Rhythms — 4 operation(s) for documents.
-  name: Rhythms documents API
+  name: Rhythms Documents API
   slug: rhythms-documents-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The explorer_views API from Rhythms — 1 operation(s) for explorer_views.
-  name: Rhythms explorer_views API
+  name: Rhythms Explorer Views API
   slug: rhythms-explorer-views-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The labels API from Rhythms — 2 operation(s) for labels.
-  name: Rhythms labels API
+  name: Rhythms Labels API
   slug: rhythms-labels-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The mention_access_checks API from Rhythms — 1 operation(s) for mention_access_checks.
-  name: Rhythms mention_access_checks API
+  name: Rhythms Mention Access Checks API
   slug: rhythms-mention-access-checks-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The notifications API from Rhythms — 1 operation(s) for notifications.
-  name: Rhythms notifications API
+  name: Rhythms Notifications API
   slug: rhythms-notifications-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The objectives API from Rhythms — 1 operation(s) for objectives.
-  name: Rhythms objectives API
+  name: Rhythms Objectives API
   slug: rhythms-objectives-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The teams API from Rhythms — 6 operation(s) for teams.
-  name: Rhythms teams API
+  name: Rhythms Teams API
   slug: rhythms-teams-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The time_periods API from Rhythms — 2 operation(s) for time_periods.
-  name: Rhythms time_periods API
+  name: Rhythms Time Periods API
   slug: rhythms-time-periods-api
 - baseURL: https://api.rhythms.ai
   baseurl_source: declared
   description: The users API from Rhythms — 1 operation(s) for users.
-  name: Rhythms users API
+  name: Rhythms Users API
   slug: rhythms-users-api
 artifact_total: 31
 collections:
@@ -153,6 +153,11 @@ collections:
   name: Rhythms (params in:body) access_requests users API
   slug: open-rhythms-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rhythms/refs/heads/main/capabilities/rhythms-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rhythms-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/rhythms/refs/heads/main/overlays/rhythms-openapi-overlay.yaml
   title: ''
@@ -251,16 +256,16 @@ modified: '2026-07-21'
 name: Rhythms
 nav: Providers
 network: true
-overview: 'Rhythms publishes 13 APIs on the [APIs.io](https://apis.io/) network, including access_requests API, chat_refresh_threads API, connector_requests API, and 10 more. Tagged areas include Company, Artificial Intelligence, Productivity, Goal Tracking, and OKRs.
+overview: 'Rhythms publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Access Requests API, Chat Refresh Threads API, Connector Requests API, and 10 more. Tagged areas include Company, Artificial Intelligence, Productivity, Goal Tracking, and OKRs.
 
 
-  Rhythms'' developer surface includes authentication, signup flow, pricing, engineering blog, support, and 15 more developer resources.'
+  Rhythms'' developer surface includes authentication, signup flow, pricing, engineering blog, support, and 16 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 29.7
+  composite: 29.0
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -270,11 +275,11 @@ score:
   facets:
     access_clarity: 14.5
     contract_governance: 4.5
-    contract_quality: 47.2
+    contract_quality: 42.7
     developer_ergonomics: 13.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 29.7
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -285,8 +290,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -312,7 +323,7 @@ tags:
 - Productivity
 - Goal Tracking
 - OKRs
-- Workflow-Automation
+- Workflow Automation
 - Team Collaboration
 - Business Reviews
 - MCP

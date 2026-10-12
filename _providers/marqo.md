@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 19.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -296,8 +296,8 @@ rate_limits:
   name: Marqo Rate Limits
   slug: marqo-rate-limits
 score:
-  band: thin
-  composite: 38.7
+  band: developing
+  composite: 43.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 39.0
@@ -309,11 +309,14 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 45.0
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 42.1
-  previous_composite: 38.7
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     contracts:
@@ -321,8 +324,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -345,8 +354,8 @@ tags:
 - Semantic Search
 - Embeddings
 - Artificial Intelligence
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - Ecommerce Search
 use_cases:
 - description: Index text and images into a single tensor store and query with natural-language or image inputs, with embedding inference running inside the engine.

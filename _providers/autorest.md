@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The AutoRest Core package (@autorest/core) is the central engine that orchestrates code generation from OpenAPI specifications. It handles input processing, configuration resolution, pipeline manageme
@@ -202,7 +202,7 @@ rate_limits:
   slug: autorest-rate-limits
 score:
   band: thin
-  composite: 29.0
+  composite: 36.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -216,13 +216,22 @@ score:
     contract_governance: 33.3
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 44.7
-  previous_composite: 29.0
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 36.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

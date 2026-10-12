@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 2
@@ -180,6 +180,11 @@ collections:
   name: Discourse API Documentation
   slug: open-discourse
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/discourse/refs/heads/main/vendor-facets/discourse-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/discourse-vendor-facets.yml
 - group: commercial
   title: ''
   type: License
@@ -268,10 +273,10 @@ modified: '2026-09-16'
 name: Discourse
 nav: Providers
 network: true
-overview: 'Discourse publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Backups API, Badges API, and 13 more. Tagged areas include Communities, Forums, and Open-Source.
+overview: 'Discourse publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Backups API, Badges API, and 13 more. Tagged areas include Community, Forums, and Open Source.
 
 
-  Discourse''s developer surface includes documentation, engineering blog, support, and 15 more developer resources.'
+  Discourse''s developer surface includes documentation, engineering blog, support, and 16 more developer resources.'
 plans:
 - name: Discourse Plans Pricing
   plan_count: 3
@@ -283,9 +288,9 @@ rate_limits:
   slug: discourse-rate-limits
 score:
   band: thin
-  composite: 34.5
+  composite: 34.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -295,11 +300,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
-    contract_quality: 41.8
+    contract_quality: 37.7
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 28.9
-  previous_composite: 34.5
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -307,8 +312,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 16
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -329,8 +340,8 @@ security:
   summary_line: SOC 2, ISO 27001
 slug: discourse
 tags:
-- Communities
+- Community
 - Forums
-- Open-Source
+- Open Source
 website: https://www.discourse.org/
 ---

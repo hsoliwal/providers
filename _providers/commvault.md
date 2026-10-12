@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 2
@@ -469,8 +469,8 @@ rules:
     warn: 5
   slug: commvault-rules
 score:
-  band: developing
-  composite: 40.0
+  band: thin
+  composite: 39.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 60.5
@@ -482,11 +482,11 @@ score:
   facets:
     access_clarity: 32.9
     contract_governance: 13.6
-    contract_quality: 61.8
+    contract_quality: 56.4
     developer_ergonomics: 38.1
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 15.8
-  previous_composite: 40.0
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     contracts:
@@ -494,8 +494,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 24
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

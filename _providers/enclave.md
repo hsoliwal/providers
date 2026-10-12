@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/enclave/refs/heads/main/security/enclave-vulnerability-disclosure.yml
@@ -88,6 +88,10 @@ created: '2026-07-17'
 description: Enclave (enclave.ai) is an AI-powered application and cloud security platform that operates as an "agentic security engineer." It continuously builds a living model of an organization's attack surface across services and cloud providers, then autonomously triages and investigates vulnerability findings against known CVEs to determine real-world exploitability and reachability. Rather than flooding teams with signature-based noise, Enclave traces data flows to confirm whether a CVE is actually reachable, surfaces cross-service exploits that traditional scanners miss, and routes prioritized remediation plans with proof to the owning teams. Founded by veterans from Stripe, Box, VMware, Salesforce, and Yelp, the company is backed by 8VC and Marc Benioff. Added to the API Evangelist network and enriched from the company's public web surface; no public developer API is currently published.
 image: https://enclave.ai/img/redesign/footer/logo-wordmark.svg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.enclave.ai over HTTP.
+  name: Enclave MCP Server
+  slug: enclave
 modified: '2026-07-19'
 name: Enclave
 nav: Providers
@@ -99,7 +103,7 @@ overview: 'Enclave is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 8
 score:
   band: emerging
-  composite: 11.3
+  composite: 11.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -113,13 +117,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 5.3
-  previous_composite: 11.3
+  previous_composite: 11.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -143,7 +153,7 @@ tags:
 - Cloud Security
 - Vulnerability Management
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 - CVE
 - DevSecOps
 website: https://enclave.ai

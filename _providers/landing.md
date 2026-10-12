@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 46.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -196,12 +196,12 @@ layout: provider
 mcp_servers:
 - description: 'Read-only public access to Landing''s furnished apartment catalog: search by market and dates, fetch a home, check availability, get an anonymous quote. No authentication is required to call any tool.'
   name: Landing MCP Server
-  slug: landing-mcp-server
+  slug: landing-public-mcp-server
 modified: '2026-07-19'
 name: Landing
 nav: Providers
 network: true
-overview: 'Landing publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, PropTech, Real-Estate, Rentals, and Furnished Apartments.
+overview: 'Landing publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, PropTech, Real Estate, Rentals, and Furnished Apartments.
 
 
   Landing''s developer surface includes documentation, API reference, getting-started guide, authentication, code examples, support, engineering blog, and 22 more developer resources.'
@@ -220,9 +220,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 51.0
+    contract_quality: 46.2
     developer_ergonomics: 58.9
-    discoverability: 87.0
+    discoverability: 85.0
     operational_transparency: 2.6
   previous_composite: 40.9
   provenance:
@@ -235,8 +235,14 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -256,12 +262,12 @@ slug: landing
 tags:
 - Company
 - PropTech
-- Real-Estate
+- Real Estate
 - Rentals
 - Furnished Apartments
 - Corporate Housing
 - Travel
-- agent-native
+- Agent-Native
 - MCP
 - Search
 website: https://www.hellolanding.com

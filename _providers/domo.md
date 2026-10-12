@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Domo API allows users to integrate and interact with data from various sources within the Domo platform. With Domo API, users can access real-time data, automate data processes, and create custom data
@@ -86,7 +86,7 @@ rate_limits:
   slug: domo-rate-limits
 score:
   band: emerging
-  composite: 14.5
+  composite: 13.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 46.0
@@ -100,11 +100,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 15.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 14.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

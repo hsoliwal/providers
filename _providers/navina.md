@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -136,7 +136,7 @@ plans:
 random_paper: 21
 score:
   band: emerging
-  composite: 20.7
+  composite: 19.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -150,9 +150,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 20.7
+  previous_composite: 19.5
   provenance:
     conformance: first-party
   regulatory:
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

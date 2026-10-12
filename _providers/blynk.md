@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: documented
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.6
-  scored_at: '2026-09-20'
+  score: 10.2
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Token-authenticated HTTPS REST API used by individual devices to read and write datastream values, batch update multiple datastreams, retrieve historical data, set widget and datastream properties, tr
@@ -255,7 +255,7 @@ overview: 'Blynk publishes 3 APIs on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 16
 score:
   band: thin
-  composite: 28.0
+  composite: 27.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -267,22 +267,22 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 6.5
+    contract_quality: 6.4
     developer_ergonomics: 54.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 28.0
+  previous_composite: 27.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 21.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

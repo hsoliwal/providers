@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -96,6 +96,10 @@ created: '2026-07-17'
 description: Finrep is an AI-powered financial reporting intelligence platform for the office of the CFO. It helps SEC reporting, technical accounting, legal counsel, investor relations, disclosure committee, internal audit, tax, and ESG teams research, benchmark, validate, and draft SEC disclosures grounded in EDGAR filings, authoritative accounting guidance (ASC/IFRS), and IR materials — with every answer traceable to inspectable source documents. Finrep ships 40+ purpose-built CFO-office workflows spanning comment-letter analysis, disclosure drafting, Section 16 filing, and peer benchmarking, and can deploy on-premises or in a private cloud. Backed by Accel.
 image: https://cdn.finrep.ai/assets/finrep-web/assets/images/og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.finrep.ai over HTTP.
+  name: Finrep MCP Server
+  slug: finrep
 modified: '2026-07-19'
 name: Finrep
 nav: Providers
@@ -107,7 +111,7 @@ overview: 'Finrep is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 6
 score:
   band: emerging
-  composite: 17.1
+  composite: 17.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -121,9 +125,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 17.1
+  previous_composite: 17.0
   provenance:
     mcp: first-party
   regulatory:
@@ -131,9 +135,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 31.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

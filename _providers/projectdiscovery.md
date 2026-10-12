@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.projectdiscovery.io
@@ -45,37 +45,37 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The assets API from ProjectDiscovery — 3 operation(s) for assets.
-  name: ProjectDiscovery assets API
+  name: ProjectDiscovery Assets API
   slug: projectdiscovery-assets-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The chaos API from ProjectDiscovery — 1 operation(s) for chaos.
-  name: ProjectDiscovery chaos API
+  name: ProjectDiscovery Chaos API
   slug: projectdiscovery-chaos-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The configurations API from ProjectDiscovery — 6 operation(s) for configurations.
-  name: ProjectDiscovery configurations API
+  name: ProjectDiscovery Configurations API
   slug: projectdiscovery-configurations-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The enumerations API from ProjectDiscovery — 11 operation(s) for enumerations.
-  name: ProjectDiscovery enumerations API
+  name: ProjectDiscovery Enumerations API
   slug: projectdiscovery-enumerations-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The export API from ProjectDiscovery — 2 operation(s) for export.
-  name: ProjectDiscovery export API
+  name: ProjectDiscovery Export API
   slug: projectdiscovery-export-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The history API from ProjectDiscovery — 1 operation(s) for history.
-  name: ProjectDiscovery history API
+  name: ProjectDiscovery History API
   slug: projectdiscovery-history-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The internal API from ProjectDiscovery — 3 operation(s) for internal.
-  name: ProjectDiscovery internal API
+  name: ProjectDiscovery Internal API
   slug: projectdiscovery-internal-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -85,22 +85,22 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The results API from ProjectDiscovery — 4 operation(s) for results.
-  name: ProjectDiscovery results API
+  name: ProjectDiscovery Results API
   slug: projectdiscovery-results-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The retests API from ProjectDiscovery — 1 operation(s) for retests.
-  name: ProjectDiscovery retests API
+  name: ProjectDiscovery Retests API
   slug: projectdiscovery-retests-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The scan_log API from ProjectDiscovery — 1 operation(s) for scan_log.
-  name: ProjectDiscovery scan_log API
+  name: ProjectDiscovery Scan Log API
   slug: projectdiscovery-scan-log-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The scans API from ProjectDiscovery — 17 operation(s) for scans.
-  name: ProjectDiscovery scans API
+  name: ProjectDiscovery Scans API
   slug: projectdiscovery-scans-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -115,22 +115,22 @@ apis:
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The template/v2 API from ProjectDiscovery — 1 operation(s) for template/v2.
-  name: ProjectDiscovery template/v2 API
+  name: ProjectDiscovery Template/v2 API
   slug: projectdiscovery-template-v2-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The templates API from ProjectDiscovery — 9 operation(s) for templates.
-  name: ProjectDiscovery templates API
+  name: ProjectDiscovery Templates API
   slug: projectdiscovery-templates-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The users API from ProjectDiscovery — 2 operation(s) for users.
-  name: ProjectDiscovery users API
+  name: ProjectDiscovery Users API
   slug: projectdiscovery-users-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
   description: The vuln API from ProjectDiscovery — 1 operation(s) for vuln.
-  name: ProjectDiscovery vuln API
+  name: ProjectDiscovery Vuln API
   slug: projectdiscovery-vuln-api
 - baseURL: https://api.projectdiscovery.io
   baseurl_source: declared
@@ -203,6 +203,11 @@ collections:
   name: PDCP Asset Vulnerability API
   slug: open-projectdiscovery-vulnerability-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/projectdiscovery/refs/heads/main/capabilities/projectdiscovery-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/projectdiscovery-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/projectdiscovery/refs/heads/main/overlays/projectdiscovery-openapi-overlay.yaml
   title: ''
@@ -353,16 +358,16 @@ modified: '2026-07-20'
 name: ProjectDiscovery
 nav: Providers
 network: true
-overview: 'ProjectDiscovery publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Asset API, assets API, chaos API, and 17 more. Tagged areas include Company, Cybersecurity, Security, Vulnerability Scanning, and Attack Surface Management.
+overview: 'ProjectDiscovery publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Asset API, Assets API, Chaos API, and 17 more. Tagged areas include Company, Cybersecurity, Security, Vulnerability Scanning, and Attack Surface Management.
 
 
-  ProjectDiscovery''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 24 more developer resources.'
+  ProjectDiscovery''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 25 more developer resources.'
 random_paper: 5
 score:
   band: developing
-  composite: 52.0
+  composite: 53.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -372,11 +377,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 55.3
+    contract_quality: 50.1
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 52.0
+  previous_composite: 53.4
   provenance:
     conformance: derived
     contracts:
@@ -386,8 +391,14 @@ score:
       total: 20
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The BuildOps Public API, named by the BuildOps Dev Center as the REST + webhook-callback integration surface for customers, software partners and vendors. The Dev Center gates its reference behind "In
   name: BuildOps Public API
   slug: public-api
-artifact_total: 7
+artifact_total: 8
 asyncapis:
 - description: ''
   name: Buildops Webhooks
@@ -158,6 +158,10 @@ description: BuildOps is an AI-native, all-in-one commercial contractor manageme
   is a Data Dictionary describing BuildOps datasets on the Dashboard module and a Snowflake private share. BuildOps does publish a security policy and a Vanta-hosted Trust Center carrying SOC 2 Type I.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/buildops.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.buildops.com over HTTP.
+  name: BuildOps MCP Server
+  slug: buildops
 modified: '2026-08-10'
 name: BuildOps
 nav: Providers
@@ -180,7 +184,7 @@ rate_limits:
   slug: buildops-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 34.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -192,15 +196,21 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 34.2
+  previous_composite: 34.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

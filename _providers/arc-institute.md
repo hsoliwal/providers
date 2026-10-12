@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -137,7 +137,7 @@ overview: 'Arc Institute is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 14
 score:
   band: minimal
-  composite: 5.8
+  composite: 4.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -155,12 +155,20 @@ score:
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 5.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,8 +193,8 @@ tags:
 - Evo 2
 - Bioinformatics
 - Non-Profit
-- Open-Source
-- Machine-Learning
+- Open Source
+- Machine Learning
 - AI for Science
 website: https://arcinstitute.org
 ---

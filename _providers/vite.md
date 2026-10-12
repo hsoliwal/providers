@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -71,6 +71,11 @@ collections:
   name: Vite Plugin API
   slug: open-vite-plugin-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vite/refs/heads/main/capabilities/vite-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vite-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/vite/refs/heads/main/agentic-access/vite-agentic-access.yml
   title: ''
@@ -167,7 +172,7 @@ overview: 'Vite publishes 2 APIs on the [APIs.io](https://apis.io/) network: Dev
   The Vite catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Vite''s developer surface includes documentation, changelog, and 12 more developer resources.'
+  Vite''s developer surface includes documentation, changelog, and 13 more developer resources.'
 plans:
 - name: Vite Plans Pricing
   plan_count: 3
@@ -201,9 +206,9 @@ rules:
   slug: vite-rules
 score:
   band: thin
-  composite: 31.8
+  composite: 29.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 56.5
     catalog_earned_first_party: 0.0
     catalog_gap: 58.5
@@ -213,11 +218,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 52.0
+    contract_quality: 47.6
     developer_ergonomics: 21.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 31.8
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -225,8 +230,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

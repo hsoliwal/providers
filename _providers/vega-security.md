@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -128,21 +128,21 @@ description: Vega (vega.io) is an AI-native security operations platform that bi
 image: https://cdn.prod.website-files.com/68791f04ead01339340acbbe/687e5eab154f5a8607c2f647_webclip.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 3 tools listed.
   name: Vega MCP
   slug: vega-mcp
 modified: '2026-07-21'
 name: Vega Security
 nav: Providers
 network: true
-overview: 'Vega Security is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security Operations, SIEM, and Agentic AI.
+overview: 'Vega Security is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security Operations, SIEM, and AI Agents.
 
 
   Vega Security''s developer surface includes engineering blog, documentation, and 18 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 17.4
+  composite: 17.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -156,14 +156,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 17.4
+  previous_composite: 17.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -185,7 +195,7 @@ tags:
 - Cybersecurity
 - Security Operations
 - SIEM
-- Agentic AI
+- AI Agents
 - Threat Detection
 - Security Analytics
 website: https://vega.io/

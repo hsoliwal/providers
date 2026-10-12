@@ -14,7 +14,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: served
@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.5
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://ps.pndsn.com
@@ -45,7 +45,7 @@ apis:
 - description: Edge serverless functions executed on PubNub's network in response to messages, presence events, or HTTP triggers.
   name: PubNub Functions
   slug: functions-api
-artifact_total: 30
+artifact_total: 31
 asyncapis:
 - description: AsyncAPI description of PubNub's realtime subscribe surface — the event stream that delivers messages, signals, presence updates, file events, message-action events, and App Context (object) events to
   name: PubNub Realtime Streaming API
@@ -115,11 +115,15 @@ finops:
   slug: pubnub-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pubnub.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pubnub.com over HTTP.
+  name: PubNub MCP Server
+  slug: pubnub
 modified: '2026-05-29'
 name: PubNub
 nav: Providers
 network: true
-overview: 'PubNub publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Real-Time, WebSocket, Pub-Sub, IoT, and Messaging.
+overview: 'PubNub publishes 2 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 1 more. Tagged areas include Real-Time, WebSocket, Pub-Sub, IoT, and Messaging.
 
 
   The PubNub catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -149,7 +153,7 @@ rules:
   slug: pubnub-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 33.9
+  composite: 32.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 50.5
@@ -161,15 +165,21 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 42.7
-    developer_ergonomics: 28.6
-    discoverability: 68.5
+    contract_quality: 40.6
+    developer_ergonomics: 27.9
+    discoverability: 68.3
     operational_transparency: 28.9
-  previous_composite: 33.9
+  previous_composite: 32.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

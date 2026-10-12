@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 40.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -132,6 +132,11 @@ collections:
   name: Flynet App Users API
   slug: open-blackbird-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/blackbird/refs/heads/main/capabilities/blackbird-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/blackbird-capability-edges.yml
 - group: commercial
   title: ''
   type: TermsOfService
@@ -282,7 +287,7 @@ layout: provider
 mcp_servers:
 - description: Flynet (Blackbird) ships two official MCP servers. The Docs MCP is a hosted, remote HTTP server (Mintlify-hosted, no credentials) that lets any MCP-aware agent search the live Flynet docs. The API MCP
   name: Blackbird MCP Server
-  slug: blackbird-mcp-server
+  slug: blackbird-mcp-yml
 modified: '2026-07-18'
 name: Blackbird
 nav: Providers
@@ -290,7 +295,7 @@ network: true
 overview: 'Blackbird publishes 10 APIs on the [APIs.io](https://apis.io/) network, including App API, Challenges API, Check-ins API, and 7 more. Tagged areas include Company, Restaurant, Loyalty, Payments, and Dining.
 
 
-  Blackbird''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 24 more developer resources.'
+  Blackbird''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 25 more developer resources.'
 random_paper: 2
 scopes:
 - name: Blackbird Scopes
@@ -299,9 +304,9 @@ scopes:
   summary_line: 9 scopes
 score:
   band: developing
-  composite: 46.0
+  composite: 43.4
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -311,11 +316,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 15.8
-  previous_composite: 46.0
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,9 +336,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

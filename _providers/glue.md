@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Public GraphQL API for the Glue workspace — send messages (sendMessage), read workspaces, threads, and groups, with Relay cursor-connection pagination and OAuth2 bearer auth.
@@ -174,7 +174,7 @@ layout: provider
 mcp_servers:
 - description: Glue's hosted remote MCP server for its team-communication workspace. The /mcp endpoint on api.glue.ai returns HTTP 401 with a WWW-Authenticate challenge whose resource_metadata points at https://mcp.
   name: Glue MCP Server
-  slug: glue-mcp-server
+  slug: glue
 modified: '2026-07-19'
 name: Glue
 nav: Providers
@@ -194,7 +194,7 @@ scopes:
   summary_line: 6 scopes
 score:
   band: developing
-  composite: 44.3
+  composite: 47.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -206,17 +206,23 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 44.3
+  previous_composite: 47.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

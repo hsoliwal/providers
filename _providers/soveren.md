@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.4
-  scored_at: '2026-09-20'
+  score: 26.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -238,7 +238,7 @@ overview: 'Soveren publishes 6 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 0
 score:
   band: developing
-  composite: 39.8
+  composite: 39.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 58.4
+    contract_quality: 53.4
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 39.8
+  previous_composite: 39.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -265,8 +265,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -289,7 +295,7 @@ tags:
 - Data Security
 - DSPM
 - DDR
-- Data Privacy
+- Privacy
 - Kubernetes
 - Compliance
 - Security

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -68,14 +68,14 @@ description: Widgera is an AI-native business platform that unifies a company's 
 image: https://widgera.com/widgera.png
 layout: provider
 modified: '2026-07-21'
-name: Widgera, Inc.
+name: Widgera
 nav: Providers
 network: true
-overview: Widgera, Inc. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Business Operations, and Adaptive OS.
+overview: Widgera is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Business Operations, and Adaptive OS.
 random_paper: 20
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.2
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -89,11 +89,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 10.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -117,7 +123,7 @@ tags:
 - Business Operations
 - Adaptive OS
 - CRM
-- Workflow-Automation
+- Workflow Automation
 - Enterprise Software
 - Customer Interaction
 website: https://widgera.com

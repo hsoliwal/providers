@@ -34,9 +34,9 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 27.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -142,6 +142,10 @@ created: '2026-07-17'
 description: 'AI Arena is a web3/AI gaming company built by ArenaX Labs, backed by Paradigm and Framework Ventures. Its flagship title, AI Arena, is an Ethereum/Arbitrum-native PvP fighting game where players purchase, train through imitation learning, and battle characters powered by real artificial intelligence, with a native $NRN (Neuron) token and an on-chain marketplace for AI models. Beyond the game, ArenaX Labs ships developer infrastructure for reinforcement learning: RLMesh, an open-source, Gymnasium-compatible framework that connects RL models to environments across process, dependency, and machine boundaries over a gRPC wire protocol (rlmesh-wire-v1), with Python and Rust SDKs; and SAI (competesai.com), a gamified RL research and competition platform with its own CLI. This profile was enriched by the API Evangelist pipeline from public sources — GitHub, package registries, and the RLMesh documentation.'
 image: https://raw.githubusercontent.com/api-evangelist/ai-arena/refs/heads/main/images/ai-arena.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.rlmesh.dev over HTTP.
+  name: AI Arena MCP Server
+  slug: ai-arena
 modified: '2026-07-17'
 name: AI Arena
 nav: Providers
@@ -153,7 +157,7 @@ overview: 'AI Arena is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 18
 score:
   band: thin
-  composite: 33.4
+  composite: 33.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -165,16 +169,22 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 66.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 42.1
-  previous_composite: 33.4
+  previous_composite: 33.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,7 +211,7 @@ tags:
 - Web3
 - Artificial Intelligence
 - Reinforcement Learning
-- Machine-Learning
+- Machine Learning
 - gRPC
 - SDK
 - Developer Tools

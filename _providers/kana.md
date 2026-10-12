@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: templated
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.7
-  scored_at: '2026-09-20'
+  score: 23.5
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The callable surface a deployed Kana pipeline ("skill") exposes on the Kana application host. POST /skill/{pipelineid} starts a run and returns a runid; GET /run/{runid}/status reports progress and qu
@@ -43,10 +43,6 @@ apis:
   slug: kana-mcp-server
 artifact_total: 8
 common:
-- group: other
-  title: ''
-  type: ParentCompany
-  url: https://apis.io/providers/salesforce/
 - group: company
   title: ''
   type: Website
@@ -150,17 +146,17 @@ description: 'Kana is an agentic AI growth and marketing platform that helps bra
 image: https://cdn.prod.website-files.com/6938c88532164b75764d7ec5/693c0c5cc53ad3db97596f39_929e4e790efd0fbe50a55bee450f14e8_Frame%202087327472.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at apps.kana.ai requiring OAuth.
   name: Kana MCP Server
   slug: kana-mcp-server
 modified: '2026-08-13'
 name: Kana
 nav: Providers
 network: true
-overview: 'Kana publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Artificial Intelligence, Agentic AI, and Marketing Technology.
+overview: 'Kana publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Artificial Intelligence, AI Agents, and Marketing Technology.
 
 
-  Kana''s developer surface includes engineering blog, support, getting-started guide, signup flow, authentication, and 17 more developer resources.'
+  Kana''s developer surface includes engineering blog, support, getting-started guide, signup flow, authentication, and 16 more developer resources.'
 plans:
 - name: Kana Plans Pricing
   plan_count: 3
@@ -172,12 +168,12 @@ rate_limits:
   slug: kana-rate-limits
 scopes:
 - name: Kana Scopes
-  scope_count: 0
+  scope_count: 4
   slug: kana-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 28.6
+  composite: 30.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -191,14 +187,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 28.6
+  previous_composite: 30.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,7 +225,7 @@ tags:
 - Company
 - Marketing
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 - Marketing Technology
 - Audience Intelligence
 - Customer Data Platform

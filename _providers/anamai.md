@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 1
@@ -351,8 +351,8 @@ rate_limits:
   name: Anamai Rate Limits
   slug: anamai-rate-limits
 score:
-  band: developing
-  composite: 54.2
+  band: strong
+  composite: 54.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -364,11 +364,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 60.7
+    contract_quality: 55.0
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 71.1
-  previous_composite: 54.2
+  previous_composite: 54.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -379,8 +379,18 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

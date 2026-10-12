@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: REST API for tables data (datatables) — row and column filtered access to hundreds of financial, economic, and alternative datasets, with JSON, XML, and CSV formats, cursor-based pagination, and an as
@@ -174,14 +174,14 @@ description: Nasdaq Data Link (formerly Quandl) is Nasdaq's financial, economic,
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasdaq-data-link.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 5 tools listed.
   name: Nasdaq Data Link MCP Server
-  slug: nasdaq-data-link-mcp-server
+  slug: nasdaq-data-link-mcp
 modified: '2026-07-22'
 name: Nasdaq Data Link
 nav: Providers
 network: true
-overview: 'Nasdaq Data Link publishes 1 API on the [APIs.io](https://apis.io/) network: REST API for Real-Time or Delayed Data. Tagged areas include Financial Data, Stock Market, Market Data, Economic Data, and Alternative Data.
+overview: 'Nasdaq Data Link publishes 3 APIs on the [APIs.io](https://apis.io/) network, including REST API for Real-Time or Delayed Data, and 2 more. Tagged areas include Financial Data, Stock Market, Market Data, Economic Data, and Alternative Data.
 
 
   Nasdaq Data Link''s developer surface includes documentation, API reference, getting-started guide, support, signup flow, CLI, authentication, and 20 more developer resources.'
@@ -197,7 +197,7 @@ scopes:
   summary_line: 9 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 38.6
+  composite: 36.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 52.0
@@ -211,9 +211,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 67.9
-    discoverability: 88.9
+    discoverability: 83.3
     operational_transparency: 50.0
-  previous_composite: 38.6
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -222,9 +222,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

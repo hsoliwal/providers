@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A governed Model Context Protocol gateway that turns GlobalData's business intelligence into tools an AI agent can call directly. One MCP server endpoint per industry vertical, all sharing a single to
@@ -137,7 +137,7 @@ description: 'GlobalData Plc is a London-listed data, analytics and insights com
 image: https://www.globaldata.com/wp-content/uploads/2025/12/cropped-cropped-gd_icon-192x192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'GlobalData Plc operates a first-party, production Model Context Protocol gateway at mcp.globaldata.com that exposes its business-intelligence estate as callable agent tools. The gateway is documented '
   name: GlobalData Intelligence Center MCP
   slug: globaldata-intelligence-center-mcp
 modified: '2026-09-13'
@@ -159,12 +159,12 @@ rate_limits:
   slug: globaldata-rate-limits
 scopes:
 - name: Globaldata Scopes
-  scope_count: 0
+  scope_count: 4
   slug: globaldata-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 25.6
+  composite: 22.5
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -178,9 +178,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 61.7
     operational_transparency: 0.0
-  previous_composite: 25.6
+  previous_composite: 22.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -190,9 +190,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,7 +221,7 @@ tags:
 - News
 - Patents
 - Research
-- Financial-Services
+- Financial Services
 - Energy
 - Mining
 website: https://www.globaldata.com/

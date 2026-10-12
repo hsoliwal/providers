@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Venn's tenant-facing GraphQL API, served through an Apollo Federation gateway on AWS API Gateway. Anonymous introspection returns the full contract — 1,983 types, 320 query fields, 357 mutation fields
@@ -112,7 +112,7 @@ modified: '2026-09-02'
 name: Venn
 nav: Providers
 network: true
-overview: 'Venn publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Property Management, Multifamily, Resident Experience, and PropTech.
+overview: 'Venn publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Property Management, Multifamily, Resident Experience, and PropTech.
 
 
   Venn''s developer surface includes changelog, release notes, and 14 more developer resources.'
@@ -127,12 +127,12 @@ rate_limits:
   slug: venn-rate-limits
 scopes:
 - name: Venn Scopes
-  scope_count: 0
+  scope_count: 4
   slug: venn-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 32.1
+  composite: 29.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -144,16 +144,18 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 32.1
+  previous_composite: 29.7
   provenance:
     conformance: derived
     mcp: derived
@@ -163,9 +165,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -182,7 +184,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: venn
 tags:
-- Real-Estate
+- Real Estate
 - Property Management
 - Multifamily
 - Resident Experience

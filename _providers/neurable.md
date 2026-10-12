@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - baseURL: https://analytics-service.neurable.com
@@ -211,7 +211,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: thin
-  composite: 35.8
+  composite: 32.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 40.0
@@ -223,11 +223,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 43.9
+    contract_quality: 39.6
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 35.8
+  previous_composite: 32.5
   provenance:
     conformance: first-party
     contracts:
@@ -242,9 +242,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,6 +272,5 @@ tags:
 - cognitive-analytics
 - Health Data
 - Authentication
-- OpenID Connect
 website: https://www.neurable.com/
 ---

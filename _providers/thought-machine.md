@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Vault Core is Thought Machine's cloud-native core banking engine. Its API surface spans a REST Core API for external integrations (channels, CRM, operator UI), a Posting API that manages financial mov
@@ -141,7 +141,7 @@ modified: '2026-08-02'
 name: Thought Machine
 nav: Providers
 network: true
-overview: 'Thought Machine publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Core Banking, Financial-Services, and Payments.
+overview: 'Thought Machine publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Banking, Core Banking, Financial Services, and Payments.
 
 
   The Thought Machine catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -156,7 +156,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: thin
-  composite: 34.9
+  composite: 32.2
   coverage:
     artifact_dirs: 12
     catalog_earned: 32.0
@@ -168,9 +168,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 26.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -180,7 +180,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 34.9
+  previous_composite: 32.2
   provenance:
     conformance: first-party
   regulatory:
@@ -188,9 +188,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -211,7 +211,7 @@ tags:
 - Company
 - Banking
 - Core Banking
-- Financial-Services
+- Financial Services
 - Payments
 - Cloud-Native
 - Smart Contracts

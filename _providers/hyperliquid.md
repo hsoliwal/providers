@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -152,7 +152,7 @@ modified: '2026-05-29'
 name: Hyperliquid
 nav: Providers
 network: true
-overview: 'Hyperliquid publishes 2 APIs on the [APIs.io](https://apis.io/) network: WebSocket API and Info API. Tagged areas include DeFi, Perpetuals, DEX, Layer 1, and Trading.
+overview: 'Hyperliquid publishes 7 APIs on the [APIs.io](https://apis.io/) network, including WebSocket API, Info API, and 5 more. Tagged areas include DeFi, Perpetuals, DEX, Layer 1, and Trading.
 
 
   The Hyperliquid catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -182,26 +182,26 @@ rules:
   slug: hyperliquid-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 37.9
+  composite: 36.8
   coverage:
     artifact_dirs: 12
-    catalog_earned: 59.8
+    catalog_earned: 58.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.3
+    catalog_gap: 56.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 11.4
-    contract_quality: 60.1
+    contract_quality: 55.4
     developer_ergonomics: 14.3
-    discoverability: 68.5
-    operational_transparency: 52.6
+    discoverability: 66.1
+    operational_transparency: 50.5
   open_source:
     applies: true
     score: 60.0
-  previous_composite: 37.9
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     contracts:
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -236,5 +236,6 @@ tags:
 - Trading
 - Order Book
 - HyperEVM
+- Real-Time
 website: https://hyperliquid.xyz
 ---

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.testim.io
@@ -99,6 +99,11 @@ collections:
   name: Testim.io Public Branches Tests API
   slug: open-testim-io-tests-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/testim-io/refs/heads/main/capabilities/testim-io-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/testim-io-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/testim-io/refs/heads/main/overlays/testim-io-openapi-overlay.yaml
   title: ''
@@ -216,24 +221,36 @@ common:
   title: ''
   type: AgentSkill
   url: skills/_index.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.testim.io/feed/
+- group: company
+  title: ''
+  type: Website
+  url: https://www.testim.io/
+- group: docs
+  title: ''
+  type: Documentation
+  url: https://help.testim.io/docs/testim-overview
 created: '2026-07-17'
 description: Testim is an AI-powered functional test automation platform for web and mobile applications, using machine learning to author, run, and self-heal UI tests. Acquired by Tricentis in 2022, Testim is offered as part of the Tricentis quality-engineering portfolio. It exposes a public REST API (api.testim.io, with an EU host at api.eu.testim.io) and an official npm CLI (@testim/testim-cli) so teams can manage test branches; look up and execute tests, suites, labels and test plans from CI/CD; read execution and step-level results; and manage mobile application binaries. Testim was backed by Lightspeed Venture Partners prior to acquisition.
 image: https://github.com/testimio.png
 layout: provider
 modified: '2026-07-21'
-name: Testim Io
+name: Testim
 nav: Providers
 network: true
-overview: 'Testim Io publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Branches API, Executions API, Labels API, and 4 more. Tagged areas include API Testing, Test Automation, Quality Assurance, CI/CD, and Mobile Testing.
+overview: 'Testim publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Io Branches API, Io Executions API, Io Labels API, and 4 more. Tagged areas include API Testing, Test Automation, Quality Assurance, CI/CD, and Mobile Testing.
 
 
-  Testim Io''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, changelog, CLI, and 18 more developer resources.'
+  Testim''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, changelog, CLI, and 22 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 40.9
+  composite: 40.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -243,11 +260,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 4.5
-    contract_quality: 52.8
+    contract_quality: 47.5
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 40.9
+  previous_composite: 40.2
   provenance:
     conformance: derived
     contracts:
@@ -257,8 +274,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,5 +311,9 @@ tags:
 - DevOps
 - Company
 - Developer Tools
-website: https://docs.tricentis.com/testim/
+- Testing
+- QA
+- AI Testing
+- End-to-End Testing
+website: https://www.testim.io/
 ---

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 143
   human_in_the_loop: 122
@@ -439,14 +439,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/postiz.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.postiz.com over HTTP requiring OAuth; 11 tools listed.
   name: Postiz MCP Server
-  slug: postiz-mcp-server
+  slug: postiz
 modified: '2026-08-13'
 name: Postiz
 nav: Providers
 network: true
-overview: 'Postiz publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Integrations API, Notifications API, and 25 more. Tagged areas include Social-Media, Scheduling, Open-Source, Content, and Marketing.
+overview: 'Postiz publishes 30 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Integrations API, Notifications API, and 27 more. Tagged areas include Social Media, Scheduling, Open Source, Content, and Marketing.
 
 
   The Postiz catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -469,7 +469,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 64.0
+  composite: 66.4
   coverage:
     artifact_dirs: 29
     catalog_earned: 67.0
@@ -481,11 +481,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 51.9
+    contract_quality: 47.6
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 89.5
-  previous_composite: 64.0
+  previous_composite: 66.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -496,8 +496,14 @@ score:
       total: 28
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -518,9 +524,9 @@ security:
   summary_line: contact published
 slug: postiz
 tags:
-- Social-Media
+- Social Media
 - Scheduling
-- Open-Source
+- Open Source
 - Content
 - Marketing
 - Agents
@@ -528,5 +534,6 @@ tags:
 - Automation
 - Publishing
 - Analytics
+- A2A
 website: https://postiz.com
 ---

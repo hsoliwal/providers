@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.lufthansa-cargo.com
@@ -48,7 +48,7 @@ apis:
   name: Lufthansa Cargo Shipment Tracking Subscribe API
   slug: lufthansa-cargo-shipment-tracking-subscribe-api
 - description: 'Prior-agreement API. Lufthansa Cargo''s digital booking connect for forwarders wiring an in-house system to the carrier and for ePlatforms integrating LH Cargo offers and bookings. Documented services '
-  name: Lufthansa Cargo smartBooking API
+  name: Lufthansa Cargo Smart Booking API
   slug: lufthansa-cargo-smartbooking-api
 - description: Prior-agreement API. Manages advance notification of truck deliveries as an alternative to the Quick Drop-Off/Pick-Up page in the Lufthansa ePortal. Documented functions are Save (create Visit Declara
   name: Lufthansa Cargo TruckPreAdvice API
@@ -148,14 +148,14 @@ modified: '2026-07-30'
 name: Lufthansa Cargo
 nav: Providers
 network: true
-overview: 'Lufthansa Cargo publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Shipment Tracking API, Shipment Tracking Subscribe API, Routes API, and 1 more. Tagged areas include Logistics, Supply Chain, Germany, Air Cargo, and Freight.
+overview: 'Lufthansa Cargo publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Shipment Tracking API, Shipment Tracking Subscribe API, Routes API, and 7 more. Tagged areas include Logistics, Supply Chain, Germany, Air Cargo, and Freight.
 
 
   Lufthansa Cargo''s developer surface includes documentation, support, changelog, signup flow, sandbox, and 7 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 19.4
+  composite: 16.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 32.0
@@ -167,9 +167,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 55.3
+    contract_quality: 50.1
     developer_ergonomics: 0.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -179,15 +179,21 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 19.4
+  previous_composite: 16.4
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

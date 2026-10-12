@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: RESTful API for managing recruitment workflows including jobs, candidates, placements, submissions, interviews, and companies in JobAdder. Authentication uses OAuth 2.0 authorization code flow with be
@@ -85,14 +85,14 @@ modified: '2026-05-11'
 name: JobAdder
 nav: Providers
 network: true
-overview: 'JobAdder publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Recruitment, ATS, Staffing, Human Resources, and Talent Acquisition.
+overview: 'JobAdder publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Recruiting, Applicant Tracking, Staffing, Human Resources, and Talent Acquisition.
 
 
   JobAdder''s developer surface includes documentation, support, signup flow, pricing, engineering blog, and 4 more developer resources.'
 random_paper: 13
 score:
   band: emerging
-  composite: 17.6
+  composite: 16.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -106,11 +106,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 17.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.4
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,8 +130,8 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: jobadder
 tags:
-- Recruitment
-- ATS
+- Recruiting
+- Applicant Tracking
 - Staffing
 - Human Resources
 - Talent Acquisition

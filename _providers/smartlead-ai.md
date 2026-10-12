@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 54
   human_in_the_loop: 1
@@ -143,6 +143,11 @@ collections:
   name: Smartlead API
   slug: open-smartlead-ai
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/smartlead-ai/refs/heads/main/capabilities/smartlead-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/smartlead-ai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/smartlead-ai/refs/heads/main/agentic-access/smartlead-ai-agentic-access.yml
   title: ''
@@ -338,18 +343,18 @@ layout: provider
 mcp_servers:
 - description: SmartLead operates a remote MCP server on its documentation/API host. `tools/list` answered anonymously over Streamable HTTP (SSE), so the tool set below is the server's real, live manifest with its r
   name: Smartlead MCP Server
-  slug: smartlead-mcp-server
+  slug: smart-lead-api
 modified: '2026-08-13'
 name: Smartlead
 nav: Providers
 network: true
-overview: 'Smartlead publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Campaign Statistics API, Campaigns API, Analytics API, and 8 more. Tagged areas include Cold Email, Outbound, Sales, Deliverability, and Email Warm-up.
+overview: 'Smartlead publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Campaign Statistics API, Campaigns API, Analytics API, and 16 more. Tagged areas include Cold Email, Outbound, Sales, Deliverability, and Email Warm-up.
 
 
   The Smartlead catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Smartlead''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, pricing, engineering blog, and 34 more developer resources.'
+  Smartlead''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, pricing, engineering blog, and 35 more developer resources.'
 plans:
 - name: Smartlead Ai Plans Pricing
   plan_count: 4
@@ -361,9 +366,9 @@ rate_limits:
   slug: smartlead-ai-rate-limits
 score:
   band: strong
-  composite: 60.4
+  composite: 61.0
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -373,11 +378,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 4.5
-    contract_quality: 64.4
+    contract_quality: 58.9
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 60.4
+  previous_composite: 61.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -388,8 +393,18 @@ score:
       total: 11
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -413,5 +428,6 @@ tags:
 - Email Warm-up
 - Automation
 - Sequences
+- A2A
 website: https://www.smartlead.ai
 ---

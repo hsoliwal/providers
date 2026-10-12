@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 74
   human_in_the_loop: 2
@@ -321,7 +321,7 @@ description: HookLogic was a retail-media advertising exchange and ad server tha
 image: https://avatars.githubusercontent.com/u/1713646?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 3 tools listed.
   name: Criteo Docs
   slug: criteo-docs
 modified: '2026-08-13'
@@ -348,7 +348,7 @@ scopes:
   summary_line: 11 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 58.7
+  composite: 61.6
   coverage:
     artifact_dirs: 26
     catalog_earned: 49.0
@@ -360,11 +360,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 78.9
-  previous_composite: 58.7
+  previous_composite: 61.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -375,8 +375,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -408,5 +414,6 @@ tags:
 - E-Commerce
 - Marketing
 - Retail
+- A2A
 website: https://www.criteo.com/
 ---

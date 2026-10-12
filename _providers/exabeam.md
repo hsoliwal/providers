@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 13
 apis:
 - description: Manage users, roles, and permissions within the Exabeam platform.
@@ -202,9 +202,9 @@ description: Exabeam is a cybersecurity company that delivers faster, more accur
 image: https://files.readme.io/e4416f6-small-Exabeam-2024-Logo-Color-Dark-Large-02.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: Exabeam MCP Server
-  slug: exabeam-mcp-server
+  slug: exabeam
 modified: '2026-07-19'
 name: Exabeam
 nav: Providers
@@ -221,7 +221,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.2
+  composite: 34.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.0
@@ -235,14 +235,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 32.1
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 36.8
-  previous_composite: 30.2
+  previous_composite: 34.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

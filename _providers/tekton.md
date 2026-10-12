@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 13.6
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'tekton.dev/v1 kind=Task — defines a series of steps that launch specific build or delivery tools, ingest specific inputs (params, workspaces, resources), and produce specific outputs (results). Tasks '
@@ -224,7 +224,7 @@ modified: '2026-05-08'
 name: Tekton
 nav: Providers
 network: true
-overview: 'Tekton publishes 1 API on the [APIs.io](https://apis.io/) network: Task CRD. Tagged areas include DevOps, CI/CD, Kubernetes, CNCF, and Pipelines.
+overview: 'Tekton publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Task CRD, and 20 more. Tagged areas include DevOps, CI/CD, Kubernetes, CNCF, and Pipelines.
 
 
   Tekton''s developer surface includes documentation, getting-started guide, CLI, engineering blog, YouTube channel, release notes, and 19 more developer resources.'
@@ -239,7 +239,7 @@ rate_limits:
   slug: tekton-rate-limits
 score:
   band: emerging
-  composite: 24.6
+  composite: 22.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 35.0
@@ -251,13 +251,19 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 31.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 31.6
-  previous_composite: 24.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 22.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -276,7 +282,7 @@ tags:
 - Kubernetes
 - CNCF
 - Pipelines
-- Open-Source
+- Open Source
 - CRD
 - Operator
 website: https://tekton.dev/

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: First-party REST API gateway behind the STARFIRE customer dashboard. Route prefixes observed in the provider's own published dashboard bundle include /api/v1/tasking-orders, /api/v1/images/, /api/v1/t
@@ -131,7 +131,7 @@ rate_limits:
   slug: turion-space-rate-limits
 score:
   band: emerging
-  composite: 13.2
+  composite: 13.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -145,14 +145,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 13.2
+  previous_composite: 13.4
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -81,9 +81,9 @@ description: 'JAYS is a Swedish consumer audio brand founded in 2006 by Jens and
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jays.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at jays-swe.myshopify.com over HTTP.
   name: Jays MCP Server
-  slug: jays-mcp-server
+  slug: jays-ucp-shopping
 modified: '2026-07-20'
 name: Jays
 nav: Providers
@@ -95,7 +95,7 @@ overview: 'Jays is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 21
 score:
   band: emerging
-  composite: 11.4
+  composite: 12.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -109,13 +109,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 11.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 12.1
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

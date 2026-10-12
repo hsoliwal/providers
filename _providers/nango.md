@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -206,7 +206,7 @@ modified: '2026-09-06'
 name: Nango
 nav: Providers
 network: true
-overview: 'Nango publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Connections API, Integrations API, and 2 more. Tagged areas include AI Agents, Integration, Authentication, Syncing, and Unified-API.
+overview: 'Nango publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Connections API, Integrations API, and 3 more. Tagged areas include AI Agents, Integration, Authentication, Syncing, and Unified API.
 
 
   Nango''s developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, changelog, developer portal, and 11 more developer resources.'
@@ -221,7 +221,7 @@ rate_limits:
   slug: nango-rate-limits
 score:
   band: developing
-  composite: 44.5
+  composite: 44.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 41.0
@@ -233,11 +233,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 46.3
     developer_ergonomics: 52.4
     discoverability: 66.7
     operational_transparency: 44.7
-  previous_composite: 44.5
+  previous_composite: 44.8
   provenance:
     agentic_access: derived
     contracts:
@@ -246,8 +246,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -272,7 +278,7 @@ tags:
 - Integration
 - Authentication
 - Syncing
-- Unified-API
+- Unified API
 - Webhook
 website: https://www.nango.dev/
 ---

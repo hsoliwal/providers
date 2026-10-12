@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Air Force Reserve Command (AFRC) provides information on reserve programs, career opportunities, unit locations, benefits, and recruiting resources for prospective and current reservists.
@@ -171,7 +171,7 @@ modified: '2026-08-30'
 name: Air Force Reserve
 nav: Providers
 network: true
-overview: 'Air Force Reserve publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Military, Defense, Air Force, and United States Government.
+overview: 'Air Force Reserve publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Military, Defense, Air Force, and United States Government.
 
 
   The Air Force Reserve catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -200,7 +200,7 @@ rules:
   slug: air-force-reserve-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 22.1
+  composite: 20.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 43.3
@@ -214,17 +214,22 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 23.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 22.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 20.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -238,7 +243,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: air-force-reserve
 tags:
-- Federal-Government
+- Federal Government
 - Military
 - Defense
 - Air Force

@@ -35,13 +35,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: SightCall's REST API is used by application back ends to request session tokens, manage users and sessions, provision providers and pull reporting. Authentication is by API key in the Authorization he
   name: SightCall REST API
   slug: rest-api
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sightcall/refs/heads/main/security/sightcall-trust-center.yml
@@ -151,6 +151,10 @@ created: '2026-08-27'
 description: SightCall is a San Francisco headquartered enterprise remote visual support platform. Its VISION product connects experts, technicians and customers over live AR-enhanced WebRTC video so that field service, customer service, insurance and telehealth teams can diagnose and resolve issues without an on-site visit. The platform layers computer vision (defect detection, parts recognition, OCR of serial numbers, gauges and meter readings), AI session insights, and Xpert Knowledge, which turns recorded sessions into structured step-by-step tutorials. SightCall ships iOS, Android and Web client SDKs plus a REST API for session management, user provisioning, reporting and workflow integration, and is embedded into Salesforce Service Cloud, Microsoft Dynamics 365, ServiceNow, SAP, Zendesk, Genesys, Five9, NICE and Guidewire. The developer portal carrying the REST API reference and SDK documentation is not public - SightCall directs developers to contact the company for access.
 image: https://sightcall.com/wp-content/uploads/SightCall.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sightcall.com over HTTP.
+  name: SightCall MCP Server
+  slug: sightcall
 modified: '2026-08-27'
 name: SightCall
 nav: Providers
@@ -170,7 +174,7 @@ rate_limits:
   slug: sightcall-rate-limits
 score:
   band: thin
-  composite: 29.0
+  composite: 27.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -184,9 +188,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 29.0
+  previous_composite: 27.4
   provenance:
     conformance: first-party
     mcp: first-party
@@ -195,9 +199,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -225,7 +229,7 @@ tags:
 - Remote Support
 - Field Service
 - Augmented Reality
-- Computer-Vision
+- Computer Vision
 - Customer Service
 - Insurance
 - Telehealth

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -279,7 +279,7 @@ rate_limits:
   slug: horizon-media-rate-limits
 score:
   band: emerging
-  composite: 15.2
+  composite: 16.6
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -293,13 +293,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.8
     operational_transparency: 5.3
-  previous_composite: 15.2
+  previous_composite: 16.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -323,7 +329,7 @@ tags:
 - Programmatic
 - Retail Media
 - Sports Marketing
-- Social-Media
+- Social Media
 - Influencer Marketing
 - Cultural Intelligence
 - Data Platform

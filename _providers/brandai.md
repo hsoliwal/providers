@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'A hosted, remote Model Context Protocol server that lets an AI agent read a company''s Brand OS — brands, machine-readable brand rules and artifacts — and write back Brand Check validations, artifacts '
@@ -155,9 +155,9 @@ description: 'Brand.ai (Access to Tools Inc.) is a San Francisco-based AI platfo
 image: https://cdn.sanity.io/images/3zwn2ers/fullsite/1e9606e67a676cbdfd3d4d66f10f4184e9bf7c8f-1800x942.png?w=1200&auto=format
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.brand.ai over HTTP requiring OAuth.
   name: Brand.ai MCP Server
-  slug: brandai-mcp-server
+  slug: brand-ai-mcp
 modified: '2026-08-13'
 name: Brand.ai
 nav: Providers
@@ -181,8 +181,8 @@ scopes:
   slug: brandai-scopes
   summary_line: 13 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.4
+  band: thin
+  composite: 26.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -196,19 +196,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.4
+  previous_composite: 26.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

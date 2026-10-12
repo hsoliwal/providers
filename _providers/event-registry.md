@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -269,7 +269,7 @@ layout: provider
 mcp_servers:
 - description: 'Event Registry publishes a first-party Model Context Protocol server, newsapi-mcp, that wraps the Event Registry REST API for LLM clients. It is a LOCAL STDIO server: there is no hosted endpoint an ag'
   name: NewsAPI.ai MCP Server
-  slug: newsapiai-mcp-server
+  slug: newsapi
 modified: 2026-08-13
 name: Event Registry
 nav: Providers
@@ -303,7 +303,7 @@ rules:
   slug: event-registry-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.2
+  composite: 48.2
   coverage:
     artifact_dirs: 29
     catalog_earned: 71.3
@@ -315,11 +315,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 14.4
-    contract_quality: 63.6
+    contract_quality: 57.8
     developer_ergonomics: 39.3
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 42.1
-  previous_composite: 49.2
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -330,8 +330,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 2
@@ -275,7 +275,7 @@ modified: '2026-05-19'
 name: Microsoft Intune
 nav: Providers
 network: true
-overview: 'Microsoft Intune publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Device Compliance Policies API, Device Configurations API, Managed Devices API, and 1 more. Tagged areas include App Protection, Azure, Compliance, Device Configuration, and Endpoint Management.
+overview: 'Microsoft Intune publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Device Compliance Policies API, Device Configurations API, Managed Devices API, and 9 more. Tagged areas include App Protection, Azure, Compliance, Device Configuration, and Endpoint Management.
 
 
   The Microsoft Intune catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -309,7 +309,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 31.9
+  composite: 32.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 54.3
@@ -321,11 +321,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 67.2
+    contract_quality: 61.4
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 31.9
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     contracts:
@@ -333,8 +333,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

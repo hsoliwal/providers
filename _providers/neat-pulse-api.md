@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Pulse API enables direct management of your Pulse devices and organisation. Update device settings, create new rooms and locations, access device sensor data and more.
@@ -89,7 +89,7 @@ rate_limits:
   slug: neat-pulse-api-rate-limits
 score:
   band: minimal
-  composite: 9.1
+  composite: 7.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 31.0
@@ -103,11 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 10.5
-  previous_composite: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

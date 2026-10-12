@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -175,7 +175,7 @@ modified: '2026-04-28'
 name: Presto Foundation
 nav: Providers
 network: true
-overview: 'Presto Foundation publishes 1 API on the [APIs.io](https://apis.io/) network: Statement API. Tagged areas include Analytics, Big Data, Distributed SQL, Linux Foundation, and Open-Source.
+overview: 'Presto Foundation publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Statement API, and 2 more. Tagged areas include Analytics, Big Data, Distributed SQL, Linux Foundation, and Open Source.
 
 
   Presto Foundation''s developer surface includes authentication, developer portal, documentation, engineering blog, YouTube channel, and 18 more developer resources.'
@@ -195,7 +195,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 34.1
+  composite: 33.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 41.0
@@ -207,14 +207,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 47.2
+    contract_quality: 42.4
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 34.1
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -222,8 +222,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -244,7 +250,7 @@ tags:
 - Big Data
 - Distributed SQL
 - Linux Foundation
-- Open-Source
+- Open Source
 - Query Engine
 - SQL
 website: https://www.prestodb.io/

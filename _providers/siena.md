@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -106,6 +106,10 @@ created: '2026-07-17'
 description: Siena AI is an empathic AI agent platform built for commerce brands. It combines AI automation with human empathy to handle customer service across email, chat, SMS, social, and WhatsApp, and integrates with Shopify, Gorgias, Zendesk, Kustomer, Recharge, Klaviyo and 20+ commerce tools. Its agents cover support, shopping, reviews, QA, order tracking, and post-purchase workflows, letting brands automate 60-80% of support tickets while preserving brand voice. Siena is backed by Sierra Ventures and holds SOC 2 Type II, GDPR, CPRA, and HIPAA compliance.
 image: https://framerusercontent.com/assets/FHZo6GH2CeM1egfYU9t6ZdbpY.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.siena.cx over HTTP.
+  name: Siena MCP Server
+  slug: siena
 modified: '2026-07-21'
 name: Siena
 nav: Providers
@@ -117,7 +121,7 @@ overview: 'Siena is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 0
 score:
   band: emerging
-  composite: 20.4
+  composite: 21.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -131,13 +135,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 20.4
+  previous_composite: 21.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

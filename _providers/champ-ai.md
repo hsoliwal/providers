@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -84,6 +84,10 @@ description: Champ AI is an AI operations platform that automates complex, multi
   company and enriched from the company's public website; Champ AI does not currently publish a public developer API, SDKs, or API documentation.
 image: https://champ.ai/opengraph-image
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.champ.ai over HTTP.
+  name: Champ Ai MCP Server
+  slug: champ-ai
 modified: '2026-07-18'
 name: Champ Ai
 nav: Providers
@@ -95,7 +99,7 @@ overview: 'Champ Ai is profiled on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 20
 score:
   band: emerging
-  composite: 18.2
+  composite: 17.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -109,9 +113,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 10.5
-  previous_composite: 18.2
+  previous_composite: 17.4
   provenance:
     mcp: first-party
   regulatory:
@@ -119,9 +123,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +152,7 @@ tags:
 - AI Agents
 - Automation
 - Business Process Outsourcing
-- Workflow-Automation
+- Workflow Automation
 - Document Intelligence
 - Voice AI
 - Healthcare

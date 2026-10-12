@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.unitlab.ai
@@ -181,14 +181,14 @@ modified: '2026-07-21'
 name: Unitlab AI
 nav: Providers
 network: true
-overview: 'Unitlab AI publishes 2 APIs on the [APIs.io](https://apis.io/) network: Datasets API and Projects API. Tagged areas include Company, Data Annotation, Machine-Learning, Computer-Vision, and Datasets.
+overview: 'Unitlab AI publishes 2 APIs on the [APIs.io](https://apis.io/) network: Datasets API and Projects API. Tagged areas include Company, Data Annotation, Machine Learning, Computer Vision, and Datasets.
 
 
   Unitlab AI''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, authentication, and 18 more developer resources.'
 random_paper: 8
 score:
   band: thin
-  composite: 30.7
+  composite: 31.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -202,9 +202,9 @@ score:
     contract_governance: 4.5
     contract_quality: 13.9
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 30.7
+  previous_composite: 31.5
   provenance:
     conformance: derived
     contracts:
@@ -214,8 +214,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -234,8 +240,8 @@ slug: unitlab-ai
 tags:
 - Company
 - Data Annotation
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - Datasets
 - Artificial Intelligence
 - Labeling

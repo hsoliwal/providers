@@ -34,13 +34,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Server-side Experience APIs and related product APIs for personalization, recommendations, event collection, product catalog sync, search, and the Shopping Muse AI assistant. Authenticated with a DY-A
   name: Dynamic Yield Experience OS API
   slug: dynamic-yield-experience-os-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/dynamic-yield/refs/heads/main/security/dynamic-yield-domain-security.yml
@@ -140,6 +140,10 @@ description: Dynamic Yield (a Mastercard company) is an experience optimization 
   company and enriched by the API Evangelist pipeline.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dynamic-yield.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at dy.dev over HTTP.
+  name: Dynamic Yield MCP Server
+  slug: dynamic-yield
 modified: '2026-07-18'
 name: Dynamic Yield
 nav: Providers
@@ -151,7 +155,7 @@ overview: 'Dynamic Yield publishes 1 API on the [APIs.io](https://apis.io/) netw
 random_paper: 1
 score:
   band: emerging
-  composite: 25.9
+  composite: 25.8
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -165,14 +169,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 25.9
+  previous_composite: 25.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +209,7 @@ tags:
 - Search
 - E-Commerce
 - Retail
-- Machine-Learning
+- Machine Learning
 - MACH
 - Mastercard
 website: https://www.dynamicyield.com/

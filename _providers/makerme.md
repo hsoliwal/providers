@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -64,16 +64,16 @@ modified: '2026-07-17'
 name: Maker.me
 nav: Providers
 network: true
-overview: Maker.me is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company.
+overview: Maker.me is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company and A2A.
 random_paper: 12
 scopes:
 - name: Makerme Scopes
-  scope_count: 0
+  scope_count: 2
   slug: makerme-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: minimal
-  composite: 4.1
+  composite: 4.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 15.0
@@ -87,14 +87,26 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 35.2
+    discoverability: 38.3
     operational_transparency: 0.0
-  previous_composite: 4.1
+  previous_composite: 4.4
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -113,5 +125,6 @@ security:
 slug: makerme
 tags:
 - Company
+- A2A
 website: https://maker.co
 ---

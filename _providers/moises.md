@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.music.ai/v1
@@ -192,14 +192,14 @@ modified: '2026-07-20'
 name: Moises
 nav: Providers
 network: true
-overview: 'Moises publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Application API, Jobs API, Upload API, and 1 more. Tagged areas include Company, Music, Audio, Artificial Intelligence, and Machine-Learning.
+overview: 'Moises publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Application API, Jobs API, Upload API, and 1 more. Tagged areas include Company, Music, Audio, Artificial Intelligence, and Machine Learning.
 
 
   Moises'' developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 17 more developer resources.'
 random_paper: 18
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 38.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -211,11 +211,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 41.2
+  previous_composite: 38.7
   provenance:
     conformance: derived
     contracts:
@@ -225,8 +225,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -243,7 +249,7 @@ tags:
 - Music
 - Audio
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Stem Separation
 - Audio Processing
 - Media

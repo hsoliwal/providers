@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 92
   human_in_the_loop: 0
@@ -221,6 +221,11 @@ collections:
   name: Wingspan Payments 1099 Operations Wingspan Wallet API
   slug: open-wingspan-wingspan-wallet-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/wingspan/refs/heads/main/capabilities/wingspan-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/wingspan-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -394,7 +399,7 @@ overview: 'Wingspan publishes 15 APIs on the [APIs.io](https://apis.io/) network
   The Wingspan catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Wingspan''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 28 more developer resources.'
+  Wingspan''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 29 more developer resources.'
 random_paper: 13
 rate_limits:
 - limit_count: 2
@@ -402,9 +407,9 @@ rate_limits:
   slug: wingspan-rate-limits
 score:
   band: strong
-  composite: 59.1
+  composite: 56.5
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -414,11 +419,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 64.0
+    contract_quality: 58.8
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 59.1
+  previous_composite: 56.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -438,9 +443,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The HTTP and A2A surface of Booz Allen's Agent Foundry agent baseline, an Apache-2.0 composition root that teams fork and deploy in their own environment. It serves three REST groups — /api/v1/query (
@@ -45,6 +45,11 @@ apis:
   slug: booz-allen-hamilton-agile-api
 artifact_total: 16
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/capabilities/booz-allen-hamilton-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/booz-allen-hamilton-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/booz-allen-hamilton/refs/heads/main/overlays/booz-allen-hamilton-palm-overlay.yaml
   title: ''
@@ -221,10 +226,10 @@ modified: '2026-09-14'
 name: Booz Allen Hamilton
 nav: Providers
 network: true
-overview: 'Booz Allen Hamilton publishes 1 API on the [APIs.io](https://apis.io/) network: Agile API. Tagged areas include Artificial Intelligence, Consulting, Cybersecurity, Defense, and Federal-Government.
+overview: 'Booz Allen Hamilton publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Agile API, and 1 more. Tagged areas include Artificial Intelligence, Consulting, Cybersecurity, Defense, and Federal Government.
 
 
-  Booz Allen Hamilton''s developer surface includes GitHub presence, engineering blog, changelog, and 28 more developer resources.'
+  Booz Allen Hamilton''s developer surface includes GitHub presence, engineering blog, changelog, and 29 more developer resources.'
 plans:
 - name: Booz Allen Hamilton Plans Pricing
   plan_count: 0
@@ -251,10 +256,10 @@ rate_limits:
   name: Booz Allen Hamilton Rate Limits
   slug: booz-allen-hamilton-rate-limits
 score:
-  band: developing
-  composite: 42.6
+  band: thin
+  composite: 38.4
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -264,11 +269,16 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 38.1
+    contract_quality: 34.3
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 42.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 38.4
   provenance:
     conformance: first-party
     contracts:
@@ -283,9 +293,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -310,7 +320,7 @@ tags:
 - Consulting
 - Cybersecurity
 - Defense
-- Federal-Government
+- Federal Government
 - Intelligence
 - Management Consulting
 - Technology

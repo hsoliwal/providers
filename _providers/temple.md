@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -60,9 +60,9 @@ description: Temple Capital is a cryptocurrency trading firm founded in 2018 tha
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/temple.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.temple.capital over HTTP; 7 tools listed.
   name: Temple MCP Server
-  slug: temple-mcp-server
+  slug: temple-capital-site
 modified: '2026-07-21'
 name: Temple
 nav: Providers
@@ -71,7 +71,7 @@ overview: Temple is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 9
 score:
   band: minimal
-  composite: 2.0
+  composite: 3.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -85,19 +85,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 2.0
+  previous_composite: 3.5
   provenance:
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -118,7 +118,7 @@ tags:
 - Hedge Funds
 - Algorithmic Trading
 - Quantitative Trading
-- Machine-Learning
+- Machine Learning
 - Asset Management
 - Investment
 website: https://www.temple.capital/

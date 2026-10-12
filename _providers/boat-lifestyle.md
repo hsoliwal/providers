@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol (UCP) shopping service boAt Lifestyle serves from its own storefront host over MCP. An anonymous JSON-RPC tools/list returns 13 tools covering catalog search and lookup
@@ -132,9 +132,9 @@ description: 'boAt (legal entity Imagine Marketing Limited) is an India-based co
 image: https://www.boat-lifestyle.com/cdn/shop/files/profile-1_2e1d2124-ba4c-43f0-bb83-0e6ee038ff30.png?v=1681111976
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.boat-lifestyle.com over HTTP; 13 tools listed.
   name: Boat Lifestyle MCP Server
-  slug: boat-lifestyle-mcp-server
+  slug: boat-lifestyle-ucp
 modified: '2026-08-08'
 name: Boat Lifestyle
 nav: Providers
@@ -151,7 +151,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.5
+  composite: 22.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -165,7 +165,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -174,13 +174,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 19.5
+  previous_composite: 22.2
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

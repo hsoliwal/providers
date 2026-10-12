@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The official public API for the Manifest Cyber platform v1. Used by Manifest''s frontend apps and internal ETL processes to access SBOM data, vulnerability analysis, and software supply chain security '
@@ -69,7 +69,7 @@ apis:
   description: Vulnerability triage and custom vulnerability ingestion
   name: Manifest Cyber Vulnerabilities API
   slug: manifest-cyber-vulnerabilities-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -93,6 +93,11 @@ collections:
   name: Manifest Cyber Vulnerabilities API
   slug: open-manifest-cyber-vulnerabilities-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/capabilities/manifest-cyber-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/manifest-cyber-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/manifest-cyber/refs/heads/main/security/manifest-cyber-trust-center.yml
   title: ''
@@ -127,14 +132,18 @@ finops:
   slug: manifest-cyber-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/manifest-cyber.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.manifestcyber.com over HTTP.
+  name: Manifest Cyber MCP Server
+  slug: manifest-cyber
 modified: '2026-04-28'
 name: Manifest Cyber
 nav: Providers
 network: true
-overview: 'Manifest Cyber publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Organizations API, Products API, and 3 more. Tagged areas include Cybersecurity, SBOM, Supply Chain Security, and Vulnerability Management.
+overview: 'Manifest Cyber publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Organizations API, Products API, and 4 more. Tagged areas include Cybersecurity, SBOM, Supply Chain Security, and Vulnerability Management.
 
 
-  Manifest Cyber''s developer surface includes engineering blog and 5 more developer resources.'
+  Manifest Cyber''s developer surface includes engineering blog and 6 more developer resources.'
 plans:
 - name: Manifest Cyber Plans Pricing
   plan_count: 3
@@ -146,9 +155,9 @@ rate_limits:
   slug: manifest-cyber-rate-limits
 score:
   band: thin
-  composite: 28.5
+  composite: 26.6
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 41.0
     catalog_earned_first_party: 0.0
     catalog_gap: 74.0
@@ -158,11 +167,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 60.0
     operational_transparency: 10.5
-  previous_composite: 28.5
+  previous_composite: 26.6
   provenance:
     contracts:
       callable: 100.0
@@ -170,8 +179,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

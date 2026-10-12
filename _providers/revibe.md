@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven commerce surface for the Revibe Shopify store implemented via the Universal Commerce Protocol (UCP). A hosted MCP endpoint exposes catalog search, cart, checkout, and fulfillment tools; c
@@ -95,9 +95,9 @@ description: Revibe (Revibe Technology FZ-LLC) is a UAE-based e-commerce marketp
 image: https://revibe.me/cdn/shop/files/revibe-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at revibe.me over HTTP; 5 tools listed.
   name: Revibe MCP Server
-  slug: revibe-mcp-server
+  slug: revibe-ucp-shopping
 modified: '2026-07-20'
 name: Revibe
 nav: Providers
@@ -109,7 +109,7 @@ overview: 'Revibe publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 21
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -123,7 +123,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -132,11 +132,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 18.2
+  previous_composite: 18.7
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

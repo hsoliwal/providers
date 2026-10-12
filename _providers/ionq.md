@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -51,12 +51,12 @@ apis:
 - baseURL: https://api.ionq.co/v0.4
   baseurl_source: declared
   description: The backends API from IonQ — 2 operation(s) for backends.
-  name: IonQ backends API
+  name: IonQ Backends API
   slug: ionq-backends-api
 - baseURL: https://api.ionq.co/v0.4
   baseurl_source: declared
   description: The characterizations API from IonQ — 2 operation(s) for characterizations.
-  name: IonQ characterizations API
+  name: IonQ Characterizations API
   slug: ionq-characterizations-api
 - baseURL: https://api.ionq.co/v0.4
   baseurl_source: declared
@@ -71,12 +71,12 @@ apis:
 - baseURL: https://api.ionq.co/v0.4
   baseurl_source: declared
   description: The usage API from IonQ — 1 operation(s) for usage.
-  name: IonQ usage API
+  name: IonQ Usage API
   slug: ionq-usage-api
 - baseURL: https://api.ionq.co/v0.4
   baseurl_source: declared
   description: The whoami API from IonQ — 1 operation(s) for whoami.
-  name: IonQ whoami API
+  name: IonQ Whoami API
   slug: ionq-whoami-api
 artifact_total: 55
 collections:
@@ -467,7 +467,7 @@ modified: '2026-05-24'
 name: IonQ
 nav: Providers
 network: true
-overview: 'IonQ publishes 6 APIs on the [APIs.io](https://apis.io/) network, including backends API, characterizations API, Jobs API, and 3 more. Tagged areas include Quantum Computing, Trapped Ion, QPU, ARIA, and Forte.
+overview: 'IonQ publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Backends API, Characterizations API, Jobs API, and 4 more. Tagged areas include Quantum Computing, Trapped Ion, QPU, ARIA, and Forte.
 
 
   The IonQ catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -507,28 +507,30 @@ rules:
   slug: ionq-rules
 score:
   band: strong
-  composite: 57.8
+  composite: 56.7
   coverage:
     artifact_dirs: 18
-    catalog_earned: 74.5
+    catalog_earned: 72.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.5
+    catalog_gap: 42.7
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 73.7
+    access_clarity: 70.5
     contract_governance: 13.6
-    contract_quality: 67.5
+    contract_quality: 61.5
     developer_ergonomics: 67.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 57.8
+  previous_composite: 56.7
   provenance:
     agentic_access: derived
     contracts:
@@ -536,8 +538,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

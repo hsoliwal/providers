@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-09-20'
+  score: 27.3
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The Hummingbot API is a FastAPI backend service (default port 8000) that orchestrates multiple trading bots and exposes REST routers for accounts and exchange credentials, trading (orders, positions, '
@@ -297,12 +297,12 @@ layout: provider
 mcp_servers:
 - description: Hummingbot maintains an official Model Context Protocol (MCP) server that lets MCP clients (Claude, Gemini CLI, Claude Code) drive Hummingbot for automated crypto trading across exchanges. It is a std
   name: Hummingbot MCP Server
-  slug: hummingbot-mcp-server
+  slug: hummingbot-mcp
 modified: '2026-07-19'
 name: Hummingbot
 nav: Providers
 network: true
-overview: 'Hummingbot publishes 16 APIs on the [APIs.io](https://apis.io/) network, including /chain/ethereum API, /chain/solana API, /config API, and 13 more. Tagged areas include Company, Crypto, Trading, Blockchain, and DeFi.
+overview: 'Hummingbot publishes 17 APIs on the [APIs.io](https://apis.io/) network, including /chain/ethereum API, /chain/solana API, /config API, and 14 more. Tagged areas include Company, Crypto, Trading, Blockchain, and DeFi.
 
 
   Hummingbot''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, authentication, and 18 more developer resources.'
@@ -313,7 +313,7 @@ rate_limits:
   slug: hummingbot-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 35.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -325,11 +325,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 42.5
+    contract_quality: 38.2
     developer_ergonomics: 78.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 39.5
-  previous_composite: 36.9
+  previous_composite: 35.9
   provenance:
     conformance: derived
     contracts:
@@ -344,9 +344,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 28.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -369,7 +369,7 @@ tags:
 - Blockchain
 - DeFi
 - DEX
-- Open-Source
+- Open Source
 - Market Making
 - Algorithmic Trading
 - Bots

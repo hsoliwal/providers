@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The institution-facing integration surface behind vle.kortext.com — 1EdTech LTI 1.1 launch and LTI 1.3 Deep Linking endpoints that place Kortext content and KeyLinks reading lists inside Blackboard, M
@@ -234,7 +234,7 @@ modified: '2026-08-23'
 name: Kortext
 nav: Providers
 network: true
-overview: 'Kortext publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Content API, Health Checks API, and 5 more. Tagged areas include Education, EdTech, Higher Education, Digital Textbooks, and Learning Analytics.
+overview: 'Kortext publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Chat API, Content API, Health Checks API, and 7 more. Tagged areas include Education, EdTech, Higher Education, Digital Textbooks, and Learning Analytics.
 
 
   Kortext''s developer surface includes documentation, API reference, support, engineering blog, signup flow, getting-started guide, authentication, and 24 more developer resources.'
@@ -249,7 +249,7 @@ rate_limits:
   slug: kortext-rate-limits
 score:
   band: developing
-  composite: 43.7
+  composite: 40.1
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -261,11 +261,16 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 47.7
+    contract_quality: 42.9
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
-  previous_composite: 43.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 40.1
   provenance:
     conformance: first-party
     contracts:
@@ -280,9 +285,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -307,7 +312,7 @@ tags:
 - Artificial Intelligence
 - Content Delivery
 - LTI
-- Libraries
+- Library
 - Student Engagement
 - Publishing
 website: https://kortext.com/

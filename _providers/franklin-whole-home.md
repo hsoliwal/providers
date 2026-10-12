@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -250,8 +250,8 @@ rate_limits:
   name: Franklin Whole Home Rate Limits
   slug: franklin-whole-home-rate-limits
 score:
-  band: thin
-  composite: 26.7
+  band: emerging
+  composite: 25.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -265,9 +265,9 @@ score:
     contract_governance: 4.5
     contract_quality: 13.9
     developer_ergonomics: 37.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 26.7
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -283,9 +283,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

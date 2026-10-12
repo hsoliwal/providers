@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Numi Tea's Universal Commerce Protocol shopping service, exposed over MCP at numitea.com/api/ucp/mcp. Thirteen tools cover catalog search and lookup, product detail, cart create/update/cancel, checkou
@@ -156,9 +156,9 @@ description: 'Numi Tea (Numi Organic Tea) is an Oakland, California social enter
 image: https://numitea.com/cdn/shop/files/group1200x628.jpg?v=1714413933
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at numitea.com requiring OAuth; 13 tools listed.
   name: Numi Tea MCP Server
-  slug: numi-tea-mcp-server
+  slug: numi-tea-mcp-yml
 modified: '2026-08-26'
 name: Numi Tea
 nav: Providers
@@ -178,12 +178,12 @@ rate_limits:
   slug: numi-tea-rate-limits
 scopes:
 - name: Numi Tea Scopes
-  scope_count: 0
+  scope_count: 4
   slug: numi-tea-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 22.7
+  composite: 25.4
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -197,15 +197,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.7
+  previous_composite: 25.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

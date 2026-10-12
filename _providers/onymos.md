@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Asynchronous document-image enhancement REST API. POST /api/enhance accepts a base64-encoded image plus a preset (document, auto-crop, photo or watermark) and returns a result_url immediately; GET /ap
@@ -158,8 +158,8 @@ rate_limits:
   name: Onymos Rate Limits
   slug: onymos-rate-limits
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 24.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 32.0
@@ -173,9 +173,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 26.2
+  previous_composite: 24.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -184,9 +184,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

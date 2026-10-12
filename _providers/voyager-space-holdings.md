@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.2
-  scored_at: '2026-09-20'
+  score: 18.7
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -140,9 +140,9 @@ description: 'Voyager Technologies, Inc. (NYSE: VOYG), formerly Voyager Space Ho
 image: https://voyagertechnologies.com/wp-content/uploads/2026/05/Voyager-Technologies-OG-Image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Voyager Technologies' corporate WordPress site exposes two live Model Context Protocol servers under the `mcp` REST namespace, produced by the WordPress MCP adapter and guarded by an OAuth 2.1 authori
   name: Voyager Technologies MCP Server
-  slug: voyager-technologies-mcp-server
+  slug: voyager-space-holdings-mcp-yml
 modified: '2026-09-18'
 name: Voyager Technologies
 nav: Providers
@@ -154,12 +154,12 @@ overview: 'Voyager Technologies is profiled on the [APIs.io](https://apis.io/) n
 random_paper: 13
 scopes:
 - name: Voyager Space Holdings Scopes
-  scope_count: 0
+  scope_count: 1
   slug: voyager-space-holdings-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 14.3
+  composite: 17.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -173,19 +173,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 52.5
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.3
+  previous_composite: 17.3
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

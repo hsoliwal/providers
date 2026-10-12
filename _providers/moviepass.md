@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -80,9 +80,9 @@ description: 'MoviePass is a consumer movie-theater subscription service that le
 image: https://static.wixstatic.com/media/f5d875_a9c258a5531b44a58f56443581eb7a9b~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.moviepass.com over HTTP; 7 tools listed.
   name: Moviepass MCP Server
-  slug: moviepass-mcp-server
+  slug: moviepass
 modified: '2026-07-20'
 name: Moviepass
 nav: Providers
@@ -94,7 +94,7 @@ overview: 'Moviepass is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 15
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -108,13 +108,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 15.6
+  previous_composite: 15.4
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

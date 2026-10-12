@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.1
-  scored_at: '2026-09-20'
+  score: 30.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -66,6 +66,11 @@ collections:
   name: Explore API
   slug: open-endeavour-energy-open-data-explore-api-v2-1
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/endeavour-energy/refs/heads/main/capabilities/endeavour-energy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/endeavour-energy-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/endeavour-energy/refs/heads/main/overlays/endeavour-energy-open-data-explore-api-v2-1-overlay.yaml
   title: ''
@@ -266,7 +271,7 @@ network: true
 overview: 'Endeavour Energy publishes 2 APIs on the [APIs.io](https://apis.io/) network: Catalog API and Dataset API. Tagged areas include Energy, Australia, Utilities, Electricity, and Grid.
 
 
-  Endeavour Energy''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, engineering blog, and 34 more developer resources.'
+  Endeavour Energy''s developer surface includes authentication, developer portal, documentation, API reference, getting-started guide, support, engineering blog, and 35 more developer resources.'
 random_paper: 14
 rate_limits:
 - limit_count: 2
@@ -278,10 +283,10 @@ scopes:
   slug: endeavour-energy-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: strong
-  composite: 54.3
+  band: developing
+  composite: 49.3
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -291,9 +296,9 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 57.2
+    contract_quality: 51.4
     developer_ergonomics: 66.1
-    discoverability: 87.0
+    discoverability: 83.9
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -302,7 +307,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 54.3
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -318,9 +323,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 70.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: CAMARA-compliant, production-ready Network APIs exposing 5G core and RAN functions through standardized northbound interfaces. Includes Quality on Demand, Device Location (Verification, Retrieval), Ge
@@ -222,14 +222,14 @@ modified: '2026-07-25'
 name: Nokia
 nav: Providers
 network: true
-overview: 'Nokia publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Telecommunications, Telecom, 5G, 6G, and Mobile Network.
+overview: 'Nokia publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Telecommunications, 5G, 6G, Mobile Network, and Network Infrastructure.
 
 
   Nokia''s developer surface includes developer portal, documentation, getting-started guide, signup flow, tooling, engineering blog, YouTube channel, and 32 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 21.5
+  composite: 21.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -243,23 +243,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - finland
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 21.5
+  previous_composite: 21.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -278,7 +280,6 @@ security:
 slug: nokia-corp
 tags:
 - Telecommunications
-- Telecom
 - 5G
 - 6G
 - Mobile Network

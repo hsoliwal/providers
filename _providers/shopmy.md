@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -256,7 +256,7 @@ modified: '2026-08-13'
 name: ShopMy
 nav: Providers
 network: true
-overview: 'ShopMy publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Collections API, Links API, and 3 more. Tagged areas include Company, Commerce, Creator Economy, Creator Commerce, and Affiliate Marketing.
+overview: 'ShopMy publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Collections API, Links API, and 4 more. Tagged areas include Company, Commerce, Creator Economy, Creator Commerce, and Affiliate Marketing.
 
 
   The ShopMy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -279,7 +279,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.7
+  composite: 42.2
   coverage:
     artifact_dirs: 25
     catalog_earned: 45.0
@@ -291,11 +291,11 @@ score:
   facets:
     access_clarity: 25.0
     contract_governance: 18.2
-    contract_quality: 64.4
+    contract_quality: 58.8
     developer_ergonomics: 38.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 40.7
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -306,8 +306,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

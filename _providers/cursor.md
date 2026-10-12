@@ -15,27 +15,27 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: false
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: bearer
+    auth_clarity: served
     consent_identity: false
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: false
+    event_surface_described: true
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 27.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -87,7 +87,11 @@ apis:
   description: Daily usage and granular usage event data
   name: Cursor Usage API
   slug: cursor-usage-api
-artifact_total: 31
+artifact_total: 35
+asyncapis:
+- description: ''
+  name: Cursor Webhooks
+  slug: cursor-webhooks
 collections:
 - collection_type: open
   name: API Collection
@@ -114,6 +118,125 @@ collections:
   name: Cursor Admin Audit Logs Usage API
   slug: open-cursor-usage-api
 common:
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/rules/cursor-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/cursor-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/rules/cursor-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/cursor-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/rules/cursor-admin-api-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/cursor-admin-api-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/json-ld/cursor-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/cursor-context.jsonld
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/vocabulary/cursor-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/cursor-vocabulary.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/asyncapi/cursor-webhooks.yml
+  title: ''
+  type: Webhooks
+  url: asyncapi/cursor-webhooks.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/data-model/cursor-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/cursor-data-model.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/changelog/cursor-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/cursor-changelog.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://cursor.com/security
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/security/cursor-vulnerability-disclosure.yml
+  title: ''
+  type: Security
+  url: security/cursor-vulnerability-disclosure.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/conformance/cursor-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/cursor-conformance.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/overlays/cursor-audit-logs-api-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/cursor-audit-logs-api-overlay.yaml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/llms/cursor-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/cursor-llms.txt
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/well-known/cursor-status-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/cursor-status-security.txt
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/well-known/cursor-security.txt
+  title: ''
+  type: SecurityTxt
+  url: well-known/cursor-security.txt
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/well-known/cursor-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/cursor-well-known.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/hosts/cursor-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/cursor-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/vendors/cursor-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/cursor-vendors.yml
+- group: commercial
+  title: ''
+  type: TermsOfService
+  url: https://cursor.com/en-US/terms-of-service
+- group: operate
+  title: ''
+  type: Support
+  url: https://cursor.com/help
+- group: operate
+  title: ''
+  type: StatusPage
+  url: https://status.cursor.com/
+- group: commercial
+  title: ''
+  type: PrivacyPolicy
+  url: https://cursor.com/privacy
+- group: start
+  title: ''
+  type: GettingStarted
+  url: https://cursor.com/docs/get-started/quickstart
+- group: auth
+  href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/security/cursor-trust-center.yml
+  title: ''
+  type: TrustCenter
+  url: security/cursor-trust-center.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/cursor/refs/heads/main/agentic-access/cursor-agentic-access.yml
   title: ''
@@ -194,6 +317,9 @@ json_schemas:
 - name: Cursor Team Member
   property_count: 5
   slug: cursor-member
+- name: UserSpend
+  property_count: 4
+  slug: cursor-user-spend
 jsonld:
 - class_count: 25
   name: Cursor Context
@@ -204,13 +330,13 @@ modified: '2026-05-19'
 name: Cursor
 nav: Providers
 network: true
-overview: 'Cursor publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Groups API, Members API, and 3 more. Tagged areas include Artificial Intelligence, Developer Tools, Code Editor, Agents, and IDE.
+overview: 'Cursor publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Audit Logs API, Groups API, Members API, and 7 more. Tagged areas include Artificial Intelligence, Developer Tools, Code Editor, Agents, and IDE.
 
 
-  The Cursor catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Cursor catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Cursor''s developer surface includes authentication, documentation, pricing, engineering blog, and 10 more developer resources.'
+  Cursor''s developer surface includes changelog, support, getting-started guide, authentication, documentation, pricing, engineering blog, and 32 more developer resources.'
 plans:
 - name: Cursor Plans Pricing
   plan_count: 1
@@ -242,35 +368,55 @@ rules:
     info: 2
     warn: 3
   slug: cursor-jsonschema-spectral-rules
+- effective_rule_count: 54
+  extends:
+  - spectral:oas
+  name: Cursor API Rules
+  rule_count: 13
+  severity_counts:
+    error: 11
+    hint: 0
+    info: 1
+    warn: 1
+  slug: cursor-rules
 score:
-  band: thin
-  composite: 36.8
+  band: strong
+  composite: 59.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 70.0
+    artifact_dirs: 27
+    catalog_earned: 78.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.0
+    catalog_gap: 36.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 22.8
   facets:
-    access_clarity: 13.2
-    contract_governance: 54.5
-    contract_quality: 58.6
-    developer_ergonomics: 14.3
-    discoverability: 75.9
-    operational_transparency: 7.9
+    access_clarity: 50.0
+    contract_governance: 67.3
+    contract_quality: 64.4
+    developer_ergonomics: 32.7
+    discoverability: 73.2
+    operational_transparency: 57.9
   previous_composite: 36.8
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    mcp: derived
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: rising
   upsert:
     applies: true
     score: 22.2
@@ -288,6 +434,10 @@ security:
   name: Cursor Vulnerability Disclosure
   slug: cursor-vulnerability-disclosure
   summary_line: security.txt · contact published
+- kind: trust-center
+  name: Cursor Trust Center
+  slug: cursor-trust-center
+  summary_line: SOC 2, ISO 27001
 slug: cursor
 tags:
 - Artificial Intelligence

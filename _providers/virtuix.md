@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 24.1
-  scored_at: '2026-09-20'
+  score: 22.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The UCP-conforming Model Context Protocol endpoint Virtuix serves from its own domain. Thirteen tools cover catalog search and lookup, product detail, cart create/update/cancel, checkout create/update
@@ -158,9 +158,9 @@ description: Virtuix is an Austin, Texas maker of omnidirectional VR treadmills.
 image: https://cdn.shopify.com/s/files/1/0609/8989/8907/files/virtuix_omni_one_og_img.jpg?v=1738174948
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at virtuix.com; 15 tools listed.
   name: Virtuix MCP Server
-  slug: virtuix-mcp-server
+  slug: virtuix-mcp-yml
 modified: '2026-09-04'
 name: Virtuix
 nav: Providers
@@ -185,7 +185,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 27.4
+  composite: 30.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -199,14 +199,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 27.4
+  previous_composite: 30.1
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

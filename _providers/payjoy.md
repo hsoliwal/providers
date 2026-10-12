@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for online checkout and credit-application flows: retrieve supported devices, begin a sale, and receive completion webhooks. Bearer-token authenticated plus a symmetric E-commerce key for enc'
@@ -233,7 +233,7 @@ modified: '2026-07-20'
 name: PayJoy
 nav: Providers
 network: true
-overview: 'PayJoy publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Carts API, Down Payments API, Merchants API, and 5 more. Tagged areas include Company, Fintech, Payments, Lending, and Buy Now Pay Later.
+overview: 'PayJoy publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Carts API, Down Payments API, Merchants API, and 6 more. Tagged areas include Company, Fintech, Payments, Lending, and Buy Now Pay Later.
 
 
   The PayJoy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -243,7 +243,7 @@ overview: 'PayJoy publishes 8 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 8
 score:
   band: developing
-  composite: 45.5
+  composite: 43.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -255,11 +255,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 62.5
+    contract_quality: 57.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 45.5
+  previous_composite: 43.2
   provenance:
     conformance: derived
     contracts:
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

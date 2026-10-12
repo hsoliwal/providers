@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Groupthink's hosted, remote Model Context Protocol (MCP) server and API, served from api.groupthink.com. Authenticated with a Bearer API token minted in the app, it lets an AI assistant join live meet
@@ -132,9 +132,9 @@ description: Groupthink is a note-taker and professional-relationship memory bui
 image: https://groupthink.com/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.groupthink.com over HTTP; 15 tools listed.
   name: Groupthink MCP Server
-  slug: groupthink-mcp-server
+  slug: groupthink
 modified: '2026-07-19'
 name: Groupthink
 nav: Providers
@@ -146,7 +146,7 @@ overview: 'Groupthink publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 21
 score:
   band: thin
-  composite: 28.0
+  composite: 29.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -160,15 +160,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 39.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 15.8
-  previous_composite: 28.0
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

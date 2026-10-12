@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 376
   human_in_the_loop: 13
@@ -87,7 +87,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The configuration API from Keboola — 26 operation(s) for configuration.
-  name: Keboola configuration API
+  name: Keboola Configuration API
   slug: keboola-configuration-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -137,12 +137,12 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The health API from Keboola — 1 operation(s) for health.
-  name: Keboola health API
+  name: Keboola Health API
   slug: keboola-health-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: Import operations
-  name: Keboola import API
+  name: Keboola Import API
   slug: keboola-import-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -152,7 +152,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The jobs API from Keboola — 13 operation(s) for jobs.
-  name: Keboola jobs API
+  name: Keboola Jobs API
   slug: keboola-jobs-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -212,7 +212,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The queries API from Keboola — 1 operation(s) for queries.
-  name: Keboola queries API
+  name: Keboola Queries API
   slug: keboola-queries-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -222,12 +222,12 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The schedules API from Keboola — 4 operation(s) for schedules.
-  name: Keboola schedules API
+  name: Keboola Schedules API
   slug: keboola-schedules-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The service API from Keboola — 1 operation(s) for service.
-  name: Keboola service API
+  name: Keboola Service API
   slug: keboola-service-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -267,7 +267,7 @@ apis:
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
   description: The test API from Keboola — 1 operation(s) for test.
-  name: Keboola test API
+  name: Keboola Test API
   slug: keboola-test-api
 - baseURL: https://connection.keboola.com/v2/storage
   baseurl_source: declared
@@ -289,7 +289,7 @@ apis:
   description: Vendor membership and service accounts.
   name: Keboola Vendor API
   slug: keboola-vendor-api
-artifact_total: 527
+artifact_total: 528
 collections:
 - collection_type: open
   name: API Collection
@@ -1812,6 +1812,10 @@ jsonld:
   property_count: 42
   slug: keboola-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.keboola.com over HTTP.
+  name: Keboola MCP Server
+  slug: keboola
 modified: '2026-09-16'
 name: Keboola
 nav: Providers
@@ -1845,7 +1849,7 @@ rules:
   slug: keboola-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.2
+  composite: 42.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 62.3
@@ -1857,11 +1861,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 9.8
-    contract_quality: 59.2
+    contract_quality: 54.0
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 21.1
-  previous_composite: 42.2
+  previous_composite: 42.6
   provenance:
     agentic_access: derived
     contracts:
@@ -1870,8 +1874,14 @@ score:
       marker_coverage: 0.0
       total: 79
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

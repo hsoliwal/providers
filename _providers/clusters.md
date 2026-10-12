@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -265,7 +265,7 @@ overview: 'Clusters publishes 6 APIs on the [APIs.io](https://apis.io/) network,
 random_paper: 5
 score:
   band: emerging
-  composite: 20.6
+  composite: 19.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -279,9 +279,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 20.6
+  previous_composite: 19.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -297,9 +297,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 35.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.1
-  scored_at: '2026-09-20'
+  score: 13.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-facing commerce surface for the True & Co Shopify storefront: a hosted Universal Commerce Protocol (UCP) MCP endpoint for catalog search, cart, and checkout, backed by Shopify Customer Account O'
@@ -105,12 +105,12 @@ overview: 'True & Co publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 21
 scopes:
 - name: True And Co Scopes
-  scope_count: 0
+  scope_count: 4
   slug: true-and-co-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code (PKCE, S256)/refresh_token/urn:ietf:params:oauth:grant-type:jwt-bearer
 score:
   band: emerging
-  composite: 14.2
+  composite: 15.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -124,13 +124,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 14.2
+  previous_composite: 15.8
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -76,6 +76,11 @@ collections:
   name: SaaS Alerts API
   slug: open-saas-alerts
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/saas-alerts/refs/heads/main/capabilities/saas-alerts-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/saas-alerts-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -174,13 +179,13 @@ modified: '2026-05-19'
 name: SaaS Alerts
 nav: Providers
 network: true
-overview: 'SaaS Alerts publishes 2 APIs on the [APIs.io](https://apis.io/) network: Events API and Reports API. Tagged areas include MSP, SaaS Security, Security Monitoring, Threat Detection, and Microsoft-365.
+overview: 'SaaS Alerts publishes 2 APIs on the [APIs.io](https://apis.io/) network: Events API and Reports API. Tagged areas include MSP, SaaS Security, Security Monitoring, Threat Detection, and Microsoft 365.
 
 
   The SaaS Alerts catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SaaS Alerts'' developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  SaaS Alerts'' developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Saas Alerts Plans Pricing
   plan_count: 3
@@ -214,9 +219,9 @@ rules:
   slug: saas-alerts-spectral-rules
 score:
   band: developing
-  composite: 41.4
+  composite: 41.2
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 58.5
     catalog_earned_first_party: 0.0
     catalog_gap: 56.5
@@ -226,11 +231,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 13.6
-    contract_quality: 58.8
+    contract_quality: 53.5
     developer_ergonomics: 32.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 41.4
+  previous_composite: 41.2
   provenance:
     agentic_access: derived
     contracts:
@@ -238,8 +243,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -261,7 +272,7 @@ tags:
 - SaaS Security
 - Security Monitoring
 - Threat Detection
-- Microsoft-365
+- Microsoft 365
 - Google Workspace
 - MSSP
 website: https://www.saasalerts.com

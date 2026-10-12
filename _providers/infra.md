@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.infrahq.com
@@ -115,6 +115,11 @@ collections:
   name: Infra Authentication Users API
   slug: open-infra-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/infra/refs/heads/main/capabilities/infra-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/infra-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/infra/refs/heads/main/mcp/infra-mcp.yml
   title: ''
@@ -252,13 +257,13 @@ network: true
 overview: 'Infra publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Destinations API, Grants API, and 5 more. Tagged areas include Company, Identity, Access Management, Authentication, and Authorization.
 
 
-  Infra''s developer surface includes documentation, API reference, getting-started guide, CLI, authentication, changelog, and 21 more developer resources.'
+  Infra''s developer surface includes documentation, API reference, getting-started guide, CLI, authentication, changelog, and 22 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 31.8
+  composite: 30.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -268,11 +273,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 42.9
+    contract_quality: 38.9
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 31.8
+  previous_composite: 30.7
   provenance:
     conformance: derived
     contracts:
@@ -282,8 +287,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -309,6 +320,6 @@ tags:
 - Kubernetes
 - OIDC
 - Security
-- Open-Source
+- Open Source
 website: https://infrahq.com
 ---

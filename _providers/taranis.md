@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://www.taranis.com
@@ -113,7 +113,7 @@ modified: '2026-06-20'
 name: Taranis
 nav: Providers
 network: true
-overview: 'Taranis publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Crop Intelligence, Imagery and Insights, Ag Assistant, and 1 more. Tagged areas include Agriculture, AgTech, Crop Intelligence, Computer-Vision, and Aerial Scouting.
+overview: 'Taranis publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Crop Intelligence, Imagery and Insights, Ag Assistant, and 1 more. Tagged areas include Agriculture, AgTech, Crop Intelligence, Computer Vision, and Aerial Scouting.
 
 
   Taranis'' developer surface includes documentation, engineering blog, and 6 more developer resources.'
@@ -128,25 +128,31 @@ rate_limits:
   slug: taranis-rate-limits
 score:
   band: emerging
-  composite: 23.8
+  composite: 20.7
   coverage:
     artifact_dirs: 9
-    catalog_earned: 51.0
+    catalog_earned: 49.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 65.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
-    contract_quality: 27.9
+    contract_quality: 25.1
     developer_ergonomics: 11.9
-    discoverability: 59.3
-    operational_transparency: 21.1
-  previous_composite: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    discoverability: 57.1
+    operational_transparency: 18.9
+  previous_composite: 20.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -163,7 +169,7 @@ tags:
 - Agriculture
 - AgTech
 - Crop Intelligence
-- Computer-Vision
+- Computer Vision
 - Aerial Scouting
 - Precision Agriculture
 website: https://www.taranis.com/

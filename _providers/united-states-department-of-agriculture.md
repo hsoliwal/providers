@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -188,7 +188,7 @@ modified: '2026-05-19'
 name: United States Department of Agriculture
 nav: Providers
 network: true
-overview: 'United States Department of Agriculture publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Data API, Foods API, Forecasts API, and 5 more. Tagged areas include Federal-Government, Agriculture, Food Safety, Nutrition, and Rural Development.
+overview: 'United States Department of Agriculture publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Data API, Foods API, Forecasts API, and 5 more. Tagged areas include Federal Government, Agriculture, Food Safety, Nutrition, and Rural Development.
 
 
   The United States Department of Agriculture catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -227,7 +227,7 @@ rules:
   slug: usda-fooddata-central-rules
 score:
   band: thin
-  composite: 37.7
+  composite: 35.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 60.3
@@ -239,11 +239,16 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 57.0
+    contract_quality: 51.8
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 10.5
-  previous_composite: 37.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 35.2
   provenance:
     agentic_access: derived
     contracts:
@@ -256,9 +261,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -276,7 +281,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DNSSEC · DMARC
 slug: united-states-department-of-agriculture
 tags:
-- Federal-Government
+- Federal Government
 - Agriculture
 - Food Safety
 - Nutrition

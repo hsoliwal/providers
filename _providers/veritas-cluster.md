@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: RESTful API for managing cluster resources, service groups, and cluster configuration.
@@ -128,7 +128,7 @@ modified: '2026-09-16'
 name: Veritas Cluster Server
 nav: Providers
 network: true
-overview: 'Veritas Cluster Server publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Clustering, Containers, Disaster Recovery, Failover, and High Availability.
+overview: 'Veritas Cluster Server publishes 8 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 7 more. Tagged areas include Clustering, Containers, Disaster Recovery, Failover, and High Availability.
 
 
   Veritas Cluster Server''s developer surface includes support, developer portal, documentation, release notes, engineering blog, and 8 more developer resources.'
@@ -143,7 +143,7 @@ rate_limits:
   slug: veritas-cluster-rate-limits
 score:
   band: thin
-  composite: 38.2
+  composite: 38.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -155,13 +155,19 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 63.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 38.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 38.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -266,9 +266,9 @@ description: 'Limrun (Limrun, Inc.) is a Y Combinator-backed cloud infrastructur
 image: https://lim.run/logo-inner-filled-no-border.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Limrun ships a per-instance MCP server rather than one shared endpoint. Every iOS and Android instance exposes its own Model Context Protocol HTTP endpoint at status.mcpUrl once the instance reaches t
   name: Limrun MCP Server
-  slug: limrun-mcp-server
+  slug: limrun-instance
 modified: '2026-07-19'
 name: Limrun
 nav: Providers
@@ -285,7 +285,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 37.0
+  composite: 38.2
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -297,11 +297,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 38.4
+    contract_quality: 34.5
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 37.0
+  previous_composite: 38.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -312,8 +312,14 @@ score:
       total: 7
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

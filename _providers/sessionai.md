@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Public REST API for the Session AI (ZineOne) platform. Documented operations cover sending events into the platform from any channel, retrieving hosted content, calling customer-authored microservices
@@ -188,7 +188,7 @@ description: Session AI (formerly ZineOne) is an ecommerce AI platform that uses
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sessionai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sessionai.com over HTTP requiring OAuth.
   name: Session AI
   slug: session-ai
 modified: '2026-08-13'
@@ -218,7 +218,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: developing
-  composite: 40.8
+  composite: 43.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -230,16 +230,28 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 40.8
+  previous_composite: 43.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -263,7 +275,7 @@ tags:
 - Retail
 - Personalization
 - Marketing
-- Agentic AI
+- AI Agents
 - Decisioning
 - Customer Data
 - Event

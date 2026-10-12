@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 17
 apis:
 - description: Discover HCE Wallet Services offers a secure and convenient way for customers to add their Discover card to their mobile devices for contactless payments. By utilizing Host Card Emulation (HCE) techno
@@ -278,7 +278,7 @@ modified: '2026-09-06'
 name: Discover
 nav: Providers
 network: true
-overview: 'Discover publishes 17 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Credit Cards, Payments, Card Network, Tokenization, and Financial-Services.
+overview: 'Discover publishes 17 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Credit Cards, Payments, Card Network, Tokenization, and Financial Services.
 
 
   The Discover catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -301,7 +301,7 @@ scopes:
   summary_line: 8 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 48.7
+  composite: 45.1
   coverage:
     artifact_dirs: 19
     catalog_earned: 38.0
@@ -313,11 +313,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 21.1
-  previous_composite: 48.7
+  previous_composite: 45.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -326,9 +326,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 73.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -354,8 +354,8 @@ tags:
 - Payments
 - Card Network
 - Tokenization
-- Financial-Services
-- Fraud
+- Financial Services
+- Fraud Prevention
 - Fortune 500
 website: https://www.discover.com/
 ---

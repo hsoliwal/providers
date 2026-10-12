@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Public-facing website of the Defense Nuclear Facilities Safety Board providing organizational information, board members, hearings, and publications. The site does not expose a developer API.
@@ -44,6 +44,7 @@ apis:
   slug: defense-nuclear-facilities-safety-board-recommendations
 - description: Online portal that publishes records released under the Freedom of Information Act and frequently requested documents. Records are browsable and downloadable but there is no documented API.
   name: DNFSB FOIA Reading Room
+  provenance: unpublished
   slug: defense-nuclear-facilities-safety-board-foia
 artifact_total: 7
 common:
@@ -92,7 +93,7 @@ modified: '2026-04-28'
 name: Defense Nuclear Facilities Safety Board
 nav: Providers
 network: true
-overview: 'Defense Nuclear Facilities Safety Board publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Defense, DNFSB, Energy, Federal-Government, and Health.
+overview: 'Defense Nuclear Facilities Safety Board publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Defense, DNFSB, Energy, Federal Government, and Health.
 
 
   Defense Nuclear Facilities Safety Board''s developer surface includes documentation, product news, and 6 more developer resources.'
@@ -121,17 +122,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 7.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
   previous_composite: 13.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 13.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +154,7 @@ tags:
 - Defense
 - DNFSB
 - Energy
-- Federal-Government
+- Federal Government
 - Health
 - Independent Agency
 - Nuclear

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -162,12 +162,12 @@ rate_limits:
   slug: zefr-rate-limits
 scopes:
 - name: Zefr Scopes
-  scope_count: 0
+  scope_count: 14
   slug: zefr-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 18.4
+  composite: 21.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -181,13 +181,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 18.4
+  previous_composite: 21.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -216,9 +222,9 @@ tags:
 - Content Intelligence
 - Content Moderation
 - Video
-- Social-Media
+- Social Media
 - Advertising
 - Media Measurement
-- Machine-Learning
+- Machine Learning
 website: https://zefr.com
 ---

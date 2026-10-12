@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: UGI International manages LPG and natural gas distribution operations across Europe, primarily through Flaga, AvantiGas, and other regional brands serving 17 European countries with liquid petroleum g
@@ -88,13 +88,13 @@ jsonld:
   slug: ugi-context
 layout: provider
 modified: '2026-09-16'
-name: UGI Corporation
+name: UGI
 nav: Providers
 network: true
-overview: 'UGI Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Natural Gas, Propane, and Electric.
+overview: 'UGI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Natural Gas, Propane, and Electric.
 
 
-  The UGI Corporation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
+  The UGI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
 plans:
 - name: Ugi Plans Pricing
   plan_count: 1
@@ -123,7 +123,7 @@ rate_limits:
 rules:
 - effective_rule_count: 5
   extends: []
-  name: UGI Corporation API Rules
+  name: UGI API Rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -133,7 +133,7 @@ rules:
   slug: ugi-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 13.4
+  composite: 13.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 53.3
@@ -147,17 +147,17 @@ score:
     contract_governance: 9.8
     contract_quality: 14.7
     developer_ergonomics: 0.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 13.4
+  previous_composite: 13.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.3
-  scored_at: '2026-09-20'
+  score: 29.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -245,12 +245,12 @@ layout: provider
 mcp_servers:
 - description: 'Official Instabase AI Hub documentation MCP server. The AI Hub docs site advertises an MCP endpoint for AI client integration (Claude Code, Cursor, etc.) that exposes the documentation corpus. Probed '
   name: Instabase MCP Server
-  slug: instabase-mcp-server
+  slug: instabase-aihub-docs
 modified: '2026-07-19'
 name: Instabase
 nav: Providers
 network: true
-overview: 'Instabase publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Batches API, Files API, and 3 more. Tagged areas include Company, Intelligent Document Processing, Document AI, Artificial Intelligence, and Machine-Learning.
+overview: 'Instabase publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Batches API, Files API, and 3 more. Tagged areas include Company, Intelligent Document Processing, Document AI, Artificial Intelligence, and Machine Learning.
 
 
   The Instabase catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -259,8 +259,8 @@ overview: 'Instabase publishes 6 APIs on the [APIs.io](https://apis.io/) network
   Instabase''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 23 more developer resources.'
 random_paper: 8
 score:
-  band: strong
-  composite: 55.3
+  band: developing
+  composite: 51.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -272,11 +272,11 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 64.5
+    contract_quality: 59.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 55.3
+  previous_composite: 51.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -304,9 +304,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 48.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -335,11 +335,11 @@ tags:
 - Intelligent Document Processing
 - Document AI
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Automation
 - Data Extraction
 - LLM
-- Financial-Services
+- Financial Services
 - Insurance
 website: https://www.instabase.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -47,27 +47,27 @@ apis:
 - baseURL: https://app.leanix.net/services/integration-api/v1
   baseurl_source: declared
   description: The configurations API from LeanIX — 1 operation(s) for configurations.
-  name: LeanIX configurations API
+  name: LeanIX Configurations API
   slug: leanix-configurations-api
 - baseURL: https://app.leanix.net/services/integration-api/v1
   baseurl_source: declared
   description: The examples API from LeanIX — 2 operation(s) for examples.
-  name: LeanIX examples API
+  name: LeanIX Examples API
   slug: leanix-examples-api
 - baseURL: https://app.leanix.net/services/integration-api/v1
   baseurl_source: declared
   description: The fastSynchronizationRuns API from LeanIX — 2 operation(s) for fastsynchronizationruns.
-  name: LeanIX fastSynchronizationRuns API
+  name: LeanIX Fast Synchronization Runs API
   slug: leanix-fastsynchronizationruns-api
 - baseURL: https://app.leanix.net/services/integration-api/v1
   baseurl_source: declared
   description: The storages API from LeanIX — 1 operation(s) for storages.
-  name: LeanIX storages API
+  name: LeanIX Storages API
   slug: leanix-storages-api
 - baseURL: https://app.leanix.net/services/integration-api/v1
   baseurl_source: declared
   description: The synchronizationRuns API from LeanIX — 13 operation(s) for synchronizationruns.
-  name: LeanIX synchronizationRuns API
+  name: LeanIX Synchronization Runs API
   slug: leanix-synchronizationruns-api
 artifact_total: 20
 collections:
@@ -150,7 +150,7 @@ modified: '2026-05-19'
 name: LeanIX
 nav: Providers
 network: true
-overview: 'LeanIX publishes 5 APIs on the [APIs.io](https://apis.io/) network, including configurations API, examples API, fastSynchronizationRuns API, and 2 more. Tagged areas include Enterprise Architecture, SaaS Management, IT Portfolio Management, Application Portfolio, and Technology Risk.
+overview: 'LeanIX publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Configurations API, Examples API, Fast Synchronization Runs API, and 2 more. Tagged areas include Enterprise Architecture, SaaS Management, IT Portfolio Management, Application Portfolio, and Technology Risk.
 
 
   LeanIX''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
@@ -170,7 +170,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 26.9
+  composite: 27.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -182,11 +182,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 44.5
+    contract_quality: 40.0
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 26.9
+  previous_composite: 27.3
   provenance:
     agentic_access: derived
     contracts:
@@ -194,8 +194,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

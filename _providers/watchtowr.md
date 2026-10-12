@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -210,6 +210,11 @@ collections:
   name: watchTowr Platform Client Activity Log Testing Infrastructure API
   slug: open-watchtowr-testing-infrastructure-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/watchtowr/refs/heads/main/capabilities/watchtowr-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/watchtowr-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -346,7 +351,7 @@ layout: provider
 mcp_servers:
 - description: watchTowr publishes an official open-source MCP server (watchtowr/watchtowr-mcp, v0.1.2) that connects AI assistants to the watchTowr Platform Client API — attack surface assets, findings, hunts, cert
   name: watchTowr MCP Server
-  slug: watchtowr-mcp-server
+  slug: watchtowr-mcp
 modified: '2026-07-21'
 name: watchTowr
 nav: Providers
@@ -354,13 +359,13 @@ network: true
 overview: 'watchTowr publishes 20 APIs on the [APIs.io](https://apis.io/) network, including Activity Log API, Assets API, Business Unit API, and 17 more. Tagged areas include Company, Security, Cybersecurity, Attack Surface Management, and EASM.
 
 
-  watchTowr''s developer surface includes documentation, developer portal, engineering blog, support, authentication, and 23 more developer resources.'
+  watchTowr''s developer surface includes documentation, developer portal, engineering blog, support, authentication, and 24 more developer resources.'
 random_paper: 5
 score:
   band: thin
-  composite: 34.6
+  composite: 34.7
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -370,11 +375,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 34.6
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -385,8 +390,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

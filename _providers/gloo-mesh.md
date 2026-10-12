@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Gloo Mesh Enterprise (documented as "Gloo Mesh (Gloo Platform APIs)", current version 2.14, released 2026-09-09) is a service mesh management platform built on Istio that provides intra-mesh and multi
@@ -272,14 +272,14 @@ finops:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gloo-mesh.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at search.solo.io over HTTP; 3 tools listed.
   name: Solo.io - Docs MCP
-  slug: soloio-docs-mcp
+  slug: solo-io---docs-mcp
 modified: '2026-09-12'
 name: Gloo Mesh
 nav: Providers
 network: true
-overview: 'Gloo Mesh publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Istio, Kubernetes, Multi-Cluster, Open-Source, and Service Mesh.
+overview: 'Gloo Mesh publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Istio, Kubernetes, Multi-Cluster, Open Source, and Service Mesh.
 
 
   Gloo Mesh''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, support, pricing, and 34 more developer resources.'
@@ -294,7 +294,7 @@ rate_limits:
   slug: gloo-mesh-rate-limits
 score:
   band: developing
-  composite: 48.9
+  composite: 47.3
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -306,23 +306,23 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 80.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 48.9
+  previous_composite: 47.3
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
   regulatory:
     applies: true
-    matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 48.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -351,7 +351,7 @@ tags:
 - Istio
 - Kubernetes
 - Multi-Cluster
-- Open-Source
+- Open Source
 - Service Mesh
 - Envoy
 - Kubernetes CRDs

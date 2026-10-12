@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 9
 apis:
 - description: API for building Safari Web Extensions that extend and customize the browsing experience.
@@ -271,7 +271,7 @@ rate_limits:
   slug: apple-safari-rate-limits
 score:
   band: strong
-  composite: 57.1
+  composite: 59.5
   coverage:
     artifact_dirs: 21
     catalog_earned: 67.0
@@ -285,15 +285,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 80.4
-    discoverability: 88.9
+    discoverability: 83.3
     operational_transparency: 76.3
-  previous_composite: 57.1
+  previous_composite: 59.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

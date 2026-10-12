@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -57,6 +57,10 @@ created: '2026-07-17'
 description: Nothing is a London-based consumer technology company designing smartphones (Phone series), wireless earbuds (Ear series), and other consumer hardware under the Nothing and CMF by Nothing brands, backed by EQT Ventures and GV. Surfaced as a portfolio-company lead in the API Evangelist network. An enrichment pass confirmed Nothing publishes a consumer web presence (support centre, community, careers, playground) but no public developer API, API documentation, developer portal, SDK, or webhook surface as of this pass.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nothing.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nothing.tech over HTTP.
+  name: Nothing MCP Server
+  slug: nothing
 modified: '2026-07-20'
 name: Nothing
 nav: Providers
@@ -68,7 +72,7 @@ overview: 'Nothing is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 11
 score:
   band: minimal
-  composite: 8.1
+  composite: 7.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -82,19 +86,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 8.1
+  previous_composite: 7.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -96,7 +96,7 @@ overview: 'Ferrum Health is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 12
 score:
   band: emerging
-  composite: 11.8
+  composite: 11.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -110,9 +110,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 11.8
+  previous_composite: 11.3
   provenance:
     conformance: first-party
   regulatory:
@@ -126,9 +126,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -153,7 +153,7 @@ tags:
 - Medical Imaging
 - Radiology
 - Patient Safety
-- Machine-Learning
+- Machine Learning
 - Healthcare
 - Compliance
 website: https://ferrumhealth.com

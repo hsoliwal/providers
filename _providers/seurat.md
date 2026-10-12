@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -132,9 +132,9 @@ description: Seurat Technologies is a Wilmington, Massachusetts contract manufac
 image: https://static.wixstatic.com/media/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg/v1/fill/w_2500,h_1598,al_c/953c5a_7e5f56c496714d66967a49d669bbef21~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.seurat.com over HTTP; 9 tools listed.
   name: Seurat Technologies MCP Server
-  slug: seurat-technologies-mcp-server
+  slug: seurat-site-mcp
 modified: '2026-08-05'
 name: Seurat Technologies
 nav: Providers
@@ -146,7 +146,7 @@ overview: 'Seurat Technologies is profiled on the [APIs.io](https://apis.io/) ne
 random_paper: 0
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -160,13 +160,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 0.0
-  previous_composite: 10.4
+  previous_composite: 10.3
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

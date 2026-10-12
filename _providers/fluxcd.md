@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.1
-  scored_at: '2026-09-20'
+  score: 5.8
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible, enabling GitOps-based automation for keeping Kubernetes clusters in sync with sources of con
@@ -102,7 +102,7 @@ rate_limits:
   slug: fluxcd-rate-limits
 score:
   band: emerging
-  composite: 16.7
+  composite: 15.7
   coverage:
     artifact_dirs: 8
     catalog_earned: 41.0
@@ -115,12 +115,18 @@ score:
     access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 31.0
-    discoverability: 59.3
+    developer_ergonomics: 30.2
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -155,5 +161,8 @@ tags:
 - Deployment
 - GitOps
 - Kubernetes
+- Cloud-Native
+- CNCF
+- Graduated
 website: https://fluxcd.io/
 ---

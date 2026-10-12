@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +25,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: verified
     mcp_server: verified
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 61.7
-  scored_at: '2026-09-20'
+  score: 59.5
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 0
@@ -322,9 +323,9 @@ description: Prezent is an AI-powered business communications and presentation p
 image: https://teams.prezent.ai/prezent_favicon.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.myprezent.com over HTTP; 11 tools listed.
   name: Prezent MCP Server
-  slug: prezent-mcp-server
+  slug: prezent
 modified: '2026-07-20'
 name: Prezent
 nav: Providers
@@ -343,7 +344,7 @@ rate_limits:
   slug: prezent-rate-limits
 score:
   band: strong
-  composite: 61.5
+  composite: 58.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -355,11 +356,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 66.6
+    contract_quality: 60.8
     developer_ergonomics: 62.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
-  previous_composite: 61.5
+  previous_composite: 58.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -381,9 +382,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

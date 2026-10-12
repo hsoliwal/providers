@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 89
   human_in_the_loop: 2
@@ -99,6 +99,11 @@ arazzos:
   slug: switstack-take-a-payment
 artifact_total: 17
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/switstack/refs/heads/main/capabilities/switstack-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/switstack-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/switstack/refs/heads/main/overlays/switstack-switcloud-overlay.yaml
   title: ''
@@ -273,7 +278,7 @@ network: true
 overview: 'Switstack publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Auth API, BOM API, Config API, and 5 more. Tagged areas include Company, Fintech Insurtech, Payments, EMV, and emv-level-2.
 
 
-  Switstack''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 28 more developer resources.'
+  Switstack''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 29 more developer resources.'
 plans:
 - name: Switstack Plans Pricing
   plan_count: 0
@@ -290,9 +295,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.6
+  composite: 39.4
   coverage:
-    artifact_dirs: 27
+    artifact_dirs: 28
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -302,11 +307,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 18.2
-    contract_quality: 48.6
+    contract_quality: 44.3
     developer_ergonomics: 80.4
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 2.6
-  previous_composite: 41.6
+  previous_composite: 39.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -322,9 +327,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-09-20'
+  score: 21.2
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.fu.do/v1alpha1
@@ -308,8 +308,8 @@ overview: 'Fudo publishes 19 APIs on the [APIs.io](https://apis.io/) network, in
   Fudo''s developer surface includes authentication, documentation, API reference, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
 random_paper: 12
 score:
-  band: developing
-  composite: 40.2
+  band: thin
+  composite: 38.0
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -321,16 +321,16 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 55.3
+    contract_quality: 50.1
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 40.2
+  previous_composite: 38.0
   provenance:
     conformance: derived
     contracts:
@@ -344,9 +344,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

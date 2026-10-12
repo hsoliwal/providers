@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -111,7 +111,7 @@ overview: 'ModernLoop is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 9
 score:
   band: emerging
-  composite: 17.9
+  composite: 17.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -125,11 +125,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 17.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.7
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

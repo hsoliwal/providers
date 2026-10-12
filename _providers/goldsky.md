@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: Managed subgraph hosting compatible with The Graph - deploy subgraph definitions and get a hosted GraphQL endpoint per subgraph for querying indexed onchain data. Includes sync acceleration and direct
@@ -60,7 +60,7 @@ apis:
 - description: Web dashboard for managing Goldsky projects - subgraph deployments, pipeline status, logs, billing, and API keys.
   name: Goldsky Dashboard
   slug: dashboard
-artifact_total: 13
+artifact_total: 14
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/goldsky/refs/heads/main/security/goldsky-domain-security.yml
@@ -112,6 +112,10 @@ graphqls:
   slug: goldsky-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goldsky.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.goldsky.com over HTTP; 3 tools listed.
+  name: Goldsky MCP Server
+  slug: goldsky
 modified: '2026-05-23'
 name: Goldsky
 nav: Providers
@@ -131,27 +135,33 @@ rate_limits:
   slug: goldsky-rate-limits
 score:
   band: emerging
-  composite: 19.7
+  composite: 17.4
   coverage:
     artifact_dirs: 10
-    catalog_earned: 59.0
+    catalog_earned: 57.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 57.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 26.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 81.5
-    operational_transparency: 26.3
-  previous_composite: 19.7
+    discoverability: 80.0
+    operational_transparency: 24.2
+  previous_composite: 17.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

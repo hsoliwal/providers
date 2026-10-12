@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing employees, schedules, timesheets, locations, leave, tasks, and sales metrics in the Deputy workforce management platform. Authentication is handled via OAuth 2.0 or a permanent a
@@ -138,7 +138,7 @@ overview: 'Deputy publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 7
 score:
   band: emerging
-  composite: 22.8
+  composite: 23.7
   coverage:
     artifact_dirs: 5
     catalog_earned: 37.0
@@ -152,11 +152,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 22.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - anz
+  previous_composite: 23.7
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,5 +197,7 @@ tags:
 - Timesheets
 - Human Resources
 - Shift Planning
+- Australia
+- Scheduling
 website: https://www.deputy.com
 ---

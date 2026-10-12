@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The EnOS platform open APIs cover the core platform services — model, device connection, asset, asset tree, alert engine, TSDB time-series data, and data subscription. Applications register in the EnO
@@ -155,7 +155,7 @@ overview: 'Univers publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 10
 score:
   band: thin
-  composite: 35.5
+  composite: 32.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -167,11 +167,16 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 38.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 35.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 32.9
   provenance:
     conformance: first-party
   regulatory:
@@ -183,9 +188,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

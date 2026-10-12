@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Public GraphQL API for the Cato Management Application (CMA): site and account provisioning, policy configuration, network/security analytics, entity lookup, and event streaming. Single GraphQL endpoi'
@@ -171,7 +171,7 @@ layout: provider
 mcp_servers:
 - description: Local Model Context Protocol (MCP) server for Cato Networks' public GraphQL API (Cato Management Application / CMA).
   name: Cato Networks MCP Server
-  slug: cato-networks-mcp-server
+  slug: cato-mcp-server
 modified: '2026-07-18'
 name: Cato Networks
 nav: Providers
@@ -183,7 +183,7 @@ overview: 'Cato Networks publishes 1 API on the [APIs.io](https://apis.io/) netw
 random_paper: 19
 score:
   band: thin
-  composite: 26.6
+  composite: 27.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -197,14 +197,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 26.6
+  previous_composite: 27.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

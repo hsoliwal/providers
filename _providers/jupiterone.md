@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JupiterOne's public GraphQL API for querying the security asset graph with J1QL, managing entities and relationships, running alert rules, ingesting data via sync jobs, and administering integrations,
@@ -186,7 +186,7 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server for JupiterOne. Exposes JupiterOne account rules and rule details to MCP-compatible agents and clients.
   name: JupiterOne MCP Server
-  slug: jupiterone-mcp-server
+  slug: jupiterone-mcp
 modified: '2026-07-19'
 name: JupiterOne
 nav: Providers
@@ -204,8 +204,8 @@ rate_limits:
   name: Jupiterone Rate Limits
   slug: jupiterone-rate-limits
 score:
-  band: developing
-  composite: 53.9
+  band: strong
+  composite: 55.8
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -217,21 +217,29 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 84.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.9
+  previous_composite: 55.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

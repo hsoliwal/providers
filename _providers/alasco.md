@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 48.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 70
   human_in_the_loop: 0
@@ -526,21 +526,21 @@ description: 'Alasco is a Munich-based real-estate financial management platform
 image: https://cdn.prod.website-files.com/656ef2eb27ad41897248f866/6a50ff4e64f5c6a6cb6d2dd5_Alasco_Logo_Full_Blue%20(1).svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.alasco.de over HTTP.
   name: Alasco MCP Server
-  slug: alasco-mcp-server
+  slug: alasco
 modified: '2026-07-17'
 name: Alasco
 nav: Providers
 network: true
-overview: 'Alasco publishes 40 APIs on the [APIs.io](https://apis.io/) network, including Annual Consumption API, Asset API, Audit Log API, and 37 more. Tagged areas include Company, Ai Enterprise Software, Real-Estate, Construction, and PropTech.
+overview: 'Alasco publishes 40 APIs on the [APIs.io](https://apis.io/) network, including Annual Consumption API, Asset API, Audit Log API, and 37 more. Tagged areas include Company, Ai Enterprise Software, Real Estate, Construction, and PropTech.
 
 
   Alasco''s developer surface includes documentation, getting-started guide, API reference, changelog, authentication, engineering blog, pricing, and 26 more developer resources.'
 random_paper: 11
 score:
-  band: developing
-  composite: 53.4
+  band: strong
+  composite: 54.9
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -552,17 +552,19 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 52.6
+    contract_quality: 47.4
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 53.4
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -573,8 +575,14 @@ score:
       total: 40
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -601,7 +609,7 @@ slug: alasco
 tags:
 - Company
 - Ai Enterprise Software
-- Real-Estate
+- Real Estate
 - Construction
 - PropTech
 - Financial Management

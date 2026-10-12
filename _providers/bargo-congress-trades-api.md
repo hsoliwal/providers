@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: verified
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.8
-  scored_at: '2026-09-20'
+  score: 42.3
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -63,7 +64,7 @@ apis:
   description: Normalized House and Senate securities transactions.
   name: Bargo Congress Trades API Trades API
   slug: bargo-congress-trades-api-trades-api
-artifact_total: 17
+artifact_total: 16
 collections:
 - collection_type: open
   name: API Collection
@@ -235,15 +236,12 @@ layout: provider
 mcp_servers:
 - description: Bargo hosts a focused Streamable HTTP MCP server for the Congress Trades dataset at https://www.bargo.ai/free-apis/congress/mcp, exposing exactly three narrowly scoped read-only tools. The tool list b
   name: Bargo Congress Trades API MCP Server
-  slug: bargo-congress-trades-api-mcp-server
-- description: ''
-  name: Bargo Congress Trades API MCP Server
-  slug: bargo-congress-trades-api-mcp-server-2
+  slug: bargo-congress
 modified: '2026-08-09'
 name: Bargo Congress Trades API
 nav: Providers
 network: true
-overview: 'Bargo Congress Trades API publishes 3 APIs on the [APIs.io](https://apis.io/) network: Members API, Statistics API, and Trades API. Tagged areas include Congress, Finance, Stocks, Government, and stock-act.
+overview: 'Bargo Congress Trades API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Members API, Statistics API, Trades API, and 1 more. Tagged areas include Congress, Finance, Stocks, Government, and stock-act.
 
 
   Bargo Congress Trades API''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, support, engineering blog, and 23 more developer resources.'
@@ -254,7 +252,7 @@ rate_limits:
   slug: bargo-congress-trades-api-rate-limits
 score:
   band: developing
-  composite: 51.7
+  composite: 48.2
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -266,11 +264,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.7
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 51.7
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -286,9 +284,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -169,7 +169,7 @@ rate_limits:
   slug: nucleus-genomics-rate-limits
 score:
   band: thin
-  composite: 30.1
+  composite: 29.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -183,9 +183,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 30.1
+  previous_composite: 29.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -198,9 +198,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

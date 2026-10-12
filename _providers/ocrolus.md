@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -230,6 +230,11 @@ collections:
   name: Account Level Book Commands Webhooks API
   slug: open-ocrolus-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/capabilities/ocrolus-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ocrolus-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -450,17 +455,17 @@ overview: 'Ocrolus publishes 16 APIs on the [APIs.io](https://apis.io/) network,
   The Ocrolus catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Ocrolus'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 38 more developer resources.'
+  Ocrolus'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 39 more developer resources.'
 random_paper: 5
 rate_limits:
 - limit_count: 1
   name: Ocrolus Rate Limits
   slug: ocrolus-rate-limits
 score:
-  band: strong
-  composite: 57.7
+  band: developing
+  composite: 53.9
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
@@ -470,11 +475,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 61.3
+    contract_quality: 56.0
     developer_ergonomics: 42.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 69.7
-  previous_composite: 57.7
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -498,9 +503,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -531,11 +536,11 @@ tags:
 - Lending
 - Underwriting
 - OCR
-- Fraud Detection
+- Fraud Prevention
 - Income Verification
 - Bank Statement Analysis
 - Mortgage
-- Machine-Learning
+- Machine Learning
 - Cash Flow Analytics
 website: https://ocrolus.com
 ---

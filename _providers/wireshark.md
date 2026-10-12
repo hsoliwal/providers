@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Wireshark is a free and open-source network protocol analyzer that captures and interactively browses network traffic. It supports hundreds of protocols, runs on multiple platforms, and provides deep '
@@ -131,7 +131,7 @@ modified: '2026-05-03'
 name: Wireshark
 nav: Providers
 network: true
-overview: 'Wireshark publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Debugging, Network Analysis, Open-Source, Packet Capture, and Protocol Analysis.
+overview: 'Wireshark publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Debugging, Network Analysis, Open Source, Packet Capture, and Protocol Analysis.
 
 
   Wireshark''s developer surface includes documentation, engineering blog, FAQ, GitHub presence, support, release notes, and 6 more developer resources.'
@@ -146,7 +146,7 @@ rate_limits:
   slug: wireshark-rate-limits
 score:
   band: emerging
-  composite: 21.4
+  composite: 20.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -160,11 +160,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 28.9
-  previous_composite: 21.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -184,7 +190,7 @@ slug: wireshark
 tags:
 - Debugging
 - Network Analysis
-- Open-Source
+- Open Source
 - Packet Capture
 - Protocol Analysis
 - Security

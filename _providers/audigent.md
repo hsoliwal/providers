@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: Public, anonymous identity-resolution endpoint that returns Audigent's cookieless Hadron ID (plus hadronIdv2 and the legacy haloId) for the calling browser. Called by the Prebid.js hadronIdSystem user
@@ -203,7 +203,7 @@ rate_limits:
   slug: audigent-rate-limits
 score:
   band: thin
-  composite: 29.1
+  composite: 29.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -217,16 +217,22 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 47.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 29.1
+  previous_composite: 29.7
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

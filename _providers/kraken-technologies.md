@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Open Kraken is the integration layer of the Kraken utility operating system. Kraken publicly describes it as "APIs, events and MCP" for building apps and experiences against data and capabilities insi
@@ -199,9 +199,9 @@ description: 'Kraken Technologies is the United Kingdom energy technology compan
 image: https://www.kraken.tech/favicon-96x96.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Kraken names MCP on two separate surfaces and only one of them is real today. The Open Kraken "AI access layer" — MCP gateways that let a licensee's AI agents orchestrate approved actions inside Krake
   name: Kraken Technologies MCP Server
-  slug: kraken-technologies-mcp-server
+  slug: kraken-technologies-mcp-yml
 modified: '2026-07-27'
 name: Kraken Technologies
 nav: Providers
@@ -213,7 +213,7 @@ overview: 'Kraken Technologies publishes 2 APIs on the [APIs.io](https://apis.io
 random_paper: 7
 score:
   band: thin
-  composite: 29.8
+  composite: 28.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 32.0
@@ -227,7 +227,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -237,7 +237,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 29.8
+  previous_composite: 28.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -250,9 +250,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 48.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

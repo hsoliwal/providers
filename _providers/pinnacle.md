@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 25.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -182,7 +182,7 @@ modified: '2026-09-16'
 name: Pinnacle Sports Betting
 nav: Providers
 network: true
-overview: 'Pinnacle Sports Betting publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Pinnacle Lines API, g Cancellationreasons API, g Currencies API, and 8 more. Tagged areas include Gambling and Sports Betting.
+overview: 'Pinnacle Sports Betting publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Pinnacle Lines API, g Cancellationreasons API, g Currencies API, and 9 more. Tagged areas include Gambling and Sports Betting.
 
 
   Pinnacle Sports Betting''s developer surface includes authentication and 5 more developer resources.'
@@ -196,8 +196,8 @@ rate_limits:
   name: Pinnacle Rate Limits
   slug: pinnacle-rate-limits
 score:
-  band: thin
-  composite: 27.0
+  band: emerging
+  composite: 25.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 34.0
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 51.6
     developer_ergonomics: 21.4
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 13.2
-  previous_composite: 27.0
+  previous_composite: 25.2
   provenance:
     agentic_access: derived
     contracts:
@@ -221,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

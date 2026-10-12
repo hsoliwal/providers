@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 1
@@ -237,7 +237,7 @@ layout: provider
 mcp_servers:
 - description: Official RentAHuman MCP server. AI agents search for humans, post bounties, manage conversations, fund escrow, and hire people for physical-world tasks.
   name: Rentahuman MCP Server
-  slug: rentahuman-mcp-server
+  slug: rentahuman
 modified: '2026-07-20'
 name: Rentahuman
 nav: Providers
@@ -256,7 +256,7 @@ rate_limits:
   slug: rentahuman-rate-limits
 score:
   band: developing
-  composite: 48.9
+  composite: 46.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -268,11 +268,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 56.6
+    contract_quality: 51.7
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 48.9
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -288,9 +288,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

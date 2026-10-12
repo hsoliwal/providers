@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.4
-  scored_at: '2026-09-20'
+  score: 19.1
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol server that Affinity Solutions serves from its own corporate site at www.affinity.solutions, advertised by an RFC 8414 authorization-server document and an RF
@@ -121,7 +121,7 @@ description: Affinity Solutions is a New York consumer purchase data and insight
 image: https://www.affinity.solutions/wp-content/uploads/2026/06/header-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.affinity.solutions requiring OAuth.
   name: Affinity Solutions MCP Server
   slug: affinity-solutions-mcp-server
 modified: '2026-09-12'
@@ -143,12 +143,12 @@ rate_limits:
   slug: affinity-solutions-rate-limits
 scopes:
 - name: Affinity Solutions Scopes
-  scope_count: 0
+  scope_count: 1
   slug: affinity-solutions-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 18.8
+  composite: 22.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -162,14 +162,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 18.8
+  previous_composite: 22.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,7 +200,7 @@ tags:
 - Marketing
 - Advertising
 - Measurements
-- Financial-Services
+- Financial Services
 - Retail
 - MCP
 website: https://www.affinity.solutions/

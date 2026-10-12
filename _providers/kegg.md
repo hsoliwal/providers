@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -59,27 +59,27 @@ apis:
 - baseURL: https://rest.kegg.jp
   baseurl_source: declared
   description: Search entries by keyword or molecular property
-  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) find API
+  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) Find API
   slug: kegg-find-api
 - baseURL: https://rest.kegg.jp
   baseurl_source: declared
   description: Retrieve specific database entries
-  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) get API
+  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) Get API
   slug: kegg-get-api
 - baseURL: https://rest.kegg.jp
   baseurl_source: declared
   description: Display database release information and statistics
-  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) info API
+  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) Info API
   slug: kegg-info-api
 - baseURL: https://rest.kegg.jp
   baseurl_source: declared
   description: Find related entries using database cross-references
-  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) link API
+  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) Link API
   slug: kegg-link-api
 - baseURL: https://rest.kegg.jp
   baseurl_source: declared
   description: Obtain a list of entry identifiers and associated names
-  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) list API
+  name: Kyoto Encyclopedia of Genes and Genomes (KEGG) List API
   slug: kegg-list-api
 artifact_total: 21
 collections:
@@ -134,7 +134,7 @@ modified: '2026-09-16'
 name: Kyoto Encyclopedia of Genes and Genomes (KEGG)
 nav: Providers
 network: true
-overview: Kyoto Encyclopedia of Genes and Genomes (KEGG) publishes 7 APIs on the [APIs.io](https://apis.io/) network, including conv API, ddi API, find API, and 4 more. Tagged areas include Bioinformatics, Genomics, Life Sciences, Pathways, and Metabolomics.
+overview: Kyoto Encyclopedia of Genes and Genomes (KEGG) publishes 8 APIs on the [APIs.io](https://apis.io/) network, including conv API, ddi API, Find API, and 5 more. Tagged areas include Bioinformatics, Genomics, Life Sciences, Pathways, and Metabolomics.
 plans:
 - name: Kegg Rest Api
   plan_count: 4
@@ -146,23 +146,23 @@ rate_limits:
   slug: kegg-rest-api
 score:
   band: thin
-  composite: 34.7
+  composite: 32.4
   coverage:
     artifact_dirs: 11
-    catalog_earned: 60.0
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 9.5
-    discoverability: 75.9
-    operational_transparency: 21.1
-  previous_composite: 34.7
+    discoverability: 73.2
+    operational_transparency: 18.9
+  previous_composite: 32.4
   provenance:
     agentic_access: derived
     contracts:
@@ -175,9 +175,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.shapeshift.com
@@ -209,7 +209,7 @@ overview: 'Classic publishes 5 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 12
 score:
   band: thin
-  composite: 36.3
+  composite: 34.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -221,11 +221,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 49.8
+    contract_quality: 44.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 36.3
+  previous_composite: 34.1
   provenance:
     conformance: derived
     contracts:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

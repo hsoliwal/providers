@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol (UCP) shopping service that Super Coffee's storefront implements over MCP transport. An anonymous tools/list returns 13 tools covering catalog search and lookup, produc
@@ -135,9 +135,9 @@ description: 'Super Coffee is the ready-to-drink coffee brand operated by Kitu L
 image: https://www.drinksupercoffee.com/cdn/shop/files/super_coffee_logo_49f6a156-94a1-46e2-9440-f09c07a4bf74.jpg?v=1623443564&width=2048
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.drinksupercoffee.com over HTTP; 13 tools listed.
   name: Super Coffee MCP Server
-  slug: super-coffee-mcp-server
+  slug: super-coffee-ucp
 modified: '2026-08-05'
 name: Super Coffee
 nav: Providers
@@ -153,8 +153,8 @@ scopes:
   slug: super-coffee-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -168,15 +168,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.8
+  previous_composite: 26.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

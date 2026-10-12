@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Klue Content API returns an organization's published Klue cards and battlecards to external tools and agents, filterable by competitor, battlecard, tag and date range. Access is authenticated with
@@ -185,9 +185,9 @@ description: Klue is a Vancouver, BC based B2B SaaS company founded in 2015 that
 image: https://avatars.githubusercontent.com/u/5720878?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.klue.com over HTTP; 18 tools listed.
   name: Klue MCP Server
-  slug: klue-mcp-server
+  slug: klue
 modified: '2026-08-14'
 name: Klue
 nav: Providers
@@ -212,7 +212,7 @@ scopes:
   summary_line: 23 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.5
+  composite: 34.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -226,15 +226,29 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 30.5
+  previous_composite: 34.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: CA
+      standard: pipeda
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

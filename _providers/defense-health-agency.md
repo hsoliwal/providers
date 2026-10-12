@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'MHS Genesis, the Department of Defense electronic health record built on Oracle Health (Cerner), exposes a SMART on FHIR interface for authorized clinical applications to read and write patient data. '
@@ -139,7 +139,7 @@ modified: '2026-09-07'
 name: Defense Health Agency
 nav: Providers
 network: true
-overview: 'Defense Health Agency publishes 1 API on the [APIs.io](https://apis.io/) network: MHS Genesis SMART on FHIR API. Tagged areas include Federal-Government, Defense, Department of Defense, Health, and Military Health System.
+overview: 'Defense Health Agency publishes 1 API on the [APIs.io](https://apis.io/) network: MHS Genesis SMART on FHIR API. Tagged areas include Federal Government, Defense, Department of Defense, Health, and Military Health System.
 
 
   Defense Health Agency''s developer surface includes engineering blog and 14 more developer resources.'
@@ -154,7 +154,7 @@ rate_limits:
   slug: defense-health-agency-rate-limits
 score:
   band: emerging
-  composite: 22.0
+  composite: 20.6
   coverage:
     artifact_dirs: 12
     catalog_earned: 35.0
@@ -166,11 +166,16 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 0.0
-  previous_composite: 22.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 20.6
   provenance:
     conformance: first-party
   regulatory:
@@ -178,9 +183,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -194,7 +199,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DNSSEC · DMARC
 slug: defense-health-agency
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Department of Defense
 - Health

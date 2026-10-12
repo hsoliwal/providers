@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 8
 common:
@@ -154,9 +154,9 @@ description: Cerenovus Inc. (cerenovus.ai) is a San Francisco AI software compan
 image: https://www.cerenovus.ai/favicon-48.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.cerenovus.ai over HTTP requiring OAuth.
   name: Cerenovus MCP Server (remote, OAuth-protected)
-  slug: cerenovus-mcp-server-remote-oauth-protected
+  slug: cerenovus
 modified: '2026-08-14'
 name: Cerenovus
 nav: Providers
@@ -181,7 +181,7 @@ scopes:
   summary_line: 9 scopes · authorizationCode
 score:
   band: emerging
-  composite: 18.1
+  composite: 22.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -195,14 +195,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 15.8
-  previous_composite: 18.1
+  previous_composite: 22.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,7 +239,7 @@ tags:
 - AI Agents
 - Enterprise Software
 - Decision Intelligence
-- Knowledge-Management
+- Knowledge Management
 - Private Equity
 - Due Diligence
 - MCP

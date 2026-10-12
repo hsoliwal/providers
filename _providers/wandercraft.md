@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -162,7 +162,7 @@ overview: 'Wandercraft is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 3
 score:
   band: minimal
-  composite: 9.9
+  composite: 9.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -186,15 +186,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 9.9
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.2
-  scored_at: '2026-09-20'
+  score: 20.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Relesium direct-to-consumer storefront (a PanTheryx consumer brand, named on pantheryx.com/consumer-brands/) exposes a Universal Commerce Protocol shopping service over MCP. An anonymous POST of t
@@ -132,12 +132,12 @@ description: 'PanTheryx, Inc. is a Boulder, Colorado nutrition and biotechnology
 image: https://pantheryx.com/wp-content/uploads/2020/08/logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at relesium.com; 13 tools listed.
   name: Relesium Universal Commerce Protocol shopping service (MCP)
   slug: relesium-universal-commerce-protocol-shopping-service-mcp
-- description: ''
+- description: Remote MCP server at www.lifesfirstnaturals.com; 13 tools listed.
   name: Life's First Naturals Universal Commerce Protocol shopping service (MCP)
-  slug: lifes-first-naturals-universal-commerce-protocol-shopping-service-mcp
+  slug: life-s-first-naturals-universal-commerce-protocol-shopping-service-mcp
 modified: '2026-08-26'
 name: PanTheryx
 nav: Providers
@@ -157,12 +157,12 @@ rate_limits:
   slug: pantheryx-rate-limits
 scopes:
 - name: Pantheryx Scopes
-  scope_count: 0
+  scope_count: 4
   slug: pantheryx-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 23.2
+  composite: 21.1
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -176,21 +176,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 20.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.2
+  previous_composite: 21.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

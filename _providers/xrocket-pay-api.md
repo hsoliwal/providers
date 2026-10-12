@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'Bearer-authenticated REST API for crypto payments: cheques, transfers, invoices, withdrawals, mass transfers, app-info, currencies and rates. Endpoints served under /api/v1/.'
@@ -48,11 +48,11 @@ modified: '2026-09-16'
 name: xRocket Exchange API
 nav: Providers
 network: true
-overview: 'xRocket Exchange API publishes 2 APIs on the [APIs.io](https://apis.io/) network: xRocket Exchange API and xRocket Pay API. Tagged areas include Cryptocurrency, Payments, Crypto payment gateway, Telegram bots, and Digital Wallet.'
+overview: xRocket Exchange API publishes 3 APIs on the [APIs.io](https://apis.io/) network, including xRocket Exchange API, xRocket Pay API, and 1 more. Tagged areas include Cryptocurrency, Payments, Crypto payment gateway, Telegram bots, and Digital Wallet.
 random_paper: 6
 score:
-  band: minimal
-  composite: 10.2
+  band: emerging
+  composite: 11.2
   coverage:
     artifact_dirs: 2
     catalog_earned: 35.0
@@ -64,9 +64,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -74,15 +74,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 10.2
+  previous_composite: 11.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -374,7 +374,7 @@ rate_limits:
   slug: instapage-rate-limits
 score:
   band: developing
-  composite: 42.0
+  composite: 43.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 60.0
@@ -388,9 +388,9 @@ score:
     contract_governance: 4.5
     contract_quality: 17.8
     developer_ergonomics: 50.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 57.9
-  previous_composite: 42.0
+  previous_composite: 43.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -401,8 +401,14 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

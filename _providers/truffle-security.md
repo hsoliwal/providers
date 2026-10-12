@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 asyncapis:
@@ -134,7 +134,7 @@ overview: 'Truffle Security is profiled on the [APIs.io](https://apis.io/) netwo
 random_paper: 21
 score:
   band: thin
-  composite: 35.5
+  composite: 34.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -146,15 +146,21 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 26.3
-  previous_composite: 35.5
+  previous_composite: 34.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,6 +182,6 @@ tags:
 - Application Security
 - Credential Scanning
 - TruffleHog
-- Open-Source
+- Open Source
 website: https://trufflesecurity.com
 ---

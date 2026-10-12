@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.7
-  scored_at: '2026-09-20'
+  score: 27.3
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.prod.fortahealth.com/api/v1/
@@ -425,8 +425,8 @@ overview: 'Forta Health publishes 34 APIs on the [APIs.io](https://apis.io/) net
   Forta Health''s developer surface includes signup flow, support, engineering blog, and 18 more developer resources.'
 random_paper: 5
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 36.6
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -438,11 +438,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 51.0
-    developer_ergonomics: 26.2
-    discoverability: 68.5
+    contract_quality: 46.2
+    developer_ergonomics: 25.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 39.6
+  previous_composite: 36.6
   provenance:
     conformance: derived
     contracts:
@@ -462,9 +462,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -492,6 +492,6 @@ tags:
 - Medicaid
 - Health Insurance
 - EHR
-- Machine-Learning
+- Machine Learning
 website: https://www.fortahealth.com/
 ---

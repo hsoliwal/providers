@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 1
@@ -405,7 +405,7 @@ overview: 'SLNG publishes 15 APIs on the [APIs.io](https://apis.io/) network, in
 random_paper: 18
 score:
   band: developing
-  composite: 53.7
+  composite: 53.6
   coverage:
     artifact_dirs: 25
     catalog_earned: 40.0
@@ -417,11 +417,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 70.3
+    contract_quality: 64.1
     developer_ergonomics: 81.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 53.7
+  previous_composite: 53.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -432,8 +432,20 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -465,5 +477,6 @@ tags:
 - Speech Recognition
 - Artificial Intelligence
 - API Gateway
+- Real-Time
 website: https://www.slng.ai/
 ---

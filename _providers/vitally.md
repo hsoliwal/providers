@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 55.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -291,7 +291,7 @@ layout: provider
 mcp_servers:
 - description: Vitally operates an official remote MCP (Model Context Protocol) server (Beta) that connects any MCP-compatible AI client (Claude, ChatGPT, Cursor) to a Vitally workspace. Authentication is a standard
   name: Vitally MCP Server
-  slug: vitally-mcp-server
+  slug: vitally
 modified: '2026-07-21'
 name: Vitally
 nav: Providers
@@ -310,7 +310,7 @@ rate_limits:
   slug: vitally-rate-limits
 score:
   band: developing
-  composite: 51.2
+  composite: 53.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 48.0
@@ -324,9 +324,9 @@ score:
     contract_governance: 18.2
     contract_quality: 24.4
     developer_ergonomics: 56.5
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 71.1
-  previous_composite: 51.2
+  previous_composite: 53.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -337,8 +337,14 @@ score:
       total: 10
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

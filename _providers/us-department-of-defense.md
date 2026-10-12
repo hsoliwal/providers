@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -168,7 +168,7 @@ modified: '2026-05-19'
 name: US Department of Defense
 nav: Providers
 network: true
-overview: 'US Department of Defense publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Levels API, Locations API, and 5 more. Tagged areas include Federal-Government, Defense, Military, Water Management, and Waterways.
+overview: 'US Department of Defense publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Levels API, Locations API, and 8 more. Tagged areas include Federal Government, Defense, Military, Water Management, and Waterways.
 
 
   The US Department of Defense catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
@@ -204,8 +204,8 @@ rules:
     warn: 6
   slug: usace-cwms-data-api-rules
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 24.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 47.5
@@ -217,11 +217,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 13.6
-    contract_quality: 54.4
+    contract_quality: 49.5
     developer_ergonomics: 19.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 26.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 24.9
   provenance:
     agentic_access: derived
     contracts:
@@ -234,9 +239,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +255,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: us-department-of-defense
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Military
 - Water Management

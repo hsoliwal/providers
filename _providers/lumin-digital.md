@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Lumin Digital's platform API and SDK surface, used by financial institutions and by ecosystem partners to integrate third-party products into the digital banking experience and to move data between th
@@ -187,7 +187,7 @@ modified: '2026-08-25'
 name: Lumin Digital
 nav: Providers
 network: true
-overview: 'Lumin Digital publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Digital Banking, Banking, Credit Union, Financial-Services, and Fintech.
+overview: 'Lumin Digital publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Digital Banking, Banking, Credit Union, Financial Services, and Fintech.
 
 
   Lumin Digital''s developer surface includes support, engineering blog, product news, CLI, and 23 more developer resources.'
@@ -202,7 +202,7 @@ rate_limits:
   slug: lumin-digital-rate-limits
 score:
   band: emerging
-  composite: 18.9
+  composite: 18.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 32.0
@@ -216,9 +216,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 59.3
+    discoverability: 58.0
     operational_transparency: 13.2
-  previous_composite: 18.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 18.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -227,9 +232,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -254,7 +259,7 @@ tags:
 - Digital Banking
 - Banking
 - Credit Union
-- Financial-Services
+- Financial Services
 - Fintech
 - Core Banking
 - Digital Account Opening

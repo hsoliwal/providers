@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: documented
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.3
-  scored_at: '2026-09-20'
+  score: 27.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -337,14 +337,18 @@ description: The U.S. Energy Information Administration (EIA) is the independent
 image: https://www.eia.gov/global/images/logos/eia_logo_print.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'EIA publishes NO first-party MCP server, and no hosted/remote MCP endpoint exists on
+
+    api.eia.gov or www.eia.gov. What does exist is a real community MCP layer over APIv2:
+
+    two independently maintained '
   name: No first-party MCP server; two community stdio servers over APIv2, plus a derived candidate tool set
   slug: no-first-party-mcp-server-two-community-stdio-servers-over-apiv2-plus-a-derived-candidate-tool-set
 modified: '2026-07-27'
 name: EIA
 nav: Providers
 network: true
-overview: 'EIA publishes 16 APIs on the [APIs.io](https://apis.io/) network, including AEO API, COAL API, CRUD IMPORTS API, and 13 more. Tagged areas include Energy, United States, Energy Markets, Electricity, and Natural Gas.
+overview: 'EIA publishes 17 APIs on the [APIs.io](https://apis.io/) network, including AEO API, COAL API, CRUD IMPORTS API, and 14 more. Tagged areas include Energy, United States, Energy Markets, Electricity, and Natural Gas.
 
 
   EIA''s developer surface includes authentication, developer portal, documentation, signup flow, developer console, tooling, API reference, and 37 more developer resources.'
@@ -355,7 +359,7 @@ rate_limits:
   slug: eia-rate-limits
 score:
   band: developing
-  composite: 51.4
+  composite: 48.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -367,9 +371,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 52.1
+    contract_quality: 47.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 57.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -378,7 +382,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 51.4
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -387,16 +391,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 16
-    mcp: first-party
+    mcp: third-party
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 41.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

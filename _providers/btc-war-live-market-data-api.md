@@ -17,7 +17,7 @@ agent_readiness:
   dimensions:
     agent_card: false
     agent_skills: true
-    agentic_access: true
+    agentic_access: unknown
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: true
@@ -35,16 +35,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.0
-  scored_at: '2026-09-20'
+  score: 54.2
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://btcwar.net
-  baseurl_source: declared
+  baseurl_source: spec
   description: Sourced and timestamped Binance Spot observations.
   name: BTC War Live Market Data API Market data API
   slug: btc-war-live-market-data-api-market-data-api
-artifact_total: 14
+artifact_total: 13
 collections:
 - collection_type: open
   name: BTC War Live Market Data API
@@ -243,10 +243,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: BTC War Live Market Data API MCP Server
-  slug: btc-war-live-market-data-api-mcp-server
-- description: Read-only, sourced and timestamped Binance Spot USDT market observations.
-  name: BTC War Live Market Data API MCP Server
-  slug: btc-war-live-market-data-api-mcp-server-2
+  slug: mcp
 modified: '2026-09-16'
 name: BTC War Live Market Data API
 nav: Providers
@@ -269,23 +266,23 @@ rate_limits:
   slug: btc-war-live-market-data-api-rate-limits
 score:
   band: developing
-  composite: 47.9
+  composite: 44.1
   coverage:
     artifact_dirs: 27
-    catalog_earned: 71.0
+    catalog_earned: 64.5
     catalog_earned_first_party: 8.0
-    catalog_gap: 44.0
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 21.1
-    contract_governance: 19.7
-    contract_quality: 68.7
+    contract_governance: 18.2
+    contract_quality: 62.7
     developer_ergonomics: 35.7
-    discoverability: 92.6
+    discoverability: 81.7
     operational_transparency: 44.7
-  previous_composite: 47.9
+  previous_composite: 44.1
   provenance:
     agentic_access: unknown
     conformance: derived
@@ -301,9 +298,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 48.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -339,9 +336,9 @@ tags:
 - MCP
 - Read Only
 - No Authentication
-- agent-native
+- Agent-Native
 - Arazzo
-- JSON-Schema
+- JSON Schema
 - Agent Skills
 website: https://www.btcwar.net/
 ---

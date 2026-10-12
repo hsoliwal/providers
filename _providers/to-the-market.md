@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Agent-driven commerce surface for the TO THE MARKET store, implementing the Universal Commerce Protocol over a hosted MCP endpoint. Agents can search the catalog, create carts, and run buyer-approved '
@@ -110,9 +110,9 @@ description: 'TO THE MARKET is a mission-driven commerce company that combines T
 image: https://tothemarket.com/cdn/shop/files/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at tothemarket.com over HTTP; 5 tools listed.
   name: TO THE MARKET MCP Server
-  slug: to-the-market-mcp-server
+  slug: to-the-market-ucp
 modified: '2026-07-21'
 name: TO THE MARKET
 nav: Providers
@@ -129,7 +129,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.0
+  composite: 22.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -143,14 +143,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 20.0
+  previous_composite: 22.7
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

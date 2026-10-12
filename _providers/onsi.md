@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -49,12 +49,12 @@ apis:
 - baseURL: https://api.onsi.com
   baseurl_source: declared
   description: The members API from Onsi — 7 operation(s) for members.
-  name: Onsi members API
+  name: Onsi Members API
   slug: onsi-members-api
 - baseURL: https://api.onsi.com
   baseurl_source: declared
   description: The pay API from Onsi — 9 operation(s) for pay.
-  name: Onsi pay API
+  name: Onsi Pay API
   slug: onsi-pay-api
 artifact_total: 9
 collections:
@@ -201,7 +201,7 @@ modified: '2026-07-20'
 name: Onsi
 nav: Providers
 network: true
-overview: 'Onsi publishes 2 APIs on the [APIs.io](https://apis.io/) network: members API and pay API. Tagged areas include Company, Benefits, Earned Wage Access, On-Demand Pay, and Payroll.
+overview: 'Onsi publishes 2 APIs on the [APIs.io](https://apis.io/) network: Members API and Pay API. Tagged areas include Company, Benefits, Earned Wage Access, On-Demand Pay, and Payroll.
 
 
   Onsi''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, authentication, and 20 more developer resources.'
@@ -212,7 +212,7 @@ rate_limits:
   slug: onsi-rate-limits
 score:
   band: developing
-  composite: 44.1
+  composite: 41.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 44.1
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -244,9 +244,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 37.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -273,5 +273,6 @@ tags:
 - Workforce
 - Human Resources
 - Health
+- Employee Benefits
 website: https://onsi.com
 ---

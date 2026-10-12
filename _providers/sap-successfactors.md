@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   slug: open-sap-successfactors
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sap-successfactors/refs/heads/main/capabilities/sap-successfactors-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sap-successfactors-capability-edges.yml
+- group: other
   title: ''
   type: ParentCompany
   url: https://apis.io/providers/sap/
@@ -194,10 +199,10 @@ modified: '2026-08-21'
 name: SAP SuccessFactors
 nav: Providers
 network: true
-overview: 'SAP SuccessFactors publishes 8 APIs on the [APIs.io](https://apis.io/) network, including EmpEmployment API, EmpJob API, FOCompany API, and 5 more. Tagged areas include HCM, Human Resources, Talent Management, Payroll, and Enterprise.
+overview: 'SAP SuccessFactors publishes 11 APIs on the [APIs.io](https://apis.io/) network, including EmpEmployment API, EmpJob API, FOCompany API, and 8 more. Tagged areas include HCM, Human Resources, Talent Management, Payroll, and Enterprise.
 
 
-  SAP SuccessFactors'' developer surface includes authentication, documentation, API reference, and 11 more developer resources.'
+  SAP SuccessFactors'' developer surface includes authentication, documentation, API reference, and 12 more developer resources.'
 random_paper: 14
 scopes:
 - name: Sap Successfactors Scopes
@@ -206,9 +211,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 23.2
+  composite: 23.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -218,11 +223,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 23.2
+  previous_composite: 23.1
   provenance:
     agentic_access: derived
     contracts:
@@ -230,8 +235,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

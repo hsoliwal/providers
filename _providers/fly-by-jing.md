@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The live machine surface on the flybyjing.com domain: a Shopify Storefront MCP server for agentic product search and cart/checkout, plus a Shopify Customer Account API secured with OAuth 2.0 / OpenID '
@@ -117,9 +117,9 @@ description: 'Fly By Jing is a premium Chinese food brand founded by James Beard
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fly-by-jing.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at flybyjing.com over HTTP; 5 tools listed.
   name: Fly By Jing MCP Server
-  slug: fly-by-jing-mcp-server
+  slug: storefront-renderer
 modified: '2026-07-19'
 name: Fly By Jing
 nav: Providers
@@ -131,17 +131,17 @@ overview: 'Fly By Jing publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 8
 scopes:
 - name: Fly By Jing Scopes
-  scope_count: 0
+  scope_count: 4
   slug: fly-by-jing-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
   band: emerging
-  composite: 18.3
+  composite: 19.5
   coverage:
     artifact_dirs: 8
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -150,13 +150,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 60.0
     operational_transparency: 0.0
-  previous_composite: 18.3
+  previous_composite: 19.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

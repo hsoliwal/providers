@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.uxcam.com/v2
@@ -222,9 +222,9 @@ description: UXCam is a mobile-first product analytics and session replay platfo
 image: https://github.com/uxcam.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at integration.mcp.uxcam.com over streamable HTTP.
   name: UXCam MCP Server
-  slug: uxcam-mcp-server
+  slug: uxcam-integration
 modified: '2026-07-21'
 name: UXCam
 nav: Providers
@@ -236,7 +236,7 @@ overview: 'UXCam publishes 3 APIs on the [APIs.io](https://apis.io/) network: Ev
 random_paper: 14
 score:
   band: thin
-  composite: 36.8
+  composite: 38.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -250,9 +250,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.3
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 36.8
+  previous_composite: 38.9
   provenance:
     conformance: derived
     contracts:
@@ -262,8 +262,18 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

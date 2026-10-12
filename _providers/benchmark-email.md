@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 130
   human_in_the_loop: 3
@@ -562,12 +562,12 @@ rules:
   slug: benchmark-email-jsonschema-spectral-rules
 scopes:
 - name: Benchmark Email Scopes
-  scope_count: 0
+  scope_count: 6
   slug: benchmark-email-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 6 scopes
 score:
   band: strong
-  composite: 62.9
+  composite: 65.0
   coverage:
     artifact_dirs: 33
     catalog_earned: 66.3
@@ -579,11 +579,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 14.4
-    contract_quality: 72.7
+    contract_quality: 67.3
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 62.9
+  previous_composite: 65.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -594,8 +594,14 @@ score:
       total: 35
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -626,5 +632,6 @@ tags:
 - Email Templates
 - Webhook
 - Agent Ready
+- A2A
 website: https://www.benchmarkemail.com/
 ---

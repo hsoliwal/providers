@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for integrating Covalent's workforce, skills, capability and production data with enterprise systems. Authenticated via AWS Cognito; access is provisioned per tenant (request a demo). No p
@@ -115,7 +115,7 @@ overview: 'Covalent publishes 1 API on the [APIs.io](https://apis.io/) network. 
 random_paper: 15
 score:
   band: emerging
-  composite: 17.7
+  composite: 19.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -129,18 +129,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 17.7
+  previous_composite: 19.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

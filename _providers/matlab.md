@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 13
 apis:
 - description: Call MATLAB from Python, allowing Python programs to start MATLAB, execute MATLAB functions, and exchange data between Python and MATLAB.
@@ -81,6 +81,16 @@ asyncapis:
   name: Matlab Thingspeak Events
   slug: matlab-thingspeak-events
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/matlab/refs/heads/main/hosts/matlab-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/matlab-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/matlab/refs/heads/main/vendors/matlab-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/matlab-vendors.yml
 - group: company
   title: ''
   type: Website
@@ -289,13 +299,13 @@ modified: '2026-09-14'
 name: MATLAB
 nav: Providers
 network: true
-overview: 'MATLAB publishes 1 API on the [APIs.io](https://apis.io/) network: Production Server RESTful API. Tagged areas include Data Analysis, Engineering, Machine-Learning, Numerical Analysis, and Scientific Computing.
+overview: 'MATLAB publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Production Server RESTful API, and 12 more. Tagged areas include Data Analysis, Engineering, Machine Learning, Numerical Analysis, and Scientific Computing.
 
 
   The MATLAB catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  MATLAB''s developer surface includes developer portal, documentation, pricing, engineering blog, support, authentication, changelog, and 35 more developer resources.'
+  MATLAB''s developer surface includes developer portal, documentation, pricing, engineering blog, support, authentication, changelog, and 37 more developer resources.'
 plans:
 - name: Matlab Plans Pricing
   plan_count: 12
@@ -307,9 +317,9 @@ rate_limits:
   slug: matlab-rate-limits
 score:
   band: exemplar
-  composite: 71.0
+  composite: 72.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 67.0
     catalog_earned_first_party: 24.0
     catalog_gap: 48.0
@@ -319,17 +329,23 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 88.1
-    discoverability: 88.9
+    discoverability: 83.3
     operational_transparency: 92.1
-  previous_composite: 71.0
+  previous_composite: 72.4
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -357,7 +373,7 @@ slug: matlab
 tags:
 - Data Analysis
 - Engineering
-- Machine-Learning
+- Machine Learning
 - Numerical Analysis
 - Scientific Computing
 website: https://www.mathworks.com

@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-09-20'
+  score: 16.5
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A Model Context Protocol server served from FundGuard's own corporate web host via the WordPress MCP adapter, advertised through RFC 8414 OAuth authorization-server metadata and RFC 9728 protected-res
@@ -157,9 +157,9 @@ description: FundGuard is an AI-powered, cloud-native investment accounting oper
 image: https://www.fundguard.com/wp-content/uploads/2020/08/fundguard-logo-cropped.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.fundguard.com over HTTP.
   name: FundGuard MCP Server
-  slug: fundguard-mcp-server
+  slug: fundguard
 modified: '2026-08-01'
 name: FundGuard
 nav: Providers
@@ -175,8 +175,8 @@ scopes:
   slug: fundguard-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: emerging
-  composite: 24.3
+  band: thin
+  composite: 27.3
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -190,19 +190,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.3
+  previous_composite: 27.3
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +236,7 @@ tags:
 - Asset Management
 - portfolio-accounting
 - Private Markets
-- Financial-Services
+- Financial Services
 - Fintech
 - Software-as-a-Service
 - Artificial Intelligence

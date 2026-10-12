@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -227,17 +227,17 @@ description: NutriCal (Nutrical Solution Ltd) is the GCC's food nutrition and in
 image: https://www.nutrical.co/common/OpenGraph.png
 layout: provider
 modified: '2026-07-20'
-name: Nutrical Solution Ltd
+name: Nutrical Solution
 nav: Providers
 network: true
-overview: 'Nutrical Solution Ltd publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Entity API, Ingredients API, Meal Plans API, and 3 more. Tagged areas include Company, Food, Nutrition, Health, and Recipes.
+overview: 'Nutrical Solution publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Ltd Entity API, Ltd Ingredients API, Ltd Meal Plans API, and 3 more. Tagged areas include Company, Food, Nutrition, Health, and Recipes.
 
 
-  Nutrical Solution Ltd''s developer surface includes authentication, sandbox, documentation, API reference, engineering blog, pricing, signup flow, and 20 more developer resources.'
+  Nutrical Solution''s developer surface includes authentication, sandbox, documentation, API reference, engineering blog, pricing, signup flow, and 20 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 31.7
+  composite: 30.2
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -251,14 +251,14 @@ score:
     contract_governance: 4.5
     contract_quality: 17.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - middle-east
-  previous_composite: 31.7
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

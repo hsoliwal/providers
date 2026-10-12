@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: gigstack API v2 — REST API for CFDI 4.0 invoicing, payments, collections, clients, services, receipts, retentions, webhooks and SAT catalogs in Mexico. Bearer JWT authentication; cursor pagination; st
@@ -181,7 +181,7 @@ layout: provider
 mcp_servers:
 - description: Official gigstack MCP server exposing the gigstack API (Mexican invoice and payment automation - CFDI, payments, clients, receipts) to MCP-capable agents. Published to npm by a gigstack.io maintainer.
   name: Official gigstack MCP server
-  slug: official-gigstack-mcp-server
+  slug: mcp-gigstack
 modified: '2026-07-19'
 name: Gigstack
 nav: Providers
@@ -195,8 +195,8 @@ overview: 'Gigstack publishes 1 API on the [APIs.io](https://apis.io/) network. 
   Gigstack''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 21 more developer resources.'
 random_paper: 9
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 38.3
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -208,9 +208,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -219,7 +219,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 39.8
+  previous_composite: 38.3
   provenance:
     conformance: derived
     mcp: first-party
@@ -228,9 +228,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

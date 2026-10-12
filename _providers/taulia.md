@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The buyer-side integration API described in the SAP Taulia Description of Software Services. It carries the accounts-payable object set — supplier master, business unit, purchase orders, invoices, pay
@@ -191,7 +191,7 @@ rate_limits:
   slug: taulia-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 31.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 32.0
@@ -205,9 +205,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 44.7
-  previous_composite: 33.4
+  previous_composite: 31.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -216,9 +216,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -253,7 +253,7 @@ tags:
 - Invoicing
 - Payments
 - Procurement
-- Financial-Services
+- Financial Services
 - ERP Integration
 - SAP
 website: https://taulia.com/

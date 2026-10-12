@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -106,14 +106,14 @@ modified: '2026-07-18'
 name: Complir
 nav: Providers
 network: true
-overview: 'Complir is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, Regulatory Technology, Product Compliance, and Retail.
+overview: 'Complir is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, RegTech, Product Compliance, and Retail.
 
 
   Complir''s developer surface includes support, engineering blog, and 12 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 16.4
+  composite: 16.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -127,11 +127,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
-  previous_composite: 16.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -151,7 +157,7 @@ slug: complir
 tags:
 - Company
 - Compliance
-- Regulatory Technology
+- RegTech
 - Product Compliance
 - Retail
 - Artificial Intelligence

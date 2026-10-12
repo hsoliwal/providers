@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/goaudience/refs/heads/main/security/goaudience-domain-security.yml
@@ -95,6 +95,10 @@ created: '2026-07-17'
 description: GoAudience is a customer-intelligence platform for Shopify ecommerce brands that turns first-party customer data into marketing decisions. It builds stable customer personas from real store data, surfaces findings and recommended actions ranked by impact, and syncs directly into Klaviyo, Meta, TikTok and other marketing tools. Features include a natural-language command surface for asking grounded questions about customers, a weekly "Monday Brief" digest of at-risk, lapsed and recovered customers with revenue impact, and a 90-day email audit. GoAudience is a Techstars-backed company; this profile was added to the API Evangelist network as an enrichment lead.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/goaudience.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.goaudience.com over HTTP.
+  name: GoAudience MCP Server
+  slug: goaudience
 modified: '2026-08-13'
 name: GoAudience
 nav: Providers
@@ -110,7 +114,7 @@ plans:
 random_paper: 10
 score:
   band: emerging
-  composite: 18.6
+  composite: 18.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 39.0
@@ -124,13 +128,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 18.6
+  previous_composite: 18.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Reader API is a server-side Node.js library exposing createReader and createGitHubReader functions that let applications read Keystatic content from a local directory or GitHub repository. The Rea
@@ -74,7 +74,7 @@ modified: '2026-04-28'
 name: Keystatic
 nav: Providers
 network: true
-overview: 'Keystatic publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include CMS, Content Management, Git-based, Open-Source, and SDK.
+overview: 'Keystatic publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include CMS, Content Management, Git-based, Open Source, and SDK.
 
 
   Keystatic''s developer surface includes documentation, GitHub presence, engineering blog, and 2 more developer resources.'
@@ -89,7 +89,7 @@ rate_limits:
   slug: keystatic-rate-limits
 score:
   band: emerging
-  composite: 13.2
+  composite: 11.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 41.0
@@ -103,11 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 13.2
-  previous_composite: 13.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -124,7 +130,7 @@ tags:
 - CMS
 - Content Management
 - Git-based
-- Open-Source
+- Open Source
 - SDK
 - Static Sites
 website: https://keystatic.com/

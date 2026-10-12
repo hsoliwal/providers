@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -189,7 +189,7 @@ rate_limits:
   slug: mursion-rate-limits
 score:
   band: emerging
-  composite: 24.9
+  composite: 22.6
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -203,9 +203,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 18.4
-  previous_composite: 24.9
+  previous_composite: 22.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

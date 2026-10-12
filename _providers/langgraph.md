@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 1
@@ -94,6 +94,11 @@ collections:
   name: LangSmith Deployment Control Plane API
   slug: open-langgraph
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/langgraph/refs/heads/main/capabilities/langgraph-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/langgraph-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -164,7 +169,7 @@ network: true
 overview: 'LangGraph publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agent Connections (v2) API, Auth Service (v2) API, Deployments (v2) API, and 2 more. Tagged areas include Agents, Artificial Intelligence, LLM, Workflows, and Orchestration.
 
 
-  LangGraph''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 9 more developer resources.'
+  LangGraph''s developer surface includes authentication, documentation, GitHub presence, engineering blog, and 10 more developer resources.'
 plans:
 - name: Langgraph Plans Pricing
   plan_count: 3
@@ -176,7 +181,7 @@ rate_limits:
   slug: langgraph-rate-limits
 score:
   band: thin
-  composite: 34.6
+  composite: 32.6
   coverage:
     artifact_dirs: 10
     catalog_earned: 46.0
@@ -188,14 +193,14 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 49.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 34.6
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +208,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

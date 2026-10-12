@@ -34,53 +34,53 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The commit_tags API from Vers — 2 operation(s) for commit_tags.
-  name: Vers commit_tags API
+  name: Vers Commit Tags API
   slug: vers-commit-tags-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The commits API from Vers — 4 operation(s) for commits.
-  name: Vers commits API
+  name: Vers Commits API
   slug: vers-commits-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The deploy API from Vers — 1 operation(s) for deploy.
-  name: Vers deploy API
+  name: Vers Deploy API
   slug: vers-deploy-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The domains API from Vers — 2 operation(s) for domains.
-  name: Vers domains API
+  name: Vers Domains API
   slug: vers-domains-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The env_vars API from Vers — 2 operation(s) for env_vars.
-  name: Vers env_vars API
+  name: Vers Env Vars API
   slug: vers-env-vars-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The images API from Vers — 5 operation(s) for images.
-  name: Vers images API
+  name: Vers Images API
   slug: vers-images-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The keys API from Vers — 1 operation(s) for keys.
-  name: Vers keys API
+  name: Vers Keys API
   slug: vers-keys-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The public_repositories API from Vers — 4 operation(s) for public_repositories.
-  name: Vers public_repositories API
+  name: Vers Public Repositories API
   slug: vers-public-repositories-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The repositories API from Vers — 6 operation(s) for repositories.
-  name: Vers repositories API
+  name: Vers Repositories API
   slug: vers-repositories-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
@@ -90,7 +90,7 @@ apis:
 - baseURL: https://api.vers.sh
   baseurl_source: declared
   description: The vm API from Vers — 20 operation(s) for vm.
-  name: Vers vm API
+  name: Vers Vm API
   slug: vers-vm-api
 - baseURL: https://api.vers.sh
   baseurl_source: declared
@@ -139,6 +139,11 @@ collections:
   name: Orchestrator Control Plane commit_tags vms API
   slug: open-vers-vms-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vers/refs/heads/main/capabilities/vers-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vers-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/vers/refs/heads/main/overlays/vers-orchestrator-overlay.yaml
   title: ''
@@ -263,23 +268,23 @@ description: Vers is "git for running compute" — a branchable microVM platform
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vers.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.vers.sh.
   name: Vers MCP Server
-  slug: vers-mcp-server
+  slug: vers-mcp-yml
 modified: '2026-07-21'
 name: Vers
 nav: Providers
 network: true
-overview: 'Vers publishes 12 APIs on the [APIs.io](https://apis.io/) network, including commit_tags API, commits API, deploy API, and 9 more. Tagged areas include Company, Compute, Virtualization, MicroVM, and Orchestration.
+overview: 'Vers publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Commit Tags API, Commits API, Deploy API, and 9 more. Tagged areas include Company, Compute, Virtualization, MicroVM, and Orchestration.
 
 
-  Vers'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 19 more developer resources.'
+  Vers'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 20 more developer resources.'
 random_paper: 8
 score:
   band: developing
-  composite: 39.4
+  composite: 39.5
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -289,11 +294,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 46.2
+    contract_quality: 41.8
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 39.4
+  previous_composite: 39.5
   provenance:
     conformance: derived
     contracts:
@@ -303,8 +308,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

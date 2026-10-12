@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Intezer Platform API 2.0 — submit files, URLs, hashes and endpoint scans for autonomous malware analysis and code-reuse detection, poll analysis status, and retrieve verdicts, sub-analyses and IOCs. A
@@ -143,7 +143,7 @@ layout: provider
 mcp_servers:
 - description: Official Intezer MCP server for security operations. Sits as a layer between an organization's detection systems (EDR, NDR, SIEM, identity, cloud, email security) and AI agents, giving agents access t
   name: Intezer MCP Server
-  slug: intezer-mcp-server
+  slug: intezer
 modified: '2026-07-19'
 name: Intezer
 nav: Providers
@@ -155,7 +155,7 @@ overview: 'Intezer publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 21
 score:
   band: thin
-  composite: 29.2
+  composite: 30.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -169,14 +169,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 2.6
-  previous_composite: 29.2
+  previous_composite: 30.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

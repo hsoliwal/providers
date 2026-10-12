@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The JSON API behind the Arbital Health adjudication platform at platform.arbitalhealth.com. Observed live and returning JSON, but every resource path answers 401 {"error":"Unauthorized"} to an anonymo
@@ -158,8 +158,8 @@ scopes:
   slug: arbital-health-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: thin
-  composite: 26.9
+  band: emerging
+  composite: 23.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -173,9 +173,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 26.9
+  previous_composite: 23.1
   provenance:
     conformance: first-party
   regulatory:
@@ -183,9 +183,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 74.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

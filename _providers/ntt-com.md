@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: Unified API gateway for NTT Communications / NTT DOCOMO BUSINESS enterprise services. Catalogs APIs across Network, Cloud, Voice, App, Management, and Core categories — including Arcstar Universal One
@@ -162,14 +162,14 @@ modified: '2026-05-25'
 name: NTT
 nav: Providers
 network: true
-overview: 'NTT publishes 1 API on the [APIs.io](https://apis.io/) network: Communications Things Cloud. Tagged areas include Telecommunications, Mobile Network, Enterprise Cloud, Smart Data Platform, and IOWN.
+overview: 'NTT publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Communications Things Cloud, and 5 more. Tagged areas include Telecommunications, Mobile Network, Enterprise Cloud, Smart Data Platform, and IOWN.
 
 
   NTT''s developer surface includes YouTube channel and 23 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 17.0
+  composite: 17.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -181,9 +181,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 33.3
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -192,15 +192,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 17.0
+  previous_composite: 17.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

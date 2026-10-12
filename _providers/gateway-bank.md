@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -213,7 +213,7 @@ modified: '2026-07-21'
 name: Gateway Bank
 nav: Providers
 network: true
-overview: 'Gateway Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Gateway Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Gateway Bank''s developer surface includes authentication, documentation, and 19 more developer resources.'
@@ -225,7 +225,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: thin
-  composite: 38.4
+  composite: 34.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -237,9 +237,9 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -248,7 +248,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 38.4
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -268,9 +268,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 72.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -287,7 +287,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: gateway-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

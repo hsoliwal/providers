@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.5
-  scored_at: '2026-09-20'
+  score: 7.2
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 6
 common:
@@ -153,12 +153,12 @@ rate_limits:
   slug: webloyalty-rate-limits
 scopes:
 - name: Webloyalty Scopes
-  scope_count: 0
+  scope_count: 1
   slug: webloyalty-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 18.7
+  composite: 21.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -172,14 +172,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 18.7
+  previous_composite: 21.7
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -205,5 +211,6 @@ tags:
 - Marketing
 - Retail
 - Cashback
+- Loyalty & Incentives
 website: http://webloyalty.com/
 ---

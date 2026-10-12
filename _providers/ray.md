@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 1
@@ -146,14 +146,14 @@ modified: '2026-05-11'
 name: Ray
 nav: Providers
 network: true
-overview: 'Ray publishes 2 APIs on the [APIs.io](https://apis.io/) network: Jobs API and Version API. Tagged areas include Distributed Computing, Machine-Learning, AI Infrastructure, Python, and Model Serving.
+overview: 'Ray publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Jobs API, Version API, and 3 more. Tagged areas include Distributed Computing, Machine Learning, AI Infrastructure, Python, and Model Serving.
 
 
   Ray''s developer surface includes documentation, engineering blog, and 13 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 26.7
+  composite: 29.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -165,11 +165,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 42.2
+    contract_quality: 38.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 26.7
+  open_source:
+    applies: true
+    score: 85.0
+  previous_composite: 29.7
   provenance:
     agentic_access: derived
     contracts:
@@ -177,8 +180,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -192,11 +201,11 @@ security:
 slug: ray
 tags:
 - Distributed Computing
-- Machine-Learning
+- Machine Learning
 - AI Infrastructure
 - Python
 - Model Serving
-- Open-Source
+- Open Source
 - Compute
 website: https://www.ray.io
 ---

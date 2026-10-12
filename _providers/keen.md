@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -126,6 +126,11 @@ collections:
   name: Keen Cached Queries Saved Queries API
   slug: open-keen-saved-queries-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/keen/refs/heads/main/capabilities/keen-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/keen-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -247,7 +252,7 @@ overview: 'Keen publishes 6 APIs on the [APIs.io](https://apis.io/) network, inc
   The Keen catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Keen''s developer surface includes authentication, documentation, getting-started guide, engineering blog, pricing, GitHub presence, signup flow, and 13 more developer resources.'
+  Keen''s developer surface includes authentication, documentation, getting-started guide, engineering blog, pricing, GitHub presence, signup flow, and 14 more developer resources.'
 plans:
 - name: Keen Plans Pricing
   plan_count: 4
@@ -270,9 +275,9 @@ rules:
   slug: keen-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 51.0
+  composite: 49.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 47.3
     catalog_earned_first_party: 0.0
     catalog_gap: 67.8
@@ -282,11 +287,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 9.8
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 56.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 28.9
-  previous_composite: 51.0
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     contracts:
@@ -294,8 +299,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

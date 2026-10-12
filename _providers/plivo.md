@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -44,11 +44,6 @@ agentic_access:
   summary_line: 6 operations · 2 acting
 api_count: 1
 apis:
-- baseURL: https://api.plivo.com/v1
-  baseurl_source: spec
-  description: The Plivo Account API exposes account-level details (auth ID, auth token, billing balance, address, account type, max-call configuration) and supports updating account properties.
-  name: Plivo Account API
-  slug: plivo-account-api
 - description: The Plivo Subaccount API supports creating, updating, listing, activating, and deleting subaccounts under a parent Plivo account, enabling multi-tenant isolation of usage and billing.
   name: Plivo Subaccount API
   slug: plivo-subaccount-api
@@ -79,11 +74,6 @@ apis:
 - description: The Plivo Verified Caller ID API allows trial accounts to verify outbound caller IDs for use as the From number in outbound calls.
   name: Plivo Verified Caller ID API
   slug: plivo-verified-caller-id-api
-- baseURL: https://api.plivo.com/v1
-  baseurl_source: spec
-  description: The Plivo Message API sends and receives SMS, MMS, and WhatsApp messages, retrieves delivery status reports, and lists historical messages.
-  name: Plivo Message API
-  slug: plivo-message-api
 - description: The Plivo Media API uploads, lists, retrieves, and deletes media files used as MMS or WhatsApp attachments.
   name: Plivo Media API
   slug: plivo-media-api
@@ -116,15 +106,15 @@ apis:
   slug: plivo-cnam-api
 - baseURL: https://api.plivo.com/v1
   baseurl_source: spec
-  description: Account-level configuration and details.
+  description: The Plivo Account API exposes account-level details (auth ID, auth token, billing balance, address, account type, max-call configuration) and supports updating account properties.
   name: Plivo Account API
   slug: plivo-account-api
 - baseURL: https://api.plivo.com/v1
   baseurl_source: spec
-  description: Send and retrieve SMS, MMS, and WhatsApp messages.
+  description: The Plivo Message API sends and receives SMS, MMS, and WhatsApp messages, retrieves delivery status reports, and lists historical messages.
   name: Plivo Message API
   slug: plivo-message-api
-artifact_total: 40
+artifact_total: 38
 asyncapis:
 - description: The Plivo Audio Streaming API delivers near real-time raw audio from active Plivo voice calls to a customer-operated WebSocket server, and (when bidirectional streaming is enabled) accepts audio and c
   name: Plivo Audio Streaming WebSocket API
@@ -312,7 +302,7 @@ modified: '2026-05-29'
 name: Plivo
 nav: Providers
 network: true
-overview: 'Plivo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Audio Stream API, Message API, and 2 more. Tagged areas include Communications, CPaaS, Voice, SMS, and Messaging.
+overview: 'Plivo publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Audio Stream API, Account API, Message API, and 19 more. Tagged areas include Communications, CPaaS, Voice, SMS, and Messaging.
 
 
   The Plivo catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -342,7 +332,7 @@ rules:
   slug: plivo-asyncapi-spectral-rules
 score:
   band: developing
-  composite: 41.9
+  composite: 40.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.5
@@ -354,11 +344,11 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 13.6
-    contract_quality: 59.5
+    contract_quality: 54.8
     developer_ergonomics: 41.7
-    discoverability: 50.0
+    discoverability: 48.3
     operational_transparency: 42.1
-  previous_composite: 41.9
+  previous_composite: 40.5
   provenance:
     agentic_access: derived
     contracts:
@@ -371,9 +361,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 23.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -402,5 +392,7 @@ tags:
 - WhatsApp
 - SIP Trunking
 - Verify
+- Telecommunications
+- Real-Time
 website: https://www.plivo.com/
 ---

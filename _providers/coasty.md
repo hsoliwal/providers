@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 5
@@ -45,44 +45,44 @@ agentic_access:
 api_count: 1
 apis:
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: API key management and usage reporting.
-  name: Coasty keys API
+  name: Coasty Keys API
   slug: coasty-keys-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Provision and control managed VMs.
-  name: Coasty machines API
+  name: Coasty Machines API
   slug: coasty-machines-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Stateless CUA action prediction and grounding.
-  name: Coasty predict API
+  name: Coasty Predict API
   slug: coasty-predict-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Autonomous task runs — the agent drives a task to completion on a machine.
-  name: Coasty runs API
+  name: Coasty Runs API
   slug: coasty-runs-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Cron and one-shot scheduled CUA jobs.
-  name: Coasty schedules API
+  name: Coasty Schedules API
   slug: coasty-schedules-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Stateful CUA sessions with persistent trajectory.
-  name: Coasty sessions API
+  name: Coasty Sessions API
   slug: coasty-sessions-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Webhook and chain triggers for schedules.
-  name: Coasty triggers API
+  name: Coasty Triggers API
   slug: coasty-triggers-api
 - baseURL: https://coasty.ai
-  baseurl_source: declared
+  baseurl_source: spec
   description: Versioned, branching multi-step automations (DSL) and their runs.
-  name: Coasty workflows API
+  name: Coasty Workflows API
   slug: coasty-workflows-api
 artifact_total: 33
 asyncapis:
@@ -142,6 +142,11 @@ collections:
   name: Coasty Public keys workflows API
   slug: open-coasty-workflows-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/coasty/refs/heads/main/capabilities/coasty-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/coasty-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -324,18 +329,18 @@ layout: provider
 mcp_servers:
 - description: First-party MCP server (npx -y @coasty/mcp; remote https://api.coasty.ai/mcp) exposing 26 computer-use tools across predict, machines, schedules, account, and discovery groups.
   name: Coasty Computer-Use MCP Server
-  slug: coasty-computer-use-mcp-server
+  slug: coasty-mcp
 modified: '2026-07-18'
 name: Coasty
 nav: Providers
 network: true
-overview: 'Coasty publishes 8 APIs on the [APIs.io](https://apis.io/) network, including keys API, machines API, predict API, and 5 more. Tagged areas include Company, Computer Use, AI Agents, Automation, and RPA.
+overview: 'Coasty publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Keys API, Machines API, Predict API, and 5 more. Tagged areas include Company, Computer Use, AI Agents, Automation, and RPA.
 
 
   The Coasty catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Coasty''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 31 more developer resources.'
+  Coasty''s developer surface includes authentication, documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, and 32 more developer resources.'
 plans:
 - name: Coasty Plans
   plan_count: 4
@@ -347,23 +352,23 @@ rate_limits:
   slug: coasty-rate-limits
 score:
   band: strong
-  composite: 59.6
+  composite: 59.3
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 57.0
+    artifact_dirs: 25
+    catalog_earned: 52.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 58.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 67.2
+    contract_quality: 61.6
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 52.6
-  previous_composite: 59.6
+  previous_composite: 59.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -374,8 +379,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

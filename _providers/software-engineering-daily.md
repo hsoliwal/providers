@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Software Engineering Daily provides RSS podcast feeds for its main episode stream as well as topic-specific feeds. These standard podcast RSS feeds are compatible with all major podcast clients includ
@@ -153,7 +153,7 @@ modified: '2026-05-02'
 name: Software Engineering Daily
 nav: Providers
 network: true
-overview: 'Software Engineering Daily publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Media, Podcasts, Software Engineering, Technical Content, and Open-Source.
+overview: 'Software Engineering Daily publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Media, Podcasts, Software Engineering, Technical Content, and Open Source.
 
 
   The Software Engineering Daily catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -182,12 +182,12 @@ rules:
   slug: software-engineering-daily-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 28.8
+  composite: 28.2
   coverage:
     artifact_dirs: 12
-    catalog_earned: 60.3
+    catalog_earned: 55.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.8
+    catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -196,14 +196,20 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 9.5
-    discoverability: 74.1
+    discoverability: 62.5
     operational_transparency: 28.9
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 28.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 28.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -221,6 +227,6 @@ tags:
 - Podcasts
 - Software Engineering
 - Technical Content
-- Open-Source
+- Open Source
 website: https://softwareengineeringdaily.com/
 ---

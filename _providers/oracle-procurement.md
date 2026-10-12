@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: REST API for managing procurement operations including requisitions, purchase orders, and supplier information.
@@ -101,7 +101,7 @@ modified: '2026-09-16'
 name: Oracle Procurement
 nav: Providers
 network: true
-overview: 'Oracle Procurement publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include ERP, Procurement, Purchasing, Spend Management, and Suppliers.
+overview: 'Oracle Procurement publishes 6 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 5 more. Tagged areas include ERP, Procurement, Purchasing, Spend Management, and Suppliers.
 
 
   Oracle Procurement''s developer surface includes getting-started guide, authentication, developer portal, support, and 4 more developer resources.'
@@ -115,8 +115,8 @@ rate_limits:
   name: Oracle Procurement Rate Limits
   slug: oracle-procurement-rate-limits
 score:
-  band: thin
-  composite: 27.4
+  band: emerging
+  composite: 26.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 34.0
@@ -128,13 +128,19 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 47.6
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 26.3
-  previous_composite: 27.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 26.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Programmatic trading and market-data API for global markets, options, futures, crypto and event contracts. Proprietary Protocol Buffers protocol spoken over TCP to a locally run OpenD gateway (default
@@ -116,7 +116,7 @@ layout: provider
 mcp_servers:
 - description: Futu does not publish a hosted/remote MCP server. Instead it ships the official "Futu Agent Hub", an MCP-compatible Agent Skill center that connects AI tools (Claude Code, Cursor, Claude Desktop, VS C
   name: Futu MCP Server
-  slug: futu-mcp-server
+  slug: futu-agent-hub
 modified: '2026-07-19'
 name: Futu
 nav: Providers
@@ -128,7 +128,7 @@ overview: 'Futu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 12
 score:
   band: emerging
-  composite: 21.3
+  composite: 21.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -140,11 +140,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 2.6
-  previous_composite: 21.3
+  previous_composite: 21.7
   provenance:
     mcp: first-party
     skills: first-party
@@ -153,9 +153,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -178,6 +178,6 @@ tags:
 - Stocks
 - Options
 - Investing
-- Financial-Services
+- Financial Services
 website: https://futuholdings.com
 ---

@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'JSON:API compliant REST API for managing candidates, jobs, applications, users, departments, and recruitment workflows in Teamtailor. Available in EU (api.teamtailor.com), NA (api.na.teamtailor.com), '
   name: Teamtailor API
   slug: rest-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/teamtailor/refs/heads/main/security/teamtailor-trust-center.yml
@@ -78,18 +78,22 @@ created: '2026-05-11'
 description: Teamtailor is an applicant tracking system (ATS) and employer branding platform that helps companies attract, engage, and hire candidates with customizable career sites, recruitment workflows, candidate communications, and analytics. The platform supports collaborative hiring, GDPR compliance, and a marketplace of integrations. Teamtailor's API follows the JSON:API specification with regional base URLs and uses token-based authentication with Public, Internal, and Admin key permission levels.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/teamtailor.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.teamtailor.com over HTTP.
+  name: Teamtailor MCP Server
+  slug: teamtailor
 modified: '2026-05-11'
 name: Teamtailor
 nav: Providers
 network: true
-overview: 'Teamtailor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include ATS, Applicant Tracking, Recruiting, Human Resources, and Hiring.
+overview: 'Teamtailor publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Applicant Tracking, Recruiting, Human Resources, Hiring, and Employer Branding.
 
 
   Teamtailor''s developer surface includes documentation, pricing, signup flow, and 5 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 15.4
+  composite: 14.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 37.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 15.4
+  previous_composite: 14.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -127,7 +137,6 @@ security:
   summary_line: SOC 2, ISO 27001, GDPR
 slug: teamtailor
 tags:
-- ATS
 - Applicant Tracking
 - Recruiting
 - Human Resources

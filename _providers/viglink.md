@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.2
-  scored_at: '2026-09-20'
+  score: 35.1
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -311,7 +311,7 @@ layout: provider
 mcp_servers:
 - description: Official hosted Commerce MCP server (beta) that connects affiliate data, campaigns, and products directly to AI tools — affiliate search, reporting, and link generation through natural language.
   name: Commerce MCP Server (Sovrn Commerce, formerly VigLink)
-  slug: commerce-mcp-server-sovrn-commerce-formerly-viglink
+  slug: commerce-mcp-server
 modified: '2026-08-13'
 name: VigLink (Sovrn Commerce)
 nav: Providers
@@ -331,7 +331,7 @@ rate_limits:
   slug: viglink-rate-limits
 score:
   band: strong
-  composite: 55.0
+  composite: 56.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 56.0
@@ -343,11 +343,11 @@ score:
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 55.6
+    contract_quality: 50.1
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 55.0
+  previous_composite: 56.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -358,8 +358,20 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 43.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.tower.dev/v1
@@ -420,7 +420,7 @@ layout: provider
 mcp_servers:
 - description: 'Tower ships an official first-party MCP server as part of the Tower CLI (pip install tower / uvx tower). It runs locally against your authenticated Tower session and supports three transports: stdio ('
   name: Tower MCP Server
-  slug: tower-mcp-server
+  slug: tower
 modified: '2026-07-21'
 name: Tower
 nav: Providers
@@ -440,7 +440,7 @@ scopes:
   summary_line: 53 scopes
 score:
   band: strong
-  composite: 54.3
+  composite: 55.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -452,11 +452,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 63.8
+    contract_quality: 58.6
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 54.3
+  previous_composite: 55.4
   provenance:
     conformance: derived
     contracts:
@@ -466,8 +466,14 @@ score:
       total: 27
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

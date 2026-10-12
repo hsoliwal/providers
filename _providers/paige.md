@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -149,14 +149,14 @@ modified: '2026-08-04'
 name: Paige
 nav: Providers
 network: true
-overview: 'Paige is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Healthcare, and Health.
+overview: 'Paige is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Healthcare, and Health.
 
 
   Paige''s developer surface includes engineering blog, product news, support, signup flow, CLI, changelog, and 14 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 23.0
+  composite: 22.0
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -170,9 +170,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 18.4
-  previous_composite: 23.0
+  previous_composite: 22.0
   provenance:
     conformance: first-party
   regulatory:
@@ -186,9 +186,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -204,7 +204,7 @@ slug: paige
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Healthcare
 - Health
 - Digital Pathology

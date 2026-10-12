@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/dianxiaomi/refs/heads/main/security/dianxiaomi-domain-security.yml
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Dianxiaomi (店小秘) is a free cross-border e-commerce ERP platform operated by Shenzhen Meiyunji Network Technology Co., Ltd., serving more than 1.8 million cross-border sellers worldwide. It unifies product listing and data collection, multi-platform order processing, warehouse and inventory management, procurement, financial and profit analytics, and customer service across 70+ marketplaces including AliExpress, Amazon, Shopee, Lazada, and TikTok Shop, with integrations to 1,700+ logistics providers and 130+ overseas warehouses. The platform is user-facing SaaS; no public developer/API open platform is currently published.
 image: https://www.dianxiaomi.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dianxiaomi.com over HTTP.
+  name: Dianxiaomi MCP Server
+  slug: dianxiaomi
 modified: '2026-07-18'
 name: Dianxiaomi
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Dianxiaomi is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 3
 score:
   band: emerging
-  composite: 12.1
+  composite: 12.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,13 +94,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 12.1
+  previous_composite: 12.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

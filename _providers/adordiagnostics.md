@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, unauthenticated Model Context Protocol endpoint served from the www.adordx.com host and advertised in the company's own llms.txt. It is provided by the Wix site platform rather than authored b
@@ -99,9 +99,9 @@ description: 'ADOR Diagnostics is an in-vitro diagnostics (IVD) company developi
 image: https://static.wixstatic.com/media/e0cc12_4becce2d37744839bc20a1ad38122632~mv2.png/v1/fill/w_324,h_100,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/ADOR%20LOGO.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.adordx.com over HTTP; 9 tools listed.
   name: ADOR Diagnostics MCP Server
-  slug: ador-diagnostics-mcp-server
+  slug: adordiagnostics-site-mcp
 modified: '2026-09-07'
 name: ADOR Diagnostics
 nav: Providers
@@ -117,7 +117,7 @@ plans:
 random_paper: 14
 score:
   band: emerging
-  composite: 17.1
+  composite: 16.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -131,20 +131,25 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 17.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - italy
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 16.2
   provenance:
     conformance: derived
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

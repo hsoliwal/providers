@@ -32,23 +32,28 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Self-service patient check-in and registration - kiosk, tablet, and mobile intake that captures demographics, consent forms, and identity, then writes the completed registration back to the practice's
   name: Clearwave Check-In API
+  provenance: modeled
   slug: clearwave-check-in-api
 - description: Multi-factor insurance eligibility and benefits verification run automatically as part of check-in, returning coverage status, plan details, and patient responsibility. Modeled capability area; access
   name: Clearwave Eligibility API
+  provenance: modeled
   slug: clearwave-eligibility-api
 - description: Online and self-service appointment scheduling where every booking, cancellation, and reschedule syncs automatically to the practice management system and EHR. Modeled capability area; access is partn
   name: Clearwave Scheduling API
+  provenance: modeled
   slug: clearwave-scheduling-api
 - description: Bidirectional patient demographic and record synchronization between Clearwave and 50+ EHR/PM systems, keeping patient data consistent across the practice's systems in real time. Modeled capability ar
   name: Clearwave Patients API
+  provenance: modeled
   slug: clearwave-patients-api
 - description: Point-of-service and self-service patient payment capture tied to eligibility-derived patient responsibility, posting balances and payments back to the practice's revenue-cycle systems. Modeled capabi
   name: Clearwave Payments API
+  provenance: modeled
   slug: clearwave-payments-api
 artifact_total: 6
 common:
@@ -84,7 +89,7 @@ overview: 'Clearwave publishes 5 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 7
 score:
   band: minimal
-  composite: 6.7
+  composite: 7.0
   coverage:
     artifact_dirs: 3
     catalog_earned: 35.0
@@ -98,17 +103,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 6.7
+  previous_composite: 7.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

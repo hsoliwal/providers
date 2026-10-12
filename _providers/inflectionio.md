@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 49.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Inflection Developer Contact Activity Lists and Members API
   slug: open-inflectionio-lists-and-members-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/inflectionio/refs/heads/main/capabilities/inflectionio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/inflectionio-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -295,20 +300,20 @@ description: 'Inflection.io is a B2B marketing automation platform positioned as
 image: https://www.inflection.io/img/asset/YXNzZXRzL29nLWltYWdlLmpwZw/og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.inflection.io over HTTP requiring OAuth; 17 tools listed.
   name: Inflection MCP
   slug: inflection-mcp
 modified: '2026-08-13'
 name: Inflection.io
 nav: Providers
 network: true
-overview: 'Inflection.io publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Contact Activity API, Contacts API, Emails API, and 2 more. Tagged areas include Company, Software-as-a-Service, Marketing, Marketing Automation, and Email Marketing.
+overview: 'Inflection.io publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Contact Activity API, Contacts API, Emails API, and 3 more. Tagged areas include Company, Software-as-a-Service, Marketing, Marketing Automation, and Email Marketing.
 
 
   The Inflection.io catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Inflection.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 36 more developer resources.'
+  Inflection.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
 plans:
 - name: Inflectionio Plans Pricing
   plan_count: 1
@@ -325,7 +330,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: strong
-  composite: 62.2
+  composite: 64.6
   coverage:
     artifact_dirs: 26
     catalog_earned: 53.0
@@ -337,11 +342,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 63.0
+    contract_quality: 57.7
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 57.9
-  previous_composite: 62.2
+  previous_composite: 64.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -352,8 +357,14 @@ score:
       total: 5
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -391,5 +402,6 @@ tags:
 - Artificial Intelligence
 - Customer Journey
 - Webhook
+- A2A
 website: https://www.inflection.io
 ---

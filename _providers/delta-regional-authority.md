@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -78,7 +78,7 @@ modified: '2026-07-25'
 name: Delta Regional Authority
 nav: Providers
 network: true
-overview: 'Delta Regional Authority is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Economic Development, Federal-Government, Grants, Mississippi River, and Regional Authority.
+overview: 'Delta Regional Authority is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Economic Development, Federal Government, Grants, Mississippi River, and Regional Authority.
 
 
   Delta Regional Authority''s developer surface includes product news, engineering blog, and 5 more developer resources.'
@@ -93,7 +93,7 @@ rate_limits:
   slug: delta-regional-authority-rate-limits
 score:
   band: minimal
-  composite: 8.1
+  composite: 8.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 36.0
@@ -107,17 +107,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 7.9
-  previous_composite: 8.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 8.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +137,7 @@ security:
 slug: delta-regional-authority
 tags:
 - Economic Development
-- Federal-Government
+- Federal Government
 - Grants
 - Mississippi River
 - Regional Authority

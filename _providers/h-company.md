@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 43
   human_in_the_loop: 4
@@ -65,7 +65,7 @@ apis:
 - baseURL: https://agp.eu.hcompany.ai/api/v2
   baseurl_source: declared
   description: The quota API from H Company — 1 operation(s) for quota.
-  name: H Company quota API
+  name: H Company Quota API
   slug: h-company-quota-api
 - baseURL: https://agp.eu.hcompany.ai/api/v2
   baseurl_source: declared
@@ -129,6 +129,11 @@ collections:
   name: Computer-Use Agents Webhooks API
   slug: open-h-company-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/h-company/refs/heads/main/capabilities/h-company-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/h-company-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/h-company/refs/heads/main/overlays/h-company-computer-use-agents-overlay.yaml
   title: ''
@@ -276,24 +281,24 @@ description: 'H Company (hcompany.ai) is a Paris-based AI lab, backed by Accel a
 image: https://framerusercontent.com/assets/Xk8HZOz0eejLsPdcyokpuQJa3c.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at agp.eu.hcompany.ai over HTTP; 6 tools listed.
   name: H Company MCP Server
-  slug: h-company-mcp-server
+  slug: hai-agents
 modified: '2026-07-19'
 name: H Company
 nav: Providers
 network: true
-overview: 'H Company publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Browser Profiles API, Environments API, and 6 more. Tagged areas include Artificial Intelligence, Agents, Computer Use, Automation, and Machine-Learning.
+overview: 'H Company publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Browser Profiles API, Environments API, and 7 more. Tagged areas include Artificial Intelligence, Agents, Computer Use, Automation, and Machine Learning.
 
 
   The H Company catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  H Company''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 24 more developer resources.'
+  H Company''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 25 more developer resources.'
 random_paper: 6
 score:
   band: developing
-  composite: 52.2
+  composite: 51.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -305,17 +310,19 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 66.9
+    contract_quality: 61.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 52.2
+  previous_composite: 51.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -326,8 +333,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -348,10 +361,11 @@ tags:
 - Agents
 - Computer Use
 - Automation
-- Machine-Learning
+- Machine Learning
 - Browser Automation
 - LLM
 - MCP
 - Developer Tools
+- Foundation Models
 website: https://www.hcompany.ai/
 ---

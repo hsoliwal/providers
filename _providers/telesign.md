@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -223,7 +223,7 @@ modified: '2026-05-19'
 name: Telesign
 nav: Providers
 network: true
-overview: 'Telesign publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Fraud Scoring API, Messaging API, Phone Intelligence API, and 1 more. Tagged areas include Authentication, Communications, Fraud Prevention, Phone Intelligence, and SMS.
+overview: 'Telesign publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Fraud Scoring API, Messaging API, Phone Intelligence API, and 2 more. Tagged areas include Authentication, Communications, Fraud Prevention, Phone Intelligence, and SMS.
 
 
   The Telesign catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -262,7 +262,7 @@ rules:
   slug: telesign-rules
 score:
   band: developing
-  composite: 43.1
+  composite: 40.7
   coverage:
     artifact_dirs: 17
     catalog_earned: 56.3
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 9.8
-    contract_quality: 59.7
+    contract_quality: 54.1
     developer_ergonomics: 22.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 23.7
-  previous_composite: 43.1
+  previous_composite: 40.7
   provenance:
     agentic_access: derived
     contracts:
@@ -291,9 +291,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 36.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -320,5 +320,6 @@ tags:
 - Phone Intelligence
 - SMS
 - Verification
+- Telecommunications
 website: https://www.telesign.com/
 ---

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: OpenAI-wire-compatible REST API for chat completions, responses-style requests and the model catalog, authenticated with a bearer API key in the Authorization header. Three endpoints are documented (P
@@ -158,7 +158,7 @@ modified: '2026-08-11'
 name: WeaveAPI - OpenAI-compatible AI API Gateway
 nav: Providers
 network: true
-overview: 'WeaveAPI - OpenAI-compatible AI API Gateway publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, LLM, AI Inference, API Gateway, and Aggregator.
+overview: 'WeaveAPI - OpenAI-compatible AI API Gateway publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, LLM, Inference, API Gateway, and Aggregator.
 
 
   WeaveAPI - OpenAI-compatible AI API Gateway''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 16 more developer resources.'
@@ -173,7 +173,7 @@ rate_limits:
   slug: weaveapi-rate-limits
 score:
   band: thin
-  composite: 33.2
+  composite: 34.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 45.0
@@ -187,13 +187,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 33.2
+  previous_composite: 34.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -213,7 +219,7 @@ slug: weaveapi
 tags:
 - Artificial Intelligence
 - LLM
-- AI Inference
+- Inference
 - API Gateway
 - Aggregator
 - OpenAI-Compatible

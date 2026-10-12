@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -73,7 +73,7 @@ apis:
   description: Create, retrieve, update, and delete linked connectors for a tenant.
   name: Hotglue Linked Connectors API
   slug: hotglue-linked-connectors-api
-artifact_total: 21
+artifact_total: 22
 collections:
 - collection_type: open
   name: API Collection
@@ -166,11 +166,15 @@ finops:
   slug: hotglue-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hotglue.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.hotglue.com over HTTP.
+  name: Hotglue MCP Server
+  slug: hotglue
 modified: '2026-05-19'
 name: Hotglue
 nav: Providers
 network: true
-overview: 'Hotglue publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Connector Metadata API, Connector State API, Discover API, and 2 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
+overview: 'Hotglue publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Connector Metadata API, Connector State API, Discover API, and 3 more. Tagged areas include Connectors, Embedded Integrations, ETL, Integration Platform, and iPaaS.
 
 
   Hotglue''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, and 9 more developer resources.'
@@ -185,7 +189,7 @@ rate_limits:
   slug: hotglue-rate-limits
 score:
   band: thin
-  composite: 35.9
+  composite: 35.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 46.0
@@ -197,11 +201,11 @@ score:
   facets:
     access_clarity: 40.8
     contract_governance: 0.0
-    contract_quality: 53.3
+    contract_quality: 48.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 35.9
+  previous_composite: 35.6
   provenance:
     agentic_access: derived
     contracts:
@@ -210,8 +214,14 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The OpenCTI platform exposes a full GraphQL API on the /graphql endpoint for programmatic access to cyber threat intelligence knowledge modeled on STIX 2.1. Authentication uses a per-user bearer API t
@@ -175,7 +175,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Filigran MCP Server
-  slug: filigran-mcp-server
+  slug: filigran-mcp-yml
 modified: '2026-07-19'
 name: Filigran
 nav: Providers
@@ -190,7 +190,7 @@ overview: 'Filigran publishes 2 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 8
 score:
   band: developing
-  composite: 45.7
+  composite: 46.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -202,16 +202,22 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 42.1
-  previous_composite: 45.7
+  previous_composite: 46.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -237,7 +243,7 @@ tags:
 - STIX
 - GraphQL
 - Breach and Attack Simulation
-- Open-Source
+- Open Source
 - Security
 website: https://filigran.io/
 ---

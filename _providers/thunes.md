@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -170,7 +170,7 @@ modified: '2026-05-08'
 name: Thunes
 nav: Providers
 network: true
-overview: 'Thunes publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Account Management API, Connectivity API, Credit Parties API, and 4 more. Tagged areas include Fintech, Cross-Border, Payments, FX, and Mobile Money.
+overview: 'Thunes publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account Management API, Connectivity API, Credit Parties API, and 6 more. Tagged areas include Fintech, Cross-Border, Payments, FX, and Mobile Money.
 
 
   Thunes'' developer surface includes authentication and 8 more developer resources.'
@@ -185,7 +185,7 @@ rate_limits:
   slug: thunes-rate-limits
 score:
   band: emerging
-  composite: 26.0
+  composite: 25.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 39.0
@@ -197,11 +197,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 21.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 5.3
-  previous_composite: 26.0
+  previous_composite: 25.3
   provenance:
     agentic_access: derived
     contracts:
@@ -214,9 +214,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -237,5 +237,6 @@ tags:
 - Payments
 - FX
 - Mobile Money
+- Cross-Border Payments
 website: https://www.thunes.com/
 ---

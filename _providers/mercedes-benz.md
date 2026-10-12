@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 18
 apis:
 - description: Use this product to integrate always up-to-date MercedesBenz technical as well as marketing vehicle data into your solution and business model. Try it out.
@@ -193,7 +193,7 @@ rate_limits:
   slug: mercedes-benz-rate-limits
 score:
   band: thin
-  composite: 29.0
+  composite: 29.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 39.0
@@ -207,11 +207,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 63.0
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 29.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 29.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

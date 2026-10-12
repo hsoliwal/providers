@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 30.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: GraphQL API for retrieving workspace and user metadata — replays/recordings, team members, and comments on a replay. POST queries to the endpoint with a Replay API key as a bearer token.
@@ -186,7 +186,7 @@ description: Replay is an AI-native QA and time-travel debugging platform for we
 image: https://www.replay.io/replayQA_og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at dispatch.replay.io over HTTP; 25 tools listed.
   name: Replay MCP
   slug: replay-mcp
 modified: '2026-07-20'
@@ -200,7 +200,7 @@ overview: 'Replay publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 15
 score:
   band: developing
-  composite: 42.4
+  composite: 44.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -214,15 +214,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 42.4
+  previous_composite: 44.9
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

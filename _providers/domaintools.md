@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 55.1
-  scored_at: '2026-09-20'
+  score: 53.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 1
@@ -295,9 +295,9 @@ description: DomainTools is a domain and DNS intelligence company whose APIs pow
 image: https://www.domaintools.com/wp-content/uploads/dt-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.domaintools.com over HTTP.
   name: DomainTools MCP Server
-  slug: domaintools-mcp-server
+  slug: domaintools-mcp
 modified: '2026-07-18'
 name: DomainTools
 nav: Providers
@@ -309,7 +309,7 @@ overview: 'DomainTools publishes 12 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 5
 score:
   band: developing
-  composite: 48.5
+  composite: 48.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -321,11 +321,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 54.1
+    contract_quality: 48.8
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 42.1
-  previous_composite: 48.5
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -336,8 +336,14 @@ score:
       total: 12
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

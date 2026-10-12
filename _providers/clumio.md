@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Regional REST API for the Clumio backup-as-a-service platform. Manage AWS and GCP connections, backup policies and protection rules, protection groups, organizational units, users, roles, compliance r
@@ -160,9 +160,9 @@ description: 'Clumio (a Commvault company) is a secure, air-gapped backup-as-a-s
 image: https://clumio.com/wp-content/uploads/2021/06/clumio-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 9 tools listed.
   name: Clumio MCP Server
-  slug: clumio-mcp-server
+  slug: clumio-terraform-mcp
 modified: '2026-07-18'
 name: Clumio
 nav: Providers
@@ -174,7 +174,7 @@ overview: 'Clumio publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 11
 score:
   band: thin
-  composite: 31.2
+  composite: 32.8
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -188,14 +188,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 31.2
+  previous_composite: 32.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

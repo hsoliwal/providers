@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: The ARGUS API is a cloud-based integration gateway that provides programmatic access to data in ARGUS Enterprise and other cloud-enabled ARGUS solutions. It enables users to extract and ingest data, t
@@ -199,7 +199,7 @@ modified: '2026-09-14'
 name: ARGUS
 nav: Providers
 network: true
-overview: 'ARGUS publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Altus Group, Asset Management, Commercial Real Estate, Fund Management, and Portfolio-Management.
+overview: 'ARGUS publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Altus Group, Asset Management, Commercial Real Estate, Fund Management, and Portfolio Management.
 
 
   ARGUS''s developer surface includes engineering blog, documentation, getting-started guide, developer portal, support, training material, release notes, and 17 more developer resources.'
@@ -214,7 +214,7 @@ rate_limits:
   slug: argus-rate-limits
 score:
   band: thin
-  composite: 28.9
+  composite: 30.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 38.0
@@ -228,13 +228,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
-  previous_composite: 28.9
+  previous_composite: 30.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -260,7 +266,7 @@ tags:
 - Asset Management
 - Commercial Real Estate
 - Fund Management
-- Portfolio-Management
+- Portfolio Management
 - Real Estate Software
 - Valuation
 use_cases:

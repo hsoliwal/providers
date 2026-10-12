@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -244,7 +244,7 @@ modified: '2026-08-04'
 name: Fundrise
 nav: Providers
 network: true
-overview: 'Fundrise publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Acknowledgments API, Authentication API, Clients API, and 6 more. Tagged areas include Company, Financial-Services, Investing, Real-Estate, and Private Credit.
+overview: 'Fundrise publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Acknowledgments API, Authentication API, Clients API, and 6 more. Tagged areas include Company, Financial Services, Investing, Real Estate, and Private Credit.
 
 
   Fundrise''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, and 18 more developer resources.'
@@ -260,7 +260,7 @@ scopes:
   summary_line: 2 scopes
 score:
   band: thin
-  composite: 37.1
+  composite: 38.5
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -272,11 +272,11 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 58.3
+    contract_quality: 52.4
     developer_ergonomics: 51.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 15.8
-  previous_composite: 37.1
+  previous_composite: 38.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -287,8 +287,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -310,9 +316,9 @@ security:
 slug: fundrise
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Investing
-- Real-Estate
+- Real Estate
 - Private Credit
 - Venture Capital
 - Alternative Assets

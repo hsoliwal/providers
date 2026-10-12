@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Apache Software Foundation hosts 300+ open source projects spanning big data, cloud, messaging, databases, build tools, and more. The ASF provides infrastructure, governance, and community support
@@ -115,7 +115,7 @@ modified: '2026-04-19'
 name: Apache Software Foundation
 nav: Providers
 network: true
-overview: 'Apache Software Foundation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open-Source, Apache, Foundations, Software, and Fortune 500.
+overview: 'Apache Software Foundation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Open Source, Apache, Foundations, Software, and Fortune 500.
 
 
   Apache Software Foundation''s developer surface includes documentation, getting-started guide, engineering blog, support, and 6 more developer resources.'
@@ -146,7 +146,7 @@ rate_limits:
   slug: apache-rate-limits
 score:
   band: emerging
-  composite: 18.3
+  composite: 18.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 41.0
@@ -160,11 +160,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 18.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -182,7 +188,7 @@ security:
   summary_line: security.txt · contact published
 slug: apache
 tags:
-- Open-Source
+- Open Source
 - Apache
 - Foundations
 - Software

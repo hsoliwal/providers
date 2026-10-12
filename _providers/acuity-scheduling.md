@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.3
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -137,14 +137,14 @@ modified: '2026-05-30'
 name: Acuity Scheduling
 nav: Providers
 network: true
-overview: 'Acuity Scheduling publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Appointments API, Meta API, and 1 more. Tagged areas include Appointment Scheduling, Booking, Calendar, Scheduling, and Squarespace.
+overview: 'Acuity Scheduling publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Webhooks, Appointments API, Meta API, and 2 more. Tagged areas include Appointment Scheduling, Booking, Calendar, Scheduling, and Squarespace.
 
 
   Acuity Scheduling''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 5 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 30.4
+  composite: 28.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 32.0
@@ -156,11 +156,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 0.0
-    contract_quality: 54.8
+    contract_quality: 50.5
     developer_ergonomics: 29.8
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 30.4
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -168,8 +168,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

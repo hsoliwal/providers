@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: 'Python API for scripting and extending Maya functionality, providing access to Maya''s scene graph and node architecture. Includes Python API 2.0 with a more Pythonic workflow and improved performance '
@@ -155,7 +155,7 @@ rate_limits:
   slug: autodesk-maya-rate-limits
 score:
   band: emerging
-  composite: 24.6
+  composite: 23.5
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -169,11 +169,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 36.8
-  previous_composite: 24.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 23.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

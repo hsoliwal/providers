@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Configure and manage a Hydrolix cluster — orgs, projects, tables, transforms, functions, jobs, and service accounts.
@@ -132,9 +132,9 @@ description: 'Hydrolix is a real-time log analytics and observability platform b
 image: https://avatars.githubusercontent.com/u/50281978?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: Hydrolix MCP Server
-  slug: hydrolix-mcp-server
+  slug: mcp-hydrolix
 modified: '2026-07-19'
 name: Hydrolix
 nav: Providers
@@ -146,7 +146,7 @@ overview: 'Hydrolix publishes 3 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 3
 score:
   band: emerging
-  composite: 20.1
+  composite: 19.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -160,15 +160,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 10.5
-  previous_composite: 20.1
+  previous_composite: 19.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

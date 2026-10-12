@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'The footway.com storefront''s agent-facing commerce surface. Built on Shopify, it implements the Universal Commerce Protocol (UCP) for agent-driven commerce: a UCP merchant profile at /.well-known/ucp '
@@ -125,7 +125,7 @@ layout: provider
 mcp_servers:
 - description: 'Universal Commerce Protocol (UCP) MCP endpoint for the footway.com Shopify storefront. Agents use it for buyer-approved, agent-driven commerce: catalog search, cart creation, and checkout. Checkout re'
   name: Footway MCP Server
-  slug: footway-mcp-server
+  slug: footway-ucp-commerce
 modified: '2026-07-19'
 name: Footway
 nav: Providers
@@ -141,8 +141,8 @@ scopes:
   slug: footway-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 24.1
+  band: thin
+  composite: 26.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -156,7 +156,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -164,13 +164,19 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 24.1
+  previous_composite: 26.8
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

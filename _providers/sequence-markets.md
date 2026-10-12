@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Bearer-auth REST API and multiplexed WebSocket streaming surface for the Sequence Markets trading OS — credentials & wallets, market data, orders & execution graphs, positions & balances, prediction m
@@ -196,7 +196,7 @@ overview: 'Sequence Markets publishes 1 API on the [APIs.io](https://apis.io/) n
 random_paper: 11
 score:
   band: developing
-  composite: 42.3
+  composite: 40.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -208,11 +208,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 42.3
+  previous_composite: 40.8
   provenance:
     conformance: derived
     mcp: derived
@@ -222,9 +222,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -254,5 +254,6 @@ tags:
 - Market Data
 - Fintech
 - Developer Tools
+- Real-Time
 website: https://sequencemkts.com/
 ---

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: WebSocket API for the Crypto.com Exchange, split into a Market Data stream (public channels for book, ticker, trade, candlestick, index, mark price, settlement, funding and open interest) and a User A
@@ -317,14 +317,14 @@ description: 'Crypto.com is a cryptocurrency exchange, brokerage and payments co
 image: https://crypto.com/images/meta-og/listing.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 9 tools listed.
   name: Crypto.com MCP Server
-  slug: cryptocom-mcp-server
+  slug: cdcx
 modified: '2026-09-16'
 name: Crypto.com
 nav: Providers
 network: true
-overview: 'Crypto.com publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Account Balance and Positions API, Advanced Order Management API, Crypto Wallet API, and 7 more. Tagged areas include Cryptocurrency, Crypto Exchange, Trading, Derivatives, and Market Data.
+overview: 'Crypto.com publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Account Balance and Positions API, Advanced Order Management API, Crypto Wallet API, and 11 more. Tagged areas include Cryptocurrency, Crypto Exchange, Trading, Derivatives, and Market Data.
 
 
   The Crypto.com catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -341,24 +341,24 @@ rate_limits:
   name: Crypto Com Rate Limits
   slug: crypto-com-rate-limits
 score:
-  band: exemplar
-  composite: 68.2
+  band: strong
+  composite: 65.5
   coverage:
     artifact_dirs: 24
-    catalog_earned: 36.0
+    catalog_earned: 44.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 79.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 60.4
+    contract_quality: 55.2
     developer_ergonomics: 85.7
-    discoverability: 51.9
+    discoverability: 63.3
     operational_transparency: 92.1
-  previous_composite: 68.2
+  previous_composite: 65.0
   provenance:
     conformance: first-party
     contracts:
@@ -373,9 +373,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 70.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -414,6 +414,6 @@ tags:
 - Staking
 - Fintech
 - MCP
-- agent-native
+- Agent-Native
 website: https://crypto.com/
 ---

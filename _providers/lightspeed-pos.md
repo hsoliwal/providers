@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 0
@@ -1121,7 +1121,7 @@ modified: '2026-06-02'
 name: Lightspeed
 nav: Providers
 network: true
-overview: 'Lightspeed publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Account API, Brands API, Catalog API, and 19 more. Tagged areas include Lightspeed, Point-of-Sale, Retail, Restaurant, and E-Commerce.
+overview: 'Lightspeed publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Account API, Brands API, Catalog API, and 25 more. Tagged areas include Lightspeed, Point-of-Sale, Retail, Restaurant, and E-Commerce.
 
 
   The Lightspeed catalog on APIs.io includes 3 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -1165,8 +1165,8 @@ scopes:
   slug: lightspeed-pos-scopes
   summary_line: 24 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 25.3
+  band: thin
+  composite: 26.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 55.5
@@ -1180,9 +1180,9 @@ score:
     contract_governance: 13.6
     contract_quality: 26.8
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 25.3
+  previous_composite: 26.7
   provenance:
     agentic_access: derived
     contracts:
@@ -1190,8 +1190,14 @@ score:
       derived: 19
       marker_coverage: 79.2
       total: 24
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

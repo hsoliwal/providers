@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Tsenta's backend API (api.autojobs.me) powers the job-matching, resume tailoring, and application-submission agent, and is exposed to AI clients as a hosted MCP server authorized over OAuth 2.0 (autho
@@ -159,9 +159,9 @@ description: Tsenta is a Y Combinator-backed (S26) AI job-application agent that
 image: https://tsenta.com/og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.autojobs.me over HTTP.
   name: Tsenta MCP Server
-  slug: tsenta-mcp-server
+  slug: tsenta
 modified: '2026-07-21'
 name: Tsenta
 nav: Providers
@@ -173,7 +173,7 @@ overview: 'Tsenta publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 17
 score:
   band: thin
-  composite: 32.0
+  composite: 34.1
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -187,14 +187,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 28.9
-  previous_composite: 32.0
+  previous_composite: 34.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

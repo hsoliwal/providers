@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.6
-  scored_at: '2026-09-20'
+  score: 21.2
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -115,6 +115,11 @@ collections:
   name: PayFit Partner & Customer API
   slug: open-payfit
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/payfit/refs/heads/main/capabilities/payfit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/payfit-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/payfit/refs/heads/main/agentic-access/payfit-agentic-access.yml
   title: ''
@@ -176,16 +181,16 @@ modified: '2026-05-11'
 name: PayFit
 nav: Providers
 network: true
-overview: 'PayFit publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Absences API, Collaborators API, Company API, and 4 more. Tagged areas include Payroll, Human Resources, Europe Payroll, Time and Attendance, and Employee Management.
+overview: 'PayFit publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Absences API, Collaborators API, Company API, and 6 more. Tagged areas include Payroll, Human Resources, Europe Payroll, Time and Attendance, and Employee Management.
 
 
-  PayFit''s developer surface includes authentication, documentation, pricing, signup flow, and 8 more developer resources.'
+  PayFit''s developer surface includes authentication, documentation, pricing, signup flow, and 9 more developer resources.'
 random_paper: 15
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 25.6
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -195,11 +200,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 10.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 6.6
-  previous_composite: 26.5
+  previous_composite: 25.6
   provenance:
     agentic_access: derived
     contracts:
@@ -207,8 +212,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

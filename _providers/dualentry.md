@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for programmatic access to an organization's accounting data across setup (accounts, items, classifications), master data (companies, customers, vendors), transactions (invoices, bills, journ
@@ -178,9 +178,9 @@ description: DualEntry is an AI-native ERP (enterprise resource planning) platfo
 image: https://cdn.prod.website-files.com/66bf861737ab5a556a15c52b/671944f8d88d82c212724765_DualEntry.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.dualentry.com over HTTP.
   name: DualEntry MCP Server
-  slug: dualentry-mcp-server
+  slug: dualentry
 modified: '2026-07-18'
 name: DualEntry
 nav: Providers
@@ -199,7 +199,7 @@ rate_limits:
   slug: dualentry-rate-limits
 score:
   band: developing
-  composite: 42.3
+  composite: 43.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 49.0
@@ -211,16 +211,22 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 42.3
+  previous_composite: 43.3
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

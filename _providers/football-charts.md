@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Free read-only REST API for football statistics, standings, results, fixtures, match probabilities, season projections, goal timing, and prediction track record. Bearer API key auth (or X-API-Key) wit
@@ -32,7 +32,7 @@ apis:
 - description: Hosted MCP server (protocol 2025-06-18) exposing ten read-only football statistics tools (list_leagues, get_league_table, get_rankings, get_results, get_fixtures, get_match, get_season_projection, get
   name: Football Charts MCP Server
   slug: football-charts-mcp-server
-artifact_total: 8
+artifact_total: 7
 common:
 - group: company
   title: ''
@@ -155,10 +155,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Football Charts MCP Server
-  slug: football-charts-mcp-server
-- description: ''
-  name: Football Charts MCP Server
-  slug: football-charts-mcp-server-2
+  slug: mcp
 modified: '2026-09-04'
 name: Football Charts
 nav: Providers
@@ -178,7 +175,7 @@ rate_limits:
   slug: football-charts-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 36.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 53.0
@@ -192,15 +189,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 35.3
+  previous_composite: 36.6
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -229,7 +232,7 @@ tags:
 - probability-models
 - monte-carlo
 - MCP
-- agent-native
+- Agent-Native
 - Free API
 website: https://www.football-charts.com
 ---

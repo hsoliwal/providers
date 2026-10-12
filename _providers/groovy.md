@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: The core Groovy language API documentation including all built-in classes, methods, and language features.
@@ -111,7 +111,7 @@ rate_limits:
   slug: groovy-rate-limits
 score:
   band: emerging
-  composite: 17.4
+  composite: 16.3
   coverage:
     artifact_dirs: 7
     catalog_earned: 44.0
@@ -125,11 +125,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 17.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

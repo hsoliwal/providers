@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: First-party backend API for the Stilta / Patrona patent search platform. Live and rate-limited (600 req window observed) but undocumented publicly — no OpenAPI, no developer docs (docs_url is null; /o
   name: Stilta Platform API
   slug: stilta-platform-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/stilta/refs/heads/main/security/stilta-trust-center.yml
@@ -97,6 +97,10 @@ created: '2026-07-17'
 description: Stilta is an agentic AI platform for high-stakes patent and intellectual property work, backed by a16z, NVIDIA, and Y Combinator (W26). Its agents automate evidence gathering and analysis across 180M+ patents, scientific literature, and archived web content to deliver source-cited invalidity analysis, infringement analysis, and freedom-to-operate assessments for in-house IP teams and intellectual property law firms. The platform markets a defensible first answer in roughly seventeen minutes, fully autonomous, with citations pulled from original documents. Stilta exposes a first-party backend API (api.stilta.com, "Patrona Patent Search Platform API") and a PropelAuth-based OpenID Connect identity surface at auth.stilta.com, but does not publish public developer documentation, an OpenAPI specification, or SDKs at this time. This profile was surfaced as an a16z / Y Combinator portfolio company and enriched from Stilta's public web surface.
 image: https://www.stilta.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.stilta.com over HTTP.
+  name: Stilta MCP Server
+  slug: stilta
 modified: '2026-07-21'
 name: Stilta
 nav: Providers
@@ -108,7 +112,7 @@ overview: 'Stilta publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 19
 score:
   band: emerging
-  composite: 19.3
+  composite: 20.4
   coverage:
     artifact_dirs: 7
     catalog_earned: 37.0
@@ -122,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 19.3
+  previous_composite: 20.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -155,7 +165,7 @@ tags:
 - Intellectual Property
 - Legal Tech
 - Artificial Intelligence
-- Agentic AI
+- AI Agents
 - Patent Search
 - Prior Art
 website: https://www.stilta.com

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -106,7 +106,7 @@ layout: provider
 mcp_servers:
 - description: Vorlon ships a remote, plug-and-play MCP (Model Context Protocol) server that lets LLMs query the platform's security data, orchestrate investigations, and return contextual answers about a customer's
   name: Vorlon MCP Server
-  slug: vorlon-mcp-server
+  slug: vorlon
 modified: '2026-07-21'
 name: Vorlon
 nav: Providers
@@ -118,7 +118,7 @@ overview: 'Vorlon is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 12
 score:
   band: emerging
-  composite: 18.8
+  composite: 19.7
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -132,14 +132,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 15.8
-  previous_composite: 18.8
+  previous_composite: 19.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

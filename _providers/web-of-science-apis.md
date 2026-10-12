@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -48,32 +48,32 @@ apis:
 - baseURL: https://api.clarivate.com/api/wos
   baseurl_source: spec
   description: The citations API from Web of Science APIs — 3 operation(s) for citations.
-  name: Web of Science APIs citations API
+  name: Web of Science APIs Citations API
   slug: web-of-science-apis-citations-api
 - baseURL: https://api.clarivate.com/apis/wos-starter/v1
   baseurl_source: spec
   description: The documents API from Web of Science APIs — 2 operation(s) for documents.
-  name: Web of Science APIs documents API
+  name: Web of Science APIs Documents API
   slug: web-of-science-apis-documents-api
 - baseURL: https://api.clarivate.com/apis/wos-starter/v1
   baseurl_source: spec
   description: The journals API from Web of Science APIs — 2 operation(s) for journals.
-  name: Web of Science APIs journals API
+  name: Web of Science APIs Journals API
   slug: web-of-science-apis-journals-api
 - baseURL: https://api.clarivate.com/api/wos
   baseurl_source: spec
   description: The records API from Web of Science APIs — 1 operation(s) for records.
-  name: Web of Science APIs records API
+  name: Web of Science APIs Records API
   slug: web-of-science-apis-records-api
 - baseURL: https://api.clarivate.com/api/wos
   baseurl_source: spec
   description: The reports API from Web of Science APIs — 2 operation(s) for reports.
-  name: Web of Science APIs reports API
+  name: Web of Science APIs Reports API
   slug: web-of-science-apis-reports-api
 - baseURL: https://api.clarivate.com/api/wos
   baseurl_source: spec
   description: The search API from Web of Science APIs — 3 operation(s) for search.
-  name: Web of Science APIs search API
+  name: Web of Science APIs Search API
   slug: web-of-science-apis-search-api
 artifact_total: 129
 collections:
@@ -489,7 +489,7 @@ modified: '2026-05-19'
 name: Web of Science APIs
 nav: Providers
 network: true
-overview: 'Web of Science APIs publishes 6 APIs on the [APIs.io](https://apis.io/) network, including citations API, documents API, journals API, and 3 more. Tagged areas include Research, Academic, Bibliometrics, Citations, and Science.
+overview: 'Web of Science APIs publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Citations API, Documents API, Journals API, and 3 more. Tagged areas include Research, Academic, Bibliometrics, Citations, and Science.
 
 
   The Web of Science APIs catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
@@ -539,23 +539,23 @@ rules:
   slug: web-of-science-spectral-rules
 score:
   band: developing
-  composite: 43.8
+  composite: 40.1
   coverage:
     artifact_dirs: 18
-    catalog_earned: 58.5
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.5
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 36.8
-    contract_governance: 28.8
-    contract_quality: 62.9
+    contract_governance: 27.3
+    contract_quality: 57.2
     developer_ergonomics: 39.3
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 43.8
+  previous_composite: 40.1
   provenance:
     agentic_access: derived
     contracts:
@@ -568,9 +568,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

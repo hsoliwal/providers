@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Revenue.io's programmable surface for guided selling, call analytics, rep performance data, conversation insights, and CRM activity synchronization. Exposed as RDNACadence Apex classes and Flow invoca
@@ -202,7 +202,7 @@ layout: provider
 mcp_servers:
 - description: Revenue.io operates a live, remote Model Context Protocol server at https://app.ringdna.com/mcp. It was discovered from the RFC 9728 protected-resource metadata served at https://api.revenue.io/.well-
   name: Revenue.io (ringDNA) MCP Server
-  slug: revenueio-ringdna-mcp-server
+  slug: revenue-io
 modified: '2026-08-13'
 name: Revenue.io
 nav: Providers
@@ -227,7 +227,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 32.4
+  composite: 35.8
   coverage:
     artifact_dirs: 21
     catalog_earned: 52.0
@@ -241,14 +241,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 32.4
+  previous_composite: 35.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

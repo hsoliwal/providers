@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -270,7 +270,7 @@ modified: '2026-05-19'
 name: Cilium
 nav: Providers
 network: true
-overview: 'Cilium publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Hubble API, BGP API, Daemon API, and 6 more. Tagged areas include Cloud-Native, eBPF, Kubernetes, Networking, and Security.
+overview: 'Cilium publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Hubble API, BGP API, Daemon API, and 8 more. Tagged areas include Cloud-Native, eBPF, Kubernetes, Networking, and Security.
 
 
   The Cilium catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -310,7 +310,7 @@ rules:
   slug: cilium-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 45.8
+  composite: 43.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 52.5
@@ -322,14 +322,14 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 58.8
+    contract_quality: 54.6
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 45.8
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     contracts:
@@ -337,8 +337,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

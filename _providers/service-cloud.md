@@ -11,7 +11,8 @@ access_model:
   trial: true
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: documented
@@ -33,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.2
-  scored_at: '2026-09-20'
+  score: 45.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Core REST API for Service Cloud operations: sObject CRUD over Case, CaseComment, EmailMessage, Knowledge articles and every other standard and custom object, plus SOQL query, SOSL search and composite'
@@ -68,16 +69,37 @@ apis:
   baseurl_source: spec
   description: The bot API from Salesforce Service Cloud APIs — 3 operation(s) for bot.
   name: Salesforce Service Cloud APIs Bot API
+  phrasing_intents:
+  - id: startSession
+    intent: Start a conversation with an Einstein Bot
+    question: How do I open a new chat session with an Einstein Bot from my own app?
+  - id: continueSession
+    intent: Send a message in an active bot session
+    question: How do I send the customer's next reply to a bot conversation that's already running?
+  - id: endSession
+    intent: End an active bot session
+    question: How do I close out a bot conversation when the customer leaves?
+  phrasing_ops: 3
   slug: service-cloud-bot-api
 - baseURL: https://runtime-api-na-west.prod.chatbots.sfdc.sh
   baseurl_source: spec
   description: The health API from Salesforce Service Cloud APIs — 1 operation(s) for health.
   name: Salesforce Service Cloud APIs Health API
+  phrasing_intents:
+  - id: checkHealthStatus
+    intent: Check whether the bots service is up
+    question: Is the Einstein Bots API up or down right now?
+  phrasing_ops: 1
   slug: service-cloud-health-api
 - baseURL: https://runtime-api-na-west.prod.chatbots.sfdc.sh
   baseurl_source: spec
   description: The versions API from Salesforce Service Cloud APIs — 1 operation(s) for versions.
   name: Salesforce Service Cloud APIs Versions API
+  phrasing_intents:
+  - id: getAPIVersions
+    intent: List supported bots API versions
+    question: Which versions of the Einstein Bots API are currently supported?
+  phrasing_ops: 1
   slug: service-cloud-versions-api
 - description: SOAP-based API for enterprise integration and complex service cloud operations.
   name: Salesforce Service Cloud SOAP API
@@ -345,14 +367,14 @@ finops:
 image: https://wp.sfdcdigital.com/en-us/wp-content/uploads/sites/4/2024/11/logo-salesforce.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.salesforce.com requiring OAuth.
   name: Salesforce Hosted MCP Servers + Salesforce DX MCP Server
   slug: salesforce-hosted-mcp-servers-salesforce-dx-mcp-server
 modified: '2026-09-16'
 name: Salesforce Service Cloud APIs
 nav: Providers
 network: true
-overview: 'Salesforce Service Cloud APIs publishes 3 APIs on the [APIs.io](https://apis.io/) network: Bot API, Health API, and Versions API. Tagged areas include Cloud, CRM, Customer Service, Enterprise, and Salesforce.
+overview: 'Salesforce Service Cloud APIs publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Bot API, Health API, Versions API, and 16 more. Tagged areas include Cloud, CRM, Customer Service, Enterprise, and Salesforce.
 
 
   The Salesforce Service Cloud APIs catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -375,7 +397,7 @@ scopes:
   summary_line: 36 scopes · authorizationCode/implicit
 score:
   band: exemplar
-  composite: 68.6
+  composite: 71.9
   coverage:
     artifact_dirs: 27
     catalog_earned: 54.0
@@ -387,11 +409,11 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 18.2
-    contract_quality: 55.6
+    contract_quality: 50.8
     developer_ergonomics: 82.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 84.2
-  previous_composite: 68.6
+  previous_composite: 71.9
   provenance:
     conformance: first-party
     contracts:
@@ -401,8 +423,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

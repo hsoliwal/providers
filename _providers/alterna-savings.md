@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -97,19 +97,19 @@ modified: '2026-07-23T18:00:00Z'
 name: Alterna Savings
 nav: Providers
 network: true
-overview: 'Alterna Savings is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, Canada, Credit Union, and Cooperative.
+overview: 'Alterna Savings is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, Canada, Credit Union, and Cooperative.
 
 
   Alterna Savings'' developer surface includes authentication, support, engineering blog, and 8 more developer resources.'
 random_paper: 11
 scopes:
 - name: Alterna Savings Scopes
-  scope_count: 0
+  scope_count: 2
   slug: alterna-savings-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: emerging
-  composite: 15.4
+  composite: 14.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -123,7 +123,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -132,15 +132,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 15.4
+  previous_composite: 14.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 46.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -158,13 +158,12 @@ security:
   summary_line: TLSv1.2 · HSTS · DMARC
 slug: alterna-savings
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - Canada
 - Credit Union
 - Cooperative
 - Consumer-Driven Banking
 - Interac
-- Data Aggregation
 website: https://www.alterna.ca/
 ---

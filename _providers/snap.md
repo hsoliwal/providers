@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'OAuth 2.0 REST API for managing Snapchat advertising: organizations, ad accounts, campaigns, ad squads, ads, creatives, media, audience segments, measurement/reporting, the Conversions API (server-to-'
@@ -264,14 +264,14 @@ description: 'Snap Inc. is the technology company behind Snapchat, Bitmoji, Spec
 image: https://developers.snap.com/img/snap-developer-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Snap publishes a first-party hosted MCP server, "Snapchat Ads MCP", that lets supported agents read the caller's authorized Snapchat Ads data through the Ads API. The release is READ-ONLY — an agent c
   name: Snap MCP Server
-  slug: snap-mcp-server
+  slug: snap-ads
 modified: '2026-09-16'
 name: Snap
 nav: Providers
 network: true
-overview: 'Snap publishes 2 APIs on the [APIs.io](https://apis.io/) network: Conversion API and Events API. Tagged areas include Company, Advertising, Marketing, Social-Media, and Augmented Reality.
+overview: 'Snap publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Conversion API, Events API, and 4 more. Tagged areas include Company, Advertising, Marketing, Social Media, and Augmented Reality.
 
 
   The Snap catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -289,12 +289,12 @@ rate_limits:
   slug: snap-rate-limits
 scopes:
 - name: Snap Scopes
-  scope_count: 0
+  scope_count: 4
   slug: snap-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorizationCode
 score:
-  band: developing
-  composite: 53.3
+  band: strong
+  composite: 56.3
   coverage:
     artifact_dirs: 24
     catalog_earned: 52.0
@@ -306,11 +306,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 53.4
+    contract_quality: 48.8
     developer_ergonomics: 73.2
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 76.3
-  previous_composite: 53.3
+  previous_composite: 56.3
   provenance:
     conformance: first-party
     contracts:
@@ -320,8 +320,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -349,7 +355,7 @@ tags:
 - Company
 - Advertising
 - Marketing
-- Social-Media
+- Social Media
 - Augmented Reality
 - Camera
 - Authentication

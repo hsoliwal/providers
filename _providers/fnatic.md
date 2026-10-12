@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,9 +24,9 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 40.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -254,7 +255,7 @@ layout: provider
 mcp_servers:
 - description: 'Fnatic serves one live MCP endpoint from its own shop host: the Universal Commerce Protocol (UCP) shopping service at https://shop.fnatic.com/api/ucp/mcp. It is advertised in Fnatic''s own /agents.md a'
   name: Fnatic MCP Server
-  slug: fnatic-mcp-server
+  slug: fnatic-mcp-yml
 modified: '2026-08-04'
 name: Fnatic
 nav: Providers
@@ -271,7 +272,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.4
+  composite: 28.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -283,9 +284,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -295,14 +296,20 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.4
+  previous_composite: 28.3
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

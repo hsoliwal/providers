@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -108,6 +108,11 @@ collections:
   name: Travis CI REST API v3
   slug: open-travis-ci
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/travis-ci/refs/heads/main/capabilities/travis-ci-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/travis-ci-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/travis-ci/refs/heads/main/agentic-access/travis-ci-agentic-access.yml
   title: ''
@@ -178,10 +183,10 @@ modified: '2026-05-08'
 name: Travis CI
 nav: Providers
 network: true
-overview: 'Travis CI publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Builds API, Jobs API, Logs API, and 3 more. Tagged areas include DevOps, CI/CD, Builds, Open-Source, and Hosted.
+overview: 'Travis CI publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Builds API, Jobs API, Logs API, and 5 more. Tagged areas include DevOps, CI/CD, Builds, Open Source, and Hosted.
 
 
-  Travis CI''s developer surface includes authentication, documentation, pricing, GitHub presence, engineering blog, and 8 more developer resources.'
+  Travis CI''s developer surface includes authentication, documentation, pricing, GitHub presence, engineering blog, and 9 more developer resources.'
 plans:
 - name: Travis Ci Plans Pricing
   plan_count: 6
@@ -193,9 +198,9 @@ rate_limits:
   slug: travis-ci-rate-limits
 score:
   band: thin
-  composite: 32.5
+  composite: 30.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -205,11 +210,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 50.3
+    contract_quality: 45.3
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 28.9
-  previous_composite: 32.5
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
@@ -217,8 +222,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -238,7 +249,7 @@ tags:
 - DevOps
 - CI/CD
 - Builds
-- Open-Source
+- Open Source
 - Hosted
 - GitHub
 website: https://www.travis-ci.com/

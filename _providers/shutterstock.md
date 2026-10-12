@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 28
   human_in_the_loop: 0
@@ -47,47 +47,47 @@ apis:
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The audio API from Shutterstock — 11 operation(s) for audio.
-  name: Shutterstock audio API
+  name: Shutterstock Audio API
   slug: shutterstock-audio-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The computer_vision API from Shutterstock — 5 operation(s) for computer_vision.
-  name: Shutterstock computer_vision API
+  name: Shutterstock Computer Vision API
   slug: shutterstock-computer-vision-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The contributors API from Shutterstock — 5 operation(s) for contributors.
-  name: Shutterstock contributors API
+  name: Shutterstock Contributors API
   slug: shutterstock-contributors-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The editorial_images API from Shutterstock — 15 operation(s) for editorial_images.
-  name: Shutterstock editorial_images API
+  name: Shutterstock Editorial Images API
   slug: shutterstock-editorial-images-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The editorial_video API from Shutterstock — 4 operation(s) for editorial_video.
-  name: Shutterstock editorial_video API
+  name: Shutterstock Editorial Video API
   slug: shutterstock-editorial-video-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The images API from Shutterstock — 16 operation(s) for images.
-  name: Shutterstock images API
+  name: Shutterstock Images API
   slug: shutterstock-images-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The test API from Shutterstock — 2 operation(s) for test.
-  name: Shutterstock test API
+  name: Shutterstock Test API
   slug: shutterstock-test-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The users API from Shutterstock — 3 operation(s) for users.
-  name: Shutterstock users API
+  name: Shutterstock Users API
   slug: shutterstock-users-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
   description: The videos API from Shutterstock — 12 operation(s) for videos.
-  name: Shutterstock videos API
+  name: Shutterstock Videos API
   slug: shutterstock-videos-api
 - baseURL: https://api.shutterstock.com
   baseurl_source: declared
@@ -206,7 +206,7 @@ modified: '2026-09-16'
 name: Shutterstock
 nav: Providers
 network: true
-overview: 'Shutterstock publishes 10 APIs on the [APIs.io](https://apis.io/) network, including audio API, computer_vision API, contributors API, and 7 more. Tagged areas include Image, Media, Photos, Stock Images, and Video.
+overview: 'Shutterstock publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Audio API, Computer Vision API, Contributors API, and 7 more. Tagged areas include Image, Media, Photos, Stock Images, and Video.
 
 
   The Shutterstock catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -251,23 +251,23 @@ scopes:
   summary_line: 6 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.5
+  composite: 43.0
   coverage:
     artifact_dirs: 18
-    catalog_earned: 76.5
+    catalog_earned: 75.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.5
+    catalog_gap: 40.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 75.6
+    contract_governance: 27.3
+    contract_quality: 69.0
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 42.5
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     contracts:
@@ -275,8 +275,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

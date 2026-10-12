@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -78,9 +78,9 @@ description: Pendulum (Pendulum Therapeutics, pendulumlife.com) is a microbiome-
 image: https://pendulumlife.com/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pendulumlife.com over HTTP; 5 tools listed.
   name: Pendulum store UCP commerce (Shopify)
-  slug: pendulum-store-ucp-commerce-shopify
+  slug: pendulum-ucp-shopping
 modified: '2026-07-20'
 name: Pendulum
 nav: Providers
@@ -89,7 +89,7 @@ overview: Pendulum is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 16
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -103,20 +103,20 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 12.0
   provenance:
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

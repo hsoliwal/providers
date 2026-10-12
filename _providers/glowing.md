@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 0
 common:
@@ -75,7 +75,7 @@ overview: 'Glow is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 11
 score:
   band: emerging
-  composite: 11.4
+  composite: 11.6
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -89,7 +89,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -97,15 +97,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 11.4
+  previous_composite: 11.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 10.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 6.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A data-feed API that returns every field in the FEVO Sales Report — orders and order adjustments — so a customer can pull FEVO transaction data directly into their own data warehouse. Queries run by O
@@ -194,7 +194,7 @@ rate_limits:
   slug: fevo-rate-limits
 score:
   band: thin
-  composite: 34.7
+  composite: 32.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 32.0
@@ -208,9 +208,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 34.7
+  previous_composite: 32.2
   provenance:
     conformance: first-party
   regulatory:
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 65.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 37.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

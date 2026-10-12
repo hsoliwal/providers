@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: List, inspect, and manage custom and base AI models available to a Scenario account. Returns training status, training progress, model type (image, video, audio, 3D), and metadata for the 500+ base mo
@@ -50,7 +50,7 @@ apis:
 - description: Retrieve unified compute-unit consumption for an account, filtered by date range, project, or model. Compute units match the metering used by the Scenario web application and are consumed by both gene
   name: Scenario Usage API
   slug: scenario-usage-api
-artifact_total: 23
+artifact_total: 24
 common:
 - group: company
   title: ''
@@ -179,18 +179,22 @@ features:
 - Studio customers including Ubisoft, Unity, Scopely, and many mobile game developers
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scenario-gg.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.scenario.com over HTTP.
+  name: Scenario MCP Server
+  slug: scenario-gg
 modified: '2026-05-25'
 name: Scenario
 nav: Providers
 network: true
-overview: 'Scenario publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Game Assets, Game Development, Generative AI, and Image-Generation.
+overview: 'Scenario publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Game Assets, Game Development, Generative AI, and Image Generation.
 
 
   Scenario''s developer surface includes developer portal, documentation, getting-started guide, authentication, signup flow, tooling, code examples, and 19 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 25.9
+  composite: 25.7
   coverage:
     artifact_dirs: 4
     catalog_earned: 40.0
@@ -202,20 +206,28 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 59.5
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.9
+  previous_composite: 25.7
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -237,7 +249,7 @@ tags:
 - Game Assets
 - Game Development
 - Generative AI
-- Image-Generation
+- Image Generation
 - Video Generation
 - Audio Generation
 - 3D Assets

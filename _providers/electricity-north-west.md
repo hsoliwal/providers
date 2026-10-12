@@ -14,7 +14,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.0
-  scored_at: '2026-09-20'
+  score: 28.5
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://electricitynorthwest.opendatasoft.com/api/explore/v2.1
@@ -313,7 +313,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 64.0
+  composite: 58.7
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -325,9 +325,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 59.9
+    contract_quality: 54.2
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 84.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -337,7 +337,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 64.0
+  previous_composite: 58.7
   provenance:
     conformance: derived
     contracts:
@@ -352,9 +352,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 75.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

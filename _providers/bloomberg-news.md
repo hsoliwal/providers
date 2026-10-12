@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: Provides access to real-time and historical market data including stocks, bonds, commodities, and currencies through the Bloomberg Terminal and enterprise data feeds.
@@ -154,7 +154,7 @@ modified: '2026-09-16'
 name: Bloomberg News
 nav: Providers
 network: true
-overview: 'Bloomberg News publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Business Intelligence, Financial-Services, Market Data, and News.
+overview: 'Bloomberg News publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Business Intelligence, Financial Services, Market Data, and News.
 
 
   The Bloomberg News catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -183,7 +183,7 @@ rules:
   slug: bloomberg-news-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.4
+  composite: 34.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 55.3
@@ -197,17 +197,17 @@ score:
     contract_governance: 9.8
     contract_quality: 10.7
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 36.4
+  previous_composite: 34.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -223,7 +223,7 @@ slug: bloomberg-news
 tags:
 - Analytics
 - Business Intelligence
-- Financial-Services
+- Financial Services
 - Market Data
 - News
 use_cases:

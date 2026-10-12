@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -149,7 +149,7 @@ overview: 'Mission Bio is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 7
 score:
   band: thin
-  composite: 26.9
+  composite: 26.3
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -163,9 +163,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 59.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 26.9
+  previous_composite: 26.3
   provenance:
     conformance: derived
   regulatory:
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 23.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -46,7 +46,7 @@ apis:
 - baseURL: https://api.bitski.com
   baseurl_source: declared
   description: The activity API from Bitski — 1 operation(s) for activity.
-  name: Bitski activity API
+  name: Bitski Activity API
   slug: bitski-activity-api
 - baseURL: https://api.bitski.com
   baseurl_source: declared
@@ -244,7 +244,7 @@ modified: '2026-07-18'
 name: Bitski
 nav: Providers
 network: true
-overview: 'Bitski publishes 5 APIs on the [APIs.io](https://apis.io/) network, including activity API, Commerce API, Droplinks API, and 2 more. Tagged areas include Web3, Crypto Wallet, Wallet as a Service, NFT, and Blockchain.
+overview: 'Bitski publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Activity API, Commerce API, Droplinks API, and 2 more. Tagged areas include Web3, Crypto Wallet, Wallet as a Service, NFT, and Blockchain.
 
 
   The Bitski catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -259,7 +259,7 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: developing
-  composite: 45.2
+  composite: 42.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -271,11 +271,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 55.1
+    contract_quality: 50.4
     developer_ergonomics: 60.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 45.2
+  previous_composite: 42.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -291,9 +291,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

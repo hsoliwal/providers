@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -73,8 +73,13 @@ apis:
   description: Quota counters.
   name: Pexafy Usage API
   slug: pexafy-usage-api
-artifact_total: 13
+artifact_total: 12
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pexafy/refs/heads/main/capabilities/pexafy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pexafy-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -218,10 +223,7 @@ layout: provider
 mcp_servers:
 - description: 'Live MCP, gated: initialize returns 401 with an explicit OAuth prompt ("This MCP server needs to know who you are"). Present and auth-required, not absent. Verified 2026-08-31.'
   name: Pexafy MCP Server
-  slug: pexafy-mcp-server
-- description: ''
-  name: Pexafy MCP Server
-  slug: pexafy-mcp-server-2
+  slug: mcp
 modified: '2026-08-27'
 name: Pexafy
 nav: Providers
@@ -229,7 +231,7 @@ network: true
 overview: 'Pexafy publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Collections API, Facets API, Photos API, and 2 more. Tagged areas include Image, Photos, Stock Photos, Image Search, and Semantic Search.
 
 
-  Pexafy''s developer surface includes support, engineering blog, authentication, CLI, changelog, and 24 more developer resources.'
+  Pexafy''s developer surface includes support, engineering blog, authentication, CLI, changelog, and 25 more developer resources.'
 plans:
 - name: Pexafy Plans Pricing
   plan_count: 7
@@ -246,9 +248,9 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.3
+  composite: 64.2
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -258,11 +260,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 56.0
+    contract_quality: 50.4
     developer_ergonomics: 73.2
-    discoverability: 83.3
+    discoverability: 81.7
     operational_transparency: 73.7
-  previous_composite: 63.3
+  previous_composite: 64.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -273,8 +275,18 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -296,10 +308,10 @@ tags:
 - Stock Photos
 - Image Search
 - Semantic Search
-- Computer-Vision
+- Computer Vision
 - Embeddings
 - MCP
-- agent-native
+- Agent-Native
 - Content Licensing
 website: https://www.pexafy.com/
 ---

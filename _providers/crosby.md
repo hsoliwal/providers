@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/crosby/refs/heads/main/security/crosby-domain-security.yml
@@ -53,6 +53,10 @@ created: '2026-07-17'
 description: Crosby is an agentic law firm that combines AI legal agents with barred attorneys to review commercial contracts in about an hour. Built for sales teams, it accelerates contract negotiation and time-to-signature with fixed, upfront per-document pricing, and integrates into existing workflows via Slack, email, and CLM/CRM triggers. Beyond contract review it offers business-specific knowledge agents and aggregated market data to improve negotiation outcomes. NYC-based, founded by Ryan Daniels and John Sarihan, and backed by Bain Capital Ventures, Index Ventures, and Lux Capital. Crosby publishes no public developer API, SDKs, or OpenAPI surface as of this profiling.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crosby.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.crosby.ai over HTTP.
+  name: Crosby MCP Server
+  slug: crosby
 modified: '2026-07-18'
 name: Crosby
 nav: Providers
@@ -64,7 +68,7 @@ overview: 'Crosby is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 20
 score:
   band: minimal
-  composite: 5.5
+  composite: 4.1
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -78,13 +82,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 5.5
+  previous_composite: 4.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

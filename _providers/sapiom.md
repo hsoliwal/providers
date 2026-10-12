@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for transaction management, payment authorization, agents, spending rules, analytics, and phone verification. Bearer-token authenticated; JSON envelope with cursor pagination.
@@ -174,9 +174,9 @@ description: 'Sapiom is an execution engine for AI agents that gives agents and 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sapiom.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.sapiom.ai.
   name: Sapiom MCP Server
-  slug: sapiom-mcp-server
+  slug: sapiom-mcp-yml
 modified: '2026-07-21'
 name: Sapiom
 nav: Providers
@@ -192,7 +192,7 @@ rate_limits:
   slug: sapiom-rate-limits
 score:
   band: thin
-  composite: 37.1
+  composite: 36.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 45.0
@@ -206,9 +206,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 82.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 37.1
+  previous_composite: 36.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -218,9 +218,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

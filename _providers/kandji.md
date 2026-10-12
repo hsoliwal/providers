@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.7
-  scored_at: '2026-09-20'
+  score: 33.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 53
   human_in_the_loop: 10
@@ -130,6 +130,11 @@ collections:
   name: Upload to S3
   slug: open-kandji-upload-to-s3
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kandji/refs/heads/main/capabilities/kandji-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kandji-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kandji/refs/heads/main/agentic-access/kandji-agentic-access.yml
   title: ''
@@ -324,17 +329,17 @@ description: Iru (formerly Kandji) is a San Francisco based endpoint management 
 image: https://www.iru.com/hubfs/assets/favicons/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at YOUR_TENANT.connect.iru.com over HTTP.
   name: Iru MCP Server
-  slug: iru-mcp-server
+  slug: iru
 modified: '2026-09-16'
 name: Iru
 nav: Providers
 network: true
-overview: 'Iru publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Behavioral Detections API, Blueprints API, and 12 more. Tagged areas include Company, Device Management, Mobile Device Management, apple-management, and Endpoint Security.
+overview: 'Iru publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Audit API, Behavioral Detections API, Blueprints API, and 13 more. Tagged areas include Company, Device Management, Mobile Device Management, apple-management, and Endpoint Security.
 
 
-  Iru''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 35 more developer resources.'
+  Iru''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 36 more developer resources.'
 random_paper: 9
 rate_limits:
 - limit_count: 1
@@ -345,7 +350,7 @@ rate_limits:
   slug: kandji-rate-limits
 score:
   band: strong
-  composite: 58.2
+  composite: 59.5
   coverage:
     artifact_dirs: 22
     catalog_earned: 45.0
@@ -357,11 +362,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 57.2
+    contract_quality: 51.8
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 58.2
+  previous_composite: 59.5
   provenance:
     agentic_access: first-party
     conformance: first-party
@@ -372,8 +377,18 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -413,6 +428,6 @@ tags:
 - Workforce Identity
 - IT Operations
 - MCP
-- agent-native
+- Agent-Native
 website: https://www.iru.com/
 ---

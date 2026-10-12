@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 66.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 36
 apis:
 - description: Hosted, remote Model Context Protocol server exposing the Feedly Real-Time Threat Graph to AI agents. Feedly documents 16 tools covering threat actors, malware, vulnerabilities, TTPs, IoCs and cyberat
@@ -515,12 +515,12 @@ layout: provider
 mcp_servers:
 - description: 'Feedly operates a hosted, remote Model Context Protocol server over its Real-Time Threat Graph, marketed as the "Threat Graph MCP Server" and bundled with the Advanced Threat Intelligence plan. It is '
   name: Feedly MCP Server
-  slug: feedly-mcp-server
+  slug: feedly-threat-graph
 modified: '2026-08-12'
 name: Feedly
 nav: Providers
 network: true
-overview: 'Feedly publishes 29 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Annotations API, Contents API, and 26 more. Tagged areas include Threat Intelligence, Cybersecurity, cyber-threat-intelligence, Content Aggregation, and RSS.
+overview: 'Feedly publishes 30 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Annotations API, Contents API, and 27 more. Tagged areas include Threat Intelligence, Cybersecurity, cyber-threat-intelligence, Content Aggregation, and RSS.
 
 
   The Feedly catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -538,7 +538,7 @@ rate_limits:
   slug: feedly-rate-limits
 score:
   band: strong
-  composite: 59.4
+  composite: 59.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 56.0
@@ -550,11 +550,11 @@ score:
   facets:
     access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 65.8
+    contract_quality: 60.0
     developer_ergonomics: 51.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 55.3
-  previous_composite: 59.4
+  previous_composite: 59.6
   provenance:
     conformance: first-party
     contracts:
@@ -564,8 +564,14 @@ score:
       total: 29
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -600,7 +606,7 @@ tags:
 - Security Automation
 - Artificial Intelligence
 - MCP
-- agent-native
+- Agent-Native
 - Webhook
 website: https://feedly.com/
 ---

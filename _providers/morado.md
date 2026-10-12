@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -84,7 +84,7 @@ description: Morado is a Colombian fintech and B2B marketplace for the beauty an
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morado.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.moradocolombia.com over HTTP; 7 tools listed.
   name: Morado Wix Site MCP
   slug: morado-wix-site-mcp
 modified: '2026-07-20'
@@ -98,7 +98,7 @@ overview: 'Morado is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 4
 score:
   band: emerging
-  composite: 14.9
+  composite: 14.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -112,7 +112,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -121,11 +121,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 14.9
+  previous_composite: 14.8
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

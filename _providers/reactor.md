@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.reactor.inc
@@ -194,7 +194,7 @@ overview: 'Reactor publishes 1 API on the [APIs.io](https://apis.io/) network: R
 random_paper: 4
 score:
   band: developing
-  composite: 46.0
+  composite: 46.3
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -206,17 +206,23 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 46.0
+  previous_composite: 46.3
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

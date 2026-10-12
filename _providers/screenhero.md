@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 0
+artifact_total: 1
 common:
 - group: company
   title: ''
@@ -44,6 +44,10 @@ created: '2026-07-17'
 description: Screenhero was a Y Combinator (W13) startup that built interactive screen sharing with voice and video, letting remote users share and control any application together. It was acquired by Slack in January 2015; the six-person team joined Slack and the standalone Screenhero product was discontinued, with its screen-sharing, voice, and video capabilities folded into Slack (today surfaced as Slack Huddles). The screenhero.com domain now 301-redirects to slack.com/features/huddles. No independent Screenhero developer portal, API, or SDK exists; this record is retained as a historical a16z portfolio-company lead in the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/screenhero.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.slack.com over HTTP.
+  name: Screenhero MCP Server
+  slug: screenhero
 modified: '2026-07-21'
 name: Screenhero
 nav: Providers
@@ -52,7 +56,7 @@ overview: Screenhero is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 14
 score:
   band: minimal
-  composite: 5.0
+  composite: 2.8
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -66,13 +70,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 5.0
+  previous_composite: 2.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

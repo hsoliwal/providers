@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 3
@@ -188,6 +188,11 @@ collections:
   name: Spike.sh Alert Rules Users API
   slug: open-spike-sh-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/spike-sh/refs/heads/main/capabilities/spike-sh-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/spike-sh-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/spike-sh/refs/heads/main/agentic-access/spike-sh-agentic-access.yml
   title: ''
@@ -307,7 +312,7 @@ overview: 'Spike.sh publishes 17 APIs on the [APIs.io](https://apis.io/) network
   The Spike.sh catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Spike.sh''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  Spike.sh''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Spike Sh Plans Pricing
   plan_count: 3
@@ -329,24 +334,24 @@ rules:
     warn: 3
   slug: spike-sh-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 40.6
+  band: thin
+  composite: 38.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 66.3
+    artifact_dirs: 19
+    catalog_earned: 65.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.8
+    catalog_gap: 49.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 46.8
     contract_governance: 9.8
-    contract_quality: 63.3
+    contract_quality: 57.7
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 21.1
-  previous_composite: 40.6
+  previous_composite: 38.8
   provenance:
     agentic_access: derived
     contracts:
@@ -355,8 +360,14 @@ score:
       marker_coverage: 0.0
       total: 17
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

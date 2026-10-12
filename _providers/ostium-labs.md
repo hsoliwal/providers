@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://builder.ostium.io
@@ -219,7 +219,7 @@ overview: 'Ostium Labs publishes 1 API on the [APIs.io](https://apis.io/) networ
 random_paper: 14
 score:
   band: developing
-  composite: 51.2
+  composite: 48.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -231,11 +231,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 41.7
+    contract_quality: 39.6
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 51.2
+  previous_composite: 48.5
   provenance:
     conformance: derived
     mcp: derived
@@ -245,9 +245,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -285,5 +285,6 @@ tags:
 - Web3
 - Market Data
 - SDK
+- Real-Time
 website: https://www.ostium.com
 ---

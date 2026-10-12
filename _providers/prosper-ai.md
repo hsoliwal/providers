@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://voice.getprosperapp.com
@@ -180,9 +180,9 @@ description: 'Prosper AI is an AI-native voice automation platform for healthcar
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prosper-ai.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at voice.getprosperapp.com over HTTP.
   name: Prosper AI MCP Server
-  slug: prosper-ai-mcp-server
+  slug: prosper-voice-mcp
 modified: '2026-07-20'
 name: Prosper AI
 nav: Providers
@@ -199,7 +199,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 48.7
+  composite: 45.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -211,11 +211,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 42.7
+    contract_quality: 38.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 48.7
+  previous_composite: 45.2
   provenance:
     conformance: first-party
     contracts:
@@ -234,9 +234,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

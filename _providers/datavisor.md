@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'Real-time fraud and risk detection API surface. Customers stream user events and transactions to a DataVisor integration endpoint and receive detection results, risk scores and reason codes back. The '
@@ -132,14 +132,14 @@ modified: '2026-08-01'
 name: DataVisor
 nav: Providers
 network: true
-overview: 'DataVisor publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fraud Detection, Fraud Prevention, Anti-Money Laundering, and Financial Crime.
+overview: 'DataVisor publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fraud Prevention, AML, Financial Crime, and Risk Management.
 
 
   DataVisor''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 13 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 22.8
+  composite: 21.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 32.0
@@ -153,9 +153,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 0.0
-  previous_composite: 22.8
+  previous_composite: 21.8
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +167,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 38.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -188,12 +188,11 @@ security:
 slug: datavisor
 tags:
 - Company
-- Fraud Detection
 - Fraud Prevention
-- Anti-Money Laundering
+- AML
 - Financial Crime
 - Risk Management
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Device Intelligence
 - Banking

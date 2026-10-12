@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 2.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -151,7 +151,7 @@ overview: 'Kopperfield is profiled on the [APIs.io](https://apis.io/) network. T
 random_paper: 7
 score:
   band: minimal
-  composite: 10.4
+  composite: 8.8
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -165,11 +165,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 10.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

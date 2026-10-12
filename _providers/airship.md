@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -157,6 +157,11 @@ collections:
   name: Airship REST API
   slug: open-airship
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/capabilities/airship-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/airship-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/airship/refs/heads/main/agentic-access/airship-agentic-access.yml
   title: ''
@@ -221,10 +226,10 @@ modified: '2026-05-08'
 name: Airship
 nav: Providers
 network: true
-overview: 'Airship publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Push API, Segments API, Reports API, and 10 more. Tagged areas include Notification, Push, Email, Mobile, and CDP.
+overview: 'Airship publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Push API, Segments API, Reports API, and 13 more. Tagged areas include Notification, Push, Email, Mobile, and CDP.
 
 
-  Airship''s developer surface includes authentication, engineering blog, and 9 more developer resources.'
+  Airship''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Airship Plans Pricing
   plan_count: 1
@@ -241,9 +246,9 @@ scopes:
   summary_line: 11 scopes · clientCredentials
 score:
   band: thin
-  composite: 26.2
+  composite: 26.5
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 39.0
     catalog_earned_first_party: 0.0
     catalog_gap: 76.0
@@ -253,11 +258,11 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 51.4
+    contract_quality: 46.3
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 26.2
+  previous_composite: 26.5
   provenance:
     agentic_access: derived
     contracts:
@@ -265,8 +270,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

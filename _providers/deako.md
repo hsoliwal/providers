@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -65,6 +65,10 @@ created: '2026-07-17'
 description: Deako is a whole-home smart lighting company that designs modular smart switches, dimmers, plugs, and simple switches (motion, timer, nightlight, and fan controls) for residential new construction and retrofit. Its Deako Intelligence platform layers adaptive lighting, follow-me sound, intercom, and parent-care features on top of the hardware, and the devices integrate with Amazon Alexa, Google Home, Control4, Clare, and the Matter smart-home standard. Deako sells directly and through a network of homebuilders, electricians, and integrators. No public developer API, SDK, or developer portal is currently published; this profile tracks the company's public web, support, blog, legal, and smart-home integration surface, awaiting any future developer program.
 image: https://cdn.deako.com/wp-content/uploads/2025/03/Favicon-512x512-1.svg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.deako.com over HTTP.
+  name: Deako MCP Server
+  slug: deako
 modified: '2026-07-18'
 name: Deako
 nav: Providers
@@ -76,7 +80,7 @@ overview: 'Deako is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 10
 score:
   band: minimal
-  composite: 10.6
+  composite: 10.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -90,9 +94,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 10.6
+  previous_composite: 10.5
   provenance:
     mcp: first-party
   regulatory:
@@ -100,9 +104,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

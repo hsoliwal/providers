@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 67.4
-  scored_at: '2026-09-20'
+  score: 66.9
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 105
   human_in_the_loop: 3
@@ -149,7 +149,7 @@ apis:
 - baseURL: http://localhost:3000
   baseurl_source: spec
   description: The runs API from Sageox — 7 operation(s) for runs.
-  name: Sageox runs API
+  name: Sageox Runs API
   slug: sageox-runs-api
 - baseURL: http://localhost:3000
   baseurl_source: spec
@@ -236,6 +236,11 @@ collections:
   name: SageOx Admin Users API
   slug: open-sageox-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/capabilities/sageox-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sageox-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/sageox/refs/heads/main/skills/sageox-capture-a-recording.md
   title: ''
@@ -260,14 +265,14 @@ created: '2026-07-17'
 description: Sageox is a company surfaced as a portfolio company of canaan-partners and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at sageox.ai over HTTP; 4 tools listed.
   name: SageOx MCP (Ox MCP)
   slug: sageox-mcp-ox-mcp
 modified: '2026-07-17'
 name: Sageox
 nav: Providers
 network: true
-overview: Sageox publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Admin API, AgentX API, API Keys API, and 20 more. Tagged areas include Company.
+overview: Sageox publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Admin API, AgentX API, API Keys API, and 20 more. Tagged areas include Company and A2A.
 random_paper: 9
 scopes:
 - name: Sageox Scopes
@@ -276,9 +281,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 24.1
+  composite: 23.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 15.0
     catalog_earned_first_party: 0.0
     catalog_gap: 100.0
@@ -288,9 +293,9 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 1.8
-    discoverability: 35.2
+    discoverability: 38.3
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -298,7 +303,7 @@ score:
     reasons:
     - owner: catalog
       reason: no_resolvable_host
-  previous_composite: 24.1
+  previous_composite: 23.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -309,8 +314,14 @@ score:
       total: 23
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -327,4 +338,5 @@ security:
 slug: sageox
 tags:
 - Company
+- A2A
 ---

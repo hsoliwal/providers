@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,17 +48,17 @@ apis:
 - baseURL: https://api.library.ethz.ch/research-collection/v1/
   baseurl_source: spec
   description: The bitstreams API from ETH Zurich – Swiss Federal Institute of Technology — 4 operation(s) for bitstreams.
-  name: ETH Zurich – Swiss Federal Institute of Technology bitstreams API
+  name: ETH Zurich – Swiss Federal Institute of Technology Bitstreams API
   slug: eth-zurich-bitstreams-api
 - baseURL: https://api.library.ethz.ch/research-collection/v1/
   baseurl_source: spec
   description: The collections API from ETH Zurich – Swiss Federal Institute of Technology — 3 operation(s) for collections.
-  name: ETH Zurich – Swiss Federal Institute of Technology collections API
+  name: ETH Zurich – Swiss Federal Institute of Technology Collections API
   slug: eth-zurich-collections-api
 - baseURL: https://api.library.ethz.ch/research-collection/v1/
   baseurl_source: spec
   description: The communities API from ETH Zurich – Swiss Federal Institute of Technology — 5 operation(s) for communities.
-  name: ETH Zurich – Swiss Federal Institute of Technology communities API
+  name: ETH Zurich – Swiss Federal Institute of Technology Communities API
   slug: eth-zurich-communities-api
 - baseURL: https://api.library.ethz.ch/ethorama/v1/
   baseurl_source: spec
@@ -93,7 +93,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
   description: The e-maps API from ETH Zurich – Swiss Federal Institute of Technology — 2 operation(s) for e-maps.
-  name: ETH Zurich – Swiss Federal Institute of Technology e-maps API
+  name: ETH Zurich – Swiss Federal Institute of Technology E Maps API
   slug: eth-zurich-e-maps-api
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
@@ -103,7 +103,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
   description: The e-rara API from ETH Zurich – Swiss Federal Institute of Technology — 2 operation(s) for e-rara.
-  name: ETH Zurich – Swiss Federal Institute of Technology e-rara API
+  name: ETH Zurich – Swiss Federal Institute of Technology E Rara API
   slug: eth-zurich-e-rara-api
 - baseURL: https://api.library.ethz.ch/research-collection/v2
   baseurl_source: spec
@@ -118,7 +118,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
   description: The geo-topics API from ETH Zurich – Swiss Federal Institute of Technology — 1 operation(s) for geo-topics.
-  name: ETH Zurich – Swiss Federal Institute of Technology geo-topics API
+  name: ETH Zurich – Swiss Federal Institute of Technology Geo Topics API
   slug: eth-zurich-geo-topics-api
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
@@ -128,7 +128,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/research-collection/v1/
   baseurl_source: spec
   description: The handle API from ETH Zurich – Swiss Federal Institute of Technology — 1 operation(s) for handle.
-  name: ETH Zurich – Swiss Federal Institute of Technology handle API
+  name: ETH Zurich – Swiss Federal Institute of Technology Handle API
   slug: eth-zurich-handle-api
 - baseURL: https://api.library.ethz.ch/persons/v1/
   baseurl_source: spec
@@ -138,7 +138,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/geo/v1/
   baseurl_source: spec
   description: The items API from ETH Zurich – Swiss Federal Institute of Technology — 5 operation(s) for items.
-  name: ETH Zurich – Swiss Federal Institute of Technology items API
+  name: ETH Zurich – Swiss Federal Institute of Technology Items API
   slug: eth-zurich-items-api
 - baseURL: https://api.library.ethz.ch/persons/v1/
   baseurl_source: spec
@@ -198,7 +198,7 @@ apis:
 - baseURL: https://api.library.ethz.ch/research-collection/v1/
   baseurl_source: spec
   description: The search API from ETH Zurich – Swiss Federal Institute of Technology — 2 operation(s) for search.
-  name: ETH Zurich – Swiss Federal Institute of Technology search API
+  name: ETH Zurich – Swiss Federal Institute of Technology Search API
   slug: eth-zurich-search-api
 - baseURL: https://api.library.ethz.ch/discovery/v1/
   baseurl_source: spec
@@ -589,7 +589,7 @@ modified: '2026-08-19'
 name: ETH Zurich – Swiss Federal Institute of Technology
 nav: Providers
 network: true
-overview: 'ETH Zurich – Swiss Federal Institute of Technology publishes 38 APIs on the [APIs.io](https://apis.io/) network, including bitstreams API, collections API, communities API, and 35 more. Tagged areas include University, Higher Education, Education, Switzerland, and ETH Domain.
+overview: 'ETH Zurich – Swiss Federal Institute of Technology publishes 44 APIs on the [APIs.io](https://apis.io/) network, including Bitstreams API, Collections API, Communities API, and 41 more. Tagged areas include University, Higher Education, Education, Switzerland, and ETH Domain.
 
 
   The ETH Zurich – Swiss Federal Institute of Technology catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -628,22 +628,22 @@ rules:
   slug: eth-zurich-rules
 score:
   band: developing
-  composite: 45.5
+  composite: 42.3
   coverage:
     artifact_dirs: 20
-    catalog_earned: 62.3
+    catalog_earned: 68.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 46.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
-    access_clarity: 52.6
-    contract_governance: 25.0
-    contract_quality: 60.0
+    access_clarity: 50.5
+    contract_governance: 23.5
+    contract_quality: 54.7
     developer_ergonomics: 23.8
-    discoverability: 61.1
-    operational_transparency: 26.3
+    discoverability: 73.2
+    operational_transparency: 24.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -652,7 +652,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 45.5
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -666,9 +666,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

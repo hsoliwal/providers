@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Fullcast''s remote Model Context Protocol server, exposing go-to-market planning, territory and team hierarchy, coverage, targets, reporting, commissions and document operations to external AI clients '
@@ -241,14 +241,14 @@ description: Fullcast is a revenue orchestration platform for go-to-market teams
 image: https://www.fullcast.com/wp-content/uploads/2026/07/Fullcast-plan-to-pay-1024x576.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.fullcast.io requiring OAuth.
   name: Fullcast MCP Server
-  slug: fullcast-mcp-server
+  slug: fullcast-mcp-yml
 modified: '2026-09-16'
 name: Fullcast
 nav: Providers
 network: true
-overview: 'Fullcast publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Copilot API, Mcp Info API, .well Known API, and 1 more. Tagged areas include Company, Enterprise, Revenue Operations, Sales Planning, and Territory Management.
+overview: 'Fullcast publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Copilot API, Mcp Info API, .well Known API, and 3 more. Tagged areas include Company, Enterprise, Revenue Operations, Sales Planning, and Territory Management.
 
 
   The Fullcast catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -271,7 +271,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: developing
-  composite: 50.5
+  composite: 50.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 49.0
@@ -283,11 +283,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 56.0
+    contract_quality: 51.3
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 50.5
+  previous_composite: 50.9
   provenance:
     conformance: first-party
     contracts:
@@ -297,8 +297,18 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -276,7 +276,7 @@ rate_limits:
   slug: powerreviews-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 47.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 51.0
@@ -288,11 +288,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 44.7
+    contract_quality: 40.3
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 63.2
-  previous_composite: 47.6
+  previous_composite: 47.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -303,8 +303,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-09-20'
+  score: 30.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 1
@@ -126,6 +126,11 @@ collections:
   name: XBOW Assessments Webhooks API
   slug: open-xbow-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/xbow/refs/heads/main/capabilities/xbow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/xbow-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/xbow/refs/heads/main/overlays/xbow-openapi-overlay.yaml
   title: ''
@@ -283,13 +288,13 @@ overview: 'Xbow publishes 9 APIs on the [APIs.io](https://apis.io/) network, inc
   The Xbow catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Xbow''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 25 more developer resources.'
+  Xbow''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 26 more developer resources.'
 random_paper: 8
 score:
   band: strong
-  composite: 56.6
+  composite: 57.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -299,11 +304,11 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 63.9
+    contract_quality: 58.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
-  previous_composite: 56.6
+  previous_composite: 57.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -314,8 +319,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

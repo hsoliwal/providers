@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -126,6 +126,10 @@ created: '2026-07-17'
 description: Bretton AI (formerly Greenlite AI) is a San Francisco fintech building AI-native operational infrastructure for financial institutions' back-office and financial-crime-compliance workflows. Its audit-ready AI agents automate AML alert investigation, KYC/CDD/EDD, sanctions screening, and transaction monitoring inside a bank's existing systems, replacing traditional BPO with agentic automation backed by QA/QC and full audit trails. The platform ships 30+ pre-built skills, 180+ data sources, a natural-language agent builder, and native connectors to core banking, document review, and compliance systems. Bretton is used by OCC-, FDIC-, and Federal Reserve-regulated banks and platforms including Robinhood, Mercury, Gusto, Lead Bank, and Coastal Community Bank, and raised a $75M Series B led by Sapphire Ventures (with Greylock, Thomson Reuters Ventures, and Canvas Ventures) in February 2026. The developer documentation portal is access-gated and there is no public API.
 image: https://cdn.prod.website-files.com/695ee158104b9c8342c9fd7e/6a440425431eff52b8bd9909_Open%20Graph.jpeg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.bretton.com over HTTP.
+  name: Bretton MCP Server
+  slug: bretton
 modified: '2026-08-08'
 name: Bretton
 nav: Providers
@@ -137,7 +141,7 @@ overview: 'Bretton is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 18
 score:
   band: emerging
-  composite: 20.5
+  composite: 22.8
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -151,14 +155,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 26.3
-  previous_composite: 20.5
+  previous_composite: 22.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -188,6 +202,6 @@ tags:
 - KYC
 - AI Agents
 - Compliance
-- Financial-Services
+- Financial Services
 website: https://www.bretton.com/
 ---

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -98,6 +98,10 @@ description: Lato (LATO Labs) is a San Francisco company building an agent-nativ
   SharePoint, Gmail, Google Drive, Slack, Teams, Excel, Affinity, Attio, Harmonic and Granola. Lato was founded by Tymek Staniszewski (CEO) and Tien Chu (CTO), is backed by Y Combinator (Summer 2026), and builds on Anthropic, OpenAI and ElevenLabs. As of this profile Lato publishes no public developer API, documentation or SDKs; the company surface is captured here for discovery and the repository will be re-enriched when a developer program appears.
 image: https://latolabs.io/og-image.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.latolabs.io over HTTP.
+  name: Lato MCP Server
+  slug: lato
 modified: '2026-07-19'
 name: Lato
 nav: Providers
@@ -109,7 +113,7 @@ overview: 'Lato is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 14
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.8
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -123,13 +127,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 10.5
-  previous_composite: 12.3
+  previous_composite: 12.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

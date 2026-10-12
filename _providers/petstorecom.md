@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-facing commerce endpoint for the Petstore.com Shopify store, implemented via the Universal Commerce Protocol (UCP) over MCP — catalog search, cart, and buyer-approved checkout.
@@ -130,7 +130,7 @@ layout: provider
 mcp_servers:
 - description: Petstore.com's agent-facing commerce endpoint, implemented via the Universal Commerce Protocol (UCP) over MCP. Lets agents search the catalog, build a cart, and drive a buyer-approved checkout on this
   name: Petstore.com MCP Server
-  slug: petstorecom-mcp-server
+  slug: petstorecom-ucp
 modified: '2026-07-20'
 name: Petstore.com
 nav: Providers
@@ -147,7 +147,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 22.7
+  composite: 25.4
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -161,15 +161,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 22.7
+  previous_composite: 25.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

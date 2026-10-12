@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Per-tenant REST API for the Chariot AI operations platform, organized as versioned microservice paths under /api/{service}/{version}/ — identity, training, evaluation, notification, catalog, serve and
@@ -136,14 +136,14 @@ modified: '2026-08-05'
 name: Striveworks
 nav: Providers
 network: true
-overview: 'Striveworks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, MLOps, and AIOps.
+overview: 'Striveworks publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, MLOps, and AIOps.
 
 
   Striveworks'' developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, authentication, CLI, and 12 more developer resources.'
 random_paper: 3
 score:
-  band: thin
-  composite: 27.0
+  band: emerging
+  composite: 25.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -157,9 +157,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 27.0
+  previous_composite: 25.6
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +167,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -189,14 +189,14 @@ slug: striveworks
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - MLOps
 - AIOps
 - Model Deployment
 - Model Monitoring
 - Inference
 - Data Annotation
-- Computer-Vision
+- Computer Vision
 - Agentic Workflows
 - Defense
 - GovTech

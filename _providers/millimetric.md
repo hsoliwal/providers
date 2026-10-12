@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -249,7 +249,7 @@ layout: provider
 mcp_servers:
 - description: Millimetric ships a first-class, hosted Model Context Protocol server. Any MCP client (Claude Code, Claude Desktop, MCP Inspector, custom agents) connects with a server-side key and uses the same oper
   name: Millimetric MCP Server
-  slug: millimetric-mcp-server
+  slug: millimetric-mcp-yml
 modified: '2026-08-13'
 name: Millimetric
 nav: Providers
@@ -269,7 +269,7 @@ rate_limits:
   slug: millimetric-rate-limits
 score:
   band: developing
-  composite: 42.4
+  composite: 44.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 57.0
@@ -283,9 +283,9 @@ score:
     contract_governance: 4.5
     contract_quality: 14.9
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 21.1
-  previous_composite: 42.4
+  previous_composite: 44.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -296,8 +296,20 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

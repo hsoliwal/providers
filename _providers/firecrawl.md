@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 1
@@ -95,7 +95,7 @@ apis:
   description: The Search API from Firecrawl — 1 operation(s) for search.
   name: Firecrawl Search API
   slug: firecrawl-search-api
-artifact_total: 29
+artifact_total: 30
 collections:
 - collection_type: open
   name: API Collection
@@ -226,6 +226,10 @@ finops:
   slug: firecrawl-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/firecrawl.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.firecrawl.dev over HTTP; 3 tools listed.
+  name: Firecrawl MCP Server
+  slug: firecrawl
 modified: '2026-05-19'
 name: Firecrawl
 nav: Providers
@@ -245,7 +249,7 @@ rate_limits:
   slug: firecrawl-rate-limits
 score:
   band: developing
-  composite: 41.8
+  composite: 41.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -257,11 +261,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 0.0
-    contract_quality: 54.1
+    contract_quality: 48.7
     developer_ergonomics: 46.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 41.8
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     contracts:
@@ -270,8 +274,14 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

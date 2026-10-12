@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 52.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 60
   human_in_the_loop: 1
@@ -49,32 +49,32 @@ apis:
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The admin API from Mixedbread — 1 operation(s) for admin.
-  name: Mixedbread admin API
+  name: Mixedbread Admin API
   slug: mixedbread-ai-admin-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The api_keys API from Mixedbread — 4 operation(s) for api_keys.
-  name: Mixedbread api_keys API
+  name: Mixedbread API Keys API
   slug: mixedbread-ai-api-keys-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The billing API from Mixedbread — 4 operation(s) for billing.
-  name: Mixedbread billing API
+  name: Mixedbread Billing API
   slug: mixedbread-ai-billing-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The completions API from Mixedbread — 1 operation(s) for completions.
-  name: Mixedbread completions API
+  name: Mixedbread Completions API
   slug: mixedbread-ai-completions-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The data_sources API from Mixedbread — 6 operation(s) for data_sources.
-  name: Mixedbread data_sources API
+  name: Mixedbread Data Sources API
   slug: mixedbread-ai-data-sources-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The deprecated_vector_stores API from Mixedbread — 10 operation(s) for deprecated_vector_stores.
-  name: Mixedbread deprecated_vector_stores API
+  name: Mixedbread Deprecated Vector Stores API
   slug: mixedbread-ai-deprecated-vector-stores-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
@@ -84,12 +84,12 @@ apis:
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The extractions API from Mixedbread — 6 operation(s) for extractions.
-  name: Mixedbread extractions API
+  name: Mixedbread Extractions API
   slug: mixedbread-ai-extractions-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The files API from Mixedbread — 7 operation(s) for files.
-  name: Mixedbread files API
+  name: Mixedbread Files API
   slug: mixedbread-ai-files-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
@@ -99,7 +99,7 @@ apis:
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The parsing API from Mixedbread — 2 operation(s) for parsing.
-  name: Mixedbread parsing API
+  name: Mixedbread Parsing API
   slug: mixedbread-ai-parsing-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
@@ -109,14 +109,14 @@ apis:
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The schemas API from Mixedbread — 1 operation(s) for schemas.
-  name: Mixedbread schemas API
+  name: Mixedbread Schemas API
   slug: mixedbread-ai-schemas-api
 - baseURL: https://api.mixedbread.com
   baseurl_source: declared
   description: The stores API from Mixedbread — 17 operation(s) for stores.
-  name: Mixedbread stores API
+  name: Mixedbread Stores API
   slug: mixedbread-ai-stores-api
-artifact_total: 70
+artifact_total: 71
 collections:
 - collection_type: postman
   name: Mixedbread admin API
@@ -242,6 +242,11 @@ collections:
   name: Mixedbread Stores API
   slug: open-mixedbread-stores-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mixedbread-ai/refs/heads/main/capabilities/mixedbread-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mixedbread-ai-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -405,17 +410,21 @@ jsonld:
   property_count: 9
   slug: mixedbread-ai-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at www.mcp.mixedbread.com over HTTP.
+  name: Mixedbread MCP Server
+  slug: mixedbread-ai
 modified: '2026-09-16'
 name: Mixedbread
 nav: Providers
 network: true
-overview: 'Mixedbread publishes 14 APIs on the [APIs.io](https://apis.io/) network, including admin API, api_keys API, billing API, and 11 more. Tagged areas include Artificial Intelligence, Embeddings, Reranking, Search, and Retrieval.
+overview: 'Mixedbread publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Admin API, API Keys API, Billing API, and 11 more. Tagged areas include Artificial Intelligence, Embeddings, Reranking, Search, and Retrieval.
 
 
   The Mixedbread catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Mixedbread''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, engineering blog, GitHub presence, and 24 more developer resources.'
+  Mixedbread''s developer surface includes authentication, developer portal, documentation, signup flow, pricing, engineering blog, GitHub presence, and 25 more developer resources.'
 plans:
 - name: Mixedbread Ai Plans Pricing
   plan_count: 4
@@ -449,29 +458,31 @@ rules:
   slug: mixedbread-ai-rules
 score:
   band: strong
-  composite: 58.1
+  composite: 55.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 83.5
+    artifact_dirs: 20
+    catalog_earned: 80.1
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.5
+    catalog_gap: 34.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 63.2
+    access_clarity: 60.0
     contract_governance: 13.6
-    contract_quality: 65.4
+    contract_quality: 59.5
     developer_ergonomics: 63.1
-    discoverability: 68.5
-    operational_transparency: 36.8
+    discoverability: 68.3
+    operational_transparency: 33.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 58.1
+  previous_composite: 55.5
   provenance:
     agentic_access: derived
     contracts:
@@ -480,8 +491,14 @@ score:
       marker_coverage: 0.0
       total: 14
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

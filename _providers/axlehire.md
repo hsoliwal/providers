@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.gojitsu.com
@@ -282,7 +282,7 @@ rate_limits:
   slug: axlehire-rate-limits
 score:
   band: developing
-  composite: 47.8
+  composite: 49.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 45.0
@@ -294,11 +294,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 66.4
+    contract_quality: 60.9
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 55.3
-  previous_composite: 47.8
+  previous_composite: 49.2
   provenance:
     conformance: first-party
     contracts:
@@ -307,8 +307,14 @@ score:
       marker_coverage: 0.0
       total: 5
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

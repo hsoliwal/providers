@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: Abacum is an AI-native financial planning and analysis (FP&A) platform built for CFOs and finance teams to connect financial data, automate planning and reporting, and align cross-functional teams. It unifies budgeting and forecasting, headcount and revenue planning, scenario modeling, investor and board reporting, and P&L / balance-sheet / cash-flow roll-ups, with 700+ prebuilt integrations across ERP and accounting systems (NetSuite, Sage Intacct, QuickBooks, Xero, Dynamics 365), HRIS and payroll (Workday, Rippling, BambooHR, Gusto, Deel), CRM (Salesforce, HubSpot), billing (Stripe, Chargebee, Maxio), and data warehouses (Snowflake, BigQuery, Databricks). An Excel connector and embedded workflows keep planning models and actuals in sync. Abacum surfaced in the API Evangelist network as a portfolio company of Creandum and Scale Venture Partners.
 image: https://framerusercontent.com/images/Xlv87HIlTj3ncQi5jZqYzXOo0.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.abacum.ai over HTTP.
+  name: Abacum MCP Server
+  slug: abacum
 modified: '2026-07-17'
 name: Abacum
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'Abacum is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 1
 score:
   band: emerging
-  composite: 14.3
+  composite: 14.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,13 +106,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 14.3
+  previous_composite: 14.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 14.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

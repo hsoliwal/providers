@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: A live remote Model Context Protocol endpoint that exposes DoubleVerify's media quality, verification and performance data to an AI assistant as the DV Neura Insight Agent. DoubleVerify states that cl
@@ -208,7 +208,7 @@ description: 'DoubleVerify (NYSE: DV) is a New York-based software platform for 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/doubleverify.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.doubleverify.com over HTTP requiring OAuth.
   name: DV Neura MCP Server
   slug: dv-neura-mcp-server
 modified: '2026-08-13'
@@ -234,8 +234,8 @@ scopes:
   slug: doubleverify-scopes
   summary_line: 21 scopes · authorizationCode/clientCredentials/deviceCode
 score:
-  band: emerging
-  composite: 24.5
+  band: thin
+  composite: 29.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -249,19 +249,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 69.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.5
+  previous_composite: 29.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -294,7 +302,7 @@ tags:
 - Viewability
 - Attention Measurement
 - Invalid Traffic
-- Fraud Detection
+- Fraud Prevention
 - Contextual Targeting
 - Programmatic Advertising
 - Connected TV

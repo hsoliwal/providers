@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 27.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 3
@@ -963,7 +963,7 @@ modified: '2026-05-19'
 name: Temenos
 nav: Providers
 network: true
-overview: 'Temenos publishes 58 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Accounts Arrangement Details API, Alert Management API, and 55 more. Tagged areas include Banking, Cloud Banking, Core Banking, Digital Banking, and Financial-Services.
+overview: 'Temenos publishes 61 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Accounts Arrangement Details API, Alert Management API, and 58 more. Tagged areas include Banking, Cloud Banking, Core Banking, Digital Banking, and Financial Services.
 
 
   The Temenos catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -1018,24 +1018,24 @@ scopes:
   slug: temenos-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: strong
-  composite: 55.1
+  band: developing
+  composite: 53.9
   coverage:
     artifact_dirs: 22
-    catalog_earned: 48.5
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.5
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 40.8
-    contract_governance: 28.8
-    contract_quality: 68.3
+    contract_governance: 27.3
+    contract_quality: 62.6
     developer_ergonomics: 60.7
-    discoverability: 68.5
+    discoverability: 89.3
     operational_transparency: 31.6
-  previous_composite: 55.1
+  previous_composite: 53.4
   provenance:
     agentic_access: derived
     contracts:
@@ -1048,9 +1048,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 58.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -1071,10 +1071,11 @@ tags:
 - Cloud Banking
 - Core Banking
 - Digital Banking
-- Financial-Services
+- Financial Services
 - Fintech
 - Open Banking
 - Payments
 - Wealth Management
+- Real-Time
 website: https://www.temenos.com
 ---

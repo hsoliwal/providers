@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.2
-  scored_at: '2026-09-20'
+  score: 30.0
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'REST API for the Stairwell threat-intelligence platform: manage assets and forwarders, query object metadata/detonation/sightings/variants, manage and scan YARA rules, upload and correlate threat repo'
@@ -155,9 +155,9 @@ description: Stairwell is a private-by-design threat intelligence and detection 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/stairwell.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.api.stairwell.com over HTTP.
   name: Stairwell MCP Server
-  slug: stairwell-mcp-server
+  slug: stairwell-mcp
 modified: '2026-07-21'
 name: Stairwell
 nav: Providers
@@ -172,7 +172,7 @@ overview: 'Stairwell publishes 1 API on the [APIs.io](https://apis.io/) network.
 random_paper: 15
 score:
   band: thin
-  composite: 34.6
+  composite: 36.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -184,17 +184,23 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 34.6
+  previous_composite: 36.0
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

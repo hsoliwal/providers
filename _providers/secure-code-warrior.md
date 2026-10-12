@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -137,6 +137,11 @@ collections:
   name: Secure Code Warrior Portal Assessments Users API
   slug: open-secure-code-warrior-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/secure-code-warrior/refs/heads/main/capabilities/secure-code-warrior-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/secure-code-warrior-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/secure-code-warrior/refs/heads/main/agentic-access/secure-code-warrior-agentic-access.yml
   title: ''
@@ -252,13 +257,13 @@ modified: '2026-05-19'
 name: Secure Code Warrior
 nav: Providers
 network: true
-overview: 'Secure Code Warrior publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Assessments API, Audit API, Courses API, and 7 more. Tagged areas include Application Security, Developer Training, Security Education, AppSec, and Secure Coding.
+overview: 'Secure Code Warrior publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Assessments API, Audit API, Courses API, and 8 more. Tagged areas include Application Security, Developer Training, Security Education, AppSec, and Secure Coding.
 
 
   The Secure Code Warrior catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Secure Code Warrior''s developer surface includes authentication, documentation, getting-started guide, code examples, engineering blog, and 14 more developer resources.'
+  Secure Code Warrior''s developer surface includes authentication, documentation, getting-started guide, code examples, engineering blog, and 15 more developer resources.'
 plans:
 - name: Secure Code Warrior Plans Pricing
   plan_count: 3
@@ -292,23 +297,23 @@ rules:
   slug: secure-code-warrior-rules
 score:
   band: developing
-  composite: 44.2
+  composite: 40.9
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 58.5
+    artifact_dirs: 18
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.5
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 23.7
-    contract_governance: 28.8
-    contract_quality: 65.8
+    contract_governance: 27.3
+    contract_quality: 60.4
     developer_ergonomics: 35.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 44.2
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     contracts:
@@ -321,9 +326,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 40.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 7
@@ -258,7 +258,7 @@ description: 'Rockbot is a unified in-location media platform for businesses, gi
 image: https://cdn.sanity.io/images/6h2uzio7/production/f258140dd891894dc1e27722af21f29a7c8c33e5-1581x1581.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.rockbot.com over HTTP; 19 tools listed.
   name: Rockbot MCP
   slug: rockbot-mcp
 modified: '2026-08-13'
@@ -285,7 +285,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 55.6
+  composite: 57.6
   coverage:
     artifact_dirs: 22
     catalog_earned: 57.0
@@ -297,11 +297,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 50.1
+    contract_quality: 45.1
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 55.6
+  previous_composite: 57.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -312,8 +312,14 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

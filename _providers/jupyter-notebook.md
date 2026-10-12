@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 40
   human_in_the_loop: 6
@@ -296,7 +296,7 @@ modified: '2026-09-16'
 name: Jupyter Notebook
 nav: Providers
 network: true
-overview: 'Jupyter Notebook publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Jupyter Kernel Messaging Protocol, Authorization API, Config API, and 11 more. Tagged areas include Data Science, Interactive Computing, Jupyter, Machine-Learning, and Notebooks.
+overview: 'Jupyter Notebook publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Jupyter Kernel Messaging Protocol, Authorization API, Config API, and 11 more. Tagged areas include Data Science, Interactive Computing, Jupyter, Machine Learning, and Notebooks.
 
 
   The Jupyter Notebook catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -336,26 +336,26 @@ rules:
   slug: jupyter-notebook-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.4
+  composite: 41.9
   coverage:
     artifact_dirs: 16
-    catalog_earned: 64.5
+    catalog_earned: 63.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 51.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 13.2
     contract_governance: 13.6
-    contract_quality: 69.7
+    contract_quality: 64.8
     developer_ergonomics: 40.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 34.2
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 42.4
+  previous_composite: 41.9
   provenance:
     agentic_access: derived
     contracts:
@@ -363,8 +363,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -388,8 +394,9 @@ tags:
 - Data Science
 - Interactive Computing
 - Jupyter
-- Machine-Learning
+- Machine Learning
 - Notebooks
 - Python
+- Real-Time
 website: https://jupyter.org
 ---

@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.3
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://lilyapp-api-prd.pub.lilyai.net
@@ -273,7 +273,7 @@ rate_limits:
   slug: lily-ai-rate-limits
 score:
   band: developing
-  composite: 39.7
+  composite: 40.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -285,11 +285,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 44.3
+    contract_quality: 40.2
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 47.4
-  previous_composite: 39.7
+  previous_composite: 40.0
   provenance:
     conformance: derived
     contracts:
@@ -299,8 +299,14 @@ score:
       total: 20
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

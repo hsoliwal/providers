@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -250,7 +250,7 @@ modified: '2026-07-25'
 name: Ricoh USA
 nav: Providers
 network: true
-overview: 'Ricoh USA publishes 1 API on the [APIs.io](https://apis.io/) network: Protocol API. Tagged areas include Printing, Document-Management, Workplace Services, Imaging, and 360 Cameras.
+overview: 'Ricoh USA publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Protocol API, and 3 more. Tagged areas include Printing, Document Management, Workplace Services, Imaging, and 360 Cameras.
 
 
   The Ricoh USA catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -289,28 +289,28 @@ rules:
   slug: theta-web-api-rules
 score:
   band: developing
-  composite: 44.4
+  composite: 40.8
   coverage:
     artifact_dirs: 15
-    catalog_earned: 86.5
+    catalog_earned: 82.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.5
+    catalog_gap: 32.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 63.9
+    access_clarity: 36.3
+    contract_governance: 27.3
+    contract_quality: 58.4
     developer_ergonomics: 36.9
-    discoverability: 59.3
-    operational_transparency: 34.2
+    discoverability: 57.1
+    operational_transparency: 31.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.4
+  previous_composite: 40.8
   provenance:
     agentic_access: derived
     contracts:
@@ -318,8 +318,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -333,11 +339,11 @@ security:
 slug: ricoh-usa
 tags:
 - Printing
-- Document-Management
+- Document Management
 - Workplace Services
 - Imaging
 - 360 Cameras
-- Workflow-Automation
+- Workflow Automation
 use_cases:
 - description: Capture and publish 360-degree walkthroughs for real estate, construction, and retail
   name: Virtual Tours

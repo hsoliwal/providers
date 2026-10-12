@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/baseframe/refs/heads/main/security/baseframe-domain-security.yml
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: BaseFrame (baseframe.co) is a Y Combinator (W26) startup building an AI workflow discovery platform for teams and small businesses. Its privacy-first desktop application analyzes historical work patterns across email, documents, Slack, calendar, browser activity, and files using on-device local models to identify high-value, repetitive tasks and recommend concrete AI automations, then helps users set them up in the tools they already use. BaseFrame publishes no public developer API, SDKs, or OpenAPI at this time; it is a consumer/desktop product with SaaS integrations (Gmail, Slack, HubSpot, Salesforce, Google Sheets, Office 365, Jira). Founded in 2025 by Anshul Paul and Vaibhav Agrawal.
 image: https://baseframe.co/logo.svg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.baseframe.co over HTTP.
+  name: Baseframe MCP Server
+  slug: baseframe
 modified: '2026-07-18'
 name: Baseframe
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Baseframe is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 10
 score:
   band: minimal
-  composite: 10.9
+  composite: 10.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 3.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 10.9
+  previous_composite: 10.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

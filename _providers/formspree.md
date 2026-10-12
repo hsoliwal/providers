@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -147,7 +147,7 @@ modified: '2026-05-08'
 name: Formspree
 nav: Providers
 network: true
-overview: 'Formspree publishes 1 API on the [APIs.io](https://apis.io/) network: Forms API. Tagged areas include Forms, Backend, Static Sites, Email, and Webhook.
+overview: 'Formspree publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Forms API, and 2 more. Tagged areas include Forms, Backend, Static Sites, Email, and Webhook.
 
 
   Formspree''s developer surface includes authentication, documentation, pricing, GitHub presence, and 11 more developer resources.'
@@ -162,7 +162,7 @@ rate_limits:
   slug: formspree-rate-limits
 score:
   band: thin
-  composite: 35.7
+  composite: 35.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 46.0
@@ -174,11 +174,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 35.7
+  previous_composite: 35.1
   provenance:
     agentic_access: derived
     contracts:
@@ -186,8 +186,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

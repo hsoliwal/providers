@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -351,7 +351,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.6
+  composite: 57.6
   coverage:
     artifact_dirs: 25
     catalog_earned: 45.0
@@ -363,11 +363,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 67.1
+    contract_quality: 61.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 81.6
-  previous_composite: 55.6
+  previous_composite: 57.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -378,8 +378,14 @@ score:
       total: 13
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -406,7 +412,7 @@ tags:
 - E-Commerce
 - Resale
 - Retail
-- Inventory Management
+- Inventory
 - Order
 - Sustainability
 website: https://www.depop.com/

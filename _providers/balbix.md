@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Read-only REST API (v1) for programmatic access to Balbix Assets and their associated Vulnerabilities, Misconfigurations, Software Inventory, Applications and application Artifacts. Authentication is '
@@ -188,8 +188,8 @@ scopes:
   slug: balbix-scopes
   summary_line: 7 scopes · authorizationCode
 score:
-  band: thin
-  composite: 35.7
+  band: developing
+  composite: 39.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 43.0
@@ -203,13 +203,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 47.4
-  previous_composite: 35.7
+  previous_composite: 39.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

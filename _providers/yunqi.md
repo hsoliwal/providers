@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -151,7 +151,7 @@ layout: provider
 mcp_servers:
 - description: Model Context Protocol server for ClickZetta Lakehouse. Lets AI assistants (Claude Desktop, Trae) run SQL queries against a ClickZetta Lakehouse and manage a memo of data insights exposed as an MCP re
   name: Yunqi (ClickZetta / Singdata Lakehouse) MCP Server
-  slug: yunqi-clickzetta-singdata-lakehouse-mcp-server
+  slug: mcp-clickzetta-server
 modified: '2026-07-21'
 name: Yunqi (ClickZetta / Singdata Lakehouse)
 nav: Providers
@@ -163,7 +163,7 @@ overview: 'Yunqi (ClickZetta / Singdata Lakehouse) is profiled on the [APIs.io](
 random_paper: 16
 score:
   band: thin
-  composite: 31.1
+  composite: 31.9
   coverage:
     artifact_dirs: 14
     catalog_earned: 27.0
@@ -177,15 +177,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 73.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 31.1
+  previous_composite: 31.9
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

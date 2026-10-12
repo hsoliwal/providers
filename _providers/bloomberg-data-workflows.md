@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Batch and per-security delivery of Bloomberg's reference, pricing, regulatory and alternative data for integration into proprietary applications and workflows. The REST / hypermedia entry point is htt
@@ -191,7 +191,7 @@ modified: '2026-09-16'
 name: Bloomberg Data Workflows
 nav: Providers
 network: true
-overview: 'Bloomberg Data Workflows publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise Data, Financial Analytics, Financial-Services, Investment Management, and Market Data.
+overview: 'Bloomberg Data Workflows publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Enterprise Data, Financial Analytics, Financial Services, Investment Management, and Market Data.
 
 
   Bloomberg Data Workflows'' developer surface includes developer portal, documentation, API reference, support, CLI, authentication, changelog, and 22 more developer resources.'
@@ -206,12 +206,12 @@ rate_limits:
   slug: bloomberg-data-workflows-rate-limits
 scopes:
 - name: Bloomberg Data Workflows Scopes
-  scope_count: 0
+  scope_count: 3
   slug: bloomberg-data-workflows-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes · authorization_code/refresh_token
 score:
   band: thin
-  composite: 36.2
+  composite: 32.9
   coverage:
     artifact_dirs: 18
     catalog_earned: 35.0
@@ -225,9 +225,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 23.7
-  previous_composite: 36.2
+  previous_composite: 32.9
   provenance:
     conformance: first-party
     mcp: derived
@@ -236,9 +236,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 78.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 43.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -262,7 +262,7 @@ slug: bloomberg-data-workflows
 tags:
 - Enterprise Data
 - Financial Analytics
-- Financial-Services
+- Financial Services
 - Investment Management
 - Market Data
 - Reference Data

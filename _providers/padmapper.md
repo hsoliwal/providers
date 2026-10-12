@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: PadMapper provides a web-based rental listing search service covering apartments, houses, condos, and rooms for rent across major US and Canadian cities. The platform is powered by Zumper and aggregat
@@ -94,7 +94,7 @@ modified: '2026-09-16'
 name: PadMapper
 nav: Providers
 network: true
-overview: PadMapper publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Rental Listings, Apartment Search, Map-Based Search, and Housing.
+overview: PadMapper publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Rental Listings, Apartment Search, Map-Based Search, and Housing.
 plans:
 - name: Plans
   plan_count: 3
@@ -106,25 +106,31 @@ rate_limits:
   slug: rate-limits
 score:
   band: emerging
-  composite: 19.0
+  composite: 16.9
   coverage:
     artifact_dirs: 8
-    catalog_earned: 52.0
+    catalog_earned: 45.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 69.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 60.5
+    access_clarity: 57.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 19.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +144,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: padmapper
 tags:
-- Real-Estate
+- Real Estate
 - Rental Listings
 - Apartment Search
 - Map-Based Search

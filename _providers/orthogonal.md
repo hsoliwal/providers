@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 45.8
-  scored_at: '2026-09-20'
+  score: 43.7
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.orthogonal.com/v1
@@ -556,7 +556,7 @@ modified: '2026-08-14'
 name: Orthogonal
 nav: Providers
 network: true
-overview: 'Orthogonal publishes 61 APIs on the [APIs.io](https://apis.io/) network, including Account API, Discovery API, Run API, and 58 more. Tagged areas include Company, AI Agents, API Discovery, API Marketplace, and Agent Payments.
+overview: 'Orthogonal publishes 61 APIs on the [APIs.io](https://apis.io/) network, including Account API, Discovery API, Run API, and 58 more. Tagged areas include Company, AI Agents, API Discovery, API Marketplace, and Agentic Payments.
 
 
   Orthogonal''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, CLI, authentication, and 32 more developer resources.'
@@ -571,12 +571,12 @@ rate_limits:
   slug: orthogonal-rate-limits
 scopes:
 - name: Orthogonal Scopes
-  scope_count: 0
+  scope_count: 7
   slug: orthogonal-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 7 scopes
 score:
-  band: strong
-  composite: 56.8
+  band: developing
+  composite: 53.1
   coverage:
     artifact_dirs: 26
     catalog_earned: 48.0
@@ -588,11 +588,11 @@ score:
   facets:
     access_clarity: 73.7
     contract_governance: 4.5
-    contract_quality: 44.0
+    contract_quality: 39.7
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 21.1
-  previous_composite: 56.8
+  previous_composite: 53.1
   provenance:
     conformance: derived
     contracts:
@@ -607,9 +607,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -634,10 +634,11 @@ tags:
 - AI Agents
 - API Discovery
 - API Marketplace
-- Agent Payments
+- Agentic Payments
 - MCP
 - Data Enrichment
 - Crypto
 - Stablecoins
+- A2A
 website: https://www.orthogonal.com/
 ---

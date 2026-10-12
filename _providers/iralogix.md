@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The publicly reachable OpenID Connect / OAuth 2.0 authorization server that fronts the IRALOGIX partner platform. It publishes a full OIDC discovery document at /.well-known/openid-configuration and a
@@ -121,7 +121,7 @@ modified: '2026-08-04'
 name: IRALOGIX
 nav: Providers
 network: true
-overview: 'IRALOGIX publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Retirement, IRA, and Recordkeeping.
+overview: 'IRALOGIX publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Retirement, IRA, and Recordkeeping.
 
 
   IRALOGIX''s developer surface includes documentation, engineering blog, support, authentication, and 12 more developer resources.'
@@ -133,7 +133,7 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: emerging
-  composite: 17.3
+  composite: 19.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -147,13 +147,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 17.3
+  previous_composite: 19.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -172,7 +178,7 @@ security:
 slug: iralogix
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Retirement
 - IRA
 - Recordkeeping

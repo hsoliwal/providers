@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -65,6 +65,11 @@ collections:
   name: Kissmetrics REST API — queries
   slug: open-kissmetrics-queries-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kissmetrics/refs/heads/main/capabilities/kissmetrics-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kissmetrics-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kissmetrics/refs/heads/main/agentic-access/kissmetrics-agentic-access.yml
   title: ''
@@ -234,10 +239,10 @@ modified: '2026-08-13'
 name: Kissmetrics
 nav: Providers
 network: true
-overview: 'Kissmetrics publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include Analytics, Product Analytics, Behavioral Analytics, Marketing Analytics, and Customer Analytics.
+overview: 'Kissmetrics publishes 2 APIs on the [APIs.io](https://apis.io/) network, including REST API, and 1 more. Tagged areas include Analytics, Product Analytics, Behavioral Analytics, Marketing Analytics, and Customer Analytics.
 
 
-  Kissmetrics'' developer surface includes authentication, code examples, documentation, API reference, getting-started guide, pricing, signup flow, and 29 more developer resources.'
+  Kissmetrics'' developer surface includes authentication, code examples, documentation, API reference, getting-started guide, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Kissmetrics Plans Pricing
   plan_count: 4
@@ -249,7 +254,7 @@ rate_limits:
   slug: kissmetrics-rate-limits
 score:
   band: developing
-  composite: 52.0
+  composite: 51.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 60.0
@@ -261,11 +266,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.7
     developer_ergonomics: 53.6
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 28.9
-  previous_composite: 52.0
+  previous_composite: 51.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,8 +281,14 @@ score:
       total: 3
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

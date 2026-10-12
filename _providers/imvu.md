@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: First-party in-world scripting API for IMVU Live Rooms. Room scripts are single-file Lua programs executed server-side in a Luau sandbox; the engine calls event functions (event_start, event_begin_ite
@@ -146,7 +146,7 @@ modified: '2026-08-23'
 name: Together Labs
 nav: Providers
 network: true
-overview: 'Together Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Social Networking, Virtual Worlds, Metaverse, and Gaming.
+overview: 'Together Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Social Network, Virtual Worlds, Metaverse, and Gaming.
 
 
   Together Labs'' developer surface includes documentation, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
@@ -161,7 +161,7 @@ rate_limits:
   slug: imvu-rate-limits
 score:
   band: thin
-  composite: 30.3
+  composite: 30.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 51.0
@@ -173,16 +173,22 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 34.2
-  previous_composite: 30.3
+  previous_composite: 30.5
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -201,7 +207,7 @@ security:
 slug: imvu
 tags:
 - Company
-- Social Networking
+- Social Network
 - Virtual Worlds
 - Metaverse
 - Gaming

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 5
 common:
@@ -116,7 +116,7 @@ layout: provider
 mcp_servers:
 - description: Wrogn (USPL / Universal Sportsbiz) runs its store on Shopify, which exposes the storefront's native MCP server publicly. POST https://wrogn.com/api/mcp answered MCP tools/list unauthenticated at probe
   name: USPL Wrogn MCP Server
-  slug: uspl-wrogn-mcp-server
+  slug: wrogn-storefront
 modified: '2026-07-21'
 name: USPL Wrogn
 nav: Providers
@@ -137,7 +137,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: emerging
-  composite: 18.7
+  composite: 21.6
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -151,7 +151,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -160,13 +160,19 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 18.7
+  previous_composite: 21.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

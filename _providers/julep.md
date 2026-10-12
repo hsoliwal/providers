@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 52
   human_in_the_loop: 0
@@ -146,6 +146,11 @@ collections:
   name: Julep Agents Users API
   slug: open-julep-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/julep/refs/heads/main/capabilities/julep-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/julep-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -247,11 +252,11 @@ network: true
 overview: 'Julep publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Docs API, Embed API, and 9 more. Tagged areas include Company, AI Agents, LLM, Agents, and Workflows.
 
 
-  Julep''s developer surface includes documentation, API reference, getting-started guide, CLI, changelog, and 15 more developer resources.'
+  Julep''s developer surface includes documentation, API reference, getting-started guide, CLI, changelog, and 16 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 38.4
+  composite: 36.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -263,14 +268,14 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 58.0
+    contract_quality: 52.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 38.4
+  previous_composite: 36.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -281,8 +286,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -308,6 +319,6 @@ tags:
 - Memory
 - Orchestration
 - Developer Tools
-- Open-Source
+- Open Source
 website: https://www.julep.ai/
 ---

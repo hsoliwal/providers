@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Open-beta public REST API for programmatic access to a user's Read AI meeting data. Three documented meeting endpoints — list meetings with cursor pagination and epoch-millisecond time filters, retrie
@@ -206,7 +206,7 @@ layout: provider
 mcp_servers:
 - description: Read AI operates a first-party remote MCP server that exposes a user's meeting reports — metadata, participants, summaries, chapter summaries, action items, key questions, topics, full transcripts, en
   name: Read AI MCP Server
-  slug: read-ai-mcp-server
+  slug: read-ai
 modified: '2026-08-05'
 name: Read AI
 nav: Providers
@@ -234,7 +234,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: strong
-  composite: 55.0
+  composite: 57.4
   coverage:
     artifact_dirs: 19
     catalog_earned: 57.0
@@ -246,17 +246,23 @@ score:
   facets:
     access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
-  previous_composite: 55.0
+  previous_composite: 57.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

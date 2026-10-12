@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -61,6 +61,14 @@ apis:
   baseurl_source: declared
   description: The ZeroBounce ChatGPT-plugin validation surface — 2 operations for single and batch email validation, served from members-api.zerobounce.net. The single-validation operation accepts up to 3 unauthent
   name: ZeroBounce Validation API
+  phrasing_intents:
+  - id: validate
+    intent: Check whether a single email address is valid
+    question: How do I check if one email address is real before I send to it?
+  - id: validateBatch
+    intent: Validate a list of email addresses in one request
+    question: Is there a way to verify a whole list of email addresses at once?
+  phrasing_ops: 2
   slug: zerobounce-validation-api
 - description: Official ZeroBounce Model Context Protocol server, published by ZeroBounce under Apache-2.0 and distributed on npm as @zerobounce/mcp. Exposes 16 tools covering validation, AI scoring, email finder, d
   name: ZeroBounce MCP Server
@@ -278,7 +286,7 @@ modified: '2026-08-13'
 name: ZeroBounce
 nav: Providers
 network: true
-overview: 'ZeroBounce publishes 1 API on the [APIs.io](https://apis.io/) network: Validation API. Tagged areas include Email Validation, Email Deliverability, Email Verification, Marketing, and Lead Scoring.
+overview: 'ZeroBounce publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Validation API, and 5 more. Tagged areas include Email Verification, Email Deliverability, Marketing, Lead Scoring, and Anti-Spam.
 
 
   The ZeroBounce catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -295,8 +303,8 @@ rate_limits:
   name: Zerobounce Rate Limits
   slug: zerobounce-rate-limits
 score:
-  band: strong
-  composite: 65.6
+  band: exemplar
+  composite: 67.1
   coverage:
     artifact_dirs: 24
     catalog_earned: 61.0
@@ -308,11 +316,11 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 49.0
+    contract_quality: 44.9
     developer_ergonomics: 74.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 84.2
-  previous_composite: 65.6
+  previous_composite: 67.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -323,8 +331,20 @@ score:
       total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -349,9 +369,8 @@ security:
   summary_line: SOC 2, ISO 27001, PCI DSS, HIPAA, GDPR
 slug: zerobounce
 tags:
-- Email Validation
-- Email Deliverability
 - Email Verification
+- Email Deliverability
 - Marketing
 - Lead Scoring
 - Anti-Spam
@@ -359,5 +378,6 @@ tags:
 - Email Finder
 - Deliverability Monitoring
 - DMARC
+- Email
 website: https://www.zerobounce.net
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: Structured document store and query surface. Create collections with typed, indexed fields (keyword_index, semantic_index, vector index), upsert/update/delete documents by `_id`, and run hybrid querie
@@ -200,7 +200,7 @@ layout: provider
 mcp_servers:
 - description: TopK ships an official hosted, remote MCP server that lets any MCP-compatible AI agent query private datasets using natural language. It is region-scoped (one HTTP endpoint per region) and authenticat
   name: Topk MCP Server
-  slug: topk-mcp-server
+  slug: topk
 modified: '2026-07-21'
 name: Topk
 nav: Providers
@@ -212,7 +212,7 @@ overview: 'Topk publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 6
 score:
   band: developing
-  composite: 40.6
+  composite: 43.0
   coverage:
     artifact_dirs: 16
     catalog_earned: 40.0
@@ -226,15 +226,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 68.5
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 44.7
-  previous_composite: 40.6
+  previous_composite: 43.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

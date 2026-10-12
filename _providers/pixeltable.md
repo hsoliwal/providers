@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'Read-only Model Context Protocol server served over HTTP at the Pixeltable apex host. Protocol version 2025-06-18, JSON-RPC 2.0 (initialize, tools/list, tools/call). Exposes two tools: search_docs, wh'
@@ -228,9 +228,9 @@ description: 'Pixeltable is an open-source (Apache 2.0) Python data infrastructu
 image: https://pixeltable.com/images/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pixeltable.com over HTTP; 2 tools listed.
   name: Pixeltable MCP Server
-  slug: pixeltable-mcp-server
+  slug: pixeltable-web
 modified: '2026-08-17'
 name: Pixeltable
 nav: Providers
@@ -250,7 +250,7 @@ rate_limits:
   slug: pixeltable-rate-limits
 score:
   band: developing
-  composite: 51.3
+  composite: 53.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 60.0
@@ -264,15 +264,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 51.3
+  previous_composite: 53.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -303,11 +309,12 @@ tags:
 - RAG
 - Agent Memory
 - MCP
-- Open-Source
+- Open Source
 - Python
 - Data Orchestration
 - Computed Columns
 - Video Processing
-- Machine-Learning
+- Machine Learning
+- A2A
 website: https://www.pixeltable.com/
 ---

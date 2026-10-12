@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 14
 apis:
 - baseURL: https://api.insforge.dev
@@ -130,6 +130,11 @@ collections:
   name: Insforge AI Admin Stripe Payments API
   slug: open-insforge-stripe-payments-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/insforge/refs/heads/main/capabilities/insforge-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/insforge-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/insforge/refs/heads/main/overlays/insforge-auth-overlay.yaml
   title: ''
@@ -294,15 +299,15 @@ layout: provider
 mcp_servers:
 - description: Official Model Context Protocol server for InsForge, exposing InsForge backend operations (database, auth, storage, functions, AI gateway, realtime, payments, deployments) as MCP tools for MCP-compati
   name: Insforge MCP Server
-  slug: insforge-mcp-server
+  slug: insforge
 modified: '2026-07-19'
 name: Insforge
 nav: Providers
 network: true
-overview: 'Insforge publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Channels API, Client API, and 8 more. Tagged areas include Company, Backend-as-a-Service, agent-native, Cloud Infrastructure, and Database.
+overview: 'Insforge publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Channels API, Client API, and 8 more. Tagged areas include Company, Backend-as-a-Service, Agent-Native, Cloud Infrastructure, and Database.
 
 
-  Insforge''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 27 more developer resources.'
+  Insforge''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 28 more developer resources.'
 random_paper: 3
 scopes:
 - name: Insforge Scopes
@@ -310,8 +315,8 @@ scopes:
   slug: insforge-scopes
   summary_line: 11 scopes · authorizationCode/deviceCode
 score:
-  band: strong
-  composite: 57.3
+  band: developing
+  composite: 53.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 40.0
@@ -323,11 +328,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 51.5
+    contract_quality: 46.5
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 28.9
-  previous_composite: 57.3
+  previous_composite: 53.4
   provenance:
     conformance: derived
     contracts:
@@ -342,9 +347,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -367,7 +372,7 @@ slug: insforge
 tags:
 - Company
 - Backend-as-a-Service
-- agent-native
+- Agent-Native
 - Cloud Infrastructure
 - Database
 - Authentication
@@ -377,7 +382,7 @@ tags:
 - AI Gateway
 - Payments
 - Real-Time
-- Open-Source
+- Open Source
 - Y Combinator
 website: https://insforge.dev
 ---

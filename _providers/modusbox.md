@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: ORCA is PortX's universal, standards-based REST contract for US banking core connectivity — an ISO 20022-aligned JSON/REST specification covering bank account opening, maintenance, closing and reporti
@@ -160,7 +160,7 @@ modified: '2026-08-26'
 name: ModusBox
 nav: Providers
 network: true
-overview: 'ModusBox publishes 1 API on the [APIs.io](https://apis.io/) network: PortX ORCA (Open Reusable Core API). Tagged areas include Company, Banking, Core Banking, Credit Union, and Financial-Services.
+overview: 'ModusBox publishes 1 API on the [APIs.io](https://apis.io/) network: PortX ORCA (Open Reusable Core API). Tagged areas include Company, Banking, Core Banking, Credit Union, and Financial Services.
 
 
   ModusBox''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 17 more developer resources.'
@@ -175,7 +175,7 @@ rate_limits:
   slug: modusbox-rate-limits
 score:
   band: developing
-  composite: 44.5
+  composite: 42.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -187,11 +187,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 44.5
+  previous_composite: 42.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -200,9 +200,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +228,7 @@ tags:
 - Banking
 - Core Banking
 - Credit Union
-- Financial-Services
+- Financial Services
 - Integration
 - iPaaS
 - Payments

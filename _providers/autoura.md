@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 51.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Autoura Experience API provides access to tourism content including cuisine guides, destination information, tour itineraries, local activities, and points of interest. Developers can integrate Au
@@ -220,9 +220,9 @@ integrations:
   name: CMS Platforms
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.autoura.com over HTTP requiring OAuth; 21 tools listed.
   name: Autoura MCP Server
-  slug: autoura-mcp-server
+  slug: autoura
 modified: '2026-09-13'
 name: Autoura
 nav: Providers
@@ -250,7 +250,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 32.3
+  composite: 33.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 52.0
@@ -262,17 +262,23 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 32.3
+  previous_composite: 33.2
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

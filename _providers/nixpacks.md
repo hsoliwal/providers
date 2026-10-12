@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: 'The Nixpacks command-line interface is the primary interface for generating build plans and producing Docker images from application source. Core commands include `nixpacks plan` (emit the JSON build '
@@ -133,7 +133,7 @@ overview: 'Nixpacks publishes 5 APIs on the [APIs.io](https://apis.io/) network.
 random_paper: 7
 score:
   band: emerging
-  composite: 14.9
+  composite: 13.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 35.0
@@ -147,11 +147,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 21.1
-  previous_composite: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -174,7 +180,7 @@ tags:
 - Container Images
 - Application Packaging
 - Railway
-- Open-Source
+- Open Source
 - Rust
 - DevOps
 - Platform Engineering

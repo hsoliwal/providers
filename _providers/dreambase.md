@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: docs
   title: ''
@@ -108,18 +108,22 @@ created: '2026-07-17'
 description: Dreambase is an AI-native analytics platform for Supabase. AI data agents connect to a Supabase project in one click via Supabase Auth, automatically detect the schema, and produce live dashboards, automated reports, and business insights without a separate data warehouse or a dedicated data team. An Analyst Agent builds and configures dashboards, ad-hoc reports enrich Supabase data with external sources, and Supabase Health Assessments scan projects for security, performance, and reliability issues with recommended fixes. Data sources beyond Postgres flow in through a plugin marketplace of MCP tools and REST APIs unified into cached datasets. Founded in 2024 and backed by a seed round led by Felicis with participation from Supabase executives.
 image: https://framerusercontent.com/images/fgMgSw80nMFDR7BquNzNXt5ALC8.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at app.dreambase.com over HTTP.
+  name: Dreambase MCP Server
+  slug: dreambase
 modified: '2026-07-18'
 name: Dreambase
 nav: Providers
 network: true
-overview: 'Dreambase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Business Intelligence, Supabase, and Postgres.
+overview: 'Dreambase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Business Intelligence, Supabase, and PostgreSQL.
 
 
   Dreambase''s developer surface includes documentation, getting-started guide, engineering blog, changelog, pricing, signup flow, support, and 9 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 23.8
+  composite: 25.1
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -133,13 +137,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 23.8
+  previous_composite: 25.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -161,7 +171,7 @@ tags:
 - Analytics
 - Business Intelligence
 - Supabase
-- Postgres
+- PostgreSQL
 - Dashboards
 - Data
 - Artificial Intelligence

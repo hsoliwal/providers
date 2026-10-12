@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -131,7 +131,7 @@ modified: '2026-05-19'
 name: Federal Emergency Management Agency
 nav: Providers
 network: true
-overview: 'Federal Emergency Management Agency publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assistance API, Disasters API, Metadata API, and 1 more. Tagged areas include Disasters, Emergencies, Federal-Government, Flood Insurance, and Hazard Mitigation.
+overview: 'Federal Emergency Management Agency publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assistance API, Disasters API, Metadata API, and 1 more. Tagged areas include Disasters, Emergencies, Federal Government, Flood Insurance, and Hazard Mitigation.
 
 
   The Federal Emergency Management Agency catalog on APIs.io includes 1 Spectral governance ruleset.
@@ -160,7 +160,7 @@ rules:
   slug: openfema-rules
 score:
   band: emerging
-  composite: 20.6
+  composite: 19.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 40.0
@@ -172,11 +172,16 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 20.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 19.7
   provenance:
     agentic_access: derived
     contracts:
@@ -189,9 +194,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -206,7 +211,7 @@ slug: federal-emergency-management-agency
 tags:
 - Disasters
 - Emergencies
-- Federal-Government
+- Federal Government
 - Flood Insurance
 - Hazard Mitigation
 website: https://www.fema.gov/

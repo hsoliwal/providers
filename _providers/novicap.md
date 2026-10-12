@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.novicap.com/v1
@@ -159,14 +159,14 @@ modified: '2026-07-20'
 name: Novicap
 nav: Providers
 network: true
-overview: 'Novicap publishes 2 APIs on the [APIs.io](https://apis.io/) network: Confirming Standard API and Dynamic Discounting API. Tagged areas include Company, Financial-Services, Fintech, Working Capital, and Invoice Finance.
+overview: 'Novicap publishes 2 APIs on the [APIs.io](https://apis.io/) network: Confirming Standard API and Dynamic Discounting API. Tagged areas include Company, Financial Services, Fintech, Working Capital, and Invoice Finance.
 
 
   Novicap''s developer surface includes engineering blog, support, authentication, and 17 more developer resources.'
 random_paper: 4
 score:
   band: emerging
-  composite: 24.2
+  composite: 25.5
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -180,7 +180,7 @@ score:
     contract_governance: 4.5
     contract_quality: 12.9
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -190,7 +190,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 24.2
+  previous_composite: 25.5
   provenance:
     conformance: derived
     contracts:
@@ -200,8 +200,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -219,7 +225,7 @@ security:
 slug: novicap
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fintech
 - Working Capital
 - Invoice Finance

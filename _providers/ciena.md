@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -214,7 +214,7 @@ modified: '2026-05-19'
 name: Ciena
 nav: Providers
 network: true
-overview: 'Ciena publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Alarms API, Performance API, Services API, and 1 more. Tagged areas include MEF, NETCONF, Network Automation, Network Management, and Optical.
+overview: 'Ciena publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Alarms API, Performance API, Services API, and 3 more. Tagged areas include MEF, NETCONF, Network Automation, Network Management, and Optical.
 
 
   The Ciena catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -263,8 +263,8 @@ scopes:
   slug: ciena-scopes
   summary_line: 5 scopes · clientCredentials
 score:
-  band: developing
-  composite: 42.3
+  band: thin
+  composite: 38.1
   coverage:
     artifact_dirs: 20
     catalog_earned: 56.3
@@ -276,11 +276,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 9.8
-    contract_quality: 58.8
+    contract_quality: 53.5
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 42.3
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     contracts:
@@ -293,9 +293,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -323,7 +323,7 @@ tags:
 - Optical
 - RESTCONF
 - SDN
-- Telecom
+- Telecommunications
 - TM Forum
 - Fortune 1000
 website: https://www.ciena.com/

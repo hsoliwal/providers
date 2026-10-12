@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Remote MCP server exposing a recruiter's inbound job applications to an agent, and letting it accept or reject them. Named "Wellfound recruiter applications" in its own RFC 9728 protected-resource doc
@@ -168,7 +168,7 @@ description: Wellfound (formerly AngelList Talent) is a startup hiring marketpla
 image: https://reach.wellfound.com/assets/marketing/og/homepage-2fb80e2936cb06211fa7702e4b089510c772d1b887166b884b4720f73445e875.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Wellfound runs TWO separate first-party hosted MCP servers, each with its own OAuth authorization server, its own scope vocabulary and its own protected-resource document. Neither is documented on any
   name: Wellfound MCP servers
   slug: wellfound-mcp-servers
 modified: '2026-09-04'
@@ -195,7 +195,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 28.4
+  composite: 32.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -209,14 +209,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 28.4
+  previous_composite: 32.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -249,7 +255,7 @@ tags:
 - Job Board
 - Startups
 - MCP
-- agent-native
+- Agent-Native
 - Authentication
 - AI Sourcing
 website: https://wellfound.com/

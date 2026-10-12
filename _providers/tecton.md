@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Low-latency online feature serving for model inference — read single or batched feature vectors, wildcard queries, and feature-service metadata. Authenticated with an Authorization Tecton-key header b
@@ -148,14 +148,14 @@ modified: '2026-07-21'
 name: Tecton
 nav: Providers
 network: true
-overview: 'Tecton publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Machine-Learning, Feature Store, Feature Platform, and MLOps.
+overview: 'Tecton publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Machine Learning, Feature Store, Feature Platform, and MLOps.
 
 
   Tecton''s developer surface includes documentation, API reference, getting-started guide, authentication, CLI, and 16 more developer resources.'
 random_paper: 15
 score:
-  band: emerging
-  composite: 26.1
+  band: thin
+  composite: 26.5
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -169,14 +169,24 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 26.1
+  previous_composite: 26.5
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +209,7 @@ security:
 slug: tecton
 tags:
 - Company
-- Machine-Learning
+- Machine Learning
 - Feature Store
 - Feature Platform
 - MLOps

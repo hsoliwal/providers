@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/the-business-of-fashion/refs/heads/main/security/the-business-of-fashion-domain-security.yml
@@ -77,6 +77,10 @@ created: '2026-07-17'
 description: The Business of Fashion (BoF) is an authoritative digital media and intelligence company founded by Imran Amed in 2007, serving the global fashion and luxury industry. It publishes news, analysis, case studies and industry data, and operates subscription products including BoF Professional membership, BoF Insights research reports, events and online courses. Backed by Index Ventures. BoF publishes no public developer API; this profile captures the company's public web, subscription and legal surface plus a domain-security probe.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-business-of-fashion.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.businessoffashion.com over HTTP; 2 tools listed.
+  name: The Business of Fashion MCP Server
+  slug: the-business-of-fashion
 modified: '2026-07-21'
 name: The Business of Fashion
 nav: Providers
@@ -88,7 +92,7 @@ overview: 'The Business of Fashion is profiled on the [APIs.io](https://apis.io/
 random_paper: 1
 score:
   band: emerging
-  composite: 15.7
+  composite: 15.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -102,13 +106,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 15.7
+  previous_composite: 15.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -126,7 +136,7 @@ tags:
 - Fashion
 - Publishing
 - News
-- Intelligence
 - Luxury
+- Market Intelligence
 website: https://www.businessoffashion.com
 ---

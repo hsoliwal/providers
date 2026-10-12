@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Daylight's partner/product API surface at api.daylight.ai, protected by OAuth2 / OpenID Connect (Bearer token, authorization server at auth.app.daylight.ai). Access is authenticated (returns 401 witho
@@ -129,7 +129,7 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Daylight MCP Server
-  slug: daylight-mcp-server
+  slug: daylight-mcp-yml
 modified: '2026-07-18'
 name: Daylight
 nav: Providers
@@ -146,7 +146,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode/clientCredentials/refreshToken
 score:
   band: emerging
-  composite: 19.4
+  composite: 22.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -160,14 +160,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 19.4
+  previous_composite: 22.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -192,7 +198,7 @@ tags:
 - MDR
 - Threat Detection
 - Incident Response
-- Agentic AI
+- AI Agents
 - SOC
 - MCP
 website: https://daylight.ai/

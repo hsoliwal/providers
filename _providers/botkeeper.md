@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Botkeeper''s partner platform API. The company does not publish a reference, a portal or a specification for it; the only public evidence of its shape is Botkeeper''s own status page, which lists three '
@@ -174,19 +174,19 @@ modified: '2026-08-08'
 name: Botkeeper
 nav: Providers
 network: true
-overview: 'Botkeeper publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Accounting, Bookkeeping, Financial-Services, and Artificial Intelligence.
+overview: 'Botkeeper publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Accounting, Bookkeeping, Financial Services, and Artificial Intelligence.
 
 
   Botkeeper''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, changelog, and 20 more developer resources.'
 random_paper: 15
 scopes:
 - name: Botkeeper Scopes
-  scope_count: 0
+  scope_count: 4
   slug: botkeeper-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: developing
-  composite: 41.2
+  band: thin
+  composite: 38.3
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -200,14 +200,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 41.2
+  previous_composite: 38.3
   provenance:
     conformance: first-party
   regulatory:
@@ -215,9 +217,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 67.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -246,7 +248,7 @@ tags:
 - Company
 - Accounting
 - Bookkeeping
-- Financial-Services
+- Financial Services
 - Artificial Intelligence
 - Automation
 - Software-as-a-Service

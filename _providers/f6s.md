@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The F6S API provides programmatic access to the F6S platform, the world's largest startup and founder community. It enables developers to integrate with F6S's core capabilities including application m
@@ -133,7 +133,7 @@ rate_limits:
   slug: f6s-rate-limits
 score:
   band: emerging
-  composite: 19.2
+  composite: 18.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 28.0
@@ -147,11 +147,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 35.2
+    discoverability: 33.9
     operational_transparency: 10.5
-  previous_composite: 19.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

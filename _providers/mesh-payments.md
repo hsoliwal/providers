@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: RESTful API for the Mesh spend management platform. Documented capabilities include connectivity verification, virtual card lifecycle management (issuance, suspension, cancellation), merchant and cate
@@ -186,9 +186,9 @@ description: Mesh Payments is a global travel and expense (T&E) and spend manage
 image: https://meshpayments.com/wp-content/uploads/2026/05/meshpayments.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.meshpayments.com over HTTP.
   name: Mesh Payments MCP Server
-  slug: mesh-payments-mcp-server
+  slug: mesh-payments
 modified: '2026-08-04'
 name: Mesh Payments
 nav: Providers
@@ -208,7 +208,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 51.5
+  composite: 47.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -220,11 +220,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 33.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 36.8
-  previous_composite: 51.5
+  previous_composite: 47.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -239,9 +239,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 84.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 48.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

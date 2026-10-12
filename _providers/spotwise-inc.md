@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: 'The product Model Context Protocol server for Spotwise aOS — the surface an agent connects to in order to reach Spotwise ad detections, leads, contacts and workflows. Streamable HTTP transport. Every '
@@ -173,17 +173,17 @@ description: Spotwise is an agentic operating system for broadcast media that de
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/spotwise-inc.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at app.spotwise.ai.
   name: Spotwise Model Context Protocol servers
   slug: spotwise-model-context-protocol-servers
 modified: '2026-08-12'
-name: Spotwise, Inc.
+name: Spotwise
 nav: Providers
 network: true
-overview: 'Spotwise, Inc. publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Broadcast Media, Advertising, Media Monitoring, and Sales Intelligence.
+overview: 'Spotwise publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Broadcast Media, Advertising, Media Monitoring, and Sales Intelligence.
 
 
-  Spotwise, Inc.''s developer surface includes engineering blog, support, authentication, and 22 more developer resources.'
+  Spotwise''s developer surface includes engineering blog, support, authentication, and 22 more developer resources.'
 plans:
 - name: Spotwise Inc Plans Pricing
   plan_count: 0
@@ -200,7 +200,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: emerging
-  composite: 21.9
+  composite: 25.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -214,14 +214,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 10.5
-  previous_composite: 21.9
+  previous_composite: 25.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

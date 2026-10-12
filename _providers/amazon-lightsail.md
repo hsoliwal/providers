@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 151
   human_in_the_loop: 13
@@ -43,14 +43,119 @@ agentic_access:
   operation_count: 162
   slug: amazon-lightsail-agentic-access
   summary_line: 162 operations · 151 acting · 13 human-in-the-loop
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://lightsail.us-east-1.amazonaws.com
   baseurl_source: declared
-  description: 'The Amazon Lightsail API — 162 operations covering instances (virtual private servers), container services, object storage buckets, managed MySQL and PostgreSQL databases, block storage disks, static '
-  name: Amazon Lightsail API
+  description: The Account API from Amazon Lightsail — 14 operation(s) for account.
+  name: Amazon Lightsail Account API
+  slug: amazon-lightsail-account-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Alarms API from Amazon Lightsail — 4 operation(s) for alarms.
+  name: Amazon Lightsail Alarms API
+  slug: amazon-lightsail-alarms-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Blueprints API from Amazon Lightsail — 1 operation(s) for blueprints.
+  name: Amazon Lightsail Blueprints API
+  slug: amazon-lightsail-blueprints-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Buckets API from Amazon Lightsail — 11 operation(s) for buckets.
+  name: Amazon Lightsail Buckets API
+  slug: amazon-lightsail-buckets-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Bundles API from Amazon Lightsail — 1 operation(s) for bundles.
+  name: Amazon Lightsail Bundles API
+  slug: amazon-lightsail-bundles-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Certificates API from Amazon Lightsail — 7 operation(s) for certificates.
+  name: Amazon Lightsail Certificates API
+  slug: amazon-lightsail-certificates-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Contact Methods API from Amazon Lightsail — 4 operation(s) for contact methods.
+  name: Amazon Lightsail Contact Methods API
+  slug: amazon-lightsail-contact-methods-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Container Services API from Amazon Lightsail — 10 operation(s) for container services.
+  name: Amazon Lightsail Container Services API
+  slug: amazon-lightsail-container-services-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Cost Estimate API from Amazon Lightsail — 1 operation(s) for cost estimate.
+  name: Amazon Lightsail Cost Estimate API
+  slug: amazon-lightsail-cost-estimate-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Distributions API from Amazon Lightsail — 11 operation(s) for distributions.
+  name: Amazon Lightsail Distributions API
+  slug: amazon-lightsail-distributions-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Domains API from Amazon Lightsail — 7 operation(s) for domains.
+  name: Amazon Lightsail Domains API
+  slug: amazon-lightsail-domains-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: Lightsail virtual server instance management
+  name: Amazon Lightsail Instances API
   slug: amazon-lightsail-instances-api
-artifact_total: 33
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Load Balancers API from Amazon Lightsail — 9 operation(s) for load balancers.
+  name: Amazon Lightsail Load Balancers API
+  slug: amazon-lightsail-load-balancers-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Operations API from Amazon Lightsail — 3 operation(s) for operations.
+  name: Amazon Lightsail Operations API
+  slug: amazon-lightsail-operations-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Regions API from Amazon Lightsail — 1 operation(s) for regions.
+  name: Amazon Lightsail Regions API
+  slug: amazon-lightsail-regions-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Relational Databases API from Amazon Lightsail — 22 operation(s) for relational databases.
+  name: Amazon Lightsail Relational Databases API
+  slug: amazon-lightsail-relational-databases-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Setup API from Amazon Lightsail — 1 operation(s) for setup.
+  name: Amazon Lightsail Setup API
+  slug: amazon-lightsail-setup-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Snapshots API from Amazon Lightsail — 15 operation(s) for snapshots.
+  name: Amazon Lightsail Snapshots API
+  slug: amazon-lightsail-snapshots-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Static IPs API from Amazon Lightsail — 6 operation(s) for static ips.
+  name: Amazon Lightsail Static IPs API
+  slug: amazon-lightsail-static-ips-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Tags API from Amazon Lightsail — 2 operation(s) for tags.
+  name: Amazon Lightsail Tags API
+  slug: amazon-lightsail-tags-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The blockstorage API from Amazon Lightsail — 6 operation(s) for blockstorage.
+  name: Amazon Lightsail Blockstorage API
+  slug: amazon-lightsail-blockstorage-api
+- baseURL: https://lightsail.us-east-1.amazonaws.com
+  baseurl_source: declared
+  description: The Keypairs API from Amazon Lightsail — 6 operation(s) for keypairs.
+  name: Amazon Lightsail Keypairs API
+  slug: amazon-lightsail-keypairs-api
+artifact_total: 54
 collections:
 - collection_type: postman
   name: Amazon Lightsail Instances API
@@ -68,6 +173,16 @@ collections:
   name: Amazon Lightsail API
   slug: open-openapi
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lightsail/refs/heads/main/capabilities/amazon-lightsail-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-lightsail-capability-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lightsail/refs/heads/main/overlays/amazon-lightsail-overlay.yaml
+  title: ''
+  type: Overlay
+  url: overlays/amazon-lightsail-overlay.yaml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -351,20 +466,20 @@ jsonld:
   slug: amazon-lightsail-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at aws-mcp.us-east-1.api.aws requiring an API key; 8 tools listed.
   name: Amazon Lightsail MCP Server
-  slug: amazon-lightsail-mcp-server
+  slug: amazon-lightsail-mcp-yml
 modified: '2026-09-17'
 name: Amazon Lightsail
 nav: Providers
 network: true
-overview: 'Amazon Lightsail publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cloud, Compute, Virtual Private Server, Hosting, and Containers.
+overview: 'Amazon Lightsail publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Account API, Alarms API, Blueprints API, and 19 more. Tagged areas include Cloud, Compute, Virtual Private Server, Hosting, and Containers.
 
 
   The Amazon Lightsail catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Lightsail''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 45 more developer resources.'
+  Amazon Lightsail''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 47 more developer resources.'
 plans:
 - name: Amazon Lightsail Plans Pricing
   plan_count: 100
@@ -398,21 +513,21 @@ rules:
   slug: amazon-lightsail-spectral-rules
 score:
   band: exemplar
-  composite: 73.3
+  composite: 75.3
   coverage:
     artifact_dirs: 32
-    catalog_earned: 72.5
+    catalog_earned: 74.4
     catalog_earned_first_party: 12.0
-    catalog_gap: 42.5
+    catalog_gap: 40.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.0
   facets:
     access_clarity: 100.0
-    contract_governance: 47.0
-    contract_quality: 70.1
+    contract_governance: 45.5
+    contract_quality: 65.6
     developer_ergonomics: 81.5
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 44.7
   previous_composite: 73.3
   provenance:
@@ -422,11 +537,17 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 2
+      total: 23
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

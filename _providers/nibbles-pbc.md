@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -77,7 +77,7 @@ modified: '2026-07-20'
 name: Nibbles PBC
 nav: Providers
 network: true
-overview: 'Nibbles PBC is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Pets, Insurance, Financial-Services, and Credit Cards.
+overview: 'Nibbles PBC is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Pets, Insurance, Financial Services, and Credit Cards.
 
 
   Nibbles PBC''s developer surface includes signup flow, support, and 6 more developer resources.'
@@ -98,7 +98,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   previous_composite: 10.6
   regulatory:
@@ -106,9 +106,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -125,7 +125,7 @@ tags:
 - Company
 - Pets
 - Insurance
-- Financial-Services
+- Financial Services
 - Credit Cards
 - Consumer
 - Public Benefit Company

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://api.pynt.io
@@ -385,7 +385,7 @@ rate_limits:
   slug: pynt-rate-limits
 score:
   band: developing
-  composite: 51.2
+  composite: 52.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 40.0
@@ -397,11 +397,11 @@ score:
   facets:
     access_clarity: 57.9
     contract_governance: 4.5
-    contract_quality: 54.0
+    contract_quality: 49.5
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 51.2
+  previous_composite: 52.7
   provenance:
     conformance: derived
     contracts:
@@ -411,8 +411,14 @@ score:
       total: 32
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

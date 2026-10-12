@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: 'Access Westlaw legal research content including case law, statutes, regulations, and secondary sources. Includes SEC Filings API, Dockets API, and Litigation Analytics providing structured legal data '
@@ -106,7 +106,7 @@ modified: '2026-05-03'
 name: Thomson Reuters
 nav: Providers
 network: true
-overview: 'Thomson Reuters publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Tax, Finance, Risk, and Fraud.
+overview: 'Thomson Reuters publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Legal, Tax, Finance, Risk Management, and Fraud Prevention.
 
 
   The Thomson Reuters catalog on APIs.io includes 1 JSON-LD context.
@@ -124,7 +124,7 @@ rate_limits:
   slug: thomson-reuters-rate-limits
 score:
   band: emerging
-  composite: 14.4
+  composite: 13.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 52.0
@@ -138,11 +138,17 @@ score:
     contract_governance: 0.0
     contract_quality: 10.7
     developer_ergonomics: 0.0
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 10.5
-  previous_composite: 14.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -159,8 +165,8 @@ tags:
 - Legal
 - Tax
 - Finance
-- Risk
-- Fraud
+- Risk Management
+- Fraud Prevention
 - Compliance
 - Data
 website: https://www.thomsonreuters.com/

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -79,7 +79,7 @@ common:
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/kinesis/video-streams/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -227,7 +227,7 @@ modified: '2026-09-16'
 name: Amazon Kinesis Video Streams
 nav: Providers
 network: true
-overview: 'Amazon Kinesis Video Streams publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Signaling Channels API, and 1 more. Tagged areas include IoT, Machine-Learning, Media, and Video Streaming.
+overview: 'Amazon Kinesis Video Streams publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Signaling Channels API, and 1 more. Tagged areas include IoT, Machine Learning, Media, and Video Streaming.
 
 
   The Amazon Kinesis Video Streams catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -267,23 +267,23 @@ rules:
   slug: amazon-kinesis-video-streams-spectral-rules
 score:
   band: developing
-  composite: 53.3
+  composite: 53.9
   coverage:
     artifact_dirs: 18
-    catalog_earned: 65.5
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 70.7
+    contract_governance: 27.3
+    contract_quality: 64.4
     developer_ergonomics: 56.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 53.3
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     contracts:
@@ -291,8 +291,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -318,7 +324,7 @@ security:
 slug: amazon-kinesis-video-streams
 tags:
 - IoT
-- Machine-Learning
+- Machine Learning
 - Media
 - Video Streaming
 use_cases:
@@ -330,5 +336,5 @@ use_cases:
   name: Autonomous Vehicles
 - description: Deliver live video streams to viewers with low latency using WebRTC.
   name: Live Video Streaming
-website: https://amazon.com
+website: https://aws.amazon.com/kinesis/video-streams/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 46
   human_in_the_loop: 46
@@ -47,42 +47,42 @@ apis:
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The auth API from Momence — 4 operation(s) for auth.
-  name: Momence auth API
+  name: Momence Auth API
   slug: momence-auth-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The host API from Momence — 29 operation(s) for host.
-  name: Momence host API
+  name: Momence Host API
   slug: momence-host-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The host-checkout API from Momence — 3 operation(s) for host-checkout.
-  name: Momence host-checkout API
+  name: Momence Host Checkout API
   slug: momence-host-checkout-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The member-addresses API from Momence — 2 operation(s) for member-addresses.
-  name: Momence member-addresses API
+  name: Momence Member Addresses API
   slug: momence-member-addresses-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The member API from Momence — 11 operation(s) for member.
-  name: Momence member API
+  name: Momence Member API
   slug: momence-member-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The member-checkout API from Momence — 3 operation(s) for member-checkout.
-  name: Momence member-checkout API
+  name: Momence Member Checkout API
   slug: momence-member-checkout-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The member-host API from Momence — 5 operation(s) for member-host.
-  name: Momence member-host API
+  name: Momence Member Host API
   slug: momence-member-host-api
 - baseURL: https://api.momence.com/api/v2
   baseurl_source: declared
   description: The member-sessions API from Momence — 2 operation(s) for member-sessions.
-  name: Momence member-sessions API
+  name: Momence Member Sessions API
   slug: momence-member-sessions-api
 artifact_total: 25
 collections:
@@ -117,6 +117,11 @@ collections:
   name: Momence Public API
   slug: open-momence
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/momence/refs/heads/main/capabilities/momence-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/momence-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/momence/refs/heads/main/agentic-access/momence-agentic-access.yml
   title: ''
@@ -176,10 +181,10 @@ modified: '2026-07-04'
 name: Momence
 nav: Providers
 network: true
-overview: 'Momence publishes 8 APIs on the [APIs.io](https://apis.io/) network, including auth API, host API, host-checkout API, and 5 more. Tagged areas include Fitness, Wellness, Studio Management, Booking, and Scheduling.
+overview: 'Momence publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Host API, Host Checkout API, and 5 more. Tagged areas include Fitness, Wellness, Studio Management, Booking, and Scheduling.
 
 
-  Momence''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  Momence''s developer surface includes authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Momence Plans Pricing
   plan_count: 3
@@ -196,23 +201,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 33.7
+  composite: 31.1
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 60.0
+    artifact_dirs: 12
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 45.4
+    contract_quality: 40.9
     developer_ergonomics: 26.2
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 33.7
+    discoverability: 66.1
+    operational_transparency: 18.9
+  previous_composite: 31.1
   provenance:
     agentic_access: derived
     contracts:
@@ -225,9 +230,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

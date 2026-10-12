@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -108,6 +108,11 @@ collections:
   name: OpenPanel API
   slug: open-openpanel
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/openpanel/refs/heads/main/capabilities/openpanel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/openpanel-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/openpanel/refs/heads/main/agentic-access/openpanel-agentic-access.yml
   title: ''
@@ -171,10 +176,10 @@ modified: '2026-05-19'
 name: OpenPanel
 nav: Providers
 network: true
-overview: 'OpenPanel publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Event API, Export API, Import API, and 4 more. Tagged areas include Event Tracking, Funnels, Open-Source, Product Analytics, and Real-Time Analytics.
+overview: 'OpenPanel publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Event API, Export API, Import API, and 4 more. Tagged areas include Event Tracking, Funnels, Open Source, Product Analytics, and Real-Time Analytics.
 
 
-  OpenPanel''s developer surface includes documentation, GitHub presence, getting-started guide, engineering blog, and 8 more developer resources.'
+  OpenPanel''s developer surface includes documentation, GitHub presence, getting-started guide, engineering blog, and 9 more developer resources.'
 plans:
 - name: Openpanel Plans Pricing
   plan_count: 3
@@ -185,10 +190,10 @@ rate_limits:
   name: Openpanel Rate Limits
   slug: openpanel-rate-limits
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 25.8
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 46.0
     catalog_earned_first_party: 0.0
     catalog_gap: 69.0
@@ -198,11 +203,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
-    contract_quality: 44.9
+    contract_quality: 40.7
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 27.6
+  previous_composite: 25.8
   provenance:
     agentic_access: derived
     contracts:
@@ -210,8 +215,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -230,7 +241,7 @@ slug: openpanel
 tags:
 - Event Tracking
 - Funnels
-- Open-Source
+- Open Source
 - Product Analytics
 - Real-Time Analytics
 - User Analytics

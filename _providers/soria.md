@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/soria/refs/heads/main/security/soria-domain-security.yml
@@ -80,6 +80,10 @@ created: '2026-07-17'
 description: Soria is an AI-native financial terminal built for healthcare investors. The platform aggregates financial data from 125+ public and private sources into continuously updated financial models and delivers them through a terminal UI, an MCP server, an API, warehouse sync, and a research feed. Soria targets bulge-bracket banks, boutique research firms, and the largest hedge funds that specialize in the healthcare sector, turning fragmented healthcare and life sciences data into live, analyst-ready models. Backed by Y Combinator. Its public surface is a single-page marketing site; the API and MCP delivery channels are gated to customers and are not publicly documented.
 image: https://www.soriaanalytics.com/images/social-preview.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.soriaanalytics.com over HTTP.
+  name: Soria MCP Server
+  slug: soria
 modified: '2026-07-21'
 name: Soria
 nav: Providers
@@ -91,7 +95,7 @@ overview: 'Soria is profiled on the [APIs.io](https://apis.io/) network. Tagged 
 random_paper: 14
 score:
   band: minimal
-  composite: 5.0
+  composite: 5.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -105,9 +109,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 5.0
+  previous_composite: 5.6
   provenance:
     mcp: first-party
   regulatory:
@@ -115,9 +119,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

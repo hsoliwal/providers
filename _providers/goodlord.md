@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -331,7 +331,7 @@ modified: '2026-07-26'
 name: Goodlord
 nav: Providers
 network: true
-overview: 'Goodlord publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Application API, Authentication API, and 12 more. Tagged areas include Real-Estate, United Kingdom, PropTech, Property Management, and Rentals.
+overview: 'Goodlord publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Application API, Authentication API, and 12 more. Tagged areas include Real Estate, United Kingdom, PropTech, Property Management, and Rentals.
 
 
   The Goodlord catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -350,7 +350,7 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: strong
-  composite: 60.4
+  composite: 55.8
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -362,9 +362,9 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 66.9
+    contract_quality: 61.3
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -374,7 +374,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 60.4
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -394,9 +394,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -417,7 +417,7 @@ security:
   summary_line: ISO 27001, GDPR
 slug: goodlord
 tags:
-- Real-Estate
+- Real Estate
 - United Kingdom
 - PropTech
 - Property Management

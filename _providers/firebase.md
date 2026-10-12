@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 4
 apis:
 - description: REST API to programmatically create and manage Firebase projects, apps (Web, Android, Apple), and their configuration.
@@ -206,9 +206,9 @@ description: Firebase is Google's app development platform — a backend-as-a-se
 image: https://firebase.google.com/downloads/brand-guidelines/PNG/logo-logomark.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Firebase MCP Server
-  slug: firebase-mcp-server
+  slug: firebase
 modified: '2026-07-19'
 name: Firebase
 nav: Providers
@@ -225,7 +225,7 @@ scopes:
   summary_line: 8 scopes · authorizationCode
 score:
   band: developing
-  composite: 42.8
+  composite: 46.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -239,13 +239,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 78.6
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 52.6
-  previous_composite: 42.8
+  previous_composite: 46.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -277,5 +283,6 @@ tags:
 - Cloud Functions
 - Messaging
 - Google
+- Real-Time
 website: https://firebase.google.com
 ---

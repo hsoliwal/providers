@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 0
@@ -291,7 +291,7 @@ modified: '2026-08-13'
 name: Mention
 nav: Providers
 network: true
-overview: 'Mention publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Alerts API, Authors API, and 6 more. Tagged areas include Alerts, Brand Monitoring, Media Monitoring, Social Listening, and Social-Media.
+overview: 'Mention publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Alerts API, Authors API, and 6 more. Tagged areas include Alerts, Brand Monitoring, Media Monitoring, Social Listening, and Social Media.
 
 
   Mention''s developer surface includes documentation, API reference, getting-started guide, developer portal, support, engineering blog, pricing, and 28 more developer resources.'
@@ -311,7 +311,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 59.0
+  composite: 61.9
   coverage:
     artifact_dirs: 24
     catalog_earned: 59.0
@@ -323,11 +323,11 @@ score:
   facets:
     access_clarity: 81.6
     contract_governance: 18.2
-    contract_quality: 53.9
+    contract_quality: 48.8
     developer_ergonomics: 58.9
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 65.8
-  previous_composite: 59.0
+  previous_composite: 61.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -338,8 +338,14 @@ score:
       total: 10
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -364,7 +370,7 @@ tags:
 - Brand Monitoring
 - Media Monitoring
 - Social Listening
-- Social-Media
+- Social Media
 - Sentiment Analysis
 - Reputation Management
 - Influencer Marketing

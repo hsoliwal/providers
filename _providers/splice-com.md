@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/splice-com/refs/heads/main/security/splice-com-domain-security.yml
@@ -174,6 +174,10 @@ description: Splice is a New York-based music creation platform serving producer
   credits, INSTRUMENT $12.99/mo) plus rent-to-own plugin payments. Splice does not publish a public developer API, OpenAPI specification, SDK, or partner program; its GitHub organization at github.com/splice contains internal tooling, GitHub Actions, audio engineering exercises, and forks rather than externally consumable APIs.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/splice-com.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.splice.com over HTTP.
+  name: Splice MCP Server
+  slug: splice-com
 modified: '2026-08-08'
 name: Splice
 nav: Providers
@@ -185,7 +189,7 @@ overview: 'Splice is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 14
 score:
   band: minimal
-  composite: 9.2
+  composite: 9.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -199,14 +203,16 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 9.2
+  previous_composite: 9.4
   provenance:
     mcp: first-party
   regulatory:
@@ -214,9 +220,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

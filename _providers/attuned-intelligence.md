@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -89,9 +89,9 @@ description: Attuned Intelligence is a healthcare voice AI company that automate
 image: https://static.wixstatic.com/media/99000f_690ca5256d704e37a71772baed21a4b6~mv2.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.attuned-intelligence.com over HTTP; 7 tools listed.
   name: Attuned Intelligence Site MCP (Wix)
-  slug: attuned-intelligence-site-mcp-wix
+  slug: attuned-intelligence-site
 modified: '2026-07-18'
 name: Attuned Intelligence
 nav: Providers
@@ -103,7 +103,7 @@ overview: 'Attuned Intelligence is profiled on the [APIs.io](https://apis.io/) n
 random_paper: 1
 score:
   band: emerging
-  composite: 16.8
+  composite: 16.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -117,12 +117,12 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 16.8
+  previous_composite: 16.0
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     jurisdictions:
@@ -132,9 +132,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

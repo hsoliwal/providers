@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.4
-  scored_at: '2026-09-20'
+  score: 33.3
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - baseURL: https://powerinbox.azure-api.net/
@@ -209,9 +209,9 @@ description: 'Jeeng (formerly PowerInbox, acquired by OpenWeb in 2022 and now ma
 image: https://www.jeeng.com/wp-content/uploads/2022/04/Jeeng_w_OW.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Jeeng serves an MCP endpoint at https://developers.jeeng.com/mcp. It is the documentation MCP that ships with the ReadMe developer hub — it exposes the docs corpus to an agent, NOT the advertiser and '
   name: Jeeng MCP Server
-  slug: jeeng-mcp-server
+  slug: jeeng-mcp-yml
 modified: '2026-08-12'
 name: Jeeng
 nav: Providers
@@ -233,10 +233,10 @@ scopes:
 - name: Jeeng Scopes
   scope_count: 1
   slug: jeeng-scopes
-  summary_line: 1 scope
+  summary_line: 1 scope · client_credentials
 score:
   band: thin
-  composite: 36.1
+  composite: 37.4
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -248,11 +248,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 52.9
     developer_ergonomics: 39.9
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 0.0
-  previous_composite: 36.1
+  previous_composite: 37.4
   provenance:
     conformance: derived
     contracts:
@@ -262,8 +262,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

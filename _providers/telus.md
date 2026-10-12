@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://location-api.insights.telus.com/product/insightsRequest/v1
@@ -205,7 +205,7 @@ modified: '2026-07-25'
 name: TELUS
 nav: Providers
 network: true
-overview: 'TELUS publishes 1 API on the [APIs.io](https://apis.io/) network: Insights Location API. Tagged areas include Telecommunications, Canada, Mobile Network Operator, Broadband, and Network APIs.
+overview: 'TELUS publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Insights Location API, and 1 more. Tagged areas include Telecommunications, Canada, Mobile Network Operator, Broadband, and Network APIs.
 
 
   The TELUS catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -223,8 +223,8 @@ scopes:
   slug: telus-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 54.3
+  band: developing
+  composite: 50.4
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -236,9 +236,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 51.0
     developer_ergonomics: 68.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 68.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -247,7 +247,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 54.3
+  previous_composite: 50.4
   provenance:
     conformance: derived
     skills: derived
@@ -256,9 +256,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 75.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

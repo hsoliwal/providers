@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 6
 apis:
 - description: The FTC Developer Portal is the central hub for developer documentation, data dictionaries, and access program details for FTC-managed datasets and services. It names the API base URL (https://api.ftc
@@ -203,7 +203,7 @@ modified: '2026-09-09'
 name: Federal Trade Commission
 nav: Providers
 network: true
-overview: 'Federal Trade Commission publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Antitrust, Consumer Protection, Do Not Call, Federal-Government, and Law Enforcement.
+overview: 'Federal Trade Commission publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Antitrust, Consumer Protection, Do Not Call, Federal Government, and Law Enforcement.
 
 
   Federal Trade Commission''s developer surface includes documentation, API reference, signup flow, support, authentication, sandbox, product news, and 23 more developer resources.'
@@ -218,7 +218,7 @@ rate_limits:
   slug: federal-trade-commission-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 34.4
   coverage:
     artifact_dirs: 18
     catalog_earned: 50.0
@@ -232,9 +232,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 70.5
     operational_transparency: 44.7
-  previous_composite: 37.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 34.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -243,9 +248,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,7 +275,7 @@ tags:
 - Antitrust
 - Consumer Protection
 - Do Not Call
-- Federal-Government
+- Federal Government
 - Law Enforcement
 - Open Data
 website: https://www.ftc.gov/

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -66,10 +66,15 @@ collections:
   name: Amazon Aurora DSQL Clusters Multi-Region Clusters API
   slug: open-amazon-aurora-dsql-multi-region-clusters-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/capabilities/amazon-aurora-dsql-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-aurora-dsql-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/rds/aurora/dsql/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/amazon-aurora-dsql/refs/heads/main/mcp/amazon-aurora-dsql-mcp.yml
   title: ''
@@ -314,9 +319,9 @@ jsonld:
   slug: amazon-aurora-dsql-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 6 tools listed.
   name: Amazon Aurora DSQL MCP Server
-  slug: amazon-aurora-dsql-mcp-server
+  slug: awslabs-aurora-dsql-mcp-server
 modified: '2026-09-16'
 name: Amazon Aurora DSQL
 nav: Providers
@@ -327,7 +332,7 @@ overview: 'Amazon Aurora DSQL publishes 2 APIs on the [APIs.io](https://apis.io/
   The Amazon Aurora DSQL catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Aurora DSQL''s developer surface includes authentication and 8 more developer resources.'
+  Amazon Aurora DSQL''s developer surface includes authentication and 9 more developer resources.'
 random_paper: 18
 rules:
 - effective_rule_count: 4
@@ -353,23 +358,23 @@ rules:
   slug: amazon-aurora-dsql-spectral-rules
 score:
   band: thin
-  composite: 31.5
+  composite: 30.0
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 56.5
+    artifact_dirs: 22
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 33.3
-    contract_quality: 72.1
+    contract_governance: 31.8
+    contract_quality: 65.9
     developer_ergonomics: 11.9
-    discoverability: 77.8
+    discoverability: 73.3
     operational_transparency: 0.0
-  previous_composite: 31.5
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -379,8 +384,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -412,5 +423,5 @@ use_cases:
 - Migrate PostgreSQL applications to serverless infrastructure
 - Build applications requiring strong consistency at global scale
 - Implement high-throughput transactional microservices
-website: https://amazon.com
+website: https://aws.amazon.com/rds/aurora/dsql/
 ---

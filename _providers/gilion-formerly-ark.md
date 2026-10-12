@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -78,18 +78,22 @@ created: '2026-07-17'
 description: Gilion (formerly ArK) is an AI-powered financial platform, headquartered in Stockholm, that sits between founders and investors to streamline how growth capital is allocated. For companies it offers non-dilutive growth funding for SaaS and technology businesses, including a Growth Loan and Seasonal Credit, underwritten by AI models of a company's trajectory. For banks, funds, and investors it offers an agentic-AI investment platform covering sourcing, due diligence, monitoring, and portfolio reporting. Gilion was rebranded from ArK and is backed by Creandum. The company publishes a public Trust Center (SOC 2 Type 2, CSA STAR, GDPR/CCPA/CPRA) but does not currently expose a public developer API; this profile tracks its security, compliance, and web presence in the API Evangelist network.
 image: https://framerusercontent.com/assets/62T62jjetbr3liDfxk2EGXs8ct0.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.gilion.com over HTTP.
+  name: Gilion (formerly ArK) MCP Server
+  slug: gilion-formerly-ark
 modified: '2026-07-19'
 name: Gilion (formerly ArK)
 nav: Providers
 network: true
-overview: 'Gilion (formerly ArK) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial-Services, Growth Financing, and Venture Debt.
+overview: 'Gilion (formerly ArK) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Services, Growth Financing, and Venture Debt.
 
 
   Gilion (formerly ArK)''s developer surface includes engineering blog, signup flow, and 7 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 15.5
+  composite: 15.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,19 +107,27 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - sweden
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 15.5
+  previous_composite: 15.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +147,7 @@ slug: gilion-formerly-ark
 tags:
 - Company
 - Fintech
-- Financial-Services
+- Financial Services
 - Growth Financing
 - Venture Debt
 - Artificial Intelligence

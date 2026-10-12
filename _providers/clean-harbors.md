@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 168
   human_in_the_loop: 0
@@ -260,7 +260,7 @@ rate_limits:
   slug: clean-harbors-rate-limits
 score:
   band: thin
-  composite: 35.4
+  composite: 36.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 48.0
@@ -272,18 +272,24 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 55.3
+    contract_quality: 53.1
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 79.5
     operational_transparency: 0.0
-  previous_composite: 35.4
+  previous_composite: 36.0
   provenance:
     agentic_access: derived
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

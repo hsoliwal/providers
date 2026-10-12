@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: true
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: documented
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.8
-  scored_at: '2026-09-20'
+  score: 26.6
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - baseURL: https://api.laserdata.cloud
@@ -192,6 +192,11 @@ collections:
   name: LaserData Cloud Audit Account Tenants API
   slug: open-laserdata-tenants-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/capabilities/laserdata-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/laserdata-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/laserdata/refs/heads/main/overlays/laserdata-audit-overlay.yaml
   title: ''
@@ -358,13 +363,13 @@ overview: 'LaserData publishes 18 APIs on the [APIs.io](https://apis.io/) networ
   The LaserData catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  LaserData''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, CLI, and 26 more developer resources.'
+  LaserData''s developer surface includes documentation, API reference, getting-started guide, signup flow, support, engineering blog, CLI, and 27 more developer resources.'
 random_paper: 21
 score:
   band: strong
-  composite: 57.6
+  composite: 58.0
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -374,11 +379,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 68.0
+    contract_quality: 62.1
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 44.7
-  previous_composite: 57.6
+  previous_composite: 58.0
   provenance:
     conformance: derived
     contracts:
@@ -388,8 +393,14 @@ score:
       total: 18
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

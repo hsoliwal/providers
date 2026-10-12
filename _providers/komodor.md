@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing Komodor clusters, services, monitors, RBAC policies, and integrations programmatically. Authentication uses an API key generated from the API Keys tab in the User Settings page a
   name: Komodor REST API
   slug: rest-api
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/komodor/refs/heads/main/security/komodor-domain-security.yml
@@ -89,6 +89,10 @@ created: '2026-05-11'
 description: Komodor is an autonomous AI SRE platform for Kubernetes observability, troubleshooting, and operations across multiple clusters. The platform surfaces cluster events, deployment timelines, dependency maps, and remediation runbooks to help platform and SRE teams diagnose incidents faster. Komodor exposes a REST API plus a Terraform provider for managing clusters, services, monitors, and policies, authenticated with API keys generated from the User Settings page.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/komodor.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.komodor.com over HTTP.
+  name: Komodor MCP Server
+  slug: komodor
 modified: '2026-05-11'
 name: Komodor
 nav: Providers
@@ -99,8 +103,8 @@ overview: 'Komodor publishes 1 API on the [APIs.io](https://apis.io/) network. T
   Komodor''s developer surface includes documentation, pricing, signup flow, engineering blog, and 7 more developer resources.'
 random_paper: 15
 score:
-  band: emerging
-  composite: 12.0
+  band: minimal
+  composite: 10.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -114,13 +118,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 12.0
+  previous_composite: 10.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

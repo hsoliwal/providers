@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: Access ERS data products in machine-readable formats for analysis or integration into your own applications. Delivered via api.data.gov as REST endpoints. Requires an api.data.gov key.
@@ -180,7 +180,7 @@ modified: '2026-09-06'
 name: Economic Research Service
 nav: Providers
 network: true
-overview: 'Economic Research Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, Economics, Federal-Government, Research, and Open Data.
+overview: 'Economic Research Service publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Agriculture, Economics, Federal Government, Research, and Open Data.
 
 
   Economic Research Service''s developer surface includes documentation, engineering blog, support, authentication, changelog, sandbox, and 21 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: economic-research-service-rate-limits
 score:
   band: developing
-  composite: 45.5
+  composite: 42.6
   coverage:
     artifact_dirs: 21
     catalog_earned: 52.0
@@ -207,11 +207,16 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 50.0
-  previous_composite: 45.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 42.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -220,9 +225,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -242,7 +247,7 @@ slug: economic-research-service
 tags:
 - Agriculture
 - Economics
-- Federal-Government
+- Federal Government
 - Research
 - Open Data
 - Geospatial

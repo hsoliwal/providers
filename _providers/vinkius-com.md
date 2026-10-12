@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: 'REST API behind the AI Connect SDK: application users, connector connections, write-only credentials, connection tokens, catalog and marketplace search, plus the execution plane for capabilities. Auth'
@@ -157,7 +157,7 @@ layout: provider
 mcp_servers:
 - description: 'Vinkius IS an MCP platform - every Connector in its catalog (9,258 connectors / 63,093 capabilities per llms.txt on 2026-09-20) is a hosted remote MCP server on the Vinkius Edge, addressed by one URL '
   name: Vinkius MCP Server
-  slug: vinkius-mcp-server
+  slug: vinkius-edge
 modified: '2026-09-20'
 name: Vinkius
 nav: Providers
@@ -177,12 +177,12 @@ rate_limits:
   slug: vinkius-com-rate-limits
 scopes:
 - name: Vinkius Com Scopes
-  scope_count: 0
+  scope_count: 2
   slug: vinkius-com-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: developing
-  composite: 42.9
+  composite: 48.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -190,18 +190,27 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
+  delta: 0.0
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 31.6
+  previous_composite: 48.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 55.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -228,6 +237,6 @@ tags:
 - Connectors
 - AI Governance
 - Developer Tools
-- agent-native
+- Agent-Native
 website: https://vinkius.com/
 ---

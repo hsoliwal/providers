@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 48.6
-  scored_at: '2026-09-20'
+  score: 46.7
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -63,7 +63,7 @@ apis:
   description: The Usuarios API from Samu — 1 operation(s) for usuarios.
   name: Samu Usuarios API
   slug: samu-usuarios-api
-artifact_total: 14
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Samu
@@ -203,17 +203,14 @@ description: Samu (samu.ai) is an AI-powered conversation-intelligence and sales
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/samu.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.samu.ai over HTTP requiring OAuth.
   name: Samu MCP Server
-  slug: samu-mcp-server
-- description: ''
-  name: Samu MCP Server
-  slug: samu-mcp-server-2
+  slug: samu
 modified: '2026-08-13'
 name: Samu
 nav: Providers
 network: true
-overview: 'Samu publishes 3 APIs on the [APIs.io](https://apis.io/) network: Meetings API, Threads API, and Usuarios API. Tagged areas include Company, Artificial Intelligence, Sales, Sales Intelligence, and Conversation Intelligence.
+overview: 'Samu publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Meetings API, Threads API, Usuarios API, and 1 more. Tagged areas include Company, Artificial Intelligence, Sales, Sales Intelligence, and Conversation Intelligence.
 
 
   Samu''s developer surface includes pricing, signup flow, engineering blog, documentation, API reference, authentication, and 22 more developer resources.'
@@ -233,7 +230,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/refreshToken
 score:
   band: developing
-  composite: 47.2
+  composite: 49.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -245,16 +242,16 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 49.6
+    contract_quality: 44.7
     developer_ergonomics: 32.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 47.2
+  previous_composite: 49.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -265,8 +262,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -299,6 +302,6 @@ tags:
 - Transcription
 - WhatsApp
 - MCP
-- agent-native
+- Agent-Native
 website: https://samu.ai
 ---

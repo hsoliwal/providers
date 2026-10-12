@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -61,7 +61,7 @@ apis:
   description: Verify whether an EIN is a tax-deductible public charity
   name: CharityAPI Public Charity Check API
   slug: charityapi-public-charity-check-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -161,6 +161,10 @@ jsonld:
   property_count: 2
   slug: charityapi-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.charityapi.org over HTTP.
+  name: CharityAPI MCP Server
+  slug: charityapi
 modified: '2026-05-19'
 name: CharityAPI
 nav: Providers
@@ -194,7 +198,7 @@ rules:
   slug: charityapi-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 38.1
+  composite: 36.8
   coverage:
     artifact_dirs: 17
     catalog_earned: 54.3
@@ -206,11 +210,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 60.5
+    contract_quality: 54.8
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 38.1
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     contracts:
@@ -219,8 +223,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: 'Cora''s transactional banking API for Direct Integration: registered boleto and carnê (installment) issuance, Pix QR codes, account data, balance and statement queries, payment and transfer initiation '
@@ -161,7 +161,7 @@ overview: 'Cora publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 3
 score:
   band: thin
-  composite: 35.5
+  composite: 34.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -173,9 +173,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -184,7 +184,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 35.5
+  previous_composite: 34.2
   provenance:
     conformance: first-party
   regulatory:
@@ -192,9 +192,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 34.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,7 +219,7 @@ tags:
 - Pix
 - Boleto
 - Invoicing
-- SMB
+- Small Business
 - Fintech
 - Banking as a Service
 website: https://www.cora.com.br/

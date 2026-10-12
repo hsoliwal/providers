@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 5
 apis:
 - description: HTTPS REST access to OneTick Cloud market data and analytics queries, authenticated with an OAuth2 client-credentials Bearer token issued by the OneTick Keycloak realm (https://cloud-auth.parent.oneti
@@ -50,7 +50,7 @@ apis:
 - description: Cloud API for extracting adjusted and unadjusted point-in-time quotes and trades at nanosecond precision across 200+ venues for transaction cost analysis, packaged for Python integration; marketed sal
   name: OneTick Point-in-Time TCA API
   slug: onetick-point-in-time-tca-api
-artifact_total: 8
+artifact_total: 9
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/onetick/refs/heads/main/security/onetick-domain-security.yml
@@ -158,11 +158,15 @@ created: '2026-07-21'
 description: OneTick, from OneMarketData, is an enterprise tick database and analytics platform for capital markets, capturing, storing, and analyzing trade, quote, and order-book time series at scale for quant research, transaction cost analysis, and trade surveillance. OneTick Cloud sells historical and reference market data covering 200+ global equities, options, and futures venues (history back to 1993, corporate actions, symbol cross-reference) delivered on demand through an OAuth2-secured REST WebAPI, a pandas-like Python API (onetick-py), a directed-graph Python API, SQL querying, and file delivery, with a self-serve trial registration. The detailed REST endpoint reference sits behind the cloud dashboard login. OneMarketData merged with KX in September 2025 under TA Associates ownership.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/onetick.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.cloud.onetick.com over HTTP; 12 tools listed.
+  name: OneTick (OneMarketData) MCP Server
+  slug: onetick
 modified: '2026-07-22'
 name: OneTick (OneMarketData)
 nav: Providers
 network: true
-overview: 'OneTick (OneMarketData) publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Tick Data, Historical Data, and Trading.
+overview: 'OneTick (OneMarketData) publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Tick Data, Historical Data, and Trading.
 
 
   OneTick (OneMarketData)''s developer surface includes authentication, changelog, getting-started guide, API reference, developer portal, documentation, engineering blog, and 16 more developer resources.'
@@ -174,7 +178,7 @@ scopes:
   summary_line: 28 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 36.0
+  composite: 34.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.0
@@ -188,9 +192,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 36.0
+  previous_composite: 34.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -199,9 +203,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -219,15 +223,15 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: onetick
 tags:
-- Financial
+- Finance
 - Market Data
 - Tick Data
 - Historical Data
 - Trading
 - Analytics
-- Surveillance
 - Time Series
 - Stocks
 - Options
+- Trade Surveillance
 website: https://www.onetick.com/
 ---

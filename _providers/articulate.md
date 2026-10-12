@@ -33,9 +33,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 5
+artifact_total: 6
 common:
 - group: company
   title: ''
@@ -151,6 +151,10 @@ created: '2026-07-17'
 description: Articulate is an AI-powered workplace-training platform for creating, collaborating on, and distributing e-learning at scale. Its Articulate 360 suite pairs Rise (web-based responsive authoring) and Storyline (desktop authoring for custom interactive content) with Review 360 (stakeholder feedback), Reach 360 (an integrated LMS for sharing and tracking training), Content Library 360, an agentic AI Assistant, and localization into 80+ languages. The platform serves 125,000+ organizations across 187 countries and 133 million learners. Articulate does not publish a public developer REST API; its programmatic surface is the id.articulate.com identity provider (OpenID Connect / OAuth 2.0, Okta-hosted) used for single sign-on, plus standards-based content interoperability (SCORM and xAPI) emitted by its authoring tools. Surfaced as a portfolio company of ICONIQ Capital.
 image: https://www.articulate.com/apple-touch-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.articulate.com over HTTP; 2 tools listed.
+  name: Articulate MCP Server
+  slug: articulate
 modified: '2026-07-18'
 name: Articulate
 nav: Providers
@@ -166,8 +170,8 @@ scopes:
   slug: articulate-scopes
   summary_line: 7 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 35.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -181,9 +185,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 39.7
+  previous_composite: 35.1
   provenance:
     conformance: first-party
     mcp: first-party
@@ -198,9 +202,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 85.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -233,6 +237,5 @@ tags:
 - Training
 - Course Authoring
 - SSO
-- OpenID Connect
 website: https://www.articulate.com/
 ---

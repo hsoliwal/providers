@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -154,7 +154,7 @@ overview: 'Preply publishes 1 API on the [APIs.io](https://apis.io/) network: Ch
 random_paper: 8
 score:
   band: thin
-  composite: 37.8
+  composite: 34.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -166,11 +166,11 @@ score:
   facets:
     access_clarity: 57.1
     contract_governance: 4.5
-    contract_quality: 43.5
+    contract_quality: 39.2
     developer_ergonomics: 8.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 37.8
+  previous_composite: 34.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -186,9 +186,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 46.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

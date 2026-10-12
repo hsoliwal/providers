@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -45,82 +45,82 @@ apis:
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: These endpoints return whole blocks, headers and payloads, from the chain database. Generally, blocks are returned in ascending order and include orphaned blocks. For only querying blocks that are inc
-  name: Kadena block API
+  name: Kadena Block API
   slug: kadena-block-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: These endpoints return block hashes from the chain database. Generally, block hashes are returned in ascending order and include hashes from orphaned blocks. For only querying blocks that are included
-  name: Kadena blockhash API
+  name: Kadena Blockhash API
   slug: kadena-blockhash-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The config API from Kadena — 1 operation(s) for config.
-  name: Kadena config API
+  name: Kadena Config API
   slug: kadena-config-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: A cut represents a distributed state of a chainweb. It references one block header for each chain, such that those blocks are pairwise concurrent. Two blocks from two different chains are said to be c
-  name: Kadena cut API
+  name: Kadena Cut API
   slug: kadena-cut-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-listen API from Kadena — 1 operation(s) for endpoint-listen.
-  name: Kadena endpoint-listen API
+  name: Kadena Endpoint Listen API
   slug: kadena-endpoint-listen-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-local API from Kadena — 1 operation(s) for endpoint-local.
-  name: Kadena endpoint-local API
+  name: Kadena Endpoint Local API
   slug: kadena-endpoint-local-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-poll API from Kadena — 1 operation(s) for endpoint-poll.
-  name: Kadena endpoint-poll API
+  name: Kadena Endpoint Poll API
   slug: kadena-endpoint-poll-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-private API from Kadena — 1 operation(s) for endpoint-private.
-  name: Kadena endpoint-private API
+  name: Kadena Endpoint Private API
   slug: kadena-endpoint-private-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-send API from Kadena — 1 operation(s) for endpoint-send.
-  name: Kadena endpoint-send API
+  name: Kadena Endpoint Send API
   slug: kadena-endpoint-send-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The endpoint-spv API from Kadena — 1 operation(s) for endpoint-spv.
-  name: Kadena endpoint-spv API
+  name: Kadena Endpoint Spv API
   slug: kadena-endpoint-spv-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: These endpoints return block headers from the chain database. Similar to the block endpoints, block headers are generally returned in ascending order and include headers of orphaned blocks. For only q
-  name: Kadena header API
+  name: Kadena Header API
   slug: kadena-header-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: Mempool P2P endpoints for communication between mempools. Endusers are not supposed to use these endpoints directly. Instead, the respective Pact endpoints should be used for submitting transactions i
-  name: Kadena mempool API
+  name: Kadena Mempool API
   slug: kadena-mempool-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The Mining API of Chainweb node is disabled by default. It can be enabled and configured in the configuration file. The mining API consists of the following endpoints that are described in detail on t
-  name: Kadena mining API
+  name: Kadena Mining API
   slug: kadena-mining-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The misc API from Kadena — 7 operation(s) for misc.
-  name: Kadena misc API
+  name: Kadena Misc API
   slug: kadena-misc-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: Raw literal Block Payloads in the form in which they are stored on the chain. By default only the payload data is returned which is sufficient for validating the blockchain Merkle Tree. It is also suf
-  name: Kadena payload API
+  name: Kadena Payload API
   slug: kadena-payload-api
 - baseURL: https://api.chainweb.com/chainweb/0.0/mainnet01
   baseurl_source: declared
   description: The P2P communication between chainweb-nodes is sharded into several independent P2P network. The `cut` network is exchanging consensus state. There is also one mempool P2P network for each chain.
-  name: Kadena peer API
+  name: Kadena Peer API
   slug: kadena-peer-api
 artifact_total: 35
 collections:
@@ -297,14 +297,14 @@ modified: '2026-07-19'
 name: Kadena
 nav: Providers
 network: true
-overview: 'Kadena publishes 16 APIs on the [APIs.io](https://apis.io/) network, including block API, blockhash API, config API, and 13 more. Tagged areas include Company, Crypto Web3, Blockchain, Smart Contracts, and Proof of Work.
+overview: 'Kadena publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Block API, Blockhash API, Config API, and 13 more. Tagged areas include Company, Crypto Web3, Blockchain, Smart Contracts, and Proof of Work.
 
 
   Kadena''s developer surface includes documentation, API reference, getting-started guide, engineering blog, changelog, CLI, sandbox, and 17 more developer resources.'
 random_paper: 18
 score:
-  band: emerging
-  composite: 25.9
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -315,12 +315,13 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 47.8
-    developer_ergonomics: 31.0
-    discoverability: 75.9
-    operational_transparency: 2.6
-  previous_composite: 25.9
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -330,8 +331,14 @@ score:
       marker_coverage: 0.0
       total: 16
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

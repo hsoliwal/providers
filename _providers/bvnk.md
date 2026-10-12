@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -387,14 +387,14 @@ description: BVNK is a stablecoin payments infrastructure company that lets busi
 image: https://cdn.prod.website-files.com/66dacc76fb28939d860bf57c/66fc3ae406ca2e2c41d2ccff_og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: BVNK MCP Server
-  slug: bvnk-mcp-server
+  slug: layer1-digital-mcp
 modified: '2026-08-08'
 name: BVNK
 nav: Providers
 network: true
-overview: 'BVNK publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Address API, Asset Pool API, Channels API, and 13 more. Tagged areas include Company, Payments, Stablecoins, Cryptocurrency, and Wallets.
+overview: 'BVNK publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Address API, Asset Pool API, Channels API, and 14 more. Tagged areas include Company, Payments, Stablecoins, Cryptocurrency, and Wallets.
 
 
   The BVNK catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -409,7 +409,7 @@ scopes:
   summary_line: 156 scopes · clientCredentials
 score:
   band: strong
-  composite: 58.1
+  composite: 54.3
   coverage:
     artifact_dirs: 26
     catalog_earned: 37.0
@@ -421,11 +421,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 62.4
+    contract_quality: 57.0
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 50.0
-  previous_composite: 58.1
+  previous_composite: 54.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -447,9 +447,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 62.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -477,7 +477,7 @@ tags:
 - Wallets
 - Virtual Accounts
 - Cross-Border Payments
-- Financial-Services
+- Financial Services
 - Cards
 - Digital Assets
 - Banking

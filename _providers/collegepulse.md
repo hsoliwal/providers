@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -73,6 +73,10 @@ created: '2026-07-17'
 description: College Pulse is an American market research and data analytics firm that specializes in survey-based insights from college students. Through an online student panel of 800,000+ verified undergraduates across 1,500+ campuses in all 50 states, it has collected 130+ million survey responses and offers custom research, brand trackers, and syndicated reports to brands, media, and nonprofit organizations. Its work is used by outlets and institutions including The New York Times, the Knight Foundation, FiveThirtyEight, Forbes, Dell, GE, and Chegg. College Pulse is a research services company and does not currently publish a public developer API, SDKs, or developer documentation; this profile captures its public web surface and domain security posture.
 image: https://collegepulse.com/cp-website-min.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.collegepulse.com over HTTP.
+  name: Collegepulse MCP Server
+  slug: collegepulse
 modified: '2026-07-18'
 name: Collegepulse
 nav: Providers
@@ -84,7 +88,7 @@ overview: 'Collegepulse is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 8
 score:
   band: minimal
-  composite: 6.7
+  composite: 6.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -98,9 +102,14 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 6.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 6.9
   provenance:
     mcp: first-party
   regulatory:
@@ -108,9 +117,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: Vector index management
   name: Upstash Vector API
   slug: upstash-vector-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -161,11 +161,15 @@ created: '2026-05-11'
 description: Upstash provides serverless data platforms including managed Redis, Kafka, QStash messaging, and Vector databases optimized for serverless and edge applications with per-request pricing. The platform offers low-latency global replication, REST APIs for stateless access from edge runtimes, and SDKs for popular serverless frameworks. The Upstash Developer API enables programmatic management of databases, teams, and account resources using HTTP Basic authentication (email + API key).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/upstash.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.upstash.com over HTTP.
+  name: Upstash MCP Server
+  slug: upstash
 modified: '2026-05-11'
 name: Upstash
 nav: Providers
 network: true
-overview: 'Upstash publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Kafka API, Redis API, RedisCommand API, and 2 more. Tagged areas include Serverless, Redis, Kafka, Messaging, and Vector Database.
+overview: 'Upstash publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Kafka API, Redis API, RedisCommand API, and 4 more. Tagged areas include Serverless, Redis, Kafka, Messaging, and Vector Database.
 
 
   Upstash''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 8 more developer resources.'
@@ -179,7 +183,7 @@ plans:
 random_paper: 6
 score:
   band: thin
-  composite: 38.1
+  composite: 36.2
   coverage:
     artifact_dirs: 13
     catalog_earned: 49.0
@@ -187,15 +191,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 55.3
     contract_governance: 0.0
-    contract_quality: 50.9
+    contract_quality: 45.8
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 31.8
+  previous_composite: 36.2
   provenance:
     agentic_access: derived
     contracts:
@@ -204,9 +208,15 @@ score:
       marker_coverage: 0.0
       total: 5
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -228,5 +238,7 @@ tags:
 - Messaging
 - Vector Database
 - Edge Computing
+- Database
+- Vector Search
 website: https://upstash.com
 ---

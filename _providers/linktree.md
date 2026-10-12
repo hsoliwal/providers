@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 43.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -248,7 +248,7 @@ modified: '2026-08-13'
 name: Linktree
 nav: Providers
 network: true
-overview: 'Linktree publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Media, Link in Bio, Creator Economy, and Social-Media.
+overview: 'Linktree publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Media, Link in Bio, Creator Economy, and Social Media.
 
 
   Linktree''s developer surface includes documentation, API reference, authentication, CLI, changelog, getting-started guide, support, and 34 more developer resources.'
@@ -268,7 +268,7 @@ scopes:
   summary_line: 30 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 45.7
+  composite: 50.0
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -282,16 +282,29 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 66.1
-    discoverability: 87.0
+    discoverability: 85.8
     operational_transparency: 36.8
-  previous_composite: 45.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - australia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - anz
+  previous_composite: 50.0
   provenance:
     agentic_access: first-party
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -321,12 +334,13 @@ tags:
 - Media
 - Link in Bio
 - Creator Economy
-- Social-Media
+- Social Media
 - Marketing
 - Analytics
 - MCP
 - Agents
 - Design Systems
 - Developer Tools
+- Australia
 website: https://linktr.ee/
 ---

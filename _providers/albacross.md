@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -244,7 +244,7 @@ modified: '2026-08-12'
 name: Albacross
 nav: Providers
 network: true
-overview: 'Albacross publishes 1 API on the [APIs.io](https://apis.io/) network: Company API. Tagged areas include Company, B2B Data, Lead Generation, Intent Data, and Company Enrichment.
+overview: 'Albacross publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Company API, and 2 more. Tagged areas include Company, B2B Data, Lead Generation, Intent Data, and Company Enrichment.
 
 
   The Albacross catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -262,7 +262,7 @@ rate_limits:
   slug: albacross-rate-limits
 score:
   band: developing
-  composite: 46.4
+  composite: 46.3
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 56.4
+    contract_quality: 51.5
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 10.5
-  previous_composite: 46.4
+  previous_composite: 46.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -289,8 +289,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -320,5 +326,6 @@ tags:
 - Account Based Marketing
 - Website Visitor Identification
 - Webhook
+- Data Enrichment
 website: https://albacross.com/
 ---

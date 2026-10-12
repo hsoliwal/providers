@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Boompop is a corporate event management and planning SaaS platform that helps companies organize offsites, conferences, team gatherings, and other business events. The platform pairs AI-powered planning tools that generate briefs, agendas, and logistics with hotel and vendor sourcing (AI-powered RFPs and rate negotiation), guest and RSVP management, itinerary and event websites, budget and expense tracking, and 24/7 AI messaging. Tiers range from a free Starter plan through a per-event Pro plan to Full Service white-glove planning with a dedicated expert. Boompop was named the 7th fastest-growing software company on the 2025 Inc. 5000 list. It is SOC 2 certified and GDPR compliant, and offers passwordless login plus Google and Microsoft single sign-on. Boompop is backed by Wing Venture Capital. Boompop does not currently publish a public API, developer portal, or API documentation.
 image: https://cdn.prod.website-files.com/69a5c7e6ea7c2b056a4c8bb8/69e7be9327a6aadf2bab58fd_735dba0479354e7677da18525b927ccb_open-graph-event-planning.webp
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.boompop.com over HTTP.
+  name: Boompop MCP Server
+  slug: boompop
 modified: '2026-07-18'
 name: Boompop
 nav: Providers
@@ -89,7 +93,7 @@ overview: 'Boompop is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 16
 score:
   band: emerging
-  composite: 16.3
+  composite: 16.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 16.3
+  previous_composite: 16.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

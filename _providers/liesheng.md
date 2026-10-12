@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - description: The Suunto Cloud API (also called the Integration API) gives approved partners OAuth2-authorized access to a Suunto App user's workout and daily-activity data. Workouts are delivered as FIT files carr
@@ -171,9 +171,9 @@ description: Liesheng Group (猎声集团 / Liesheng Technology) is a Dongguan, 
 image: https://liesheng.cc/phone/images/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at haylou.com over HTTP; 5 tools listed.
   name: Liesheng Group MCP Server
-  slug: liesheng-group-mcp-server
+  slug: haylou-ucp
 modified: '2026-07-19'
 name: Liesheng Group
 nav: Providers
@@ -193,7 +193,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 45.5
+  composite: 42.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -205,9 +205,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -216,18 +216,18 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 45.5
+  previous_composite: 42.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

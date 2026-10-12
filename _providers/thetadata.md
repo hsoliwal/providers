@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: ws://127.0.0.1:25520/v1/events
@@ -358,7 +358,7 @@ modified: '2026-07-22'
 name: ThetaData
 nav: Providers
 network: true
-overview: 'ThetaData publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Streaming WebSocket API, Calendar API, Index API, and 3 more. Tagged areas include Financial, Market Data, Options, Stocks, and Indices.
+overview: 'ThetaData publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Streaming WebSocket API, Calendar API, Index API, and 4 more. Tagged areas include Finance, Market Data, Options, Stocks, and Indices.
 
 
   The ThetaData catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -376,7 +376,7 @@ rate_limits:
   slug: thetadata-rate-limits
 score:
   band: strong
-  composite: 62.4
+  composite: 59.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 61.0
@@ -388,11 +388,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 52.2
+    contract_quality: 48.2
     developer_ergonomics: 69.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 78.9
-  previous_composite: 62.4
+  previous_composite: 59.8
   provenance:
     conformance: derived
     contracts:
@@ -407,9 +407,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -427,7 +427,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: thetadata
 tags:
-- Financial
+- Finance
 - Market Data
 - Options
 - Stocks

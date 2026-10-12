@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: A live, first-party remote Model Context Protocol server that makes the Bluefish AI platform callable by agents over Streamable HTTP. It is protected by OAuth 2.1 and requires the mcp:connect scope; a
@@ -117,9 +117,9 @@ description: Bluefish AI is an enterprise AI marketing platform built for Fortun
 image: https://framerusercontent.com/images/HAib9zYaCuHpzLWP2A6EcUxHGM.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at platform.bluefishai.com over HTTP requiring OAuth; 1 tool listed.
   name: Bluefish AI MCP Server
-  slug: bluefish-ai-mcp-server
+  slug: bluefish-ai
 modified: '2026-08-13'
 name: Bluefish AI
 nav: Providers
@@ -144,7 +144,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.1
+  composite: 21.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 37.0
@@ -158,14 +158,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 19.1
+  previous_composite: 21.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

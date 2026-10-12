@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Pantheon platform REST API (terminus.pantheon.io) underpins the Terminus CLI and enables programmatic management of sites, environments, deployments, domains, backups, teams, organizations, SSH ke
   name: Pantheon REST API
   slug: pantheon-api
-artifact_total: 6
+artifact_total: 7
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/pantheon/refs/heads/main/security/pantheon-trust-center.yml
@@ -105,6 +105,10 @@ finops:
   slug: pantheon-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pantheon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.pantheon.io over HTTP.
+  name: Pantheon MCP Server
+  slug: pantheon
 modified: '2026-06-13'
 name: Pantheon
 nav: Providers
@@ -123,8 +127,8 @@ rate_limits:
   name: Pantheon Rate Limits
   slug: pantheon-rate-limits
 score:
-  band: thin
-  composite: 26.3
+  band: emerging
+  composite: 25.8
   coverage:
     artifact_dirs: 9
     catalog_earned: 40.0
@@ -136,15 +140,21 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 21.1
-  previous_composite: 26.3
+  previous_composite: 25.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

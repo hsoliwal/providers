@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 4
 common:
@@ -150,9 +150,9 @@ description: 'GenHealth.ai builds generative AI for healthcare operations, power
 image: https://genhealth.ai/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.genhealth.ai over HTTP; 5 tools listed.
   name: GenHealth.ai MCP Server
-  slug: genhealthai-mcp-server
+  slug: genhealth-docs
 modified: '2026-07-19'
 name: GenHealth.ai
 nav: Providers
@@ -164,7 +164,7 @@ overview: 'GenHealth.ai is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 2
 score:
   band: thin
-  composite: 29.2
+  composite: 28.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -178,9 +178,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 26.3
-  previous_composite: 29.2
+  previous_composite: 28.0
   provenance:
     conformance: first-party
     mcp: first-party
@@ -190,9 +190,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

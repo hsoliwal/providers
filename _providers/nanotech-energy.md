@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -102,7 +102,7 @@ overview: 'Nanotech Energy is profiled on the [APIs.io](https://apis.io/) networ
 random_paper: 3
 score:
   band: minimal
-  composite: 9.3
+  composite: 9.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 25.0
@@ -116,17 +116,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 46.3
+    discoverability: 45.5
     operational_transparency: 0.0
-  previous_composite: 9.3
+  previous_composite: 9.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

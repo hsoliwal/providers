@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: false
@@ -32,9 +32,9 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.1
-  scored_at: '2026-09-20'
-api_count: 9
+  score: 5.8
+  scored_at: '2026-10-04'
+api_count: 10
 apis:
 - description: 'The Angular Core API provides the fundamental building blocks of the Angular framework including components, directives, pipes, dependency injection, Signals for reactive state management, standalone '
   name: Angular Core API
@@ -63,7 +63,10 @@ apis:
 - description: Angular DevTools is a browser extension for debugging and profiling Angular applications with component tree inspection, change detection profiling, and dependency injection debugging.
   name: Angular DevTools
   slug: angular-devtools
-artifact_total: 15
+- description: Reference for the @angular/common package - common directives (NgClass, NgStyle, NgTemplateOutlet), pipes (DatePipe, CurrencyPipe, AsyncPipe), Location services and locale utilities.
+  name: Angular Common API
+  slug: angular-common-api
+artifact_total: 16
 common:
 - group: company
   title: ''
@@ -142,7 +145,7 @@ modified: '2026-09-16'
 name: Angular
 nav: Providers
 network: true
-overview: 'Angular publishes 9 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Deferrable Views, Framework, Frontend, JavaScript, and Open-Source.
+overview: 'Angular publishes 10 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Deferrable Views, Framework, Frontend, JavaScript, and Open Source.
 
 
   Angular''s developer surface includes documentation, GitHub presence, engineering blog, Stack Overflow tag, YouTube channel, and 11 more developer resources.'
@@ -157,7 +160,7 @@ rate_limits:
   slug: angular-rate-limits
 score:
   band: emerging
-  composite: 17.2
+  composite: 15.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 46.0
@@ -170,12 +173,18 @@ score:
     access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 23.8
-    discoverability: 68.5
+    developer_ergonomics: 23.1
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 17.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.3
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -199,7 +208,7 @@ tags:
 - Framework
 - Frontend
 - JavaScript
-- Open-Source
+- Open Source
 - Signals
 - Single Page Application
 - TypeScript

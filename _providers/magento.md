@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -168,6 +168,11 @@ collections:
   name: Magento REST Authentication Tax API
   slug: open-magento-tax-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/magento/refs/heads/main/capabilities/magento-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/magento-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/magento/refs/heads/main/agentic-access/magento-agentic-access.yml
   title: ''
@@ -211,6 +216,10 @@ common:
   title: ''
   type: JSONSchema
   url: json-schema/magento-product-schema.json
+- group: company
+  title: ''
+  type: Website
+  url: https://business.adobe.com/products/magento/magento-commerce.html
 description: Overview of the Adobe Commerce and Magento Open Source REST API documentation.
 features:
 - 'Magento Open Source: free, self-hosted PHP commerce platform'
@@ -358,13 +367,13 @@ modified: '2026-09-16'
 name: Magento
 nav: Providers
 network: true
-overview: 'Magento publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Adobe Commerce Webhooks, Adobe Commerce Eventing, Authentication API, and 10 more. Tagged areas include E-Commerce, Catalog, Headless Commerce, and Magento.
+overview: 'Magento publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Adobe Commerce Webhooks, Adobe Commerce Eventing, Authentication API, and 13 more. Tagged areas include E-Commerce, Catalog, Headless Commerce, and Magento.
 
 
   The Magento catalog on APIs.io includes 2 event-driven AsyncAPI specifications, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Magento''s developer surface includes authentication and 8 more developer resources.'
+  Magento''s developer surface includes authentication and 10 more developer resources.'
 plans:
 - name: Magento Plans Pricing
   plan_count: 3
@@ -398,9 +407,9 @@ rules:
   slug: magento-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 31.0
+  composite: 30.7
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 42.5
     catalog_earned_first_party: 0.0
     catalog_gap: 72.5
@@ -410,11 +419,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 13.6
-    contract_quality: 67.5
+    contract_quality: 62.7
     developer_ergonomics: 21.4
-    discoverability: 44.4
+    discoverability: 42.9
     operational_transparency: 10.5
-  previous_composite: 31.0
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     contracts:
@@ -422,8 +431,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -448,4 +463,5 @@ tags:
 - Catalog
 - Headless Commerce
 - Magento
+website: https://business.adobe.com/products/magento/magento-commerce.html
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 136
   human_in_the_loop: 0
@@ -648,12 +648,12 @@ rate_limits:
   slug: nationgraph-rate-limits
 scopes:
 - name: Nationgraph Scopes
-  scope_count: 0
+  scope_count: 5
   slug: nationgraph-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 48.9
+  composite: 43.4
   coverage:
     artifact_dirs: 23
     catalog_earned: 37.0
@@ -665,11 +665,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 49.2
+    contract_quality: 44.3
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 48.9
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -685,9 +685,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 74.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

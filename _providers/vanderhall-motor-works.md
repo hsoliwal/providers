@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: An OAuth-protected Model Context Protocol endpoint served from the Vanderhall Admin Portal at https://portal.vanderhallusa.com/mcp. The endpoint is live and speaks JSON-RPC 2.0, but every method — inc
@@ -121,7 +121,7 @@ description: 'Vanderhall Motor Works is a privately held American vehicle manufa
 image: https://dealer.vanderhallusa.com/android-icon-192x192.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at portal.vanderhallusa.com over HTTP requiring OAuth.
   name: Vanderhall Admin Portal MCP Server
   slug: vanderhall-admin-portal-mcp-server
 modified: '2026-09-02'
@@ -143,12 +143,12 @@ rate_limits:
   slug: vanderhall-motor-works-rate-limits
 scopes:
 - name: Vanderhall Motor Works Scopes
-  scope_count: 0
+  scope_count: 1
   slug: vanderhall-motor-works-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: emerging
-  composite: 18.0
+  composite: 16.2
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -162,14 +162,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.0
+  previous_composite: 16.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -178,9 +180,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 45.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

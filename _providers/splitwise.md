@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,44 +32,44 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: The comments API from Splitwise — 3 operation(s) for comments.
-  name: Splitwise comments API
+  name: Splitwise Comments API
   slug: splitwise-comments-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: The expenses API from Splitwise — 6 operation(s) for expenses.
-  name: Splitwise expenses API
+  name: Splitwise Expenses API
   slug: splitwise-expenses-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: The friends API from Splitwise — 5 operation(s) for friends.
-  name: Splitwise friends API
+  name: Splitwise Friends API
   slug: splitwise-friends-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: 'A Group represents a collection of users who share expenses together. For example, some users use a Group to aggregate expenses related to a home. Others use it to represent a trip. Expenses assigned '
-  name: Splitwise groups API
+  name: Splitwise Groups API
   slug: splitwise-groups-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: The notifications API from Splitwise — 1 operation(s) for notifications.
-  name: Splitwise notifications API
+  name: Splitwise Notifications API
   slug: splitwise-notifications-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: The other API from Splitwise — 2 operation(s) for other.
-  name: Splitwise other API
+  name: Splitwise Other API
   slug: splitwise-other-api
 - baseURL: https://secure.splitwise.com/api/v3.0
   baseurl_source: declared
   description: Resources to access and modify user information.
-  name: Splitwise users API
+  name: Splitwise Users API
   slug: splitwise-users-api
 artifact_total: 19
 collections:
@@ -227,7 +227,7 @@ modified: '2026-07-21'
 name: Splitwise
 nav: Providers
 network: true
-overview: 'Splitwise publishes 7 APIs on the [APIs.io](https://apis.io/) network, including comments API, expenses API, friends API, and 4 more. Tagged areas include Company, Consumer, Expense Management, Personal Finance, and Bill Splitting.
+overview: 'Splitwise publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Expenses API, Friends API, and 4 more. Tagged areas include Company, Consumer, Expense Management, Personal Finance, and Bill Splitting.
 
 
   Splitwise''s developer surface includes authentication, documentation, API reference, signup flow, engineering blog, and 21 more developer resources.'
@@ -238,8 +238,8 @@ scopes:
   slug: splitwise-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: developing
-  composite: 42.6
+  band: thin
+  composite: 38.8
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -251,11 +251,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 50.8
+    contract_quality: 45.7
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 42.6
+  previous_composite: 38.8
   provenance:
     conformance: derived
     contracts:
@@ -270,9 +270,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

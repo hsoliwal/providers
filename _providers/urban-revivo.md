@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Agent-driven shopping surface for the Urban Revivo global store, declared in the store's UCP merchant profile and llms.txt. Exposes MCP tools for catalog search, cart creation, and checkout (create/up
@@ -123,7 +123,7 @@ layout: provider
 mcp_servers:
 - description: 'Urban Revivo''s global Shopify storefront publishes an agent-facing commerce surface via the Universal Commerce Protocol (UCP). The store''s /llms.txt (mirrored at /agents.md) documents an MCP shopping '
   name: Urban Revivo MCP Server
-  slug: urban-revivo-mcp-server
+  slug: urban-revivo-ucp-shopping
 modified: '2026-07-21'
 name: Urban Revivo
 nav: Providers
@@ -140,7 +140,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 20.5
+  composite: 23.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 37.0
@@ -154,14 +154,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 20.5
+  previous_composite: 23.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

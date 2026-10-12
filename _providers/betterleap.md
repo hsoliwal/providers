@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/betterleap/refs/heads/main/security/betterleap-domain-security.yml
@@ -69,6 +69,10 @@ created: '2026-07-17'
 description: Betterleap is an AI-powered healthcare recruiting platform that automates candidate sourcing, credential verification, and multi-step outreach for talent acquisition teams. Its agentic search lets recruiters describe an ideal candidate conversationally and surfaces qualified matches from a database of 35M+ verified healthcare professionals, with licensing verified through 25+ state board partnerships. The platform autonomously drafts and sends personalized email sequences with follow-ups, integrates with ATS platforms such as Workday, Oracle, and UKG for talent rediscovery and data refresh, and reports recruiting performance and ROI through an insights dashboard. Betterleap is a venture-backed company (a16z portfolio) added to the API Evangelist network; it operates as a SaaS web application and does not currently publish a public developer API.
 image: https://www.betterleap.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.betterleap.com over HTTP.
+  name: Betterleap MCP Server
+  slug: betterleap
 modified: '2026-07-18'
 name: Betterleap
 nav: Providers
@@ -80,7 +84,7 @@ overview: 'Betterleap is profiled on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 8
 score:
   band: minimal
-  composite: 9.5
+  composite: 9.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -94,9 +98,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 9.5
+  previous_composite: 9.6
   provenance:
     mcp: first-party
   regulatory:
@@ -104,9 +108,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -239,7 +239,7 @@ overview: 'Class (fka ClassEDU) publishes 7 APIs on the [APIs.io](https://apis.i
 random_paper: 0
 score:
   band: thin
-  composite: 36.4
+  composite: 33.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -253,9 +253,9 @@ score:
     contract_governance: 4.5
     contract_quality: 16.9
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 36.4
+  previous_composite: 33.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -271,9 +271,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

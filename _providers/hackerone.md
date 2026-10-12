@@ -32,13 +32,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The industry’s first hacker API that helps increase productivity towards creative bug bounty hunting
   name: HackerOne
   slug: hackerone
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hackerone/refs/heads/main/security/hackerone-domain-security.yml
@@ -57,15 +57,19 @@ created: '2026-05-28'
 description: The industry’s first hacker API that helps increase productivity towards creative bug bounty hunting
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hackerone.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.hackerone.com over HTTP.
+  name: HackerOne MCP Server
+  slug: hackerone
 modified: '2026-05-28'
 name: HackerOne
 nav: Providers
 network: true
-overview: HackerOne publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Security and Public APIs.
+overview: HackerOne publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Security, Public APIs, Cybersecurity, Vulnerability Management, and Bug Bounty.
 random_paper: 20
 score:
   band: minimal
-  composite: 7.6
+  composite: 6.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -79,13 +83,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 7.6
+  previous_composite: 6.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -101,5 +111,9 @@ slug: hackerone
 tags:
 - Security
 - Public APIs
+- Cybersecurity
+- Vulnerability Management
+- Bug Bounty
+- Vulnerability Disclosure
 website: https://api.hackerone.com/
 ---

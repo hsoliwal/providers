@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-04'
 api_count: 2
 apis:
 - baseURL: https://tonapi.io
@@ -234,6 +234,11 @@ collections:
   slug: open-top-group-webhooks-api
 common:
 - group: other
+  href: https://raw.githubusercontent.com/api-evangelist/top-group/refs/heads/main/capabilities/top-group-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/top-group-capability-edges.yml
+- group: other
   href: https://raw.githubusercontent.com/api-evangelist/top-group/refs/heads/main/overlays/top-group-tonapi-overlay.yaml
   title: ''
   type: Overlay
@@ -396,7 +401,7 @@ overview: 'TOP Group (The Open Platform) publishes 23 APIs on the [APIs.io](http
   The TOP Group (The Open Platform) catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  TOP Group (The Open Platform)''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, signup flow, support, and 25 more developer resources.'
+  TOP Group (The Open Platform)''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, signup flow, support, and 26 more developer resources.'
 random_paper: 17
 rate_limits:
 - limit_count: 2
@@ -404,9 +409,9 @@ rate_limits:
   slug: top-group-rate-limits
 score:
   band: developing
-  composite: 42.6
+  composite: 40.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -416,11 +421,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 51.4
+    contract_quality: 47.1
     developer_ergonomics: 63.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 39.5
-  previous_composite: 42.6
+  previous_composite: 40.7
   provenance:
     conformance: derived
     contracts:
@@ -435,9 +440,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

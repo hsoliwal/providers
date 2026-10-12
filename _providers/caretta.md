@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 60.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Remote Model Context Protocol server that gives compatible AI clients OAuth-scoped access to the Caretta calls, transcripts and todos the signed-in user can already see. Seven documented tools cover l
@@ -185,9 +185,9 @@ description: 'Caretta is a Y Combinator-backed (W26) startup building a real-tim
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/caretta.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at gateway.caretta.app over HTTP requiring OAuth; 7 tools listed.
   name: Caretta MCP Server
-  slug: caretta-mcp-server
+  slug: caretta
 modified: '2026-08-13'
 name: Caretta
 nav: Providers
@@ -215,7 +215,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: developing
-  composite: 40.1
+  composite: 41.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -227,17 +227,23 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 40.1
+  previous_composite: 41.8
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -270,5 +276,6 @@ tags:
 - MCP
 - Webhook
 - Agents
+- A2A
 website: https://www.caretta.so
 ---

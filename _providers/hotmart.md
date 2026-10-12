@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 8
 apis:
 - description: 'The Hotmart authorization server. Exchanges a developer credential (client_id/client_secret, presented with HTTP Basic) for a short-lived OAuth 2.0 client_credentials access token, which is then sent '
@@ -235,7 +235,7 @@ layout: provider
 mcp_servers:
 - description: Hotmart operates NO MCP server. No hosted endpoint, no published package, no entry in the official MCP registry, and nothing in the Hotmart-Org GitHub organization. Two community projects wrap the Hot
   name: Hotmart MCP Server
-  slug: hotmart-mcp-server
+  slug: hotmart-mcp-yml
 modified: '2026-08-04'
 name: Hotmart
 nav: Providers
@@ -254,7 +254,7 @@ rate_limits:
   slug: hotmart-rate-limits
 score:
   band: developing
-  composite: 52.9
+  composite: 50.7
   coverage:
     artifact_dirs: 21
     catalog_earned: 48.0
@@ -266,9 +266,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 65.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -277,7 +277,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 52.9
+  previous_composite: 50.7
   provenance:
     conformance: derived
     mcp: derived
@@ -287,9 +287,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

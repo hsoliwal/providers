@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.p2flux.com
@@ -210,9 +210,9 @@ description: Non-custodial USDC payments API on the Base blockchain. Provides RE
 image: https://p2flux.com/assets/apple-touch-icon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: P2Flux ships no MCP server. This is a DERIVED candidate tool list mapping the public REST operations to prospective MCP tools, provided as a starting point only. Nobody serves these as MCP tools today
   name: P2Flux API MCP Server
-  slug: p2flux-api-mcp-server
+  slug: p2flux-api-mcp-yml
 modified: '2026-09-15'
 name: P2Flux API
 nav: Providers
@@ -232,7 +232,7 @@ rate_limits:
   slug: p2flux-api-rate-limits
 score:
   band: developing
-  composite: 46.7
+  composite: 44.5
   coverage:
     artifact_dirs: 19
     catalog_earned: 46.0
@@ -244,11 +244,11 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 4.5
-    contract_quality: 51.6
+    contract_quality: 46.4
     developer_ergonomics: 70.8
-    discoverability: 70.4
+    discoverability: 67.9
     operational_transparency: 50.0
-  previous_composite: 46.7
+  previous_composite: 44.5
   provenance:
     conformance: derived
     contracts:
@@ -263,9 +263,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 3
 common:
@@ -126,7 +126,7 @@ rate_limits:
   slug: bizible-marketing-analytics-rate-limits
 score:
   band: emerging
-  composite: 11.9
+  composite: 11.0
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -140,13 +140,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 11.9
+  previous_composite: 11.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -168,5 +174,6 @@ tags:
 - B2B
 - Adobe
 - Marketo
+- Attribution
 website: https://bizible.com/
 ---

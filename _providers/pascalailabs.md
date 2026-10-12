@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -92,14 +92,14 @@ modified: '2026-07-20'
 name: Pascal AI
 nav: Providers
 network: true
-overview: 'Pascal AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Financial-Services, Investment Research, and AI Agents.
+overview: 'Pascal AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Financial Services, Investment Research, and AI Agents.
 
 
   Pascal AI''s developer surface includes engineering blog, signup flow, and 9 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -113,13 +113,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 18.2
+  previous_composite: 18.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -135,7 +145,7 @@ slug: pascalailabs
 tags:
 - Company
 - Artificial Intelligence
-- Financial-Services
+- Financial Services
 - Investment Research
 - AI Agents
 - MCP

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -67,6 +67,11 @@ collections:
   name: TabPFN Prediction Training API
   slug: open-priorlabs-training-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/priorlabs/refs/heads/main/capabilities/priorlabs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/priorlabs-capability-edges.yml
 - group: docs
   title: ''
   type: Documentation
@@ -200,23 +205,23 @@ description: Prior Labs builds TabPFN, a tabular foundation model that delivers 
 image: https://priorlabs.ai/pl.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.priorlabs.ai over HTTP; 5 tools listed.
   name: Prior Labs MCP Server
-  slug: prior-labs-mcp-server
+  slug: tabpfn
 modified: '2026-07-20'
 name: Prior Labs
 nav: Providers
 network: true
-overview: 'Prior Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network: Prediction API and Training API. Tagged areas include Company, Machine-Learning, Artificial Intelligence, Tabular Data, and Foundation Models.
+overview: 'Prior Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network: Prediction API and Training API. Tagged areas include Company, Machine Learning, Artificial Intelligence, Tabular Data, and Foundation Models.
 
 
-  Prior Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, changelog, and 21 more developer resources.'
+  Prior Labs'' developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, support, changelog, and 22 more developer resources.'
 random_paper: 6
 score:
   band: developing
-  composite: 43.8
+  composite: 43.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -226,11 +231,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 61.9
+    contract_quality: 55.7
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 43.8
+  previous_composite: 43.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,8 +246,14 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -260,7 +271,7 @@ security:
 slug: priorlabs
 tags:
 - Company
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Tabular Data
 - Foundation Models

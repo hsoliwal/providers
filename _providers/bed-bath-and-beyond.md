@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Seller-facing API for the Bed Bath & Beyond third-party marketplace, which runs as a tenant of the Mirakl Marketplace Platform at bedbathandbeyondus-prod.mirakl.net. Approved sellers generate a Shop A
@@ -172,7 +172,7 @@ rate_limits:
   slug: bed-bath-and-beyond-rate-limits
 score:
   band: emerging
-  composite: 18.7
+  composite: 19.9
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -186,11 +186,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 18.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 19.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

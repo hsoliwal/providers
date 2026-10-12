@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -55,7 +55,7 @@ apis:
   description: List and retrieve project templates.
   name: Creatomate Templates API
   slug: creatomate-templates-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -124,11 +124,15 @@ finops:
   slug: creatomate-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/creatomate.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.creatomate.com over HTTP.
+  name: Creatomate MCP Server
+  slug: creatomate
 modified: '2026-06-20'
 name: Creatomate
 nav: Providers
 network: true
-overview: 'Creatomate publishes 2 APIs on the [APIs.io](https://apis.io/) network: Renders API and Templates API. Tagged areas include Media, Video Generation, Image-Generation, Automation, and Templates.
+overview: 'Creatomate publishes 2 APIs on the [APIs.io](https://apis.io/) network: Renders API and Templates API. Tagged areas include Media, Video Generation, Image Generation, Automation, and Templates.
 
 
   Creatomate''s developer surface includes authentication, documentation, and 8 more developer resources.'
@@ -143,23 +147,23 @@ rate_limits:
   slug: creatomate-rate-limits
 score:
   band: thin
-  composite: 38.5
+  composite: 35.4
   coverage:
     artifact_dirs: 12
-    catalog_earned: 64.0
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 38.5
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 35.4
   provenance:
     agentic_access: derived
     contracts:
@@ -168,8 +172,14 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -188,7 +198,7 @@ slug: creatomate
 tags:
 - Media
 - Video Generation
-- Image-Generation
+- Image Generation
 - Automation
 - Templates
 - Rendering

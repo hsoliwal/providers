@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 45.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Hosted remote MCP server (streamable HTTP) that connects Levitate to AI assistants — Claude Desktop, Claude Code, ChatGPT, Cursor, VS Code Copilot, Windsurf and any MCP-compatible HTTP client. Tools c
@@ -232,17 +232,17 @@ description: 'Levitate is a relationship-marketing and "Happiness Platform" SaaS
 image: https://cdn.prod.website-files.com/645165b093e7c8d734211d5d/64ac9c0f52d7bf5e396e6261_og%20image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.levitate.ai over streamable HTTP requiring OAuth.
   name: Levitate MCP Server
   slug: levitate-mcp-server
 - description: ''
   name: Levitate MCP Server
-  slug: levitate-mcp-server-2
+  slug: mcp
 modified: '2026-08-25'
 name: Levitate
 nav: Providers
 network: true
-overview: 'Levitate publishes 3 APIs on the [APIs.io](https://apis.io/) network: Companies API, Contacts API, and Notes API. Tagged areas include relationship-marketing, CRM, Email Marketing, Contacts, and Small Business.
+overview: 'Levitate publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Companies API, Contacts API, Notes API, and 1 more. Tagged areas include relationship-marketing, CRM, Email Marketing, Contacts, and Small Business.
 
 
   Levitate''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, changelog, and 29 more developer resources.'
@@ -262,7 +262,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 62.0
+  composite: 57.1
   coverage:
     artifact_dirs: 22
     catalog_earned: 49.0
@@ -274,11 +274,11 @@ score:
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 57.0
+    contract_quality: 51.6
     developer_ergonomics: 49.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 62.0
+  previous_composite: 57.1
   provenance:
     conformance: first-party
     contracts:
@@ -293,9 +293,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 80.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 46.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -326,11 +326,11 @@ tags:
 - Contacts
 - Small Business
 - Insurance
-- Financial-Services
+- Financial Services
 - Non-Profit
 - Marketing Automation
 - MCP
-- agent-native
+- Agent-Native
 - Software-as-a-Service
 website: https://www.levitate.ai/
 ---

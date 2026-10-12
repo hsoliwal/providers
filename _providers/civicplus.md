@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://seeclickfix.com/api/v2
@@ -210,7 +210,7 @@ overview: 'CivicPlus publishes 5 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 10
 score:
   band: thin
-  composite: 35.0
+  composite: 32.7
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -222,11 +222,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 43.5
+    contract_quality: 39.2
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 35.0
+  previous_composite: 32.7
   provenance:
     conformance: derived
     contracts:
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

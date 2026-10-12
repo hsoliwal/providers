@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 2
@@ -41,13 +41,8 @@ agentic_access:
   operation_count: 25
   slug: apache-storm-agentic-access
   summary_line: 25 operations · 11 acting · 2 human-in-the-loop
-api_count: 9
+api_count: 8
 apis:
-- baseURL: http://localhost:8080
-  baseurl_source: spec
-  description: The Storm Topology API provides Java and other language bindings for building real-time processing topologies composed of spouts (data sources) and bolts (processing units). It supports various stream
-  name: Apache Storm Topology API
-  slug: apache-storm-topology-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
   description: The Cluster API from Apache Storm — 2 operation(s) for cluster.
@@ -80,7 +75,7 @@ apis:
   slug: apache-storm-supervisor-api
 - baseURL: http://localhost:8080
   baseurl_source: spec
-  description: The Topology API from Apache Storm — 14 operation(s) for topology.
+  description: The Storm Topology API provides Java and other language bindings for building real-time processing topologies composed of spouts (data sources) and bolts (processing units). It supports various stream
   name: Apache Storm Topology API
   slug: apache-storm-topology-api
 - baseURL: http://localhost:8080
@@ -88,7 +83,7 @@ apis:
   description: The Topology Workers API from Apache Storm — 1 operation(s) for topology workers.
   name: Apache Storm Topology Workers API
   slug: apache-storm-topology-workers-api
-artifact_total: 40
+artifact_total: 39
 collections:
 - collection_type: open
   name: API Collection
@@ -224,7 +219,7 @@ modified: '2026-05-19'
 name: Apache Storm
 nav: Providers
 network: true
-overview: 'Apache Storm publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Topology API, Cluster API, Drpc API, and 6 more. Tagged areas include Distributed Computing, Event Processing, Real-Time, Stream Processing, and Open-Source.
+overview: 'Apache Storm publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Cluster API, Drpc API, History API, and 5 more. Tagged areas include Distributed Computing, Event Processing, Real-Time, Stream Processing, and Open Source.
 
 
   Apache Storm''s developer surface includes documentation, developer portal, getting-started guide, release notes, support, engineering blog, and 10 more developer resources.'
@@ -239,7 +234,7 @@ rate_limits:
   slug: apache-storm-rate-limits
 score:
   band: thin
-  composite: 38.5
+  composite: 37.5
   coverage:
     artifact_dirs: 10
     catalog_earned: 44.0
@@ -251,14 +246,14 @@ score:
   facets:
     access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 45.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 75.0
-  previous_composite: 38.5
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     contracts:
@@ -266,8 +261,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -288,7 +289,7 @@ tags:
 - Event Processing
 - Real-Time
 - Stream Processing
-- Open-Source
+- Open Source
 use_cases:
 - description: Continuous computation over live event streams for operational dashboards.
   name: Real-Time Analytics

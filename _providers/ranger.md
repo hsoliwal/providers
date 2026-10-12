@@ -33,9 +33,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ranger/refs/heads/main/security/ranger-domain-security.yml
@@ -126,6 +126,10 @@ created: '2026-07-17'
 description: 'Ranger is an AI-powered quality-assurance platform that lets coding agents verify their own work in a real browser. Its CLI (@ranger-testing/ranger-cli) sets up a project so an AI coding agent — Claude Code, OpenCode, Cursor, Codex, or any bash-capable agent — can run autonomous end-to-end feature reviews: creating scenarios, driving Chromium, self-maintaining broken tests, auto-scaling parallel browsers, and collecting screenshots, recordings, and traces as evidence, with results reviewed on a shared dashboard. Ranger is agent-native rather than a conventional REST API: it ships a Claude Code plugin (ranger@trailhead), Agent Skills installed to .claude/skills/, slash commands, hooks, and OAuth 2.0 / OpenID Connect authentication (login.ranger.net), with MCP-based auth delegation for managed agent platforms. Backed by General Catalyst and Homebrew.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ranger.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ranger.net over HTTP.
+  name: Ranger MCP Server
+  slug: ranger
 modified: '2026-07-20'
 name: Ranger
 nav: Providers
@@ -137,7 +141,7 @@ overview: 'Ranger is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 1
 score:
   band: thin
-  composite: 27.8
+  composite: 29.0
   coverage:
     artifact_dirs: 11
     catalog_earned: 27.0
@@ -151,13 +155,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 27.8
+  previous_composite: 29.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

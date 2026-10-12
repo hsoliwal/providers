@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -92,6 +92,11 @@ collections:
   name: Razorpay Core REST API
   slug: open-razorpay
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/capabilities/razorpay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/razorpay-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/razorpay/refs/heads/main/a2a/razorpay-a2a.yml
   title: ''
@@ -209,13 +214,13 @@ modified: '2026-05-30'
 name: Razorpay
 nav: Providers
 network: true
-overview: 'Razorpay publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Core REST API, Webhooks, Orders API, and 2 more. Tagged areas include Payments, Payment Gateway, Fintech, India, and UPI.
+overview: 'Razorpay publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Core REST API, Webhooks, Orders API, and 3 more. Tagged areas include Payments, Payment Gateway, Fintech, India, and UPI.
 
 
   The Razorpay catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Razorpay''s developer surface includes sandbox, changelog, authentication, documentation, API reference, pricing, signup flow, and 17 more developer resources.'
+  Razorpay''s developer surface includes sandbox, changelog, authentication, documentation, API reference, pricing, signup flow, and 18 more developer resources.'
 random_paper: 8
 rules:
 - effective_rule_count: 34
@@ -236,7 +241,7 @@ scopes:
   summary_line: 5 scopes
 score:
   band: developing
-  composite: 45.8
+  composite: 43.1
   coverage:
     artifact_dirs: 18
     catalog_earned: 35.8
@@ -248,9 +253,9 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 11.4
-    contract_quality: 58.9
+    contract_quality: 54.5
     developer_ergonomics: 47.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -259,7 +264,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 45.8
+  previous_composite: 43.1
   provenance:
     agentic_access: derived
     contracts:
@@ -272,9 +277,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -307,5 +312,7 @@ tags:
 - Subscription
 - Payouts
 - Checkout
+- A2A
+- Payment Processing
 website: https://razorpay.com
 ---

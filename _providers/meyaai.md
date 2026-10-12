@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Meya Grid HTTP gateway that receives inbound integration and API/webhook events for a Meya app. Webhook URLs follow the format https://grid.meya.ai/gateway/v2/{integration}/{app_id}/{dot_path}.
@@ -128,7 +128,7 @@ modified: '2026-07-20'
 name: Meya.ai
 nav: Providers
 network: true
-overview: 'Meya.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Chatbots, Conversational AI, Customer-Support, and CX Automation.
+overview: 'Meya.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Chatbots, Conversational AI, Customer Support, and CX Automation.
 
 
   The Meya.ai catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -138,7 +138,7 @@ overview: 'Meya.ai publishes 1 API on the [APIs.io](https://apis.io/) network. T
 random_paper: 14
 score:
   band: thin
-  composite: 31.0
+  composite: 28.7
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -150,13 +150,19 @@ score:
   facets:
     access_clarity: 13.2
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 29.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 31.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 28.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -173,7 +179,7 @@ tags:
 - Company
 - Chatbots
 - Conversational AI
-- Customer-Support
+- Customer Support
 - CX Automation
 - Messaging
 - Webhook

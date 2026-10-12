@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -82,7 +82,7 @@ apis:
   description: Manage Sisense users and user settings
   name: Sisense Users API
   slug: sisense-users-api
-artifact_total: 37
+artifact_total: 38
 collections:
 - collection_type: postman
   name: Sisense REST Authentication API
@@ -127,6 +127,11 @@ collections:
   name: Sisense REST Authentication Users API
   slug: open-sisense-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sisense/refs/heads/main/capabilities/sisense-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sisense-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -230,17 +235,21 @@ jsonld:
   property_count: 6
   slug: sisense-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.sisense.com over HTTP.
+  name: Sisense MCP Server
+  slug: sisense
 modified: '2026-05-19'
 name: Sisense
 nav: Providers
 network: true
-overview: 'Sisense publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Dashboards API, Data Security API, and 3 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Models, and Embedded Analytics.
+overview: 'Sisense publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Dashboards API, Data Security API, and 5 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Models, and Embedded Analytics.
 
 
   The Sisense catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Sisense''s developer surface includes authentication, documentation, pricing, engineering blog, support, and 12 more developer resources.'
+  Sisense''s developer surface includes authentication, documentation, pricing, engineering blog, support, and 13 more developer resources.'
 plans:
 - name: Sisense Plans Pricing
   plan_count: 3
@@ -275,7 +284,7 @@ score:
   band: developing
   composite: 41.2
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 56.3
     catalog_earned_first_party: 0.0
     catalog_gap: 58.8
@@ -285,9 +294,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 9.8
-    contract_quality: 61.8
+    contract_quality: 56.4
     developer_ergonomics: 36.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
   previous_composite: 41.2
   provenance:
@@ -298,8 +307,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

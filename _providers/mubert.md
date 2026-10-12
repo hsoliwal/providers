@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.4
-  scored_at: '2026-09-20'
+  score: 33.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -101,6 +101,11 @@ collections:
   name: Mubert AI Music API v3 Price Subscription API
   slug: open-mubert-subscription-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mubert/refs/heads/main/capabilities/mubert-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mubert-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mubert/refs/heads/main/agentic-access/mubert-agentic-access.yml
   title: ''
@@ -281,7 +286,7 @@ overview: 'Mubert publishes 6 APIs on the [APIs.io](https://apis.io/) network, i
   The Mubert catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Mubert''s developer surface includes authentication, documentation, code examples, engineering blog, and 19 more developer resources.'
+  Mubert''s developer surface includes authentication, documentation, code examples, engineering blog, and 20 more developer resources.'
 plans:
 - name: Mubert Plans Pricing
   plan_count: 4
@@ -315,23 +320,23 @@ rules:
   slug: mubert-rules
 score:
   band: developing
-  composite: 42.9
+  composite: 40.2
   coverage:
     artifact_dirs: 17
-    catalog_earned: 82.5
+    catalog_earned: 79.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 32.5
+    catalog_gap: 35.2
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 75.3
-    developer_ergonomics: 31.0
-    discoverability: 68.5
+    access_clarity: 36.3
+    contract_governance: 27.3
+    contract_quality: 68.9
+    developer_ergonomics: 30.2
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 42.9
+  previous_composite: 40.2
   provenance:
     agentic_access: derived
     contracts:
@@ -339,8 +344,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -363,7 +374,7 @@ tags:
 - Streaming
 - Text-to-Music
 - Image-to-Music
-- STEM
+- Stems
 - B2B
 use_cases:
 - Apps embedding adaptive background music

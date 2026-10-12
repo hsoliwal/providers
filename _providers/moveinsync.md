@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: JWT-authenticated REST and webhook API for employee-transport integration. Partners authenticate at api.moveinsync.com/auth/token (OAuth2 client-credentials over HTTP Basic) to obtain a 24-hour JWT, t
@@ -130,7 +130,7 @@ overview: 'MoveInSync publishes 1 API on the [APIs.io](https://apis.io/) network
 random_paper: 21
 score:
   band: thin
-  composite: 34.6
+  composite: 35.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -142,15 +142,21 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 34.6
+  previous_composite: 35.8
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -176,7 +182,6 @@ tags:
 - Fleet Management
 - Parking
 - Workplace Management
-- Ridesharing
 - Logistics
 website: https://moveinsync.com/
 ---

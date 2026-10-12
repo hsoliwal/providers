@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: First-party remote Model Context Protocol server that exposes Channel99 marketing intelligence - visits, pixel impressions, vendor and channel scores, audiences, account identity and pipeline influenc
@@ -131,6 +131,11 @@ collections:
   name: Pulsar API
   slug: open-channel99-pulsar
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/channel99/refs/heads/main/capabilities/channel99-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/channel99-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/channel99/refs/heads/main/authentication/channel99-authentication.yml
   title: ''
@@ -283,10 +288,10 @@ modified: '2026-09-16'
 name: Channel99
 nav: Providers
 network: true
-overview: 'Channel99 publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Ad Accounts API, Ad Campaign Groups API, Ad Campaigns API, and 14 more. Tagged areas include Company, Marketing, Analytics, Attribution, and B2B.
+overview: 'Channel99 publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Ad Accounts API, Ad Campaign Groups API, Ad Campaigns API, and 15 more. Tagged areas include Company, Marketing, Analytics, Attribution, and B2B.
 
 
-  Channel99''s developer surface includes authentication, documentation, API reference, support, getting-started guide, engineering blog, signup flow, and 23 more developer resources.'
+  Channel99''s developer surface includes authentication, documentation, API reference, support, getting-started guide, engineering blog, signup flow, and 24 more developer resources.'
 plans:
 - name: Channel99 Plans Pricing
   plan_count: 0
@@ -303,9 +308,9 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 43.2
+  composite: 44.0
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -315,11 +320,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 48.5
+    contract_quality: 43.7
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 63.2
-  previous_composite: 43.2
+  previous_composite: 44.0
   provenance:
     conformance: derived
     contracts:
@@ -329,8 +334,14 @@ score:
       total: 17
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

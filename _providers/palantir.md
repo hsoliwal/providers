@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -145,7 +145,7 @@ modified: '2026-04-28'
 name: Palantir
 nav: Providers
 network: true
-overview: 'Palantir publishes 3 APIs on the [APIs.io](https://apis.io/) network: Admin - Groups API, Admin - Users API, and Datasets API. Tagged areas include AI Platform, Data Analytics, Enterprise, and Government.
+overview: 'Palantir publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Admin - Groups API, Admin - Users API, Datasets API, and 1 more. Tagged areas include AI Platform, Data Analytics, Enterprise, and Government.
 
 
   Palantir''s developer surface includes authentication, developer portal, documentation, engineering blog, and 8 more developer resources.'
@@ -159,8 +159,8 @@ rate_limits:
   name: Palantir Rate Limits
   slug: palantir-rate-limits
 score:
-  band: thin
-  composite: 26.4
+  band: emerging
+  composite: 23.8
   coverage:
     artifact_dirs: 11
     catalog_earned: 36.0
@@ -172,11 +172,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 10.5
-  previous_composite: 26.4
+  previous_composite: 23.8
   provenance:
     agentic_access: derived
     contracts:
@@ -189,9 +189,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 33.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

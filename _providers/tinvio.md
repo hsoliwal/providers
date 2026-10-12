@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tinvio/refs/heads/main/security/tinvio-domain-security.yml
@@ -61,6 +61,10 @@ created: '2026-07-17'
 description: Tinvio is a Singapore-based B2B commerce and payments SaaS that helped merchants and their suppliers manage ordering, invoicing, and business payments across Southeast Asia. The company was backed by Partech. As of 2026 Tinvio has been integrated into Jaz (jaz.ai), an AI-powered accounting platform for modern businesses, and now operates as a feature within Jaz rather than as a standalone product; tinvio.com redirects to the Jaz landing page. Tinvio does not currently publish a public developer portal, API reference, SDK, CLI, or OpenAPI definition, so this profile captures the company identity and its live domain-security posture for the API Evangelist network rather than an API surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tinvio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.jaz.ai over HTTP.
+  name: Tinvio MCP Server
+  slug: tinvio
 modified: '2026-07-21'
 name: Tinvio
 nav: Providers
@@ -72,7 +76,7 @@ overview: 'Tinvio is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 5
 score:
   band: minimal
-  composite: 4.1
+  composite: 5.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -86,14 +90,16 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 4.1
+  previous_composite: 5.6
   provenance:
     mcp: first-party
   regulatory:
@@ -101,9 +107,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

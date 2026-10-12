@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 49
   human_in_the_loop: 2
@@ -313,7 +313,7 @@ layout: provider
 mcp_servers:
 - description: 'Official Elementum documentation MCP server. Gives MCP-compatible AI tools (Cursor, Claude Desktop, Claude Code, ChatGPT, and any Streamable HTTP client) real-time, cited access to the live Elementum '
   name: Elementum MCP Server
-  slug: elementum-mcp-server
+  slug: elementum-docs
 modified: '2026-07-19'
 name: Elementum
 nav: Providers
@@ -325,7 +325,7 @@ overview: 'Elementum publishes 18 APIs on the [APIs.io](https://apis.io/) networ
 random_paper: 4
 score:
   band: developing
-  composite: 41.7
+  composite: 41.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -337,11 +337,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 45.2
+    contract_quality: 40.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 36.8
-  previous_composite: 41.7
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -352,8 +352,14 @@ score:
       total: 18
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

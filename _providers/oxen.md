@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 59
   human_in_the_loop: 22
@@ -77,7 +77,7 @@ apis:
 - baseURL: https://hub.oxen.ai
   baseurl_source: declared
   description: The evaluations API from Oxen — 2 operation(s) for evaluations.
-  name: Oxen evaluations API
+  name: Oxen Evaluations API
   slug: oxen-evaluations-api
 - baseURL: https://hub.oxen.ai
   baseurl_source: declared
@@ -92,7 +92,7 @@ apis:
 - baseURL: https://hub.oxen.ai
   baseurl_source: declared
   description: The fine_tunes API from Oxen — 13 operation(s) for fine_tunes.
-  name: Oxen fine_tunes API
+  name: Oxen Fine Tunes API
   slug: oxen-fine-tunes-api
 - baseURL: https://hub.oxen.ai
   baseurl_source: declared
@@ -202,6 +202,11 @@ collections:
   name: oxen Ai Workspaces API
   slug: open-oxen-workspaces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/oxen/refs/heads/main/capabilities/oxen-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/oxen-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/oxen/refs/heads/main/overlays/oxen-hub-api-overlay.yaml
   title: ''
@@ -345,16 +350,16 @@ modified: '2026-07-20'
 name: Oxen
 nav: Providers
 network: true
-overview: 'Oxen publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Ai API, Branches API, Commits API, and 16 more. Tagged areas include Company, Data Version Control, Machine-Learning, Artificial Intelligence, and Fine-Tuning.
+overview: 'Oxen publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Ai API, Branches API, Commits API, and 16 more. Tagged areas include Company, Data Version Control, Machine Learning, Artificial Intelligence, and Fine-Tuning.
 
 
-  Oxen''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 23 more developer resources.'
+  Oxen''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 24 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 38.4
+  composite: 36.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -364,11 +369,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 56.1
+    contract_quality: 50.5
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 38.4
+  previous_composite: 36.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -379,8 +384,14 @@ score:
       total: 19
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -399,7 +410,7 @@ slug: oxen
 tags:
 - Company
 - Data Version Control
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Fine-Tuning
 - Inference

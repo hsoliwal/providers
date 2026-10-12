@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 2
 common:
@@ -108,14 +108,14 @@ modified: '2026-07-21'
 name: Strongkeep
 nav: Providers
 network: true
-overview: 'Strongkeep is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, SMB, and Malware Protection.
+overview: 'Strongkeep is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, Small Business, and Malware Protection.
 
 
   Strongkeep''s developer surface includes pricing, signup flow, support, engineering blog, and 11 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 18.6
+  composite: 18.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -129,11 +129,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 18.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -154,7 +160,7 @@ tags:
 - Company
 - Cybersecurity
 - Security
-- SMB
+- Small Business
 - Malware Protection
 - Phishing
 - Security Awareness Training

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: The Globant Enterprise AI platform API. Twenty-six documented API groups — Access Control, Agents, Agentic Processes, Analytics, Assistant, Chat, Corpus, Corpus Semantic Similarity, Embeddings, Evalua
@@ -228,12 +228,12 @@ layout: provider
 mcp_servers:
 - description: Globant publishes an MCP server card at https://glob.ai/.well-known/mcp/server-card.json describing an MCP server named "orchestrator" that exposes the Glob.AI Hubs Orchestrator API — projects, goals,
   name: Glob.AI Hubs Orchestrator MCP Server
-  slug: globai-hubs-orchestrator-mcp-server
+  slug: glob-ai-hubs-orchestrator-mcp-server
 modified: '2026-09-14'
 name: Globant
 nav: Providers
 network: true
-overview: 'Globant publishes 2 APIs on the [APIs.io](https://apis.io/) network: Catalog API and Health API. Tagged areas include Software, Digital Transformation, Artificial Intelligence, Agents, and MCP.
+overview: 'Globant publishes 3 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Health API, and 1 more. Tagged areas include Software, Digital Transformation, Artificial Intelligence, Agents, and MCP.
 
 
   Globant''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 29 more developer resources.'
@@ -248,7 +248,7 @@ rate_limits:
   slug: globant-rate-limits
 score:
   band: developing
-  composite: 45.7
+  composite: 44.7
   coverage:
     artifact_dirs: 22
     catalog_earned: 40.0
@@ -260,11 +260,11 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 18.2
-    contract_quality: 44.9
+    contract_quality: 40.4
     developer_ergonomics: 78.6
-    discoverability: 87.0
+    discoverability: 81.7
     operational_transparency: 26.3
-  previous_composite: 45.7
+  previous_composite: 44.7
   provenance:
     conformance: first-party
     contracts:
@@ -274,8 +274,14 @@ score:
       total: 2
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

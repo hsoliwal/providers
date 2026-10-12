@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.9
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 55
   human_in_the_loop: 3
@@ -48,77 +48,77 @@ apis:
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The align API from Athenian — 3 operation(s) for align.
-  name: Athenian align API
+  name: Athenian Align API
   slug: athenian-align-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The events API from Athenian — 4 operation(s) for events.
-  name: Athenian events API
+  name: Athenian Events API
   slug: athenian-events-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The filter API from Athenian — 11 operation(s) for filter.
-  name: Athenian filter API
+  name: Athenian Filter API
   slug: athenian-filter-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The get API from Athenian — 4 operation(s) for get.
-  name: Athenian get API
+  name: Athenian Get API
   slug: athenian-get-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The histograms API from Athenian — 3 operation(s) for histograms.
-  name: Athenian histograms API
+  name: Athenian Histograms API
   slug: athenian-histograms-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The integrations API from Athenian — 2 operation(s) for integrations.
-  name: Athenian integrations API
+  name: Athenian Integrations API
   slug: athenian-integrations-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The metrics API from Athenian — 7 operation(s) for metrics.
-  name: Athenian metrics API
+  name: Athenian Metrics API
   slug: athenian-metrics-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The pagination API from Athenian — 1 operation(s) for pagination.
-  name: Athenian pagination API
+  name: Athenian Pagination API
   slug: athenian-pagination-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The registration API from Athenian — 6 operation(s) for registration.
-  name: Athenian registration API
+  name: Athenian Registration API
   slug: athenian-registration-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The reposet API from Athenian — 3 operation(s) for reposet.
-  name: Athenian reposet API
+  name: Athenian Reposet API
   slug: athenian-reposet-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The security API from Athenian — 3 operation(s) for security.
-  name: Athenian security API
+  name: Athenian Security API
   slug: athenian-security-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The settings API from Athenian — 13 operation(s) for settings.
-  name: Athenian settings API
+  name: Athenian Settings API
   slug: athenian-settings-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The team API from Athenian — 3 operation(s) for team.
-  name: Athenian team API
+  name: Athenian Team API
   slug: athenian-team-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The user API from Athenian — 6 operation(s) for user.
-  name: Athenian user API
+  name: Athenian User API
   slug: athenian-user-api
 - baseURL: https://api.athenian.co/v1
   baseurl_source: declared
   description: The version API from Athenian — 1 operation(s) for version.
-  name: Athenian version API
+  name: Athenian Version API
   slug: athenian-version-api
 artifact_total: 35
 collections:
@@ -174,6 +174,11 @@ collections:
   name: '{{ title }} align version API'
   slug: open-athenian-version-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/athenian/refs/heads/main/capabilities/athenian-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/athenian-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/athenian/refs/heads/main/overlays/athenian-openapi-overlay.yaml
   title: ''
@@ -242,16 +247,16 @@ modified: '2026-07-18'
 name: Athenian
 nav: Providers
 network: true
-overview: 'Athenian publishes 15 APIs on the [APIs.io](https://apis.io/) network, including align API, events API, filter API, and 12 more. Tagged areas include Company, Engineering Intelligence, Software Development Analytics, Developer Productivity, and DevOps.
+overview: 'Athenian publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Align API, Events API, Filter API, and 12 more. Tagged areas include Company, Engineering Intelligence, Software Development Analytics, Developer Productivity, and DevOps.
 
 
-  Athenian''s developer surface includes authentication and 12 more developer resources.'
+  Athenian''s developer surface includes authentication and 13 more developer resources.'
 random_paper: 4
 score:
-  band: thin
-  composite: 30.2
+  band: minimal
+  composite: 0.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -260,12 +265,13 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 49.9
-    developer_ergonomics: 13.7
-    discoverability: 75.9
-    operational_transparency: 2.6
-  previous_composite: 30.2
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,8 +282,14 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

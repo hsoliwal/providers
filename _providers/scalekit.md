@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -89,7 +89,7 @@ apis:
   description: Organization user membership lifecycle and invitations.
   name: Scalekit Users & Memberships API
   slug: scalekit-users-memberships-api
-artifact_total: 27
+artifact_total: 28
 collections:
 - collection_type: open
   name: API Collection
@@ -125,6 +125,11 @@ collections:
   name: Scalekit API
   slug: open-scalekit
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/scalekit/refs/heads/main/capabilities/scalekit-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/scalekit-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/scalekit/refs/heads/main/agentic-access/scalekit-agentic-access.yml
   title: ''
@@ -188,6 +193,10 @@ finops:
   slug: scalekit-finops
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/scalekit.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.scalekit.com over HTTP.
+  name: Scalekit MCP Server
+  slug: scalekit
 modified: '2026-09-16'
 name: Scalekit
 nav: Providers
@@ -195,7 +204,7 @@ network: true
 overview: 'Scalekit publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Admin Portal API, Authentication API, Connected Accounts API, and 6 more. Tagged areas include Authentication, SSO, SCIM, Identity, and B2B SaaS.
 
 
-  Scalekit''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
+  Scalekit''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Scalekit Plans Pricing
   plan_count: 5
@@ -212,23 +221,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 41.0
+  composite: 39.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 61.6
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 53.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 36.3
     contract_governance: 0.0
-    contract_quality: 53.1
+    contract_quality: 48.0
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 41.0
+    discoverability: 68.3
+    operational_transparency: 31.1
+  previous_composite: 39.5
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +246,14 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

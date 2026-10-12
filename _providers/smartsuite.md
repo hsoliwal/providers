@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: REST API for managing Solutions, Tables, Records, and Fields in the SmartSuite work management platform. Authentication uses an API Token passed in the Authorization header with the Workspace ID in th
@@ -86,14 +86,14 @@ modified: '2026-05-11'
 name: SmartSuite
 nav: Providers
 network: true
-overview: 'SmartSuite publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Work Management, Project Management, Collaboration, Workflow-Automation, and No-Code.
+overview: 'SmartSuite publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Work Management, Project Management, Collaboration, Workflow Automation, and No-Code.
 
 
   SmartSuite''s developer surface includes documentation, pricing, signup flow, engineering blog, and 5 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 16.8
+  composite: 16.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -107,11 +107,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 16.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +138,7 @@ tags:
 - Work Management
 - Project Management
 - Collaboration
-- Workflow-Automation
+- Workflow Automation
 - No-Code
 - Productivity
 website: https://www.smartsuite.com

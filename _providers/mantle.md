@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
 artifact_total: 1
 common:
@@ -86,14 +86,14 @@ modified: '2026-07-20'
 name: Mantle
 nav: Providers
 network: true
-overview: 'Mantle is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Cap Table, Equity Management, and Portfolio-Management.
+overview: 'Mantle is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Cap Table, Equity Management, and Portfolio Management.
 
 
   Mantle''s developer surface includes documentation, engineering blog, pricing, support, and 6 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 18.4
+  composite: 19.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -107,13 +107,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 18.4
+  previous_composite: 19.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -131,7 +137,7 @@ tags:
 - Artificial Intelligence
 - Cap Table
 - Equity Management
-- Portfolio-Management
+- Portfolio Management
 - Alternative Assets
 - Fintech
 - Software-as-a-Service

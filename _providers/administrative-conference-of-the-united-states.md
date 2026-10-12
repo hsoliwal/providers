@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 3
 apis:
 - description: 'ACUS maintains an online database of Equal Access to Justice Act (EAJA) awards, tracking awards of attorney''s fees and other costs against the United States government. ACUS collects and reports this '
@@ -180,7 +180,7 @@ modified: '2026-08-30'
 name: Administrative Conference of the United States
 nav: Providers
 network: true
-overview: 'Administrative Conference of the United States publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Regulatory Reform, Administrative Law, Government Efficiency, and Open Data.
+overview: 'Administrative Conference of the United States publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Regulatory Reform, Administrative Law, Government Efficiency, and Open Data.
 
 
   Administrative Conference of the United States'' developer surface includes authentication, code examples, API reference, documentation, engineering blog, support, developer portal, and 17 more developer resources.'
@@ -195,7 +195,7 @@ rate_limits:
   slug: administrative-conference-of-the-united-states-rate-limits
 score:
   band: thin
-  composite: 28.7
+  composite: 26.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 38.0
@@ -207,11 +207,16 @@ score:
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 45.2
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 10.5
-  previous_composite: 28.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 26.2
   provenance:
     conformance: first-party
     mcp: derived
@@ -220,9 +225,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -243,7 +248,7 @@ security:
   summary_line: contact published
 slug: administrative-conference-of-the-united-states
 tags:
-- Federal-Government
+- Federal Government
 - Regulatory Reform
 - Administrative Law
 - Government Efficiency

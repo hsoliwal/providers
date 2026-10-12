@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/incandor/refs/heads/main/security/incandor-domain-security.yml
@@ -58,18 +58,22 @@ description: Incandor is a San Francisco based Y Combinator (Spring 2026) startu
   collects only behavioral signals — not what users type, read, or view — keeping user data private by design. The company was founded by Matthew Yekell (CEO) and Luc Rosenzweig (CTO), both Stanford CS graduates. This profile is maintained by the API Evangelist network; the developer platform is currently early access.
 image: https://www.incandor.com/logo.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.incandor.com over HTTP; 3 tools listed.
+  name: Incandor MCP Server
+  slug: incandor
 modified: '2026-07-19'
 name: Incandor
 nav: Providers
 network: true
-overview: 'Incandor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fraud Prevention, Anti-Fraud, Behavioral Biometrics, and Account Takeover.
+overview: 'Incandor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fraud Prevention, Behavioral Biometrics, Account Takeover, and Security.
 
 
   Incandor''s developer surface includes support and 3 more developer resources.'
 random_paper: 10
 score:
   band: minimal
-  composite: 6.3
+  composite: 5.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -83,13 +87,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 2.6
-  previous_composite: 6.3
+  previous_composite: 5.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -105,11 +115,10 @@ slug: incandor
 tags:
 - Company
 - Fraud Prevention
-- Anti-Fraud
 - Behavioral Biometrics
 - Account Takeover
 - Security
 - Fintech
-- Machine-Learning
+- Machine Learning
 website: https://www.incandor.com
 ---

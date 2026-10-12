@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 1
@@ -343,7 +343,7 @@ layout: provider
 mcp_servers:
 - description: Metriport serves a remote MCP endpoint from its documentation host. A tools/list POST returns HTTP 200 anonymously with three real tools and their inputSchemas — captured verbatim in metriport-mcp-too
   name: Metriport MCP Server
-  slug: metriport-mcp-server
+  slug: metriport-docs
 modified: '2026-08-14'
 name: Metriport
 nav: Providers
@@ -365,8 +365,8 @@ rate_limits:
   name: Metriport Rate Limits
   slug: metriport-rate-limits
 score:
-  band: exemplar
-  composite: 69.5
+  band: strong
+  composite: 66.2
   coverage:
     artifact_dirs: 28
     catalog_earned: 64.0
@@ -378,11 +378,11 @@ score:
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 61.6
+    contract_quality: 56.5
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 69.5
+  previous_composite: 66.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -402,9 +402,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 51.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.0
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true
@@ -434,6 +434,7 @@ tags:
 - FHIR
 - Health Data
 - Wearables
-- Open-Source
+- Open Source
+- A2A
 website: https://www.metriport.com
 ---

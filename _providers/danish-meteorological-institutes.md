@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,22 +48,22 @@ apis:
 - baseURL: https://opendataapi.dmi.dk/v2
   baseurl_source: declared
   description: Quality-checked climate data at multiple aggregation levels.
-  name: Danish Meteorological Institutes climateData API
+  name: Danish Meteorological Institutes Climate Data API
   slug: danish-meteorological-institutes-climatedata-api
 - baseURL: https://opendataapi.dmi.dk/v2
   baseurl_source: declared
   description: Lightning strike observations.
-  name: Danish Meteorological Institutes lightningData API
+  name: Danish Meteorological Institutes Lightning Data API
   slug: danish-meteorological-institutes-lightningdata-api
 - baseURL: https://opendataapi.dmi.dk/v2
   baseurl_source: declared
   description: Raw weather observations from Danish and Greenlandic stations.
-  name: Danish Meteorological Institutes metObs API
+  name: Danish Meteorological Institutes Met Obs API
   slug: danish-meteorological-institutes-metobs-api
 - baseURL: https://opendataapi.dmi.dk/v2
   baseurl_source: declared
   description: Sea-level and water-temperature observations.
-  name: Danish Meteorological Institutes oceanObs API
+  name: Danish Meteorological Institutes Ocean Obs API
   slug: danish-meteorological-institutes-oceanobs-api
 artifact_total: 22
 collections:
@@ -164,7 +164,7 @@ modified: '2026-05-19'
 name: Danish Meteorological Institutes
 nav: Providers
 network: true
-overview: 'Danish Meteorological Institutes publishes 4 APIs on the [APIs.io](https://apis.io/) network, including climateData API, lightningData API, metObs API, and 1 more. Tagged areas include Climate, Environment, Lightning, Meteorological, and Ocean.
+overview: 'Danish Meteorological Institutes publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Climate Data API, Lightning Data API, Met Obs API, and 1 more. Tagged areas include Climate, Environment, Lightning, Meteorological, and Ocean.
 
 
   The Danish Meteorological Institutes catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -204,21 +204,21 @@ rules:
   slug: dmi-open-data-api-rules
 score:
   band: thin
-  composite: 33.6
+  composite: 30.0
   coverage:
     artifact_dirs: 14
-    catalog_earned: 70.5
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.5
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 62.6
+    contract_governance: 27.3
+    contract_quality: 56.7
     developer_ergonomics: 0.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -226,7 +226,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 33.6
+  previous_composite: 30.0
   provenance:
     agentic_access: derived
     contracts:
@@ -239,9 +239,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 42.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false

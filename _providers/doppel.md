@@ -34,43 +34,43 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The alerts API from Doppel — 3 operation(s) for alerts.
-  name: Doppel alerts API
+  name: Doppel Alerts API
   slug: doppel-alerts-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The brands API from Doppel — 2 operation(s) for brands.
-  name: Doppel brands API
+  name: Doppel Brands API
   slug: doppel-brands-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The hrm API from Doppel — 3 operation(s) for hrm.
-  name: Doppel hrm API
+  name: Doppel Hrm API
   slug: doppel-hrm-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The phishing-simulation API from Doppel — 1 operation(s) for phishing-simulation.
-  name: Doppel phishing-simulation API
+  name: Doppel Phishing Simulation API
   slug: doppel-phishing-simulation-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The protected-assets API from Doppel — 3 operation(s) for protected-assets.
-  name: Doppel protected-assets API
+  name: Doppel Protected Assets API
   slug: doppel-protected-assets-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The reports API from Doppel — 2 operation(s) for reports.
-  name: Doppel reports API
+  name: Doppel Reports API
   slug: doppel-reports-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
   description: The scan API from Doppel — 2 operation(s) for scan.
-  name: Doppel scan API
+  name: Doppel Scan API
   slug: doppel-scan-api
 - baseURL: https://api.doppel.com/v1
   baseurl_source: declared
@@ -123,6 +123,11 @@ collections:
   name: Doppel alerts scan API
   slug: open-doppel-scan-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/doppel/refs/heads/main/capabilities/doppel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/doppel-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -267,19 +272,19 @@ modified: '2026-07-18'
 name: Doppel
 nav: Providers
 network: true
-overview: 'Doppel publishes 11 APIs on the [APIs.io](https://apis.io/) network, including alerts API, brands API, hrm API, and 8 more. Tagged areas include Company, Security, Cybersecurity, Digital Risk Protection, and Social Engineering Defense.
+overview: 'Doppel publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Brands API, Hrm API, and 8 more. Tagged areas include Company, Security, Cybersecurity, Digital Risk Protection, and Social Engineering Defense.
 
 
   The Doppel catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Doppel''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, changelog, and 23 more developer resources.'
+  Doppel''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, changelog, and 24 more developer resources.'
 random_paper: 6
 score:
   band: developing
-  composite: 43.1
+  composite: 44.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -289,11 +294,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 58.3
+    contract_quality: 53.2
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 43.1
+  previous_composite: 44.5
   provenance:
     conformance: derived
     contracts:
@@ -303,8 +308,18 @@ score:
       total: 11
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: true

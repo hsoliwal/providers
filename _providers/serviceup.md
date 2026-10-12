@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-04'
 api_count: 1
 apis:
 - description: Live Model Context Protocol server operated by ServiceUp at api.serviceup.com/mcp, exposing the agentic repair platform to MCP clients. The endpoint is protected by OAuth 2.1 (authorization code + PKC
@@ -140,9 +140,9 @@ description: ServiceUp is an agentic vehicle repair and maintenance platform for
 image: https://cdn.prod.website-files.com/65dfc331994523c04b3fbb30/6a3c44c69acc55aa24cf9bb7_7125858b1dfb99cd458a33c165bd452b_logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.serviceup.com over HTTP.
   name: ServiceUp MCP Server
-  slug: serviceup-mcp-server
+  slug: serviceup
 modified: '2026-08-05'
 name: ServiceUp
 nav: Providers
@@ -158,8 +158,8 @@ scopes:
   slug: serviceup-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: thin
-  composite: 28.5
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -173,9 +173,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 2.6
-  previous_composite: 28.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 25.5
   provenance:
     conformance: first-party
     mcp: first-party
@@ -184,9 +189,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.23.0
+  scored_at: '2026-10-04'
   trend: flat
   upsert:
     applies: false
@@ -214,7 +219,7 @@ tags:
 - Automotive
 - Insurance
 - Maintenance
-- Agentic AI
+- AI Agents
 - MCP
 - Transportation
 website: https://www.serviceup.com/
