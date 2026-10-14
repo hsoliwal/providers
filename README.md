@@ -19,6 +19,22 @@ follows below; upstream authorship, licenses, and project identity remain intact
 # API Evangelist Providers (api-evangelist-providers)
 An alphabetical listing of every provider tracked across the API Evangelist network.
 
+## Working with this fork
+
+This is [hsoliwal/providers](https://github.com/hsoliwal/providers), a fork of
+[api-evangelist/providers](https://github.com/api-evangelist/providers).
+The catalog describes public API providers; it does not host or grant access to
+those providers' APIs. Upstream site URLs and maintainer attribution below are
+retained and do not imply that this fork deploys to those domains.
+
+- [Contributor guide](CONTRIBUTING.md): source layout, generation prerequisites,
+  data validation, and provenance
+- [Site configuration](_config.yml), [templates](_layouts), and
+  [shared includes](_includes): static-site entrypoints
+- [Generated catalog data](_data) and [provider documents](_providers):
+  inspect the committed snapshot without running generators
+
+
 **URL:** [Visit APIs.json URL](https://github.com/api-evangelist/providers/blob/main/apis.yml)
 
 ## Scope
@@ -38,23 +54,35 @@ An alphabetical listing of every provider tracked across the API Evangelist netw
 
 ## Listing
 
-The site is a static, alphabetically-grouped index (A–Z plus 0-9) of all provider
-repositories under `all/*`. There are no detail pages — each provider links out to:
+The site is a static Jekyll catalog with alphabetical, category, and rating-band
+listings. The current tree also includes provider detail documents in
+[`_providers/`](_providers), rendered using the provider collection in
+[`_config.yml`](_config.yml) and [provider layout](_layouts/provider.html).
 
-- its **APIs.io provider page** (`https://providers.apis.io/providers/<slug>/`) when the
-  provider has an API listed (i.e. it appears in `api-search/providers/_providers/`), or
-- its **GitHub repository** (`https://github.com/api-evangelist/<slug>`) otherwise.
+[`scripts/build-listing.py`](scripts/build-listing.py) writes the alphabetical
+map to `_data/providers.json`, category/band datasets to
+`_data/providers-*.json`, and generated listing pages. Its source URLs point to:
 
-The listing data is generated into `_data/companies.json` by `scripts/build-listing.py`,
-which scans `all/*` (provider repos) and `api-search/providers/_providers/*` (provider
-listings). Re-run it to refresh the index:
+- an **APIs.io provider page** when enriched provider metadata is available, or
+- the provider's **API Evangelist GitHub repository** otherwise
 
-```
+[`scripts/build-providers.py`](scripts/build-providers.py) separately generates
+the local provider detail documents and paper catalog.
+[`scripts/build-sections.py`](scripts/build-sections.py) builds industry,
+country, and Australian-bank sections.
+
+The generators depend on a larger workspace containing provider repositories,
+enriched metadata, scoring rules, and delisting information. These inputs are
+not all included in a standalone clone. Read the
+[generation prerequisites](CONTRIBUTING.md#regenerating-the-catalog) before running:
+
+```sh
 python3 scripts/build-listing.py
 ```
 
-This site is static — there is no API backend. The listing is generated at build
-time from local repositories and deployed as plain HTML + a static `apis.json` feed.
+Generation rewrites data and pages. This is a static site, not an API backend;
+the committed [apis.json](apis.json) and [apis.yml](apis.yml) files are catalog
+metadata, not live provider endpoints.
 
 ## Editing `_data/` — read this first
 
