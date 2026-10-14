@@ -124,3 +124,52 @@ that choice to the actual data shape before altering a template.
   generated files can disappear at the next regeneration.
 - Keep documentation-only changes separate from catalog regeneration and site
   deployment. This guide adds no API backend or M3 runtime integration.
+
+## End-to-end example: inspect the generated federal listing
+
+This read-only exercise starts with checked-in output, so it does not need the
+sibling input repositories and cannot accidentally regenerate a partial catalog.
+From the repository root, with Python 3:
+
+```bash
+python3 - <<'PY'
+import json
+from pathlib import Path
+
+catalog = json.loads(Path('_data/providers-federal.json').read_text(encoding='utf-8'))
+groups = catalog['bands']
+print('declared total:', catalog['total'])
+print('grouped total:', sum(group['count'] for group in groups))
+for group in groups:
+    print(group['band'], group['count'], 'rows:', len(group['providers']))
+    for provider in group['providers'][:2]:
+        print(' ', provider['slug'], provider['name'], provider['url'])
+PY
+```
+
+This command is an unexecuted inspection example derived from the generator's
+output contract. It should report groups, counts, and sample links, not a fixed
+provider count. Compare each group's declared count with its array length and
+the sum of grouped counts with the overall total. A mismatch is a reason to
+inspect producer inputs and grouping logic, not to patch counts by hand.
+
+Follow the same entry back through `main()`: the enriched metadata's federal
+tag admits it to the category; `make_rated()` attaches available score details;
+`band_grouped()` orders and groups it; the generated federal page chooses
+`data_key: providers-federal` and `company-listing-rated.html`. This separates
+membership, score, serialization, and rendering into independently inspectable
+steps. A correctly displayed row does not establish accurate source metadata.
+
+### Failure diagnosis that avoids misleading green checks
+
+- `KeyError: 'bands'`: confirm that you opened a rated file. The alphabetical
+  `providers.json` file has letter keys instead of the rated contract.
+- Missing file: inspect the checkout/ref and actual `_data` inventory; do not run
+  regeneration until its external inputs are present.
+- A zero-file Ruby check: `check-data.rb` filters out nonexistent paths before
+  parsing and can succeed with zero targets. Check its reported file count;
+  a typo in an explicit path is not a successful validation of that file.
+- Empty band ranges: inspect `lib_bands.py`'s canonical/mirror rubric candidates.
+  Its deliberate empty-range fallback prevents invented thresholds.
+- Parse checks pass but counts look wrong: parsing cannot detect missing source
+  repositories, excluded descriptors, stale enrichment, or category-policy errors.
