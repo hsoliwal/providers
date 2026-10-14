@@ -123,3 +123,8 @@ build takes to tell you.
 **FN:** Kin Lane
 
 **Email:** info@apievangelist.com
+
+## Contributor field guide
+
+See the [catalog data-flow and contributor guide](documentation/CONTRIBUTOR_GUIDE.md) for the
+input checkout layout, source walkthrough, validation commands, and safe regeneration boundaries.
