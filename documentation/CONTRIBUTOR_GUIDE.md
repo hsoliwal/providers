@@ -15,8 +15,7 @@ distinction is between source descriptors, generated data, and presentation:
    alphabetical and rated listings, plus page stubs.
 4. Jekyll reads the generated `_data` files and renders Liquid includes/layouts.
 
-The generator currently writes `_data/providers.json`, not the older
-`_data/companies.json` name mentioned in the README. The alphabetical output is
+The generator writes the alphabetical output to `_data/providers.json` as
 a map of letters to arrays. Rated outputs such as
 `_data/providers-federal.json` have a `{total, bands}` shape. Treat these as
 different contracts, not interchangeable lists.
