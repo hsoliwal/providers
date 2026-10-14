@@ -128,3 +128,9 @@ build takes to tell you.
 
 See the [catalog data-flow and contributor guide](documentation/CONTRIBUTOR_GUIDE.md) for the
 input checkout layout, source walkthrough, validation commands, and safe regeneration boundaries.
+
+## Detailed architecture and contracts
+
+See the [architecture and coverage map](documentation/ARCHITECTURE_AND_COVERAGE.md) for
+generator/module contracts, data and template boundaries, validation behavior, and
+explicit gaps in provider, template and vendored-package coverage.

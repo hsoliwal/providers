@@ -173,3 +173,11 @@ steps. A correctly displayed row does not establish accurate source metadata.
   Its deliberate empty-range fallback prevents invented thresholds.
 - Parse checks pass but counts look wrong: parsing cannot detect missing source
   repositories, excluded descriptors, stale enrichment, or category-policy errors.
+
+## Deeper contract reference
+
+The [architecture and coverage map](ARCHITECTURE_AND_COVERAGE.md) links the
+[generator contracts](GENERATOR_CONTRACTS.md), [data and template contracts](DATA_AND_TEMPLATE_CONTRACTS.md),
+and [validation/operations guide](VALIDATION_AND_OPERATIONS.md). It records inspected
+source revisions and unresolved coverage instead of treating a directory index as
+complete package or runtime documentation.
