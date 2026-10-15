@@ -1,3 +1,87 @@
+<!-- fork-homepage-guide:start -->
+# Explore the API provider catalog
+
+An API discovery catalog for readers who want to find providers, understand the
+metadata behind a listing, or improve how that information is organized. This
+[hsoliwal fork](https://github.com/hsoliwal/providers) inherits the
+[API Evangelist catalog](https://github.com/api-evangelist/providers). It contains
+static Jekyll pages and generation tools; the listed companies operate their own
+APIs, credentials, pricing, and support.
+
+## What is here, and what is experimental?
+
+- **Present in the tree:** committed provider datasets and detail documents,
+  Liquid layouts/includes, Python generators, and a Ruby data-parser check.
+- **Fork purpose:** explore reusable API knowledge and provenance for the M3
+  programme. Its analysis tooling is separate from the catalog/site contract.
+- **Evidence boundary:** source and documentation describe these components;
+  this homepage update did not regenerate, render, deploy, or test the catalog.
+  A provider listing does not verify that provider's availability or quality.
+
+## Concepts in one minute
+
+| Concept | Meaning in this repository |
+| --- | --- |
+| Provider | A company/project described by a source API descriptor and optional enrichment |
+| Descriptor | `apis.yml`/`apis.json` metadata describing APIs and links, rather than an API implementation |
+| Generated snapshot | Committed data/pages produced from a larger input workspace at a point in time |
+| Collection | Jekyll's `_providers` documents, configured in `_config.yml` and rendered through layouts |
+| Rating band | A rubric-driven grouping loaded through `scripts/lib_bands.py`, not a new scoring scale |
+| Provenance | Where a record, enrichment, rubric, or generated value came from |
+
+The main flow is **source descriptors + enrichment → Python generators →
+`_data` / `_providers` / pages → Jekyll layouts and includes**. Start with the
+producer when correcting data, and the relevant template when changing display.
+
+## Quickstart: inspect before regenerating
+
+Clone this fork, then use Ruby with Psych to validate the committed snapshot:
+
+```sh
+git clone https://github.com/hsoliwal/providers.git
+cd providers
+ruby scripts/check-data.rb
+```
+
+This checks parsing of `_data` files and `_config.yml`; it does not prove that
+Liquid renders correctly or that remote API endpoints work. Regeneration also
+needs Python 3, PyYAML, and the external workspace inputs described in
+[CONTRIBUTING.md](CONTRIBUTING.md). A clone alone does not supply those inputs.
+There is no root Gemfile pinning a local Jekyll environment; the Dockerfile is a
+ZIP utility, not a ready-made site preview image.
+
+## Compact cheat sheet
+
+| Goal | Start here | Important boundary |
+| --- | --- | --- |
+| Find committed listings | [`_data`](_data), [`_providers`](_providers) | Snapshot metadata, not live provider responses |
+| Trace alphabetical/category output | [`scripts/build-listing.py`](scripts/build-listing.py) | Rewrites data/pages and needs external inputs |
+| Trace provider detail pages | [`scripts/build-providers.py`](scripts/build-providers.py) | Distinct from the alphabetical builder |
+| Change presentation | [`_layouts`](_layouts), [`_includes`](_includes) | Preserve data/template field contracts |
+| Validate data syntax | `ruby scripts/check-data.rb` | Psych parsing, not a complete site build |
+| Review your edit | `git diff --check` then `git diff` | Inspect generated churn before proposing it |
+
+### Example: a valid JSON file can still break the site
+
+A provider description containing an emoji can be valid JSON yet fail Pages'
+YAML parsing if serialized as surrogate escapes. The checked-in
+[`dump_json()` helper](scripts/build-listing.py) repairs surrogates and writes
+UTF-8 with `ensure_ascii=False`. Preserve that helper when writing `_data` output,
+then run [`check-data.rb`](scripts/check-data.rb). Passing a generic JSON parser
+alone misses this boundary.
+
+## Go deeper
+
+Read the [contributor field guide](documentation/CONTRIBUTOR_GUIDE.md) for the
+workspace layout and a full walkthrough, then the
+[architecture and coverage map](documentation/ARCHITECTURE_AND_COVERAGE.md) for
+module/data contracts and explicit inspection gaps. Upstream attribution and
+existing notices remain below. Public availability is not a blanket reuse
+license; consult the provenance guidance before redistributing material.
+<!-- fork-homepage-guide:end -->
+
+---
+
 ## M3 direction in this fork
 
 M3 is based on the idea that shared immutable structure and indexed metadata can
