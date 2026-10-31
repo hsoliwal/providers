@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Public gRPC API for the StellarStation ground-station-as-a-service platform. Lets satellite operators list upcoming available passes, reserve and cancel plans, add and retrieve TLE orbital data, set p
@@ -41,6 +41,10 @@ apis:
   slug: stellarstation-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.infostellar.net/news/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/infostellar/refs/heads/main/security/infostellar-domain-security.yml
   title: ''
@@ -143,45 +147,53 @@ created: '2026-07-17'
 description: Infostellar is a Tokyo-based space infrastructure company that operates StellarStation, a cloud ground-station-as-a-service (GSaaS) platform. It aggregates partner and operator antennas into a shared global network so satellite operators can discover and reserve upcoming passes, schedule and cancel plans, manage two-line element (TLE) orbital data, and stream live telemetry and commands to and from their spacecraft. StellarStation exposes a public gRPC API (defined with Protocol Buffers) at api.stellarstation.com, with precompiled client stubs published for Java, Python, Go, and Node.js and authentication handled via JWT bearer service-account credentials issued from the StellarStation Console. The API separates a satellite-operator service (StellarStationService) from a ground-station-operator service (GroundStationService), plus supporting definitions for antennas, radios, orbit, monitoring, and transport.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/infostellar.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Infostellar
 nav: Providers
 network: true
-overview: 'Infostellar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Space, Satellite, Ground Station, and Aerospace.
+overview: 'Infostellar is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Space, Satellite, Ground Station, and Aerospace.
 
 
-  Infostellar''s developer surface includes documentation, API reference, changelog, authentication, and 17 more developer resources.'
+  Infostellar''s developer surface includes engineering blog, documentation, API reference, changelog, authentication, and 17 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 26.6
+  composite: 26.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 26.7
-    developer_ergonomics: 47.0
-    discoverability: 75.9
+    contract_quality: 24.0
+    developer_ergonomics: 49.4
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - japan
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 26.6
+  previous_composite: 25.8
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

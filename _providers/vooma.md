@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 29
+- acting_count: 27
   human_in_the_loop: 1
   name: Vooma Agentic Access
   operation_count: 35
   slug: vooma-agentic-access
-  summary_line: 35 operations · 29 acting · 1 human-in-the-loop
+  summary_line: 35 operations · 27 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.vooma.ai/v0
@@ -265,7 +265,7 @@ modified: '2026-07-21'
 name: Vooma
 nav: Providers
 network: true
-overview: 'Vooma publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Carriers API, Contacts API, Customers API, and 7 more. Tagged areas include Company, Artificial Intelligence, Freight, Logistics, and Transportation.
+overview: 'Vooma publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Carriers API, Contacts API, Customers API, and 7 more. Tagged areas include Company, Artificial Intelligence, Freight, Logistics, and Transportation.
 
 
   The Vooma catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -275,9 +275,9 @@ overview: 'Vooma publishes 10 APIs on the [APIs.io](https://apis.io/) network, i
 random_paper: 18
 score:
   band: developing
-  composite: 48.7
+  composite: 46.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -287,11 +287,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 4.5
-    contract_quality: 55.9
+    contract_quality: 51.1
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 48.7
+  previous_composite: 46.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -304,12 +304,12 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: weak_tags
-    regime: Securities & Market Data
-    regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -335,8 +335,8 @@ tags:
 - Freight
 - Logistics
 - Transportation
-- Brokers
 - TMS
 - Agents
+- Freight Brokerage
 website: https://www.vooma.com
 ---

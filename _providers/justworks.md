@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.0
-  scored_at: '2026-09-20'
+  score: 40.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 9
+- acting_count: 8
   human_in_the_loop: 1
   name: Justworks Agentic Access
   operation_count: 27
   slug: justworks-agentic-access
-  summary_line: 27 operations · 9 acting · 1 human-in-the-loop
+  summary_line: 27 operations · 8 acting · 1 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: https://public-api.justworks.com
@@ -100,7 +100,7 @@ apis:
   description: OAuth 2.0 token endpoints
   name: Justworks O Auth API
   slug: justworks-oauth-api
-artifact_total: 59
+artifact_total: 60
 collections:
 - collection_type: open
   name: API Collection
@@ -145,6 +145,11 @@ collections:
   name: Justworks Company Webhooks API
   slug: open-justworks-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/capabilities/justworks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/justworks-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/justworks/refs/heads/main/agentic-access/justworks-agentic-access.yml
   title: ''
@@ -271,9 +276,13 @@ features:
 - Integrations marketplace covering Greenhouse, Lever, JazzHR, CultureAmp, 15Five, QuickBooks, NetSuite, Xero, Sage Intacct, Brex, Ramp
 - Available via aggregator platforms Finch, Merge, and Apideck for cross-HRIS access
 finops:
-- name: Justworks Finops
+- has_sources: true
+  method: generated
+  name: Justworks Finops
+  primary_unit: employee-month
   service_category: Human Capital Management
   slug: justworks-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/justworks.png
 json_schemas:
 - name: Justworks Deduction
@@ -300,17 +309,21 @@ jsonld:
   property_count: 8
   slug: justworks-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.justworks.com over HTTP.
+  name: Justworks MCP Server
+  slug: justworks
 modified: '2026-05-25'
 name: Justworks
 nav: Providers
 network: true
-overview: 'Justworks publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Members API, Company API, Deductions API, and 8 more. Tagged areas include PEO, Payroll, Human Resources, Benefits, and Health Insurance.
+overview: 'Justworks publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Members API, Company API, Deductions API, and 8 more. Tagged areas include PEO, Payroll, Human Resources, Benefits, and Health Insurance.
 
 
   The Justworks catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Justworks'' developer surface includes authentication, documentation, developer portal, getting-started guide, pricing, engineering blog, YouTube channel, and 17 more developer resources.'
+  Justworks'' developer surface includes authentication, documentation, developer portal, getting-started guide, pricing, engineering blog, YouTube channel, and 18 more developer resources.'
 plans:
 - name: Justworks Plans Pricing
   plan_count: 5
@@ -321,9 +334,10 @@ rate_limits:
   name: Justworks Rate Limits
   slug: justworks-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Justworks API Rules
+  name: Justworks — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -338,28 +352,30 @@ scopes:
   summary_line: 15 scopes · authorizationCode
 score:
   band: developing
-  composite: 52.1
+  composite: 40.7
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 73.3
+    artifact_dirs: 19
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.9
   facets:
-    access_clarity: 53.9
+    access_clarity: 30.3
     contract_governance: 9.8
-    contract_quality: 65.1
+    contract_quality: 58.9
     developer_ergonomics: 50.0
-    discoverability: 59.3
-    operational_transparency: 23.7
+    discoverability: 60.0
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.1
+  previous_composite: 46.6
   provenance:
     agentic_access: derived
     contracts:
@@ -371,12 +387,12 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Insurance
-    regime_id: insurance
-    score: 64.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 34.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -407,5 +423,6 @@ tags:
 - Small Business
 - Employer of Record
 - HRIS
+- Employee Benefits
 website: https://www.justworks.com
 ---

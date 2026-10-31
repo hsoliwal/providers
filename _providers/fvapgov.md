@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -44,32 +44,32 @@ agentic_access:
 api_count: 1
 apis:
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: State-specific ballot rules (FPCA, FWAB, VBR).
   name: FVAP.gov Ballot Rules API
   slug: fvapgov-ballot-rules-api
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: Election deadlines for a jurisdiction.
   name: FVAP.gov Deadline Dates API
   slug: fvapgov-deadline-dates-api
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: Local election office contact information.
   name: FVAP.gov Election Offices API
   slug: fvapgov-election-offices-api
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: Combined electronic Voting Assistance Guide.
   name: FVAP.gov eVAG API
   slug: fvapgov-evag-api
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: General voting information for a jurisdiction.
   name: FVAP.gov Important Info API
   slug: fvapgov-important-info-api
 - baseURL: https://www.fvap.gov
-  baseurl_source: declared
+  baseurl_source: spec
   description: XML schema definition.
   name: FVAP.gov Schema API
   slug: fvapgov-schema-api
@@ -100,6 +100,21 @@ collections:
   name: FVAP.gov XML API
   slug: open-fvapgov-xml-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/fvapgov/refs/heads/main/plans/fvapgov-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/fvapgov-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/fvapgov/refs/heads/main/rate-limits/fvapgov-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/fvapgov-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/fvapgov/refs/heads/main/finops/fvapgov-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/fvapgov-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/fvapgov/refs/heads/main/capabilities/fvapgov-capability-edges.yml
   title: ''
@@ -135,9 +150,13 @@ common:
 created: '2024-03-30'
 description: Federal Voting Assistance Program (FVAP) publishes XML feeds of voter information by U.S. state and territory, including important info, deadline dates, ballot rules, and election offices, plus a combined electronic Voting Assistance Guide (eVAG).
 finops:
-- name: Fvapgov Finops
+- has_sources: false
+  method: generated
+  name: Fvapgov Finops
+  primary_unit: ''
   service_category: API
   slug: fvapgov-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fvapgov.png
 json_schemas:
 - name: FVAP eVAG
@@ -148,13 +167,13 @@ modified: '2026-05-19'
 name: FVAP.gov
 nav: Providers
 network: true
-overview: 'FVAP.gov publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Ballot Rules API, Deadline Dates API, Election Offices API, and 3 more. Tagged areas include Government and Voting.
+overview: 'FVAP.gov publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ballot Rules API, Deadline Dates API, Election Offices API, and 3 more. Tagged areas include Government and Voting.
 
 
   The FVAP.gov catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  FVAP.gov''s developer surface includes documentation, engineering blog, and 5 more developer resources.'
+  FVAP.gov''s developer surface includes documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Fvapgov Plans Pricing
   plan_count: 3
@@ -165,9 +184,10 @@ rate_limits:
   name: Fvapgov Rate Limits
   slug: fvapgov-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: FVAP.gov API Rules
+  name: FVAP.gov — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -177,23 +197,23 @@ rules:
   slug: fvapgov-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 19.2
+  composite: 18.9
   coverage:
     artifact_dirs: 13
-    catalog_earned: 38.3
+    catalog_earned: 36.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.8
-    catalog_max: 100.0
+    catalog_gap: 78.8
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.5
   facets:
-    access_clarity: 0.0
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 48.6
+    contract_quality: 43.8
     developer_ergonomics: 2.4
-    discoverability: 59.3
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 19.2
+  previous_composite: 17.4
   provenance:
     agentic_access: derived
     contracts:
@@ -206,9 +226,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

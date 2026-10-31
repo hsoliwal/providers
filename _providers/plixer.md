@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for Plixer Scrutinizer flow analytics — run flow reports, manage alarms, tune detections, trigger packet captures, and work with Collections. Scrutinizer is deployed as a self-hosted applianc
@@ -41,6 +41,10 @@ apis:
   slug: plixer-scrutinizer-rest-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.plixer.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/plixer/refs/heads/main/security/plixer-domain-security.yml
   title: ''
@@ -104,15 +108,15 @@ layout: provider
 mcp_servers:
 - description: Plixer ships a native Model Context Protocol (MCP) server as part of Plixer Scrutinizer / Plixer One, released in Plixer 19.8 and available to all Scrutinizer and Plixer One customers at no additional
   name: Plixer MCP Server
-  slug: plixer-mcp-server
-modified: '2026-07-20'
+  slug: plixer-scrutinizer
+modified: '2026-10-06'
 name: Plixer
 nav: Providers
 network: true
-overview: 'Plixer publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Network Observability, Network Security, Network Detection and Response, and NetFlow.
+overview: 'Plixer is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Network Observability, Network Security, Network Detection and Response, and NetFlow.
 
 
-  Plixer''s developer surface includes documentation, engineering blog, support, pricing, signup flow, and 8 more developer resources.'
+  Plixer''s developer surface includes documentation, engineering blog, support, pricing, signup flow, and 9 more developer resources.'
 plans:
 - name: Plixer Plans
   plan_count: 3
@@ -120,7 +124,7 @@ plans:
 random_paper: 0
 score:
   band: thin
-  composite: 28.1
+  composite: 27.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 49.0
@@ -128,19 +132,25 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 0.0
-  previous_composite: 28.1
+  previous_composite: 27.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

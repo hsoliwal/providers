@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: JSON/REST API for hotels and PMS/channel-manager systems to push availability, rates and inventory (ARI), manage property, room, rate-plan and channel configuration, and exchange reservations across 5
@@ -146,7 +146,7 @@ modified: '2026-07-18'
 name: DerbySoft
 nav: Providers
 network: true
-overview: 'DerbySoft publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Travel, Hospitality, and Hotels.
+overview: 'DerbySoft is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Travel, Hospitality, and Hotels.
 
 
   DerbySoft''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, changelog, and 13 more developer resources.'
@@ -157,27 +157,37 @@ rate_limits:
   slug: derbysoft-rate-limits
 score:
   band: thin
-  composite: 32.8
+  composite: 34.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 43.0
     catalog_earned_first_party: 8.0
     catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 36.8
-  previous_composite: 32.8
+  previous_composite: 34.6
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

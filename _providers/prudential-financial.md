@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,6 +68,21 @@ collections:
   name: Prudential Financial Developer Accounts Retirement API
   slug: open-prudential-financial-retirement-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/prudential-financial/refs/heads/main/plans/prudential-financial-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/prudential-financial-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/prudential-financial/refs/heads/main/rate-limits/prudential-financial-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/prudential-financial-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/prudential-financial/refs/heads/main/finops/prudential-financial-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/prudential-financial-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/prudential-financial/refs/heads/main/agentic-access/prudential-financial-agentic-access.yml
   title: ''
@@ -93,16 +108,20 @@ common:
 created: '2026-03-21'
 description: Prudential Financial, Inc. is a global financial services company offering insurance, retirement planning, investment management, and other financial products and services. Founded in 1875 and headquartered in Newark, New Jersey, the company serves individual and institutional customers worldwide.
 finops:
-- name: Prudential Financial Finops
+- has_sources: true
+  method: generated
+  name: Prudential Financial Finops
+  primary_unit: ''
   service_category: Insurance
   slug: prudential-financial-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/prudential-financial.png
 layout: provider
 modified: '2026-05-19'
 name: Prudential Financial
 nav: Providers
 network: true
-overview: 'Prudential Financial publishes 2 APIs on the [APIs.io](https://apis.io/) network: Accounts API and Retirement API. Tagged areas include Annuities, Financial-Services, Insurance, Retirement, and Fortune 100.'
+overview: 'Prudential Financial publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Accounts API and Retirement API. Tagged areas include Annuities, Financial Services, Insurance, Retirement, and Fortune 100.'
 plans:
 - name: Prudential Financial Plans Pricing
   plan_count: 1
@@ -130,28 +149,30 @@ rate_limits:
   slug: prudential-financial-rate-limits
 score:
   band: emerging
-  composite: 20.2
+  composite: 20.7
   coverage:
     artifact_dirs: 13
-    catalog_earned: 39.0
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.0
-    catalog_max: 100.0
+    catalog_gap: 74.0
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.0
   facets:
-    access_clarity: 0.0
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 9.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.2
+  previous_composite: 19.7
   provenance:
     agentic_access: derived
     contracts:
@@ -164,14 +185,15 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'
     reason: read_only
+screenshot: https://raw.githubusercontent.com/api-evangelist/prudential-financial/refs/heads/main/screenshots/prudential-financial-2026-10-11T192229.png
 security:
 - kind: domain-security
   name: Prudential Financial Domain Security
@@ -180,7 +202,7 @@ security:
 slug: prudential-financial
 tags:
 - Annuities
-- Financial-Services
+- Financial Services
 - Insurance
 - Retirement
 - Fortune 100

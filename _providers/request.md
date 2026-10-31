@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Accounts Payable and Receivable REST API for issuing invoices, accepting crypto and fiat payments, running payroll, and managing organizations and clients. JSON request and response bodies, Bearer
@@ -178,7 +178,7 @@ modified: '2026-07-20'
 name: Request Finance
 nav: Providers
 network: true
-overview: 'Request Finance publishes 1 API on the [APIs.io](https://apis.io/) network: AP and AR API. Tagged areas include Company, Payments, Invoicing, Crypto, and Web3.
+overview: 'Request Finance is listed with 1 API on the [APIs.io](https://apis.io/) network: AP and AR API. Tagged areas include Company, Payments, Invoicing, Cryptocurrency, and Web3.
 
 
   The Request Finance catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -197,7 +197,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
   band: developing
-  composite: 45.8
+  composite: 43.6
   coverage:
     artifact_dirs: 16
     catalog_earned: 49.0
@@ -209,11 +209,11 @@ score:
   facets:
     access_clarity: 15.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
-  previous_composite: 45.8
+  previous_composite: 43.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -223,9 +223,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -250,7 +250,7 @@ tags:
 - Company
 - Payments
 - Invoicing
-- Crypto
+- Cryptocurrency
 - Web3
 - Payroll
 - Stablecoins

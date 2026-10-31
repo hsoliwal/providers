@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-09-20'
+  score: 24.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -177,7 +177,7 @@ modified: '2026-07-19'
 name: LI-COR Intermediate
 nav: Providers
 network: true
-overview: 'LI-COR Intermediate publishes 2 APIs on the [APIs.io](https://apis.io/) network: Data API and Newa API. Tagged areas include Company, Environmental Monitoring, Greenhouse Gas, Climate, and Agriculture.
+overview: 'LI-COR Intermediate publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Data API and Newa API. Tagged areas include Company, Environmental Monitoring, Greenhouse Gas, Climate, and Agriculture.
 
 
   LI-COR Intermediate''s developer surface includes documentation, API reference, support, engineering blog, authentication, and 17 more developer resources.'
@@ -188,7 +188,7 @@ rate_limits:
   slug: li-cor-intermediate-rate-limits
 score:
   band: thin
-  composite: 38.1
+  composite: 35.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -200,11 +200,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 47.8
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 38.1
+  previous_composite: 35.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -220,9 +220,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

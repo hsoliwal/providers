@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://wanderluxe.theluxenomad.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/luxe-nomad/refs/heads/main/security/luxe-nomad-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: The Luxe Nomad is a luxury travel booking company offering curated villas, private residences, and boutique hotels across Asia-Pacific and beyond. It operates as a consumer-facing booking platform rather than a developer-first API provider. Surfaced as a portfolio company of 500 Global and added to the API Evangelist network for enrichment, this profile was probed for a public API surface, developer portal, and discovery documents; none were found (the site is bot-protected and returns no developer, API, or /.well-known resources). It remains catalogued as a company lead with a probed domain-security profile.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luxe-nomad.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Luxe Nomad
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Luxe Nomad is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 6
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,11 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

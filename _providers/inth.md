@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-09-20'
+  score: 21.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://your-instance.c15t.dev
@@ -84,6 +84,11 @@ collections:
   name: c15t Backend Consent Subjects API
   slug: open-inth-subjects-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/inth/refs/heads/main/capabilities/inth-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/inth-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/inth/refs/heads/main/overlays/inth-c15t-consent-api-overlay.yaml
   title: ''
@@ -241,30 +246,30 @@ modified: '2026-07-19'
 name: Inth
 nav: Providers
 network: true
-overview: 'Inth publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Consent API, Init API, Legal Documents API, and 2 more. Tagged areas include Company, Consent Management, Privacy, Cookie Consent, and GDPR.
+overview: 'Inth publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Consent API, Init API, Legal Documents API, and 2 more. Tagged areas include Company, Consent Management, Privacy, Cookie Consent, and GDPR.
 
 
-  Inth''s developer surface includes documentation, API reference, quickstart, pricing, engineering blog, signup flow, support, and 25 more developer resources.'
+  Inth''s developer surface includes documentation, API reference, quickstart, pricing, engineering blog, signup flow, support, and 26 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 50.4
+  composite: 49.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 49.4
+    contract_quality: 44.4
     developer_ergonomics: 85.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 50.4
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     contracts:
@@ -274,8 +279,22 @@ score:
       total: 5
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: BR
+      standard: lgpd
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 3
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -301,6 +320,7 @@ tags:
 - Compliance
 - Consent
 - Developer Tools
-- Open-Source
+- Open Source
+- A2A
 website: https://c15t.com/docs
 ---

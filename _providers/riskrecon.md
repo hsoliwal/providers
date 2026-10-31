@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: RiskRecon REST API for programmatic access to security ratings, portfolio and toe (target-of-evaluation) analyses, findings, and evidence. Authenticated with a JWT bearer token. Multiple version prefi
@@ -42,6 +42,10 @@ apis:
   slug: riskrecon-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.riskrecon.com/rss.xml
 - group: other
   title: ''
   type: ParentCompany
@@ -125,18 +129,18 @@ created: '2026-07-17'
 description: RiskRecon by Mastercard is a third-party and supply-chain cyber risk management platform that continuously assesses, rates, and monitors the cybersecurity posture of an organization and its vendor ecosystem. It produces objective, automated security ratings across dozens of security criteria, prioritizes findings by asset value and issue severity, and lets teams tune assessments to their own risk appetite. RiskRecon exposes a REST API (api.riskrecon.com) so customers can programmatically pull portfolio ratings, toe (target-of-evaluation) analyses, findings, and evidence into their own GRC, TPRM, and security workflows. Originally venture backed by Accel and others, RiskRecon was acquired by Mastercard and now operates as RiskRecon by Mastercard.
 image: https://www.riskrecon.com/hubfs/riskrecon-by-mastercard-logo.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: RiskRecon
 nav: Providers
 network: true
-overview: 'RiskRecon publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security Ratings, Third-Party Risk, and Supply Chain Risk.
+overview: 'RiskRecon is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security Ratings, Third-Party Risk Management, and Supply Chain Risk.
 
 
-  RiskRecon''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 12 more developer resources.'
+  RiskRecon''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 13 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 21.3
+  composite: 21.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -150,11 +154,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 21.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 21.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -175,7 +185,7 @@ tags:
 - Company
 - Cybersecurity
 - Security Ratings
-- Third-Party Risk
+- Third-Party Risk Management
 - Supply Chain Risk
 - Risk Management
 - GRC

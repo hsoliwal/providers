@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://hanwhaphillyshipyard.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/philly-shipyard/refs/heads/main/security/philly-shipyard-domain-security.yml
   title: ''
@@ -69,7 +73,7 @@ created: '2026-05-03'
 description: Philly Shipyard (now Hanwha Philly Shipyard, Inc.) is a commercial shipbuilder based at the former Philadelphia Naval Shipyard, constructing Jones Act-compliant container ships, product and Aframax tankers, and National Security Multi-Mission Vessels (NSMVs) for the U.S. Maritime Administration and state maritime academies. In December 2024, Hanwha Systems and Hanwha Ocean (subsidiaries of South Korea's Hanwha Group) completed the acquisition of Philly Shipyard for approximately $100M, rebranding the operation as Hanwha Philly Shipyard Inc. (HPSI). No public developer APIs have been identified at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/philly-shipyard.png
 layout: provider
-modified: '2026-05-23'
+modified: '2026-10-06'
 name: Philly Shipyard
 nav: Providers
 network: true
@@ -77,9 +81,9 @@ overview: Philly Shipyard is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 9
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.5
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -91,11 +95,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

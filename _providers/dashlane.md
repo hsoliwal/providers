@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 6
   slug: dashlane-agentic-access
   summary_line: 6 operations · 5 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.dashlane.com/public
   baseurl_source: declared
@@ -66,6 +66,10 @@ collections:
   name: Dashlane public API documentation Teams Time API
   slug: open-dashlane-time-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.dashlane.com/feed
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/dashlane/refs/heads/main/overlays/dashlane-public-api-overlay.yaml
   title: ''
@@ -216,20 +220,20 @@ created: '2026-07-17'
 description: Dashlane is a password manager and credential-security platform for individuals, families, and enterprises, protecting against credential reuse, phishing, and account takeover with zero-knowledge encryption, passkey support, and AI-powered phishing detection. For developers, Dashlane publishes a read-only Public API (OpenAPI 3.0) that returns real-time team data — member roles/status/usage metrics, activated devices, and password-health analytics (weak, reused, compromised credentials) — authenticated with a bearer DLP token. Dashlane also ships an open-source CLI (dcli), a GitHub Action for injecting vault secrets into CI/CD, SCIM provisioning, and SSO federation.
 image: https://www.dashlane.com/favicon.ico
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Dashlane
 nav: Providers
 network: true
-overview: 'Dashlane publishes 2 APIs on the [APIs.io](https://apis.io/) network: Teams API and Time API. Tagged areas include Company, Cybersecurity, Password Management, Identity, and Security.
+overview: 'Dashlane publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Teams API and Time API. Tagged areas include Company, Cybersecurity, Password Management, Identity, and Security.
 
 
-  Dashlane''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, support, engineering blog, and 25 more developer resources.'
+  Dashlane''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, support, engineering blog, and 26 more developer resources.'
 random_paper: 18
 score:
   band: developing
-  composite: 48.4
+  composite: 49.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -239,11 +243,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 48.4
+  previous_composite: 49.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -254,8 +258,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

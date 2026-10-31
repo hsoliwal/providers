@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -87,6 +87,21 @@ collections:
   name: CGMIX Maritime Information Exchange Equipment Vessel Documentation API
   slug: open-united-states-coast-guard-vessel-documentation-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-coast-guard/refs/heads/main/plans/united-states-coast-guard-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/united-states-coast-guard-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-coast-guard/refs/heads/main/rate-limits/united-states-coast-guard-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/united-states-coast-guard-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/united-states-coast-guard/refs/heads/main/finops/united-states-coast-guard-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/united-states-coast-guard-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/united-states-coast-guard/refs/heads/main/agentic-access/united-states-coast-guard-agentic-access.yml
   title: ''
@@ -114,9 +129,13 @@ examples:
   name: Cgmix Get Vessel Summary Example
   slug: cgmix-get-vessel-summary-example
 finops:
-- name: United States Coast Guard Finops
+- has_sources: false
+  method: generated
+  name: United States Coast Guard Finops
+  primary_unit: ''
   service_category: API
   slug: united-states-coast-guard-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/united-states-coast-guard.png
 json_schemas:
 - name: CGMIX Vessel Inspection Case
@@ -139,7 +158,7 @@ modified: '2026-05-19'
 name: United States Coast Guard
 nav: Providers
 network: true
-overview: 'United States Coast Guard publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Equipment API, Incident Reports API, Port State Information API, and 1 more. Tagged areas include Federal-Government, Maritime Safety, Vessel Documentation, Emergency Response, and Law Enforcement.
+overview: 'United States Coast Guard publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Equipment API, Incident Reports API, Port State Information API, and 2 more. Tagged areas include Federal Government, Maritime Safety, Vessel Documentation, Emergency Response, and Law Enforcement.
 
 
   The United States Coast Guard catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
@@ -153,9 +172,10 @@ rate_limits:
   name: United States Coast Guard Rate Limits
   slug: united-states-coast-guard-rate-limits
 rules:
-- effective_rule_count: 7
+- authorship: unmarked
+  effective_rule_count: 7
   extends: []
-  name: United States Coast Guard API Rules
+  name: United States Coast Guard — cgmix maritime information exchange rules
   rule_count: 7
   severity_counts:
     error: 3
@@ -163,9 +183,10 @@ rules:
     info: 0
     warn: 4
   slug: cgmix-maritime-information-exchange-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: United States Coast Guard API Rules
+  name: United States Coast Guard — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -174,24 +195,29 @@ rules:
     warn: 3
   slug: united-states-coast-guard-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 28.9
+  band: emerging
+  composite: 25.3
   coverage:
     artifact_dirs: 14
-    catalog_earned: 64.0
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.0
-    catalog_max: 100.0
+    catalog_gap: 57.8
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 0.0
-    contract_governance: 39.4
-    contract_quality: 58.5
+    access_clarity: 7.9
+    contract_governance: 9.8
+    contract_quality: 53.4
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 28.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 26.8
   provenance:
     agentic_access: derived
     contracts:
@@ -204,9 +230,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -220,7 +246,7 @@ security:
   summary_line: TLSv1.2 · HSTS · DNSSEC · DMARC
 slug: united-states-coast-guard
 tags:
-- Federal-Government
+- Federal Government
 - Maritime Safety
 - Vessel Documentation
 - Emergency Response

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 62.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 58
   human_in_the_loop: 1
@@ -75,7 +75,7 @@ apis:
   description: Workflow Engine resources on the Losant Platform.
   name: Losant Workflow Engine API
   slug: losant-workflow-engine-api
-artifact_total: 69
+artifact_total: 68
 asyncapis:
 - description: ''
   name: Losant Event Surface
@@ -157,6 +157,11 @@ collections:
   name: Losant Application Workflow Engine API
   slug: open-losant-workflow-engine-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/losant/refs/heads/main/capabilities/losant-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/losant-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -549,9 +554,13 @@ examples:
   name: Losant Workflow Api Create Flow Example
   slug: losant-workflow-api-create-flow-example
 finops:
-- name: Losant Finops
+- has_sources: false
+  method: generated
+  name: Losant Finops
+  primary_unit: ''
   service_category: ''
   slug: losant-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/losant.png
 json_schemas:
 - name: Losant Application
@@ -598,23 +607,20 @@ jsonld:
   slug: losant-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.losant.com over HTTP requiring OAuth; 3 tools listed.
   name: Losant MCP Server
-  slug: losant-mcp-server
-- description: ''
-  name: Losant hosted MCP endpoint
-  slug: losant-hosted-mcp-endpoint
+  slug: losant
 modified: '2026-08-26'
 name: Losant
 nav: Providers
 network: true
-overview: 'Losant publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication and Account API, Data and Data Tables API, Edge and Embedded Compute API, and 3 more. Tagged areas include IoT, Devices, Edge Compute, Embedded, and MQTT.
+overview: 'Losant publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication and Account API, Data and Data Tables API, Edge and Embedded Compute API, and 3 more. Tagged areas include IoT, Devices, Edge Compute, Embedded, and MQTT.
 
 
   The Losant catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Losant''s developer surface includes authentication, developer portal, documentation, getting-started guide, CLI, engineering blog, pricing, and 72 more developer resources.'
+  Losant''s developer surface includes authentication, developer portal, documentation, getting-started guide, CLI, engineering blog, pricing, and 73 more developer resources.'
 plans:
 - name: Losant Plans Pricing
   plan_count: 4
@@ -625,9 +631,10 @@ rate_limits:
   name: Losant Rate Limits
   slug: losant-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Losant API Rules
+  name: Losant — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -635,7 +642,8 @@ rules:
     info: 2
     warn: 4
   slug: losant-jsonschema-spectral-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
   name: Losant API Rules
@@ -653,23 +661,23 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: exemplar
-  composite: 80.4
+  composite: 81.6
   coverage:
-    artifact_dirs: 34
-    catalog_earned: 90.5
+    artifact_dirs: 35
+    catalog_earned: 86.4
     catalog_earned_first_party: 24.0
-    catalog_gap: 24.5
+    catalog_gap: 28.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 92.1
-    contract_governance: 47.0
-    contract_quality: 76.4
+    access_clarity: 84.2
+    contract_governance: 45.5
+    contract_quality: 70.4
     developer_ergonomics: 91.1
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 94.7
-  previous_composite: 80.4
+  previous_composite: 83.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -680,8 +688,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -709,7 +723,7 @@ tags:
 - MQTT
 - Industrial IoT
 - Telemetry
-- Workflow-Automation
+- Workflow Automation
 - Visual Workflow Engine
 - Dashboards
 - Time Series

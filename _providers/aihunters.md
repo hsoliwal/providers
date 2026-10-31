@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
@@ -69,13 +69,13 @@ modified: '2026-09-14'
 name: AIHunters
 nav: Providers
 network: true
-overview: AIHunters is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Computer-Vision, Video, Media, and Entertainment.
+overview: AIHunters is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Computer Vision, Video, Media, and Entertainment.
 random_paper: 11
 score:
   band: minimal
-  composite: 5.0
+  composite: 2.5
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 5
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -87,24 +87,31 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 46.3
+    discoverability: 44.6
     operational_transparency: 2.6
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 2.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/aihunters/refs/heads/main/screenshots/aihunters-2026-10-11T093304.png
 slug: aihunters
 tags:
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Video
 - Media
 - Entertainment
-- Machine-Learning
+- Machine Learning
 - Content Automation
 - Video Analysis
 website: https://aihunters.com/

@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-09-20'
+  score: 24.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -70,7 +70,7 @@ apis:
   description: The Tracker API from Rasa — 7 operation(s) for tracker.
   name: Rasa Tracker API
   slug: rasa-tracker-api
-artifact_total: 14
+artifact_total: 15
 collections:
 - collection_type: open
   name: API Collection
@@ -91,6 +91,20 @@ collections:
   name: Rasa SDK - Action Server Endpoint Domain Tracker API
   slug: open-rasa-tracker-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/rasa/refs/heads/main/plans/rasa-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/rasa-plans-pricing.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://rasa.com/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rasa/refs/heads/main/capabilities/rasa-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rasa-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/rasa/refs/heads/main/overlays/rasa-action-server-overlay.yaml
   title: ''
@@ -219,34 +233,38 @@ created: '2026-07-17'
 description: Rasa is an open-core conversational AI framework for enterprises, built by Rasa Technologies GmbH, that natively leverages generative AI through CALM (Conversational AI with Language Models) to build reliable text and voice assistants. Rasa Pro is the pro-code framework (with Flows, custom actions, channel connectors, multi-LLM routing, observability and Kubernetes deployment); Rasa Studio is the companion no-code UI; and Rasa Open Source provides the underlying NLU and dialogue-management framework. The self-hosted runtime exposes an HTTP API for managing conversation trackers and training, testing and loading models, plus a Python SDK action server for custom actions.
 image: https://rasa.com/favicon.ico
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Rasa
 nav: Providers
 network: true
-overview: 'Rasa publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Domain API, Model API, SDK Action Server Endpoint API, and 2 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, Chatbots, and Voice Assistant.
+overview: 'Rasa publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Domain API, Model API, SDK Action Server Endpoint API, and 2 more. Tagged areas include Company, Artificial Intelligence, Conversational AI, Chatbots, and Voice Assistant.
 
 
-  Rasa''s developer surface includes authentication, CLI, sandbox, changelog, documentation, API reference, quickstart, and 20 more developer resources.'
+  Rasa''s developer surface includes engineering blog, authentication, CLI, sandbox, changelog, documentation, API reference, and 23 more developer resources.'
+plans:
+- name: Rasa Plans Pricing
+  plan_count: 2
+  slug: rasa-plans-pricing
 random_paper: 5
 score:
   band: developing
-  composite: 43.5
+  composite: 46.0
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 32.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    artifact_dirs: 25
+    catalog_earned: 40.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.9
   facets:
-    access_clarity: 23.7
+    access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 46.9
+    contract_quality: 42.2
     developer_ergonomics: 85.7
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 43.5
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -257,8 +275,14 @@ score:
       total: 5
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -280,9 +304,9 @@ tags:
 - Conversational AI
 - Chatbots
 - Voice Assistant
-- NLU
+- Natural Language Understanding
 - LLM
-- Machine-Learning
+- Machine Learning
 - Agents
 website: https://rasa.com
 ---

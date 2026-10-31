@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The HTTP API of phoenixd, ACINQ's self-custodial Lightning server daemon. 27 documented endpoints covering Bolt11 invoices, Bolt12 offers, Lightning addresses, on-chain sends and swap-in, payment hist
@@ -196,7 +196,7 @@ modified: '2026-08-17'
 name: Acinq
 nav: Providers
 network: true
-overview: 'Acinq publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Bitcoin, Lightning Network, and Payments.
+overview: 'Acinq is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Blockchain, Bitcoin, Lightning Network, and Payments.
 
 
   The Acinq catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -214,9 +214,9 @@ rate_limits:
   slug: acinq-rate-limits
 score:
   band: developing
-  composite: 48.9
+  composite: 46.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -226,17 +226,19 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 76.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 48.9
+  previous_composite: 46.8
   provenance:
     conformance: first-party
     mcp: derived
@@ -245,9 +247,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -274,7 +276,7 @@ tags:
 - Bitcoin
 - Lightning Network
 - Payments
-- Open-Source
+- Open Source
 - Self-Custody
 - Node Software
 - Cryptocurrency

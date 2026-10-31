@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The ISNetworld API is a RESTful, bearer-token authenticated HTTP API that lets ISN subscribers download their own ISNetworld data — company profile scorecards, connected contractor lists and related c
@@ -44,6 +44,11 @@ apis:
   slug: isnetworld-api
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/isn/refs/heads/main/rate-limits/isn-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/isn-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/isn/refs/heads/main/security/isn-domain-security.yml
   title: ''
@@ -127,10 +132,10 @@ modified: '2026-08-23'
 name: ISN
 nav: Providers
 network: true
-overview: 'ISN publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Contractor Management, Supplier Management, Health Safety and Environment, and Risk Management.
+overview: 'ISN is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Contractor Management, Supplier Management, Health Safety and Environment, and Risk Management.
 
 
-  ISN''s developer surface includes support, engineering blog, signup flow, and 11 more developer resources.'
+  ISN''s developer surface includes support, engineering blog, signup flow, and 12 more developer resources.'
 plans:
 - name: Isn Plans Pricing
   plan_count: 0
@@ -142,7 +147,7 @@ rate_limits:
   slug: isn-rate-limits
 score:
   band: emerging
-  composite: 25.6
+  composite: 24.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -156,9 +161,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 25.6
+  previous_composite: 24.0
   provenance:
     conformance: first-party
     mcp: derived
@@ -167,9 +172,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

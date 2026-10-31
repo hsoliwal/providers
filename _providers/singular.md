@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 11
 apis:
 - description: 'Asynchronous REST API for programmatically pulling Singular''s unified marketing data — attribution, cost, ad revenue, and creative metrics — as standardized, warehouse-ready reports. Create a report, '
@@ -77,6 +77,10 @@ asyncapis:
   name: Singular Postbacks Webhooks
   slug: singular-postbacks-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.singular.net/feed/
 - group: company
   title: ''
   type: Website
@@ -245,18 +249,18 @@ layout: provider
 mcp_servers:
 - description: Singular's first-party remote MCP server. It translates a natural-language prompt into a Singular Reporting API query, runs it against the caller's own Singular account, and returns the aggregated mar
   name: Singular MCP Server
-  slug: singular-mcp-server
-modified: '2026-08-12'
+  slug: singular-mcp
+modified: '2026-10-06'
 name: Singular
 nav: Providers
 network: true
-overview: 'Singular publishes 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing Analytics, Mobile Attribution, Attribution, and Marketing.
+overview: 'Singular is listed with 11 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing Analytics, Mobile Attribution, Attribution, and Marketing.
 
 
   The Singular catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Singular''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, engineering blog, and 28 more developer resources.'
+  Singular''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, engineering blog, and 29 more developer resources.'
 plans:
 - name: Singular Plans Pricing
   plan_count: 3
@@ -273,9 +277,9 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: strong
-  composite: 63.0
+  composite: 65.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 64.0
     catalog_earned_first_party: 24.0
     catalog_gap: 51.0
@@ -285,16 +289,22 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 73.7
-  previous_composite: 63.0
+  previous_composite: 65.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

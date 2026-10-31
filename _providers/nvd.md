@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -97,6 +97,21 @@ collections:
   name: NVD CVE CPE Sources API
   slug: open-nvd-sources-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nvd/refs/heads/main/plans/nvd-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/nvd-plans-pricing.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nvd/refs/heads/main/finops/nvd-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/nvd-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nvd/refs/heads/main/capabilities/nvd-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nvd-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nvd/refs/heads/main/agentic-access/nvd-agentic-access.yml
   title: ''
@@ -150,9 +165,13 @@ common:
   url: https://raw.githubusercontent.com/api-evangelist/nvd/refs/heads/main/json-ld/nvd-context.jsonld
 description: The National Vulnerability Database (NVD) provides REST APIs for CVE (Common Vulnerabilities and Exposures) data, CPE (Common Platform Enumeration) records, match criteria, and source organizations. APIs deliver vulnerability descriptions, CVSS severity scores, affected product lists, CWE classifications, and reference links for security monitoring and dependency alerting.
 finops:
-- name: Nvd Finops
+- has_sources: true
+  method: generated
+  name: Nvd Finops
+  primary_unit: ''
   service_category: Public Sector / Security Data
   slug: nvd-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nvd.png
 json_schemas:
 - name: CPE
@@ -202,13 +221,13 @@ modified: '2026-05-19'
 name: NVD
 nav: Providers
 network: true
-overview: 'NVD publishes 5 APIs on the [APIs.io](https://apis.io/) network, including CPE API, CPE Match API, CVE API, and 2 more. Tagged areas include Security, CVE, CPE, Vulnerability, and CVSS.
+overview: 'NVD publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including CPE API, CPE Match API, CVE API, and 3 more. Tagged areas include Security, CVE, CPE, Vulnerabilities, and CVSS.
 
 
   The NVD catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  NVD''s developer surface includes authentication, developer portal, getting-started guide, and 9 more developer resources.'
+  NVD''s developer surface includes authentication, developer portal, getting-started guide, and 12 more developer resources.'
 plans:
 - name: Nvd Plans Pricing
   plan_count: 2
@@ -219,9 +238,10 @@ rate_limits:
   name: Nvd Rate Limits
   slug: nvd-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: NVD API Rules
+  name: NVD — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -231,23 +251,23 @@ rules:
   slug: nvd-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 37.8
+  composite: 35.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 59.3
+    artifact_dirs: 17
+    catalog_earned: 55.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.8
+    catalog_gap: 59.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 66.9
+    contract_quality: 61.0
     developer_ergonomics: 42.9
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 37.8
+  previous_composite: 36.9
   provenance:
     agentic_access: derived
     contracts:
@@ -255,8 +275,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -277,7 +303,8 @@ tags:
 - Security
 - CVE
 - CPE
-- Vulnerability
+- Vulnerabilities
 - CVSS
+- Vulnerability Management
 website: https://nvd.nist.gov/
 ---

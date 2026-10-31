@@ -23,7 +23,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: partial
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.1
-  scored_at: '2026-09-20'
+  score: 33.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 116
   human_in_the_loop: 0
@@ -242,6 +242,11 @@ collections:
   name: Mangopay REST Bank Accounts Wallets API
   slug: open-mangopay-wallets-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mangopay/refs/heads/main/capabilities/mangopay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mangopay-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/mangopay/refs/heads/main/agentic-access/mangopay-agentic-access.yml
   title: ''
@@ -333,9 +338,13 @@ examples:
   name: Request Examples
   slug: request-examples
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mangopay.png
 json_schemas:
 - name: Mangopay Schemas
@@ -351,13 +360,13 @@ modified: '2026-06-13'
 name: Mangopay
 nav: Providers
 network: true
-overview: 'Mangopay publishes 24 APIs on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Client (Platform) API, Client Wallets API, and 21 more. Tagged areas include Payments, Marketplace Payments, Digital Wallet, KYC, and KYB.
+overview: 'Mangopay publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bank Accounts API, Client (Platform) API, Client Wallets API, and 21 more. Tagged areas include Payments, Marketplace Payments, Digital Wallet, KYC, and KYB.
 
 
   The Mangopay catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Mangopay''s developer surface includes authentication, documentation, pricing, engineering blog, sandbox, changelog, and 14 more developer resources.'
+  Mangopay''s developer surface includes authentication, documentation, pricing, engineering blog, sandbox, changelog, and 15 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -368,9 +377,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 2
+- authorship: generated
+  effective_rule_count: 2
   extends: []
-  name: Mangopay API Rules
+  name: Mangopay — jsonschema rules
   rule_count: 2
   severity_counts:
     error: 0
@@ -384,29 +394,29 @@ scopes:
   slug: mangopay-scopes
   summary_line: 20 scopes · clientCredentials
 score:
-  band: developing
-  composite: 44.0
+  band: thin
+  composite: 37.5
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 55.5
+    artifact_dirs: 18
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.5
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 7.6
-    contract_quality: 56.8
+    contract_quality: 51.6
     developer_ergonomics: 52.4
-    discoverability: 63.0
+    discoverability: 66.1
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 44.0
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -419,9 +429,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 42.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

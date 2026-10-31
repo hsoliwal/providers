@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: On-device RESTful management API served by each CENTAURI wireless laser device over HTTPS with token-based authentication. Used to view and modify device configuration, alignment, and monitoring setti
@@ -42,6 +42,10 @@ apis:
   slug: centauri-management-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://transcelestial.com/feed/
 - group: company
   title: ''
   type: Website
@@ -93,18 +97,18 @@ created: '2026-07-17'
 description: Transcelestial is a Singapore-based wireless laser communications company building CENTAURI, a line of compact free-space optical (laser) devices that deliver high-speed, low-latency connectivity of up to 25 Gbps as a rapid-to-deploy alternative to fiber and RF backhaul. CENTAURI links buildings, cell towers, and street-level infrastructure, and the company is extending its optical network toward LEO satellites for global inter-continental connectivity. Each CENTAURI device exposes an on-device RESTful management API (over HTTPS with token-based authentication) alongside SNMP monitoring and a device CLI for configuration and deployment.
 image: https://transcelestial.com/wp-content/uploads/2022/08/logo_white.svg
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Transcelestial
 nav: Providers
 network: true
-overview: 'Transcelestial publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laser Communications, Free-Space Optics, Wireless, and Connectivity.
+overview: 'Transcelestial is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laser Communications, Free-Space Optics, Wireless, and Connectivity.
 
 
-  Transcelestial''s developer surface includes documentation, support, engineering blog, changelog, authentication, CLI, and 5 more developer resources.'
+  Transcelestial''s developer surface includes documentation, support, engineering blog, changelog, authentication, CLI, and 6 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 19.1
+  composite: 18.6
   coverage:
     artifact_dirs: 7
     catalog_earned: 32.0
@@ -118,17 +122,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 15.8
-  previous_composite: 19.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - singapore
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 18.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 27.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

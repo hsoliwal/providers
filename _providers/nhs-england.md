@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 32
+- acting_count: 30
   human_in_the_loop: 0
   name: Nhs England Agentic Access
-  operation_count: 70
+  operation_count: 69
   slug: nhs-england-agentic-access
-  summary_line: 70 operations · 32 acting
+  summary_line: 69 operations · 30 acting
 api_count: 7
 apis:
 - description: National electronic database of NHS patient demographic details - name, address, date of birth, related people, registered GP, nominated pharmacy and NHS number - exposed as an HL7 FHIR R4 API. Produc
@@ -149,7 +149,16 @@ apis:
   description: The ValueSet API from NHS England — 1 operation(s) for valueset.
   name: NHS England Value Set API
   slug: nhs-england-valueset-api
-artifact_total: 27
+- description: The NHS e-Referral Service combines electronic booking with a choice of place, date and time for first hospital or clinic appointments. The e-RS FHIR API enables clinical systems to integrate referral
+  name: e-Referral Service (e-RS) FHIR API
+  slug: e-referral-service
+- description: The Summary Care Record holds essential patient information from the GP record. The SCR API enables authorised health and care professionals to retrieve a patient's medication, allergies and adverse r
+  name: Summary Care Record (SCR) API
+  slug: summary-care-record
+- description: NHS login provides a single, secure way for citizens to access NHS digital services. The NHS login API enables relying parties to authenticate users, verify identity to a known level of assurance, and
+  name: NHS Login API
+  slug: nhs-login
+artifact_total: 30
 asyncapis:
 - description: ''
   name: Nhs England Webhooks
@@ -353,7 +362,7 @@ modified: '2026-07-24'
 name: NHS England
 nav: Providers
 network: true
-overview: 'NHS England publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Booking API, Callbacks API, Channels API, and 16 more. Tagged areas include Healthcare, United Kingdom, National Health System, FHIR, and HL7.
+overview: 'NHS England publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Booking API, Callbacks API, Channels API, and 22 more. Tagged areas include Healthcare, United Kingdom, National Health System, FHIR, and HL7.
 
 
   The NHS England catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -363,9 +372,9 @@ overview: 'NHS England publishes 19 APIs on the [APIs.io](https://apis.io/) netw
 random_paper: 3
 score:
   band: developing
-  composite: 49.6
+  composite: 46.1
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -375,9 +384,9 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 61.0
+    contract_quality: 55.9
     developer_ergonomics: 66.1
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 44.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -387,7 +396,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 49.6
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -403,9 +412,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 52.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -435,6 +444,14 @@ tags:
 - SMART on FHIR
 - Health Data
 - e-Prescribing
-- EHR
+- Electronic Health Records
+- Clinical
+- Demographics
+- Government
+- Health
+- NHS
+- Open Data
+- Patient Records
+- Prescriptions
 website: https://digital.nhs.uk/
 ---

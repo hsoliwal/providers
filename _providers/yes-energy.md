@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: DataSignals is Yes Energy's REST API for automated access to its North American wholesale power market data — nodal prices, transmission, generation, outages, constraints, weather, and fuels — coverin
@@ -154,14 +154,14 @@ modified: '2026-07-27'
 name: Yes Energy
 nav: Providers
 network: true
-overview: 'Yes Energy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United States, Energy Markets, Electricity, and Grid.
+overview: 'Yes Energy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United States, Energy Markets, Electricity, and Grid.
 
 
   Yes Energy''s developer surface includes authentication, support, documentation, signup flow, pricing, engineering blog, product news, and 17 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 21.9
+  composite: 20.9
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -175,7 +175,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 22.6
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -184,7 +184,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.9
+  previous_composite: 20.9
   provenance:
     conformance: derived
   regulatory:
@@ -192,9 +192,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 28.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -219,7 +219,7 @@ tags:
 - Grid
 - Market Data
 - Wholesale Power
-- ISO RTO
+- ISO/RTO
 - Renewables
 - Trading
 website: https://www.yesenergy.com/

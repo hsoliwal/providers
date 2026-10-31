@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,27 +23,27 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
-    openapi_examples: verified
+    mcp_server: false
+    openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.0
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 15
-  human_in_the_loop: 0
+- acting_count: 93
+  human_in_the_loop: 3
   name: Teradata Agentic Access
-  operation_count: 33
+  operation_count: 170
   slug: teradata-agentic-access
-  summary_line: 33 operations · 15 acting
-api_count: 11
+  summary_line: 170 operations · 93 acting · 3 human-in-the-loop
+api_count: 1
 apis:
 - baseURL: https://querygrid.teradata.com/api/v1
   baseurl_source: declared
@@ -134,7 +134,7 @@ arazzos:
 - description: Create a query session, verify it is active, then close it.
   name: Teradata Session Lifecycle
   slug: teradata-session-lifecycle-workflow
-artifact_total: 77
+artifact_total: 107
 collections:
 - collection_type: postman
   name: Teradata Query Service API
@@ -179,6 +179,21 @@ collections:
   name: Teradata Query Service API Info Users API
   slug: open-teradata-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/plans/teradata-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/teradata-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/rate-limits/teradata-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/teradata-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/finops/teradata-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/teradata-finops.yml
 - group: company
   title: ''
   type: Website
@@ -383,9 +398,13 @@ features:
 - description: Support for Apache Iceberg and open table formats for lakehouse analytics.
   name: Open Table Formats
 finops:
-- name: Teradata Finops
+- has_sources: false
+  method: generated
+  name: Teradata Finops
+  primary_unit: ''
   service_category: API
   slug: teradata-finops
+  template: true
 image: /assets/icons/teradata.png
 json_schemas:
 - name: QueryResult
@@ -415,6 +434,87 @@ json_schemas:
 - name: System
   property_count: 6
   slug: querygrid-manager-api-system
+- name: AutoInstallRequest
+  property_count: 2
+  slug: teradata-auto-install-request
+- name: AutoInstallResponse
+  property_count: 3
+  slug: teradata-auto-install-response
+- name: Bridge
+  property_count: 5
+  slug: teradata-bridge
+- name: CommPolicy
+  property_count: 5
+  slug: teradata-comm-policy
+- name: Connector
+  property_count: 5
+  slug: teradata-connector
+- name: DiagnosticCheckRequest
+  property_count: 3
+  slug: teradata-diagnostic-check-request
+- name: DiagnosticCheckResponse
+  property_count: 3
+  slug: teradata-diagnostic-check-response
+- name: Fabric
+  property_count: 4
+  slug: teradata-fabric
+- name: ImportSystemRequest
+  property_count: 2
+  slug: teradata-import-system-request
+- name: ImportSystemResponse
+  property_count: 3
+  slug: teradata-import-system-response
+- name: Issue
+  property_count: 5
+  slug: teradata-issue
+- name: Link
+  property_count: 6
+  slug: teradata-link
+- name: Manager
+  property_count: 5
+  slug: teradata-manager
+- name: Node
+  property_count: 6
+  slug: teradata-node
+- name: post-datasource
+  property_count: 29
+  slug: teradata-post-datasource
+- name: post-link
+  property_count: 19
+  slug: teradata-post-link
+- name: query-details
+  property_count: 0
+  slug: teradata-query-details
+- name: QueryRequest
+  property_count: 4
+  slug: teradata-query-request
+- name: QueryResult
+  property_count: 6
+  slug: teradata-query-result
+- name: query-summary
+  property_count: 0
+  slug: teradata-query-summary
+- name: QuerySystem
+  property_count: 4
+  slug: teradata-query-system
+- name: SessionRequest
+  property_count: 3
+  slug: teradata-session-request
+- name: Session
+  property_count: 5
+  slug: teradata-session
+- name: Software
+  property_count: 3
+  slug: teradata-software
+- name: system
+  property_count: 23
+  slug: teradata-system
+- name: User
+  property_count: 2
+  slug: teradata-user
+- name: watchdog-heartbeat
+  property_count: 15
+  slug: teradata-watchdog-heartbeat
 json_structures:
 - name: Query Service Api Query Result Structure
   property_count: 6
@@ -432,6 +532,10 @@ json_structures:
   property_count: 6
   slug: querygrid-manager-api-system-structure
 jsonld:
+- class_count: 120
+  name: Teradata Context
+  property_count: 282
+  slug: teradata-context
 - class_count: 4
   name: Teradata Query Service Api Context
   property_count: 13
@@ -449,13 +553,13 @@ modified: '2026-05-19'
 name: Teradata
 nav: Providers
 network: true
-overview: 'Teradata publishes 11 APIs on the [APIs.io](https://apis.io/) network, including API Info API, Configuration API, Issues API, and 8 more. Tagged areas include Analytics, Cloud, Data Management, Data Warehousing, and Database.
+overview: 'Teradata publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Info API, Configuration API, Issues API, and 8 more. Tagged areas include Analytics, Cloud, Data Management, Data Warehousing, and Database.
 
 
-  The Teradata catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
+  The Teradata catalog on APIs.io includes 3 JSON-LD contexts and 3 Spectral governance rulesets.
 
 
-  Teradata''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, engineering blog, training material, and 32 more developer resources.'
+  Teradata''s developer surface includes authentication, developer portal, documentation, getting-started guide, support, engineering blog, training material, and 35 more developer resources.'
 plans:
 - name: Teradata Plans Pricing
   plan_count: 3
@@ -491,9 +595,10 @@ rate_limits:
   name: Teradata Rate Limits
   slug: teradata-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Teradata API Rules
+  name: Teradata — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -501,7 +606,20 @@ rules:
     info: 2
     warn: 3
   slug: teradata-jsonschema-spectral-rules
-- effective_rule_count: 73
+- authorship: generated
+  effective_rule_count: 52
+  extends:
+  - spectral:oas
+  name: Teradata API Rules
+  rule_count: 11
+  severity_counts:
+    error: 9
+    hint: 0
+    info: 1
+    warn: 1
+  slug: teradata-rules
+- authorship: generated
+  effective_rule_count: 73
   extends:
   - spectral:oas
   name: Teradata API Rules
@@ -514,36 +632,45 @@ rules:
   slug: teradata-spectral-rules
 score:
   band: developing
-  composite: 40.8
+  composite: 49.7
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 69.5
+    artifact_dirs: 33
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.5
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.3
   facets:
-    access_clarity: 36.8
-    contract_governance: 28.8
-    contract_quality: 21.9
+    access_clarity: 28.9
+    contract_governance: 31.8
+    contract_quality: 52.2
     developer_ergonomics: 75.0
-    discoverability: 88.9
+    discoverability: 80.4
     operational_transparency: 10.5
-  previous_composite: 40.8
+  previous_composite: 55.0
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
-      callable: 100.0
-      derived: 13
-      marker_coverage: 100.0
-      total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+      callable: 11.1
+      derived: 6
+      marker_coverage: 16.7
+      total: 36
+    mcp: derived
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
-    score: 0.0
+    score: 22.2
 screenshot: https://raw.githubusercontent.com/api-evangelist/teradata/refs/heads/main/screenshots/teradata-2026-06-20T195123.png
 security:
 - kind: authentication
@@ -554,6 +681,10 @@ security:
   name: Teradata Domain Security
   slug: teradata-domain-security
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
+- kind: vulnerability-disclosure
+  name: Teradata Vulnerability Disclosure
+  slug: teradata-vulnerability-disclosure
+  summary_line: security.txt · contact published
 slug: teradata
 tags:
 - Analytics
@@ -562,7 +693,7 @@ tags:
 - Data Warehousing
 - Database
 - Enterprise
-- Machine-Learning
+- Machine Learning
 - SQL
 - Fortune 1000
 use_cases:

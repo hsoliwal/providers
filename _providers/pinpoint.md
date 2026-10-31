@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -86,6 +86,15 @@ collections:
   name: Pinpoint API
   slug: open-pinpoint
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.pinpointhq.com/insights
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pinpoint/refs/heads/main/capabilities/pinpoint-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pinpoint-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/pinpoint/refs/heads/main/agentic-access/pinpoint-agentic-access.yml
   title: ''
@@ -131,19 +140,23 @@ common:
 created: '2026-06-21'
 description: Pinpoint is an applicant tracking system (ATS) and recruitment platform for in-house talent teams. Its REST API follows the JSON:API specification and is served per-tenant at https://{subdomain}.pinpointhq.com/api/v1, exposing jobs, applications, candidates, comments, files, and webhooks for building recruitment integrations. Not to be confused with AWS Pinpoint (customer engagement) or Pinpoint (signal/data intelligence).
 finops:
-- name: Pinpoint Finops
+- has_sources: true
+  method: generated
+  name: Pinpoint Finops
+  primary_unit: ''
   service_category: Recruitment and HR Technology
   slug: pinpoint-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pinpoint.png
 layout: provider
-modified: '2026-06-21'
+modified: '2026-10-06'
 name: Pinpoint
 nav: Providers
 network: true
-overview: 'Pinpoint publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Applicants API, Applications API, Comments API, and 1 more. Tagged areas include ATS, Recruitment, Hiring, Human Resources, and JSON:API.
+overview: 'Pinpoint publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applicants API, Applications API, Comments API, and 1 more. Tagged areas include Applicant Tracking, Recruiting, Hiring, Human Resources, and JSON:API.
 
 
-  Pinpoint''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  Pinpoint''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Pinpoint Plans Pricing
   plan_count: 1
@@ -154,24 +167,24 @@ rate_limits:
   name: Pinpoint Rate Limits
   slug: pinpoint-rate-limits
 score:
-  band: thin
-  composite: 35.1
+  band: emerging
+  composite: 25.1
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 60.0
+    artifact_dirs: 13
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 57.1
-    developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 35.1
+    contract_quality: 51.8
+    developer_ergonomics: 26.2
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 31.6
   provenance:
     agentic_access: derived
     contracts:
@@ -179,9 +192,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -197,8 +216,8 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: pinpoint
 tags:
-- ATS
-- Recruitment
+- Applicant Tracking
+- Recruiting
 - Hiring
 - Human Resources
 - JSON:API

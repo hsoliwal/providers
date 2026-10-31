@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The public Esri ArcGIS Online feature-service catalog Hawaiian Electric serves under tenant gfBpz2hbsVDgru6D. Twenty-three FeatureServers are shared publicly and answer anonymous queries: the External'
@@ -40,6 +40,16 @@ apis:
   slug: hawaiian-electric-grid-data-arcgis-rest-feature-services
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/hawaiian-electric-industries/refs/heads/main/plans/hawaiian-electric-industries-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/hawaiian-electric-industries-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/hawaiian-electric-industries/refs/heads/main/rate-limits/hawaiian-electric-industries-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/hawaiian-electric-industries-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hawaiian-electric-industries/refs/heads/main/security/hawaiian-electric-industries-domain-security.yml
   title: ''
@@ -111,10 +121,10 @@ modified: '2026-09-13'
 name: Hawaiian Electric Industries
 nav: Providers
 network: true
-overview: 'Hawaiian Electric Industries publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Electricity, Grid, and Holding Company.
+overview: 'Hawaiian Electric Industries is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Electricity, Grid, and Holding Company.
 
 
-  Hawaiian Electric Industries'' developer surface includes engineering blog and 14 more developer resources.'
+  Hawaiian Electric Industries'' developer surface includes engineering blog and 16 more developer resources.'
 plans:
 - name: Hawaiian Electric Industries Plans Pricing
   plan_count: 0
@@ -141,8 +151,8 @@ rate_limits:
   name: Hawaiian Electric Industries Rate Limits
   slug: hawaiian-electric-industries-rate-limits
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 25.2
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -156,9 +166,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 31.6
-  previous_composite: 26.5
+  previous_composite: 25.2
   provenance:
     conformance: first-party
   regulatory:
@@ -166,9 +176,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

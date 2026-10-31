@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 27
   human_in_the_loop: 0
@@ -191,6 +191,10 @@ collections:
   name: XETA
   slug: open-xeta-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.euronet.com/feed/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/euronet/refs/heads/main/skills/euronet-cross-border-payment.md
   title: ''
@@ -329,22 +333,22 @@ description: 'Euronet Worldwide (NASDAQ: EEFT) is a US-based (Leawood, Kansas) g
   (Payments, Dandelion) developer surfaces rather than one unified platform API.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-24'
+modified: '2026-10-06'
 name: Euronet Worldwide
 nav: Providers
 network: true
-overview: 'Euronet Worldwide publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Account API, Account Information API, Budget Category API, and 22 more. Tagged areas include Payments, United States, Payment Processing, Cross-Border, and Money Transfer.
+overview: 'Euronet Worldwide publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Account Information API, Budget Category API, and 23 more. Tagged areas include Payments, United States, Payment Processing, Cross-Border, and Money Transfer.
 
 
-  Euronet Worldwide''s developer surface includes authentication, API reference, pricing, engineering blog, documentation, signup flow, and 23 more developer resources.'
+  Euronet Worldwide''s developer surface includes authentication, API reference, pricing, engineering blog, documentation, signup flow, and 24 more developer resources.'
 random_paper: 0
 rate_limits:
 - limit_count: 0
   name: Euronet Rate Limits
   slug: euronet-rate-limits
 score:
-  band: developing
-  composite: 39.7
+  band: thin
+  composite: 37.7
   coverage:
     artifact_dirs: 19
     catalog_earned: 35.0
@@ -356,9 +360,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 48.9
+    contract_quality: 44.3
     developer_ergonomics: 45.8
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -367,7 +371,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.7
+  previous_composite: 37.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -383,9 +387,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -407,11 +411,11 @@ tags:
 - Payment Processing
 - Cross-Border
 - Money Transfer
-- Currency Exchange
-- FX
+- Foreign Exchange
 - Payouts
 - Real-Time Payments
 - ISO 20022
 - Acquiring
+- Cross-Border Payments
 website: https://www.euronet.com/
 ---

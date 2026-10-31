@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.masmovil.es/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/masmovil/refs/heads/main/security/masmovil-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: Masmovil (MasMovil Group) is a Spanish telecommunications operator providing mobile, fiber optic internet, and fixed-line services to consumers and businesses across Spain, with bundled fiber-plus-mobile packages, device sales, roaming, and international calling. The group operates a family of consumer telecom brands and, following its 2024 combination with Orange Spain, is part of the MasOrange joint venture. As of this enrichment pass Masmovil publishes no public developer portal, API documentation, or machine-readable API specification; the network profile carries the identity and a domain security posture probe only.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/masmovil.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Masmovil
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Masmovil is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 14
 score:
   band: minimal
-  composite: 1.8
+  composite: 2.5
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,7 +75,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -81,15 +85,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 1.8
+  previous_composite: 2.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

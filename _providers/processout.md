@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -136,6 +136,11 @@ collections:
   name: ProcessOut Balances Uploads API
   slug: open-processout-uploads-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/processout/refs/heads/main/rate-limits/processout-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/processout-rate-limits.yml
 - group: docs
   href: https://raw.githubusercontent.com/api-evangelist/processout/refs/heads/main/openapi/_original/processout-openapi.json
   title: ''
@@ -326,26 +331,26 @@ layout: provider
 mcp_servers:
 - description: ProcessOut publishes an official, hosted (remote) Model Context Protocol server that gives AI code editors (Cursor, Windsurf) and assistants (Claude Desktop) direct access to the ProcessOut API and do
   name: ProcessOut MCP Server
-  slug: processout-mcp-server
+  slug: processout
 modified: '2026-07-20'
 name: ProcessOut
 nav: Providers
 network: true
-overview: 'ProcessOut publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Balances API, Cards API, Customers API, and 7 more. Tagged areas include Payments, Payment Orchestration, Smart Routing, Tokenization, and Checkout.
+overview: 'ProcessOut publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Balances API, Cards API, Customers API, and 7 more. Tagged areas include Payments, Payment Orchestration, Smart Routing, Tokenization, and Checkout.
 
 
   The ProcessOut catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  ProcessOut''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 33 more developer resources.'
+  ProcessOut''s developer surface includes authentication, sandbox, documentation, API reference, getting-started guide, support, engineering blog, and 34 more developer resources.'
 random_paper: 11
 rate_limits:
 - limit_count: 1
   name: Processout Rate Limits
   slug: processout-rate-limits
 score:
-  band: strong
-  composite: 55.7
+  band: developing
+  composite: 50.8
   coverage:
     artifact_dirs: 25
     catalog_earned: 45.0
@@ -357,11 +362,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 60.5
-  previous_composite: 55.7
+  previous_composite: 50.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -381,9 +386,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 78.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -401,7 +406,7 @@ security:
 - kind: vulnerability-disclosure
   name: Processout Vulnerability Disclosure
   slug: processout-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: processout
 tags:
 - Payments
@@ -410,7 +415,7 @@ tags:
 - Tokenization
 - Checkout
 - Reconciliation
-- Fraud
+- Fraud Prevention
 - 3D Secure
 - Company
 website: https://www.processout.com/

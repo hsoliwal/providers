@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Klump REST API lets a merchant verify transactions, sync commerce product catalogs, create Klump Access hosted payment pages, and resend webhooks. A single base URL serves both sandbox and product
@@ -188,7 +188,7 @@ modified: '2026-07-19'
 name: Klump
 nav: Providers
 network: true
-overview: 'Klump publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Buy Now Pay Later, Fintech, and Lending.
+overview: 'Klump is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Buy Now Pay Later, Fintech, and Lending.
 
 
   The Klump catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -198,21 +198,21 @@ overview: 'Klump publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 3
 score:
   band: developing
-  composite: 50.4
+  composite: 47.6
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -221,7 +221,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - africa
-  previous_composite: 50.4
+  previous_composite: 47.5
   provenance:
     conformance: first-party
     mcp: derived
@@ -230,9 +230,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

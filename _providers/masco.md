@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://masco.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/masco/refs/heads/main/security/masco-domain-security.yml
   title: ''
@@ -77,11 +81,11 @@ created: '2026-03-21'
 description: Masco Corporation is a global leader in the design, manufacture, and distribution of branded home improvement and building products, including faucets, plumbing fixtures, cabinets, paints, and architectural coatings under brands such as Delta, Behr, Hansgrohe, KILZ, and Liberty Hardware.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/masco.png
 layout: provider
-modified: '2026-04-28'
-name: Masco Corporation
+modified: '2026-10-06'
+name: Masco
 nav: Providers
 network: true
-overview: Masco Corporation is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Home Improvement, Building Products, Plumbing, Paint, and Cabinets.
+overview: Masco is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Home Improvement, Building Products, Plumbing, Paint, and Cabinets.
 press:
 - date: ''
   title: Masco Corporation (via Public) / Proxy Statement (Form DEF 14A)
@@ -101,7 +105,7 @@ press:
 random_paper: 3
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -115,11 +119,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

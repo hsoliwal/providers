@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The only publicly documented HTTP endpoints Chatsimple (now Expertise AI) publishes. Documented on the Zapier integration page of docs.expertise.ai as four operations under the base URL https://api.ex
@@ -183,14 +183,14 @@ description: Chatsimple (now operating as Expertise AI, expertise.ai) is an AI a
 image: https://www.expertise.ai/images/og-home-page.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.expertise.ai over HTTP requiring an API key.
   name: Chatsimple MCP Server
-  slug: chatsimple-mcp-server
+  slug: expertise-ai
 modified: '2026-08-13'
 name: Chatsimple
 nav: Providers
 network: true
-overview: 'Chatsimple publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Conversational AI, Chatbots, and Lead Generation.
+overview: 'Chatsimple is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Agents, Conversational AI, Chatbots, and Lead Generation.
 
 
   The Chatsimple catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -208,7 +208,7 @@ rate_limits:
   slug: chatsimple-rate-limits
 score:
   band: developing
-  composite: 52.1
+  composite: 53.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -216,20 +216,32 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 85.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 31.6
-  previous_composite: 52.1
+  previous_composite: 53.5
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

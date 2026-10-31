@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.5
+  scored_at: '2026-10-17'
 api_count: 10
 apis:
 - description: Redpanda implements the Apache Kafka wire protocol natively, allowing existing Kafka clients (producers, consumers, AdminClient, Streams, Connect) to work unchanged against Redpanda brokers on TCP por
@@ -66,7 +66,7 @@ apis:
 - description: Redpanda Iceberg Topics expose topic data as Apache Iceberg tables in object storage, accessible from the Iceberg REST catalog and consumable by query engines like Spark, Trino, and Snowflake.
   name: Redpanda Iceberg Topic API
   slug: redpanda-iceberg-topic-api
-artifact_total: 23
+artifact_total: 24
 collections:
 - collection_type: open
   name: API Collection
@@ -224,20 +224,27 @@ common:
 created: '2026-05-08'
 description: Redpanda is a Kafka API-compatible streaming data platform written in C++ with no JVM and no ZooKeeper, optimized for low latency and operational simplicity. The core broker (redpanda) is open source and available under the Business Source License 1.1, and a fully managed cloud service (Redpanda Cloud — Serverless, Dedicated, BYOC) is offered commercially. Redpanda Connect (formerly Benthos) provides stream processing. The platform exposes the Kafka wire protocol, an Admin API, a Schema Registry API, an HTTP Proxy (Pandaproxy), Kafka-compatible client APIs, and the Redpanda Cloud Control Plane and Data Plane APIs for managed deployments.
 finops:
-- name: Redpanda Finops
+- has_sources: true
+  method: generated
+  name: Redpanda Finops
+  primary_unit: ''
   service_category: Streaming
   slug: redpanda-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/redpanda.png
 layout: provider
 mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at docs.redpanda.com over HTTP; 6 tools listed.
+  name: Redpanda MCP Server
+  slug: redpanda
 modified: '2026-05-19'
 name: Redpanda
 nav: Providers
 network: true
-overview: 'Redpanda publishes 1 API on the [APIs.io](https://apis.io/) network: Admin API. Tagged areas include Streaming, Kafka, Event Streaming, Real-Time, and Data Platform.
+overview: 'Redpanda is listed with 10 APIs on the [APIs.io](https://apis.io/) network, including Admin API, and 9 more. Tagged areas include Streaming, Kafka, Event Streaming, Real-Time, and Data Platform.
 
 
   Redpanda''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, developer console, code examples, and 25 more developer resources.'
@@ -252,27 +259,33 @@ rate_limits:
   slug: redpanda-rate-limits
 score:
   band: thin
-  composite: 33.8
+  composite: 31.8
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 39.0
+    artifact_dirs: 13
+    catalog_earned: 36.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 76.0
+    catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 40.8
+    access_clarity: 32.9
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 38.1
-    discoverability: 63.0
+    discoverability: 63.3
     operational_transparency: 26.3
-  previous_composite: 33.8
+  previous_composite: 33.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -299,7 +312,7 @@ tags:
 - Event Streaming
 - Real-Time
 - Data Platform
-- Open-Source
+- Open Source
 - C++
 - Stream Processing
 website: https://redpanda.com/

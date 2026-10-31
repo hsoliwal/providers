@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/juli/refs/heads/main/plans/juli-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/juli-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/juli/refs/heads/main/security/juli-domain-security.yml
   title: ''
@@ -123,27 +128,31 @@ network: true
 overview: 'Juli is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Digital Health, Chronic Conditions, Mental Health, and Asthma.
 
 
-  Juli''s developer surface includes engineering blog, support, pricing, and 15 more developer resources.'
+  Juli''s developer surface includes engineering blog, support, pricing, and 16 more developer resources.'
+plans:
+- name: Juli Plans Pricing
+  plan_count: 0
+  slug: juli-plans-pricing
 random_paper: 18
 score:
   band: emerging
-  composite: 21.1
+  composite: 20.2
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 10.5
-  previous_composite: 21.1
+  previous_composite: 20.1
   provenance:
     conformance: first-party
   regulatory:
@@ -151,9 +160,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

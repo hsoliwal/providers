@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,16 +34,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 9
+- acting_count: 5
   human_in_the_loop: 0
   name: Morning Consult Agentic Access
   operation_count: 26
   slug: morning-consult-agentic-access
-  summary_line: 26 operations · 9 acting
-api_count: 1
+  summary_line: 26 operations · 5 acting
+api_count: 2
 apis:
 - baseURL: https://api.morningconsult.com/v1
   baseurl_source: declared
@@ -77,6 +77,15 @@ arazzos:
   slug: morning-consult-compute-score
 artifact_total: 14
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://morningconsult.com/articles/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/morning-consult/refs/heads/main/capabilities/morning-consult-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/morning-consult-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/morning-consult/refs/heads/main/overlays/morning-consult-api-overlay.yaml
   title: ''
@@ -235,38 +244,38 @@ json_schemas:
   property_count: 0
   slug: morning-consult-schemas
 layout: provider
-modified: '2026-08-01'
+modified: '2026-10-06'
 name: Morning Consult
 nav: Providers
 network: true
-overview: 'Morning Consult publishes 4 APIs on the [APIs.io](https://apis.io/) network, including AI API, Authentication API, Data API, and 1 more. Tagged areas include Company, Market Research, Survey Data, Consumer Intelligence, and Brand Tracking.
+overview: 'Morning Consult publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI API, Authentication API, Data API, and 1 more. Tagged areas include Company, Market Research, Survey Data, Consumer Intelligence, and Brand Tracking.
 
 
-  Morning Consult''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 26 more developer resources.'
+  Morning Consult''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 28 more developer resources.'
 random_paper: 21
 rate_limits:
 - limit_count: 5
   name: Morning Consult Rate Limits
   slug: morning-consult-rate-limits
 score:
-  band: developing
-  composite: 54.0
+  band: strong
+  composite: 54.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 55.0
+    artifact_dirs: 23
+    catalog_earned: 54.4
     catalog_earned_first_party: 12.0
-    catalog_gap: 60.0
+    catalog_gap: 60.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 65.2
+    contract_quality: 59.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 54.0
+  previous_composite: 54.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -277,8 +286,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

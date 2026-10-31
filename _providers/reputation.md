@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 26
+- acting_count: 24
   human_in_the_loop: 0
   name: Reputation Agentic Access
   operation_count: 67
   slug: reputation-agentic-access
-  summary_line: 67 operations · 26 acting
+  summary_line: 67 operations · 24 acting
 api_count: 1
 apis:
 - baseURL: https://api.reputation.com
@@ -177,6 +177,11 @@ collections:
   name: Reputation Asset Library Users API
   slug: open-reputation-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/reputation/refs/heads/main/capabilities/reputation-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/reputation-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/reputation/refs/heads/main/agentic-access/reputation-agentic-access.yml
   title: ''
@@ -367,9 +372,13 @@ examples:
   name: Reputation Send Review Request Example
   slug: reputation-send-review-request-example
 finops:
-- name: Reputation Finops
+- has_sources: false
+  method: generated
+  name: Reputation Finops
+  primary_unit: ''
   service_category: ''
   slug: reputation-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/reputation.png
 json_schemas:
 - name: Location
@@ -397,13 +406,13 @@ modified: '2026-08-13'
 name: Reputation
 nav: Providers
 network: true
-overview: 'Reputation publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Asset Library API, Authorize API, Categories API, and 13 more. Tagged areas include Reputation Management, Online Reviews, Business Listings, Surveys, and Social Listening.
+overview: 'Reputation publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asset Library API, Authorize API, Categories API, and 13 more. Tagged areas include Reputation Management, Online Reviews, Business Listings, Surveys, and Social Listening.
 
 
   The Reputation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Reputation''s developer surface includes authentication, documentation, engineering blog, pricing, code examples, API reference, support, and 31 more developer resources.'
+  Reputation''s developer surface includes authentication, documentation, engineering blog, pricing, code examples, API reference, support, and 32 more developer resources.'
 plans:
 - name: Reputation Plans Pricing
   plan_count: 4
@@ -414,9 +423,10 @@ rate_limits:
   name: Reputation Rate Limits
   slug: reputation-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Reputation API Rules
+  name: Reputation — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -426,21 +436,21 @@ rules:
   slug: reputation-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 61.8
+  composite: 60.3
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 78.3
+    artifact_dirs: 30
+    catalog_earned: 73.8
     catalog_earned_first_party: 12.0
-    catalog_gap: 36.8
+    catalog_gap: 41.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 93.4
-    contract_governance: 43.2
-    contract_quality: 71.6
+    access_clarity: 85.5
+    contract_governance: 41.7
+    contract_quality: 65.3
     developer_ergonomics: 51.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   previous_composite: 61.8
   provenance:
@@ -453,8 +463,22 @@ score:
       total: 16
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://getbuilt.com/news/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://getbuilt.com/news/feed/
 - group: company
   title: ''
   type: Website
@@ -109,18 +117,18 @@ created: '2026-07-17'
 description: Built (Built Technologies) is an AI-powered real estate and construction finance platform that connects capital and information across the construction lending ecosystem. It serves banks, credit unions, private credit firms, owners, developers, and general contractors with construction loan administration, deal origination and underwriting, project financials, invoice and lien-waiver management, compliance tracking, and payments. Founded over a decade ago and headquartered in Nashville and New York, Built operates on one of the largest connected datasets in real estate finance and integrates with Procore, Sage Intacct, Yardi, QuickBooks, Encompass, nCino, and DocuSign. It is backed by Fifth Wall and Index Ventures. This profile was enriched from Built's public developer and trust surfaces; Built publishes an integrations directory, identity/SSO, a status page, and a trust center, but does not expose a public REST API or OpenAPI.
 image: https://getbuilt.com/wp-content/uploads/2024/10/built-red-white-logo.svg
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Built
 nav: Providers
 network: true
-overview: 'Built is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction Tech, Construction Finance, Real Estate Finance, and Fintech.
+overview: 'Built is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Construction Technology, Construction Finance, Real Estate Finance, and Fintech.
 
 
-  Built''s developer surface includes documentation, support, engineering blog, changelog, and 12 more developer resources.'
+  Built''s developer surface includes engineering blog, documentation, support, changelog, and 14 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 17.1
+  composite: 17.5
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -128,28 +136,30 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 17.1
+  previous_composite: 17.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -168,7 +178,7 @@ security:
 slug: built
 tags:
 - Company
-- Construction Tech
+- Construction Technology
 - Construction Finance
 - Real Estate Finance
 - Fintech

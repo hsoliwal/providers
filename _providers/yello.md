@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'A remote Model Context Protocol (streamable HTTP) server operated by WayUp, a Yello company, at https://www.wayup.com/mcp. Discovered by probe: the host publishes RFC 9728 protected-resource metadata '
@@ -128,14 +128,14 @@ description: Yello is a Chicago-based talent acquisition software company, found
 image: https://yello.co/wp-content/uploads/2021/04/yello-logo@4x.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.wayup.com over HTTP requiring OAuth.
   name: Yello MCP Server
-  slug: yello-mcp-server
+  slug: wayup
 modified: '2026-09-04'
 name: Yello
 nav: Providers
 network: true
-overview: 'Yello publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Talent Acquisition, Recruiting, Human Resources, Campus Recruiting, and Applicant Tracking.
+overview: 'Yello is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Talent Acquisition, Recruiting, Human Resources, Campus Recruiting, and Applicant Tracking.
 
 
   Yello''s developer surface includes engineering blog, support, signup flow, pricing, and 16 more developer resources.'
@@ -155,9 +155,9 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 37.8
+  composite: 32.7
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -169,14 +169,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 37.8
+  previous_composite: 32.7
   provenance:
     conformance: first-party
     mcp: first-party
@@ -193,14 +195,15 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 88.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 47.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/yello/refs/heads/main/screenshots/yello-2026-10-11T194854.png
 security:
 - kind: authentication
   name: Yello Authentication

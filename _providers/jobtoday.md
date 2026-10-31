@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,16 +73,16 @@ modified: '2026-07-19'
 name: JobToday
 nav: Providers
 network: true
-overview: 'JobToday is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Job, Recruitment, and Hiring.
+overview: 'JobToday is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, Job, Recruiting, and Hiring.
 
 
   JobToday''s developer surface includes support, engineering blog, signup flow, and 4 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 13.3
+  composite: 12.3
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -94,16 +94,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 13.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 12.3
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/jobtoday/refs/heads/main/screenshots/jobtoday-2026-10-11T190912.png
 security:
 - kind: domain-security
   name: Jobtoday Domain Security
@@ -114,7 +121,7 @@ tags:
 - Company
 - Consumer
 - Job
-- Recruitment
+- Recruiting
 - Hiring
 - Marketplace
 - Employment

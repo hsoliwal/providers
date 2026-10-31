@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 52
+- acting_count: 45
   human_in_the_loop: 0
   name: Dojo Agentic Access
   operation_count: 75
   slug: dojo-agentic-access
-  summary_line: 75 operations · 52 acting
+  summary_line: 75 operations · 45 acting
 api_count: 5
 apis:
 - baseURL: https://api.dojo.tech
@@ -162,6 +162,11 @@ collections:
   name: Transaction API
   slug: open-dojo-transactions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/dojo/refs/heads/main/capabilities/dojo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/dojo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/dojo/refs/heads/main/agentic-access/dojo-agentic-access.yml
   title: ''
@@ -344,19 +349,19 @@ modified: '2026-07-24'
 name: Dojo
 nav: Providers
 network: true
-overview: 'Dojo publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Areas API, Capabilities API, Captures API, and 16 more. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Acquiring.
+overview: 'Dojo publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Areas API, Capabilities API, Captures API, and 16 more. Tagged areas include Payments, United Kingdom, Payment Gateway, Payment Processing, and Acquiring.
 
 
   The Dojo catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Dojo''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, sandbox, engineering blog, and 31 more developer resources.'
+  Dojo''s developer surface includes authentication, documentation, API reference, getting-started guide, changelog, sandbox, engineering blog, and 32 more developer resources.'
 random_paper: 10
 score:
-  band: strong
-  composite: 56.4
+  band: developing
+  composite: 53.6
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -366,9 +371,9 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 4.5
-    contract_quality: 66.2
+    contract_quality: 60.6
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 52.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -378,7 +383,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 56.4
+  previous_composite: 53.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -394,9 +399,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -414,7 +419,7 @@ security:
 - kind: vulnerability-disclosure
   name: Dojo Vulnerability Disclosure
   slug: dojo-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: dojo
 tags:
 - Payments
@@ -424,8 +429,9 @@ tags:
 - Acquiring
 - Card Payments
 - In-Person Payments
-- Terminal
 - Point-of-Sale
 - Webhook
+- Real-Time
+- Payment Terminals
 website: https://dojo.tech/
 ---

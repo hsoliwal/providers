@@ -32,10 +32,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 21
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/plans/albemarle-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/albemarle-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/rate-limits/albemarle-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/albemarle-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/albemarle/refs/heads/main/security/albemarle-domain-security.yml
   title: ''
@@ -123,7 +133,7 @@ network: true
 overview: 'Albemarle is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Chemicals, Lithium, Bromine, Energy Storage, and Electric Vehicles.
 
 
-  Albemarle''s developer surface includes engineering blog and 8 more developer resources.'
+  Albemarle''s developer surface includes engineering blog and 10 more developer resources.'
 plans:
 - name: Albemarle Plans Pricing
   plan_count: 0
@@ -151,9 +161,9 @@ rate_limits:
   slug: albemarle-rate-limits
 score:
   band: minimal
-  composite: 10.4
+  composite: 10.0
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -165,17 +175,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 10.4
+  previous_composite: 10.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

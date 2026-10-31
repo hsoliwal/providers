@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.8
-  scored_at: '2026-09-20'
+  score: 25.6
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.trustlayer.io/v2
@@ -46,17 +46,17 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The branding API from TrustLayer — 2 operation(s) for branding.
-  name: TrustLayer branding API
+  name: TrustLayer Branding API
   slug: trustlayer-branding-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The compliance-profiles API from TrustLayer — 8 operation(s) for compliance-profiles.
-  name: TrustLayer compliance-profiles API
+  name: TrustLayer Compliance Profiles API
   slug: trustlayer-compliance-profiles-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The contacts API from TrustLayer — 4 operation(s) for contacts.
-  name: TrustLayer contacts API
+  name: TrustLayer Contacts API
   slug: trustlayer-contacts-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -71,7 +71,7 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The custom-fields API from TrustLayer — 4 operation(s) for custom-fields.
-  name: TrustLayer custom-fields API
+  name: TrustLayer Custom Fields API
   slug: trustlayer-custom-fields-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -81,7 +81,7 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The documents API from TrustLayer — 15 operation(s) for documents.
-  name: TrustLayer documents API
+  name: TrustLayer Documents API
   slug: trustlayer-documents-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -91,7 +91,7 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The party-types API from TrustLayer — 1 operation(s) for party-types.
-  name: TrustLayer party-types API
+  name: TrustLayer Party Types API
   slug: trustlayer-party-types-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -116,7 +116,7 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The reports API from TrustLayer — 2 operation(s) for reports.
-  name: TrustLayer reports API
+  name: TrustLayer Reports API
   slug: trustlayer-reports-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -131,7 +131,7 @@ apis:
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
   description: The tags API from TrustLayer — 4 operation(s) for tags.
-  name: TrustLayer tags API
+  name: TrustLayer Tags API
   slug: trustlayer-tags-api
 - baseURL: https://api.trustlayer.io/v2
   baseurl_source: declared
@@ -216,6 +216,11 @@ collections:
   name: TrustLayer Platform Auth Workspaces API
   slug: open-trustlayer-workspaces-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/capabilities/trustlayer-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trustlayer-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/trustlayer/refs/heads/main/overlays/trustlayer-platform-v1-overlay.yaml
   title: ''
@@ -342,19 +347,19 @@ modified: '2026-07-21'
 name: TrustLayer
 nav: Providers
 network: true
-overview: 'TrustLayer publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Auth API, branding API, compliance-profiles API, and 18 more. Tagged areas include Company, Fintech, Insurtech, Insurance, and Risk Management.
+overview: 'TrustLayer publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Branding API, Compliance Profiles API, and 18 more. Tagged areas include Company, Fintech, Insurtech, Insurance, and Risk Management.
 
 
   The TrustLayer catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  TrustLayer''s developer surface includes documentation, API reference, authentication, sandbox, engineering blog, signup flow, and 20 more developer resources.'
+  TrustLayer''s developer surface includes documentation, API reference, authentication, sandbox, engineering blog, signup flow, and 21 more developer resources.'
 random_paper: 19
 score:
   band: developing
-  composite: 51.3
+  composite: 48.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -364,11 +369,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 63.4
+    contract_quality: 58.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 51.3
+  previous_composite: 48.5
   provenance:
     conformance: derived
     contracts:
@@ -383,9 +388,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

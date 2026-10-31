@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://centivo.com/newsroom/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://centivo.com/newsroom/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/centivo/refs/heads/main/security/centivo-domain-security.yml
   title: ''
@@ -69,18 +77,18 @@ created: '2026-07-17'
 description: Centivo is a primary-care-centered health plan administrator for self-funded employers, founded in 2017 and headquartered in New York City. Sold through benefits brokers and consultants, it serves mid-market employers (roughly 50 or more employees) and covers about 77,000 members across 160 businesses. Members get $0 primary care to encourage early intervention, and employers typically save 15-30% versus traditional fully-insured plans through a primary-care-first model, the cost advantages of self-funding, and directly negotiated health-system partnerships. Centivo operates member, employer, provider, and referral portals plus iOS/Android member apps; it does not publish a public developer API. Backed by Bain Capital Ventures and JPMorgan Chase's Morgan Health.
 image: https://centivo.com/wp-content/uploads/2026/01/CentivoLogo.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Centivo
 nav: Providers
 network: true
 overview: 'Centivo is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Insurance, Health Plans, and Employee Benefits.
 
 
-  Centivo''s developer surface includes support, engineering blog, and 5 more developer resources.'
+  Centivo''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 11.0
+  composite: 11.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,17 +102,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 11.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

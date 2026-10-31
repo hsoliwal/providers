@@ -27,21 +27,25 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 14.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'RESTful API for Bitsight security ratings, portfolio and company data, findings, alerts, and cyber threat intelligence. Authenticated with an API token via HTTP Basic over HTTPS; versioned in the URL '
   name: Bitsight API
   slug: bitsight-api
-artifact_total: 5
+artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.bitsight.com/rss.xml
 - group: company
   title: ''
   type: Website
@@ -145,38 +149,48 @@ created: '2026-07-17'
 description: Bitsight is a global cyber risk intelligence platform that combines security ratings, external attack surface management (EASM), third-party risk management (TPRM), and cyber threat intelligence (CTI) in a single data model. Its outside-in, agentless monitoring produces continuously updated security ratings validated against real-world breach likelihood, powering vendor risk workflows, insurance underwriting, and capital-markets portfolio oversight for more than 3,500 organizations across 60+ countries. Bitsight exposes a RESTful HTTP API at api.bitsighttech.com (companies, portfolios, ratings, findings, alerts, and CTI) authenticated with an API token over HTTP Basic, documented in the Bitsight Knowledge Base and an interactive Stoplight reference.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bitsight.png
 layout: provider
-modified: '2026-07-18'
+mcp_servers:
+- description: Remote MCP server at mcp.bitsighttech.com over HTTP.
+  name: BitSight MCP Server
+  slug: bitsight
+modified: '2026-10-06'
 name: BitSight
 nav: Providers
 network: true
-overview: 'BitSight publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Cyber Risk, Security Ratings, and Third-Party Risk Management.
+overview: 'BitSight is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Cyber Risk, Security Ratings, and Third-Party Risk Management.
 
 
-  BitSight''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 16 more developer resources.'
+  BitSight''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 17 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 29.1
+  composite: 31.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 29.1
+  previous_composite: 31.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -210,5 +224,6 @@ tags:
 - Attack Surface Management
 - Threat Intelligence
 - Vendor Risk
+- Risk Management
 website: http://www.bitsight.com/
 ---

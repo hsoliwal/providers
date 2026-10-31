@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://kabal.com/feed/
 - group: company
   title: ''
   type: Website
@@ -74,18 +78,18 @@ created: '2026-07-17'
 description: Kabal is the energy industry's leading logistics management SaaS platform. Founded in Norway in 2011 (formerly Wellit), Kabal provides an integrated, cloud-native platform that manages cargo, marine, transport, personnel, warehouse, rig and installation logistics across both offshore and onshore operations for oil & gas operators. The platform spans planning, execution and optimization, plus cost and emissions tracking and KPI reporting, connecting operators with their suppliers and vessels to share business-critical logistics data. Kabal is trusted by energy supermajors including ExxonMobil, Shell, Chevron, BP, TotalEnergies, Equinor, Petronas, Repsol, Eni and ADNOC, with tens of thousands of users across dozens of countries. Kabal received a growth investment from Insight Partners in 2023.
 image: https://kabal.com/wp-content/uploads/2022/11/favicon.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kabal
 nav: Providers
 network: true
 overview: 'Kabal is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Oil and Gas, Logistics, and Supply Chain.
 
 
-  Kabal''s developer surface includes engineering blog, support, and 6 more developer resources.'
+  Kabal''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 1
 score:
   band: emerging
-  composite: 14.7
+  composite: 13.9
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,9 +103,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 14.7
+  previous_composite: 13.9
   provenance:
     conformance: first-party
   regulatory:
@@ -109,9 +113,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 27.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

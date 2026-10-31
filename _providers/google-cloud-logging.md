@@ -35,60 +35,123 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 46.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 10
+- acting_count: 9
   human_in_the_loop: 0
   name: Google Cloud Logging Agentic Access
   operation_count: 15
   slug: google-cloud-logging-agentic-access
-  summary_line: 15 operations · 10 acting
+  summary_line: 15 operations · 9 acting
 api_count: 1
 apis:
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Bucket API from Google Cloud Logging — 1 operation(s) for bucket.
   name: Google Cloud Logging Bucket API
+  phrasing_intents:
+  - id: getBucket
+    intent: Look up a Cloud Logging log bucket
+    question: What retention period and lifecycle state does one of my log buckets have?
+  - id: updateBucket
+    intent: Change a log bucket's retention or settings
+    question: Can I change how long an existing log bucket retains logs?
+  - id: deleteBucket
+    intent: Delete a log bucket
+    question: Can I remove a log bucket I no longer need?
+  phrasing_ops: 3
   slug: google-cloud-logging-bucket-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Buckets API from Google Cloud Logging — 1 operation(s) for buckets.
   name: Google Cloud Logging Buckets API
+  phrasing_intents:
+  - id: listBuckets
+    intent: List log buckets in a project or location
+    question: Which log buckets exist in my Google Cloud project?
+  - id: createBucket
+    intent: Create a new log bucket
+    question: Can I create a separate log bucket with its own retention period?
+  phrasing_ops: 2
   slug: google-cloud-logging-buckets-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Entries:copy API from Google Cloud Logging — 1 operation(s) for entries:copy.
   name: Google Cloud Logging Entries:copy API
+  phrasing_intents:
+  - id: copyLogEntries
+    intent: Copy log entries from a bucket to another destination
+    question: Can I copy log entries that are already stored in a log bucket somewhere else?
+  phrasing_ops: 1
   slug: google-cloud-logging-entries-copy-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Entries:list API from Google Cloud Logging — 1 operation(s) for entries:list.
   name: Google Cloud Logging Entries:list API
+  phrasing_intents:
+  - id: listLogEntries
+    intent: Search and list stored log entries
+    question: Can I query my past logs with a filter like severity or resource type?
+  phrasing_ops: 1
   slug: google-cloud-logging-entries-list-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Entries:tail API from Google Cloud Logging — 1 operation(s) for entries:tail.
   name: Google Cloud Logging Entries:tail API
+  phrasing_intents:
+  - id: tailLogEntries
+    intent: Stream log entries live as they arrive
+    question: Can I watch new log entries stream in live, like tail -f?
+  phrasing_ops: 1
   slug: google-cloud-logging-entries-tail-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Entries:write API from Google Cloud Logging — 1 operation(s) for entries:write.
   name: Google Cloud Logging Entries:write API
+  phrasing_intents:
+  - id: writeLogEntries
+    intent: Write log entries to Cloud Logging
+    question: Can I send my application's log messages straight to Google Cloud Logging?
+  phrasing_ops: 1
   slug: google-cloud-logging-entries-write-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Exclusions API from Google Cloud Logging — 1 operation(s) for exclusions.
   name: Google Cloud Logging Exclusions API
+  phrasing_intents:
+  - id: listExclusions
+    intent: List log exclusion filters
+    question: Which logs am I currently excluding from ingestion?
+  - id: createExclusion
+    intent: Create a log exclusion to stop ingesting logs
+    question: Can I stop noisy logs from being ingested to cut my logging costs?
+  phrasing_ops: 2
   slug: google-cloud-logging-exclusions-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Google Cloud Logging API API from Google Cloud Logging — 1 operation(s) for google cloud logging api.
   name: Google Cloud Logging Google Cloud Logging API
+  phrasing_intents:
+  - id: getSink
+    intent: Look up a log sink's configuration
+    question: Where is a particular log sink routing my logs to?
+  - id: deleteSink
+    intent: Delete a log sink
+    question: Can I stop exporting logs by removing a sink?
+  phrasing_ops: 2
   slug: google-cloud-logging-google-cloud-logging-api-api
 - baseURL: https://logging.googleapis.com
   baseurl_source: declared
   description: The Sinks API from Google Cloud Logging — 1 operation(s) for sinks.
   name: Google Cloud Logging Sinks API
+  phrasing_intents:
+  - id: listSinks
+    intent: List log sinks in a project
+    question: Which sinks are exporting logs out of my project?
+  - id: createSink
+    intent: Create a sink that routes logs to a destination
+    question: Can I export logs that match a filter to BigQuery, Cloud Storage or Pub/Sub?
+  phrasing_ops: 2
   slug: google-cloud-logging-sinks-api
 artifact_total: 30
 collections:
@@ -126,6 +189,11 @@ collections:
   name: Google Cloud Logging API
   slug: open-google-cloud-logging
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/google-cloud-logging/refs/heads/main/capabilities/google-cloud-logging-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-cloud-logging-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/google-cloud-logging/refs/heads/main/agentic-access/google-cloud-logging-agentic-access.yml
   title: ''
@@ -376,22 +444,26 @@ common:
 created: '2024-01-01'
 description: Google Cloud Logging is a fully managed, real-time log management service that ingests, stores, searches, analyzes, routes and alerts on application and system log data at scale across Google Cloud, AWS and on-premises environments. The v2 API writes log entries and manages the configuration surface behind them — log buckets and views, Log Router sinks and exclusions, logs-based metrics, log scopes, linked BigQuery datasets and CMEK settings. Google publishes it as a Discovery document with 254 methods, as first-party gRPC service definitions, through seven official client libraries and the gcloud logging command group, and — since April 2026 — through a fully managed remote MCP server at logging.googleapis.com/mcp that exposes six read-only tools to agents.
 finops:
-- name: Google Cloud Logging Finops
+- has_sources: false
+  method: generated
+  name: Google Cloud Logging Finops
+  primary_unit: ''
   service_category: API
   slug: google-cloud-logging-finops
+  template: true
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at logging.googleapis.com over HTTP requiring OAuth; 6 tools listed.
   name: Cloud Logging MCP server
   slug: cloud-logging-mcp-server
 modified: '2026-09-16'
 name: Google Cloud Logging
 nav: Providers
 network: true
-overview: 'Google Cloud Logging publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Bucket API, Buckets API, Entries:copy API, and 6 more. Tagged areas include Cloud, Logging, Monitoring, Observability, and Telemetry.
+overview: 'Google Cloud Logging publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bucket API, Buckets API, Entries:copy API, and 6 more. Tagged areas include Cloud, Logging, Monitoring, Observability, and Telemetry.
 
 
-  Google Cloud Logging''s developer surface includes authentication, developer portal, getting-started guide, support, engineering blog, changelog, documentation, and 47 more developer resources.'
+  Google Cloud Logging''s developer surface includes authentication, developer portal, getting-started guide, support, engineering blog, changelog, documentation, and 48 more developer resources.'
 plans:
 - name: Google Cloud Logging Plans Pricing
   plan_count: 1
@@ -408,23 +480,23 @@ scopes:
   summary_line: 5 scopes · authorizationCode
 score:
   band: strong
-  composite: 64.2
+  composite: 65.9
   coverage:
-    artifact_dirs: 28
-    catalog_earned: 58.0
+    artifact_dirs: 29
+    catalog_earned: 55.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 57.0
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 76.3
+    access_clarity: 68.4
     contract_governance: 18.2
-    contract_quality: 51.0
+    contract_quality: 46.2
     developer_ergonomics: 82.7
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 84.2
-  previous_composite: 64.2
+  previous_composite: 67.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -435,8 +507,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: LeapC is the native C API of the Ultraleap Hand Tracking Software. A client opens a connection to the locally running tracking service and polls it for tracking frames (hands, palms, digits, bones), d
@@ -172,16 +172,16 @@ modified: '2026-09-18'
 name: Ultraleap
 nav: Providers
 network: true
-overview: 'Ultraleap publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hand Tracking, Computer-Vision, Spatial Computing, and Haptics.
+overview: 'Ultraleap is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hand Tracking, Computer Vision, Spatial Computing, and Haptics.
 
 
   Ultraleap''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, changelog, and 22 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 29.7
+  composite: 30.4
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 14
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -191,20 +191,27 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 18.4
-  previous_composite: 29.7
+  previous_composite: 30.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/ultraleap/refs/heads/main/screenshots/ultraleap-2026-10-11T131400.png
 security:
 - kind: domain-security
   name: Ultraleap Domain Security
@@ -214,12 +221,12 @@ slug: ultraleap
 tags:
 - Company
 - Hand Tracking
-- Computer-Vision
+- Computer Vision
 - Spatial Computing
 - Haptics
 - Augmented Reality
 - Virtual Reality
-- XR
+- Extended Reality
 - Gesture Recognition
 - OpenXR
 - SDK

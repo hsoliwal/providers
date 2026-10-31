@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -54,8 +54,8 @@ apis:
 - description: Provides shipment status information for ODFL freight movements. Used to integrate real-time and historical freight tracking data into shipper and partner systems.
   name: ODFL Tracking API
   slug: tracking-api
-- baseURL: https://www.odfl.com
-  baseurl_source: declared
+- baseURL: https://www.odfl.com/wsDocument/v1
+  baseurl_source: spec
   description: Retrieve PDF shipping documents associated with ODFL PRO numbers.
   name: Old Dominion Freight Line Documents API
   slug: old-dominion-freight-line-documents-api
@@ -80,6 +80,21 @@ collections:
   name: ODFL Bill of Lading Tracking API
   slug: open-old-dominion-freight-line-tracking-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/plans/old-dominion-freight-line-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/old-dominion-freight-line-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/rate-limits/old-dominion-freight-line-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/old-dominion-freight-line-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/finops/old-dominion-freight-line-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/old-dominion-freight-line-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/old-dominion-freight-line/refs/heads/main/capabilities/old-dominion-freight-line-capability-edges.yml
   title: ''
@@ -123,19 +138,23 @@ common:
 created: '2026-03-24'
 description: Old Dominion Freight Line is a leading less-than-truckload (LTL) motor carrier providing regional, inter-regional, and national freight services in the United States. ODFL offers a suite of REST web services for shippers and partners to integrate freight booking, pickup, tracking, document retrieval, and electronic bill of lading capabilities directly into their systems.
 finops:
-- name: Old Dominion Freight Line Finops
+- has_sources: true
+  method: generated
+  name: Old Dominion Freight Line Finops
+  primary_unit: ''
   service_category: LTL Freight / Logistics
   slug: old-dominion-freight-line-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/old-dominion-freight-line.png
 layout: provider
 modified: '2026-05-19'
 name: Old Dominion Freight Line
 nav: Providers
 network: true
-overview: 'Old Dominion Freight Line publishes 4 APIs on the [APIs.io](https://apis.io/) network, including ODFL Bill of Lading API, ODFL Pickup API, ODFL Tracking API, and 1 more. Tagged areas include Freight, Less-Than-Truckload, Logistics, Shipping, and Transportation.
+overview: 'Old Dominion Freight Line publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including ODFL Bill of Lading API, ODFL Pickup API, ODFL Tracking API, and 1 more. Tagged areas include Freight, LTL, Logistics, Shipping, and Transportation.
 
 
-  Old Dominion Freight Line''s developer surface includes authentication, support, tooling, and 6 more developer resources.'
+  Old Dominion Freight Line''s developer surface includes authentication, support, tooling, and 9 more developer resources.'
 plans:
 - name: Old Dominion Freight Line Plans Pricing
   plan_count: 1
@@ -162,24 +181,24 @@ rate_limits:
   name: Old Dominion Freight Line Rate Limits
   slug: old-dominion-freight-line-rate-limits
 score:
-  band: thin
-  composite: 29.0
+  band: emerging
+  composite: 24.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 44.0
+    artifact_dirs: 15
+    catalog_earned: 36.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 29.0
+  previous_composite: 25.9
   provenance:
     agentic_access: derived
     contracts:
@@ -187,8 +206,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -206,7 +231,7 @@ security:
 slug: old-dominion-freight-line
 tags:
 - Freight
-- Less-Than-Truckload
+- LTL
 - Logistics
 - Shipping
 - Transportation

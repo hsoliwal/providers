@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -112,16 +112,16 @@ description: AccuPulse Medical Technology Co., Ltd. (Suzhou AccuPulse, 艾科脉
 image: https://28415683.s21i.faiusr.com/4/ABUIABAEGAAgn8iajgYoqNjpvAYw_gE4Ug.png
 layout: provider
 modified: '2026-09-06'
-name: AccuPulse Medical Technology Co., Ltd.
+name: AccuPulse Medical
 nav: Providers
 network: true
-overview: AccuPulse Medical Technology Co., Ltd. is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Cardiology, and Electrophysiology.
+overview: AccuPulse Medical is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Medical Devices, Healthcare, Cardiology, and Electrophysiology.
 random_paper: 12
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.8
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -133,7 +133,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -142,20 +142,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 3.3
+  previous_composite: 3.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/accupulsemedical/refs/heads/main/screenshots/accupulsemedical-2026-10-11T092549.png
 security:
 - kind: domain-security
   name: Accupulsemedical Domain Security

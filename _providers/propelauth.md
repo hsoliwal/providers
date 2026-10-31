@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 36
+- acting_count: 35
   human_in_the_loop: 3
   name: Propelauth Agentic Access
   operation_count: 54
   slug: propelauth-agentic-access
-  summary_line: 54 operations · 36 acting · 3 human-in-the-loop
+  summary_line: 54 operations · 35 acting · 3 human-in-the-loop
 api_count: 3
 apis:
 - baseURL_template: https://{authId}.propelauthtest.com
@@ -259,6 +259,11 @@ collections:
   name: PropelAuth End-User API Keys Access Tokens Validation API
   slug: open-propelauth-validation-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/propelauth/refs/heads/main/capabilities/propelauth-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/propelauth-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -635,9 +640,13 @@ features:
 - Advanced API Keys add-on for 5,000,000 monthly validations
 - Bring-Your-Own-Auth deployment mode (`byo.propelauth.com`)
 finops:
-- name: Propelauth Finops
+- has_sources: true
+  method: generated
+  name: Propelauth Finops
+  primary_unit: mau
   service_category: Identity
   slug: propelauth-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/propelauth.png
 json_schemas:
 - name: PropelAuth End-User API Key
@@ -659,13 +668,13 @@ modified: '2026-09-16'
 name: PropelAuth
 nav: Providers
 network: true
-overview: 'PropelAuth publishes 18 APIs on the [APIs.io](https://apis.io/) network, including End-User API Keys API, Access Tokens API, Discovery API, and 15 more. Tagged areas include Authentication, Identity, B2B, Multi-Tenancy, and Authorization.
+overview: 'PropelAuth publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including End-User API Keys API, Access Tokens API, Discovery API, and 15 more. Tagged areas include Authentication, Identity, B2B, Multi-Tenancy, and Authorization.
 
 
   The PropelAuth catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  PropelAuth''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, engineering blog, signup flow, and 72 more developer resources.'
+  PropelAuth''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, engineering blog, signup flow, and 73 more developer resources.'
 plans:
 - name: Propelauth Plans Pricing
   plan_count: 4
@@ -676,9 +685,10 @@ rate_limits:
   name: Propelauth Rate Limits
   slug: propelauth-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: PropelAuth API Rules
+  name: PropelAuth — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -686,7 +696,8 @@ rules:
     info: 1
     warn: 4
   slug: propelauth-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: PropelAuth API Rules
@@ -699,23 +710,23 @@ rules:
   slug: propelauth-rules
 score:
   band: strong
-  composite: 64.1
+  composite: 56.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 86.5
+    artifact_dirs: 19
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.5
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.7
   facets:
-    access_clarity: 92.1
-    contract_governance: 28.8
-    contract_quality: 68.0
+    access_clarity: 68.4
+    contract_governance: 27.3
+    contract_quality: 61.9
     developer_ergonomics: 63.1
-    discoverability: 64.8
-    operational_transparency: 52.6
-  previous_composite: 64.1
+    discoverability: 62.5
+    operational_transparency: 28.9
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     contracts:
@@ -723,9 +734,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 18
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

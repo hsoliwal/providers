@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.bit.bio/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bit.bio/refs/heads/main/security/bit.bio-domain-security.yml
   title: ''
@@ -127,18 +131,18 @@ created: '2026-08-07'
 description: bit.bio is a Cambridge, UK synthetic biology company founded in 2016 by stem cell biologist and neurosurgeon Mark Kotter, headquartered at the Babraham Research Campus with a second site in San Francisco and a discovery subsidiary (bit.bio discovery GmbH) in Vienna. Its proprietary opti-ox cell coding technology uses a dual genomic safe harbour approach to deterministically reprogram human induced pluripotent stem cells (iPSCs) into defined, consistent human cell types at industrial scale. The company sells these as ioCells — ioWild Type Cells, ioDisease Model Cells and CRISPR-Ready ioCells covering neurons, microglia, hepatocytes, glial and muscle lineages — plus custom iPSC-derived cell development and expert-led CRISPR functional genomics screening services for research, drug discovery and cell therapy. Products are sold as physical cell vials through a web storefront and a distributor network; bit.bio publishes no developer program, public API, or machine-readable API contract.
 image: https://14527135.fs1.hubspotusercontent-na1.net/hubfs/14527135/Logos/bit.bio/bitbio-logotype-no_tagline-color-positive-RGB.png
 layout: provider
-modified: '2026-08-07'
+modified: '2026-10-06'
 name: Bit.bio
 nav: Providers
 network: true
 overview: 'Bit.bio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Synthetic Biology, Biotechnology, Life Sciences, and Stem Cells.
 
 
-  Bit.bio''s developer surface includes support, engineering blog, product news, and 13 more developer resources.'
+  Bit.bio''s developer surface includes support, engineering blog, product news, and 14 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.7
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -152,17 +156,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 2.6
-  previous_composite: 10.8
+  previous_composite: 10.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

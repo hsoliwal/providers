@@ -13,7 +13,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: false
@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-09-20'
+  score: 24.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -92,6 +92,26 @@ collections:
   name: Confluent Schema Registry API
   slug: open-schema-registry
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/plans/confluent-schema-registry-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/confluent-schema-registry-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/rate-limits/confluent-schema-registry-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/confluent-schema-registry-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/finops/confluent-schema-registry-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/confluent-schema-registry-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/capabilities/confluent-schema-registry-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/confluent-schema-registry-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/confluent-schema-registry/refs/heads/main/agentic-access/confluent-schema-registry-agentic-access.yml
   title: ''
@@ -160,9 +180,13 @@ common:
 created: '2026-03-26'
 description: Confluent Schema Registry is the open-source serving layer for schema metadata used in Apache Kafka data pipelines. It exposes a RESTful interface for storing and retrieving Avro, JSON Schema, and Protobuf schemas, manages schema evolution through configurable compatibility rules (BACKWARD, FORWARD, FULL, and transitive variants), supports schema references and contexts, and integrates with Kafka producers and consumers via shipped serializers and deserializers. Schema Registry is distributed under the Confluent Community License and is a core component of both Confluent Platform and Confluent Cloud.
 finops:
-- name: Confluent Schema Registry Finops
+- has_sources: false
+  method: generated
+  name: Confluent Schema Registry Finops
+  primary_unit: ''
   service_category: API
   slug: confluent-schema-registry-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/confluent-schema-registry.png
 json_schemas:
 - name: Confluent Schema Registry Schema
@@ -178,13 +202,13 @@ modified: '2026-05-19'
 name: Confluent Schema Registry
 nav: Providers
 network: true
-overview: 'Confluent Schema Registry publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Compatibility API, Mode API, Schemas API, and 2 more. Tagged areas include Apache Kafka, Avro, Compatibility, Confluent, and Data Governance.
+overview: 'Confluent Schema Registry publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Compatibility API, Mode API, Schemas API, and 2 more. Tagged areas include Apache Kafka, Avro, Compatibility, Confluent, and Data Governance.
 
 
   The Confluent Schema Registry catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Confluent Schema Registry''s developer surface includes documentation, getting-started guide, API reference, GitHub presence, engineering blog, pricing, and 9 more developer resources.'
+  Confluent Schema Registry''s developer surface includes documentation, getting-started guide, API reference, GitHub presence, engineering blog, pricing, and 13 more developer resources.'
 plans:
 - name: Confluent Schema Registry Plans Pricing
   plan_count: 3
@@ -195,9 +219,10 @@ rate_limits:
   name: Confluent Schema Registry Rate Limits
   slug: confluent-schema-registry-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Confluent Schema Registry API Rules
+  name: Confluent Schema Registry — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -205,7 +230,8 @@ rules:
     info: 2
     warn: 3
   slug: confluent-schema-registry-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Confluent Schema Registry API Rules
@@ -218,23 +244,23 @@ rules:
   slug: confluent-schema-registry-rules
 score:
   band: thin
-  composite: 34.7
+  composite: 31.9
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 59.5
+    artifact_dirs: 16
+    catalog_earned: 55.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.5
+    catalog_gap: 59.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 13.6
-    contract_quality: 50.2
-    developer_ergonomics: 38.1
-    discoverability: 66.7
+    contract_quality: 45.7
+    developer_ergonomics: 37.4
+    discoverability: 64.3
     operational_transparency: 13.2
-  previous_composite: 34.7
+  previous_composite: 33.4
   provenance:
     agentic_access: derived
     contracts:
@@ -242,8 +268,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -292,8 +324,8 @@ tags:
 - Confluent
 - Data Governance
 - Data Streaming
-- JSON-Schema
-- Open-Source
+- JSON Schema
+- Open Source
 - Protobuf
 - REST
 - Schema Evolution

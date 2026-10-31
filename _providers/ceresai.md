@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ceresai/refs/heads/main/plans/ceresai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ceresai-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ceresai/refs/heads/main/security/ceresai-domain-security.yml
   title: ''
@@ -105,13 +110,17 @@ network: true
 overview: 'CeresAI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, AgTech, Geospatial, and Remote Sensing.
 
 
-  CeresAI''s developer surface includes documentation, engineering blog, pricing, signup flow, support, and 9 more developer resources.'
+  CeresAI''s developer surface includes documentation, engineering blog, pricing, signup flow, support, and 10 more developer resources.'
+plans:
+- name: Ceresai Plans Pricing
+  plan_count: 0
+  slug: ceresai-plans-pricing
 random_paper: 6
 score:
   band: emerging
   composite: 15.5
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -123,7 +132,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   previous_composite: 15.5
   regulatory:
@@ -131,9 +140,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 21.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -153,7 +162,7 @@ tags:
 - Geospatial
 - Remote Sensing
 - Satellite Imagery
-- Machine-Learning
+- Machine Learning
 - Crop Health
 - Agricultural Intelligence
 - Insurance

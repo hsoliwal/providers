@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://matic.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/matic/refs/heads/main/security/matic-vulnerability-disclosure.yml
   title: ''
@@ -101,18 +105,18 @@ created: '2026-07-17'
 description: 'Matic is a digital insurance marketplace and independent insurance agency that lets consumers compare and buy home, auto, pet, umbrella, jewelry and other personal-lines insurance from a network of 60+ A-rated carriers in one place. Founded in 2014 and headquartered in Columbus, Ohio, Matic is best known for its embedded-insurance model: it integrates insurance shopping into the digital experiences of mortgage lenders, servicers, banks and other financial-services partners so borrowers and account holders can obtain coverage at the point of need. Matic is a licensed agency operating in all 50 states and is backed by investors including Anthemis. It was added to the API Evangelist network as a portfolio-lead stub; this enrichment pass confirms Matic operates as a consumer-facing insurance marketplace with a partner/embedded-insurance business but no publicly documented developer API surface.'
 image: https://matic.com/favicon.ico
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Matic
 nav: Providers
 network: true
 overview: 'Matic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Embedded Insurance, and Personal Lines.
 
 
-  Matic''s developer surface includes engineering blog, support, and 12 more developer resources.'
+  Matic''s developer surface includes engineering blog, support, and 13 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 14.5
+  composite: 14.0
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -126,22 +130,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.5
+  previous_composite: 14.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 30.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -167,6 +173,6 @@ tags:
 - Home Insurance
 - Auto Insurance
 - Marketplace
-- Financial-Services
+- Financial Services
 website: https://matic.com
 ---

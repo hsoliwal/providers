@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Real-time surcharge calculation API. The caller sends a base transaction amount and payment-method details (card brand and type) and receives the permitted surcharge amount, evaluated against U.S. sta
@@ -42,6 +42,21 @@ apis:
   slug: yeeld
 artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/yeeld/refs/heads/main/plans/yeeld-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/yeeld-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/yeeld/refs/heads/main/rate-limits/yeeld-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/yeeld-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/yeeld/refs/heads/main/finops/yeeld-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/yeeld-finops.yml
 - group: company
   title: ''
   type: Website
@@ -113,19 +128,23 @@ common:
 created: '2025-02-21'
 description: 'Yeeld builds credit-card surcharging infrastructure for merchants and platforms across the United States and Canada, and provides payments consulting and development services. The Yeeld Surcharging API is a real-time rules engine: a caller passes a transaction amount and payment-method details, and Yeeld returns the surcharge that jurisdictional law and Visa, Mastercard, American Express and Discover rules permit, or zero where surcharging is prohibited. Yeeld also ships a Stripe App Marketplace app for Stripe Checkout and Payment Links, and YeeldPay, a no-code branded hosted checkout. Founded by ex-Stripe staff and headquartered in Chicago, Illinois.'
 finops:
-- name: Yeeld Finops
+- has_sources: false
+  method: generated
+  name: Yeeld Finops
+  primary_unit: ''
   service_category: API
   slug: yeeld-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/yeeld.png
 layout: provider
 modified: '2026-08-28'
 name: Yeeld
 nav: Providers
 network: true
-overview: 'Yeeld publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, Surcharging, Credit Cards, Compliance, and Stripe.
+overview: 'Yeeld is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Payments, Surcharging, Credit Cards, Compliance, and Stripe.
 
 
-  Yeeld''s developer surface includes documentation, getting-started guide, support, pricing, signup flow, engineering blog, and 10 more developer resources.'
+  Yeeld''s developer surface includes documentation, getting-started guide, support, pricing, signup flow, engineering blog, and 13 more developer resources.'
 plans:
 - name: Yeeld Plans Pricing
   plan_count: 0
@@ -137,28 +156,30 @@ rate_limits:
   slug: yeeld-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 30.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 40.0
+    artifact_dirs: 17
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 52.6
+    access_clarity: 44.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.4
+  previous_composite: 31.9
   provenance:
     conformance: first-party
   regulatory:
@@ -166,9 +187,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

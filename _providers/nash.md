@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 42.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 118
+- acting_count: 116
   human_in_the_loop: 16
   name: Nash Agentic Access
   operation_count: 173
   slug: nash-agentic-access
-  summary_line: 173 operations · 118 acting · 16 human-in-the-loop
+  summary_line: 173 operations · 116 acting · 16 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.usenash.com/v1
@@ -299,6 +299,11 @@ collections:
   name: Nash AI Functions Zones API
   slug: open-nash-zones-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/nash/refs/heads/main/rate-limits/nash-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/nash-rate-limits.yml
 - group: commercial
   href: https://raw.githubusercontent.com/api-evangelist/nash/refs/heads/main/plans/nash-plans-pricing.yml
   title: ''
@@ -453,18 +458,18 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Nash MCP Server
-  slug: nash-mcp-server
+  slug: nash
 modified: '2026-07-20'
 name: Nash
 nav: Providers
 network: true
-overview: 'Nash publishes 30 APIs on the [APIs.io](https://apis.io/) network, including AI Functions API, Annotate API, Batch Job API, and 27 more. Tagged areas include Company, Delivery, Last Mile Delivery, Logistics, and Dispatch.
+overview: 'Nash publishes 30 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Functions API, Annotate API, Batch Job API, and 27 more. Tagged areas include Company, Delivery, Last Mile Delivery, Logistics, and Dispatch.
 
 
   The Nash catalog on APIs.io includes 2 event-driven AsyncAPI specifications.
 
 
-  Nash''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, changelog, and 26 more developer resources.'
+  Nash''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, changelog, and 27 more developer resources.'
 plans:
 - name: Nash Plans Pricing
   plan_count: 0
@@ -476,7 +481,7 @@ rate_limits:
   slug: nash-rate-limits
 score:
   band: strong
-  composite: 60.2
+  composite: 61.5
   coverage:
     artifact_dirs: 27
     catalog_earned: 37.0
@@ -484,15 +489,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 62.2
+    contract_quality: 56.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 44.7
-  previous_composite: 60.2
+  previous_composite: 61.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -503,8 +508,14 @@ score:
       total: 30
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

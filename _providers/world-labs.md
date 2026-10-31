@@ -14,7 +14,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: false
     agentic_commerce: false
     auth_clarity: bearer
@@ -33,14 +33,14 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-09-20'
+  score: 27.0
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.worldlabs.ai
   baseurl_source: spec
   description: The credits API from World Labs — 1 operation(s) for credits.
-  name: World Labs credits API
+  name: World Labs Credits API
   slug: world-labs-credits-api
 - baseURL: https://api.worldlabs.ai
   baseurl_source: spec
@@ -59,6 +59,10 @@ collections:
   name: Public API v1 credits Marble API
   slug: open-world-labs-marble-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.worldlabs.ai/blog
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/world-labs/refs/heads/main/skills/world-labs-marble-developer-api.md
   title: ''
@@ -97,34 +101,34 @@ created: '2026-07-17'
 description: 'World Labs is a company surfaced as a portfolio company of sv-angel and added to the API Evangelist network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/world-labs.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: World Labs
 nav: Providers
 network: true
-overview: 'World Labs publishes 2 APIs on the [APIs.io](https://apis.io/) network: credits API and Marble API. Tagged areas include Company and Artificial Intelligence.
+overview: 'World Labs publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Credits API and Marble API. Tagged areas include Company and Artificial Intelligence.
 
 
-  World Labs'' developer surface includes authentication and 6 more developer resources.'
+  World Labs'' developer surface includes engineering blog, authentication, and 6 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 22.1
+  composite: 21.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 54.5
-    developer_ergonomics: 19.0
-    discoverability: 48.1
+    contract_quality: 49.1
+    developer_ergonomics: 20.7
+    discoverability: 46.4
     operational_transparency: 0.0
-  previous_composite: 22.1
+  previous_composite: 20.5
   provenance:
     conformance: derived
     contracts:
@@ -133,12 +137,19 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/world-labs/refs/heads/main/screenshots/world-labs-2026-10-11T193546.png
 security:
 - kind: authentication
   name: World Labs Authentication
@@ -151,7 +162,7 @@ security:
 - kind: vulnerability-disclosure
   name: World Labs Vulnerability Disclosure
   slug: world-labs-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: world-labs
 tags:
 - Company

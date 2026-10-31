@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 22.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -45,32 +45,32 @@ agentic_access:
   summary_line: 37 operations
 api_count: 1
 apis:
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: Wikipedia, external sites, reviews, FAQ and other ancillary data.
   name: IMDb-API External API
   slug: imdb-api-external-api
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: Curated and aggregated lists (Top 250, Most Popular, In Theaters, Coming Soon, Box Office).
   name: IMDb-API Lists API
   slug: imdb-api-lists-api
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: People (actors, directors, writers) information and awards.
   name: IMDb-API Name API
   slug: imdb-api-name-api
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: Free-text and faceted search across titles, names, companies and keywords.
   name: IMDb-API Search API
   slug: imdb-api-search-api
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: Movie and series metadata, posters, images, trailers, cast, ratings.
   name: IMDb-API Title API
   slug: imdb-api-title-api
-- baseURL: https://tv-api.com/
+- baseURL: https://imdb-api.com
   baseurl_source: declared
   description: Image utilities and account usage.
   name: IMDb-API Tools API
@@ -102,6 +102,10 @@ collections:
   name: IMDb-API (TV-API)
   slug: open-imdb-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://tv-api.com/blog/
 - group: operate
   title: ''
   type: IssueTracker
@@ -233,9 +237,13 @@ features:
 - description: Per-key daily quota consumption via /API/Usage.
   name: Usage telemetry
 finops:
-- name: Imdb Api Finops
+- has_sources: false
+  method: generated
+  name: Imdb Api Finops
+  primary_unit: ''
   service_category: ''
   slug: imdb-api-finops
+  template: true
 image: https://tv-api.com/images/original/Apple-TV-Plus-Logo.png
 integrations:
 - description: Primary source of title and name ids.
@@ -290,17 +298,17 @@ jsonld:
   property_count: 0
   slug: imdb-api-context
 layout: provider
-modified: '2026-05-30'
+modified: '2026-10-06'
 name: IMDb-API
 nav: Providers
 network: true
-overview: 'IMDb-API publishes 6 APIs on the [APIs.io](https://apis.io/) network, including External API, Lists API, Name API, and 3 more. Tagged areas include Video, Movies, TV, Entertainment, and Metadata.
+overview: 'IMDb-API publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including External API, Lists API, Name API, and 3 more. Tagged areas include Video, Movies, TV, Entertainment, and Metadata.
 
 
   The IMDb-API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  IMDb-API''s developer surface includes authentication, pricing, signup flow, tooling, and 15 more developer resources.'
+  IMDb-API''s developer surface includes engineering blog, authentication, pricing, signup flow, tooling, and 15 more developer resources.'
 plans:
 - name: Imdb Api Plans Pricing
   plan_count: 4
@@ -311,9 +319,10 @@ rate_limits:
   name: Imdb Api Rate Limits
   slug: imdb-api-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: IMDb-API API Rules
+  name: IMDb-API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -321,7 +330,8 @@ rules:
     info: 2
     warn: 3
   slug: imdb-api-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: IMDb-API API Rules
@@ -334,23 +344,23 @@ rules:
   slug: imdb-api-rules
 score:
   band: developing
-  composite: 48.4
+  composite: 40.9
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 79.5
+    artifact_dirs: 17
+    catalog_earned: 66.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.5
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.1
   facets:
-    access_clarity: 63.2
-    contract_governance: 28.8
-    contract_quality: 69.0
-    developer_ergonomics: 35.7
-    discoverability: 75.9
+    access_clarity: 31.6
+    contract_governance: 27.3
+    contract_quality: 63.0
+    developer_ergonomics: 38.1
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 48.4
+  previous_composite: 46.0
   provenance:
     agentic_access: derived
     contracts:
@@ -358,9 +368,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

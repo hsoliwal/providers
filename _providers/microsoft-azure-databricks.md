@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.2
-  scored_at: '2026-09-20'
+  score: 33.3
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 20
+- acting_count: 19
   human_in_the_loop: 3
   name: Microsoft Azure Databricks Agentic Access
   operation_count: 32
   slug: microsoft-azure-databricks-agentic-access
-  summary_line: 32 operations · 20 acting · 3 human-in-the-loop
+  summary_line: 32 operations · 19 acting · 3 human-in-the-loop
 api_count: 1
 apis:
 - description: Access Databricks File System (DBFS) for file operations including uploading, downloading, listing, and deleting files and directories.
@@ -247,6 +247,26 @@ collections:
   name: Azure Databricks REST Clusters Workspace API
   slug: open-microsoft-azure-databricks-workspace-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-databricks/refs/heads/main/plans/azure-databricks-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/azure-databricks-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-databricks/refs/heads/main/rate-limits/azure-databricks-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/azure-databricks-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-databricks/refs/heads/main/finops/azure-databricks-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/azure-databricks-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-databricks/refs/heads/main/capabilities/microsoft-azure-databricks-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-databricks-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -680,12 +700,20 @@ features:
 - Git integration for version control of notebooks
 - SCIM 2.0 for identity and access management
 finops:
-- name: Azure Databricks Finops
+- has_sources: true
+  method: generated
+  name: Azure Databricks Finops
+  primary_unit: ''
   service_category: Data Analytics
   slug: azure-databricks-finops
-- name: Microsoft Azure Databricks Finops
+  template: false
+- has_sources: true
+  method: generated
+  name: Microsoft Azure Databricks Finops
+  primary_unit: ''
   service_category: Analytics / Data + AI Platform
   slug: microsoft-azure-databricks-finops
+  template: false
 image: https://azure.microsoft.com/svghandler/databricks/
 integrations:
 - Azure Data Factory for orchestration
@@ -912,13 +940,13 @@ modified: '2026-05-19'
 name: Azure Databricks
 nav: Providers
 network: true
-overview: 'Azure Databricks publishes 3 APIs on the [APIs.io](https://apis.io/) network: Clusters API, Jobs API, and Workspace API. Tagged areas include Analytics, Apache Spark, Big Data, Data Engineering, and Machine-Learning.
+overview: 'Azure Databricks publishes 38 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clusters API, Jobs API, Workspace API, and 35 more. Tagged areas include Analytics, Apache Spark, Big Data, Data Engineering, and Machine Learning.
 
 
   The Azure Databricks catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Azure Databricks'' developer surface includes authentication, getting-started guide, pricing, CLI, API reference, release notes, changelog, and 49 more developer resources.'
+  Azure Databricks'' developer surface includes authentication, getting-started guide, pricing, CLI, API reference, release notes, changelog, and 53 more developer resources.'
 plans:
 - name: Azure Databricks Plans Pricing
   plan_count: 4
@@ -935,9 +963,10 @@ rate_limits:
   name: Microsoft Azure Databricks Rate Limits
   slug: microsoft-azure-databricks-rate-limits
 rules:
-- effective_rule_count: 7
+- authorship: unmarked
+  effective_rule_count: 7
   extends: []
-  name: Azure Databricks API Rules
+  name: Azure Databricks — azure databricks rules
   rule_count: 7
   severity_counts:
     error: 7
@@ -945,9 +974,10 @@ rules:
     info: 0
     warn: 0
   slug: azure-databricks-spectral-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Azure Databricks API Rules
+  name: Azure Databricks — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -955,7 +985,8 @@ rules:
     info: 1
     warn: 4
   slug: microsoft-azure-databricks-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: generated
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Azure Databricks API Rules
@@ -977,26 +1008,26 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: strong
-  composite: 63.4
+  composite: 57.9
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 75.0
+    artifact_dirs: 22
+    catalog_earned: 57.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.0
+    catalog_gap: 57.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.2
   facets:
-    access_clarity: 21.1
-    contract_governance: 69.7
-    contract_quality: 68.7
+    access_clarity: 13.2
+    contract_governance: 27.3
+    contract_quality: 62.2
     developer_ergonomics: 72.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 55.3
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 63.4
+  previous_composite: 63.1
   provenance:
     agentic_access: derived
     contracts:
@@ -1004,9 +1035,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1
@@ -1030,7 +1067,7 @@ tags:
 - Apache Spark
 - Big Data
 - Data Engineering
-- Machine-Learning
+- Machine Learning
 use_cases:
 - Building and managing data lakehouse architectures
 - Training and deploying machine learning models at scale

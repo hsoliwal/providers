@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 0
   human_in_the_loop: 0
   name: Alinta Energy Agentic Access
   operation_count: 27
   slug: alinta-energy-agentic-access
-  summary_line: 27 operations · 5 acting
+  summary_line: 27 operations
 api_count: 2
 apis:
 - baseURL: https://public.cdr.alintaenergy.com.au/cds-au/v1
@@ -273,7 +273,7 @@ modified: '2026-09-16'
 name: Alinta Energy
 nav: Providers
 network: true
-overview: 'Alinta Energy publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
+overview: 'Alinta Energy publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
 
 
   Alinta Energy''s developer surface includes authentication, changelog, documentation, API reference, support, status page, and 30 more developer resources.'
@@ -289,9 +289,9 @@ scopes:
   summary_line: 11 scopes · authorizationCode
 score:
   band: developing
-  composite: 45.3
+  composite: 41.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -301,9 +301,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 35.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 65.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -313,7 +313,7 @@ score:
     regions:
     - anz
     - greater-china
-  previous_composite: 45.3
+  previous_composite: 41.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -329,9 +329,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

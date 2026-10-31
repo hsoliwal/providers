@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
@@ -85,9 +85,13 @@ common:
 created: '2026-05-08'
 description: FanDuel is a major US sports betting and daily fantasy sports operator (FanDuel Sportsbook, FanDuel Casino, FanDuel Fantasy, FanDuel TV). FanDuel does not publish a public developer REST API for its sportsbook, casino, or fantasy products. Internal/private APIs power the apps and a Sportradar/SBTech-derived trading stack but are not available to third-party developers.
 finops:
-- name: Fanduel Finops
+- has_sources: true
+  method: generated
+  name: Fanduel Finops
+  primary_unit: ''
   service_category: Sports Betting / DFS
   slug: fanduel-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fanduel.png
 layout: provider
 modified: '2026-05-08'
@@ -106,25 +110,31 @@ rate_limits:
   slug: fanduel-rate-limits
 score:
   band: minimal
-  composite: 9.4
+  composite: 7.1
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 34.0
+    artifact_dirs: 8
+    catalog_earned: 31.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 81.0
+    catalog_gap: 84.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -148,5 +158,6 @@ tags:
 - Casinos
 - Gaming
 - Regulated
+- Sports
 website: https://www.fanduel.com/
 ---

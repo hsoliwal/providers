@@ -1,6 +1,6 @@
 ---
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.0
-  scored_at: '2026-09-20'
+  score: 4.7
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -144,14 +144,14 @@ description: Aerwave is a Dallas, Texas managed Wi-Fi provider founded in 2019 t
 image: https://register.getaerwave.com/images/aerwave_website_logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Aerwave serves a live, anonymous Model Context Protocol endpoint at https://www.aerwave.com/_api/mcp. It is advertised in the company''s own llms.txt at https://www.aerwave.com/llms.txt and answered a '
   name: Aerwave Site MCP
   slug: aerwave-site-mcp
 modified: '2026-09-12'
 name: Aerwave
 nav: Providers
 network: true
-overview: 'Aerwave is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Managed WiFi, Multifamily, Real-Estate, and Telecommunications.
+overview: 'Aerwave is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Managed WiFi, Multifamily, Real Estate, and Telecommunications.
 
 
   Aerwave''s developer surface includes engineering blog, support, signup flow, and 19 more developer resources.'
@@ -168,7 +168,7 @@ score:
   band: emerging
   composite: 15.7
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -180,25 +180,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 59.2
     operational_transparency: 0.0
   previous_composite: 15.7
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 26.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/aerwave/refs/heads/main/screenshots/aerwave-2026-10-11T092955.png
 security:
 - kind: domain-security
   name: Aerwave Domain Security
@@ -209,7 +210,7 @@ tags:
 - Company
 - Managed WiFi
 - Multifamily
-- Real-Estate
+- Real Estate
 - Telecommunications
 - Internet Service Provider
 - Connectivity

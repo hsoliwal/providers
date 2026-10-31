@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 6
@@ -211,7 +211,7 @@ modified: '2026-08-22'
 name: GrowthSpace
 nav: Providers
 network: true
-overview: 'GrowthSpace publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Ah API, @growthspace Engineering/public Api Management API, and 3 more. Tagged areas include Company, Learning and Development, Talent Development, Human Resources, and Coaching.
+overview: 'GrowthSpace publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Ah API, @growthspace Engineering/public Api Management API, and 3 more. Tagged areas include Company, Learning and Development, Talent Development, Human Resources, and Coaching.
 
 
   GrowthSpace''s developer surface includes engineering blog, support, YouTube channel, authentication, and 23 more developer resources.'
@@ -231,7 +231,7 @@ scopes:
   summary_line: 11 scopes
 score:
   band: thin
-  composite: 31.4
+  composite: 32.9
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -243,16 +243,18 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 36.1
+    contract_quality: 32.4
     developer_ergonomics: 28.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.4
+  previous_composite: 32.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -263,8 +265,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

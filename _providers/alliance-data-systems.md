@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 22.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -261,9 +261,13 @@ examples:
   name: Bread Pay Platform Refund Transaction Example
   slug: bread-pay-platform-refund-transaction-example
 finops:
-- name: Alliance Data Systems Finops
+- has_sources: true
+  method: generated
+  name: Alliance Data Systems Finops
+  primary_unit: ''
   service_category: Financial Services
   slug: alliance-data-systems-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/alliance-data-systems.png
 json_schemas:
 - name: BreadClassicCartItem
@@ -316,7 +320,7 @@ modified: '2026-05-23'
 name: Alliance Data Systems (Bread Financial Holdings)
 nav: Providers
 network: true
-overview: 'Alliance Data Systems (Bread Financial Holdings) publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Buyers API, Carts API, Payment Options API, and 2 more. Tagged areas include Financial-Services, Fintech, Buy Now Pay Later, Bread Pay, and Private Label Credit.
+overview: 'Alliance Data Systems (Bread Financial Holdings) publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Buyers API, Carts API, Payment Options API, and 6 more. Tagged areas include Financial Services, Fintech, Buy Now Pay Later, Bread Pay, and Private Label Credit.
 
 
   The Alliance Data Systems (Bread Financial Holdings) catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
@@ -349,9 +353,10 @@ rate_limits:
   name: Alliance Data Systems Rate Limits
   slug: alliance-data-systems-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Alliance Data Systems (Bread Financial Holdings) API Rules
+  name: Alliance Data Systems (Bread Financial Holdings) — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -359,10 +364,11 @@ rules:
     info: 2
     warn: 3
   slug: alliance-data-systems-jsonschema-spectral-rules
-- effective_rule_count: 44
+- authorship: unmarked
+  effective_rule_count: 44
   extends:
   - spectral:oas
-  name: Alliance Data Systems (Bread Financial Holdings) API Rules
+  name: Alliance Data Systems (Bread Financial Holdings) — bread classic merchant rules
   rule_count: 3
   severity_counts:
     error: 1
@@ -370,10 +376,11 @@ rules:
     info: 0
     warn: 2
   slug: bread-classic-merchant-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Alliance Data Systems (Bread Financial Holdings) API Rules
+  name: Alliance Data Systems (Bread Financial Holdings) — bread pay platform rules
   rule_count: 5
   severity_counts:
     error: 2
@@ -387,29 +394,31 @@ scopes:
   slug: alliance-data-systems-scopes
   summary_line: 3 scopes · clientCredentials
 score:
-  band: developing
-  composite: 47.5
+  band: thin
+  composite: 36.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 80.5
+    artifact_dirs: 22
+    catalog_earned: 62.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 34.5
+    catalog_gap: 53.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 62.0
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 56.6
     developer_ergonomics: 38.1
-    discoverability: 68.5
-    operational_transparency: 39.5
+    discoverability: 67.0
+    operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.5
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     contracts:
@@ -422,10 +431,10 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 43.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 26.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -441,7 +450,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: alliance-data-systems
 tags:
-- Financial-Services
+- Financial Services
 - Fintech
 - Buy Now Pay Later
 - Bread Pay

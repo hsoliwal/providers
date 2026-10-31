@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 17
+- acting_count: 16
   human_in_the_loop: 0
   name: Cobalt Agentic Access
   operation_count: 31
   slug: cobalt-agentic-access
-  summary_line: 31 operations · 17 acting
+  summary_line: 31 operations · 16 acting
 api_count: 1
 apis:
 - baseURL: https://api.gocobalt.io/api/v2
@@ -164,6 +164,26 @@ collections:
   name: Cobalt Applications Webhooks API
   slug: open-cobalt-webhooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cobalt/refs/heads/main/plans/cobalt-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cobalt-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/cobalt/refs/heads/main/rate-limits/cobalt-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/cobalt-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cobalt/refs/heads/main/finops/cobalt-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/cobalt-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cobalt/refs/heads/main/capabilities/cobalt-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cobalt-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -300,9 +320,13 @@ features:
 - name: Unlimited Workflows
 - name: Whiteglove Support
 finops:
-- name: Cobalt Finops
+- has_sources: false
+  method: generated
+  name: Cobalt Finops
+  primary_unit: ''
   service_category: API
   slug: cobalt-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cobalt.png
 integrations:
 - name: 0codekit
@@ -1382,13 +1406,13 @@ modified: '2026-09-16'
 name: Cobalt
 nav: Providers
 network: true
-overview: 'Cobalt publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Applications API, Hosted API, Config API, and 7 more. Tagged areas include Automation, Embedded iPaaS, and Integration.
+overview: 'Cobalt publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applications API, Hosted API, Config API, and 7 more. Tagged areas include Automation, Embedded iPaaS, and Integration.
 
 
   The Cobalt catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Cobalt''s developer surface includes authentication, getting-started guide, documentation, pricing, signup flow, engineering blog, and 19 more developer resources.'
+  Cobalt''s developer surface includes authentication, getting-started guide, documentation, pricing, signup flow, engineering blog, and 23 more developer resources.'
 plans:
 - name: Cobalt Plans Pricing
   plan_count: 3
@@ -1399,9 +1423,10 @@ rate_limits:
   name: Cobalt Rate Limits
   slug: cobalt-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Cobalt API Rules
+  name: Cobalt — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1409,7 +1434,8 @@ rules:
     info: 2
     warn: 3
   slug: cobalt-jsonschema-spectral-rules
-- effective_rule_count: 54
+- authorship: unmarked
+  effective_rule_count: 54
   extends:
   - spectral:oas
   name: Cobalt API Rules
@@ -1422,23 +1448,23 @@ rules:
   slug: cobalt-rules
 score:
   band: developing
-  composite: 54.0
+  composite: 53.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 57.5
+    artifact_dirs: 16
+    catalog_earned: 56.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 57.5
+    catalog_gap: 58.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 68.4
+    access_clarity: 60.5
     contract_governance: 13.6
-    contract_quality: 68.6
+    contract_quality: 62.2
     developer_ergonomics: 44.0
-    discoverability: 53.7
+    discoverability: 57.1
     operational_transparency: 36.8
-  previous_composite: 54.0
+  previous_composite: 54.9
   provenance:
     agentic_access: derived
     contracts:
@@ -1446,8 +1472,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

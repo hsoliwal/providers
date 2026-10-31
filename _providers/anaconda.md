@@ -36,15 +36,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 97
-  human_in_the_loop: 7
+- acting_count: 95
+  human_in_the_loop: 6
   name: Anaconda Agentic Access
-  operation_count: 223
+  operation_count: 235
   slug: anaconda-agentic-access
-  summary_line: 223 operations · 97 acting · 7 human-in-the-loop
-api_count: 5
+  summary_line: 235 operations · 95 acting · 6 human-in-the-loop
+api_count: 6
 apis:
 - description: The public REST API behind anaconda.org — the community package repository that serves conda and PyPI artifacts. Exposes user/organization profiles, packages, releases, files, labels and channels, and
   name: Anaconda.org Repository API
@@ -162,7 +162,7 @@ apis:
   description: The cves API from Anaconda — 20 operation(s) for cves.
   name: Anaconda Cves API
   slug: anaconda-cves-api
-artifact_total: 55
+artifact_total: 56
 asyncapis:
 - description: ''
   name: Anaconda Events
@@ -238,6 +238,16 @@ collections:
   name: Anaconda Server Websocket API
   slug: open-anaconda-websocket-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/anaconda/refs/heads/main/plans/anaconda-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/anaconda-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/anaconda/refs/heads/main/capabilities/anaconda-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/anaconda-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/anaconda/refs/heads/main/agentic-access/anaconda-agentic-access.yml
   title: ''
@@ -459,20 +469,24 @@ description: Anaconda, Inc. is the Austin, Texas company behind the Anaconda Dis
 image: https://www.anaconda.com/wp-content/uploads/2024/07/anaconda-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at anaconda.com.
   name: Anaconda MCP Server
-  slug: anaconda-mcp-server
+  slug: anaconda-mcp-yml
 modified: '2026-09-16'
 name: Anaconda
 nav: Providers
 network: true
-overview: 'Anaconda publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Account API, AI Navigator API, Artifacts API, and 19 more. Tagged areas include Company, Data Science, Machine-Learning, Artificial Intelligence, and Package Management.
+overview: 'Anaconda publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, AI Navigator API, Artifacts API, and 21 more. Tagged areas include Company, Data Science, Machine Learning, Artificial Intelligence, and Package Management.
 
 
   The Anaconda catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Anaconda''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 40 more developer resources.'
+  Anaconda''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 42 more developer resources.'
+plans:
+- name: Anaconda Plans Pricing
+  plan_count: 17
+  slug: anaconda-plans-pricing
 random_paper: 7
 scopes:
 - name: Anaconda Scopes
@@ -480,24 +494,24 @@ scopes:
   slug: anaconda-scopes
   summary_line: 3 scopes · authorizationCode/clientCredentials/deviceCode/password/refreshToken
 score:
-  band: developing
-  composite: 51.8
+  band: strong
+  composite: 60.3
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 35.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 80.0
+    artifact_dirs: 28
+    catalog_earned: 47.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 50.0
+    access_clarity: 81.6
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 57.5
     developer_ergonomics: 73.2
-    discoverability: 72.2
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 51.8
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -508,9 +522,15 @@ score:
       total: 22
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 38.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -536,7 +556,7 @@ slug: anaconda
 tags:
 - Company
 - Data Science
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Package Management
 - Python

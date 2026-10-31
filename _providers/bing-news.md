@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.5
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 3
   slug: bing-news-agentic-access
   summary_line: 3 operations
-api_count: 1
+api_count: 2
 apis:
 - description: Returns top news articles filtered by category (e.g., Business, Entertainment, Sports, Health, ScienceAndTechnology, Politics, World). Supports multiple markets with locale-specific category taxonomie
   name: Bing News Category API
@@ -90,6 +90,21 @@ collections:
   name: Bing News Search API v7 News Category Trending Topics API
   slug: open-bing-news-trending-topics-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/bing-news/refs/heads/main/plans/bing-news-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/bing-news-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/bing-news/refs/heads/main/rate-limits/bing-news-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/bing-news-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/bing-news/refs/heads/main/finops/bing-news-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/bing-news-finops.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -170,9 +185,13 @@ examples:
   name: Trending Topics Response
   slug: trending-topics-response
 finops:
-- name: Bing News Finops
+- has_sources: false
+  method: generated
+  name: Bing News Finops
+  primary_unit: ''
   service_category: API
   slug: bing-news-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bing-news.png
 json_schemas:
 - name: NewsArticle
@@ -186,13 +205,13 @@ modified: '2026-06-13'
 name: Bing News Search
 nav: Providers
 network: true
-overview: 'Bing News Search publishes 3 APIs on the [APIs.io](https://apis.io/) network: News Category API, News Search API, and Trending Topics API. Tagged areas include News, Search, Microsoft, Bing, and Media.
+overview: 'Bing News Search publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including News Category API, News Search API, Trending Topics API, and 2 more. Tagged areas include News, Search, Microsoft, Bing, and Media.
 
 
   The Bing News Search catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Bing News Search''s developer surface includes authentication, developer portal, documentation, API reference, pricing, getting-started guide, support, and 9 more developer resources.'
+  Bing News Search''s developer surface includes authentication, developer portal, documentation, API reference, pricing, getting-started guide, support, and 12 more developer resources.'
 plans:
 - name: Bing News Plans Pricing
   plan_count: 2
@@ -203,9 +222,10 @@ rate_limits:
   name: Bing News Rate Limits
   slug: bing-news-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Bing News Search API Rules
+  name: Bing News Search — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -214,24 +234,25 @@ rules:
     warn: 3
   slug: bing-news-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 50.3
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 16
-    catalog_earned: 63.3
+    catalog_earned: 45.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 69.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 50.0
-    contract_governance: 9.8
-    contract_quality: 57.8
-    developer_ergonomics: 63.1
-    discoverability: 75.9
-    operational_transparency: 34.2
-  previous_composite: 50.3
+    access_clarity: 0.0
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     agentic_access: derived
     contracts:
@@ -239,8 +260,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -265,5 +292,6 @@ tags:
 - Media
 - Headlines
 - Trending Topics
+- Defunct
 website: https://www.bing.com/news
 ---

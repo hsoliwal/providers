@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 116
+- acting_count: 114
   human_in_the_loop: 3
   name: University Of Illinois Urbana Champaign Agentic Access
   operation_count: 196
   slug: university-of-illinois-urbana-champaign-agentic-access
-  summary_line: 196 operations · 116 acting · 3 human-in-the-loop
+  summary_line: 196 operations · 114 acting · 3 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: https://api.rokwire.illinois.edu/core
@@ -303,9 +303,13 @@ examples:
   name: University Of Illinois Urbana Champaign Organization Example
   slug: university-of-illinois-urbana-champaign-organization-example
 finops:
-- name: University Of Illinois Urbana Champaign Finops
+- has_sources: true
+  method: generated
+  name: University Of Illinois Urbana Champaign Finops
+  primary_unit: ''
   service_category: Education
   slug: university-of-illinois-urbana-champaign-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/university-of-illinois-urbana-champaign.png
 json_schemas:
 - name: Account
@@ -334,7 +338,7 @@ modified: '2026-08-19'
 name: University of Illinois Urbana-Champaign
 nav: Providers
 network: true
-overview: 'University of Illinois Urbana-Champaign publishes 2 APIs on the [APIs.io](https://apis.io/) network: Rokwire Core Building Block API and Rokwire Gateway Building Block API. Tagged areas include University, Higher Education, Education, Public Research University, and United States.
+overview: 'University of Illinois Urbana-Champaign publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Rokwire Core Building Block API, Rokwire Gateway Building Block API, and 6 more. Tagged areas include University, Higher Education, Education, Public Research University, and United States.
 
 
   The University of Illinois Urbana-Champaign catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -351,9 +355,10 @@ rate_limits:
   name: University Of Illinois Urbana Champaign Rate Limits
   slug: university-of-illinois-urbana-champaign-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: University of Illinois Urbana-Champaign API Rules
+  name: University of Illinois Urbana-Champaign — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -361,7 +366,8 @@ rules:
     info: 2
     warn: 3
   slug: university-of-illinois-urbana-champaign-jsonschema-spectral-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
   name: University of Illinois Urbana-Champaign API Rules
   rule_count: 6
@@ -378,21 +384,21 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 48.8
+  composite: 41.4
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 53.5
+    artifact_dirs: 23
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.5
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 26.3
     contract_governance: 31.8
-    contract_quality: 64.1
+    contract_quality: 58.7
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -401,7 +407,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 48.8
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -415,9 +421,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 79.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -450,6 +456,6 @@ tags:
 - OAI-PMH
 - Library
 - Research Computing
-- Open-Source
+- Open Source
 website: https://illinois.edu/
 ---

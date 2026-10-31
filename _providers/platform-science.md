@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -106,7 +106,7 @@ overview: 'Platform Science is profiled on the [APIs.io](https://apis.io/) netwo
 random_paper: 16
 score:
   band: emerging
-  composite: 17.4
+  composite: 18.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -120,11 +120,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
-  previous_composite: 17.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -139,7 +145,7 @@ security:
 - kind: vulnerability-disclosure
   name: Platform Science Vulnerability Disclosure
   slug: platform-science-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Platform Science Trust Center
   slug: platform-science-trust-center

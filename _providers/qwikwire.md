@@ -20,7 +20,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.9
-  scored_at: '2026-09-20'
+  score: 0.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Aqwire Connect (Access) API is a developer-facing payments API that lets merchants integrate their application with Aqwire to create cross-border payment transactions. The reference documentation '
@@ -40,6 +40,10 @@ apis:
   slug: aqwire-connect-api
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://aqwire.co/news/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/qwikwire/refs/heads/main/security/qwikwire-domain-security.yml
   title: ''
@@ -85,32 +89,32 @@ created: '2026-07-17'
 description: Qwikwire, now operating as Aqwire, is a Philippine-founded cross-border payments company backed by 500 Global that bridges international payers with Philippine recipients, with a primary focus on the real estate sector. The platform lets overseas home buyers and investors pay property developers in multiple currencies while handling collection, reconciliation, and delivery of Philippine pesos to local bank accounts. Aqwire for Enterprise provides a payment dashboard for creating payment links, tracking transactions in real time, running auto-debit enrollments, and receiving daily automated reports, plus the Aqwire Connect (Access) API so merchants can integrate payment transaction creation into their own applications. This profile was surfaced as a portfolio company of 500 Global and enriched by the API Evangelist pipeline.
 image: https://aqwire.io/assets/logo-brand.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Qwikwire
 nav: Providers
 network: true
-overview: 'Qwikwire publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Real-Estate, and Fintech.
+overview: 'Qwikwire is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Real Estate, and Fintech.
 
 
-  Qwikwire''s developer surface includes API reference, signup flow, support, and 7 more developer resources.'
+  Qwikwire''s developer surface includes engineering blog, API reference, signup flow, support, and 7 more developer resources.'
 random_paper: 3
 score:
-  band: minimal
-  composite: 10.4
+  band: emerging
+  composite: 11.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 68.5
+    developer_ergonomics: 7.1
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -119,15 +123,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 10.4
+  previous_composite: 10.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -144,7 +148,7 @@ tags:
 - Company
 - Payments
 - Cross-Border Payments
-- Real-Estate
+- Real Estate
 - Fintech
 - Philippines
 - Multi-Currency

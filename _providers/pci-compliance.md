@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.pcisecuritystandards.org/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/pci-compliance/refs/heads/main/security/pci-compliance-domain-security.yml
   title: ''
@@ -57,18 +61,18 @@ created: '2025'
 description: Payment Card Industry Data Security Standard (PCI DSS) is a set of security standards designed to ensure that all companies that accept, process, store or transmit credit card information maintain a secure environment. It plays a critical role in protecting organizational assets and maintaining a strong security posture. The PCI Security Standards Council does not currently publish a public REST API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pci-compliance.png
 layout: provider
-modified: '2026-04-28'
+modified: '2026-10-06'
 name: PCI Compliance
 nav: Providers
 network: true
 overview: 'PCI Compliance is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Compliance, Data Protection, Payment Processing, and Security.
 
 
-  PCI Compliance''s developer surface includes documentation, developer portal, and 2 more developer resources.'
+  PCI Compliance''s developer surface includes documentation, developer portal, and 3 more developer resources.'
 random_paper: 4
 score:
   band: minimal
-  composite: 4.4
+  composite: 5.6
   coverage:
     artifact_dirs: 4
     catalog_earned: 22.0
@@ -82,17 +86,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
-  previous_composite: 4.4
+  previous_composite: 5.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

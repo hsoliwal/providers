@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://api.apigit.com/v1
   baseurl_source: declared
   description: Manage API definitions and designs.
-  name: APIGit AP Is API
+  name: APIGit APIs API
   slug: apigit-apis-api
 artifact_total: 38
 collections:
@@ -83,6 +83,21 @@ collections:
   name: APIGit APIs Tests API
   slug: open-apigit-tests-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apigit/refs/heads/main/plans/apigit-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apigit-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apigit/refs/heads/main/rate-limits/apigit-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apigit-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apigit/refs/heads/main/finops/apigit-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apigit-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/apigit/refs/heads/main/agentic-access/apigit-agentic-access.yml
   title: ''
@@ -149,9 +164,13 @@ features:
 - description: Zero-configuration dynamic mock servers generated from API definitions.
   name: Dynamic Mock Server
 finops:
-- name: Apigit Finops
+- has_sources: false
+  method: generated
+  name: Apigit Finops
+  primary_unit: ''
   service_category: API
   slug: apigit-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apigit.png
 integrations:
 - description: Native OpenAPI specification support for API design and documentation.
@@ -182,13 +201,13 @@ modified: '2026-05-19'
 name: APIGit
 nav: Providers
 network: true
-overview: 'APIGit publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Mocks API, Repositories API, Tests API, and 1 more. Tagged areas include API Design, API Lifecycle, Developer Tools, Documentation, and Git.
+overview: 'APIGit is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Mocks API, Repositories API, Tests API, and 1 more. Tagged areas include API Design, API Lifecycle, Developer Tools, Documentation, and Git.
 
 
   The APIGit catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  APIGit''s developer surface includes authentication, documentation, pricing, engineering blog, YouTube channel, and 5 more developer resources.'
+  APIGit''s developer surface includes authentication, documentation, pricing, engineering blog, YouTube channel, and 8 more developer resources.'
 plans:
 - name: Apigit Plans Pricing
   plan_count: 3
@@ -199,9 +218,10 @@ rate_limits:
   name: Apigit Rate Limits
   slug: apigit-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: APIGit API Rules
+  name: APIGit — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -209,7 +229,8 @@ rules:
     info: 2
     warn: 3
   slug: apigit-jsonschema-spectral-rules
-- effective_rule_count: 56
+- authorship: generated
+  effective_rule_count: 56
   extends:
   - spectral:oas
   name: APIGit API Rules
@@ -222,23 +243,23 @@ rules:
   slug: apigit-spectral-rules
 score:
   band: emerging
-  composite: 26.1
+  composite: 24.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 68.5
+    artifact_dirs: 17
+    catalog_earned: 64.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.5
+    catalog_gap: 50.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 13.6
-    contract_quality: 24.3
+    contract_quality: 23.6
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 13.2
-  previous_composite: 26.1
+  previous_composite: 25.9
   provenance:
     agentic_access: derived
     contracts:
@@ -246,8 +267,14 @@ score:
       derived: 5
       marker_coverage: 100.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

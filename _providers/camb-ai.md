@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -106,6 +106,10 @@ collections:
   name: Camb.AI API
   slug: open-camb-ai
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.camb.ai/pricing
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/camb-ai/refs/heads/main/agentic-access/camb-ai-agentic-access.yml
   title: ''
@@ -159,36 +163,41 @@ common:
 created: '2026-07-11'
 description: Camb.AI is a generative voice AI platform for translation, dubbing, and speech. Its research models - MARS (text-to-speech and voice cloning) and BOLI (neural translation) - power an API covering text-to-speech, end-to-end video and audio dubbing, text translation across 140+ languages, voice discovery and custom voice cloning, and speech-to-text transcription. The REST API lives at https://client.camb.ai/apis, is authenticated with an x-api-key header, and follows an asynchronous create-and-poll pattern (POST to start a task, GET the task by id until it succeeds, then fetch the result). Camb.AI also exposes public WebSocket surfaces for real-time streaming TTS, live transcription, and realtime speech-to-speech translation.
 finops:
-- name: Camb Ai Finops
+- has_sources: true
+  method: generated
+  name: Camb Ai Finops
+  primary_unit: ''
   service_category: AI and Machine Learning
   slug: camb-ai-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/camb-ai.png
 layout: provider
 modified: '2026-07-11'
 name: Camb.AI
 nav: Providers
 network: true
-overview: 'Camb.AI publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Dubbing API, Languages API, Text-to-Speech API, and 3 more. Tagged areas include Artificial Intelligence, Text-to-Speech, Dubbing, Translation, and Transcription.
+overview: 'Camb.AI publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Dubbing API, Languages API, Text-to-Speech API, and 3 more. Tagged areas include Artificial Intelligence, Text-to-Speech, Dubbing, Translation, and Transcription.
 
 
   The Camb.AI catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Camb.AI''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Camb.AI''s developer surface includes pricing, authentication, documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Camb Ai Plans Pricing
-  plan_count: 6
+  plan_count: 7
   slug: camb-ai-plans-pricing
 random_paper: 12
 rate_limits:
-- limit_count: 6
+- limit_count: 0
   name: Camb Ai Rate Limits
   slug: camb-ai-rate-limits
 rules:
-- effective_rule_count: 37
+- authorship: generated
+  effective_rule_count: 37
   extends:
   - spectral:asyncapi
-  name: Camb.AI API Rules
+  name: Camb.AI — asyncapi rules
   rule_count: 10
   severity_counts:
     error: 1
@@ -197,24 +206,24 @@ rules:
     warn: 9
   slug: camb-ai-asyncapi-spectral-rules
 score:
-  band: developing
-  composite: 42.6
+  band: thin
+  composite: 36.2
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 67.8
-    catalog_earned_first_party: 0.0
-    catalog_gap: 47.3
+    artifact_dirs: 14
+    catalog_earned: 52.8
+    catalog_earned_first_party: 12.0
+    catalog_gap: 62.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 42.1
     contract_governance: 11.4
-    contract_quality: 63.8
+    contract_quality: 58.2
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 42.6
+    discoverability: 66.1
+    operational_transparency: 5.3
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     contracts:
@@ -222,8 +231,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 10.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -247,5 +262,6 @@ tags:
 - Transcription
 - Voice Cloning
 - Speech
+- Real-Time
 website: https://www.camb.ai
 ---

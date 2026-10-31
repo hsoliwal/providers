@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.apex.ai/blog-feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/apex-ai/refs/heads/main/security/apex-ai-domain-security.yml
   title: ''
@@ -62,20 +66,20 @@ description: Apex.AI is an embedded and autonomous software company whose taglin
   no public developer REST API at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apex-ai.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Apex.AI
 nav: Providers
 network: true
 overview: 'Apex.AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Embedded, Autonomous Vehicles, Robotics, and Middleware.
 
 
-  Apex.AI''s developer surface includes engineering blog and 4 more developer resources.'
+  Apex.AI''s developer surface includes engineering blog and 5 more developer resources.'
 random_paper: 17
 score:
   band: minimal
-  composite: 7.9
+  composite: 6.9
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -87,11 +91,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 7.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

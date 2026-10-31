@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 8.3
-  scored_at: '2026-09-20'
+  score: 6.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The REST API behind the Lifebit Platform (CloudOS): manage workspace projects, job queues, workflows/pipelines, Nextflow and Cromwell/WDL job submission and monitoring, interactive analysis sessions, '
@@ -42,6 +42,10 @@ apis:
   slug: cloudos-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://lifebit.ai/feed/
 - group: operate
   title: ''
   type: IssueTracker
@@ -205,20 +209,20 @@ description: 'Lifebit Biotech Ltd is a London-founded (2017) health-data infrast
   federated TRE, AI-automated OMOP CDM v5.4 harmonisation, federated learning, a trusted data lakehouse and a trusted data marketplace. Publicly disclosed deployments include Genomics England, the US NIH National Library of Medicine, CanPath, Singapore Synapxe, Boehringer Ingelheim, Flatiron Health and 23andMe.'
 image: https://lifebit.ai/wp-content/uploads/2025/04/favicon.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Lifebit Biotech
 nav: Providers
 network: true
-overview: 'Lifebit Biotech publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Genomics, Bioinformatics, and Federated Learning.
+overview: 'Lifebit Biotech is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Genomics, Bioinformatics, and Federated Learning.
 
 
-  Lifebit Biotech''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, YouTube channel, and 29 more developer resources.'
+  Lifebit Biotech''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, YouTube channel, and 30 more developer resources.'
 random_paper: 18
 score:
   band: thin
-  composite: 34.2
+  composite: 33.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -230,12 +234,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 34.2
+  previous_composite: 33.1
   provenance:
     conformance: first-party
     mcp: derived
@@ -244,9 +248,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

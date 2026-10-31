@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -416,20 +416,24 @@ description: LeanData is a Sunnyvale, California revenue orchestration platform 
   inputs, availability, and meeting CRUD for custom UIs), and the Graph API (one-time routing and routing-graph metadata for custom orchestration). The Matching and Round Robin APIs are Salesforce-native and dispatched through the managed package's Apex REST endpoint at /services/apexrest/LeanData/LeanDataAPI, authenticated with the customer's own Salesforce OAuth 2.0 Connected App; BookIt and Graph are hosted at api.leandata.com behind AWS API Gateway and authenticated with a server-side API key in an X-Api-Key header. Since the Q2 2026 release LeanData also runs a hosted BookIt MCP server at https://mcp.leandata.com/mcp — currently labelled beta — which exposes BookIt scheduling and operational data to MCP-compatible AI clients under OAuth 2.1 with PKCE and dynamic client registration, with admin, user and partner scopes and tool visibility filtered by the caller's BookIt permission set. Developer documentation is published as a public Postman collection at docs.leandata.com. Commercial
   offerings are tiered across Standard, Advanced, Premium, and Enterprise editions of Orchestration plus BookIt scheduling products and Buying Groups, with implementation services billed separately.
 finops:
-- name: Leandata Finops
+- has_sources: true
+  method: generated
+  name: Leandata Finops
+  primary_unit: license
   service_category: Sales and Marketing Software
   slug: leandata-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/leandata.png
 layout: provider
 mcp_servers:
 - description: LeanData ships a hosted, remote BookIt MCP server, announced in the Q2 2026 release. It exposes BookIt scheduling and operational data to any MCP client (Claude, ChatGPT, Agentforce, Cursor) and is au
   name: LeanData BookIt MCP (remote, https://mcp.leandata.com/mcp)
-  slug: leandata-bookit-mcp-remote-httpsmcpleandatacommcp
+  slug: leandata-bookit-mcp
 modified: '2026-08-13'
 name: LeanData
 nav: Providers
 network: true
-overview: 'LeanData publishes 9 APIs on the [APIs.io](https://apis.io/) network, including 🗓️ Availability API, Legacy (still supported) API, Matching API, and 6 more. Tagged areas include Revenue Operations, Lead Routing, Lead to Account Matching, Salesforce, and Sales Engagement.
+overview: 'LeanData publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including 🗓️ Availability API, Legacy (still supported) API, Matching API, and 6 more. Tagged areas include Revenue Operations, Lead Routing, Lead to Account Matching, Salesforce, and Sales Engagement.
 
 
   LeanData''s developer surface includes developer portal, documentation, changelog, pricing, training material, engineering blog, YouTube channel, and 57 more developer resources.'
@@ -449,9 +453,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: strong
-  composite: 58.6
+  composite: 61.7
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 63.0
     catalog_earned_first_party: 20.0
     catalog_gap: 52.0
@@ -461,23 +465,35 @@ score:
   facets:
     access_clarity: 100.0
     contract_governance: 4.5
-    contract_quality: 47.4
+    contract_quality: 42.3
     developer_ergonomics: 61.3
-    discoverability: 81.5
+    discoverability: 80.8
     operational_transparency: 50.0
-  previous_composite: 58.6
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 88.9
       derived: 0
       marker_coverage: 0.0
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

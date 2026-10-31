@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The only public HTTP endpoint Ploy documents. An authenticated inbound ingest endpoint that accepts any well-formed JSON object (up to 1 MB) from an external system — Clay, Stripe, Zapier, or a custom
@@ -220,7 +220,7 @@ modified: '2026-08-12'
 name: Ploy
 nav: Providers
 network: true
-overview: 'Ploy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Marketing Automation, Artificial Intelligence, and AI Agents.
+overview: 'Ploy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Marketing Automation, Artificial Intelligence, and AI Agents.
 
 
   The Ploy catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -238,7 +238,7 @@ rate_limits:
   slug: ploy-rate-limits
 score:
   band: strong
-  composite: 59.8
+  composite: 60.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 57.0
@@ -246,20 +246,26 @@ score:
     catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 73.7
-  previous_composite: 59.8
+  previous_composite: 60.8
   provenance:
     conformance: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

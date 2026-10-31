@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pharmacann/refs/heads/main/plans/pharmacann-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/pharmacann-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/pharmacann/refs/heads/main/rate-limits/pharmacann-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/pharmacann-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -113,7 +123,7 @@ network: true
 overview: 'PharmaCann is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cannabis, Retail, Agriculture, and Consumer Goods.
 
 
-  PharmaCann''s developer surface includes engineering blog, support, and 8 more developer resources.'
+  PharmaCann''s developer surface includes engineering blog, support, and 10 more developer resources.'
 plans:
 - name: Pharmacann Plans Pricing
   plan_count: 0
@@ -125,7 +135,7 @@ rate_limits:
   slug: pharmacann-rate-limits
 score:
   band: minimal
-  composite: 10.8
+  composite: 10.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -139,17 +149,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 10.8
+  previous_composite: 10.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

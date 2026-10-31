@@ -17,7 +17,7 @@ agent_readiness:
   dimensions:
     agent_card: conformant
     agent_skills: true
-    agentic_access: true
+    agentic_access: unknown
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
@@ -35,9 +35,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 55.6
-  scored_at: '2026-09-20'
-api_count: 3
+  score: 54.9
+  scored_at: '2026-10-17'
+api_count: 5
 apis:
 - baseURL: https://api.sylvia-api.com/v1
   baseurl_source: declared
@@ -281,20 +281,24 @@ common:
 created: '2026-08-04'
 description: 'Sylvia API is a third-party Reddit data API that serves Reddit content as JSON — posts, comments with full recursive threads, subreddit and user surfaces, global search, and a live comment stream. Thirty-six operations across twelve tags cover the read surface (posts, comments, subreddits, users, search, domains, discovery and live feeds) plus account self-service: API key issue and revoke, response-format templates, usage history and crypto billing. Authentication is an API key for data endpoints and a separate account token for account operations. It occupies the gap left by Pushshift, giving researchers and developers queryable Reddit history without going through OAuth on the first-party API.'
 finops:
-- name: Sylvia Api Finops
+- has_sources: true
+  method: searched
+  name: Sylvia Api Finops
+  primary_unit: ''
   service_category: ''
   slug: sylvia-api-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sylvia-api.png
 layout: provider
 mcp_servers:
 - description: ''
   name: Sylvia API MCP Server
-  slug: sylvia-api-mcp-server
+  slug: mcp
 modified: '2026-08-20'
 name: Sylvia API
 nav: Providers
 network: true
-overview: 'Sylvia API publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Live API, Subreddits API, Users API, and 13 more. Tagged areas include Reddit, Social, Data, Search, and Comments.
+overview: 'Sylvia API publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Live API, Subreddits API, Users API, and 13 more. Tagged areas include Reddit, Social, Data, Search, and Comments.
 
 
   Sylvia API''s developer surface includes authentication, documentation, API reference, pricing, changelog, engineering blog, SDKs, and 27 more developer resources.'
@@ -309,23 +313,23 @@ rate_limits:
   slug: sylvia-api-rate-limits
 score:
   band: developing
-  composite: 54.0
+  composite: 52.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 55.0
+    artifact_dirs: 20
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 60.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 68.4
-    contract_governance: 18.2
-    contract_quality: 57.5
-    developer_ergonomics: 59.5
-    discoverability: 81.5
+    access_clarity: 60.5
+    contract_governance: 16.4
+    contract_quality: 51.9
+    developer_ergonomics: 59.0
+    discoverability: 76.7
     operational_transparency: 34.2
-  previous_composite: 54.0
+  previous_composite: 53.8
   provenance:
     conformance: unknown
     contracts:
@@ -335,8 +339,14 @@ score:
       total: 16
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -357,5 +367,6 @@ tags:
 - Research
 - Content
 - Datasets
+- A2A
 website: https://sylvia-api.com/
 ---

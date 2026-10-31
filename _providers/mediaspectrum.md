@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mediaspectrum/refs/heads/main/plans/mediaspectrum-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/mediaspectrum-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/mediaspectrum/refs/heads/main/security/mediaspectrum-domain-security.yml
   title: ''
@@ -114,7 +119,7 @@ plans:
 random_paper: 9
 score:
   band: minimal
-  composite: 7.8
+  composite: 6.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -128,16 +133,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 7.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -157,6 +170,6 @@ tags:
 - Content Management
 - Media
 - Software-as-a-Service
-- Advertising Technology
+- AdTech
 website: https://mediaspectrum.net/
 ---

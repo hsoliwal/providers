@@ -1,6 +1,6 @@
 ---
 agent_readiness:
-  band: human-only
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: platform
+    mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.2
-  scored_at: '2026-09-20'
+  score: 8.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Lets external systems interact with Robylon and trigger workflows, including voice and outbound automation. Operations are not enumerated here: no OpenAPI or other machine-readable contract is served,'
@@ -31,6 +31,10 @@ apis:
   slug: robylon-platform-api
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.robylon.ai/blog
 - group: company
   title: ''
   type: Website
@@ -65,39 +69,45 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Robylon AI MCP Server
-  slug: robylon-ai-mcp-server
-modified: '2026-08-20'
+  slug: mcp
+modified: '2026-10-06'
 name: Robylon AI
 nav: Providers
 network: true
-overview: 'Robylon AI publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Customer-Support, AI Agents, Conversational AI, Voice, and WhatsApp.
+overview: 'Robylon AI is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Customer Service, AI Agents, Conversational AI, Voice, and WhatsApp.
 
 
-  Robylon AI''s developer surface includes documentation, API reference, getting-started guide, and 4 more developer resources.'
+  Robylon AI''s developer surface includes engineering blog, documentation, API reference, getting-started guide, and 4 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 14.3
+  composite: 11.2
   coverage:
-    artifact_dirs: 5
-    catalog_earned: 32.0
+    artifact_dirs: 6
+    catalog_earned: 27.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 83.0
+    catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 38.1
-    discoverability: 66.7
+    developer_ergonomics: 40.5
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 14.3
+  previous_composite: 11.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -106,7 +116,7 @@ score:
 screenshot: https://raw.githubusercontent.com/api-evangelist/robylon/refs/heads/main/screenshots/robylon-2026-09-02T154026.png
 slug: robylon
 tags:
-- Customer-Support
+- Customer Service
 - AI Agents
 - Conversational AI
 - Voice
@@ -115,6 +125,6 @@ tags:
 - Email
 - Ticketing
 - Contact Center
-- Workflow-Automation
+- Workflow Automation
 website: https://www.robylon.ai
 ---

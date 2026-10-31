@@ -27,19 +27,19 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.5
-  scored_at: '2026-09-20'
+  score: 18.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL_template: http://{{api url}}
   baseurl_source: spec_template
   description: The default API from Salad Transcription API — 2 operation(s) for default.
-  name: Salad Transcription API default API
+  name: Salad Transcription API Default API
   slug: salad-transcription-api-default-api
 artifact_total: 15
 collections:
@@ -50,6 +50,21 @@ collections:
   name: Salad Transcription default API
   slug: open-salad-transcription-api-default-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/salad-transcription-api/refs/heads/main/plans/salad-transcription-api-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/salad-transcription-api-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/salad-transcription-api/refs/heads/main/rate-limits/salad-transcription-api-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/salad-transcription-api-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/salad-transcription-api/refs/heads/main/finops/salad-transcription-api-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/salad-transcription-api-finops.yml
 - group: company
   title: ''
   type: Website
@@ -87,7 +102,7 @@ common:
 - group: company
   title: ''
   type: Blog
-  url: https://blog.salad.com/?_gl=1*wlg1yz*_gcl_au*NTI4MzE4NzY0LjE3MzU5MjAxNzc.
+  url: https://blog.salad.com/
 - group: auth
   title: ''
   type: Security
@@ -107,7 +122,7 @@ common:
 - group: auth
   title: ''
   type: Trust
-  url: https://trust.salad.com/?_gl=1*b0d9i*_gcl_au*NTI4MzE4NzY0LjE3MzU5MjAxNzc.
+  url: https://trust.salad.com/
 created: '2024-11-17'
 description: Salad Transcription API provides speech-to-text conversion powered by Salad's distributed GPU cloud network. Designed for high-volume audio and video transcription workloads with support for 97 languages, speaker diarization, and caption generation.
 examples:
@@ -118,9 +133,13 @@ examples:
   name: Salad Transcribe Example
   slug: salad-transcribe-example
 finops:
-- name: Salad Transcription Api Finops
+- has_sources: false
+  method: generated
+  name: Salad Transcription Api Finops
+  primary_unit: ''
   service_category: API
   slug: salad-transcription-api-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salad-transcription-api.png
 json_schemas:
 - name: Salad Transcription Job
@@ -140,13 +159,13 @@ modified: '2026-05-02'
 name: Salad Transcription API
 nav: Providers
 network: true
-overview: 'Salad Transcription API publishes 1 API on the [APIs.io](https://apis.io/) network: default API. Tagged areas include Audio Transcription, Captions, Diarization, GPU, and Speech Recognition.
+overview: 'Salad Transcription API publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Default API. Tagged areas include Audio Transcription, Captions, Diarization, GPU, and Speech Recognition.
 
 
   The Salad Transcription API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Salad Transcription API''s developer surface includes pricing, engineering blog, and 12 more developer resources.'
+  Salad Transcription API''s developer surface includes pricing, engineering blog, and 15 more developer resources.'
 plans:
 - name: Salad Transcription Api Plans Pricing
   plan_count: 3
@@ -157,9 +176,10 @@ rate_limits:
   name: Salad Transcription Api Rate Limits
   slug: salad-transcription-api-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Salad Transcription API API Rules
+  name: Salad Transcription API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -167,7 +187,8 @@ rules:
     info: 1
     warn: 4
   slug: salad-transcription-api-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
   name: Salad Transcription API API Rules
@@ -179,32 +200,38 @@ rules:
     warn: 2
   slug: salad-transcription-api-rules
 score:
-  band: developing
-  composite: 39.9
+  band: thin
+  composite: 38.2
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 67.5
+    artifact_dirs: 16
+    catalog_earned: 63.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.5
+    catalog_gap: 51.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 55.3
-    contract_governance: 28.8
-    contract_quality: 56.5
+    access_clarity: 47.4
+    contract_governance: 27.3
+    contract_quality: 51.6
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 58.9
     operational_transparency: 21.1
-  previous_composite: 39.9
+  previous_composite: 39.7
   provenance:
     contracts:
       callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

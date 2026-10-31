@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Reflexivity's institutional REST API. Documented by the company as "JSON REST based services" whose requests are authenticated with an OAuth 2.0 Bearer token obtained from the Reflexivity OAuth servic
@@ -44,6 +44,11 @@ apis:
   slug: reflexivity-api
 artifact_total: 6
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/reflexivity/refs/heads/main/rate-limits/reflexivity-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/reflexivity-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -148,10 +153,10 @@ modified: '2026-08-26'
 name: Reflexivity
 nav: Providers
 network: true
-overview: 'Reflexivity publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Investment Analysis, Market Data, and Artificial Intelligence.
+overview: 'Reflexivity is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Investment Analysis, Market Data, and Artificial Intelligence.
 
 
-  Reflexivity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, pricing, and 12 more developer resources.'
+  Reflexivity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, pricing, and 13 more developer resources.'
 plans:
 - name: Reflexivity Plans Pricing
   plan_count: 0
@@ -163,12 +168,12 @@ rate_limits:
   slug: reflexivity-rate-limits
 scopes:
 - name: Reflexivity Scopes
-  scope_count: 0
+  scope_count: 23
   slug: reflexivity-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 23 scopes
 score:
   band: thin
-  composite: 33.9
+  composite: 30.3
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -182,9 +187,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 33.9
+  previous_composite: 30.3
   provenance:
     conformance: first-party
     mcp: first-party
@@ -193,9 +198,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 76.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -214,11 +219,11 @@ security:
 slug: reflexivity
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Investment Analysis
 - Market Data
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Fintech
 - Research
 - Knowledge Graph

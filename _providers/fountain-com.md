@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.5
-  scored_at: '2026-09-20'
+  score: 34.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 26
   human_in_the_loop: 0
@@ -96,7 +96,7 @@ apis:
 - description: Post-hire REST API covering worker profiles (activation and deactivation), employment records, document submissions, I-9 verification processing, attendance, shift creation and assignment, demands, al
   name: Fountain Worker API
   slug: worker-api
-artifact_total: 29
+artifact_total: 30
 collections:
 - collection_type: open
   name: API Collection
@@ -132,6 +132,15 @@ collections:
   name: Fountain Developer API (Hire API v2)
   slug: open-fountain-com
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.fountain.com/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/capabilities/fountain-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/fountain-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/fountain-com/refs/heads/main/agentic-access/fountain-com-agentic-access.yml
   title: ''
@@ -182,19 +191,27 @@ common:
 created: '2026-07-01'
 description: Fountain is a high-volume, frontline hourly hiring and workforce management platform used by enterprises to source, screen, schedule, and hire large numbers of hourly workers. The Fountain Developer API (Hire API v2) lets customers programmatically manage applicants, openings, positions, stages, labels, documents, scheduling slots, and webhooks across their hiring funnels.
 finops:
-- name: Fountain Com Finops
+- has_sources: true
+  method: generated
+  name: Fountain Com Finops
+  primary_unit: ''
   service_category: Human Resources
   slug: fountain-com-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fountain-com.png
 layout: provider
-modified: '2026-07-01'
+mcp_servers:
+- description: Remote MCP server at api.fountain.com over HTTP.
+  name: Fountain MCP Server
+  slug: fountain-com
+modified: '2026-10-06'
 name: Fountain
 nav: Providers
 network: true
-overview: 'Fountain publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Applicants API, Documents API, Labels API, and 6 more. Tagged areas include Hiring, Recruiting, Applicant Tracking, Frontline Hiring, and Hourly Workforce.
+overview: 'Fountain publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Applicants API, Documents API, Labels API, and 8 more. Tagged areas include Hiring, Recruiting, Applicant Tracking, Frontline Hiring, and Hourly Workforce.
 
 
-  Fountain''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  Fountain''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Fountain Com Plans Pricing
   plan_count: 4
@@ -205,24 +222,24 @@ rate_limits:
   name: Fountain Com Rate Limits
   slug: fountain-com-rate-limits
 score:
-  band: developing
-  composite: 40.6
+  band: thin
+  composite: 30.2
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 54.8
-    developer_ergonomics: 23.8
-    discoverability: 75.9
-    operational_transparency: 35.5
-  previous_composite: 40.6
+    contract_quality: 49.7
+    developer_ergonomics: 26.2
+    discoverability: 75.0
+    operational_transparency: 11.8
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     contracts:
@@ -231,9 +248,15 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8

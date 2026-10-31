@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 68
   human_in_the_loop: 2
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 149
   slug: vijil-agentic-access
   summary_line: 149 operations · 68 acting · 2 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://console-api.vijil.ai
   baseurl_source: declared
@@ -69,7 +69,7 @@ apis:
   description: Authentication, users, and team management
   name: Vijil Teams API
   slug: vijil-teams-api
-artifact_total: 39
+artifact_total: 40
 collections:
 - collection_type: open
   name: API Collection
@@ -159,6 +159,20 @@ collections:
   name: Vijil Console API (Combined) agent-configurations webhooks API
   slug: open-vijil-webhooks-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.vijil.ai/pricing/
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/vijil/refs/heads/main/plans/vijil-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/vijil-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/vijil/refs/heads/main/capabilities/vijil-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/vijil-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -312,35 +326,39 @@ layout: provider
 mcp_servers:
 - description: 'Official MCP server for the Vijil AI trust platform. Distributed as the `vijil-mcp` PyPI package, it exposes the Vijil Console CLI surface as MCP tools (stdio transport) for Claude Code and other MCP '
   name: Vijil MCP Server
-  slug: vijil-mcp-server
+  slug: vijil
 modified: '2026-07-21'
 name: Vijil
 nav: Providers
 network: true
-overview: 'Vijil publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Agent Environment API, Diamond API, Dome API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Security, and AI Safety.
+overview: 'Vijil publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Environment API, Diamond API, Dome API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Agents, Agent Security, and AI Safety.
 
 
-  Vijil''s developer surface includes documentation, API reference, getting-started guide, quickstart, engineering blog, signup flow, support, and 25 more developer resources.'
+  Vijil''s developer surface includes pricing, documentation, API reference, getting-started guide, quickstart, engineering blog, signup flow, and 28 more developer resources.'
+plans:
+- name: Vijil Plans Pricing
+  plan_count: 3
+  slug: vijil-plans-pricing
 random_paper: 14
 score:
-  band: developing
-  composite: 47.8
+  band: strong
+  composite: 56.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 22
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 8.5
   facets:
-    access_clarity: 50.0
+    access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 48.8
+    contract_quality: 44.2
     developer_ergonomics: 68.5
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 13.2
-  previous_composite: 47.8
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -351,9 +369,15 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 27.8

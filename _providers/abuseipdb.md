@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -111,6 +111,11 @@ collections:
   name: AbuseIPDB APIv2 Blacklist Reputation API
   slug: open-abuseipdb-reputation-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/abuseipdb/refs/heads/main/capabilities/abuseipdb-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/abuseipdb-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/abuseipdb/refs/heads/main/agentic-access/abuseipdb-agentic-access.yml
   title: ''
@@ -309,9 +314,13 @@ features:
 - description: Responses include an `isWhitelisted` flag so consumers can avoid blocking known-good infrastructure.
   name: Whitelist Awareness
 finops:
-- name: Abuseipdb Finops
+- has_sources: true
+  method: generated
+  name: Abuseipdb Finops
+  primary_unit: ''
   service_category: Security & Identity
   slug: abuseipdb-finops
+  template: false
 image: https://www.abuseipdb.com/img/abuseipdb-logo.svg
 integrations:
 - description: Pre-packaged AbuseIPDB action ships with fail2ban; reports banned offenders directly to AbuseIPDB.
@@ -366,13 +375,13 @@ modified: '2026-05-30'
 name: AbuseIPDB
 nav: Providers
 network: true
-overview: 'AbuseIPDB publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Blacklist API, Management API, Reports API, and 1 more. Tagged areas include Anti Malware, Blacklist, Cybersecurity, IP Reputation, and Network Security.
+overview: 'AbuseIPDB publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Blacklist API, Management API, Reports API, and 1 more. Tagged areas include Anti Malware, Blacklist, Cybersecurity, IP Reputation, and Network Security.
 
 
   The AbuseIPDB catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  AbuseIPDB''s developer surface includes authentication, documentation, signup flow, pricing, engineering blog, FAQ, support, and 29 more developer resources.'
+  AbuseIPDB''s developer surface includes authentication, documentation, signup flow, pricing, engineering blog, FAQ, support, and 30 more developer resources.'
 plans:
 - name: Abuseipdb Plans Pricing
   plan_count: 4
@@ -383,9 +392,10 @@ rate_limits:
   name: Abuseipdb Rate Limits
   slug: abuseipdb-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: AbuseIPDB API Rules
+  name: AbuseIPDB — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -393,7 +403,8 @@ rules:
     info: 2
     warn: 3
   slug: abuseipdb-jsonschema-spectral-rules
-- effective_rule_count: 66
+- authorship: unmarked
+  effective_rule_count: 66
   extends:
   - spectral:oas
   name: AbuseIPDB API Rules
@@ -405,24 +416,24 @@ rules:
     warn: 14
   slug: abuseipdb-rules
 score:
-  band: strong
-  composite: 54.4
+  band: developing
+  composite: 43.2
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 91.5
+    artifact_dirs: 21
+    catalog_earned: 69.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 23.5
+    catalog_gap: 46.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 56.6
-    contract_governance: 28.8
-    contract_quality: 72.4
+    access_clarity: 25.0
+    contract_governance: 27.3
+    contract_quality: 66.0
     developer_ergonomics: 51.2
-    discoverability: 75.9
-    operational_transparency: 34.2
-  previous_composite: 54.4
+    discoverability: 73.2
+    operational_transparency: 10.5
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     contracts:
@@ -430,9 +441,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

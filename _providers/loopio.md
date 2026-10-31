@@ -39,7 +39,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 47.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.loopio.com/data/v2
@@ -123,6 +123,11 @@ asyncapis:
   name: Loopio Events Webhooks
   slug: loopio-events-webhooks
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/capabilities/loopio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/loopio-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/loopio/refs/heads/main/security/loopio-domain-security.yml
   title: ''
@@ -259,13 +264,13 @@ modified: '2026-08-25'
 name: Loopio
 nav: Providers
 network: true
-overview: 'Loopio publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Asynchronous API, CRM API, Custom Project Fields API, and 12 more. Tagged areas include Company, RFP, Proposals, Response Management, and Content Library.
+overview: 'Loopio publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Asynchronous API, CRM API, Custom Project Fields API, and 12 more. Tagged areas include Company, RFP, Proposals, Response Management, and Content Library.
 
 
   The Loopio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Loopio''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 21 more developer resources.'
+  Loopio''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 22 more developer resources.'
 plans:
 - name: Loopio Plans Pricing
   plan_count: 0
@@ -279,12 +284,12 @@ scopes:
 - name: Loopio Scopes
   scope_count: 52
   slug: loopio-scopes
-  summary_line: 52 scopes
+  summary_line: 52 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 33.9
+  composite: 30.2
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -294,16 +299,18 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 61.6
+    contract_quality: 56.6
     developer_ergonomics: 18.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.9
+  previous_composite: 30.2
   provenance:
     conformance: first-party
     contracts:
@@ -318,9 +325,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

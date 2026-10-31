@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.8
-  scored_at: '2026-09-20'
+  score: 1.9
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: The Promptfoo CLI is the primary entry point for running prompt and model evaluations from the command line or CI. It is installable via npm, Homebrew, pip, or npx and reads a YAML configuration to fa
@@ -56,6 +56,21 @@ apis:
   slug: promptfoo-code-scanning
 artifact_total: 33
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/promptfoo/refs/heads/main/plans/promptfoo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/promptfoo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/promptfoo/refs/heads/main/rate-limits/promptfoo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/promptfoo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/promptfoo/refs/heads/main/finops/promptfoo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/promptfoo-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -202,9 +217,13 @@ features:
 - description: Open source CLI and library run locally with no telemetry to Promptfoo required.
   name: Self-Hosting
 finops:
-- name: Promptfoo Finops
+- has_sources: false
+  method: generated
+  name: Promptfoo Finops
+  primary_unit: ''
   service_category: API
   slug: promptfoo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/promptfoo.png
 integrations:
 - description: Native provider for OpenAI Chat Completions, Assistants, and Responses APIs.
@@ -230,10 +249,10 @@ modified: '2026-08-08'
 name: Promptfoo
 nav: Providers
 network: true
-overview: 'Promptfoo publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LLM Evaluation, Red Teaming, AI Security, Guardrails, and Open-Source.
+overview: 'Promptfoo is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LLM Evaluation, Red Teaming, AI Security, Guardrails, and Open Source.
 
 
-  Promptfoo''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, developer portal, tooling, and 24 more developer resources.'
+  Promptfoo''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, developer portal, tooling, and 27 more developer resources.'
 plans:
 - name: Promptfoo Plans Pricing
   plan_count: 1
@@ -245,26 +264,35 @@ rate_limits:
   slug: promptfoo-rate-limits
 score:
   band: thin
-  composite: 36.9
+  composite: 36.3
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 54.0
+    artifact_dirs: 8
+    catalog_earned: 39.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.4
   facets:
-    access_clarity: 53.9
+    access_clarity: 30.3
     contract_governance: 0.0
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 52.4
-    discoverability: 64.8
-    operational_transparency: 57.9
-  previous_composite: 36.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    discoverability: 62.5
+    operational_transparency: 42.1
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 41.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -285,7 +313,7 @@ tags:
 - Red Teaming
 - AI Security
 - Guardrails
-- Open-Source
+- Open Source
 - CLI
 - Developer Tools
 use_cases:

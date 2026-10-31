@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -193,9 +193,9 @@ rate_limits:
   slug: sound-rate-limits
 score:
   band: emerging
-  composite: 14.4
+  composite: 13.5
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -207,22 +207,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 13.2
-  previous_composite: 14.4
+  previous_composite: 13.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/sound/refs/heads/main/screenshots/sound-2026-10-11T130115.png
 security:
 - kind: domain-security
   name: Sound Domain Security

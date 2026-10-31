@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/inductive/refs/heads/main/security/inductive-domain-security.yml
@@ -79,18 +79,22 @@ created: '2026-07-17'
 description: Inductive Bio is a New York-based AI drug discovery company building a virtual lab for small molecule optimization. It pairs medicinal chemists with AI to run millions of in silico ADMET experiments before synthesis. Its Beacon-1 models — trained on a pre-competitive, anonymized data consortium spanning thousands of drug programs — won consecutive first-place finishes in the 2025 Polaris/ASAP and 2026 OpenADMET blind ADMET prediction competitions, beating 370+ submissions including entries from Merck and NVIDIA. Products include the Compass software platform (accessible via API), the Indy AI chemistry assistant, the ADME-One high-throughput profiling service, and Embedded Experts. Founded in 2023 by Josh Haimson and Ben Birnbaum (both formerly Flatiron Health); SOC 2 compliant; backed by Obvious Ventures, a16z Bio+Health, Lux Capital, Bessemer Venture Partners, Character, and S32.
 image: https://cdn.prod.website-files.com/67fd80408c022fd8f406c6f7/6803dafa8e9822bfe4e9a943_OpenGraph.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.inductive.bio over HTTP.
+  name: Inductive MCP Server
+  slug: inductive
 modified: '2026-07-19'
 name: Inductive
 nav: Providers
 network: true
-overview: 'Inductive is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Drug Discovery, and Biotechnology.
+overview: 'Inductive is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Machine Learning, Drug Discovery, and Biotechnology.
 
 
   Inductive''s developer surface includes engineering blog and 8 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 11.8
+  composite: 11.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -98,20 +102,22 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 14.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.8
+  previous_composite: 11.6
   provenance:
     conformance: first-party
     mcp: first-party
@@ -120,9 +126,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 20.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -138,7 +144,7 @@ slug: inductive
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Drug Discovery
 - Biotechnology
 - Pharmaceuticals

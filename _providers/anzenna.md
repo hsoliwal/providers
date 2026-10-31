@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: documented
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 10.4
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -124,6 +124,10 @@ created: '2026-07-17'
 description: Anzenna is an AI-powered insider risk and SOC platform that gives security teams unified visibility across identity, endpoint, SaaS, and cloud without deploying agents. Founded by former Yahoo and LinkedIn security leaders and based in Redwood City, CA, Anzenna correlates signals from 130+ integrations (Okta, CrowdStrike, Microsoft 365, Google Workspace, Snowflake, Jamf, and more) and uses agentic AI investigation agents to turn insider-risk alerts into fully reasoned case files. The platform covers shadow-AI discovery and control, data loss prevention with behavior- first analytics, identity threat detection, and user activity monitoring, and is SOC 2 Type 2 and Microsoft 365 certified.
 image: https://www.anzenna.ai/wp-content/themes/anzenna-theme-v3_15_2/assets/og-homepage.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.anzenna.ai over HTTP.
+  name: Anzenna MCP Server
+  slug: anzenna
 modified: '2026-07-17'
 name: Anzenna
 nav: Providers
@@ -135,9 +139,9 @@ overview: 'Anzenna is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 21
 score:
   band: thin
-  composite: 27.8
+  composite: 30.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -149,19 +153,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 27.8
+  previous_composite: 30.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -191,6 +201,6 @@ tags:
 - Data Loss Prevention
 - Shadow AI
 - Identity
-- Agentic AI
+- AI Agents
 website: https://anzenna.ai
 ---

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
@@ -86,16 +86,16 @@ modified: '2026-07-19'
 name: Fintor
 nav: Providers
 network: true
-overview: 'Fintor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mortgage, Lending, Financial-Services, and Artificial Intelligence.
+overview: 'Fintor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mortgage, Lending, Financial Services, and Artificial Intelligence.
 
 
   Fintor''s developer surface includes support, engineering blog, and 8 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 13.8
+  composite: 13.9
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -107,16 +107,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 13.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/fintor/refs/heads/main/screenshots/fintor-2026-10-11T185037.png
 security:
 - kind: domain-security
   name: Fintor Domain Security
@@ -131,7 +138,7 @@ tags:
 - Company
 - Mortgage
 - Lending
-- Financial-Services
+- Financial Services
 - Artificial Intelligence
 - AI Agents
 - Automation

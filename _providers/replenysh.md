@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -78,6 +78,10 @@ created: '2026-07-17'
 description: Replenysh is an enterprise circularity platform that runs circular supply chains for brands and recovery facilities. It routes, recovers, verifies, and optimizes material recovery flows across a network of 5,000+ partners, giving enterprises a single control layer for reverse logistics with audit-ready chain-of-custody, pricing, settlement, and compliance documentation. Customers include PepsiCo, Disney, Marriott, and Live Nation. Backed by Kindred Ventures and M13. Surfaced as a portfolio-lead stub and enriched via the API Evangelist pipeline.
 image: https://replenysh.com/og.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.replenysh.com over HTTP.
+  name: Replenysh MCP Server
+  slug: replenysh
 modified: '2026-07-20'
 name: Replenysh
 nav: Providers
@@ -89,9 +93,9 @@ overview: 'Replenysh is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 18
 score:
   band: emerging
-  composite: 12.6
+  composite: 12.4
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -103,13 +107,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 12.6
+  previous_composite: 12.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

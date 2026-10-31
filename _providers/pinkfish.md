@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: documented
     openapi_examples: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.8
-  scored_at: '2026-09-20'
+  score: 41.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -55,7 +55,7 @@ apis:
   description: Execute published workflows via API and webhook triggers
   name: Pinkfish Triggers API
   slug: pinkfish-triggers-api
-artifact_total: 9
+artifact_total: 10
 collections:
 - collection_type: open
   name: API Collection
@@ -67,6 +67,11 @@ collections:
   name: AI Workflow Runs Triggers API
   slug: open-pinkfish-triggers-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pinkfish/refs/heads/main/plans/pinkfish-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/pinkfish-plans-pricing.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -188,37 +193,41 @@ description: Pinkfish is an enterprise agentic AI and business orchestration pla
 image: https://www.pinkfish.ai/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Pinkfish publishes an official embedded MCP server, "Pinkfish Sidekick" (workflow building), that exposes the platform's workflow create/update/run/ publish/trigger surface as MCP tools. Beyond Sideki
   name: Pinkfish MCP Server
-  slug: pinkfish-mcp-server
+  slug: pinkfish-mcp-yml
 modified: '2026-07-20'
 name: Pinkfish
 nav: Providers
 network: true
-overview: 'Pinkfish publishes 2 APIs on the [APIs.io](https://apis.io/) network: Runs API and Triggers API. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic Workflows, and Automation.
+overview: 'Pinkfish publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Runs API and Triggers API. Tagged areas include Company, Artificial Intelligence, AI Agents, Agentic Workflows, and Automation.
 
 
-  Pinkfish''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, changelog, authentication, and 19 more developer resources.'
+  Pinkfish''s developer surface includes documentation, API reference, engineering blog, pricing, signup flow, changelog, authentication, and 20 more developer resources.'
+plans:
+- name: Pinkfish Plans Pricing
+  plan_count: 4
+  slug: pinkfish-plans-pricing
 random_paper: 2
 score:
-  band: emerging
-  composite: 23.6
+  band: thin
+  composite: 28.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 20
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 0.0
+    access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 27.5
+    contract_quality: 24.8
     developer_ergonomics: 39.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 23.6
+  previous_composite: 22.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -229,9 +238,15 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

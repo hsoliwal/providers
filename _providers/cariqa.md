@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 1
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 22
   slug: cariqa-agentic-access
   summary_line: 22 operations · 9 acting · 1 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://connect.cariqa.com
   baseurl_source: declared
@@ -243,19 +243,19 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server for the Cariqa Connect API. Gives AI coding agents native access to the entire Connect API knowledge base — documentation, code examples, API reference, and guides. Agents c
   name: Cariqa MCP Server
-  slug: cariqa-mcp-server
+  slug: cariqa-connect
 modified: '2026-07-18'
 name: Cariqa
 nav: Providers
 network: true
-overview: 'Cariqa publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Billing Details API, Charging Sessions API, Debts API, and 4 more. Tagged areas include Company, EV Charging, Electric Vehicles, Payments, and Mobility.
+overview: 'Cariqa publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing Details API, Charging Sessions API, Debts API, and 4 more. Tagged areas include Company, EV Charging, Electric Vehicles, Payments, and Mobility.
 
 
   Cariqa''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, quickstart, and 21 more developer resources.'
 random_paper: 9
 score:
   band: developing
-  composite: 47.5
+  composite: 44.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 57.3
+    contract_quality: 51.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 47.5
+  previous_composite: 44.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -291,9 +291,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

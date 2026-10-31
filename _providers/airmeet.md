@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.3
-  scored_at: '2026-09-20'
+  score: 18.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api-gateway.airmeet.com/prod
@@ -113,6 +113,10 @@ collections:
   name: Airmeet Public Authentication Webhooks API
   slug: open-airmeet-webhooks-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.airmeet.com/hub/feed/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -255,23 +259,23 @@ created: '2026-07-17'
 description: 'Airmeet is a virtual, hybrid and in-person events platform used to run webinars, conferences, summits, meetups, workshops and trade shows with interactive stages, networking lounges, booths, polls, Q&A and engagement analytics. Its Public API lets developers create and manage events (Airmeets), sessions, speakers, booths and event series; manage registrations (add, block and unblock attendees with custom fields); pull engagement and attendance data including polls, questions, UTMs, recordings and replay attendance; and subscribe to 24+ webhook event triggers. Authentication is a two-step flow: exchange an access key and secret key for a 30-day access token, then send it as the X-Airmeet-Access-Token header. The API is served from regional gateways (default Mumbai, EU and US). Airmeet is backed by Accel, Prosus Ventures and Redpoint Ventures.'
 image: https://www.airmeet.com/hub/wp-content/uploads/2023/03/Airmeet-Featured-Image.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Airmeet
 nav: Providers
 network: true
-overview: 'Airmeet publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Event Details API, Manage Event API, and 3 more. Tagged areas include Company, Cloud Saas, Event, Virtual Events, and Webinars.
+overview: 'Airmeet publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Event Details API, Manage Event API, and 3 more. Tagged areas include Company, Cloud Saas, Event, Virtual Events, and Webinars.
 
 
   The Airmeet catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Airmeet''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 24 more developer resources.'
+  Airmeet''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, support, engineering blog, and 25 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 49.0
+  composite: 50.3
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -281,11 +285,11 @@ score:
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 63.4
+    contract_quality: 57.9
     developer_ergonomics: 50.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 49.0
+  previous_composite: 50.3
   provenance:
     conformance: first-party
     contracts:
@@ -295,8 +299,18 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

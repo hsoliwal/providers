@@ -29,31 +29,31 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 6
+- acting_count: 5
   human_in_the_loop: 0
   name: Netdata Agentic Access
   operation_count: 7
   slug: netdata-agentic-access
-  summary_line: 7 operations · 6 acting
+  summary_line: 7 operations · 5 acting
 api_count: 1
 apis:
 - baseURL: http://localhost:19999
   baseurl_source: declared
   description: Everything related to alerts
-  name: Netdata alerts API
+  name: Netdata Alerts API
   slug: netdata-alerts-api
 - baseURL: http://localhost:19999
   baseurl_source: declared
   description: Everything related to chart instances - DO NOT USE IN NEW CODE - use contexts instead
-  name: Netdata charts API
+  name: Netdata Charts API
   slug: netdata-charts-api
 artifact_total: 59
 collections:
@@ -181,6 +181,11 @@ collections:
   name: Netdata agent weights API
   slug: open-netdata-weights-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/netdata/refs/heads/main/capabilities/netdata-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/netdata-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -282,9 +287,13 @@ examples:
   name: Netdata Node Info Example
   slug: netdata-node-info-example
 finops:
-- name: Netdata Finops
+- has_sources: true
+  method: generated
+  name: Netdata Finops
+  primary_unit: ''
   service_category: Monitoring and Observability
   slug: netdata-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/netdata.png
 json_schemas:
 - name: Netdata Alert
@@ -306,13 +315,13 @@ modified: '2026-06-12'
 name: Netdata
 nav: Providers
 network: true
-overview: 'Netdata publishes 2 APIs on the [APIs.io](https://apis.io/) network: alerts API and charts API. Tagged areas include Monitoring, Observability, Infrastructure, Metrics, and Alerts.
+overview: 'Netdata publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Alerts API and Charts API. Tagged areas include Monitoring, Observability, Infrastructure, Metrics, and Alerts.
 
 
   The Netdata catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Netdata''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, and 14 more developer resources.'
+  Netdata''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, and 15 more developer resources.'
 plans:
 - name: Netdata Plans Pricing
   plan_count: 3
@@ -323,9 +332,10 @@ rate_limits:
   name: Netdata Rate Limits
   slug: netdata-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Netdata API Rules
+  name: Netdata — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -334,24 +344,24 @@ rules:
     warn: 4
   slug: netdata-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 46.4
+  band: thin
+  composite: 37.2
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 74.3
+    artifact_dirs: 19
+    catalog_earned: 55.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.8
+    catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 66.0
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 60.4
     developer_ergonomics: 25.0
-    discoverability: 59.3
-    operational_transparency: 39.5
-  previous_composite: 46.4
+    discoverability: 57.1
+    operational_transparency: 23.7
+  previous_composite: 44.6
   provenance:
     agentic_access: derived
     contracts:
@@ -359,9 +369,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 20
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

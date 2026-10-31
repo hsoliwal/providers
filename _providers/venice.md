@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/venice/refs/heads/main/security/venice-trust-center.yml
@@ -83,6 +83,10 @@ created: '2026-07-17'
 description: Venice is an enterprise privileged access management (PAM) platform built for the AI era, delivering zero standing access across human, machine, and AI-driven identities. Founded by Rotem Lurie (CEO) and Or Vaknin (CTO) and operating out of Tel Aviv and New York, Venice discovers and controls privileged access across the enterprise and removes standing privileges entirely, so that only the right identities reach critical systems and only for the moments they should. The company emerged from stealth in February 2026 with $33M in funding led by IVP with participation from Index Ventures. As an early-stage security vendor it publishes a marketing site, blog, and a public trust center, but does not yet expose a public developer API surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/venice.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.venice.io over HTTP.
+  name: Venice MCP Server
+  slug: venice
 modified: '2026-07-21'
 name: Venice
 nav: Providers
@@ -94,7 +98,7 @@ overview: 'Venice is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 18
 score:
   band: emerging
-  composite: 15.5
+  composite: 16.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -102,19 +106,25 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.5
+  previous_composite: 16.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -137,8 +147,7 @@ tags:
 - Privileged Access Management
 - Identity Security
 - Zero Trust
-- Access Management
+- Identity and Access Management
 - Cybersecurity
-- PAM
 website: https://www.venice.io/
 ---

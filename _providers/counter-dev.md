@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 1
@@ -81,6 +81,11 @@ collections:
   name: Counter API
   slug: open-counter-dev
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/counter-dev/refs/heads/main/capabilities/counter-dev-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/counter-dev-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/counter-dev/refs/heads/main/agentic-access/counter-dev-agentic-access.yml
   title: ''
@@ -218,22 +223,26 @@ common:
 created: '2026-06-21'
 description: Counter (counter.dev) is an open-source, privacy-friendly web analytics service. A lightweight tracking snippet POSTs a single aggregated hit per visit to a public collect endpoint (t.counter.dev), and a token-authenticated dashboard data feed returns aggregated stats. Counter uses no cookies, no logging, and no IP fingerprinting. It is AGPL-3.0 licensed and can be self-hosted; the hosted service is pay-what-you-want.
 finops:
-- name: Counter Dev Finops
+- has_sources: true
+  method: generated
+  name: Counter Dev Finops
+  primary_unit: ''
   service_category: Analytics
   slug: counter-dev-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/counter-dev.png
 layout: provider
 modified: '2026-08-13'
 name: Counter
 nav: Providers
 network: true
-overview: 'Counter publishes 3 APIs on the [APIs.io](https://apis.io/) network: Account API, Stats API, and Tracking API. Tagged areas include Web Analytics, Privacy, Open-Source, Tracking, and Self-Hosted.
+overview: 'Counter publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Account API, Stats API, and Tracking API. Tagged areas include Web Analytics, Privacy, Open Source, Tracking, and Self-Hosted.
 
 
   The Counter catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Counter''s developer surface includes authentication, documentation, engineering blog, sandbox, CLI, getting-started guide, support, and 22 more developer resources.'
+  Counter''s developer surface includes authentication, documentation, engineering blog, sandbox, CLI, getting-started guide, support, and 23 more developer resources.'
 plans:
 - name: Counter Dev Plans Pricing
   plan_count: 2
@@ -245,23 +254,23 @@ rate_limits:
   slug: counter-dev-rate-limits
 score:
   band: developing
-  composite: 48.8
+  composite: 46.6
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 60.0
+    artifact_dirs: 27
+    catalog_earned: 57.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 52.6
+    access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 56.8
+    contract_quality: 51.9
     developer_ergonomics: 64.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 34.2
-  previous_composite: 48.8
+  previous_composite: 48.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -272,8 +281,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -292,7 +307,7 @@ slug: counter-dev
 tags:
 - Web Analytics
 - Privacy
-- Open-Source
+- Open Source
 - Tracking
 - Self-Hosted
 website: https://counter.dev/

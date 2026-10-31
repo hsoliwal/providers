@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -75,6 +75,19 @@ collections:
   name: Chainabuse Public Reports Sanctions Screening API
   slug: open-trm-labs-sanctions-screening-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.trmlabs.com/resources/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.trmlabs.com/resources/blog/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trm-labs/refs/heads/main/capabilities/trm-labs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trm-labs-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/trm-labs/refs/heads/main/overlays/trm-labs-chainabuse-overlay.yaml
   title: ''
@@ -202,14 +215,14 @@ created: '2026-07-17'
 description: TRM Labs is a blockchain intelligence company that helps financial institutions, crypto businesses, and government agencies detect and investigate crypto-related fraud, money laundering, and sanctions violations. Its public API surface includes the TRM Sanctions API for screening blockchain addresses against sanctions lists, and the Chainabuse Public API (community-sourced scam reporting) for contributing, retrieving, and looking up reports of malicious addresses, tokens, transactions, and domains. Both APIs use HTTP Basic authentication and are documented at docs.trmlabs.com.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trm-labs.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: TRM Labs
 nav: Providers
 network: true
-overview: 'TRM Labs publishes 3 APIs on the [APIs.io](https://apis.io/) network: Reports API, Sanctions API, and Sanctions Screening API. Tagged areas include Company, Crypto, Blockchain, Compliance, and Sanctions.
+overview: 'TRM Labs publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Reports API, Sanctions API, and Sanctions Screening API. Tagged areas include Company, Cryptocurrency, Blockchain, Compliance, and Sanctions.
 
 
-  TRM Labs'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 20 more developer resources.'
+  TRM Labs'' developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, signup flow, and 23 more developer resources.'
 random_paper: 10
 rate_limits:
 - limit_count: 3
@@ -217,23 +230,23 @@ rate_limits:
   slug: trm-labs-rate-limits
 score:
   band: developing
-  composite: 47.3
+  composite: 48.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 39.5
     contract_governance: 4.5
-    contract_quality: 57.1
+    contract_quality: 51.4
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 60.5
-  previous_composite: 47.3
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -244,8 +257,18 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -263,7 +286,7 @@ security:
 - kind: vulnerability-disclosure
   name: Trm Labs Vulnerability Disclosure
   slug: trm-labs-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Trm Labs Trust Center
   slug: trm-labs-trust-center
@@ -271,12 +294,12 @@ security:
 slug: trm-labs
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Blockchain
 - Compliance
 - Sanctions
-- Fraud
-- Anti-Money Laundering
+- Fraud Prevention
+- AML
 - Blockchain Intelligence
 website: https://www.trmlabs.com/
 ---

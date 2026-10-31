@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Prime Roots Shopify storefront''s agent-facing commerce surface: a UCP merchant profile, a hosted MCP endpoint for catalog/cart/checkout, and read-only storefront JSON endpoints.'
@@ -40,6 +40,14 @@ apis:
   slug: prime-roots-storefront-agentic-commerce
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.primeroots.com/en-us/blogs/learn
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.primeroots.com/en-us/blogs/learn.atom
 - group: company
   title: ''
   type: Website
@@ -83,24 +91,24 @@ layout: provider
 mcp_servers:
 - description: 'Prime Roots operates a hosted, remote MCP endpoint as part of its Shopify storefront implementation of the Universal Commerce Protocol (UCP, https://ucp.dev). Agents POST JSON-RPC to the endpoint and '
   name: Prime Roots MCP Server
-  slug: prime-roots-mcp-server
-modified: '2026-07-20'
+  slug: prime-roots-ucp
+modified: '2026-10-06'
 name: Prime Roots
 nav: Providers
 network: true
-overview: 'Prime Roots publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Food Tech, Plant-Based, Deli Meat, and Food Service.
+overview: 'Prime Roots is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Food Tech, Plant-Based, Deli Meat, and Food Service.
 
 
-  Prime Roots'' developer surface includes engineering blog and 7 more developer resources.'
+  Prime Roots'' developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 12.3
+  composite: 12.0
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 37.0
+    artifact_dirs: 8
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -109,13 +117,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 75.9
+    discoverability: 66.7
     operational_transparency: 0.0
-  previous_composite: 12.3
+  previous_composite: 12.0
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

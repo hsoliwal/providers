@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 6
   slug: collectors-agentic-access
   summary_line: 6 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.psacard.com/publicapi
   baseurl_source: declared
@@ -58,6 +58,10 @@ collections:
   name: PSA Public PSA Public API Methods API
   slug: open-collectors-psa-public-api-methods-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.collectors.com/feed/
 - group: company
   title: ''
   type: Website
@@ -154,18 +158,18 @@ created: '2026-07-17'
 description: Collectors (Collectors Holdings, Inc.) is the parent company behind PSA, PCGS, Beckett, SGC, Card Ladder, and Collectors vault and financial services — the infrastructure powering trust, authentication, grading, vaulting, and marketplace services for trading cards, coins, currency, and memorabilia. Its PSA brand publishes a public developer API for certificate verification, grading order and submission tracking, and population reports, secured with Bearer access tokens.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/collectors.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Collectors
 nav: Providers
 network: true
-overview: 'Collectors publishes 1 API on the [APIs.io](https://apis.io/) network: PSA Public API Methods API. Tagged areas include Company, Marketplace, Collectibles, Authentication, and Grading.
+overview: 'Collectors publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: PSA Public API Methods API. Tagged areas include Company, Marketplace, Collectibles, Authentication, and Grading.
 
 
-  Collectors'' developer surface includes documentation, API reference, signup flow, engineering blog, authentication, and 15 more developer resources.'
+  Collectors'' developer surface includes documentation, API reference, signup flow, engineering blog, authentication, and 16 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 35.1
+  composite: 33.2
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -177,11 +181,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 42.9
+    contract_quality: 38.6
     developer_ergonomics: 42.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 35.1
+  previous_composite: 33.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -197,9 +201,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -21,24 +21,24 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 31.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Full REST API for managing accounts, subscriptions, plans, add-ons, coupons, invoices, line items, transactions, shipping, tax, and webhooks across a Recurly site. Authentication is HTTP Basic with a '
   name: Recurly v3 API
   slug: v3-api
-artifact_total: 3
+artifact_total: 4
 common:
 - group: commercial
   title: ''
@@ -114,20 +114,24 @@ created: '2026-05-11'
 description: Recurly is a subscription management and recurring billing platform that handles signups, plans, add-ons, coupons, dunning, invoicing, tax, revenue recognition, and analytics for subscription businesses. The Recurly v3 REST API gives developers full access to accounts, subscriptions, invoices, transactions, plans, and webhooks, with a versioned `Accept` header for API revisions. Authentication uses HTTP Basic with a site-scoped API key.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/recurly.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.recurly.com over HTTP.
+  name: Recurly MCP Server
+  slug: recurly
 modified: '2026-05-30'
 name: Recurly
 nav: Providers
 network: true
-overview: 'Recurly publishes 1 API on the [APIs.io](https://apis.io/) network: v3 API. Tagged areas include Subscription, Billing, Payments, Recurring Revenue, and Invoicing.
+overview: 'Recurly is listed with 1 API on the [APIs.io](https://apis.io/) network: v3 API. Tagged areas include Subscription, Billing, Payments, Recurring Revenue, and Invoicing.
 
 
   Recurly''s developer surface includes documentation, API reference, pricing, signup flow, support, engineering blog, and 11 more developer resources.'
 random_paper: 4
 score:
   band: thin
-  composite: 37.0
+  composite: 35.7
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -137,11 +141,11 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 0.0
-    contract_quality: 26.0
+    contract_quality: 23.4
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 37.0
+  previous_composite: 35.7
   provenance:
     mcp: first-party
   regulatory:
@@ -149,9 +153,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

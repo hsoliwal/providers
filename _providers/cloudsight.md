@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -59,6 +59,10 @@ collections:
   name: CloudSight Images API
   slug: open-cloudsight-images-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://cloudsight.ai/blog/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/cloudsight/refs/heads/main/overlays/cloudsight-images-overlay.yaml
   title: ''
@@ -176,34 +180,34 @@ created: '2026-08-09'
 description: CloudSight Inc. is a computer-vision company that sells general-purpose image understanding as a single, simple REST API. A client POSTs an image — as a multipart upload, a base64 data URI, or a remote image URL — and receives a token; polling that token returns a natural-language caption describing what is in the picture, together with skip reasons (blurry, dark, bright, offensive, unsure) and content flags (adult) when the image cannot be described. The company grew out of the CamFind visual-search app, also ships an on-device SDK, and lists a whole-scene recognition model on Google Cloud Marketplace. The public API contract is published as an API Blueprint on Apiary and is backed by first-party client libraries for Ruby, Python, Go, Elixir and Objective-C.
 image: https://cloudsight.ai/static/img/favicons/apple-touch-icon.png
 layout: provider
-modified: '2026-08-09'
+modified: '2026-10-06'
 name: CloudSight
 nav: Providers
 network: true
-overview: 'CloudSight publishes 1 API on the [APIs.io](https://apis.io/) network: Images API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Computer-Vision, and Image Recognition.
+overview: 'CloudSight publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Images API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Computer Vision, and Image Recognition.
 
 
-  CloudSight''s developer surface includes documentation, support, authentication, code examples, changelog, sandbox, and 18 more developer resources.'
+  CloudSight''s developer surface includes engineering blog, documentation, support, authentication, code examples, changelog, sandbox, and 18 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 31.9
+  composite: 30.8
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 59.9
-    developer_ergonomics: 32.7
-    discoverability: 68.5
+    contract_quality: 54.1
+    developer_ergonomics: 35.1
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 31.9
+  previous_composite: 30.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -214,8 +218,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -234,8 +244,8 @@ slug: cloudsight
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
-- Computer-Vision
+- Machine Learning
+- Computer Vision
 - Image Recognition
 - Image Captioning
 - Classification

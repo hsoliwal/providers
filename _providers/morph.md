@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Ethereum-compatible JSON-RPC 2.0 API (eth_*, net_*, web3_*) plus Morph-specific methods such as morph_getBlockByNumber that return additional L2 fields. No API key required; chain id 2818.
@@ -143,14 +143,14 @@ modified: '2026-07-20'
 name: Morph
 nav: Providers
 network: true
-overview: 'Morph publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, Blockchain, Layer 2, and Ethereum.
+overview: 'Morph is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Blockchain, Layer 2, and Ethereum.
 
 
   Morph''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, changelog, CLI, and 12 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 28.4
+  composite: 28.3
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -164,14 +164,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 81.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 28.4
+  previous_composite: 28.3
   provenance:
     conformance: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -190,7 +196,7 @@ security:
 slug: morph
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Blockchain
 - Layer 2
 - Ethereum

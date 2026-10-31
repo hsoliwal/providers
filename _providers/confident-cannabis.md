@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.0
-  scored_at: '2026-09-20'
+  score: 23.8
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - baseURL: https://api.confidentcannabis.com
@@ -248,14 +248,14 @@ modified: '2026-07-18'
 name: Confident Cannabis
 nav: Providers
 network: true
-overview: 'Confident Cannabis publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Client Info API, Clients API, Lab Info API, and 7 more. Tagged areas include Company, Cannabis, Laboratory, LIMS, and Testing.
+overview: 'Confident Cannabis publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Client Info API, Clients API, Lab Info API, and 7 more. Tagged areas include Company, Cannabis, Laboratory, LIMS, and Testing.
 
 
   Confident Cannabis'' developer surface includes documentation, API reference, authentication, engineering blog, support, pricing, signup flow, and 19 more developer resources.'
 random_paper: 4
 score:
   band: developing
-  composite: 43.6
+  composite: 40.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -267,11 +267,11 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 59.3
+    contract_quality: 53.9
     developer_ergonomics: 33.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 43.6
+  previous_composite: 40.8
   provenance:
     conformance: first-party
     contracts:
@@ -286,9 +286,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -9,7 +9,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -31,11 +31,15 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.8
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://gimmemetal.com/pages/blog
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/gimme-media/refs/heads/main/security/gimme-media-domain-security.yml
   title: ''
@@ -49,17 +53,20 @@ created: '2026-07-17'
 description: Gimme Media is the Techstars-backed music company behind Gimme Radio, the heavy-metal streaming and live-DJ radio platform that later expanded into Gimme Metal and Gimme Country. The standalone streaming apps were wound down, and the brand now operates as a Shopify-hosted storefront at gimmemetal.com selling vinyl, merchandise, and exclusive releases to the metal community. As of this enrichment pass Gimme Media publishes no first-party public developer API, SDKs, OpenAPI definition, or developer documentation; the only machine-readable surfaces served at its domain are the Shopify Customer Accounts platform OIDC endpoints, which belong to the hosting platform rather than to a Gimme Media API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gimme-media.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Gimme Media
 nav: Providers
 network: true
-overview: Gimme Media is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Music, Streaming, Media, and Radio.
+overview: 'Gimme Media is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Music, Streaming, Media, and Radio.
+
+
+  Gimme Media''s developer surface includes engineering blog and 2 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 5.0
+  composite: 0.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,11 +78,18 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 0.0
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  lifecycle: defunct
+  previous_composite: 0.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

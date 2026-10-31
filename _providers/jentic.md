@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -30,20 +30,20 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.8
-  scored_at: '2026-09-20'
+  score: 40.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 4
+- acting_count: 3
   human_in_the_loop: 0
   name: Jentic Agentic Access
   operation_count: 4
   slug: jentic-agentic-access
-  summary_line: 4 operations · 4 acting
+  summary_line: 4 operations · 3 acting
 api_count: 1
 apis:
 - description: The Jentic Remote MCP Server is the hosted Model Context Protocol endpoint that exposes the Jentic catalog to MCP-capable clients (Claude Desktop, ChatGPT, Cursor, Windsurf, VS Code). It speaks the sa
@@ -76,7 +76,7 @@ apis:
   description: Semantic search over the Jentic API and workflow catalog using natural language queries.
   name: Jentic Search API
   slug: jentic-search-api
-artifact_total: 37
+artifact_total: 38
 collections:
 - collection_type: postman
   name: Jentic Authentication API
@@ -103,6 +103,21 @@ collections:
   name: Jentic API
   slug: open-jentic
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/plans/jentic-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/jentic-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/rate-limits/jentic-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/jentic-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/jentic/refs/heads/main/finops/jentic-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/jentic-finops.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -254,9 +269,13 @@ examples:
   name: Jentic Workflow Execute Example
   slug: jentic-workflow-execute-example
 finops:
-- name: Jentic Finops
+- has_sources: false
+  method: generated
+  name: Jentic Finops
+  primary_unit: ''
   service_category: AI Agent Platform
   slug: jentic-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jentic.png
 json_schemas:
 - name: Jentic Agent
@@ -278,17 +297,21 @@ jsonld:
   property_count: 6
   slug: jentic-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.jentic.com over HTTP; 4 tools listed.
+  name: Jentic MCP Server
+  slug: jentic
 modified: '2026-05-19'
 name: Jentic
 nav: Providers
 network: true
-overview: 'Jentic publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Execution API, and Search API. Tagged areas include AI Agents, Arazzo, OpenAPI, MCP, and Workflows.
+overview: 'Jentic publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Execution API, Search API, and 5 more. Tagged areas include AI Agents, Arazzo, OpenAPI, MCP, and Workflows.
 
 
   The Jentic catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Jentic''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, developer console, YouTube channel, and 24 more developer resources.'
+  Jentic''s developer surface includes authentication, engineering blog, documentation, pricing, signup flow, developer console, YouTube channel, and 27 more developer resources.'
 plans:
 - name: Jentic Plans Pricing
   plan_count: 2
@@ -299,9 +322,10 @@ rate_limits:
   name: Jentic Rate Limits
   slug: jentic-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Jentic API Rules
+  name: Jentic — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -309,7 +333,8 @@ rules:
     info: 1
     warn: 5
   slug: jentic-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: unmarked
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Jentic API Rules
@@ -321,24 +346,24 @@ rules:
     warn: 5
   slug: jentic-rules
 score:
-  band: strong
-  composite: 54.3
+  band: developing
+  composite: 52.4
   coverage:
     artifact_dirs: 21
-    catalog_earned: 64.5
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 57.9
-    contract_governance: 28.8
-    contract_quality: 73.5
-    developer_ergonomics: 63.1
-    discoverability: 59.3
+    access_clarity: 50.0
+    contract_governance: 27.3
+    contract_quality: 66.7
+    developer_ergonomics: 62.4
+    discoverability: 61.7
     operational_transparency: 23.7
-  previous_composite: 54.3
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     contracts:
@@ -347,8 +372,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

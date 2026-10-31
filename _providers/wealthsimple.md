@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://engineering.wealthsimple.com/feed
 - group: company
   title: ''
   type: Website
@@ -127,20 +131,20 @@ created: '2026-07-17'
 description: 'Wealthsimple is a Toronto-based Canadian financial technology company, founded in 2014, offering a full suite of consumer financial products: managed investing (Invest), self-directed stock and ETF trading (Trade), cryptocurrency, tax filing (Tax), spending, saving, and cash and card products. It serves more than four million Canadians with roughly CAD $125 billion in assets under administration and reached a CAD $10 billion valuation in its 2025 Series F round. Wealthsimple does not publish an official public developer API or OpenAPI specification; programmatic account access is available only through open-banking aggregators (SnapTrade, Plaid) and community-built unofficial libraries. This profile captures the company''s public trust, security, and developer-adjacent surface (security.txt, HackerOne bug bounty, Trust Center, status page, verified GitHub organization).'
 image: https://www.wealthsimple.com/
 layout: provider
-modified: '2026-07-23'
+modified: '2026-10-06'
 name: Wealthsimple
 nav: Providers
 network: true
 overview: 'Wealthsimple is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Investing, Wealth Management, and Cryptocurrency.
 
 
-  Wealthsimple''s developer surface includes pricing, signup flow, support, engineering blog, and 16 more developer resources.'
+  Wealthsimple''s developer surface includes pricing, signup flow, support, engineering blog, and 17 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 20.5
+  composite: 20.1
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -152,7 +156,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -161,15 +165,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.5
+  previous_composite: 20.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

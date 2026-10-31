@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -69,7 +69,7 @@ apis:
   description: Patch session variables.
   name: Voiceflow Variables API
   slug: voiceflow-variables-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -153,16 +153,24 @@ common:
 created: '2026-05-08'
 description: Voiceflow is a conversational AI design and orchestration platform for building chat and voice agents with no-code flows, knowledge bases, and tool integrations. The Voiceflow Conversations API (formerly Dialog Manager API) enables programmatic interaction with Voiceflow agents — running turns, managing session state, and modifying conversation variables. Authentication via API key.
 finops:
-- name: Voiceflow Finops
+- has_sources: true
+  method: generated
+  name: Voiceflow Finops
+  primary_unit: ''
   service_category: AI
   slug: voiceflow-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/voiceflow.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.voiceflow.com over HTTP.
+  name: Voiceflow MCP Server
+  slug: voiceflow
 modified: '2026-05-08'
 name: Voiceflow
 nav: Providers
 network: true
-overview: 'Voiceflow publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Interact API, Session API, State API, and 1 more. Tagged areas include Artificial Intelligence, Conversational, Chat, Voice, and Agent Builder.
+overview: 'Voiceflow publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Interact API, Session API, State API, and 2 more. Tagged areas include Artificial Intelligence, Conversational AI, Chat, Voice, and Agent Builder.
 
 
   Voiceflow''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
@@ -177,23 +185,23 @@ rate_limits:
   slug: voiceflow-rate-limits
 score:
   band: thin
-  composite: 35.2
+  composite: 32.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 45.0
+    artifact_dirs: 15
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 52.0
+    contract_quality: 46.8
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 35.2
+  previous_composite: 34.6
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +210,14 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 20.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -221,7 +235,7 @@ security:
 - kind: vulnerability-disclosure
   name: Voiceflow Vulnerability Disclosure
   slug: voiceflow-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Voiceflow Trust Center
   slug: voiceflow-trust-center
@@ -229,7 +243,7 @@ security:
 slug: voiceflow
 tags:
 - Artificial Intelligence
-- Conversational
+- Conversational AI
 - Chat
 - Voice
 - Agent Builder

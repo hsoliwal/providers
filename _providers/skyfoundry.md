@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: SkySpark is a native Project Haystack server. External applications integrate through the Haystack HTTP REST API, exposing operations such as about, read, hisRead, hisWrite, pointWrite, watchSub, watc
@@ -95,16 +95,16 @@ modified: '2026-07-21'
 name: SkyFoundry
 nav: Providers
 network: true
-overview: 'SkyFoundry publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Building Analytics, IoT, Energy Management, and Fault Detection.
+overview: 'SkyFoundry is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Building Analytics, IoT, Energy Management, and Fault Detection.
 
 
   SkyFoundry''s developer surface includes documentation, API reference, engineering blog, authentication, and 6 more developer resources.'
 random_paper: 18
 score:
   band: emerging
-  composite: 14.9
+  composite: 14.3
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -116,22 +116,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.9
+  previous_composite: 14.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 21.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -28,21 +28,21 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 48
+- acting_count: 32
   human_in_the_loop: 1
   name: Newscatcher Agentic Access
-  operation_count: 79
+  operation_count: 76
   slug: newscatcher-agentic-access
-  summary_line: 79 operations · 48 acting · 1 human-in-the-loop
-api_count: 3
+  summary_line: 76 operations · 32 acting · 1 human-in-the-loop
+api_count: 4
 apis:
 - baseURL: https://v3-api.newscatcherapi.com/api
   baseurl_source: declared
@@ -178,6 +178,11 @@ collections:
   name: Local News AggregationCount Webhooks API
   slug: open-newscatcher-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/newscatcher/refs/heads/main/capabilities/newscatcher-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/newscatcher-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/newscatcher/refs/heads/main/agentic-access/newscatcher-agentic-access.yml
   title: ''
@@ -273,9 +278,13 @@ examples:
   name: Newscatcher Search Response Example
   slug: newscatcher-search-response-example
 finops:
-- name: Newscatcher Finops
+- has_sources: false
+  method: generated
+  name: Newscatcher Finops
+  primary_unit: ''
   service_category: ''
   slug: newscatcher-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/newscatcher.png
 json_schemas:
 - name: Newscatcher Article
@@ -294,13 +303,13 @@ modified: '2026-06-12'
 name: Newscatcher
 nav: Providers
 network: true
-overview: 'Newscatcher publishes 16 APIs on the [APIs.io](https://apis.io/) network, including AggregationCount API, Authors API, BreakingNews API, and 13 more. Tagged areas include News, Search, NLP, Sentiment Analysis, and Entity Extraction.
+overview: 'Newscatcher publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including AggregationCount API, Authors API, BreakingNews API, and 13 more. Tagged areas include News, Search, Natural Language Processing, Sentiment Analysis, and Entity Extraction.
 
 
   The Newscatcher catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Newscatcher''s developer surface includes authentication, documentation, engineering blog, pricing, and 14 more developer resources.'
+  Newscatcher''s developer surface includes authentication, documentation, engineering blog, pricing, and 15 more developer resources.'
 plans:
 - name: Newscatcher Plans Pricing
   plan_count: 7
@@ -311,9 +320,10 @@ rate_limits:
   name: Newscatcher Rate Limits
   slug: newscatcher-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Newscatcher API Rules
+  name: Newscatcher — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -322,24 +332,24 @@ rules:
     warn: 4
   slug: newscatcher-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.8
+  band: thin
+  composite: 37.5
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 86.3
+    artifact_dirs: 18
+    catalog_earned: 64.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    catalog_gap: 50.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 70.1
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 64.0
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 52.6
-  previous_composite: 48.8
+    discoverability: 71.4
+    operational_transparency: 28.9
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     contracts:
@@ -347,9 +357,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 16
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -367,7 +383,7 @@ slug: newscatcher
 tags:
 - News
 - Search
-- NLP
+- Natural Language Processing
 - Sentiment Analysis
 - Entity Extraction
 - Clustering

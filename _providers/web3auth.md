@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Threshold-key Auth Network nodes that issue and recover key shares anchored to OAuth/social/passkey identity providers. Accessed primarily through the Web3Auth client SDK rather than as a developer-fa
@@ -42,7 +42,7 @@ apis:
 - description: Backend REST endpoints used by the Web3Auth dashboard to manage projects, verifiers, custom auth, and analytics. Available to project administrators.
   name: Web3Auth Dashboard / Verifier API
   slug: dashboard-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/web3auth/refs/heads/main/security/web3auth-trust-center.yml
@@ -92,16 +92,24 @@ common:
 created: '2026-05-08'
 description: Web3Auth (now MetaMask Embedded Wallets) is a non-custodial threshold-key wallet and authentication platform. It provides client SDKs (Web, React, Vue, iOS, Android, Flutter, React Native, Unity, Unreal, Node.js) and a backend Auth Network for OAuth-anchored MPC key shares. Public HTTP surface is limited and SDK-first.
 finops:
-- name: Web3Auth Finops
+- has_sources: true
+  method: generated
+  name: Web3Auth Finops
+  primary_unit: ''
   service_category: Web3
   slug: web3auth-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/web3auth.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.web3auth.io over HTTP; 5 tools listed.
+  name: Web3Auth MCP Server
+  slug: web3auth
 modified: '2026-05-08'
 name: Web3Auth
 nav: Providers
 network: true
-overview: 'Web3Auth publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Web3, Wallets, Authentication, MPC, and Embedded Wallets.
+overview: 'Web3Auth is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Web3, Wallets, Authentication, MPC, and Embedded Wallets.
 
 
   Web3Auth''s developer surface includes engineering blog and 9 more developer resources.'
@@ -116,23 +124,23 @@ rate_limits:
   slug: web3auth-rate-limits
 score:
   band: emerging
-  composite: 13.4
+  composite: 12.6
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 45.0
+    artifact_dirs: 10
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 70.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 7.9
-  previous_composite: 13.4
+  previous_composite: 14.2
   provenance:
     mcp: first-party
   regulatory:
@@ -140,9 +148,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 17.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

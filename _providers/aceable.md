@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -133,16 +133,16 @@ modified: '2026-08-02'
 name: Aceable
 nav: Providers
 network: true
-overview: 'Aceable is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, Online Learning, and Continuing Education.
+overview: 'Aceable is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, EdTech, E-Learning, and Continuing Education.
 
 
   Aceable''s developer surface includes engineering blog, support, and 18 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 16.3
+  composite: 15.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -154,9 +154,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 16.3
+  previous_composite: 15.0
   provenance:
     conformance: first-party
   regulatory:
@@ -164,9 +164,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -183,12 +183,12 @@ tags:
 - Company
 - Education
 - EdTech
-- Online Learning
+- E-Learning
 - Continuing Education
 - Licensing
 - Certification
 - Drivers Education
-- Real-Estate
+- Real Estate
 - Insurance
 - Mortgage
 - Compliance Training

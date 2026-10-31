@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: East West Bancorp's API surface is delivered by its banking subsidiary, East West Bank, through the Bridge Open Banking developer program for Global Transaction Services clients. Documented capabiliti
@@ -183,16 +183,20 @@ created: '2026-04-19'
 description: 'East West Bancorp, Inc. (NASDAQ: EWBC) is the Pasadena, California bank holding company for East West Bank, a California state-chartered commercial bank and Member FDIC institution (NMLSR ID 469761) that specializes in cross-border U.S.-Greater China commercial banking and Global Transaction Services. The holding company publishes no API of its own; the group''s entire developer surface is East West Bank''s first-party "Bridge Open Banking" program at apiportal.eastwestbank.com, which documents APIs to open and manage master and sub accounts (with ACH transaction permissions and Excess, Deficit or TwoWay sweeps), retrieve balances, transactions and statements, transfer funds, and receive incoming and outgoing wire push notifications. Authorization is OAuth 2.0 client_credentials against an Okta token endpoint with a Bearer token, account-opening and funds-transfer requests are made idempotent by a client-generated GUID requestId, and a client certificate is required for sandbox
   and production connectivity. Portal sign-up is free and self-serve, but the API list, product library and every callable environment sit behind sign-in and Global Transaction Services sales onboarding, so no OpenAPI, Swagger or AsyncAPI document is publicly downloadable.'
 finops:
-- name: East West Bancorp Finops
+- has_sources: true
+  method: generated
+  name: East West Bancorp Finops
+  primary_unit: ''
   service_category: Banking
   slug: east-west-bancorp-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/east-west-bancorp.png
 layout: provider
 modified: '2026-09-14'
 name: East West Bancorp
 nav: Providers
 network: true
-overview: 'East West Bancorp publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial-Services, Commercial Banking, Treasury Management, and Open Banking.
+overview: 'East West Bancorp is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Banking, Financial Services, Commercial Banking, Treasury Management, and Open Banking.
 
 
   The East West Bancorp catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -210,21 +214,21 @@ rate_limits:
   slug: east-west-bancorp-rate-limits
 score:
   band: developing
-  composite: 46.1
+  composite: 43.0
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 40.0
+    artifact_dirs: 18
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 42.1
+    access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -233,7 +237,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 46.1
+  previous_composite: 44.5
   provenance:
     conformance: first-party
   regulatory:
@@ -241,9 +245,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -262,7 +266,7 @@ security:
 slug: east-west-bancorp
 tags:
 - Banking
-- Financial-Services
+- Financial Services
 - Commercial Banking
 - Treasury Management
 - Open Banking

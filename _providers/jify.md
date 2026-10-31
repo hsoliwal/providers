@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.jify.co/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/jify/refs/heads/main/security/jify-domain-security.yml
   title: ''
@@ -74,20 +78,20 @@ created: '2026-07-17'
 description: 'Jify is an India-based financial wellness platform (part of the Moneyview group) that partners with employers to give employees earned wage access: its On-Demand Salary lets workers draw already-earned pay before payday. Beyond earned wage access it offers salary advances, a rewards and discount marketplace, micro-savings, digital gold investing, credit-score tracking, smart tax tools, and a money manager for budgeting and expense tracking, delivered through Android and iOS apps. Jify is a consumer / B2B2C fintech app and does not currently publish a public developer API; this profile tracks its identity, domain-security posture, and published compliance claims (ISO 27001, CISA-certified, independently tested by Appknox).'
 image: https://www.jify.co/wp-content/uploads/2025/01/Colour-Logo-MV.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Jify
 nav: Providers
 network: true
 overview: 'Jify is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Fintech, Earned Wage Access, and Financial Wellness.
 
 
-  Jify''s developer surface includes support and 7 more developer resources.'
+  Jify''s developer surface includes support and 8 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 14.7
+  composite: 14.0
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -99,7 +103,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -108,7 +112,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 14.7
+  previous_composite: 14.0
   provenance:
     conformance: first-party
   regulatory:
@@ -116,9 +120,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

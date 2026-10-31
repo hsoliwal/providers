@@ -28,20 +28,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 26.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Moodys Corporation Agentic Access
-  operation_count: 24
+  operation_count: 23
   slug: moodys-corporation-agentic-access
-  summary_line: 24 operations · 8 acting
+  summary_line: 23 operations · 7 acting
 api_count: 2
 apis:
 - description: Programmatic access to the Scenario Studio macroeconomic scenario platform, enabling automatic retrieval of custom scenarios generated against the Moody's Analytics Global Macroeconomic Model. Support
@@ -152,6 +152,21 @@ collections:
   name: Moody's Data Buffet API
   slug: open-moodys-data-buffet-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/moodys-corporation/refs/heads/main/plans/moodys-corporation-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/moodys-corporation-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/moodys-corporation/refs/heads/main/rate-limits/moodys-corporation-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/moodys-corporation-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/moodys-corporation/refs/heads/main/finops/moodys-corporation-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/moodys-corporation-finops.yml
 - group: company
   title: ''
   type: Website
@@ -230,9 +245,13 @@ examples:
   name: Moodys Corporation Token Example
   slug: moodys-corporation-token-example
 finops:
-- name: Moodys Corporation Finops
+- has_sources: false
+  method: generated
+  name: Moodys Corporation Finops
+  primary_unit: ''
   service_category: ''
   slug: moodys-corporation-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/moodys-corporation.png
 json_schemas:
 - name: Moody's RMS Catastrophe Event
@@ -264,16 +283,16 @@ jsonld:
   slug: moodys-corporation-context
 layout: provider
 modified: '2026-07-25'
-name: Moody's Corporation
+name: Moody's
 nav: Providers
 network: true
-overview: 'Moody''s Corporation publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Baskets API, Catalog API, and 6 more. Tagged areas include Analytics, Catastrophe Risk, Climate Risk, Compliance, and Credit Ratings.
+overview: 'Moody''s publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Corporation Authentication API, Corporation Baskets API, Corporation Catalog API, and 14 more. Tagged areas include Analytics, Catastrophe Risk, Climate Risk, Compliance, and Credit Ratings.
 
 
-  The Moody''s Corporation catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Moody''s catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Moody''s Corporation''s developer surface includes authentication, developer portal, engineering blog, and 11 more developer resources.'
+  Moody''s'' developer surface includes authentication, developer portal, engineering blog, and 14 more developer resources.'
 plans:
 - name: Moodys Corporation Plans Pricing
   plan_count: 2
@@ -284,10 +303,11 @@ rate_limits:
   name: Moodys Corporation Rate Limits
   slug: moodys-corporation-rate-limits
 rules:
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
-  name: Moody's Corporation API Rules
+  name: Moody's — moodys analytics developer rules
   rule_count: 6
   severity_counts:
     error: 2
@@ -295,9 +315,10 @@ rules:
     info: 0
     warn: 4
   slug: moodys-analytics-developer-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Moody's Corporation API Rules
+  name: Moody's — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -312,23 +333,23 @@ scopes:
   summary_line: 2 scopes · clientCredentials
 score:
   band: developing
-  composite: 48.2
+  composite: 39.8
   coverage:
     artifact_dirs: 18
-    catalog_earned: 74.0
+    catalog_earned: 51.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 41.0
+    catalog_gap: 63.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.5
   facets:
-    access_clarity: 50.0
-    contract_governance: 54.5
-    contract_quality: 62.8
+    access_clarity: 26.3
+    contract_governance: 13.6
+    contract_quality: 57.2
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 48.2
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     contracts:
@@ -336,9 +357,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -363,7 +390,7 @@ tags:
 - ESG
 - Financial Data
 - KYC
-- Risk
+- Risk Management
 - Fortune 1000
 website: https://www.moodys.com/
 ---

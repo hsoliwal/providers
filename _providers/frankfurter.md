@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-09-20'
+  score: 33.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -51,17 +51,17 @@ apis:
 - baseURL: https://api.frankfurter.dev/v2
   baseurl_source: declared
   description: Latest foreign exchange rates
-  name: Frankfurter current-rates API
+  name: Frankfurter Current Rates API
   slug: frankfurter-current-rates-api
 - baseURL: https://api.frankfurter.dev/v2
   baseurl_source: declared
   description: Historical exchange rates for specific dates and periods
-  name: Frankfurter historical-rates API
+  name: Frankfurter Historical Rates API
   slug: frankfurter-historical-rates-api
 - baseURL: https://api.frankfurter.dev/v2
   baseurl_source: declared
   description: API reference data like available currencies
-  name: Frankfurter metadata API
+  name: Frankfurter Metadata API
   slug: frankfurter-metadata-api
 - baseURL: https://api.frankfurter.dev/v2
   baseurl_source: declared
@@ -73,7 +73,7 @@ apis:
   description: Blended currency exchange rates
   name: Frankfurter Rates API
   slug: frankfurter-rates-api
-artifact_total: 87
+artifact_total: 88
 collections:
 - collection_type: open
   name: API Collection
@@ -351,11 +351,15 @@ jsonld:
   property_count: 22
   slug: frankfurter-v2-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.frankfurter.dev over HTTP; 4 tools listed.
+  name: Frankfurter MCP Server
+  slug: frankfurter
 modified: '2026-05-29'
 name: Frankfurter
 nav: Providers
 network: true
-overview: 'Frankfurter publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Currencies API, current-rates API, historical-rates API, and 3 more. Tagged areas include Currency Exchange, Foreign Exchange, FX, Open-Source, and MIT.
+overview: 'Frankfurter publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Currencies API, Current Rates API, Historical Rates API, and 3 more. Tagged areas include Foreign Exchange, Open Source, MIT, Self-Hosted, and Public APIs.
 
 
   The Frankfurter catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -372,9 +376,10 @@ rate_limits:
   name: Frankfurter Rate Limits
   slug: frankfurter-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Frankfurter API Rules
+  name: Frankfurter — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -382,7 +387,8 @@ rules:
     info: 1
     warn: 4
   slug: frankfurter-jsonschema-spectral-rules
-- effective_rule_count: 81
+- authorship: generated
+  effective_rule_count: 81
   extends:
   - spectral:oas
   name: Frankfurter API Rules
@@ -394,24 +400,24 @@ rules:
     warn: 20
   slug: frankfurter-spectral-rules
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 32.7
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 80.5
+    artifact_dirs: 17
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 34.5
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.5
   facets:
-    access_clarity: 21.1
-    contract_governance: 28.8
-    contract_quality: 68.5
+    access_clarity: 5.3
+    contract_governance: 27.3
+    contract_quality: 62.4
     developer_ergonomics: 14.3
-    discoverability: 75.9
-    operational_transparency: 39.5
-  previous_composite: 40.4
+    discoverability: 75.0
+    operational_transparency: 23.7
+  previous_composite: 37.2
   provenance:
     agentic_access: derived
     contracts:
@@ -420,8 +426,14 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -442,13 +454,12 @@ solutions:
 - description: Drop the Frankfurter MCP server into any Claude / agent stack for natural-language FX access.
   name: MCP Tooling
 tags:
-- Currency Exchange
 - Foreign Exchange
-- FX
-- Open-Source
+- Open Source
 - MIT
 - Self-Hosted
 - Public APIs
+- Exchange Rates
 use_cases:
 - description: Embed blended FX rates into invoicing, payouts, and conversion.
   name: Treasury and Payments Pricing

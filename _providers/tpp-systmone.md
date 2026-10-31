@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: TPP's local client-integration interface allowing an approved third-party application to interact with a running SystmOne client. Communication is performed with XML documents (validated against publi
@@ -57,6 +57,10 @@ apis:
   slug: gp-connect
 artifact_total: 8
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://tpp-uk.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tpp-systmone/refs/heads/main/security/tpp-systmone-domain-security.yml
   title: ''
@@ -128,18 +132,18 @@ description: TPP (The Phoenix Partnership) is a UK healthcare software company f
   Client Integration API (XML over a TCP socket), a Patient Facing Services (PFS) API, a Generic HTML API, and a Telephony API - and a formal Integration Request process. Home market is the United Kingdom, exclusively within the NHS.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-24'
+modified: '2026-10-06'
 name: TPP (SystmOne)
 nav: Providers
 network: true
-overview: 'TPP (SystmOne) publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, United Kingdom, EHR, EMR, and FHIR.
+overview: 'TPP (SystmOne) is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Healthcare, United Kingdom, Electronic Health Records, FHIR, and HL7.
 
 
-  TPP (SystmOne)''s developer surface includes documentation, getting-started guide, engineering blog, support, authentication, and 10 more developer resources.'
+  TPP (SystmOne)''s developer surface includes documentation, getting-started guide, engineering blog, support, authentication, and 11 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 24.5
+  composite: 23.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 35.0
@@ -153,7 +157,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 51.2
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -163,7 +167,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 24.5
+  previous_composite: 23.3
   provenance:
     conformance: first-party
   regulatory:
@@ -171,9 +175,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 34.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -193,8 +197,7 @@ slug: tpp-systmone
 tags:
 - Healthcare
 - United Kingdom
-- EHR
-- EMR
+- Electronic Health Records
 - FHIR
 - HL7
 - Interoperability

@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,23 +32,17 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.0
-  scored_at: '2026-09-20'
+  score: 23.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
-- baseURL: https://www.switchfly.com
-  baseurl_source: declared
-  description: Describes authentication required (`client_credentials` OAuth 2) and refund requests performed by Switchfly application to 3rd party service to cancel redemption components.
+- description: Describes authentication required (`client_credentials` OAuth 2) and refund requests performed by Switchfly application to 3rd party service to cancel redemption components.
   name: Switchfly Machine to Machine (OAuth2 & Refund) API
   slug: switchfly-machine-to-machine-oauth2-refund-api
-- baseURL: https://www.switchfly.com
-  baseurl_source: declared
-  description: Switchfly OAuth 2 SSO request to 3rd party
+- description: Switchfly OAuth 2 SSO request to 3rd party
   name: Switchfly OAuth 2 - SSO Authorize API
   slug: switchfly-oauth-2-sso-authorize-api
-- baseURL: https://www.switchfly.com
-  baseurl_source: declared
-  description: Information about requests performed by Switchfly system to 3rd party service to fetch Loyalty profile data and redeem points from the customer account.
+- description: Information about requests performed by Switchfly system to 3rd party service to fetch Loyalty profile data and redeem points from the customer account.
   name: Switchfly Shopping Flow API
   slug: switchfly-shopping-flow-api
 artifact_total: 9
@@ -66,6 +60,10 @@ collections:
   name: Switchfly Loyalty Machine to Machine (OAuth2 & Refund) Machine to Machine (OAuth2 & Refund) Shopping Flow API
   slug: open-switchfly-shopping-flow-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.switchfly.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -167,39 +165,41 @@ created: '2026-07-17'
 description: Switchfly is a B2B travel loyalty and commerce technology company that powers white-label travel booking, dynamic packaging, and points-plus-cash redemption for airlines, financial services loyalty programs, and HR/employee-rewards platforms. Its platform connects flights, hotels, cars, and activities to loyalty currencies with real-time pricing, business rules, markups, and 24/7 traveler support, giving partners access to more than 400,000 travel options. Switchfly exposes a REST Loyalty API (v3.4, OpenAPI 3.1) for OAuth2 SSO authentication, traveler-profile retrieval, points redemption, and refunds, plus a family of embeddable travel-search and identity UI widgets with a JavaScript SDK. Headquartered in Denver, Colorado, Switchfly has operated in travel technology for more than twenty years.
 image: https://www.switchfly.com/
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Switchfly
 nav: Providers
 network: true
-overview: 'Switchfly publishes 3 APIs on the [APIs.io](https://apis.io/) network: Machine to Machine (OAuth2 & Refund) API, OAuth 2 - SSO Authorize API, and Shopping Flow API. Tagged areas include Company, Travel, Loyalty, Travel Technology, and Rewards.
+overview: 'Switchfly publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Machine to Machine (OAuth2 & Refund) API, OAuth 2 - SSO Authorize API, and Shopping Flow API. Tagged areas include Company, Travel, Loyalty, Travel Technology, and Rewards.
 
 
-  Switchfly''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 15 more developer resources.'
+  Switchfly''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 16 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 35.4
+  composite: 33.8
   coverage:
     artifact_dirs: 20
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.4
+  previous_composite: 33.7
   provenance:
     conformance: derived
     contracts:
@@ -209,8 +209,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -237,5 +243,6 @@ tags:
 - White Label
 - Points Redemption
 - Travel Commerce
+- Loyalty & Incentives
 website: https://www.switchfly.com/
 ---

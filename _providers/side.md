@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -69,16 +69,16 @@ modified: '2026-07-21'
 name: Side
 nav: Providers
 network: true
-overview: 'Side is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real-Estate, Brokerage, and Transaction Management.
+overview: 'Side is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, PropTech, Real Estate, Brokerage, and Transaction Management.
 
 
   Side''s developer surface includes engineering blog, support, and 4 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 8.9
+  composite: 9.3
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -90,22 +90,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.9
+  previous_composite: 9.3
   regulatory:
     applies: true
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/side/refs/heads/main/screenshots/side-2026-10-11T125839.png
 security:
 - kind: domain-security
   name: Side Domain Security
@@ -115,7 +116,7 @@ slug: side
 tags:
 - Company
 - PropTech
-- Real-Estate
+- Real Estate
 - Brokerage
 - Transaction Management
 - Real Estate Technology

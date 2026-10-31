@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -141,6 +141,26 @@ collections:
   name: Cycloid HTTP CloudCost ServiceCatalogs API
   slug: open-cycloid-servicecatalogs-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/plans/cycloid-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/cycloid-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/rate-limits/cycloid-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/cycloid-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/finops/cycloid-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/cycloid-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cycloid/refs/heads/main/capabilities/cycloid-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cycloid-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -250,9 +270,13 @@ common:
 created: '2026-03-27'
 description: Cycloid is a unified Internal Developer Portal & Platform combining self-service Service Catalogs (Stacks and StackForms), Infrastructure as Code orchestration, multi-cloud asset inventory (Asset Inventory and InfraView), CI/CD pipeline centralization, FinOps and GreenOps cost / carbon dashboards, RBAC governance, and an MCP server for natural-language interaction. Cycloid exposes a public HTTP REST API at http-api.cycloid.io for programmatic management of organizations, projects, environments, stacks, pipelines, credentials, config repositories, and cloud cost dashboards. Authentication is via API key or OAuth2 with token refresh; the canonical Swagger / Redoc reference is published at docs.cycloid.io.
 finops:
-- name: Cycloid Finops
+- has_sources: false
+  method: generated
+  name: Cycloid Finops
+  primary_unit: ''
   service_category: API
   slug: cycloid-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cycloid.png
 json_schemas:
 - name: Organization
@@ -275,13 +299,13 @@ modified: '2026-05-19'
 name: Cycloid
 nav: Providers
 network: true
-overview: 'Cycloid publishes 8 APIs on the [APIs.io](https://apis.io/) network, including CloudCost API, ConfigRepositories API, Credentials API, and 5 more. Tagged areas include Asset Inventory, CI/CD, Cloud Cost Management, Cloud Management, and Developer Experience.
+overview: 'Cycloid publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including CloudCost API, ConfigRepositories API, Credentials API, and 5 more. Tagged areas include Asset Inventory, CI/CD, Cloud Cost Management, Cloud Management, and Developer Experience.
 
 
   The Cycloid catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Cycloid''s developer surface includes authentication, documentation, pricing, engineering blog, and 20 more developer resources.'
+  Cycloid''s developer surface includes authentication, documentation, pricing, engineering blog, and 24 more developer resources.'
 plans:
 - name: Cycloid Plans Pricing
   plan_count: 3
@@ -292,10 +316,11 @@ rate_limits:
   name: Cycloid Rate Limits
   slug: cycloid-rate-limits
 rules:
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
-  name: Cycloid API Rules
+  name: Cycloid — api rules
   rule_count: 6
   severity_counts:
     error: 3
@@ -303,9 +328,10 @@ rules:
     info: 0
     warn: 3
   slug: cycloid-api-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Cycloid API Rules
+  name: Cycloid — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -319,24 +345,24 @@ scopes:
   slug: cycloid-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: developing
-  composite: 43.0
+  band: thin
+  composite: 37.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 77.0
+    artifact_dirs: 20
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.0
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.7
   facets:
-    access_clarity: 40.8
-    contract_governance: 69.7
-    contract_quality: 54.4
+    access_clarity: 32.9
+    contract_governance: 27.3
+    contract_quality: 49.5
     developer_ergonomics: 13.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
-  previous_composite: 43.0
+  previous_composite: 42.9
   provenance:
     agentic_access: derived
     contracts:
@@ -344,9 +370,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

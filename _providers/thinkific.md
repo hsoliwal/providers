@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.6
-  scored_at: '2026-09-20'
+  score: 52.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 41
   human_in_the_loop: 0
@@ -161,7 +161,7 @@ apis:
   description: Users operations
   name: Thinkific Users API
   slug: thinkific-users-api
-artifact_total: 89
+artifact_total: 90
 collections:
 - collection_type: postman
   name: Thinkific Admin Bundles API
@@ -407,9 +407,13 @@ examples:
   name: Thinkific User Example
   slug: thinkific-user-example
 finops:
-- name: Thinkific Finops
+- has_sources: false
+  method: generated
+  name: Thinkific Finops
+  primary_unit: ''
   service_category: ''
   slug: thinkific-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/thinkific.png
 json_schemas:
 - name: BundleResponse
@@ -442,11 +446,15 @@ jsonld:
   property_count: 6
   slug: thinkific-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.thinkific.com over HTTP.
+  name: Thinkific MCP Server
+  slug: thinkific
 modified: '2026-06-12'
 name: Thinkific
 nav: Providers
 network: true
-overview: 'Thinkific publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Bundles API, Categories API, and 20 more. Tagged areas include Online Courses, E-Learning, LMS, Course Creation, and Enrollment.
+overview: 'Thinkific publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Webhooks API, Bundles API, Categories API, and 20 more. Tagged areas include Online Courses, E-Learning, LMS, Course Creation, and Enrollment.
 
 
   The Thinkific catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -463,9 +471,10 @@ rate_limits:
   name: Thinkific Rate Limits
   slug: thinkific-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Thinkific API Rules
+  name: Thinkific — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -474,24 +483,31 @@ rules:
     warn: 4
   slug: thinkific-jsonschema-spectral-rules
 score:
-  band: strong
-  composite: 55.0
+  band: developing
+  composite: 43.2
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 80.3
+    artifact_dirs: 21
+    catalog_earned: 58.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 34.8
+    catalog_gap: 56.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 66.4
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 60.7
     developer_ergonomics: 36.9
-    discoverability: 68.5
-    operational_transparency: 65.8
-  previous_composite: 55.0
+    discoverability: 68.3
+    operational_transparency: 42.1
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 51.5
   provenance:
     agentic_access: derived
     contracts:
@@ -505,10 +521,10 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
@@ -533,5 +549,6 @@ tags:
 - Education
 - Digital Products
 - Webhook
+- Canada
 website: https://www.thinkific.com
 ---

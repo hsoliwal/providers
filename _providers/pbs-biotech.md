@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.0
-  scored_at: '2026-09-20'
+  score: 29.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The agent-callable commerce surface of the PBS Biotech online store. Implemented by Shopify on the company's own shoppbsbiotech.com host and advertised by the store's own /llms.txt, /agents.md and /ro
@@ -162,14 +162,14 @@ description: 'PBS Biotech, Inc. is a Camarillo, California manufacturer of singl
 image: https://cdn.prod.website-files.com/62cc627d7fe73059b1484e97/6375797b9b37d215da32705e_PBS_Wing_Logo_1375C-p-500.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shoppbsbiotech.com; 13 tools listed.
   name: PBS Biotech Store Agent Commerce (UCP/MCP)
-  slug: pbs-biotech-store-agent-commerce-ucpmcp
+  slug: pbs-biotech-store-agent-commerce-ucp-mcp
 modified: '2026-08-26'
 name: PBS Biotech
 nav: Providers
 network: true
-overview: 'PBS Biotech publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Biotechnology, Bioprocessing, and Cell Therapy.
+overview: 'PBS Biotech is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Biotechnology, Bioprocessing, and Cell Therapy.
 
 
   PBS Biotech''s developer surface includes support, pricing, authentication, changelog, and 20 more developer resources.'
@@ -184,14 +184,14 @@ rate_limits:
   slug: pbs-biotech-rate-limits
 scopes:
 - name: Pbs Biotech Scopes
-  scope_count: 0
+  scope_count: 4
   slug: pbs-biotech-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: thin
-  composite: 31.8
+  composite: 29.4
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -203,21 +203,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 15.8
-  previous_composite: 31.8
+  previous_composite: 29.4
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

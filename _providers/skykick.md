@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Partner Integration API is the SkyKick / ConnectWise Cloud Services partner-facing REST API. The provider's own Get Started page documents an OAuth 2.0 client-credentials token exchange at /auth/t
@@ -44,6 +44,10 @@ apis:
   slug: skykick-partner-integration-api
 artifact_total: 8
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.connectwise.com/blog
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/skykick/refs/heads/main/security/skykick-domain-security.yml
   title: ''
@@ -167,14 +171,14 @@ description: 'SkyKick is a Seattle-based cloud automation company whose Microsof
   partner portal, so no OpenAPI, AsyncAPI, MCP server or agent card is published anonymously.'
 image: https://avatars.githubusercontent.com/u/15131071?v=4
 layout: provider
-modified: '2026-08-28'
+modified: '2026-10-06'
 name: SkyKick
 nav: Providers
 network: true
-overview: 'SkyKick publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backup, Migration, Microsoft-365, and Managed Service Providers.
+overview: 'SkyKick is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Backup, Migration, Microsoft 365, and Managed Service Providers.
 
 
-  SkyKick''s developer surface includes getting-started guide, support, pricing, authentication, and 22 more developer resources.'
+  SkyKick''s developer surface includes engineering blog, getting-started guide, support, pricing, authentication, and 22 more developer resources.'
 plans:
 - name: Skykick Plans Pricing
   plan_count: 0
@@ -186,38 +190,46 @@ rate_limits:
   slug: skykick-rate-limits
 scopes:
 - name: Skykick Scopes
-  scope_count: 0
+  scope_count: 2
   slug: skykick-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes · clientCredentials
 score:
   band: thin
-  composite: 29.6
+  composite: 34.4
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 38.1
-    discoverability: 68.5
+    developer_ergonomics: 40.5
+    discoverability: 66.1
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 29.6
+  previous_composite: 33.8
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -246,7 +258,7 @@ tags:
 - Company
 - Backup
 - Migration
-- Microsoft-365
+- Microsoft 365
 - Managed Service Providers
 - SaaS Security
 - Cloud Automation

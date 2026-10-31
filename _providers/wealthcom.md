@@ -26,25 +26,30 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: documented
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-09-20'
+  score: 37.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Advisor API connects advisor applications to Wealth.com, exposing client, asset, document, contact, quiz, AI-notes, client-group and top-account resources over JSON HTTPS, with OAuth2 (authorizati
   name: Wealth.com Advisor API
   slug: wealthcom-advisor-api
-artifact_total: 7
+artifact_total: 9
 asyncapis:
 - description: ''
   name: Wealthcom Webhooks
   slug: wealthcom-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/wealthcom/refs/heads/main/plans/wealthcom-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/wealthcom-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -170,17 +175,25 @@ created: '2026-07-17'
 description: Wealth.com is the industry-leading estate and tax planning platform for financial advisors, unifying estate document creation, tax intelligence, and its proprietary Ester AI assistant to help advisors deliver sophisticated planning at scale. For developers, Wealth.com publishes an Advisor API (OAuth2, JSON over HTTPS) that connects advisor applications to the platform for managing clients, assets, documents, contacts, quizzes, and AI notes, plus a webhook surface for real-time events and an Onboarding API for partner-referred client onboarding. A separate SFTP interface supports bulk data exchange. The company is backed by GV (Google Ventures) and integrates with Salesforce, Orion, Redtail, Wealthbox, Addepar, eMoney, and other advisor tools.
 image: https://www.wealth.com/favicon.ico
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.wealth.com over HTTP.
+  name: Wealth.com MCP Server
+  slug: wealthcom
 modified: '2026-07-21'
 name: Wealth.com
 nav: Providers
 network: true
-overview: 'Wealth.com publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Estate Planning, Tax Planning, and Wealth Management.
+overview: 'Wealth.com is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Estate Planning, Tax Planning, and Wealth Management.
 
 
   The Wealth.com catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Wealth.com''s developer surface includes documentation, API reference, getting-started guide, authentication, pricing, signup flow, support, and 20 more developer resources.'
+  Wealth.com''s developer surface includes documentation, API reference, getting-started guide, authentication, pricing, signup flow, support, and 21 more developer resources.'
+plans:
+- name: Wealthcom Plans Pricing
+  plan_count: 3
+  slug: wealthcom-plans-pricing
 random_paper: 18
 rate_limits:
 - limit_count: 1
@@ -192,30 +205,36 @@ scopes:
   slug: wealthcom-scopes
   summary_line: 3 scopes · authorizationCode
 score:
-  band: developing
-  composite: 46.9
+  band: strong
+  composite: 55.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 45.0
-    catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    artifact_dirs: 17
+    catalog_earned: 57.0
+    catalog_earned_first_party: 20.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.3
   facets:
-    access_clarity: 47.4
+    access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 44.7
-  previous_composite: 46.9
+  previous_composite: 49.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

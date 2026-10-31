@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: OAuth-protected Model Context Protocol server exposing Nowlun freight-forwarding capabilities to agents. Requires an access token holding the "mcp" scope.
@@ -95,17 +95,17 @@ description: Nowlun is a digital freight-forwarding platform serving the Middle 
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nowlun-holding-corp.png
 layout: provider
 mcp_servers:
-- description: ''
-  name: Nowlun Holding Corp. MCP Server
-  slug: nowlun-holding-corp-mcp-server
+- description: Remote MCP server at nowlun.com over HTTP.
+  name: Nowlun MCP Server
+  slug: nowlun
 modified: '2026-07-20'
-name: Nowlun Holding Corp.
+name: Nowlun
 nav: Providers
 network: true
-overview: 'Nowlun Holding Corp. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Logistics, Freight Forwarding, Shipping, and Supply Chain.
+overview: 'Nowlun is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Logistics, Freight Forwarding, Shipping, and Supply Chain.
 
 
-  Nowlun Holding Corp.''s developer surface includes authentication, signup flow, engineering blog, support, and 7 more developer resources.'
+  Nowlun''s developer surface includes authentication, signup flow, engineering blog, support, and 7 more developer resources.'
 random_paper: 6
 scopes:
 - name: Nowlun Holding Corp Scopes
@@ -114,7 +114,7 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: emerging
-  composite: 15.4
+  composite: 16.9
   coverage:
     artifact_dirs: 8
     catalog_earned: 37.0
@@ -128,13 +128,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 15.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - mena
+  previous_composite: 16.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -157,7 +168,7 @@ tags:
 - Freight Forwarding
 - Shipping
 - Supply Chain
-- Sea Freight
+- Ocean Freight
 - Customs
 - MENA
 - MCP

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The HTTP API each Norish instance serves under /api/v1, covering a public health check plus authenticated recipe read/search/create/import, grocery list management, stores, and planned recipes for tod
@@ -157,7 +157,7 @@ modified: '2026-08-27'
 name: Norish
 nav: Providers
 network: true
-overview: 'Norish publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recipes, Meal Planning, Groceries, and Food.
+overview: 'Norish is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recipes, Meal Planning, Groceries, and Food.
 
 
   Norish''s developer surface includes documentation, getting-started guide, support, changelog, API reference, authentication, and 17 more developer resources.'
@@ -172,7 +172,7 @@ rate_limits:
   slug: norish-rate-limits
 score:
   band: emerging
-  composite: 24.6
+  composite: 24.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -186,15 +186,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 24.6
+  previous_composite: 24.5
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -218,7 +224,7 @@ tags:
 - Groceries
 - Food
 - Self-Hosted
-- Open-Source
+- Open Source
 - Household
 - Calendar
 - CalDAV

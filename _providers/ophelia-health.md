@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://ophelia.com/blog/rss.xml
 - group: build
   title: ''
   type: GitHubOrganization
@@ -81,18 +85,18 @@ created: '2026-07-17'
 description: Ophelia is a telehealth company providing private, evidence-based medication-assisted treatment (MAT) for opioid use disorder from home. Founded in 2019 by Zack Gray and Mattan Griffel and headquartered in New York City, Ophelia connects patients with licensed clinicians for video visits, prescribes Suboxone (buprenorphine + naloxone) sent to a local pharmacy, and provides ongoing care-team support seven days a week. The subscription service accepts most major insurance plans, including Medicaid, and is licensed to provide care across 49 states and Washington, D.C. Ophelia is a direct-to-consumer clinical service and does not publish a public developer API, SDK, or partner API program; this profile captures its public web presence and domain security posture.
 image: https://cdn.prod.website-files.com/63235599a30434033ca3d1c3/6361395eee27477cec36be5e_ophelia-nav-logo.svg
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Ophelia Health
 nav: Providers
 network: true
 overview: 'Ophelia Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Telehealth, and Opioid Use Disorder.
 
 
-  Ophelia Health''s developer surface includes pricing, engineering blog, support, signup flow, and 6 more developer resources.'
+  Ophelia Health''s developer surface includes pricing, engineering blog, support, signup flow, and 7 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 14.2
+  composite: 14.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -106,22 +110,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 14.2
+  previous_composite: 14.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
@@ -146,9 +146,9 @@ rate_limits:
   slug: graphitehealth-rate-limits
 score:
   band: emerging
-  composite: 21.2
+  composite: 19.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -160,9 +160,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 21.2
+  previous_composite: 19.9
   provenance:
     conformance: first-party
   regulatory:
@@ -170,14 +170,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/graphitehealth/refs/heads/main/screenshots/graphitehealth-2026-10-11T105017.png
 security:
 - kind: domain-security
   name: Graphitehealth Domain Security

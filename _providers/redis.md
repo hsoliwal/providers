@@ -10,31 +10,38 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: agent-native
   dimensions:
     agent_card: false
     agent_skills: false
-    agentic_access: false
+    agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
     consent_identity: false
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: false
+    error_semantics: verified
     event_surface_described: false
-    idempotency: false
+    idempotency: verified
     mcp_server: verified
-    openapi_examples: documented
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    openapi_examples: partial
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
-    spec_presence: false
+    spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 14.9
-  scored_at: '2026-09-20'
-api_count: 4
+  score: 44.9
+  scored_at: '2026-10-17'
+agentic_access:
+- acting_count: 103
+  human_in_the_loop: 9
+  name: Redis Agentic Access
+  operation_count: 179
+  slug: redis-agentic-access
+  summary_line: 179 operations · 103 acting · 9 human-in-the-loop
+api_count: 1
 apis:
 - description: Core Redis commands and data structure operations. Redis supports strings, hashes, lists, sets, sorted sets, streams, and more. The primary interface is the Redis Serialization Protocol (RESP) over TC
   name: Redis Core
@@ -48,8 +55,143 @@ apis:
 - description: Redis Insight is a free GUI management tool for Redis. Provides database browsing, query execution, memory analysis, slow log inspection, and Redis Streams visualization. Available as a desktop app an
   name: Redis Insight
   slug: redis-insight
-artifact_total: 36
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: Current account details.
+  name: Redis Account API
+  slug: redis-account-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Actuator API from Redis — 1 operation(s) for actuator.
+  name: Redis Actuator API
+  slug: redis-actuator-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All operations related to Agent Memory store lifecycle
+  name: Redis Agent Memory - Stores API
+  slug: redis-agent-memory-stores-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Ai API from Redis — 1 operation(s) for ai.
+  name: Redis AI API
+  slug: redis-ai-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Bdbs API from Redis — 1 operation(s) for bdbs.
+  name: Redis Bdbs API
+  slug: redis-bdbs-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Caches API from Redis — 5 operation(s) for caches.
+  name: Redis Caches API
+  slug: redis-caches-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All operations related to cloud accounts (AWS only).
+  name: Redis Cloud Accounts API
+  slug: redis-cloud-accounts-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: The Data Integration API from Redis — 3 operation(s) for data integration.
+  name: Redis Data Integration API
+  slug: redis-data-integration-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All Essentials database operations.
+  name: Redis Databases - Essentials API
+  slug: redis-databases-essentials-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All Pro database operations.
+  name: Redis Databases - Pro API
+  slug: redis-databases-pro-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Dedup API from Redis — 2 operation(s) for dedup.
+  name: Redis Dedup API
+  slug: redis-dedup-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: Dynamic endpoint redirection operations.
+  name: Redis Endpoint Redirections API
+  slug: redis-endpoint-redirections-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Gpg API from Redis — 1 operation(s) for gpg.
+  name: Redis Gpg API
+  slug: redis-gpg-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Homebrew API from Redis — 1 operation(s) for homebrew.
+  name: Redis Homebrew API
+  slug: redis-homebrew-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Images API from Redis — 1 operation(s) for images.
+  name: Redis Images API
+  slug: redis-images-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Long Term Memory API from Redis — 1 operation(s) for long term memory.
+  name: Redis Long Term Memory API
+  slug: redis-long-term-memory-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Redis API API from Redis — 1 operation(s) for redis api.
+  name: Redis Redis API
+  slug: redis-redis-api-api
+- baseURL: https://packages.redis.io
+  baseurl_source: spec
+  description: The Redis Cli API from Redis — 1 operation(s) for redis cli.
+  name: Redis Redis Cli API
+  slug: redis-redis-cli-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All operations for [Role-based Access Control](https://redis.io/docs/latest/operate/rc/security/access-control/data-access-control/role-based-access-control/) (RBAC).
+  name: Redis Role-based Access Control (RBAC) API
+  slug: redis-role-based-access-control-rbac-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All Essentials subscription operations.
+  name: Redis Subscriptions - Essentials API
+  slug: redis-subscriptions-essentials-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All Pro subscription operations.
+  name: Redis Subscriptions - Pro API
+  slug: redis-subscriptions-pro-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: All Pro subscription connectivity operations.
+  name: Redis Subscriptions - Pro - Connectivity API
+  slug: redis-subscriptions-pro-connectivity-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: Tracks asynchronous background operations. See [API request lifecycle](https://redis.io/docs/latest/operate/rc/api/get-started/process-lifecycle/) for more information.
+  name: Redis Tasks API
+  slug: redis-tasks-api
+- baseURL: https://api.redislabs.com
+  baseurl_source: spec
+  description: Data and operations related to account's users
+  name: Redis Users API
+  slug: redis-users-api
+artifact_total: 70
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/redis/refs/heads/main/plans/redis-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/redis-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/redis/refs/heads/main/rate-limits/redis-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/redis-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/redis/refs/heads/main/finops/redis-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/redis-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/redis/refs/heads/main/security/redis-trust-center.yml
   title: ''
@@ -163,17 +305,39 @@ features:
 - OAuth + API keys
 - Open-source self-managed Redis OSS alternative
 finops:
-- name: Redis Finops
+- has_sources: true
+  method: generated
+  name: Redis Finops
+  primary_unit: ''
   service_category: Database / Cache
   slug: redis-finops
+  template: false
 image: https://redis.io/images/redis-logo.png
 json_schemas:
 - name: Redis Command
   property_count: 8
   slug: redis-command
+- name: GetApiDedupStatsResponse
+  property_count: 6
+  slug: redis-get-api-dedup-stats-response
+- name: GetUsersUseridResponse
+  property_count: 5
+  slug: redis-get-users-userid-response
 - name: Redis Key-Value Entry
   property_count: 5
   slug: redis-key-value
+- name: PostApiDedupDedupidRequest
+  property_count: 4
+  slug: redis-post-api-dedup-dedupid-request
+- name: PostApiDedupDedupidResponse
+  property_count: 6
+  slug: redis-post-api-dedup-dedupid-response
+- name: PostUsersRequest
+  property_count: 4
+  slug: redis-post-users-request
+- name: PostV1LongTermMemoryRequest
+  property_count: 1
+  slug: redis-post-v1-long-term-memory-request
 - name: Redis Server Info
   property_count: 19
   slug: redis-server-info
@@ -190,17 +354,21 @@ jsonld:
   property_count: 3
   slug: redis-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at redis.io over HTTP; 3 tools listed.
+  name: Redis MCP Server
+  slug: redis
 modified: '2026-05-04'
 name: Redis
 nav: Providers
 network: true
-overview: 'Redis publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cache, Database, In-Memory, Key-Value Store, and NoSQL.
+overview: 'Redis publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Actuator API, Agent Memory - Stores API, and 25 more. Tagged areas include Cache, Database, In-Memory, Key-Value Store, and NoSQL.
 
 
-  The Redis catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
+  The Redis catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Redis'' developer surface includes documentation, engineering blog, YouTube channel, support, and 16 more developer resources.'
+  Redis'' developer surface includes documentation, engineering blog, YouTube channel, support, and 19 more developer resources.'
 plans:
 - name: Redis Plans Pricing
   plan_count: 4
@@ -211,9 +379,10 @@ rate_limits:
   name: Redis Rate Limits
   slug: redis-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Redis API Rules
+  name: Redis — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -221,36 +390,65 @@ rules:
     info: 1
     warn: 4
   slug: redis-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 61
+  extends:
+  - spectral:oas
+  name: Redis API Rules
+  rule_count: 20
+  severity_counts:
+    error: 13
+    hint: 0
+    info: 4
+    warn: 3
+  slug: redis-rules
 score:
   band: developing
-  composite: 40.6
+  composite: 46.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 67.3
+    artifact_dirs: 31
+    catalog_earned: 61.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.8
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -19.2
   facets:
-    access_clarity: 44.7
-    contract_governance: 25.0
-    contract_quality: 26.7
+    access_clarity: 36.8
+    contract_governance: 31.8
+    contract_quality: 44.4
     developer_ergonomics: 54.8
-    discoverability: 72.2
+    discoverability: 66.7
     operational_transparency: 28.9
-  previous_composite: 40.6
+  previous_composite: 65.2
   provenance:
+    agentic_access: derived
+    conformance: derived
+    contracts:
+      callable: 100.0
+      derived: 13
+      marker_coverage: 52.0
+      total: 25
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
-    applies: false
-    note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
-    reason: no_specs
+    applies: true
+    score: 0.0
 screenshot: https://raw.githubusercontent.com/api-evangelist/redis/refs/heads/main/screenshots/redis-2026-06-20T192736.png
 security:
+- kind: authentication
+  name: Redis Authentication
+  slug: redis-authentication
+  summary_line: 1 scheme
 - kind: domain-security
   name: Redis Domain Security
   slug: redis-domain-security
@@ -262,7 +460,7 @@ security:
 - kind: trust-center
   name: Redis Trust Center
   slug: redis-trust-center
-  summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, PCI DSS, HIPAA, GDPR, CSA STAR
+  summary_line: SOC 2, ISO 27001, ISO 27017, ISO 27018, PCI DSS, HIPAA, GDPR, CSA STAR, FIPS 140
 slug: redis
 tags:
 - Cache
@@ -270,7 +468,7 @@ tags:
 - In-Memory
 - Key-Value Store
 - NoSQL
-- Open-Source
+- Open Source
 - Streaming
 website: https://redis.io/
 ---

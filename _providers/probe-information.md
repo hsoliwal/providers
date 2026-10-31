@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The Probe42 API provides programmatic access to curated intelligence on Indian companies — company profiles, financials, directors, and charges — for embedding due-diligence and business-intelligence '
@@ -90,16 +90,16 @@ modified: '2026-07-20'
 name: Probe Information
 nav: Providers
 network: true
-overview: 'Probe Information publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Business Intelligence, Company Data, Financial Data, and Due Diligence.
+overview: 'Probe Information is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Business Intelligence, Company Data, Financial Data, and Due Diligence.
 
 
   Probe Information''s developer surface includes engineering blog, support, and 8 more developer resources.'
 random_paper: 11
 score:
   band: emerging
-  composite: 15.6
+  composite: 15.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -111,7 +111,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -120,15 +120,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 15.6
+  previous_composite: 15.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

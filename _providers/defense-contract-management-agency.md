@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 collections:
@@ -41,6 +41,21 @@ collections:
   name: API Collection
   slug: open-defense-contract-management-agency
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/defense-contract-management-agency/refs/heads/main/plans/defense-contract-management-agency-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/defense-contract-management-agency-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/defense-contract-management-agency/refs/heads/main/rate-limits/defense-contract-management-agency-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/defense-contract-management-agency-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/defense-contract-management-agency/refs/heads/main/finops/defense-contract-management-agency-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/defense-contract-management-agency-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/defense-contract-management-agency/refs/heads/main/llms/defense-contract-management-agency-llms.txt
   title: ''
@@ -74,19 +89,23 @@ common:
 created: '2024-12-03'
 description: The Defense Contract Management Agency (DCMA) is the Department of Defense component that works directly with defense suppliers to help ensure that DoD, federal, and allied government supplies and services are delivered on time, at projected cost, and meet performance requirements. DCMA performs contract administration, quality assurance, and earned value management oversight, but does not currently expose a public developer API.
 finops:
-- name: Defense Contract Management Agency Finops
+- has_sources: false
+  method: generated
+  name: Defense Contract Management Agency Finops
+  primary_unit: ''
   service_category: API
   slug: defense-contract-management-agency-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/defense-contract-management-agency.png
 layout: provider
 modified: '2026-09-07'
 name: Defense Contract Management Agency
 nav: Providers
 network: true
-overview: 'Defense Contract Management Agency is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Defense, Department of Defense, Contract Management, and Acquisition.
+overview: 'Defense Contract Management Agency is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Defense, Department of Defense, Contract Management, and Acquisition.
 
 
-  Defense Contract Management Agency''s developer surface includes product news and 6 more developer resources.'
+  Defense Contract Management Agency''s developer surface includes product news and 9 more developer resources.'
 plans:
 - name: Defense Contract Management Agency Plans Pricing
   plan_count: 0
@@ -98,31 +117,36 @@ rate_limits:
   slug: defense-contract-management-agency-rate-limits
 score:
   band: minimal
-  composite: 5.7
+  composite: 4.5
   coverage:
     artifact_dirs: 10
-    catalog_earned: 30.0
+    catalog_earned: 27.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 85.0
+    catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 7.9
+    access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 5.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 6.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -136,7 +160,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: defense-contract-management-agency
 tags:
-- Federal-Government
+- Federal Government
 - Defense
 - Department of Defense
 - Contract Management

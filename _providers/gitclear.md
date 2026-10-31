@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -117,6 +117,11 @@ collections:
   name: GitClear Public API
   slug: open-gitclear
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/capabilities/gitclear-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gitclear-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gitclear/refs/heads/main/agentic-access/gitclear-agentic-access.yml
   title: ''
@@ -180,19 +185,23 @@ common:
 created: '2026-06-21'
 description: GitClear provides code and commit analytics for engineering teams, centered on its Diff Delta metric (formerly Line Impact) that scores durable code change beyond raw lines. Its public REST API exposes repositories, commits/data audits, Diff Delta reports, and developer management so teams can pull research-backed productivity and AI-ROI metrics programmatically.
 finops:
-- name: Gitclear Finops
+- has_sources: true
+  method: generated
+  name: Gitclear Finops
+  primary_unit: ''
   service_category: Developer Tools and Analytics
   slug: gitclear-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gitclear.png
 layout: provider
 modified: '2026-06-21'
 name: GitClear
 nav: Providers
 network: true
-overview: 'GitClear publishes 8 APIs on the [APIs.io](https://apis.io/) network, including API Tokens API, Code Introspection API, Data Audit API, and 5 more. Tagged areas include Code Analytics, Commit Analytics, Developer Productivity, Diff Delta, and Engineering Metrics.
+overview: 'GitClear publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including API Tokens API, Code Introspection API, Data Audit API, and 5 more. Tagged areas include Code Analytics, Commit Analytics, Developer Productivity, Diff Delta, and Engineering Metrics.
 
 
-  GitClear''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
+  GitClear''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Gitclear Plans Pricing
   plan_count: 4
@@ -204,23 +213,23 @@ rate_limits:
   slug: gitclear-rate-limits
 score:
   band: thin
-  composite: 38.3
+  composite: 29.5
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 60.0
+    artifact_dirs: 13
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.3
   facets:
-    access_clarity: 47.4
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 53.4
+    contract_quality: 48.2
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 38.3
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     contracts:
@@ -228,9 +237,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

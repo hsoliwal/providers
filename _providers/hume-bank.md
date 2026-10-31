@@ -33,14 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 0
   human_in_the_loop: 0
   name: Hume Bank Agentic Access
   operation_count: 19
   slug: hume-bank-agentic-access
-  summary_line: 19 operations · 3 acting
+  summary_line: 19 operations
 api_count: 1
 apis:
 - baseURL: https://ibankob.humebank.com.au/OpenBanking/cds-au/v1/banking/products
@@ -223,7 +223,7 @@ modified: '2026-07-22'
 name: Hume Bank
 nav: Providers
 network: true
-overview: 'Hume Bank publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Financial, Banks, Open Banking, CDR, and Consumer Banking.
+overview: 'Hume Bank publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Banking Account Balances API, Banking Account Direct Debits API, Banking Account Scheduled Payments API, and 4 more. Tagged areas include Finance, Banks, Open Banking, CDR, and Consumer Banking.
 
 
   Hume Bank''s developer surface includes authentication, documentation, API reference, pricing, support, and 19 more developer resources.'
@@ -234,21 +234,21 @@ plans:
 random_paper: 8
 score:
   band: developing
-  composite: 42.8
+  composite: 41.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.0
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -257,7 +257,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 36.5
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -273,10 +273,10 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 31.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+    score: 19.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 0.0
@@ -292,7 +292,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: hume-bank
 tags:
-- Financial
+- Finance
 - Banks
 - Open Banking
 - CDR

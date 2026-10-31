@@ -12,7 +12,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: documented
@@ -23,8 +23,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.5
-  scored_at: '2026-09-20'
+  score: 51.3
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.magichour.ai
@@ -199,14 +199,14 @@ description: Magic Hour is an AI media generation platform for video, image and 
 image: https://magichour.ai/logo-social.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.magichour.ai requiring an API key.
   name: Magic Hour MCP servers
   slug: magic-hour-mcp-servers
 modified: '2026-09-03'
 name: Magic Hour
 nav: Providers
 network: true
-overview: 'Magic Hour publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Audio Projects API, Files API, Image Projects API, and 1 more. Tagged areas include AI Video, Image-Generation, Audio, Generative AI, and Voice Cloning.
+overview: 'Magic Hour publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Audio Projects API, Files API, Image Projects API, and 1 more. Tagged areas include AI Video, Image Generation, Audio, Generative AI, and Voice Cloning.
 
 
   The Magic Hour catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -224,23 +224,23 @@ rate_limits:
   slug: magichour-rate-limits
 score:
   band: strong
-  composite: 62.4
+  composite: 61.6
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 73.7
-  previous_composite: 62.4
+  previous_composite: 62.0
   provenance:
     conformance: derived
     contracts:
@@ -250,8 +250,14 @@ score:
       total: 4
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 21.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -269,10 +275,11 @@ security:
 slug: magichour
 tags:
 - AI Video
-- Image-Generation
+- Image Generation
 - Audio
 - Generative AI
 - Voice Cloning
-- Text-to-Video
+- Video Generation
+- A2A
 website: https://magichour.ai
 ---

@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.pfct.co.kr/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/peoplefund-perfect-technologies/refs/heads/main/security/peoplefund-perfect-technologies-domain-security.yml
   title: ''
@@ -53,18 +57,18 @@ created: '2026-07-17'
 description: 'PFC Technologies (formerly PeopleFund) is a Seoul, South Korea fintech company operating at the intersection of direct online lending and AI lending infrastructure. It runs two platforms: CPLE (Crople), an online investment-linked finance (온라인투자연계금융) service that matches retail investors with consumer and small-business loans, and AIRPACK, an AI-powered, no-code underwriting and loan operations infrastructure (AIRPACK-Lab for data analysis, model development and approval-rule tuning, and AIRPACK-Studio for model deployment, rule-set operation and performance monitoring) sold to savings banks and other lending institutions. As of this profile the company publishes no public developer portal, OpenAPI, SDK, or partner API surface; AIRPACK integrations are handled through a direct sales/contact process. This record was surfaced as a 500 Global portfolio company and enriched as an API Evangelist network company profile.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/peoplefund-perfect-technologies.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: PeopleFund, Perfect Technologies
 nav: Providers
 network: true
 overview: 'PeopleFund, Perfect Technologies is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Lending, Investing, and Artificial Intelligence.
 
 
-  PeopleFund, Perfect Technologies'' developer surface includes engineering blog and 2 more developer resources.'
+  PeopleFund, Perfect Technologies'' developer surface includes engineering blog and 3 more developer resources.'
 random_paper: 3
 score:
   band: minimal
-  composite: 2.8
+  composite: 3.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -78,7 +82,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -87,15 +91,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 2.8
+  previous_composite: 3.5
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

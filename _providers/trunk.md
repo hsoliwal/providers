@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,26 +23,26 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-09-20'
+  score: 28.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 15
+- acting_count: 8
   human_in_the_loop: 0
   name: Trunk Agentic Access
   operation_count: 16
   slug: trunk-agentic-access
-  summary_line: 16 operations · 15 acting
+  summary_line: 16 operations · 8 acting
 api_count: 1
 apis:
 - description: CI test-result ingestion surface. The trunk-analytics-cli (and the trunk-io/analytics-uploader GitHub Action) uploads JUnit XML, Bazel BEP, and XCResult test reports to Trunk for flaky-test detection,
@@ -83,6 +83,11 @@ collections:
   name: Trunk Flaky Tests Merge Queue API
   slug: open-trunk-merge-queue-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/trunk/refs/heads/main/capabilities/trunk-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/trunk-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -199,22 +204,26 @@ common:
 created: '2026-07-17'
 description: Trunk builds developer experience and CI reliability tooling. Its platform spans Code Quality (a meta-linter and static analysis manager driven by the trunk CLI), a flake-aware parallel Merge Queue, and Flaky Tests detection / CI Analytics. Test results are uploaded from CI via the Trunk Analytics CLI / GitHub Action, and an HTTP REST API at api.trunk.io exposes Flaky Tests and Merge Queue control plus Svix-powered outbound webhooks. Trunk is a portfolio company of a16z.
 finops:
-- name: Trunk Finops
+- has_sources: true
+  method: generated
+  name: Trunk Finops
+  primary_unit: ''
   service_category: Developer Tools
   slug: trunk-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/trunk.png
 layout: provider
 modified: '2026-08-08'
 name: Trunk
 nav: Providers
 network: true
-overview: 'Trunk publishes 2 APIs on the [APIs.io](https://apis.io/) network: Flaky Tests API and Merge Queue API. Tagged areas include Developer Tools, CI/CD, Code Quality, Flaky Tests, and Merge Queue.
+overview: 'Trunk publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Flaky Tests API, Merge Queue API, and 3 more. Tagged areas include Developer Tools, CI/CD, Code Quality, Flaky Tests, and Merge Queue.
 
 
   The Trunk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Trunk''s developer surface includes documentation, engineering blog, authentication, CLI, and 20 more developer resources.'
+  Trunk''s developer surface includes documentation, engineering blog, authentication, CLI, and 21 more developer resources.'
 plans:
 - name: Trunk Plans Pricing
   plan_count: 3
@@ -225,24 +234,24 @@ rate_limits:
   name: Trunk Rate Limits
   slug: trunk-rate-limits
 score:
-  band: developing
-  composite: 47.7
+  band: thin
+  composite: 37.8
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 64.0
+    artifact_dirs: 23
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 4.5
-    contract_quality: 63.6
+    contract_quality: 58.1
     developer_ergonomics: 51.8
-    discoverability: 68.5
-    operational_transparency: 52.6
-  previous_composite: 47.7
+    discoverability: 66.1
+    operational_transparency: 28.9
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -253,9 +262,15 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -272,7 +287,7 @@ security:
 - kind: vulnerability-disclosure
   name: Trunk Vulnerability Disclosure
   slug: trunk-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: trunk
 tags:
 - Developer Tools

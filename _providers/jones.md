@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://getjones.com/feed/
 - group: company
   title: ''
   type: Website
@@ -88,20 +92,20 @@ created: '2026-07-17'
 description: 'Jones is a full-service SaaS platform purpose-built for insurance compliance in construction and commercial real estate, unifying Certificate of Insurance (COI) collection, deep insurance auditing, workflow automation, and a licensed brokerage in one platform. It pairs hundreds of insurance specialists with AI agents to review COIs and policies at enterprise scale, and is used by general contractors, construction managers, owner-operators, REITs, property management teams, and insurance brokers to manage compliance across large portfolios of subcontractors, vendors, and tenants. Jones offers two engagement models: Jones Software (self-managed) and Jones Operator (an AI-driven concierge that runs day-to-day insurance tasks). Reported scale: 40,000+ projects, 3 billion+ square feet, and 50 million+ insurance documents processed for 300+ industry leaders. Headquartered in New York, NY, Jones was surfaced as a portfolio company of 500 Global and Foundry Group.'
 image: https://getjones.com/wp-content/uploads/uploads-3-0/24-sparkle.svg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Jones
 nav: Providers
 network: true
 overview: 'Jones is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurance Compliance, Certificate of Insurance, and COI.
 
 
-  Jones'' developer surface includes pricing, engineering blog, support, and 8 more developer resources.'
+  Jones'' developer surface includes pricing, engineering blog, support, and 9 more developer resources.'
 random_paper: 15
 score:
   band: emerging
-  composite: 11.3
+  composite: 11.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -113,14 +117,14 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.3
+  previous_composite: 11.2
   provenance:
     conformance: first-party
   regulatory:
@@ -128,9 +132,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 24.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -151,7 +155,7 @@ tags:
 - COI
 - Risk Management
 - Construction
-- Real-Estate
+- Real Estate
 - Property Management
 - Insurtech
 website: https://getjones.com

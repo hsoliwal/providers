@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/happy-health/refs/heads/main/plans/happy-health-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/happy-health-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/happy-health/refs/heads/main/rate-limits/happy-health-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/happy-health-rate-limits.yml
 - group: design
   href: https://raw.githubusercontent.com/api-evangelist/happy-health/refs/heads/main/conformance/happy-health-conformance.yml
   title: ''
@@ -121,7 +131,7 @@ network: true
 overview: 'Happy Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Wearables.
 
 
-  Happy Health''s developer surface includes support, pricing, signup flow, and 10 more developer resources.'
+  Happy Health''s developer surface includes support, pricing, signup flow, and 12 more developer resources.'
 plans:
 - name: Happy Health Plans Pricing
   plan_count: 0
@@ -133,7 +143,7 @@ rate_limits:
   slug: happy-health-rate-limits
 score:
   band: emerging
-  composite: 21.8
+  composite: 20.5
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -147,9 +157,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 21.8
+  previous_composite: 20.5
   provenance:
     conformance: first-party
   regulatory:
@@ -157,9 +167,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

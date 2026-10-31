@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -119,7 +119,7 @@ score:
   band: minimal
   composite: 7.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -131,7 +131,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -144,14 +144,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/adaptive-innovations/refs/heads/main/screenshots/adaptive-innovations-2026-10-11T092737.png
 security:
 - kind: domain-security
   name: Adaptive Innovations Domain Security

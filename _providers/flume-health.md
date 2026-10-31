@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: A remote Model Context Protocol endpoint served by the Flume Console at /api/v1/context/mcp. It is protected by OAuth 2.0 and advertises RFC 9728 protected-resource metadata, returning a 401 with a WW
@@ -139,7 +139,7 @@ apis:
   description: The WorkerSizes API from Flume Health — 2 operation(s) for workersizes.
   name: Flume Health Worker Sizes API
   slug: flume-health-workersizes-api
-artifact_total: 28
+artifact_total: 27
 common:
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/flume-health/refs/heads/main/capabilities/flume-health-capability-edges.yml
@@ -291,17 +291,14 @@ description: Flume Health is a New York based healthcare data platform for the p
 image: https://flumehealth.com/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: 'Flume Health runs a remote Model Context Protocol server at https://console.flumehealth.com/api/v1/context/mcp. It was not found in any directory, registry, docs page, or llms.txt — it was discovered '
   name: Flume Context MCP Server
   slug: flume-context-mcp-server
-- description: ''
-  name: Flume Health MCP Server
-  slug: flume-health-mcp-server
 modified: '2026-09-16'
 name: Flume Health
 nav: Providers
 network: true
-overview: 'Flume Health publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Account Contracts API, Accounts API, Automap Jobs API, and 16 more. Tagged areas include Healthcare, Health Plans, Payers, Healthcare Data, and Data Integration.
+overview: 'Flume Health publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Contracts API, Accounts API, Automap Jobs API, and 17 more. Tagged areas include Healthcare, Health Plans, Payers, Healthcare Data, and Data Integration.
 
 
   Flume Health''s developer surface includes documentation, API reference, support, authentication, and 27 more developer resources.'
@@ -321,7 +318,7 @@ scopes:
   summary_line: 14 scopes · implicit
 score:
   band: developing
-  composite: 48.2
+  composite: 44.2
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -333,11 +330,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 51.6
+    contract_quality: 46.6
     developer_ergonomics: 44.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 18.4
-  previous_composite: 48.2
+  previous_composite: 44.2
   provenance:
     conformance: first-party
     contracts:
@@ -352,9 +349,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 65.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -385,7 +382,7 @@ tags:
 - Claims
 - Knowledge Graph
 - MCP
-- agent-native
+- Agent-Native
 - Authentication
 - Data Engineering
 - Interoperability

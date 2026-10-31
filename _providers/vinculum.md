@@ -22,20 +22,20 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.0
-  scored_at: '2026-09-20'
-api_count: 2
+  score: 22.0
+  scored_at: '2026-10-17'
+api_count: 4
 apis:
 - baseURL: https://erp.vineretail.com/RestWS/api/eretail
   baseurl_source: declared
@@ -277,7 +277,7 @@ modified: '2026-07-21'
 name: Vinculum
 nav: Providers
 network: true
-overview: 'Vinculum publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Advance Shipping Notice API, Authentication Process API, Common API, and 14 more. Tagged areas include Company, E-Commerce, Omnichannel, Order Management, and Warehouse Management.
+overview: 'Vinculum publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Advance Shipping Notice API, Authentication Process API, Common API, and 14 more. Tagged areas include Company, E-Commerce, Omnichannel, Order Management, and Warehouse Management.
 
 
   Vinculum''s developer surface includes documentation, engineering blog, support, authentication, and 15 more developer resources.'
@@ -288,23 +288,23 @@ rate_limits:
   slug: vinculum-rate-limits
 score:
   band: thin
-  composite: 31.2
+  composite: 31.3
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 40.0
+    artifact_dirs: 20
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 41.5
+    contract_quality: 37.4
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 7.9
-  previous_composite: 31.2
+  previous_composite: 30.7
   provenance:
     conformance: derived
     contracts:
@@ -314,8 +314,14 @@ score:
       total: 17
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

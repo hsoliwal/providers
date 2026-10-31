@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://alemhealth.com/blog/
 - group: company
   title: ''
   type: Website
@@ -68,32 +72,32 @@ created: '2026-07-17'
 description: AlemHealth is an AI-powered teleradiology and medical imaging platform that unifies image acquisition, diagnostic reading, reporting, and analytics into a single cloud system used by 500+ radiologists across 20+ countries. Its product suite includes Connect PACS (cloud image archiving with an FDA-approved diagnostic viewer), FrontDesk RIS scheduling, a referring-physician Referral Portal, a patient QR-access app, and the AlemBox gateway and AlemHub reporting-server hardware. AI features cover automated report drafting, quality-assurance scoring, laterality-mismatch detection, and ICD-10 tagging, metered via an AI-tokens model. For providers, AlemHealth supports bi-directional HL7, FHIR, and API integrations plus standard DICOM connectivity to sync orders, patient demographics, and finalized reports with existing EMR/EHR and PACS systems.
 image: https://alemhealth.com/images/alemhealth-logo-full.svg
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Alem Health
 nav: Providers
 network: true
 overview: 'Alem Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Teleradiology, Medical Imaging, Radiology, and Healthcare.
 
 
-  Alem Health''s developer surface includes pricing, signup flow, support, and 4 more developer resources.'
+  Alem Health''s developer surface includes engineering blog, pricing, signup flow, support, and 4 more developer resources.'
 random_paper: 12
 score:
   band: minimal
-  composite: 7.9
+  composite: 8.9
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 2.4
-    discoverability: 50.0
+    developer_ergonomics: 4.8
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -101,15 +105,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 7.9
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 2.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

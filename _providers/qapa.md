@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://qapa.fr/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/qapa/refs/heads/main/security/qapa-domain-security.yml
   title: ''
@@ -49,17 +53,17 @@ created: '2026-07-17'
 description: Qapa (qapa.fr) is a Paris-based French online recruitment and temporary-work (interim) marketplace that matched companies with job seekers for permanent and temp placements. Backed by Index Ventures and Partech, it was majority-acquired by the Adecco Group. The qapa.fr web property is now gated behind an Azure Application Gateway (HTTP 403) and exposes no public developer, API, or documentation surface; this profile is retained as an API Evangelist network record.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qapa.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Qapa
 nav: Providers
 network: true
-overview: Qapa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruitment, Staffing, Temporary Work, and Human Resources.
+overview: Qapa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Recruiting, Staffing, Temporary Work, and Human Resources.
 random_paper: 1
 score:
   band: minimal
-  composite: 5.0
+  composite: 2.9
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,7 +75,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -81,9 +85,15 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 2.9
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -98,7 +108,7 @@ security:
 slug: qapa
 tags:
 - Company
-- Recruitment
+- Recruiting
 - Staffing
 - Temporary Work
 - Human Resources

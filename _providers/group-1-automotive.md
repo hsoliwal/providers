@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -106,7 +106,7 @@ modified: '2026-08-28'
 name: Group 1 Automotive
 nav: Providers
 network: true
-overview: 'Group 1 Automotive publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Automotive, Automotive Retail, Vehicle Inventory, and Dealership.
+overview: 'Group 1 Automotive is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, Automotive, Automotive Retail, Vehicle Inventory, and Dealership.
 
 
   Group 1 Automotive''s developer surface includes support and 10 more developer resources.'
@@ -137,7 +137,7 @@ rate_limits:
   slug: group-1-automotive-rate-limits
 score:
   band: emerging
-  composite: 15.5
+  composite: 15.0
   coverage:
     artifact_dirs: 13
     catalog_earned: 45.0
@@ -151,19 +151,26 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 15.5
+  previous_composite: 15.0
   provenance:
     agentic_access: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/group-1-automotive/refs/heads/main/screenshots/group-1-automotive-2026-10-11T185917.png
 security:
 - kind: domain-security
   name: Group 1 Automotive Domain Security

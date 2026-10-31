@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -46,7 +46,7 @@ apis:
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_auth API from Murf — 1 operation(s) for subpackage_auth.
-  name: Murf subpackage_auth API
+  name: Murf Subpackage Auth API
   slug: murf-subpackage-auth-api
 - baseURL: https://api.murf.ai
   baseurl_source: declared
@@ -56,27 +56,27 @@ apis:
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_dubbing.subpackage_dubbing/languages API from Murf — 2 operation(s) for subpackage_dubbing.subpackage_dubbing/languages.
-  name: Murf subpackage_dubbing.subpackage_dubbing/languages API
+  name: Murf Subpackage Dubbing.subpackage Dubbing/languages API
   slug: murf-subpackage-dubbing-subpackage-dubbing-languages-api
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_dubbing.subpackage_dubbing/projects API from Murf — 3 operation(s) for subpackage_dubbing.subpackage_dubbing/projects.
-  name: Murf subpackage_dubbing.subpackage_dubbing/projects API
+  name: Murf Subpackage Dubbing.subpackage Dubbing/projects API
   slug: murf-subpackage-dubbing-subpackage-dubbing-projects-api
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_text API from Murf — 1 operation(s) for subpackage_text.
-  name: Murf subpackage_text API
+  name: Murf Subpackage Text API
   slug: murf-subpackage-text-api
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_textToSpeech API from Murf — 3 operation(s) for subpackage_texttospeech.
-  name: Murf subpackage_textToSpeech API
+  name: Murf Subpackage Text To Speech API
   slug: murf-subpackage-texttospeech-api
 - baseURL: https://api.murf.ai
   baseurl_source: declared
   description: The subpackage_voiceChanger API from Murf — 1 operation(s) for subpackage_voicechanger.
-  name: Murf subpackage_voiceChanger API
+  name: Murf Subpackage Voice Changer API
   slug: murf-subpackage-voicechanger-api
 artifact_total: 22
 collections:
@@ -171,16 +171,20 @@ common:
 created: '2026-05-08'
 description: Murf is an AI voice generation platform offering studio-quality voiceovers in 20+ languages with 130+ voices. Public APIs include Falcon TTS (ultra-fast streaming), Text-to-Speech Gen 2 (studio quality), Dubbing, Voice Changer, Translation, and Voice Isolator. The Murf API is REST-based at https://api.murf.ai with regional alternatives (us-east, us-west, in, global). OpenAPI 3.1 published.
 finops:
-- name: Murf Finops
+- has_sources: true
+  method: generated
+  name: Murf Finops
+  primary_unit: ''
   service_category: AI
   slug: murf-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/murf.png
 layout: provider
 modified: '2026-05-19'
 name: Murf
 nav: Providers
 network: true
-overview: 'Murf publishes 7 APIs on the [APIs.io](https://apis.io/) network, including subpackage_auth API, subpackage_dubbing.subpackage_dubbing/jobs API, subpackage_dubbing.subpackage_dubbing/languages API, and 4 more. Tagged areas include Artificial Intelligence, Voice, TTS, Voiceover, and Dubbing.
+overview: 'Murf publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Subpackage Auth API, subpackage_dubbing.subpackage_dubbing/jobs API, Subpackage Dubbing.subpackage Dubbing/languages API, and 4 more. Tagged areas include Artificial Intelligence, Voice, TTS, Voiceover, and Dubbing.
 
 
   Murf''s developer surface includes documentation, engineering blog, and 11 more developer resources.'
@@ -195,23 +199,23 @@ rate_limits:
   slug: murf-rate-limits
 score:
   band: thin
-  composite: 32.6
+  composite: 28.3
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 46.0
+    artifact_dirs: 13
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.0
   facets:
-    access_clarity: 47.4
+    access_clarity: 39.5
     contract_governance: 0.0
-    contract_quality: 48.5
+    contract_quality: 43.6
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 32.6
+  previous_composite: 30.3
   provenance:
     agentic_access: derived
     contracts:
@@ -219,8 +223,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 10.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -33,14 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 0
   human_in_the_loop: 0
   name: Energyaustralia Agentic Access
   operation_count: 27
   slug: energyaustralia-agentic-access
-  summary_line: 27 operations · 5 acting
+  summary_line: 27 operations
 api_count: 2
 apis:
 - baseURL: https://cdr.energymadeeasy.gov.au/energyaustralia/cds-au/v1
@@ -261,7 +261,7 @@ modified: '2026-07-27'
 name: EnergyAustralia
 nav: Providers
 network: true
-overview: 'EnergyAustralia publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
+overview: 'EnergyAustralia publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
 
 
   EnergyAustralia''s developer surface includes authentication, changelog, API reference, documentation, support, signup flow, pricing, and 27 more developer resources.'
@@ -272,10 +272,10 @@ scopes:
   slug: energyaustralia-scopes
   summary_line: 12 scopes · authorizationCode
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 35.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -285,9 +285,9 @@ score:
   facets:
     access_clarity: 22.4
     contract_governance: 4.5
-    contract_quality: 49.7
+    contract_quality: 44.7
     developer_ergonomics: 32.7
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 31.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -296,7 +296,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 39.4
+  previous_composite: 35.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -312,9 +312,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 51.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 31.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

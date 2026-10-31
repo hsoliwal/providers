@@ -27,14 +27,14 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
-api_count: 34
+  score: 0.6
+  scored_at: '2026-10-17'
+api_count: 31
 apis:
 - description: 'The CHAMP Cargosystems Cargospot Acceptance API is a software solution that allows cargo handling agents and freight forwarders to streamline and automate the acceptance process for air shipments. By '
   name: CHAMP Cargosystems Cargospot Acceptance API
@@ -90,21 +90,12 @@ apis:
 - description: The CHAMP Cargosystems Cargospot Pickup API is a software solution that enables users to efficiently manage and coordinate the pickup of cargo shipments. This API allows users to schedule and track pi
   name: CHAMP Cargosystems Cargospot Pickup API
   slug: cargospot-pickup-api
-- description: The CHAMP Cargosystems Price Class API is a tool that allows users to access and manage pricing information for cargo shipments. With this API, users can retrieve real-time pricing data for various tr
-  name: CHAMP Cargosystems Price Class API
-  slug: price-class-api
-- description: The CHAMP Cargosystems Product API is a sophisticated software solution that provides users with a seamless interface to access and manage a wide range of cargo-related services and functionalities. B
-  name: CHAMP Cargosystems Product API
-  slug: product-api
 - description: The CHAMP Cargosystems Publish Ad-Hoc Price Details API is a tool designed to provide users with the ability to quickly and easily access and disseminate real-time pricing information for cargo shipme
   name: CHAMP Cargosystems Publish Ad-Hoc Price Details API
   slug: publish-ad-hoc-price-details-api
 - description: The CHAMP Cargosystems Cargospot Publish Bookings API is a tool designed to streamline the process of booking cargo shipments. This API allows users to publish booking information and details directly
   name: CHAMP Cargosystems Cargospot Publish Bookings API
   slug: cargospot-publish-bookings-api
-- description: The CHAMP Cargosystems Participant API is a powerful tool that allows users to access and interact with CHAMP Cargosystems' comprehensive suite of cargo management solutions. This API enables seamless
-  name: CHAMP Cargosystems Participant API
-  slug: participant-api
 - description: CHAMP Cargosystems Cargospot Scale Weight API is a software tool that allows users to input and retrieve accurate weight measurements for cargo shipments. By integrating with existing systems, this AP
   name: CHAMP Cargosystems Cargospot Scale Weight API
   slug: cargospot-scale-weight-api
@@ -138,8 +129,31 @@ apis:
 - description: The CHAMP Cargosystems TGS House Air Waybill Declarations API is a software tool that allows users to easily create and manage air waybill declarations for cargo shipments. This API streamlines the pr
   name: CHAMP Cargosystems TGS House Air Waybill Declarations API
   slug: tgs-house-air-waybill-declarations-api
-artifact_total: 84
+artifact_total: 81
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/champ/refs/heads/main/plans/champ-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/champ-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/champ/refs/heads/main/rate-limits/champ-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/champ-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/champ/refs/heads/main/finops/champ-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/champ-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.champ.aero/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.champ.aero/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/champ/refs/heads/main/security/champ-domain-security.yml
   title: ''
@@ -216,9 +230,13 @@ features:
 - name: Real-Time Tracking
 - name: REST API
 finops:
-- name: Champ Finops
+- has_sources: false
+  method: generated
+  name: Champ Finops
+  primary_unit: ''
   service_category: API
   slug: champ-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/champ.png
 integrations:
 - name: Cargospot
@@ -233,14 +251,14 @@ integrations:
 - name: SITA
 - name: Customs Authorities
 layout: provider
-modified: '2026-04-23'
+modified: '2026-10-06'
 name: CHAMP Cargosystems
 nav: Providers
 network: true
-overview: 'CHAMP Cargosystems publishes 34 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Air Cargo, Airlines, Booking, Cargo, and Cargospot.
+overview: 'CHAMP Cargosystems is listed with 31 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Air Cargo, Airlines, Booking, Cargo, and Cargospot.
 
 
-  CHAMP Cargosystems'' developer surface includes developer portal, getting-started guide, product news, and 9 more developer resources.'
+  CHAMP Cargosystems'' developer surface includes engineering blog, developer portal, getting-started guide, product news, and 13 more developer resources.'
 plans:
 - name: Champ Plans Pricing
   plan_count: 3
@@ -252,25 +270,31 @@ rate_limits:
   slug: champ-rate-limits
 score:
   band: emerging
-  composite: 17.6
+  composite: 15.0
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 44.0
+    artifact_dirs: 8
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.1
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 31.0
-    discoverability: 72.2
+    developer_ergonomics: 33.3
+    discoverability: 71.4
     operational_transparency: 7.9
-  previous_composite: 17.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -292,6 +316,7 @@ tags:
 - Freight
 - Logistics
 - Tracking
+- Aviation
 use_cases:
 - name: Air Cargo Operations Automation
 - name: Freight Forwarder Integration

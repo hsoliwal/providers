@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://uniteus.com/feed/
 - group: company
   title: ''
   type: Website
@@ -114,18 +118,18 @@ created: '2026-07-17'
 description: Unite Us is the software and data infrastructure company for coordinating whole-person care across healthcare, government, and community-based organizations. Its platform screens people for social determinants of health, sends closed-loop referrals to community services, and tracks outcomes, with EHR and case-management integrations (Epic, Oracle Health, Meditech, Salesforce) delivered through FHIR APIs, SMART on FHIR apps, and other HL7 protocols aligned with Gravity Project standards. The platform is HIPAA-compliant and HITRUST, SOC 2 Type 2, and NIST CSF certified. API and integration documentation is gated to licensed network partners.
 image: https://docs.uniteus.com/wp-content/uploads/2022/08/cropped-favicon-01-270x270.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Unite Us
 nav: Providers
 network: true
 overview: 'Unite Us is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Social Care, SDOH, and Referrals.
 
 
-  Unite Us'' developer surface includes documentation, changelog, support, engineering blog, signup flow, and 12 more developer resources.'
+  Unite Us'' developer surface includes documentation, changelog, support, engineering blog, signup flow, and 13 more developer resources.'
 random_paper: 12
 score:
-  band: thin
-  composite: 26.3
+  band: emerging
+  composite: 24.4
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -139,9 +143,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
-  previous_composite: 26.3
+  previous_composite: 24.4
   provenance:
     conformance: first-party
   regulatory:
@@ -155,9 +159,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

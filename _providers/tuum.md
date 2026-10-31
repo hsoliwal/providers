@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Tuum's modular, API-first core banking platform. Per-module REST APIs (auth, person, employee, account, payment, card, loan, deposit, data-import, notification) versioned independently in the URL path
@@ -140,7 +140,7 @@ modified: '2026-07-21'
 name: Tuum
 nav: Providers
 network: true
-overview: 'Tuum publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Core Banking, Banking as a Service, Payments, and Lending.
+overview: 'Tuum is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Core Banking, Banking as a Service, Payments, and Lending.
 
 
   The Tuum catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -150,7 +150,7 @@ overview: 'Tuum publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 19
 score:
   band: thin
-  composite: 33.9
+  composite: 32.8
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -162,11 +162,11 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 33.9
+  previous_composite: 32.8
   provenance:
     conformance: first-party
   regulatory:
@@ -174,9 +174,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 32.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -201,6 +201,6 @@ tags:
 - Lending
 - Cards
 - Fintech
-- Financial-Services
+- Financial Services
 website: https://tuum.com/
 ---

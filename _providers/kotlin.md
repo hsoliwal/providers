@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Core Kotlin standard library with collections, I/O, and utility functions.
@@ -42,8 +42,23 @@ apis:
 - description: Library support for Kotlin coroutines with async/await patterns.
   name: Kotlin Coroutines API
   slug: coroutines
-artifact_total: 6
+artifact_total: 7
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/kotlin/refs/heads/main/plans/kotlin-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/kotlin-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/kotlin/refs/heads/main/rate-limits/kotlin-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/kotlin-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/kotlin/refs/heads/main/finops/kotlin-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/kotlin-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/kotlin/refs/heads/main/security/kotlin-domain-security.yml
   title: ''
@@ -80,19 +95,27 @@ common:
 created: '2024-01-01'
 description: Kotlin is a modern, concise, and safe programming language for the JVM, Android, and multiplatform development. It is developed by JetBrains and provides full interoperability with Java. Kotlin's standard library and ecosystem offer rich APIs for building applications across all platforms.
 finops:
-- name: Kotlin Finops
+- has_sources: false
+  method: generated
+  name: Kotlin Finops
+  primary_unit: ''
   service_category: API
   slug: kotlin-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kotlin.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.kotlinlang.org over HTTP; 2 tools listed.
+  name: Kotlin MCP Server
+  slug: kotlin
 modified: '2026-04-28'
 name: Kotlin
 nav: Providers
 network: true
-overview: 'Kotlin publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Android, JVM, Kotlin, Multiplatform, and Programming Language.
+overview: 'Kotlin is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Android, JVM, Kotlin, Multiplatform, and Programming Language.
 
 
-  Kotlin''s developer surface includes documentation, engineering blog, and 6 more developer resources.'
+  Kotlin''s developer surface includes documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Kotlin Plans Pricing
   plan_count: 3
@@ -104,27 +127,33 @@ rate_limits:
   slug: kotlin-rate-limits
 score:
   band: emerging
-  composite: 15.5
+  composite: 12.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 41.0
+    artifact_dirs: 10
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
     discoverability: 66.7
     operational_transparency: 10.5
-  previous_composite: 15.5
+  previous_composite: 14.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -125,6 +125,21 @@ collections:
   name: Tableau REST API
   slug: open-tableau-desktop
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tableau-desktop/refs/heads/main/plans/tableau-desktop-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tableau-desktop-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tableau-desktop/refs/heads/main/rate-limits/tableau-desktop-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tableau-desktop-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tableau-desktop/refs/heads/main/finops/tableau-desktop-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tableau-desktop-finops.yml
 - group: company
   title: ''
   type: Website
@@ -213,9 +228,13 @@ features:
 - description: Automate Tableau Server operations with the Python Server Client library.
   name: Python Automation
 finops:
-- name: Tableau Desktop Finops
+- has_sources: false
+  method: generated
+  name: Tableau Desktop Finops
+  primary_unit: ''
   service_category: API
   slug: tableau-desktop-finops
+  template: true
 graphqls:
 - description: Discover and query metadata about Tableau content using GraphQL, including workbooks, data sources, flows, and lineage information.
   name: Tableau Desktop GraphQL API
@@ -239,10 +258,10 @@ modified: '2026-09-16'
 name: Tableau Desktop
 nav: Providers
 network: true
-overview: 'Tableau Desktop publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Projects API, and 4 more. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Desktop Application.
+overview: 'Tableau Desktop is listed with 12 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Projects API, and 9 more. Tagged areas include Analytics, Business Intelligence, Data Visualization, and Desktop Application.
 
 
-  Tableau Desktop''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, training material, and 10 more developer resources.'
+  Tableau Desktop''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, support, training material, and 13 more developer resources.'
 plans:
 - name: Tableau Desktop Plans Pricing
   plan_count: 3
@@ -253,27 +272,27 @@ rate_limits:
   name: Tableau Desktop Rate Limits
   slug: tableau-desktop-rate-limits
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 37.7
   coverage:
     artifact_dirs: 13
-    catalog_earned: 44.0
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 36.8
+    access_clarity: 28.9
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.3
     developer_ergonomics: 57.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 39.8
+  previous_composite: 39.1
   provenance:
     agentic_access: derived
     contracts:
@@ -281,8 +300,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

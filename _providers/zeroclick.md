@@ -34,10 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://zeroclick.ai/blog
 - group: company
   title: ''
   type: Website
@@ -130,34 +134,38 @@ created: '2026-07-17'
 description: ZeroClick is the agent-first storefront and transaction layer that lets businesses sell directly to AI agents. It turns any existing API or offering into an agent-purchasable service, publishing a machine-readable storefront so agents can discover it and adding agent identity, agent-native payment rails (x402 and MPP, the Machine Payments Protocol), signed proxying, and per-transaction analytics in front of the seller's unchanged upstream API. Sellers keep their product, pricing, and customer experience, add a small guard to billed endpoints via the @zeroclickai/sellers SDK, and settle revenue to their own connected Stripe account. ZeroClick launched in July 2026, raised $55M, is backed by Forerunner Ventures, and is a product of the People's Internet Experiment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zeroclick.png
 layout: provider
-modified: '2026-07-21'
+mcp_servers:
+- description: Remote MCP server at mcp.zeroclick.ai over HTTP.
+  name: Zeroclick MCP Server
+  slug: zeroclick
+modified: '2026-10-06'
 name: Zeroclick
 nav: Providers
 network: true
 overview: 'Zeroclick is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Agentic Commerce, Agentic Payments, and API Monetization.
 
 
-  Zeroclick''s developer surface includes documentation, API reference, authentication, and 16 more developer resources.'
+  Zeroclick''s developer surface includes engineering blog, documentation, API reference, authentication, and 16 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 20.6
+  composite: 20.4
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
     contract_quality: 0.0
-    developer_ergonomics: 35.7
-    discoverability: 57.4
+    developer_ergonomics: 38.1
+    discoverability: 58.3
     operational_transparency: 2.6
-  previous_composite: 20.6
+  previous_composite: 19.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -166,9 +174,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

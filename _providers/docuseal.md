@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.8
-  scored_at: '2026-09-20'
+  score: 37.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 0
@@ -60,7 +60,7 @@ apis:
   description: Templates represent reusable document signing forms with fields and signatures to be collected. It's possible to create unique template forms with fields and signatures using HTML or with tagged PDFs.
   name: DocuSeal Templates API
   slug: docuseal-templates-api
-artifact_total: 24
+artifact_total: 25
 collections:
 - collection_type: postman
   name: DocuSeal Submissions API
@@ -223,9 +223,13 @@ examples:
   name: Docuseal Create Template From Pdf Example
   slug: docuseal-create-template-from-pdf-example
 finops:
-- name: Docuseal Finops
+- has_sources: false
+  method: generated
+  name: Docuseal Finops
+  primary_unit: ''
   service_category: ''
   slug: docuseal-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/docuseal.png
 json_schemas:
 - name: DocuSeal Submission
@@ -240,11 +244,15 @@ jsonld:
   property_count: 61
   slug: docuseal-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.docuseal.com over HTTP; 2 tools listed.
+  name: DocuSeal MCP Server
+  slug: docuseal
 modified: 2026-06-12
 name: DocuSeal
 nav: Providers
 network: true
-overview: 'DocuSeal publishes 3 APIs on the [APIs.io](https://apis.io/) network: Submissions API, Submitters API, and Templates API. Tagged areas include Document Signing, E-Signature, Electronic Signature, Document-Management, and PDF.
+overview: 'DocuSeal publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Submissions API, Submitters API, and Templates API. Tagged areas include E-Signature, Document Management, PDF, Templates, and Open Source.
 
 
   The DocuSeal catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -261,9 +269,10 @@ rate_limits:
   name: Docuseal Rate Limits
   slug: docuseal-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: DocuSeal API Rules
+  name: DocuSeal — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -273,23 +282,23 @@ rules:
   slug: docuseal-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 52.6
+  composite: 46.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 68.3
+    artifact_dirs: 19
+    catalog_earned: 55.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.8
+    catalog_gap: 59.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 60.4
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 55.2
     developer_ergonomics: 47.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 34.2
-  previous_composite: 52.6
+  previous_composite: 51.9
   provenance:
     agentic_access: derived
     contracts:
@@ -298,9 +307,15 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
@@ -317,20 +332,18 @@ security:
 - kind: vulnerability-disclosure
   name: Docuseal Vulnerability Disclosure
   slug: docuseal-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Docuseal Trust Center
   slug: docuseal-trust-center
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
 slug: docuseal
 tags:
-- Document Signing
 - E-Signature
-- Electronic Signature
-- Document-Management
+- Document Management
 - PDF
 - Templates
-- Open-Source
+- Open Source
 - Webhook
 - Embeddings
 website: https://www.docuseal.com/

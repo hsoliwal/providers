@@ -37,13 +37,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Hosted, remote Model Context Protocol server that lets external AI clients — Claude Desktop, Cursor and other MCP clients — work with an Instant project. Documented tools list, create, edit, publish a
   name: Instant MCP Server
   slug: instant-mcp-server
-artifact_total: 7
+artifact_total: 6
 common:
 - group: company
   title: ''
@@ -206,15 +206,12 @@ layout: provider
 mcp_servers:
 - description: Instant operates a hosted, remote Model Context Protocol (MCP) server that lets external AI clients such as Claude Desktop and Cursor work with an Instant project. It was announced in the product chan
   name: Instant Commerce MCP Server
-  slug: instant-commerce-mcp-server
-- description: ''
-  name: Instant Commerce MCP Server
-  slug: instant-commerce-mcp-server-2
+  slug: instant
 modified: '2026-08-13'
 name: Instant Commerce
 nav: Providers
 network: true
-overview: 'Instant Commerce publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Enterprise Software, E-Commerce, Shopify, and No-Code.
+overview: 'Instant Commerce is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Enterprise Software, E-Commerce, Shopify, and No-Code.
 
 
   Instant Commerce''s developer surface includes documentation, pricing, signup flow, engineering blog, support, changelog, getting-started guide, and 27 more developer resources.'
@@ -229,9 +226,9 @@ rate_limits:
   slug: instant-commerce-rate-limits
 score:
   band: developing
-  composite: 44.8
+  composite: 45.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -243,19 +240,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 44.8
+  previous_composite: 45.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -284,6 +289,6 @@ tags:
 - Conversion Rate Optimization
 - Developer Tools
 - MCP
-- agent-native
+- Agent-Native
 website: https://instant.so/
 ---

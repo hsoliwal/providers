@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -327,7 +327,7 @@ modified: '2026-09-16'
 name: Red Energy
 nav: Providers
 network: true
-overview: 'Red Energy publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
+overview: 'Red Energy publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data Holder Customers API, Data Holder Operations API, Distributed Energy Resources API, and 6 more. Tagged areas include Energy, Australia, Utilities, Electricity, and Gas.
 
 
   Red Energy''s developer surface includes authentication, changelog, code examples, status page, documentation, API reference, support, and 35 more developer resources.'
@@ -342,10 +342,10 @@ scopes:
   slug: red-energy-scopes
   summary_line: 11 scopes · authorizationCode
 score:
-  band: strong
-  composite: 55.0
+  band: developing
+  composite: 50.6
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 25
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -355,9 +355,9 @@ score:
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.3
     developer_ergonomics: 35.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 68.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -366,7 +366,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 55.0
+  previous_composite: 50.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -382,13 +382,14 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 63.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 0.0
+screenshot: https://raw.githubusercontent.com/api-evangelist/red-energy/refs/heads/main/screenshots/red-energy-2026-10-11T193404.png
 security:
 - kind: authentication
   name: Red Energy Authentication

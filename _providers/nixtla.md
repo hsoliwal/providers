@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -57,7 +57,7 @@ apis:
 - baseURL: https://api.nixtla.io
   baseurl_source: declared
   description: The excluded API from Nixtla — 1 operation(s) for excluded.
-  name: Nixtla excluded API
+  name: Nixtla Excluded API
   slug: nixtla-excluded-api
 - baseURL: https://api.nixtla.io
   baseurl_source: declared
@@ -84,7 +84,7 @@ apis:
   description: The Validate Api Key API from Nixtla — 1 operation(s) for validate api key.
   name: Nixtla Validate Api Key API
   slug: nixtla-validate-api-key-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -114,6 +114,16 @@ collections:
   name: Nixtla Forecast Anomaly Detection Validate Api Key API
   slug: open-nixtla-validate-api-key-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nixtla/refs/heads/main/plans/nixtla-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/nixtla-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nixtla/refs/heads/main/capabilities/nixtla-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nixtla-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/nixtla/refs/heads/main/overlays/nixtla-forecast-overlay.yaml
   title: ''
@@ -257,35 +267,39 @@ layout: provider
 mcp_servers:
 - description: Nixtla ships MCP tools that expose TimeGPT time-series forecasting and anomaly detection to AI agents. Announced 2025-12-18 as part of Nixtla Enterprise's foundation-models + MCP + agentic release. Di
   name: Nixtla MCP Server
-  slug: nixtla-mcp-server
+  slug: nixtla
 modified: '2026-07-20'
 name: Nixtla
 nav: Providers
 network: true
-overview: 'Nixtla publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Anomaly Detection API, Cross Validation API, excluded API, and 5 more. Tagged areas include Company, Time Series, Forecasting, Anomaly Detection, and Machine-Learning.
+overview: 'Nixtla publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Anomaly Detection API, Cross Validation API, Excluded API, and 5 more. Tagged areas include Company, Time Series, Forecasting, Anomaly Detection, and Machine Learning.
 
 
-  Nixtla''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, pricing, and 23 more developer resources.'
+  Nixtla''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, pricing, and 25 more developer resources.'
+plans:
+- name: Nixtla Plans Pricing
+  plan_count: 0
+  slug: nixtla-plans-pricing
 random_paper: 18
 score:
   band: developing
-  composite: 49.6
+  composite: 48.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 56.0
+    contract_quality: 50.4
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 49.6
+  previous_composite: 48.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -296,8 +310,14 @@ score:
       total: 8
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -322,7 +342,7 @@ tags:
 - Time Series
 - Forecasting
 - Anomaly Detection
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - Foundation Models
 - Predictive Analytics

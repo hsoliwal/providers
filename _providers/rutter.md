@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.3
-  scored_at: '2026-09-20'
+  score: 24.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -111,6 +111,26 @@ collections:
   name: Rutter Unified Accounting Webhooks API
   slug: open-rutter-webhooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/rutter/refs/heads/main/plans/rutter-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/rutter-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/rutter/refs/heads/main/rate-limits/rutter-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rutter-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/rutter/refs/heads/main/finops/rutter-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/rutter-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/rutter/refs/heads/main/capabilities/rutter-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/rutter-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/rutter/refs/heads/main/agentic-access/rutter-agentic-access.yml
   title: ''
@@ -203,9 +223,13 @@ examples:
   name: Rutter List Orders Example
   slug: rutter-list-orders-example
 finops:
-- name: Rutter Finops
+- has_sources: true
+  method: generated
+  name: Rutter Finops
+  primary_unit: ''
   service_category: Unified API / Commerce + Accounting Integration
   slug: rutter-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rutter.png
 json_schemas:
 - name: Rutter Connection
@@ -237,13 +261,13 @@ modified: '2026-05-19'
 name: Rutter
 nav: Providers
 network: true
-overview: 'Rutter publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Accounting API, Ads API, Banking API, and 3 more. Tagged areas include Accounting, B2B, Commerce, Financial Data, and Payments.
+overview: 'Rutter publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounting API, Ads API, Banking API, and 6 more. Tagged areas include Accounting, B2B, Commerce, Financial Data, and Payments.
 
 
   The Rutter catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Rutter''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, GitHub presence, and 13 more developer resources.'
+  Rutter''s developer surface includes authentication, documentation, pricing, engineering blog, signup flow, GitHub presence, and 17 more developer resources.'
 plans:
 - name: Rutter Plans Pricing
   plan_count: 1
@@ -254,9 +278,10 @@ rate_limits:
   name: Rutter Rate Limits
   slug: rutter-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Rutter API Rules
+  name: Rutter — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -264,7 +289,8 @@ rules:
     info: 1
     warn: 4
   slug: rutter-jsonschema-spectral-rules
-- effective_rule_count: 56
+- authorship: generated
+  effective_rule_count: 56
   extends:
   - spectral:oas
   name: Rutter API Rules
@@ -277,23 +303,23 @@ rules:
   slug: rutter-spectral-rules
 score:
   band: thin
-  composite: 38.7
+  composite: 35.6
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 56.5
+    artifact_dirs: 20
+    catalog_earned: 53.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 36.8
-    contract_governance: 28.8
-    contract_quality: 61.0
+    access_clarity: 28.9
+    contract_governance: 27.3
+    contract_quality: 55.4
     developer_ergonomics: 31.0
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 38.7
+  previous_composite: 37.1
   provenance:
     agentic_access: derived
     contracts:
@@ -306,9 +332,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -330,6 +356,6 @@ tags:
 - Commerce
 - Financial Data
 - Payments
-- Unified-API
+- Unified API
 website: https://www.rutter.com/
 ---

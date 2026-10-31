@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Real-time REST API exposing raw mobile app-store data — apps, publishers, parent companies, SDKs, download/revenue/usage estimates, ratings, top charts, and advertising intelligence across iTunes, Goo
@@ -43,6 +43,11 @@ apis:
   slug: apptopia-data-api
 artifact_total: 4
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apptopia/refs/heads/main/rate-limits/apptopia-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apptopia-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -114,10 +119,10 @@ modified: '2026-07-18'
 name: Apptopia
 nav: Providers
 network: true
-overview: 'Apptopia publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mobile, App Store Intelligence, Market Intelligence, and Alternative Data.
+overview: 'Apptopia is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Mobile, App Store Intelligence, Market Intelligence, and Alternative Data.
 
 
-  Apptopia''s developer surface includes documentation, API reference, authentication, support, pricing, engineering blog, and 9 more developer resources.'
+  Apptopia''s developer surface includes documentation, API reference, authentication, support, pricing, engineering blog, and 10 more developer resources.'
 random_paper: 4
 rate_limits:
 - limit_count: 4
@@ -125,7 +130,7 @@ rate_limits:
   slug: apptopia-rate-limits
 score:
   band: thin
-  composite: 31.9
+  composite: 33.7
   coverage:
     artifact_dirs: 14
     catalog_earned: 49.0
@@ -139,14 +144,20 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 42.1
-  previous_composite: 31.9
+  previous_composite: 33.7
   provenance:
     conformance: derived
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

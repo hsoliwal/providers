@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 62
   human_in_the_loop: 2
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 128
   slug: blues-wireless-agentic-access
   summary_line: 128 operations · 62 acting · 2 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - description: The Notecard API is the firmware-level JSON API for interacting with Blues Notecard hardware modules directly over serial or I2C. It supports card, dfu, env, file, hub, note, ntn, var, and web request
   name: Notecard API
@@ -51,27 +51,27 @@ apis:
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: The alert API from Blues — 1 operation(s) for alert.
-  name: Blues alert API
+  name: Blues Alert API
   slug: blues-wireless-alert-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Authorization operations
-  name: Blues authorization API
+  name: Blues Authorization API
   slug: blues-wireless-authorization-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Billing Account operations
-  name: Blues billing_account API
+  name: Blues Billing Account API
   slug: blues-wireless-billing-account-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Device operations
-  name: Blues device API
+  name: Blues Device API
   slug: blues-wireless-device-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Event retrieval operations
-  name: Blues event API
+  name: Blues Event API
   slug: blues-wireless-event-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
@@ -81,37 +81,37 @@ apis:
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Batch job operations
-  name: Blues jobs API
+  name: Blues Jobs API
   slug: blues-wireless-jobs-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: The monitor API from Blues — 2 operation(s) for monitor.
-  name: Blues monitor API
+  name: Blues Monitor API
   slug: blues-wireless-monitor-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Organization operations
-  name: Blues organization API
+  name: Blues Organization API
   slug: blues-wireless-organization-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Project operations
-  name: Blues project API
+  name: Blues Project API
   slug: blues-wireless-project-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Route operations
-  name: Blues route API
+  name: Blues Route API
   slug: blues-wireless-route-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Project Usage information related to events, route logs, sessions, and data usage
-  name: Blues usage API
+  name: Blues Usage API
   slug: blues-wireless-usage-api
 - baseURL: https://api.notefile.net
   baseurl_source: declared
   description: Webhook APIs for non-notecard event ingestion
-  name: Blues webhook API
+  name: Blues Webhook API
   slug: blues-wireless-webhook-api
 artifact_total: 61
 collections:
@@ -287,9 +287,13 @@ examples:
   name: Blues Wireless Notehub Api Examples
   slug: blues-wireless-notehub-api-examples
 finops:
-- name: Blues Wireless Finops
+- has_sources: false
+  method: generated
+  name: Blues Wireless Finops
+  primary_unit: ''
   service_category: ''
   slug: blues-wireless-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blues-wireless.png
 json_schemas:
 - name: BillingAccount
@@ -335,7 +339,7 @@ modified: '2026-06-12'
 name: Blues
 nav: Providers
 network: true
-overview: 'Blues publishes 13 APIs on the [APIs.io](https://apis.io/) network, including alert API, authorization API, billing_account API, and 10 more. Tagged areas include IoT, Cellular, Connectivity, Device Management, and Fleet Management.
+overview: 'Blues publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert API, Authorization API, Billing Account API, and 11 more. Tagged areas include IoT, Cellular, Connectivity, Device Management, and Fleet Management.
 
 
   The Blues catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -352,9 +356,10 @@ rate_limits:
   name: Blues Wireless Rate Limits
   slug: blues-wireless-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Blues API Rules
+  name: Blues — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -364,23 +369,23 @@ rules:
   slug: blues-wireless-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 52.0
+  composite: 43.1
   coverage:
     artifact_dirs: 17
-    catalog_earned: 83.3
+    catalog_earned: 66.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.8
+    catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 67.3
+    access_clarity: 15.8
+    contract_governance: 23.5
+    contract_quality: 61.4
     developer_ergonomics: 45.2
-    discoverability: 63.0
-    operational_transparency: 65.8
-  previous_composite: 52.0
+    discoverability: 66.1
+    operational_transparency: 42.1
+  previous_composite: 50.0
   provenance:
     agentic_access: derived
     contracts:
@@ -388,9 +393,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1

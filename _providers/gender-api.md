@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -46,17 +46,17 @@ agentic_access:
 api_count: 1
 apis:
 - baseURL: https://gender-api.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Get API from Gender API — 1 operation(s) for get.
   name: Gender API Get API
   slug: gender-api-get-api
 - baseURL: https://gender-api.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Get Country Of Origin API from Gender API — 1 operation(s) for get country of origin.
   name: Gender API Get Country Of Origin API
   slug: gender-api-get-country-of-origin-api
 - baseURL: https://gender-api.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: The Get Stats API from Gender API — 1 operation(s) for get stats.
   name: Gender API Get Stats API
   slug: gender-api-get-stats-api
@@ -78,6 +78,21 @@ collections:
   name: Gender API
   slug: open-gender-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/gender-api/refs/heads/main/plans/gender-api-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/gender-api-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/gender-api/refs/heads/main/rate-limits/gender-api-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/gender-api-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/gender-api/refs/heads/main/finops/gender-api-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/gender-api-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gender-api/refs/heads/main/agentic-access/gender-api-agentic-access.yml
   title: ''
@@ -144,19 +159,23 @@ common:
 created: '2025-01-07'
 description: Gender-API is an AI-powered service that determines whether a first name is more likely to be used by males or females, with optional localization by country, IP address, or browser locale. The API returns a gender prediction with an accuracy score and supports multi-name lookups, email parsing, full-name splitting, and country-of-origin queries. Gender-API is delivered as a metered REST API with credit-based subscription plans and integrates with Zapier, Postman, Google Sheets, and HubSpot.
 finops:
-- name: Gender Api Finops
+- has_sources: false
+  method: generated
+  name: Gender Api Finops
+  primary_unit: ''
   service_category: API
   slug: gender-api-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gender-api.png
 layout: provider
 modified: '2026-05-19'
 name: Gender API
 nav: Providers
 network: true
-overview: 'Gender API publishes 3 APIs on the [APIs.io](https://apis.io/) network: Get API, Get Country Of Origin API, and Get Stats API. Tagged areas include Artificial Intelligence, Demographics, Gender, Identity, and Name.
+overview: 'Gender API publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Get API, Get Country Of Origin API, and Get Stats API. Tagged areas include Artificial Intelligence, Demographics, Gender, Identity, and Name.
 
 
-  Gender API''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 10 more developer resources.'
+  Gender API''s developer surface includes authentication, documentation, pricing, signup flow, engineering blog, and 13 more developer resources.'
 plans:
 - name: Gender Api Plans Pricing
   plan_count: 3
@@ -168,23 +187,23 @@ rate_limits:
   slug: gender-api-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 30.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 46.0
+    artifact_dirs: 13
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 32.9
+    access_clarity: 25.0
     contract_governance: 0.0
-    contract_quality: 51.9
+    contract_quality: 46.7
     developer_ergonomics: 23.8
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 35.3
+  previous_composite: 32.2
   provenance:
     agentic_access: derived
     contracts:
@@ -192,8 +211,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -14,7 +14,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: true
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.8
-  scored_at: '2026-09-20'
+  score: 34.5
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The Acadio LMS platform surface. Acadio operates an API gateway at api.acadio.com (its own status page lists an "API — Acadio API Services" component) and documents integration entry points in its kno
@@ -38,6 +38,14 @@ asyncapis:
   name: Acadio Lms Webhooks
   slug: acadio-lms-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://acadio.com/blogs/articles
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://acadio.com/blogs/articles.atom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/acadio/refs/heads/main/security/acadio-domain-security.yml
   title: ''
@@ -149,17 +157,17 @@ mcp_servers:
 - description: 'A live, unauthenticated remote MCP server on Acadio''s own domain that exposes the company''s direct-to-learner securities exam prep storefront to agents: catalog search and lookup, cart construction, c'
   name: Acadio Storefront (Universal Commerce Protocol)
   slug: acadio-storefront-universal-commerce-protocol
-modified: '2026-09-06'
+modified: '2026-10-06'
 name: Acadio
 nav: Providers
 network: true
-overview: 'Acadio publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, Learning Management System, Professional Education, and Continuing Education.
+overview: 'Acadio is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, LMS, Professional Education, and Continuing Education.
 
 
   The Acadio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Acadio''s developer surface includes documentation, support, engineering blog, authentication, and 18 more developer resources.'
+  Acadio''s developer surface includes engineering blog, documentation, support, authentication, and 20 more developer resources.'
 plans:
 - name: Acadio Plans Pricing
   plan_count: 0
@@ -171,14 +179,14 @@ rate_limits:
   slug: acadio-rate-limits
 scopes:
 - name: Acadio Scopes
-  scope_count: 0
+  scope_count: 4
   slug: acadio-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 36.5
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -188,28 +196,29 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 23.7
-  previous_composite: 40.4
+  previous_composite: 36.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/acadio/refs/heads/main/screenshots/acadio-2026-10-11T092701.png
 security:
 - kind: authentication
   name: Acadio Authentication
@@ -223,7 +232,7 @@ slug: acadio
 tags:
 - Company
 - Education
-- Learning Management System
+- LMS
 - Professional Education
 - Continuing Education
 - Certification

@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: documented
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.1
-  scored_at: '2026-09-20'
+  score: 28.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -51,6 +51,11 @@ apis:
   slug: glowbar-ucp-commerce-mcp-api
 artifact_total: 8
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/glowbar/refs/heads/main/rate-limits/glowbar-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/glowbar-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -124,17 +129,17 @@ description: 'Glowbar is a New York-founded skincare studio chain offering exper
 image: https://glowbar.com/cdn/shop/files/Face_your_skin._2.png?v=1681760540
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at glowbar.com over streamable HTTP; 13 tools listed.
   name: Glowbar UCP Commerce MCP
   slug: glowbar-ucp-commerce-mcp
 modified: '2026-08-22'
 name: Glowbar
 nav: Providers
 network: true
-overview: 'Glowbar publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Skincare, Beauty, Retail, and Commerce.
+overview: 'Glowbar is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Skincare, Beauty, Retail, and Commerce.
 
 
-  Glowbar''s developer surface includes engineering blog, support, pricing, signup flow, and 11 more developer resources.'
+  Glowbar''s developer surface includes engineering blog, support, pricing, signup flow, and 12 more developer resources.'
 plans:
 - name: Glowbar Plans Pricing
   plan_count: 0
@@ -146,35 +151,41 @@ rate_limits:
   slug: glowbar-rate-limits
 scopes:
 - name: Glowbar Scopes
-  scope_count: 0
+  scope_count: 4
   slug: glowbar-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes · authorization_code
 score:
-  band: emerging
-  composite: 24.8
+  band: thin
+  composite: 27.6
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 24.8
+  previous_composite: 27.5
   provenance:
     agentic_access: derived
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

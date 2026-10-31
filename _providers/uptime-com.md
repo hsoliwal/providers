@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -110,6 +110,16 @@ collections:
   name: Uptime.com REST API
   slug: open-uptime-com
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/uptime-com/refs/heads/main/capabilities/uptime-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/uptime-com-capability-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/uptime-com/refs/heads/main/vendor-facets/uptime-com-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/uptime-com-vendor-facets.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/uptime-com/refs/heads/main/agentic-access/uptime-com-agentic-access.yml
   title: ''
@@ -163,19 +173,23 @@ common:
 created: '2026-06-21'
 description: Uptime.com is a website, application, and infrastructure monitoring platform providing uptime checks, transaction and API monitoring, page speed checks, SLA reporting, status pages, and alerting from a global network of probe servers. Its REST API at https://uptime.com/api/v1 (Token authentication) lets customers programmatically manage checks, outages, SLA reports, status pages, contacts, integrations, and tags.
 finops:
-- name: Uptime Com Finops
+- has_sources: true
+  method: generated
+  name: Uptime Com Finops
+  primary_unit: ''
   service_category: Monitoring and Observability
   slug: uptime-com-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/uptime-com.png
 layout: provider
 modified: '2026-06-21'
 name: Uptime.com
 nav: Providers
 network: true
-overview: 'Uptime.com publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Checks API, Contacts API, Integrations API, and 4 more. Tagged areas include Monitoring, Uptime, Website Monitoring, Status Pages, and SLA.
+overview: 'Uptime.com publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Checks API, Contacts API, Integrations API, and 4 more. Tagged areas include Monitoring, Uptime, Website Monitoring, Status Pages, and SLA.
 
 
-  Uptime.com''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Uptime.com''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
 plans:
 - name: Uptime Com Plans Pricing
   plan_count: 4
@@ -187,23 +201,23 @@ rate_limits:
   slug: uptime-com-rate-limits
 score:
   band: thin
-  composite: 38.1
+  composite: 26.7
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 52.7
+    contract_quality: 47.7
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 38.1
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -211,9 +225,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

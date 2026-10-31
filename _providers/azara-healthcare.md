@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.azarahealthcare.com/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/azara-healthcare/refs/heads/main/security/azara-healthcare-domain-security.yml
   title: ''
@@ -65,18 +69,18 @@ created: '2026-07-17'
 description: Azara Healthcare provides population health management, data analytics, and quality reporting solutions for community health centers, safety-net providers, and physician practices. Its flagship platform, Azara DRVS (Data Reporting and Visualization System), aggregates clinical, claims, and social determinants of health (SDOH) data into unified dashboards, quality measures, eCQM and UDS (Uniform Data System) reporting, patient registries, and care-gap analytics. Related products include Azara Cost & Utilization, Azara Patient Outreach, Azara Care Connect, and value-based care reporting. Azara is backed by Insight Partners and serves the safety-net and federally qualified health center (FQHC) market. This profile was added to the API Evangelist network as a company lead; the provider publishes no public developer portal or API at this time.
 image: https://www.azarahealthcare.com/hs-fs/hubfs/AzaraHealthcare_Logo_RGB-1.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Azara Healthcare
 nav: Providers
 network: true
 overview: 'Azara Healthcare is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Population Health, Analytics, and Quality Reporting.
 
 
-  Azara Healthcare''s developer surface includes engineering blog, support, and 4 more developer resources.'
+  Azara Healthcare''s developer surface includes engineering blog, support, and 5 more developer resources.'
 random_paper: 7
 score:
   band: minimal
-  composite: 8.9
+  composite: 9.0
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,17 +94,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 8.9
+  previous_composite: 9.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

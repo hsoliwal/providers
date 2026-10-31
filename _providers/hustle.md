@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 23
   slug: hustle-agentic-access
   summary_line: 23 operations · 14 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.hustle.com/v3
   baseurl_source: declared
@@ -284,7 +284,7 @@ modified: '2026-08-13'
 name: Hustle
 nav: Providers
 network: true
-overview: 'Hustle publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Access Token API, Agents API, Custom Fields API, and 7 more. Tagged areas include Company, Enterprise, Messaging, SMS, and Peer-to-Peer Texting.
+overview: 'Hustle publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Token API, Agents API, Custom Fields API, and 7 more. Tagged areas include Company, Enterprise, Messaging, SMS, and Peer-to-Peer Texting.
 
 
   The Hustle catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -306,10 +306,10 @@ scopes:
   slug: hustle-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: exemplar
-  composite: 66.8
+  band: strong
+  composite: 62.9
   coverage:
-    artifact_dirs: 24
+    artifact_dirs: 25
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -319,11 +319,11 @@ score:
   facets:
     access_clarity: 75.0
     contract_governance: 18.2
-    contract_quality: 56.6
+    contract_quality: 51.9
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 65.8
-  previous_composite: 66.8
+  previous_composite: 62.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -339,9 +339,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 65.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

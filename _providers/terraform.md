@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: documented
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-09-20'
+  score: 29.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 23
   human_in_the_loop: 0
@@ -169,6 +169,26 @@ collections:
   name: HCP Terraform Modules Workspaces API
   slug: open-terraform-workspaces-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/plans/terraform-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/terraform-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/rate-limits/terraform-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/terraform-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/finops/terraform-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/terraform-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/capabilities/terraform-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/terraform-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/terraform/refs/heads/main/agentic-access/terraform-agentic-access.yml
   title: ''
@@ -374,9 +394,13 @@ examples:
   name: Hcp Terraform List Workspaces Example
   slug: hcp-terraform-list-workspaces-example
 finops:
-- name: Terraform Finops
+- has_sources: false
+  method: generated
+  name: Terraform Finops
+  primary_unit: ''
   service_category: API
   slug: terraform-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/terraform.png
 json_schemas:
 - name: Terraform Run
@@ -398,18 +422,18 @@ layout: provider
 mcp_servers:
 - description: 'HashiCorp publishes an official open-source Terraform MCP server that exposes the Terraform Registry APIs and HCP Terraform / Terraform Enterprise workspace operations to AI agents. It is self-hosted '
   name: Terraform MCP Server
-  slug: terraform-mcp-server
+  slug: terraform
 modified: '2026-06-20'
 name: Terraform
 nav: Providers
 network: true
-overview: 'Terraform publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Modules API, Organizations API, Policies API, and 6 more. Tagged areas include Infrastructure as Code, Cloud Infrastructure, DevOps, Open-Source, and HashiCorp.
+overview: 'Terraform publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Modules API, Organizations API, Policies API, and 6 more. Tagged areas include Infrastructure as Code, Cloud Infrastructure, DevOps, Open Source, and HashiCorp.
 
 
   The Terraform catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Terraform''s developer surface includes authentication, changelog, CLI, developer portal, engineering blog, and 36 more developer resources.'
+  Terraform''s developer surface includes authentication, changelog, CLI, developer portal, engineering blog, and 40 more developer resources.'
 plans:
 - name: Terraform Plans Pricing
   plan_count: 3
@@ -420,10 +444,11 @@ rate_limits:
   name: Terraform Rate Limits
   slug: terraform-rate-limits
 rules:
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
-  name: Terraform API Rules
+  name: Terraform — hcp terraform rules
   rule_count: 10
   severity_counts:
     error: 1
@@ -431,9 +456,10 @@ rules:
     info: 1
     warn: 8
   slug: hcp-terraform-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Terraform API Rules
+  name: Terraform — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -443,23 +469,23 @@ rules:
   slug: terraform-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 48.3
+  composite: 41.9
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 72.0
+    artifact_dirs: 31
+    catalog_earned: 55.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.8
   facets:
-    access_clarity: 23.7
-    contract_governance: 59.1
-    contract_quality: 64.4
+    access_clarity: 15.8
+    contract_governance: 18.2
+    contract_quality: 58.8
     developer_ergonomics: 52.4
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 28.9
-  previous_composite: 48.3
+  previous_composite: 47.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -469,9 +495,15 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -498,7 +530,7 @@ tags:
 - Infrastructure as Code
 - Cloud Infrastructure
 - DevOps
-- Open-Source
+- Open Source
 - HashiCorp
 website: https://developer.hashicorp.com/terraform
 ---

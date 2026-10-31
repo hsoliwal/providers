@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 13.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for managing Jimdo website content, blog posts, online store products, orders, and customer data for small business websites built on the Jimdo platform.
@@ -41,6 +41,14 @@ apis:
   slug: jimdo-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.jimdo.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.jimdo.com/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/jimdo/refs/heads/main/security/jimdo-vulnerability-disclosure.yml
   title: ''
@@ -101,19 +109,23 @@ common:
 created: '2026-06-13'
 description: Jimdo is a website builder platform that provides REST APIs for managing website content, blog posts, online store products, and customer data for small business websites. The platform offers AI-powered website creation tools, ecommerce capabilities, and developer integrations enabling businesses to build and manage their online presence programmatically.
 finops:
-- name: Jimdo Finops
+- has_sources: false
+  method: generated
+  name: Jimdo Finops
+  primary_unit: ''
   service_category: ''
   slug: jimdo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/jimdo.png
 layout: provider
-modified: '2026-06-13'
+modified: '2026-10-06'
 name: Jimdo
 nav: Providers
 network: true
-overview: 'Jimdo publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Website Builder, E-Commerce, CMS, Small Business, and Online Store.
+overview: 'Jimdo is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Website Builder, E-Commerce, CMS, Small Business, and Online Store.
 
 
-  Jimdo''s developer surface includes documentation, engineering blog, pricing, and 10 more developer resources.'
+  Jimdo''s developer surface includes engineering blog, documentation, pricing, and 12 more developer resources.'
 plans:
 - name: Jimdo Plans Pricing
   plan_count: 12
@@ -124,27 +136,33 @@ rate_limits:
   name: Jimdo Rate Limits
   slug: jimdo-rate-limits
 score:
-  band: thin
-  composite: 27.6
+  band: emerging
+  composite: 19.9
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 52.0
+    artifact_dirs: 9
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 26.7
+    contract_quality: 24.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 27.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 25.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

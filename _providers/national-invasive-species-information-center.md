@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The NISIC gateway to invasive species information covers federal, state, local, and international sources on plants, animals, and pathogens that are non-native to ecosystems and whose introduction cau
@@ -41,6 +41,21 @@ apis:
   slug: national-invasive-species-information-center
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/national-invasive-species-information-center/refs/heads/main/plans/national-invasive-species-information-center-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/national-invasive-species-information-center-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/national-invasive-species-information-center/refs/heads/main/rate-limits/national-invasive-species-information-center-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/national-invasive-species-information-center-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/national-invasive-species-information-center/refs/heads/main/finops/national-invasive-species-information-center-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/national-invasive-species-information-center-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/national-invasive-species-information-center/refs/heads/main/security/national-invasive-species-information-center-domain-security.yml
   title: ''
@@ -53,16 +68,20 @@ common:
 created: '2024-12-03'
 description: National Invasive Species Information Center (NISIC) is the gateway to invasive species information covering federal, state, local, and international sources. Invasive species are plants, animals, or pathogens that are non-native to the ecosystem under consideration, and whose introduction causes or is likely to cause harm.
 finops:
-- name: National Invasive Species Information Center Finops
+- has_sources: false
+  method: generated
+  name: National Invasive Species Information Center Finops
+  primary_unit: ''
   service_category: API
   slug: national-invasive-species-information-center-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/national-invasive-species-information-center.png
 layout: provider
 modified: '2026-04-28'
 name: National Invasive Species Information Center
 nav: Providers
 network: true
-overview: National Invasive Species Information Center publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Environment, Federal-Government, and Invasive Species.
+overview: National Invasive Species Information Center is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Environment, Federal Government, and Invasive Species.
 plans:
 - name: National Invasive Species Information Center Plans Pricing
   plan_count: 3
@@ -74,31 +93,36 @@ rate_limits:
   slug: national-invasive-species-information-center-rate-limits
 score:
   band: minimal
-  composite: 9.5
+  composite: 8.2
   coverage:
     artifact_dirs: 6
-    catalog_earned: 36.0
+    catalog_earned: 33.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 79.0
+    catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 7.9
-  previous_composite: 9.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 9.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -113,7 +137,7 @@ security:
 slug: national-invasive-species-information-center
 tags:
 - Environment
-- Federal-Government
+- Federal Government
 - Invasive Species
 website: https://www.invasivespeciesinfo.gov/
 ---

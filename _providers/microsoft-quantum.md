@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 13
   human_in_the_loop: 0
@@ -57,24 +57,91 @@ apis:
   baseurl_source: spec
   description: The Offerings API from Microsoft Azure Quantum — 1 operation(s) for offerings.
   name: Microsoft Azure Quantum Offerings API
+  phrasing_intents:
+  - id: Offerings_List
+    intent: List quantum provider offerings in a region
+    question: Which quantum hardware and software provider offerings are available in a given Azure region?
+  phrasing_ops: 1
   slug: microsoft-quantum-offerings-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: The Operations API from Microsoft Azure Quantum — 1 operation(s) for operations.
   name: Microsoft Azure Quantum Operations API
+  phrasing_intents:
+  - id: Operations_List
+    intent: List the Azure Quantum resource provider operations
+    question: What management operations does the Microsoft.Quantum resource provider support?
+  phrasing_ops: 1
   slug: microsoft-quantum-operations-api
 - description: The Subscriptions API from Microsoft Azure Quantum — 12 operation(s) for subscriptions.
   name: Microsoft Azure Quantum Subscriptions API
+  phrasing_intents:
+  - id: Jobs_Update
+    intent: Change a quantum job's name, priority or tags
+    question: Can I bump the priority of a quantum job that is already submitted?
+  - id: Jobs_List
+    intent: List quantum jobs in a workspace
+    question: What quantum jobs have been submitted to my workspace?
+  - id: Jobs_Get
+    intent: Get a quantum job's status and results location
+    question: Has my quantum job finished, and where are its output results?
+  - id: Jobs_Create
+    intent: Submit a new quantum job to a target
+    question: How do I submit a quantum program to run on a specific hardware target?
+  - id: Jobs_Delete
+    intent: Delete a quantum job (legacy cancel)
+    question: How do I delete a quantum job record from my workspace?
+  - id: Jobs_Cancel
+    intent: Cancel a running quantum job
+    question: Can I stop a quantum job that is still queued or running?
+  - id: Providers_List
+    intent: Check the status of a workspace's quantum providers
+    question: Which quantum providers are enabled in my workspace and are they online?
+  - id: Quotas_List
+    intent: List a quantum workspace's quotas
+    question: How much of my quantum compute quota have I used in this workspace?
+  phrasing_ops: 15
   slug: microsoft-quantum-subscriptions-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: The SuiteOffers API from Microsoft Azure Quantum — 1 operation(s) for suiteoffers.
   name: Microsoft Azure Quantum SuiteOffers API
+  phrasing_intents:
+  - id: SuiteOffers_ListBySubscription
+    intent: List quantum suite offers for my subscription
+    question: Which Azure Quantum suite offers are associated with my subscription?
+  phrasing_ops: 1
   slug: microsoft-quantum-suiteoffers-api
 - baseURL: https://management.azure.com
   baseurl_source: spec
   description: The Workspaces API from Microsoft Azure Quantum — 6 operation(s) for workspaces.
   name: Microsoft Azure Quantum Workspaces API
+  phrasing_intents:
+  - id: Workspaces_CheckNameAvailability
+    intent: Check if a quantum workspace name is available
+    question: Is the quantum workspace name I want already taken in this region?
+  - id: Workspaces_ListBySubscription
+    intent: List quantum workspaces in a subscription
+    question: Which Azure Quantum workspaces exist across my whole subscription?
+  - id: Workspaces_ListByResourceGroup
+    intent: List quantum workspaces in a resource group
+    question: What quantum workspaces live in one particular resource group?
+  - id: Workspaces_Get
+    intent: Get a quantum workspace's details
+    question: How do I look up the configuration of a specific quantum workspace?
+  - id: Workspaces_CreateOrUpdate
+    intent: Create or update a quantum workspace
+    question: How do I create a new Azure Quantum workspace?
+  - id: Workspaces_UpdateTags
+    intent: Update a quantum workspace's tags
+    question: Can I change only the resource tags on an existing quantum workspace?
+  - id: Workspaces_Delete
+    intent: Delete a quantum workspace
+    question: How do I remove a quantum workspace I no longer use?
+  - id: Workspaces_ListKeys
+    intent: Get a quantum workspace's API keys
+    question: Where do I get the access keys to call the Quantum REST APIs for my workspace?
+  phrasing_ops: 9
   slug: microsoft-quantum-workspaces-api
 arazzos:
 - description: Look up a job, branch on whether it is still running, cancel it, and confirm cancellation.
@@ -465,9 +532,13 @@ features:
 - TypeSpec-defined OpenAPI specs published to Azure/azure-rest-api-specs
 - Azure-native integrations (RBAC, Entra ID, Storage, Monitor) and per-region provider availability
 finops:
-- name: Microsoft Quantum Finops
+- has_sources: true
+  method: generated
+  name: Microsoft Quantum Finops
+  primary_unit: ''
   service_category: Quantum Computing
   slug: microsoft-quantum-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-quantum.png
 json_schemas:
 - name: AzureQuantumJob
@@ -489,7 +560,7 @@ modified: '2026-05-25'
 name: Microsoft Azure Quantum
 nav: Providers
 network: true
-overview: 'Microsoft Azure Quantum publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Offerings API, Operations API, Subscriptions API, and 2 more. Tagged areas include Quantum, Quantum Computing, Azure, Microsoft, and Q#.
+overview: 'Microsoft Azure Quantum publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Offerings API, Operations API, Subscriptions API, and 5 more. Tagged areas include Quantum, Quantum Computing, Microsoft Azure, Microsoft, and Q#.
 
 
   The Microsoft Azure Quantum catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -506,9 +577,10 @@ rate_limits:
   name: Microsoft Quantum Rate Limits
   slug: microsoft-quantum-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Microsoft Azure Quantum API Rules
+  name: Microsoft Azure Quantum — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -523,23 +595,23 @@ scopes:
   summary_line: 2 scopes · clientCredentials/implicit
 score:
   band: strong
-  composite: 66.3
+  composite: 59.8
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 77.3
+    artifact_dirs: 21
+    catalog_earned: 55.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 37.8
+    catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 92.1
+    access_clarity: 60.5
     contract_governance: 9.8
-    contract_quality: 59.9
+    contract_quality: 54.5
     developer_ergonomics: 67.9
-    discoverability: 66.7
-    operational_transparency: 68.4
-  previous_composite: 66.3
+    discoverability: 64.3
+    operational_transparency: 44.7
+  previous_composite: 68.1
   provenance:
     agentic_access: derived
     contracts:
@@ -547,9 +619,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 33.3
@@ -571,7 +649,7 @@ slug: microsoft-quantum
 tags:
 - Quantum
 - Quantum Computing
-- Azure
+- Microsoft Azure
 - Microsoft
 - Q#
 - QDK

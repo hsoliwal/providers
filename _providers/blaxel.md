@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -100,7 +100,7 @@ apis:
   description: The Workspaces API from Blaxel — 3 operation(s) for workspaces.
   name: Blaxel Workspaces API
   slug: blaxel-workspaces-api
-artifact_total: 30
+artifact_total: 31
 collections:
 - collection_type: open
   name: API Collection
@@ -142,6 +142,15 @@ collections:
   name: Blaxel Control Plane API
   slug: open-blaxel
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://blaxel.ai/pricing
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/blaxel/refs/heads/main/capabilities/blaxel-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/blaxel-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/blaxel/refs/heads/main/agentic-access/blaxel-agentic-access.yml
   title: ''
@@ -195,47 +204,55 @@ common:
 created: '2026-07-01'
 description: Blaxel (formerly Beamlit) is an infrastructure and compute platform built for AI agents. Its control plane API deploys and manages agents, MCP/function servers, serverless code sandboxes, batch jobs, a multi-provider model gateway, deployment policies, integrations, and multi-tenant workspaces. The REST control plane lives at api.blaxel.ai/v0 and authenticates with a Bearer API key or OAuth 2.0.
 finops:
-- name: Blaxel Finops
+- has_sources: true
+  method: generated
+  name: Blaxel Finops
+  primary_unit: ''
   service_category: Compute
   slug: blaxel-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/blaxel.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.blaxel.ai over HTTP.
+  name: Blaxel MCP Server
+  slug: blaxel
 modified: '2026-07-01'
 name: Blaxel
 nav: Providers
 network: true
-overview: 'Blaxel publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Agents API, Compute API, Functions API, and 8 more. Tagged areas include Artificial Intelligence, Agents, Infrastructure, Sandbox, and MCP.
+overview: 'Blaxel publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agents API, Compute API, Functions API, and 8 more. Tagged areas include Artificial Intelligence, Agents, Infrastructure, Sandbox, and MCP.
 
 
-  Blaxel''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Blaxel''s developer surface includes pricing, authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Blaxel Plans Pricing
-  plan_count: 4
+  plan_count: 14
   slug: blaxel-plans-pricing
 random_paper: 16
 rate_limits:
-- limit_count: 6
+- limit_count: 0
   name: Blaxel Rate Limits
   slug: blaxel-rate-limits
 score:
   band: thin
-  composite: 38.0
+  composite: 32.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 64.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    artifact_dirs: 15
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.5
   facets:
-    access_clarity: 39.5
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 52.4
+    contract_quality: 47.5
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 38.0
+    discoverability: 68.3
+    operational_transparency: 2.6
+  previous_composite: 35.0
   provenance:
     agentic_access: derived
     contracts:
@@ -244,8 +261,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

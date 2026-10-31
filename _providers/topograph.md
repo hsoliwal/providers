@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: verified
@@ -32,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 58.8
-  scored_at: '2026-09-20'
+  score: 56.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 10
-  human_in_the_loop: 10
+- acting_count: 9
+  human_in_the_loop: 9
   name: Topograph Agentic Access
   operation_count: 22
   slug: topograph-agentic-access
-  summary_line: 22 operations · 10 acting · 10 human-in-the-loop
+  summary_line: 22 operations · 9 acting · 9 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: https://api.topograph.co
@@ -283,14 +284,14 @@ description: Topograph is a KYB (Know Your Business) data platform that connects
 image: https://www.topograph.co/opengraph-image
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.topograph.co over HTTP.
   name: Topograph MCP Server
-  slug: topograph-mcp-server
+  slug: topograph
 modified: '2026-07-21'
 name: Topograph
 nav: Providers
 network: true
-overview: 'Topograph publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Billing API, Billing Notifications API, Data API, and 4 more. Tagged areas include Company, KYB, Company Data, Business Registers, and Compliance.
+overview: 'Topograph publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Billing Notifications API, Data API, and 4 more. Tagged areas include Company, KYB, Company Data, Business Registers, and Compliance.
 
 
   The Topograph catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -305,7 +306,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/refreshToken
 score:
   band: strong
-  composite: 54.6
+  composite: 56.8
   coverage:
     artifact_dirs: 22
     catalog_earned: 37.0
@@ -317,11 +318,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 60.8
+    contract_quality: 55.8
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 54.6
+  previous_composite: 56.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -332,8 +333,18 @@ score:
       total: 7
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

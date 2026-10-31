@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -32,9 +32,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.4
-  scored_at: '2026-09-20'
-api_count: 1
+  score: 17.3
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://api.revyze.fr
   baseurl_source: declared
@@ -128,6 +128,10 @@ collections:
 common:
 - group: company
   title: ''
+  type: Blog
+  url: https://revyze.fr/press
+- group: company
+  title: ''
   type: Website
   url: https://www.revyze.fr
 - group: commercial
@@ -187,35 +191,35 @@ created: '2026-07-17'
 description: Revyze is a French EdTech mobile learning application that helps secondary and baccalaureate-level students revise by scrolling short-form educational videos and playing quizzes created by a community of young content creators. The app covers all school subjects and is oriented around exam preparation for the French brevet and baccalaureate, reporting more than two million users, a 4.8/5 app-store rating, and 15,000+ videos, all offered free of charge. Revyze is a portfolio company of Speedinvest. This profile also captures the app's publicly reachable backend at api.revyze.fr — a FastAPI service that fronts a GraphQL API, an AI study-coach streaming endpoint, and subscription/content-moderation webhooks — discovered and harvested by the API Evangelist enrichment pipeline. It is the application's own backend rather than a documented public developer program.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revyze.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Revyze
 nav: Providers
 network: true
-overview: 'Revyze publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Coach API, FastAPI API, and 7 more. Tagged areas include Company, EdTech, Education, Mobile, and Video.
+overview: 'Revyze publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Coach API, FastAPI API, and 7 more. Tagged areas include Company, EdTech, Education, Mobile, and Video.
 
 
   The Revyze catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Revyze''s developer surface includes authentication and 11 more developer resources.'
+  Revyze''s developer surface includes engineering blog, authentication, and 11 more developer resources.'
 random_paper: 17
 score:
-  band: thin
-  composite: 27.9
+  band: emerging
+  composite: 25.9
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 47.9
-    developer_ergonomics: 11.9
-    discoverability: 75.9
+    contract_quality: 43.9
+    developer_ergonomics: 14.3
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -225,7 +229,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 27.9
+  previous_composite: 25.4
   provenance:
     contracts:
       callable: 0.0
@@ -237,9 +241,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

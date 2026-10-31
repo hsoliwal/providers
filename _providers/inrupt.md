@@ -38,8 +38,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.7
-  scored_at: '2026-09-20'
-api_count: 1
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - description: The ESS Pod Storage Service implements the Solid Protocol over HTTP — LDP-style container and resource CRUD in RDF (Turtle, JSON-LD) and binary form, with Access Control Policy (ACP) resources, canoni
   name: Inrupt Pod Storage API (Solid Protocol)
@@ -77,6 +77,10 @@ asyncapis:
   name: Inrupt Notifications Webhooks
   slug: inrupt-notifications-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.inrupt.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -261,17 +265,17 @@ mcp_servers:
 - description: Inrupt ships a first-party MCP server as an ESS service. The MCP Resource Service exposes four tools that let an AI agent ask a person for consent to their Pod data, watch for the approval, verify the
   name: Inrupt ESS MCP Resource Service
   slug: inrupt-ess-mcp-resource-service
-modified: '2026-08-23'
+modified: '2026-10-06'
 name: Inrupt
 nav: Providers
 network: true
-overview: 'Inrupt publishes 3 APIs on the [APIs.io](https://apis.io/) network: Discovery API, Jsonkeys API, and Subscription API. Tagged areas include Company, Solid, Personal Data Stores, Decentralized Identity, and Data Privacy.
+overview: 'Inrupt publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Discovery API, Jsonkeys API, Subscription API, and 5 more. Tagged areas include Company, Solid, Personal Data Stores, Decentralized Identity, and Privacy.
 
 
   The Inrupt catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Inrupt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 31 more developer resources.'
+  Inrupt''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, changelog, and 32 more developer resources.'
 plans:
 - name: Inrupt Plans Pricing
   plan_count: 0
@@ -283,12 +287,12 @@ rate_limits:
   slug: inrupt-rate-limits
 scopes:
 - name: Inrupt Scopes
-  scope_count: 0
+  scope_count: 3
   slug: inrupt-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 3 scopes
 score:
   band: strong
-  composite: 65.6
+  composite: 61.0
   coverage:
     artifact_dirs: 23
     catalog_earned: 49.0
@@ -300,11 +304,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 51.3
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 92.1
-  previous_composite: 65.6
+  previous_composite: 61.0
   provenance:
     conformance: first-party
     contracts:
@@ -319,9 +323,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 71.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -350,7 +354,7 @@ tags:
 - Solid
 - Personal Data Stores
 - Decentralized Identity
-- Data Privacy
+- Privacy
 - Access Control
 - Verifiable Credentials
 - Linked Data

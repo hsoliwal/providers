@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: IDE plugins (VS Code, JetBrains, Vim, Emacs, Visual Studio, Sublime Text, etc.) surfacing autocomplete, chat, command, and Cascade-style agent edits backed by Codeium / Windsurf inference. There is no
@@ -93,16 +93,20 @@ common:
 created: '2026-05-08'
 description: Codeium has been rebranded as Windsurf. The codeium.com URL now redirects to windsurf.com. The legacy Codeium product offered AI-powered code completion, search, and chat across IDEs (VS Code, JetBrains, Vim, Emacs, etc.). Codeium for Enterprise lives on as the enterprise / self-host SKU within Windsurf, alongside the Windsurf Editor and Plugins.
 finops:
-- name: Codeium Finops
+- has_sources: true
+  method: generated
+  name: Codeium Finops
+  primary_unit: ''
   service_category: AI
   slug: codeium-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/codeium.png
 layout: provider
 modified: '2026-05-08'
 name: Codeium
 nav: Providers
 network: true
-overview: 'Codeium publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Developer Tools, Code Completion, IDE, and Windsurf.
+overview: 'Codeium is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Artificial Intelligence, Developer Tools, Code Completion, IDE, and Windsurf.
 
 
   Codeium''s developer surface includes documentation and 9 more developer resources.'
@@ -116,26 +120,32 @@ rate_limits:
   name: Codeium Rate Limits
   slug: codeium-rate-limits
 score:
-  band: emerging
-  composite: 12.4
+  band: minimal
+  composite: 9.1
   coverage:
     artifact_dirs: 7
-    catalog_earned: 44.0
+    catalog_earned: 36.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 12.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -150,7 +160,7 @@ security:
 - kind: vulnerability-disclosure
   name: Codeium Vulnerability Disclosure
   slug: codeium-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: codeium
 tags:
 - Artificial Intelligence

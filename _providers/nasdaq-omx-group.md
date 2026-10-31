@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,6 +76,21 @@ collections:
   name: Nasdaq Data Link API
   slug: open-nasdaq-omx-group
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nasdaq-omx-group/refs/heads/main/plans/nasdaq-omx-group-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/nasdaq-omx-group-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/nasdaq-omx-group/refs/heads/main/rate-limits/nasdaq-omx-group-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/nasdaq-omx-group-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nasdaq-omx-group/refs/heads/main/finops/nasdaq-omx-group-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/nasdaq-omx-group-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nasdaq-omx-group/refs/heads/main/agentic-access/nasdaq-omx-group-agentic-access.yml
   title: ''
@@ -114,19 +129,23 @@ common:
 created: '2024-01-01'
 description: Nasdaq is a global technology company serving capital markets and other industries, providing trading, clearing, exchange technology, listing, information, and public company services. Nasdaq Data Link offers REST APIs for accessing financial, economic, and alternative data.
 finops:
-- name: Nasdaq Omx Group Finops
+- has_sources: true
+  method: generated
+  name: Nasdaq Omx Group Finops
+  primary_unit: ''
   service_category: Market Data / Financial Data
   slug: nasdaq-omx-group-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nasdaq-omx-group.png
 layout: provider
 modified: '2026-05-19'
 name: Nasdaq
 nav: Providers
 network: true
-overview: 'Nasdaq publishes 2 APIs on the [APIs.io](https://apis.io/) network: Databases API and Datasets API. Tagged areas include Financial-Services, Capital Markets, Stock Exchange, Market Data, and Economics.
+overview: 'Nasdaq is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Databases API, Datasets API, and 2 more. Tagged areas include Financial Services, Capital Markets, Stock Exchange, Market Data, and Economics.
 
 
-  Nasdaq''s developer surface includes authentication, developer portal, documentation, and 5 more developer resources.'
+  Nasdaq''s developer surface includes authentication, developer portal, documentation, and 8 more developer resources.'
 plans:
 - name: Nasdaq Omx Group Plans Pricing
   plan_count: 4
@@ -154,23 +173,23 @@ rate_limits:
   slug: nasdaq-omx-group-rate-limits
 score:
   band: thin
-  composite: 33.4
+  composite: 30.5
   coverage:
     artifact_dirs: 14
-    catalog_earned: 49.0
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 28.9
+    access_clarity: 21.1
     contract_governance: 0.0
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 32.1
-    discoverability: 88.9
+    discoverability: 85.7
     operational_transparency: 7.9
-  previous_composite: 33.4
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     contracts:
@@ -183,9 +202,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -203,7 +222,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: nasdaq-omx-group
 tags:
-- Financial-Services
+- Financial Services
 - Capital Markets
 - Stock Exchange
 - Market Data

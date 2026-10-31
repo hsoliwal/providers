@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: RESTful JSON API for triggering and monitoring pipelines and tasks, managing users/groups, parameters, audit logs, SCM migration, and GitCustodian, authenticated with scoped JWT Personal Access Tokens
@@ -149,14 +149,14 @@ description: Opsera is an AI-powered unified DevOps platform that helps enterpri
 image: https://opsera.ai/wp-content/uploads/2025/07/opsera-generic-social.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at agent.opsera.io over HTTP; 12 tools listed.
   name: Opsera MCP Server
-  slug: opsera-mcp-server
+  slug: opsera-ai-agent
 modified: '2026-07-20'
 name: Opsera
 nav: Providers
 network: true
-overview: 'Opsera publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, DevOps, CI/CD, DevSecOps, and Pipeline Orchestration.
+overview: 'Opsera is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, DevOps, CI/CD, DevSecOps, and Pipeline Orchestration.
 
 
   Opsera''s developer surface includes documentation, getting-started guide, API reference, authentication, changelog, engineering blog, pricing, and 16 more developer resources.'
@@ -168,9 +168,9 @@ scopes:
   summary_line: 2 scopes
 score:
   band: thin
-  composite: 32.0
+  composite: 34.7
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -182,14 +182,20 @@ score:
     contract_governance: 18.2
     contract_quality: 5.3
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 32.0
+  previous_composite: 34.7
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

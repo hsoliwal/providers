@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://partner-subdomain.embed.unmade.com
@@ -195,7 +195,7 @@ modified: '2026-09-16'
 name: Unmade
 nav: Providers
 network: true
-overview: 'Unmade publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Design API, Ecommerce Orders API, Factory API, and 3 more. Tagged areas include Fashion, Apparel, Manufacturing, Customization, and E-Commerce.
+overview: 'Unmade publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Design API, Ecommerce Orders API, Factory API, and 3 more. Tagged areas include Fashion, Apparel, Manufacturing, Customization, and E-Commerce.
 
 
   Unmade''s developer surface includes documentation, API reference, getting-started guide, engineering blog, authentication, and 16 more developer resources.'
@@ -206,23 +206,23 @@ rate_limits:
   slug: unmade-rate-limits
 score:
   band: emerging
-  composite: 21.8
+  composite: 22.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 12.2
+    contract_quality: 12.6
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 21.8
+  previous_composite: 22.4
   provenance:
     conformance: derived
     contracts:
@@ -232,8 +232,14 @@ score:
       total: 6
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

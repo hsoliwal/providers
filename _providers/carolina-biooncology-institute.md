@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -100,9 +100,9 @@ overview: 'Carolina BioOncology Institute is profiled on the [APIs.io](https://a
 random_paper: 18
 score:
   band: minimal
-  composite: 8.3
+  composite: 8.4
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -114,22 +114,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 8.3
+  previous_composite: 8.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/carolina-biooncology-institute/refs/heads/main/screenshots/carolina-biooncology-institute-2026-10-11T102723.png
 security:
 - kind: domain-security
   name: Carolina Biooncology Institute Domain Security

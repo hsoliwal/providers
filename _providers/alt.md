@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -119,9 +119,9 @@ overview: 'Alt is profiled on the [APIs.io](https://apis.io/) network. Tagged ar
 random_paper: 13
 score:
   band: minimal
-  composite: 7.0
+  composite: 8.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -133,17 +133,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 7.0
+  previous_composite: 8.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +165,7 @@ tags:
 - Marketplace
 - Auctions
 - Asset Valuation
-- Machine-Learning
+- Machine Learning
 - Lending
 - Fintech
 - E-Commerce

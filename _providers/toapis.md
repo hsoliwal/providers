@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: OpenAI-compatible REST API covering chat/completions, image generation, video generation, and model listing (plus Anthropic Messages and OpenAI Responses formats). Key-authenticated via Bearer token.
@@ -137,14 +137,14 @@ description: An OpenAI-compatible AI API gateway/aggregator fronting 50+ text, i
 image: https://docs.toapis.com/logo/light.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.toapis.com; 3 tools listed.
   name: ToAPIs MCP Server
-  slug: toapis-mcp-server
+  slug: toapis-mcp-yml
 modified: '2026-09-07'
 name: ToAPIs
 nav: Providers
 network: true
-overview: 'ToAPIs publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI API, LLM/AI gateway, model aggregation, OpenAI-Compatible, and Model Routing.
+overview: 'ToAPIs is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include AI API, LLM/AI gateway, model aggregation, OpenAI-Compatible, and Model Routing.
 
 
   The ToAPIs catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -162,34 +162,41 @@ rate_limits:
   slug: toapis-rate-limits
 score:
   band: developing
-  composite: 43.7
+  composite: 44.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 46.0
     catalog_earned_first_party: 12.0
     catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 70.4
+    discoverability: 70.0
     operational_transparency: 42.1
-  previous_composite: 43.7
+  previous_composite: 44.3
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/toapis/refs/heads/main/screenshots/toapis-2026-10-11T130955.png
 security:
 - kind: authentication
   name: Toapis Authentication
@@ -208,8 +215,9 @@ tags:
 - Model Routing
 - provider failover
 - Text Generation
-- Image-Generation
+- Image Generation
 - Video Generation
 - Developer Tools
+- A2A
 website: https://toapis.com
 ---

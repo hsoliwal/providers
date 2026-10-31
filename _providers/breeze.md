@@ -34,15 +34,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 45
+- acting_count: 41
   human_in_the_loop: 1
   name: Breeze Agentic Access
   operation_count: 89
   slug: breeze-agentic-access
-  summary_line: 89 operations · 45 acting · 1 human-in-the-loop
-api_count: 1
+  summary_line: 89 operations · 41 acting · 1 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api.breeze.baby
   baseurl_source: declared
@@ -57,7 +57,7 @@ apis:
 - baseURL: https://api.breeze.baby
   baseurl_source: declared
   description: The fund API from Breeze — 1 operation(s) for fund.
-  name: Breeze fund API
+  name: Breeze Fund API
   slug: breeze-fund-api
 - baseURL: https://api.breeze.baby
   baseurl_source: declared
@@ -170,6 +170,11 @@ collections:
   name: Breeze Admin Yield Sources API
   slug: open-breeze-yield-sources-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/breeze/refs/heads/main/capabilities/breeze-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/breeze-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -287,37 +292,37 @@ description: Breeze is instant, non-custodial yield infrastructure for Solana. A
 image: https://www.breeze.baby/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 5 tools listed.
   name: Breeze MCP Server
-  slug: breeze-mcp-server
+  slug: breeze
 modified: '2026-07-18'
 name: Breeze
 nav: Providers
 network: true
-overview: 'Breeze publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Admin API, Deposits API, fund API, and 12 more. Tagged areas include Company, Crypto Web3, Solana, Yield, and DeFi.
+overview: 'Breeze publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Deposits API, Fund API, and 12 more. Tagged areas include Company, Web3, Solana, Yield, and DeFi.
 
 
-  Breeze''s developer surface includes signup flow, documentation, API reference, getting-started guide, support, authentication, and 18 more developer resources.'
+  Breeze''s developer surface includes signup flow, documentation, API reference, getting-started guide, support, authentication, and 19 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 35.3
+  composite: 34.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 13.2
     contract_governance: 4.5
-    contract_quality: 52.2
+    contract_quality: 47.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 35.3
+  previous_composite: 33.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -333,9 +338,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -353,12 +358,13 @@ security:
 slug: breeze
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Solana
 - Yield
 - DeFi
 - Payments
 - Blockchain
 - AI Agents
+- Cryptocurrency
 website: https://www.breeze.baby
 ---

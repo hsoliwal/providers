@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.4
-  scored_at: '2026-09-20'
+  score: 3.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The AWS S3-compatible object storage API for Cubbit DS3. Supports bucket create/delete/list, object upload/download/copy/delete, multipart upload, object versioning, object lock (COMPLIANCE and GOVERN
@@ -41,6 +41,10 @@ apis:
   slug: cubbit-ds3-s3-compatible-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.cubbit.io/rss/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/cubbit/refs/heads/main/security/cubbit-domain-security.yml
   title: ''
@@ -170,20 +174,20 @@ created: '2026-07-17'
 description: 'Cubbit is a European cloud storage provider offering DS3, a sovereign, geo-distributed, S3-compatible object storage platform. DS3 encrypts (AES-256), fragments, and replicates data across multiple user-selected locations using Reed-Solomon erasure coding, delivering geo-resilience and data sovereignty within Europe. It ships in two forms: DS3 Cloud, a ready-to-use managed geo-redundant object store (TBs to PBs), and DS3 Composer, self-hosted software-defined storage you run on your own hardware (200 TB+). The storage plane exposes an AWS S3-compatible API at https://s3.cubbit.eu (region eu-west-1), authenticated with access key / secret key and AWS Signature Version 4, so existing S3 SDKs, the AWS CLI, rclone, Cyberduck, Veeam and other S3 tooling work unchanged. Cubbit is certified to ISO/IEC 27001, 27017, 27018, 9001, 20000-1 and 22301, and is GDPR- and NIS2-aligned with Italian ACN PA Cloud qualification.'
 image: https://cdn.prod.website-files.com/67a4c547ac46cdf433fcc313/67c76518961dec2a8b897c21_og-homepage.webp
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Cubbit
 nav: Providers
 network: true
-overview: 'Cubbit publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Object Storage, Cloud Storage, S3 Compatible, Storage, and Data Sovereignty.
+overview: 'Cubbit is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Object Storage, Cloud Storage, S3 Compatible, Storage, and Data Sovereignty.
 
 
-  Cubbit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
+  Cubbit''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 36.3
+  composite: 39.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -195,13 +199,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 36.3
+  previous_composite: 39.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: EU
+      standard: nis2
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

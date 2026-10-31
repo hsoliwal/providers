@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.4
-  scored_at: '2026-09-20'
+  score: 21.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -203,6 +203,26 @@ collections:
   name: PlanetScale Platform Backups Webhooks API
   slug: open-planetscale-webhooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/planetscale/refs/heads/main/plans/planetscale-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/planetscale-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/planetscale/refs/heads/main/rate-limits/planetscale-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/planetscale-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/planetscale/refs/heads/main/finops/planetscale-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/planetscale-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/planetscale/refs/heads/main/capabilities/planetscale-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/planetscale-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -263,9 +283,13 @@ features:
 - Boost for query result caching
 - Management API at 240 req/min/org
 finops:
-- name: Planetscale Finops
+- has_sources: true
+  method: generated
+  name: Planetscale Finops
+  primary_unit: ''
   service_category: Distributed Database
   slug: planetscale-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/planetscale.png
 json_schemas:
 - name: Backup
@@ -351,13 +375,13 @@ modified: '2026-09-16'
 name: Planetscale
 nav: Providers
 network: true
-overview: 'Planetscale publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Backups API, Billing API, Bouncers API, and 14 more. Tagged areas include Application, Authorization, and Edge Computing.
+overview: 'Planetscale publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Backups API, Billing API, Bouncers API, and 17 more. Tagged areas include Database, MySQL, PostgreSQL, and Serverless.
 
 
   The Planetscale catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Planetscale''s developer surface includes authentication, engineering blog, and 7 more developer resources.'
+  Planetscale''s developer surface includes authentication, engineering blog, and 11 more developer resources.'
 plans:
 - name: Planetscale Plans Pricing
   plan_count: 5
@@ -368,10 +392,11 @@ rate_limits:
   name: Planetscale Rate Limits
   slug: planetscale-rate-limits
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: Planetscale API Rules
+  name: Planetscale — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -379,9 +404,10 @@ rules:
     info: 0
     warn: 7
   slug: planetscale-asyncapi-spectral-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Planetscale API Rules
+  name: Planetscale — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -391,23 +417,23 @@ rules:
   slug: planetscale-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 31.2
+  composite: 28.3
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 45.5
+    artifact_dirs: 21
+    catalog_earned: 42.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.5
+    catalog_gap: 72.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 13.6
-    contract_quality: 69.9
+    contract_quality: 64.2
     developer_ergonomics: 19.0
-    discoverability: 44.4
+    discoverability: 42.9
     operational_transparency: 10.5
-  previous_composite: 31.2
+  previous_composite: 29.8
   provenance:
     agentic_access: derived
     contracts:
@@ -415,8 +441,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 17
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -433,8 +465,9 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: planetscale
 tags:
-- Application
-- Authorization
-- Edge Computing
+- Database
+- MySQL
+- PostgreSQL
+- Serverless
 website: https://planetscale.com
 ---

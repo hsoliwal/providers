@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Pintu Pro's institutional/partner trading API. A unified message format is used over both an HTTP endpoint and a WebSocket transport, authenticated with an HMAC-SHA256 signature computed from an API k
@@ -47,6 +47,14 @@ asyncapis:
   name: Pintu Partner Asyncapi
   slug: pintu-partner-asyncapi
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://pintu.co.id/news
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://pintu.co.id/news/rss-feed.xml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -166,21 +174,21 @@ created: '2026-07-17'
 description: Pintu (PT Pintu Kemana Saja) is an Indonesian cryptocurrency exchange and investment app founded in April 2020 and headquartered in Jakarta. Licensed as a Physical Crypto Asset Trader (PFAK) under Bappebti and now supervised by the OJK, Pintu serves more than four million retail users with spot trading, crypto futures, staking/Earn, and a self-custody Web3 wallet connecting to DeFi and NFT dApps. Beyond the consumer app, Pintu operates Pintu Pro, an institutional and partner trading platform whose HMAC-signed WebSocket + HTTP API (docs.pintu.pro) lets market makers and partners place and cancel orders and stream execution reports and trades against production and sandbox environments. Pintu has raised over 150M USD across a Lightspeed-led 35M Series A+ (2021) and a 113M Series B (2022) with Intudo, Pantera Capital, and Northstar.
 image: https://assets.pintu.co.id/frontend/strapi-prod/pintu_thumbnail_card_6a039be9aa.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Pintu
 nav: Providers
 network: true
-overview: 'Pintu publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Crypto Exchange, Trading, and Fintech.
+overview: 'Pintu is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, Cryptocurrency Exchange, Trading, and Fintech.
 
 
   The Pintu catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Pintu''s developer surface includes documentation, engineering blog, support, authentication, sandbox, and 20 more developer resources.'
+  Pintu''s developer surface includes engineering blog, documentation, support, authentication, sandbox, and 22 more developer resources.'
 random_paper: 10
 score:
-  band: developing
-  composite: 41.9
+  band: thin
+  composite: 39.1
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -192,9 +200,9 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 39.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -203,7 +211,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 41.9
+  previous_composite: 39.1
   provenance:
     conformance: first-party
   regulatory:
@@ -211,9 +219,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 60.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -241,7 +249,7 @@ slug: pintu
 tags:
 - Company
 - Cryptocurrency
-- Crypto Exchange
+- Cryptocurrency Exchange
 - Trading
 - Fintech
 - Digital Assets

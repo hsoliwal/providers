@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 127
-  human_in_the_loop: 2
+- acting_count: 80
+  human_in_the_loop: 1
   name: Bright Pattern Agentic Access
-  operation_count: 178
+  operation_count: 139
   slug: bright-pattern-agentic-access
-  summary_line: 178 operations · 127 acting · 2 human-in-the-loop
+  summary_line: 139 operations · 80 acting · 1 human-in-the-loop
 api_count: 11
 apis:
 - baseURL: https://{tenant}.brightpattern.com/configapi/v2
@@ -335,14 +335,14 @@ modified: '2026-08-08'
 name: Bright Pattern
 nav: Providers
 network: true
-overview: 'Bright Pattern publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Calling List API, Campaigns API, and 11 more. Tagged areas include Company, Contact Center, CCaaS, Customer Experience, and Omnichannel.
+overview: 'Bright Pattern publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Calling List API, Campaigns API, and 11 more. Tagged areas include Company, Contact Center, CCaaS, Customer Experience, and Omnichannel.
 
 
   Bright Pattern''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, pricing, and 29 more developer resources.'
 random_paper: 21
 score:
-  band: strong
-  composite: 54.7
+  band: developing
+  composite: 52.2
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -354,11 +354,11 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 53.9
+    contract_quality: 49.6
     developer_ergonomics: 70.8
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 54.7
+  previous_composite: 52.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -380,9 +380,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 41.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

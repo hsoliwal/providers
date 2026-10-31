@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The OAuth 2.0 authorization surface in front of the Introhive platform. Introhive publishes an RFC 8414 OAuth 2.0 Authorization Server Metadata document at /.well-known/oauth-authorization-server on e
@@ -137,16 +137,16 @@ modified: '2026-08-01'
 name: Introhive
 nav: Providers
 network: true
-overview: 'Introhive publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Relationship Intelligence, CRM, Data Automation, and Contact Management.
+overview: 'Introhive is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Relationship Intelligence, CRM, Data Automation, and Contact Management.
 
 
   Introhive''s developer surface includes support, engineering blog, YouTube channel, authentication, and 16 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 21.9
+  composite: 24.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -158,13 +158,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 21.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 24.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -198,6 +209,6 @@ tags:
 - Data Quality
 - Professional Services
 - Sales
-- Enrichment
+- Data Enrichment
 website: https://www.introhive.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 41
   slug: disease-sh-agentic-access
   summary_line: 41 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://disease.sh/v3
   baseurl_source: declared
@@ -121,6 +121,21 @@ collections:
   name: 'disease.sh Docs - An open API for disease-related statistics COVID-19: Apple Influenza: CDC API'
   slug: open-disease-sh-influenza-cdc-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/disease-sh/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/disease-sh/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/disease-sh/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -191,9 +206,13 @@ examples:
   name: Statessimplevaccinetimeline
   slug: statesSimpleVaccineTimeline
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/disease-sh.png
 json_schemas:
 - name: ILINet
@@ -345,13 +364,13 @@ modified: '2026-06-13'
 name: disease.sh
 nav: Providers
 network: true
-overview: 'disease.sh publishes 9 APIs on the [APIs.io](https://apis.io/) network, including COVID-19: Apple API, COVID-19: Government API, COVID-19: JHUCSSE API, and 6 more. Tagged areas include COVID-19, Disease, Health, Epidemiology, and Influenza.
+overview: 'disease.sh publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including COVID-19: Apple API, COVID-19: Government API, COVID-19: JHUCSSE API, and 6 more. Tagged areas include COVID-19, Disease, Health, Epidemiology, and Influenza.
 
 
   The disease.sh catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
 
 
-  disease.sh''s developer surface includes GitHub presence, documentation, and 5 more developer resources.'
+  disease.sh''s developer surface includes GitHub presence, documentation, and 8 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -362,9 +381,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: disease.sh API Rules
+  name: disease.sh — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -373,24 +393,24 @@ rules:
     warn: 3
   slug: disease-sh-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 27.3
+  band: emerging
+  composite: 21.5
   coverage:
     artifact_dirs: 14
-    catalog_earned: 59.3
+    catalog_earned: 50.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.8
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 46.5
+    contract_quality: 42.4
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 27.3
+  previous_composite: 25.8
   provenance:
     agentic_access: derived
     contracts:
@@ -403,9 +423,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -15,7 +15,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: negotiable
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 40.3
-  scored_at: '2026-09-20'
+  score: 39.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 1
@@ -339,7 +339,7 @@ arazzos:
 - description: Find a CSM contact by email and update it if it exists, otherwise create it.
   name: ServiceNow Upsert Contact
   slug: servicenow-upsert-contact-workflow
-artifact_total: 303
+artifact_total: 328
 asyncapis:
 - description: ServiceNow supports outbound event-driven integrations through business rules, event management, and outbound REST messages. When records are created, updated, or deleted in ServiceNow tables, busines
   name: ServiceNow Events and Notifications
@@ -442,6 +442,65 @@ collections:
   name: ServiceNow Trouble Ticket API
   slug: open-servicenow-trouble-ticket-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/finops/servicenow-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/servicenow-finops.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/rate-limits/servicenow-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/servicenow-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/plans/servicenow-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/servicenow-plans-pricing.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/rules/servicenow-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/servicenow-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/rules/servicenow-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/servicenow-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/rules/servicenow-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/servicenow-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/rules/servicenow-asyncapi-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/servicenow-asyncapi-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/vocabulary/servicenow-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/servicenow-vocabulary.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://www.servicenow.com/company/trust.html
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/lifecycle/servicenow-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/servicenow-lifecycle.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/hosts/servicenow-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/servicenow-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/vendors/servicenow-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/servicenow-vendors.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/servicenow/refs/heads/main/capabilities/servicenow-capability-edges.yml
   title: ''
@@ -937,6 +996,10 @@ common:
   title: ''
   type: AgentSkills
   url: https://github.com/ServiceNow/saai-skill-feedback
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.servicenow.com/blogs.html
 created: '2025-01-08'
 description: ServiceNow provides cloud-based platform services that automate enterprise IT operations.
 examples:
@@ -1091,9 +1154,13 @@ features:
 - description: ML-powered APIs for automated classification, assignment, and prioritization of records.
   name: Predictive Intelligence
 finops:
-- name: Servicenow Finops
+- has_sources: true
+  method: generated
+  name: Servicenow Finops
+  primary_unit: ''
   service_category: Enterprise Workflow / Now Platform
   slug: servicenow-finops
+  template: false
 graphqls:
 - description: The ServiceNow GraphQL API framework allows developers to create custom GraphQL API schemas on the Now Platform for querying record data from components or external systems. It supports defining resol
   name: ServiceNow GraphQL API
@@ -1132,15 +1199,42 @@ json_schemas:
 - name: Error
   property_count: 1
   slug: servicenow-aggregate-error
+- name: AggregateResult
+  property_count: 2
+  slug: servicenow-aggregate-result
 - name: Attachment
   property_count: 16
   slug: servicenow-attachment-attachment
 - name: Error
   property_count: 1
   slug: servicenow-attachment-error
+- name: Attachment
+  property_count: 16
+  slug: servicenow-attachment
+- name: CartItemInput
+  property_count: 2
+  slug: servicenow-cart-item-input
+- name: CartItem
+  property_count: 4
+  slug: servicenow-cart-item
+- name: Cart
+  property_count: 2
+  slug: servicenow-cart
+- name: CatalogItemDetail
+  property_count: 10
+  slug: servicenow-catalog-item-detail
+- name: CatalogItem
+  property_count: 6
+  slug: servicenow-catalog-item
 - name: ServiceNow Catalog Request
   property_count: 17
   slug: servicenow-catalog-request
+- name: Catalog
+  property_count: 5
+  slug: servicenow-catalog
+- name: Category
+  property_count: 5
+  slug: servicenow-category
 - name: ChangeRequestInput
   property_count: 16
   slug: servicenow-change-management-change-request-input
@@ -1156,9 +1250,18 @@ json_schemas:
 - name: Error
   property_count: 1
   slug: servicenow-change-management-error
+- name: ChangeRequestInput
+  property_count: 16
+  slug: servicenow-change-request-input
 - name: ServiceNow Change Request
   property_count: 39
   slug: servicenow-change-request
+- name: ChangeTaskInput
+  property_count: 6
+  slug: servicenow-change-task-input
+- name: ChangeTask
+  property_count: 8
+  slug: servicenow-change-task
 - name: CmdbInstance
   property_count: 26
   slug: servicenow-cmdb-instance-cmdb-instance
@@ -1168,9 +1271,21 @@ json_schemas:
 - name: Error
   property_count: 1
   slug: servicenow-cmdb-instance-error
+- name: CmdbInstance
+  property_count: 26
+  slug: servicenow-cmdb-instance
+- name: CmdbInstanceSummary
+  property_count: 2
+  slug: servicenow-cmdb-instance-summary
 - name: ServiceNow Configuration Item
   property_count: 44
   slug: servicenow-configuration-item
+- name: ContactCreate
+  property_count: 56
+  slug: servicenow-contact-create
+- name: Contact
+  property_count: 65
+  slug: servicenow-contact
 - name: Error
   property_count: 1
   slug: servicenow-import-set-error
@@ -1180,9 +1295,24 @@ json_schemas:
 - name: ImportSetResult
   property_count: 10
   slug: servicenow-import-set-import-set-result
+- name: ImportSetInput
+  property_count: 0
+  slug: servicenow-import-set-input
+- name: ImportSetResult
+  property_count: 10
+  slug: servicenow-import-set-result
 - name: ServiceNow Incident
   property_count: 45
   slug: servicenow-incident
+- name: OrderResult
+  property_count: 3
+  slug: servicenow-order-result
+- name: RecordInput
+  property_count: 0
+  slug: servicenow-record-input
+- name: Record
+  property_count: 8
+  slug: servicenow-record
 - name: CartItemInput
   property_count: 2
   slug: servicenow-service-catalog-cart-item-input
@@ -1222,6 +1352,15 @@ json_schemas:
 - name: Record
   property_count: 8
   slug: servicenow-table-record
+- name: TroubleTicketCreate
+  property_count: 9
+  slug: servicenow-trouble-ticket-create
+- name: TroubleTicket
+  property_count: 14
+  slug: servicenow-trouble-ticket
+- name: TroubleTicketUpdate
+  property_count: 8
+  slug: servicenow-trouble-ticket-update
 - name: ServiceNow User
   property_count: 30
   slug: servicenow-user
@@ -1434,20 +1573,20 @@ jsonld:
   slug: trouble-ticket-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.servicenow.com over HTTP; 12 tools listed.
   name: ServiceNow MCP Server
-  slug: servicenow-mcp-server
+  slug: servicenow
 modified: '2026-06-20'
 name: ServiceNow
 nav: Providers
 network: true
-overview: 'ServiceNow publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Event Management Topic Open API, Aggregate Statistics API, Attachments API, and 13 more. Tagged areas include ServiceNow, Automation, Cloud Services, Digital Workflows, and Enterprise Platform.
+overview: 'ServiceNow publishes 63 API contracts indexed on the [APIs.io](https://apis.io/) network, including Event Management Topic Open API, Aggregate Statistics API, Attachments API, and 60 more. Tagged areas include ServiceNow, Automation, Cloud Services, Digital Workflows, and Enterprise Platform.
 
 
-  The ServiceNow catalog on APIs.io includes 1 event-driven AsyncAPI specification, 10 JSON-LD contexts, and 3 Spectral governance rulesets.
+  The ServiceNow catalog on APIs.io includes 1 event-driven AsyncAPI specification, 10 JSON-LD contexts, and 4 Spectral governance rulesets.
 
 
-  ServiceNow''s developer surface includes authentication, CLI, changelog, sandbox, developer portal, engineering blog, documentation, and 100 more developer resources.'
+  ServiceNow''s developer surface includes authentication, CLI, changelog, sandbox, developer portal, engineering blog, documentation, and 113 more developer resources.'
 plans:
 - name: Servicenow Plans Pricing
   plan_count: 1
@@ -1458,10 +1597,11 @@ rate_limits:
   name: Servicenow Rate Limits
   slug: servicenow-rate-limits
 rules:
-- effective_rule_count: 36
+- authorship: generated
+  effective_rule_count: 36
   extends:
   - spectral:asyncapi
-  name: ServiceNow API Rules
+  name: ServiceNow — asyncapi rules
   rule_count: 9
   severity_counts:
     error: 1
@@ -1469,9 +1609,10 @@ rules:
     info: 0
     warn: 8
   slug: servicenow-asyncapi-spectral-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: ServiceNow API Rules
+  name: ServiceNow — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -1479,7 +1620,20 @@ rules:
     info: 1
     warn: 5
   slug: servicenow-jsonschema-spectral-rules
-- effective_rule_count: 68
+- authorship: generated
+  effective_rule_count: 57
+  extends:
+  - spectral:oas
+  name: ServiceNow API Rules
+  rule_count: 16
+  severity_counts:
+    error: 13
+    hint: 0
+    info: 1
+    warn: 2
+  slug: servicenow-rules
+- authorship: generated
+  effective_rule_count: 68
   extends:
   - spectral:oas
   name: ServiceNow API Rules
@@ -1497,23 +1651,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 60.7
+  composite: 66.0
   coverage:
-    artifact_dirs: 36
-    catalog_earned: 49.5
+    artifact_dirs: 41
+    catalog_earned: 59.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 65.5
+    catalog_gap: 56.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
     access_clarity: 65.8
-    contract_governance: 33.3
-    contract_quality: 66.3
-    developer_ergonomics: 86.9
-    discoverability: 48.1
-    operational_transparency: 42.1
-  previous_composite: 60.7
+    contract_governance: 31.8
+    contract_quality: 61.5
+    developer_ergonomics: 86.2
+    discoverability: 69.6
+    operational_transparency: 50.0
+  previous_composite: 67.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1523,8 +1677,14 @@ score:
       marker_coverage: 0.0
       total: 15
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -1553,8 +1713,9 @@ tags:
 - ITSM
 - Processes
 - T1
-- Workflow-Automation
+- Workflow Automation
 - Workflows
+- A2A
 use_cases:
 - description: Automate incident creation, assignment, escalation, and resolution through Table and Predictive Intelligence APIs.
   name: Incident Management Automation

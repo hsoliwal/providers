@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.6
-  scored_at: '2026-09-20'
+  score: 33.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 15
   human_in_the_loop: 4
@@ -280,9 +280,13 @@ common:
 created: '2026-06-13'
 description: OCLC WorldCat REST API for searching 500 million+ library holdings worldwide, accessing bibliographic records, finding library locations, and retrieving rich metadata for books, videos, music, and other media. Provides access to the WorldCat Search API, WorldCat Metadata API, WorldCat Knowledge Base API, and WorldCat Entities data API for libraries and developers building discovery and cataloging applications.
 finops:
-- name: Worldcat Finops
+- has_sources: false
+  method: generated
+  name: Worldcat Finops
+  primary_unit: ''
   service_category: ''
   slug: worldcat-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/worldcat.png
 json_schemas:
 - name: BibRecordBrief
@@ -307,7 +311,7 @@ modified: '2026-06-13'
 name: WorldCat
 nav: Providers
 network: true
-overview: 'WorldCat publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Bibliographic Resources API, Local Bib Resources API, Local Holdings Resources API, and 16 more. Tagged areas include Libraries, Bibliographic Records, WorldCat, OCLC, and Cataloging.
+overview: 'WorldCat publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Bibliographic Resources API, Local Bib Resources API, Local Holdings Resources API, and 17 more. Tagged areas include Library, Bibliographic Records, WorldCat, OCLC, and Cataloging.
 
 
   The WorldCat catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -324,9 +328,10 @@ rate_limits:
   name: Worldcat Rate Limits
   slug: worldcat-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: WorldCat API Rules
+  name: WorldCat — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -340,24 +345,24 @@ scopes:
   slug: worldcat-scopes
   summary_line: 26 scopes · clientCredentials/authorizationCode
 score:
-  band: developing
-  composite: 43.0
+  band: thin
+  composite: 33.2
   coverage:
     artifact_dirs: 16
-    catalog_earned: 78.3
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 62.5
+    contract_quality: 57.2
     developer_ergonomics: 23.8
-    discoverability: 74.1
-    operational_transparency: 52.6
-  previous_composite: 43.0
+    discoverability: 71.4
+    operational_transparency: 28.9
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     contracts:
@@ -365,9 +370,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 19
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Education & Research
+    regime_id: education
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -383,7 +394,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: worldcat
 tags:
-- Libraries
+- Library
 - Bibliographic Records
 - WorldCat
 - OCLC

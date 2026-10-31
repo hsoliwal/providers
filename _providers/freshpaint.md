@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,9 +22,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.8
-  scored_at: '2026-09-20'
+  score: 27.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -64,6 +64,10 @@ collections:
   name: Freshpaint HTTP API
   slug: open-freshpaint
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.freshpaint.io/blog/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/freshpaint/refs/heads/main/capabilities/freshpaint-capability-edges.yml
   title: ''
@@ -204,19 +208,23 @@ common:
 created: '2026-06-25'
 description: Freshpaint is a healthcare privacy platform and customer-data platform that collects first-party event data and governs it for HIPAA compliance before fanning it out to 100+ marketing, analytics, and data destinations. Its server-side HTTP API ingests track, identify, page, and screen events at https://api.perfalytics.com/track authenticated with an environment token.
 finops:
-- name: Freshpaint Finops
+- has_sources: true
+  method: generated
+  name: Freshpaint Finops
+  primary_unit: ''
   service_category: Analytics
   slug: freshpaint-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freshpaint.png
 layout: provider
-modified: '2026-08-13'
+modified: '2026-10-06'
 name: Freshpaint
 nav: Providers
 network: true
-overview: 'Freshpaint publishes 1 API on the [APIs.io](https://apis.io/) network: Events API. Tagged areas include Customer Data Platform, Event Tracking, Healthcare, HIPAA, and Privacy.
+overview: 'Freshpaint publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Events API, and 1 more. Tagged areas include Customer Data Platform, Event Tracking, Healthcare, HIPAA, and Privacy.
 
 
-  Freshpaint''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, signup flow, support, and 23 more developer resources.'
+  Freshpaint''s developer surface includes authentication, documentation, engineering blog, changelog, pricing, signup flow, support, and 24 more developer resources.'
 plans:
 - name: Freshpaint Plans Pricing
   plan_count: 3
@@ -227,24 +235,24 @@ rate_limits:
   name: Freshpaint Rate Limits
   slug: freshpaint-rate-limits
 score:
-  band: strong
-  composite: 55.1
+  band: developing
+  composite: 50.7
   coverage:
     artifact_dirs: 24
-    catalog_earned: 60.0
+    catalog_earned: 57.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 86.8
+    access_clarity: 78.9
     contract_governance: 18.2
-    contract_quality: 56.5
+    contract_quality: 50.8
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 55.1
+  previous_composite: 52.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -264,9 +272,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

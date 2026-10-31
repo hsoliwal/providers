@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: false
@@ -35,9 +35,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
-api_count: 2
+  score: 22.8
+  scored_at: '2026-10-17'
+api_count: 4
 apis:
 - baseURL: https://yoursubdomain.zendesk.com/qa
   baseurl_source: declared
@@ -49,7 +49,7 @@ apis:
   description: The PublicExportApi API from Klaus — 18 operation(s) for publicexportapi.
   name: Klaus PublicExportApi API
   slug: klaus-publicexportapi-api
-artifact_total: 10
+artifact_total: 11
 collections:
 - collection_type: open
   name: API Collection
@@ -61,6 +61,11 @@ collections:
   name: Public Export PubImportApi PublicExportApi API
   slug: open-klaus-publicexportapi-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/klaus/refs/heads/main/plans/klaus-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/klaus-plans-pricing.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -234,34 +239,38 @@ modified: '2026-07-19'
 name: Klaus
 nav: Providers
 network: true
-overview: 'Klaus publishes 2 APIs on the [APIs.io](https://apis.io/) network: PubImportApi API and PublicExportApi API. Tagged areas include Company, Quality Assurance, Customer-Support, Customer Experience, and Conversation Analytics.
+overview: 'Klaus publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: PubImportApi API and PublicExportApi API. Tagged areas include Company, Quality Assurance, Customer Service, Customer Experience, and Conversation Analytics.
 
 
-  Klaus'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 30 more developer resources.'
+  Klaus'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
+plans:
+- name: Klaus Plans Pricing
+  plan_count: 11
+  slug: klaus-plans-pricing
 random_paper: 16
 rate_limits:
 - limit_count: 4
   name: Klaus Rate Limits
   slug: klaus-rate-limits
 score:
-  band: developing
-  composite: 52.8
+  band: strong
+  composite: 60.9
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 49.0
-    catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    artifact_dirs: 21
+    catalog_earned: 64.0
+    catalog_earned_first_party: 24.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 7.0
   facets:
-    access_clarity: 60.5
+    access_clarity: 92.1
     contract_governance: 4.5
-    contract_quality: 46.3
+    contract_quality: 41.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 76.3
-  previous_composite: 52.8
+  previous_composite: 53.9
   provenance:
     conformance: derived
     contracts:
@@ -271,9 +280,15 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -299,7 +314,7 @@ slug: klaus
 tags:
 - Company
 - Quality Assurance
-- Customer-Support
+- Customer Service
 - Customer Experience
 - Conversation Analytics
 - Contact Center

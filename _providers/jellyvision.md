@@ -28,7 +28,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.2
-  scored_at: '2026-09-20'
+  score: 21.9
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The ALEX Partner Integration API lets a Jellyvision partner — typically a benefits administration or enrollment platform — streamline and personalize the ALEX experience for its end users. Partners PO
@@ -45,6 +45,15 @@ apis:
   slug: alex-partner-integration-api
 artifact_total: 8
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/jellyvision/refs/heads/main/rate-limits/jellyvision-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/jellyvision-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.jellyvision.com/resources/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/jellyvision/refs/heads/main/security/jellyvision-trust-center.yml
   title: ''
@@ -130,17 +139,17 @@ description: Jellyvision (The Jellyvision Lab, Inc.) is a Chicago-based employee
 image: https://www.jellyvision.com/wp-content/uploads/2023/12/Jellyvision_Generic.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Jellyvision serves a live, OAuth-protected Model Context Protocol server from its own marketing host. It was found by following RFC 9728 protected-resource metadata at https://www.jellyvision.com/.wel
   name: Jellyvision MCP Server
-  slug: jellyvision-mcp-server
-modified: '2026-08-23'
+  slug: jellyvision-mcp-yml
+modified: '2026-10-06'
 name: Jellyvision
 nav: Providers
 network: true
-overview: 'Jellyvision publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Employee Benefits, Human Resources, Benefits Administration, and Benefits Enrollment.
+overview: 'Jellyvision is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Employee Benefits, Human Resources, Benefits Administration, and Benefits Enrollment.
 
 
-  Jellyvision''s developer surface includes documentation, API reference, engineering blog, support, signup flow, and 13 more developer resources.'
+  Jellyvision''s developer surface includes documentation, API reference, engineering blog, support, signup flow, and 15 more developer resources.'
 plans:
 - name: Jellyvision Plans Pricing
   plan_count: 0
@@ -157,7 +166,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 35.3
+  composite: 32.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -171,25 +180,27 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.3
+  previous_composite: 32.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 71.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 41.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'The zSpace Core SDK is a native C API (documented as native_sdk_4.0) that lets an application drive a zSpace display: it loads the SDK runtime, detects connected peripherals, and exposes fourteen API '
@@ -153,7 +153,7 @@ modified: '2026-09-05'
 name: zSpace
 nav: Providers
 network: true
-overview: 'zSpace publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, Augmented Reality, Virtual Reality, and EdTech.
+overview: 'zSpace is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Education, Augmented Reality, Virtual Reality, and EdTech.
 
 
   zSpace''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, changelog, and 17 more developer resources.'
@@ -168,14 +168,14 @@ rate_limits:
   slug: zspace-rate-limits
 scopes:
 - name: Zspace Scopes
-  scope_count: 0
+  scope_count: 9
   slug: zspace-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 9 scopes
 score:
   band: emerging
-  composite: 24.1
+  composite: 21.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -187,14 +187,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 24.1
+  previous_composite: 21.7
   provenance:
     conformance: first-party
     mcp: derived
@@ -203,14 +205,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/zspace/refs/heads/main/screenshots/zspace-2026-10-11T195543.png
 security:
 - kind: authentication
   name: Zspace Authentication

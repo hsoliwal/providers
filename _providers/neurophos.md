@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: A live, unauthenticated Model Context Protocol endpoint served from the neurophos.com host and advertised in the company's own llms.txt. It is provided by the Wix site platform rather than authored by
@@ -42,6 +42,10 @@ apis:
   slug: neurophos-site-mcp
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.neurophos.com/news
 - group: company
   title: ''
   type: Website
@@ -101,42 +105,48 @@ description: 'Neurophos is an Austin, Texas semiconductor company, spun out of D
 image: https://static.wixstatic.com/media/79aa3c_0cf41cb45de44d92ab97f571e6d733ff~mv2.jpg/v1/fill/w_1942,h_931,al_c/79aa3c_0cf41cb45de44d92ab97f571e6d733ff~mv2.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.neurophos.com over HTTP; 9 tools listed.
   name: Neurophos MCP Server
-  slug: neurophos-mcp-server
-modified: '2026-08-04'
+  slug: neurophos-site-mcp
+modified: '2026-10-06'
 name: Neurophos
 nav: Providers
 network: true
-overview: 'Neurophos publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Photonics, Optical Computing, AI Inference, and AI Accelerators.
+overview: 'Neurophos is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Photonics, Optical Computing, Inference, and AI Accelerators.
 
 
-  Neurophos'' developer surface includes authentication, product news, and 10 more developer resources.'
+  Neurophos'' developer surface includes engineering blog, authentication, product news, and 10 more developer resources.'
 random_paper: 5
 score:
-  band: minimal
-  composite: 10.8
+  band: emerging
+  composite: 11.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 11.9
-    discoverability: 75.9
+    developer_ergonomics: 14.3
+    discoverability: 75.8
     operational_transparency: 2.6
   previous_composite: 10.8
   provenance:
     conformance: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -157,11 +167,11 @@ tags:
 - Company
 - Photonics
 - Optical Computing
-- AI Inference
+- Inference
 - AI Accelerators
 - Semiconductors
 - Metamaterials
-- Data-Center
+- Data Center
 - Deep Tech
 - MCP
 website: https://www.neurophos.com/

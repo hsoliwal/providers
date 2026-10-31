@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.7
-  scored_at: '2026-09-20'
+  score: 20.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -76,6 +76,7 @@ apis:
   slug: brightlayer-digital-energy-twin-autodesk
 - description: Eaton + NVIDIA reference architecture announced March 2026 for end-to-end AI-factory deployment on NVIDIA's Vera Rubin platform. Bundles supercapacitor-backed power, busbar power distribution, hot-ais
   name: Eaton Beam Rubin DSX Platform
+  provenance: unpublished
   slug: eaton-beam-rubin-dsx-platform
 - baseURL: https://api.em.eaton.com
   baseurl_source: declared
@@ -322,9 +323,13 @@ examples:
   name: Smart Breaker Send Command Example
   slug: smart-breaker-send-command-example
 finops:
-- name: Eaton Finops
+- has_sources: true
+  method: generated
+  name: Eaton Finops
+  primary_unit: ''
   service_category: ''
   slug: eaton-finops
+  template: true
 image: https://www.eaton.com/etc.clientlibs/settings/wcm/designs/eaton/clientlibs/clientlib-base/resources/images/eaton-logo.svg
 json_schemas:
 - name: ChargingSession
@@ -353,7 +358,7 @@ modified: '2026-09-16'
 name: Eaton
 nav: Providers
 network: true
-overview: 'Eaton publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, Device Commands API, Devices API, and 5 more. Tagged areas include Power Management, Electrical, Smart Breaker, EV Charging, and Demand Response.
+overview: 'Eaton publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Authorization API, Device Commands API, and Devices API. Tagged areas include Power Management, Electrical, Smart Breaker, EV Charging, and Demand Response.
 
 
   The Eaton catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -370,9 +375,10 @@ rate_limits:
   name: Eaton Rate Limits
   slug: eaton-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Eaton API Rules
+  name: Eaton — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -380,10 +386,11 @@ rules:
     info: 2
     warn: 3
   slug: eaton-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
-  name: Eaton API Rules
+  name: Eaton — smart breaker rules
   rule_count: 6
   severity_counts:
     error: 3
@@ -398,23 +405,23 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 54.0
+  composite: 43.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 64.5
+    artifact_dirs: 20
+    catalog_earned: 52.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.7
   facets:
-    access_clarity: 77.6
-    contract_governance: 28.8
-    contract_quality: 53.1
+    access_clarity: 46.1
+    contract_governance: 27.3
+    contract_quality: 48.3
     developer_ergonomics: 40.5
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 54.0
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     contracts:
@@ -427,10 +434,10 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 54.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 33.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -451,7 +458,7 @@ tags:
 - Smart Breaker
 - EV Charging
 - Demand Response
-- Data-Center
+- Data Center
 - DCIM
 - PDU
 - UPS

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -102,6 +102,21 @@ collections:
   name: The News API
   slug: open-the-news-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/the-news-api/refs/heads/main/plans/the-news-api-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/the-news-api-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/the-news-api/refs/heads/main/rate-limits/the-news-api-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/the-news-api-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/the-news-api/refs/heads/main/finops/the-news-api-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/the-news-api-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/the-news-api/refs/heads/main/agentic-access/the-news-api-agentic-access.yml
   title: ''
@@ -160,9 +175,13 @@ examples:
   name: The News Api Top Stories Example
   slug: the-news-api-top-stories-example
 finops:
-- name: The News Api Finops
+- has_sources: false
+  method: generated
+  name: The News Api Finops
+  primary_unit: ''
   service_category: API
   slug: the-news-api-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/the-news-api.png
 json_schemas:
 - name: The News API Article
@@ -182,13 +201,13 @@ modified: '2026-05-19'
 name: The News API
 nav: Providers
 network: true
-overview: 'The News API publishes 6 APIs on the [APIs.io](https://apis.io/) network, including All News API, Articles API, Headlines API, and 3 more. Tagged areas include Articles, Headlines, News, Media, and Search.
+overview: 'The News API publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including All News API, Articles API, Headlines API, and 3 more. Tagged areas include Articles, Headlines, News, Media, and Search.
 
 
   The The News API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  The News API''s developer surface includes authentication, documentation, signup flow, pricing, and 7 more developer resources.'
+  The News API''s developer surface includes authentication, documentation, signup flow, pricing, and 10 more developer resources.'
 plans:
 - name: The News Api Plans Pricing
   plan_count: 3
@@ -199,9 +218,10 @@ rate_limits:
   name: The News Api Rate Limits
   slug: the-news-api-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: The News API API Rules
+  name: The News API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -209,7 +229,8 @@ rules:
     info: 1
     warn: 4
   slug: the-news-api-jsonschema-spectral-rules
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
   name: The News API API Rules
@@ -222,28 +243,28 @@ rules:
   slug: the-news-api-rules
 score:
   band: thin
-  composite: 38.3
+  composite: 35.2
   coverage:
     artifact_dirs: 16
-    catalog_earned: 63.5
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 59.2
+    access_clarity: 31.6
+    contract_governance: 27.3
+    contract_quality: 53.8
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - global
-  previous_composite: 38.3
+  previous_composite: 36.7
   provenance:
     agentic_access: derived
     contracts:
@@ -251,8 +272,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

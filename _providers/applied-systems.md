@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Freemium
   onboarding: unknown
   pricing: freemium
@@ -27,13 +30,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 5
 apis:
 - description: Read Applied Epic client (account) records - client lookup, benefits data such as employee counts and HIPAA compliance, and identifiers used for VoIP caller identification. Confirmed endpoint GET /crm
@@ -44,12 +47,15 @@ apis:
   slug: applied-systems-policies-api
 - description: Centralize contact data for clients, prospects, carriers, and vendors, with filtering by classification, email, or account for sales and service teams. Named in Applied's own API blog; specific REST p
   name: Applied Epic Contacts API
+  provenance: modeled
   slug: applied-systems-contacts-api
 - description: Manage documents across Epic workflows - retrieve active attachments on a client account, upload call recordings and transcripts to accounts or activities, access proof-of-insurance attachments, and a
   name: Applied Epic Attachments API
+  provenance: modeled
   slug: applied-systems-attachments-api
 - description: Work with Epic activities - the actions and follow-up reminders tracked against each account. The legacy Applied Epic SDK exposed activity insert operations; the modern REST surface is behind the gate
   name: Applied Epic Activities API
+  provenance: modeled
   slug: applied-systems-activities-api
 artifact_total: 9
 common:
@@ -92,16 +98,20 @@ common:
 created: '2026-07-10'
 description: 'Applied Systems is a leading global provider of cloud-based software for the business of insurance, best known for the Applied Epic agency management system (plus TAM, Applied CSR24, and related products). Applied exposes a RESTful developer platform for Applied Epic through the Applied Dev Center at devcenter.myappliedproducts.com, superseding the older Applied Epic SDK. The APIs let certified partners and agencies read and write core Epic data - clients/accounts, policies, contacts, attachments, and activities - over OAuth 2.0. Access is gated: developers register, build and test an app against a sandbox, then submit a production request (name, email, organization, enterprise ID, and Epic database name) that Applied must approve before production credentials are issued. Base URL for the platform is https://api.myappliedproducts.com.'
 finops:
-- name: Applied Systems Finops
+- has_sources: true
+  method: generated
+  name: Applied Systems Finops
+  primary_unit: ''
   service_category: Insurance Software and Agency Management
   slug: applied-systems-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/applied-systems.png
 layout: provider
 modified: '2026-07-10'
 name: Applied Systems
 nav: Providers
 network: true
-overview: 'Applied Systems publishes 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurtech, Agency Management, Applied Epic, and CRM.
+overview: 'Applied Systems is listed with 5 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Insurtech, Agency Management, Applied Epic, and CRM.
 
 
   Applied Systems'' developer surface includes documentation and 7 more developer resources.'
@@ -116,32 +126,32 @@ rate_limits:
   slug: applied-systems-rate-limits
 score:
   band: emerging
-  composite: 20.5
+  composite: 11.9
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 67.0
+    artifact_dirs: 8
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 74.1
-    operational_transparency: 31.6
-  previous_composite: 20.5
+    discoverability: 71.4
+    operational_transparency: 7.9
+  previous_composite: 20.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 9.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 5.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -160,6 +170,5 @@ tags:
 - Applied Epic
 - CRM
 - Policy Management
-- Partner Gated
 website: https://www.appliedsystems.com
 ---

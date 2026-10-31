@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.5
-  scored_at: '2026-09-20'
+  score: 30.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -105,6 +105,10 @@ collections:
   name: HUD User CHAS ZIP Code Crosswalk API
   slug: open-hud-zip-code-crosswalk-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hud.gov/rss.xml
 - group: other
   title: ''
   type: Open Data
@@ -289,9 +293,13 @@ examples:
   name: Hud Usps Zip Crosswalk Example
   slug: hud-usps-zip-crosswalk-example
 finops:
-- name: Hud Finops
+- has_sources: false
+  method: generated
+  name: Hud Finops
+  primary_unit: ''
   service_category: ''
   slug: hud-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hud.png
 json_schemas:
 - name: HUD Fair Market Rent
@@ -309,17 +317,17 @@ jsonld:
   property_count: 67
   slug: hud-context
 layout: provider
-modified: '2026-06-13'
+modified: '2026-10-06'
 name: HUD - US Department of Housing and Urban Development
 nav: Providers
 network: true
-overview: 'HUD - US Department of Housing and Urban Development publishes 5 APIs on the [APIs.io](https://apis.io/) network, including CHAS API, Fair Market Rents API, Housing Counseling API, and 2 more. Tagged areas include Housing, Government, Fair Market Rent, Mortgage, and Community Development.
+overview: 'HUD - US Department of Housing and Urban Development publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including CHAS API, Fair Market Rents API, Housing Counseling API, and 7 more. Tagged areas include Housing, Government, Fair Market Rent, Mortgage, and Community Development.
 
 
   The HUD - US Department of Housing and Urban Development catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  HUD - US Department of Housing and Urban Development''s developer surface includes product news, support, API reference, getting-started guide, signup flow, authentication, documentation, and 32 more developer resources.'
+  HUD - US Department of Housing and Urban Development''s developer surface includes product news, support, API reference, getting-started guide, signup flow, authentication, documentation, and 33 more developer resources.'
 plans:
 - name: Hud Plans Pricing
   plan_count: 2
@@ -330,9 +338,10 @@ rate_limits:
   name: Hud Rate Limits
   slug: hud-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: HUD - US Department of Housing and Urban Development API Rules
+  name: HUD - US Department of Housing and Urban Development — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -341,24 +350,24 @@ rules:
     warn: 3
   slug: hud-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 48.4
+  band: thin
+  composite: 37.8
   coverage:
     artifact_dirs: 24
-    catalog_earned: 70.3
+    catalog_earned: 55.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.8
+    catalog_gap: 59.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.1
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 28.0
-    contract_quality: 61.4
+    contract_quality: 55.8
     developer_ergonomics: 14.3
-    discoverability: 81.5
-    operational_transparency: 50.0
-  previous_composite: 48.4
+    discoverability: 80.4
+    operational_transparency: 34.2
+  previous_composite: 43.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -373,10 +382,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

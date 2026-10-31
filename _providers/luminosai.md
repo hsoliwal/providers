@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.luminos.ai/forms/book-a-demo/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.luminos.ai/rss.xml
 - group: company
   title: ''
   type: Website
@@ -96,18 +104,18 @@ created: '2026-07-17'
 description: Luminos.AI is an AI governance and evaluation platform that tests AI systems — classical machine learning, generative AI, and autonomous agents — for legal, regulatory, and reputational risk. The platform automates continuous evaluations against customizable risks, generates privileged, audit-ready compliance documentation, runs approval and governance workflows, and monitors deployed models in real time for drift, updates, and deployment-context changes, all without requiring direct access to the underlying model. Luminos.AI was surfaced as a portfolio company of Bloomberg Beta and profiled into the API Evangelist network. It does not currently publish a public developer API, SDKs, or an OpenAPI definition; the product is engaged through hosted evaluations and demos.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/luminosai.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Luminos.AI
 nav: Providers
 network: true
 overview: 'Luminos.AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AI Governance, AI Evaluation, Compliance, and Risk Management.
 
 
-  Luminos.AI''s developer surface includes getting-started guide, signup flow, engineering blog, support, and 9 more developer resources.'
+  Luminos.AI''s developer surface includes engineering blog, getting-started guide, signup flow, support, and 11 more developer resources.'
 random_paper: 9
 score:
   band: emerging
-  composite: 19.3
+  composite: 20.5
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -121,11 +129,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 19.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 20.5
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +154,7 @@ security:
 - kind: vulnerability-disclosure
   name: Luminosai Vulnerability Disclosure
   slug: luminosai-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Luminosai Trust Center
   slug: luminosai-trust-center
@@ -153,7 +167,7 @@ tags:
 - Compliance
 - Risk Management
 - AI Safety
-- Regulatory Technology
-- Agentic AI
+- RegTech
+- AI Agents
 website: https://www.luminos.ai/
 ---

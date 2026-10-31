@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://indexing.googleapis.com/v3
   baseurl_source: declared
   description: The urlNotifications API from Google Indexing — 1 operation(s) for urlnotifications.
-  name: Google Indexing urlNotifications API
+  name: Google Indexing URL Notifications API
   slug: google-indexing-urlnotifications-api
 - baseURL: https://indexing.googleapis.com/v3
   baseurl_source: declared
@@ -258,9 +258,13 @@ common:
 created: '2026-03-13'
 description: The Google Indexing API lets a site owner tell Google directly when a page has been added, updated, or removed, instead of waiting for a crawl. It is a two-operation API — publish a URL notification, and read back the latest notification metadata for a URL. Google restricts its use to pages carrying JobPosting structured data, or BroadcastEvent embedded in a VideoObject. It is free of charge, capped by default at 200 publish requests per day per Google Cloud project, and gated on Search Console ownership verification rather than on price.
 finops:
-- name: Google Indexing Finops
+- has_sources: false
+  method: generated
+  name: Google Indexing Finops
+  primary_unit: ''
   service_category: API
   slug: google-indexing-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-indexing.png
 json_schemas:
 - name: Google Indexing URL Notification
@@ -276,7 +280,7 @@ modified: '2026-08-13'
 name: Google Indexing
 nav: Providers
 network: true
-overview: 'Google Indexing publishes 2 APIs on the [APIs.io](https://apis.io/) network: urlNotifications API and urlNotifications:publish API. Tagged areas include Crawling, Google, Indexing, Search, and SEO.
+overview: 'Google Indexing publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: URL Notifications API and urlNotifications:publish API. Tagged areas include Crawling, Google, Indexing, Search, and SEO.
 
 
   The Google Indexing catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -293,9 +297,10 @@ rate_limits:
   name: Google Indexing Rate Limits
   slug: google-indexing-rate-limits
 rules:
-- effective_rule_count: 4
+- authorship: generated
+  effective_rule_count: 4
   extends: []
-  name: Google Indexing API Rules
+  name: Google Indexing — jsonschema rules
   rule_count: 4
   severity_counts:
     error: 0
@@ -303,7 +308,8 @@ rules:
     info: 1
     warn: 3
   slug: google-indexing-jsonschema-spectral-rules
-- effective_rule_count: 56
+- authorship: generated
+  effective_rule_count: 56
   extends:
   - spectral:oas
   name: Google Indexing API Rules
@@ -321,23 +327,23 @@ scopes:
   summary_line: 1 scope · jwt-bearer/authorizationCode
 score:
   band: strong
-  composite: 62.3
+  composite: 62.7
   coverage:
     artifact_dirs: 29
-    catalog_earned: 78.5
+    catalog_earned: 74.9
     catalog_earned_first_party: 20.0
-    catalog_gap: 36.5
+    catalog_gap: 40.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 67.1
+    access_clarity: 59.2
     contract_governance: 18.2
-    contract_quality: 66.7
+    contract_quality: 60.5
     developer_ergonomics: 69.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 76.3
-  previous_composite: 62.3
+  previous_composite: 64.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,8 +354,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

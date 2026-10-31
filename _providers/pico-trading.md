@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.pico.net/blog/feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/pico-trading/refs/heads/main/security/pico-trading-domain-security.yml
   title: ''
@@ -112,14 +116,14 @@ created: '2026-07-21'
 description: Pico (pico.net) is a trading-infrastructure and financial market data company - not the creator-CRM company of the same name - providing global exchange connectivity, colocation and managed infrastructure in 55+ data centers, Redline trading software (InRush ticker plant feed handlers and Execution Gateway, acquired 2021), RedlineFeed normalized market data from 230+ venues, and Corvil network and trading analytics (acquired 2019). Market data is delivered to entitled customers via multicast feeds and an embedded InRush software API rather than public HTTP endpoints, and Corvil exposes analytics via a REST API, SDK, and streaming to Kafka, Splunk, and Elastic. Privately held; everything is sales-gated - there is no public developer portal, no self-serve signup, and no public API reference, with product documentation and the Corvil API docs behind the login-gated customer portal at portal.pico.net.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pico-trading.png
 layout: provider
-modified: '2026-07-22'
+modified: '2026-10-06'
 name: Pico
 nav: Providers
 network: true
-overview: 'Pico is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Financial, Market Data, Trading, Real-Time, and Low Latency.
+overview: 'Pico is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Finance, Market Data, Trading, Real-Time, and Low Latency.
 
 
-  Pico''s developer surface includes authentication, changelog, documentation, developer portal, engineering blog, support, and 10 more developer resources.'
+  Pico''s developer surface includes authentication, changelog, documentation, developer portal, engineering blog, support, and 11 more developer resources.'
 random_paper: 7
 scopes:
 - name: Pico Trading Scopes
@@ -128,7 +132,7 @@ scopes:
   summary_line: 36 scopes · authorizationCode
 score:
   band: emerging
-  composite: 25.6
+  composite: 23.7
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,9 +146,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 25.6
+  previous_composite: 23.7
   provenance:
     conformance: first-party
   regulatory:
@@ -152,9 +156,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 58.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -172,7 +176,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: pico-trading
 tags:
-- Financial
+- Finance
 - Market Data
 - Trading
 - Real-Time

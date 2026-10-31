@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'REST API for the Acquire (formerly Tagove) customer support platform: conversations/cases, messages, notes, contacts, companies, phone, chatbots, cards, analytics, knowledge base, and account settings'
@@ -157,7 +157,7 @@ modified: '2026-07-21'
 name: Tagove
 nav: Providers
 network: true
-overview: 'Tagove publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer-Support, Live Chat, Conversational, and Co-Browsing.
+overview: 'Tagove is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Service, Live Chat, Conversational AI, and Co-Browsing.
 
 
   The Tagove catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -167,32 +167,39 @@ overview: 'Tagove publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 8
 score:
   band: thin
-  composite: 37.0
+  composite: 36.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 37.0
+  previous_composite: 36.8
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/tagove/refs/heads/main/screenshots/tagove-2026-10-11T130607.png
 security:
 - kind: authentication
   name: Tagove Authentication
@@ -205,9 +212,9 @@ security:
 slug: tagove
 tags:
 - Company
-- Customer-Support
+- Customer Service
 - Live Chat
-- Conversational
+- Conversational AI
 - Co-Browsing
 - Chatbots
 - Webhook

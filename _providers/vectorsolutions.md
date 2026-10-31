@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 2
@@ -163,6 +163,14 @@ collections:
   name: TargetSolutions Courses Users API
   slug: open-vectorsolutions-users-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.vectorsolutions.com/resources/newsroom/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.vectorsolutions.com/resources/newsroom/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/vectorsolutions/refs/heads/main/security/vectorsolutions-domain-security.yml
   title: ''
@@ -280,18 +288,18 @@ created: '2026-07-17'
 description: Vector Solutions is a training and workforce management software company serving education, public safety, government, manufacturing, construction, and gaming industries with products including Vector LMS, Vector EHS, Vector Scheduling, Vector Check It, Acadis, Guardian Tracking, and TargetSolutions. Its TargetSolutions platform for online training and records management exposes a REST API (v1) for managing sites, users, profile groups, supervisor and feature access, credentials, courses, and training assignments, documented at developers.targetsolutions.com.
 image: https://www.vectorsolutions.com/wp-content/uploads/2021/03/VectorSolutions_Logo_Icon_Color-copy-e1610391064416-1024x907.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Vector Solutions
 nav: Providers
 network: true
-overview: 'Vector Solutions publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Courses API, Credential Assignment API, Credential Categories API, and 11 more. Tagged areas include Training, Learning Management, Compliance, Public Safety, and Workforce Management.
+overview: 'Vector Solutions publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Courses API, Credential Assignment API, Credential Categories API, and 11 more. Tagged areas include Training, LMS, Compliance, Public Safety, and Workforce Management.
 
 
-  Vector Solutions'' developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 18 more developer resources.'
+  Vector Solutions'' developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, support, signup flow, and 20 more developer resources.'
 random_paper: 17
 score:
   band: thin
-  composite: 37.6
+  composite: 34.9
   coverage:
     artifact_dirs: 19
     catalog_earned: 37.0
@@ -299,15 +307,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
     contract_quality: 13.9
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
-  previous_composite: 37.6
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -323,9 +331,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -343,7 +351,7 @@ security:
 slug: vectorsolutions
 tags:
 - Training
-- Learning Management
+- LMS
 - Compliance
 - Public Safety
 - Workforce Management

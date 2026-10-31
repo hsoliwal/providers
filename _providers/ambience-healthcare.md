@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'Partner-facing integration APIs for EHRs, telehealth platforms and healthcare applications, covering medical encounter transcription, clinical note generation, integrated CDI with ICD-10 suggestions, '
@@ -171,7 +171,7 @@ modified: '2026-07-31'
 name: Ambience Healthcare
 nav: Providers
 network: true
-overview: 'Ambience Healthcare publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Artificial Intelligence, Clinical Documentation, and Ambient AI.
+overview: 'Ambience Healthcare is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Artificial Intelligence, Clinical Documentation, and Ambient AI.
 
 
   Ambience Healthcare''s developer surface includes authentication, documentation, engineering blog, signup flow, and 23 more developer resources.'
@@ -183,9 +183,9 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: thin
-  composite: 34.5
+  composite: 30.5
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -197,9 +197,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 33.3
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 2.6
-  previous_composite: 34.5
+  previous_composite: 30.5
   provenance:
     conformance: first-party
   regulatory:
@@ -213,9 +213,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 44.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

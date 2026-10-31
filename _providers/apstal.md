@@ -38,7 +38,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Hosted MCP server exposing Apstal analytics via JSON-RPC 2.0 over Streamable HTTP. Public tools (login, register, server_info) and authenticated tools (execute_sql, get_analytics, list_projects, regis
@@ -212,14 +212,14 @@ description: 'AI-first website analytics and visitor tracking platform that repl
 image: https://apstal.com/logos/apstal-mark.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at apstal.com over HTTP requiring an API key; 9 tools listed.
   name: Apstal MCP Server
-  slug: apstal-mcp-server
+  slug: apstal-analytics
 modified: '2026-08-13'
 name: Apstal
 nav: Providers
 network: true
-overview: 'Apstal publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Web Analytics, Privacy, Session Replay, and Heatmaps.
+overview: 'Apstal is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Analytics, Web Analytics, Privacy, Session Replay, and Heatmaps.
 
 
   The Apstal catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -241,30 +241,45 @@ scopes:
   slug: apstal-scopes
   summary_line: 3 scopes · authorizationCode/refreshToken
 score:
-  band: developing
-  composite: 53.6
+  band: strong
+  composite: 56.5
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 58.0
     catalog_earned_first_party: 24.0
     catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 70.4
+    discoverability: 70.0
     operational_transparency: 42.1
-  previous_composite: 53.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - poland
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 56.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -288,7 +303,7 @@ tags:
 - Session Replay
 - Heatmaps
 - MCP
-- agent-native
+- Agent-Native
 - Cookieless
 - llms-txt
 - BigQuery

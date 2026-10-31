@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -48,26 +48,72 @@ apis:
   baseurl_source: declared
   description: Accounts the authenticated user can access.
   name: Awin Accounts API
+  phrasing_intents:
+  - id: getAccounts
+    intent: List the accounts my user can access
+    question: Which Awin publisher and advertiser accounts can my login access?
+  phrasing_ops: 1
   slug: awin-affiliate-accounts-api
 - baseURL: https://api.awin.com
   baseurl_source: declared
   description: Commission groups and rates for a programme.
   name: Awin Commission Groups API
+  phrasing_intents:
+  - id: getCommissionGroups
+    intent: Get an advertiser's commission groups and rates
+    question: What commission rates does an advertiser pay me as a publisher on Awin?
+  phrasing_ops: 1
   slug: awin-affiliate-commission-groups-api
 - baseURL: https://api.awin.com
   baseurl_source: declared
   description: Advertiser programmes and their details.
   name: Awin Programmes API
+  phrasing_intents:
+  - id: getProgrammes
+    intent: List the advertiser programmes a publisher works with
+    question: Which advertiser programmes have I joined as an Awin publisher?
+  - id: getProgrammeDetails
+    intent: Get details of one advertiser programme
+    question: What are the valid domains, KPIs and commission range for one advertiser's programme?
+  phrasing_ops: 2
   slug: awin-affiliate-programmes-api
 - baseURL: https://api.awin.com
   baseurl_source: declared
   description: Aggregated performance reports.
   name: Awin Reports API
+  phrasing_intents:
+  - id: getPublisherAdvertiserReport
+    intent: Report a publisher's performance by advertiser
+    question: Which advertisers earned me the most as a publisher over a date range?
+  - id: getPublisherCreativeReport
+    intent: Report a publisher's performance by creative
+    question: Which banners and creatives drove the most clicks and impressions on my publisher site?
+  - id: getPublisherCampaignReport
+    intent: Report a publisher's performance by campaign
+    question: Which campaigns brought me the most clicks and sales as a publisher?
+  - id: getAdvertiserPublisherReport
+    intent: Report an advertiser's performance by publisher
+    question: Which publishers drive the most sales for my advertiser programme?
+  - id: getAdvertiserCreativeReport
+    intent: Report an advertiser's performance by creative
+    question: Which of my advertiser creatives get the most impressions across publishers?
+  - id: getAdvertiserCampaignReport
+    intent: Report an advertiser's performance by campaign
+    question: Which of my advertiser campaigns drew the most clicks and sales from publishers?
+  phrasing_ops: 6
   slug: awin-affiliate-reports-api
 - baseURL: https://api.awin.com
   baseurl_source: declared
   description: Individual publisher and advertiser transactions.
   name: Awin Transactions API
+  phrasing_intents:
+  - id: getPublisherTransactions
+    intent: List a publisher's individual transactions
+    question: Which individual sales did I earn commission on as a publisher last week?
+  - id: getAdvertiserTransactions
+    intent: List an advertiser's individual transactions
+    question: How do I export every affiliate sale tracked for my advertiser account in a date range?
+  phrasing_ops: 2
   slug: awin-affiliate-transactions-api
 artifact_total: 21
 asyncapis:
@@ -294,16 +340,20 @@ common:
 created: '2026-07-05'
 description: Awin is a global affiliate marketing network connecting advertisers (brands) with publishers (content creators, cashback, voucher, and loyalty partners) across thousands of programmes worldwide. Awin exposes a documented public REST API at https://api.awin.com that lets both publishers and advertisers pull data such as individual transactions and aggregated performance reports, inspect commission groups and programme details, list the accounts a user can access, and generate tracking links and offers. All endpoints follow REST principles, return JSON, are served over HTTPS only, and authenticate with an OAuth 2.0 Bearer access token issued at the user level from the Awin UI (the Create Transactions API is the exception and uses an x-api-key). A platform-wide throttle limits requests to 20 API calls per minute per user.
 finops:
-- name: Awin Affiliate Finops
+- has_sources: true
+  method: generated
+  name: Awin Affiliate Finops
+  primary_unit: ''
   service_category: Marketing and Advertising
   slug: awin-affiliate-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/awin-affiliate.png
 layout: provider
 modified: '2026-08-13'
 name: Awin
 nav: Providers
 network: true
-overview: 'Awin publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Commission Groups API, Programmes API, and 2 more. Tagged areas include Affiliate Marketing, Advertising, Publishers, Advertisers, and Transaction.
+overview: 'Awin publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Commission Groups API, Programmes API, and 2 more. Tagged areas include Affiliate Marketing, Advertising, Publishers, Advertisers, and Transaction.
 
 
   The Awin catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -321,23 +371,23 @@ rate_limits:
   slug: awin-affiliate-rate-limits
 score:
   band: exemplar
-  composite: 68.6
+  composite: 68.5
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 64.0
+    artifact_dirs: 26
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 100.0
+    access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 60.4
+    contract_quality: 55.2
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 78.9
-  previous_composite: 68.6
+  previous_composite: 70.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -348,8 +398,18 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

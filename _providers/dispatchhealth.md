@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-09-20'
+  score: 16.5
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'An OAuth 2.1-protected Model Context Protocol (MCP) server exposed on DispatchHealth''s own host by the WordPress MCP adapter running on www.dispatchhealth.com. Discovery is fully machine-readable: RFC'
@@ -161,14 +161,14 @@ description: DispatchHealth is a Denver, Colorado-based provider of complex medi
 image: https://www.dispatchhealth.com/wp-content/uploads/2025/07/dispatchhealth-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.dispatchhealth.com.
   name: DispatchHealth MCP Server
-  slug: dispatchhealth-mcp-server
+  slug: dispatchhealth-mcp-yml
 modified: '2026-07-31'
 name: DispatchHealth
 nav: Providers
 network: true
-overview: 'DispatchHealth publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Systems, Hospital at Home, and Home Health.
+overview: 'DispatchHealth is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Systems, Hospital at Home, and Home Health.
 
 
   DispatchHealth''s developer surface includes authentication, engineering blog, support, FAQ, pricing, signup flow, and 20 more developer resources.'
@@ -180,7 +180,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: thin
-  composite: 30.7
+  composite: 28.4
   coverage:
     artifact_dirs: 10
     catalog_earned: 37.0
@@ -188,23 +188,25 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 53.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.7
+  previous_composite: 28.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: site-plugin
   regulatory:
     applies: true
     jurisdictions:
@@ -214,9 +216,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 58.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

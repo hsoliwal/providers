@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 4
   human_in_the_loop: 0
   name: Codacy Agentic Access
   operation_count: 18
   slug: codacy-agentic-access
-  summary_line: 18 operations · 5 acting
+  summary_line: 18 operations · 4 acting
 api_count: 1
 apis:
 - baseURL: https://api.codacy.com/api/v3
@@ -118,6 +118,11 @@ collections:
   name: Codacy API
   slug: open-codacy
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/codacy/refs/heads/main/capabilities/codacy-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/codacy-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/codacy/refs/heads/main/agentic-access/codacy-agentic-access.yml
   title: ''
@@ -171,19 +176,23 @@ common:
 created: '2026-06-21'
 description: Codacy is an automated code quality and security platform that analyzes commits and pull requests across 49+ languages, surfacing issues, coverage, and security findings. The Codacy API v3 lets teams manage organizations, repositories, issues, pull requests, coverage, security, and quality settings programmatically.
 finops:
-- name: Codacy Finops
+- has_sources: true
+  method: generated
+  name: Codacy Finops
+  primary_unit: ''
   service_category: Developer Tools
   slug: codacy-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/codacy.png
 layout: provider
 modified: '2026-06-21'
 name: Codacy
 nav: Providers
 network: true
-overview: 'Codacy publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Account API, Coverage API, Issues API, and 5 more. Tagged areas include Code Quality, Static Analysis, Security, Code Coverage, and DevOps.
+overview: 'Codacy publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Coverage API, Issues API, and 5 more. Tagged areas include Code Quality, Static Analysis, Security, Code Coverage, and DevOps.
 
 
-  Codacy''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Codacy''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Codacy Plans Pricing
   plan_count: 3
@@ -194,24 +203,24 @@ rate_limits:
   name: Codacy Rate Limits
   slug: codacy-rate-limits
 score:
-  band: thin
-  composite: 35.8
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 60.0
+    artifact_dirs: 13
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 49.7
+    contract_quality: 44.8
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 35.8
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 32.8
   provenance:
     agentic_access: derived
     contracts:
@@ -219,9 +228,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

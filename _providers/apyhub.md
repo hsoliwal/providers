@@ -28,15 +28,15 @@ agent_readiness:
     event_surface_described: false
     idempotency: false
     mcp_server: verified
-    openapi_examples: false
+    openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 506
   human_in_the_loop: 0
@@ -44,7 +44,7 @@ agentic_access:
   operation_count: 552
   slug: apyhub-agentic-access
   summary_line: 552 operations · 506 acting
-api_count: 210
+api_count: 220
 apis:
 - description: Classify a public JPG, PNG, or WebP URL as likely AI-generated, human, or uncertain. Returns ai_score, confidence, and source_breakdown.
   name: AI-Generated Image Detection API
@@ -864,7 +864,27 @@ apis:
   description: The Uncategorized API from ApyHub — 14 operation(s) for uncategorized.
   name: ApyHub Uncategorized API
   slug: apyhub-uncategorized-api
-artifact_total: 277
+- baseURL: https://api.apyhub.com
+  baseurl_source: spec
+  description: Document conversion utilities
+  name: ApyHub Convert API
+  slug: apyhub-convert-api
+- baseURL: https://api.apyhub.com
+  baseurl_source: spec
+  description: Currency conversion utilities
+  name: ApyHub Currency API
+  slug: apyhub-currency-api
+- baseURL: https://api.apyhub.com
+  baseurl_source: spec
+  description: Data extraction utilities
+  name: ApyHub Extract API
+  slug: apyhub-extract-api
+- baseURL: https://api.apyhub.com
+  baseurl_source: spec
+  description: Document generation utilities
+  name: ApyHub Generate API
+  slug: apyhub-generate-api
+artifact_total: 282
 collections:
 - collection_type: open
   name: API Collection
@@ -882,6 +902,30 @@ collections:
   name: ApyHub Convert Generate API
   slug: open-apyhub-generate-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://apyhub.com/pricing
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/rate-limits/apyhub-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apyhub-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/finops/apyhub-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apyhub-finops.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/plans/apyhub-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apyhub-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apyhub/refs/heads/main/capabilities/apyhub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apyhub-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -893,9 +937,13 @@ examples:
   name: Conversion Request Example
   slug: conversion-request-example
 finops:
-- name: Apyhub Finops
+- has_sources: false
+  method: generated
+  name: Apyhub Finops
+  primary_unit: ''
   service_category: API
   slug: apyhub-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apyhub.png
 json_schemas:
 - name: ConversionRequest
@@ -911,14 +959,21 @@ jsonld:
   property_count: 0
   slug: apyhub-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.eu.apyhub.com over HTTP.
+  name: ApyHub MCP Server
+  slug: apyhub
 modified: '2026-09-16'
 name: ApyHub
 nav: Providers
 network: true
-overview: 'ApyHub publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Artificial Intelligence API, Audio Processing API, Communications API, and 16 more. Tagged areas include API Marketplace, API Platform, Utility APIs, Document Conversion, and Data Processing.
+overview: 'ApyHub publishes 264 API contracts indexed on the [APIs.io](https://apis.io/) network, including Artificial Intelligence API, Audio Processing API, Communications API, and 261 more. Tagged areas include API Marketplace, API Platform, Utility APIs, Document Conversion, and Data Processing.
 
 
-  The ApyHub catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
+  The ApyHub catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+
+
+  ApyHub''s developer surface includes pricing and 5 more developer resources.'
 plans:
 - name: Apyhub Plans Pricing
   plan_count: 3
@@ -929,9 +984,10 @@ rate_limits:
   name: Apyhub Rate Limits
   slug: apyhub-rate-limits
 rules:
-- effective_rule_count: 4
+- authorship: generated
+  effective_rule_count: 4
   extends: []
-  name: ApyHub API Rules
+  name: ApyHub — jsonschema rules
   rule_count: 4
   severity_counts:
     error: 0
@@ -939,7 +995,8 @@ rules:
     info: 1
     warn: 3
   slug: apyhub-jsonschema-spectral-rules
-- effective_rule_count: 63
+- authorship: generated
+  effective_rule_count: 63
   extends:
   - spectral:oas
   name: ApyHub API Rules
@@ -952,40 +1009,40 @@ rules:
   slug: apyhub-spectral-rules
 score:
   band: thin
-  composite: 27.1
+  composite: 32.4
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 48.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 66.5
+    artifact_dirs: 23
+    catalog_earned: 59.5
+    catalog_earned_first_party: 12.0
+    catalog_gap: 55.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 5.2
   facets:
-    access_clarity: 15.8
+    access_clarity: 42.1
     contract_governance: 13.6
-    contract_quality: 60.2
+    contract_quality: 56.8
     developer_ergonomics: 9.5
-    discoverability: 57.4
+    discoverability: 66.7
     operational_transparency: 7.9
-  previous_composite: 27.1
+  previous_composite: 27.2
   provenance:
     agentic_access: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 19
+      total: 23
     mcp: first-party
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 8.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

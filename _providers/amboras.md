@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The multi-tenant commerce backend Amboras operates at api.amboras.com. Every Amboras-built storefront calls it through the Medusa JS SDK, sending a publishable API key (x-publishable-api-key, pk_ pref
@@ -40,6 +40,11 @@ apis:
   slug: amboras-storefront-backend
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/amboras/refs/heads/main/rate-limits/amboras-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/amboras-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/amboras/refs/heads/main/security/amboras-trust-center.yml
   title: ''
@@ -172,10 +177,10 @@ modified: '2026-08-13'
 name: Amboras
 nav: Providers
 network: true
-overview: 'Amboras publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Artificial Intelligence, Generative AI, and Automation.
+overview: 'Amboras is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Artificial Intelligence, Generative AI, and Automation.
 
 
-  Amboras'' developer surface includes documentation, pricing, signup flow, support, authentication, changelog, and 21 more developer resources.'
+  Amboras'' developer surface includes documentation, pricing, signup flow, support, authentication, changelog, and 22 more developer resources.'
 plans:
 - name: Amboras Plans Pricing
   plan_count: 4
@@ -187,9 +192,9 @@ rate_limits:
   slug: amboras-rate-limits
 score:
   band: developing
-  composite: 44.9
+  composite: 42.7
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -201,9 +206,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 40.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 44.7
-  previous_composite: 44.9
+  previous_composite: 42.7
   provenance:
     conformance: first-party
     skills: first-party
@@ -212,9 +217,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

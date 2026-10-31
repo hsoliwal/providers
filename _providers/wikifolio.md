@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.wikifolio.com/en/int/blog/rss
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/wikifolio/refs/heads/main/security/wikifolio-domain-security.yml
   title: ''
@@ -74,18 +78,18 @@ created: '2026-07-17'
 description: wikifolio (wikifolio Financial Technologies AG) is a European social- and copy-trading platform that lets everyday investors follow, compare, and invest in the strategies of experienced traders. Traders build virtual portfolios ("wikifolios") that are published transparently; in Germany, Austria, and Switzerland the best-performing wikifolios can be securitized as exchange-listed wikifolio certificates that investors buy through their bank or broker. The platform surfaces thousands of trading ideas with published rules, fees, and live performance tracking. wikifolio was surfaced as a portfolio company of Speedinvest and is profiled in the API Evangelist network; it does not appear to publish a public developer API at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/wikifolio.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Wikifolio
 nav: Providers
 network: true
 overview: 'Wikifolio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Social Trading, Copy Trading, and Investing.
 
 
-  Wikifolio''s developer surface includes engineering blog, getting-started guide, and 6 more developer resources.'
+  Wikifolio''s developer surface includes engineering blog, getting-started guide, and 7 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 12.0
+  composite: 12.4
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -99,22 +103,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 12.0
+  previous_composite: 12.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

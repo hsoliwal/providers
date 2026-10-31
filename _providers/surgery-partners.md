@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.surgerypartners.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/surgery-partners/refs/heads/main/security/surgery-partners-domain-security.yml
   title: ''
@@ -85,7 +89,7 @@ created: '2026-05-04'
 description: Surgery Partners is a leading operator of surgical facilities and ancillary services in the United States, including ambulatory surgery centers, surgical hospitals, multi-specialty physician practices, and anesthesia services. The company partners with physicians to deliver high-quality, cost-effective surgical care across short-stay surgical procedures. Surgery Partners does not currently publish a public developer API or documentation portal.
 image: https://www.surgerypartners.com/favicon.ico
 layout: provider
-modified: '2026-05-04'
+modified: '2026-10-06'
 name: Surgery Partners
 nav: Providers
 network: true
@@ -93,7 +97,7 @@ overview: Surgery Partners is profiled on the [APIs.io](https://apis.io/) networ
 random_paper: 15
 score:
   band: minimal
-  composite: 4.7
+  composite: 4.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 19.0
@@ -107,17 +111,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 35.2
+    discoverability: 33.9
     operational_transparency: 0.0
-  previous_composite: 4.7
+  previous_composite: 4.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

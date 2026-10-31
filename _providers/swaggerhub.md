@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 22
   human_in_the_loop: 0
@@ -88,7 +88,7 @@ apis:
 - baseURL: https://api.swaggerhub.com
   baseurl_source: declared
   description: Manage SwaggerHub API definitions and versions
-  name: SwaggerHub AP Is API
+  name: SwaggerHub APIs API
   slug: swaggerhub-apis-api
 artifact_total: 43
 collections:
@@ -156,6 +156,26 @@ collections:
   name: SwaggerHub User Management API
   slug: open-swaggerhub-user-management
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/swaggerhub/refs/heads/main/plans/swaggerhub-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/swaggerhub-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/swaggerhub/refs/heads/main/rate-limits/swaggerhub-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/swaggerhub-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/swaggerhub/refs/heads/main/finops/swaggerhub-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/swaggerhub-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/swaggerhub/refs/heads/main/capabilities/swaggerhub-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/swaggerhub-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -253,9 +273,13 @@ examples:
   name: Swaggerhub Search Apis Example
   slug: swaggerhub-search-apis-example
 finops:
-- name: Swaggerhub Finops
+- has_sources: false
+  method: generated
+  name: Swaggerhub Finops
+  primary_unit: ''
   service_category: API
   slug: swaggerhub-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/swaggerhub.png
 json_schemas:
 - name: SwaggerHub API Entry
@@ -275,13 +299,13 @@ modified: '2026-05-19'
 name: SwaggerHub
 nav: Providers
 network: true
-overview: 'SwaggerHub publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Domains API, Integrations API, Organizations API, and 6 more. Tagged areas include API Design, API Management, API Registry, Developer Tools, and Documentation.
+overview: 'SwaggerHub publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Domains API, Integrations API, Organizations API, and 6 more. Tagged areas include API Design, API Management, API Registry, Developer Tools, and Documentation.
 
 
   The SwaggerHub catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  SwaggerHub''s developer surface includes authentication, developer portal, signup flow, documentation, getting-started guide, pricing, engineering blog, and 14 more developer resources.'
+  SwaggerHub''s developer surface includes authentication, developer portal, signup flow, documentation, getting-started guide, pricing, engineering blog, and 18 more developer resources.'
 plans:
 - name: Swaggerhub Plans Pricing
   plan_count: 3
@@ -292,9 +316,10 @@ rate_limits:
   name: Swaggerhub Rate Limits
   slug: swaggerhub-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: SwaggerHub API Rules
+  name: SwaggerHub — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -302,7 +327,8 @@ rules:
     info: 1
     warn: 4
   slug: swaggerhub-jsonschema-spectral-rules
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
   name: SwaggerHub API Rules
@@ -315,23 +341,23 @@ rules:
   slug: swaggerhub-rules
 score:
   band: developing
-  composite: 50.8
+  composite: 48.5
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 58.5
+    artifact_dirs: 18
+    catalog_earned: 55.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.5
+    catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 43.4
+    access_clarity: 35.5
     contract_governance: 13.6
-    contract_quality: 59.6
+    contract_quality: 54.2
     developer_ergonomics: 69.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 50.8
+  previous_composite: 50.0
   provenance:
     agentic_access: derived
     contracts:
@@ -339,8 +365,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

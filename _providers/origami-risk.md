@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Quote-side policy lifecycle — create and patch proposals, add and remove policy lines, coverages, schedules and linked schedules, list insurance programs, carriers, policy lines and states, run or que
@@ -101,6 +101,10 @@ collections:
   name: Rating API
   slug: open-origami-risk-standard-rating-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.origamirisk.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/origami-risk/refs/heads/main/overlays/origami-risk-authentication-overlay.yaml
   title: ''
@@ -296,17 +300,17 @@ description: Origami Risk is a Chicago-headquartered risk, safety and insurance 
   billing and payments, claims-from-incident and first-report actions, files, reports, domain metadata and outbound webhooks. Four OpenAPI definitions are downloadable from the portal's spec registry, though three of the four are thin scaffolds and the bulk of the reference is hand-authored per-endpoint documentation rather than a complete machine-readable spec. Access to a live tenant is still commercial — the base URL is a per-customer https://{environment}.origamirisk.com host and authentication is token-based or HMAC against a provisioned account — and no ACORD, AL3, IVANS or NGDS conformance is claimed anywhere in the marketing site or the developer portal.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-25'
+modified: '2026-10-06'
 name: Origami Risk
 nav: Providers
 network: true
-overview: 'Origami Risk publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Has Token Expired API, New Endpoint 1 API, and 2 more. Tagged areas include Insurance, United States, Property and Casualty, Policy Administration, and Claims.
+overview: 'Origami Risk publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Has Token Expired API, New Endpoint 1 API, and 8 more. Tagged areas include Insurance, United States, Property and Casualty, Policy Administration, and Claims.
 
 
   The Origami Risk catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Origami Risk''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, support, and 35 more developer resources.'
+  Origami Risk''s developer surface includes authentication, changelog, sandbox, documentation, API reference, getting-started guide, support, and 36 more developer resources.'
 random_paper: 20
 rate_limits:
 - limit_count: 5
@@ -314,7 +318,7 @@ rate_limits:
   slug: origami-risk-rate-limits
 score:
   band: developing
-  composite: 53.7
+  composite: 51.0
   coverage:
     artifact_dirs: 22
     catalog_earned: 52.0
@@ -326,9 +330,9 @@ score:
   facets:
     access_clarity: 53.9
     contract_governance: 4.5
-    contract_quality: 53.0
+    contract_quality: 48.5
     developer_ergonomics: 50.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 73.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -337,7 +341,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.7
+  previous_composite: 51.0
   provenance:
     conformance: derived
     contracts:
@@ -352,9 +356,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

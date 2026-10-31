@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.6
-  scored_at: '2026-09-20'
+  score: 24.7
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Auto-generated GraphQL API exposing indexed smart contract events from any EVM-compatible chain. HyperIndex processes on-chain events into queryable databases, supports multichain indexing from a sing
@@ -45,7 +45,7 @@ apis:
 - description: Read-only JSON-RPC endpoint optimised for data-intensive operations, providing up to 5x performance improvement over standard node providers. Functions as a drop-in replacement for existing Ethereum J
   name: HyperRPC JSON-RPC API
   slug: hyperrpc-json-rpc-api
-artifact_total: 9
+artifact_total: 10
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/envio/refs/heads/main/security/envio-domain-security.yml
@@ -102,9 +102,13 @@ common:
 created: '2026-06-13'
 description: Envio is a high-performance blockchain data indexing platform providing developers with the fastest and most flexible way to access on-chain data. Its core products — HyperIndex, HyperSync, and HyperRPC — enable real-time and historical indexing across 100+ EVM networks and beyond, exposing indexed smart contract events through auto-generated GraphQL APIs and a REST-based HyperSync data retrieval layer. Envio Cloud offers fully managed hosting with git-based deployments, zero-downtime rollbacks, and multi-region support.
 finops:
-- name: Envio Finops
+- has_sources: false
+  method: generated
+  name: Envio Finops
+  primary_unit: ''
   service_category: ''
   slug: envio-finops
+  template: true
 graphqls:
 - description: The Envio HyperIndex GraphQL API exposes indexed smart contract events and blockchain state from any EVM-compatible chain. Each HyperIndex deployment auto-generates a GraphQL API based on the user-def
   name: Envio GraphQL API
@@ -116,11 +120,15 @@ jsonld:
   property_count: 0
   slug: envio-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.envio.dev over HTTP; 2 tools listed.
+  name: Envio MCP Server
+  slug: envio
 modified: '2026-06-13'
 name: Envio
 nav: Providers
 network: true
-overview: 'Envio publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Blockchain, Indexer, GraphQL, Web3, and EVM.
+overview: 'Envio is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Blockchain, Indexer, GraphQL, Web3, and EVM.
 
 
   The Envio catalog on APIs.io includes 1 JSON-LD context.
@@ -138,28 +146,34 @@ rate_limits:
   slug: envio-rate-limits
 score:
   band: thin
-  composite: 36.3
+  composite: 28.8
   coverage:
     artifact_dirs: 10
-    catalog_earned: 63.0
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 50.0
+    contract_quality: 47.9
     developer_ergonomics: 28.6
-    discoverability: 74.1
+    discoverability: 65.0
     operational_transparency: 5.3
-  previous_composite: 36.3
+  previous_composite: 34.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 187
+- acting_count: 186
   human_in_the_loop: 4
   name: Emory Agentic Access
   operation_count: 344
   slug: emory-agentic-access
-  summary_line: 344 operations · 187 acting · 4 human-in-the-loop
+  summary_line: 344 operations · 186 acting · 4 human-in-the-loop
 api_count: 1
 apis:
 - description: Emory's instance of the Instructure Canvas learning management system exposes the standard Canvas LMS REST API. Access requires an Emory Canvas account and developer keys / API access tokens; the refe
@@ -57,112 +57,112 @@ apis:
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: annotation resource
-  name: Emory University annotation API
+  name: Emory University Annotation API
   slug: emory-annotation-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: api_key resource
-  name: Emory University api_key API
+  name: Emory University API Key API
   slug: emory-api-key-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: assetstore resource
-  name: Emory University assetstore API
+  name: Emory University Assetstore API
   slug: emory-assetstore-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: collection resource
-  name: Emory University collection API
+  name: Emory University Collection API
   slug: emory-collection-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: dicomweb_assetstore resource
-  name: Emory University dicomweb_assetstore API
+  name: Emory University Dicomweb Assetstore API
   slug: emory-dicomweb-assetstore-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: file resource
-  name: Emory University file API
+  name: Emory University File API
   slug: emory-file-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: files resource
-  name: Emory University files API
+  name: Emory University Files API
   slug: emory-files-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: folder resource
-  name: Emory University folder API
+  name: Emory University Folder API
   slug: emory-folder-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: group resource
-  name: Emory University group API
+  name: Emory University Group API
   slug: emory-group-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: histomicsui resource
-  name: Emory University histomicsui API
+  name: Emory University Histomicsui API
   slug: emory-histomicsui-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: homepage resource
-  name: Emory University homepage API
+  name: Emory University Homepage API
   slug: emory-homepage-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: item resource
-  name: Emory University item API
+  name: Emory University Item API
   slug: emory-item-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: job resource
-  name: Emory University job API
+  name: Emory University Job API
   slug: emory-job-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: large_image resource
-  name: Emory University large_image API
+  name: Emory University Large Image API
   slug: emory-large-image-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: notification resource
-  name: Emory University notification API
+  name: Emory University Notification API
   slug: emory-notification-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: resource resource
-  name: Emory University resource API
+  name: Emory University Resource API
   slug: emory-resource-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: slicer_cli_web resource
-  name: Emory University slicer_cli_web API
+  name: Emory University Slicer Cli Web API
   slug: emory-slicer-cli-web-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: system resource
-  name: Emory University system API
+  name: Emory University System API
   slug: emory-system-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: tcga resource
-  name: Emory University tcga API
+  name: Emory University Tcga API
   slug: emory-tcga-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: token resource
-  name: Emory University token API
+  name: Emory University Token API
   slug: emory-token-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: user resource
-  name: Emory University user API
+  name: Emory University User API
   slug: emory-user-api
 - baseURL: https://computablebrain.emory.edu/api/v1
   baseurl_source: declared
   description: worker resource
-  name: Emory University worker API
+  name: Emory University Worker API
   slug: emory-worker-api
 - description: The Emory Libraries Digital Library Program discovery layer (dlp-lux) exposes its Blacklight search index as a JSON:API document at /catalog.json. Query, paginate and read digital collection records —
   name: Emory Digital Library Program Search API (Blacklight JSON:API)
@@ -181,6 +181,7 @@ apis:
   slug: primo-discovery
 - description: Course Atlas is Emory's published course catalog and class schedule. It is a CourseLeaf (Leepfrog Technologies) tenancy on an Emory hostname. The catalog content is Emory's; the application and any AP
   name: Emory Course Atlas (CourseLeaf)
+  provenance: unpublished
   slug: course-atlas
 artifact_total: 75
 collections:
@@ -376,9 +377,13 @@ examples:
   name: Emory List Folders Example
   slug: emory-list-folders-example
 finops:
-- name: Emory Finops
+- has_sources: true
+  method: generated
+  name: Emory Finops
+  primary_unit: ''
   service_category: Education
   slug: emory-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/emory.png
 json_schemas:
 - name: Girder Annotation
@@ -416,7 +421,7 @@ modified: '2026-09-01'
 name: Emory University
 nav: Providers
 network: true
-overview: 'Emory University publishes 22 APIs on the [APIs.io](https://apis.io/) network, including annotation API, api_key API, assetstore API, and 19 more. Tagged areas include University, Higher Education, Education, Private Research University, and Association of American Universities.
+overview: 'Emory University publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Annotation API, API Key API, and Assetstore API. Tagged areas include University, Higher Education, Education, Private Research University, and Association of American Universities.
 
 
   The Emory University catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -433,9 +438,10 @@ rate_limits:
   name: Emory Rate Limits
   slug: emory-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Emory University API Rules
+  name: Emory University — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -443,7 +449,8 @@ rules:
     info: 2
     warn: 3
   slug: emory-jsonschema-spectral-rules
-- effective_rule_count: 6
+- authorship: unmarked
+  effective_rule_count: 6
   extends: []
   name: Emory University API Rules
   rule_count: 6
@@ -454,23 +461,23 @@ rules:
     warn: 5
   slug: emory-rules
 score:
-  band: developing
-  composite: 43.3
+  band: thin
+  composite: 34.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 65.3
+    artifact_dirs: 20
+    catalog_earned: 52.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.8
+    catalog_gap: 62.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.1
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 58.8
+    contract_quality: 53.8
     developer_ergonomics: 38.1
-    discoverability: 53.7
-    operational_transparency: 42.1
+    discoverability: 57.1
+    operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -478,7 +485,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 43.3
+  previous_composite: 40.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -492,10 +499,10 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 33.3
@@ -520,7 +527,7 @@ tags:
 - Georgia
 - Atlanta
 - Research
-- Libraries
+- Library
 - Research Repository
 - Library Catalog
 - Course Catalog

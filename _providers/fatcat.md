@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 42
   human_in_the_loop: 0
@@ -47,57 +47,57 @@ apis:
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: 'Helper methods and internal APIs for editor authentication. # TAGLINE'
-  name: Fatcat auth API
+  name: Fatcat Auth API
   slug: fatcat-auth-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: 'The **Changelog** is the ordered feed of editgroups which have been # TAGLINE accepted into the catalog. # TAGLINE'
-  name: Fatcat changelog API
+  name: Fatcat Changelog API
   slug: fatcat-changelog-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Container** entities represent publication venues like journals, # TAGLINE conference proceedings, book series, or blogs. They group publications # TAGLINE ("releases"). # TAGLINE See the "Catalog S'
-  name: Fatcat containers API
+  name: Fatcat Containers API
   slug: fatcat-containers-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Creator** entities represent individuals (or organizations, or other # TAGLINE agents) who contribute to the creation of specific releases # TAGLINE (publications). # TAGLINE See the "Catalog Style '
-  name: Fatcat creators API
+  name: Fatcat Creators API
   slug: fatcat-creators-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Editgroups** are sets of changes, each to individual entities in the # TAGLINE catalog. Every edit must be part of an editgroup which is reviewed and # TAGLINE accepted (merged) as a whole. # TAGLIN'
-  name: Fatcat editgroups API
+  name: Fatcat Editgroups API
   slug: fatcat-editgroups-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Editors** are human user accounts and bots that make changes to the # TAGLINE Fatcat catalog. # TAGLINE The API allows fetching (and updating) metadata about individual editors, # TAGLINE as well as'
-  name: Fatcat editors API
+  name: Fatcat Editors API
   slug: fatcat-editors-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**File** entities represent unique digital files which are full # TAGLINE manifestations of specific releases (publications), such as fulltext PDF # TAGLINE files, JATS XML documents, or video files. '
-  name: Fatcat files API
+  name: Fatcat Files API
   slug: fatcat-files-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Fileset** entities represent sets of digital files, as well as locations # TAGLINE where they can be found on the public web. Filesets most commonly # TAGLINE represent datasets consisting of severa'
-  name: Fatcat filesets API
+  name: Fatcat Filesets API
   slug: fatcat-filesets-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Release** entities represent specific published versions of a research # TAGLINE work, such as a pre-print, a journal article, a book (or chapter), or a # TAGLINE scholarly blog post. Releases are a'
-  name: Fatcat releases API
+  name: Fatcat Releases API
   slug: fatcat-releases-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Web Capture** entities represent archival snapshots of web pages (or # TAGLINE other web resources), which are usually complete manifestations of a # TAGLINE specific release entity. Web Captures al'
-  name: Fatcat webcaptures API
+  name: Fatcat Webcaptures API
   slug: fatcat-webcaptures-api
 - baseURL: https://api.fatcat.wiki/v0
   baseurl_source: declared
   description: '**Work** entities group several Release entities which are different # TAGLINE versions of the same abstract piece of research. For example, three # TAGLINE release entities representing the pre-print'
-  name: Fatcat works API
+  name: Fatcat Works API
   slug: fatcat-works-api
 artifact_total: 40
 collections:
@@ -138,6 +138,21 @@ collections:
   name: fatcat auth works API
   slug: open-fatcat-works-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/fatcat/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/fatcat/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/fatcat/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -184,9 +199,13 @@ examples:
   name: Release Entity Example
   slug: release-entity-example
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://fatcat.wiki/static/fatcat_logo.svg
 json_schemas:
 - name: ContainerEntity
@@ -214,13 +233,13 @@ modified: '2026-09-16'
 name: Fatcat
 nav: Providers
 network: true
-overview: 'Fatcat publishes 11 APIs on the [APIs.io](https://apis.io/) network, including auth API, changelog API, containers API, and 8 more. Tagged areas include Scholarly, Research, Academic, Open Access, and Bibliographic.
+overview: 'Fatcat publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Changelog API, Containers API, and 8 more. Tagged areas include Scholarly, Research, Academic, Open Access, and Bibliographic.
 
 
   The Fatcat catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Fatcat''s developer surface includes authentication and 5 more developer resources.'
+  Fatcat''s developer surface includes authentication and 8 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -231,9 +250,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Fatcat API Rules
+  name: Fatcat — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -243,23 +263,23 @@ rules:
   slug: fatcat-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 34.1
+  composite: 27.8
   coverage:
     artifact_dirs: 15
-    catalog_earned: 62.3
+    catalog_earned: 53.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.2
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 61.2
+    contract_quality: 55.9
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 34.1
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     contracts:
@@ -272,9 +292,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 10.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: The FTC Developer Portal is the central hub for developer documentation, data dictionaries, and access program details for FTC-managed datasets and services. It names the API base URL (https://api.ftc
@@ -57,6 +57,11 @@ apis:
   slug: hsr-premerger
 artifact_total: 12
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/federal-trade-commission/refs/heads/main/finops/federal-trade-commission-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/federal-trade-commission-finops.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -194,19 +199,23 @@ common:
 created: '2024-12-03'
 description: 'The Federal Trade Commission (FTC) is a U.S. federal agency that enforces antitrust and consumer protection laws affecting virtually every area of commerce. The FTC operates a small public, read-only REST API at https://api.ftc.gov/v0 — fronted by the api.data.gov gateway and covering Do Not Call consumer complaint reports and Hart-Scott-Rodino premerger early termination notices — alongside a Project Open Data (DCAT-US 1.1) inventory of 95 datasets at https://www.ftc.gov/data.json. Two further developer-facing programmes are gated rather than public: the National Do Not Call Registry telemarketer download at telemarketing.donotcall.gov, and the Consumer Sentinel Network of consumer complaint data shared with vetted law enforcement.'
 finops:
-- name: Federal Trade Commission Finops
+- has_sources: false
+  method: generated
+  name: Federal Trade Commission Finops
+  primary_unit: ''
   service_category: API
   slug: federal-trade-commission-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-trade-commission.png
 layout: provider
 modified: '2026-09-09'
 name: Federal Trade Commission
 nav: Providers
 network: true
-overview: 'Federal Trade Commission publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Antitrust, Consumer Protection, Do Not Call, Federal-Government, and Law Enforcement.
+overview: 'Federal Trade Commission is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Antitrust, Consumer Protection, Do Not Call, Federal Government, and Law Enforcement.
 
 
-  Federal Trade Commission''s developer surface includes documentation, API reference, signup flow, support, authentication, sandbox, product news, and 23 more developer resources.'
+  Federal Trade Commission''s developer surface includes documentation, API reference, signup flow, support, authentication, sandbox, product news, and 24 more developer resources.'
 plans:
 - name: Federal Trade Commission Plans Pricing
   plan_count: 0
@@ -218,23 +227,28 @@ rate_limits:
   slug: federal-trade-commission-rate-limits
 score:
   band: thin
-  composite: 37.3
+  composite: 32.7
   coverage:
     artifact_dirs: 18
-    catalog_earned: 50.0
+    catalog_earned: 47.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 65.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.7
   facets:
-    access_clarity: 42.1
+    access_clarity: 34.2
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 72.2
+    discoverability: 70.5
     operational_transparency: 44.7
-  previous_composite: 37.3
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 34.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -243,9 +257,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 57.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -270,7 +284,7 @@ tags:
 - Antitrust
 - Consumer Protection
 - Do Not Call
-- Federal-Government
+- Federal Government
 - Law Enforcement
 - Open Data
 website: https://www.ftc.gov/

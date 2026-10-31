@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://conexiom.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -92,18 +96,18 @@ created: '2026-07-17'
 description: Conexiom is an AI-powered sales order and invoice automation platform for manufacturers and distributors. It captures order and document data from any format (PDFs, Excel, email bodies, scans, and handwritten notes), validates and corrects it against ERP systems, and pushes clean, touchless transactions into a customer's order-management workflow. The platform surfaces its own document API (retrieving document lists and attachments) and a set of ERP integrations, documented in an authenticated help center rather than a public developer portal. Conexiom is backed by ICONIQ Capital and runs on Microsoft Azure with a SOC 2 Type II and GDPR-aligned security posture.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/conexiom.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Conexiom
 nav: Providers
 network: true
 overview: 'Conexiom is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise Software, Order Automation, Invoice Automation, and Document Processing.
 
 
-  Conexiom''s developer surface includes documentation, support, engineering blog, changelog, and 8 more developer resources.'
+  Conexiom''s developer surface includes documentation, support, engineering blog, changelog, and 9 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 19.6
+  composite: 20.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -117,13 +121,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 31.6
-  previous_composite: 19.6
+  previous_composite: 20.1
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

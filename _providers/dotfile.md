@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 33.3
-  scored_at: '2026-09-20'
+  score: 31.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 57
   human_in_the_loop: 0
@@ -45,7 +45,7 @@ agentic_access:
   operation_count: 100
   slug: dotfile-agentic-access
   summary_line: 100 operations · 57 acting
-api_count: 27
+api_count: 28
 apis:
 - baseURL: https://api.dotfile.com/v1
   baseurl_source: declared
@@ -347,7 +347,7 @@ modified: '2026-08-17'
 name: Dotfile
 nav: Providers
 network: true
-overview: 'Dotfile publishes 26 APIs on the [APIs.io](https://apis.io/) network, including Activities API, AML check API, Cases API, and 23 more. Tagged areas include KYB, KYC, AML, Business Verification, and Identity Verification.
+overview: 'Dotfile publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, AML check API, Cases API, and 23 more. Tagged areas include KYB, KYC, AML, Business Verification, and Identity Verification.
 
 
   The Dotfile catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -365,7 +365,7 @@ rate_limits:
   slug: dotfile-rate-limits
 score:
   band: developing
-  composite: 51.4
+  composite: 51.2
   coverage:
     artifact_dirs: 25
     catalog_earned: 48.0
@@ -373,21 +373,23 @@ score:
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 65.8
+    contract_quality: 60.3
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 59.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - france
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - france-iberia
-  previous_composite: 51.4
+  previous_composite: 51.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -398,8 +400,18 @@ score:
       total: 26
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -430,11 +442,11 @@ tags:
 - Onboarding
 - Sanctions Screening
 - Document Verification
-- Fraud Detection
+- Fraud Prevention
 - Company Data
 - Beneficial Ownership
 - Case Management
-- Electronic Signature
+- E-Signature
 - Webhook
 website: https://www.dotfile.com/
 ---

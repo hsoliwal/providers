@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 13.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Multi-chain REST API providing NFT metadata, ownership, transfers, floor prices, listings, bids, spam scores, and fungible token market prices across 80+ blockchains and testnets. Supports bulk lookup
@@ -101,9 +101,13 @@ common:
 created: '2026-06-12'
 description: NFT data API aggregating metadata, ownership, transfers, floor prices, and token market data across 80+ blockchains. Provides REST API, webhooks, and Kafka streaming used by wallets, marketplaces, and analytics platforms including Coinbase, Phantom, Ledger, and Uniswap. Indexes 3B+ tokens and NFTs with 99.999% uptime SLA.
 finops:
-- name: Simplehash Finops
+- has_sources: false
+  method: generated
+  name: Simplehash Finops
+  primary_unit: ''
   service_category: ''
   slug: simplehash-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/simplehash.png
 jsonld:
 - class_count: 29
@@ -115,7 +119,7 @@ modified: '2026-06-12'
 name: SimpleHash
 nav: Providers
 network: true
-overview: 'SimpleHash publishes 1 API on the [APIs.io](https://apis.io/) network: NFT & Token API. Tagged areas include NFT, Blockchain, Web3, Cryptocurrency, and Tokens.
+overview: 'SimpleHash is listed with 1 API on the [APIs.io](https://apis.io/) network: NFT & Token API. Tagged areas include NFT, Blockchain, Web3, Cryptocurrency, and Tokens.
 
 
   The SimpleHash catalog on APIs.io includes 1 JSON-LD context.
@@ -132,26 +136,32 @@ rate_limits:
   name: Simplehash Rate Limits
   slug: simplehash-rate-limits
 score:
-  band: thin
-  composite: 26.2
+  band: emerging
+  composite: 20.8
   coverage:
     artifact_dirs: 8
-    catalog_earned: 56.0
+    catalog_earned: 47.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.2
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 37.3
+    contract_quality: 34.7
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 26.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 25.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -166,7 +176,7 @@ security:
 - kind: vulnerability-disclosure
   name: Simplehash Vulnerability Disclosure
   slug: simplehash-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: simplehash
 tags:
 - NFT

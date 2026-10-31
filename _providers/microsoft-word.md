@@ -23,26 +23,26 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 43.5
-  scored_at: '2026-09-20'
+  score: 39.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 27
+- acting_count: 23
   human_in_the_loop: 0
   name: Microsoft Word Agentic Access
-  operation_count: 55
+  operation_count: 46
   slug: microsoft-word-agentic-access
-  summary_line: 55 operations · 27 acting
+  summary_line: 46 operations · 23 acting
 api_count: 21
 apis:
 - description: Server-side document conversion and automation service for SharePoint. Supports batch conversion of Word documents to PDF, XPS, and other formats without user interaction.
@@ -250,6 +250,21 @@ collections:
   name: Microsoft Graph Word Body Versions API
   slug: open-microsoft-word-versions-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-word/refs/heads/main/plans/microsoft-word-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/microsoft-word-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-word/refs/heads/main/rate-limits/microsoft-word-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/microsoft-word-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-word/refs/heads/main/finops/microsoft-word-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/microsoft-word-finops.yml
 - group: company
   title: ''
   type: Website
@@ -571,9 +586,13 @@ features:
 - description: Low-level manipulation of Word document structure using the ECMA-376 Open XML standard.
   name: Open XML Processing
 finops:
-- name: Microsoft Word Finops
+- has_sources: true
+  method: generated
+  name: Microsoft Word Finops
+  primary_unit: ''
   service_category: Productivity / Documents
   slug: microsoft-word-finops
+  template: false
 image: /assets/icons/microsoft-word.png
 integrations:
 - description: Store, manage, and collaborate on Word documents through SharePoint document libraries and workflows.
@@ -647,20 +666,20 @@ jsonld:
   slug: microsoft-word-open-xml-sdk-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.svc.cloud.microsoft over HTTP; 3 tools listed.
   name: Microsoft MCP Server for Enterprise
   slug: microsoft-mcp-server-for-enterprise
 modified: '2026-06-20'
 name: Microsoft Word
 nav: Providers
 network: true
-overview: 'Microsoft Word publishes 18 APIs on the [APIs.io](https://apis.io/) network, including Body API, Checkout API, Comments API, and 15 more. Tagged areas include Documents, Microsoft-365, Office, Productivity, and Word Processing.
+overview: 'Microsoft Word is listed with 21 APIs on the [APIs.io](https://apis.io/) network, including Body API, Checkout API, Comments API, and 18 more. Tagged areas include Documents, Microsoft 365, Office, Productivity, and Word Processing.
 
 
   The Microsoft Word catalog on APIs.io includes 3 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  Microsoft Word''s developer surface includes authentication, sandbox, changelog, CLI, developer portal, developer console, signup flow, and 54 more developer resources.'
+  Microsoft Word''s developer surface includes authentication, sandbox, changelog, CLI, developer portal, developer console, signup flow, and 57 more developer resources.'
 plans:
 - name: Microsoft Word Plans Pricing
   plan_count: 7
@@ -671,9 +690,10 @@ rate_limits:
   name: Microsoft Word Rate Limits
   slug: microsoft-word-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Microsoft Word API Rules
+  name: Microsoft Word — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -681,7 +701,8 @@ rules:
     info: 2
     warn: 4
   slug: microsoft-word-jsonschema-spectral-rules
-- effective_rule_count: 82
+- authorship: generated
+  effective_rule_count: 82
   extends:
   - spectral:oas
   name: Microsoft Word API Rules
@@ -699,26 +720,26 @@ scopes:
   summary_line: 8 scopes · authorizationCode
 score:
   band: strong
-  composite: 58.5
+  composite: 61.8
   coverage:
     artifact_dirs: 33
-    catalog_earned: 66.5
+    catalog_earned: 65.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.5
+    catalog_gap: 50.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 57.9
-    contract_governance: 33.3
-    contract_quality: 33.9
+    access_clarity: 50.0
+    contract_governance: 31.8
+    contract_quality: 33.2
     developer_ergonomics: 89.3
-    discoverability: 57.4
+    discoverability: 63.3
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 58.5
+  previous_composite: 63.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -728,8 +749,14 @@ score:
       marker_coverage: 100.0
       total: 21
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -755,7 +782,7 @@ security:
 slug: microsoft-word
 tags:
 - Documents
-- Microsoft-365
+- Microsoft 365
 - Office
 - Productivity
 - Word Processing

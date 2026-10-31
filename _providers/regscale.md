@@ -25,7 +25,7 @@ agent_readiness:
     dynamic_client_registration: false
     error_semantics: false
     event_surface_described: true
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.5
-  scored_at: '2026-09-20'
+  score: 23.1
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: The RegScale REST API is the primary programmable surface of the RegScale platform. It is served from each customer's own RegScale tenant under the /api path, authenticated with a JSON Web Token obtai
@@ -53,6 +53,10 @@ asyncapis:
   name: Regscale Webhooks
   slug: regscale-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://regscale.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/regscale/refs/heads/main/security/regscale-domain-security.yml
   title: ''
@@ -202,17 +206,17 @@ created: '2026-08-26'
 description: 'RegScale is a Continuous Controls Monitoring (CCM) and compliance-automation company whose cloud-native, OSCAL-native GRC platform keeps organizations continuously audit-ready by turning compliance documentation into living, machine-readable data. The platform ships as a customer-tenanted deployment (SaaS, hybrid, or on-premises) and exposes its data through three programmable surfaces: a JWT-authenticated REST API under /api, a HotChocolate-style GraphQL endpoint at /graphql, and a published gRPC contract library (rs-data) covering asset, issue and vulnerability ingestion. RegScale also publishes a first-party Python CLI/SDK (regscale-cli) that doubles as an integration framework for 70+ scanners, cloud providers and ITSM tools, and holds FedRAMP High, SOC 2 Type 2, ISO 27001:2022, TX-RAMP Level 2 and CSA STAR credentials.'
 image: https://regscale.com/wp-content/uploads/2024/04/cropped-Regscale-Favicon-192x192.png
 layout: provider
-modified: '2026-08-26'
+modified: '2026-10-06'
 name: RegScale
 nav: Providers
 network: true
-overview: 'RegScale publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, Governance Risk and Compliance, Continuous Controls Monitoring, and Security.
+overview: 'RegScale is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Compliance, Governance Risk and Compliance, Continuous Controls Monitoring, and Security.
 
 
   The RegScale catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  RegScale''s developer surface includes documentation, getting-started guide, support, API reference, engineering blog, changelog, CLI, and 25 more developer resources.'
+  RegScale''s developer surface includes documentation, getting-started guide, support, API reference, engineering blog, changelog, CLI, and 26 more developer resources.'
 plans:
 - name: Regscale Plans Pricing
   plan_count: 0
@@ -224,9 +228,9 @@ rate_limits:
   slug: regscale-rate-limits
 score:
   band: developing
-  composite: 50.9
+  composite: 46.5
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -236,11 +240,11 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 50.9
+  previous_composite: 46.5
   provenance:
     conformance: first-party
   regulatory:
@@ -248,9 +252,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

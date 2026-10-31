@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -104,7 +104,7 @@ modified: '2026-08-12'
 name: Divergent
 nav: Providers
 network: true
-overview: 'Divergent is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, Additive Manufacturing, 3D Printing, and Industrial.
+overview: 'Divergent is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Manufacturing, 3D Printing, Industrial, and Aerospace.
 
 
   Divergent''s developer surface includes support and 9 more developer resources.'
@@ -119,7 +119,7 @@ rate_limits:
   slug: divergent-rate-limits
 score:
   band: minimal
-  composite: 10.5
+  composite: 10.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -133,11 +133,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 10.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -153,7 +159,6 @@ slug: divergent
 tags:
 - Company
 - Manufacturing
-- Additive Manufacturing
 - 3D Printing
 - Industrial
 - Aerospace

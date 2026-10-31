@@ -35,14 +35,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Real-time speech-enhancement SDK (Quail, Rook, Quail VAD, Quail Voice Focus, Tyto) with a JWT token-minting API for client authentication. Delivered as native language bindings.
   name: ai-coustics SDK
   slug: ai-coustics-sdk
-artifact_total: 3
+artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ai-coustics/refs/heads/main/plans/ai-coustics-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ai-coustics-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -144,45 +149,61 @@ created: '2026-07-17'
 description: ai-coustics is a Berlin-based audio-intelligence company providing a real-time speech-enhancement SDK for Voice AI systems. Its Quail, Rook, Quail VAD, Quail Voice Focus, and Tyto models remove background noise, isolate the primary speaker, detect voice activity, and score audio risk to make automatic speech recognition (ASR) more accurate and voice-activity detection steadier in the real world. The SDK runs on the proprietary AirTen CPU-first inference runtime (no GPU, no ONNX dependency) with sub-30ms latency, and ships official bindings for Python, Rust, Node.js, C, C++, and WebAssembly, plus LiveKit and Pipecat integrations. Authentication uses self-service license keys or short-lived JWTs; a legacy REST API was sunset in favor of the SDK. Backed by Partech.
 image: https://framerusercontent.com/images/1bJnBz9PHkEocX9YfiBn69WgGao.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.ai-coustics.com over HTTP; 3 tools listed.
+  name: ai-coustics MCP Server
+  slug: ai-coustics
 modified: '2026-07-18'
 name: ai-coustics
 nav: Providers
 network: true
-overview: 'ai-coustics publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Audio, Speech Enhancement, and Voice AI.
+overview: 'ai-coustics is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Audio, Speech Enhancement, and Voice AI.
 
 
-  ai-coustics'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 15 more developer resources.'
+  ai-coustics'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 16 more developer resources.'
+plans:
+- name: Ai Coustics Plans Pricing
+  plan_count: 4
+  slug: ai-coustics-plans-pricing
 random_paper: 2
 score:
-  band: thin
-  composite: 34.3
+  band: developing
+  composite: 40.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 14
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.0
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 66.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 34.3
+  previous_composite: 34.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 18.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -200,13 +221,13 @@ security:
 slug: ai-coustics
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - Audio
 - Speech Enhancement
 - Voice AI
 - Speech Recognition
 - SDK
 - Real-Time
-- Machine-Learning
+- Machine Learning
 website: https://ai-coustics.com/
 ---

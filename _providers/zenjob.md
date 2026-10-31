@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.zenjob.com/de/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.zenjob.com/de/feed/
 - group: company
   title: ''
   type: Website
@@ -81,18 +89,18 @@ created: '2026-07-17'
 description: Zenjob is a Berlin-based staffing platform that connects businesses with vetted temporary workers (students and side-jobbers) through a mobile app and a self-service booking platform (Buchungsplattform). Companies create shifts, staff them in real time, track working hours, and handle invoicing in one place. Zenjob offers an integration layer (marketed as "Schnittstellen (API)") for personnel management, shift creation and staffing, time tracking, and billing, plus partner integrations with workforce and vendor-management systems including Quinyx, ATOSS, Ubeya, and compleet. The API is partner/consultation-led (arranged via a scheduled onboarding call) rather than a self-serve public developer program; there is no public developer portal, OpenAPI definition, or SDK. Backed by 500 Global, Zenjob was surfaced as a portfolio company and enriched into the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zenjob.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Zenjob
 nav: Providers
 network: true
 overview: 'Zenjob is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Staffing, Workforce, Human Resources, and Temporary Work.
 
 
-  Zenjob''s developer surface includes developer portal, documentation, signup flow, support, engineering blog, and 5 more developer resources.'
+  Zenjob''s developer surface includes engineering blog, developer portal, documentation, signup flow, support, and 7 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 17.4
+  composite: 16.5
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -106,17 +114,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 17.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.5
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

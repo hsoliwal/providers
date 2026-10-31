@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -95,6 +95,26 @@ collections:
   name: Grafana Tempo HTTP API
   slug: open-tempo
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tempo/refs/heads/main/plans/tempo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tempo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tempo/refs/heads/main/rate-limits/tempo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tempo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tempo/refs/heads/main/finops/tempo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tempo-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tempo/refs/heads/main/capabilities/tempo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tempo-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -214,9 +234,13 @@ examples:
   name: Tempo Search Traceql Example
   slug: tempo-search-traceql-example
 finops:
-- name: Tempo Finops
+- has_sources: false
+  method: generated
+  name: Tempo Finops
+  primary_unit: ''
   service_category: API
   slug: tempo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tempo.png
 json_schemas:
 - name: Grafana Tempo Trace
@@ -236,13 +260,13 @@ modified: '2026-05-19'
 name: Tempo
 nav: Providers
 network: true
-overview: 'Tempo publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Health API, Metrics API, Search API, and 2 more. Tagged areas include Distributed Tracing, Observability, OpenTelemetry, Grafana, and Monitoring.
+overview: 'Tempo publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Metrics API, Search API, and 3 more. Tagged areas include Distributed Tracing, Observability, OpenTelemetry, Grafana, and Monitoring.
 
 
   The Tempo catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Tempo''s developer surface includes documentation, release notes, engineering blog, getting-started guide, and 21 more developer resources.'
+  Tempo''s developer surface includes documentation, release notes, engineering blog, getting-started guide, and 25 more developer resources.'
 plans:
 - name: Tempo Plans Pricing
   plan_count: 3
@@ -253,9 +277,10 @@ rate_limits:
   name: Tempo Rate Limits
   slug: tempo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Tempo API Rules
+  name: Tempo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -263,7 +288,8 @@ rules:
     info: 2
     warn: 3
   slug: tempo-jsonschema-spectral-rules
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
   name: Tempo API Rules
@@ -275,27 +301,27 @@ rules:
     warn: 6
   slug: tempo-rules
 score:
-  band: developing
-  composite: 39.8
+  band: thin
+  composite: 37.5
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 55.5
+    artifact_dirs: 17
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 44.5
-    catalog_max: 100.0
+    catalog_gap: 57.0
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.9
   facets:
-    access_clarity: 21.4
-    contract_governance: 28.8
-    contract_quality: 55.0
+    access_clarity: 15.8
+    contract_governance: 27.3
+    contract_quality: 50.2
     developer_ergonomics: 31.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 39.8
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -303,8 +329,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

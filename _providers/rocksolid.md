@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://app-integration.rocksolid.network/api
@@ -66,6 +66,10 @@ collections:
   name: RockSolid Allocations Vaults API
   slug: open-rocksolid-vaults-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.rocksolid.network/rss/
 - group: company
   title: ''
   type: Website
@@ -165,18 +169,18 @@ created: '2026-07-17'
 description: RockSolid (rocksolid.network) is a DeFi platform offering actively managed, institutional-grade liquid vaults. It lets institutions, protocols and projects launch tailored, white-label vault products that give their communities streamlined access to higher yields and DeFi strategies typically reserved for large investors, sourcing yield from protocols such as Uniswap, Aave, Morpho and Yearn. Vaults are built on the ERC-7540 Asynchronous Tokenized Vault standard (Lagoon Finance implementation) and are audited. RockSolid publishes a public, read-only REST Vaults API that exposes vault metadata, curators, rewards, latest performance (NAV, APR/APY, TVL), strategy allocation snapshots by period, and calculated APR/TVL — plus smart-contract integration docs for on-chain deposit/redeem. Added to the API Evangelist network as a portfolio company of Kindred Ventures.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/rocksolid.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: RockSolid
 nav: Providers
 network: true
-overview: 'RockSolid publishes 3 APIs on the [APIs.io](https://apis.io/) network: Allocations API, Performance API, and Vaults API. Tagged areas include Company, DeFi, Decentralized Finance, Liquid Vaults, and Yield.
+overview: 'RockSolid publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Allocations API, Performance API, and Vaults API. Tagged areas include Company, DeFi, Decentralized Finance, Liquid Vaults, and Yield.
 
 
-  RockSolid''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 14 more developer resources.'
+  RockSolid''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, signup flow, authentication, and 15 more developer resources.'
 random_paper: 2
 score:
   band: thin
-  composite: 38.4
+  composite: 37.6
   coverage:
     artifact_dirs: 17
     catalog_earned: 37.0
@@ -188,11 +192,11 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 53.7
+    contract_quality: 48.4
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 38.4
+  previous_composite: 37.6
   provenance:
     conformance: derived
     contracts:
@@ -202,8 +206,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

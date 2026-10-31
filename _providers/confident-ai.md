@@ -26,14 +26,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 12.9
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: DeepEval is an open-source Python framework for evaluating LLM applications as unit tests. It ships with research-backed metrics including GEval, AnswerRelevancyMetric, FaithfulnessMetric, TaskComplet
@@ -45,8 +45,23 @@ apis:
 - description: DeepTeam is Confident AI's open-source red teaming framework for stress-testing LLM applications against adversarial attacks including prompt injection, jailbreaks, PII leakage, bias, and policy viola
   name: DeepTeam
   slug: deepteam
-artifact_total: 33
+artifact_total: 34
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/confident-ai/refs/heads/main/plans/confident-ai-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/confident-ai-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/confident-ai/refs/heads/main/rate-limits/confident-ai-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/confident-ai-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/confident-ai/refs/heads/main/finops/confident-ai-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/confident-ai-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -144,9 +159,13 @@ features:
 - description: SOC 2 Type II, HIPAA, and GDPR compliant cloud platform.
   name: Compliance
 finops:
-- name: Confident Ai Finops
+- has_sources: false
+  method: generated
+  name: Confident Ai Finops
+  primary_unit: ''
   service_category: API
   slug: confident-ai-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/confident-ai.png
 integrations:
 - description: Evaluate OpenAI Chat Completions and Assistants outputs.
@@ -172,14 +191,18 @@ integrations:
 - description: Evaluate Google Gemini model outputs.
   name: Gemini
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.confident-ai.com over HTTP.
+  name: Confident AI MCP Server
+  slug: confident-ai
 modified: '2026-05-23'
 name: Confident AI
 nav: Providers
 network: true
-overview: 'Confident AI publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LLM Evaluation, Open-Source, Observability, Red Teaming, and Guardrails.
+overview: 'Confident AI is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include LLM Evaluation, Open Source, Observability, Red Teaming, and Guardrails.
 
 
-  Confident AI''s developer surface includes documentation, engineering blog, pricing, and 15 more developer resources.'
+  Confident AI''s developer surface includes documentation, engineering blog, pricing, and 18 more developer resources.'
 plans:
 - name: Confident Ai Plans Pricing
   plan_count: 1
@@ -190,32 +213,38 @@ rate_limits:
   name: Confident Ai Rate Limits
   slug: confident-ai-rate-limits
 score:
-  band: thin
-  composite: 29.3
+  band: emerging
+  composite: 21.9
   coverage:
     artifact_dirs: 9
-    catalog_earned: 54.0
+    catalog_earned: 39.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.4
   facets:
-    access_clarity: 46.1
+    access_clarity: 22.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 64.8
-    operational_transparency: 39.5
+    discoverability: 65.0
+    operational_transparency: 23.7
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 29.3
+  previous_composite: 27.3
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -229,7 +258,7 @@ security:
 slug: confident-ai
 tags:
 - LLM Evaluation
-- Open-Source
+- Open Source
 - Observability
 - Red Teaming
 - Guardrails

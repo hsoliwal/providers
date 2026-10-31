@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-ready
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.8
-  scored_at: '2026-09-20'
+  score: 32.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 3
@@ -78,7 +78,7 @@ apis:
   description: The NFTs API from Circle — 1 operation(s) for nfts.
   name: Circle NF Ts API
   slug: circle-nfts-api
-artifact_total: 29
+artifact_total: 30
 asyncapis:
 - description: AsyncAPI description of Circle's outbound webhook (notification) surfaces. Circle delivers event notifications by POSTing a JSON body to a subscriber endpoint that is registered via product-specific n
   name: Circle Webhook Notifications
@@ -109,6 +109,21 @@ collections:
   name: Circle Web3 Services (W3S) — Developer-Controlled Wallets API
   slug: open-circle
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/plans/circle-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/circle-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/rate-limits/circle-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/circle-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/circle/refs/heads/main/finops/circle-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/circle-finops.yml
 - group: agent
   title: ''
   type: AgentSkills
@@ -220,9 +235,13 @@ common:
 created: '2024-11-07'
 description: Circle Internet Financial is the issuer of USDC and EURC and operates a developer platform for moving regulated stablecoin money across the internet. Their APIs cover programmable wallets (developer- and user-controlled), gas sponsorship, the Cross-Chain Transfer Protocol (CCTP), Gateway unified balances, the Smart Contract Platform, the Circle Payments Network (CPN) for cross-border payments, compliance, StableFX trading on Arc, and xReserve for issuing USDC-backed stablecoins.
 finops:
-- name: Circle Finops
+- has_sources: false
+  method: generated
+  name: Circle Finops
+  primary_unit: ''
   service_category: API
   slug: circle-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/circle.png
 json_schemas:
 - name: Circle Transaction
@@ -240,18 +259,21 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Circle MCP Server
-  slug: circle-mcp-server
+  slug: mcp
+- description: Remote MCP server at api.circle.com over HTTP; 4 tools listed.
+  name: Circle MCP Server
+  slug: circle
 modified: '2026-05-30'
 name: Circle
 nav: Providers
 network: true
-overview: 'Circle publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Signing API, Tokens API, Transactions API, and 3 more. Tagged areas include Blockchain, Compliance, Cross-Chain, Currency, and Money.
+overview: 'Circle publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Signing API, Tokens API, Transactions API, and 4 more. Tagged areas include Blockchain, Compliance, Cross-Chain, Currency, and Money.
 
 
   The Circle catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Circle''s developer surface includes API reference, authentication, developer portal, developer console, getting-started guide, support, engineering blog, and 18 more developer resources.'
+  Circle''s developer surface includes API reference, authentication, developer portal, developer console, getting-started guide, support, engineering blog, and 21 more developer resources.'
 plans:
 - name: Circle Plans Pricing
   plan_count: 3
@@ -262,10 +284,11 @@ rate_limits:
   name: Circle Rate Limits
   slug: circle-rate-limits
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: Circle API Rules
+  name: Circle — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -273,9 +296,10 @@ rules:
     info: 0
     warn: 7
   slug: circle-asyncapi-spectral-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Circle API Rules
+  name: Circle — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -283,7 +307,8 @@ rules:
     info: 2
     warn: 3
   slug: circle-jsonschema-spectral-rules
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
   name: Circle API Rules
@@ -295,24 +320,24 @@ rules:
     warn: 4
   slug: circle-rules
 score:
-  band: developing
-  composite: 42.0
+  band: thin
+  composite: 38.8
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 55.5
+    artifact_dirs: 18
+    catalog_earned: 52.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.5
+    catalog_gap: 62.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 13.6
-    contract_quality: 61.1
-    developer_ergonomics: 47.6
-    discoverability: 75.9
+    contract_quality: 56.1
+    developer_ergonomics: 46.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 42.0
+  previous_composite: 40.4
   provenance:
     agentic_access: derived
     contracts:
@@ -326,9 +351,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 32.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -355,5 +380,6 @@ tags:
 - Transfers
 - USDC
 - Wallets
+- Stablecoin Issuance
 website: https://www.circle.com/
 ---

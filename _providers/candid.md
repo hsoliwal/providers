@@ -30,20 +30,20 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 4
+- acting_count: 0
   human_in_the_loop: 0
   name: Candid Agentic Access
   operation_count: 7
   slug: candid-agentic-access
-  summary_line: 7 operations · 4 acting
+  summary_line: 7 operations
 api_count: 9
 apis:
 - description: Deep nonprofit profile data. Returns comprehensive records for a given organization including financials, programs, leadership, board, grants received and awarded, operating details, affiliations, and
@@ -77,7 +77,7 @@ apis:
   description: Operations for searching the Candid nonprofit database.
   name: Candid Search API
   slug: candid-search-api
-artifact_total: 19
+artifact_total: 20
 collections:
 - collection_type: open
   name: API Collection
@@ -92,6 +92,25 @@ collections:
   name: Candid Essentials Lookup Search API
   slug: open-candid-search-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/plans/candid-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/candid-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/rate-limits/candid-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/candid-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/finops/candid-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/candid-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://candid.org/blogs/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/candid/refs/heads/main/agentic-access/candid-agentic-access.yml
   title: ''
@@ -154,19 +173,27 @@ common:
 created: '2025-03-01'
 description: Candid (formed from the 2019 merger of Foundation Center and GuideStar) helps social sector organizations advance their missions by sharing information, breaking down barriers, and improving giving. Candid maintains the most comprehensive set of data on U.S. nonprofits, foundations, grants, and philanthropy, and exposes that data through a family of developer APIs — Essentials, Premier, Charity Check, Demographics, Grants, News, Taxonomy, Eligibility, and PDF/Bulk variants — available through the Candid Developer Portal.
 finops:
-- name: Candid Finops
+- has_sources: false
+  method: generated
+  name: Candid Finops
+  primary_unit: ''
   service_category: API
   slug: candid-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/candid.png
 layout: provider
-modified: '2026-05-19'
+mcp_servers:
+- description: Remote MCP server at mcp.candid.org over HTTP.
+  name: Candid MCP Server
+  slug: candid
+modified: '2026-10-06'
 name: Candid
 nav: Providers
 network: true
-overview: 'Candid publishes 2 APIs on the [APIs.io](https://apis.io/) network: Lookup API and Search API. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
+overview: 'Candid is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Lookup API, Search API, and 7 more. Tagged areas include Charities, Donations, Non-Profit, Philanthropy, and Foundations.
 
 
-  Candid''s developer surface includes authentication, support, and 12 more developer resources.'
+  Candid''s developer surface includes engineering blog, authentication, support, and 15 more developer resources.'
 plans:
 - name: Candid Plans Pricing
   plan_count: 3
@@ -178,23 +205,23 @@ rate_limits:
   slug: candid-rate-limits
 score:
   band: thin
-  composite: 33.3
+  composite: 30.7
   coverage:
     artifact_dirs: 14
-    catalog_earned: 49.0
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 66.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 26.3
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 55.8
-    developer_ergonomics: 26.2
-    discoverability: 81.5
+    contract_quality: 50.2
+    developer_ergonomics: 28.6
+    discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 33.3
+  previous_composite: 31.7
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +230,14 @@ score:
       marker_coverage: 0.0
       total: 3
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

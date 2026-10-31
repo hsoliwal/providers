@@ -27,21 +27,25 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 14.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Token-authenticated HTTP API behind the Charles conversational commerce platform. Clients authenticate against a per-tenant "universe" host and the central api.hello-charles.com service, then work wit
   name: Charles API
   slug: charles-api
-artifact_total: 3
+artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hello-charles.com/blog/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/charles-co/refs/heads/main/security/charles-co-domain-security.yml
   title: ''
@@ -137,20 +141,24 @@ created: '2026-07-17'
 description: Charles (charlesAI, hello-charles.com) is a Berlin-based conversational commerce and CRM platform that lets brands sell, market, and support customers over WhatsApp, Instagram, Facebook Messenger, and Webchat. Founded in 2019, the platform connects chat-app APIs (WhatsApp Business, Messenger) with e-commerce and CRM systems such as Shopify, Salesforce, SAP, and HubSpot, and layers AI agents over them to automate the full funnel from acquisition and conversion to retention while staying GDPR compliant. Charles exposes a token-authenticated HTTP API organized around per-tenant "universe" hosts, a public Postman workspace, and a (now deprecated) JavaScript/TypeScript browser SDK published to npm. It was surfaced as a portfolio lead of Speedinvest and enriched into the API Evangelist network from its public developer surface.
 image: https://www.hello-charles.com/hubfs/feature_charles.png
 layout: provider
-modified: '2026-07-18'
+mcp_servers:
+- description: Remote MCP server at mcp.hello-charles.com over HTTP.
+  name: Charles Co MCP Server
+  slug: charles-co
+modified: '2026-10-06'
 name: Charles Co
 nav: Providers
 network: true
-overview: 'Charles Co publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Conversational Commerce, Messaging, WhatsApp, and CRM.
+overview: 'Charles Co is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Conversational Commerce, Messaging, WhatsApp, and CRM.
 
 
-  Charles Co''s developer surface includes authentication, documentation, API reference, engineering blog, support, signup flow, and 15 more developer resources.'
+  Charles Co''s developer surface includes authentication, documentation, API reference, engineering blog, support, signup flow, and 16 more developer resources.'
 random_paper: 3
 score:
   band: emerging
   composite: 20.4
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -162,10 +170,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
@@ -173,8 +183,14 @@ score:
   previous_composite: 20.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -197,7 +213,7 @@ tags:
 - Messaging
 - WhatsApp
 - CRM
-- Customer-Support
+- Customer Service
 - E-Commerce
 - AI Agents
 website: https://www.hello-charles.com/

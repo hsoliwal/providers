@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 19
+- acting_count: 14
   human_in_the_loop: 0
   name: Code Ocean Agentic Access
   operation_count: 26
   slug: code-ocean-agentic-access
-  summary_line: 26 operations · 19 acting
+  summary_line: 26 operations · 14 acting
 api_count: 1
 apis:
 - baseURL: https://codeocean.com/api/v1
@@ -176,12 +176,12 @@ layout: provider
 mcp_servers:
 - description: Official Code Ocean MCP server. Provides tools to search and run capsules and pipelines and to manage data assets. Runs locally as a stdio child process; authenticates with a Code Ocean access token v
   name: Code Ocean MCP Server
-  slug: code-ocean-mcp-server
+  slug: codeocean
 modified: '2026-07-18'
 name: Code Ocean
 nav: Providers
 network: true
-overview: 'Code Ocean publishes 3 APIs on the [APIs.io](https://apis.io/) network: Capsules API, Computations API, and Data Assets API. Tagged areas include Company, Reproducible Research, Computational Science, Data Science, and Research Computing.
+overview: 'Code Ocean publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Capsules API, Computations API, and Data Assets API. Tagged areas include Company, Reproducible Research, Computational Science, Data Science, and Research Computing.
 
 
   Code Ocean''s developer surface includes documentation, API reference, getting-started guide, authentication, and 16 more developer resources.'
@@ -193,7 +193,7 @@ scopes:
   summary_line: 4 scopes
 score:
   band: thin
-  composite: 38.0
+  composite: 34.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -205,11 +205,11 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 62.6
+    contract_quality: 56.7
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 2.6
-  previous_composite: 38.0
+  previous_composite: 34.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -225,9 +225,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 42.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

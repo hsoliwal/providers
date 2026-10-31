@@ -26,7 +26,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.9
-  scored_at: '2026-09-20'
+  score: 19.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'An authenticated Model Context Protocol (MCP) endpoint served from Aera Technology''s own corporate WordPress host. Anonymous discovery works: the site publishes RFC 9728 protected-resource metadata an'
@@ -157,14 +157,14 @@ description: Aera Technology is the Decision Intelligence company behind Aera De
 image: https://www.aeratechnology.com/wp-content/uploads/2025/11/aera-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.aeratechnology.com over HTTP.
   name: Aera Technology MCP Server
-  slug: aera-technology-mcp-server
+  slug: aera-technology
 modified: '2026-08-06'
 name: Aera Technology
 nav: Providers
 network: true
-overview: 'Aera Technology publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Decision Intelligence, Artificial Intelligence, Enterprise Software, and Supply Chain.
+overview: 'Aera Technology is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Decision Intelligence, Artificial Intelligence, Enterprise Software, and Supply Chain.
 
 
   Aera Technology''s developer surface includes engineering blog, support, authentication, and 18 more developer resources.'
@@ -175,34 +175,47 @@ scopes:
   slug: aera-technology-scopes
   summary_line: 1 scope · authorizationCode
 score:
-  band: emerging
-  composite: 24.4
+  band: thin
+  composite: 28.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 24.4
+  previous_composite: 28.2
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa-cpra
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/aera-technology/refs/heads/main/screenshots/aera-technology-2026-10-11T092922.png
 security:
 - kind: authentication
   name: Aera Technology Authentication

@@ -33,20 +33,24 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Modeled loan-file exchange surface - create, read, and update mortgage loan files, submit loan data to lenders/investors, and import/export loan data (LendingPad describes MISMO-style 3.2/3.4 loan-dat
   name: LendingPad Loans API (modeled)
+  provenance: modeled
   slug: lendingpad-loans-api
 - description: Modeled document and condition exchange surface - push borrower and loan documents into the LendingPad LOS (as POS/doc-prep partners like Floify and DocMagic do) and manage underwriting conditions and
   name: LendingPad Documents & Conditions API (modeled)
+  provenance: modeled
   slug: lendingpad-documents-conditions-api
 - description: Modeled product, pricing, and eligibility (PPE) exchange surface - integrations with pricing engines such as Polly, Lender Price, Optimal Blue, and LoanNex return real-time product and pricing results
   name: LendingPad Pricing & Product Eligibility API (modeled)
+  provenance: modeled
   slug: lendingpad-pricing-eligibility-api
 - description: Modeled event/notification surface - partner integrations describe synchronization of field updates, critical dates, and loan-status changes back to external systems (e.g. Shape's bi-directional sync)
   name: LendingPad Webhooks & Events (modeled)
+  provenance: modeled
   slug: lendingpad-webhooks-events-api
 artifact_total: 7
 common:
@@ -98,7 +102,7 @@ modified: '2026-07-04'
 name: LendingPad
 nav: Providers
 network: true
-overview: 'LendingPad publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Mortgage, Loan Origination System, LOS, Lending, and Fintech.
+overview: 'LendingPad is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Mortgage, Loan Origination System, LOS, Lending, and Fintech.
 
 
   LendingPad''s developer surface includes documentation, engineering blog, and 7 more developer resources.'
@@ -109,25 +113,31 @@ plans:
 random_paper: 12
 score:
   band: emerging
-  composite: 16.8
+  composite: 11.1
   coverage:
-    artifact_dirs: 5
-    catalog_earned: 47.0
+    artifact_dirs: 6
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.1
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 16.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 15.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -150,8 +160,8 @@ tags:
 - LOS
 - Lending
 - Fintech
-- Financial-Services
-- Real-Estate
+- Financial Services
+- Real Estate
 - Partner API
 - Gated API
 website: https://lendingpad.com

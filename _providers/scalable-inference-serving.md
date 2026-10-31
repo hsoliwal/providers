@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -99,6 +99,26 @@ collections:
   name: KServe Open Inference Protocol Health Models API
   slug: open-scalable-inference-serving-models-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/scalable-inference-serving/refs/heads/main/plans/scalable-inference-serving-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/scalable-inference-serving-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/scalable-inference-serving/refs/heads/main/rate-limits/scalable-inference-serving-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/scalable-inference-serving-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/scalable-inference-serving/refs/heads/main/finops/scalable-inference-serving-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/scalable-inference-serving-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/scalable-inference-serving/refs/heads/main/capabilities/scalable-inference-serving-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/scalable-inference-serving-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/scalable-inference-serving/refs/heads/main/agentic-access/scalable-inference-serving-agentic-access.yml
   title: ''
@@ -179,9 +199,13 @@ examples:
   name: Scalable Inference Serving Runinference Example
   slug: scalable-inference-serving-runinference-example
 finops:
-- name: Scalable Inference Serving Finops
+- has_sources: true
+  method: generated
+  name: Scalable Inference Serving Finops
+  primary_unit: ''
   service_category: AI Infrastructure
   slug: scalable-inference-serving-finops
+  template: false
 image: https://kserve.github.io/website/images/KServe.png
 json_schemas:
 - name: Inference Request
@@ -246,13 +270,13 @@ modified: '2026-05-19'
 name: Scalable Inference Serving
 nav: Providers
 network: true
-overview: 'Scalable Inference Serving publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Health API, Inference API, Metadata API, and 1 more. Tagged areas include Artificial Intelligence, CNCF, Deployment, Inference, and Kubernetes.
+overview: 'Scalable Inference Serving publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Inference API, Metadata API, and 6 more. Tagged areas include Artificial Intelligence, CNCF, Deployment, Inference, and Kubernetes.
 
 
   The Scalable Inference Serving catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Scalable Inference Serving''s developer surface includes authentication, getting-started guide, engineering blog, and 9 more developer resources.'
+  Scalable Inference Serving''s developer surface includes authentication, getting-started guide, engineering blog, and 13 more developer resources.'
 plans:
 - name: Scalable Inference Serving Plans Pricing
   plan_count: 1
@@ -263,10 +287,11 @@ rate_limits:
   name: Scalable Inference Serving Rate Limits
   slug: scalable-inference-serving-rate-limits
 rules:
-- effective_rule_count: 58
+- authorship: unmarked
+  effective_rule_count: 58
   extends:
   - spectral:oas
-  name: Scalable Inference Serving API Rules
+  name: Scalable Inference Serving — kserve open inference protocol rules
   rule_count: 17
   severity_counts:
     error: 5
@@ -274,9 +299,10 @@ rules:
     info: 3
     warn: 9
   slug: kserve-open-inference-protocol-rules
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Scalable Inference Serving API Rules
+  name: Scalable Inference Serving — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -285,24 +311,24 @@ rules:
     warn: 5
   slug: scalable-inference-serving-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 42.7
+  band: thin
+  composite: 33.8
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 68.0
+    artifact_dirs: 15
+    catalog_earned: 51.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.0
+    catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.7
   facets:
-    access_clarity: 18.4
-    contract_governance: 69.7
-    contract_quality: 60.7
+    access_clarity: 10.5
+    contract_governance: 27.3
+    contract_quality: 55.4
     developer_ergonomics: 40.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 23.7
-  previous_composite: 42.7
+  previous_composite: 39.5
   provenance:
     agentic_access: derived
     contracts:
@@ -310,9 +336,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -325,7 +357,7 @@ tags:
 - Inference
 - Kubernetes
 - LLM
-- Machine-Learning
+- Machine Learning
 - Model Serving
 - MLOps
 - Scalability

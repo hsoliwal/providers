@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 23.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: REST API over Welcome to the Jungle Solutions recruiting and employer-branding data. Bearer-token (OAuth access token) authentication with a published scope model, JSON request and response bodies, pa
@@ -179,7 +179,7 @@ modified: '2026-09-04'
 name: Welcome to the Jungle
 nav: Providers
 network: true
-overview: 'Welcome to the Jungle publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Human Resources, Recruiting, Applicant Tracking, and Job.
+overview: 'Welcome to the Jungle is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Human Resources, Recruiting, Applicant Tracking, and Job.
 
 
   Welcome to the Jungle''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 23 more developer resources.'
@@ -194,14 +194,14 @@ rate_limits:
   slug: welcome-to-the-jungle-rate-limits
 scopes:
 - name: Welcome To The Jungle Scopes
-  scope_count: 0
+  scope_count: 29
   slug: welcome-to-the-jungle-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 29 scopes
 score:
   band: developing
-  composite: 40.8
+  composite: 43.1
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -211,9 +211,9 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -223,17 +223,28 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 40.8
+  previous_composite: 43.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/welcome-to-the-jungle/refs/heads/main/screenshots/welcome-to-the-jungle-2026-10-11T194401.png
 security:
 - kind: authentication
   name: Welcome To The Jungle Authentication

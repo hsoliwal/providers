@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.8
-  scored_at: '2026-09-20'
+  score: 23.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 65
   slug: weather-gov-agentic-access
   summary_line: 65 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.weather.gov
   baseurl_source: declared
@@ -158,6 +158,25 @@ collections:
   name: weather.gov Alerts Zones API
   slug: open-weather-gov-zones-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/plans/weather-gov-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/weather-gov-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/rate-limits/weather-gov-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/weather-gov-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/weather-gov/refs/heads/main/finops/weather-gov-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/weather-gov-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.weather.gov/news
 - group: company
   title: ''
   type: Website
@@ -215,6 +234,10 @@ common:
   title: ''
   type: Vocabulary
   url: vocabulary/weather-gov-vocabulary.yml
+- group: build
+  title: ''
+  type: GitHubOrganization
+  url: https://github.com/weather-gov
 created: '2024-07-02T00:00:00.000Z'
 description: Weather.gov is the official website of the National Weather Service (NWS), operated by NOAA within the US Department of Commerce. The NWS provides weather, hydrologic, and climate forecasts and warnings for the United States, its territories, adjacent waters, and ocean areas. The Weather.gov API provides free, open access to forecasts, alerts, observations, radar data, aviation weather, and geographic zone information across all 50 states and territories.
 examples:
@@ -557,9 +580,13 @@ features:
 - description: Supports GeoJSON, JSON-LD, DWML, OXML, CAP, and ATOM formats.
   name: Multiple Output Formats
 finops:
-- name: Weather Gov Finops
+- has_sources: false
+  method: generated
+  name: Weather Gov Finops
+  primary_unit: ''
   service_category: API
   slug: weather-gov-finops
+  template: true
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/api-web-service.png
 json_schemas:
 - name: AlertAtomEntry
@@ -1211,17 +1238,17 @@ jsonld:
   property_count: 181
   slug: weather-gov-context
 layout: provider
-modified: '2026-05-19'
+modified: '2026-10-06'
 name: Weather.gov
 nav: Providers
 network: true
-overview: 'Weather.gov publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Aviation API, Glossary API, and 10 more. Tagged areas include Weather, Government, United States, Forecasting, and Alerts.
+overview: 'Weather.gov publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Aviation API, Glossary API, and 10 more. Tagged areas include Weather, Government, United States, Forecasting, and Alerts.
 
 
   The Weather.gov catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Weather.gov''s developer surface includes authentication, documentation, API reference, developer portal, and 9 more developer resources.'
+  Weather.gov''s developer surface includes engineering blog, authentication, documentation, API reference, developer portal, and 13 more developer resources.'
 plans:
 - name: Weather Gov Plans Pricing
   plan_count: 3
@@ -1232,9 +1259,10 @@ rate_limits:
   name: Weather Gov Rate Limits
   slug: weather-gov-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Weather.gov API Rules
+  name: Weather.gov — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1242,7 +1270,8 @@ rules:
     info: 2
     warn: 3
   slug: weather-gov-jsonschema-spectral-rules
-- effective_rule_count: 70
+- authorship: generated
+  effective_rule_count: 70
   extends:
   - spectral:oas
   name: Weather.gov API Rules
@@ -1254,22 +1283,22 @@ rules:
     warn: 16
   slug: weather-gov-spectral-rules
 score:
-  band: developing
-  composite: 39.5
+  band: thin
+  composite: 35.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 66.5
+    artifact_dirs: 18
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.5
+    catalog_gap: 52.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.2
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 60.8
-    developer_ergonomics: 38.1
-    discoverability: 68.5
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 55.4
+    developer_ergonomics: 40.5
+    discoverability: 66.1
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -1278,7 +1307,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.5
+  previous_composite: 36.8
   provenance:
     agentic_access: derived
     contracts:
@@ -1291,9 +1320,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -1317,6 +1346,8 @@ tags:
 - Forecasting
 - Alerts
 - Open Data
+- Federal Government
+- Public APIs
 use_cases:
 - description: Monitor active weather alerts and warnings for emergency response and public safety decisions.
   name: Emergency Management

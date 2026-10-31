@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The authenticated API gateway behind the ACCURE battery analytics platform. Established by probe, not by documentation: the platform single-page application at accure-platform.com declares VITE_AUTH0_'
@@ -113,7 +113,7 @@ modified: '2026-09-06'
 name: ACCURE Battery Intelligence
 nav: Providers
 network: true
-overview: 'ACCURE Battery Intelligence publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Battery, Energy Storage, and Analytics.
+overview: 'ACCURE Battery Intelligence is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Battery, Energy Storage, and Analytics.
 
 
   ACCURE Battery Intelligence''s developer surface includes engineering blog, support, authentication, and 10 more developer resources.'
@@ -128,9 +128,9 @@ rate_limits:
   slug: accurebatteryintelligence-rate-limits
 score:
   band: emerging
-  composite: 20.9
+  composite: 19.3
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -142,7 +142,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -152,7 +152,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 20.9
+  previous_composite: 19.3
   provenance:
     conformance: first-party
   regulatory:
@@ -160,14 +160,15 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 35.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/accurebatteryintelligence/refs/heads/main/screenshots/accurebatteryintelligence-2026-10-11T092552.png
 security:
 - kind: authentication
   name: Accurebatteryintelligence Authentication

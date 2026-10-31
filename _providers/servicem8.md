@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 0
@@ -100,7 +100,7 @@ apis:
   description: Object and event webhook subscriptions.
   name: ServiceM8 Webhooks API
   slug: servicem8-webhooks-api
-artifact_total: 32
+artifact_total: 33
 collections:
 - collection_type: open
   name: API Collection
@@ -142,6 +142,11 @@ collections:
   name: ServiceM8 REST API
   slug: open-servicem8
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/servicem8/refs/heads/main/capabilities/servicem8-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/servicem8-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/servicem8/refs/heads/main/agentic-access/servicem8-agentic-access.yml
   title: ''
@@ -205,19 +210,27 @@ common:
 created: '2026-07-03'
 description: ServiceM8 is field service and job management software for trade and home-service businesses - electricians, plumbers, HVAC, cleaners, landscapers, and similar contractors. It manages the full job lifecycle from lead and quote through scheduling, dispatch, on-site work, materials, invoicing, and payment. ServiceM8 publishes a documented REST API at https://api.servicem8.com/api_1.0 that exposes its core objects - Jobs, Job Activities, Clients (Companies), Contacts, Staff, Materials, Job Materials, Attachments, Queues, Vendors, and Badges - as plain JSON over HTTP using GET, POST, and DELETE. Private integrations authenticate with an API key (X-API-Key header); public add-ons use OAuth 2.0. Object and event webhook subscriptions push change notifications to a callback URL.
 finops:
-- name: Servicem8 Finops
+- has_sources: true
+  method: generated
+  name: Servicem8 Finops
+  primary_unit: ''
   service_category: Field Service Management Software
   slug: servicem8-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/servicem8.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.servicem8.com over HTTP.
+  name: ServiceM8 MCP Server
+  slug: servicem8
 modified: '2026-07-03'
 name: ServiceM8
 nav: Providers
 network: true
-overview: 'ServiceM8 publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Attachments API, Badges API, Clients API, and 8 more. Tagged areas include Field Service, Job Management, Trade, Scheduling, and Dispatch.
+overview: 'ServiceM8 publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attachments API, Badges API, Clients API, and 8 more. Tagged areas include Field Service, Job Management, Trade, Scheduling, and Dispatch.
 
 
-  ServiceM8''s developer surface includes authentication, documentation, engineering blog, and 10 more developer resources.'
+  ServiceM8''s developer surface includes authentication, documentation, engineering blog, and 11 more developer resources.'
 plans:
 - name: Servicem8 Plans Pricing
   plan_count: 5
@@ -233,24 +246,24 @@ scopes:
   slug: servicem8-scopes
   summary_line: 11 scopes · authorizationCode
 score:
-  band: developing
-  composite: 40.3
+  band: thin
+  composite: 31.5
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 64.0
+    artifact_dirs: 16
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 52.6
+    contract_quality: 47.7
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 40.3
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 39.8
   provenance:
     agentic_access: derived
     contracts:
@@ -259,9 +272,15 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2

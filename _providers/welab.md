@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: WeLab Bank's Open API programme, published under the Hong Kong Monetary Authority Open API Framework and linked as "Open API" from the welab.bank site footer. The developer portal at portal-sandbox.we
@@ -140,16 +140,16 @@ modified: '2026-08-05'
 name: WeLab
 nav: Providers
 network: true
-overview: 'WeLab publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Digital Banking, virtual-bank, Open Banking, and Hong Kong.
+overview: 'WeLab is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fintech, Digital Banking, virtual-bank, Open Banking, and Hong Kong.
 
 
   WeLab''s developer surface includes support, engineering blog, authentication, and 15 more developer resources.'
 random_paper: 17
 score:
   band: emerging
-  composite: 20.2
+  composite: 19.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -161,7 +161,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -171,7 +171,7 @@ score:
     regions:
     - greater-china
     - southeast-asia
-  previous_composite: 20.2
+  previous_composite: 19.4
   provenance:
     conformance: first-party
   regulatory:
@@ -179,9 +179,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 39.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -208,6 +208,6 @@ tags:
 - Consumer Lending
 - Payments
 - hkma-open-api
-- Financial-Services
+- Financial Services
 website: https://www.welab.co/
 ---

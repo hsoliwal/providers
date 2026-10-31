@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Unified API to manage storage, endpoints, users, and roles across multiple Signiant products. Authenticates via OAuth 2.0 client_credentials, returning a one-hour JWT bearer token.
@@ -54,6 +54,10 @@ asyncapis:
   name: Signiant Webhooks
   slug: signiant-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.signiant.com/feed/
 - group: company
   title: ''
   type: Website
@@ -183,21 +187,21 @@ created: '2026-07-17'
 description: 'Signiant provides intelligent file-movement software that helps the world''s top content creators and distributors move large files fast and securely over public and private networks. The SaaS Signiant Platform unifies four products behind a common OAuth-secured REST API: the Signiant Platform API (storage, endpoints, users, and roles across products), Jet (automated system-to-system transfers with event webhooks), Media Shuttle (person-initiated transfers with Platform, Management, and System-to-Person APIs plus a browser SDK), and Flight Deck (the Manager REST API for scheduling and running jobs). All APIs authenticate with a client_id/client_secret pair exchanged for a one-hour OAuth 2.0 JWT bearer token at platform-api-service.services.cloud.signiant.com, and access is governed by product-scoped account roles.'
 image: https://www.signiant.com/wp-content/uploads/signiant-logo.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Signiant
 nav: Providers
 network: true
-overview: 'Signiant publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include File Transfer, Media Supply Chain, Managed File Transfer, Content Delivery, and Storage.
+overview: 'Signiant is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include File Transfer, Media Supply Chain, Managed File Transfer, Content Delivery, and Storage.
 
 
   The Signiant catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Signiant''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 21 more developer resources.'
+  Signiant''s developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, pricing, and 22 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 48.6
+  composite: 49.7
   coverage:
     artifact_dirs: 15
     catalog_earned: 40.0
@@ -209,16 +213,22 @@ score:
   facets:
     access_clarity: 39.5
     contract_governance: 18.2
-    contract_quality: 48.1
+    contract_quality: 45.3
     developer_ergonomics: 64.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 42.1
-  previous_composite: 48.6
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

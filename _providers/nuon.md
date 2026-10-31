@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 350
   human_in_the_loop: 16
@@ -47,92 +47,92 @@ apis:
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: accounts
-  name: Nuon accounts API
+  name: Nuon Accounts API
   slug: nuon-accounts-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: actions
-  name: Nuon actions API
+  name: Nuon Actions API
   slug: nuon-actions-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: actions/runner
-  name: Nuon actions/runner API
+  name: Nuon Actions/runner API
   slug: nuon-actions-runner-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: apps
-  name: Nuon apps API
+  name: Nuon Apps API
   slug: nuon-apps-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: auth
-  name: Nuon auth API
+  name: Nuon Auth API
   slug: nuon-auth-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: components
-  name: Nuon components API
+  name: Nuon Components API
   slug: nuon-components-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: general
-  name: Nuon general API
+  name: Nuon General API
   slug: nuon-general-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: installs
-  name: Nuon installs API
+  name: Nuon Installs API
   slug: nuon-installs-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: notebooks
-  name: Nuon notebooks API
+  name: Nuon Notebooks API
   slug: nuon-notebooks-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: onboarding
-  name: Nuon onboarding API
+  name: Nuon Onboarding API
   slug: nuon-onboarding-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: orgs
-  name: Nuon orgs API
+  name: Nuon Orgs API
   slug: nuon-orgs-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: policy-reports
-  name: Nuon policy-reports API
+  name: Nuon Policy Reports API
   slug: nuon-policy-reports-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: queues
-  name: Nuon queues API
+  name: Nuon Queues API
   slug: nuon-queues-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: runbooks
-  name: Nuon runbooks API
+  name: Nuon Runbooks API
   slug: nuon-runbooks-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: runners
-  name: Nuon runners API
+  name: Nuon Runners API
   slug: nuon-runners-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: runners/runner
-  name: Nuon runners/runner API
+  name: Nuon Runners/runner API
   slug: nuon-runners-runner-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: slack
-  name: Nuon slack API
+  name: Nuon Slack API
   slug: nuon-slack-api
 - baseURL: https://api.nuon.co
   baseurl_source: declared
   description: vcs
-  name: Nuon vcs API
+  name: Nuon VCS API
   slug: nuon-vcs-api
 artifact_total: 42
 asyncapis:
@@ -198,6 +198,15 @@ collections:
   name: Nuon accounts vcs API
   slug: open-nuon-vcs-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://nuon.co/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nuon/refs/heads/main/capabilities/nuon-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nuon-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/nuon/refs/heads/main/overlays/nuon-oapi-v3-overlay.yaml
   title: ''
@@ -369,37 +378,37 @@ created: '2026-07-17'
 description: 'Nuon is a Bring Your Own Cloud (BYOC) continuous-delivery platform for software vendors. It lets vendors package existing applications — Terraform, Pulumi, Helm charts, Kubernetes manifests, and container images — and deploy them into their customers'' own AWS, Azure, or GCP accounts while keeping a SaaS-like experience. Nuon runs a Control Plane plus egress-only Runners installed in each customer account (no cross-account IAM), and adds day-2 operations: least-privilege operation roles, drift detection, approval workflows, OPA-based policies, runbooks, secrets, actions, and org-scoped CloudEvents webhooks. The platform exposes a REST control-plane API (OpenAPI v2 + v3), a first-party CLI and TUIs, Go/Python/Elixir SDKs, and Terraform providers. Nuon''s core is open source under github.com/nuonco.'
 image: https://nuon.co/favicon.svg
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Nuon
 nav: Providers
 network: true
-overview: 'Nuon publishes 18 APIs on the [APIs.io](https://apis.io/) network, including accounts API, actions API, actions/runner API, and 15 more. Tagged areas include Company, BYOC, Deployment, Continuous Delivery, and DevOps.
+overview: 'Nuon publishes 18 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Actions API, Actions/runner API, and 15 more. Tagged areas include Company, BYOC, Deployment, Continuous Delivery, and DevOps.
 
 
   The Nuon catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Nuon''s developer surface includes authentication, documentation, API reference, getting-started guide, quickstart, support, engineering blog, and 30 more developer resources.'
+  Nuon''s developer surface includes authentication, documentation, API reference, getting-started guide, quickstart, support, engineering blog, and 32 more developer resources.'
 random_paper: 8
 score:
   band: strong
-  composite: 55.5
+  composite: 55.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 66.9
+    contract_quality: 61.1
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 34.2
-  previous_composite: 55.5
+  previous_composite: 55.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -410,8 +419,14 @@ score:
       total: 18
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

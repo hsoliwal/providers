@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for the Solarize meter-to-cash platform — customers, sites, meters, contracts, measurements, readings, invoices, payments, pricing, and outgoing webhooks. JSON over HTTPS, JWT bearer auth, of
@@ -47,6 +47,10 @@ asyncapis:
   name: Solarize Outgoing Webhooks
   slug: solarize-webhooks-asyncapi
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.solarize.de/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -151,17 +155,17 @@ created: '2026-07-17'
 description: Solarize is a German energy software company offering a meter-to-cash billing platform as a software-as-a-service for utilities, municipal utilities (Stadtwerke), and energy providers. The platform converts metering data into a revenue stream through automated billing and invoicing, metering data management, monitoring and reporting, and flexible electricity-product configuration. Solarize exposes a REST API at api.solarize.energy covering customers, sites, meters, contracts, measurements, readings, invoices, payments, pricing, and outgoing webhooks, enabling open-architecture integration with ERP, CRM, and metering-operator systems.
 image: https://api-docs.solarize.energy/_next/static/media/solarize-api-docs.b9d189f5.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Solarize
 nav: Providers
 network: true
-overview: 'Solarize publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Billing, Metering, and Utilities.
+overview: 'Solarize is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Billing, Metering, and Utilities.
 
 
   The Solarize catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Solarize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 15 more developer resources.'
+  Solarize''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 16 more developer resources.'
 random_paper: 15
 rate_limits:
 - limit_count: 1
@@ -169,7 +173,7 @@ rate_limits:
   slug: solarize-rate-limits
 score:
   band: developing
-  composite: 40.7
+  composite: 39.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 45.0
@@ -181,11 +185,16 @@ score:
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 52.6
-  previous_composite: 40.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 39.4
   provenance:
     conformance: derived
     mcp: derived
@@ -194,9 +203,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 23.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -34,90 +34,90 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 21
+- acting_count: 19
   human_in_the_loop: 0
   name: Salv Agentic Access
   operation_count: 36
   slug: salv-agentic-access
-  summary_line: 36 operations · 21 acting
+  summary_line: 36 operations · 19 acting
 api_count: 1
 apis:
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: The alert API from Salv — 1 operation(s) for alert.
-  name: Salv alert API
+  name: Salv Alert API
   slug: salv-alert-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Salv has multiple properties that are associated with individual alerts and influence alert management process based on their assignment. Using the initial alert ID and TYPE that are generated after d
-  name: Salv alerts API
+  name: Salv Alerts API
   slug: salv-alerts-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: 'This section contains all operations managing the state of persons and transactions. There are three endpoints for creating or modifying a person, make sure to choose the right one for your task: * [C'
-  name: Salv aml API
+  name: Salv Aml API
   slug: salv-aml-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: 'Endpoints to add, update, delete and get custom list records. Custom Lists can be used in two ways: - Custom Lists can be used to screen persons and transactions against them in the same way it works '
-  name: Salv custom-list-record API
+  name: Salv Custom List Record API
   slug: salv-custom-list-record-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Custom list usable fields can be used in [Screening search](#tag/screening-searches/operation/search)
-  name: Salv custom-list-usable-field-public API
+  name: Salv Custom List Usable Field Public API
   slug: salv-custom-list-usable-field-public-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: '## Steps to upload data using CSV 1. Format the csv file and add all the mandatory data fields indicated in the [User Manual](https://help.salv.com/en/articles/154650-data-overview) 2. Upload the [csv'
-  name: Salv data-upload API
+  name: Salv Data Upload API
   slug: salv-data-upload-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Manual alerts allow compliance officers to create alerts manually for persons or transactions that require investigation outside of automated monitoring and screening processes. These alerts can be us
-  name: Salv manual-alerts API
+  name: Salv Manual Alerts API
   slug: salv-manual-alerts-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: 'Person & Transaction monitoring. Real-time (ONLINE) scenarios should be used when an alert created by the scenario should block the transaction. [Example: Real-time (pre-processing) transaction monito'
-  name: Salv monitoring-checks API
+  name: Salv Monitoring Checks API
   slug: salv-monitoring-checks-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: The note API from Salv — 1 operation(s) for note.
-  name: Salv note API
+  name: Salv Note API
   slug: salv-note-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Risks levels are assigned to persons according to configured risk rules. It is up to client how to interpret each particular level. Risk rules are configured in Salv UI. Person risk is scored every ti
-  name: Salv risk API
+  name: Salv Risk API
   slug: salv-risk-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Screening alert is created when a particular field of a particular person matches against one of the screening lists. Screening alert has a list of hits, each of which represent one matched record fro
-  name: Salv screening-alerts API
+  name: Salv Screening Alerts API
   slug: salv-screening-alerts-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Screening checks for transaction and person.
-  name: Salv screening-checks API
+  name: Salv Screening Checks API
   slug: salv-screening-checks-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Screening selectors can be used in screening search. These can be used in [Screening search](#tag/screening-searches/operation/search)
-  name: Salv screening-list-groups API
+  name: Salv Screening List Groups API
   slug: salv-screening-list-groups-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Screening search can be used to check any name against screening lists without first uploading a person or a transaction.
-  name: Salv screening-searches API
+  name: Salv Screening Searches API
   slug: salv-screening-searches-api
 - baseURL: https://app.salv.com/api
   baseurl_source: declared
   description: Endpoints to check if given entity has anything unresolved
-  name: Salv unresolved-alerts API
+  name: Salv Unresolved Alerts API
   slug: salv-unresolved-alerts-api
 artifact_total: 38
 asyncapis:
@@ -174,6 +174,15 @@ collections:
   name: Salv AML alert unresolved-alerts API
   slug: open-salv-unresolved-alerts-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://salv.com/feed
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/capabilities/salv-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/salv-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/salv/refs/heads/main/overlays/salv-aml-overlay.yaml
   title: ''
@@ -318,17 +327,17 @@ created: '2026-07-17'
 description: Salv is an Estonian financial-crime prevention (FinCrime) SaaS platform used by banks, fintechs, and payment service providers to detect money laundering and prevent fraud. Its products include Salv Screening (sanctions, PEP/RCA and adverse-media screening), Salv Monitoring (real-time and post-event transaction monitoring), Salv Risk Scoring, and Salv Bridge (collaborative intelligence sharing). The Salv AML API (OpenAPI 3.0.3, OAuth2 client-credentials, scope `aml`) exposes 36 operations across persons, transactions, monitoring, screening, risk, alerts, custom lists, and bulk data upload, with a webhook surface for alert and status events. Salv is ISO/IEC 27001:2022 certified and SOC 2 Type 2 compliant.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/salv.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Salv
 nav: Providers
 network: true
-overview: 'Salv publishes 15 APIs on the [APIs.io](https://apis.io/) network, including alert API, alerts API, aml API, and 12 more. Tagged areas include Company, Anti-Money Laundering, Financial Crime, Compliance, and RegTech.
+overview: 'Salv publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert API, Alerts API, Aml API, and 12 more. Tagged areas include Company, AML, Financial Crime, Compliance, and RegTech.
 
 
   The Salv catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Salv''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 23 more developer resources.'
+  Salv''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 25 more developer resources.'
 random_paper: 20
 rate_limits:
 - limit_count: 1
@@ -341,23 +350,28 @@ scopes:
   summary_line: 1 scope · clientCredentials
 score:
   band: developing
-  composite: 39.8
+  composite: 42.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 18.4
     contract_governance: 18.2
-    contract_quality: 61.3
+    contract_quality: 56.0
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 39.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - estonia
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 42.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -368,8 +382,18 @@ score:
       total: 15
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -391,7 +415,7 @@ security:
 slug: salv
 tags:
 - Company
-- Anti-Money Laundering
+- AML
 - Financial Crime
 - Compliance
 - RegTech

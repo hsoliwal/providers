@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,9 +22,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
@@ -33,16 +33,16 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.8
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 13
   human_in_the_loop: 0
   name: Microsoft Azure Private Link Agentic Access
-  operation_count: 7
+  operation_count: 29
   slug: microsoft-azure-private-link-agentic-access
-  summary_line: 7 operations · 3 acting
-api_count: 2
+  summary_line: 29 operations · 13 acting
+api_count: 3
 apis:
 - baseURL: https://management.azure.com/
   baseurl_source: declared
@@ -54,7 +54,27 @@ apis:
   description: Private Endpoints operations
   name: microsoft-azure-private-link Private Endpoints API
   slug: microsoft-azure-private-link-private-endpoints-api
-artifact_total: 15
+- baseURL: https://management.azure.com/
+  baseurl_source: declared
+  description: The PrivateDnsZoneGroups API from Microsoft Azure Private Link — 2 operation(s) for privatednszonegroups.
+  name: Microsoft Azure Private Link Private Dns Zone Groups API
+  slug: microsoft-azure-private-link-privatednszonegroups-api
+- baseURL: https://management.azure.com/
+  baseurl_source: declared
+  description: The PrivateLinkService API from Microsoft Azure Private Link — 1 operation(s) for privatelinkservice.
+  name: Microsoft Azure Private Link Private Link Service API
+  slug: microsoft-azure-private-link-privatelinkservice-api
+- baseURL: https://management.azure.com/
+  baseurl_source: declared
+  description: The PrivateLinkServices API from Microsoft Azure Private Link — 9 operation(s) for privatelinkservices.
+  name: Microsoft Azure Private Link Private Link Services API
+  slug: microsoft-azure-private-link-privatelinkservices-api
+- baseURL: https://management.azure.com/
+  baseurl_source: declared
+  description: The Subscriptions API from Microsoft Azure Private Link — 2 operation(s) for subscriptions.
+  name: Microsoft Azure Private Link Subscriptions API
+  slug: microsoft-azure-private-link-subscriptions-api
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -69,6 +89,16 @@ collections:
   name: Azure Private Link REST API
   slug: open-microsoft-azure-private-link
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-private-link/refs/heads/main/finops/microsoft-azure-private-link-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/microsoft-azure-private-link-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/microsoft-azure-private-link/refs/heads/main/capabilities/microsoft-azure-private-link-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/microsoft-azure-private-link-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -258,19 +288,23 @@ common:
 created: '2026-05-04'
 description: 'Microsoft Azure Private Link gives a virtual network a private IP address onto an Azure PaaS service, a partner service, or a service the customer publishes themselves, so traffic reaches it across the Microsoft backbone and never traverses the public internet. It has two sides. A consumer creates a private endpoint pointing at a target resource id and attaches a private DNS zone group so the service''s own hostname resolves to that private address. A producer publishes a private link service in front of a Standard Load Balancer, hands out an opaque alias, and approves or rejects the connections that arrive — including connections from other tenants. Both sides are managed through the Azure Resource Manager REST API at management.azure.com, which Microsoft publishes as Swagger 2.0 in its azure-rest-api-specs repository: 24 operations at api-version 2025-03-01, OAuth2 bearer only, with no API key and no anonymous surface.'
 finops:
-- name: Microsoft Azure Private Link Finops
+- has_sources: false
+  method: generated
+  name: Microsoft Azure Private Link Finops
+  primary_unit: ''
   service_category: API
   slug: microsoft-azure-private-link-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/microsoft-azure-private-link.png
 layout: provider
 modified: '2026-09-17'
 name: Microsoft Azure Private Link
 nav: Providers
 network: true
-overview: 'Microsoft Azure Private Link publishes 2 APIs on the [APIs.io](https://apis.io/) network: microsoft-azure-private-link Operations API and microsoft-azure-private-link Private Endpoints API. Tagged areas include Networking, Private Connectivity, Cloud Infrastructure, Virtual Networks, and DNS.
+overview: 'Microsoft Azure Private Link publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including microsoft-azure-private-link Operations API, microsoft-azure-private-link Private Endpoints API, Private Dns Zone Groups API, and 3 more. Tagged areas include Networking, Private Connectivity, Cloud Infrastructure, Virtual Networks, and DNS.
 
 
-  Microsoft Azure Private Link''s developer surface includes developer portal, documentation, API reference, getting-started guide, quickstart, engineering blog, pricing, and 34 more developer resources.'
+  Microsoft Azure Private Link''s developer surface includes developer portal, documentation, API reference, getting-started guide, quickstart, engineering blog, pricing, and 36 more developer resources.'
 plans:
 - name: Microsoft Azure Private Link Plans Pricing
   plan_count: 0
@@ -287,23 +321,23 @@ scopes:
   summary_line: 1 scope · implicit
 score:
   band: strong
-  composite: 61.0
+  composite: 63.3
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.0
   facets:
-    access_clarity: 68.4
+    access_clarity: 60.5
     contract_governance: 4.5
-    contract_quality: 45.6
+    contract_quality: 42.2
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 89.5
-  previous_composite: 61.0
+  previous_composite: 64.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -311,11 +345,17 @@ score:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
-      total: 3
+      total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

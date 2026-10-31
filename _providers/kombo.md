@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 62
+- acting_count: 61
   human_in_the_loop: 6
   name: Kombo Agentic Access
   operation_count: 121
   slug: kombo-agentic-access
-  summary_line: 121 operations · 62 acting · 6 human-in-the-loop
+  summary_line: 121 operations · 61 acting · 6 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.kombo.dev
@@ -123,6 +123,21 @@ collections:
   name: Kombo API
   slug: open-kombo
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/kombo/refs/heads/main/plans/kombo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/kombo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/kombo/refs/heads/main/rate-limits/kombo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/kombo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/kombo/refs/heads/main/finops/kombo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/kombo-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kombo/refs/heads/main/capabilities/kombo-capability-edges.yml
   title: ''
@@ -516,9 +531,13 @@ examples:
   name: Kombo Putintegrationsintegrationidcustomfieldscustomfieldid Example
   slug: kombo-putintegrationsintegrationidcustomfieldscustomfieldid-example
 finops:
-- name: Kombo Finops
+- has_sources: true
+  method: generated
+  name: Kombo Finops
+  primary_unit: ''
   service_category: HR Tech / Unified API
   slug: kombo-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kombo.png
 json_schemas:
 - name: AiApplyApplicationStatusUpdatedWebhookPayload
@@ -2135,13 +2154,13 @@ modified: '2026-09-16'
 name: Kombo
 nav: Providers
 network: true
-overview: 'Kombo publishes 9 APIs on the [APIs.io](https://apis.io/) network, including AI Apply API, Custom Endpoints API, General API, and 6 more. Tagged areas include ATS, Embedded iPaaS, HRIS, LMS, and Payroll.
+overview: 'Kombo publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including AI Apply API, Custom Endpoints API, General API, and 6 more. Tagged areas include Applicant Tracking, Embedded iPaaS, HRIS, LMS, and Payroll.
 
 
   The Kombo catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Kombo''s developer surface includes authentication, documentation, support, engineering blog, and 11 more developer resources.'
+  Kombo''s developer surface includes authentication, documentation, support, engineering blog, and 14 more developer resources.'
 plans:
 - name: Kombo Plans Pricing
   plan_count: 3
@@ -2152,9 +2171,10 @@ rate_limits:
   name: Kombo Rate Limits
   slug: kombo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Kombo API Rules
+  name: Kombo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -2164,23 +2184,23 @@ rules:
   slug: kombo-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 44.3
+  composite: 40.2
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 43.3
+    artifact_dirs: 19
+    catalog_earned: 40.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.8
+    catalog_gap: 74.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 55.3
+    contract_quality: 49.9
     developer_ergonomics: 47.6
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 18.4
-  previous_composite: 44.3
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     contracts:
@@ -2191,11 +2211,11 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Education & Research
-    regime_id: education
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -2216,11 +2236,13 @@ security:
   summary_line: SOC 2, ISO 27001, HIPAA, GDPR
 slug: kombo
 tags:
-- ATS
+- Applicant Tracking
 - Embedded iPaaS
 - HRIS
 - LMS
 - Payroll
-- Unified-API
+- Unified API
+- Recruiting
+- Integration
 website: https://www.kombo.dev
 ---

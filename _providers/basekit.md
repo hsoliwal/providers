@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Partner-facing REST API to provision and manage brands, users, packages, sites, custom domains, SSL certificates and webhook subscriptions on the BaseKit platform. HTTP Basic auth (recommended) or OAu
@@ -46,6 +46,10 @@ asyncapis:
   name: Basekit Webhooks
   slug: basekit-webhooks
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.basekit.com/feed/
 - group: start
   title: ''
   type: DeveloperPortal
@@ -144,23 +148,23 @@ created: '2026-07-17'
 description: BaseKit is a white-label SaaS platform that lets partners — web hosting companies, telcos, banks, SaaS providers and resellers — offer website building, online stores and bookings to small businesses under their own brand. Its products are BaseKit Site (website builder), BaseKit Store (e-commerce) and BaseKit Bookings (appointment scheduling), deployed SaaS or on-premise across 60+ partners in 40 markets. Partners provision and manage end users through the BaseKit REST API, which exposes brands, users, packages, sites, domains, SSL certificates and webhook subscriptions. BaseKit was surfaced as a Seedcamp portfolio company and enriched from its public developer surface at apidocs.basekit.com.
 image: https://dqmeprwm.cdn.imgeng.in/wp-content/themes/basekit/assets/favicon/apple-touch-icon.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Basekit
 nav: Providers
 network: true
-overview: 'Basekit publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Website Builder, Web Hosting, E-Commerce, and White Label.
+overview: 'Basekit is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Website Builder, Web Hosting, E-Commerce, and White Label.
 
 
   The Basekit catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Basekit''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 15 more developer resources.'
+  Basekit''s developer surface includes documentation, API reference, getting-started guide, engineering blog, signup flow, authentication, and 16 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 38.2
+  composite: 38.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -170,15 +174,21 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 38.2
+  previous_composite: 38.7
   provenance:
     conformance: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

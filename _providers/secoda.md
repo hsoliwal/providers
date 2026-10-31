@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: HTTP REST API to interact with a Secoda workspace — CRUD over catalog resources (databases, schemas, tables, columns, dashboards, charts, collections, documents, glossary/terms, tags, custom propertie
@@ -43,6 +43,11 @@ apis:
   slug: secoda-api
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/secoda/refs/heads/main/rate-limits/secoda-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/secoda-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -182,25 +187,25 @@ description: Secoda is an AI-powered data catalog, governance, and observability
 image: https://cdn.prod.website-files.com/61ddd0b42c51f86c96e1e90e/683a14fafd2295179b0ab954_Open%20graph%20image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 8 tools listed.
   name: Secoda MCP Server
-  slug: secoda-mcp-server
+  slug: secoda-mcp
 modified: '2026-07-21'
 name: Secoda
 nav: Providers
 network: true
-overview: 'Secoda publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Data Catalog, Data Governance, and Metadata.
+overview: 'Secoda is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Data Catalog, Data Governance, and Metadata.
 
 
-  Secoda''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 23 more developer resources.'
+  Secoda''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 24 more developer resources.'
 random_paper: 7
 rate_limits:
 - limit_count: 1
   name: Secoda Rate Limits
   slug: secoda-rate-limits
 score:
-  band: thin
-  composite: 37.6
+  band: developing
+  composite: 40.5
   coverage:
     artifact_dirs: 16
     catalog_earned: 45.0
@@ -214,15 +219,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 63.2
-  previous_composite: 37.6
+  previous_composite: 40.5
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

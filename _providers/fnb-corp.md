@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: F.N.B. Corporation publishes no first-party developer API. Consumer-permissioned account, balance and transaction data for First National Bank of Pennsylvania is available only through third-party dat
@@ -41,6 +41,10 @@ apis:
   slug: fnb-aggregator-data-access
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.fnb-online.com/about-us/newsroom
 - group: start
   title: ''
   type: Login
@@ -80,32 +84,32 @@ description: 'F.N.B. Corporation (NYSE: FNB) is a diversified financial services
   (FDX) membership or public CFPB Section 1033 posture is documented by the institution as of this profile.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-23'
+modified: '2026-10-06'
 name: F.N.B. Corporation
 nav: Providers
 network: true
-overview: 'F.N.B. Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial-Services, Banking, United States, Regional Bank, and Consumer Banking.
+overview: 'F.N.B. Corporation is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Financial Services, Banking, United States, Regional Bank, and Consumer Banking.
 
 
-  F.N.B. Corporation''s developer surface includes support and 7 more developer resources.'
+  F.N.B. Corporation''s developer surface includes engineering blog, support, and 7 more developer resources.'
 random_paper: 21
 score:
   band: emerging
-  composite: 13.0
+  composite: 13.9
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 7
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 14.3
-    discoverability: 66.7
+    developer_ergonomics: 16.7
+    discoverability: 64.3
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -114,15 +118,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 13.0
+  previous_composite: 13.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -136,14 +140,13 @@ security:
   summary_line: TLSv1.2 · HSTS · DNSSEC · DMARC
 slug: fnb-corp
 tags:
-- Financial-Services
+- Financial Services
 - Banking
 - United States
 - Regional Bank
 - Consumer Banking
 - Commercial Banking
 - Wealth Management
-- Data Aggregation
 - Open Finance
 website: https://www.fnb-online.com/
 ---

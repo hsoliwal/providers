@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,15 +32,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.0
-  scored_at: '2026-09-20'
+  score: 18.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 116
+- acting_count: 69
   human_in_the_loop: 0
   name: Virtru Agentic Access
   operation_count: 116
   slug: virtru-agentic-access
-  summary_line: 116 operations · 116 acting
+  summary_line: 116 operations · 69 acting
 api_count: 15
 apis:
 - baseURL: https://api.virtru.com
@@ -56,62 +56,62 @@ apis:
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The entityresolution.v2.EntityResolutionService API from Virtru — 2 operation(s) for entityresolution.v2.entityresolutionservice.
-  name: Virtru entityresolution.v2.EntityResolutionService API
+  name: Virtru Entityresolution.v2.Entity Resolution Service API
   slug: virtru-entityresolution-v2-entityresolutionservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: Get app info from the root path
-  name: Virtru kas.AccessService API
+  name: Virtru Kas.Access Service API
   slug: virtru-kas-accessservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The policy.actions.ActionService API from Virtru — 5 operation(s) for policy.actions.actionservice.
-  name: Virtru policy.actions.ActionService API
+  name: Virtru Policy.actions.Action Service API
   slug: virtru-policy-actions-actionservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: / / Attribute Service /
-  name: Virtru policy.attributes.AttributesService API
+  name: Virtru Policy.attributes.Attributes Service API
   slug: virtru-policy-attributes-attributesservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The policy.kasregistry.KeyAccessServerRegistryService API from Virtru — 14 operation(s) for policy.kasregistry.keyaccessserverregistryservice.
-  name: Virtru policy.kasregistry.KeyAccessServerRegistryService API
+  name: Virtru Policy.kasregistry.Key Access Server Registry Service API
   slug: virtru-policy-kasregistry-keyaccessserverregistryservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The policy.keymanagement.KeyManagementService API from Virtru — 5 operation(s) for policy.keymanagement.keymanagementservice.
-  name: Virtru policy.keymanagement.KeyManagementService API
+  name: Virtru Policy.keymanagement.Key Management Service API
   slug: virtru-policy-keymanagement-keymanagementservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The policy.namespaces.NamespaceService API from Virtru — 9 operation(s) for policy.namespaces.namespaceservice.
-  name: Virtru policy.namespaces.NamespaceService API
+  name: Virtru Policy.namespaces.Namespace Service API
   slug: virtru-policy-namespaces-namespaceservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: / / Obligation Service /
-  name: Virtru policy.obligations.Service API
+  name: Virtru Policy.obligations.Service API
   slug: virtru-policy-obligations-service-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: Registered Resources
-  name: Virtru policy.registeredresources.RegisteredResourcesService API
+  name: Virtru Policy.registeredresources.Registered Resources Service API
   slug: virtru-policy-registeredresources-registeredresourcesservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: Resource Mapping Groups
-  name: Virtru policy.resourcemapping.ResourceMappingService API
+  name: Virtru Policy.resourcemapping.Resource Mapping Service API
   slug: virtru-policy-resourcemapping-resourcemappingservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The policy.subjectmapping.SubjectMappingService API from Virtru — 12 operation(s) for policy.subjectmapping.subjectmappingservice.
-  name: Virtru policy.subjectmapping.SubjectMappingService API
+  name: Virtru Policy.subjectmapping.Subject Mapping Service API
   slug: virtru-policy-subjectmapping-subjectmappingservice-api
 - baseURL: https://api.virtru.com
   baseurl_source: declared
   description: The wellknownconfiguration.WellKnownService API from Virtru — 1 operation(s) for wellknownconfiguration.wellknownservice.
-  name: Virtru wellknownconfiguration.WellKnownService API
+  name: Virtru Wellknownconfiguration.Well Known Service API
   slug: virtru-wellknownconfiguration-wellknownservice-api
 artifact_total: 34
 collections:
@@ -161,6 +161,19 @@ collections:
   name: authorization authorization.AuthorizationService wellknownconfiguration.WellKnownService API
   slug: open-virtru-wellknownconfiguration-wellknownservice-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.virtru.com/newsroom
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.virtru.com/newsroom/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/virtru/refs/heads/main/capabilities/virtru-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/virtru-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -323,34 +336,34 @@ created: '2026-07-17'
 description: Virtru is a data-centric security company whose Data Security Platform is built on OpenTDF, the open Trusted Data Format. Applications encrypt data with attribute-based access control (ABAC) and enforce who can decrypt it through Key Access Servers (KAS), independent of where the data travels — email, files, SaaS, and data pipelines. The platform exposes Connect-protocol (gRPC + HTTP/JSON) services for policy (namespaces, attributes, values, subject mappings), key access, authorization decisions, and entity resolution, authenticated with OIDC/OAuth 2.0. Virtru maintains the open-source OpenTDF project and ships SDKs for JavaScript, Go, and Java plus the otdfctl CLI. Backed by Bessemer Venture Partners and ICONIQ Capital.
 image: https://www.virtru.com/hubfs/assets/images/logos/virtru/logomark/blue/virtru_LOGOMARKMASTER_BLUE_FINAL.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Virtru
 nav: Providers
 network: true
-overview: 'Virtru publishes 14 APIs on the [APIs.io](https://apis.io/) network, including authorization.AuthorizationService API, authorization.v2.AuthorizationService API, entityresolution.v2.EntityResolutionService API, and 11 more. Tagged areas include Company, Cybersecurity, Data Security, Encryption, and Access Control.
+overview: 'Virtru publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including authorization.AuthorizationService API, authorization.v2.AuthorizationService API, Entityresolution.v2.Entity Resolution Service API, and 11 more. Tagged areas include Company, Cybersecurity, Data Security, Encryption, and Access Control.
 
 
-  Virtru''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, CLI, authentication, and 27 more developer resources.'
+  Virtru''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, CLI, authentication, and 30 more developer resources.'
 random_paper: 2
 score:
   band: developing
-  composite: 47.5
+  composite: 49.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
-    contract_quality: 39.5
+    contract_quality: 35.5
     developer_ergonomics: 68.5
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 36.8
-  previous_composite: 47.5
+  previous_composite: 49.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -361,8 +374,14 @@ score:
       total: 14
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -380,7 +399,7 @@ security:
 - kind: vulnerability-disclosure
   name: Virtru Vulnerability Disclosure
   slug: virtru-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Virtru Trust Center
   slug: virtru-trust-center
@@ -393,7 +412,7 @@ tags:
 - Encryption
 - Access Control
 - Zero Trust
-- Data Privacy
+- Privacy
 - OpenTDF
 - Key Management
 website: https://www.virtru.com/

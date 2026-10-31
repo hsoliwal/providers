@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 35.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The CrowdStrike Falcon API — 1,463 documented operations across 128 service collections covering hosts, detections, incidents, real-time response, threat intelligence, cloud and container security, id
@@ -48,6 +48,11 @@ asyncapis:
   name: Crowdstrike Event Streams
   slug: crowdstrike-event-streams
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/crowdstrike/refs/heads/main/finops/crowdstrike-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/crowdstrike-finops.yml
 - group: company
   title: ''
   type: Website
@@ -251,26 +256,30 @@ common:
 created: '2026-04-19'
 description: 'CrowdStrike is a US cybersecurity company and Fortune 1000 constituent whose Falcon platform delivers endpoint, cloud, identity and data protection from a single cloud-native agent. Its developer surface is substantial and public: a 1,463-operation OAuth2 REST API spanning 128 service collections, documented operation by operation on developer.crowdstrike.com, with 187 named permission scopes; six official SDKs (Python, PowerShell, Go, TypeScript/JavaScript, Rust, Ruby); a Terraform provider for Configuration as Code; Falcon Foundry, an app platform with its own CLI; a first-party open-source MCP server (falcon-mcp) exposing 166 agent tools across 28 modules; and a published set of Agent Skills for building Foundry apps. CrowdStrike does not publish an OpenAPI document, and API access requires a Falcon subscription — the API itself is included in every paid bundle.'
 finops:
-- name: Crowdstrike Finops
+- has_sources: true
+  method: generated
+  name: Crowdstrike Finops
+  primary_unit: ''
   service_category: Cybersecurity
   slug: crowdstrike-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crowdstrike.png
 layout: provider
 mcp_servers:
 - description: 'CrowdStrike publishes falcon-mcp, a first-party open-source MCP server that connects agents to the Falcon platform. It is a LOCAL STDIO product: installed with uv/pip/uvx and run by the operator, auth'
   name: io.github.CrowdStrike/falcon-mcp
-  slug: iogithubcrowdstrikefalcon-mcp
+  slug: io-github-crowdstrike-falcon-mcp
 modified: '2026-09-19'
 name: CrowdStrike
 nav: Providers
 network: true
-overview: 'CrowdStrike publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Endpoint Security, EDR, Threat Intelligence, and Cloud Security.
+overview: 'CrowdStrike is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Endpoint Security, Endpoint Detection and Response, Threat Intelligence, and Cloud Security.
 
 
   The CrowdStrike catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  CrowdStrike''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 37 more developer resources.'
+  CrowdStrike''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 38 more developer resources.'
 plans:
 - name: Crowdstrike Plans Pricing
   plan_count: 6
@@ -287,29 +296,35 @@ scopes:
   summary_line: 187 scopes
 score:
   band: strong
-  composite: 62.4
+  composite: 65.6
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 60.0
+    artifact_dirs: 25
+    catalog_earned: 57.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 100.0
+    access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.3
     operational_transparency: 50.0
-  previous_composite: 62.4
+  previous_composite: 67.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 52.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -337,7 +352,7 @@ slug: crowdstrike
 tags:
 - Cybersecurity
 - Endpoint Security
-- EDR
+- Endpoint Detection and Response
 - Threat Intelligence
 - Cloud Security
 - Identity Protection

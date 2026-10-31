@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://onfabric.substack.com/feed
 - group: company
   title: ''
   type: Website
@@ -138,18 +142,18 @@ mcp_servers:
 - description: OnFabric advertises a hosted "Fabric MCP server" that brings a user's personal context (curated from Google searches, YouTube, Instagram and other connected sources) to LLM clients such as ChatGPT and
   name: Fabric MCP
   slug: fabric-mcp
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: OnFabric
 nav: Providers
 network: true
 overview: 'OnFabric is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, AI Agents, Personal Context, and Memory.
 
 
-  OnFabric''s developer surface includes documentation, getting-started guide, engineering blog, support, signup flow, CLI, changelog, and 14 more developer resources.'
+  OnFabric''s developer surface includes documentation, getting-started guide, engineering blog, support, signup flow, CLI, changelog, and 15 more developer resources.'
 random_paper: 0
 score:
   band: thin
-  composite: 28.4
+  composite: 29.1
   coverage:
     artifact_dirs: 12
     catalog_earned: 27.0
@@ -163,15 +167,25 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 18.4
-  previous_composite: 28.4
+  previous_composite: 29.1
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

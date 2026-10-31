@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://amanah.kitabisa.com/feed/
 - group: company
   title: ''
   type: Website
@@ -103,18 +107,18 @@ description: Kitabisa is Indonesia's largest donation-based crowdfunding and mut
   program backed by an RFC 9116 security.txt.
 image: https://avatars.githubusercontent.com/u/40655294?v=4
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kita Bisa
 nav: Providers
 network: true
 overview: 'Kita Bisa is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crowdfunding, Donations, Non-Profit, and Philanthropy.
 
 
-  Kita Bisa''s developer surface includes engineering blog, support, and 12 more developer resources.'
+  Kita Bisa''s developer surface includes engineering blog, support, and 13 more developer resources.'
 random_paper: 5
 score:
   band: emerging
-  composite: 13.6
+  composite: 13.0
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -128,7 +132,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -137,15 +141,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - southeast-asia
-  previous_composite: 13.6
+  previous_composite: 13.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 30.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -172,6 +176,6 @@ tags:
 - Social Impact
 - Insurance
 - Indonesia
-- Open-Source
+- Open Source
 website: https://kitabisa.com
 ---

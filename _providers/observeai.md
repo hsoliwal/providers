@@ -35,8 +35,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.7
-  scored_at: '2026-09-20'
-api_count: 1
+  scored_at: '2026-10-17'
+api_count: 2
 apis:
 - baseURL: https://kong.observe.ai/
   baseurl_source: declared
@@ -277,7 +277,7 @@ modified: '2026-08-14'
 name: Observe.AI
 nav: Providers
 network: true
-overview: 'Observe.AI publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Ack Dispute Flow API, Authentication API, Coachings API, and 4 more. Tagged areas include Company, Ai Apps, Contact Center, Conversation Intelligence, and Customer-Support.
+overview: 'Observe.AI publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ack Dispute Flow API, Authentication API, Coachings API, and 4 more. Tagged areas include Company, Ai Apps, Contact Center, Conversation Intelligence, and Customer Service.
 
 
   Observe.AI''s developer surface includes engineering blog, support, documentation, API reference, getting-started guide, changelog, authentication, and 25 more developer resources.'
@@ -291,24 +291,24 @@ rate_limits:
   name: Observeai Rate Limits
   slug: observeai-rate-limits
 score:
-  band: developing
-  composite: 53.8
+  band: strong
+  composite: 54.5
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 67.0
+    artifact_dirs: 23
+    catalog_earned: 66.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 48.0
+    catalog_gap: 49.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 54.8
+    contract_quality: 49.3
     developer_ergonomics: 48.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 80.3
-  previous_composite: 53.8
+  previous_composite: 54.9
   provenance:
     conformance: derived
     contracts:
@@ -318,8 +318,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 33.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -337,7 +343,7 @@ security:
 - kind: vulnerability-disclosure
   name: Observeai Vulnerability Disclosure
   slug: observeai-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Observeai Trust Center
   slug: observeai-trust-center
@@ -348,12 +354,13 @@ tags:
 - Ai Apps
 - Contact Center
 - Conversation Intelligence
-- Customer-Support
-- Agentic AI
+- Customer Service
+- AI Agents
 - Voice AI
 - Quality Assurance
 - Reporting
 - OpenAPI
 - Speech Analytics
+- Conversational AI
 website: https://www.observe.ai/
 ---

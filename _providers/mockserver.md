@@ -27,36 +27,36 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 20
-  human_in_the_loop: 12
+- acting_count: 10
+  human_in_the_loop: 6
   name: Mockserver Agentic Access
-  operation_count: 20
+  operation_count: 10
   slug: mockserver-agentic-access
-  summary_line: 20 operations · 20 acting · 12 human-in-the-loop
+  summary_line: 10 operations · 10 acting · 6 human-in-the-loop
 api_count: 2
 apis:
 - baseURL: http://localhost:1080/
   baseurl_source: declared
   description: Manage state or process (both MockServer & MockServer Proxy)
-  name: MockServer control API
+  name: MockServer Control API
   slug: mockserver-control-api
 - baseURL: http://localhost:1080/
   baseurl_source: declared
   description: Create or update expectations - updates if the id matches an existing expectations (only supported by MockServer)
-  name: MockServer expectation API
+  name: MockServer Expectation API
   slug: mockserver-expectation-api
 - baseURL: http://localhost:1080/
   baseurl_source: declared
   description: Verify requests (both MockServer & MockServer Proxy)
-  name: MockServer verify API
+  name: MockServer Verify API
   slug: mockserver-verify-api
 artifact_total: 14
 collections:
@@ -76,6 +76,21 @@ collections:
   name: MockServer control verify API
   slug: open-mockserver-verify-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mockserver/refs/heads/main/plans/mockserver-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/mockserver-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/mockserver/refs/heads/main/rate-limits/mockserver-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/mockserver-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mockserver/refs/heads/main/finops/mockserver-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/mockserver-finops.yml
 - group: operate
   title: ''
   type: Releases
@@ -142,19 +157,23 @@ common:
 created: '2025-01-08'
 description: MockServer enables easy mocking of any system you integrate with via HTTP or HTTPS (e.g. services, web sites, etc) with clients in Java, JavaScript, and Ruby and a simple REST API. MockServer can be used to mock APIs that are not yet fully developed, isolate the system under test for reliable testing, simulate slow or faulty endpoints, and record/replay requests.
 finops:
-- name: Mockserver Finops
+- has_sources: false
+  method: generated
+  name: Mockserver Finops
+  primary_unit: ''
   service_category: API
   slug: mockserver-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mockserver.png
 layout: provider
 modified: '2026-05-19'
 name: MockServer
 nav: Providers
 network: true
-overview: 'MockServer publishes 3 APIs on the [APIs.io](https://apis.io/) network: control API, expectation API, and verify API. Tagged areas include Mocking, Mock Servers, Testing, Service Virtualization, and HTTP.
+overview: 'MockServer publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Control API, Expectation API, and Verify API. Tagged areas include Mocking, Mock Servers, Testing, Service Virtualization, and HTTP.
 
 
-  MockServer''s developer surface includes documentation, getting-started guide, and 13 more developer resources.'
+  MockServer''s developer surface includes documentation, getting-started guide, and 16 more developer resources.'
 plans:
 - name: Mockserver Plans Pricing
   plan_count: 3
@@ -166,23 +185,26 @@ rate_limits:
   slug: mockserver-rate-limits
 score:
   band: thin
-  composite: 28.4
+  composite: 32.4
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 41.0
+    artifact_dirs: 12
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 40.8
+    contract_quality: 36.7
     developer_ergonomics: 21.4
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 36.8
-  previous_composite: 28.4
+  open_source:
+    applies: true
+    score: 100.0
+  previous_composite: 33.8
   provenance:
     agentic_access: derived
     contracts:
@@ -190,8 +212,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

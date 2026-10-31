@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 29
+- acting_count: 28
   human_in_the_loop: 0
   name: Sheeva Agentic Access
   operation_count: 53
   slug: sheeva-agentic-access
-  summary_line: 53 operations · 29 acting
+  summary_line: 53 operations · 28 acting
 api_count: 1
 apis:
 - baseURL: https://us-apis.sheeva.ai
@@ -319,7 +319,7 @@ modified: '2026-07-21'
 name: Sheeva
 nav: Providers
 network: true
-overview: 'Sheeva publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Credit Cards API, Driver Alerts API, and 12 more. Tagged areas include Company, Connected Vehicles, Automotive, Payments, and Fintech.
+overview: 'Sheeva publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Credit Cards API, Driver Alerts API, and 12 more. Tagged areas include Company, Connected Vehicles, Automotive, Payments, and Fintech.
 
 
   The Sheeva catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -329,9 +329,9 @@ overview: 'Sheeva publishes 15 APIs on the [APIs.io](https://apis.io/) network, 
 random_paper: 20
 score:
   band: developing
-  composite: 44.6
+  composite: 41.9
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -341,11 +341,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 61.3
+    contract_quality: 56.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 44.6
+  previous_composite: 41.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -361,9 +361,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

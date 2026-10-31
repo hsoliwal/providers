@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -195,6 +195,10 @@ collections:
 common:
 - group: company
   title: ''
+  type: Blog
+  url: https://www.cardiff.ac.uk/news/
+- group: company
+  title: ''
   type: Website
   url: https://www.cardiff.ac.uk/
 - group: start
@@ -324,9 +328,13 @@ examples:
   name: Cardiff Publications List Example
   slug: cardiff-publications-list-example
 finops:
-- name: Cardiff Finops
+- has_sources: true
+  method: generated
+  name: Cardiff Finops
+  primary_unit: ''
   service_category: Education
   slug: cardiff-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cardiff.png
 json_schemas:
 - name: Course
@@ -357,17 +365,17 @@ jsonld:
   property_count: 4
   slug: cardiff-context
 layout: provider
-modified: '2026-08-30'
+modified: '2026-10-06'
 name: Cardiff University
 nav: Providers
 network: true
-overview: 'Cardiff University publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Courses API, Clearing Adjustments API, Groups API, and 13 more. Tagged areas include Education, Higher Education, University, Public Research University, and United Kingdom.
+overview: 'Cardiff University publishes 21 API contracts indexed on the [APIs.io](https://apis.io/) network, including Courses API, Clearing Adjustments API, Groups API, and 18 more. Tagged areas include Education, Higher Education, University, Public Research University, and United Kingdom.
 
 
   The Cardiff University catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Cardiff University''s developer surface includes status page, authentication, and 24 more developer resources.'
+  Cardiff University''s developer surface includes engineering blog, status page, authentication, and 24 more developer resources.'
 plans:
 - name: Cardiff Plans Pricing
   plan_count: 2
@@ -378,9 +386,10 @@ rate_limits:
   name: Cardiff Rate Limits
   slug: cardiff-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Cardiff University API Rules
+  name: Cardiff University — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -388,7 +397,8 @@ rules:
     info: 2
     warn: 3
   slug: cardiff-jsonschema-spectral-rules
-- effective_rule_count: 5
+- authorship: unmarked
+  effective_rule_count: 5
   extends: []
   name: Cardiff University API Rules
   rule_count: 5
@@ -404,23 +414,23 @@ scopes:
   slug: cardiff-scopes
   summary_line: 2 scopes · implicit
 score:
-  band: developing
-  composite: 41.8
+  band: thin
+  composite: 31.9
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 65.3
+    artifact_dirs: 21
+    catalog_earned: 50.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.8
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 42.1
+    access_clarity: 18.4
     contract_governance: 9.8
-    contract_quality: 52.2
-    developer_ergonomics: 31.0
-    discoverability: 64.8
-    operational_transparency: 23.7
+    contract_quality: 47.7
+    developer_ergonomics: 33.3
+    discoverability: 62.5
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -429,7 +439,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 41.8
+  previous_composite: 37.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -443,10 +453,10 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

@@ -33,9 +33,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -140,6 +140,10 @@ created: '2026-07-17'
 description: Minimus provides hardened, minimal container images designed for security-conscious teams. Its images are built from source with near-zero CVEs, rebuilt daily, and typically around 95% smaller than standard alternatives, with drop-in compatibility for existing workflows. Images ship audit-ready for compliance regimes including FedRAMP, NIST 800-190, FIPS 140-3, CIS, STIG, and SLSA L3, and the company is SOC 2 and ISO 27001 certified. The programmatic surface is the first-party minicli tool (manage private image recipes as code and trigger asynchronous builds), an open MinimOS apk package repository, and a generate-skills feature that makes the CLI agent-native for assistants such as Claude, Codex, and Cursor. Surfaced as a Mayfield portfolio company and enriched by the API Evangelist pipeline.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/minimus.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.minimus.io over HTTP; 3 tools listed.
+  name: Minimus MCP Server
+  slug: minimus
 modified: '2026-07-20'
 name: Minimus
 nav: Providers
@@ -151,28 +155,38 @@ overview: 'Minimus is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 0
 score:
   band: thin
-  composite: 31.4
+  composite: 33.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 57.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 31.4
+  previous_composite: 33.6
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: fedramp
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

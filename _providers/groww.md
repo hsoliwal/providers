@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 41.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 4
   human_in_the_loop: 0
   name: Groww Agentic Access
   operation_count: 20
   slug: groww-agentic-access
-  summary_line: 20 operations · 5 acting
+  summary_line: 20 operations · 4 acting
 api_count: 1
 apis:
 - baseURL: https://api.groww.in
@@ -116,6 +116,11 @@ collections:
   name: Groww Trading Authentication Portfolio API
   slug: open-groww-portfolio-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/groww/refs/heads/main/plans/groww-plans.yml
+  title: ''
+  type: Plans
+  url: plans/groww-plans.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -272,10 +277,10 @@ modified: '2026-07-19'
 name: Groww
 nav: Providers
 network: true
-overview: 'Groww publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Historical Data API, Live Data API, and 3 more. Tagged areas include Company, Fintech, Trading, Investing, and Stock Broking.
+overview: 'Groww publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Historical Data API, Live Data API, and 3 more. Tagged areas include Company, Fintech, Trading, Investing, and Stock Broking.
 
 
-  Groww''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 25 more developer resources.'
+  Groww''s developer surface includes documentation, API reference, getting-started guide, pricing, signup flow, support, engineering blog, and 26 more developer resources.'
 plans:
 - name: Groww Plans
   plan_count: 1
@@ -291,8 +296,8 @@ scopes:
   slug: groww-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: strong
-  composite: 57.5
+  band: developing
+  composite: 53.5
   coverage:
     artifact_dirs: 25
     catalog_earned: 57.0
@@ -304,9 +309,9 @@ score:
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
-    contract_quality: 53.4
+    contract_quality: 48.1
     developer_ergonomics: 67.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -315,7 +320,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 57.5
+  previous_composite: 53.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -331,9 +336,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 68.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 38.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

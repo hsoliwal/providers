@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: verified
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-09-20'
+  score: 41.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 293
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 412
   slug: limble-cmms-agentic-access
   summary_line: 412 operations · 293 acting
-api_count: 1
+api_count: 4
 apis:
 - description: 'The Limble CMMS REST API V2 provides HTTPS access to maintenance management data including assets, locations, work orders, preventive maintenance tasks, parts, purchase orders, users, vendors, teams, '
   name: Limble API V2
@@ -52,11 +52,37 @@ apis:
   baseurl_source: declared
   description: The Routes API from Limble CMMS — 120 operation(s) for routes.
   name: Limble CMMS Routes API
+  phrasing_intents:
+  - id: getMe
+    intent: Check which customer and plan my API keys belong to
+    question: Which Limble customer account are my API keys authenticated as?
+  - id: putAssetsByAssetIDImage
+    intent: Set the main image for an asset
+    question: Can I upload a main photo for a piece of equipment?
+  - id: deleteAssetsByAssetIDImage
+    intent: Remove an asset's main image
+    question: How can I take the main photo off an asset?
+  - id: getAssetsFields
+    intent: List custom field values on assets
+    question: What values are stored in the Make, Model and other custom fields on my assets?
+  - id: postAssetsFields
+    intent: Create a new suggested field for assets
+    question: Can I add a new custom field option that assets at a location can use?
+  - id: getAssetsFieldsSuggested
+    intent: List suggested fields available to assets
+    question: Which fields can an asset choose from when setting up its fields?
+  - id: getAssetsFieldsHistory
+    intent: Get the change history of asset field values
+    question: How have an asset's field values changed over time?
+  - id: putAssetsByAssetIDFields
+    intent: Attach a suggested field to an asset
+    question: How do I add the Make field to an asset that doesn't have it yet?
+  phrasing_ops: 212
   slug: limble-cmms-routes-api
 - description: 'Official hosted Model Context Protocol server at https://mcp.limblecmms.com/mcp (Streamable HTTP) that exposes Limble CMMS data and actions to MCP clients (Cursor, Claude Desktop, Claude Code, GitHub '
   name: Limble MCP Server
   slug: limble-mcp-server
-artifact_total: 84
+artifact_total: 83
 asyncapis:
 - description: ''
   name: Limble Cmms Webhooks
@@ -491,17 +517,14 @@ jsonld:
   slug: limble-cmms-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.limblecmms.com over HTTP.
   name: Limble CMMS MCP Server
-  slug: limble-cmms-mcp-server
-- description: ''
-  name: Limble CMMS MCP Server
-  slug: limble-cmms-mcp-server-2
+  slug: limble-cmms
 modified: '2026-06-05'
 name: Limble CMMS
 nav: Providers
 network: true
-overview: 'Limble CMMS publishes 2 APIs on the [APIs.io](https://apis.io/) network: Limble API V2 and Routes API. Tagged areas include CMMS, Maintenance Management, Asset Management, Manufacturing, and Facility Management.
+overview: 'Limble CMMS publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Routes API, and 2 more. Tagged areas include CMMS, Maintenance Management, Asset Management, Manufacturing, and Facility Management.
 
 
   The Limble CMMS catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
@@ -518,9 +541,10 @@ rate_limits:
   name: Limble Cmms Rate Limits
   slug: limble-cmms-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Limble CMMS API Rules
+  name: Limble CMMS — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -528,7 +552,8 @@ rules:
     info: 2
     warn: 3
   slug: limble-cmms-jsonschema-spectral-rules
-- effective_rule_count: 7
+- authorship: unmarked
+  effective_rule_count: 7
   extends: []
   name: Limble CMMS API Rules
   rule_count: 7
@@ -540,35 +565,47 @@ rules:
   slug: limble-cmms-rules
 score:
   band: exemplar
-  composite: 74.0
+  composite: 76.0
   coverage:
     artifact_dirs: 28
-    catalog_earned: 75.3
+    catalog_earned: 78.3
     catalog_earned_first_party: 24.0
-    catalog_gap: 39.8
+    catalog_gap: 36.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 92.1
     contract_governance: 14.4
-    contract_quality: 77.5
+    contract_quality: 71.9
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 84.2
-  previous_composite: 74.0
+  previous_composite: 75.4
   provenance:
     agentic_access: derived
     conformance: derived
     contracts:
-      callable: 100.0
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
-      total: 2
+      total: 1
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: eu-ai-act
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

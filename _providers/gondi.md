@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -30,11 +30,11 @@ agent_readiness:
     protected_resource_metadata: false
     rate_limit_signal: false
     reversibility_documented: false
-    spec_presence: true
+    spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 16.4
-  scored_at: '2026-09-20'
+  score: 3.4
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The off-chain Gondi GraphQL API (api.gondi.xyz/graphql) is the order/offer book and indexing layer behind the Gondi NFT lending protocol. It exposes 76 queries and 48 mutations across 325 types: Sign-'
@@ -172,14 +172,14 @@ modified: '2026-07-19'
 name: Gondi
 nav: Providers
 network: true
-overview: 'Gondi publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto, NFT, DeFi, and Lending.
+overview: 'Gondi is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cryptocurrency, NFT, DeFi, and Lending.
 
 
   Gondi''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 19 more developer resources.'
 random_paper: 1
 score:
   band: thin
-  composite: 35.4
+  composite: 26.9
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -191,17 +191,23 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 0.0
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
-  previous_composite: 35.4
+  previous_composite: 26.9
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -220,11 +226,11 @@ security:
 - kind: vulnerability-disclosure
   name: Gondi Vulnerability Disclosure
   slug: gondi-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: gondi
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - NFT
 - DeFi
 - Lending

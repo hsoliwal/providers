@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/udacity/refs/heads/main/security/udacity-domain-security.yml
@@ -138,20 +138,24 @@ description: Udacity is an online tech-upskilling platform offering project-base
   — enterprise customers integrate via Accenture LearnVantage sales channels rather than self-service APIs. Its public GitHub organization (github.com/udacity) hosts 1,100+ open-source classroom and course-content repositories (e.g. deep-learning-v2-pytorch, self-driving-car, cd13303-genai-c1-classroom) used as Nanodegree exercises, not as official platform APIs.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/udacity.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.udacity.com over HTTP.
+  name: Udacity MCP Server
+  slug: udacity
 modified: '2026-05-25'
 name: Udacity
 nav: Providers
 network: true
-overview: 'Udacity is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Online Learning, Upskilling, Nanodegrees, Tech Education, and Workforce Development.
+overview: 'Udacity is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include E-Learning, Upskilling, Nanodegrees, Tech Education, and Workforce Development.
 
 
   Udacity''s developer surface includes pricing, engineering blog, privacy policy, GitHub presence, YouTube channel, and 19 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 12.2
+  composite: 12.1
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -163,9 +167,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 53.3
     operational_transparency: 5.3
-  previous_composite: 12.2
+  previous_composite: 12.1
   provenance:
     mcp: first-party
   regulatory:
@@ -173,9 +177,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 25.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -189,13 +193,13 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: udacity
 tags:
-- Online Learning
+- E-Learning
 - Upskilling
 - Nanodegrees
 - Tech Education
 - Workforce Development
 - Generative AI Training
-- Agentic AI
+- AI Agents
 - Data Science
 - Cloud Computing
 - Cybersecurity

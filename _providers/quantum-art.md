@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 17
   human_in_the_loop: 1
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The admin API from Quantum Art — 12 operation(s) for admin.
-  name: Quantum Art admin API
+  name: Quantum Art Admin API
   slug: quantum-art-admin-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -142,7 +142,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The qiskit-provider API from Quantum Art — 5 operation(s) for qiskit-provider.
-  name: Quantum Art qiskit-provider API
+  name: Quantum Art Qiskit Provider API
   slug: quantum-art-qiskit-provider-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -152,7 +152,7 @@ apis:
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
   description: The registration API from Quantum Art — 2 operation(s) for registration.
-  name: Quantum Art registration API
+  name: Quantum Art Registration API
   slug: quantum-art-registration-api
 - baseURL: https://qaas.quantum-art.tech
   baseurl_source: declared
@@ -242,6 +242,10 @@ collections:
   name: QaaS Backend admin User API
   slug: open-quantum-art-user-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.quantum-art.tech/news
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/quantum-art/refs/heads/main/overlays/quantum-art-qaas-overlay.yaml
   title: ''
@@ -347,34 +351,34 @@ created: '2026-07-17'
 description: Quantum Art is a quantum computing company building best-in-class, scalable quantum computers for commercial applications. Its technology combines advanced multi-qubit gates that implement up to 1,000 standard two-qubit operations in a single action with a dynamically reconfigurable multi-core trapped-ion architecture that runs tens of independent cores in parallel with microsecond reconfiguration. Quantum Art targets chemistry and materials science, machine learning, process optimization, and finance. It exposes its systems through a Quantum-as-a-Service (QaaS) platform whose QaaS Backend API offers a Qiskit-provider-compatible interface for listing backends, submitting and managing quantum jobs, retrieving results, plus account, task, artifact, and administration management. Backed by Battery Ventures.
 image: https://qaas.quantum-art.tech/logo-square.png
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Quantum Art
 nav: Providers
 network: true
-overview: 'Quantum Art publishes 24 APIs on the [APIs.io](https://apis.io/) network, including admin API, Apple Touch Icon.png API, Artifacts API, and 21 more. Tagged areas include Company, Quantum Computing, Quantum as a Service, Qiskit, and Developer Tools.
+overview: 'Quantum Art publishes 24 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Apple Touch Icon.png API, Artifacts API, and 21 more. Tagged areas include Company, Quantum Computing, Quantum as a Service, Qiskit, and Developer Tools.
 
 
-  Quantum Art''s developer surface includes authentication, documentation, API reference, signup flow, and 18 more developer resources.'
+  Quantum Art''s developer surface includes engineering blog, authentication, documentation, API reference, signup flow, and 18 more developer resources.'
 random_paper: 7
 score:
   band: thin
-  composite: 31.6
+  composite: 31.3
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 45.9
-    developer_ergonomics: 39.9
-    discoverability: 75.9
+    contract_quality: 41.4
+    developer_ergonomics: 42.3
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 31.6
+  previous_composite: 30.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -385,8 +389,14 @@ score:
       total: 24
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -408,7 +418,7 @@ tags:
 - Quantum as a Service
 - Qiskit
 - Developer Tools
-- Machine-Learning
+- Machine Learning
 - Optimization
 - Finance
 - Chemistry

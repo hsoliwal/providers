@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.1
-  scored_at: '2026-09-20'
+  score: 19.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: A live, anonymously reachable Model Context Protocol endpoint served from the atma.io marketing site (Avery Dennison's connected product cloud and Digital Product Passport brand). It is the Wix-platfo
@@ -40,6 +40,11 @@ apis:
   slug: atma-io-site-mcp
 artifact_total: 6
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/avery-dennison/refs/heads/main/rate-limits/avery-dennison-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/avery-dennison-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -111,17 +116,17 @@ description: Avery Dennison is a global materials science and manufacturing comp
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/avery-dennison.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.atma.io over HTTP; 9 tools listed.
   name: atma.io (Wix Site MCP)
-  slug: atmaio-wix-site-mcp
+  slug: atma-io-wix-site-mcp
 modified: '2026-09-18'
 name: Avery Dennison
 nav: Providers
 network: true
-overview: 'Avery Dennison publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, IoT, RFID, Labels, and Supply Chain.
+overview: 'Avery Dennison is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Fortune 500, IoT, RFID, Labels, and Supply Chain.
 
 
-  Avery Dennison''s developer surface includes developer portal, engineering blog, support, and 9 more developer resources.'
+  Avery Dennison''s developer surface includes developer portal, engineering blog, support, and 10 more developer resources.'
 plans:
 - name: Avery Dennison Plans Pricing
   plan_count: 0
@@ -149,9 +154,9 @@ rate_limits:
   slug: avery-dennison-rate-limits
 score:
   band: emerging
-  composite: 17.9
+  composite: 18.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -163,14 +168,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.8
     operational_transparency: 2.6
-  previous_composite: 17.9
+  previous_composite: 18.7
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

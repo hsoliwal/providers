@@ -34,15 +34,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 598
-  human_in_the_loop: 291
+- acting_count: 547
+  human_in_the_loop: 265
   name: Eventscom Agentic Access
-  operation_count: 979
+  operation_count: 978
   slug: eventscom-agentic-access
-  summary_line: 979 operations · 598 acting · 291 human-in-the-loop
-api_count: 6
+  summary_line: 978 operations · 547 acting · 265 human-in-the-loop
+api_count: 8
 apis:
 - description: Hosted Model Context Protocol server for the DataGol workbook surface, reachable at the /mcp, /sse and /messages transport paths. Connections are gated on workspace_id, workbook_id and token query par
   name: DataGol MCP Server
@@ -1087,14 +1087,14 @@ description: Events.com is a La Jolla, California event-technology company found
 image: https://events.com/wp-content/uploads/2023/09/events-featured-logo.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at datagol-mcp.events.com over HTTP.
   name: Events.com MCP Server
-  slug: eventscom-mcp-server
+  slug: datagol-mcp
 modified: '2026-08-04'
 name: Events.com
 nav: Providers
 network: true
-overview: 'Events.com publishes 112 APIs on the [APIs.io](https://apis.io/) network, including Agent Config Controller API, Agent Config Migration Controller API, Agent Email Controller API, and 109 more. Tagged areas include Event Management, Ticketing, Event Registration, Event Marketing, and Sponsorship.
+overview: 'Events.com publishes 113 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent Config Controller API, Agent Config Migration Controller API, Agent Email Controller API, and 110 more. Tagged areas include Event Management, Ticketing, Event Registration, Event Marketing, and Sponsorship.
 
 
   The Events.com catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -1111,23 +1111,23 @@ plans:
 random_paper: 12
 score:
   band: developing
-  composite: 48.3
+  composite: 48.6
   coverage:
     artifact_dirs: 22
-    catalog_earned: 49.0
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.3
+  delta: 0.1
   facets:
     access_clarity: 69.7
     contract_governance: 4.5
-    contract_quality: 59.7
+    contract_quality: 54.8
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 42.0
+  previous_composite: 48.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -1138,9 +1138,15 @@ score:
       total: 112
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 50.0
@@ -1166,7 +1172,7 @@ tags:
 - Business Intelligence
 - Artificial Intelligence
 - MCP
-- agent-native
+- Agent-Native
 - No-Code
 website: https://events.com/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 32.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -66,6 +66,15 @@ collections:
   name: REST API for Community Aws localstack API
   slug: open-localstack-localstack-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.localstack.cloud/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/localstack/refs/heads/main/capabilities/localstack-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/localstack-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/localstack/refs/heads/main/overlays/localstack-openapi-overlay.yaml
   title: ''
@@ -213,23 +222,23 @@ description: LocalStack is a cloud service emulator that runs in a single contai
 image: https://github.com/localstack.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 11 tools listed.
   name: LocalStack MCP Server
-  slug: localstack-mcp-server
-modified: '2026-09-16'
+  slug: io-github-localstack-localstack-mcp-server
+modified: '2026-10-06'
 name: LocalStack
 nav: Providers
 network: true
-overview: 'LocalStack publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Aws API, and 1 more. Tagged areas include Company, Developer Tools, Cloud, Emulator, and Testing.
+overview: 'LocalStack publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aws API, and 1 more. Tagged areas include Company, Developer Tools, Cloud, Emulator, and Testing.
 
 
-  LocalStack''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 24 more developer resources.'
+  LocalStack''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 26 more developer resources.'
 random_paper: 1
 score:
   band: developing
   composite: 43.6
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 32.0
     catalog_earned_first_party: 0.0
     catalog_gap: 83.0
@@ -239,9 +248,9 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 4.5
-    contract_quality: 42.5
+    contract_quality: 38.3
     developer_ergonomics: 78.6
-    discoverability: 66.7
+    discoverability: 63.3
     operational_transparency: 34.2
   previous_composite: 43.6
   provenance:
@@ -254,8 +263,14 @@ score:
       total: 2
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

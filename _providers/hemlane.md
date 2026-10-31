@@ -33,13 +33,13 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 11.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Internal REST API powering the Hemlane property management platform, providing access to rental listings, tenant applications, lease tracking, rent payments, maintenance requests, and owner financial '
   name: Hemlane API
   slug: hemlane-api
-artifact_total: 5
+artifact_total: 6
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hemlane/refs/heads/main/security/hemlane-domain-security.yml
@@ -88,16 +88,24 @@ common:
 created: '2026-06-13'
 description: Hemlane is a technology platform for managing long-term rental properties, combining AI tools with human support to assist with tenant placement, rent collection, lease management, maintenance coordination, and eviction support. The platform operates across all 50 US states and has processed over $1.8B in payments.
 finops:
-- name: Hemlane Finops
+- has_sources: false
+  method: generated
+  name: Hemlane Finops
+  primary_unit: ''
   service_category: ''
   slug: hemlane-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hemlane.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.hemlane.com over HTTP.
+  name: Hemlane MCP Server
+  slug: hemlane
 modified: '2026-06-13'
 name: Hemlane
 nav: Providers
 network: true
-overview: 'Hemlane publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real-Estate, Rentals, Tenant Screening, and Lease Management.
+overview: 'Hemlane is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Property Management, Real Estate, Rentals, Tenant Screening, and Lease Management.
 
 
   Hemlane''s developer surface includes documentation, engineering blog, pricing, and 7 more developer resources.'
@@ -112,28 +120,34 @@ rate_limits:
   slug: hemlane-rate-limits
 score:
   band: emerging
-  composite: 19.2
+  composite: 11.5
   coverage:
     artifact_dirs: 9
-    catalog_earned: 52.0
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 63.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 0.0
-  previous_composite: 19.2
+  previous_composite: 17.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -147,7 +161,7 @@ security:
 slug: hemlane
 tags:
 - Property Management
-- Real-Estate
+- Real Estate
 - Rentals
 - Tenant Screening
 - Lease Management

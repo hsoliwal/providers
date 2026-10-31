@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.0
-  scored_at: '2026-09-20'
+  score: 22.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 19
   human_in_the_loop: 2
@@ -145,6 +145,11 @@ collections:
   name: RevenueCat REST API
   slug: open-revenuecat
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/revenuecat/refs/heads/main/capabilities/revenuecat-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/revenuecat-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/revenuecat/refs/heads/main/agentic-access/revenuecat-agentic-access.yml
   title: ''
@@ -198,19 +203,23 @@ common:
 created: '2026-07-01'
 description: RevenueCat provides in-app subscription and purchase infrastructure for mobile and web apps. It abstracts App Store, Google Play, Amazon, Stripe, Roku, and Paddle billing behind cross-platform SDKs and a REST API, handling receipt validation, entitlements, subscriber state, offerings and paywalls, experiments, and subscription analytics. A v1 REST API manages live subscribers and purchases; a v2 REST API manages the project catalog (projects, apps, products, entitlements, offerings, packages); webhooks stream subscription lifecycle events.
 finops:
-- name: Revenuecat Finops
+- has_sources: true
+  method: generated
+  name: Revenuecat Finops
+  primary_unit: ''
   service_category: Developer Tools
   slug: revenuecat-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/revenuecat.png
 layout: provider
 modified: '2026-07-01'
 name: RevenueCat
 nav: Providers
 network: true
-overview: 'RevenueCat publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Customers API, Entitlements (v1) API, and 8 more. Tagged areas include Subscription, In-App Purchases, Billing, Mobile, and Entitlements.
+overview: 'RevenueCat publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Apps API, Customers API, Entitlements (v1) API, and 9 more. Tagged areas include Subscription, In-App Purchases, Billing, Mobile, and Entitlements.
 
 
-  RevenueCat''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  RevenueCat''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Revenuecat Plans Pricing
   plan_count: 4
@@ -221,24 +230,24 @@ rate_limits:
   name: Revenuecat Rate Limits
   slug: revenuecat-rate-limits
 score:
-  band: thin
-  composite: 37.4
+  band: emerging
+  composite: 26.0
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 51.0
+    contract_quality: 45.9
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 37.4
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     contracts:
@@ -246,9 +255,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

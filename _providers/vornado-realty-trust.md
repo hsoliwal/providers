@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -86,7 +86,7 @@ modified: '2026-05-03'
 name: Vornado Realty Trust
 nav: Providers
 network: true
-overview: 'Vornado Realty Trust is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Commercial Real Estate, Fortune 500, New York City, REIT, and Real-Estate.
+overview: 'Vornado Realty Trust is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Commercial Real Estate, Fortune 500, New York City, REIT, and Real Estate.
 
 
   The Vornado Realty Trust catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
@@ -108,9 +108,10 @@ press:
   url: https://seekingalpha.com/article/4899203-vornado-realty-valued-on-depressed-earnings-not-stabilized-noi
 random_paper: 18
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Vornado Realty Trust API Rules
+  name: Vornado Realty Trust — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -120,9 +121,9 @@ rules:
   slug: vornado-realty-trust-jsonschema-spectral-rules
 score:
   band: minimal
-  composite: 7.9
+  composite: 7.0
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 35.3
     catalog_earned_first_party: 0.0
     catalog_gap: 79.8
@@ -134,11 +135,17 @@ score:
     contract_governance: 9.8
     contract_quality: 6.7
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 7.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 7.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -156,6 +163,6 @@ tags:
 - Fortune 500
 - New York City
 - REIT
-- Real-Estate
+- Real Estate
 website: https://www.vno.com/
 ---

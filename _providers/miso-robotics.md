@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://info.misorobotics.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/miso-robotics/refs/heads/main/security/miso-robotics-domain-security.yml
   title: ''
@@ -116,18 +120,18 @@ description: Miso Robotics is a Pasadena, California kitchen-automation company 
   cloud-infrastructure forks used internally rather than a client-facing API surface.
 image: https://www.misorobotics.com/hs-fs/hubfs/Miso_Logo_RAI_4C.png
 layout: provider
-modified: '2026-08-01'
+modified: '2026-10-06'
 name: Miso Robotics
 nav: Providers
 network: true
 overview: 'Miso Robotics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Robotics, Kitchen Automation, Restaurant, and Food Service.
 
 
-  Miso Robotics'' developer surface includes engineering blog, support, and 16 more developer resources.'
+  Miso Robotics'' developer surface includes engineering blog, support, and 17 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 11.7
+  composite: 11.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -141,11 +145,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
-  previous_composite: 11.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 11.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -165,7 +175,7 @@ tags:
 - Restaurant
 - Food Service
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Workforce Management
 - Point-of-Sale
 website: https://www.misorobotics.com/

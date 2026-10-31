@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-09-20'
+  score: 24.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 147
   human_in_the_loop: 0
@@ -44,70 +44,70 @@ agentic_access:
 api_count: 1
 apis:
 - description: The certificates API from Incus — 4 operation(s) for certificates.
-  name: Incus certificates API
+  name: Incus Certificates API
   slug: incus-certificates-api
 - description: The cluster API from Incus — 7 operation(s) for cluster.
-  name: Incus cluster API
+  name: Incus Cluster API
   slug: incus-cluster-api
 - description: The cluster-groups API from Incus — 3 operation(s) for cluster-groups.
-  name: Incus cluster-groups API
+  name: Incus Cluster Groups API
   slug: incus-cluster-groups-api
 - description: The images API from Incus — 14 operation(s) for images.
-  name: Incus images API
+  name: Incus Images API
   slug: incus-images-api
 - description: The instances API from Incus — 28 operation(s) for instances.
-  name: Incus instances API
+  name: Incus Instances API
   slug: incus-instances-api
 - description: The Metadata API from Incus — 1 operation(s) for metadata.
   name: Incus Metadata API
   slug: incus-metadata-api
 - description: The metrics API from Incus — 1 operation(s) for metrics.
-  name: Incus metrics API
+  name: Incus Metrics API
   slug: incus-metrics-api
 - description: The network-acls API from Incus — 4 operation(s) for network-acls.
-  name: Incus network-acls API
+  name: Incus Network Acls API
   slug: incus-network-acls-api
 - description: The network-address-sets API from Incus — 3 operation(s) for network-address-sets.
-  name: Incus network-address-sets API
+  name: Incus Network Address Sets API
   slug: incus-network-address-sets-api
 - description: The network-allocations API from Incus — 1 operation(s) for network-allocations.
-  name: Incus network-allocations API
+  name: Incus Network Allocations API
   slug: incus-network-allocations-api
 - description: The network-forwards API from Incus — 3 operation(s) for network-forwards.
-  name: Incus network-forwards API
+  name: Incus Network Forwards API
   slug: incus-network-forwards-api
 - description: The network-integrations API from Incus — 3 operation(s) for network-integrations.
-  name: Incus network-integrations API
+  name: Incus Network Integrations API
   slug: incus-network-integrations-api
 - description: The network-load-balancers API from Incus — 4 operation(s) for network-load-balancers.
-  name: Incus network-load-balancers API
+  name: Incus Network Load Balancers API
   slug: incus-network-load-balancers-api
 - description: The network-peers API from Incus — 3 operation(s) for network-peers.
-  name: Incus network-peers API
+  name: Incus Network Peers API
   slug: incus-network-peers-api
 - description: The network-zones API from Incus — 6 operation(s) for network-zones.
-  name: Incus network-zones API
+  name: Incus Network Zones API
   slug: incus-network-zones-api
 - description: The networks API from Incus — 5 operation(s) for networks.
-  name: Incus networks API
+  name: Incus Networks API
   slug: incus-networks-api
 - description: The operations API from Incus — 7 operation(s) for operations.
-  name: Incus operations API
+  name: Incus Operations API
   slug: incus-operations-api
 - description: The profiles API from Incus — 3 operation(s) for profiles.
-  name: Incus profiles API
+  name: Incus Profiles API
   slug: incus-profiles-api
 - description: The projects API from Incus — 5 operation(s) for projects.
-  name: Incus projects API
+  name: Incus Projects API
   slug: incus-projects-api
 - description: The server API from Incus — 5 operation(s) for server.
-  name: Incus server API
+  name: Incus Server API
   slug: incus-server-api
 - description: The storage API from Incus — 39 operation(s) for storage.
-  name: Incus storage API
+  name: Incus Storage API
   slug: incus-storage-api
 - description: The warnings API from Incus — 3 operation(s) for warnings.
-  name: Incus warnings API
+  name: Incus Warnings API
   slug: incus-warnings-api
 artifact_total: 52
 collections:
@@ -184,6 +184,26 @@ collections:
   name: Incus external REST API
   slug: open-incus
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/incus/refs/heads/main/plans/incus-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/incus-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/incus/refs/heads/main/rate-limits/incus-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/incus-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/incus/refs/heads/main/finops/incus-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/incus-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/incus/refs/heads/main/capabilities/incus-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/incus-capability-edges.yml
 - group: operate
   title: ''
   type: Releases
@@ -245,22 +265,26 @@ common:
 created: '2026-03-26'
 description: Incus is a modern open source system container and virtual machine manager maintained by LinuxContainers.org as a community-led fork of Canonical's LXD. It provides a unified experience for running and managing system containers and VMs across single hosts and clusters, with image-based deployment, live migration, snapshots, projects, and a comprehensive RESTful API for automation and tooling integration.
 finops:
-- name: Incus Finops
+- has_sources: false
+  method: generated
+  name: Incus Finops
+  primary_unit: ''
   service_category: API
   slug: incus-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/incus.png
 layout: provider
 modified: '2026-05-19'
 name: Incus
 nav: Providers
 network: true
-overview: 'Incus publishes 22 APIs on the [APIs.io](https://apis.io/) network, including certificates API, cluster API, cluster-groups API, and 19 more. Tagged areas include Containers, Virtual Machines, Virtualization, Linux, and Open-Source.
+overview: 'Incus publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Certificates API, Cluster API, Cluster Groups API, and 19 more. Tagged areas include Containers, Virtual Machines, Virtualization, Linux, and Open Source.
 
 
   The Incus catalog on APIs.io includes 1 Spectral governance ruleset.
 
 
-  Incus'' developer surface includes documentation, getting-started guide, engineering blog, and 11 more developer resources.'
+  Incus'' developer surface includes documentation, getting-started guide, engineering blog, and 15 more developer resources.'
 plans:
 - name: Incus Plans Pricing
   plan_count: 3
@@ -271,7 +295,8 @@ rate_limits:
   name: Incus Rate Limits
   slug: incus-rate-limits
 rules:
-- effective_rule_count: 0
+- authorship: unmarked
+  effective_rule_count: 0
   extends: []
   name: Incus API Rules
   rule_count: 0
@@ -283,26 +308,26 @@ rules:
   slug: incus-rules
 score:
   band: developing
-  composite: 43.6
+  composite: 40.3
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 41.0
+    artifact_dirs: 12
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 53.2
+    contract_quality: 48.2
     developer_ergonomics: 40.5
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 39.5
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 43.6
+  previous_composite: 41.7
   provenance:
     agentic_access: derived
     contracts:
@@ -310,8 +335,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 22
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -328,6 +359,6 @@ tags:
 - Virtual Machines
 - Virtualization
 - Linux
-- Open-Source
+- Open Source
 website: https://linuxcontainers.org/incus/
 ---

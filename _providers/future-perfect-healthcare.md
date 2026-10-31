@@ -23,10 +23,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://www.applytosupply.digitalmarketplace.service.gov.uk/g-cloud/services/557090777176539
 - group: company
   title: ''
   type: Website
@@ -112,7 +116,7 @@ network: true
 overview: 'Future Perfect (Healthcare) is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health IT, Electronic Health Records, and openEHR.
 
 
-  Future Perfect (Healthcare)''s developer surface includes engineering blog, authentication, and 11 more developer resources.'
+  Future Perfect (Healthcare)''s developer surface includes pricing, engineering blog, authentication, and 11 more developer resources.'
 plans:
 - name: Future Perfect Healthcare Plans Pricing
   plan_count: 3
@@ -124,21 +128,21 @@ rate_limits:
   slug: future-perfect-healthcare-rate-limits
 score:
   band: emerging
-  composite: 22.9
+  composite: 23.7
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 15
     catalog_earned: 39.0
     catalog_earned_first_party: 12.0
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.1
   facets:
-    access_clarity: 50.0
+    access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -148,7 +152,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 22.9
+  previous_composite: 21.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -157,14 +161,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/future-perfect-healthcare/refs/heads/main/screenshots/future-perfect-healthcare-2026-10-11T104735.png
 security:
 - kind: authentication
   name: Future Perfect Healthcare Authentication

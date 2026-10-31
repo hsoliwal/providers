@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
@@ -48,13 +48,13 @@ modified: '2026-07-20'
 name: Madrone
 nav: Providers
 network: true
-overview: Madrone is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data-Center, Cooling, Infrastructure, and Energy Efficiency.
+overview: Madrone is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Center, Cooling, Infrastructure, and Energy Efficiency.
 random_paper: 16
 score:
   band: minimal
-  composite: 2.1
+  composite: 2.8
   coverage:
-    artifact_dirs: 1
+    artifact_dirs: 2
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -66,7 +66,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -74,24 +74,25 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 2.1
+  previous_composite: 2.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/madrone/refs/heads/main/screenshots/madrone-2026-10-11T190448.png
 slug: madrone
 tags:
 - Company
-- Data-Center
+- Data Center
 - Cooling
 - Infrastructure
 - Energy Efficiency

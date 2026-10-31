@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 21.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 21
   human_in_the_loop: 0
@@ -274,14 +274,14 @@ modified: '2026-07-20'
 name: Nayya
 nav: Providers
 network: true
-overview: 'Nayya publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Benefits API, Carriers API, Connections API, and 8 more. Tagged areas include Company, Employee Benefits, Insurance, Insurtech, and Health.
+overview: 'Nayya publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Benefits API, Carriers API, Connections API, and 8 more. Tagged areas include Company, Employee Benefits, Insurance, Insurtech, and Health.
 
 
   Nayya''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 22 more developer resources.'
 random_paper: 18
 score:
-  band: strong
-  composite: 54.7
+  band: developing
+  composite: 51.0
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -293,11 +293,11 @@ score:
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 53.6
+    contract_quality: 48.6
     developer_ergonomics: 58.9
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 26.3
-  previous_composite: 54.7
+  previous_composite: 51.0
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -313,9 +313,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

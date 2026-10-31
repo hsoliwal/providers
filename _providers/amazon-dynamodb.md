@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: verified
     mcp_server: documented
@@ -34,41 +34,96 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 38.5
-  scored_at: '2026-09-20'
+  score: 36.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 15
+- acting_count: 12
   human_in_the_loop: 0
   name: Amazon Dynamodb Agentic Access
   operation_count: 15
   slug: amazon-dynamodb-agentic-access
-  summary_line: 15 operations · 15 acting
+  summary_line: 15 operations · 12 acting
 api_count: 1
 apis:
 - baseURL: https://dynamodb.{region}.amazonaws.com
   baseurl_source: declared
   description: Operations for batch reading and writing multiple items
   name: Amazon DynamoDB Batch API
+  phrasing_intents:
+  - id: batchGetItem
+    intent: Fetch many items by key across tables
+    question: How do I read up to 100 items by primary key in a single request?
+  - id: batchWriteItem
+    intent: Put or delete many items in one batch
+    question: How do I load a bunch of items into a table in one call?
+  phrasing_ops: 2
   slug: amazon-dynamodb-batch-api
 - baseURL: https://dynamodb.{region}.amazonaws.com
   baseurl_source: declared
   description: Operations for putting, getting, updating, and deleting individual items
   name: Amazon DynamoDB Items API
+  phrasing_intents:
+  - id: putItem
+    intent: Write or replace an item in a table
+    question: How do I insert a new record into a DynamoDB table?
+  - id: getItem
+    intent: Fetch one item by its primary key
+    question: How do I look up a single record in a table by its primary key?
+  - id: updateItem
+    intent: Edit attributes on an existing item
+    question: How do I change just a few attributes on an existing item without rewriting the whole thing?
+  - id: deleteItem
+    intent: Delete one item by its primary key
+    question: How do I remove a single record from a DynamoDB table?
+  phrasing_ops: 4
   slug: amazon-dynamodb-items-api
 - baseURL: https://dynamodb.{region}.amazonaws.com
   baseurl_source: declared
   description: Operations for querying and scanning table data
   name: Amazon DynamoDB Queries API
+  phrasing_intents:
+  - id: query
+    intent: Find items by partition key value
+    question: How do I get all items that share one partition key value?
+  - id: scan
+    intent: Read every item in a table or index
+    question: How do I read through every item in a table without knowing the keys?
+  phrasing_ops: 2
   slug: amazon-dynamodb-queries-api
 - baseURL: https://dynamodb.{region}.amazonaws.com
   baseurl_source: declared
   description: Operations for creating, describing, updating, listing, and deleting DynamoDB tables
   name: Amazon DynamoDB Tables API
+  phrasing_intents:
+  - id: createTable
+    intent: Create a new DynamoDB table
+    question: How do I create a new table in DynamoDB with a partition key and sort key?
+  - id: describeTable
+    intent: Get a table's status, key schema and indexes
+    question: Is my DynamoDB table still being created, or is it active yet?
+  - id: listTables
+    intent: List the tables in my account
+    question: What tables do I have in this account and Region?
+  - id: updateTable
+    intent: Change a table's throughput, billing or indexes
+    question: How do I raise the provisioned read and write capacity on an existing table?
+  - id: deleteTable
+    intent: Delete a table and all its items
+    question: How do I permanently drop a DynamoDB table along with its data?
+  phrasing_ops: 5
   slug: amazon-dynamodb-tables-api
 - baseURL: https://dynamodb.{region}.amazonaws.com
   baseurl_source: declared
   description: Operations for transactional reads and writes across multiple items
   name: Amazon DynamoDB Transactions API
+  phrasing_intents:
+  - id: transactGetItems
+    intent: Read several items atomically
+    question: How do I read several items as one consistent, all-or-nothing snapshot?
+  - id: transactWriteItems
+    intent: Write several items atomically
+    question: How do I make several writes succeed or fail together across tables?
+  phrasing_ops: 2
   slug: amazon-dynamodb-transactions-api
 - description: API for capturing and processing change data from DynamoDB tables in near real-time, providing time-ordered sequences of item-level modifications.
   name: Amazon DynamoDB Streams API
@@ -128,6 +183,11 @@ collections:
   name: Amazon DynamoDB API
   slug: open-amazon-dynamodb
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-dynamodb/refs/heads/main/finops/amazon-dynamodb-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/amazon-dynamodb-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/amazon-dynamodb/refs/heads/main/smithy/dynamodb-2012-08-10.json
   title: ''
@@ -523,9 +583,13 @@ features:
 - description: Time to Live automatically deletes expired items to reduce storage costs.
   name: TTL
 finops:
-- name: Amazon Dynamodb Finops
+- has_sources: false
+  method: generated
+  name: Amazon Dynamodb Finops
+  primary_unit: ''
   service_category: API
   slug: amazon-dynamodb-finops
+  template: true
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 json_schemas:
 - name: Amazon DynamoDB Table
@@ -746,20 +810,20 @@ jsonld:
   slug: amazon-dynamodb-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at aws-mcp.us-east-1.api.aws requiring an API key.
   name: Amazon DynamoDB MCP Server
-  slug: amazon-dynamodb-mcp-server
+  slug: amazon-dynamodb-mcp-yml
 modified: '2026-09-18'
 name: Amazon DynamoDB
 nav: Providers
 network: true
-overview: 'Amazon DynamoDB publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Batch API, Items API, Queries API, and 2 more. Tagged areas include Database, Document Store, Key-Value, NoSQL, and Serverless.
+overview: 'Amazon DynamoDB publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Batch API, Items API, Queries API, and 3 more. Tagged areas include Database, Document Store, Key-Value Store, NoSQL, and Serverless.
 
 
   The Amazon DynamoDB catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon DynamoDB''s developer surface includes CLI, sandbox, changelog, pricing, authentication, developer portal, documentation, and 51 more developer resources.'
+  Amazon DynamoDB''s developer surface includes CLI, sandbox, changelog, pricing, authentication, developer portal, documentation, and 52 more developer resources.'
 plans:
 - name: Amazon Dynamodb Plans Pricing
   plan_count: 5
@@ -770,9 +834,10 @@ rate_limits:
   name: Amazon Dynamodb Rate Limits
   slug: amazon-dynamodb-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Amazon DynamoDB API Rules
+  name: Amazon DynamoDB — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -780,7 +845,8 @@ rules:
     info: 2
     warn: 4
   slug: amazon-dynamodb-jsonschema-spectral-rules
-- effective_rule_count: 75
+- authorship: generated
+  effective_rule_count: 75
   extends:
   - spectral:oas
   name: Amazon DynamoDB API Rules
@@ -793,23 +859,23 @@ rules:
   slug: amazon-dynamodb-spectral-rules
 score:
   band: exemplar
-  composite: 79.4
+  composite: 78.8
   coverage:
-    artifact_dirs: 34
-    catalog_earned: 90.5
+    artifact_dirs: 35
+    catalog_earned: 86.4
     catalog_earned_first_party: 24.0
-    catalog_gap: 24.5
+    catalog_gap: 28.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 93.4
-    contract_governance: 47.0
-    contract_quality: 76.2
+    access_clarity: 85.5
+    contract_governance: 45.5
+    contract_quality: 69.6
     developer_ergonomics: 81.5
-    discoverability: 83.3
+    discoverability: 81.7
     operational_transparency: 84.2
-  previous_composite: 79.4
+  previous_composite: 80.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -820,8 +886,14 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -848,7 +920,7 @@ slug: amazon-dynamodb
 tags:
 - Database
 - Document Store
-- Key-Value
+- Key-Value Store
 - NoSQL
 - Serverless
 use_cases:

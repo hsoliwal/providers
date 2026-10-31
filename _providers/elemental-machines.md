@@ -14,7 +14,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -25,10 +24,10 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -36,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.3
-  scored_at: '2026-09-20'
+  score: 33.6
+  scored_at: '2026-10-17'
 api_count: 14
 apis:
 - description: A remote Model Context Protocol server served from the elementalmachines.com WordPress host via the WordPress MCP Adapter, advertised by /.well-known/oauth-protected-resource and /.well-known/oauth-au
@@ -103,12 +102,22 @@ apis:
   description: The Users API from Elemental Machines — 2 operation(s) for users.
   name: Elemental Machines Users API
   slug: elemental-machines-users-api
-artifact_total: 21
+artifact_total: 20
 collections:
 - collection_type: open
   name: Elemental Machines API
   slug: open-elemental-machines-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/plans/elemental-machines-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/elemental-machines-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/rate-limits/elemental-machines-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/elemental-machines-rate-limits.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/elemental-machines/refs/heads/main/capabilities/elemental-machines-capability-edges.yml
   title: ''
@@ -237,20 +246,17 @@ description: Elemental Machines is a Cambridge, Massachusetts LabOps connectivit
 image: https://elementalmachines.com/wp-content/uploads/2024/11/connectivity-alerts-video.jpeg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Elemental Machines serves a remote Model Context Protocol server from its WordPress marketing host via the WordPress MCP Adapter. It was discovered from /.well-known/oauth-protected-resource, not from
   name: Elemental Machines MCP Server
-  slug: elemental-machines-mcp-server
-- description: ''
-  name: Elemental Machines MCP Server
-  slug: elemental-machines-mcp-server-2
+  slug: elemental-machines-mcp-yml
 modified: '2026-09-16'
 name: Elemental Machines
 nav: Providers
 network: true
-overview: 'Elemental Machines publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Alert Logs API, Alert Rules API, Authentication API, and 9 more. Tagged areas include lab-operations, laboratory-monitoring, IoT, Sensors, and Life Sciences.
+overview: 'Elemental Machines publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alert Logs API, Alert Rules API, Authentication API, and 10 more. Tagged areas include lab-operations, laboratory-monitoring, IoT, Sensors, and Life Sciences.
 
 
-  Elemental Machines'' developer surface includes documentation, API reference, support, engineering blog, signup flow, changelog, authentication, and 20 more developer resources.'
+  Elemental Machines'' developer surface includes documentation, API reference, support, engineering blog, signup flow, changelog, authentication, and 22 more developer resources.'
 plans:
 - name: Elemental Machines Plans Pricing
   plan_count: 0
@@ -267,7 +273,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 49.5
+  composite: 45.6
   coverage:
     artifact_dirs: 23
     catalog_earned: 40.0
@@ -279,11 +285,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 18.2
-    contract_quality: 45.7
+    contract_quality: 41.1
     developer_ergonomics: 47.0
-    discoverability: 74.1
+    discoverability: 73.3
     operational_transparency: 34.2
-  previous_composite: 49.5
+  previous_composite: 45.6
   provenance:
     conformance: first-party
     contracts:
@@ -291,16 +297,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 65.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 40.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -97,6 +97,10 @@ created: '2026-07-17'
 description: Anjuna Security provides a confidential-computing platform that lets organizations run existing applications inside hardware-based secure enclaves (Trusted Execution Environments) across AWS Nitro, AMD SEV, and Intel SGX without code changes, keeping data encrypted at rest, in transit, and in use. Its Seaglass platform, Policy Manager, Overwatch agentic-AI governance, and Northstar AI data clean room deliver hardware-rooted cryptographic attestation and policy-based access control for sensitive workloads and privacy-preserving AI. Anjuna is delivered as command-line runtime tooling and open-source attestation libraries rather than a public HTTP API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anjuna.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.anjuna.io over HTTP; 2 tools listed.
+  name: Anjuna MCP Server
+  slug: anjuna
 modified: '2026-07-17'
 name: Anjuna
 nav: Providers
@@ -108,27 +112,33 @@ overview: 'Anjuna is profiled on the [APIs.io](https://apis.io/) network. Tagged
 random_paper: 21
 score:
   band: emerging
-  composite: 17.2
+  composite: 15.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 18.4
-  previous_composite: 17.2
+  previous_composite: 15.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

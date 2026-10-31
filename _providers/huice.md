@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Wangdiantong (旺店通) ERP Open Platform HTTP API (openapi2). Endpoints are named PHP methods (e.g. trade_push.php, trade_query.php, goods_push.php, stock_query.php) grouped into basics (shops/warehou
@@ -41,6 +41,10 @@ apis:
   slug: wangdiantong-open-platform-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.wangdian.cn/news/
 - group: company
   title: ''
   type: Website
@@ -105,32 +109,32 @@ created: '2026-07-17'
 description: Huice (慧策) is a Chinese enterprise software company whose flagship product, Wangdiantong (旺店通) ERP, is a tailor-made e-commerce management system for merchants operating across multiple online channels. It provides order management, warehouse and inventory management (WMS), goods and product-archive management, procurement, after-sales/returns processing, and financial operations (慧经营). Huice runs a public Open Platform (open.wangdian.cn) exposing an HTTP API (openapi2) for third-party integrators to synchronize shops, goods, orders, stock, purchasing, and logistics. The API uses a sid + appkey + timestamp + MD5 signature (sign) authentication scheme, page_no/page_size pagination, and a code/message response envelope, with separate sandbox and production hosts.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/huice.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Huice
 nav: Providers
 network: true
-overview: 'Huice publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, E-Commerce, ERP, and Order Management.
+overview: 'Huice is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, E-Commerce, ERP, and Order Management.
 
 
-  Huice''s developer surface includes documentation, API reference, support, authentication, sandbox, and 8 more developer resources.'
+  Huice''s developer surface includes engineering blog, documentation, API reference, support, authentication, sandbox, and 8 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 17.6
+  composite: 17.3
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 50.0
-    discoverability: 75.9
+    developer_ergonomics: 52.4
+    discoverability: 73.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -139,9 +143,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 17.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -164,7 +174,7 @@ tags:
 - E-Commerce
 - ERP
 - Order Management
-- Inventory Management
+- Inventory
 - Warehouse Management
 - Retail
 - Software-as-a-Service

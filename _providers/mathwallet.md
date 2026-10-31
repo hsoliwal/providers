@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -73,14 +73,14 @@ modified: '2026-07-20'
 name: MathWallet
 nav: Providers
 network: true
-overview: 'MathWallet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, Cryptocurrency, Wallets, and Blockchain.
+overview: 'MathWallet is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, Cryptocurrency, Wallets, and Blockchain.
 
 
   MathWallet''s developer surface includes documentation, API reference, getting-started guide, engineering blog, and 3 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 8.1
+  composite: 9.2
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -94,17 +94,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 8.1
+  previous_composite: 9.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -119,11 +119,10 @@ security:
 slug: mathwallet
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Cryptocurrency
 - Wallets
 - Blockchain
-- Web3
 - DApps
 - Multi-Chain
 website: https://mathwallet.org

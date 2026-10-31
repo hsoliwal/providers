@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Asynchronous short-form video generation REST API. Submit a template id and a prompt to POST /v1/videos, receive a job id, and collect the finished render either by polling GET /v1/videos/{id} or by s
@@ -50,6 +50,10 @@ asyncapis:
   name: Bluma Webhooks
   slug: bluma-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.getbluma.com/blog/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bluma/refs/heads/main/security/bluma-domain-security.yml
   title: ''
@@ -195,20 +199,20 @@ description: 'Bluma is a San Francisco-based AI company (Y Combinator Fall 2025)
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bluma.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.getbluma.com.
   name: Bluma MCP Server
-  slug: bluma-mcp-server
-modified: '2026-08-12'
+  slug: bluma-mcp-yml
+modified: '2026-10-06'
 name: Bluma
 nav: Providers
 network: true
-overview: 'Bluma publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Advertising.
+overview: 'Bluma is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Video, Video Generation, and Advertising.
 
 
   The Bluma catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Bluma''s developer surface includes signup flow, documentation, API reference, getting-started guide, authentication, pricing, changelog, and 23 more developer resources.'
+  Bluma''s developer surface includes engineering blog, signup flow, documentation, API reference, getting-started guide, authentication, pricing, and 24 more developer resources.'
 plans:
 - name: Bluma Plans Pricing
   plan_count: 6
@@ -225,34 +229,42 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: strong
-  composite: 56.8
+  composite: 58.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
-    contract_quality: 41.6
-    developer_ergonomics: 70.8
-    discoverability: 75.9
+    contract_quality: 39.0
+    developer_ergonomics: 73.2
+    discoverability: 75.0
     operational_transparency: 55.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 56.8
+  previous_composite: 58.5
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 31.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -278,7 +290,7 @@ tags:
 - Marketing
 - Content Creation
 - Short-Form Video
-- Social-Media
+- Social Media
 - Generative AI
 - Creative Tools
 - Text-to-Speech

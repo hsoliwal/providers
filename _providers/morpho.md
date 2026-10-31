@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.1
-  scored_at: '2026-09-20'
+  score: 22.2
+  scored_at: '2026-10-17'
 api_count: 7
 apis:
 - description: GraphQL queries for Morpho Blue lending markets — retrieve market parameters (loan asset, collateral asset, LLTV, oracle, IRM), real-time state metrics (supply, borrow, collateral assets and USD value
@@ -57,8 +57,23 @@ apis:
 - description: GraphQL time-series queries for historical market and vault state — query historicalState on markets or vaults with configurable startTimestamp, endTimestamp, and interval (YEAR, QUARTER, MONTH, WEEK,
   name: Morpho Historical Data API
   slug: historical-api
-artifact_total: 12
+artifact_total: 13
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/morpho/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/morpho/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/morpho/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -115,23 +130,31 @@ common:
 created: '2026-06-14'
 description: Morpho is an open DeFi credit network enabling permissionless lending and borrowing of digital assets. The Morpho API provides a GraphQL-based interface to access comprehensive onchain and offchain data from the Morpho ecosystem in real time, covering Morpho Markets, Morpho Vaults, user positions, collateral, liquidations, rewards, and historical analytics across Ethereum, Base, Arbitrum, and other supported chains. The API is publicly accessible without authentication and includes a companion TypeScript SDK suite for application integration.
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 graphqls:
 - description: The Morpho GraphQL API is the primary offchain data interface for the Morpho DeFi credit protocol. It exposes comprehensive real-time and historical data covering Morpho Blue lending markets, MetaMorp
   name: Morpho GraphQL API
   slug: morpho-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/morpho.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.morpho.org over HTTP; 18 tools listed.
+  name: Morpho MCP Server
+  slug: morpho
 modified: '2026-06-14'
 name: Morpho
 nav: Providers
 network: true
-overview: 'Morpho publishes 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include DeFi, Lending, Borrowing, Collateral, and Liquidations.
+overview: 'Morpho is listed with 7 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include DeFi, Lending, Borrowing, Collateral, and Liquidations.
 
 
-  Morpho''s developer surface includes documentation, GitHub presence, engineering blog, status page, support, and 8 more developer resources.'
+  Morpho''s developer surface includes documentation, GitHub presence, engineering blog, status page, support, and 11 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -142,29 +165,35 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 score:
-  band: thin
-  composite: 34.1
+  band: emerging
+  composite: 24.3
   coverage:
     artifact_dirs: 10
-    catalog_earned: 63.0
+    catalog_earned: 45.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 28.6
-    discoverability: 74.1
-    operational_transparency: 36.8
-  previous_composite: 34.1
+    discoverability: 73.3
+    operational_transparency: 13.2
+  previous_composite: 31.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

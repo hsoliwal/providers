@@ -25,17 +25,21 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.8
-  scored_at: '2026-09-20'
+  score: 14.4
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.soriaanalytics.com/blog/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/soria/refs/heads/main/security/soria-domain-security.yml
   title: ''
@@ -80,34 +84,38 @@ created: '2026-07-17'
 description: Soria is an AI-native financial terminal built for healthcare investors. The platform aggregates financial data from 125+ public and private sources into continuously updated financial models and delivers them through a terminal UI, an MCP server, an API, warehouse sync, and a research feed. Soria targets bulge-bracket banks, boutique research firms, and the largest hedge funds that specialize in the healthcare sector, turning fragmented healthcare and life sciences data into live, analyst-ready models. Backed by Y Combinator. Its public surface is a single-page marketing site; the API and MCP delivery channels are gated to customers and are not publicly documented.
 image: https://www.soriaanalytics.com/images/social-preview.png
 layout: provider
-modified: '2026-07-21'
+mcp_servers:
+- description: Remote MCP server at mcp.soriaanalytics.com over HTTP.
+  name: Soria MCP Server
+  slug: soria
+modified: '2026-10-06'
 name: Soria
 nav: Providers
 network: true
 overview: 'Soria is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Data, Healthcare, Investment Research, and Market Data.
 
 
-  Soria''s developer surface includes signup flow, support, and 7 more developer resources.'
+  Soria''s developer surface includes engineering blog, signup flow, support, and 7 more developer resources.'
 random_paper: 14
 score:
   band: minimal
-  composite: 5.0
+  composite: 6.1
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 4.8
-    discoverability: 57.4
+    developer_ergonomics: 7.1
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 5.0
+  previous_composite: 5.6
   provenance:
     mcp: first-party
   regulatory:
@@ -115,9 +123,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

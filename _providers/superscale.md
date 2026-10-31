@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: The product Model Context Protocol server. Lets an external agent runtime (Claude and similar MCP clients) drive Superscale's creative engine — generating statics, UGC video and scripts from context t
@@ -201,14 +201,14 @@ description: 'Superscale is an autonomous AI marketing agent for performance adv
 image: https://superscale.ai/images/og-images/default-og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Superscale operates two distinct Model Context Protocol surfaces on its own hosts. (1) The PRODUCT MCP server at https://mcp.superscale.ai/mcp is live and OAuth-gated — it answers HTTP 401 with an RFC
   name: Superscale MCP Server
-  slug: superscale-mcp-server
+  slug: superscale-mcp-yml
 modified: '2026-08-12'
 name: Superscale
 nav: Providers
 network: true
-overview: 'Superscale publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Marketing, Advertising, and Generative AI.
+overview: 'Superscale is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Marketing, Advertising, and Generative AI.
 
 
   Superscale''s developer surface includes documentation, getting-started guide, pricing, signup flow, engineering blog, support, changelog, and 26 more developer resources.'
@@ -227,30 +227,36 @@ scopes:
   slug: superscale-scopes
   summary_line: 7 scopes · authorizationCode
 score:
-  band: thin
-  composite: 38.3
+  band: developing
+  composite: 40.0
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 76.3
-  previous_composite: 38.3
+  previous_composite: 40.4
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -284,7 +290,6 @@ tags:
 - MCP
 - A2A
 - Agent Skills
-- Advertising Technology
 - Video Generation
 - Media Buying
 website: https://www.superscale.ai/

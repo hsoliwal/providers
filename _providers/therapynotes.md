@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: private
+  gated_source:
+  - tag:No Public API
   label: Paid (free trial)
   onboarding: unknown
   pricing: paid
@@ -33,23 +36,31 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: 'Modeled capability area for managing the client (patient) roster - demographics, contacts, insurance, and portal enrollment. TherapyNotes surfaces this only in its web application; there is no public '
   name: TherapyNotes Clients API (Modeled)
+  provenance: unpublished
   slug: therapynotes-clients-api
 - description: Modeled capability area for appointments, recurring schedules, and reminders. TherapyNotes offers native one-way calendar sync to Google Calendar, Microsoft Outlook, and iCloud from within the applica
   name: TherapyNotes Scheduling API (Modeled)
+  provenance: unpublished
   slug: therapynotes-scheduling-api
 - description: Modeled capability area for interactive clinical note templates - intake, progress notes, treatment plans, and psychiatry documentation. This is PHI-bearing behavioral-health data and is available onl
   name: TherapyNotes Clinical Documentation API (Modeled)
+  provenance: unpublished
   slug: therapynotes-clinical-documentation-api
 - description: Modeled capability area for medical billing - electronic insurance claims, ERA (electronic remittance advice), superbills, and integrated credit card processing. TherapyNotes runs claims through an in
   name: TherapyNotes Billing and Claims API (Modeled)
+  provenance: unpublished
   slug: therapynotes-billing-claims-api
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.therapynotes.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/therapynotes/refs/heads/main/security/therapynotes-vulnerability-disclosure.yml
   title: ''
@@ -81,46 +92,46 @@ created: '2026-07-10'
 description: TherapyNotes is a HIPAA-compliant practice management and electronic health record (EHR) platform built specifically for behavioral health - therapists, psychologists, psychiatrists, social workers, and group practices. It provides interactive note templates and clinical documentation, scheduling with appointment reminders, a client portal, telehealth, electronic insurance claims and ERA, credit card processing, and TherapyFuel AI tooling. As of this writing TherapyNotes does NOT expose a public or partner developer API, webhooks, or documented programmatic interface; access to client, appointment, clinical-note, and billing data is through the browser application and manual exports only. This entry documents TherapyNotes as an API-relevant provider and honestly models the capability areas a behavioral-health EHR API would cover; the API surfaces below are modeled, not published, and no endpoints are fabricated.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/therapynotes.png
 layout: provider
-modified: '2026-07-10'
+modified: '2026-10-06'
 name: TherapyNotes
 nav: Providers
 network: true
-overview: 'TherapyNotes publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Behavioral Health, EHR, Practice Management, Mental Health, and Electronic Health Records.
+overview: 'TherapyNotes publishes no API. The 4 entries listed on the [APIs.io](https://apis.io/) network are product areas recorded for completeness, each marked as not an API. Tagged areas include Behavioral Health, Electronic Health Records, Practice Management, Mental Health, and Medical Billing.
 
 
-  TherapyNotes'' developer surface includes documentation and 5 more developer resources.'
+  TherapyNotes'' developer surface includes documentation and 6 more developer resources.'
 plans:
 - name: Therapynotes Plans Pricing
   plan_count: 3
   slug: therapynotes-plans-pricing
 random_paper: 20
 score:
-  band: emerging
-  composite: 14.1
+  band: minimal
+  composite: 9.3
   coverage:
-    artifact_dirs: 4
-    catalog_earned: 47.0
+    artifact_dirs: 5
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 68.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.1
   facets:
-    access_clarity: 31.6
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 0.0
-  previous_composite: 14.1
+  previous_composite: 13.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 15.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -139,12 +150,10 @@ security:
 slug: therapynotes
 tags:
 - Behavioral Health
-- EHR
+- Electronic Health Records
 - Practice Management
 - Mental Health
-- Electronic Health Records
 - Medical Billing
 - HIPAA
-- No Public API
 website: https://www.therapynotes.com
 ---

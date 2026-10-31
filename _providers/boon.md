@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -92,6 +92,10 @@ created: '2026-07-17'
 description: Boon is an agile referral hiring platform that helps organizations source talent through employee, vendor, customer, and external referral networks. Using AI-driven semantic matching and proactive referral requests, Boon surfaces hidden candidates, manages reward and gamification programs, and syncs with existing HR/ATS tech stacks (Workday, Greenhouse, Lever, iCIMS, Ashby, JazzHR, Slack, Teams, and 50+ others). Founded in 2014 and backed by 500 Global and Redpoint Ventures, Boon markets faster time-to-hire and lower cost-per-hire through community-driven recruiting. This profile was seeded from VC portfolio data and enriched by the API Evangelist pipeline; Boon exposes a private integration API (api.goboon.co) but publishes no public OpenAPI or developer portal.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/boon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.goboon.co over HTTP.
+  name: Boon MCP Server
+  slug: boon
 modified: '2026-07-18'
 name: Boon
 nav: Providers
@@ -103,9 +107,9 @@ overview: 'Boon is profiled on the [APIs.io](https://apis.io/) network. Tagged a
 random_paper: 12
 score:
   band: emerging
-  composite: 19.3
+  composite: 20.2
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -117,14 +121,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 15.8
-  previous_composite: 19.3
+  previous_composite: 20.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 23.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

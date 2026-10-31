@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: platform
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.2
-  scored_at: '2026-09-20'
+  score: 32.0
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: 'Agent-facing commerce surface for the Hubble Contacts online store, implementing the Universal Commerce Protocol (UCP) over MCP/JSON-RPC. Hubble''s own /agents.md documents the flow: discover capabilit'
@@ -179,14 +179,14 @@ description: 'Hubble Contacts is a New York-based direct-to-consumer vision care
 image: https://hubblecontacts.com/static/Hubble-Contacts-Homepage-Inset-Image-mobile.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at account.hubblecontacts.com over HTTP; 13 tools listed.
   name: Hubble Contacts MCP Server
-  slug: hubble-contacts-mcp-server
+  slug: hubble-contacts-ucp
 modified: '2026-08-04'
 name: Hubble Contacts
 nav: Providers
 network: true
-overview: 'Hubble Contacts publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Retail, Health, and Vision Care.
+overview: 'Hubble Contacts is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, E-Commerce, Retail, Health, and Vision Care.
 
 
   Hubble Contacts'' developer surface includes signup flow, pricing, support, engineering blog, documentation, authentication, and 21 more developer resources.'
@@ -198,9 +198,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 38.2
+  composite: 29.3
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -210,28 +210,30 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 37.2
+    contract_quality: 9.3
     developer_ergonomics: 35.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 38.2
+  previous_composite: 29.3
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

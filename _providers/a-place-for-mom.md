@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The integration surface of You''ve Got Leads, the senior-living CRM that is a division of A Place for Mom, Inc. The public integrations page names an "application programming interface (API)" used for '
@@ -44,6 +44,16 @@ asyncapis:
   name: A Place For Mom Webhooks
   slug: a-place-for-mom-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/plans/a-place-for-mom-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/a-place-for-mom-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/a-place-for-mom/refs/heads/main/rate-limits/a-place-for-mom-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/a-place-for-mom-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -123,13 +133,13 @@ modified: '2026-08-10'
 name: A Place for Mom
 nav: Providers
 network: true
-overview: 'A Place for Mom publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Senior Living, Senior Care, Referral Marketplace, and Home Care.
+overview: 'A Place for Mom is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Senior Living, Senior Care, Referral Marketplace, and Home Care.
 
 
   The A Place for Mom catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  A Place for Mom''s developer surface includes support and 12 more developer resources.'
+  A Place for Mom''s developer surface includes support and 14 more developer resources.'
 plans:
 - name: A Place For Mom Plans Pricing
   plan_count: 0
@@ -141,9 +151,9 @@ rate_limits:
   slug: a-place-for-mom-rate-limits
 score:
   band: emerging
-  composite: 25.7
+  composite: 24.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -153,19 +163,19 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 4.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 25.7
+  previous_composite: 24.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

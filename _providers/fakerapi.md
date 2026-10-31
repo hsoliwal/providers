@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -304,15 +304,16 @@ modified: '2026-05-30'
 name: FakerAPI
 nav: Providers
 network: true
-overview: 'FakerAPI publishes 10 APIs on the [APIs.io](https://apis.io/) network, including Addresses API, Books API, Companies API, and 7 more. Tagged areas include Test Data, Fake Data, Mocking, Developer Tools, and Open-Source.
+overview: 'FakerAPI publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Addresses API, Books API, Companies API, and 7 more. Tagged areas include Test Data, Fake Data, Mocking, Developer Tools, and Open Source.
 
 
   The FakerAPI catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
 random_paper: 21
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: FakerAPI API Rules
+  name: FakerAPI — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -320,7 +321,8 @@ rules:
     info: 1
     warn: 4
   slug: fakerapi-jsonschema-spectral-rules
-- effective_rule_count: 76
+- authorship: unmarked
+  effective_rule_count: 76
   extends:
   - spectral:oas
   name: FakerAPI API Rules
@@ -332,24 +334,24 @@ rules:
     warn: 14
   slug: fakerapi-rules
 score:
-  band: thin
-  composite: 27.9
+  band: emerging
+  composite: 25.5
   coverage:
     artifact_dirs: 12
-    catalog_earned: 64.5
+    catalog_earned: 63.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 35.5
+    catalog_gap: 37.0
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
-    contract_governance: 28.8
-    contract_quality: 63.9
+    contract_governance: 27.3
+    contract_quality: 58.4
     developer_ergonomics: 4.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 27.9
+  previous_composite: 25.4
   provenance:
     agentic_access: derived
     contracts:
@@ -357,8 +359,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 10
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -376,7 +384,7 @@ tags:
 - Fake Data
 - Mocking
 - Developer Tools
-- Open-Source
+- Open Source
 - Public APIs
 use_cases:
 - description: Populate React, Vue, or Svelte mockups with realistic data without standing up a backend.

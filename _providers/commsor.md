@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/commsor/refs/heads/main/plans/commsor-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/commsor-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/commsor/refs/heads/main/rate-limits/commsor-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/commsor-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/commsor/refs/heads/main/security/commsor-domain-security.yml
   title: ''
@@ -157,7 +167,7 @@ network: true
 overview: 'Commsor is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales, Marketing, Go To Network, and Referrals.
 
 
-  Commsor''s developer surface includes signup flow, support, engineering blog, and 18 more developer resources.'
+  Commsor''s developer surface includes signup flow, support, engineering blog, and 20 more developer resources.'
 plans:
 - name: Commsor Plans Pricing
   plan_count: 0
@@ -169,9 +179,9 @@ rate_limits:
   slug: commsor-rate-limits
 score:
   band: emerging
-  composite: 22.1
+  composite: 24.0
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -183,13 +193,23 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 21.1
-  previous_composite: 22.1
+  previous_composite: 24.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

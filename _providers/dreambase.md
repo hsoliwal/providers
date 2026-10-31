@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dreambase/refs/heads/main/plans/dreambase-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/dreambase-plans-pricing.yml
 - group: docs
   title: ''
   type: Documentation
@@ -108,39 +113,53 @@ created: '2026-07-17'
 description: Dreambase is an AI-native analytics platform for Supabase. AI data agents connect to a Supabase project in one click via Supabase Auth, automatically detect the schema, and produce live dashboards, automated reports, and business insights without a separate data warehouse or a dedicated data team. An Analyst Agent builds and configures dashboards, ad-hoc reports enrich Supabase data with external sources, and Supabase Health Assessments scan projects for security, performance, and reliability issues with recommended fixes. Data sources beyond Postgres flow in through a plugin marketplace of MCP tools and REST APIs unified into cached datasets. Founded in 2024 and backed by a seed round led by Felicis with participation from Supabase executives.
 image: https://framerusercontent.com/images/fgMgSw80nMFDR7BquNzNXt5ALC8.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at app.dreambase.com over HTTP.
+  name: Dreambase MCP Server
+  slug: dreambase
 modified: '2026-07-18'
 name: Dreambase
 nav: Providers
 network: true
-overview: 'Dreambase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Business Intelligence, Supabase, and Postgres.
+overview: 'Dreambase is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Analytics, Business Intelligence, Supabase, and PostgreSQL.
 
 
-  Dreambase''s developer surface includes documentation, getting-started guide, engineering blog, changelog, pricing, signup flow, support, and 9 more developer resources.'
+  Dreambase''s developer surface includes documentation, getting-started guide, engineering blog, changelog, pricing, signup flow, support, and 10 more developer resources.'
+plans:
+- name: Dreambase Plans Pricing
+  plan_count: 4
+  slug: dreambase-plans-pricing
 random_paper: 8
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 31.5
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 9
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 26.3
-  previous_composite: 23.8
+  previous_composite: 25.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -161,7 +180,7 @@ tags:
 - Analytics
 - Business Intelligence
 - Supabase
-- Postgres
+- PostgreSQL
 - Dashboards
 - Data
 - Artificial Intelligence

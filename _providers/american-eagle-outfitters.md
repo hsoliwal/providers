@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.0
-  scored_at: '2026-09-20'
+  score: 23.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'The one callable, machine-reachable surface in the American Eagle Outfitters estate: a Universal Commerce Protocol shopping server, transported over MCP, on the Unsubscribed brand storefront. Anonymou'
@@ -40,6 +40,10 @@ apis:
   slug: unsubscribed-commerce
 artifact_total: 28
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.ae.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/american-eagle-outfitters/refs/heads/main/security/american-eagle-outfitters-domain-security.yml
   title: ''
@@ -177,15 +181,15 @@ layout: provider
 mcp_servers:
 - description: 'American Eagle Outfitters exposes one live, anonymously reachable MCP endpoint across its estate: the Universal Commerce Protocol (UCP) shopping server on www.unsubscribed.com, the AEO brand storefron'
   name: Unsubscribed Commerce (UCP/MCP)
-  slug: unsubscribed-commerce-ucpmcp
-modified: '2026-09-02'
+  slug: unsubscribed-commerce-ucp-mcp
+modified: '2026-10-06'
 name: American Eagle Outfitters
 nav: Providers
 network: true
-overview: 'American Eagle Outfitters publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Retail, E-Commerce, Fashion, Apparel, and Consumer Goods.
+overview: 'American Eagle Outfitters is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Retail, E-Commerce, Fashion, Apparel, and Consumer Goods.
 
 
-  American Eagle Outfitters'' developer surface includes authentication, engineering blog, support, and 18 more developer resources.'
+  American Eagle Outfitters'' developer surface includes authentication, engineering blog, support, and 19 more developer resources.'
 plans:
 - name: American Eagle Outfitters Plans Pricing
   plan_count: 0
@@ -213,39 +217,45 @@ rate_limits:
   slug: american-eagle-outfitters-rate-limits
 scopes:
 - name: American Eagle Outfitters Scopes
-  scope_count: 0
+  scope_count: 4
   slug: american-eagle-outfitters-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 4 scopes
 score:
   band: emerging
-  composite: 20.4
+  composite: 23.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.4
+  previous_composite: 23.1
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

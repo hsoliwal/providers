@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Iniciador's regulated Open Finance Brasil API surface for payment initiation and financial data sharing (accounts, credit cards, loans, financings, investments, exchanges, and more), authorized via FA
@@ -41,6 +41,10 @@ apis:
   slug: iniciador-open-finance-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://iniciador.com.br/feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/iniciador/refs/heads/main/security/iniciador-trust-center.yml
   title: ''
@@ -144,14 +148,14 @@ created: '2026-07-17'
 description: Iniciador is a Brazilian Open Finance infrastructure company that provides the regulated rails, APIs, and managed operations banks, payment institutions, fintechs, and platforms use to participate in Brazil's Open Finance ecosystem. It operates as a Payment Initiator (Iniciadora de Pagamentos), Data Receptor, Account Holder, and Data Transmitter, reportedly processing roughly one in three Pix initiations nationally and over a billion API data calls monthly. Its product surface spans Pague com Seu Banco, Pix Inteligente, Pix Biometria, Pix Automatico, Pix por Aproximacao, agentic payments, and data products such as real-time Dados Bancarios and Cadastro Expresso one-click onboarding. The platform is a FAPI / Open Finance Brasil OAuth2 + OpenID Connect provider using private_key_jwt client authentication, mTLS-bound access tokens, pushed authorization requests (PAR), and PS256 signed request objects.
 image: https://iniciador.com.br/pt/opengraph-image
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Iniciador
 nav: Providers
 network: true
-overview: 'Iniciador publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Open Finance, Open Banking, and Payments.
+overview: 'Iniciador is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Open Finance, Open Banking, and Payments.
 
 
-  Iniciador''s developer surface includes documentation, API reference, authentication, YouTube channel, and 18 more developer resources.'
+  Iniciador''s developer surface includes documentation, API reference, authentication, YouTube channel, and 19 more developer resources.'
 random_paper: 0
 scopes:
 - name: Iniciador Scopes
@@ -160,21 +164,21 @@ scopes:
   summary_line: 16 scopes · authorizationCode/clientCredentials
 score:
   band: thin
-  composite: 36.5
+  composite: 33.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 11
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 38.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -183,7 +187,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 36.5
+  previous_composite: 33.0
   provenance:
     conformance: first-party
   regulatory:
@@ -195,9 +199,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 84.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 52.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -232,6 +236,6 @@ tags:
 - Brazil
 - FAPI
 - Authentication
-- Financial-Services
+- Financial Services
 website: https://iniciador.com.br
 ---

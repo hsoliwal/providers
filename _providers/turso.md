@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.6
-  scored_at: '2026-09-20'
+  score: 47.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 2
@@ -71,7 +71,7 @@ apis:
   description: The User API from Turso — 1 operation(s) for user.
   name: Turso User API
   slug: turso-user-api
-artifact_total: 27
+artifact_total: 28
 collections:
 - collection_type: open
   name: API Collection
@@ -89,6 +89,11 @@ collections:
   name: Turso Platform Auth User API
   slug: open-turso-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/turso/refs/heads/main/capabilities/turso-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/turso-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -205,9 +210,13 @@ examples:
   name: Turso List Databases Example
   slug: turso-list-databases-example
 finops:
-- name: Turso Finops
+- has_sources: true
+  method: generated
+  name: Turso Finops
+  primary_unit: ''
   service_category: Database
   slug: turso-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/turso.png
 json_schemas:
 - name: APIToken
@@ -228,17 +237,21 @@ jsonld:
   property_count: 30
   slug: turso-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.turso.tech over HTTP.
+  name: Turso MCP Server
+  slug: turso
 modified: '2026-06-12'
 name: Turso
 nav: Providers
 network: true
-overview: 'Turso publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Auth API, Locations API, Organizations API, and 1 more. Tagged areas include Database, Edge Computing, SQLite, Developer Tools, and Multi-Tenant.
+overview: 'Turso publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth API, Locations API, Organizations API, and 3 more. Tagged areas include Database, Edge Computing, SQLite, Developer Tools, and Multi-Tenant.
 
 
   The Turso catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Turso''s developer surface includes authentication, documentation, engineering blog, pricing, CLI, code examples, and 17 more developer resources.'
+  Turso''s developer surface includes authentication, documentation, engineering blog, pricing, CLI, code examples, and 18 more developer resources.'
 plans:
 - name: Turso Plans Pricing
   plan_count: 5
@@ -249,9 +262,10 @@ rate_limits:
   name: Turso Rate Limits
   slug: turso-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Turso API Rules
+  name: Turso — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -261,23 +275,23 @@ rules:
   slug: turso-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.4
+  composite: 39.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 75.3
+    artifact_dirs: 20
+    catalog_earned: 53.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.8
+    catalog_gap: 61.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 50.0
-    contract_governance: 25.0
-    contract_quality: 59.8
+    access_clarity: 18.4
+    contract_governance: 23.5
+    contract_quality: 54.7
     developer_ergonomics: 38.1
-    discoverability: 59.3
-    operational_transparency: 57.9
-  previous_composite: 49.4
+    discoverability: 60.0
+    operational_transparency: 34.2
+  previous_composite: 48.0
   provenance:
     agentic_access: derived
     contracts:
@@ -286,9 +300,15 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1

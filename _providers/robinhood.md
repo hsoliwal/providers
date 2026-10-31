@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.5
-  scored_at: '2026-09-20'
+  score: 26.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -231,16 +231,16 @@ modified: '2026-07-21'
 name: Robinhood
 nav: Providers
 network: true
-overview: 'Robinhood publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Account API, Holdings API, Market Data API, and 2 more. Tagged areas include Company, Fintech, Cryptocurrency, Trading, and Brokerage.
+overview: 'Robinhood publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Holdings API, Market Data API, and 2 more. Tagged areas include Company, Fintech, Cryptocurrency, Trading, and Brokerage.
 
 
   Robinhood''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, authentication, and 23 more developer resources.'
 random_paper: 18
 score:
   band: developing
-  composite: 44.2
+  composite: 41.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -250,11 +250,11 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 44.2
+  previous_composite: 41.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -270,9 +270,9 @@ score:
     matched_via: weak_tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 51.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -299,7 +299,6 @@ tags:
 - Trading
 - Brokerage
 - Investing
-- Financial-Services
-- Crypto
+- Financial Services
 website: https://robinhood.com
 ---

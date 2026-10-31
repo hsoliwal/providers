@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Read-only REST API providing programmatic access to the article data behind a Muck Rack Saved Search. Sold as an add-on to Premier-tier subscriptions; authenticated with an organization API key presen
@@ -44,6 +44,15 @@ apis:
   slug: muck-rack-api
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/muck-rack/refs/heads/main/rate-limits/muck-rack-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/muck-rack-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://muckrack.com/blog/feed.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/muck-rack/refs/heads/main/security/muck-rack-domain-security.yml
   title: ''
@@ -131,14 +140,14 @@ created: '2026-08-26'
 description: Muck Rack is a public relations and earned-media software platform that combines a journalist and media-outlet database, media monitoring across news, print, broadcast, social and generative AI engines, pitching and press-release distribution, and executive-ready earned-media reporting. The Muck Rack API is a paid add-on for Premier-tier customers that provides programmatic access to the article data behind a Saved Search, so communications teams can pipe earned coverage into internal systems such as Snowflake or business-intelligence tools such as Power BI and Tableau. API keys are issued by an account Admin under Organization Settings, and the API reference itself is published only to authenticated customers.
 image: https://cdn.muckrack.com/static/images/icon_facebook_share.f9886809.jpg
 layout: provider
-modified: '2026-08-26'
+modified: '2026-10-06'
 name: Muck Rack
 nav: Providers
 network: true
-overview: 'Muck Rack publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Public Relations, Media Monitoring, Media Database, Journalists, and Communications.
+overview: 'Muck Rack is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Public Relations, Media Monitoring, Media Database, Journalists, and Communications.
 
 
-  Muck Rack''s developer surface includes documentation, pricing, engineering blog, support, and 15 more developer resources.'
+  Muck Rack''s developer surface includes documentation, pricing, engineering blog, support, and 17 more developer resources.'
 plans:
 - name: Muck Rack Plans Pricing
   plan_count: 3
@@ -150,28 +159,34 @@ rate_limits:
   slug: muck-rack-rate-limits
 score:
   band: thin
-  composite: 32.4
+  composite: 35.2
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 85.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 32.4
+  previous_composite: 35.1
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

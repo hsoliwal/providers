@@ -33,28 +33,28 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 16.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The fetch API from Zipline Ai — 4 operation(s) for fetch.
-  name: Zipline Ai fetch API
+  name: Zipline Ai Fetch API
   slug: zipline-ai-fetch-api
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The health API from Zipline Ai — 2 operation(s) for health.
-  name: Zipline Ai health API
+  name: Zipline Ai Health API
   slug: zipline-ai-health-api
 - baseURL: http://localhost:9000
   baseurl_source: spec
   description: The schema API from Zipline Ai — 5 operation(s) for schema.
-  name: Zipline Ai schema API
+  name: Zipline Ai Schema API
   slug: zipline-ai-schema-api
 - baseURL_template: https://{host}
   baseurl_source: spec_template
   description: The workflow API from Zipline Ai — 1 operation(s) for workflow.
-  name: Zipline Ai workflow API
+  name: Zipline Ai Workflow API
   slug: zipline-ai-workflow-api
 artifact_total: 12
 collections:
@@ -74,6 +74,15 @@ collections:
   name: Zipline AI Fetcher fetch workflow API
   slug: open-zipline-ai-workflow-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://zipline.ai/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zipline-ai/refs/heads/main/capabilities/zipline-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zipline-ai-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zipline-ai/refs/heads/main/skills/zipline-ai-fetch-features.md
   title: ''
@@ -107,34 +116,34 @@ created: '2026-07-17'
 description: Zipline Ai is a company surfaced as a portfolio company of wing-venture-capital and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zipline-ai.png
 layout: provider
-modified: '2026-07-17'
+modified: '2026-10-06'
 name: Zipline Ai
 nav: Providers
 network: true
-overview: 'Zipline Ai publishes 4 APIs on the [APIs.io](https://apis.io/) network, including fetch API, health API, schema API, and 1 more. Tagged areas include Company.
+overview: 'Zipline Ai publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Fetch API, Health API, Schema API, and 1 more. Tagged areas include Company.
 
 
-  Zipline Ai''s developer surface includes authentication and 5 more developer resources.'
+  Zipline Ai''s developer surface includes engineering blog, authentication, and 6 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 19.1
+  composite: 17.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 22.0
     catalog_earned_first_party: 0.0
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 40.1
-    developer_ergonomics: 13.7
-    discoverability: 48.1
+    contract_quality: 36.1
+    developer_ergonomics: 16.1
+    discoverability: 46.4
     operational_transparency: 0.0
-  previous_composite: 19.1
+  previous_composite: 17.3
   provenance:
     conformance: first-party
     contracts:
@@ -144,8 +153,14 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

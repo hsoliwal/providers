@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -46,17 +46,17 @@ apis:
 - baseURL: https://api.orca.so/v2/solana
   baseurl_source: declared
   description: Orca protocol information endpoints
-  name: Orca protocol API
+  name: Orca Protocol API
   slug: orca-protocol-api
 - baseURL: https://api.orca.so/v2/solana
   baseurl_source: declared
   description: Token information endpoints
-  name: Orca tokens API
+  name: Orca Tokens API
   slug: orca-tokens-api
 - baseURL: https://api.orca.so/v2/solana
   baseurl_source: declared
   description: Whirlpool information endpoints
-  name: Orca whirlpools API
+  name: Orca Whirlpools API
   slug: orca-whirlpools-api
 arazzos:
 - description: Search Orca Whirlpools for a token pair, then fetch full state for the top-matching pool. Read-only; runs against the open Orca Public REST API.
@@ -77,6 +77,10 @@ collections:
   name: Orca Public protocol whirlpools API
   slug: open-orca-whirlpools-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.orca.so/rss/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/orca/refs/heads/main/agentic-access/orca-agentic-access.yml
   title: ''
@@ -202,35 +206,35 @@ layout: provider
 mcp_servers:
 - description: Orca operates a live, hosted MCP (Model Context Protocol) server for native AI tool-use access to its documentation. No API key required; connect via any MCP-compatible client (Claude Desktop, Cursor,
   name: Orca MCP Server
-  slug: orca-mcp-server
-modified: '2026-07-20'
+  slug: orca-docs
+modified: '2026-10-06'
 name: Orca
 nav: Providers
 network: true
-overview: 'Orca publishes 3 APIs on the [APIs.io](https://apis.io/) network: protocol API, tokens API, and whirlpools API. Tagged areas include Company, Defi Dex, DeFi, DEX, and Solana.
+overview: 'Orca publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Protocol API, Tokens API, and Whirlpools API. Tagged areas include Company, Defi Dex, DeFi, Decentralized Exchange, and Solana.
 
 
-  Orca''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, changelog, and 18 more developer resources.'
+  Orca''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, changelog, and 19 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 38.5
+  composite: 36.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 63.0
     catalog_max: 100.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.9
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 78.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 38.5
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,8 +245,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Securities & Market Data
+    regime_id: securities_market_data
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -263,12 +273,12 @@ tags:
 - Company
 - Defi Dex
 - DeFi
-- DEX
+- Decentralized Exchange
 - Solana
 - AMM
 - Liquidity
 - Concentrated Liquidity
 - Blockchain
-- Crypto
+- Cryptocurrency
 website: https://orca.so
 ---

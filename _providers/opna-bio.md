@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.opnabio.com/press-releases/feed/
 - group: company
   title: ''
   type: Website
@@ -95,18 +99,18 @@ created: '2026-07-17'
 description: Opna Bio is a clinical-stage biopharmaceutical company focused on oncology, developing novel small-molecule and targeted-degrader therapeutics against key regulators of cancer, including the Hallmarks of Cancer. Its pipeline features OPN-6602 (an EP300/CBP inhibitor in Phase 1 for multiple myeloma, granted FDA Fast Track designation), zavabresib (OPN-2853, a BET inhibitor with Orphan Drug designation for myelofibrosis), multi-functional protein degraders, and additional programs targeting hematologic malignancies and solid tumors. The company operates from South San Francisco and San Diego, California, and Lausanne, Switzerland.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/opna-bio.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Opna Bio
 nav: Providers
 network: true
 overview: 'Opna Bio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Oncology, Biopharmaceutical, Pharmaceuticals, and Cancer.
 
 
-  Opna Bio''s developer surface includes engineering blog, support, and 11 more developer resources.'
+  Opna Bio''s developer surface includes engineering blog, support, and 12 more developer resources.'
 random_paper: 19
 score:
   band: emerging
-  composite: 11.2
+  composite: 11.0
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -120,17 +124,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 11.2
+  previous_composite: 11.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

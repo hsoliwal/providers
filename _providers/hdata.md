@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.hdata.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/hdata/refs/heads/main/security/hdata-domain-security.yml
   title: ''
@@ -108,18 +112,18 @@ created: '2026-07-17'
 description: HData is the AI-native operating system for energy regulation. Founded in 2018 by Hudson Hollister, the platform turns disconnected federal and state regulatory filings, dockets, and proceedings from sources such as FERC, EIA, and state utility commissions into standardized, citable, machine-readable data. It combines centralized regulatory data, domain-specific AI trained on more than 20 million citable documents, and purpose-built tools — including HData Analytics, Regulatory Intelligence, Gateway for FERC data extraction, and Data Request Management — to help utilities, regulators, advocates, advisory firms, financial institutions, and large energy customers accelerate rate cases, resource planning, compliance reporting, and policy research.
 image: https://www.hdata.com/hubfs/HData%20Regulatory%20AI%20%26%20Energy%20Data%20Platform.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: HData
 nav: Providers
 network: true
 overview: 'HData is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Energy, Regulatory, Utilities, and Regulatory Intelligence.
 
 
-  HData''s developer surface includes engineering blog, support, signup flow, and 13 more developer resources.'
+  HData''s developer surface includes engineering blog, support, signup flow, and 14 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 19.1
+  composite: 18.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -133,17 +137,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 7.9
-  previous_composite: 19.1
+  previous_composite: 18.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 25.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

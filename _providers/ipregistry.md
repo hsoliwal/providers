@@ -27,19 +27,19 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.1
-  scored_at: '2026-09-20'
+  score: 22.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: A REST API that resolves IPv4/IPv6 addresses and Autonomous System Numbers to rich intelligence including geolocation, ISP/carrier details, company data, currency and time zone, and threat classificat
   name: IPregistry IP Geolocation and Threat Intelligence API
   slug: ipregistry-ip-geolocation-and-threat-intelligence-api
-artifact_total: 7
+artifact_total: 8
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ipregistry/refs/heads/main/security/ipregistry-vulnerability-disclosure.yml
@@ -115,9 +115,13 @@ common:
 created: '2026-06-12'
 description: IPregistry provides a fast, reliable IP geolocation and threat intelligence REST API for looking up information associated with IPv4 or IPv6 addresses and Autonomous Systems (AS). The API returns location data, connection details, company and carrier information, time zone, currency, and comprehensive security threat assessments from over 220 OSINT threat feeds. It supports single and batch IP lookups, user-agent parsing, ASN queries, and optional EU-region routing for data residency compliance. All lookups are authenticated via API key and billed against prepaid credits that never expire.
 finops:
-- name: Ipregistry Finops
+- has_sources: false
+  method: generated
+  name: Ipregistry Finops
+  primary_unit: ''
   service_category: ''
   slug: ipregistry-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ipregistry.png
 jsonld:
 - class_count: 4
@@ -125,11 +129,15 @@ jsonld:
   property_count: 76
   slug: ipregistry-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.ipregistry.co over HTTP; 7 tools listed.
+  name: IPregistry MCP Server
+  slug: ipregistry
 modified: '2026-06-12'
 name: IPregistry
 nav: Providers
 network: true
-overview: 'IPregistry publishes 1 API on the [APIs.io](https://apis.io/) network: IP Geolocation and Threat Intelligence API. Tagged areas include IP Geolocation, Threat Intelligence, IP Address, ASN, and Carrier.
+overview: 'IPregistry is listed with 1 API on the [APIs.io](https://apis.io/) network: IP Geolocation and Threat Intelligence API. Tagged areas include IP Geolocation, Threat Intelligence, IP Address, ASN, and Carrier.
 
 
   The IPregistry catalog on APIs.io includes 1 JSON-LD context.
@@ -147,23 +155,23 @@ rate_limits:
   slug: ipregistry-rate-limits
 score:
   band: thin
-  composite: 36.6
+  composite: 26.4
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 72.0
+    artifact_dirs: 10
+    catalog_earned: 51.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 64.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 37.3
+    contract_quality: 34.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
-    operational_transparency: 68.4
-  previous_composite: 36.6
+    discoverability: 68.3
+    operational_transparency: 44.7
+  previous_composite: 34.8
   provenance:
     mcp: first-party
   regulatory:
@@ -171,10 +179,10 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 23.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 14.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

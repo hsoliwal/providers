@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 36.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: GraphQL API for fetching feedback entries and group taxonomy, batch-importing feedback, and building classification groups. Authenticated with a personal API key sent as an HTTP Bearer token, scoped t
@@ -187,14 +187,14 @@ description: Unwrap is an AI-powered customer intelligence platform, founded by 
 image: https://cdn.prod.website-files.com/67c5e65b5323e6f7f216d5e7/67ddb0f28d559f418b033a59_unwrap-og-image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at nlp.api.production.unwrap.ai over HTTP; 9 tools listed.
   name: Unwrap MCP Server
-  slug: unwrap-mcp-server
+  slug: unwrap
 modified: '2026-07-21'
 name: Unwrap
 nav: Providers
 network: true
-overview: 'Unwrap publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Customer Feedback, Customer Intelligence, and Product Analytics.
+overview: 'Unwrap is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Customer Feedback, Customer Intelligence, and Product Analytics.
 
 
   Unwrap''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, changelog, and 24 more developer resources.'
@@ -209,8 +209,8 @@ scopes:
   slug: unwrap-scopes
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 38.0
+  band: developing
+  composite: 41.5
   coverage:
     artifact_dirs: 18
     catalog_earned: 49.0
@@ -218,21 +218,31 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 47.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 50.0
-  previous_composite: 38.0
+  previous_composite: 41.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -260,7 +270,7 @@ tags:
 - Customer Intelligence
 - Product Analytics
 - Voice of Customer
-- NLP
+- Natural Language Processing
 - GraphQL
 - MCP
 website: https://www.unwrap.ai/

@@ -27,7 +27,7 @@ agent_readiness:
     error_semantics: verified
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: partial
     protected_resource_metadata: verified
     rate_limit_signal: documented
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 52.0
-  scored_at: '2026-09-20'
+  score: 45.5
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - baseURL: https://api.monetate.net/api/data/v1/{retailerShortname}/production
@@ -77,7 +77,7 @@ apis:
   description: File upload related endpoints.
   name: Monetate Upload API
   slug: monetate-upload-api
-artifact_total: 20
+artifact_total: 19
 collections:
 - collection_type: open
   name: Monetate Auth API
@@ -92,6 +92,14 @@ collections:
   name: Monetate Metadata API
   slug: open-monetate-metadata-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://monetate.com/resources/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://monetate.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/monetate/refs/heads/main/overlays/monetate-engine-api-overlay.yaml
   title: ''
@@ -255,20 +263,17 @@ description: Monetate is an enterprise experience-optimization and personalizati
 image: https://images.archbee.com/ceIfEvQHzQk1IVxoRWUh7/48dIncdY24xPwZLOvfSEr_horizontal-pink-blue-800px.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at monetate.com over HTTP.
   name: Monetate MCP Server
-  slug: monetate-mcp-server
-- description: ''
-  name: Monetate MCP Server
-  slug: monetate-mcp-server-2
-modified: '2026-08-12'
+  slug: monetate-website-mcp
+modified: '2026-10-06'
 name: Monetate
 nav: Providers
 network: true
-overview: 'Monetate publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Data API, Metadata API, Decision API, and 4 more. Tagged areas include Company, Personalization, Experience Optimization, A/B Testing, and E-Commerce.
+overview: 'Monetate publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Metadata API, Decision API, and 5 more. Tagged areas include Company, Personalization, Experience Optimization, A/B Testing, and E-Commerce.
 
 
-  Monetate''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 28 more developer resources.'
+  Monetate''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 30 more developer resources.'
 plans:
 - name: Monetate Plans Pricing
   plan_count: 0
@@ -280,23 +285,23 @@ rate_limits:
   slug: monetate-rate-limits
 score:
   band: developing
-  composite: 52.8
+  composite: 53.4
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 55.5
+    contract_quality: 49.9
     developer_ergonomics: 66.1
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 34.2
-  previous_composite: 52.8
+  previous_composite: 53.3
   provenance:
     conformance: derived
     contracts:
@@ -304,10 +309,16 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-    mcp: first-party
+    mcp: site-plugin
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

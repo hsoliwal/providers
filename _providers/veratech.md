@@ -23,10 +23,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/veratech/refs/heads/main/rate-limits/veratech-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/veratech-rate-limits.yml
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://linkehr.veratech.es/getlinkehr.html
 - group: company
   title: ''
   type: Website
@@ -146,7 +155,7 @@ network: true
 overview: 'Veratech for Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Health Data, Semantic Interoperability, and openEHR.
 
 
-  Veratech for Health''s developer surface includes documentation, support, engineering blog, changelog, and 16 more developer resources.'
+  Veratech for Health''s developer surface includes pricing, documentation, support, engineering blog, changelog, and 17 more developer resources.'
 plans:
 - name: Veratech Plans Pricing
   plan_count: 2
@@ -158,21 +167,21 @@ rate_limits:
   slug: veratech-rate-limits
 score:
   band: emerging
-  composite: 18.5
+  composite: 20.3
   coverage:
-    artifact_dirs: 11
+    artifact_dirs: 12
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 2.2
   facets:
-    access_clarity: 31.6
+    access_clarity: 42.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 10.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -182,7 +191,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 18.5
+  previous_composite: 18.1
   provenance:
     conformance: first-party
   regulatory:
@@ -190,14 +199,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/veratech/refs/heads/main/screenshots/veratech-2026-10-11T132835.png
 security:
 - kind: domain-security
   name: Veratech Domain Security
@@ -210,7 +220,7 @@ tags:
 - Health Data
 - Semantic Interoperability
 - openEHR
-- HL7 FHIR
+- FHIR
 - ISO 13606
 - SNOMED CT
 - OMOP CDM

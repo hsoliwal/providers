@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://elegenbio.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/elegen/refs/heads/main/security/elegen-domain-security.yml
   title: ''
@@ -99,18 +103,18 @@ description: Elegen is a synthetic biology company founded in 2017 and headquart
   Agilent, and others, and raised a $35M Series B in 2024.
 image: https://elegenbio.com/wp-content/uploads/2025/08/elegen-mark-200x200-1.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Elegen
 nav: Providers
 network: true
 overview: 'Elegen is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Synthetic Biology, DNA Synthesis, Biotechnology, and Genomics.
 
 
-  Elegen''s developer surface includes developer portal, documentation, support, engineering blog, pricing, signup flow, and 8 more developer resources.'
+  Elegen''s developer surface includes developer portal, documentation, support, engineering blog, pricing, signup flow, and 9 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 20.4
+  composite: 20.2
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -124,22 +128,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.4
+  previous_composite: 20.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

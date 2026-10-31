@@ -11,7 +11,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -22,8 +22,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.0
-  scored_at: '2026-09-20'
+  score: 20.9
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'The current AIQ SOAP 1.1 integration web service. 219 operations covering customers, suppliers, stock items, sales and purchase invoices, credit and debit notes, orders, deliveries, general journals, '
@@ -170,7 +170,7 @@ modified: '2026-09-06'
 name: AccountsIQ
 nav: Providers
 network: true
-overview: 'AccountsIQ publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Accounting, Financial Management, Cloud Accounting, and ERP.
+overview: 'AccountsIQ is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Accounting, Financial Management, Cloud Accounting, and ERP.
 
 
   AccountsIQ''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
@@ -185,9 +185,9 @@ rate_limits:
   slug: accountsiq-rate-limits
 score:
   band: developing
-  composite: 53.1
+  composite: 54.2
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -197,9 +197,9 @@ score:
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
-    contract_quality: 33.3
+    contract_quality: 30.5
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -209,18 +209,25 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 53.1
+  previous_composite: 54.2
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/accountsiq/refs/heads/main/screenshots/accountsiq-2026-10-11T092528.png
 security:
 - kind: authentication
   name: Accountsiq Authentication

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -154,6 +154,11 @@ collections:
   name: NRDP (Nagios Remote Data Processor) API
   slug: open-nrdp
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nagios/refs/heads/main/capabilities/nagios-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nagios-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nagios/refs/heads/main/agentic-access/nagios-agentic-access.yml
   title: ''
@@ -339,22 +344,23 @@ modified: '2026-05-23'
 name: Nagios
 nav: Providers
 network: true
-overview: 'Nagios publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Config API, CPU API, Disk API, and 8 more. Tagged areas include Monitoring, Infrastructure Monitoring, Network Monitoring, Open-Source, and IT Operations.
+overview: 'Nagios publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Config API, CPU API, Disk API, and 10 more. Tagged areas include Monitoring, Infrastructure Monitoring, Network Monitoring, Open Source, and IT Operations.
 
 
   The Nagios catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Nagios'' developer surface includes authentication, documentation, pricing, engineering blog, and 27 more developer resources.'
+  Nagios'' developer surface includes authentication, documentation, pricing, engineering blog, and 28 more developer resources.'
 plans:
 - name: Nagios Plans Pricing
   plan_count: 4
   slug: nagios-plans-pricing
 random_paper: 3
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Nagios API Rules
+  name: Nagios — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -362,10 +368,11 @@ rules:
     info: 1
     warn: 4
   slug: nagios-jsonschema-spectral-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Nagios API Rules
+  name: Nagios — xi rules
   rule_count: 5
   severity_counts:
     error: 2
@@ -373,10 +380,11 @@ rules:
     info: 0
     warn: 3
   slug: nagios-xi-rules
-- effective_rule_count: 44
+- authorship: unmarked
+  effective_rule_count: 44
   extends:
   - spectral:oas
-  name: Nagios API Rules
+  name: Nagios — ncpa rules
   rule_count: 3
   severity_counts:
     error: 1
@@ -385,24 +393,24 @@ rules:
     warn: 2
   slug: ncpa-rules
 score:
-  band: developing
-  composite: 41.9
+  band: thin
+  composite: 35.7
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 82.5
+    artifact_dirs: 16
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 32.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.0
   facets:
-    access_clarity: 42.1
-    contract_governance: 28.8
-    contract_quality: 58.1
+    access_clarity: 18.4
+    contract_governance: 27.3
+    contract_quality: 53.1
     developer_ergonomics: 31.0
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 2.6
-  previous_composite: 41.9
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     contracts:
@@ -410,8 +418,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 11
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -431,7 +445,7 @@ tags:
 - Monitoring
 - Infrastructure Monitoring
 - Network Monitoring
-- Open-Source
+- Open Source
 - IT Operations
 - Alerting
 - Observability

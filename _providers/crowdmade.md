@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Agent-driven commerce over the Universal Commerce Protocol (UCP) served by the crowdmade.com Shopify storefront, plus read-only catalog JSON endpoints and Shopify Customer Accounts OpenID Connect auth
@@ -97,14 +97,14 @@ description: 'CrowdMade partners with online creators from YouTube, Instagram, S
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crowdmade.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at crowdmade.com over HTTP; 5 tools listed.
   name: CrowdMade MCP Server
-  slug: crowdmade-mcp-server
+  slug: crowdmade-ucp-shopping
 modified: '2026-07-18'
 name: CrowdMade
 nav: Providers
 network: true
-overview: 'CrowdMade publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Commerce, E-Commerce, Merchandise, and Creator Economy.
+overview: 'CrowdMade is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Commerce, E-Commerce, Merchandise, and Creator Economy.
 
 
   CrowdMade''s developer surface includes documentation, authentication, and 9 more developer resources.'
@@ -116,9 +116,9 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 16.1
+  composite: 18.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -130,13 +130,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 16.1
+  previous_composite: 18.1
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

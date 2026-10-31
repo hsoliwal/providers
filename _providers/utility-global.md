@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -98,9 +98,9 @@ overview: 'Utility Global is profiled on the [APIs.io](https://apis.io/) network
 random_paper: 6
 score:
   band: minimal
-  composite: 4.5
+  composite: 4.9
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -112,22 +112,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 0.0
-  previous_composite: 4.5
+  previous_composite: 4.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/utility-global/refs/heads/main/screenshots/utility-global-2026-10-11T131541.png
 security:
 - kind: domain-security
   name: Utility Global Domain Security

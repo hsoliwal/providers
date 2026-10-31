@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.5
-  scored_at: '2026-09-20'
+  score: 32.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -87,7 +87,7 @@ arazzos:
 - description: Inspect an existing execution, deliver human feedback, then poll until it settles.
   name: CrewAI AMP Resume a Paused Execution
   slug: crewai-cloud-resume-paused-execution-workflow
-artifact_total: 62
+artifact_total: 63
 asyncapis:
 - description: 'Outbound webhook events published by CrewAI AMP during crew execution. Three callback URLs can be supplied per kickoff — `taskWebhookUrl`, `stepWebhookUrl`, and `crewWebhookUrl`. AMP POSTs JSON event '
   name: CrewAI AMP Webhook Streaming
@@ -422,9 +422,13 @@ features:
 - Enterprise tier includes up to 30,000 free executions per month, dedicated support, 50 hours of development per month, on-site support and training
 - Used by 60% of Fortune 500 companies; runs 450M+ agentic workflows per month
 finops:
-- name: Crewai Cloud Finops
+- has_sources: true
+  method: generated
+  name: Crewai Cloud Finops
+  primary_unit: ''
   service_category: ''
   slug: crewai-cloud-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/crewai-cloud.png
 json_schemas:
 - name: CrewAI AMP Kickoff
@@ -446,11 +450,15 @@ jsonld:
   property_count: 10
   slug: crewai-cloud-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at crewai.com over HTTP; 5 tools listed.
+  name: CrewAI Cloud MCP Server
+  slug: crewai-cloud
 modified: '2026-05-24'
 name: CrewAI Cloud
 nav: Providers
 network: true
-overview: 'CrewAI Cloud publishes 5 APIs on the [APIs.io](https://apis.io/) network, including CrewAI AMP Webhook Streaming, Inputs API, Kickoff API, and 2 more. Tagged areas include AI Agents, AI Agent Platform, Agent Orchestration, Multi-Agent Systems, and Agent Management Platform.
+overview: 'CrewAI Cloud publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including CrewAI AMP Webhook Streaming, Inputs API, Kickoff API, and 3 more. Tagged areas include AI Agents, AI Agent Platform, Agent Orchestration, Multi-Agent Systems, and Agent Management Platform.
 
 
   The CrewAI Cloud catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
@@ -467,10 +475,11 @@ rate_limits:
   name: Crewai Cloud Rate Limits
   slug: crewai-cloud-rate-limits
 rules:
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
-  name: CrewAI Cloud API Rules
+  name: CrewAI Cloud — crewai amp rest api rules
   rule_count: 8
   severity_counts:
     error: 4
@@ -478,10 +487,11 @@ rules:
     info: 0
     warn: 4
   slug: crewai-amp-rest-api-rules
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: CrewAI Cloud API Rules
+  name: CrewAI Cloud — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -489,9 +499,10 @@ rules:
     info: 0
     warn: 7
   slug: crewai-cloud-asyncapi-spectral-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: CrewAI Cloud API Rules
+  name: CrewAI Cloud — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -501,23 +512,23 @@ rules:
   slug: crewai-cloud-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 51.1
+  composite: 41.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 72.0
+    artifact_dirs: 23
+    catalog_earned: 49.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.0
+    catalog_gap: 65.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.5
   facets:
-    access_clarity: 52.6
-    contract_governance: 54.5
-    contract_quality: 71.3
+    access_clarity: 28.9
+    contract_governance: 13.6
+    contract_quality: 66.0
     developer_ergonomics: 39.3
     discoverability: 66.7
     operational_transparency: 18.4
-  previous_composite: 51.1
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     contracts:
@@ -526,9 +537,15 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -557,5 +574,6 @@ tags:
 - Automation
 - Observability
 - Human-in-the-Loop
+- A2A
 website: https://www.crewai.com
 ---

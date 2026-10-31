@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 9.3
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: Core TypeScript library distributed as the `better-auth` npm package. Configured in the application backend to expose sign-in / sign-up / session endpoints that the developer mounts under their own do
@@ -48,8 +48,23 @@ apis:
 - description: Optional managed dashboard at dash.better-auth.com. Adds user management UI, audit logs, security signals (breached-password lookups, bot protection, brute-force detection), and enterprise features su
   name: Better Auth Dashboard (Managed)
   slug: dashboard
-artifact_total: 8
+artifact_total: 9
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/better-auth/refs/heads/main/plans/better-auth-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/better-auth-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/better-auth/refs/heads/main/rate-limits/better-auth-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/better-auth-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/better-auth/refs/heads/main/finops/better-auth-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/better-auth-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -114,19 +129,27 @@ common:
 created: '2026-05-23'
 description: Better Auth is a framework-agnostic authentication and authorization library for TypeScript. Unlike hosted identity providers, Better Auth runs inside the developer's own application against their own database (Postgres, MySQL, SQLite, MongoDB via adapters). The core library supports credential, social, magic-link, OTP, passkey, and SSO sign-in, with plugins for organizations / teams / RBAC, API keys, two-factor authentication, JWT, generic OAuth, SAML / SSO, and SCIM. It integrates with Next.js, Nuxt, SvelteKit, Astro, Hono, and 20+ other frameworks. An optional managed dashboard with audit logs, breached-password detection, bot-protection, and self-service enterprise SSO is available at dash.better-auth.com.
 finops:
-- name: Better Auth Finops
+- has_sources: false
+  method: generated
+  name: Better Auth Finops
+  primary_unit: ''
   service_category: API
   slug: better-auth-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/better-auth.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.better-auth.com over HTTP; 2 tools listed.
+  name: Better Auth MCP Server
+  slug: better-auth
 modified: '2026-09-16'
 name: Better Auth
 nav: Providers
 network: true
-overview: 'Better Auth publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Authentication, Authorization, TypeScript, Library, and Open-Source.
+overview: 'Better Auth is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Authentication, Authorization, TypeScript, Library, and Open Source.
 
 
-  Better Auth''s developer surface includes documentation, GitHub presence, engineering blog, and 12 more developer resources.'
+  Better Auth''s developer surface includes documentation, GitHub presence, engineering blog, and 15 more developer resources.'
 plans:
 - name: Better Auth Plans Pricing
   plan_count: 1
@@ -137,27 +160,27 @@ rate_limits:
   name: Better Auth Rate Limits
   slug: better-auth-rate-limits
 score:
-  band: thin
-  composite: 28.6
+  band: emerging
+  composite: 23.0
   coverage:
     artifact_dirs: 8
-    catalog_earned: 59.0
+    catalog_earned: 44.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.4
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 74.1
-    operational_transparency: 52.6
+    discoverability: 73.3
+    operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 28.6
+  previous_composite: 28.4
   provenance:
     mcp: first-party
   regulatory:
@@ -165,14 +188,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 11.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/better-auth/refs/heads/main/screenshots/better-auth-2026-10-11T182828.png
 security:
 - kind: domain-security
   name: Better Auth Domain Security
@@ -184,7 +208,7 @@ tags:
 - Authorization
 - TypeScript
 - Library
-- Open-Source
+- Open Source
 - SSO
 - Passkeys
 - Identity Federation

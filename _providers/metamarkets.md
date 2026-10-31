@@ -13,7 +13,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 9.2
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: HTTPS event-ingestion API for streaming batches of newline-delimited JSON, OpenRTB 2.5-based ad-tech event records (e.g. MmxAuctionSummary) to the Metamarkets platform for near-real-time dashboarding.
@@ -171,7 +171,7 @@ modified: '2026-09-16'
 name: Metamarkets
 nav: Providers
 network: true
-overview: 'Metamarkets publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Analytics, and Real-Time.
+overview: 'Metamarkets is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Advertising, AdTech, Analytics, and Real-Time.
 
 
   Metamarkets'' developer surface includes documentation, getting-started guide, support, CLI, authentication, sandbox, API reference, and 16 more developer resources.'
@@ -185,8 +185,8 @@ rate_limits:
   name: Metamarkets Rate Limits
   slug: metamarkets-rate-limits
 score:
-  band: emerging
-  composite: 24.1
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 19
     catalog_earned: 42.0
@@ -197,16 +197,23 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 33.3
-    contract_quality: 6.7
-    developer_ergonomics: 52.4
-    discoverability: 75.9
-    operational_transparency: 2.6
-  previous_composite: 24.1
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -233,5 +240,6 @@ tags:
 - Programmatic Advertising
 - OpenRTB
 - Business Intelligence
+- Defunct
 website: https://metamarkets.com
 ---

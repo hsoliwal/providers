@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -43,42 +43,42 @@ agentic_access:
   operation_count: 25
   slug: dryad-agentic-access
   summary_line: 25 operations · 9 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Dataset operations
-  name: Dryad datasets API
+  name: Dryad Datasets API
   slug: dryad-datasets-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Operations on individual files of a dataset
-  name: Dryad files API
+  name: Dryad Files API
   slug: dryad-files-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Internal APIs not of general interest to the public
-  name: Dryad internal API
+  name: Dryad Internal API
   slug: dryad-internal-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Reports on content in Dryad
-  name: Dryad reports API
+  name: Dryad Reports API
   slug: dryad-reports-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Root-level API calls
-  name: Dryad root API
+  name: Dryad Root API
   slug: dryad-root-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Searching datasets
-  name: Dryad search API
+  name: Dryad Search API
   slug: dryad-search-api
 - baseURL: https://datadryad.org/api/v2
   baseurl_source: declared
   description: Operations on individual versions of a dataset
-  name: Dryad versions API
+  name: Dryad Versions API
   slug: dryad-versions-api
 artifact_total: 74
 collections:
@@ -107,6 +107,21 @@ collections:
   name: Dryad datasets versions API
   slug: open-dryad-versions-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/dryad/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: company
   title: ''
   type: Website
@@ -200,9 +215,13 @@ examples:
   name: Patch Datasets Doi Response 403
   slug: patch-datasets-doi-response-403
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://datadryad.org/images/logo.png
 json_schemas:
 - name: Error
@@ -351,13 +370,13 @@ modified: '2026-06-13'
 name: Dryad
 nav: Providers
 network: true
-overview: 'Dryad publishes 7 APIs on the [APIs.io](https://apis.io/) network, including datasets API, files API, internal API, and 4 more. Tagged areas include Research Data, Open Science, Data Repository, Datasets, and Biology.
+overview: 'Dryad publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Datasets API, Files API, Internal API, and 4 more. Tagged areas include Research Data, Open Science, Research Repository, Datasets, and Biology.
 
 
   The Dryad catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
 
 
-  Dryad''s developer surface includes authentication, pricing, engineering blog, GitHub presence, signup flow, and 12 more developer resources.'
+  Dryad''s developer surface includes authentication, pricing, engineering blog, GitHub presence, signup flow, and 15 more developer resources.'
 plans:
 - name: Plans
   plan_count: 4
@@ -368,9 +387,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Dryad API Rules
+  name: Dryad — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -380,23 +400,23 @@ rules:
   slug: dryad-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 50.2
+  composite: 43.4
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 74.3
+    artifact_dirs: 18
+    catalog_earned: 61.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 40.8
+    catalog_gap: 53.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 84.2
-    contract_governance: 25.0
-    contract_quality: 66.2
+    access_clarity: 52.6
+    contract_governance: 23.5
+    contract_quality: 60.2
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 50.2
+  previous_composite: 49.0
   provenance:
     agentic_access: derived
     contracts:
@@ -404,9 +424,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1
@@ -424,7 +450,7 @@ slug: dryad
 tags:
 - Research Data
 - Open Science
-- Data Repository
+- Research Repository
 - Datasets
 - Biology
 - Ecology

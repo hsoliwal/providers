@@ -26,21 +26,36 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 12.9
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Recorded Future Intelligence Cloud REST API (api.recordedfuture.com) provides programmatic access to threat intelligence sourced from over a million open-web, dark-web, technical, and customer fee
   name: Recorded Future Intelligence Cloud API
   slug: recorded-future-connect-api
-artifact_total: 31
+artifact_total: 32
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/recorded-future/refs/heads/main/plans/recorded-future-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/recorded-future-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/recorded-future/refs/heads/main/rate-limits/recorded-future-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/recorded-future-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/recorded-future/refs/heads/main/finops/recorded-future-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/recorded-future-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/recorded-future/refs/heads/main/security/recorded-future-vulnerability-disclosure.yml
   title: ''
@@ -133,9 +148,13 @@ features:
 - description: In-house intelligence research and analyst team producing finished intelligence
   name: Insikt Group
 finops:
-- name: Recorded Future Finops
+- has_sources: false
+  method: generated
+  name: Recorded Future Finops
+  primary_unit: ''
   service_category: API
   slug: recorded-future-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/recorded-future.png
 integrations:
 - description: Out-of-the-box integrations with Splunk, Microsoft Sentinel, Google Chronicle, IBM QRadar, and others
@@ -151,14 +170,18 @@ integrations:
 - description: Recorded Future browser extension surfaces intelligence in any web-based security tool
   name: Browser Extension
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.recordedfuture.com over HTTP.
+  name: Recorded Future MCP Server
+  slug: recorded-future
 modified: '2026-05-23'
 name: Recorded Future
 nav: Providers
 network: true
-overview: 'Recorded Future publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Threat Intelligence, Intelligence Cloud, Brand Intelligence, and Identity Intelligence.
+overview: 'Recorded Future is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Cybersecurity, Threat Intelligence, Intelligence Cloud, Brand Intelligence, and Identity Intelligence.
 
 
-  Recorded Future''s developer surface includes developer portal, support, documentation, engineering blog, product news, and 10 more developer resources.'
+  Recorded Future''s developer surface includes developer portal, support, documentation, engineering blog, product news, and 13 more developer resources.'
 plans:
 - name: Recorded Future Plans Pricing
   plan_count: 1
@@ -170,28 +193,34 @@ rate_limits:
   slug: recorded-future-rate-limits
 score:
   band: emerging
-  composite: 22.7
+  composite: 16.1
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 56.0
+    artifact_dirs: 9
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 22.7
+    discoverability: 69.2
+    operational_transparency: 5.3
+  previous_composite: 22.1
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

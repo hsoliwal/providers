@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 115
+- acting_count: 145
   human_in_the_loop: 0
   name: Frontline Agentic Access
-  operation_count: 188
+  operation_count: 271
   slug: frontline-agentic-access
-  summary_line: 188 operations · 115 acting
+  summary_line: 271 operations · 145 acting
 api_count: 1
 apis:
 - baseURL: https://prod-api.getfrontline.ai/public/v1
@@ -511,7 +511,7 @@ modified: '2026-08-14'
 name: Frontline
 nav: Providers
 network: true
-overview: 'Frontline publishes 43 APIs on the [APIs.io](https://apis.io/) network, including Account API, Agent Builder API, Agents API, and 40 more. Tagged areas include Company, CRM, AI Agents, Sales Automation, and Customer-Support.
+overview: 'Frontline publishes 43 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Agent Builder API, Agents API, and 40 more. Tagged areas include Company, CRM, AI Agents, Sales Automation, and Customer Service.
 
 
   Frontline''s developer surface includes authentication, CLI, documentation, API reference, getting-started guide, pricing, signup flow, and 23 more developer resources.'
@@ -526,23 +526,23 @@ rate_limits:
   slug: frontline-rate-limits
 score:
   band: developing
-  composite: 48.1
+  composite: 48.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
-    contract_quality: 56.8
+    contract_quality: 51.4
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 48.1
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -553,8 +553,14 @@ score:
       total: 44
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -629,7 +635,7 @@ tags:
 - CRM
 - AI Agents
 - Sales Automation
-- Customer-Support
+- Customer Service
 - Workflows
 - Conversational AI
 website: https://getfrontline.ai

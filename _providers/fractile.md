@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -77,16 +77,16 @@ modified: '2026-07-19'
 name: Fractile
 nav: Providers
 network: true
-overview: 'Fractile is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Semiconductors, AI Inference, and AI Hardware.
+overview: 'Fractile is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Semiconductors, Inference, and AI Hardware.
 
 
   Fractile''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 10.2
+  composite: 9.6
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -98,22 +98,31 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 10.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 9.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/fractile/refs/heads/main/screenshots/fractile-2026-10-11T185719.png
 security:
 - kind: domain-security
   name: Fractile Domain Security
@@ -124,7 +133,7 @@ tags:
 - Company
 - Artificial Intelligence
 - Semiconductors
-- AI Inference
+- Inference
 - AI Hardware
 - Compute
 - Chips

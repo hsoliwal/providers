@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://temaetfs.com/insights
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://temaetfs.com/insights/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tema/refs/heads/main/security/tema-domain-security.yml
   title: ''
@@ -65,18 +73,18 @@ created: '2026-07-17'
 description: Tema is a thematic, active ETF issuer founded in 2022 by CEO Maurits Pot (formerly of Goldman Sachs, Vitol and Kingsway Capital) and backed by Index Ventures, Accel and Zinal Growth in what the firm described as the largest venture round in ETFs to date. Tema builds institutional-grade, expert-led thematic exchange-traded funds spanning growth themes (space, oncology, electrification, reshoring, luxury) and core strategies, and is underpinned by an end-to-end ETF issuance infrastructure that also enables turnkey launches for external fund managers. The company is a consumer-facing asset manager; it publishes investor resources, fund pages, insights and educational content but does not currently expose a public developer API, SDKs, or technical documentation.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tema.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Tema
 nav: Providers
 network: true
 overview: 'Tema is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Consumer, ETFs, Asset Management, and Investing.
 
 
-  Tema''s developer surface includes engineering blog, product news, and 4 more developer resources.'
+  Tema''s developer surface includes engineering blog, product news, and 6 more developer resources.'
 random_paper: 5
 score:
   band: minimal
-  composite: 4.8
+  composite: 5.8
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,17 +98,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
-  previous_composite: 4.8
+  previous_composite: 5.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 16.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -119,7 +127,7 @@ tags:
 - ETFs
 - Asset Management
 - Investing
-- Financial-Services
+- Financial Services
 - Thematic Investing
 - Fintech
 website: https://www.temaetfs.com/

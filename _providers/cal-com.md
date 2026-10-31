@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.9
-  scored_at: '2026-09-20'
+  score: 48.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 66
   human_in_the_loop: 66
@@ -157,7 +157,7 @@ apis:
   description: The OAuth2 API from Cal.com — 2 operation(s) for oauth2.
   name: Cal.com O Auth2 API
   slug: cal-com-oauth2-api
-artifact_total: 56
+artifact_total: 57
 asyncapis:
 - description: AsyncAPI definition for Cal.com's webhook surface. Cal.com webhooks are HTTP POST deliveries from Cal.com to a developer-defined `subscriberUrl` registered via the Cal.com Webhooks API (`/v2/webhooks`
   name: Cal.com Webhooks
@@ -236,6 +236,11 @@ collections:
   name: Cal.diy API v2
   slug: open-cal-com
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cal-com/refs/heads/main/capabilities/cal-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cal-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/cal-com/refs/heads/main/agentic-access/cal-com-agentic-access.yml
   title: ''
@@ -298,22 +303,30 @@ common:
 created: '2026-05-08'
 description: Cal.com is open-source scheduling infrastructure (Calendly alternative) available as a managed cloud service or self-hosted deployment. The Cal.com API v2 exposes bookings, event types, schedules, availability, slots, webhooks, OAuth, teams, organizations, OOO, conferencing, destination calendars, and the Cal.com Atoms (Platform) for embedding scheduling primitives into other apps.
 finops:
-- name: Cal Com Finops
+- has_sources: true
+  method: generated
+  name: Cal Com Finops
+  primary_unit: ''
   service_category: Productivity
   slug: cal-com-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cal-com.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.cal.com over HTTP.
+  name: Cal.com MCP Server
+  slug: cal-com
 modified: '2026-05-30'
 name: Cal.com
 nav: Providers
 network: true
-overview: 'Cal.com publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Api Keys API, Bookings API, Bookings / Attendees API, and 19 more. Tagged areas include Productivity, Scheduling, Calendar, Open-Source, and Booking.
+overview: 'Cal.com publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Api Keys API, Bookings API, Bookings / Attendees API, and 20 more. Tagged areas include Productivity, Scheduling, Calendar, Open Source, and Booking.
 
 
   The Cal.com catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Cal.com''s developer surface includes documentation, pricing, GitHub presence, engineering blog, and 9 more developer resources.'
+  Cal.com''s developer surface includes documentation, pricing, GitHub presence, engineering blog, and 10 more developer resources.'
 plans:
 - name: Cal Com Plans Pricing
   plan_count: 6
@@ -324,10 +337,11 @@ rate_limits:
   name: Cal Com Rate Limits
   slug: cal-com-rate-limits
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: Cal.com API Rules
+  name: Cal.com — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -337,23 +351,23 @@ rules:
   slug: cal-com-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 36.8
+  composite: 35.9
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 17
     catalog_earned: 47.5
     catalog_earned_first_party: 0.0
     catalog_gap: 67.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 34.2
+    access_clarity: 26.3
     contract_governance: 13.6
-    contract_quality: 52.0
+    contract_quality: 48.1
     developer_ergonomics: 26.2
-    discoverability: 63.0
+    discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 36.8
+  previous_composite: 37.4
   provenance:
     agentic_access: derived
     contracts:
@@ -362,8 +376,14 @@ score:
       marker_coverage: 0.0
       total: 22
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -387,7 +407,7 @@ tags:
 - Productivity
 - Scheduling
 - Calendar
-- Open-Source
+- Open Source
 - Booking
 website: https://cal.com/
 ---

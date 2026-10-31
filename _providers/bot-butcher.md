@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -62,6 +62,11 @@ collections:
   name: Bot Butcher Classification API
   slug: open-bot-butcher
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/bot-butcher/refs/heads/main/finops/bot-butcher-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/bot-butcher-finops.yml
 - group: company
   title: ''
   type: Website
@@ -165,19 +170,23 @@ common:
 created: '2025-01-07'
 description: Bot Butcher is an AI-powered spam detection API that uses a fine-tuned large language model to classify contact form submissions as spam or legitimate messages. The service analyzes messages within the context of what each website is about, providing context-aware classification with 99% reported accuracy against the provider's own human-graded benchmark. It supports multi-tenant architectures and is designed for enterprise scalability across vertical SaaS and website builder platforms. The API has two operations — classify a message, retrieve a message by id — authenticated with a per-form x-api-key header, and is sold on a single usage-based plan whose first ten requests each month are free. Bot Butcher is operated by Hillside Lab Inc, a Delaware corporation based in Pasadena, California.
 finops:
-- name: Bot Butcher Finops
+- has_sources: false
+  method: generated
+  name: Bot Butcher Finops
+  primary_unit: ''
   service_category: API
   slug: bot-butcher-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bot-butcher.png
 layout: provider
 modified: '2026-09-04'
 name: Bot Butcher
 nav: Providers
 network: true
-overview: 'Bot Butcher publishes 1 API on the [APIs.io](https://apis.io/) network: Classification API. Tagged areas include Bots, Spam Detection, Contact Forms, AI Classification, and Security.
+overview: 'Bot Butcher publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Classification API. Tagged areas include Bots, Spam Detection, Contact Forms, AI Classification, and Security.
 
 
-  Bot Butcher''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, authentication, and 16 more developer resources.'
+  Bot Butcher''s developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, authentication, and 17 more developer resources.'
 plans:
 - name: Bot Butcher Plans Pricing
   plan_count: 1
@@ -189,28 +198,30 @@ rate_limits:
   slug: bot-butcher-rate-limits
 score:
   band: thin
-  composite: 36.2
+  composite: 35.8
   coverage:
     artifact_dirs: 21
-    catalog_earned: 48.0
+    catalog_earned: 45.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 73.7
+    access_clarity: 65.8
     contract_governance: 18.2
     contract_quality: 15.0
     developer_ergonomics: 47.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 36.2
+  previous_composite: 37.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -221,8 +232,14 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

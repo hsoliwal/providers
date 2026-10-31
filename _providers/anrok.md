@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 56.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 17
+- acting_count: 10
   human_in_the_loop: 0
   name: Anrok Agentic Access
   operation_count: 17
   slug: anrok-agentic-access
-  summary_line: 17 operations · 17 acting
+  summary_line: 17 operations · 10 acting
 api_count: 1
 apis:
 - baseURL: https://api.anrok.com
@@ -76,7 +76,7 @@ apis:
   description: 'This documentation describes how to use Anrok''s Transactions API to synchronize transactions between Anrok and your billing system, as well as calculate sales tax for new invoices. Use of this API is '
   name: Anrok Transactions API
   slug: anrok-transactions-api
-artifact_total: 63
+artifact_total: 64
 collections:
 - collection_type: open
   name: API Collection
@@ -100,6 +100,11 @@ collections:
   name: Anrok Customer certificates Transactions API
   slug: open-anrok-transactions-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/anrok/refs/heads/main/capabilities/anrok-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/anrok-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/anrok/refs/heads/main/agentic-access/anrok-agentic-access.yml
   title: ''
@@ -193,9 +198,13 @@ examples:
   name: Validate Tax Id Request
   slug: validate-tax-id-request
 finops:
-- name: Anrok Finops
+- has_sources: false
+  method: generated
+  name: Anrok Finops
+  primary_unit: ''
   service_category: ''
   slug: anrok-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anrok.png
 json_schemas:
 - name: CommonTransactionProperties
@@ -303,17 +312,21 @@ jsonld:
   property_count: 36
   slug: anrok-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.anrok.com over HTTP.
+  name: Anrok MCP Server
+  slug: anrok
 modified: '2026-06-12'
 name: Anrok
 nav: Providers
 network: true
-overview: 'Anrok publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Customer certificates API, Filings API, Product mappings API, and 3 more. Tagged areas include Sales Tax, VAT, Tax Compliance, Software-as-a-Service, and Fintech.
+overview: 'Anrok publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Customer certificates API, Filings API, Product mappings API, and 3 more. Tagged areas include Sales Tax, VAT, Tax Compliance, Software-as-a-Service, and Fintech.
 
 
   The Anrok catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Anrok''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  Anrok''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Anrok Plans Pricing
   plan_count: 2
@@ -324,9 +337,10 @@ rate_limits:
   name: Anrok Rate Limits
   slug: anrok-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Anrok API Rules
+  name: Anrok — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -336,23 +350,23 @@ rules:
   slug: anrok-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 48.5
+  composite: 41.8
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 78.3
+    artifact_dirs: 20
+    catalog_earned: 62.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 52.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 47.4
-    contract_governance: 25.0
-    contract_quality: 68.1
+    access_clarity: 23.7
+    contract_governance: 23.5
+    contract_quality: 61.8
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 48.5
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 47.8
   provenance:
     agentic_access: derived
     contracts:
@@ -361,9 +375,15 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 50.0
@@ -380,7 +400,7 @@ security:
 - kind: vulnerability-disclosure
   name: Anrok Vulnerability Disclosure
   slug: anrok-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Anrok Trust Center
   slug: anrok-trust-center
@@ -395,5 +415,6 @@ tags:
 - Tax Automation
 - Nexus
 - E-Invoicing
+- Tax
 website: https://www.anrok.com/
 ---

@@ -24,7 +24,7 @@ agent_readiness:
     error_semantics: documented
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.4
-  scored_at: '2026-09-20'
+  score: 10.1
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: SocialBee platform API for managing social media posts, content categories, scheduling, recycling evergreen content, and accessing analytics across major social networks. Currently accessible via Zapi
@@ -185,9 +185,13 @@ common:
 created: '2026-06-13'
 description: SocialBee is an AI-powered social media management platform for creating, scheduling, recycling and analyzing content across Facebook, Instagram, X (Twitter), LinkedIn, TikTok, Pinterest, YouTube, Threads, Bluesky and Google Business Profiles, built around content categories and evergreen post recycling with AI caption generation. SocialBee publishes NO public REST API — its own help center states a public API is on the long-term roadmap with no committed timeline, and programmatic access is brokered through Zapier, Make and Pabbly connectors. It does, however, operate an undocumented but fully standards-discoverable Model Context Protocol server at socialbee.com/wp-json/mcp/mcp-oauth-server, guarded by OAuth 2.1 with PKCE and advertised via RFC 8414 and RFC 9728 metadata under /.well-known/. SocialBee was acquired by WebPros in August 2024.
 finops:
-- name: Socialbee Finops
+- has_sources: false
+  method: generated
+  name: Socialbee Finops
+  primary_unit: ''
   service_category: ''
   slug: socialbee-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/socialbee.png
 layout: provider
 mcp_servers:
@@ -198,7 +202,7 @@ modified: '2026-08-13'
 name: SocialBee
 nav: Providers
 network: true
-overview: 'SocialBee publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Social Media Management, Content Scheduling, Content Recycling, Social Media Analytics, and AI Caption Generation.
+overview: 'SocialBee is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Social Media Management, Content Scheduling, Content Recycling, Social Media Analytics, and AI Caption Generation.
 
 
   SocialBee''s developer surface includes documentation, engineering blog, pricing, authentication, changelog, and 25 more developer resources.'
@@ -213,33 +217,39 @@ rate_limits:
   slug: socialbee-rate-limits
 scopes:
 - name: Socialbee Scopes
-  scope_count: 0
+  scope_count: 1
   slug: socialbee-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: developing
-  composite: 40.9
+  composite: 43.0
   coverage:
     artifact_dirs: 19
-    catalog_earned: 64.0
+    catalog_earned: 61.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 51.0
+    catalog_gap: 54.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 77.6
+    access_clarity: 69.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 76.3
-  previous_composite: 40.9
+  previous_composite: 44.5
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: site-plugin
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 40.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -270,5 +280,6 @@ tags:
 - MCP
 - Marketing Automation
 - Software-as-a-Service
+- Scheduling
 website: https://socialbee.com
 ---

@@ -33,14 +33,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Hosted Model Context Protocol server (15 tools) plus REST API for compiling and querying codebase context: architecture overviews, code maps, file and symbol documentation, source retrieval, changelog'
   name: Driver Platform API & MCP Server
   slug: driver-platform-api-mcp-server
-artifact_total: 6
+artifact_total: 7
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/driver/refs/heads/main/plans/driver-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/driver-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -144,17 +149,21 @@ description: Driver is an AI platform that compiles exhaustive, structured conte
 image: https://www.driver.ai/og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.us1.driverai.com over HTTP; 15 tools listed.
   name: Driver MCP Server
-  slug: driver-mcp-server
+  slug: driver-mcp
 modified: '2026-07-18'
 name: Driver
 nav: Providers
 network: true
-overview: 'Driver publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Developer Tools, Code Documentation, and MCP.
+overview: 'Driver is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Developer Tools, Code Documentation, and MCP.
 
 
-  Driver''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 15 more developer resources.'
+  Driver''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, authentication, and 16 more developer resources.'
+plans:
+- name: Driver Plans Pricing
+  plan_count: 3
+  slug: driver-plans-pricing
 random_paper: 14
 scopes:
 - name: Driver Scopes
@@ -163,29 +172,35 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 29.1
+  composite: 38.5
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 14
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 71.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 29.1
+  previous_composite: 32.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

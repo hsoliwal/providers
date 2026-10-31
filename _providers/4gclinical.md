@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Production API host operated by 4G Clinical on AWS API Gateway at api.4gclinical.com. Anonymous requests to every probed path return HTTP 403 ForbiddenException, so no route, contract or discovery doc
@@ -31,6 +31,10 @@ apis:
   slug: 4g-clinical-api
 artifact_total: 6
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.4gclinical.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -126,14 +130,14 @@ created: '2026-09-05'
 description: '4G Clinical is a clinical-trial technology company headquartered in Wellesley, Massachusetts, building randomization and trial supply management (RTSM) software for biotech, pharmaceutical and CRO sponsors. Its flagship platform, Prancer RTSM, uses natural language processing to read a written RTSM specification and generate a deployable randomization and supply system, and is sold alongside Prancer Lite for early-phase studies, the Prancer RTSM Inventory Platform for investigator-sponsored trials, 4C Supply for clinical supply forecasting and scenario planning, and 4G DataHub for portfolio-level study data delivery. The company operates a production API host at api.4gclinical.com and markets API-enabled data access, Enterprise Prancer Integrations and EDC/CTMS/depot connectivity, but publishes no public developer portal, API reference or machine-readable contract: integration scope is settled inside a sponsor engagement rather than on the public web.'
 image: https://www.4gclinical.com/hubfs/4G-Clinical-logo-black.svg
 layout: provider
-modified: '2026-09-05'
+modified: '2026-10-06'
 name: 4G Clinical
 nav: Providers
 network: true
-overview: '4G Clinical publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Clinical Trials, Life Sciences, Randomization, Trial Supply Management, and RTSM.
+overview: '4G Clinical is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Clinical Trials, Life Sciences, Randomization, Trial Supply Management, and RTSM.
 
 
-  4G Clinical''s developer surface includes engineering blog, support, and 15 more developer resources.'
+  4G Clinical''s developer surface includes engineering blog, support, and 16 more developer resources.'
 plans:
 - name: 4Gclinical Plans Pricing
   plan_count: 0
@@ -145,9 +149,9 @@ rate_limits:
   slug: 4gclinical-rate-limits
 score:
   band: emerging
-  composite: 20.8
+  composite: 19.7
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -159,14 +163,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.8
+  previous_composite: 19.7
   provenance:
     conformance: first-party
   regulatory:
@@ -180,14 +186,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 32.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/4gclinical/refs/heads/main/screenshots/4gclinical-2026-10-11T092122.png
 security:
 - kind: domain-security
   name: 4Gclinical Domain Security

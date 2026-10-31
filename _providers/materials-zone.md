@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 25
   human_in_the_loop: 0
@@ -47,47 +47,47 @@ apis:
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Files are used to store data not related to specific items.
-  name: Materials Zone files API
+  name: Materials Zone Files API
   slug: materials-zone-files-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Folders are used to organize other Folders and Tables.
-  name: Materials Zone folders API
+  name: Materials Zone Folders API
   slug: materials-zone-folders-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Items are the rows in tables.
-  name: Materials Zone items API
+  name: Materials Zone Items API
   slug: materials-zone-items-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Jobs are used to perform long running tasks.
-  name: Materials Zone jobs API
+  name: Materials Zone Jobs API
   slug: materials-zone-jobs-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Measurements are the files that are uploaded to the system and can be parsed.
-  name: Materials Zone measurements API
+  name: Materials Zone Measurements API
   slug: materials-zone-measurements-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Parameters are used to define the structure of columns in tables.
-  name: Materials Zone parameters API
+  name: Materials Zone Parameters API
   slug: materials-zone-parameters-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Parsers are used to convert instrument specific output files to a MaterialsZone common format.
-  name: Materials Zone parsers API
+  name: Materials Zone Parsers API
   slug: materials-zone-parsers-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Protocols are used to group parameters in tables.
-  name: Materials Zone protocols API
+  name: Materials Zone Protocols API
   slug: materials-zone-protocols-api
 - baseURL: https://api.materials.zone/v2beta1
   baseurl_source: declared
   description: Tables are organized in folders, and contain Items.
-  name: Materials Zone tables API
+  name: Materials Zone Tables API
   slug: materials-zone-tables-api
 artifact_total: 22
 collections:
@@ -235,30 +235,30 @@ modified: '2026-07-20'
 name: Materials Zone
 nav: Providers
 network: true
-overview: 'Materials Zone publishes 9 APIs on the [APIs.io](https://apis.io/) network, including files API, folders API, items API, and 6 more. Tagged areas include Company, Materials Informatics, Materials Science, Research and Development, and Laboratory Data.
+overview: 'Materials Zone publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Files API, Folders API, Items API, and 6 more. Tagged areas include Company, Materials Informatics, Materials Science, Research and Development, and Laboratory Data.
 
 
   Materials Zone''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, and 17 more developer resources.'
 random_paper: 21
 score:
   band: thin
-  composite: 35.7
+  composite: 33.2
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 60.9
+    contract_quality: 55.1
     developer_ergonomics: 28.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 35.7
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -274,9 +274,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

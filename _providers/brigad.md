@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: First-party GraphQL router backing the Brigad talent (freelancer) app — talents, propositions/missions, onboarding, experiences, availabilities and billing. Endpoint is hardcoded in Brigad's own web S
@@ -131,7 +131,7 @@ modified: '2026-08-17'
 name: Brigad
 nav: Providers
 network: true
-overview: 'Brigad publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Staffing, Marketplace, Hospitality, and Healthcare.
+overview: 'Brigad is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Staffing, Marketplace, Hospitality, and Healthcare.
 
 
   Brigad''s developer surface includes support, engineering blog, pricing, signup flow, authentication, and 12 more developer resources.'
@@ -146,7 +146,7 @@ rate_limits:
   slug: brigad-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 28.9
   coverage:
     artifact_dirs: 13
     catalog_earned: 40.0
@@ -158,11 +158,11 @@ score:
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 37.2
+    contract_quality: 35.1
     developer_ergonomics: 19.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 30.2
+  previous_composite: 28.9
   provenance:
     mcp: derived
   regulatory:
@@ -170,9 +170,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 25.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

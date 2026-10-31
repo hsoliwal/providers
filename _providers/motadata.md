@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: true
   schema_version: '0.2'
-  score: 17.8
-  scored_at: '2026-09-20'
+  score: 15.7
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: ObserveOps (formerly Motadata AIOps) is a unified observability platform correlating metrics, logs, traces, flows and topology with anomaly detection that needs no training period. Its REST API is mou
@@ -187,20 +187,24 @@ created: '2026-03-27'
 description: 'Motadata (Mindarray Systems) is a global IT software company running two AI-native platforms on a shared deep-learning foundation: ObserveOps, a unified observability and AIOps platform that brings metrics, logs, traces, flows and topology into one backend, and ServiceOps, an ITIL-aligned IT and enterprise service management suite covering service desk, CMDB, asset management, patch management and workflow automation. Both products are deployed in the customer''s own environment, so every API host, credential and rate limit belongs to the customer rather than to Motadata. ObserveOps exposes a REST API at /api/v1 across 96 configuration resource types plus a Vert.x EventBus websocket for live streams, and ships an official agent-first CLI that doubles as an MCP server with 22 tools and five packaged Agent Skills. ServiceOps exposes a documented REST API over OAuth 2.0 or an API key across request, problem, change, release, CMDB, asset and service-catalog objects. Motadata publishes
   no OpenAPI for either product.'
 finops:
-- name: Motadata Finops
+- has_sources: false
+  method: generated
+  name: Motadata Finops
+  primary_unit: ''
   service_category: API
   slug: motadata-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/motadata.png
 layout: provider
 mcp_servers:
 - description: Motadata ships an MCP server inside its official ObserveOps CLI. `observeops mcp` exposes the ObserveOps (AIOps) platform as typed MCP tools over stdio, holding one authenticated session for the whole
   name: Motadata MCP Server
-  slug: motadata-mcp-server
+  slug: observeops
 modified: '2026-08-29'
 name: Motadata
 nav: Providers
 network: true
-overview: 'Motadata publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AIOps, Monitoring, Observability, ITSM, and Service Desk.
+overview: 'Motadata is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include AIOps, Monitoring, Observability, ITSM, and Service Desk.
 
 
   Motadata''s developer surface includes documentation, engineering blog, getting-started guide, support, signup flow, CLI, authentication, and 23 more developer resources.'
@@ -215,34 +219,40 @@ rate_limits:
   slug: motadata-rate-limits
 scopes:
 - name: Motadata Scopes
-  scope_count: 0
+  scope_count: 1
   slug: motadata-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope · password
 score:
   band: thin
-  composite: 36.2
+  composite: 37.1
   coverage:
     artifact_dirs: 22
-    catalog_earned: 48.0
+    catalog_earned: 45.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 67.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 42.1
+    access_clarity: 34.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 39.5
-  previous_composite: 36.2
+  previous_composite: 38.6
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

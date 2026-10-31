@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/whistic/refs/heads/main/plans/whistic-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/whistic-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -105,6 +110,10 @@ created: '2026-07-17'
 description: Whistic is an AI-driven Third-Party Risk Management (TPRM) platform that helps organizations assess vendor security, monitor third-party risk continuously, and share their own security posture through a Trust Center. The platform combines assessment AI (automated questionnaire responses and SOC 2 summarization), vendor monitoring with breach detection and structured alerts, compliance controls testing, and a Trust Center Exchange of verified security information for thousands of vendors. It integrates with Jira, Salesforce, Slack, and BitSight. Whistic itself holds SOC 2, ISO 27001, ISO 42001, NIST, GDPR, TX-RAMP, and START Level One / Shared Assessments certifications, backed by Battery Ventures and Emergence Capital.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/whistic.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.whistic.com over HTTP.
+  name: Whistic MCP Server
+  slug: whistic
 modified: '2026-07-21'
 name: Whistic
 nav: Providers
@@ -112,33 +121,43 @@ network: true
 overview: 'Whistic is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Third-Party Risk Management, Vendor Security, Security Assessments, and Trust Center.
 
 
-  Whistic''s developer surface includes support, engineering blog, pricing, signup flow, and 11 more developer resources.'
+  Whistic''s developer surface includes support, engineering blog, pricing, signup flow, and 12 more developer resources.'
+plans:
+- name: Whistic Plans Pricing
+  plan_count: 3
+  slug: whistic-plans-pricing
 random_paper: 15
 score:
-  band: emerging
-  composite: 23.2
+  band: thin
+  composite: 31.4
   coverage:
-    artifact_dirs: 7
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 8
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 60.5
+    access_clarity: 92.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 13.2
-  previous_composite: 23.2
+  previous_composite: 25.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

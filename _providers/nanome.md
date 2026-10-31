@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: REST API to create workspaces, load molecular structures, create and rename scenes, and add visualization components. Bearer-token auth. Powers the MARA workspace builder, the official Nanome MCP serv
@@ -43,8 +43,13 @@ apis:
 - description: Account and session API (e.g. GET /user/session to validate a token).
   name: Nanome Account API
   slug: nanome-account-api
-artifact_total: 5
+artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/nanome/refs/heads/main/plans/nanome-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/nanome-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -155,37 +160,41 @@ description: Nanome is a collaborative workspace for drug discovery — molecula
 image: https://nanome.ai/MR_preview.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 5 tools listed.
   name: Nanome MCP Server
-  slug: nanome-mcp-server
+  slug: nanome
 modified: '2026-07-20'
 name: Nanome
 nav: Providers
 network: true
-overview: 'Nanome publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Drug Discovery, Molecular Visualization, Life Sciences, and Cheminformatics.
+overview: 'Nanome is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Drug Discovery, Molecular Visualization, Life Sciences, and Cheminformatics.
 
 
-  Nanome''s developer surface includes documentation, engineering blog, pricing, signup flow, authentication, and 18 more developer resources.'
+  Nanome''s developer surface includes documentation, engineering blog, pricing, signup flow, authentication, and 19 more developer resources.'
+plans:
+- name: Nanome Plans Pricing
+  plan_count: 6
+  slug: nanome-plans-pricing
 random_paper: 0
 score:
   band: thin
-  composite: 28.3
+  composite: 33.2
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 16
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 31.6
+    access_clarity: 63.2
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 18.4
-  previous_composite: 28.3
+  previous_composite: 26.8
   provenance:
     conformance: derived
     mcp: first-party
@@ -195,10 +204,10 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 18.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

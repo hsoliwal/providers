@@ -24,19 +24,19 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.9
-  scored_at: '2026-09-20'
+  score: 29.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 470
   human_in_the_loop: 12
@@ -61,47 +61,266 @@ apis:
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The admin API from Gitea — 22 operation(s) for admin.
-  name: Gitea admin API
+  name: Gitea Admin API
+  phrasing_intents:
+  - id: listAdminWorkflowJobs
+    intent: List all Actions jobs on the instance
+    question: As a site admin, which Actions jobs are queued or running across the whole instance?
+  - id: getAdminRunners
+    intent: List all global Actions runners
+    question: Which instance-wide runners are registered on this Gitea server?
+  - id: adminCreateRunnerRegistrationToken
+    intent: Get a global runner registration token
+    question: How do I get a token to register a runner that serves the entire instance?
+  - id: getAdminRunner
+    intent: Get a global Actions runner
+    question: What's the status of a specific instance-wide runner?
+  - id: deleteAdminRunner
+    intent: Delete a global Actions runner
+    question: How do I unregister a shared runner from the whole instance?
+  - id: updateAdminRunner
+    intent: Enable or disable a global runner
+    question: Can I take a shared instance runner out of rotation without deleting it?
+  - id: listAdminWorkflowRuns
+    intent: List all workflow runs on the instance
+    question: Which workflow runs have happened across every repo on the server?
+  - id: adminCronList
+    intent: List scheduled cron tasks
+    question: Which background cron tasks does this Gitea server run, and when did they last run?
+  phrasing_ops: 32
   slug: gitea-admin-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The issue API from Gitea — 34 operation(s) for issue.
-  name: Gitea issue API
+  name: Gitea Issue API
+  phrasing_intents:
+  - id: issueSearchIssues
+    intent: Search issues across all my accessible repos
+    question: Can I search issues across every Gitea repository I have access to at once?
+  - id: issueListIssues
+    intent: List a repository's issues
+    question: What issues are currently open in a single repository?
+  - id: issueCreateIssue
+    intent: Open a new issue in a repository
+    question: How do I open a new issue in a Gitea repo?
+  - id: issueGetRepoComments
+    intent: List all issue comments in a repository
+    question: Can I pull every issue comment posted anywhere in a repository?
+  - id: issueGetComment
+    intent: Get a single issue comment
+    question: How can I fetch one specific issue comment by its ID?
+  - id: issueDeleteComment
+    intent: Delete an issue comment by its ID
+    question: Can I delete an issue comment using just the repo and comment ID?
+  - id: issueEditComment
+    intent: Edit the text of an issue comment
+    question: Can I change the wording of a comment I already posted on an issue?
+  - id: issueListIssueCommentAttachments
+    intent: List files attached to an issue comment
+    question: Which files are attached to a particular issue comment?
+  phrasing_ops: 69
   slug: gitea-issue-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The miscellaneous API from Gitea — 12 operation(s) for miscellaneous.
-  name: Gitea miscellaneous API
+  name: Gitea Miscellaneous API
+  phrasing_intents:
+  - id: listGitignoresTemplates
+    intent: List available .gitignore templates
+    question: Which .gitignore templates can I pick from when creating a repo?
+  - id: getGitignoreTemplateInfo
+    intent: Get a .gitignore template's contents
+    question: What does a particular .gitignore template actually contain?
+  - id: listLabelTemplates
+    intent: List available issue label templates
+    question: Which issue label sets can I seed a new repository with?
+  - id: getLabelTemplateInfo
+    intent: Get the labels in a label template
+    question: What labels and colors come in a given label template?
+  - id: listLicenseTemplates
+    intent: List available license templates
+    question: Which open source licenses can I choose when creating a repository?
+  - id: getLicenseTemplateInfo
+    intent: Get a license template's text
+    question: What's the full text of a given license template?
+  - id: renderMarkdown
+    intent: Render Markdown to HTML
+    question: How do I preview Markdown as HTML the way Gitea displays it?
+  - id: renderMarkdownRaw
+    intent: Render a raw Markdown body to HTML
+    question: Can I send plain Markdown text as the request body and get HTML back?
+  phrasing_ops: 12
   slug: gitea-miscellaneous-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The notification API from Gitea — 4 operation(s) for notification.
-  name: Gitea notification API
+  name: Gitea Notification API
+  phrasing_intents:
+  - id: notifyGetList
+    intent: List my notification threads
+    question: What notifications do I have across all my repositories?
+  - id: notifyReadList
+    intent: Mark all my notifications read, pinned or unread
+    question: How do I mark every notification in my inbox as read at once?
+  - id: notifyNewAvailable
+    intent: Check for unread notifications
+    question: Do I have any unread notifications right now?
+  - id: notifyGetThread
+    intent: Get a notification thread
+    question: What is a specific notification about?
+  - id: notifyReadThread
+    intent: Mark one notification thread read
+    question: How do I mark a single notification as read?
+  - id: notifyGetRepoList
+    intent: List my notifications for one repository
+    question: What notifications do I have for a specific repository?
+  - id: notifyReadRepoList
+    intent: Mark a repository's notifications read
+    question: How do I clear all notifications for just one repository?
+  phrasing_ops: 7
   slug: gitea-notification-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The organization API from Gitea — 37 operation(s) for organization.
-  name: Gitea organization API
+  name: Gitea Organization API
+  phrasing_intents:
+  - id: createOrgRepoDeprecated
+    intent: Create an org repo via the legacy /org path
+    question: Is there an older, deprecated /org endpoint for creating a repository under an organization?
+  - id: orgGetAll
+    intent: List all organizations on the instance
+    question: Which organizations exist on this Gitea server?
+  - id: orgCreate
+    intent: Create an organization
+    question: How do I create a new organization for my team?
+  - id: orgGet
+    intent: Get an organization's profile
+    question: What are the website, location and visibility settings of an organization?
+  - id: orgDelete
+    intent: Delete an organization
+    question: Can I delete an organization I no longer need?
+  - id: orgEdit
+    intent: Update an organization's profile settings
+    question: Can I change an organization's description, website or contact email?
+  - id: getOrgWorkflowJobs
+    intent: List an organization's Actions workflow jobs
+    question: Which Actions jobs are running or queued across an organization?
+  - id: getOrgRunners
+    intent: List an organization's Actions runners
+    question: What self-hosted runners are registered to an organization?
+  phrasing_ops: 67
   slug: gitea-organization-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The package API from Gitea — 7 operation(s) for package.
-  name: Gitea package API
+  name: Gitea Package API
+  phrasing_intents:
+  - id: listPackages
+    intent: List an owner's packages
+    question: Which packages has a user or organization published to the registry?
+  - id: listPackageVersions
+    intent: List all versions of a package
+    question: Which versions of a package have been published?
+  - id: deletePackage
+    intent: Delete a package and all its versions
+    question: How do I remove a whole package, every version included?
+  - id: getLatestPackageVersion
+    intent: Get the latest version of a package
+    question: What is the newest published version of a package?
+  - id: linkPackage
+    intent: Link a package to a repository
+    question: How do I connect a package to the repository that builds it?
+  - id: unlinkPackage
+    intent: Unlink a package from its repository
+    question: How do I detach a package from the repository it's linked to?
+  - id: getPackage
+    intent: Get a specific package version
+    question: What are the details of one specific version of a package?
+  - id: deletePackageVersion
+    intent: Delete one version of a package
+    question: How do I delete a single bad release but keep the rest of the package?
+  phrasing_ops: 9
   slug: gitea-package-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The repository API from Gitea — 133 operation(s) for repository.
-  name: Gitea repository API
+  name: Gitea Repository API
+  phrasing_intents:
+  - id: repoMigrate
+    intent: Migrate a remote git repository
+    question: How do I import an existing repository from another git server into Gitea?
+  - id: repoSearch
+    intent: Search repositories
+    question: What's the way to find repositories matching a keyword across the whole instance?
+  - id: repoGet
+    intent: Get a repository's details
+    question: How can I look up the details of a single repository, like its default branch and visibility?
+  - id: repoDelete
+    intent: Delete a repository
+    question: How do I permanently delete a repository?
+  - id: repoEdit
+    intent: Change a repository's settings
+    question: Can I rename a repository or change its description and website?
+  - id: getArtifacts
+    intent: List a repository's Actions artifacts
+    question: What build artifacts have Actions workflows produced in this repository?
+  - id: getArtifact
+    intent: Get one Actions artifact
+    question: How do I see the metadata of a single workflow artifact, like its size and expiry?
+  - id: deleteArtifact
+    intent: Delete an Actions artifact
+    question: How can I delete a workflow artifact I no longer need to free up storage?
+  phrasing_ops: 197
   slug: gitea-repository-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The settings API from Gitea — 4 operation(s) for settings.
-  name: Gitea settings API
+  name: Gitea Settings API
+  phrasing_intents:
+  - id: getGeneralAPISettings
+    intent: Get the instance's API settings
+    question: What is the maximum page size the Gitea API allows on this server?
+  - id: getGeneralAttachmentSettings
+    intent: Get the instance's attachment settings
+    question: How large can file attachments be on this server?
+  - id: getGeneralRepositorySettings
+    intent: Get the instance's repository settings
+    question: Are repository mirrors, migrations or forks disabled on this server?
+  - id: getGeneralUISettings
+    intent: Get the instance's UI settings
+    question: What themes and default theme does this Gitea instance offer?
+  phrasing_ops: 4
   slug: gitea-settings-api
 - baseURL: https://gitea.com/api/v1
   baseurl_source: declared
   description: The user API from Gitea — 48 operation(s) for user.
-  name: Gitea user API
+  name: Gitea User API
+  phrasing_intents:
+  - id: userGetCurrent
+    intent: Get my own Gitea user profile
+    question: Which Gitea account is my API token signed in as?
+  - id: getUserWorkflowJobs
+    intent: List my Actions workflow jobs
+    question: What Actions workflow jobs are running across my personal account?
+  - id: getUserRunners
+    intent: List my user-level Actions runners
+    question: Which Actions runners are registered to my personal account?
+  - id: userCreateRunnerRegistrationToken
+    intent: Get a token to register a personal runner
+    question: How do I get a registration token to attach a runner to my own account?
+  - id: getUserRunner
+    intent: Get one of my user-level runners
+    question: What are the details and status of one specific runner on my account?
+  - id: deleteUserRunner
+    intent: Remove a user-level runner
+    question: How can I unregister a runner I no longer use from my personal account?
+  - id: updateUserRunner
+    intent: Enable or disable a user-level runner
+    question: Can I pause one of my personal runners without deleting it?
+  - id: getUserWorkflowRuns
+    intent: List my Actions workflow runs
+    question: Which workflow runs have been triggered across my personal repos?
+  phrasing_ops: 76
   slug: gitea-user-api
 arazzos:
 - description: Create a repository, open a tracking issue in it, and add a kickoff comment.
@@ -161,7 +380,7 @@ arazzos:
 - description: Create a milestone and label, open an issue under them, and apply the label.
   name: Gitea Sprint Issue Setup
   slug: gitea-sprint-issue-setup-workflow
-artifact_total: 140
+artifact_total: 141
 collections:
 - collection_type: postman
   name: Gitea API
@@ -203,6 +422,11 @@ collections:
   name: Gitea admin user API
   slug: open-gitea-user-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/gitea/refs/heads/main/capabilities/gitea-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/gitea-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -582,6 +806,10 @@ common:
   title: ''
   type: Vocabulary
   url: vocabulary/gitea-vocabulary.yml
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/go-gitea/gitea/blob/76aabbff9f0644743b30882b5910d9e1d818ec2e/.spectral.yaml
 created: '2026-05-06'
 description: Gitea is an open-source, self-hosted Git service and all-in-one DevOps platform written in Go and licensed under the MIT License. It provides Git hosting, code review, team collaboration, an integrated package registry across 24+ formats, issue tracking, project boards, and GitHub-Actions-compatible CI/CD via Gitea Actions. Gitea ships with a comprehensive Swagger 2.0 / OpenAPI-described REST API at /api/v1/ exposing roughly 300 operations across repositories, users, organizations, issues, packages, notifications, admin, and miscellaneous tags. The project is governed by CommitGo, Inc., which also offers Gitea Enterprise (self-managed, with SSO, audit logs and Kubernetes auto-scaling runners) and Gitea Cloud (single-tenant fully-managed hosting in multiple regions).
 examples:
@@ -676,9 +904,13 @@ features:
 - description: Pull and push mirrors plus one-shot migration import from GitHub, GitLab, Bitbucket, Gitea, and other sources.
   name: Mirroring And Migration
 finops:
-- name: Gitea Finops
+- has_sources: false
+  method: generated
+  name: Gitea Finops
+  primary_unit: ''
   service_category: Developer Tools / DevOps
   slug: gitea-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/gitea.png
 integrations:
 - description: GitHub-compatible workflow ecosystem; most public Actions run unmodified on Gitea Actions runners.
@@ -802,20 +1034,20 @@ jsonld:
   slug: gitea-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at gitea.com; 23 tools listed.
   name: Gitea MCP Server
-  slug: gitea-mcp-server
+  slug: gitea-mcp
 modified: '2026-06-20'
 name: Gitea
 nav: Providers
 network: true
-overview: 'Gitea publishes 9 APIs on the [APIs.io](https://apis.io/) network, including admin API, issue API, miscellaneous API, and 6 more. Tagged areas include Gitea, Git, Source Control, DevOps, and CI/CD.
+overview: 'Gitea publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, Issue API, Miscellaneous API, and 10 more. Tagged areas include Gitea, Git, Version Control, DevOps, and CI/CD.
 
 
-  The Gitea catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Gitea catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Gitea''s developer surface includes authentication, changelog, CLI, documentation, API reference, engineering blog, signup flow, and 76 more developer resources.'
+  Gitea''s developer surface includes authentication, changelog, CLI, documentation, API reference, engineering blog, signup flow, and 78 more developer resources.'
 plans:
 - name: Gitea Plans Pricing
   plan_count: 3
@@ -826,9 +1058,22 @@ rate_limits:
   name: Gitea Rate Limits
   slug: gitea-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: provider
+  effective_rule_count: 41
+  extends:
+  - spectral:oas
+  name: Gitea — gitea rules
+  rule_count: 0
+  severity_counts:
+    error: 0
+    hint: 0
+    info: 0
+    warn: 0
+  slug: gitea-gitea-spectral-rules
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Gitea API Rules
+  name: Gitea — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -836,7 +1081,8 @@ rules:
     info: 1
     warn: 5
   slug: gitea-jsonschema-spectral-rules
-- effective_rule_count: 57
+- authorship: unmarked
+  effective_rule_count: 57
   extends:
   - spectral:oas
   name: Gitea API Rules
@@ -853,27 +1099,27 @@ scopes:
   slug: gitea-scopes
   summary_line: OAuth 2.0 · no documented scopes
 score:
-  band: exemplar
-  composite: 71.7
+  band: strong
+  composite: 65.5
   coverage:
-    artifact_dirs: 34
-    catalog_earned: 83.5
+    artifact_dirs: 36
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 31.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 78.9
-    contract_governance: 33.3
-    contract_quality: 65.8
+    access_clarity: 47.4
+    contract_governance: 31.8
+    contract_quality: 60.6
     developer_ergonomics: 79.8
-    discoverability: 61.1
-    operational_transparency: 65.8
+    discoverability: 64.3
+    operational_transparency: 42.1
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 71.7
+  previous_composite: 73.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -883,9 +1129,15 @@ score:
       marker_coverage: 0.0
       total: 9
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 37.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -920,11 +1172,11 @@ solutions:
 tags:
 - Gitea
 - Git
-- Source Control
+- Version Control
 - DevOps
 - CI/CD
 - Code Hosting
-- Open-Source
+- Open Source
 - Self-Hosted
 - Package Registry
 - Issue Tracking

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Live production API host operated by Blockskye, discovered by probe. The host answers as a Fastify service behind AWS API Gateway: GET /health returns 200 with a JSON status/bootId payload, every othe'
@@ -42,6 +42,15 @@ apis:
   slug: blockskye-api
 artifact_total: 3
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/blockskye/refs/heads/main/rate-limits/blockskye-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/blockskye-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.blockskye.com/latestnews?format=rss
 - group: company
   title: ''
   type: Website
@@ -127,14 +136,14 @@ description: 'Blockskye is an enterprise travel management and payments platform
   at api.blockskye.com but publishes no public developer portal, API reference, or machine-readable API contract.'
 image: https://static1.squarespace.com/static/68efa9e7e26dde07bc4331ce/t/690a135f62cc1b156338a90e/1778097079157/SEOblockskye.jpg?format=1500w
 layout: provider
-modified: '2026-08-07'
+modified: '2026-10-06'
 name: Blockskye
 nav: Providers
 network: true
-overview: 'Blockskye publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Travel, Corporate Travel, Travel Management, Payments, and Settlement.
+overview: 'Blockskye is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Travel, Corporate Travel, Travel Management, Payments, and Settlement.
 
 
-  Blockskye''s developer surface includes engineering blog, support, and 12 more developer resources.'
+  Blockskye''s developer surface includes engineering blog, support, and 14 more developer resources.'
 random_paper: 21
 rate_limits:
 - limit_count: 1
@@ -142,7 +151,7 @@ rate_limits:
   slug: blockskye-rate-limits
 score:
   band: emerging
-  composite: 14.9
+  composite: 15.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 45.0
@@ -156,17 +165,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 14.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 15.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

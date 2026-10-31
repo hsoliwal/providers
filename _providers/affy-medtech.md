@@ -23,10 +23,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/affy-medtech/refs/heads/main/plans/affy-medtech-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/affy-medtech-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/affy-medtech/refs/heads/main/rate-limits/affy-medtech-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/affy-medtech-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/affy-medtech/refs/heads/main/security/affy-medtech-domain-security.yml
   title: ''
@@ -85,7 +95,7 @@ score:
   band: minimal
   composite: 5.0
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -97,11 +107,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
+    - netherlands
     - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
@@ -115,14 +126,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 13.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/affy-medtech/refs/heads/main/screenshots/affy-medtech-2026-10-11T093028.png
 security:
 - kind: domain-security
   name: Affy Medtech Domain Security

@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-09-20'
+  score: 34.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 60
   slug: independence-blue-cross-agentic-access
   summary_line: 60 operations
-api_count: 4
+api_count: 5
 apis:
 - description: 'Monthly machine-readable JSON files published under 45 CFR Part Â§147.211 / the Transparency in Coverage rule for three carrier brands operated by Independence Blue Cross: Keystone Health Plan East, Q'
   name: Independence Blue Cross Transparency In Coverage Data
@@ -95,6 +95,36 @@ collections:
   name: Independence Blue Cross Provider Directory FHIR API
   slug: open-independence-blue-cross-provider
 common:
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/rules/independence-blue-cross-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/independence-blue-cross-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/rules/independence-blue-cross-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/independence-blue-cross-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/json-ld/independence-blue-cross-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/independence-blue-cross-context.jsonld
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/lifecycle/independence-blue-cross-lifecycle.yml
+  title: ''
+  type: Deprecation
+  url: lifecycle/independence-blue-cross-lifecycle.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/hosts/independence-blue-cross-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/independence-blue-cross-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/vendors/independence-blue-cross-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/independence-blue-cross-vendors.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/capabilities/independence-blue-cross-capability-edges.yml
   title: ''
@@ -115,11 +145,6 @@ common:
   title: ''
   type: WellKnown
   url: well-known/independence-blue-cross-well-known.yml
-- group: build
-  href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/packages/independence-blue-cross-packages.yml
-  title: ''
-  type: Packages
-  url: packages/independence-blue-cross-packages.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/independence-blue-cross/refs/heads/main/mcp/independence-blue-cross-mcp.yml
   title: ''
@@ -408,9 +433,13 @@ features:
 - description: Independence Blue Cross does not maintain a public api-evangelist-discoverable GitHub organization for its FHIR developer surface; SDKs, sample code, and documentation are distributed through the dev portal rather than open-source repositories.
   name: No Public GitHub Organization
 finops:
-- name: Independence Blue Cross Finops
+- has_sources: true
+  method: generated
+  name: Independence Blue Cross Finops
+  primary_unit: ''
   service_category: Healthcare Interoperability
   slug: independence-blue-cross-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/independence-blue-cross.png
 integrations:
 - description: Independence Blue Cross is a subsidiary of Independence Health Group, Inc., the 2013 holding company that also owns AmeriHealth (commercial) and majority-owns AmeriHealth Caritas (Medicaid managed care).
@@ -466,13 +495,13 @@ modified: '2026-08-15'
 name: Independence Blue Cross
 nav: Providers
 network: true
-overview: 'Independence Blue Cross publishes 3 APIs on the [APIs.io](https://apis.io/) network: Formulary API, Patient Access API, and Provider Directory API. Tagged areas include Healthcare, Health Insurance, Blue Cross Blue Shield, Managed Care, and Medicare.
+overview: 'Independence Blue Cross publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Formulary API, Patient Access API, Provider Directory API, and 1 more. Tagged areas include Healthcare, Health Insurance, Blue Cross Blue Shield, Managed Care, and Medicare.
 
 
   The Independence Blue Cross catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Independence Blue Cross'' developer surface includes sandbox, getting-started guide, support, code examples, authentication, developer portal, documentation, and 54 more developer resources.'
+  Independence Blue Cross'' developer surface includes sandbox, getting-started guide, support, code examples, authentication, developer portal, documentation, and 59 more developer resources.'
 plans:
 - name: Independence Blue Cross Plans Pricing
   plan_count: 5
@@ -483,9 +512,10 @@ rate_limits:
   name: Independence Blue Cross Rate Limits
   slug: independence-blue-cross-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Independence Blue Cross API Rules
+  name: Independence Blue Cross — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -493,7 +523,8 @@ rules:
     info: 2
     warn: 3
   slug: independence-blue-cross-jsonschema-spectral-rules
-- effective_rule_count: 0
+- authorship: unmarked
+  effective_rule_count: 0
   extends: []
   name: Independence Blue Cross API Rules
   rule_count: 0
@@ -509,24 +540,24 @@ scopes:
   slug: independence-blue-cross-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: exemplar
-  composite: 68.7
+  band: developing
+  composite: 54.0
   coverage:
-    artifact_dirs: 32
-    catalog_earned: 96.3
+    artifact_dirs: 35
+    catalog_earned: 70.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 18.8
+    catalog_gap: 44.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.5
   facets:
-    access_clarity: 75.0
-    contract_governance: 43.2
-    contract_quality: 64.2
+    access_clarity: 43.4
+    contract_governance: 31.8
+    contract_quality: 58.8
     developer_ergonomics: 57.7
-    discoverability: 81.5
-    operational_transparency: 31.6
-  previous_composite: 68.7
+    discoverability: 78.6
+    operational_transparency: 15.8
+  previous_composite: 62.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -542,10 +573,10 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 76.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 47.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

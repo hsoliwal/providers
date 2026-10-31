@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.zest.ai/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zest-ai/refs/heads/main/security/zest-ai-domain-security.yml
   title: ''
@@ -57,18 +61,18 @@ created: '2026-07-17'
 description: Zest AI is an AI-powered lending technology company that provides credit underwriting, fraud detection, and lending intelligence software to credit unions, banks, and specialty lenders. Its machine-learning models automate credit decisioning and risk assessment, and the company reports operating over 600 active lending models in production. Zest AI operates as a B2B SaaS platform delivered to financial institutions rather than as a public developer API; no public developer portal, API documentation, OpenAPI specification, SDKs, or self-service developer surface were found during enrichment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zest-ai.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Zest AI
 nav: Providers
 network: true
-overview: 'Zest AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Lending, Credit Underwriting, Fraud Detection, and Artificial Intelligence.
+overview: 'Zest AI is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Lending, Credit Underwriting, Fraud Prevention, and Artificial Intelligence.
 
 
-  Zest AI''s developer surface includes engineering blog and 3 more developer resources.'
+  Zest AI''s developer surface includes engineering blog and 4 more developer resources.'
 random_paper: 19
 score:
   band: minimal
-  composite: 5.8
+  composite: 6.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -82,17 +86,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.8
+  previous_composite: 6.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 15.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 8.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -109,10 +113,10 @@ tags:
 - Company
 - Lending
 - Credit Underwriting
-- Fraud Detection
+- Fraud Prevention
 - Artificial Intelligence
-- Machine-Learning
-- Financial-Services
+- Machine Learning
+- Financial Services
 - Fintech
 website: https://zest.ai/
 ---

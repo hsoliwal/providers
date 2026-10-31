@@ -28,14 +28,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.5
-  scored_at: '2026-09-20'
+  score: 31.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 0
@@ -85,7 +85,7 @@ apis:
   description: Member-authenticated experience endpoints.
   name: Circle Headless - Member API
   slug: circle-community-headless-member-api
-artifact_total: 25
+artifact_total: 26
 asyncapis:
 - description: Circle exposes a documented public WebSocket API for realtime chat and notifications, in beta for customers on the Business plan and above. The transport is ActionCable (Rails' WebSocket framework), a
   name: Circle Realtime WebSocket API (Beta)
@@ -119,6 +119,15 @@ collections:
   name: Circle Developer Platform API
   slug: open-circle-community
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://circle.so/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/circle-community/refs/heads/main/vendor-facets/circle-community-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/circle-community-vendor-facets.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/circle-community/refs/heads/main/agentic-access/circle-community-agentic-access.yml
   title: ''
@@ -164,22 +173,30 @@ common:
 created: '2026-07-05'
 description: 'Circle (circle.so) is an all-in-one community platform for creators, coaches, and brands - hosting discussions, courses, events, live streams, memberships, paywalls, and chat under a single branded space. This is the community software company at circle.so, NOT the USDC / stablecoin financial-services company. Circle exposes a documented public developer platform: an admin-authenticated Admin API (V2) for automations, migrations, and bulk administration; a Headless offering (Member API plus Auth API) for embedding Circle features into your own website or app via member-scoped JWT tokens; and a beta ActionCable WebSocket surface for realtime chat and notifications. API access is plan-gated to the Business plan and above.'
 finops:
-- name: Circle Community Finops
+- has_sources: true
+  method: generated
+  name: Circle Community Finops
+  primary_unit: ''
   service_category: Community and Collaboration
   slug: circle-community-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/circle-community.png
 layout: provider
-modified: '2026-07-05'
+mcp_servers:
+- description: Remote MCP server at app.circle.so over HTTP.
+  name: Circle MCP Server
+  slug: circle-community
+modified: '2026-10-06'
 name: Circle
 nav: Providers
 network: true
-overview: 'Circle publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Realtime WebSocket API, Admin - Courses API, Admin - Events API, and 5 more. Tagged areas include Community, Creators, Courses, Membership, and Event.
+overview: 'Circle publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Realtime WebSocket API, Admin - Courses API, Admin - Events API, and 5 more. Tagged areas include Community, Creators, Courses, Membership, and Event.
 
 
   The Circle catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
 
 
-  Circle''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  Circle''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Circle Community Plans Pricing
   plan_count: 4
@@ -190,10 +207,11 @@ rate_limits:
   name: Circle Community Rate Limits
   slug: circle-community-rate-limits
 rules:
-- effective_rule_count: 35
+- authorship: generated
+  effective_rule_count: 35
   extends:
   - spectral:asyncapi
-  name: Circle API Rules
+  name: Circle — asyncapi rules
   rule_count: 8
   severity_counts:
     error: 1
@@ -202,24 +220,24 @@ rules:
     warn: 7
   slug: circle-community-asyncapi-spectral-rules
 score:
-  band: developing
-  composite: 40.6
+  band: thin
+  composite: 30.1
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 67.8
+    artifact_dirs: 16
+    catalog_earned: 46.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.3
+    catalog_gap: 68.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.8
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 11.4
-    contract_quality: 60.6
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 40.6
+    contract_quality: 56.3
+    developer_ergonomics: 32.1
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 37.9
   provenance:
     agentic_access: derived
     contracts:
@@ -228,9 +246,15 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -253,5 +277,6 @@ tags:
 - Event
 - Chat
 - Community Platform
+- Real-Time
 website: https://circle.so
 ---

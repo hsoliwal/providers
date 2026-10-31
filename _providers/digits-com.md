@@ -28,27 +28,22 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 36.2
-  scored_at: '2026-09-20'
+  score: 34.3
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Digits Com Agentic Access
-  operation_count: 24
+  operation_count: 28
   slug: digits-com-agentic-access
-  summary_line: 24 operations · 8 acting
-api_count: 2
+  summary_line: 28 operations · 7 acting
+api_count: 3
 apis:
-- baseURL: https://connect.digits.com/v1
-  baseurl_source: declared
-  description: Receive event notifications from Digits at a configured webhook endpoint; Digits POSTs a JSON event body and expects a 2xx acknowledgment (WebhookService.receiveWebhookEvent).
-  name: Digits Webhooks API
-  slug: digits-com-webhooks-api
 - description: Model Context Protocol server that lets AI clients like ChatGPT and Claude connect directly to Digits to query the ledger in natural language. Discovery is published as an MCP Server Card at /.well-kn
   name: Digits MCP Server
   slug: digits-com-mcp-server
@@ -89,7 +84,7 @@ apis:
   slug: digits-com-transactions-api
 - baseURL: https://connect.digits.com/v1
   baseurl_source: declared
-  description: Event delivery to partner-configured endpoints.
+  description: Receive event notifications from Digits at a configured webhook endpoint; Digits POSTs a JSON event body and expects a 2xx acknowledgment (WebhookService.receiveWebhookEvent).
   name: Digits Webhooks API
   slug: digits-com-webhooks-api
 - baseURL: https://connect.digits.com/v1
@@ -107,7 +102,7 @@ apis:
   description: The .well Known API from Digits — 2 operation(s) for .well known.
   name: Digits .well Known API
   slug: digits-com-well-known-api
-artifact_total: 36
+artifact_total: 35
 asyncapis:
 - description: ''
   name: Digits Com Webhooks
@@ -153,6 +148,11 @@ collections:
   name: Digits Connect API
   slug: open-digits-com
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/capabilities/digits-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/digits-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/digits-com/refs/heads/main/agentic-access/digits-com-agentic-access.yml
   title: ''
@@ -340,25 +340,29 @@ common:
 created: '2026-07-01'
 description: Digits is an AI-native accounting and bookkeeping platform for startups and their accountants, built around the Autonomous General Ledger (AGL) that auto-books the majority of transactions in real time. The Digits Connect API opens the AGL programmatically over REST with OAuth 2.0, letting partners send raw transaction, party, and dimension data for AI categorization and vendor enrichment, and read back ledger entries and financial statements. Digits also publishes an MCP server for AI agents (ChatGPT, Claude) to query the ledger.
 finops:
-- name: Digits Com Finops
+- has_sources: true
+  method: generated
+  name: Digits Com Finops
+  primary_unit: ''
   service_category: Business Applications
   slug: digits-com-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/digits-com.png
 layout: provider
 modified: '2026-08-08'
 name: Digits
 nav: Providers
 network: true
-overview: 'Digits publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Webhooks API, Chart of Accounts API, Connections API, and 9 more. Tagged areas include Accounting, Bookkeeping, Finance, General Ledger, and Artificial Intelligence.
+overview: 'Digits publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chart of Accounts API, Connections API, Financial Statements API, and 9 more. Tagged areas include Accounting, Bookkeeping, Finance, General Ledger, and Artificial Intelligence.
 
 
   The Digits catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Digits'' developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 33 more developer resources.'
+  Digits'' developer surface includes authentication, documentation, engineering blog, API reference, getting-started guide, pricing, signup flow, and 34 more developer resources.'
 plans:
 - name: Digits Com Plans Pricing
-  plan_count: 2
+  plan_count: 3
   slug: digits-com-plans-pricing
 random_paper: 18
 rate_limits:
@@ -372,23 +376,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 53.5
+  composite: 53.0
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 56.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    artifact_dirs: 26
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
-    access_clarity: 55.3
+    access_clarity: 57.9
     contract_governance: 18.2
-    contract_quality: 57.9
+    contract_quality: 52.9
     developer_ergonomics: 48.2
-    discoverability: 75.9
-    operational_transparency: 50.0
-  previous_composite: 53.5
+    discoverability: 69.6
+    operational_transparency: 34.2
+  previous_composite: 53.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -399,8 +403,14 @@ score:
       total: 11
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

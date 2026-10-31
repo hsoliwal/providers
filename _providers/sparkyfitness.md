@@ -23,9 +23,9 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: templated
     openapi_examples: partial
     protected_resource_metadata: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 34.4
-  scored_at: '2026-09-20'
+  score: 29.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: A first-party Model Context Protocol server running in-process inside the SparkyFitness API server, mounted at POST /mcp over a stateless streamable HTTP transport. 56 tools across food, exercise, che
@@ -148,6 +148,11 @@ apis:
   slug: sparkyfitness-wellness-metrics-api
 artifact_total: 28
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/sparkyfitness/refs/heads/main/rate-limits/sparkyfitness-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/sparkyfitness-rate-limits.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/sparkyfitness/refs/heads/main/capabilities/sparkyfitness-capability-edges.yml
   title: ''
@@ -255,17 +260,17 @@ description: 'SparkyFitness is a self-hosted, open-source health and fitness tra
 image: https://codewithcj.github.io/SparkyFitness/logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: SparkyFitness ships a first-party Model Context Protocol server IN-PROCESS inside the main API server — there is no separate MCP service to run. It is a stateless StreamableHTTP transport mounted at P
   name: SparkyFitness MCP Server
   slug: sparkyfitness-mcp-server
 modified: '2026-08-27'
 name: SparkyFitness
 nav: Providers
 network: true
-overview: 'SparkyFitness publishes 21 APIs on the [APIs.io](https://apis.io/) network, including Admin API, AI API, AI & Insights API, and 18 more. Tagged areas include Company, Health, Fitness, Nutrition, and Self-Hosted.
+overview: 'SparkyFitness publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Admin API, AI API, AI & Insights API, and 19 more. Tagged areas include Company, Health, Fitness, Nutrition, and Self-Hosted.
 
 
-  SparkyFitness'' developer surface includes documentation, API reference, getting-started guide, support, FAQ, changelog, and 17 more developer resources.'
+  SparkyFitness'' developer surface includes documentation, API reference, getting-started guide, support, FAQ, changelog, and 18 more developer resources.'
 plans:
 - name: Sparkyfitness Plans Pricing
   plan_count: 0
@@ -277,7 +282,7 @@ rate_limits:
   slug: sparkyfitness-rate-limits
 score:
   band: thin
-  composite: 34.2
+  composite: 32.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -291,9 +296,9 @@ score:
     contract_governance: 4.5
     contract_quality: 15.1
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 68.3
     operational_transparency: 39.5
-  previous_composite: 34.2
+  previous_composite: 32.9
   provenance:
     conformance: derived
     contracts:
@@ -308,9 +313,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -336,7 +341,7 @@ tags:
 - Fitness
 - Nutrition
 - Self-Hosted
-- Open-Source
+- Open Source
 - Wearables
 - MCP
 - AI Assistant

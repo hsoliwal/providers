@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hometree.co.uk/feed/
 - group: company
   title: ''
   type: Website
@@ -76,18 +80,18 @@ created: '2026-07-17'
 description: Hometree is a UK home services and residential energy company offering homeowners and landlords subscription-based boiler and home emergency cover with unlimited repairs and annual maintenance from around £12.95 per month. Its nationwide network of Gas Safe registered engineers handles breakdowns across heating, plumbing, electrics, drainage and gas fires, and the company also arranges boiler installations and green home upgrades such as heat pumps and solar panels. Operating as an insurance distributor and installer across mainland England, Scotland and Wales, Hometree is backed by Anthemis, DN Capital, Barclays, BlackRock, 2150 and Puma Growth Partners.
 image: https://www.hometree.co.uk/wp-content/uploads/2024/01/24-7-logo-comparison_800x290px.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Hometree
 nav: Providers
 network: true
 overview: 'Hometree is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Home Services, Residential Energy, Insurance, and Boiler Cover.
 
 
-  Hometree''s developer surface includes support, engineering blog, signup flow, and 6 more developer resources.'
+  Hometree''s developer surface includes support, engineering blog, signup flow, and 7 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 9.7
+  composite: 10.3
   coverage:
     artifact_dirs: 3
     catalog_earned: 27.0
@@ -101,7 +105,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
@@ -109,15 +113,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 9.7
+  previous_composite: 10.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 12.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

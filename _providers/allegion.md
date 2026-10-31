@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,18 +23,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.4
-  scored_at: '2026-09-20'
+  score: 28.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -111,6 +111,11 @@ collections:
   name: Schlage Home API
   slug: open-schlage-home
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/allegion/refs/heads/main/capabilities/allegion-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/allegion-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -320,9 +325,13 @@ features:
 - HTTPS-only callback URLs, 200-299 success range
 - Onboarding requires Schlage Home Representative approval (residential) or Allegion Security Token Agreement (mobile credentials)
 finops:
-- name: Allegion Finops
+- has_sources: true
+  method: generated
+  name: Allegion Finops
+  primary_unit: ''
   service_category: Identity, Security, and Access
   slug: allegion-finops
+  template: false
 image: https://www.allegion.com/content/dam/allegion-corporate/logos/allegion-logo.svg
 json_schemas:
 - name: ENGAGE Mobile Credential
@@ -354,13 +363,13 @@ modified: '2026-05-23'
 name: Allegion
 nav: Providers
 network: true
-overview: 'Allegion publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Access Codes API, Commands API, Devices API, and 2 more. Tagged areas include Access Control, Smart Lock, Smart Home, Mobile Credentials, and Bluetooth.
+overview: 'Allegion publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Codes API, Commands API, Devices API, and 2 more. Tagged areas include Access Control, Smart Lock, Smart Home, Mobile Credentials, and Bluetooth.
 
 
   The Allegion catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Allegion''s developer surface includes authentication, developer portal, documentation, release notes, support, engineering blog, and 33 more developer resources.'
+  Allegion''s developer surface includes authentication, developer portal, documentation, release notes, support, engineering blog, and 34 more developer resources.'
 plans:
 - name: Allegion Plans Pricing
   plan_count: 3
@@ -371,9 +380,10 @@ rate_limits:
   name: Allegion Rate Limits
   slug: allegion-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Allegion API Rules
+  name: Allegion — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -381,10 +391,11 @@ rules:
     info: 2
     warn: 3
   slug: allegion-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
-  name: Allegion API Rules
+  name: Allegion — engage credentialing rules
   rule_count: 6
   severity_counts:
     error: 2
@@ -392,10 +403,11 @@ rules:
     info: 0
     warn: 4
   slug: engage-credentialing-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
-  name: Allegion API Rules
+  name: Allegion — schlage home rules
   rule_count: 7
   severity_counts:
     error: 1
@@ -409,24 +421,24 @@ scopes:
   slug: allegion-scopes
   summary_line: 5 scopes · authorizationCode
 score:
-  band: strong
-  composite: 58.9
+  band: developing
+  composite: 51.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 94.5
+    artifact_dirs: 21
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 20.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 64.5
-    contract_governance: 28.8
-    contract_quality: 68.7
+    access_clarity: 32.9
+    contract_governance: 27.3
+    contract_quality: 62.9
     developer_ergonomics: 58.3
-    discoverability: 68.5
-    operational_transparency: 57.9
-  previous_composite: 58.9
+    discoverability: 66.1
+    operational_transparency: 34.2
+  previous_composite: 59.8
   provenance:
     agentic_access: derived
     contracts:
@@ -434,9 +446,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

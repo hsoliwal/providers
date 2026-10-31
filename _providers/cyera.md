@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Versioned REST API (v1 / v3) for programmatic access to Cyera's data discovery, classification, access-exposure, and risk findings. Secured with OAuth 2.0 client_credentials (Client ID + Client Secret
@@ -41,6 +41,10 @@ apis:
   slug: cyera-api
 artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.cyera.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -161,14 +165,14 @@ mcp_servers:
 - description: Cyera MCP is an official Model Context Protocol server that lets any MCP-compatible AI client (Claude, Cursor, Microsoft Copilot, ChatGPT, custom agents) query Cyera's data-security intelligence in na
   name: Cyera MCP (DataPort)
   slug: cyera-mcp-dataport
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Cyera
 nav: Providers
 network: true
-overview: 'Cyera publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Data Security, DSPM, and Data Security Posture Management.
+overview: 'Cyera is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Data Security, DSPM, and Data Security Posture Management.
 
 
-  Cyera''s developer surface includes documentation, API reference, support, engineering blog, pricing, changelog, authentication, and 18 more developer resources.'
+  Cyera''s developer surface includes documentation, API reference, support, engineering blog, pricing, changelog, authentication, and 19 more developer resources.'
 random_paper: 4
 scopes:
 - name: Cyera Scopes
@@ -177,9 +181,9 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: thin
-  composite: 35.1
+  composite: 39.1
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -191,14 +195,26 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 42.1
-  previous_composite: 35.1
+  previous_composite: 39.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -26,14 +26,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
-    spec_presence: true
+    spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 17.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -78,7 +78,7 @@ apis:
   description: 'Register outbound webhooks so DroneDeploy notifies your endpoint when long-running work finishes. Confirmed on the export flow, where a `webhook.url` set inside CreateExportInput parameters is called '
   name: DroneDeploy Webhooks API
   slug: dronedeploy-webhooks-api
-artifact_total: 15
+artifact_total: 16
 collections:
 - collection_type: open
   name: DroneDeploy GraphQL API
@@ -197,20 +197,28 @@ common:
 created: '2026-07-04'
 description: DroneDeploy is a drone mapping, reality capture, and aerial analytics platform for construction, energy, agriculture, and inspection. Its developer platform is a GraphQL API (endpoint https://www.dronedeploy.com/graphql) that lets Enterprise and Developer Partner accounts query and mutate DroneDeploy data - organizations, projects, map plans, exports, annotations/issues, images, and webhooks - using a single strongly typed, Relay-style (cursor-paginated) schema rooted at the `viewer` object. A set of legacy REST APIs (Map Processing / Map Engine as a Service, Plan API, Export API) also remains available, but DroneDeploy recommends the GraphQL API for most integrations.
 finops:
-- name: Dronedeploy Finops
+- has_sources: true
+  method: generated
+  name: Dronedeploy Finops
+  primary_unit: ''
   service_category: Geospatial and Reality Capture
   slug: dronedeploy-finops
+  template: false
 graphqls:
 - description: DroneDeploy is a drone mapping, reality capture, and aerial analytics platform. Its
   name: DroneDeploy GraphQL API
   slug: dronedeploy-graphql
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/dronedeploy.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.dronedeploy.com over HTTP.
+  name: DroneDeploy MCP Server
+  slug: dronedeploy
 modified: '2026-07-04'
 name: DroneDeploy
 nav: Providers
 network: true
-overview: 'DroneDeploy publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Projects and Plans API, Maps and Exports API, Annotations and Issues API, and 4 more. Tagged areas include Drone Mapping, Reality Capture, Aerial Analytics, Geospatial, and GraphQL.
+overview: 'DroneDeploy is listed with 7 APIs on the [APIs.io](https://apis.io/) network, including Projects and Plans API, Maps and Exports API, Annotations and Issues API, and 4 more. Tagged areas include Drone Mapping, Reality Capture, Aerial Analytics, Geospatial, and GraphQL.
 
 
   DroneDeploy''s developer surface includes authentication, developer portal, sandbox, signup flow, support, engineering blog, YouTube channel, and 19 more developer resources.'
@@ -224,30 +232,36 @@ rate_limits:
   name: Dronedeploy Rate Limits
   slug: dronedeploy-rate-limits
 score:
-  band: developing
-  composite: 48.1
+  band: thin
+  composite: 29.9
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 67.0
+    artifact_dirs: 13
+    catalog_earned: 46.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 48.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.2
   facets:
-    access_clarity: 67.1
+    access_clarity: 35.5
     contract_governance: 0.0
-    contract_quality: 37.2
-    developer_ergonomics: 57.1
-    discoverability: 74.1
-    operational_transparency: 50.0
-  previous_composite: 48.1
+    contract_quality: 0.0
+    developer_ergonomics: 56.7
+    discoverability: 73.3
+    operational_transparency: 26.3
+  previous_composite: 38.1
   provenance:
     agentic_access: derived
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'

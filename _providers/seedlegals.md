@@ -33,10 +33,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://seedlegals.com/feed/
 - group: company
   title: ''
   type: Website
@@ -111,15 +115,15 @@ layout: provider
 mcp_servers:
 - description: Hosted Model Context Protocol server operated by SeedLegals at https://api.seedlegals.com/mcp. Discovered via RFC 8414 OAuth Authorization Server Metadata and RFC 9728 OAuth Protected Resource Metadat
   name: SeedLegals MCP Server
-  slug: seedlegals-mcp-server
-modified: '2026-07-21'
+  slug: seedlegals
+modified: '2026-10-06'
 name: SeedLegals
 nav: Providers
 network: true
 overview: 'SeedLegals is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Business Applications, Legal Tech, Startups, and Fundraising.
 
 
-  SeedLegals'' developer surface includes pricing, engineering blog, support, signup flow, authentication, and 10 more developer resources.'
+  SeedLegals'' developer surface includes pricing, engineering blog, support, signup flow, authentication, and 11 more developer resources.'
 random_paper: 15
 scopes:
 - name: Seedlegals Scopes
@@ -128,7 +132,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode
 score:
   band: emerging
-  composite: 19.4
+  composite: 22.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,14 +146,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 19.4
+  previous_composite: 22.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -176,6 +186,5 @@ tags:
 - Equity
 - Compliance
 - MCP
-- OpenID Connect
 website: https://seedlegals.com
 ---

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.8
-  scored_at: '2026-09-20'
+  score: 20.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -58,11 +58,6 @@ apis:
 - description: 'Access full transaction history for an OANDA trading account with time-based and ID-range queries. Includes a streaming endpoint for real-time transaction notifications from the moment the request is '
   name: OANDA Transaction API
   slug: oanda-transaction-api
-- baseURL: /v3
-  baseurl_source: spec
-  description: Retrieve real-time bid/ask pricing, stream live price updates at up to 4 per second, and access historical OHLC candlestick data for any tradeable instrument. Historical data is available from 2005 on
-  name: OANDA Pricing API
-  slug: oanda-pricing-api
 - description: Institutional-grade foreign exchange data service covering 200+ currencies and 38,000+ currency pairs. Provides daily average rates, period averages, ECB and national bank rates, forward rates, stream
   name: OANDA Exchange Rates API
   slug: oanda-exchange-rates-api
@@ -78,7 +73,7 @@ apis:
   slug: oanda-instruments-api
 - baseURL: /v3
   baseurl_source: spec
-  description: The Pricing API from OANDA — 2 operation(s) for pricing.
+  description: Retrieve real-time bid/ask pricing, stream live price updates at up to 4 per second, and access historical OHLC candlestick data for any tradeable instrument. Historical data is available from 2005 on
   name: OANDA Pricing API
   slug: oanda-pricing-api
 - baseURL: /v3
@@ -86,7 +81,7 @@ apis:
   description: The Users API from OANDA — 2 operation(s) for users.
   name: OANDA Users API
   slug: oanda-users-api
-artifact_total: 234
+artifact_total: 233
 collections:
 - collection_type: open
   name: API Collection
@@ -104,6 +99,21 @@ collections:
   name: OANDA v20 REST Accounts Users API
   slug: open-oanda-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/oanda/refs/heads/main/plans/oanda-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/oanda-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/oanda/refs/heads/main/rate-limits/oanda-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/oanda-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/oanda/refs/heads/main/finops/oanda-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/oanda-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/oanda/refs/heads/main/capabilities/oanda-capability-edges.yml
   title: ''
@@ -321,9 +331,13 @@ features:
 - FIX API for institutional customers
 - MT4 integration for backtesting support
 finops:
-- name: Oanda Finops
+- has_sources: true
+  method: generated
+  name: Oanda Finops
+  primary_unit: ''
   service_category: Financial Services
   slug: oanda-finops
+  template: false
 image: https://www.oanda.com/img/oanda-logo.png
 json_schemas:
 - name: AcceptDatetimeFormat
@@ -804,13 +818,13 @@ modified: '2026-06-13'
 name: OANDA
 nav: Providers
 network: true
-overview: 'OANDA publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Pricing API, Accounts API, Instruments API, and 2 more. Tagged areas include Forex, FX Trading, CFD Trading, Financial-Services, and Trading APIs.
+overview: 'OANDA publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Instruments API, Pricing API, and 7 more. Tagged areas include Foreign Exchange, FX Trading, CFD Trading, Financial Services, and Trading APIs.
 
 
   The OANDA catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  OANDA''s developer surface includes developer portal, documentation, getting-started guide, API reference, authentication, pricing, signup flow, and 12 more developer resources.'
+  OANDA''s developer surface includes developer portal, documentation, getting-started guide, API reference, authentication, pricing, signup flow, and 15 more developer resources.'
 plans:
 - name: Oanda Plans Pricing
   plan_count: 6
@@ -821,9 +835,10 @@ rate_limits:
   name: Oanda Rate Limits
   slug: oanda-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: OANDA API Rules
+  name: OANDA — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -832,24 +847,24 @@ rules:
     warn: 3
   slug: oanda-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 47.8
+  band: thin
+  composite: 36.6
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 68.3
+    artifact_dirs: 16
+    catalog_earned: 47.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 46.8
+    catalog_gap: 67.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 63.2
+    access_clarity: 31.6
     contract_governance: 9.8
-    contract_quality: 55.4
+    contract_quality: 50.7
     developer_ergonomics: 50.0
-    discoverability: 55.6
-    operational_transparency: 36.8
-  previous_composite: 47.8
+    discoverability: 53.6
+    operational_transparency: 13.2
+  previous_composite: 44.9
   provenance:
     agentic_access: derived
     contracts:
@@ -862,10 +877,10 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 21.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -877,10 +892,10 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: oanda
 tags:
-- Forex
+- Foreign Exchange
 - FX Trading
 - CFD Trading
-- Financial-Services
+- Financial Services
 - Trading APIs
 website: https://www.oanda.com/
 ---

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for retrieving public company org charts, prospecting positions/people, and monitoring credit usage. Metered in credits; authenticated with an X-Api-Key header.
@@ -189,14 +189,14 @@ description: 'The Org operates the world''s largest network of public organizati
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/theorg.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api.theorg.com over streamable HTTP; 13 tools listed.
   name: The Org MCP Server
-  slug: the-org-mcp-server
+  slug: theorg
 modified: '2026-08-14'
 name: The Org
 nav: Providers
 network: true
-overview: 'The Org publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Organizational Charts, People Data, Sales Intelligence, and Prospecting.
+overview: 'The Org is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Organizational Charts, People Data, Sales Intelligence, and Prospecting.
 
 
   The Org''s developer surface includes documentation, API reference, getting-started guide, changelog, authentication, pricing, support, and 24 more developer resources.'
@@ -216,9 +216,9 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: developing
-  composite: 42.4
+  composite: 46.0
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -230,15 +230,21 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 36.8
-  previous_composite: 42.4
+  previous_composite: 46.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -96,40 +96,46 @@ created: '2026-07-17'
 description: 9fin is an AI-native debt market intelligence and data platform for modern credit teams, covering leveraged finance, private credit, distressed debt, high yield bonds, leveraged loans, CLOs, structured credit, and asset-backed finance. Founded in 2016 and headquartered in London, 9fin unifies deep credit data, covenant and financial analysis, expert news and analysis, and AI-powered workflows (covenant analysis, earnings summaries, comparable analysis) in one interface. It powers credit teams at 350+ leading institutions - investment banks, asset managers, hedge funds, law firms, and advisors - and raised a $170M Series C at a $1.3B valuation. 9fin offers an API and Data Services for clients to access its data under agreement, but publishes no open public developer portal or API specification at this time.
 image: https://9fin.com/apple-touch-icon.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.9fin.com over HTTP.
+  name: 9FIN MCP Server
+  slug: 9fin
 modified: '2026-07-17'
 name: 9FIN
 nav: Providers
 network: true
-overview: '9FIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Fixed Income, Credit Intelligence, and Leveraged Finance.
+overview: '9FIN is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Fixed Income, Credit Intelligence, and Leveraged Finance.
 
 
   9FIN''s developer surface includes engineering blog, changelog, signup flow, and 10 more developer resources.'
 random_paper: 0
 score:
   band: emerging
-  composite: 22.9
+  composite: 22.3
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 22.9
+  previous_composite: 22.2
   provenance:
     conformance: first-party
     mcp: first-party
@@ -142,9 +148,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 40.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 20.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -163,7 +169,7 @@ security:
 slug: 9fin
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Fixed Income
 - Credit Intelligence
 - Leveraged Finance

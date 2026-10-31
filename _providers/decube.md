@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Decube Public API (BETA, v1) exposes a Data API (assets, glossary, lineage, monitors, ACL, reports, recon, custom attributes, virtual sources) and a Control API (users) for automating data catalog
@@ -175,14 +175,14 @@ description: Decube is a unified data trust platform that combines data observab
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/decube.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at connect.us1.decube.io over HTTP requiring OAuth; 32 tools listed.
   name: Decube MCP Server
-  slug: decube-mcp-server
+  slug: decube-mcp
 modified: '2026-07-18'
 name: Decube
 nav: Providers
 network: true
-overview: 'Decube publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Observability, Data Governance, Data Catalog, and Data Quality.
+overview: 'Decube is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Observability, Data Governance, Data Catalog, and Data Quality.
 
 
   The Decube catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -192,7 +192,7 @@ overview: 'Decube publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
 random_paper: 0
 score:
   band: developing
-  composite: 49.2
+  composite: 51.5
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -200,20 +200,32 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 57.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 49.2
+  previous_composite: 51.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -232,7 +244,7 @@ security:
 - kind: vulnerability-disclosure
   name: Decube Vulnerability Disclosure
   slug: decube-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Decube Trust Center
   slug: decube-trust-center

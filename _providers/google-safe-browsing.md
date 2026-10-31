@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 1
   human_in_the_loop: 0
   name: Google Safe Browsing Agentic Access
   operation_count: 4
   slug: google-safe-browsing-agentic-access
-  summary_line: 4 operations · 3 acting
+  summary_line: 4 operations · 1 acting
 api_count: 1
 apis:
 - baseURL: https://safebrowsing.googleapis.com/v4
@@ -53,17 +53,17 @@ apis:
 - baseURL: https://safebrowsing.googleapis.com/v4
   baseurl_source: declared
   description: The threatLists API from Google Safe Browsing — 1 operation(s) for threatlists.
-  name: Google Safe Browsing threatLists API
+  name: Google Safe Browsing Threat Lists API
   slug: google-safe-browsing-threatlists-api
 - baseURL: https://safebrowsing.googleapis.com/v4
   baseurl_source: declared
   description: The threatListUpdates:fetch API from Google Safe Browsing — 1 operation(s) for threatlistupdates:fetch.
-  name: Google Safe Browsing threatListUpdates:fetch API
+  name: Google Safe Browsing Threat List Updates:fetch API
   slug: google-safe-browsing-threatlistupdates-fetch-api
 - baseURL: https://safebrowsing.googleapis.com/v4
   baseurl_source: declared
   description: The threatMatches:find API from Google Safe Browsing — 1 operation(s) for threatmatches:find.
-  name: Google Safe Browsing threatMatches:find API
+  name: Google Safe Browsing Threat Matches:find API
   slug: google-safe-browsing-threatmatches-find-api
 artifact_total: 24
 collections:
@@ -98,6 +98,26 @@ collections:
   name: Google Safe Browsing API
   slug: open-openapi
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/google-safe-browsing/refs/heads/main/plans/google-safe-browsing-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/google-safe-browsing-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/google-safe-browsing/refs/heads/main/rate-limits/google-safe-browsing-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/google-safe-browsing-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/google-safe-browsing/refs/heads/main/finops/google-safe-browsing-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/google-safe-browsing-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/google-safe-browsing/refs/heads/main/capabilities/google-safe-browsing-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/google-safe-browsing-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -170,9 +190,13 @@ common:
 created: '2026-03-13'
 description: The Google Safe Browsing API enables client applications to check web resources (most commonly URLs) against Google-generated lists of unsafe web resources including malware, social engineering, unwanted software, and potentially harmful applications.
 finops:
-- name: Google Safe Browsing Finops
+- has_sources: false
+  method: generated
+  name: Google Safe Browsing Finops
+  primary_unit: ''
   service_category: API
   slug: google-safe-browsing-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/google-safe-browsing.png
 json_schemas:
 - name: Google Safe Browsing Threat Match
@@ -188,13 +212,13 @@ modified: '2026-05-19'
 name: Google Safe Browsing
 nav: Providers
 network: true
-overview: 'Google Safe Browsing publishes 4 APIs on the [APIs.io](https://apis.io/) network, including fullHashes:find API, threatLists API, threatListUpdates:fetch API, and 1 more. Tagged areas include Google, Malware, Safe Browsing, Security, and Threats.
+overview: 'Google Safe Browsing publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including fullHashes:find API, Threat Lists API, Threat List Updates:fetch API, and 1 more. Tagged areas include Google, Malware, Safe Browsing, Security, and Threats.
 
 
   The Google Safe Browsing catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Google Safe Browsing''s developer surface includes authentication, developer portal, getting-started guide, documentation, support, and 11 more developer resources.'
+  Google Safe Browsing''s developer surface includes authentication, developer portal, getting-started guide, documentation, support, and 15 more developer resources.'
 plans:
 - name: Google Safe Browsing Plans Pricing
   plan_count: 3
@@ -205,9 +229,10 @@ rate_limits:
   name: Google Safe Browsing Rate Limits
   slug: google-safe-browsing-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Google Safe Browsing API Rules
+  name: Google Safe Browsing — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -217,23 +242,23 @@ rules:
   slug: google-safe-browsing-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 42.6
+  composite: 41.7
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 63.3
+    artifact_dirs: 16
+    catalog_earned: 59.7
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 55.4
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 36.8
+    access_clarity: 28.9
     contract_governance: 9.8
-    contract_quality: 62.9
+    contract_quality: 57.2
     developer_ergonomics: 44.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 42.6
+  previous_composite: 43.2
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +266,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: documented
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 31.4
-  scored_at: '2026-09-20'
+  score: 29.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 15
+- acting_count: 30
   human_in_the_loop: 0
   name: Virtual Peaker Agentic Access
-  operation_count: 23
+  operation_count: 47
   slug: virtual-peaker-agentic-access
-  summary_line: 23 operations · 15 acting
+  summary_line: 47 operations · 30 acting
 api_count: 2
 apis:
 - baseURL: https://partner.virtualpeaker.io/v1
@@ -276,7 +276,7 @@ modified: '2026-07-27'
 name: Virtual Peaker
 nav: Providers
 network: true
-overview: 'Virtual Peaker publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Commands API, Devices API, Energy Interval Endpoint API, and 5 more. Tagged areas include Energy, United States, Utilities, Electricity, and Grid.
+overview: 'Virtual Peaker publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Commands API, Devices API, Energy Interval Endpoint API, and 5 more. Tagged areas include Energy, United States, Utilities, Electricity, and Grid.
 
 
   The Virtual Peaker catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -291,9 +291,9 @@ scopes:
   summary_line: 3 scopes · clientCredentials/authorizationCode
 score:
   band: developing
-  composite: 51.3
+  composite: 46.4
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -303,9 +303,9 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 57.8
+    contract_quality: 53.1
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -314,7 +314,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 51.3
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: derived
@@ -330,9 +330,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 74.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

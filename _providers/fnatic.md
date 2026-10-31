@@ -12,7 +12,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -23,9 +24,9 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
-    idempotency: documented
+    idempotency: derived
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
@@ -34,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 40.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -254,12 +255,12 @@ layout: provider
 mcp_servers:
 - description: 'Fnatic serves one live MCP endpoint from its own shop host: the Universal Commerce Protocol (UCP) shopping service at https://shop.fnatic.com/api/ucp/mcp. It is advertised in Fnatic''s own /agents.md a'
   name: Fnatic MCP Server
-  slug: fnatic-mcp-server
+  slug: fnatic-mcp-yml
 modified: '2026-08-04'
 name: Fnatic
 nav: Providers
 network: true
-overview: 'Fnatic publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Esports, Gaming, Entertainment, and Sports.
+overview: 'Fnatic is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Esports, Gaming, Entertainment, and Sports.
 
 
   Fnatic''s developer surface includes documentation, authentication, support, engineering blog, signup flow, YouTube channel, and 38 more developer resources.'
@@ -271,21 +272,21 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.4
+  composite: 28.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -295,14 +296,20 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 33.4
+  previous_composite: 28.3
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

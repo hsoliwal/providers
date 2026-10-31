@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.1
-  scored_at: '2026-09-20'
+  score: 30.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -87,6 +87,10 @@ collections:
   name: Flexa Assets Refunds API
   slug: open-flexa-refunds-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://flexa.co/newsroom
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/flexa/refs/heads/main/agentic-access/flexa-agentic-access.yml
   title: ''
@@ -226,37 +230,37 @@ created: '2026-07-17'
 description: Flexa is a digital-currency payments network that lets businesses accept crypto and other digital assets from customers anywhere, with instant authorization, fraud-resistant settlement, and automatic conversion into a preferred payout currency so merchants avoid price volatility. The Flexa Payments API is built around the "commerce intent" resource, which represents any attempt to collect a digital-currency payment and tracks requested debits against actual credits; supporting resources include assets, refunds, events, links, brands, and flexcodes. Flexa ships prebuilt mobile UI Components for iOS, Android, and React Native, plus in-person (Point of Sale) and online acceptance options, and a production-grade test mode that uses a valueless ERC-20 "Credit" (CR) token. Flexa is backed by Pantera Capital and supports 99+ digital assets across Ethereum, Bitcoin, Lightning, Solana, and more.
 image: https://framerusercontent.com/assets/GHzfAvG7SahlNocEC2Agsubvp0.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Flexa
 nav: Providers
 network: true
-overview: 'Flexa publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Commerce Intents API, Events API, and 1 more. Tagged areas include Company, Crypto, Payments, Digital Currency, and Cryptocurrency.
+overview: 'Flexa publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Commerce Intents API, Events API, and 1 more. Tagged areas include Company, Cryptocurrency, Payments, Digital Currency, and Fintech.
 
 
   The Flexa catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Flexa''s developer surface includes documentation, API reference, getting-started guide, support, authentication, sandbox, and 23 more developer resources.'
+  Flexa''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, authentication, sandbox, and 23 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 47.5
+  composite: 45.1
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 21.1
     contract_governance: 4.5
-    contract_quality: 66.2
-    developer_ergonomics: 70.8
-    discoverability: 75.9
+    contract_quality: 60.4
+    developer_ergonomics: 73.2
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 47.5
+  previous_composite: 44.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -272,9 +276,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -296,10 +300,9 @@ security:
 slug: flexa
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Payments
 - Digital Currency
-- Cryptocurrency
 - Fintech
 - Blockchain
 - Merchant Payments

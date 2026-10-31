@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: The Rates API from Tatum — 1 operation(s) for rates.
   name: Tatum Rates API
   slug: tatum-rates-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -149,16 +149,24 @@ common:
 created: '2026-05-08'
 description: Tatum is a multi-chain Web3 platform offering an RPC Gateway across 130+ blockchains, indexed Data APIs, Notifications/Webhooks, NFT/Wallet APIs, Smart Contract APIs, Virtual Accounts, and a Key Management System (KMS). Both REST and JSON-RPC interfaces are available.
 finops:
-- name: Tatum Finops
+- has_sources: true
+  method: generated
+  name: Tatum Finops
+  primary_unit: ''
   service_category: Web3
   slug: tatum-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tatum.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.tatum.io over HTTP; 7 tools listed.
+  name: Tatum MCP Server
+  slug: tatum
 modified: '2026-05-08'
 name: Tatum
 nav: Providers
 network: true
-overview: 'Tatum publishes 2 APIs on the [APIs.io](https://apis.io/) network: Data API and Rates API. Tagged areas include Web3, Blockchain, RPC, Multi-Chain, and Wallets.
+overview: 'Tatum publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Rates API, and 7 more. Tagged areas include Web3, Blockchain, RPC, Multi-Chain, and Wallets.
 
 
   Tatum''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
@@ -173,23 +181,23 @@ rate_limits:
   slug: tatum-rate-limits
 score:
   band: thin
-  composite: 30.2
+  composite: 27.4
   coverage:
     artifact_dirs: 13
-    catalog_earned: 46.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 23.7
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 10.5
-  previous_composite: 30.2
+  previous_composite: 29.0
   provenance:
     agentic_access: derived
     contracts:
@@ -203,9 +211,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

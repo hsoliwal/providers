@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -23,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +37,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 15.8
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: TAL's partner-facing OpenID Connect identity tenant (Okta org talpartner-au.okta.com), and the only machine-readable API contract TAL serves anonymously. Full OIDC discovery and RFC 8414 authorization
@@ -177,7 +180,7 @@ modified: '2026-07-25'
 name: TAL
 nav: Providers
 network: true
-overview: 'TAL publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Australia, Life Insurance, Income Protection, and Group Insurance.
+overview: 'TAL is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, Australia, Life Insurance, Income Protection, and Group Insurance.
 
 
   TAL''s developer surface includes authentication, support, FAQ, engineering blog, and 23 more developer resources.'
@@ -189,7 +192,7 @@ scopes:
   summary_line: 7 scopes · authorizationCode/deviceCode
 score:
   band: emerging
-  composite: 21.8
+  composite: 19.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 40.0
@@ -203,7 +206,7 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 81.5
+    discoverability: 79.5
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -212,7 +215,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 21.8
+  previous_composite: 19.6
   provenance:
     conformance: derived
   regulatory:
@@ -220,9 +223,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 57.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -250,9 +253,6 @@ tags:
 - Claims
 - Carrier
 - Embedded Insurance
-- Partner Gated
-- No Public API
-- OpenID Connect
 - GraphQL
 - Identity
 website: https://www.tal.com.au/

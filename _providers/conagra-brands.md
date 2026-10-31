@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Read-only OData v3 service that supplies product and brand data to Conagra's consumer brand websites. The service document at /odata advertises six entity sets; two of them resolve — Products (2,267 r
@@ -43,6 +43,11 @@ apis:
   slug: conagra-brands-brand-sites-api
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/rate-limits/conagra-brands-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/conagra-brands-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/security/conagra-brands-domain-security.yml
   title: ''
@@ -135,10 +140,10 @@ modified: '2026-09-05'
 name: Conagra Brands
 nav: Providers
 network: true
-overview: 'Conagra Brands publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Branded Foods, CPG, Consumer Packaged Goods, Food Service, and Fortune 500.
+overview: 'Conagra Brands is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Branded Foods, Consumer Packaged Goods, Food Service, Fortune 500, and Frozen Foods.
 
 
-  Conagra Brands'' developer surface includes support, engineering blog, and 16 more developer resources.'
+  Conagra Brands'' developer surface includes support, engineering blog, and 17 more developer resources.'
 plans:
 - name: Conagra Brands Plans Pricing
   plan_count: 0
@@ -150,7 +155,7 @@ rate_limits:
   slug: conagra-brands-rate-limits
 score:
   band: emerging
-  composite: 19.1
+  composite: 20.3
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -158,30 +163,39 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 19.1
+  previous_composite: 20.2
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/conagra-brands/refs/heads/main/screenshots/conagra-brands-2026-10-11T184052.png
 security:
 - kind: authentication
   name: Conagra Brands Authentication
@@ -194,7 +208,6 @@ security:
 slug: conagra-brands
 tags:
 - Branded Foods
-- CPG
 - Consumer Packaged Goods
 - Food Service
 - Fortune 500
@@ -202,5 +215,6 @@ tags:
 - Grocery
 - OData
 - Product Data
+- Food and Beverage
 website: https://www.conagrabrands.com
 ---

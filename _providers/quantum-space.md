@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/quantum-space/refs/heads/main/plans/quantum-space-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/quantum-space-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/quantum-space/refs/heads/main/rate-limits/quantum-space-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/quantum-space-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/quantum-space/refs/heads/main/security/quantum-space-domain-security.yml
   title: ''
@@ -100,7 +110,7 @@ network: true
 overview: 'Quantum Space is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Space, Aerospace, Defense, Satellite, and Spacecraft.
 
 
-  Quantum Space''s developer surface includes engineering blog and 8 more developer resources.'
+  Quantum Space''s developer surface includes engineering blog and 10 more developer resources.'
 plans:
 - name: Quantum Space Plans Pricing
   plan_count: 0
@@ -112,7 +122,7 @@ rate_limits:
   slug: quantum-space-rate-limits
 score:
   band: minimal
-  composite: 6.2
+  composite: 4.6
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -126,16 +136,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 6.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 4.6
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

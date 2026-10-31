@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 120
   human_in_the_loop: 5
@@ -407,14 +407,14 @@ description: Light is an agentic accounting and financial-operations platform po
 image: https://light.inc/assets/images/og-home.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.light.inc over HTTP; 3 tools listed.
   name: Light API documentation
   slug: light-api-documentation
 modified: '2026-07-19'
 name: Light
 nav: Providers
 network: true
-overview: 'Light publishes 28 APIs on the [APIs.io](https://apis.io/) network, including Authorization API, v1 - Accounting Documents API, v1 - Attachments API, and 25 more. Tagged areas include Accounting, Finance, ERP, Accounts Payable, and Accounts Receivable.
+overview: 'Light publishes 28 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authorization API, v1 - Accounting Documents API, v1 - Attachments API, and 25 more. Tagged areas include Accounting, Finance, ERP, Accounts Payable, and Accounts Receivable.
 
 
   Light''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, signup flow, authentication, and 21 more developer resources.'
@@ -425,9 +425,9 @@ rate_limits:
   slug: light-rate-limits
 score:
   band: developing
-  composite: 49.0
+  composite: 46.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -437,11 +437,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 44.0
+    contract_quality: 39.7
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 21.1
-  previous_composite: 49.0
+  previous_composite: 46.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -457,9 +457,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 46.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

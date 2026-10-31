@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://arcusbio.com/feed/
 - group: company
   title: ''
   type: Website
@@ -58,7 +62,7 @@ created: '2026-07-17'
 description: Arcus Biosciences is a clinical-stage biopharmaceutical company focused on developing differentiated cancer immunotherapies, headquartered in Hayward, California. Its pipeline pairs multiple novel molecules across intra-tumoral immune pathways, including the HIF-2a inhibitor casdatifan, the CD73 inhibitor quemliclustat, the anti-TIGIT antibody domvanalimab, the anti-PD-1 antibody zimberelimab, and the CD39 inhibitor AB598. Surfaced as a portfolio company of GV and added to the API Evangelist network as a life-sciences company profile. Arcus publishes an agent-facing surface (llms.txt, an AI content map, and an Organization schema) but no public developer API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arcus-biosciences.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Arcus Biosciences
 nav: Providers
 network: true
@@ -66,9 +70,9 @@ overview: Arcus Biosciences is profiled on the [APIs.io](https://apis.io/) netwo
 random_paper: 8
 score:
   band: minimal
-  composite: 6.9
+  composite: 7.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -80,17 +84,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 6.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 7.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

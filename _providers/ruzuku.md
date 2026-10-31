@@ -33,17 +33,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Student lifecycle actions exposed through Ruzuku's Zapier integration - enroll a student in a course, unenroll a student, and find a student by email or ID. Authentication uses an API Key, API Secret,
   name: Ruzuku Students and Enrollments API
+  provenance: modeled
   slug: ruzuku-students-enrollments-api
 - description: Course-activity event triggers surfaced through Ruzuku's Zapier integration - New Student Enrolled (with pricing and coupon data), Lesson Completed, Course Completed, Quiz Submitted (with score), Assi
   name: Ruzuku Activity Events API
+  provenance: modeled
   slug: ruzuku-activity-events-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.ruzuku.com/learn/articles
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ruzuku/refs/heads/main/security/ruzuku-trust-center.yml
   title: ''
@@ -75,46 +81,46 @@ created: '2026-07-05'
 description: Ruzuku is a hosted online course platform for coaches, authors, and subject matter experts to create, teach, and sell online courses and learning communities. Ruzuku does not publish a documented public REST API or developer program. Its programmatic surface is exposed exclusively through a Zapier integration - authenticated with an API Key, API Secret, and Site URL generated under Account then Integrations then Configure Zapier - that offers event triggers (enrollments, lesson and course completions, quiz and assignment submissions, comments, cancellations) and a small set of student enroll, unenroll, and lookup actions. The APIs modeled below are honest logical groupings of that Zapier-mediated surface, not endpoints from a public Ruzuku API reference.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ruzuku.png
 layout: provider
-modified: '2026-07-05'
+modified: '2026-10-06'
 name: Ruzuku
 nav: Providers
 network: true
-overview: 'Ruzuku publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Online Courses, Learning Management, Education, Course Platform, and Zapier.
+overview: 'Ruzuku is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Online Courses, LMS, Education, Course Platform, and Zapier.
 
 
-  Ruzuku''s developer surface includes documentation and 5 more developer resources.'
+  Ruzuku''s developer surface includes engineering blog, documentation, and 5 more developer resources.'
 plans:
 - name: Ruzuku Plans Pricing
   plan_count: 3
   slug: ruzuku-plans-pricing
 random_paper: 12
 score:
-  band: emerging
-  composite: 14.7
+  band: minimal
+  composite: 10.1
   coverage:
-    artifact_dirs: 4
-    catalog_earned: 44.0
+    artifact_dirs: 6
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -3.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 9.5
-    discoverability: 59.3
+    developer_ergonomics: 11.9
+    discoverability: 57.1
     operational_transparency: 0.0
-  previous_composite: 14.7
+  previous_composite: 13.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -133,7 +139,7 @@ security:
 slug: ruzuku
 tags:
 - Online Courses
-- Learning Management
+- LMS
 - Education
 - Course Platform
 - Zapier

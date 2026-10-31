@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -222,6 +222,10 @@ common:
   title: ''
   type: FinOps
   url: finops/cfpb-finops.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.consumerfinance.gov/about-us/newsroom/feed/
 created: '2026-06-13'
 description: The Consumer Financial Protection Bureau (CFPB) provides public REST APIs for searching consumer financial complaint data, accessing Home Mortgage Disclosure Act (HMDA) mortgage lending records, and retrieving regulatory filing data. These APIs support financial researchers, journalists, developers, and the general public in understanding consumer financial markets and lending practices across the United States.
 examples:
@@ -232,9 +236,13 @@ examples:
   name: Cfpb Hmda Aggregation Example
   slug: cfpb-hmda-aggregation-example
 finops:
-- name: Cfpb Finops
+- has_sources: false
+  method: generated
+  name: Cfpb Finops
+  primary_unit: ''
   service_category: ''
   slug: cfpb-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cfpb.png
 json_schemas:
 - name: Complaint
@@ -253,13 +261,13 @@ modified: '2026-06-13'
 name: Consumer Financial Protection Bureau (CFPB)
 nav: Providers
 network: true
-overview: 'Consumer Financial Protection Bureau (CFPB) publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Aggregations API, Complaints API, CSV API, and 8 more. Tagged areas include Consumer Finance, Government, Complaints, Mortgage, and HMDA.
+overview: 'Consumer Financial Protection Bureau (CFPB) publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aggregations API, Complaints API, CSV API, and 8 more. Tagged areas include Consumer Finance, Government, Complaints, Mortgage, and HMDA.
 
 
   The Consumer Financial Protection Bureau (CFPB) catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Consumer Financial Protection Bureau (CFPB)''s developer surface includes authentication, documentation, engineering blog, pricing, and 15 more developer resources.'
+  Consumer Financial Protection Bureau (CFPB)''s developer surface includes authentication, documentation, engineering blog, pricing, and 16 more developer resources.'
 plans:
 - name: Cfpb Plans Pricing
   plan_count: 2
@@ -270,9 +278,10 @@ rate_limits:
   name: Cfpb Rate Limits
   slug: cfpb-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Consumer Financial Protection Bureau (CFPB) API Rules
+  name: Consumer Financial Protection Bureau (CFPB) — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -281,24 +290,29 @@ rules:
     warn: 4
   slug: cfpb-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 41.6
+  band: thin
+  composite: 34.3
   coverage:
     artifact_dirs: 17
-    catalog_earned: 62.3
+    catalog_earned: 53.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 52.8
+    catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 59.1
+    contract_quality: 53.8
     developer_ergonomics: 23.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 36.8
-  previous_composite: 41.6
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 38.6
   provenance:
     agentic_access: derived
     contracts:
@@ -311,9 +325,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -338,5 +352,8 @@ tags:
 - Financial Data
 - Regulatory
 - Open Data
+- Consumer Protection
+- Federal Government
+- Financial Services
 website: https://www.consumerfinance.gov/
 ---

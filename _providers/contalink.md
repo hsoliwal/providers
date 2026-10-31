@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 13
   slug: contalink-agentic-access
   summary_line: 13 operations · 7 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://794lol2h95.execute-api.us-east-1.amazonaws.com/prod
   baseurl_source: declared
@@ -114,6 +114,11 @@ collections:
   name: API Contalink Balanza de comprobación Status de documentos fiscales API
   slug: open-contalink-status-de-documentos-fiscales-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/contalink/refs/heads/main/capabilities/contalink-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/contalink-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/contalink/refs/heads/main/skills/contalink-post-manual-policy.md
   title: ''
@@ -214,16 +219,16 @@ modified: '2026-07-18'
 name: Contalink
 nav: Providers
 network: true
-overview: 'Contalink publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Balanza de comprobación API, Cargar un documento fiscal API, Conciliación API, and 5 more. Tagged areas include Company, Accounting, Bookkeeping, Payroll, and Tax.
+overview: 'Contalink publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Balanza de comprobación API, Cargar un documento fiscal API, Conciliación API, and 5 more. Tagged areas include Company, Accounting, Bookkeeping, Payroll, and Tax.
 
 
-  Contalink''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 14 more developer resources.'
+  Contalink''s developer surface includes API reference, documentation, getting-started guide, support, engineering blog, pricing, signup flow, and 15 more developer resources.'
 random_paper: 17
 score:
   band: developing
-  composite: 41.9
+  composite: 40.6
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -233,9 +238,9 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 53.8
+    contract_quality: 48.6
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -244,7 +249,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 41.9
+  previous_composite: 40.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -255,8 +260,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

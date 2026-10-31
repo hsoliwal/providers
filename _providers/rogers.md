@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Rogers Control Centre is Rogers' managed IoT and M2M connectivity management platform, a white-labelled deployment of Cisco IoT Control Center (formerly Jasper). Rogers' own product pages list "Access
@@ -48,6 +48,16 @@ asyncapis:
   name: Rogers Push Api Webhooks
   slug: rogers-push-api-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/rogers/refs/heads/main/plans/rogers-plans.yml
+  title: ''
+  type: Plans
+  url: plans/rogers-plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/rogers/refs/heads/main/rate-limits/rogers-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rogers-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/rogers/refs/heads/main/security/rogers-domain-security.yml
   title: ''
@@ -135,13 +145,13 @@ modified: '2026-07-25'
 name: Rogers Communications
 nav: Providers
 network: true
-overview: 'Rogers Communications publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Telecommunications, Canada, Mobile Network Operator, Broadband, and 5G.
+overview: 'Rogers Communications is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Telecommunications, Canada, Mobile Network Operator, Broadband, and 5G.
 
 
   The Rogers Communications catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Rogers Communications'' developer surface includes documentation, engineering blog, support, pricing, product news, and 13 more developer resources.'
+  Rogers Communications'' developer surface includes documentation, engineering blog, support, pricing, product news, and 15 more developer resources.'
 plans:
 - name: Rogers Plans
   plan_count: 3
@@ -153,9 +163,9 @@ rate_limits:
   slug: rogers-rate-limits
 score:
   band: developing
-  composite: 52.6
+  composite: 50.5
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 61.0
     catalog_earned_first_party: 24.0
     catalog_gap: 54.0
@@ -165,9 +175,9 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 51.2
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -176,7 +186,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.6
+  previous_composite: 50.5
   provenance:
     conformance: first-party
   regulatory:
@@ -184,9 +194,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 43.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 25.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

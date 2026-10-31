@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The agent-facing commerce surface of the Deep Sentinel store. A live, anonymous Model Context Protocol endpoint exposing thirteen catalog, cart, checkout and order tools, implementing the Universal Co
@@ -159,14 +159,14 @@ description: 'Deep Sentinel is a US security company that pairs on-camera AI wit
 image: https://www.deepsentinel.com/wp-content/uploads/2018/01/cropped-DS_Primary_Logo_Negative_RGB-Large-Favicon-300x300.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at shop.deepsentinel.com.
   name: Deep Sentinel MCP Server
-  slug: deep-sentinel-mcp-server
+  slug: deep-sentinel-mcp-yml
 modified: '2026-08-12'
 name: Deep Sentinel
 nav: Providers
 network: true
-overview: 'Deep Sentinel publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Physical Security, Video Surveillance, and Home Security.
+overview: 'Deep Sentinel is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Physical Security, Video Surveillance, and Home Security.
 
 
   Deep Sentinel''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 18 more developer resources.'
@@ -182,7 +182,7 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: emerging
-  composite: 23.7
+  composite: 25.0
   coverage:
     artifact_dirs: 15
     catalog_earned: 49.0
@@ -190,21 +190,27 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 23.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 23.7
+  previous_composite: 24.9
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -228,7 +234,7 @@ tags:
 - Video Surveillance
 - Home Security
 - Artificial Intelligence
-- Computer-Vision
+- Computer Vision
 - Monitoring
 - IoT
 - Commerce

@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Self-serve signup
   onboarding: self-serve
   pricing: unknown
@@ -23,7 +26,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +37,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 15.8
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Vitality's production API gateway, running WSO2 API Manager at apis.vitality.co.uk (origin wso2-prd-apigw.tvc.vitality.co.uk:8243 behind an AWS load balancer in eu-west-1). The gateway is publicly res
@@ -126,7 +129,7 @@ modified: '2026-07-25'
 name: Vitality
 nav: Providers
 network: true
-overview: 'Vitality publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Health Insurance, Life Insurance, and Employee Benefits.
+overview: 'Vitality is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Health Insurance, Life Insurance, and Employee Benefits.
 
 
   Vitality''s developer surface includes support, authentication, and 14 more developer resources.'
@@ -138,7 +141,7 @@ scopes:
   summary_line: 5 scopes · authorizationCode/clientCredentials
 score:
   band: emerging
-  composite: 23.1
+  composite: 20.4
   coverage:
     artifact_dirs: 11
     catalog_earned: 37.0
@@ -152,7 +155,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -162,7 +165,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 23.1
+  previous_composite: 20.4
   provenance:
     conformance: first-party
   regulatory:
@@ -170,9 +173,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -198,6 +201,5 @@ tags:
 - Carrier
 - Policy Administration
 - Underwriting
-- Partner Gated
 website: https://www.vitality.co.uk/
 ---

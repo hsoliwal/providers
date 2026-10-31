@@ -25,17 +25,21 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.clerky.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -85,18 +89,22 @@ created: '2026-07-17'
 description: Clerky is an online legal service that helps startup founders handle their legal paperwork safely and efficiently. Designed by startup attorneys formerly at a Silicon Valley law firm, Clerky provides software and guided workflows for Delaware incorporation and post-incorporation setup, fundraising (SAFEs, convertible notes, board consents), hiring (offer letters, consulting agreements, equity compensation), commercial documents (NDAs), and ongoing corporate maintenance. Clerky is a Y Combinator portfolio company. It is a legal document assistant rather than a law firm, and does not currently publish a public developer API, developer portal, or programmatic integrations.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clerky.png
 layout: provider
-modified: '2026-07-18'
+mcp_servers:
+- description: Remote MCP server at mcp.clerky.com over HTTP.
+  name: Clerky MCP Server
+  slug: clerky
+modified: '2026-10-06'
 name: Clerky
 nav: Providers
 network: true
 overview: 'Clerky is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Legal, Legal Tech, Startups, and Incorporation.
 
 
-  Clerky''s developer surface includes pricing, signup flow, engineering blog, support, and 7 more developer resources.'
+  Clerky''s developer surface includes pricing, signup flow, engineering blog, support, and 8 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 15.4
+  composite: 15.3
   coverage:
     artifact_dirs: 5
     catalog_earned: 27.0
@@ -104,19 +112,25 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 15.4
+  previous_composite: 15.2
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

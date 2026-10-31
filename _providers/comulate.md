@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/comulate/refs/heads/main/rate-limits/comulate-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/comulate-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -131,7 +136,7 @@ network: true
 overview: 'Comulate is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Accounting, and Reconciliation.
 
 
-  Comulate''s developer surface includes support and 15 more developer resources.'
+  Comulate''s developer surface includes support and 16 more developer resources.'
 plans:
 - name: Comulate Plans Pricing
   plan_count: 0
@@ -143,7 +148,7 @@ rate_limits:
   slug: comulate-rate-limits
 score:
   band: emerging
-  composite: 21.7
+  composite: 20.2
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -157,9 +162,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 21.7
+  previous_composite: 20.2
   provenance:
     conformance: first-party
   regulatory:
@@ -167,9 +172,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 45.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

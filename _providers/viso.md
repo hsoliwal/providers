@@ -33,14 +33,19 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Authenticated Apollo GraphQL API backing the Viso Now agentic computer vision app. Anonymous access is denied (HTTP 403); sign-in is via Google Identity Services with a session credential. GraphQL int
   name: Viso Now GraphQL API
   slug: viso-now-graphql-api
-artifact_total: 3
+artifact_total: 4
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/viso/refs/heads/main/plans/viso-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/viso-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -111,35 +116,45 @@ modified: '2026-07-21'
 name: VISO
 nav: Providers
 network: true
-overview: 'VISO publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer-Vision, Machine-Learning, and Video Analytics.
+overview: 'VISO is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Computer Vision, Machine Learning, and Video Analytics.
 
 
-  VISO''s developer surface includes documentation, pricing, signup flow, authentication, and 10 more developer resources.'
+  VISO''s developer surface includes documentation, pricing, signup flow, authentication, and 11 more developer resources.'
+plans:
+- name: Viso Plans Pricing
+  plan_count: 4
+  slug: viso-plans-pricing
 random_paper: 9
 score:
   band: emerging
-  composite: 14.2
+  composite: 20.3
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 9
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 0.0
+    access_clarity: 31.6
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 14.2
+  previous_composite: 13.9
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -158,8 +173,8 @@ slug: viso
 tags:
 - Company
 - Artificial Intelligence
-- Computer-Vision
-- Machine-Learning
+- Computer Vision
+- Machine Learning
 - Video Analytics
 - Vision Agents
 - Edge AI

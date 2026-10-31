@@ -10,7 +10,8 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -21,7 +22,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: false
@@ -32,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.2
-  scored_at: '2026-09-20'
+  score: 39.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 192
   human_in_the_loop: 6
@@ -41,7 +42,7 @@ agentic_access:
   operation_count: 340
   slug: skilljar-agentic-access
   summary_line: 340 operations · 192 acting · 6 human-in-the-loop
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.skilljar.com/v1/
   baseurl_source: declared
@@ -376,7 +377,7 @@ apis:
 - baseURL: https://api.skilljar.com/v1/
   baseurl_source: declared
   description: The tags API from Skilljar — 2 operation(s) for tags.
-  name: Skilljar tags API
+  name: Skilljar Tags API
   slug: skilljar-tags-api
 - baseURL: https://api.skilljar.com/v1/
   baseurl_source: declared
@@ -822,7 +823,7 @@ modified: '2026-07-21'
 name: Skilljar
 nav: Providers
 network: true
-overview: 'Skilljar publishes 78 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Courses API, Courses > Labels API, and 75 more. Tagged areas include Company, Education, Learning Management System, Customer Education, and Training.
+overview: 'Skilljar publishes 78 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Courses API, Courses > Labels API, and 75 more. Tagged areas include Company, Education, LMS, Customer Education, and Training.
 
 
   The Skilljar catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -837,9 +838,9 @@ scopes:
   summary_line: 89 scopes · authorizationCode
 score:
   band: developing
-  composite: 52.9
+  composite: 48.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -849,11 +850,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.5
+    contract_quality: 53.8
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 52.9
+  previous_composite: 48.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -869,9 +870,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 64.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -890,7 +891,7 @@ slug: skilljar
 tags:
 - Company
 - Education
-- Learning Management System
+- LMS
 - Customer Education
 - Training
 - Online Courses

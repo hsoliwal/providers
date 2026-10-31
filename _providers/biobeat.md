@@ -1,6 +1,9 @@
 ---
 access_model:
   confidence: medium
+  gated: partner
+  gated_source:
+  - tag:Partner Gated
   label: Paid
   onboarding: unknown
   pricing: paid
@@ -33,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: 'Modeled resource for enrolling and managing monitored patients on the Biobeat patient management platform - create, list, and update patient records, assign devices, and set per-patient alarm limits. '
@@ -80,7 +83,7 @@ modified: '2026-07-05'
 name: Biobeat
 nav: Providers
 network: true
-overview: 'Biobeat publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Remote Patient Monitoring, RPM, Wearables, Vital Signs, and Cuffless Blood Pressure.
+overview: 'Biobeat is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Remote Patient Monitoring, RPM, Wearables, Vital Signs, and Cuffless Blood Pressure.
 
 
   Biobeat''s developer surface includes developer portal and 4 more developer resources.'
@@ -90,32 +93,37 @@ plans:
   slug: biobeat-plans-pricing
 random_paper: 0
 score:
-  band: emerging
-  composite: 11.9
+  band: minimal
+  composite: 9.0
   coverage:
     artifact_dirs: 4
-    catalog_earned: 48.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 67.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -2.7
   facets:
-    access_clarity: 21.1
+    access_clarity: 5.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 9.5
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 0.0
-  previous_composite: 11.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - israel
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 11.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -137,6 +145,5 @@ tags:
 - Digital Health
 - Medical Devices
 - PPG
-- Partner Gated
 website: https://www.bio-beat.com/
 ---

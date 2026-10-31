@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: documented
     mcp_server: false
@@ -32,34 +32,34 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.5
-  scored_at: '2026-09-20'
+  score: 20.3
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.vault.tesseract.fi
   baseurl_source: declared
   description: The clients API from Tesseract — 3 operation(s) for clients.
-  name: Tesseract clients API
+  name: Tesseract Clients API
   slug: tesseract-clients-api
 - baseURL: https://api.vault.tesseract.fi
   baseurl_source: declared
   description: The health API from Tesseract — 1 operation(s) for health.
-  name: Tesseract health API
+  name: Tesseract Health API
   slug: tesseract-health-api
 - baseURL: https://api.vault.tesseract.fi
   baseurl_source: declared
   description: The insights API from Tesseract — 5 operation(s) for insights.
-  name: Tesseract insights API
+  name: Tesseract Insights API
   slug: tesseract-insights-api
 - baseURL: https://api.vault.tesseract.fi
   baseurl_source: declared
   description: The strategies API from Tesseract — 2 operation(s) for strategies.
-  name: Tesseract strategies API
+  name: Tesseract Strategies API
   slug: tesseract-strategies-api
 - baseURL: https://api.vault.tesseract.fi
   baseurl_source: declared
   description: The vaults API from Tesseract — 4 operation(s) for vaults.
-  name: Tesseract vaults API
+  name: Tesseract Vaults API
   slug: tesseract-vaults-api
 artifact_total: 13
 collections:
@@ -82,6 +82,10 @@ collections:
   name: Tesseract Public clients vaults API
   slug: open-tesseract-vaults-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://tesseract.fi/news/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/tesseract/refs/heads/main/security/tesseract-domain-security.yml
   title: ''
@@ -204,34 +208,39 @@ created: '2026-07-17'
 description: Tesseract is a Finnish digital-asset management and crypto-lending company. Tesseract Investment Oy is authorised as a Crypto-Asset Service Provider (CASP) under Regulation (EU) 2023/1114 (MiCA) and supervised by the Finnish Financial Supervisory Authority (FIN-FSA). It operates institutional-grade, per-client on-chain Dedicated Client Vaults (DCVs) on Ethereum mainnet, an Earn API that lets exchanges, neobanks and fintechs offer crypto yield to their users under their own brand, and Earn Direct for referred clients. Developers integrate via a public vault reporting API (unauthenticated reads, EIP-712 signed strategy assignment) and a partner Earn API using OAuth2 client-credentials with a daily net-settlement model.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tesseract.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Tesseract
 nav: Providers
 network: true
-overview: 'Tesseract publishes 5 APIs on the [APIs.io](https://apis.io/) network, including clients API, health API, insights API, and 2 more. Tagged areas include Company, Fintech, Cryptocurrency, DeFi, and Lending.
+overview: 'Tesseract publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clients API, Health API, Insights API, and 2 more. Tagged areas include Company, Fintech, Cryptocurrency, DeFi, and Lending.
 
 
-  Tesseract''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, support, engineering blog, and 19 more developer resources.'
+  Tesseract''s developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, support, engineering blog, and 20 more developer resources.'
 random_paper: 6
 score:
   band: developing
-  composite: 41.9
+  composite: 42.8
   coverage:
-    artifact_dirs: 17
+    artifact_dirs: 18
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 46.1
     contract_governance: 18.2
-    contract_quality: 37.3
+    contract_quality: 33.6
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 41.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - finland
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+  previous_composite: 42.7
   provenance:
     conformance: first-party
     contracts:
@@ -241,8 +250,14 @@ score:
       total: 5
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

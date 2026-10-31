@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -98,10 +98,25 @@ collections:
   name: Amazon EventBridge Pipes
   slug: open-amazon-eventbridge-pipes
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-eventbridge-pipes/refs/heads/main/plans/amazon-eventbridge-pipes-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/amazon-eventbridge-pipes-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-eventbridge-pipes/refs/heads/main/rate-limits/amazon-eventbridge-pipes-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/amazon-eventbridge-pipes-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-eventbridge-pipes/refs/heads/main/finops/amazon-eventbridge-pipes-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/amazon-eventbridge-pipes-finops.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/eventbridge/pipes/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/amazon-eventbridge-pipes/refs/heads/main/agentic-access/amazon-eventbridge-pipes-agentic-access.yml
   title: ''
@@ -526,9 +541,13 @@ features:
 - description: Process events in batches for improved throughput
   name: Batching Support
 finops:
-- name: Amazon Eventbridge Pipes Finops
+- has_sources: false
+  method: generated
+  name: Amazon Eventbridge Pipes Finops
+  primary_unit: ''
   service_category: API
   slug: amazon-eventbridge-pipes-finops
+  template: true
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 json_schemas:
 - name: ArnOrJsonPath
@@ -1712,13 +1731,13 @@ modified: '2026-09-16'
 name: Amazon EventBridge Pipes
 nav: Providers
 network: true
-overview: 'Amazon EventBridge Pipes publishes 2 APIs on the [APIs.io](https://apis.io/) network, including Tags API, and 1 more. Tagged areas include Amazon Web Services, Event-Driven, Integration, Messaging, and Serverless.
+overview: 'Amazon EventBridge Pipes publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network, including Tags API, and 1 more. Tagged areas include Amazon Web Services, Event-Driven, Integration, Messaging, and Serverless.
 
 
   The Amazon EventBridge Pipes catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon EventBridge Pipes'' developer surface includes authentication, developer portal, documentation, engineering blog, developer console, signup flow, support, and 27 more developer resources.'
+  Amazon EventBridge Pipes'' developer surface includes authentication, developer portal, documentation, engineering blog, developer console, signup flow, support, and 30 more developer resources.'
 plans:
 - name: Amazon Eventbridge Pipes Plans Pricing
   plan_count: 3
@@ -1729,9 +1748,10 @@ rate_limits:
   name: Amazon Eventbridge Pipes Rate Limits
   slug: amazon-eventbridge-pipes-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Amazon EventBridge Pipes API Rules
+  name: Amazon EventBridge Pipes — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1739,7 +1759,8 @@ rules:
     info: 1
     warn: 4
   slug: amazon-eventbridge-pipes-jsonschema-spectral-rules
-- effective_rule_count: 65
+- authorship: generated
+  effective_rule_count: 65
   extends:
   - spectral:oas
   name: Amazon EventBridge Pipes API Rules
@@ -1752,23 +1773,23 @@ rules:
   slug: amazon-eventbridge-pipes-spectral-rules
 score:
   band: strong
-  composite: 60.9
+  composite: 60.2
   coverage:
     artifact_dirs: 19
-    catalog_earned: 76.5
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 69.7
-    contract_governance: 28.8
-    contract_quality: 74.8
+    access_clarity: 61.8
+    contract_governance: 27.3
+    contract_quality: 68.1
     developer_ergonomics: 65.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 60.9
+  previous_composite: 61.7
   provenance:
     agentic_access: derived
     contracts:
@@ -1776,8 +1797,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -1816,5 +1843,5 @@ use_cases:
   name: Stream Analytics
 - description: Connect SaaS event sources to AWS targets without custom code
   name: SaaS Integration
-website: https://amazon.com
+website: https://aws.amazon.com/eventbridge/pipes/
 ---

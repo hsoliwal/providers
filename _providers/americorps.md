@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -82,6 +82,11 @@ collections:
   name: AmeriCorps Open Data API
   slug: open-americorps
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/americorps/refs/heads/main/finops/americorps-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/americorps-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/americorps/refs/heads/main/agentic-access/americorps-agentic-access.yml
   title: ''
@@ -219,9 +224,13 @@ features:
 - description: Grant program supporting organizations that recruit, manage, and support volunteers to meet critical community needs.
   name: Volunteer Generation Fund
 finops:
-- name: Americorps Finops
+- has_sources: false
+  method: generated
+  name: Americorps Finops
+  primary_unit: ''
   service_category: API
   slug: americorps-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/americorps.png
 integrations:
 - description: Standard Socrata SODA API integration enabling applications to query, filter, and aggregate AmeriCorps program data programmatically.
@@ -235,10 +244,10 @@ modified: '2026-09-02'
 name: AmeriCorps
 nav: Providers
 network: true
-overview: 'AmeriCorps publishes 3 APIs on the [APIs.io](https://apis.io/) network: Catalog API, Datasets API, and Metadata API. Tagged areas include Federal-Government, National Service, Volunteerism, Community Development, and Civic Engagement.
+overview: 'AmeriCorps publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Datasets API, Metadata API, and 1 more. Tagged areas include Federal Government, National Service, Volunteerism, Community Development, and Civic Engagement.
 
 
-  AmeriCorps'' developer surface includes authentication, developer portal, getting-started guide, and 23 more developer resources.'
+  AmeriCorps'' developer surface includes authentication, developer portal, getting-started guide, and 24 more developer resources.'
 plans:
 - name: Americorps Plans Pricing
   plan_count: 0
@@ -249,24 +258,29 @@ rate_limits:
   name: Americorps Rate Limits
   slug: americorps-rate-limits
 score:
-  band: developing
-  composite: 43.5
+  band: thin
+  composite: 38.1
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 40.0
+    artifact_dirs: 23
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 18.4
+    access_clarity: 10.5
     contract_governance: 18.2
-    contract_quality: 56.2
+    contract_quality: 50.6
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 28.9
-  previous_composite: 43.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 39.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -282,9 +296,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -306,7 +320,7 @@ security:
   summary_line: security.txt · contact published
 slug: americorps
 tags:
-- Federal-Government
+- Federal Government
 - National Service
 - Volunteerism
 - Community Development

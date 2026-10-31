@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Electra's Open Charge Point Interface implementation in the Charge Point Operator role — the roaming interface an e-mobility service provider calls to read Electra's locations and tariffs, authorise i
@@ -192,7 +192,7 @@ modified: '2026-08-17'
 name: Electra
 nav: Providers
 network: true
-overview: 'Electra publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Climate Tech, EV Charging, Energy, and Mobility.
+overview: 'Electra is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Climate Tech, EV Charging, Energy, and Mobility.
 
 
   Electra''s developer surface includes pricing, signup flow, support, engineering blog, legal docs, authentication, code examples, and 22 more developer resources.'
@@ -207,9 +207,9 @@ rate_limits:
   slug: go-electra-rate-limits
 score:
   band: thin
-  composite: 33.2
+  composite: 31.4
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
@@ -219,9 +219,9 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -231,7 +231,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 33.2
+  previous_composite: 31.4
   provenance:
     conformance: first-party
     mcp: derived
@@ -240,9 +240,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 24.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

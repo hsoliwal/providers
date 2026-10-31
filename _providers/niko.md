@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.niko.mx/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/niko/refs/heads/main/security/niko-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: Niko (Niko Energy) is a Mexican clean-energy company focused on energy efficiency for multi-site enterprises. It designs, installs, and finances commercial and residential solar photovoltaic systems and battery storage, wrapping them in embedded financing options that include cash purchase, 12-month interest-free plans, multi-year subscriptions, and power purchase agreements (PPAs). Its Niko Hub dashboard centralizes energy-portfolio management across locations, Niko Care provides 24/7 monitoring and maintenance, and Niko Insurance covers panel hardware. Backed by fintech venture firm QED Investors, Niko pairs solar deployment with consumption analytics and ESG / consolidated reporting. No public developer API, documentation, or specification surface was found on niko.mx as of this enrichment pass.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/niko.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Niko
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Niko is profiled on the [APIs.io](https://apis.io/) network. Tagged ar
 random_paper: 15
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.6
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,7 +75,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -80,15 +84,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 3.3
+  previous_composite: 3.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 12
 common:
@@ -134,14 +134,14 @@ modified: '2026-08-03'
 name: MISMO
 nav: Providers
 network: true
-overview: 'MISMO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include API Standards, Data Standard, Fannie Mae, Freddie Mac, and Financial-Services.
+overview: 'MISMO is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include API Standards, Data Standard, Fannie Mae, Freddie Mac, and Financial Services.
 
 
   MISMO''s developer surface includes developer portal, documentation, product news, and 17 more developer resources.'
 random_paper: 21
 score:
   band: minimal
-  composite: 8.8
+  composite: 6.7
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -155,7 +155,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 49.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -170,9 +170,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 8.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 6.7
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Government & Public Sector
+    regime_id: government
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -185,13 +191,13 @@ tags:
 - Data Standard
 - Fannie Mae
 - Freddie Mac
-- Financial-Services
-- GSE
+- Financial Services
+- Government-Sponsored Enterprise
 - Lending
 - MBA
 - MISMO
 - Mortgage
-- Real-Estate
+- Real Estate
 - Real Estate Finance
 - Reference Model
 - SMART Doc

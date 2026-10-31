@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.5
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 17
+- acting_count: 14
   human_in_the_loop: 0
   name: Mlflow Agentic Access
   operation_count: 23
   slug: mlflow-agentic-access
-  summary_line: 23 operations · 17 acting
+  summary_line: 23 operations · 14 acting
 api_count: 1
 apis:
 - description: The MLflow tracking server exposes a REST API for experiments, runs, parameters, metrics, tags, registered models, model versions, model aliases, and artifacts, plus newer endpoints for traces, prompt
@@ -108,6 +108,11 @@ collections:
   name: MLflow Tracking REST API
   slug: open-mlflow
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mlflow/refs/heads/main/capabilities/mlflow-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/mlflow-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -189,19 +194,23 @@ common:
 created: '2026-05-08'
 description: 'MLflow is an Apache 2.0 open-source platform for the end-to-end ML and GenAI lifecycle: tracking, model registry, deployment, evaluation, traces, prompts, and GenAI gateway. The tracking server exposes a REST API under `/api/2.0/mlflow`.'
 finops:
-- name: Mlflow Finops
+- has_sources: true
+  method: generated
+  name: Mlflow Finops
+  primary_unit: ''
   service_category: ML
   slug: mlflow-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mlflow.png
 layout: provider
 modified: '2026-05-08'
 name: MLflow
 nav: Providers
 network: true
-overview: 'MLflow publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Artifacts API, Experiments API, Metrics API, and 3 more. Tagged areas include Machine-Learning, MLOps, Generative AI, Experiment Tracking, and Open-Source.
+overview: 'MLflow publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Artifacts API, Experiments API, Metrics API, and 5 more. Tagged areas include Machine Learning, MLOps, Generative AI, Experiment Tracking, and Open Source.
 
 
-  MLflow''s developer surface includes authentication, developer portal, engineering blog, and 15 more developer resources.'
+  MLflow''s developer surface includes authentication, developer portal, engineering blog, and 16 more developer resources.'
 plans:
 - name: Mlflow Plans Pricing
   plan_count: 1
@@ -213,23 +222,26 @@ rate_limits:
   slug: mlflow-rate-limits
 score:
   band: thin
-  composite: 35.5
+  composite: 36.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 44.0
+    artifact_dirs: 14
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 71.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.7
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 44.9
+    contract_quality: 40.4
     developer_ergonomics: 50.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 36.8
-  previous_composite: 35.5
+  open_source:
+    applies: true
+    score: 85.0
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -237,8 +249,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -255,10 +273,10 @@ security:
   summary_line: TLSv1.3
 slug: mlflow
 tags:
-- Machine-Learning
+- Machine Learning
 - MLOps
 - Generative AI
 - Experiment Tracking
-- Open-Source
+- Open Source
 website: https://mlflow.org/
 ---

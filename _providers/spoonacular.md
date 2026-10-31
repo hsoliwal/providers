@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 24
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 99
   slug: spoonacular-agentic-access
   summary_line: 99 operations · 24 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.spoonacular.com
   baseurl_source: declared
@@ -288,9 +288,13 @@ features:
 - description: Classify food in images, search recipe videos, extract recipes from web pages, and return food jokes and trivia.
   name: Food Classification and Media
 finops:
-- name: Spoonacular Finops
+- has_sources: true
+  method: generated
+  name: Spoonacular Finops
+  primary_unit: ''
   service_category: Food And Drink Data
   slug: spoonacular-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/spoonacular.png
 integrations:
 - description: Official spoonacular-mcp server exposes the API as MCP tools for AI assistants.
@@ -359,7 +363,7 @@ modified: '2026-06-03'
 name: Spoonacular
 nav: Providers
 network: true
-overview: 'Spoonacular publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Ingredients API, Meal Planning API, Menu Items API, and 4 more. Tagged areas include Restaurant, Food And Drink, Recipes, Nutrition, and Meal Planning.
+overview: 'Spoonacular publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ingredients API, Meal Planning API, Menu Items API, and 4 more. Tagged areas include Restaurant, Food and Beverage, Recipes, Nutrition, and Meal Planning.
 
 
   The Spoonacular catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -376,9 +380,10 @@ rate_limits:
   name: Spoonacular Rate Limits
   slug: spoonacular-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Spoonacular API Rules
+  name: Spoonacular — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -386,7 +391,8 @@ rules:
     info: 2
     warn: 3
   slug: spoonacular-jsonschema-spectral-rules
-- effective_rule_count: 70
+- authorship: generated
+  effective_rule_count: 70
   extends:
   - spectral:oas
   name: Spoonacular API Rules
@@ -398,27 +404,27 @@ rules:
     warn: 19
   slug: spoonacular-spectral-rules
 score:
-  band: strong
-  composite: 55.5
+  band: developing
+  composite: 45.4
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 94.5
+    artifact_dirs: 19
+    catalog_earned: 72.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 20.5
+    catalog_gap: 43.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 63.2
-    contract_governance: 28.8
-    contract_quality: 75.5
+    access_clarity: 31.6
+    contract_governance: 27.3
+    contract_quality: 69.0
     developer_ergonomics: 77.4
-    discoverability: 75.9
-    operational_transparency: 34.2
+    discoverability: 73.2
+    operational_transparency: 10.5
   open_source:
     applies: true
     score: 0.0
-  previous_composite: 55.5
+  previous_composite: 52.9
   provenance:
     agentic_access: derived
     contracts:
@@ -426,9 +432,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -445,7 +457,7 @@ security:
 slug: spoonacular
 tags:
 - Restaurant
-- Food And Drink
+- Food and Beverage
 - Recipes
 - Nutrition
 - Meal Planning

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 1
@@ -116,6 +116,11 @@ collections:
   name: Kenjo API
   slug: open-kenjo
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kenjo/refs/heads/main/capabilities/kenjo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kenjo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/kenjo/refs/heads/main/agentic-access/kenjo-agentic-access.yml
   title: ''
@@ -159,19 +164,23 @@ common:
 created: '2026-07-11'
 description: Kenjo is an all-in-one human resources (HRIS) software platform for small and mid-sized companies, with a strong focus on deskless and shift-based teams. It covers the full employee lifecycle - employee database, attendance and time tracking, absence and time-off management, document management, payroll and compensation, shift planning, performance reviews, and recruiting. Kenjo exposes a documented REST API (base https://api.kenjo.io/api/v1, sandbox https://sandbox-api.kenjo.io/api/v1) that lets customers read and write employees, attendances, time-off requests, company documents, compensation, org structure, and recruiting data. API access is gated - it is available on Kenjo's top-tier Connect plan and must be activated by the Kenjo Customer Success team, then keys are generated in Settings > Integrations > API and exchanged for a bearer token.
 finops:
-- name: Kenjo Finops
+- has_sources: true
+  method: generated
+  name: Kenjo Finops
+  primary_unit: ''
   service_category: Human Resources Software
   slug: kenjo-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/kenjo.png
 layout: provider
 modified: '2026-07-11'
 name: Kenjo
 nav: Providers
 network: true
-overview: 'Kenjo publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Attendance API, Authentication API, Compensation API, and 5 more. Tagged areas include Human Resources, HRIS, Employee Management, HR Software, and Time Tracking.
+overview: 'Kenjo publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attendance API, Authentication API, Compensation API, and 5 more. Tagged areas include Human Resources, HRIS, Employee Management, HR Software, and Time Tracking.
 
 
-  Kenjo''s developer surface includes documentation, engineering blog, and 7 more developer resources.'
+  Kenjo''s developer surface includes documentation, engineering blog, and 8 more developer resources.'
 plans:
 - name: Kenjo Plans Pricing
   plan_count: 3
@@ -182,24 +191,24 @@ rate_limits:
   name: Kenjo Rate Limits
   slug: kenjo-rate-limits
 score:
-  band: thin
-  composite: 39.2
+  band: emerging
+  composite: 25.4
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 64.0
+    artifact_dirs: 10
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 56.9
+    contract_quality: 51.5
     developer_ergonomics: 20.2
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 39.2
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -207,9 +216,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 0.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8

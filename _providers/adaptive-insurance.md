@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
@@ -145,9 +145,9 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: emerging
-  composite: 24.0
+  composite: 21.4
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -159,9 +159,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 24.0
+  previous_composite: 21.4
   provenance:
     conformance: first-party
   regulatory:
@@ -169,14 +169,15 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 63.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/adaptive-insurance/refs/heads/main/screenshots/adaptive-insurance-2026-10-11T092738.png
 security:
 - kind: authentication
   name: Adaptive Insurance Authentication

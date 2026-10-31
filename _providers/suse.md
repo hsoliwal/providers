@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: JSON-based "A-REST" API for SUSE Manager (SUMA), used to manage systems, channels, configuration, errata, and users across Linux infrastructure. Calls use GET for retrievals, POST for changes, and POS
@@ -41,7 +41,7 @@ apis:
 - description: REST API for SUSE Rancher Prime Kubernetes management platform, used to manage clusters, projects, workloads, users, and policies. Supports v3 API endpoints with bearer token authentication.
   name: SUSE Rancher API
   slug: rancher-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -69,7 +69,7 @@ modified: '2026-09-16'
 name: SUSE
 nav: Providers
 network: true
-overview: 'SUSE publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Linux, Kubernetes, Enterprise Linux, Systems Management, and Open-Source.
+overview: 'SUSE is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Linux, Kubernetes, Enterprise Linux, Systems Management, and Open Source.
 
 
   SUSE''s developer surface includes engineering blog and 3 more developer resources.'
@@ -78,34 +78,46 @@ score:
   band: minimal
   composite: 9.2
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -17.7
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 9.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 26.9
+  provenance:
+    mcp: derived
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
 screenshot: https://raw.githubusercontent.com/api-evangelist/suse/refs/heads/main/screenshots/suse-2026-06-20T194741.png
 security:
+- kind: authentication
+  name: Suse Authentication
+  slug: suse-authentication
+  summary_line: 1 scheme
 - kind: domain-security
   name: Suse Domain Security
   slug: suse-domain-security
-  summary_line: TLSv1.3 · DMARC
+  summary_line: TLSv1.3 · HSTS · DMARC
 - kind: vulnerability-disclosure
   name: Suse Vulnerability Disclosure
   slug: suse-vulnerability-disclosure
@@ -116,7 +128,7 @@ tags:
 - Kubernetes
 - Enterprise Linux
 - Systems Management
-- Open-Source
+- Open Source
 - Container Management
 website: https://suse.com
 ---

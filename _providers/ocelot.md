@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -48,18 +48,18 @@ apis:
 - description: Ocelot is an open-source .NET API Gateway that provides routing, authentication, authorization, rate limiting, load balancing, caching, and service discovery for microservices architectures. It is con
   name: Ocelot API Gateway
   slug: ocelot-gateway
-- baseURL: https://ocelot.readthedocs.io/
-  baseurl_source: declared
+- baseURL: http://localhost:5000
+  baseurl_source: spec
   description: Obtain access tokens for the Administration API
   name: Ocelot Authentication API
   slug: ocelot-authentication-api
-- baseURL: https://ocelot.readthedocs.io/
-  baseurl_source: declared
+- baseURL: http://localhost:5000
+  baseurl_source: spec
   description: Clear output cache regions
   name: Ocelot Cache API
   slug: ocelot-cache-api
-- baseURL: https://ocelot.readthedocs.io/
-  baseurl_source: declared
+- baseURL: http://localhost:5000
+  baseurl_source: spec
   description: Read and update the active gateway configuration
   name: Ocelot Configuration API
   slug: ocelot-configuration-api
@@ -81,6 +81,21 @@ collections:
   name: Ocelot Administration Authentication Configuration API
   slug: open-ocelot-configuration-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/plans/ocelot-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ocelot-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/rate-limits/ocelot-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ocelot-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ocelot/refs/heads/main/finops/ocelot-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/ocelot-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -151,19 +166,23 @@ common:
 created: '2026-03-16'
 description: Ocelot is an open-source API Gateway built with .NET for microservices architectures. It provides routing, authentication, rate limiting, load balancing, and service discovery features for managing and securing APIs in .NET ecosystems.
 finops:
-- name: Ocelot Finops
+- has_sources: false
+  method: generated
+  name: Ocelot Finops
+  primary_unit: ''
   service_category: API
   slug: ocelot-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ocelot.png
 layout: provider
 modified: '2026-05-19'
 name: Ocelot
 nav: Providers
 network: true
-overview: 'Ocelot publishes 3 APIs on the [APIs.io](https://apis.io/) network: Authentication API, Cache API, and Configuration API. Tagged areas include .NET, API Gateway, Microservices, and Open-Source.
+overview: 'Ocelot publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Cache API, Configuration API, and 1 more. Tagged areas include .NET, API Gateway, Microservices, and Open Source.
 
 
-  Ocelot''s developer surface includes authentication, documentation, getting-started guide, changelog, and 12 more developer resources.'
+  Ocelot''s developer surface includes authentication, documentation, getting-started guide, changelog, and 15 more developer resources.'
 plans:
 - name: Ocelot Plans Pricing
   plan_count: 3
@@ -175,26 +194,26 @@ rate_limits:
   slug: ocelot-rate-limits
 score:
   band: thin
-  composite: 37.6
+  composite: 33.5
   coverage:
     artifact_dirs: 10
-    catalog_earned: 41.0
+    catalog_earned: 33.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 82.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 51.2
+    contract_quality: 46.1
     developer_ergonomics: 50.0
-    discoverability: 59.3
+    discoverability: 48.2
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 37.6
+  previous_composite: 34.9
   provenance:
     agentic_access: derived
     contracts:
@@ -202,8 +221,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -223,6 +248,6 @@ tags:
 - .NET
 - API Gateway
 - Microservices
-- Open-Source
+- Open Source
 website: https://ocelot.readthedocs.io/
 ---

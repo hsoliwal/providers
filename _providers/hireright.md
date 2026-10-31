@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.hireright.com/blog/feed
 - group: company
   title: ''
   type: Website
@@ -110,18 +114,18 @@ description: HireRight is a leading global provider of employment background scr
   rather than an open API.
 image: https://www.hireright.com/assets/img/hr-default.jpg
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: HireRight
 nav: Providers
 network: true
 overview: 'HireRight is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, Background Screening, Identity Verification, and Human Resources.
 
 
-  HireRight''s developer surface includes support, engineering blog, signup flow, and 13 more developer resources.'
+  HireRight''s developer surface includes support, engineering blog, signup flow, and 14 more developer resources.'
 random_paper: 20
 score:
-  band: emerging
-  composite: 11.4
+  band: minimal
+  composite: 10.1
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -135,16 +139,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 11.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 10.1
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -159,7 +171,7 @@ security:
 - kind: vulnerability-disclosure
   name: Hireright Vulnerability Disclosure
   slug: hireright-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Hireright Trust Center
   slug: hireright-trust-center
@@ -173,5 +185,7 @@ tags:
 - Human Resources
 - Compliance
 - Employment
+- Recruiting
+- Background Checks
 website: http://www.hireright.com/
 ---

@@ -29,21 +29,21 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.6
-  scored_at: '2026-09-20'
+  score: 28.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 60
+- acting_count: 58
   human_in_the_loop: 3
   name: Composio Agentic Access
   operation_count: 107
   slug: composio-agentic-access
-  summary_line: 107 operations · 60 acting · 3 human-in-the-loop
-api_count: 2
+  summary_line: 107 operations · 58 acting · 3 human-in-the-loop
+api_count: 3
 apis:
 - baseURL: https://backend.composio.dev/api/v3
   baseurl_source: declared
@@ -290,6 +290,31 @@ collections:
   name: Composio Platform Account Management x-internal API
   slug: open-composio-x-internal-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/composio/refs/heads/main/plans/composio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/composio-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/composio/refs/heads/main/rate-limits/composio-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/composio-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/composio/refs/heads/main/finops/composio-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/composio-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/composio/refs/heads/main/capabilities/composio-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/composio-capability-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/composio/refs/heads/main/vendor-facets/composio-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/composio-vendor-facets.yml
 - group: company
   title: ''
   type: Website
@@ -609,9 +634,13 @@ examples:
   name: Composio Posttoolroutersession Example
   slug: composio-posttoolroutersession-example
 finops:
-- name: Composio Finops
+- has_sources: true
+  method: generated
+  name: Composio Finops
+  primary_unit: ''
   service_category: AI Tooling / Integrations
   slug: composio-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/composio.png
 json_schemas:
 - name: AuthConfigListResponse
@@ -699,18 +728,18 @@ layout: provider
 mcp_servers:
 - description: 'Composio exposes its 1000+ toolkits over the Model Context Protocol as a hosted, per-session MCP server. The recommended path is the Tool Router: create a session with `mcp: true` and read the hosted '
   name: Composio MCP Server
-  slug: composio-mcp-server
+  slug: composio-mcp-yml
 modified: '2026-06-20'
 name: Composio
 nav: Providers
 network: true
-overview: 'Composio publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Auth Configs API, Authentication API, CLI API, and 14 more. Tagged areas include AI Agents, Authentication, Integration, MCP, and Sandbox.
+overview: 'Composio publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Auth Configs API, Authentication API, CLI API, and 14 more. Tagged areas include AI Agents, Authentication, Integration, MCP, and Sandbox.
 
 
   The Composio catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Composio''s developer surface includes changelog, CLI, authentication, developer portal, documentation, getting-started guide, API reference, and 54 more developer resources.'
+  Composio''s developer surface includes changelog, CLI, authentication, developer portal, documentation, getting-started guide, API reference, and 59 more developer resources.'
 plans:
 - name: Composio Plans Pricing
   plan_count: 4
@@ -721,9 +750,10 @@ rate_limits:
   name: Composio Rate Limits
   slug: composio-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Composio API Rules
+  name: Composio — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -731,7 +761,8 @@ rules:
     info: 2
     warn: 3
   slug: composio-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Composio API Rules
@@ -744,26 +775,26 @@ rules:
   slug: composio-rules
 score:
   band: strong
-  composite: 56.4
+  composite: 56.3
   coverage:
-    artifact_dirs: 32
+    artifact_dirs: 34
     catalog_earned: 55.5
     catalog_earned_first_party: 0.0
     catalog_gap: 59.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.8
   facets:
-    access_clarity: 60.5
+    access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 59.5
+    contract_quality: 54.0
     developer_ergonomics: 56.0
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 44.7
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 56.4
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -773,8 +804,14 @@ score:
       marker_coverage: 0.0
       total: 17
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -792,7 +829,7 @@ security:
 - kind: vulnerability-disclosure
   name: Composio Vulnerability Disclosure
   slug: composio-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: composio
 tags:
 - AI Agents
@@ -802,7 +839,7 @@ tags:
 - Sandbox
 - Tools
 - Triggers
-- Unified-API
+- Unified API
 - Webhook
 website: https://www.composio.dev/
 ---

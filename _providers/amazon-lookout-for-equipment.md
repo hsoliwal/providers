@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -65,10 +65,34 @@ collections:
   name: Amazon Lookout for Equipment API
   slug: open-amazon-lookout-for-equipment
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://aws.amazon.com/lookout-for-equipment/pricing/
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-equipment/refs/heads/main/rate-limits/amazon-lookout-for-equipment-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/amazon-lookout-for-equipment-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-equipment/refs/heads/main/finops/amazon-lookout-for-equipment-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/amazon-lookout-for-equipment-finops.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-equipment/refs/heads/main/plans/amazon-lookout-for-equipment-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/amazon-lookout-for-equipment-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-lookout-for-equipment/refs/heads/main/capabilities/amazon-lookout-for-equipment-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-lookout-for-equipment-capability-edges.yml
 - group: company
   title: ''
   type: Website
-  url: https://amazon.com
+  url: https://aws.amazon.com/lookout-for-equipment/
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -181,9 +205,13 @@ features:
 - description: Run continuous inference on streaming sensor data for real-time failure detection.
   name: Real-Time Inference
 finops:
-- name: Amazon Lookout For Equipment Finops
+- has_sources: false
+  method: generated
+  name: Amazon Lookout For Equipment Finops
+  primary_unit: ''
   service_category: API
   slug: amazon-lookout-for-equipment-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/amazon-lookout-for-equipment.png
 json_schemas:
 - name: Dataset
@@ -209,13 +237,13 @@ modified: '2026-09-16'
 name: Amazon Lookout for Equipment
 nav: Providers
 network: true
-overview: 'Amazon Lookout for Equipment publishes 1 API on the [APIs.io](https://apis.io/) network: Datasets API. Tagged areas include Equipment Monitoring, Industrial IoT, Machine-Learning, and Predictive Maintenance.
+overview: 'Amazon Lookout for Equipment publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Datasets API. Tagged areas include Equipment Monitoring, Industrial IoT, Machine Learning, and Predictive Maintenance.
 
 
   The Amazon Lookout for Equipment catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon Lookout for Equipment''s developer surface includes authentication, developer portal, documentation, support, engineering blog, developer console, signup flow, and 15 more developer resources.'
+  Amazon Lookout for Equipment''s developer surface includes pricing, authentication, developer portal, documentation, support, engineering blog, developer console, and 20 more developer resources.'
 plans:
 - name: Amazon Lookout For Equipment Plans Pricing
   plan_count: 3
@@ -226,9 +254,10 @@ rate_limits:
   name: Amazon Lookout For Equipment Rate Limits
   slug: amazon-lookout-for-equipment-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Amazon Lookout for Equipment API Rules
+  name: Amazon Lookout for Equipment — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -236,7 +265,8 @@ rules:
     info: 1
     warn: 4
   slug: amazon-lookout-for-equipment-jsonschema-spectral-rules
-- effective_rule_count: 65
+- authorship: generated
+  effective_rule_count: 65
   extends:
   - spectral:oas
   name: Amazon Lookout for Equipment API Rules
@@ -249,23 +279,23 @@ rules:
   slug: amazon-lookout-for-equipment-spectral-rules
 score:
   band: developing
-  composite: 50.1
+  composite: 53.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 65.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 49.5
+    artifact_dirs: 19
+    catalog_earned: 70.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 3.2
   facets:
-    access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 67.3
+    access_clarity: 77.6
+    contract_governance: 27.3
+    contract_quality: 61.0
     developer_ergonomics: 44.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
-  previous_composite: 50.1
+  previous_composite: 50.7
   provenance:
     agentic_access: derived
     contracts:
@@ -273,8 +303,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -301,7 +337,7 @@ slug: amazon-lookout-for-equipment
 tags:
 - Equipment Monitoring
 - Industrial IoT
-- Machine-Learning
+- Machine Learning
 - Predictive Maintenance
 use_cases:
 - description: Detect early warning signs of equipment failures in manufacturing machinery.
@@ -312,5 +348,5 @@ use_cases:
   name: Mining Equipment Health
 - description: Detect anomalies in HVAC systems to prevent equipment failures in buildings.
   name: HVAC System Monitoring
-website: https://amazon.com
+website: https://aws.amazon.com/lookout-for-equipment/
 ---

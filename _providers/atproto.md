@@ -23,18 +23,18 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.1
-  scored_at: '2026-09-20'
+  score: 21.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -50,42 +50,42 @@ apis:
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Actor (user) profile, search, and preference operations
-  name: AT Protocol actor API
+  name: AT Protocol Actor API
   slug: atproto-actor-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Feed, post, timeline, and content operations
-  name: AT Protocol feed API
+  name: AT Protocol Feed API
   slug: atproto-feed-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Graph operations — follows, blocks, lists, and mutes
-  name: AT Protocol graph API
+  name: AT Protocol Graph API
   slug: atproto-graph-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: DID and handle resolution, identity management
-  name: AT Protocol identity API
+  name: AT Protocol Identity API
   slug: atproto-identity-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Notification management
-  name: AT Protocol notification API
+  name: AT Protocol Notification API
   slug: atproto-notification-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Repository management, record CRUD operations
-  name: AT Protocol repo API
+  name: AT Protocol Repo API
   slug: atproto-repo-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Server management, session creation, account administration
-  name: AT Protocol server API
+  name: AT Protocol Server API
   slug: atproto-server-api
 - baseURL: https://bsky.social/xrpc
   baseurl_source: declared
   description: Data synchronization, firehose, blob access
-  name: AT Protocol sync API
+  name: AT Protocol Sync API
   slug: atproto-sync-api
 - description: XRPC is the AT Protocol's HTTP-based remote procedure call layer. All protocol interactions — querying records, writing records, subscribing to streams, resolving identity, moderating content — are ex
   name: AT Protocol XRPC API
@@ -217,9 +217,13 @@ examples:
   name: Atproto Gettimeline Example
   slug: atproto-getTimeline-example
 finops:
-- name: Atproto Finops
+- has_sources: true
+  method: generated
+  name: Atproto Finops
+  primary_unit: ''
   service_category: Social Networking
   slug: atproto-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/atproto.png
 json_schemas:
 - name: Bluesky Post (app.bsky.feed.post)
@@ -241,7 +245,7 @@ modified: '2026-06-12'
 name: AT Protocol
 nav: Providers
 network: true
-overview: 'AT Protocol publishes 9 APIs on the [APIs.io](https://apis.io/) network, including actor API, feed API, graph API, and 6 more. Tagged areas include Social Networking, Decentralized, Federated, Open-Source, and Bluesky.
+overview: 'AT Protocol publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actor API, Feed API, Graph API, and 12 more. Tagged areas include Social Network, Decentralized, Federated, Open Source, and Bluesky.
 
 
   The AT Protocol catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -258,9 +262,10 @@ rate_limits:
   name: Atproto Rate Limits
   slug: atproto-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: AT Protocol API Rules
+  name: AT Protocol — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -269,24 +274,24 @@ rules:
     warn: 3
   slug: atproto-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 47.5
+  band: thin
+  composite: 36.7
   coverage:
     artifact_dirs: 16
-    catalog_earned: 78.3
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 72.7
+    contract_quality: 67.0
     developer_ergonomics: 38.1
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 47.5
+    discoverability: 66.1
+    operational_transparency: 26.3
+  previous_composite: 45.0
   provenance:
     agentic_access: derived
     contracts:
@@ -294,9 +299,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -312,10 +323,10 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: atproto
 tags:
-- Social Networking
+- Social Network
 - Decentralized
 - Federated
-- Open-Source
+- Open Source
 - Bluesky
 - Fediverse
 - Identity

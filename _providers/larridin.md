@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -68,7 +68,7 @@ apis:
   description: Clustered workflow analysis, friction, recommendations, and tool verdicts.
   name: Larridin Workflow Intelligence API
   slug: larridin-workflow-intelligence-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -89,6 +89,20 @@ collections:
   name: Larridin Scout Adoption Workflow Intelligence API
   slug: open-larridin-workflow-intelligence-api
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://larridin.com/router/
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/plans/larridin-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/larridin-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/capabilities/larridin-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/larridin-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/larridin/refs/heads/main/agentic-access/larridin-agentic-access.yml
   title: ''
@@ -236,15 +250,19 @@ layout: provider
 mcp_servers:
 - description: 'Larridin publishes an official Model Context Protocol server that connects AI assistants and agents to Scout. It is enabled per organization: additional tools may be enabled for an organization and ac'
   name: Larridin MCP Server
-  slug: larridin-mcp-server
+  slug: larridin
 modified: '2026-07-19'
 name: Larridin
 nav: Providers
 network: true
-overview: 'Larridin publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Adoption API, Proficiency API, Surveys API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Adoption, AI Governance, and Analytics.
+overview: 'Larridin publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Adoption API, Proficiency API, Surveys API, and 2 more. Tagged areas include Company, Artificial Intelligence, AI Adoption, AI Governance, and Analytics.
 
 
-  Larridin''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, authentication, and 24 more developer resources.'
+  Larridin''s developer surface includes pricing, documentation, API reference, getting-started guide, quickstart, support, engineering blog, and 27 more developer resources.'
+plans:
+- name: Larridin Plans Pricing
+  plan_count: 1
+  slug: larridin-plans-pricing
 random_paper: 17
 scopes:
 - name: Larridin Scopes
@@ -252,24 +270,24 @@ scopes:
   slug: larridin-scopes
   summary_line: 4 scopes · authorizationCode/deviceCode
 score:
-  band: developing
-  composite: 45.8
+  band: strong
+  composite: 54.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 21
+    catalog_earned: 45.0
+    catalog_earned_first_party: 8.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 43.4
+    access_clarity: 75.0
     contract_governance: 18.2
-    contract_quality: 55.5
+    contract_quality: 50.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 13.2
-  previous_composite: 45.8
+  previous_composite: 48.3
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -280,9 +298,15 @@ score:
       total: 5
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

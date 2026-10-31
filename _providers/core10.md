@@ -34,10 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://monarchfts.com/feed/
 - group: company
   title: ''
   type: Website
@@ -131,14 +135,14 @@ description: 'Core10, Inc. is a U.S.-based fintech software development and API 
   other companies for nearly a decade but never published a developer program, public API, SDK or machine-readable contract of its own, and as of 2026-08-11 neither successor brand does either.'
 image: https://monarchfts.com/wp-content/uploads/cropped-monarch-favicon-192x192.webp
 layout: provider
-modified: '2026-08-11'
+modified: '2026-10-06'
 name: Core10
 nav: Providers
 network: true
-overview: 'Core10 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial-Services, Banking, and API Integration.
+overview: 'Core10 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Services, Banking, and API Integration.
 
 
-  Core10''s developer surface includes engineering blog and 15 more developer resources.'
+  Core10''s developer surface includes engineering blog and 16 more developer resources.'
 plans:
 - name: Core10 Plans Pricing
   plan_count: 0
@@ -150,9 +154,9 @@ rate_limits:
   slug: core10-rate-limits
 score:
   band: minimal
-  composite: 7.7
+  composite: 8.1
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -164,22 +168,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 7.7
+  previous_composite: 8.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 17.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 11.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -195,7 +201,7 @@ slug: core10
 tags:
 - Company
 - Fintech
-- Financial-Services
+- Financial Services
 - Banking
 - API Integration
 - Software Development

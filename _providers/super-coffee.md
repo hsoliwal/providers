@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Universal Commerce Protocol (UCP) shopping service that Super Coffee's storefront implements over MCP transport. An anonymous tools/list returns 13 tools covering catalog search and lookup, produc
@@ -135,14 +135,14 @@ description: 'Super Coffee is the ready-to-drink coffee brand operated by Kitu L
 image: https://www.drinksupercoffee.com/cdn/shop/files/super_coffee_logo_49f6a156-94a1-46e2-9440-f09c07a4bf74.jpg?v=1623443564&width=2048
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at www.drinksupercoffee.com over HTTP; 13 tools listed.
   name: Super Coffee MCP Server
-  slug: super-coffee-mcp-server
+  slug: super-coffee-ucp
 modified: '2026-08-05'
 name: Super Coffee
 nav: Providers
 network: true
-overview: 'Super Coffee publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Food and Beverage, Consumer Packaged Goods, Retail, and E-Commerce.
+overview: 'Super Coffee is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Food and Beverage, Consumer Packaged Goods, Retail, and E-Commerce.
 
 
   Super Coffee''s developer surface includes documentation, support, engineering blog, pricing, signup flow, authentication, and 13 more developer resources.'
@@ -153,30 +153,36 @@ scopes:
   slug: super-coffee-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.8
+  band: thin
+  composite: 26.6
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 25.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 0.0
-  previous_composite: 23.8
+  previous_composite: 26.5
   provenance:
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

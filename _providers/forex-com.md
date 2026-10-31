@@ -29,42 +29,22 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-09-20'
+  score: 24.7
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 5
+- acting_count: 4
   human_in_the_loop: 1
   name: Forex Com Agentic Access
   operation_count: 17
   slug: forex-com-agentic-access
-  summary_line: 17 operations · 5 acting · 1 human-in-the-loop
+  summary_line: 17 operations · 4 acting · 1 human-in-the-loop
 api_count: 1
 apis:
-- baseURL: https://ciapi.cityindex.com/TradingAPI
-  baseurl_source: spec
-  description: Authenticate and manage API sessions for the FOREX.com trading platform. A POST request to the session endpoint with username, password, and AppKey returns a session ID used as a header credential for
-  name: FOREX.com Session API
-  slug: forex-com-session-api
-- baseURL: https://ciapi.cityindex.com/TradingAPI
-  baseurl_source: spec
-  description: Retrieve client and trading account details including account IDs, balance, available margin, and personal account information. The /useraccount/ClientAndTradingAccount endpoint returns the Trading Ac
-  name: FOREX.com Account API
-  slug: forex-com-account-api
-- baseURL: https://ciapi.cityindex.com/TradingAPI
-  baseurl_source: spec
-  description: Search and retrieve market details for tradeable instruments across 80+ forex and CFD markets. Supports full market search by name or tag to resolve Market IDs used in order placement and price subscr
-  name: FOREX.com Market API
-  slug: forex-com-market-api
-- baseURL: https://ciapi.cityindex.com/TradingAPI
-  baseurl_source: spec
-  description: Access real-time and historical price data for forex and CFD markets. Real-time bid/ask/offer prices are delivered via Lightstreamer streaming subscriptions using MERGE mode. Historical OHLC price dat
-  name: FOREX.com Pricing API
-  slug: forex-com-pricing-api
 - description: 'Place and manage trade orders on the FOREX.com platform against live streaming prices. Supports market price orders with configurable direction (Buy/Sell), quantity, stop-loss, take-profit, and price '
   name: FOREX.com Order API
   slug: forex-com-order-api
@@ -73,7 +53,7 @@ apis:
   slug: forex-com-position-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
   baseurl_source: spec
-  description: Client and trading account information
+  description: Retrieve client and trading account details including account IDs, balance, available margin, and personal account information. The /useraccount/ClientAndTradingAccount endpoint returns the Trading Ac
   name: FOREX.com Account API
   slug: forex-com-account-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
@@ -83,7 +63,7 @@ apis:
   slug: forex-com-margin-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
   baseurl_source: spec
-  description: Market search and instrument lookup
+  description: Search and retrieve market details for tradeable instruments across 80+ forex and CFD markets. Supports full market search by name or tag to resolve Market IDs used in order placement and price subscr
   name: FOREX.com Market API
   slug: forex-com-market-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
@@ -98,15 +78,15 @@ apis:
   slug: forex-com-positions-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
   baseurl_source: spec
-  description: Real-time tick history and OHLC bar history
+  description: Access real-time and historical price data for forex and CFD markets. Real-time bid/ask/offer prices are delivered via Lightstreamer streaming subscriptions using MERGE mode. Historical OHLC price dat
   name: FOREX.com Pricing API
   slug: forex-com-pricing-api
 - baseURL: https://ciapi.cityindex.com/TradingAPI
   baseurl_source: spec
-  description: Authentication and session management
+  description: Authenticate and manage API sessions for the FOREX.com trading platform. A POST request to the session endpoint with username, password, and AppKey returns a session ID used as a header credential for
   name: FOREX.com Session API
   slug: forex-com-session-api
-artifact_total: 45
+artifact_total: 41
 collections:
 - collection_type: open
   name: API Collection
@@ -133,6 +113,21 @@ collections:
   name: FOREX.com REST Account Session API
   slug: open-forex-com-session-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/forex-com/refs/heads/main/plans/forex-com-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/forex-com-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/forex-com/refs/heads/main/rate-limits/forex-com-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/forex-com-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/forex-com/refs/heads/main/finops/forex-com-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/forex-com-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/forex-com/refs/heads/main/capabilities/forex-com-capability-edges.yml
   title: ''
@@ -226,9 +221,13 @@ features:
 - Minimum deposit $100; recommended $2,500 for adequate risk buffer
 - Language-agnostic: integrations documented in Python, C++, Perl, VB.NET
 finops:
-- name: Forex Com Finops
+- has_sources: true
+  method: generated
+  name: Forex Com Finops
+  primary_unit: ''
   service_category: Financial Services
   slug: forex-com-finops
+  template: false
 image: https://www.forex.com/favicon.ico
 jsonld:
 - class_count: 0
@@ -240,13 +239,13 @@ modified: '2026-06-13'
 name: FOREX.com
 nav: Providers
 network: true
-overview: 'FOREX.com publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Session API, Account API, Market API, and 8 more. Tagged areas include Forex, FX Trading, CFD Trading, Algorithmic Trading, and Financial-Services.
+overview: 'FOREX.com publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Margin API, Market API, and 6 more. Tagged areas include Foreign Exchange, FX Trading, CFD Trading, Algorithmic Trading, and Financial Services.
 
 
   The FOREX.com catalog on APIs.io includes 1 JSON-LD context.
 
 
-  FOREX.com''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, signup flow, support, and 10 more developer resources.'
+  FOREX.com''s developer surface includes authentication, developer portal, documentation, getting-started guide, pricing, signup flow, support, and 13 more developer resources.'
 plans:
 - name: Forex Com Plans Pricing
   plan_count: 3
@@ -257,24 +256,24 @@ rate_limits:
   name: Forex Com Rate Limits
   slug: forex-com-rate-limits
 score:
-  band: developing
-  composite: 50.2
+  band: thin
+  composite: 37.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 59.0
+    artifact_dirs: 13
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 73.7
+    access_clarity: 42.1
     contract_governance: 0.0
-    contract_quality: 58.3
+    contract_quality: 52.8
     developer_ergonomics: 47.6
-    discoverability: 50.0
-    operational_transparency: 31.6
-  previous_composite: 50.2
+    discoverability: 48.2
+    operational_transparency: 7.9
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     contracts:
@@ -287,10 +286,10 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 30.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -310,12 +309,11 @@ security:
   summary_line: security.txt · contact published
 slug: forex-com
 tags:
-- Forex
+- Foreign Exchange
 - FX Trading
 - CFD Trading
 - Algorithmic Trading
-- Financial-Services
+- Financial Services
 - Trading APIs
-- Currency Exchange
 website: https://www.forex.com/
 ---

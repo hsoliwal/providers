@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 2
@@ -150,6 +150,26 @@ collections:
   name: Authsignal Server API
   slug: open-authsignal
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/authsignal/refs/heads/main/plans/authsignal-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/authsignal-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/authsignal/refs/heads/main/rate-limits/authsignal-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/authsignal-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/authsignal/refs/heads/main/finops/authsignal-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/authsignal-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/authsignal/refs/heads/main/capabilities/authsignal-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/authsignal-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -212,19 +232,23 @@ common:
 created: '2026-05-23'
 description: Authsignal is a passwordless, step-up, and risk-based authentication platform. The product wraps passkeys, authenticator apps (TOTP), SMS and WhatsApp OTP, email OTP and magic links, push notifications, biometrics (face / palm), and ID verification behind a unified Server API, Client API, and Management API. A no-code rules engine routes high-risk events through step-up challenges, and audit / observability surfaces every authentication attempt. Authsignal slots in front of existing identity providers (Cognito, Auth0, Azure AD B2C, Keycloak, IdentityServer, NextAuth.js) or works standalone.
 finops:
-- name: Authsignal Finops
+- has_sources: false
+  method: generated
+  name: Authsignal Finops
+  primary_unit: ''
   service_category: API
   slug: authsignal-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/authsignal.png
 layout: provider
 modified: '2026-05-23'
 name: Authsignal
 nav: Providers
 network: true
-overview: 'Authsignal publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Actions API, Authenticators API, Challenges API, and 3 more. Tagged areas include Authentication, Passkeys, MFA, Step-Up, and Passwordless.
+overview: 'Authsignal publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Actions API, Authenticators API, Challenges API, and 19 more. Tagged areas include Authentication, Passkeys, MFA, Step-Up, and Passwordless.
 
 
-  Authsignal''s developer surface includes authentication, documentation, GitHub presence, status page, pricing, engineering blog, and 8 more developer resources.'
+  Authsignal''s developer surface includes authentication, documentation, GitHub presence, status page, pricing, engineering blog, and 12 more developer resources.'
 plans:
 - name: Authsignal Plans Pricing
   plan_count: 1
@@ -236,26 +260,26 @@ rate_limits:
   slug: authsignal-rate-limits
 score:
   band: thin
-  composite: 36.7
+  composite: 28.1
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 56.0
+    artifact_dirs: 14
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 52.1
+    contract_quality: 46.9
     developer_ergonomics: 23.8
-    discoverability: 75.9
-    operational_transparency: 42.1
+    discoverability: 73.2
+    operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 36.7
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     contracts:
@@ -263,9 +287,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 11.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -286,7 +316,7 @@ tags:
 - MFA
 - Step-Up
 - Passwordless
-- Risk
+- Risk Management
 - Biometrics
 - Identity Verification
 website: https://www.authsignal.com/

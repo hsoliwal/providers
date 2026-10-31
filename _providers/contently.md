@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST-first JSON API to Contently's vetted creative network and project workflow. Search creators, open NDA-scoped projects, brief and message contributors, submit draft reviews, approve and pay out wo
@@ -159,7 +159,7 @@ modified: '2026-08-13'
 name: Contently
 nav: Providers
 network: true
-overview: 'Contently publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Content Marketing, Talent Marketplace, Freelance, and Content Creation.
+overview: 'Contently is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Content Marketing, Talent Marketplace, Freelance, and Content Creation.
 
 
   The Contently catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -176,10 +176,10 @@ rate_limits:
   name: Contently Rate Limits
   slug: contently-rate-limits
 score:
-  band: thin
-  composite: 38.7
+  band: developing
+  composite: 40.8
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -189,16 +189,30 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 38.7
+  previous_composite: 40.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

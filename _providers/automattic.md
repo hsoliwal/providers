@@ -37,14 +37,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 60.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 1218
+- acting_count: 1210
   human_in_the_loop: 20
   name: Automattic Agentic Access
-  operation_count: 2384
+  operation_count: 2351
   slug: automattic-agentic-access
-  summary_line: 2384 operations · 1218 acting · 20 human-in-the-loop
+  summary_line: 2351 operations · 1210 acting · 20 human-in-the-loop
 api_count: 2
 apis:
 - description: Automattic's hosted Model Context Protocol server for WordPress.com. Streamable HTTP transport secured with OAuth 2.1 (PKCE S256, dynamic client registration, token rotation, no client secret). Twelve
@@ -1993,6 +1993,14 @@ collections:
   name: WordPress.com REST API — wpcom/v2 namespace
   slug: open-automattic-wordpress-com-wpcom-v2
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://automattic.com/news/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://automattic.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/automattic/refs/heads/main/overlays/automattic-wordpress-com-rest-v1-1-overlay.yaml
   title: ''
@@ -2243,20 +2251,20 @@ description: Automattic is the company behind WordPress.com, Jetpack, WooCommerc
 image: https://automattic.com/wp-content/uploads/2024/11/cropped-automattic-logo-square.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at public-api.wordpress.com over HTTP; 12 tools listed.
   name: Automattic MCP Server
-  slug: automattic-mcp-server
-modified: '2026-07-31'
+  slug: wordpress-com
+modified: '2026-10-06'
 name: Automattic
 nav: Providers
 network: true
-overview: 'Automattic publishes 383 APIs on the [APIs.io](https://apis.io/) network, including A8c Lore API, A8cmentorship API, Abilities API, and 380 more. Tagged areas include Company, Content Management, Publishing, Blogging, and Website Hosting.
+overview: 'Automattic publishes 385 API contracts indexed on the [APIs.io](https://apis.io/) network, including A8c Lore API, A8cmentorship API, Abilities API, and 382 more. Tagged areas include Company, Content Management, Publishing, Blogging, and Website Hosting.
 
 
   The Automattic catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Automattic''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 46 more developer resources.'
+  Automattic''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 48 more developer resources.'
 random_paper: 5
 scopes:
 - name: Automattic Scopes
@@ -2264,24 +2272,24 @@ scopes:
   slug: automattic-scopes
   summary_line: 21 scopes · authorizationCode/refreshToken/clientCredentials
 score:
-  band: developing
-  composite: 49.5
+  band: strong
+  composite: 54.5
   coverage:
-    artifact_dirs: 26
-    catalog_earned: 34.0
+    artifact_dirs: 27
+    catalog_earned: 37.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 81.0
+    catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 23.9
     developer_ergonomics: 80.4
-    discoverability: 70.4
+    discoverability: 75.0
     operational_transparency: 52.6
-  previous_composite: 49.5
+  previous_composite: 54.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -2292,8 +2300,14 @@ score:
       total: 388
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -2331,7 +2345,7 @@ tags:
 - Analytics
 - Domains
 - E-Commerce
-- Open-Source
+- Open Source
 - Developer Tools
 - MCP
 website: https://automattic.com/

@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.monogramhealth.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/monogramhealth/refs/heads/main/security/monogramhealth-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: Monogram Health is a value-based, in-home specialty care provider for people living with chronic kidney disease, end-stage renal disease, and other complex chronic conditions. Multidisciplinary teams of physicians, nurse practitioners, nurses, dietitians, pharmacists, and social workers deliver coordinated care in patients' homes with 24/7 access, addressing both medical needs and social determinants of health to reduce hospitalizations and emergency visits. Headquartered in Nashville, Tennessee, the company partners with health plans (payer partners) and provider groups and serves over 200,000 patients annually. This is a healthcare services company with no public developer, API, or platform surface; the enrichment pass probed domain security and found no API.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/monogramhealth.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Monogramhealth
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Monogramhealth is profiled on the [APIs.io](https://apis.io/) network.
 random_paper: 20
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,22 +75,24 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 3.3
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

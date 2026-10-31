@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -96,6 +96,11 @@ collections:
   name: Roadie API
   slug: open-roadie-io
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/roadie-io/refs/heads/main/capabilities/roadie-io-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/roadie-io-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/roadie-io/refs/heads/main/agentic-access/roadie-io-agentic-access.yml
   title: ''
@@ -140,19 +145,23 @@ common:
 created: '2026-07-11'
 description: Roadie is managed Backstage - a fully hosted internal developer portal (IDP) and software catalog delivered as SaaS, so teams get the Backstage software catalog, TechDocs, Scaffolder software templates, Tech Insights scorecards, and 75+ plugins without operating Backstage themselves. Roadie exposes a public REST API under https://api.roadie.so/api (Bearer-token authenticated with User or Service tokens) for reading catalog entities, pushing Roadie-managed entities and idempotent entity sets into the software catalog, running Scaffolder templates, and querying Tech Insights facts, checks, and scorecards. Roadie also ships six agent-native MCP servers over the same API base. Backstage itself is free and open source; Roadie is the commercial managed product, priced per contributing developer. Operated by Larder Software Limited.
 finops:
-- name: Roadie Io Finops
+- has_sources: true
+  method: generated
+  name: Roadie Io Finops
+  primary_unit: ''
   service_category: Developer Tools and Platform Engineering
   slug: roadie-io-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/roadie-io.png
 layout: provider
 modified: '2026-07-11'
 name: Roadie
 nav: Providers
 network: true
-overview: 'Roadie publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Catalog API, Entity Push API, Scaffolder API, and 2 more. Tagged areas include Software Catalog, Internal Developer Portal, Backstage, Developer Experience, and IDP.
+overview: 'Roadie publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Catalog API, Entity Push API, Scaffolder API, and 3 more. Tagged areas include Software Catalog, Internal Developer Portal, Backstage, Developer Experience, and Developer Portal.
 
 
-  Roadie''s developer surface includes authentication, documentation, engineering blog, and 6 more developer resources.'
+  Roadie''s developer surface includes authentication, documentation, engineering blog, and 7 more developer resources.'
 plans:
 - name: Roadie Io Plans Pricing
   plan_count: 3
@@ -163,24 +172,24 @@ rate_limits:
   name: Roadie Io Rate Limits
   slug: roadie-io-rate-limits
 score:
-  band: thin
-  composite: 37.9
+  band: emerging
+  composite: 25.8
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 64.0
+    artifact_dirs: 12
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 44.6
+    contract_quality: 40.2
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 37.9
+    discoverability: 66.1
+    operational_transparency: 7.9
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     contracts:
@@ -188,9 +197,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -206,7 +221,6 @@ tags:
 - Internal Developer Portal
 - Backstage
 - Developer Experience
-- IDP
 - Developer Portal
 - Managed Backstage
 - Scaffolder

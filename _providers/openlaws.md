@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: partial
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 49.6
-  scored_at: '2026-09-20'
+  score: 47.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -71,7 +71,7 @@ apis:
   description: Opinions represent published and unpublished case law opinions. Opinions belong to a Court and Jurisdiction.
   name: OpenLaws Opinions API
   slug: openlaws-opinions-api
-artifact_total: 18
+artifact_total: 19
 collections:
 - collection_type: open
   name: API Collection
@@ -156,16 +156,24 @@ common:
 created: '2025-03-01'
 description: OpenLaws is a Public Benefit Corporation that provides programmatic access to U.S. law text — federal and state statutes, regulations, constitutions, and case law — through a unified Legal Data API. The platform exposes keyword and citation search, hierarchical division retrieval, historical versions with redline comparisons, citation parsing and validation, and deep links to authoritative government sources. Coverage spans 53 U.S. jurisdictions (50 states + D.C. + Puerto Rico + Federal) with more than 4.3 million law sections under a single data model, targeted at RegTech, LegalTech, GRC / IRM, generative AI / RAG, and legal research workloads.
 finops:
-- name: Openlaws Finops
+- has_sources: false
+  method: generated
+  name: Openlaws Finops
+  primary_unit: ''
   service_category: API
   slug: openlaws-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/openlaws.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.openlaws.us over HTTP.
+  name: OpenLaws MCP Server
+  slug: openlaws
 modified: '2026-05-21'
 name: OpenLaws
 nav: Providers
 network: true
-overview: 'OpenLaws publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Courts API, Jurisdictions API, Law Divisions API, and 2 more. Tagged areas include Legal, Law, Statutes, Regulations, and Constitutions.
+overview: 'OpenLaws publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Courts API, Jurisdictions API, Law Divisions API, and 2 more. Tagged areas include Legal, Law, Statutes, Regulations, and Constitutions.
 
 
   OpenLaws'' developer surface includes authentication, documentation, getting-started guide, signup flow, changelog, and 8 more developer resources.'
@@ -180,23 +188,23 @@ rate_limits:
   slug: openlaws-rate-limits
 score:
   band: thin
-  composite: 35.2
+  composite: 31.4
   coverage:
     artifact_dirs: 12
-    catalog_earned: 46.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 31.6
     contract_governance: 0.0
-    contract_quality: 55.9
+    contract_quality: 50.3
     developer_ergonomics: 21.4
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 7.9
-  previous_composite: 35.2
+  previous_composite: 33.0
   provenance:
     agentic_access: derived
     contracts:
@@ -210,9 +218,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

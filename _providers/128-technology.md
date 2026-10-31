@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 25.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The northbound API of the Juniper Session Smart Router (SSR) and Session Smart Conductor. A YANG-modeled configuration and state tree is exposed over a REST API rooted at /api/v1, an equivalent GraphQ
@@ -144,7 +144,7 @@ modified: '2026-09-05'
 name: 128 Technology
 nav: Providers
 network: true
-overview: '128 Technology publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, SD-WAN, Routing, and Network Management.
+overview: '128 Technology is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Networking, SD-WAN, Routing, and Network Management.
 
 
   The 128 Technology catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -162,23 +162,23 @@ rate_limits:
   slug: 128-technology-rate-limits
 score:
   band: thin
-  composite: 38.4
+  composite: 37.0
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 7.9
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 69.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 38.4
+  previous_composite: 37.1
   provenance:
     conformance: first-party
   regulatory:
@@ -186,14 +186,15 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 30.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/128-technology/refs/heads/main/screenshots/128-technology-2026-10-11T092005.png
 security:
 - kind: authentication
   name: 128 Technology Authentication

@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/bold-security/refs/heads/main/security/bold-security-domain-security.yml
@@ -84,38 +84,48 @@ created: '2026-07-17'
 description: Bold Security provides real-time, on-device (endpoint) data security. Its on-device AI classifies data interactions across every application in real time and detects and prevents user- and AI-agent-driven data exfiltration before sensitive data leaves the endpoint, without requiring policy configuration or cloud round-trips. The platform gives security teams visibility into data movement, intent and risky-behavior analysis, and full-context investigation across employees and AI agents. Bold Security is ISO 27001 certified and SOC 2 compliant, and is a portfolio company of Bessemer Venture Partners. As of this profile the company publishes no public developer API, specification, or SDK; this entry captures its identity, security posture, and public properties.
 image: https://cdn.prod.website-files.com/6696877e0376bfc5993d8902/691c923b17866b6031536337_2ad9fe4431a4d3c6fba51e835e317799_Bold%20-%20Share%20Image.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.bold.security over HTTP.
+  name: Bold Security MCP Server
+  slug: bold-security
 modified: '2026-07-18'
 name: Bold Security
 nav: Providers
 network: true
-overview: 'Bold Security is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Ml, Data Security, Endpoint Security, and Data Loss Prevention.
+overview: 'Bold Security is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Data Security, Endpoint Security, and Data Loss Prevention.
 
 
   Bold Security''s developer surface includes engineering blog, signup flow, support, and 7 more developer resources.'
 random_paper: 8
 score:
   band: emerging
-  composite: 15.1
+  composite: 14.9
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 39.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 15.1
+  previous_composite: 15.0
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -134,7 +144,7 @@ security:
 slug: bold-security
 tags:
 - Company
-- Ai Ml
+- Artificial Intelligence
 - Data Security
 - Endpoint Security
 - Data Loss Prevention

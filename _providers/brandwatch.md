@@ -24,7 +24,7 @@ agent_readiness:
     delegated_identity: served
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -35,9 +35,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 42.3
-  scored_at: '2026-09-20'
-api_count: 4
+  score: 40.1
+  scored_at: '2026-10-17'
+api_count: 6
 apis:
 - description: 'Query Brandwatch''s content library or imported data to return aggregated statistics and computed analysis. Enables programmatic access to brand mention analytics, sentiment scores, volume trends, and '
   name: Brandwatch Analysis API
@@ -295,16 +295,20 @@ common:
 created: '2025-03-01'
 description: Brandwatch is a leading consumer intelligence and social media analytics platform providing access to trillions of consumer conversations. The platform offers six distinct APIs for analysis, data upload, consumer research, social metrics, publishing, and engagement. Businesses use Brandwatch to track brand mentions, monitor competitors, analyze sentiment, and integrate social data with existing analytics and CRM systems for strategic decision-making.
 finops:
-- name: Brandwatch Finops
+- has_sources: false
+  method: generated
+  name: Brandwatch Finops
+  primary_unit: ''
   service_category: API
   slug: brandwatch-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/brandwatch.png
 layout: provider
 modified: '2026-08-13'
 name: Brandwatch
 nav: Providers
 network: true
-overview: 'Brandwatch publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Client API, Data API, Me API, and 4 more. Tagged areas include Analytics, Social-Media, Social Media Monitoring, Consumer Intelligence, and Brand Management.
+overview: 'Brandwatch publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Client API, Data API, Me API, and 9 more. Tagged areas include Analytics, Social Media, Social Media Monitoring, Consumer Intelligence, and Brand Management.
 
 
   Brandwatch''s developer surface includes authentication, documentation, engineering blog, getting-started guide, support, pricing, changelog, and 36 more developer resources.'
@@ -324,23 +328,23 @@ scopes:
   summary_line: 3 scopes · password
 score:
   band: developing
-  composite: 51.4
+  composite: 52.7
   coverage:
-    artifact_dirs: 25
-    catalog_earned: 46.0
+    artifact_dirs: 26
+    catalog_earned: 43.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 69.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 61.8
+    access_clarity: 53.9
     contract_governance: 18.2
-    contract_quality: 53.8
+    contract_quality: 48.5
     developer_ergonomics: 41.1
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 57.9
-  previous_composite: 51.4
+  previous_composite: 54.2
   provenance:
     conformance: first-party
     contracts:
@@ -350,8 +354,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -377,7 +387,7 @@ security:
 slug: brandwatch
 tags:
 - Analytics
-- Social-Media
+- Social Media
 - Social Media Monitoring
 - Consumer Intelligence
 - Brand Management

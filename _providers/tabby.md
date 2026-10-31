@@ -26,7 +26,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: platform
@@ -37,8 +37,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.8
-  scored_at: '2026-09-20'
+  score: 40.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -52,21 +52,86 @@ apis:
   baseurl_source: declared
   description: Checkout is a whole process of customer data collection and payment authorization.
   name: Tabby Checkout API
+  phrasing_intents:
+  - id: postCheckoutSession
+    intent: Start a buy-now-pay-later checkout session
+    question: How do I start a Tabby checkout for a shopper's order?
+  - id: getCheckoutSession
+    intent: Look up an existing checkout session
+    question: How can I fetch a checkout session I already created to get its token?
+  phrasing_ops: 2
   slug: tabby-checkout-api
 - baseURL: https://api.tabby.ai
   baseurl_source: declared
   description: The Disputes API is designed to simplify the process of handling disputes and help merchants resolve issues with customer orders more efficiently. Merchants can use this API to retrieve a list of disp
   name: Tabby Disputes API
+  phrasing_intents:
+  - id: getDisputes
+    intent: List recent disputes
+    question: Which disputes have customers opened against my store recently?
+  - id: getDispute
+    intent: View the details of one dispute
+    question: What are the full details of a single dispute I'm handling?
+  - id: postDisputeProvideEvidence
+    intent: Submit evidence for a dispute
+    question: How do I respond when a dispute asks me for evidence?
+  - id: postDisputesApprove
+    intent: Accept disputes and refund the customers
+    question: How do I accept a dispute and give the customer their money back?
+  - id: postDisputesChallenge
+    intent: Challenge a dispute with Tabby support
+    question: Can I push back on a dispute I think is unfair and have support review it?
+  - id: postUploadAttachment
+    intent: Upload a file to use in a dispute
+    question: How do I upload a receipt or delivery photo to use in a dispute?
+  phrasing_ops: 6
   slug: tabby-disputes-api
 - baseURL: https://api.tabby.ai
   baseurl_source: declared
   description: The core of tabby is a payments flow enabling you to handle payments at your webstore.
   name: Tabby Payments API
+  phrasing_intents:
+  - id: getPayment
+    intent: Look up a payment with its captures and refunds
+    question: What is the current status of a specific Tabby payment?
+  - id: putPayment
+    intent: Change a payment's order reference ID
+    question: How do I change the order reference number attached to a payment?
+  - id: postPaymentCapture
+    intent: Capture an authorized payment
+    question: How do I collect the money for an order once it ships?
+  - id: postPaymentRefund
+    intent: Refund a closed payment
+    question: How do I refund a customer who returned their order?
+  - id: closePayment
+    intent: Close a payment as final
+    question: How do I cancel a whole order so the customer gets back everything they paid?
+  - id: getPayments
+    intent: List my payments
+    question: Which payments have I taken, newest first?
+  phrasing_ops: 6
   slug: tabby-payments-api
 - baseURL: https://api.tabby.ai
   baseurl_source: declared
   description: Manage webhook endpoints.
   name: Tabby Webhooks API
+  phrasing_intents:
+  - id: postWebhook
+    intent: Register a webhook endpoint
+    question: How do I get notified at my server when a payment changes?
+  - id: getWebhooks
+    intent: List registered webhooks
+    question: Which webhooks have I registered for payment notifications?
+  - id: getWebhook
+    intent: View one webhook's settings
+    question: What URL and header is a particular webhook configured with?
+  - id: putWebhook
+    intent: Change a webhook's URL or header
+    question: How do I point an existing webhook at a new server URL?
+  - id: deleteWebhook
+    intent: Remove a webhook
+    question: How do I stop notifications going to an old endpoint?
+  phrasing_ops: 5
   slug: tabby-webhooks-api
 artifact_total: 33
 asyncapis:
@@ -93,6 +158,40 @@ collections:
   name: Tabby API Reference Checkout Webhooks API
   slug: open-tabby-webhooks-api
 common:
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/rules/tabby-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/tabby-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/rules/tabby-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/tabby-jsonschema-spectral-rules.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/hosts/tabby-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/tabby-hosts.yml
+- group: build
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/integrations/tabby-integration-edges.yml
+  title: ''
+  type: IntegrationEdges
+  url: integrations/tabby-integration-edges.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/vendors/tabby-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/tabby-vendors.yml
+- group: company
+  title: ''
+  type: Newsroom
+  url: https://tabby.ai/newsroom
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/capabilities/tabby-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/tabby-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tabby/refs/heads/main/agentic-access/tabby-agentic-access.yml
   title: ''
@@ -456,9 +555,13 @@ examples:
   name: Tabby Webhook Event Example
   slug: tabby-webhook-event-example
 finops:
-- name: Tabby Finops
+- has_sources: true
+  method: generated
+  name: Tabby Finops
+  primary_unit: transaction
   service_category: Financial Services
   slug: tabby-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tabby.png
 json_schemas:
 - name: TabbyCapture
@@ -489,20 +592,20 @@ jsonld:
   slug: tabby-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Tabby ships an official hosted MCP server over its documentation. It is documented at https://docs.tabby.ai/introduction/ai-tools with copy-paste Cursor and Claude Code configs, and answers tools/list
   name: Tabby Docs MCP Server
   slug: tabby-docs-mcp-server
 modified: '2026-08-26'
 name: Tabby
 nav: Providers
 network: true
-overview: 'Tabby publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Checkout API, Disputes API, Payments API, and 1 more. Tagged areas include Buy Now Pay Later, Consumer Finance, E-Commerce, Fintech, and Installments.
+overview: 'Tabby publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Checkout API, Disputes API, Payments API, and 1 more. Tagged areas include Buy Now Pay Later, Consumer Finance, E-Commerce, Fintech, and Installments.
 
 
   The Tabby catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 2 Spectral governance rulesets.
 
 
-  Tabby''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, API reference, and 71 more developer resources.'
+  Tabby''s developer surface includes authentication, developer portal, documentation, getting-started guide, engineering blog, pricing, API reference, and 78 more developer resources.'
 plans:
 - name: Tabby Plans Pricing
   plan_count: 3
@@ -513,9 +616,10 @@ rate_limits:
   name: Tabby Rate Limits
   slug: tabby-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Tabby API Rules
+  name: Tabby — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -523,7 +627,8 @@ rules:
     info: 1
     warn: 4
   slug: tabby-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: Tabby API Rules
@@ -536,21 +641,21 @@ rules:
   slug: tabby-rules
 score:
   band: exemplar
-  composite: 80.6
+  composite: 77.3
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 91.5
+    artifact_dirs: 35
+    catalog_earned: 90.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 23.5
+    catalog_gap: 25.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.2
   facets:
     access_clarity: 92.1
-    contract_governance: 47.0
-    contract_quality: 78.7
+    contract_governance: 45.5
+    contract_quality: 72.3
     developer_ergonomics: 92.9
-    discoverability: 75.9
+    discoverability: 76.7
     operational_transparency: 60.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -559,8 +664,9 @@ score:
     - united-arab-emirates
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
+    - mena
     - middle-east
-  previous_composite: 80.6
+  previous_composite: 77.1
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -576,9 +682,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -604,5 +710,6 @@ tags:
 - Payments
 - Saudi Arabia
 - United Arab Emirates
+- A2A
 website: https://tabby.ai
 ---

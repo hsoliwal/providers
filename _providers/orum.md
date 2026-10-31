@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 38
   human_in_the_loop: 1
@@ -332,14 +332,14 @@ description: Orum is a payments infrastructure company that lets businesses move
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orum.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server.
   name: Orum MCP Server
-  slug: orum-mcp-server
+  slug: orum-openapi-mcp-server
 modified: '2026-07-20'
 name: Orum
 nav: Providers
 network: true
-overview: 'Orum publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Balance API, Book Transfers API, and 14 more. Tagged areas include Company, Payments, Fintech, Banking, and Instant Payments.
+overview: 'Orum publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Balance API, Book Transfers API, and 14 more. Tagged areas include Company, Payments, Fintech, Banking, and Instant Payments.
 
 
   The Orum catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -354,9 +354,9 @@ scopes:
   summary_line: 29 scopes · clientCredentials
 score:
   band: developing
-  composite: 44.8
+  composite: 41.8
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -366,11 +366,11 @@ score:
   facets:
     access_clarity: 7.9
     contract_governance: 4.5
-    contract_quality: 63.3
+    contract_quality: 58.0
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 34.2
-  previous_composite: 44.8
+  previous_composite: 41.8
   provenance:
     agentic_access: derived
     conformance: derived
@@ -386,9 +386,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 49.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 16.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Reranking endpoint that scores a list of candidate documents against a query and returns relevance scores. Powered by the voyage-rerank-2 model family, used downstream of vector search to improve retr
@@ -89,6 +89,11 @@ collections:
   name: Voyage AI Rerank API
   slug: open-voyage-ai-rerank-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/voyage-ai/refs/heads/main/capabilities/voyage-ai-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/voyage-ai-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -152,19 +157,23 @@ common:
 created: '2026-05-23'
 description: Voyage AI builds state-of-the-art embedding and reranker models for retrieval-augmented generation (RAG) and semantic search. The platform exposes an OpenAI-style REST API at api.voyageai.com/v1 for text embeddings, multimodal embeddings, contextualized embeddings, and reranking, with Python and TypeScript SDKs. Model families include voyage-3.x and voyage-4.x text embeddings, voyage-code-3, domain-specialised models (voyage-finance-2, voyage-law-2), voyage-multimodal-3, and the voyage-rerank-2 reranker family. Voyage AI was acquired by MongoDB in February 2024 and is integrated into MongoDB Atlas Vector Search; models are also distributed via AWS Marketplace, Azure Marketplace, and Snowflake.
 finops:
-- name: Voyage Ai Finops
+- has_sources: false
+  method: generated
+  name: Voyage Ai Finops
+  primary_unit: ''
   service_category: API
   slug: voyage-ai-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/voyage-ai.png
 layout: provider
 modified: '2026-05-23'
 name: Voyage AI
 nav: Providers
 network: true
-overview: 'Voyage AI publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Contextualized API, Embeddings API, Multimodal API, and 1 more. Tagged areas include Embeddings, Rerankers, RAG, Semantic Search, and AI Models.
+overview: 'Voyage AI publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contextualized API, Embeddings API, Multimodal API, and 6 more. Tagged areas include Embeddings, Rerankers, RAG, Semantic Search, and AI Models.
 
 
-  Voyage AI''s developer surface includes documentation, GitHub presence, pricing, engineering blog, and 10 more developer resources.'
+  Voyage AI''s developer surface includes documentation, GitHub presence, pricing, engineering blog, and 11 more developer resources.'
 plans:
 - name: Voyage Ai Plans Pricing
   plan_count: 1
@@ -175,36 +184,42 @@ rate_limits:
   name: Voyage Ai Rate Limits
   slug: voyage-ai-rate-limits
 score:
-  band: thin
-  composite: 32.9
+  band: emerging
+  composite: 23.5
   coverage:
-    artifact_dirs: 9
-    catalog_earned: 56.0
+    artifact_dirs: 11
+    catalog_earned: 41.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 59.0
+    catalog_gap: 74.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 51.7
+    contract_quality: 46.5
     developer_ergonomics: 7.1
-    discoverability: 68.5
-    operational_transparency: 42.1
+    discoverability: 66.1
+    operational_transparency: 26.3
   open_source:
     applies: true
     score: 25.0
-  previous_composite: 32.9
+  previous_composite: 29.4
   provenance:
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 5.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

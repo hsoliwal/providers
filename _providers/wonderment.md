@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: na
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 35.2
-  scored_at: '2026-09-20'
+  score: 32.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -83,6 +83,10 @@ collections:
   name: Wonderment Delivery Promise Shipments API
   slug: open-wonderment-shipments-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.loopreturns.com/blog/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/wonderment/refs/heads/main/capabilities/wonderment-capability-edges.yml
   title: ''
@@ -191,37 +195,37 @@ created: '2026-07-17'
 description: Wonderment is a post-purchase order-tracking and shipment-visibility platform for ecommerce brands (built for Shopify), now part of Loop as Loop Tracking. It ingests carrier tracking data, surfaces proactive delivery updates, powers branded self-serve tracking pages, and reports on shipment performance. The public REST API (versioned 2022-10, hosted at api.wonderment.com) lets merchants search shipments by order name or tracking code, list and download shipment report exports, and fetch delivery-date predictions for shipping methods, plus webhooks for shipping events. Originally a CRV-backed company, added to the API Evangelist network and enriched from its ReadMe developer hub.
 image: https://www.wonderment.com/
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Wonderment
 nav: Providers
 network: true
-overview: 'Wonderment publishes 3 APIs on the [APIs.io](https://apis.io/) network: Delivery Promise API, Reports API, and Shipments API. Tagged areas include Company, E-Commerce, Order Tracking, Post-Purchase, and Shipping.
+overview: 'Wonderment publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Delivery Promise API, Reports API, and Shipments API. Tagged areas include Company, E-Commerce, Order Tracking, Post-Purchase, and Shipping.
 
 
   The Wonderment catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Wonderment''s developer surface includes documentation, API reference, getting-started guide, support, authentication, and 17 more developer resources.'
+  Wonderment''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, authentication, and 17 more developer resources.'
 random_paper: 13
 score:
   band: thin
-  composite: 35.8
+  composite: 34.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 63.5
-    developer_ergonomics: 47.0
-    discoverability: 75.9
+    contract_quality: 58.0
+    developer_ergonomics: 49.4
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 35.8
+  previous_composite: 34.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -232,8 +236,14 @@ score:
       total: 3
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

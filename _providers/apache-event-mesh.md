@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.3
-  scored_at: '2026-09-20'
+  score: 16.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -107,6 +107,21 @@ collections:
   name: Apache EventMesh Admin API
   slug: open-eventmesh-admin
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/plans/apache-event-mesh-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apache-event-mesh-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/rate-limits/apache-event-mesh-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apache-event-mesh-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-event-mesh/refs/heads/main/finops/apache-event-mesh-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apache-event-mesh-finops.yml
 - group: company
   title: ''
   type: Website
@@ -207,9 +222,13 @@ features:
 - description: Pluggable connector model supporting Kafka, RocketMQ, Pulsar, and other messaging backends.
   name: Multi-Runtime Support
 finops:
-- name: Apache Event Mesh Finops
+- has_sources: false
+  method: generated
+  name: Apache Event Mesh Finops
+  primary_unit: ''
   service_category: API
   slug: apache-event-mesh-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-event-mesh.png
 integrations:
 - description: Kafka connector for event streaming with durable storage and consumer groups.
@@ -259,13 +278,13 @@ modified: '2026-05-19'
 name: Apache EventMesh
 nav: Providers
 network: true
-overview: 'Apache EventMesh publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Messaging API, Client API, Event API, and 4 more. Tagged areas include Apache, CloudEvents, Event-Driven, Messaging, and Open-Source.
+overview: 'Apache EventMesh publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Messaging API, Client API, Event API, and 4 more. Tagged areas include Apache, CloudEvents, Event-Driven, Messaging, and Open Source.
 
 
   The Apache EventMesh catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 3 Spectral governance rulesets.
 
 
-  Apache EventMesh''s developer surface includes documentation, getting-started guide, engineering blog, support, and 12 more developer resources.'
+  Apache EventMesh''s developer surface includes documentation, getting-started guide, engineering blog, support, and 15 more developer resources.'
 plans:
 - name: Apache Event Mesh Plans Pricing
   plan_count: 3
@@ -276,10 +295,11 @@ rate_limits:
   name: Apache Event Mesh Rate Limits
   slug: apache-event-mesh-rate-limits
 rules:
-- effective_rule_count: 29
+- authorship: generated
+  effective_rule_count: 29
   extends:
   - spectral:asyncapi
-  name: Apache EventMesh API Rules
+  name: Apache EventMesh — asyncapi rules
   rule_count: 2
   severity_counts:
     error: 0
@@ -287,9 +307,10 @@ rules:
     info: 0
     warn: 2
   slug: apache-event-mesh-asyncapi-spectral-rules
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apache EventMesh API Rules
+  name: Apache EventMesh — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -297,7 +318,8 @@ rules:
     info: 1
     warn: 4
   slug: apache-event-mesh-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: generated
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Apache EventMesh API Rules
@@ -310,26 +332,26 @@ rules:
   slug: apache-event-mesh-spectral-rules
 score:
   band: thin
-  composite: 33.7
+  composite: 31.3
   coverage:
     artifact_dirs: 17
-    catalog_earned: 67.5
+    catalog_earned: 63.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.5
+    catalog_gap: 51.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 57.7
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 53.9
     developer_ergonomics: 16.7
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 33.7
+  previous_composite: 32.6
   provenance:
     agentic_access: derived
     contracts:
@@ -337,8 +359,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -359,8 +387,8 @@ tags:
 - CloudEvents
 - Event-Driven
 - Messaging
-- Open-Source
-- Pub-Sub
+- Open Source
+- Pub/Sub
 - Serverless
 use_cases:
 - description: Decouple microservices through asynchronous event-driven communication reducing direct service dependencies.

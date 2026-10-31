@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.iadgroup.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/iad/refs/heads/main/security/iad-domain-security.yml
   title: ''
@@ -57,17 +61,17 @@ created: '2026-07-17'
 description: IAD Group (I@D International) is a European real-estate network company that combines real estate, digital tools, and network marketing to digitalize the traditional agency model through a network of independent agents rather than brick-and-mortar offices. Founded in France, IAD operates across France, Portugal, Spain, Italy, Germany, Mexico, the United Kingdom, and the United States (Florida), with roughly 20,000 independent agents, around 500 employees, more than 96,000 online property listings, and 521 million euros in 2025 turnover. It is a portfolio company of Insight Partners. IAD publishes a consumer/agent web presence but no public developer platform or API surface at this time.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/iad.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: IAD
 nav: Providers
 network: true
-overview: IAD is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, PropTech, Network Marketing, and Property Listings.
+overview: IAD is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, PropTech, Network Marketing, and Property Listings.
 random_paper: 16
 score:
   band: minimal
-  composite: 9.2
+  composite: 8.8
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -79,16 +83,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 9.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 8.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -103,7 +113,7 @@ security:
 slug: iad
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - PropTech
 - Network Marketing
 - Property Listings

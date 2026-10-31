@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.9
-  scored_at: '2026-09-20'
+  score: 25.0
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 20
   human_in_the_loop: 0
@@ -41,7 +41,7 @@ agentic_access:
   operation_count: 96
   slug: tastytrade-agentic-access
   summary_line: 96 operations · 20 acting
-api_count: 16
+api_count: 17
 apis:
 - description: Real-time market data streaming via DXLink, a WebSocket-based protocol backed by dxFeed. Clients fetch a quote token from the tastytrade REST API and use it to authenticate with the DXLink WebSocket e
   name: tastytrade DXLink Market Data Streaming API
@@ -52,12 +52,12 @@ apis:
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about accounts
-  name: tastytrade accounts API
+  name: tastytrade Accounts API
   slug: tastytrade-accounts-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about api-quote-tokens
-  name: tastytrade api-quote-tokens API
+  name: tastytrade API Quote Tokens API
   slug: tastytrade-api-quote-tokens-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
@@ -72,42 +72,42 @@ apis:
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about balance-snapshots
-  name: tastytrade balance-snapshots API
+  name: tastytrade Balance Snapshots API
   slug: tastytrade-balance-snapshots-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to retreive information about complex orders on a per account basis.
-  name: tastytrade complex-orders API
+  name: tastytrade Complex Orders API
   slug: tastytrade-complex-orders-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about customers
-  name: tastytrade customers API
+  name: tastytrade Customers API
   slug: tastytrade-customers-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about futures-option-chains
-  name: tastytrade futures-option-chains API
+  name: tastytrade Futures Option Chains API
   slug: tastytrade-futures-option-chains-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about instruments
-  name: tastytrade instruments API
+  name: tastytrade Instruments API
   slug: tastytrade-instruments-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: allows a client to fetch margin-requirements for positions and orders
-  name: tastytrade margin-requirements API
+  name: tastytrade Margin Requirements API
   slug: tastytrade-margin-requirements-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about margin-requirements-public-configurations
-  name: tastytrade margin-requirements-public-configuration API
+  name: tastytrade Margin Requirements Public Configuration API
   slug: tastytrade-margin-requirements-public-configuration-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: The market-data-controller API from tastytrade — 1 operation(s) for market-data-controller.
-  name: tastytrade market-data-controller API
+  name: tastytrade Market Data Controller API
   slug: tastytrade-market-data-controller-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
@@ -117,42 +117,42 @@ apis:
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about market-times
-  name: tastytrade market-time API
+  name: tastytrade Market Time API
   slug: tastytrade-market-time-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: The net-liq-controller API from tastytrade — 1 operation(s) for net-liq-controller.
-  name: tastytrade net-liq-controller API
+  name: tastytrade Net Liq Controller API
   slug: tastytrade-net-liq-controller-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about option-chains
-  name: tastytrade option-chains API
+  name: tastytrade Option Chains API
   slug: tastytrade-option-chains-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to view, filter, create, cancel and replace orders.
-  name: tastytrade orders API
+  name: tastytrade Orders API
   slug: tastytrade-orders-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to fetch pairs watchlists.
-  name: tastytrade pairs-watchlists API
+  name: tastytrade Pairs Watchlists API
   slug: tastytrade-pairs-watchlists-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about positions
-  name: tastytrade positions API
+  name: tastytrade Positions API
   slug: tastytrade-positions-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to fetch tastyworks watchlists.
-  name: tastytrade public-watchlists API
+  name: tastytrade Public Watchlists API
   slug: tastytrade-public-watchlists-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about quote-alerts
-  name: tastytrade quote-alerts API
+  name: tastytrade Quote Alerts API
   slug: tastytrade-quote-alerts-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
@@ -162,7 +162,7 @@ apis:
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about spans
-  name: tastytrade span API
+  name: tastytrade Span API
   slug: tastytrade-span-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
@@ -172,17 +172,17 @@ apis:
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to request information about the basic trade status of an account. \ This includes information about the strategies an account can trade.
-  name: tastytrade trading-status API
+  name: tastytrade Trading Status API
   slug: tastytrade-trading-status-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Operations about transactions
-  name: tastytrade transactions API
+  name: tastytrade Transactions API
   slug: tastytrade-transactions-api
 - baseURL: https://api.tastyworks.com
   baseurl_source: declared
   description: Allows an API client to fetch a user's watchlists.
-  name: tastytrade user-watchlists API
+  name: tastytrade User Watchlists API
   slug: tastytrade-user-watchlists-api
 artifact_total: 169
 collections:
@@ -271,6 +271,10 @@ collections:
   name: Account Status accounts user-watchlists API
   slug: open-tastytrade-user-watchlists-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://tastytrade.com/newsroom/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/tastytrade/refs/heads/main/agentic-access/tastytrade-agentic-access.yml
   title: ''
@@ -462,9 +466,13 @@ examples:
   name: Watchlists Getwatchlists
   slug: watchlists-getWatchlists
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tastytrade.png
 json_schemas:
 - name: TradingStatus
@@ -675,17 +683,17 @@ jsonld:
   property_count: 562
   slug: tastytrade-context
 layout: provider
-modified: '2026-06-13'
+modified: '2026-10-06'
 name: tastytrade
 nav: Providers
 network: true
-overview: 'tastytrade publishes 27 APIs on the [APIs.io](https://apis.io/) network, including accounts API, api-quote-tokens API, Available Dates API, and 24 more. Tagged areas include Finance, Brokerage, Trading, Options, and Futures.
+overview: 'tastytrade publishes 29 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, API Quote Tokens API, Available Dates API, and 26 more. Tagged areas include Finance, Brokerage, Trading, Options, and Futures.
 
 
   The tastytrade catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
 
 
-  tastytrade''s developer surface includes developer portal, documentation, authentication, sandbox, FAQ, changelog, and 11 more developer resources.'
+  tastytrade''s developer surface includes engineering blog, developer portal, documentation, authentication, sandbox, FAQ, changelog, and 11 more developer resources.'
 plans:
 - name: Plans
   plan_count: 2
@@ -696,9 +704,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: tastytrade API Rules
+  name: tastytrade — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -708,23 +717,23 @@ rules:
   slug: tastytrade-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 49.4
+  composite: 40.2
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 76.3
+    artifact_dirs: 15
+    catalog_earned: 60.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.8
+    catalog_gap: 54.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.5
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 53.9
-    developer_ergonomics: 54.8
-    discoverability: 68.5
-    operational_transparency: 50.0
-  previous_composite: 49.4
+    access_clarity: 15.8
+    contract_governance: 23.5
+    contract_quality: 49.3
+    developer_ergonomics: 57.1
+    discoverability: 71.4
+    operational_transparency: 26.3
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     contracts:
@@ -737,10 +746,10 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 45.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 25.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -758,8 +767,10 @@ tags:
 - Options
 - Futures
 - Stocks
-- Crypto
+- Cryptocurrency
 - Market Data
 - WebSocket
+- Investing
+- Financial Services
 website: https://tastytrade.com/
 ---

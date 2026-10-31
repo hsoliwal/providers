@@ -35,8 +35,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.0
-  scored_at: '2026-09-20'
-api_count: 9
+  scored_at: '2026-10-17'
+api_count: 18
 apis:
 - baseURL: https://auth-staging.2ndkitchen.com
   baseurl_source: declared
@@ -180,16 +180,16 @@ modified: '2026-07-17'
 name: 2ndKitchen
 nav: Providers
 network: true
-overview: '2ndKitchen publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Brand API, Business API, and 9 more. Tagged areas include Company, Food Technology, Ghost Kitchen, Restaurant, and Food Delivery.
+overview: '2ndKitchen publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Brand API, Business API, and 9 more. Tagged areas include Company, Food Technology, Ghost Kitchen, Restaurant, and Food Delivery.
 
 
   2ndKitchen''s developer surface includes authentication, documentation, API reference, and 4 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 25.7
+  composite: 24.2
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -199,19 +199,21 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 50.2
+    contract_quality: 42.3
     developer_ergonomics: 28.6
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 25.7
+  previous_composite: 24.2
   provenance:
     contracts:
-      callable: 91.7
+      callable: 0.0
       derived: 0
       marker_coverage: 0.0
       total: 12
@@ -220,9 +222,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 21.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://production-gameflip.fingershock.com/api/v1
@@ -93,6 +93,11 @@ collections:
   name: Gameflip API (GFAPI) Account Steam Escrow API
   slug: open-gameflip-steam-escrow-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/gameflip/refs/heads/main/rate-limits/gameflip-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/gameflip-rate-limits.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/gameflip/refs/heads/main/skills/gameflip-create-and-sell.md
   title: ''
@@ -186,10 +191,10 @@ modified: '2026-07-19'
 name: Gameflip
 nav: Providers
 network: true
-overview: 'Gameflip publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Account API, Exchange API, Listing API, and 3 more. Tagged areas include Company, Gaming, Marketplace, Digital Goods, and E-Commerce.
+overview: 'Gameflip publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Exchange API, Listing API, and 3 more. Tagged areas include Company, Gaming, Marketplace, Digital Goods, and E-Commerce.
 
 
-  Gameflip''s developer surface includes getting-started guide, documentation, API reference, support, engineering blog, signup flow, authentication, and 12 more developer resources.'
+  Gameflip''s developer surface includes getting-started guide, documentation, API reference, support, engineering blog, signup flow, authentication, and 13 more developer resources.'
 random_paper: 1
 rate_limits:
 - limit_count: 1
@@ -197,9 +202,9 @@ rate_limits:
   slug: gameflip-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 34.4
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 45.0
     catalog_earned_first_party: 8.0
     catalog_gap: 70.0
@@ -211,9 +216,9 @@ score:
     contract_governance: 4.5
     contract_quality: 16.7
     developer_ergonomics: 63.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
-  previous_composite: 35.3
+  previous_composite: 34.4
   provenance:
     conformance: derived
     contracts:
@@ -228,9 +233,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

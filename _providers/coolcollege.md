@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.1
-  scored_at: '2026-09-20'
+  score: 23.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -185,14 +185,14 @@ modified: '2026-07-18'
 name: 酷学院 (Cool College)
 nav: Providers
 network: true
-overview: '酷学院 (Cool College) publishes 3 APIs on the [APIs.io](https://apis.io/) network: 学习 API, pet API, and thirdoa API. Tagged areas include Company, Corporate Training, E-Learning, Talent Development, and Human Resources.
+overview: '酷学院 (Cool College) publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: 学习 API, pet API, and thirdoa API. Tagged areas include Company, Corporate Training, E-Learning, Talent Development, and Human Resources.
 
 
   酷学院 (Cool College)''s developer surface includes API reference, documentation, support, engineering blog, signup flow, authentication, and 17 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 35.0
+  composite: 32.0
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -204,9 +204,9 @@ score:
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 43.1
+    contract_quality: 38.8
     developer_ergonomics: 38.7
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -215,7 +215,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - greater-china
-  previous_composite: 35.0
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -228,12 +228,12 @@ score:
     skills: derived
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 42.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -256,7 +256,7 @@ tags:
 - Talent Development
 - Human Resources
 - Software-as-a-Service
-- Learning Management
+- LMS
 - China
 website: https://www.coolcollege.com
 ---

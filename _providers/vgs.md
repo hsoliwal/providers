@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 0
@@ -48,22 +48,22 @@ apis:
 - baseURL: https://api.sandbox.verygoodvault.com
   baseurl_source: declared
   description: Tokenization operations on the VGS Vault HTTP API.
-  name: Very Good Security aliases API
+  name: Very Good Security Aliases API
   slug: vgs-aliases-api
 - baseURL: https://api.sandbox.verygoodvault.com
   baseurl_source: declared
   description: Organization resources on the VGS Accounts API.
-  name: Very Good Security organizations API
+  name: Very Good Security Organizations API
   slug: vgs-organizations-api
 - baseURL: https://api.sandbox.verygoodvault.com
   baseurl_source: declared
   description: Inbound / outbound proxy route resources on the VGS Accounts API.
-  name: Very Good Security routes API
+  name: Very Good Security Routes API
   slug: vgs-routes-api
 - baseURL: https://api.sandbox.verygoodvault.com
   baseurl_source: declared
   description: Vault resources on the VGS Accounts API.
-  name: Very Good Security vaults API
+  name: Very Good Security Vaults API
   slug: vgs-vaults-api
 artifact_total: 17
 collections:
@@ -86,6 +86,14 @@ collections:
   name: Very Good Security (VGS) API
   slug: open-vgs
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.verygoodsecurity.com/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.verygoodsecurity.com/blog/rss.xml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/vgs/refs/heads/main/agentic-access/vgs-agentic-access.yml
   title: ''
@@ -140,19 +148,23 @@ common:
 created: '2026-06-20'
 description: Very Good Security (VGS) is a data security and tokenization platform that lets companies collect, protect, and exchange sensitive data (cards, PII, bank accounts, credentials) without it touching their own systems, reducing PCI DSS and compliance scope. The platform exposes a Vault HTTP API for tokenization (aliases / redact / reveal), an Accounts management API for vaults, routes, and organizations, and a forward/reverse Proxy that aliases and de-aliases data in transit.
 finops:
-- name: Vgs Finops
+- has_sources: true
+  method: generated
+  name: Vgs Finops
+  primary_unit: ''
   service_category: Security and Identity
   slug: vgs-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/vgs.png
 layout: provider
-modified: '2026-06-20'
+modified: '2026-10-06'
 name: Very Good Security
 nav: Providers
 network: true
-overview: 'Very Good Security publishes 4 APIs on the [APIs.io](https://apis.io/) network, including aliases API, organizations API, routes API, and 1 more. Tagged areas include Security, Tokenization, Data Privacy, PCI Compliance, and Vault.
+overview: 'Very Good Security publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Aliases API, Organizations API, Routes API, and 1 more. Tagged areas include Security, Tokenization, Privacy, PCI Compliance, and Vault.
 
 
-  Very Good Security''s developer surface includes authentication, documentation, and 9 more developer resources.'
+  Very Good Security''s developer surface includes engineering blog, authentication, documentation, and 10 more developer resources.'
 plans:
 - name: Vgs Plans Pricing
   plan_count: 3
@@ -163,24 +175,24 @@ rate_limits:
   name: Vgs Rate Limits
   slug: vgs-rate-limits
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 29.2
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 64.0
+    artifact_dirs: 11
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.8
   facets:
-    access_clarity: 47.4
+    access_clarity: 15.8
     contract_governance: 0.0
-    contract_quality: 57.2
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 39.4
+    contract_quality: 51.9
+    developer_ergonomics: 32.1
+    discoverability: 66.1
+    operational_transparency: 10.5
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -193,10 +205,10 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -218,7 +230,7 @@ slug: vgs
 tags:
 - Security
 - Tokenization
-- Data Privacy
+- Privacy
 - PCI Compliance
 - Vault
 website: https://www.verygoodsecurity.com

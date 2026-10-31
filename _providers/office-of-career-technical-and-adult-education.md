@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 created: '2024-12-03'
@@ -43,11 +43,11 @@ modified: '2026-04-28'
 name: Office of Career, Technical, and Adult Education
 nav: Providers
 network: true
-overview: Office of Career, Technical, and Adult Education is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government.
+overview: Office of Career, Technical, and Adult Education is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government.
 random_paper: 3
 score:
   band: minimal
-  composite: 0.8
+  composite: 1.9
   coverage:
     artifact_dirs: 0
     catalog_earned: 22.0
@@ -55,14 +55,19 @@ score:
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 0.0
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
   needs_work:
     note: Recorded so this provider's gaps can be attributed. Does not affect the composite above.
     owner: catalog
@@ -71,15 +76,15 @@ score:
       reason: no_resolvable_host
     - owner: catalog
       reason: never_enriched
-  previous_composite: 0.8
+  previous_composite: 2.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -87,5 +92,5 @@ score:
     reason: no_specs
 slug: office-of-career-technical-and-adult-education
 tags:
-- Federal-Government
+- Federal Government
 ---

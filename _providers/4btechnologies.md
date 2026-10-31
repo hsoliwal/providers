@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -125,9 +125,9 @@ rate_limits:
   slug: 4btechnologies-rate-limits
 score:
   band: minimal
-  composite: 3.2
+  composite: 4.4
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 9
     catalog_earned: 25.0
     catalog_earned_first_party: 0.0
     catalog_gap: 90.0
@@ -139,22 +139,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 53.7
+    discoverability: 51.8
     operational_transparency: 0.0
-  previous_composite: 3.2
+  previous_composite: 4.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/4btechnologies/refs/heads/main/screenshots/4btechnologies-2026-10-11T092108.png
 security:
 - kind: domain-security
   name: 4Btechnologies Domain Security
@@ -168,6 +169,6 @@ tags:
 - Business Lending
 - B2B Data
 - Marketing
-- Financial-Services
+- Financial Services
 website: https://businessleadsworld.com/
 ---

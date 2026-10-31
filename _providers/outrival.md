@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 52
   human_in_the_loop: 52
@@ -404,7 +404,7 @@ modified: '2026-07-20'
 name: OutRival
 nav: Providers
 network: true
-overview: 'OutRival publishes 25 APIs on the [APIs.io](https://apis.io/) network, including Ai Chat Sessions API, Assistants API, Assistants Chat Configuration API, and 22 more. Tagged areas include Company, Enterprise Saas, Conversational AI, AI Agents, and Voice.
+overview: 'OutRival publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ai Chat Sessions API, Assistants API, Assistants Chat Configuration API, and 22 more. Tagged areas include Company, Enterprise Saas, Conversational AI, AI Agents, and Voice.
 
 
   The OutRival catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -414,7 +414,7 @@ overview: 'OutRival publishes 25 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 6
 score:
   band: developing
-  composite: 52.7
+  composite: 49.7
   coverage:
     artifact_dirs: 24
     catalog_earned: 37.0
@@ -426,11 +426,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 4.5
-    contract_quality: 57.5
+    contract_quality: 53.1
     developer_ergonomics: 61.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 52.7
+  previous_composite: 49.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -446,9 +446,9 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 30.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -466,7 +466,7 @@ security:
 - kind: vulnerability-disclosure
   name: Outrival Vulnerability Disclosure
   slug: outrival-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Outrival Trust Center
   slug: outrival-trust-center

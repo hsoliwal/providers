@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for the Zomentum revenue platform, documented as public Postman documentation. Uses Bearer token authentication (Auth0-issued access and refresh tokens) via an API User provisioned in the das
@@ -41,6 +41,10 @@ apis:
   slug: zomentum-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.zomentum.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -130,20 +134,20 @@ created: '2026-07-17'
 description: Zomentum is an AI-powered revenue platform built for managed service providers (MSPs) and IT service businesses, unifying proposal and quote creation, contracts and e-signatures, an MSP-focused CRM, workflow automation, and integrated payment collection into a single "Turn Every Proposal Into Revenue" workflow. Founded in 2018 (legal entity Pactora Inc) and headquartered in San Francisco, Zomentum connects to 50+ PSA, accounting, and distributor systems — including Autotask, ConnectWise Manage, HaloPSA, Syncro, QuickBooks, and Xero — and exposes a REST API, documented via Postman at api-docs.zomentum.com and served from api.zomentum.com, that uses Bearer token authentication (Auth0-issued access and refresh tokens) provisioned through an API User in the dashboard and available on the Growth plan.
 image: https://www.zomentum.com/wp-content/uploads/2019/09/Logo_Color_Black.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Zomentum
 nav: Providers
 network: true
-overview: 'Zomentum publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, MSP, CRM, and Sales.
+overview: 'Zomentum is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Enterprise, MSP, CRM, and Sales.
 
 
-  Zomentum''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 13 more developer resources.'
+  Zomentum''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 14 more developer resources.'
 random_paper: 15
 score:
   band: thin
-  composite: 31.6
+  composite: 30.7
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -155,22 +159,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 31.6
+  previous_composite: 30.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 40.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -189,7 +193,7 @@ security:
 - kind: vulnerability-disclosure
   name: Zomentum Vulnerability Disclosure
   slug: zomentum-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: zomentum
 tags:
 - Company

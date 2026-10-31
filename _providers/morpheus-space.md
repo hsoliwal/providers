@@ -23,7 +23,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: documented
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: false
     rate_limit_signal: false
@@ -31,11 +31,15 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 3.5
-  scored_at: '2026-09-20'
+  score: 2.2
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.morpheus.space/blog-feed.xml
 - group: company
   title: ''
   type: Website
@@ -96,18 +100,18 @@ mcp_servers:
 - description: Wix-provided Site MCP server for morpheus.space. This is a platform-hosted (Wix) MCP endpoint auto-exposed for the marketing site, not a first-party product API from Morpheus Space. It surfaces public
   name: Morpheus Space Site MCP
   slug: morpheus-space-site-mcp
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Morpheus Space
 nav: Providers
 network: true
 overview: 'Morpheus Space is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Space, Satellite, Propulsion, and Electric Propulsion.
 
 
-  Morpheus Space''s developer surface includes support, engineering blog, and 10 more developer resources.'
+  Morpheus Space''s developer surface includes support, engineering blog, and 11 more developer resources.'
 random_paper: 0
 score:
   band: minimal
-  composite: 9.3
+  composite: 8.2
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -121,13 +125,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.0
     operational_transparency: 0.0
-  previous_composite: 9.3
+  previous_composite: 8.2
   provenance:
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

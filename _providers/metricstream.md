@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 8
 apis:
 - description: Business REST APIs over the GRC Foundation object model — Area of Compliance, Asset, Asset Class, Control, Evidence, Exception, Financial Accounts, Function, Framework/Model Reference, Objectives, Pro
@@ -189,7 +189,7 @@ modified: '2026-08-25'
 name: MetricStream
 nav: Providers
 network: true
-overview: 'MetricStream publishes 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Governance, Risk, Compliance, and GRC.
+overview: 'MetricStream is listed with 8 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Governance, Risk Management, Compliance, and GRC.
 
 
   MetricStream''s developer surface includes API reference, documentation, engineering blog, support, signup flow, authentication, changelog, and 18 more developer resources.'
@@ -204,7 +204,7 @@ rate_limits:
   slug: metricstream-rate-limits
 score:
   band: thin
-  composite: 29.9
+  composite: 31.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -212,21 +212,27 @@ score:
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 18.4
-  previous_composite: 29.9
+  previous_composite: 31.7
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -254,14 +260,14 @@ slug: metricstream
 tags:
 - Company
 - Governance
-- Risk
+- Risk Management
 - Compliance
 - GRC
 - Audit
 - Enterprise Software
-- Regulatory Technology
+- RegTech
 - Cyber Risk
-- Third-Party Risk
+- Third-Party Risk Management
 - Operational Resilience
 - ESG
 website: https://www.metricstream.com/

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: REST API described on the public Rentsync Partners portal (branded "LIFT System API") as giving partners "access to the underlying data structures of the LIFT System" with "detailed Canadian rental in
@@ -47,6 +47,14 @@ apis:
   slug: rentsync-search-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://rentals.ca/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://rentals.ca/blog/feed
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/rentals-ca/refs/heads/main/security/rentals-ca-domain-security.yml
   title: ''
@@ -106,18 +114,18 @@ description: 'Rentals.ca is a Toronto-headquartered residential rental marketpla
   clients. The real developer surface belongs to the parent, at the Rentsync Partners portal (partners.rentsync.ca, branded "LIFT System API"), which publicly names a REST API, an Ad Syndication API and a Search API but places all documentation behind an account whose registration form requires a written application explaining what you intend to build. There is no RESO Web API or Data Dictionary certification, no OData $metadata document, no Universal Property Identifier, and no open dataset published by the company.'
 image: https://rentals.ca/static/fe/img/favicon/apple-touch-icon.png
 layout: provider
-modified: '2026-07-26'
+modified: '2026-10-06'
 name: Rentals.ca
 nav: Providers
 network: true
-overview: 'Rentals.ca publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real-Estate, Canada, Rentals, Property Listings, and Rental Marketplace.
+overview: 'Rentals.ca is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Real Estate, Canada, Rentals, Property Listings, and Rental Marketplace.
 
 
-  Rentals.ca''s developer surface includes developer portal, signup flow, engineering blog, documentation, and 9 more developer resources.'
+  Rentals.ca''s developer surface includes engineering blog, developer portal, signup flow, documentation, and 11 more developer resources.'
 random_paper: 12
 score:
   band: emerging
-  composite: 16.3
+  composite: 16.6
   coverage:
     artifact_dirs: 5
     catalog_earned: 35.0
@@ -131,7 +139,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 72.2
+    discoverability: 69.6
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -140,15 +148,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 16.3
+  previous_composite: 16.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 23.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +170,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DMARC
 slug: rentals-ca
 tags:
-- Real-Estate
+- Real Estate
 - Canada
 - Rentals
 - Property Listings

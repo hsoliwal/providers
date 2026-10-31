@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 47.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 5
   human_in_the_loop: 1
   name: Clevertap Agentic Access
-  operation_count: 10
+  operation_count: 11
   slug: clevertap-agentic-access
-  summary_line: 10 operations · 8 acting · 1 human-in-the-loop
+  summary_line: 11 operations · 5 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - description: Upload, retrieve, update, and delete user profiles in CleverTap with identity, demographic, and custom property data.
@@ -114,6 +114,11 @@ collections:
   name: CleverTap REST API
   slug: open-clevertap
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/clevertap/refs/heads/main/capabilities/clevertap-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/clevertap-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/clevertap/refs/heads/main/agentic-access/clevertap-agentic-access.yml
   title: ''
@@ -341,9 +346,13 @@ common:
 created: '2024-11-14'
 description: CleverTap is a customer engagement and retention platform that helps businesses understand user behavior, segment audiences, and deliver personalized experiences across mobile push, email, SMS, in-app, web push, and WhatsApp channels. CleverTap exposes a comprehensive REST API surface covering profiles, events, campaigns, real-time analytics, catalogs, feature flags, and more, authenticated via account ID and passcode headers.
 finops:
-- name: Clevertap Finops
+- has_sources: false
+  method: generated
+  name: Clevertap Finops
+  primary_unit: ''
   service_category: API
   slug: clevertap-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/clevertap.png
 jsonld:
 - class_count: 0
@@ -354,18 +363,18 @@ layout: provider
 mcp_servers:
 - description: CleverTap operates a first-party remote MCP server at mcp.clevertap.com. The server is OAuth-protected end to end, so tools/list and initialize both return 401 anonymously and the live tool schemas ca
   name: CleverTap MCP Server
-  slug: clevertap-mcp-server
+  slug: clevertap
 modified: '2026-08-13'
 name: CleverTap
 nav: Providers
 network: true
-overview: 'CleverTap publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Campaigns API, Events API, Profiles API, and 1 more. Tagged areas include Audiences, Customer Engagement, Customer Retention, Marketing Automation, and Mobile Engagement.
+overview: 'CleverTap publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Campaigns API, Events API, Profiles API, and 9 more. Tagged areas include Audiences, Customer Engagement, Customer Retention, Marketing Automation, and Mobile Engagement.
 
 
   The CleverTap catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  CleverTap''s developer surface includes authentication, documentation, pricing, engineering blog, changelog, API reference, getting-started guide, and 42 more developer resources.'
+  CleverTap''s developer surface includes authentication, documentation, pricing, engineering blog, changelog, API reference, getting-started guide, and 43 more developer resources.'
 plans:
 - name: Clevertap Plans Pricing
   plan_count: 3
@@ -376,7 +385,8 @@ rate_limits:
   name: Clevertap Rate Limits
   slug: clevertap-rate-limits
 rules:
-- effective_rule_count: 49
+- authorship: unmarked
+  effective_rule_count: 49
   extends:
   - spectral:oas
   name: CleverTap API Rules
@@ -394,23 +404,23 @@ scopes:
   summary_line: 4 scopes · authorizationCode/refreshToken
 score:
   band: strong
-  composite: 64.1
+  composite: 60.2
   coverage:
-    artifact_dirs: 27
-    catalog_earned: 84.0
+    artifact_dirs: 29
+    catalog_earned: 69.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 31.0
+    catalog_gap: 45.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.0
   facets:
-    access_clarity: 89.5
-    contract_governance: 63.6
-    contract_quality: 61.7
+    access_clarity: 81.6
+    contract_governance: 29.5
+    contract_quality: 56.7
     developer_ergonomics: 38.7
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 65.8
-  previous_composite: 64.1
+  previous_composite: 65.2
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -421,9 +431,23 @@ score:
       total: 4
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

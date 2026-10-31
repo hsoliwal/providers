@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: verified
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 47.1
-  scored_at: '2026-09-20'
+  score: 45.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 32
   human_in_the_loop: 0
@@ -147,7 +147,7 @@ apis:
   description: Publish, query, update, delete, and download workbooks. Workbooks contain one or more views (sheets, dashboards, or stories) and can connect to one or more data sources.
   name: Tableau Workbooks API
   slug: tableau-workbooks-api
-artifact_total: 377
+artifact_total: 378
 collections:
 - collection_type: postman
   name: Tableau REST Authentication API
@@ -234,6 +234,21 @@ collections:
   name: Tableau REST Authentication Workbooks API
   slug: open-tableau-workbooks-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tableau/refs/heads/main/plans/tableau-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/tableau-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/tableau/refs/heads/main/rate-limits/tableau-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/tableau-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/tableau/refs/heads/main/finops/tableau-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/tableau-finops.yml
 - group: company
   title: ''
   type: Website
@@ -723,9 +738,13 @@ features:
 - description: Enable event-driven automation with HTTP POST notifications when events occur on Tableau Server or Cloud.
   name: Webhooks
 finops:
-- name: Tableau Finops
+- has_sources: true
+  method: generated
+  name: Tableau Finops
+  primary_unit: ''
   service_category: Analytics & Business Intelligence
   slug: tableau-finops
+  template: false
 graphqls:
 - description: The Tableau Metadata API is a GraphQL-based API introduced in Tableau 2019.3 that enables querying of metadata about Tableau Server and Tableau Cloud content, data assets, and data lineage. It provide
   name: Tableau GraphQL API
@@ -1283,17 +1302,20 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.tableau.com over HTTP.
+  name: Tableau MCP Server
+  slug: tableau
 modified: '2026-09-16'
 name: Tableau
 nav: Providers
 network: true
-overview: 'Tableau publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Favorites API, and 10 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Visualization, and Tableau.
+overview: 'Tableau publishes 25 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Data Sources API, Favorites API, and 22 more. Tagged areas include Analytics, Business Intelligence, Dashboards, Data Visualization, and Tableau.
 
 
   The Tableau catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  Tableau''s developer surface includes authentication, engineering blog, support, release notes, signup flow, documentation, Stack Overflow tag, and 20 more developer resources.'
+  Tableau''s developer surface includes authentication, engineering blog, support, release notes, signup flow, documentation, Stack Overflow tag, and 23 more developer resources.'
 plans:
 - name: Tableau Plans Pricing
   plan_count: 4
@@ -1304,9 +1326,10 @@ rate_limits:
   name: Tableau Rate Limits
   slug: tableau-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Tableau API Rules
+  name: Tableau — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -1314,7 +1337,8 @@ rules:
     info: 2
     warn: 4
   slug: tableau-jsonschema-spectral-rules
-- effective_rule_count: 56
+- authorship: generated
+  effective_rule_count: 56
   extends:
   - spectral:oas
   name: Tableau API Rules
@@ -1327,23 +1351,23 @@ rules:
   slug: tableau-spectral-rules
 score:
   band: developing
-  composite: 50.8
+  composite: 49.9
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 56.5
+    artifact_dirs: 23
+    catalog_earned: 55.9
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.5
+    catalog_gap: 59.1
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 43.4
+    access_clarity: 35.5
     contract_governance: 13.6
-    contract_quality: 74.3
+    contract_quality: 68.9
     developer_ergonomics: 65.5
-    discoverability: 61.1
+    discoverability: 66.7
     operational_transparency: 26.3
-  previous_composite: 50.8
+  previous_composite: 51.4
   provenance:
     agentic_access: derived
     contracts:
@@ -1352,8 +1376,14 @@ score:
       marker_coverage: 0.0
       total: 13
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

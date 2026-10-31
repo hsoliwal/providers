@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 12.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Programmatic access to the exe.dev command surface. POST the command exactly as typed in the ssh exe.dev REPL to https://exe.dev/exec with an exe1. bearer token; supported commands return JSON via --j
@@ -42,6 +42,10 @@ apis:
   slug: exedev-https-api
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.exe.dev/atom.xml
 - group: company
   title: ''
   type: Website
@@ -175,23 +179,23 @@ created: '2026-07-17'
 description: exe.dev is a cloud computing platform from Bold Software that provisions Linux VMs with persistent disks, instant HTTPS, and built-in authentication — all managed over SSH ("just use ssh"). It offers disposable Sandboxes for running AI-generated code, persistent VPS-style VMs, and Devbox cloud development environments, each reachable at https://<vm>.exe.xyz with automatic TLS. A companion HTTPS API (POST /exec) runs the same command surface with exe1. bearer tokens, and Shelley — a first-party, web-based coding agent — runs inside the VMs. exe.dev raised a $35M Series A and is backed by Amplify Partners. This profile was enriched by the API Evangelist pipeline from the provider's public docs, llms.txt, GitHub org (boldsoftware), and well-known surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/exedev.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: exe.dev
 nav: Providers
 network: true
-overview: 'exe.dev publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Cloud Computing, Virtual Machines, and Sandbox.
+overview: 'exe.dev is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Cloud Computing, Virtual Machines, and Sandbox.
 
 
-  exe.dev''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, support, authentication, and 21 more developer resources.'
+  exe.dev''s developer surface includes documentation, API reference, getting-started guide, pricing, engineering blog, support, authentication, and 22 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 32.0
+  composite: 33.1
   coverage:
     artifact_dirs: 18
-    catalog_earned: 37.0
+    catalog_earned: 32.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 83.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
@@ -200,15 +204,21 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 69.0
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 28.9
-  previous_composite: 32.0
+  previous_composite: 33.1
   provenance:
     conformance: derived
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: verified
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: partial
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.4
-  scored_at: '2026-09-20'
+  score: 31.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -432,9 +432,13 @@ features:
 - Zapier and Microsoft Flow integrations for no-code automation
 - Credit-based pricing with monthly subscription tiers and per-credit overage
 finops:
-- name: Mindee Finops
+- has_sources: true
+  method: generated
+  name: Mindee Finops
+  primary_unit: credit
   service_category: AI and Machine Learning
   slug: mindee-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mindee.png
 json_schemas:
 - name: Mindee Inference
@@ -457,7 +461,7 @@ modified: '2026-05-25'
 name: Mindee
 nav: Providers
 network: true
-overview: 'Mindee publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Extraction API, Classification API, Crop API, and 3 more. Tagged areas include Document Parsing, OCR, IDP, Artificial Intelligence, and Machine-Learning.
+overview: 'Mindee is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Extraction API, Classification API, Crop API, and 3 more. Tagged areas include Document Parsing, OCR, Intelligent Document Processing, Artificial Intelligence, and Machine Learning.
 
 
   The Mindee catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -474,9 +478,10 @@ rate_limits:
   name: Mindee Rate Limits
   slug: mindee-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Mindee API Rules
+  name: Mindee — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -484,7 +489,8 @@ rules:
     info: 1
     warn: 4
   slug: mindee-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
   name: Mindee API Rules
@@ -496,24 +502,24 @@ rules:
     warn: 2
   slug: mindee-rules
 score:
-  band: strong
-  composite: 56.6
+  band: developing
+  composite: 50.0
   coverage:
     artifact_dirs: 19
-    catalog_earned: 76.5
+    catalog_earned: 66.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 38.5
+    catalog_gap: 48.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.0
   facets:
-    access_clarity: 63.2
-    contract_governance: 28.8
-    contract_quality: 73.6
+    access_clarity: 39.5
+    contract_governance: 27.3
+    contract_quality: 67.2
     developer_ergonomics: 63.1
-    discoverability: 64.8
+    discoverability: 62.5
     operational_transparency: 28.9
-  previous_composite: 56.6
+  previous_composite: 54.0
   provenance:
     agentic_access: derived
     contracts:
@@ -521,8 +527,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -541,12 +553,12 @@ slug: mindee
 tags:
 - Document Parsing
 - OCR
-- IDP
+- Intelligent Document Processing
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Invoices
 - Receipts
 - IDS
-- Computer-Vision
+- Computer Vision
 website: https://www.mindee.com/
 ---

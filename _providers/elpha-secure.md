@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/plans/elpha-secure-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/elpha-secure-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/elpha-secure/refs/heads/main/rate-limits/elpha-secure-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/elpha-secure-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -122,7 +132,7 @@ network: true
 overview: 'Elpha Secure is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Cyber Insurance, Insurance, and Insurtech.
 
 
-  Elpha Secure''s developer surface includes engineering blog, support, and 12 more developer resources.'
+  Elpha Secure''s developer surface includes engineering blog, support, and 14 more developer resources.'
 plans:
 - name: Elpha Secure Plans Pricing
   plan_count: 0
@@ -134,7 +144,7 @@ rate_limits:
   slug: elpha-secure-rate-limits
 score:
   band: emerging
-  composite: 18.2
+  composite: 17.3
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -148,14 +158,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.2
+  previous_composite: 17.3
   provenance:
     conformance: first-party
   regulatory:
@@ -163,9 +175,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 36.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

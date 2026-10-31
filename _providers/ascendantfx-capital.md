@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Programmatic and file-based integration surface for the Ascendant (AscendantFX) aPay cross-border payments platform, enabling straight-through processing of domestic and international payments from ER
@@ -40,6 +40,10 @@ apis:
   slug: ascendant-payments-api
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.ascendant.world/insights/rss.xml
 - group: company
   title: ''
   type: Website
@@ -87,18 +91,18 @@ created: '2026-07-17'
 description: AscendantFX Capital, now operating as Ascendant, is a global cross-border payments and foreign exchange platform serving businesses and financial institutions. Its aPay platform sends domestic and international payments across global ACH, wire, and local payment rails with competitive FX rates and built-in validation, complemented by FX risk management (forward contracts and multi-currency support), Payee Intelligence bank-detail validation, and Track 360 real-time payment tracking. Ascendant supports 130+ currencies across 200+ countries and territories for 3,000+ active customers, and integrates into finance and ERP stacks (NetSuite, QuickBooks, Microsoft Dynamics) via APIs and file-upload workflows. The company is regulated as an FCA Authorized Payments Institution (UK), a FinTRAC-registered and Retail Payments Activities Act payment services provider (Canada), and under US state money-transmitter licensing, and maintains SOC 1 & SOC 2 Type II and NYCRR 500 attestations.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ascendantfx-capital.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: AscendantFX Capital
 nav: Providers
 network: true
-overview: 'AscendantFX Capital publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Foreign Exchange, and FX.
+overview: 'AscendantFX Capital is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Cross-Border Payments, Foreign Exchange, and International Payments.
 
 
-  AscendantFX Capital''s developer surface includes signup flow, engineering blog, support, and 7 more developer resources.'
+  AscendantFX Capital''s developer surface includes signup flow, engineering blog, support, and 8 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 18.9
+  composite: 18.6
   coverage:
     artifact_dirs: 6
     catalog_earned: 37.0
@@ -112,9 +116,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 18.9
+  previous_composite: 18.6
   provenance:
     conformance: first-party
   regulatory:
@@ -126,9 +130,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 17.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -150,10 +154,9 @@ tags:
 - Payments
 - Cross-Border Payments
 - Foreign Exchange
-- FX
 - International Payments
 - B2B Payments
-- Financial-Services
+- Financial Services
 - Fintech
 website: https://www.ascendant.world
 ---

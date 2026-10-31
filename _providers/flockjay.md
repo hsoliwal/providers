@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Django REST Framework API behind the Flockjay platform. The API root at https://api.flockjay.com/api/ is anonymously readable and enumerates 20 collections across an unversioned v1 tree (events, quest
@@ -43,7 +43,7 @@ apis:
 - description: Hosted, first-party Model Context Protocol server that gives AI assistants read access to a customer's enablement data — rep certification and learning progress, coaching scorecards and call scores, a
   name: Flockjay MCP Server
   slug: flockjay-mcp-server
-artifact_total: 12
+artifact_total: 11
 common:
 - group: company
   title: ''
@@ -175,14 +175,11 @@ mcp_servers:
 - description: Flockjay operates a first-party, hosted Model Context Protocol server that gives AI assistants read access to a customer's enablement data — rep certification and learning progress, coaching scorecard
   name: Flockjay MCP Server
   slug: flockjay-mcp-server
-- description: ''
-  name: Flockjay MCP Server
-  slug: flockjay-mcp-server-2
 modified: '2026-08-14'
 name: Flockjay
 nav: Providers
 network: true
-overview: 'Flockjay publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Enablement, Sales Training, Learning Management, and Revenue Operations.
+overview: 'Flockjay is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Sales Enablement, Sales Training, LMS, and Revenue Operations.
 
 
   Flockjay''s developer surface includes engineering blog, support, authentication, and 22 more developer resources.'
@@ -197,39 +194,39 @@ rate_limits:
   slug: flockjay-rate-limits
 scopes:
 - name: Flockjay Scopes
-  scope_count: 0
+  scope_count: 2
   slug: flockjay-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: thin
-  composite: 34.2
+  composite: 29.4
   coverage:
     artifact_dirs: 18
-    catalog_earned: 43.0
+    catalog_earned: 42.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 72.0
+    catalog_gap: 72.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 8.0
+    contract_quality: 7.2
     developer_ergonomics: 28.6
-    discoverability: 68.5
+    discoverability: 68.3
     operational_transparency: 13.2
-  previous_composite: 34.2
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     mcp: first-party
   regulatory:
     applies: true
-    matched_via: tags
+    matched_via: weak_tags
     regime: Education & Research
     regime_id: education
-    score: 85.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -258,13 +255,13 @@ tags:
 - Company
 - Sales Enablement
 - Sales Training
-- Learning Management
+- LMS
 - Revenue Operations
 - AI Coaching
 - Content Management
 - Software-as-a-Service
 - MCP
-- agent-native
+- Agent-Native
 - Authentication
 website: https://flockjay.com
 ---

@@ -29,20 +29,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 58
+- acting_count: 59
   human_in_the_loop: 0
   name: Nuxeo Agentic Access
-  operation_count: 139
+  operation_count: 169
   slug: nuxeo-agentic-access
-  summary_line: 139 operations · 58 acting
+  summary_line: 169 operations · 59 acting
 api_count: 1
 apis:
 - baseURL: https://{nuxeo-server}/nuxeo/api/v1
@@ -227,6 +227,11 @@ collections:
   name: Nuxeo Platform ACL Workflow Model API
   slug: open-nuxeo-workflow-model-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nuxeo/refs/heads/main/capabilities/nuxeo-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nuxeo-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/nuxeo/refs/heads/main/agentic-access/nuxeo-agentic-access.yml
   title: ''
@@ -292,9 +297,13 @@ common:
 created: '2026-06-13'
 description: Nuxeo is an open-source, cloud-native enterprise content management platform owned by Hyland Software. It provides a comprehensive REST API for managing documents, digital assets, workflows, metadata, search, batch uploads, and cloud file storage in large-scale enterprise environments. The API supports OAuth2, token-based, and basic authentication, and exposes automation chains, content enrichers, and web adapters for flexible integration.
 finops:
-- name: Nuxeo Finops
+- has_sources: false
+  method: generated
+  name: Nuxeo Finops
+  primary_unit: ''
   service_category: ''
   slug: nuxeo-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nuxeo.png
 json_schemas:
 - name: Ace
@@ -448,13 +457,13 @@ modified: '2026-06-13'
 name: Nuxeo
 nav: Providers
 network: true
-overview: 'Nuxeo publishes 22 APIs on the [APIs.io](https://apis.io/) network, including ACL API, Adapter API, Annotation API, and 19 more. Tagged areas include Content Management, Digital Asset Management, Enterprise, Documents, and Workflows.
+overview: 'Nuxeo publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including ACL API, Adapter API, Annotation API, and 19 more. Tagged areas include Content Management, Digital Asset Management, Enterprise, Documents, and Workflows.
 
 
   The Nuxeo catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Nuxeo''s developer surface includes authentication, documentation, engineering blog, pricing, and 10 more developer resources.'
+  Nuxeo''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
 plans:
 - name: Nuxeo Plans Pricing
   plan_count: 2
@@ -465,9 +474,10 @@ rate_limits:
   name: Nuxeo Rate Limits
   slug: nuxeo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Nuxeo API Rules
+  name: Nuxeo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -477,23 +487,23 @@ rules:
   slug: nuxeo-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.3
+  composite: 30.4
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 56.3
+    artifact_dirs: 17
+    catalog_earned: 47.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.8
+    catalog_gap: 67.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 54.5
+    contract_quality: 49.7
     developer_ergonomics: 23.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 21.1
-  previous_composite: 36.3
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -501,8 +511,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 22
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -525,6 +541,6 @@ tags:
 - Documents
 - Workflows
 - Search
-- Open-Source
+- Open Source
 website: https://www.hyland.com/en/solutions/products/nuxeo-platform
 ---

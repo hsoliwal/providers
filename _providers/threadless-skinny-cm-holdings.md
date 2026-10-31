@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://blog.threadless.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/threadless-skinny-cm-holdings/refs/heads/main/security/threadless-skinny-cm-holdings-domain-security.yml
   title: ''
@@ -49,7 +53,7 @@ created: '2026-07-17'
 description: Threadless (operated by Skinny CM Holdings) is an online design community and print-on-demand apparel marketplace founded in 2000 in Chicago. Artists and designers submit artwork, the community scores and votes on submissions, and winning designs are printed on t-shirts, apparel, wall art, home goods, and accessories sold through the site. Threadless also runs Artist Shops, free hosted storefronts that let independent creators sell their designs on a print-on-demand basis without holding inventory. Surfaced as a portfolio company of Insight Partners and added to the API Evangelist network for enrichment; no public developer API surface was reachable during this pass (the storefront aggressively blocks automated access).
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/threadless-skinny-cm-holdings.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Threadless ( Skinny CM Holdings)
 nav: Providers
 network: true
@@ -57,9 +61,9 @@ overview: Threadless ( Skinny CM Holdings) is profiled on the [APIs.io](https://
 random_paper: 12
 score:
   band: minimal
-  composite: 5.0
+  composite: 3.4
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 5
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,16 +75,23 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 5.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 3.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/threadless-skinny-cm-holdings/refs/heads/main/screenshots/threadless-skinny-cm-holdings-2026-10-11T130903.png
 security:
 - kind: domain-security
   name: Threadless Skinny Cm Holdings Domain Security

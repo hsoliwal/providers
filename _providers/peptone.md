@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://peptone.io/news/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://peptone.io/news/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/peptone/refs/heads/main/security/peptone-domain-security.yml
   title: ''
@@ -61,18 +69,18 @@ created: '2026-07-17'
 description: Peptone is a computational drug-discovery biotech building a Product Engine that targets intrinsically disordered proteins (IDPs). It couples experimental measurement of disordered proteins in solution with enhanced-sampling simulation and generative machine-learning models to resolve transient, druggable pockets and design small-molecule drug candidates against them. Peptone describes its stack as an end-to-end Protein Engineering Operating System (PeOS); its open-source research tooling (protein-disorder prediction, ensemble generators, protein language models) is published on GitHub. Peptone is a Bessemer Venture Partners portfolio company. No public developer API, documentation, or SDK surface was found during enrichment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/peptone.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Peptone
 nav: Providers
 network: true
-overview: 'Peptone is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotech, Drug Discovery, Proteins, and Machine-Learning.
+overview: 'Peptone is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biotechnology, Drug Discovery, Proteins, and Machine Learning.
 
 
-  Peptone''s developer surface includes engineering blog, support, and 3 more developer resources.'
+  Peptone''s developer surface includes engineering blog, support, and 5 more developer resources.'
 random_paper: 15
 score:
   band: minimal
-  composite: 6.8
+  composite: 5.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -86,11 +94,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 6.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 5.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -105,10 +119,10 @@ security:
 slug: peptone
 tags:
 - Company
-- Biotech
+- Biotechnology
 - Drug Discovery
 - Proteins
-- Machine-Learning
+- Machine Learning
 - Protein Engineering
 - Intrinsically Disordered Proteins
 website: https://peptone.io/

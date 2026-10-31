@@ -34,18 +34,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Atera's REST API. Twelve data domains — Agents, Alerts, Billing, Contacts, Contracts, Customers, CustomValues, Departments, Devices, KnowledgeBase, Rates and Tickets — reachable over HTTPS only at htt
   name: Atera API v3
   slug: atera-api-v3
-artifact_total: 5
+artifact_total: 6
 asyncapis:
 - description: ''
   name: Atera Webhooks
   slug: atera-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/atera/refs/heads/main/plans/atera-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/atera-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/atera/refs/heads/main/security/atera-domain-security.yml
   title: ''
@@ -173,19 +178,23 @@ modified: '2026-08-06'
 name: Atera
 nav: Providers
 network: true
-overview: 'Atera publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include IT Management, RMM, PSA, Help Desk, and Ticketing.
+overview: 'Atera is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include IT Management, RMM, PSA, Help Desk, and Ticketing.
 
 
   The Atera catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Atera''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 20 more developer resources.'
+  Atera''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, changelog, pricing, and 21 more developer resources.'
+plans:
+- name: Atera Plans Pricing
+  plan_count: 0
+  slug: atera-plans-pricing
 random_paper: 19
 score:
   band: developing
-  composite: 44.0
+  composite: 44.2
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -195,15 +204,21 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 48.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 39.5
-  previous_composite: 44.0
+  previous_composite: 44.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

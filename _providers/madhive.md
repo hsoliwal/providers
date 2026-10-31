@@ -37,14 +37,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 49
+- acting_count: 48
   human_in_the_loop: 0
   name: Madhive Agentic Access
-  operation_count: 78
+  operation_count: 77
   slug: madhive-agentic-access
-  summary_line: 78 operations · 49 acting
+  summary_line: 77 operations · 48 acting
 api_count: 2
 apis:
 - baseURL: https://api2.madhive.com/api
@@ -752,14 +752,14 @@ description: Madhive is a New York-based advertising technology company that ope
 image: https://cdn.prod.website-files.com/66f4642913b966635efd9666/675750501cfd31ca8779c1a9_og%20image.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at api2.madhive.com over HTTP; 22 tools listed.
   name: MadHive MCP Server
-  slug: madhive-mcp-server
+  slug: madhive
 modified: '2026-08-04'
 name: MadHive
 nav: Providers
 network: true
-overview: 'MadHive publishes 66 APIs on the [APIs.io](https://apis.io/) network, including Ability to pause a campaign and all of its associated line items and creatives API, Ability to pause a line item API, Advertiser API, and 63 more. Tagged areas include Company, Advertising, AdTech, Connected TV, and CTV.
+overview: 'MadHive publishes 66 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ability to pause a campaign and all of its associated line items and creatives API, Ability to pause a line item API, Advertiser API, and 63 more. Tagged areas include Company, Advertising, AdTech, Connected TV, and CTV.
 
 
   MadHive''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, FAQ, changelog, and 30 more developer resources.'
@@ -775,28 +775,30 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: thin
-  composite: 34.5
+  composite: 39.2
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 36.0
+    artifact_dirs: 24
+    catalog_earned: 49.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 79.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
     access_clarity: 28.9
     contract_governance: 4.5
-    contract_quality: 59.1
+    contract_quality: 53.8
     developer_ergonomics: 16.1
-    discoverability: 44.4
+    discoverability: 68.3
     operational_transparency: 50.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 34.5
+  previous_composite: 39.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -807,8 +809,14 @@ score:
       total: 66
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

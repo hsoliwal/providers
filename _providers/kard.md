@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 34.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 33
   human_in_the_loop: 0
@@ -41,12 +41,12 @@ agentic_access:
   operation_count: 59
   slug: kard-agentic-access
   summary_line: 59 operations · 33 acting
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
   description: The attributions API from Kard — 1 operation(s) for attributions.
-  name: Kard attributions API
+  name: Kard Attributions API
   slug: kard-attributions-api
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
@@ -91,17 +91,17 @@ apis:
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
   description: The rewards API from Kard — 9 operation(s) for rewards.
-  name: Kard rewards API
+  name: Kard Rewards API
   slug: kard-rewards-api
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
   description: The transactions API from Kard — 7 operation(s) for transactions.
-  name: Kard transactions API
+  name: Kard Transactions API
   slug: kard-transactions-api
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
   description: The users API from Kard — 5 operation(s) for users.
-  name: Kard users API
+  name: Kard Users API
   slug: kard-users-api
 - baseURL: https://rewards-api.getkard.com
   baseurl_source: declared
@@ -186,6 +186,11 @@ collections:
   name: API Reference attributions users > WebView API
   slug: open-kard-users-webview-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/kard/refs/heads/main/capabilities/kard-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/kard-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kard/refs/heads/main/overlays/kard-api-reference-overlay.yaml
   title: ''
@@ -354,18 +359,18 @@ layout: provider
 mcp_servers:
 - description: Official hosted MCP server exposing the Kard API documentation to AI clients (Claude Code, Cursor, etc.). Documentation-scoped MCP server (docs + spec navigation).
   name: Kard MCP Server
-  slug: kard-mcp-server
+  slug: kard
 modified: '2026-07-19'
 name: Kard
 nav: Providers
 network: true
-overview: 'Kard publishes 17 APIs on the [APIs.io](https://apis.io/) network, including attributions API, Files API, notifications > Notifications API, and 14 more. Tagged areas include Company, Rewards, Card-Linked Offers, Loyalty, and Fintech.
+overview: 'Kard publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Attributions API, Files API, notifications > Notifications API, and 14 more. Tagged areas include Company, Rewards, Card-Linked Offers, Loyalty, and Fintech.
 
 
   The Kard catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Kard''s developer surface includes documentation, API reference, getting-started guide, quickstart, authentication, engineering blog, support, and 28 more developer resources.'
+  Kard''s developer surface includes documentation, API reference, getting-started guide, quickstart, authentication, engineering blog, support, and 29 more developer resources.'
 random_paper: 0
 scopes:
 - name: Kard Scopes
@@ -374,23 +379,23 @@ scopes:
   summary_line: 13 scopes · clientCredentials
 score:
   band: developing
-  composite: 53.9
+  composite: 50.8
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 37.0
+    artifact_dirs: 23
+    catalog_earned: 40.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 23.7
     contract_governance: 4.5
-    contract_quality: 60.6
+    contract_quality: 55.3
     developer_ergonomics: 70.8
-    discoverability: 75.9
+    discoverability: 76.7
     operational_transparency: 44.7
-  previous_composite: 53.9
+  previous_composite: 50.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -406,9 +411,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 57.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -439,5 +444,6 @@ tags:
 - Transaction
 - Cashback
 - Webhook
+- Loyalty & Incentives
 website: https://getkard.com/
 ---

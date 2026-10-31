@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 31
   human_in_the_loop: 1
@@ -47,77 +47,77 @@ apis:
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The access-tokens API from AskUI — 6 operation(s) for access-tokens.
-  name: AskUI access-tokens API
+  name: AskUI Access Tokens API
   slug: askui-access-tokens-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The agent-executions API from AskUI — 2 operation(s) for agent-executions.
-  name: AskUI agent-executions API
+  name: AskUI Agent Executions API
   slug: askui-agent-executions-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The agents API from AskUI — 3 operation(s) for agents.
-  name: AskUI agents API
+  name: AskUI Agents API
   slug: askui-agents-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The analytics API from AskUI — 1 operation(s) for analytics.
-  name: AskUI analytics API
+  name: AskUI Analytics API
   slug: askui-analytics-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The auth API from AskUI — 2 operation(s) for auth.
-  name: AskUI auth API
+  name: AskUI Auth API
   slug: askui-auth-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The billing API from AskUI — 4 operation(s) for billing.
-  name: AskUI billing API
+  name: AskUI Billing API
   slug: askui-billing-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The dashboard API from AskUI — 1 operation(s) for dashboard.
-  name: AskUI dashboard API
+  name: AskUI Dashboard API
   slug: askui-dashboard-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The files API from AskUI — 3 operation(s) for files.
-  name: AskUI files API
+  name: AskUI Files API
   slug: askui-files-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The invites API from AskUI — 3 operation(s) for invites.
-  name: AskUI invites API
+  name: AskUI Invites API
   slug: askui-invites-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The runner-jobs API from AskUI — 3 operation(s) for runner-jobs.
-  name: AskUI runner-jobs API
+  name: AskUI Runner Jobs API
   slug: askui-runner-jobs-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The runs API from AskUI — 1 operation(s) for runs.
-  name: AskUI runs API
+  name: AskUI Runs API
   slug: askui-runs-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The schedules API from AskUI — 2 operation(s) for schedules.
-  name: AskUI schedules API
+  name: AskUI Schedules API
   slug: askui-schedules-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The tools API from AskUI — 1 operation(s) for tools.
-  name: AskUI tools API
+  name: AskUI Tools API
   slug: askui-tools-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The workspace-memberships API from AskUI — 3 operation(s) for workspace-memberships.
-  name: AskUI workspace-memberships API
+  name: AskUI Workspace Memberships API
   slug: askui-workspace-memberships-api
 - baseURL: https://workspaces.askui.com
   baseurl_source: declared
   description: The workspaces API from AskUI — 2 operation(s) for workspaces.
-  name: AskUI workspaces API
+  name: AskUI Workspaces API
   slug: askui-workspaces-api
 artifact_total: 35
 collections:
@@ -170,6 +170,19 @@ collections:
   name: AskUI access-tokens workspaces API
   slug: open-askui-workspaces-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.askui.com/blog/index.html
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.askui.com/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/askui/refs/heads/main/capabilities/askui-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/askui-capability-edges.yml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -319,40 +332,42 @@ created: '2026-07-17'
 description: AskUI is a German (Karlsruhe-based) company building agentic test automation and computer-use agents for any interface. Its vision agents observe the screen, reason, and act — clicking, typing, and extracting data without DOM queries or brittle UI selectors — across Windows, macOS, Linux, Android, iOS, and embedded/HMI systems. The platform ships a Python Vision Agent SDK, a TypeScript SDK, the AskUI Suite (AgentOS runtime + AskUI Development Environment PowerShell CLI), and the AskUI Hub management console. Developers drive it programmatically through the AskUI Workspaces API — an OpenAPI 3.1 REST service for workspaces, agents, agent executions, access tokens, schedules, runs, files, usage, and billing. AskUI GmbH is ISO/IEC 27001:2022 certified and GDPR-aligned. Surfaced as a Seedcamp portfolio company and enriched into the API Evangelist network.
 image: https://files.askui.com/assets/logo/askui-logo-primary.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: AskUI
 nav: Providers
 network: true
-overview: 'AskUI publishes 15 APIs on the [APIs.io](https://apis.io/) network, including access-tokens API, agent-executions API, agents API, and 12 more. Tagged areas include Company, Test Automation, UI Automation, AI Agents, and Computer Use.
+overview: 'AskUI publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Tokens API, Agent Executions API, Agents API, and 12 more. Tagged areas include Company, Test Automation, UI Automation, AI Agents, and Computer Use.
 
 
-  AskUI''s developer surface includes documentation, API reference, getting-started guide, quickstart, support, engineering blog, signup flow, and 25 more developer resources.'
+  AskUI''s developer surface includes engineering blog, documentation, API reference, getting-started guide, quickstart, support, signup flow, and 28 more developer resources.'
 random_paper: 13
 score:
   band: developing
-  composite: 41.8
+  composite: 41.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 47.7
+    contract_quality: 42.9
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 41.8
+  previous_composite: 41.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -363,8 +378,18 @@ score:
       total: 15
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

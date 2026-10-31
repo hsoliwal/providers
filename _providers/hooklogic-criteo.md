@@ -33,15 +33,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 74
+- acting_count: 66
   human_in_the_loop: 2
   name: Hooklogic Criteo Agentic Access
   operation_count: 114
   slug: hooklogic-criteo-agentic-access
-  summary_line: 114 operations · 74 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 114 operations · 66 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - baseURL: https://api.criteo.com
   baseurl_source: declared
@@ -321,14 +321,14 @@ description: HookLogic was a retail-media advertising exchange and ad server tha
 image: https://avatars.githubusercontent.com/u/1713646?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: MCP server; 3 tools listed.
   name: Criteo Docs
   slug: criteo-docs
 modified: '2026-08-13'
 name: HookLogic (Criteo)
 nav: Providers
 network: true
-overview: 'HookLogic (Criteo) publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Analytics API, Audience API, and 5 more. Tagged areas include Company, Commerce, Retail Media, Advertising, and E-Commerce.
+overview: 'HookLogic (Criteo) publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Analytics API, Audience API, and 5 more. Tagged areas include Company, Commerce, Retail Media, Advertising, and E-Commerce.
 
 
   HookLogic (Criteo)''s developer surface includes quickstart, documentation, API reference, getting-started guide, support, engineering blog, signup flow, and 37 more developer resources.'
@@ -348,23 +348,23 @@ scopes:
   summary_line: 11 scopes · clientCredentials/authorizationCode
 score:
   band: strong
-  composite: 58.7
+  composite: 61.7
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 49.4
+    contract_quality: 44.5
     developer_ergonomics: 73.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 78.9
-  previous_composite: 58.7
+  previous_composite: 61.6
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -375,8 +375,14 @@ score:
       total: 8
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -408,5 +414,6 @@ tags:
 - E-Commerce
 - Marketing
 - Retail
+- A2A
 website: https://www.criteo.com/
 ---

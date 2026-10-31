@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://api.pay-i.com
@@ -220,14 +220,14 @@ description: 'Pay-i is a GenAI cost, capacity and ROI optimization platform foun
 image: https://cdn.prod.website-files.com/698b13d019d0be64f91a6ae7/69a72aad61995c2a45243b2e_open-graph.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at docs.pay-i.com over HTTP; 4 tools listed.
   name: Pay-i MCP Server
-  slug: pay-i-mcp-server
+  slug: pay-i-docs
 modified: '2026-08-26'
 name: Pay-i
 nav: Providers
 network: true
-overview: 'Pay-i publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Anthropic Requests API, AWS Bedrock Requests API, Azure Anthropic Requests API, and 11 more. Tagged areas include Company, Artificial Intelligence, FinOps, Observability, and Cost Management.
+overview: 'Pay-i publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Anthropic Requests API, AWS Bedrock Requests API, Azure Anthropic Requests API, and 11 more. Tagged areas include Company, Artificial Intelligence, FinOps, Observability, and Cost Management.
 
 
   Pay-i''s developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, and 18 more developer resources.'
@@ -241,24 +241,24 @@ rate_limits:
   name: Pay I Rate Limits
   slug: pay-i-rate-limits
 score:
-  band: developing
-  composite: 39.6
+  band: thin
+  composite: 38.9
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.4
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 53.6
+    contract_quality: 48.3
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 2.6
-  previous_composite: 39.6
+  previous_composite: 39.3
   provenance:
     conformance: derived
     contracts:
@@ -268,8 +268,14 @@ score:
       total: 14
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

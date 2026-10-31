@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 37.4
-  scored_at: '2026-09-20'
+  score: 35.3
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 25
+- acting_count: 24
   human_in_the_loop: 2
   name: Algebras Ai Inc Agentic Access
   operation_count: 44
   slug: algebras-ai-inc-agentic-access
-  summary_line: 44 operations · 25 acting · 2 human-in-the-loop
+  summary_line: 44 operations · 24 acting · 2 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://platform.algebras.ai/api/v1
@@ -89,7 +89,7 @@ apis:
   description: The Video API from Algebras AI Inc. — 2 operation(s) for video.
   name: Algebras AI Inc. Video API
   slug: algebras-ai-inc-video-api
-artifact_total: 23
+artifact_total: 24
 collections:
 - collection_type: open
   name: API Collection
@@ -122,6 +122,11 @@ collections:
   name: Algebras Authentication Video API
   slug: open-algebras-ai-inc-video-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/algebras-ai-inc/refs/heads/main/plans/algebras-ai-inc-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/algebras-ai-inc-plans-pricing.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/algebras-ai-inc/refs/heads/main/overlays/algebras-ai-inc-openapi-overlay.yaml
   title: ''
@@ -254,37 +259,41 @@ description: Algebras AI is an AI-powered localization platform that translates 
 image: https://algebras.ai/favicon.ico
 layout: provider
 mcp_servers:
-- description: ''
-  name: Algebras AI Inc. MCP Server
-  slug: algebras-ai-inc-mcp-server
+- description: Remote MCP server at platform.algebras.ai over HTTP; 8 tools listed.
+  name: Algebras AI MCP Server
+  slug: algebras
 modified: '2026-07-17'
-name: Algebras AI Inc.
+name: Algebras AI
 nav: Providers
 network: true
-overview: 'Algebras AI Inc. publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Common API, Glossaries API, and 6 more. Tagged areas include Company, Translation, Localization, Internationalization, and Artificial Intelligence.
+overview: 'Algebras AI publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Inc. Authentication API, Inc. Common API, Inc. Glossaries API, and 6 more. Tagged areas include Company, Translation, Localization, Internationalization, and Artificial Intelligence.
 
 
-  Algebras AI Inc.''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 21 more developer resources.'
+  Algebras AI''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, pricing, signup flow, and 22 more developer resources.'
+plans:
+- name: Algebras Ai Inc Plans Pricing
+  plan_count: 10
+  slug: algebras-ai-inc-plans-pricing
 random_paper: 9
 score:
   band: developing
-  composite: 41.2
+  composite: 46.7
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 21
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 27.6
+    access_clarity: 59.2
     contract_governance: 4.5
-    contract_quality: 54.0
+    contract_quality: 48.6
     developer_ergonomics: 61.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 18.4
-  previous_composite: 41.2
+  previous_composite: 40.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -295,9 +304,15 @@ score:
       total: 9
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

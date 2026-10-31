@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
@@ -101,14 +101,14 @@ modified: '2026-07-21'
 name: Zama
 nav: Providers
 network: true
-overview: 'Zama is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, Cryptography, Fully Homomorphic Encryption, and FHE.
+overview: 'Zama is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, Cryptography, Fully Homomorphic Encryption, and FHE.
 
 
   Zama''s developer surface includes documentation, getting-started guide, API reference, engineering blog, and 9 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 17.0
+  composite: 16.1
   coverage:
     artifact_dirs: 7
     catalog_earned: 27.0
@@ -122,11 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 17.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 16.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -141,19 +147,19 @@ security:
 - kind: vulnerability-disclosure
   name: Zama Vulnerability Disclosure
   slug: zama-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: zama
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Cryptography
 - Fully Homomorphic Encryption
 - FHE
 - Privacy
 - Blockchain
 - Smart Contracts
-- Machine-Learning
-- Open-Source
+- Machine Learning
+- Open Source
 - SDK
 website: https://www.zama.org
 ---

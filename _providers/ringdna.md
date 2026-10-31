@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Programmatic entry points into the Guided Selling managed package for completing participant actions, skipping (deferring) participant actions, and creating sequence-independent quick actions. These a
@@ -197,20 +197,24 @@ common:
 created: '2026-06-13'
 description: RingDNA (now Revenue.io) is an intelligent revenue platform providing REST APIs for sales dialing, call recording, conversation analytics, real-time coaching, and CRM integration. The platform is 100% Salesforce-native and serves revenue teams with AI-driven sales engagement, guided selling cadences, conversation intelligence, and revenue orchestration capabilities including the RingDNA Dialer, Moments real-time guidance, and Guided Selling API endpoints.
 finops:
-- name: Ringdna Finops
+- has_sources: false
+  method: generated
+  name: Ringdna Finops
+  primary_unit: ''
   service_category: ''
   slug: ringdna-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ringdna.png
 layout: provider
 mcp_servers:
 - description: 'Revenue.io (formerly RingDNA) operates a live, remotely-hosted Model Context Protocol server at https://app.ringdna.com/mcp. It is a real agent surface: an MCP client can POST to it today without any '
   name: RingDNA / Revenue.io MCP Server
-  slug: ringdna-revenueio-mcp-server
+  slug: ringdna
 modified: '2026-08-14'
 name: RingDNA
 nav: Providers
 network: true
-overview: 'RingDNA publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Sales Engagement, Conversation Intelligence, Sales Dialing, Call Recording, and Revenue Orchestration.
+overview: 'RingDNA is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Sales Engagement, Conversation Intelligence, Sales Dialing, Call Recording, and Revenue Orchestration.
 
 
   RingDNA''s developer surface includes documentation, engineering blog, pricing, authentication, changelog, sandbox, API reference, and 26 more developer resources.'
@@ -229,29 +233,35 @@ scopes:
   slug: ringdna-scopes
   summary_line: 4 scopes · authorizationCode
 score:
-  band: thin
-  composite: 38.9
+  band: developing
+  composite: 40.9
   coverage:
     artifact_dirs: 21
-    catalog_earned: 60.0
+    catalog_earned: 57.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 55.0
+    catalog_gap: 58.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 86.8
+    access_clarity: 78.9
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 57.9
-  previous_composite: 38.9
+  previous_composite: 42.4
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

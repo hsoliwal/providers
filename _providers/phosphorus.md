@@ -22,19 +22,19 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 24.6
-  scored_at: '2026-09-20'
+  score: 20.6
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - baseURL: https://{tenant}.phosphorus.io
@@ -79,6 +79,20 @@ apis:
   slug: phosphorus-vault-api
 artifact_total: 13
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/rate-limits/phosphorus-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/phosphorus-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://phosphorus.io/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/capabilities/phosphorus-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/phosphorus-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/phosphorus/refs/heads/main/overlays/phosphorus-api-overlay.yaml
   title: ''
@@ -173,14 +187,14 @@ created: '2026-08-26'
 description: Phosphorus Cybersecurity is a Nashville, Tennessee cyber-physical systems (CPS) security company founded in 2017 by Chris Rouland, Earle Ady and Rebecca Rouland, and acquired by Dragos on 1 June 2026. Its agentless xIoT platform discovers, assesses, hardens and remediates IoT, OT, IIoT and IoMT devices across enterprise and critical infrastructure networks, automating credential rotation, firmware updates, certificate management, and vulnerability assessment at scale without additional hardware or endpoint agents. The platform exposes a customer-facing REST API (v2 and v3) described by an OpenAPI 3.0.0 contract that Phosphorus serves from each tenant instance at /api/swagger/public/swagger.json, covering devices, alerts, firmware, certificates, credentials, sites, search, dynamic scans, integration providers, and the Phosphorus Vault, authenticated with an X-API-KEY request header.
 image: https://phosphorus.io/wp-content/uploads/2026/01/300x300.jpg
 layout: provider
-modified: '2026-08-26'
+modified: '2026-10-06'
 name: Phosphorus
 nav: Providers
 network: true
-overview: 'Phosphorus publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Alerts API, Device API, Devices API, and 5 more. Tagged areas include Cybersecurity, xIoT Security, IoT Security, OT Security, and IoMT.
+overview: 'Phosphorus publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Alerts API, Device API, Devices API, and 5 more. Tagged areas include Cybersecurity, xIoT Security, IoT Security, OT Security, and IoMT.
 
 
-  Phosphorus'' developer surface includes support, engineering blog, and 18 more developer resources.'
+  Phosphorus'' developer surface includes support, engineering blog, and 21 more developer resources.'
 plans:
 - name: Phosphorus Plans Pricing
   plan_count: 0
@@ -192,9 +206,9 @@ rate_limits:
   slug: phosphorus-rate-limits
 score:
   band: thin
-  composite: 31.6
+  composite: 32.5
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -204,11 +218,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 48.9
+    contract_quality: 44.3
     developer_ergonomics: 20.8
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 31.6
+  previous_composite: 32.5
   provenance:
     conformance: derived
     contracts:
@@ -218,8 +232,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

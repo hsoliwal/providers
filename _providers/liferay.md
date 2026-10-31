@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 6
   human_in_the_loop: 0
@@ -62,6 +62,26 @@ collections:
   name: Liferay Roles API
   slug: open-liferay
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/liferay/refs/heads/main/plans/liferay-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/liferay-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/liferay/refs/heads/main/rate-limits/liferay-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/liferay-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/liferay/refs/heads/main/finops/liferay-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/liferay-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/liferay/refs/heads/main/capabilities/liferay-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/liferay-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -101,19 +121,23 @@ common:
 created: '2025-01-08'
 description: Liferay DXP is an open-source digital experience platform offering headless REST APIs for managing users, roles, permissions, content, and site configuration. The Roles API lets you list, retrieve, and associate or dissociate regular, site, and organization roles for users.
 finops:
-- name: Liferay Finops
+- has_sources: false
+  method: generated
+  name: Liferay Finops
+  primary_unit: ''
   service_category: API
   slug: liferay-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/liferay.png
 layout: provider
 modified: '2026-09-16'
 name: Liferay
 nav: Providers
 network: true
-overview: 'Liferay publishes 1 API on the [APIs.io](https://apis.io/) network: Roles API. Tagged areas include Open-Source, Digital Experience, DXP, Roles, and User.
+overview: 'Liferay publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Roles API. Tagged areas include Open Source, Digital Experience, DXP, Roles, and User.
 
 
-  Liferay''s developer surface includes authentication, engineering blog, and 6 more developer resources.'
+  Liferay''s developer surface includes authentication, engineering blog, and 10 more developer resources.'
 plans:
 - name: Liferay Plans Pricing
   plan_count: 3
@@ -125,23 +149,23 @@ rate_limits:
   slug: liferay-rate-limits
 score:
   band: emerging
-  composite: 25.4
+  composite: 22.9
   coverage:
-    artifact_dirs: 11
-    catalog_earned: 41.0
+    artifact_dirs: 13
+    catalog_earned: 38.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    catalog_gap: 77.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 43.5
+    contract_quality: 39.2
     developer_ergonomics: 23.8
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 10.5
-  previous_composite: 25.4
+  previous_composite: 24.4
   provenance:
     agentic_access: derived
     contracts:
@@ -149,8 +173,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -171,7 +201,7 @@ security:
   summary_line: security.txt · contact published
 slug: liferay
 tags:
-- Open-Source
+- Open Source
 - Digital Experience
 - DXP
 - Roles

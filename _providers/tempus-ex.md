@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://feed.fusion.tempus-ex.com/v2/
@@ -152,7 +152,7 @@ modified: '2026-07-21'
 name: Tempus Ex
 nav: Providers
 network: true
-overview: 'Tempus Ex publishes 1 API on the [APIs.io](https://apis.io/) network: FusionFeed. Tagged areas include Company, Sports Data, Sports, Video, and Streaming.
+overview: 'Tempus Ex is listed with 1 API on the [APIs.io](https://apis.io/) network: FusionFeed. Tagged areas include Company, Sports Data, Sports, Video, and Streaming.
 
 
   The Tempus Ex catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -166,7 +166,7 @@ rate_limits:
   slug: tempus-ex-rate-limits
 score:
   band: thin
-  composite: 35.0
+  composite: 34.4
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -178,17 +178,23 @@ score:
   facets:
     access_clarity: 0.0
     contract_governance: 18.2
-    contract_quality: 44.8
+    contract_quality: 42.7
     developer_ergonomics: 56.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 26.3
-  previous_composite: 35.0
+  previous_composite: 34.4
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -217,5 +223,6 @@ tags:
 - Media
 - NFL
 - Analytics
+- Real-Time
 website: https://tempus-ex.com
 ---

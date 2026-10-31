@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 10.6
-  scored_at: '2026-09-20'
+  score: 10.2
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: RESTful JSON API for accepting crypto, stock, and card donations on behalf of nonprofits in The Giving Block network. Provides organization management, currency and exchange-rate lookups, crypto depos
@@ -140,16 +140,16 @@ modified: '2026-07-21'
 name: The Giving Block
 nav: Providers
 network: true
-overview: 'The Giving Block publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, Donations, Fundraising, and Non-Profit.
+overview: 'The Giving Block is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, Donations, Fundraising, and Non-Profit.
 
 
   The Giving Block''s developer surface includes developer portal, documentation, API reference, getting-started guide, support, authentication, sandbox, and 12 more developer resources.'
 random_paper: 16
 score:
   band: emerging
-  composite: 18.2
+  composite: 18.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -161,9 +161,9 @@ score:
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 49.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 18.2
+  previous_composite: 18.1
   provenance:
     conformance: derived
     mcp: derived
@@ -173,9 +173,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -194,7 +194,7 @@ security:
 slug: the-giving-block
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Donations
 - Fundraising
 - Non-Profit

@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 6.3
-  scored_at: '2026-09-20'
+  score: 4.4
+  scored_at: '2026-10-17'
 api_count: 9
 apis:
 - description: MSP (Mortgage Servicing Platform) was Black Knight's flagship product — the mainframe-rooted system of record that services the majority of US first-mortgage loans. MSP DX (Direct Exchange) is the RES
@@ -65,6 +65,10 @@ apis:
   slug: optimal-blue-broker-pricing
 artifact_total: 43
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://mortgagetech.ice.com/blog
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/black-knight/refs/heads/main/security/black-knight-domain-security.yml
   title: ''
@@ -171,9 +175,13 @@ features:
 - description: Optimal Blue Business Intelligence APIs publish 16 mortgage rate indices derived from real-time PPE flow.
   name: 16 Mortgage Market Rate Indices
 finops:
-- name: Black Knight Finops
+- has_sources: false
+  method: generated
+  name: Black Knight Finops
+  primary_unit: ''
   service_category: ''
   slug: black-knight-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/black-knight.png
 integrations:
 - description: Sibling product under ICE; primary LOS integration target going forward.
@@ -211,14 +219,17 @@ jsonld:
   property_count: 10
   slug: black-knight-context
 layout: provider
-modified: '2026-07-25'
+modified: '2026-10-06'
 name: Black Knight
 nav: Providers
 network: true
-overview: 'Black Knight publishes 1 API on the [APIs.io](https://apis.io/) network: Encompass Developer Connect (sibling product under ICE). Tagged areas include Mortgage Technology, Loan Servicing, Loan Origination, Secondary Marketing, and Default Management.
+overview: 'Black Knight is listed with 9 APIs on the [APIs.io](https://apis.io/) network, including Encompass Developer Connect (sibling product under ICE), and 8 more. Tagged areas include Mortgage, Loan Servicing, Loan Origination, Secondary Marketing, and Default Management.
 
 
-  The Black Knight catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.'
+  The Black Knight catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+
+
+  Black Knight''s developer surface includes engineering blog and 16 more developer resources.'
 plans:
 - name: Black Knight Plans Pricing
   plan_count: 4
@@ -229,9 +240,10 @@ rate_limits:
   name: Black Knight Rate Limits
   slug: black-knight-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Black Knight API Rules
+  name: Black Knight — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -239,7 +251,8 @@ rules:
     info: 2
     warn: 3
   slug: black-knight-jsonschema-spectral-rules
-- effective_rule_count: 50
+- authorship: unmarked
+  effective_rule_count: 50
   extends:
   - spectral:oas
   name: Black Knight API Rules
@@ -252,31 +265,39 @@ rules:
   slug: black-knight-rules
 score:
   band: thin
-  composite: 35.2
+  composite: 28.8
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 77.5
+    artifact_dirs: 14
+    catalog_earned: 64.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 37.5
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.1
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 34.7
-    developer_ergonomics: 39.3
-    discoverability: 59.3
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 33.2
+    developer_ergonomics: 41.7
+    discoverability: 57.1
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 35.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 33.9
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -289,7 +310,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: black-knight
 tags:
-- Mortgage Technology
+- Mortgage
 - Loan Servicing
 - Loan Origination
 - Secondary Marketing

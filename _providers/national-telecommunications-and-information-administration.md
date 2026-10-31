@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
@@ -65,14 +65,14 @@ modified: '2026-04-28'
 name: National Telecommunications and Information Administration
 nav: Providers
 network: true
-overview: 'National Telecommunications and Information Administration is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Information Technology, and Telecommunications.
+overview: 'National Telecommunications and Information Administration is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Information Technology, and Telecommunications.
 
 
   National Telecommunications and Information Administration''s developer surface includes engineering blog and 4 more developer resources.'
 random_paper: 18
 score:
   band: minimal
-  composite: 2.4
+  composite: 3.1
   coverage:
     artifact_dirs: 4
     catalog_earned: 22.0
@@ -80,23 +80,28 @@ score:
     catalog_gap: 93.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 48.1
+    discoverability: 46.4
     operational_transparency: 2.6
-  previous_composite: 2.4
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 3.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 8.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -110,7 +115,7 @@ security:
   summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: national-telecommunications-and-information-administration
 tags:
-- Federal-Government
+- Federal Government
 - Information Technology
 - Telecommunications
 website: https://www.ntia.gov/

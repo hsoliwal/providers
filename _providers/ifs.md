@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 33.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -98,6 +98,16 @@ collections:
   name: IFS Cloud ERP Finance Work Orders API
   slug: open-ifs-work-orders-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ifs/refs/heads/main/finops/ifs-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/ifs-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ifs/refs/heads/main/capabilities/ifs-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ifs-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/ifs/refs/heads/main/agentic-access/ifs-agentic-access.yml
   title: ''
@@ -247,9 +257,13 @@ common:
 created: '2026-05-04'
 description: IFS is a global enterprise software company providing cloud ERP, enterprise asset management, field service management, and enterprise service management platforms. APIs enable integration with IFS Cloud across manufacturing, energy, aerospace, defense, and service industries. IFS is headquartered in Linköping, Sweden with operations in over 90 countries.
 finops:
-- name: Ifs Finops
+- has_sources: true
+  method: generated
+  name: Ifs Finops
+  primary_unit: ''
   service_category: Enterprise Software
   slug: ifs-finops
+  template: false
 image: https://ifs-p-001.sitecorecontenthub.cloud/api/public/content/ifs-logo.png-e018c7?v=ec7c2a48
 json_schemas:
 - name: IFS Work Order
@@ -265,13 +279,13 @@ modified: '2026-09-13'
 name: IFS
 nav: Providers
 network: true
-overview: 'IFS publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Finance API, Inventory API, Procurement API, and 1 more. Tagged areas include ERP, Field Service, Asset Management, Manufacturing, and Energy.
+overview: 'IFS publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Finance API, Inventory API, Procurement API, and 4 more. Tagged areas include ERP, Field Service, Asset Management, Manufacturing, and Energy.
 
 
   The IFS catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  IFS''s developer surface includes authentication, engineering blog, developer portal, documentation, API reference, getting-started guide, support, and 25 more developer resources.'
+  IFS''s developer surface includes authentication, engineering blog, developer portal, documentation, API reference, getting-started guide, support, and 27 more developer resources.'
 plans:
 - name: Ifs Plans Pricing
   plan_count: 0
@@ -282,9 +296,10 @@ rate_limits:
   name: Ifs Rate Limits
   slug: ifs-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: IFS API Rules
+  name: IFS — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -298,22 +313,22 @@ scopes:
   slug: ifs-scopes
   summary_line: 2 scopes · clientCredentials/authorizationCode/authorizationCode+PKCE/password
 score:
-  band: strong
-  composite: 54.3
+  band: developing
+  composite: 47.8
   coverage:
-    artifact_dirs: 24
-    catalog_earned: 54.3
+    artifact_dirs: 26
+    catalog_earned: 51.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.8
+    catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 44.7
+    access_clarity: 36.8
     contract_governance: 28.0
-    contract_quality: 73.8
+    contract_quality: 68.3
     developer_ergonomics: 26.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -323,7 +338,7 @@ score:
     regions:
     - europe
     - nordics
-  previous_composite: 54.3
+  previous_composite: 49.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -337,9 +352,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 70.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

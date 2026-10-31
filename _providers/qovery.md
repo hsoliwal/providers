@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -35,15 +35,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 57.9
-  scored_at: '2026-09-20'
+  score: 57.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 271
+- acting_count: 268
   human_in_the_loop: 23
   name: Qovery Agentic Access
   operation_count: 508
   slug: qovery-agentic-access
-  summary_line: 508 operations · 271 acting · 23 human-in-the-loop
+  summary_line: 508 operations · 268 acting · 23 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.qovery.com
@@ -469,7 +469,7 @@ apis:
 - baseURL: https://api.qovery.com
   baseurl_source: declared
   description: The service_status API from Qovery — 1 operation(s) for service_status.
-  name: Qovery service_status API
+  name: Qovery Service Status API
   slug: qovery-service-status-api
 - baseURL: https://api.qovery.com
   baseurl_source: declared
@@ -516,7 +516,7 @@ apis:
   description: The Variable Main Calls API from Qovery — 5 operation(s) for variable main calls.
   name: Qovery Variable Main Calls API
   slug: qovery-variable-main-calls-api
-artifact_total: 205
+artifact_total: 206
 collections:
 - collection_type: open
   name: API Collection
@@ -804,6 +804,21 @@ collections:
   name: Qovery Account Info Variable Main Calls API
   slug: open-qovery-variable-main-calls-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/qovery/refs/heads/main/plans/qovery-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/qovery-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/qovery/refs/heads/main/rate-limits/qovery-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/qovery-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/qovery/refs/heads/main/finops/qovery-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/qovery-finops.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/qovery/refs/heads/main/capabilities/qovery-capability-edges.yml
   title: ''
@@ -916,19 +931,27 @@ common:
 created: '2026-03-27'
 description: Qovery is an internal developer platform that simplifies cloud deployment and infrastructure management, enabling developers to self-serve environments on AWS, GCP, and Azure.
 finops:
-- name: Qovery Finops
+- has_sources: false
+  method: generated
+  name: Qovery Finops
+  primary_unit: ''
   service_category: API
   slug: qovery-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/qovery.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.qovery.com over HTTP.
+  name: Qovery MCP Server
+  slug: qovery
 modified: '2026-05-25'
 name: Qovery
 nav: Providers
 network: true
-overview: 'Qovery publishes 94 APIs on the [APIs.io](https://apis.io/) network, including Account Info API, Alert Receivers API, Alert Rules API, and 91 more. Tagged areas include Cloud Deployment, Developer Experience, and Internal Developer Platform.
+overview: 'Qovery publishes 94 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Info API, Alert Receivers API, Alert Rules API, and 91 more. Tagged areas include Cloud Deployment, Developer Experience, and Internal Developer Platform.
 
 
-  Qovery''s developer surface includes authentication, documentation, developer portal, pricing, engineering blog, changelog, support, and 19 more developer resources.'
+  Qovery''s developer surface includes authentication, documentation, developer portal, pricing, engineering blog, changelog, support, and 22 more developer resources.'
 plans:
 - name: Qovery Plans Pricing
   plan_count: 4
@@ -943,23 +966,23 @@ rate_limits:
   slug: qovery-rate-limits
 score:
   band: developing
-  composite: 41.3
+  composite: 41.0
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 37.0
+    artifact_dirs: 16
+    catalog_earned: 47.0
     catalog_earned_first_party: 20.0
-    catalog_gap: 78.0
+    catalog_gap: 68.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 6.4
+  delta: -1.5
   facets:
-    access_clarity: 57.9
+    access_clarity: 50.0
     contract_governance: 0.0
-    contract_quality: 58.1
-    developer_ergonomics: 40.5
-    discoverability: 25.9
+    contract_quality: 52.6
+    developer_ergonomics: 39.8
+    discoverability: 51.7
     operational_transparency: 31.6
-  previous_composite: 34.9
+  previous_composite: 42.5
   provenance:
     agentic_access: derived
     contracts:
@@ -968,9 +991,15 @@ score:
       marker_coverage: 0.0
       total: 94
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: rising
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: flat
   upsert:
     applies: true
     score: 11.1

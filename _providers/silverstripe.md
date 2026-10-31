@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 18.0
-  scored_at: '2026-09-20'
+  score: 16.1
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'SilverStripe''s GraphQL API provides a content API layer for getting data in and out of the CMS. It supports schema generation from DataObject models, custom types and queries, and extensible schemas. '
@@ -127,9 +127,13 @@ common:
 created: '2026-06-13'
 description: SilverStripe is an open-source PHP content management system and framework with a GraphQL and REST API for managing pages, assets, versioning, and custom data objects. It powers 50,000+ live sites and provides a flexible, extensible platform for developers to build content-driven web applications with enterprise-level security and an intuitive editing experience.
 finops:
-- name: Silverstripe Finops
+- has_sources: false
+  method: generated
+  name: Silverstripe Finops
+  primary_unit: ''
   service_category: ''
   slug: silverstripe-finops
+  template: true
 graphqls:
 - description: SilverStripe CMS provides a GraphQL API via the optional `silverstripe/graphql` module. The schema is code-generated at build time from DataObject models configured in YAML. Types, queries, and mutati
   name: SilverStripe GraphQL API
@@ -140,7 +144,7 @@ modified: '2026-06-13'
 name: SilverStripe
 nav: Providers
 network: true
-overview: 'SilverStripe publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include CMS, Content Management, GraphQL, REST API, and PHP.
+overview: 'SilverStripe is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include CMS, Content Management, GraphQL, REST API, and PHP.
 
 
   SilverStripe''s developer surface includes documentation, API reference, engineering blog, pricing, changelog, and 14 more developer resources.'
@@ -154,30 +158,36 @@ rate_limits:
   name: Silverstripe Rate Limits
   slug: silverstripe-rate-limits
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 32.2
   coverage:
     artifact_dirs: 9
-    catalog_earned: 60.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.2
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 41.5
+    contract_quality: 39.4
     developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 68.4
+    discoverability: 66.1
+    operational_transparency: 44.7
   open_source:
     applies: true
     score: 65.0
-  previous_composite: 40.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  previous_composite: 38.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -195,7 +205,7 @@ tags:
 - GraphQL
 - REST API
 - PHP
-- Open-Source
+- Open Source
 - Framework
 - Pages
 - Assets

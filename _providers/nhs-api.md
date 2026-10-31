@@ -28,20 +28,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: false
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.5
-  scored_at: '2026-09-20'
+  score: 24.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 23
+- acting_count: 22
   human_in_the_loop: 0
   name: Nhs Api Agentic Access
-  operation_count: 53
+  operation_count: 50
   slug: nhs-api-agentic-access
-  summary_line: 53 operations · 23 acting
+  summary_line: 50 operations · 22 acting
 api_count: 3
 apis:
 - description: Retrieve documents held at a patient's registered GP practice, such as letters, discharge summaries, and other clinical documents stored in GP systems. Used alongside the Access Record Structured API.
@@ -202,21 +202,6 @@ common:
   title: ''
   type: Status
   url: https://status.digital.nhs.uk/
-- group: operate
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/rate-limits/nhs-api-rate-limits.md
-  title: ''
-  type: RateLimits
-  url: /rate-limits/nhs-api-rate-limits.md
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/plans/nhs-api-plans.md
-  title: ''
-  type: Plans
-  url: /plans/nhs-api-plans.md
-- group: commercial
-  href: https://raw.githubusercontent.com/api-evangelist/nhs-api/refs/heads/main/finops/nhs-api-finops.md
-  title: ''
-  type: FinOps
-  url: /finops/nhs-api-finops.md
 created: '2026-06-13'
 description: NHS England's API management platform provides FHIR R4 and REST APIs for healthcare interoperability across the NHS. The platform covers GP Connect (appointment management and access record), Personal Demographics Service, Electronic Prescription Service, Summary Care Records, NHS login (OpenID Connect for citizens), Booking and Referral, Organisation Data Service, and content syndication. APIs are managed via NHS England's Apigee-based API platform and are targeted at system suppliers, NHS organisations, and accredited third-party healthcare application developers.
 examples:
@@ -247,18 +232,19 @@ modified: '2026-06-13'
 name: NHS API
 nav: Providers
 network: true
-overview: 'NHS API publishes 8 APIs on the [APIs.io](https://apis.io/) network, including CodeSystem API, List{id} API, Metadata API, and 5 more. Tagged areas include Healthcare, FHIR, NHS, United Kingdom, and HL7.
+overview: 'NHS API publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including CodeSystem API, List{id} API, Metadata API, and 10 more. Tagged areas include Healthcare, FHIR, NHS, United Kingdom, and HL7.
 
 
   The NHS API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  NHS API''s developer surface includes authentication, developer portal, documentation, getting-started guide, status page, and 15 more developer resources.'
+  NHS API''s developer surface includes authentication, developer portal, documentation, getting-started guide, status page, and 12 more developer resources.'
 random_paper: 6
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: NHS API API Rules
+  name: NHS API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -268,7 +254,7 @@ rules:
   slug: nhs-api-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.2
+  composite: 33.7
   coverage:
     artifact_dirs: 16
     catalog_earned: 48.3
@@ -280,9 +266,9 @@ score:
   facets:
     access_clarity: 10.5
     contract_governance: 9.8
-    contract_quality: 53.9
+    contract_quality: 48.9
     developer_ergonomics: 48.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -292,7 +278,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 36.2
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -305,9 +291,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 33.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -35,10 +35,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 6
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/zefr/refs/heads/main/plans/zefr-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/zefr-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/zefr/refs/heads/main/rate-limits/zefr-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/zefr-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/zefr/refs/heads/main/security/zefr-domain-security.yml
   title: ''
@@ -150,7 +160,7 @@ network: true
 overview: 'Zefr is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, AdTech, Brand Safety, Brand Suitability, and Content Intelligence.
 
 
-  Zefr''s developer surface includes authentication, support, engineering blog, and 15 more developer resources.'
+  Zefr''s developer surface includes authentication, support, engineering blog, and 17 more developer resources.'
 plans:
 - name: Zefr Plans Pricing
   plan_count: 0
@@ -162,12 +172,12 @@ rate_limits:
   slug: zefr-rate-limits
 scopes:
 - name: Zefr Scopes
-  scope_count: 0
+  scope_count: 14
   slug: zefr-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: emerging
-  composite: 18.4
+  composite: 21.4
   coverage:
     artifact_dirs: 13
     catalog_earned: 27.0
@@ -181,13 +191,19 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 18.4
+  previous_composite: 21.4
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 36.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -216,9 +232,9 @@ tags:
 - Content Intelligence
 - Content Moderation
 - Video
-- Social-Media
+- Social Media
 - Advertising
 - Media Measurement
-- Machine-Learning
+- Machine Learning
 website: https://zefr.com
 ---

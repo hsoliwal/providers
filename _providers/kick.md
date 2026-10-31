@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 27.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Kick's programmatic surface — a hosted MCP server and CLI executing against the Kick REST API under the same auth, workspace, permission, and audit checks as the web app. No public OpenAPI is publishe
@@ -41,6 +41,10 @@ apis:
   slug: kick-mcp-rest-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.kick.co/resources/rss.xml
 - group: company
   title: ''
   type: Website
@@ -162,17 +166,17 @@ description: Kick is a self-driving, agentic bookkeeping platform for business o
 image: https://use.kick.co/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at use.kick.co over HTTP; 39 tools listed.
   name: Kick
   slug: kick
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Kick
 nav: Providers
 network: true
-overview: 'Kick publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Bookkeeping, Accounting, Finance, and Fintech.
+overview: 'Kick is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Bookkeeping, Accounting, Finance, and Fintech.
 
 
-  Kick''s developer surface includes documentation, API reference, quickstart, engineering blog, pricing, signup flow, support, and 19 more developer resources.'
+  Kick''s developer surface includes documentation, API reference, quickstart, engineering blog, pricing, signup flow, support, and 20 more developer resources.'
 random_paper: 0
 scopes:
 - name: Kick Scopes
@@ -181,7 +185,7 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: thin
-  composite: 34.4
+  composite: 37.2
   coverage:
     artifact_dirs: 15
     catalog_earned: 37.0
@@ -189,20 +193,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 34.4
+  previous_composite: 37.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

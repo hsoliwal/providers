@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: GRIN's bi-directional REST API lets a brand's own software communicate with GRIN to synchronize creators, content, programs, and reporting data. Reference documentation is published on Stoplight at ap
@@ -43,6 +43,10 @@ apis:
   slug: grin-gia-mcp-server
 artifact_total: 10
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://grin.co/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/grin/refs/heads/main/security/grin-trust-center.yml
   title: ''
@@ -178,17 +182,17 @@ description: GRIN is a creator management and influencer marketing platform for 
 image: https://grin.co/wp-content/uploads/2022/11/2022_GRIN_Logo_Black_Transparent-Bkgnd-small.webp
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.grin.co over HTTP requiring OAuth.
   name: Grin MCP Server
-  slug: grin-mcp-server
-modified: '2026-08-13'
+  slug: grin
+modified: '2026-10-06'
 name: Grin
 nav: Providers
 network: true
-overview: 'Grin publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Influencer Marketing, Creator Economy, Creator Management, and Affiliate Marketing.
+overview: 'Grin is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Influencer Marketing, Creator Economy, Creator Management, and Affiliate Marketing.
 
 
-  Grin''s developer surface includes API reference, documentation, support, engineering blog, signup flow, pricing, authentication, and 22 more developer resources.'
+  Grin''s developer surface includes API reference, documentation, support, engineering blog, signup flow, pricing, authentication, and 23 more developer resources.'
 plans:
 - name: Grin Plans Pricing
   plan_count: 5
@@ -205,28 +209,34 @@ scopes:
   summary_line: 14 scopes · authorizationCode/clientCredentials/deviceCode
 score:
   band: developing
-  composite: 40.7
+  composite: 45.1
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 92.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 45.2
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 40.7
+  previous_composite: 45.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -245,7 +255,7 @@ security:
 - kind: vulnerability-disclosure
   name: Grin Vulnerability Disclosure
   slug: grin-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Grin Trust Center
   slug: grin-trust-center
@@ -258,7 +268,7 @@ tags:
 - Creator Management
 - Affiliate Marketing
 - Marketing
-- Social-Media
+- Social Media
 - E-Commerce
 website: https://grin.co
 ---

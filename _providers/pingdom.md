@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for managing uptime checks, transaction checks, results, alerts, contacts, maintenance windows, teams, and reports in the Pingdom monitoring platform. Authentication uses Bearer token API key
@@ -101,16 +101,16 @@ modified: '2026-05-11'
 name: Pingdom
 nav: Providers
 network: true
-overview: 'Pingdom publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Monitoring, Uptime Monitoring, Website Monitoring, Performance Monitoring, and Real User Monitoring.
+overview: 'Pingdom is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Monitoring, Uptime Monitoring, Website Monitoring, Performance Monitoring, and Real User Monitoring.
 
 
   Pingdom''s developer surface includes documentation, pricing, signup flow, engineering blog, support, and 8 more developer resources.'
 random_paper: 2
 score:
   band: emerging
-  composite: 18.9
+  composite: 18.1
   coverage:
-    artifact_dirs: 4
+    artifact_dirs: 5
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -122,11 +122,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 31.0
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 18.4
-  previous_composite: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 18.1
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

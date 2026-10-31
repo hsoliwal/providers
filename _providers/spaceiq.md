@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: SpaceIQ's (SiQ) GraphQL API. A single endpoint at https://api.spaceiq.com/queries accepts POST requests with a JSON query body and an access-token bearer header. Read operations cover companies, build
@@ -42,6 +42,14 @@ apis:
   slug: siq-graphql-api
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://eptura.com/discover-more/news/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://eptura.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/spaceiq/refs/heads/main/security/spaceiq-trust-center.yml
   title: ''
@@ -163,18 +171,18 @@ created: '2026-07-17'
 description: 'SpaceIQ (branded SiQ, now part of Eptura) is a workplace and space-management platform for optimizing physical office environments: space planning, desk and meeting-room booking, hoteling, moves management, wayfinding, floorplan management, occupancy analytics, building-attendance reporting, and real-estate forecasting. SpaceIQ exposes a GraphQL API (schema version 1.7) at api.spaceiq.com/queries for reading workplace data (companies, buildings, floors, spaces, departments, employees, meeting-room calendars, map images, and reports/exports) and for creating and deleting meeting-room calendar events. All access is over HTTPS with an admin/IT-generated access token; the schema is fully introspectable.'
 image: https://eptura.com/spaceiq/
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: SpaceIQ
 nav: Providers
 network: true
-overview: 'SpaceIQ publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workplace Management, Space Management, Facilities Management, and Desk Booking.
+overview: 'SpaceIQ is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Workplace Management, Space Management, Facilities Management, and Desk Booking.
 
 
-  SpaceIQ''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, support, authentication, and 19 more developer resources.'
+  SpaceIQ''s developer surface includes engineering blog, documentation, API reference, getting-started guide, pricing, support, authentication, and 21 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 32.8
+  composite: 35.6
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -182,21 +190,27 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 47.4
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 26.3
-  previous_composite: 32.8
+  previous_composite: 35.5
   provenance:
     conformance: derived
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -215,7 +229,7 @@ security:
 - kind: vulnerability-disclosure
   name: Spaceiq Vulnerability Disclosure
   slug: spaceiq-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Spaceiq Trust Center
   slug: spaceiq-trust-center
@@ -230,7 +244,7 @@ tags:
 - Hoteling
 - Meeting Rooms
 - Occupancy Analytics
-- Real-Estate
+- Real Estate
 - Floor Plans
 - GraphQL
 - IWMS

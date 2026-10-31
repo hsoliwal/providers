@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.8
-  scored_at: '2026-09-20'
+  score: 24.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 0
@@ -166,6 +166,11 @@ collections:
   name: Arcade Workers API
   slug: open-arcade-workers-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/arcade-dev/refs/heads/main/capabilities/arcade-dev-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/arcade-dev-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -407,9 +412,13 @@ features:
 - Arcade Registry (Beta) for publishing, sharing, and monetizing agentic tools
 - SSO/SAML, RBAC, and tenant isolation on Enterprise
 finops:
-- name: Arcade Dev Finops
+- has_sources: true
+  method: generated
+  name: Arcade Dev Finops
+  primary_unit: execution
   service_category: AI and Machine Learning
   slug: arcade-dev-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/arcade-dev.png
 json_schemas:
 - name: Arcade Authorization
@@ -447,13 +456,13 @@ modified: '2026-09-16'
 name: Arcade.dev
 nav: Providers
 network: true
-overview: 'Arcade.dev publishes 8 APIs on the [APIs.io](https://apis.io/) network, including arcade-dev Admin API, arcade-dev Authorization API, arcade-dev Gateways API, and 5 more. Tagged areas include Authorization, LLM, and Plugins.
+overview: 'Arcade.dev publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including arcade-dev Admin API, arcade-dev Authorization API, arcade-dev Gateways API, and 5 more. Tagged areas include Authorization, LLM, Plugins, Agents, and MCP.
 
 
   The Arcade.dev catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Arcade.dev''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 37 more developer resources.'
+  Arcade.dev''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, pricing, engineering blog, and 38 more developer resources.'
 plans:
 - name: Arcade Dev Plans Pricing
   plan_count: 3
@@ -464,9 +473,10 @@ rate_limits:
   name: Arcade Dev Rate Limits
   slug: arcade-dev-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Arcade.dev API Rules
+  name: Arcade.dev — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -474,7 +484,8 @@ rules:
     info: 1
     warn: 4
   slug: arcade-dev-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: Arcade.dev API Rules
@@ -487,23 +498,23 @@ rules:
   slug: arcade-dev-rules
 score:
   band: strong
-  composite: 59.8
+  composite: 58.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 75.5
-    catalog_earned_first_party: 0.0
-    catalog_gap: 39.5
+    artifact_dirs: 20
+    catalog_earned: 79.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 36.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.6
   facets:
     access_clarity: 63.2
-    contract_governance: 28.8
-    contract_quality: 78.3
+    contract_governance: 27.3
+    contract_quality: 71.8
     developer_ergonomics: 67.9
-    discoverability: 55.6
+    discoverability: 62.5
     operational_transparency: 5.3
-  previous_composite: 59.8
+  previous_composite: 57.1
   provenance:
     agentic_access: derived
     contracts:
@@ -511,8 +522,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -532,5 +549,12 @@ tags:
 - Authorization
 - LLM
 - Plugins
+- Agents
+- MCP
+- AI Agents
+- Authentication
+- Tool Calling
+- Agent Infrastructure
+- Integration
 website: https://www.arcade.dev/
 ---

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 9.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Configure and manage a Hydrolix cluster — orgs, projects, tables, transforms, functions, jobs, and service accounts.
@@ -132,43 +132,49 @@ description: 'Hydrolix is a real-time log analytics and observability platform b
 image: https://avatars.githubusercontent.com/u/50281978?v=4
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 4 tools listed.
   name: Hydrolix MCP Server
-  slug: hydrolix-mcp-server
+  slug: mcp-hydrolix
 modified: '2026-07-19'
 name: Hydrolix
 nav: Providers
 network: true
-overview: 'Hydrolix publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Observability, Log Analytics, Data Lake, and Streaming.
+overview: 'Hydrolix is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Observability, Log Analytics, Data Lake, and Streaming.
 
 
   Hydrolix''s developer surface includes documentation, API reference, signup flow, CLI, authentication, and 12 more developer resources.'
 random_paper: 3
 score:
   band: emerging
-  composite: 20.1
+  composite: 19.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
     contract_quality: 0.0
     developer_ergonomics: 50.0
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 10.5
-  previous_composite: 20.1
+  previous_composite: 19.7
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

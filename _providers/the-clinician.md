@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
@@ -151,9 +151,9 @@ rate_limits:
   slug: the-clinician-rate-limits
 score:
   band: emerging
-  composite: 20.0
+  composite: 18.1
   coverage:
-    artifact_dirs: 10
+    artifact_dirs: 12
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -165,7 +165,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 15.5
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -174,7 +174,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 20.0
+  previous_composite: 18.1
   provenance:
     conformance: first-party
   regulatory:
@@ -182,14 +182,15 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 47.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/the-clinician/refs/heads/main/screenshots/the-clinician-2026-10-11T130830.png
 security:
 - kind: authentication
   name: The Clinician Authentication

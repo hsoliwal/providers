@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 42.0
-  scored_at: '2026-09-20'
+  score: 40.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 1
@@ -75,7 +75,7 @@ apis:
   description: Identity and diagnostic endpoints.
   name: LoyaltyLion Utility API
   slug: loyaltylion-utility-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -102,6 +102,15 @@ collections:
   name: LoyaltyLion API
   slug: open-loyaltylion
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://loyaltylion.com/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/loyaltylion/refs/heads/main/capabilities/loyaltylion-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/loyaltylion-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/loyaltylion/refs/heads/main/agentic-access/loyaltylion-agentic-access.yml
   title: ''
@@ -147,19 +156,27 @@ common:
 created: '2026-07-10'
 description: LoyaltyLion is an e-commerce loyalty and rewards platform for Shopify, BigCommerce, and custom storefronts, letting merchants run points, referrals, VIP tiers, and reward programs. Its v2 REST API (base https://api.loyaltylion.com/v2) is split into an Admin API for moving data in and out of LoyaltyLion - retrieving customers and transactions, tracking orders, and adjusting points - and a Headless API for building custom shopper-facing loyalty experiences in web, mobile, and POS apps. Requests authenticate with a Program API key passed as a Bearer token (with scoped access), or the deprecated token/secret pair over HTTP Basic auth. All endpoints share a 20 requests-per-second rate limit.
 finops:
-- name: Loyaltylion Finops
+- has_sources: true
+  method: generated
+  name: Loyaltylion Finops
+  primary_unit: ''
   service_category: Marketing and Loyalty
   slug: loyaltylion-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/loyaltylion.png
 layout: provider
-modified: '2026-07-10'
+mcp_servers:
+- description: Remote MCP server at api.loyaltylion.com over HTTP.
+  name: LoyaltyLion MCP Server
+  slug: loyaltylion
+modified: '2026-10-06'
 name: LoyaltyLion
 nav: Providers
 network: true
-overview: 'LoyaltyLion publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Customers API, Points API, and 3 more. Tagged areas include Loyalty, Rewards, E-Commerce, Points, and Shopify.
+overview: 'LoyaltyLion publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Customers API, Points API, and 3 more. Tagged areas include Loyalty, Rewards, E-Commerce, Points, and Shopify.
 
 
-  LoyaltyLion''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  LoyaltyLion''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Loyaltylion Plans Pricing
   plan_count: 4
@@ -170,24 +187,24 @@ rate_limits:
   name: Loyaltylion Rate Limits
   slug: loyaltylion-rate-limits
 score:
-  band: thin
-  composite: 34.2
+  band: emerging
+  composite: 24.6
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 60.0
+    artifact_dirs: 15
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 46.8
-    developer_ergonomics: 28.6
-    discoverability: 68.5
-    operational_transparency: 21.1
-  previous_composite: 34.2
+    contract_quality: 42.1
+    developer_ergonomics: 31.0
+    discoverability: 68.3
+    operational_transparency: 5.3
+  previous_composite: 31.5
   provenance:
     agentic_access: derived
     contracts:
@@ -196,9 +213,15 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -220,5 +243,6 @@ tags:
 - Points
 - Shopify
 - Retention
+- Loyalty & Incentives
 website: https://loyaltylion.com
 ---

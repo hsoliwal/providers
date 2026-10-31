@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.9
-  scored_at: '2026-09-20'
+  score: 25.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 10
   human_in_the_loop: 0
@@ -235,7 +235,7 @@ modified: '2026-07-21'
 name: VidGrid
 nav: Providers
 network: true
-overview: 'VidGrid publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Caption API, Folder API, Search API, and 4 more. Tagged areas include Video, Screen Recording, Captions, Video Hosting, and Webhook.
+overview: 'VidGrid publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Caption API, Folder API, Search API, and 4 more. Tagged areas include Video, Screen Recording, Captions, Video Hosting, and Webhook.
 
 
   The VidGrid catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -248,8 +248,8 @@ rate_limits:
   name: Vidgrid Rate Limits
   slug: vidgrid-rate-limits
 score:
-  band: developing
-  composite: 40.7
+  band: thin
+  composite: 38.7
   coverage:
     artifact_dirs: 20
     catalog_earned: 45.0
@@ -261,11 +261,11 @@ score:
   facets:
     access_clarity: 6.6
     contract_governance: 4.5
-    contract_quality: 66.2
+    contract_quality: 60.6
     developer_ergonomics: 56.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 31.6
-  previous_composite: 40.7
+  previous_composite: 38.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -276,8 +276,14 @@ score:
       total: 7
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

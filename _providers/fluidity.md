@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Public GraphQL endpoint exposing Fluidity's on-chain and webapp data — transactions, rewards, prize-pool and Fluid Asset metrics across Arbitrum, Solana, Sui, and the Superposition devnet.
@@ -126,14 +126,14 @@ modified: '2026-07-19'
 name: Fluidity
 nav: Providers
 network: true
-overview: 'Fluidity publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, DeFi, GraphQL, and Ethereum.
+overview: 'Fluidity is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, DeFi, GraphQL, and Ethereum.
 
 
   Fluidity''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, and 13 more developer resources.'
 random_paper: 16
 score:
-  band: emerging
-  composite: 20.6
+  band: minimal
+  composite: 0.0
   coverage:
     artifact_dirs: 8
     catalog_earned: 32.0
@@ -146,12 +146,19 @@ score:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 52.4
-    discoverability: 66.7
-    operational_transparency: 26.3
-  previous_composite: 20.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -170,7 +177,7 @@ security:
 slug: fluidity
 tags:
 - Company
-- Crypto Web3
+- Web3
 - DeFi
 - GraphQL
 - Ethereum
@@ -178,5 +185,7 @@ tags:
 - Blockchain
 - Tokenization
 - Rewards
+- Defunct
+- Cryptocurrency
 website: https://fluidity.money
 ---

@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Agrofy Developers is the company''s marketed partner-integration program for marketplace sellers — listing management, lead management and catalog synchronisation. Agrofy publishes no machine-readable '
@@ -103,7 +103,7 @@ modified: '2026-09-13'
 name: Agrofy
 nav: Providers
 network: true
-overview: 'Agrofy publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, Agribusiness, AgTech, and Marketplace.
+overview: 'Agrofy is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Agriculture, Agribusiness, AgTech, and Marketplace.
 
 
   Agrofy''s developer surface includes support, engineering blog, and 10 more developer resources.'
@@ -118,9 +118,9 @@ rate_limits:
   slug: agrofy-rate-limits
 score:
   band: emerging
-  composite: 14.1
+  composite: 14.4
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -132,7 +132,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -142,20 +142,21 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 14.1
+  previous_composite: 14.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/agrofy/refs/heads/main/screenshots/agrofy-2026-10-11T140039.png
 security:
 - kind: domain-security
   name: Agrofy Domain Security

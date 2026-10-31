@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 37.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -64,7 +64,7 @@ apis:
   description: Generate responses with TextCortex models.
   name: Textcortex Responses API
   slug: textcortex-responses-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -82,6 +82,20 @@ collections:
   name: TextCortex Balance Responses API
   slug: open-textcortex-responses-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/textcortex/refs/heads/main/plans/textcortex-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/textcortex-plans-pricing.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://textcortex.com/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/textcortex/refs/heads/main/capabilities/textcortex-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/textcortex-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -197,40 +211,46 @@ created: '2026-07-17'
 description: TextCortex is a Berlin-based AI writing and content-generation platform (ZenoChat assistant, knowledge bases, and a suite of writing tools) that also ships a public, OpenAI-compatible REST API. The API, served from https://api.textcortex.com/v1 with Bearer API-key authentication, exposes model discovery, chat completions, and an OpenAI Responses-compatible generation endpoint, plus an API-credit balance check. Streaming is supported over server-sent events and infrastructure is EU-hosted and GDPR-compliant. TextCortex is backed by Speedinvest and maintains first-party Python and JavaScript client libraries.
 image: https://docs.textcortex.com/logo192.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Textcortex
 nav: Providers
 network: true
-overview: 'Textcortex publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Balance API, Chat Completions API, Models API, and 1 more. Tagged areas include Company, Artificial Intelligence, Text Generation, LLM, and Chat Completions.
+overview: 'Textcortex publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Balance API, Chat Completions API, Models API, and 1 more. Tagged areas include Company, Artificial Intelligence, Text Generation, LLM, and Chat Completions.
 
 
-  Textcortex''s developer surface includes authentication, support, pricing, signup flow, and 20 more developer resources.'
+  Textcortex''s developer surface includes engineering blog, authentication, support, pricing, signup flow, and 22 more developer resources.'
+plans:
+- name: Textcortex Plans Pricing
+  plan_count: 3
+  slug: textcortex-plans-pricing
 random_paper: 14
 score:
-  band: thin
-  composite: 35.2
+  band: developing
+  composite: 40.5
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 22
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.5
   facets:
-    access_clarity: 21.1
+    access_clarity: 52.6
     contract_governance: 4.5
-    contract_quality: 56.8
-    developer_ergonomics: 39.9
-    discoverability: 75.9
+    contract_quality: 51.1
+    developer_ergonomics: 42.3
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - dach
     - europe
-  previous_composite: 35.2
+  previous_composite: 34.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -241,9 +261,19 @@ score:
       total: 4
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 19.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0
@@ -267,5 +297,6 @@ tags:
 - OpenAI-Compatible
 - Content Generation
 - Developer Tools
+- Foundation Models
 website: https://www.textcortex.com/
 ---

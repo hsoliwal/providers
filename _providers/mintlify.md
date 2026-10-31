@@ -13,36 +13,37 @@ access_model:
   try_now: true
 agent_readiness:
   band: agent-ready
+  band_gated_from: agent-native
   dimensions:
-    agent_card: false
-    agent_skills: true
+    agent_card: conformant
+    agent_skills: derived
     agentic_access: derived
     agentic_commerce: false
-    auth_clarity: bearer
+    auth_clarity: served
     consent_identity: false
-    delegated_identity: false
+    delegated_identity: served
     dry_run_mode: false
-    dynamic_client_registration: false
+    dynamic_client_registration: true
     error_semantics: false
     event_surface_described: false
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.0
-  scored_at: '2026-09-20'
+  score: 49.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 4
+- acting_count: 3
   human_in_the_loop: 0
   name: Mintlify Agentic Access
   operation_count: 8
   slug: mintlify-agentic-access
-  summary_line: 8 operations · 4 acting
+  summary_line: 8 operations · 3 acting
 api_count: 1
 apis:
 - description: Mintlify is a developer documentation platform that helps product and engineering teams create, maintain, and host modern docs. It uses a docs‑as‑code workflow (Markdown in your repo) with a rich comp
@@ -68,7 +69,7 @@ apis:
   description: Trigger and monitor documentation deployment updates.
   name: Mintlify Update API
   slug: mintlify-update-api
-artifact_total: 31
+artifact_total: 40
 collections:
 - collection_type: postman
   name: Mintlify Agent API
@@ -101,6 +102,113 @@ collections:
   name: Mintlify API
   slug: open-mintlify
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/finops/mintlify-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/mintlify-finops.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/rate-limits/mintlify-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/mintlify-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/plans/mintlify-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/mintlify-plans-pricing.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/rules/mintlify-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/mintlify-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/rules/mintlify-jsonschema-spectral-rules.yml
+  title: ''
+  type: Spectral
+  url: rules/mintlify-jsonschema-spectral-rules.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/json-ld/mintlify-context.jsonld
+  title: ''
+  type: JSONLD
+  url: json-ld/mintlify-context.jsonld
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/vocabulary/mintlify-vocabulary.yml
+  title: ''
+  type: Vocabulary
+  url: vocabulary/mintlify-vocabulary.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/skills/_index.yml
+  title: ''
+  type: AgentSkill
+  url: skills/_index.yml
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/data-model/mintlify-data-model.yml
+  title: ''
+  type: DataModel
+  url: data-model/mintlify-data-model.yml
+- group: build
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/cli/mintlify-cli.yml
+  title: ''
+  type: CLI
+  url: cli/mintlify-cli.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/changelog/mintlify-changelog.yml
+  title: ''
+  type: ChangeLog
+  url: changelog/mintlify-changelog.yml
+- group: auth
+  title: ''
+  type: Compliance
+  url: https://security.mintlify.com/
+- group: design
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/conformance/mintlify-conformance.yml
+  title: ''
+  type: Conformance
+  url: conformance/mintlify-conformance.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/llms/mintlify-llms.txt
+  title: ''
+  type: LLMsTxt
+  url: llms/mintlify-llms.txt
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/a2a/mintlify-a2a.yml
+  title: ''
+  type: AgentCard
+  url: a2a/mintlify-a2a.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/mcp/mintlify-mcp.yml
+  title: ''
+  type: MCPServer
+  url: mcp/mintlify-mcp.yml
+- group: agent
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/well-known/mintlify-well-known.yml
+  title: ''
+  type: WellKnown
+  url: well-known/mintlify-well-known.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/hosts/mintlify-hosts.yml
+  title: ''
+  type: Hosts
+  url: hosts/mintlify-hosts.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/vendors/mintlify-vendors.yml
+  title: ''
+  type: Vendors
+  url: vendors/mintlify-vendors.yml
+- group: operate
+  title: ''
+  type: Roadmap
+  url: https://www.mintlify.com/roadmap
+- group: docs
+  title: ''
+  type: APIReference
+  url: https://www.mintlify.com/docs/reference/concepts
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/mintlify/refs/heads/main/vendor-facets/mintlify-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/mintlify-vendor-facets.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -246,14 +354,32 @@ common:
   title: ''
   type: LlmsText
   url: https://www.mintlify.com/docs/llms.txt
+coverage:
+  checked: '2026-10-11'
+  detail: Access to the API specification requires authentication; the openapi.json endpoint redirects to a login page.
+  evidence:
+  - status: 307
+    url: https://app.mintlify.com/openapi.json
+  reason: sales-gate
+  state: gated
 created: '2026-01-05'
 description: Mintlify is an AI-native intelligent documentation platform designed for the next generation of technical documentation, combining beautiful out-of-the-box design with advanced collaboration and AI capabilities.
 finops:
-- name: Mintlify Finops
+- has_sources: true
+  method: generated
+  name: Mintlify Finops
+  primary_unit: ''
   service_category: Documentation / Developer Tools
   slug: mintlify-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/mintlify.png
 json_schemas:
+- name: AgentJobRequest
+  property_count: 4
+  slug: mintlify-agent-job-request
+- name: AgentJob
+  property_count: 7
+  slug: mintlify-agent-job
 - name: AgentJob
   property_count: 7
   slug: mintlify-agentjob
@@ -262,7 +388,16 @@ json_schemas:
   slug: mintlify-agentjobrequest
 - name: AssistantMessageRequest
   property_count: 4
+  slug: mintlify-assistant-message-request
+- name: AssistantMessageRequest
+  property_count: 4
   slug: mintlify-assistantmessagerequest
+- name: SearchRequest
+  property_count: 4
+  slug: mintlify-search-request
+- name: SearchResult
+  property_count: 3
+  slug: mintlify-search-result
 - name: SearchRequest
   property_count: 4
   slug: mintlify-searchrequest
@@ -271,23 +406,35 @@ json_schemas:
   slug: mintlify-searchresult
 - name: UpdateStatus
   property_count: 8
+  slug: mintlify-update-status
+- name: UpdateStatus
+  property_count: 8
   slug: mintlify-updatestatus
 json_structures:
 - name: Mintlify Structure
   property_count: 0
   slug: mintlify-structure
+jsonld:
+- class_count: 6
+  name: Mintlify Context
+  property_count: 26
+  slug: mintlify-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.mintlify.com over HTTP.
+  name: Mintlify MCP Server
+  slug: mintlify
 modified: '2026-05-30'
 name: Mintlify
 nav: Providers
 network: true
-overview: 'Mintlify publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Analytics API, Assistant API, and 1 more. Tagged areas include Documentation.
+overview: 'Mintlify publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent API, Analytics API, Assistant API, and 2 more. Tagged areas include Documentation, API Documentation, Developer Portal, MCP, and AI Assistant.
 
 
-  The Mintlify catalog on APIs.io includes 1 Spectral governance ruleset.
+  The Mintlify catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Mintlify''s developer surface includes authentication, engineering blog, pricing, documentation, changelog, signup flow, getting-started guide, and 28 more developer resources.'
+  Mintlify''s developer surface includes CLI, changelog, API reference, authentication, engineering blog, pricing, documentation, and 50 more developer resources.'
 plans:
 - name: Mintlify Plans Pricing
   plan_count: 4
@@ -298,9 +445,10 @@ rate_limits:
   name: Mintlify Rate Limits
   slug: mintlify-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Mintlify API Rules
+  name: Mintlify — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -308,35 +456,55 @@ rules:
     info: 2
     warn: 3
   slug: mintlify-jsonschema-spectral-rules
+- authorship: generated
+  effective_rule_count: 54
+  extends:
+  - spectral:oas
+  name: Mintlify API Rules
+  rule_count: 13
+  severity_counts:
+    error: 12
+    hint: 0
+    info: 1
+    warn: 0
+  slug: mintlify-rules
 score:
-  band: developing
-  composite: 49.1
+  band: strong
+  composite: 59.9
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 39.3
+    artifact_dirs: 32
+    catalog_earned: 67.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.8
+    catalog_gap: 48.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.9
   facets:
     access_clarity: 68.4
-    contract_governance: 9.8
-    contract_quality: 49.0
-    developer_ergonomics: 48.8
-    discoverability: 57.4
-    operational_transparency: 55.3
-  previous_composite: 49.1
+    contract_governance: 31.8
+    contract_quality: 57.7
+    developer_ergonomics: 57.7
+    discoverability: 66.7
+    operational_transparency: 60.5
+  previous_composite: 60.8
   provenance:
     agentic_access: derived
+    conformance: derived
     contracts:
       callable: 100.0
       derived: 0
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    skills: derived
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -354,7 +522,7 @@ security:
 - kind: vulnerability-disclosure
   name: Mintlify Vulnerability Disclosure
   slug: mintlify-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Mintlify Trust Center
   slug: mintlify-trust-center
@@ -362,5 +530,10 @@ security:
 slug: mintlify
 tags:
 - Documentation
+- API Documentation
+- Developer Portal
+- MCP
+- AI Assistant
+- Docs as Code
 website: https://www.mintlify.com/
 ---

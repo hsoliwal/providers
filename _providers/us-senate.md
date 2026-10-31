@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.9
-  scored_at: '2026-09-20'
+  score: 20.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -102,6 +102,21 @@ collections:
   name: US Senate Lobbying Disclosure Act (LDA) Clients Registrants API
   slug: open-us-senate-registrants-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/us-senate/refs/heads/main/plans/us-senate-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/us-senate-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/us-senate/refs/heads/main/rate-limits/us-senate-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/us-senate-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/us-senate/refs/heads/main/finops/us-senate-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/us-senate-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/us-senate/refs/heads/main/agentic-access/us-senate-agentic-access.yml
   title: ''
@@ -131,9 +146,13 @@ examples:
   name: Lda List Filings Example
   slug: lda-list-filings-example
 finops:
-- name: Us Senate Finops
+- has_sources: false
+  method: generated
+  name: Us Senate Finops
+  primary_unit: ''
   service_category: API
   slug: us-senate-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/us-senate.png
 json_schemas:
 - name: Senate LDA Lobbying Filing
@@ -153,13 +172,13 @@ modified: '2026-05-19'
 name: US Senate
 nav: Providers
 network: true
-overview: 'US Senate publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Clients API, Constants API, Contributions API, and 3 more. Tagged areas include Federal-Government, Lobbying, Government Transparency, Campaign Finance, and Open Data.
+overview: 'US Senate publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Clients API, Constants API, Contributions API, and 3 more. Tagged areas include Federal Government, Lobbying, Government Transparency, Campaign Finance, and Open Data.
 
 
   The US Senate catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  US Senate''s developer surface includes authentication and 3 more developer resources.'
+  US Senate''s developer surface includes authentication and 6 more developer resources.'
 plans:
 - name: Us Senate Plans Pricing
   plan_count: 3
@@ -170,9 +189,10 @@ rate_limits:
   name: Us Senate Rate Limits
   slug: us-senate-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: US Senate API Rules
+  name: US Senate — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -180,7 +200,8 @@ rules:
     info: 1
     warn: 4
   slug: us-senate-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: US Senate API Rules
@@ -193,23 +214,28 @@ rules:
   slug: us-senate-rules
 score:
   band: thin
-  composite: 32.7
+  composite: 28.5
   coverage:
     artifact_dirs: 15
-    catalog_earned: 53.5
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.5
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 13.6
-    contract_quality: 60.7
+    contract_quality: 55.1
     developer_ergonomics: 21.4
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 7.9
-  previous_composite: 32.7
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 30.1
   provenance:
     agentic_access: derived
     contracts:
@@ -222,9 +248,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 31.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -242,7 +268,7 @@ security:
   summary_line: TLSv1.3 · DNSSEC · DMARC
 slug: us-senate
 tags:
-- Federal-Government
+- Federal Government
 - Lobbying
 - Government Transparency
 - Campaign Finance

@@ -35,15 +35,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 18
+- acting_count: 22
   human_in_the_loop: 0
   name: Reasonblocks Agentic Access
-  operation_count: 32
+  operation_count: 47
   slug: reasonblocks-agentic-access
-  summary_line: 32 operations · 18 acting
-api_count: 1
+  summary_line: 47 operations · 22 acting
+api_count: 2
 apis:
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
@@ -63,7 +63,7 @@ apis:
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
   description: The monitor API from ReasonBlocks — 11 operation(s) for monitor.
-  name: ReasonBlocks monitor API
+  name: ReasonBlocks Monitor API
   slug: reasonblocks-monitor-api
 - baseURL: https://rb-api.reasonblocks.com
   baseurl_source: declared
@@ -234,14 +234,14 @@ modified: '2026-07-21'
 name: ReasonBlocks
 nav: Providers
 network: true
-overview: 'ReasonBlocks publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Billing API, Codebase Findings API, Health API, and 6 more. Tagged areas include Company, AI Agents, Agent Observability, LLM, and Developer Tools.
+overview: 'ReasonBlocks publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing API, Codebase Findings API, Health API, and 6 more. Tagged areas include Company, AI Agents, Agent Observability, LLM, and Developer Tools.
 
 
   ReasonBlocks'' developer surface includes documentation, API reference, getting-started guide, authentication, sandbox, and 17 more developer resources.'
 random_paper: 10
 score:
   band: thin
-  composite: 34.2
+  composite: 32.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 37.0
@@ -249,15 +249,15 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 4.5
-    contract_quality: 48.6
+    contract_quality: 43.9
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 34.2
+  previous_composite: 32.7
   provenance:
     agentic_access: derived
     conformance: derived
@@ -268,8 +268,14 @@ score:
       total: 9
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -293,7 +299,7 @@ tags:
 - Developer Tools
 - Token Optimization
 - Agent Steering
-- Machine-Learning
+- Machine Learning
 - Artificial Intelligence
 - SDK
 website: https://reasonblocks.com

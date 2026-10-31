@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 18.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -42,28 +42,28 @@ agentic_access:
   summary_line: 14 operations · 1 acting
 api_count: 2
 apis:
-- baseURL: https://www.boredapi.com
+- baseURL: https://bored-api.appbrewery.com
   baseurl_source: declared
   description: Random and filtered activity suggestions.
   name: Bored API Activities API
   slug: bored-activities-api
 - baseURL: https://www.boredapi.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Random or keyed factual snippets (v2 only).
   name: Bored API Facts API
   slug: bored-facts-api
 - baseURL: https://www.boredapi.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Random or keyed riddles with difficulty filter (v2 only).
   name: Bored API Riddles API
   slug: bored-riddles-api
 - baseURL: https://www.boredapi.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Community-submitted content suggestions for review (v2 only).
   name: Bored API Suggestions API
   slug: bored-suggestions-api
 - baseURL: https://www.boredapi.com
-  baseurl_source: declared
+  baseurl_source: spec
   description: Random or keyed website recommendations (v2 only).
   name: Bored API Websites API
   slug: bored-websites-api
@@ -264,7 +264,7 @@ modified: '2026-05-30'
 name: Bored API
 nav: Providers
 network: true
-overview: 'Bored API publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Activities API, Facts API, Riddles API, and 2 more. Tagged areas include Activities, Boredom, Community, Development, and Discovery.
+overview: 'Bored API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Activities API, Facts API, Riddles API, and 2 more. Tagged areas include Activities, Boredom, Community, Development, and Discovery.
 
 
   The Bored API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
@@ -273,9 +273,10 @@ overview: 'Bored API publishes 5 APIs on the [APIs.io](https://apis.io/) network
   Bored API''s developer surface includes developer portal, GitHub presence, documentation, and 13 more developer resources.'
 random_paper: 18
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Bored API API Rules
+  name: Bored API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -283,7 +284,8 @@ rules:
     info: 1
     warn: 4
   slug: bored-jsonschema-spectral-rules
-- effective_rule_count: 53
+- authorship: unmarked
+  effective_rule_count: 53
   extends:
   - spectral:oas
   name: Bored API API Rules
@@ -296,23 +298,23 @@ rules:
   slug: bored-rules
 score:
   band: thin
-  composite: 31.3
+  composite: 28.6
   coverage:
     artifact_dirs: 12
-    catalog_earned: 61.5
+    catalog_earned: 55.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 60.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
-    contract_governance: 28.8
-    contract_quality: 59.7
+    contract_governance: 27.3
+    contract_quality: 54.4
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 31.3
+  previous_composite: 28.5
   provenance:
     agentic_access: derived
     contracts:
@@ -325,9 +327,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -350,7 +352,7 @@ tags:
 - Free
 - MEVN
 - No Auth
-- Open-Source
+- Open Source
 - Public APIs
 - Recreation
 - Riddles

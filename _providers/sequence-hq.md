@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: Usage event ingestion, usage metrics, and seats.
   name: Sequence Usage API
   slug: sequence-hq-usage-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -103,6 +103,11 @@ collections:
   name: Sequence API
   slug: open-sequence-hq
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/sequence-hq/refs/heads/main/capabilities/sequence-hq-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/sequence-hq-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/sequence-hq/refs/heads/main/agentic-access/sequence-hq-agentic-access.yml
   title: ''
@@ -156,19 +161,27 @@ common:
 created: '2026-07-12'
 description: Sequence is a usage-based billing, pricing, and revenue orchestration platform for B2B SaaS and other recurring-revenue businesses. It turns product usage and negotiated contract terms into automated billing schedules, invoices, credit notes, and quotes, backed by a metering engine for usage events and usage metrics, plus revenue recognition and integrations to ERP/CRM, tax, and payment providers. The REST API (production base https://eu.sequencehq.com) uses HTTP Basic authentication with a Client ID and Client Secret, date-based API versioning (for example sequence-version 2024-07-30), and signed webhooks for event notifications. A Sandbox environment (https://sandbox.sequencehq.com) mirrors production for testing.
 finops:
-- name: Sequence Hq Finops
+- has_sources: true
+  method: generated
+  name: Sequence Hq Finops
+  primary_unit: ''
   service_category: Financial Operations and Billing
   slug: sequence-hq-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sequence-hq.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at eu.sequencehq.com over HTTP.
+  name: Sequence MCP Server
+  slug: sequence-hq
 modified: '2026-07-12'
 name: Sequence
 nav: Providers
 network: true
-overview: 'Sequence publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Billing Schedules API, Customers API, Invoices API, and 3 more. Tagged areas include Billing, Usage-Based Billing, Revenue Recognition, Metering, and Invoicing.
+overview: 'Sequence publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Billing Schedules API, Customers API, Invoices API, and 3 more. Tagged areas include Billing, Usage-Based Billing, Revenue Recognition, Metering, and Invoicing.
 
 
-  Sequence''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Sequence''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Sequence Hq Plans Pricing
   plan_count: 3
@@ -180,23 +193,23 @@ rate_limits:
   slug: sequence-hq-rate-limits
 score:
   band: emerging
-  composite: 23.5
+  composite: 14.7
   coverage:
-    artifact_dirs: 13
-    catalog_earned: 60.0
+    artifact_dirs: 14
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 23.7
-  previous_composite: 23.5
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 22.0
   provenance:
     agentic_access: derived
     contracts:
@@ -205,9 +218,15 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 14
   human_in_the_loop: 0
@@ -129,6 +129,26 @@ collections:
   name: Pulse Public API
   slug: open-pulse-software
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pulse-software/refs/heads/main/plans/pulse-software-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/pulse-software-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/pulse-software/refs/heads/main/rate-limits/pulse-software-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/pulse-software-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/pulse-software/refs/heads/main/finops/pulse-software-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/pulse-software-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/pulse-software/refs/heads/main/capabilities/pulse-software-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/pulse-software-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -155,19 +175,23 @@ common:
 created: '2025-02-24'
 description: The Pulse API is targeted towards developers looking to automate tasks in Pulse.
 finops:
-- name: Pulse Software Finops
+- has_sources: false
+  method: generated
+  name: Pulse Software Finops
+  primary_unit: ''
   service_category: API
   slug: pulse-software-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/pulse-software.png
 layout: provider
 modified: '2026-09-16'
 name: Pulse Software
 nav: Providers
 network: true
-overview: 'Pulse Software publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Corporate Planning API, Forms API, and 6 more. Tagged areas include Pulse, Automation, and Developers.
+overview: 'Pulse Software publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Corporate Planning API, Forms API, and 7 more. Tagged areas include Pulse, Automation, and Developers.
 
 
-  Pulse Software''s developer surface includes authentication and 4 more developer resources.'
+  Pulse Software''s developer surface includes authentication and 8 more developer resources.'
 plans:
 - name: Pulse Software Plans Pricing
   plan_count: 3
@@ -178,24 +202,24 @@ rate_limits:
   name: Pulse Software Rate Limits
   slug: pulse-software-rate-limits
 score:
-  band: thin
-  composite: 28.0
+  band: emerging
+  composite: 24.5
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 31.0
+    artifact_dirs: 11
+    catalog_earned: 28.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 84.0
+    catalog_gap: 87.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.6
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 51.4
+    contract_quality: 46.4
     developer_ergonomics: 21.4
-    discoverability: 40.7
+    discoverability: 39.3
     operational_transparency: 7.9
-  previous_composite: 28.0
+  previous_composite: 26.1
   provenance:
     agentic_access: derived
     contracts:
@@ -203,8 +227,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

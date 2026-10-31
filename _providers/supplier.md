@@ -24,7 +24,7 @@ agent_readiness:
     error_semantics: false
     event_surface_described: false
     idempotency: false
-    mcp_server: verified
+    mcp_server: platform
     openapi_examples: false
     protected_resource_metadata: verified
     rate_limit_signal: false
@@ -32,11 +32,15 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.3
-  scored_at: '2026-09-20'
+  score: 20.9
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://supplier.io/feed
 - group: company
   title: ''
   type: Website
@@ -109,17 +113,17 @@ description: Supplier.io is a supplier intelligence and supplier diversity platf
 image: https://supplier.io/wp-content/uploads/2025/07/SupplierIO-OG.jpg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at supplier.io over HTTP.
   name: Supplier MCP Server
-  slug: supplier-mcp-server
-modified: '2026-07-21'
+  slug: supplier
+modified: '2026-10-06'
 name: Supplier
 nav: Providers
 network: true
 overview: 'Supplier is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Procurement, Supply Chain, Supplier Diversity, and Spend Analytics.
 
 
-  Supplier''s developer surface includes engineering blog, pricing, support, authentication, and 11 more developer resources.'
+  Supplier''s developer surface includes engineering blog, pricing, support, authentication, and 12 more developer resources.'
 random_paper: 4
 scopes:
 - name: Supplier Scopes
@@ -128,7 +132,7 @@ scopes:
   summary_line: 1 scope · authorizationCode
 score:
   band: emerging
-  composite: 19.4
+  composite: 22.3
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -142,14 +146,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 0.0
-  previous_composite: 19.4
+  previous_composite: 22.3
   provenance:
     conformance: first-party
-    mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    mcp: platform-generated
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 28.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.kugelaudio.com
@@ -50,7 +50,7 @@ apis:
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
   description: The billing API from KugelAudio — 2 operation(s) for billing.
-  name: KugelAudio billing API
+  name: KugelAudio Billing API
   slug: kugelaudio-billing-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
@@ -65,7 +65,7 @@ apis:
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
   description: The license API from KugelAudio — 12 operation(s) for license.
-  name: KugelAudio license API
+  name: KugelAudio License API
   slug: kugelaudio-license-api
 - baseURL: https://api.kugelaudio.com
   baseurl_source: declared
@@ -107,7 +107,7 @@ apis:
   description: The Voices API from KugelAudio — 6 operation(s) for voices.
   name: KugelAudio Voices API
   slug: kugelaudio-voices-api
-artifact_total: 32
+artifact_total: 33
 asyncapis:
 - description: API Evangelist description of KugelAudio's documented WebSocket streaming surface. KugelAudio publishes no AsyncAPI document of its own; this file is GENERATED from the provider's own published wire-f
   name: KugelAudio TTS Streaming API
@@ -159,6 +159,15 @@ collections:
   name: KugelAudio TTS 11labs Voices API
   slug: open-kugelaudio-voices-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/plans/kugelaudio-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/kugelaudio-plans-pricing.yml
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.kugelaudio.com/en/articles
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/kugelaudio/refs/heads/main/capabilities/kugelaudio-capability-edges.yml
   title: ''
@@ -295,42 +304,48 @@ description: KugelAudio is a Y Combinator-backed, Germany-based voice AI company
   Vapi integrations point at KugelAudio without rewrites.
 image: https://www.kugelaudio.com/icon.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: KugelAudio
 nav: Providers
 network: true
-overview: 'KugelAudio publishes 14 APIs on the [APIs.io](https://apis.io/) network, including 11labs API, Audio API, billing API, and 11 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
+overview: 'KugelAudio publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including 11labs API, Audio API, Billing API, and 11 more. Tagged areas include Voice, Text-to-Speech, Speech Synthesis, Voice AI, and Voice Cloning.
 
 
   The KugelAudio catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  KugelAudio''s developer surface includes documentation, API reference, getting-started guide, support, pricing, signup flow, authentication, and 22 more developer resources.'
+  KugelAudio''s developer surface includes engineering blog, documentation, API reference, getting-started guide, support, pricing, signup flow, and 24 more developer resources.'
+plans:
+- name: Kugelaudio Plans Pricing
+  plan_count: 3
+  slug: kugelaudio-plans-pricing
 random_paper: 10
 score:
   band: developing
-  composite: 46.8
+  composite: 52.8
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 21
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.3
   facets:
-    access_clarity: 39.5
+    access_clarity: 71.1
     contract_governance: 4.5
-    contract_quality: 52.5
-    developer_ergonomics: 69.0
-    discoverability: 75.9
+    contract_quality: 48.2
+    developer_ergonomics: 71.4
+    discoverability: 73.2
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - germany
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 46.8
+  previous_composite: 46.5
   provenance:
     conformance: derived
     contracts:
@@ -340,9 +355,15 @@ score:
       total: 14
     mcp: derived
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 21.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 11.1
@@ -365,7 +386,7 @@ tags:
 - Voice Cloning
 - Audio
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Streaming
 - Real-Time
 - Conversational AI

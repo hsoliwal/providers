@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 13.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://news.andersonsinc.com/press-releases?pagetemplate=rss
 - group: company
   title: ''
   type: Website
@@ -123,14 +127,14 @@ description: 'The Andersons, Inc. (NASDAQ: ANDE) is a diversified North American
   — all federated through an Active Directory Federation Services identity provider at portalauth.andersonsinc.com. Business-to-business integration is handled through EDI and direct merchant relationships rather than a self-service API. NOTE ON IDENTITY: the domain andersons.com belongs to Anderson''s of White Bear Lake, Minnesota, an unrelated prom and school-spirit party-supply retailer; The Andersons, Inc. is at andersonsinc.com.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/andersons.png
 layout: provider
-modified: '2026-09-02'
+modified: '2026-10-06'
 name: The Andersons
 nav: Providers
 network: true
 overview: 'The Andersons is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Agribusiness, Agriculture, Grain, Commodity Merchandising, and Plant Nutrients.
 
 
-  The Andersons'' developer surface includes support, authentication, and 12 more developer resources.'
+  The Andersons'' developer surface includes support, authentication, and 13 more developer resources.'
 plans:
 - name: Andersons Plans Pricing
   plan_count: 0
@@ -158,12 +162,12 @@ rate_limits:
   slug: andersons-rate-limits
 scopes:
 - name: Andersons Scopes
-  scope_count: 0
+  scope_count: 9
   slug: andersons-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 9 scopes
 score:
   band: emerging
-  composite: 21.4
+  composite: 18.8
   coverage:
     artifact_dirs: 15
     catalog_earned: 27.0
@@ -177,14 +181,16 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 21.4
+  previous_composite: 18.8
   provenance:
     conformance: first-party
   regulatory:
@@ -192,9 +198,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 56.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 34.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: Unified Orders API in Aleph V2 that consolidates archive purchases and new-capture tasking into a single REST surface. Supports archive products, POI (point-of-interest) tasking, and AOI (area-of-inte
@@ -200,14 +200,14 @@ modified: '2026-05-24'
 name: Satellogic
 nav: Providers
 network: true
-overview: 'Satellogic publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Earth Observation, Satellite Imagery, Geospatial, Remote Sensing, and High Resolution.
+overview: 'Satellogic is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Earth Observation, Satellite Imagery, Geospatial, Remote Sensing, and High Resolution.
 
 
   Satellogic''s developer surface includes developer portal, documentation, getting-started guide, authentication, signup flow, engineering blog, YouTube channel, and 23 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 15.4
+  composite: 15.3
   coverage:
     artifact_dirs: 4
     catalog_earned: 35.0
@@ -221,17 +221,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 21.4
-    discoverability: 64.8
+    discoverability: 63.4
     operational_transparency: 2.6
-  previous_composite: 15.4
+  previous_composite: 15.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 24.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 14.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

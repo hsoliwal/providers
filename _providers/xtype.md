@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.xtype.io/news
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.xtype.io/news/rss.xml
 - group: company
   title: ''
   type: Website
@@ -92,18 +100,18 @@ created: '2026-07-17'
 description: 'xtype is an automated governance platform for ServiceNow, giving enterprises visibility, control, orchestration, and compliance across every instance in their ServiceNow estate — tracking changes, access decisions, and configurations and enforcing policy in real time. Products include xtype Enterprise and the free xtype View. The company is backed by ServiceNow Ventures, Columbia Capital, Norwest Venture Partners, Inner Loop Capital, and SaaS Venture Capital, with offices in Covina (CA), Tel Aviv, and Vienna. xtype publishes no public developer API: api.xtype.io is a live Kong gateway with no publicly documented routes.'
 image: https://cdn.prod.website-files.com/67593e2359195546cb0ee9a9/69bc184ec653bb3c4ec386f1_xtype_2026_icon_RGB_FullColour-256.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Xtype
 nav: Providers
 network: true
 overview: 'Xtype is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include ServiceNow, Governance, Compliance, Change Management, and DevOps.
 
 
-  Xtype''s developer surface includes engineering blog, support, and 10 more developer resources.'
+  Xtype''s developer surface includes engineering blog, support, and 12 more developer resources.'
 random_paper: 20
 score:
   band: emerging
-  composite: 16.2
+  composite: 17.4
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -117,11 +125,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
-  previous_composite: 16.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.4
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

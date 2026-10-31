@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 25.4
-  scored_at: '2026-09-20'
+  score: 23.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Weavix Agentic Access
   operation_count: 19
   slug: weavix-agentic-access
-  summary_line: 19 operations · 8 acting
+  summary_line: 19 operations · 7 acting
 api_count: 1
 apis:
 - baseURL: https://api.weavix.com
@@ -118,6 +118,10 @@ collections:
   name: weavix REST Channels & Messaging User Management API
   slug: open-weavix-user-management-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://weavix.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/weavix/refs/heads/main/overlays/weavix-rest-overlay.yaml
   title: ''
@@ -247,26 +251,26 @@ description: 'weavix is the "Internet of Workers" frontline communication and wo
 image: https://weavix.com/wp-content/uploads/2023/03/weavix-logo.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP; 18 tools listed. A candidate, not confirmed as published by the provider.
   name: Weavix MCP Server
-  slug: weavix-mcp-server
-modified: '2026-07-21'
+  slug: weavix
+modified: '2026-10-06'
 name: Weavix
 nav: Providers
 network: true
-overview: 'Weavix publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Channels & Messaging API, Crafts API, Forms API, and 5 more. Tagged areas include Communications, Frontline Workers, Workforce Management, Messaging, and Push To Talk.
+overview: 'Weavix publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Channels & Messaging API, Crafts API, Forms API, and 5 more. Tagged areas include Communications, Frontline Workers, Workforce Management, Messaging, and Push To Talk.
 
 
   The Weavix catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Weavix''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, authentication, and 20 more developer resources.'
+  Weavix''s developer surface includes documentation, getting-started guide, support, engineering blog, pricing, signup flow, authentication, and 21 more developer resources.'
 random_paper: 0
 score:
   band: developing
-  composite: 39.8
+  composite: 41.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -278,14 +282,16 @@ score:
     contract_governance: 4.5
     contract_quality: 21.5
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 23.7
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 39.8
+  previous_composite: 41.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -296,8 +302,14 @@ score:
       total: 8
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

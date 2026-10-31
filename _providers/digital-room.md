@@ -32,10 +32,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/digital-room/refs/heads/main/plans/digital-room-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/digital-room-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/digital-room/refs/heads/main/rate-limits/digital-room-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/digital-room-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/digital-room/refs/heads/main/security/digital-room-domain-security.yml
   title: ''
@@ -90,7 +100,7 @@ network: true
 overview: 'Digital Room is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing, Printing, Print, and E-Commerce.
 
 
-  Digital Room''s developer surface includes support and 5 more developer resources.'
+  Digital Room''s developer surface includes support and 7 more developer resources.'
 plans:
 - name: Digital Room Plans Pricing
   plan_count: 0
@@ -102,9 +112,9 @@ rate_limits:
   slug: digital-room-rate-limits
 score:
   band: minimal
-  composite: 9.1
+  composite: 8.1
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -116,13 +126,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 4.8
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 9.1
+  previous_composite: 8.1
   provenance:
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

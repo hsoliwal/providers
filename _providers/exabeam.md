@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 14.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 13
 apis:
 - description: Manage users, roles, and permissions within the Exabeam platform.
@@ -77,6 +77,10 @@ apis:
   slug: exabeam-use-cases-api
 artifact_total: 19
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.exabeam.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/exabeam/refs/heads/main/security/exabeam-vulnerability-disclosure.yml
   title: ''
@@ -202,17 +206,17 @@ description: Exabeam is a cybersecurity company that delivers faster, more accur
 image: https://files.readme.io/e4416f6-small-Exabeam-2024-Logo-Color-Dark-Large-02.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server over HTTP.
   name: Exabeam MCP Server
-  slug: exabeam-mcp-server
-modified: '2026-07-19'
+  slug: exabeam
+modified: '2026-10-06'
 name: Exabeam
 nav: Providers
 network: true
-overview: 'Exabeam publishes 13 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, SIEM, and UEBA.
+overview: 'Exabeam is listed with 13 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Cybersecurity, Security, SIEM, and UEBA.
 
 
-  Exabeam''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, support, and 20 more developer resources.'
+  Exabeam''s developer surface includes documentation, API reference, getting-started guide, authentication, changelog, engineering blog, support, and 21 more developer resources.'
 random_paper: 19
 scopes:
 - name: Exabeam Scopes
@@ -221,9 +225,9 @@ scopes:
   summary_line: 3 scopes · authorizationCode
 score:
   band: thin
-  composite: 30.2
+  composite: 34.2
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
@@ -235,14 +239,20 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 32.1
-    discoverability: 81.5
+    discoverability: 76.7
     operational_transparency: 36.8
-  previous_composite: 30.2
+  previous_composite: 34.2
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -261,7 +271,7 @@ security:
 - kind: vulnerability-disclosure
   name: Exabeam Vulnerability Disclosure
   slug: exabeam-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Exabeam Trust Center
   slug: exabeam-trust-center

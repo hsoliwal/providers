@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 6.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 4
 apis:
 - description: 'Market API for electronic placement in the London subscription market — create submissions and submission versions, upload Market Reform Contract and quote documents, add carriers and underwriters to '
@@ -253,7 +253,7 @@ modified: '2026-07-25'
 name: Lloyd's of London
 nav: Providers
 network: true
-overview: 'Lloyd''s of London publishes 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Reinsurance, Specialty Insurance, and London Market.
+overview: 'Lloyd''s of London is listed with 4 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Insurance, United Kingdom, Reinsurance, Specialty Insurance, and London Market.
 
 
   Lloyd''s of London''s developer surface includes authentication, code examples, changelog, sandbox, support, engineering blog, documentation, and 20 more developer resources.'
@@ -265,7 +265,7 @@ scopes:
   summary_line: 1 scope · authorizationCode/on-behalf-of
 score:
   band: thin
-  composite: 35.6
+  composite: 32.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 35.0
@@ -277,9 +277,9 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 42.9
-    discoverability: 83.3
+    discoverability: 80.4
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -289,7 +289,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 35.6
+  previous_composite: 32.2
   provenance:
     conformance: first-party
   regulatory:
@@ -297,9 +297,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 72.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 42.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -329,7 +329,7 @@ tags:
 - Underwriting
 - Claims
 - Delegated Authority
-- Brokers
+- Brokerage
 - Market Infrastructure
 - Standards
 - ACORD

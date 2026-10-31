@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.8
-  scored_at: '2026-09-20'
+  score: 22.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 18
   human_in_the_loop: 0
@@ -149,6 +149,15 @@ collections:
   name: freee API (Accounting and HR/Payroll)
   slug: open-freee
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.freee.co.jp/blog/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/freee/refs/heads/main/capabilities/freee-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/freee-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/freee/refs/heads/main/agentic-access/freee-agentic-access.yml
   title: ''
@@ -198,19 +207,23 @@ common:
 created: '2026-07-12'
 description: freee K.K. (freee株式会社) is a Japanese cloud business-management SaaS company. Its core products are freee Accounting (会計freee) - cloud accounting and bookkeeping - and freee HR & Payroll (人事労務freee) - HR, attendance, and payroll - plus invoicing (freee請求書) and sales management. freee exposes well-documented public REST APIs for both accounting and HR, authenticated with OAuth 2.0 (authorization code). Accounting endpoints live under https://api.freee.co.jp/api/1 and HR / payroll endpoints under https://api.freee.co.jp/hr/api/v1, and freee publishes machine-readable OpenAPI schemas for its platform.
 finops:
-- name: Freee Finops
+- has_sources: true
+  method: generated
+  name: Freee Finops
+  primary_unit: ''
   service_category: Business Applications
   slug: freee-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/freee.png
 layout: provider
-modified: '2026-07-12'
+modified: '2026-10-06'
 name: freee
 nav: Providers
 network: true
-overview: 'freee publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Account Items API, Attendance API, Companies API, and 9 more. Tagged areas include Accounting, Bookkeeping, Human Resources, Payroll, and Invoicing.
+overview: 'freee publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account Items API, Attendance API, Companies API, and 9 more. Tagged areas include Accounting, Bookkeeping, Human Resources, Payroll, and Invoicing.
 
 
-  freee''s developer surface includes authentication, documentation, and 8 more developer resources.'
+  freee''s developer surface includes engineering blog, authentication, documentation, and 9 more developer resources.'
 plans:
 - name: Freee Plans Pricing
   plan_count: 5
@@ -222,22 +235,22 @@ rate_limits:
   slug: freee-rate-limits
 score:
   band: thin
-  composite: 37.2
+  composite: 26.7
   coverage:
-    artifact_dirs: 10
-    catalog_earned: 60.0
+    artifact_dirs: 13
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.0
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 56.5
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 23.7
+    contract_quality: 51.2
+    developer_ergonomics: 32.1
+    discoverability: 66.1
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -245,7 +258,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 37.2
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -253,9 +266,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 12
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

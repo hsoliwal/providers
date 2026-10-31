@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The League platform API, served from the Kong-fronted gateway at api.league.com. Unauthenticated requests return an RFC-shaped JSON:API error document (content-type application/vnd.api+json) and carry
@@ -43,6 +43,11 @@ apis:
   slug: league-platform-api
 artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/league/refs/heads/main/rate-limits/league-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/league-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/league/refs/heads/main/security/league-trust-center.yml
   title: ''
@@ -134,10 +139,10 @@ modified: '2026-08-25'
 name: League
 nav: Providers
 network: true
-overview: 'League publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Health Benefits.
+overview: 'League is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Digital Health, and Health Benefits.
 
 
-  League''s developer surface includes signup flow, support, engineering blog, changelog, and 14 more developer resources.'
+  League''s developer surface includes signup flow, support, engineering blog, changelog, and 15 more developer resources.'
 plans:
 - name: League Plans Pricing
   plan_count: 0
@@ -149,7 +154,7 @@ rate_limits:
   slug: league-rate-limits
 score:
   band: thin
-  composite: 34.5
+  composite: 32.9
   coverage:
     artifact_dirs: 15
     catalog_earned: 45.0
@@ -157,15 +162,22 @@ score:
     catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 28.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 34.5
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 32.8
   provenance:
     conformance: first-party
   regulatory:
@@ -173,9 +185,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -213,5 +225,6 @@ tags:
 - Patient Engagement
 - Insurance
 - Software-as-a-Service
+- Canada
 website: https://league.com/
 ---

@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/palette/refs/heads/main/rate-limits/palette-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/palette-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -133,7 +138,7 @@ network: true
 overview: 'Palette is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Sales Compensation, Commission Management, and Revenue Operations.
 
 
-  Palette''s developer surface includes documentation, pricing, engineering blog, support, and 13 more developer resources.'
+  Palette''s developer surface includes documentation, pricing, engineering blog, support, and 14 more developer resources.'
 plans:
 - name: Palette Plans Pricing
   plan_count: 3
@@ -145,7 +150,7 @@ rate_limits:
   slug: palette-rate-limits
 score:
   band: thin
-  composite: 26.7
+  composite: 28.1
   coverage:
     artifact_dirs: 11
     catalog_earned: 39.0
@@ -153,19 +158,29 @@ score:
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 67.1
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 28.9
-  previous_composite: 26.7
+  previous_composite: 28.0
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 25.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -180,7 +195,7 @@ security:
 - kind: vulnerability-disclosure
   name: Palette Vulnerability Disclosure
   slug: palette-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 slug: palette
 tags:
 - Company

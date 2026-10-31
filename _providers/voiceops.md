@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'Live first-party remote Model Context Protocol server operated by VoiceOps. JSON-RPC 2.0 over HTTP (streamable HTTP transport), authenticated with a VoiceOps API key sent in the Authorization header. '
@@ -153,14 +153,14 @@ description: VoiceOps is an AI agent platform that analyzes customer conversatio
 image: https://cdn.prod.website-files.com/677e212e69df600d0a08b485/678abf9aa13aa718ca1f779f_voiceops_favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.voiceops.com over HTTP requiring an API key.
   name: VoiceOps MCP Server
-  slug: voiceops-mcp-server
+  slug: voiceops
 modified: '2026-08-14'
 name: VoiceOps
 nav: Providers
 network: true
-overview: 'VoiceOps publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Conversation Intelligence, Call Center, and Sales Coaching.
+overview: 'VoiceOps is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Apps, Conversation Intelligence, Call Center, and Sales Coaching.
 
 
   VoiceOps'' developer surface includes engineering blog, support, authentication, and 20 more developer resources.'
@@ -179,8 +179,8 @@ scopes:
   slug: voiceops-scopes
   summary_line: 6 scopes · authorizationCode
 score:
-  band: emerging
-  composite: 23.3
+  band: thin
+  composite: 27.2
   coverage:
     artifact_dirs: 16
     catalog_earned: 37.0
@@ -188,20 +188,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 79.6
+    discoverability: 78.3
     operational_transparency: 5.3
-  previous_composite: 23.3
+  previous_composite: 27.1
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

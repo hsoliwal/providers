@@ -16,7 +16,7 @@ agent_readiness:
   band_gated_from: agent-native
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: served
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 53.2
-  scored_at: '2026-09-20'
+  score: 52.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -76,7 +76,7 @@ apis:
   description: User and account management.
   name: Apify Users API
   slug: apify-users-api
-artifact_total: 60
+artifact_total: 62
 collections:
 - collection_type: postman
   name: Apify Actor Runs API
@@ -118,6 +118,26 @@ collections:
   name: Apify Actor Runs Users API
   slug: open-apify-users-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apify/refs/heads/main/plans/apify-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apify-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apify/refs/heads/main/rate-limits/apify-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apify-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apify/refs/heads/main/finops/apify-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apify-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apify/refs/heads/main/vendor-facets/apify-vendor-facets.yml
+  title: ''
+  type: VendorFacets
+  url: vendor-facets/apify-vendor-facets.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -202,6 +222,10 @@ common:
   title: ''
   type: LlmsText
   url: https://docs.apify.com/llms.txt
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/apify/apify-docs/blob/316b3fdb2727d974bbc60c6cf479156f7bbebd17/.spectral.yaml
 created: '2026-03-26'
 description: Apify is a full-stack web scraping and browser automation platform that enables developers to build, run, and scale web scrapers, crawlers, and data extraction tools using a cloud-based infrastructure with built-in proxy management, scheduling, and storage. The platform hosts thousands of ready-made Actors for scraping social media, search engines, maps, e-commerce sites, and more.
 examples:
@@ -235,9 +259,13 @@ features:
 - description: Apify MCP server enabling AI agents to use thousands of web scraping and automation tools.
   name: MCP Server
 finops:
-- name: Apify Finops
+- has_sources: false
+  method: generated
+  name: Apify Finops
+  primary_unit: ''
   service_category: API
   slug: apify-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apify.png
 json_schemas:
 - name: Actor
@@ -275,17 +303,20 @@ mcp_servers:
 - description: ''
   name: MCP Server
   slug: mcp-server
+- description: Remote MCP server at mcp.apify.com over HTTP.
+  name: Apify MCP Server
+  slug: apify
 modified: '2026-05-19'
 name: Apify
 nav: Providers
 network: true
-overview: 'Apify publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Actor Runs API, Actors API, Datasets API, and 3 more. Tagged areas include Actors, Browser Automation, Crawling, Data Aggregation, and Data Extraction.
+overview: 'Apify is listed with 6 APIs on the [APIs.io](https://apis.io/) network, including Actor Runs API, Actors API, Datasets API, and 3 more. Tagged areas include Actors, Browser Automation, Crawling, Data Aggregation, and Data Extraction.
 
 
-  The Apify catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
+  The Apify catalog on APIs.io includes 1 JSON-LD context and 3 Spectral governance rulesets.
 
 
-  Apify''s developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, signup flow, academy / training, and 13 more developer resources.'
+  Apify''s developer surface includes authentication, documentation, getting-started guide, pricing, engineering blog, signup flow, academy / training, and 18 more developer resources.'
 plans:
 - name: Apify Plans Pricing
   plan_count: 3
@@ -296,9 +327,22 @@ rate_limits:
   name: Apify Rate Limits
   slug: apify-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: provider
+  effective_rule_count: 41
+  extends:
+  - spectral:oas
+  name: Apify — apify docs rules
+  rule_count: 0
+  severity_counts:
+    error: 0
+    hint: 0
+    info: 0
+    warn: 0
+  slug: apify-apify-docs-spectral-rules
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apify API Rules
+  name: Apify — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -306,7 +350,8 @@ rules:
     info: 2
     warn: 3
   slug: apify-jsonschema-spectral-rules
-- effective_rule_count: 61
+- authorship: generated
+  effective_rule_count: 61
   extends:
   - spectral:oas
   name: Apify API Rules
@@ -319,23 +364,23 @@ rules:
   slug: apify-spectral-rules
 score:
   band: thin
-  composite: 36.5
+  composite: 35.5
   coverage:
-    artifact_dirs: 23
-    catalog_earned: 71.5
+    artifact_dirs: 25
+    catalog_earned: 67.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.5
+    catalog_gap: 47.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 32.9
+    access_clarity: 25.0
     contract_governance: 13.6
-    contract_quality: 27.3
-    developer_ergonomics: 63.1
-    discoverability: 81.5
+    contract_quality: 26.6
+    developer_ergonomics: 62.4
+    discoverability: 80.0
     operational_transparency: 10.5
-  previous_composite: 36.5
+  previous_composite: 37.0
   provenance:
     agentic_access: derived
     contracts:
@@ -344,8 +389,14 @@ score:
       marker_coverage: 100.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

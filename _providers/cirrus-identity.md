@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: na
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: na
     mcp_server: false
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 30.2
-  scored_at: '2026-09-20'
+  score: 27.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -47,7 +47,7 @@ apis:
 - baseURL: https://api.cirrusidentity.com/logs/v1
   baseurl_source: declared
   description: The endpoints API from Cirrus Identity — 2 operation(s) for endpoints.
-  name: Cirrus Identity endpoints API
+  name: Cirrus Identity Endpoints API
   slug: cirrus-identity-endpoints-api
 artifact_total: 8
 collections:
@@ -58,6 +58,10 @@ collections:
   name: Cirrus Identity Log endpoints API
   slug: open-cirrus-identity-endpoints-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.cirrusidentity.com/blog/rss.xml
 - group: start
   title: ''
   type: DeveloperPortal
@@ -193,20 +197,20 @@ created: '2026-07-17'
 description: Cirrus Identity provides managed identity and access management for higher education, connecting modern identity providers, federations, and legacy systems to standardize authentication across campus environments without replacing existing infrastructure. Its products include Cirrus Bridge (multilateral SAML & CAS for Entra ID, Okta, and Duo SSO), External User Sign-In, Trusted Federation & Affiliates Sign-In, a Slate applicant sign-in extension, and an Admin Console with event logs. Cirrus also publishes a REST Log API for programmatically retrieving authentication and service event logs, and maintains a suite of open-source SimpleSAMLphp modules on GitHub and Packagist.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/cirrus-identity.png
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Cirrus Identity
 nav: Providers
 network: true
-overview: 'Cirrus Identity publishes 1 API on the [APIs.io](https://apis.io/) network: endpoints API. Tagged areas include Company, Identity, Authentication, SSO, and SAML.
+overview: 'Cirrus Identity publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Endpoints API. Tagged areas include Company, Identity, Authentication, SSO, and SAML.
 
 
-  Cirrus Identity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 23 more developer resources.'
+  Cirrus Identity''s developer surface includes documentation, API reference, engineering blog, support, signup flow, authentication, and 24 more developer resources.'
 random_paper: 21
 score:
   band: developing
-  composite: 49.5
+  composite: 44.5
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 38.3
     catalog_earned_first_party: 0.0
     catalog_gap: 76.8
@@ -216,11 +220,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 8.3
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 13.2
-  previous_composite: 49.5
+  previous_composite: 44.5
   provenance:
     agentic_access: derived
     conformance: derived
@@ -236,9 +240,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 66.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -269,9 +273,9 @@ tags:
 - Authentication
 - SSO
 - SAML
-- OIDC
+- OpenID Connect
 - Higher Education
-- Identity Management
+- Identity and Access Management
 - Federation
 - Logs
 - Identity Federation

@@ -28,20 +28,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.1
-  scored_at: '2026-09-20'
+  score: 26.2
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 43
+- acting_count: 42
   human_in_the_loop: 0
   name: Zuper Agentic Access
   operation_count: 69
   slug: zuper-agentic-access
-  summary_line: 69 operations · 43 acting
+  summary_line: 69 operations · 42 acting
 api_count: 1
 apis:
 - baseURL: https://accounts.zuperpro.com/api
@@ -162,6 +162,11 @@ collections:
   name: Zuper REST Assets Webhooks API
   slug: open-zuper-webhooks-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/zuper/refs/heads/main/capabilities/zuper-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/zuper-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/zuper/refs/heads/main/agentic-access/zuper-agentic-access.yml
   title: ''
@@ -242,9 +247,13 @@ examples:
   name: Zuper Get Jobs Example
   slug: zuper-get-jobs-example
 finops:
-- name: Zuper Finops
+- has_sources: false
+  method: generated
+  name: Zuper Finops
+  primary_unit: ''
   service_category: ''
   slug: zuper-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/zuper.png
 json_schemas:
 - name: Zuper Asset
@@ -266,13 +275,13 @@ modified: '2026-06-13'
 name: Zuper
 nav: Providers
 network: true
-overview: 'Zuper publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Authentication API, Customers API, and 11 more. Tagged areas include Field Service Management, Scheduling, Dispatching, Invoicing, and Timesheets.
+overview: 'Zuper publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Authentication API, Customers API, and 11 more. Tagged areas include Field Service, Scheduling, Dispatching, Invoicing, and Timesheets.
 
 
   The Zuper catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Zuper''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  Zuper''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: Zuper Plans Pricing
   plan_count: 3
@@ -283,9 +292,10 @@ rate_limits:
   name: Zuper Rate Limits
   slug: zuper-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Zuper API Rules
+  name: Zuper — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -294,24 +304,24 @@ rules:
     warn: 4
   slug: zuper-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 47.4
+  band: thin
+  composite: 37.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 78.3
+    artifact_dirs: 17
+    catalog_earned: 57.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.8
+    catalog_gap: 57.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.3
   facets:
-    access_clarity: 47.4
+    access_clarity: 15.8
     contract_governance: 9.8
-    contract_quality: 65.1
+    contract_quality: 59.7
     developer_ergonomics: 32.1
-    discoverability: 68.5
-    operational_transparency: 60.5
-  previous_composite: 47.4
+    discoverability: 66.1
+    operational_transparency: 36.8
+  previous_composite: 45.6
   provenance:
     agentic_access: derived
     contracts:
@@ -319,9 +329,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -341,7 +357,7 @@ security:
   summary_line: SOC 2, ISO 27001
 slug: zuper
 tags:
-- Field Service Management
+- Field Service
 - Scheduling
 - Dispatching
 - Invoicing

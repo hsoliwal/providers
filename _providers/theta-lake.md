@@ -21,7 +21,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.2
-  scored_at: '2026-09-20'
+  score: 17.1
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://developer.thetalake.ai/api/v1
@@ -47,6 +47,10 @@ collections:
   name: API Collection
   slug: open-.refine-report
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://thetalake.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/theta-lake/refs/heads/main/security/theta-lake-domain-security.yml
   title: ''
@@ -155,14 +159,14 @@ created: '2026-07-17'
 description: Theta Lake is a cloud- and AI-native Digital Communications Governance and Archiving (DCGA) platform for compliance and security across unified communications. It captures, archives, supervises, and monitors electronic (eComms), audio (aComms), video (vComms), and AI (aiComms) interactions across 100+ certified integrations including Zoom, Microsoft Teams, Webex, RingCentral, Slack, Microsoft Copilot, and Anthropic. The Theta Lake API (v1) exposes data ingestion, records, unified search, supervision spaces, legal hold and legal matters, retention libraries, workflows, identities, exports, and audit logs, secured with OAuth2 client-credentials and JWT bearer tokens carrying fine-grained permission scopes.
 image: https://thetalake.com/wp-content/uploads/2018/05/TL_logo_transparent.png
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Theta Lake
 nav: Providers
 network: true
-overview: 'Theta Lake publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Communications Governance, Compliance, Archiving, Security, and Supervision.
+overview: 'Theta Lake publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network. Tagged areas include Communications Governance, Compliance, Archiving, Security, and Supervision.
 
 
-  Theta Lake''s developer surface includes documentation, API reference, signup flow, engineering blog, support, authentication, getting-started guide, and 16 more developer resources.'
+  Theta Lake''s developer surface includes documentation, API reference, signup flow, engineering blog, support, authentication, getting-started guide, and 17 more developer resources.'
 random_paper: 2
 scopes:
 - name: Theta Lake Scopes
@@ -171,23 +175,23 @@ scopes:
   summary_line: 70 scopes · clientCredentials
 score:
   band: thin
-  composite: 26.7
+  composite: 29.4
   coverage:
-    artifact_dirs: 18
+    artifact_dirs: 19
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 36.8
     contract_governance: 18.2
-    contract_quality: 25.2
+    contract_quality: 22.7
     developer_ergonomics: 16.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 0.0
-  previous_composite: 26.7
+  previous_composite: 29.3
   provenance:
     conformance: first-party
     contracts:
@@ -197,8 +201,14 @@ score:
       total: 2
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

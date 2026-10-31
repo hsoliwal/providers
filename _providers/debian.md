@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
+  score: 17.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -88,6 +88,26 @@ collections:
   name: Debian Ultimate Database (UDD) Web Tools
   slug: open-debian-udd-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/plans/debian-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/debian-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/rate-limits/debian-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/debian-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/finops/debian-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/debian-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/capabilities/debian-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/debian-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/debian/refs/heads/main/agentic-access/debian-agentic-access.yml
   title: ''
@@ -156,9 +176,13 @@ common:
 created: '2025-01-01'
 description: Debian is a free operating system distribution maintained by the Debian Project, a community of more than a thousand volunteers worldwide. Debian provides a number of developer-facing services including a source-code browsing API at sources.debian.org, the Bug Tracking System (BTS) at bugs.debian.org, and the Ultimate Debian Database (UDD) - a single Postgres database aggregating package, bug, Lintian, popcon, and reproducibility data for cross-cutting queries.
 finops:
-- name: Debian Finops
+- has_sources: false
+  method: generated
+  name: Debian Finops
+  primary_unit: ''
   service_category: API
   slug: debian-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/debian.png
 json_schemas:
 - name: Debian Bug Report
@@ -177,13 +201,13 @@ modified: '2026-05-19'
 name: Debian
 nav: Providers
 network: true
-overview: 'Debian publishes 3 APIs on the [APIs.io](https://apis.io/) network: Bugs API, Maintainers API, and Reproducibility API. Tagged areas include Bug Tracker, Debian, Linux, Open-Source, and Operating System.
+overview: 'Debian publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Bugs API, Maintainers API, and Reproducibility API. Tagged areas include Bug Tracker, Debian, Linux, Open Source, and Operating System.
 
 
   The Debian catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Debian''s developer surface includes engineering blog, documentation, and 13 more developer resources.'
+  Debian''s developer surface includes engineering blog, documentation, and 17 more developer resources.'
 plans:
 - name: Debian Plans Pricing
   plan_count: 3
@@ -194,9 +218,10 @@ rate_limits:
   name: Debian Rate Limits
   slug: debian-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Debian API Rules
+  name: Debian — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -204,10 +229,11 @@ rules:
     info: 1
     warn: 4
   slug: debian-jsonschema-spectral-rules
-- effective_rule_count: 46
+- authorship: unmarked
+  effective_rule_count: 46
   extends:
   - spectral:oas
-  name: Debian API Rules
+  name: Debian — sources api rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -217,23 +243,23 @@ rules:
   slug: debian-sources-api-rules
 score:
   band: thin
-  composite: 32.9
+  composite: 30.1
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 63.5
+    artifact_dirs: 16
+    catalog_earned: 65.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 36.5
-    catalog_max: 100.0
+    catalog_gap: 49.6
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.9
   facets:
-    access_clarity: 28.6
-    contract_governance: 28.8
-    contract_quality: 52.4
+    access_clarity: 18.4
+    contract_governance: 27.3
+    contract_quality: 47.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 10.5
-  previous_composite: 32.9
+  previous_composite: 32.0
   provenance:
     agentic_access: derived
     contracts:
@@ -241,8 +267,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -263,7 +295,7 @@ tags:
 - Bug Tracker
 - Debian
 - Linux
-- Open-Source
+- Open Source
 - Operating System
 - Package Management
 - Source Code

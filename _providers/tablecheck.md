@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -29,91 +29,91 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.8
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 22
+- acting_count: 20
   human_in_the_loop: 0
   name: Tablecheck Agentic Access
-  operation_count: 59
+  operation_count: 46
   slug: tablecheck-agentic-access
-  summary_line: 59 operations · 22 acting
+  summary_line: 46 operations · 20 acting
 api_count: 6
 apis:
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The availability API from TableCheck — 1 operation(s) for availability.
-  name: TableCheck availability API
+  name: TableCheck Availability API
   slug: tablecheck-availability-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The blockages API from TableCheck — 2 operation(s) for blockages.
-  name: TableCheck blockages API
+  name: TableCheck Blockages API
   slug: tablecheck-blockages-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The calendar API from TableCheck — 1 operation(s) for calendar.
-  name: TableCheck calendar API
+  name: TableCheck Calendar API
   slug: tablecheck-calendar-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The customers API from TableCheck — 3 operation(s) for customers.
-  name: TableCheck customers API
+  name: TableCheck Customers API
   slug: tablecheck-customers-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The franchises API from TableCheck — 2 operation(s) for franchises.
-  name: TableCheck franchises API
+  name: TableCheck Franchises API
   slug: tablecheck-franchises-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The membership_programs API from TableCheck — 2 operation(s) for membership_programs.
-  name: TableCheck membership_programs API
+  name: TableCheck Membership Programs API
   slug: tablecheck-membership-programs-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The memberships API from TableCheck — 2 operation(s) for memberships.
-  name: TableCheck memberships API
+  name: TableCheck Memberships API
   slug: tablecheck-memberships-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The pos_journals API from TableCheck — 3 operation(s) for pos_journals.
-  name: TableCheck pos_journals API
+  name: TableCheck Pos Journals API
   slug: tablecheck-pos-journals-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The reservation_flags API from TableCheck — 2 operation(s) for reservation_flags.
-  name: TableCheck reservation_flags API
+  name: TableCheck Reservation Flags API
   slug: tablecheck-reservation-flags-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The reservations API from TableCheck — 6 operation(s) for reservations.
-  name: TableCheck reservations API
+  name: TableCheck Reservations API
   slug: tablecheck-reservations-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The shops API from TableCheck — 3 operation(s) for shops.
-  name: TableCheck shops API
+  name: TableCheck Shops API
   slug: tablecheck-shops-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The table_status API from TableCheck — 2 operation(s) for table_status.
-  name: TableCheck table_status API
+  name: TableCheck Table Status API
   slug: tablecheck-table-status-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The tables API from TableCheck — 1 operation(s) for tables.
-  name: TableCheck tables API
+  name: TableCheck Tables API
   slug: tablecheck-tables-api
 - baseURL: https://api.tablecheck.com/api/availability/v1
   baseurl_source: declared
   description: The timetable API from TableCheck — 1 operation(s) for timetable.
-  name: TableCheck timetable API
+  name: TableCheck Timetable API
   slug: tablecheck-timetable-api
 artifact_total: 36
 collections:
@@ -224,16 +224,20 @@ common:
 created: '2026-07-05'
 description: TableCheck is a restaurant booking and guest-experience platform (founded 2011, headquartered in Tokyo, Japan) used by thousands of restaurants across 35+ countries to consolidate reservations, availability, guest CRM, memberships, and POS integration into one system. TableCheck exposes a production JSON/REST API, partitioned into components - Availability, Web Booking, Booking, CRM, POS, and Site Controller - under https://api.tablecheck.com/api. Access is partner-gated, and a per-environment secret_key is issued by the TableCheck API team on approval, while some components (notably the direct Booking API) are available only by special arrangement. Each component publishes an OpenAPI 3.0 description.
 finops:
-- name: Tablecheck Finops
+- has_sources: true
+  method: generated
+  name: Tablecheck Finops
+  primary_unit: ''
   service_category: Restaurant Reservation and Guest Management
   slug: tablecheck-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/tablecheck.png
 layout: provider
 modified: '2026-07-05'
 name: TableCheck
 nav: Providers
 network: true
-overview: 'TableCheck publishes 14 APIs on the [APIs.io](https://apis.io/) network, including availability API, blockages API, calendar API, and 11 more. Tagged areas include Restaurant, Reservations, Booking, Hospitality, and Availability.
+overview: 'TableCheck publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Availability API, Blockages API, Calendar API, and 11 more. Tagged areas include Restaurant, Reservations, Booking, Hospitality, and Availability.
 
 
   TableCheck''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
@@ -248,22 +252,22 @@ rate_limits:
   slug: tablecheck-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 26.5
   coverage:
     artifact_dirs: 12
-    catalog_earned: 59.0
+    catalog_earned: 44.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 56.0
+    catalog_gap: 71.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 0.0
-    contract_quality: 53.1
+    contract_quality: 48.3
     developer_ergonomics: 32.1
-    discoverability: 74.1
-    operational_transparency: 23.7
+    discoverability: 71.4
+    operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     countries:
@@ -271,7 +275,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 35.3
+  previous_composite: 32.5
   provenance:
     agentic_access: derived
     contracts:
@@ -279,9 +283,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

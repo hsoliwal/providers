@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 17.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -87,6 +87,26 @@ collections:
   name: Apache Geode REST API
   slug: open-apache-geode-rest
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/plans/apache-geode-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apache-geode-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/rate-limits/apache-geode-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apache-geode-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/finops/apache-geode-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apache-geode-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apache-geode/refs/heads/main/capabilities/apache-geode-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apache-geode-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -203,9 +223,13 @@ features:
 - description: High-performance C++ and .NET native client libraries for non-JVM applications.
   name: Native Clients
 finops:
-- name: Apache Geode Finops
+- has_sources: false
+  method: generated
+  name: Apache Geode Finops
+  primary_unit: ''
   service_category: API
   slug: apache-geode-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-geode.png
 integrations:
 - description: Geode-Spark connector for using Geode regions as Spark RDD/DataFrame data sources.
@@ -288,13 +312,13 @@ modified: '2026-05-19'
 name: Apache Geode
 nav: Providers
 network: true
-overview: 'Apache Geode publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Administration API, Functions API, Queries API, and 1 more. Tagged areas include Apache, Caching, Data Grid, Distributed Systems, and In-Memory.
+overview: 'Apache Geode publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Administration API, Functions API, Queries API, and 2 more. Tagged areas include Apache, Caching, Data Grid, Distributed Systems, and In-Memory.
 
 
   The Apache Geode catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Apache Geode''s developer surface includes documentation, getting-started guide, engineering blog, and 11 more developer resources.'
+  Apache Geode''s developer surface includes documentation, getting-started guide, engineering blog, and 15 more developer resources.'
 plans:
 - name: Apache Geode Plans Pricing
   plan_count: 3
@@ -305,9 +329,10 @@ rate_limits:
   name: Apache Geode Rate Limits
   slug: apache-geode-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apache Geode API Rules
+  name: Apache Geode — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -315,7 +340,8 @@ rules:
     info: 2
     warn: 3
   slug: apache-geode-jsonschema-spectral-rules
-- effective_rule_count: 55
+- authorship: generated
+  effective_rule_count: 55
   extends:
   - spectral:oas
   name: Apache Geode API Rules
@@ -328,26 +354,26 @@ rules:
   slug: apache-geode-spectral-rules
 score:
   band: thin
-  composite: 35.6
+  composite: 32.3
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 67.5
+    artifact_dirs: 17
+    catalog_earned: 63.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 47.5
+    catalog_gap: 51.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 54.5
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 49.8
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 26.3
   open_source:
     applies: true
     score: 40.0
-  previous_composite: 35.6
+  previous_composite: 33.7
   provenance:
     agentic_access: derived
     contracts:
@@ -360,9 +386,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 23.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 13.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -384,7 +410,7 @@ tags:
 - Data Grid
 - Distributed Systems
 - In-Memory
-- Open-Source
+- Open Source
 use_cases:
 - description: Replace Redis or Memcached with Geode for distributed session caching with ACID guarantees.
   name: Session Caching

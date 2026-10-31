@@ -25,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -36,15 +36,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 8
+- acting_count: 7
   human_in_the_loop: 0
   name: Niural Agentic Access
   operation_count: 15
   slug: niural-agentic-access
-  summary_line: 15 operations · 8 acting
+  summary_line: 15 operations · 7 acting
 api_count: 1
 apis:
 - baseURL: https://api-live.niural.com
@@ -258,7 +258,7 @@ modified: '2026-08-04'
 name: Niural
 nav: Providers
 network: true
-overview: 'Niural publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Authentication API, Contracts API, Invoices API, and 1 more. Tagged areas include Company, Payroll, Human Resources, Employer of Record, and Contractor Management.
+overview: 'Niural publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Authentication API, Contracts API, Invoices API, and 1 more. Tagged areas include Company, Payroll, Human Resources, Employer of Record, and Contractor Management.
 
 
   The Niural catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -275,8 +275,8 @@ rate_limits:
   name: Niural Rate Limits
   slug: niural-rate-limits
 score:
-  band: strong
-  composite: 54.8
+  band: developing
+  composite: 52.6
   coverage:
     artifact_dirs: 24
     catalog_earned: 57.0
@@ -288,11 +288,11 @@ score:
   facets:
     access_clarity: 77.6
     contract_governance: 4.5
-    contract_quality: 60.3
+    contract_quality: 55.1
     developer_ergonomics: 41.1
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 54.8
+  previous_composite: 52.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -306,11 +306,11 @@ score:
   regulatory:
     applies: true
     matched_via: tags
-    regime: Payments
-    regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

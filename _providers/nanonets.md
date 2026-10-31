@@ -25,7 +25,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: true
     error_semantics: documented
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: partial
@@ -35,8 +35,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 54.3
-  scored_at: '2026-09-20'
+  score: 53.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 16
   human_in_the_loop: 0
@@ -133,7 +133,7 @@ arazzos:
 - description: Add training images to an OCR model from public URLs, then start training.
   name: Nanonets Upload Training URLs and Train
   slug: nanonets-upload-training-urls-and-train-workflow
-artifact_total: 115
+artifact_total: 116
 collections:
 - collection_type: postman
   name: Nanonets External Integrations API
@@ -187,6 +187,11 @@ collections:
   name: Nanonets External Integrations OCR Train API
   slug: open-nanonets-ocr-train-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/nanonets/refs/heads/main/capabilities/nanonets-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/nanonets-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -488,9 +493,13 @@ features:
 - description: Tree- and graph-based reasoning harness for long-document retrieval with citations down to the pixel.
   name: Agentic RAG (nanoindex)
 finops:
-- name: Nanonets Finops
+- has_sources: true
+  method: generated
+  name: Nanonets Finops
+  primary_unit: run
   service_category: AI and Machine Learning
   slug: nanonets-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nanonets.png
 integrations:
 - description: ERP export connector for posting extracted data.
@@ -567,17 +576,21 @@ jsonld:
   property_count: 1
   slug: nanonets-context
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.nanonets.com over HTTP.
+  name: Nanonets MCP Server
+  slug: nanonets
 modified: '2026-05-25'
 name: Nanonets
 nav: Providers
 network: true
-overview: 'Nanonets publishes 10 APIs on the [APIs.io](https://apis.io/) network, including External Integrations API, File Assignment API, File Delete API, and 7 more. Tagged areas include Artificial Intelligence, OCR, Document AI, Intelligent Document Processing, and Data Extraction.
+overview: 'Nanonets publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including External Integrations API, File Assignment API, File Delete API, and 7 more. Tagged areas include Artificial Intelligence, OCR, Document AI, Intelligent Document Processing, and Data Extraction.
 
 
   The Nanonets catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Nanonets'' developer surface includes authentication, developer portal, developer console, documentation, getting-started guide, engineering blog, signup flow, and 50 more developer resources.'
+  Nanonets'' developer surface includes authentication, developer portal, developer console, documentation, getting-started guide, engineering blog, signup flow, and 51 more developer resources.'
 plans:
 - name: Nanonets Plans Pricing
   plan_count: 3
@@ -588,9 +601,10 @@ rate_limits:
   name: Nanonets Rate Limits
   slug: nanonets-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Nanonets API Rules
+  name: Nanonets — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -598,7 +612,8 @@ rules:
     info: 1
     warn: 4
   slug: nanonets-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: Nanonets API Rules
@@ -610,24 +625,24 @@ rules:
     warn: 4
   slug: nanonets-rules
 score:
-  band: strong
-  composite: 58.7
+  band: developing
+  composite: 51.0
   coverage:
-    artifact_dirs: 20
-    catalog_earned: 82.5
+    artifact_dirs: 22
+    catalog_earned: 66.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 32.5
+    catalog_gap: 48.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.6
   facets:
-    access_clarity: 73.7
-    contract_governance: 28.8
-    contract_quality: 65.3
+    access_clarity: 50.0
+    contract_governance: 27.3
+    contract_quality: 59.6
     developer_ergonomics: 65.5
-    discoverability: 59.3
-    operational_transparency: 44.7
-  previous_composite: 58.7
+    discoverability: 65.0
+    operational_transparency: 21.1
+  previous_composite: 57.6
   provenance:
     agentic_access: derived
     contracts:
@@ -636,9 +651,15 @@ score:
       marker_coverage: 0.0
       total: 10
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -666,8 +687,8 @@ tags:
 - Document AI
 - Intelligent Document Processing
 - Data Extraction
-- Workflow-Automation
-- Computer-Vision
+- Workflow Automation
+- Computer Vision
 - No-Code
 use_cases:
 - description: Multi-format invoice capture, 3-way matching, approval routing, and ERP posting (claimed 80% cost reduction).

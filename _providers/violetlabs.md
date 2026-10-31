@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 23.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for programmatic access to your Violet data. The Explore endpoint (POST /api/explore) accepts a rich query payload (keyword, filterModel, sort, grouping, pagination) and returns a paginated P
@@ -176,12 +176,12 @@ layout: provider
 mcp_servers:
 - description: Violet Labs operates an official hosted (remote) Model Context Protocol server that gives agents secure access to a workspace's structured Violet data — to answer questions, build insights, and assemb
   name: Violetlabs MCP Server
-  slug: violetlabs-mcp-server
+  slug: violet
 modified: '2026-07-21'
 name: Violetlabs
 nav: Providers
 network: true
-overview: 'Violetlabs publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hardware, Engineering, Manufacturing, and PLM.
+overview: 'Violetlabs is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Hardware, Engineering, Manufacturing, and PLM.
 
 
   Violetlabs'' developer surface includes documentation, API reference, getting-started guide, signup flow, engineering blog, pricing, support, and 22 more developer resources.'
@@ -192,8 +192,8 @@ scopes:
   slug: violetlabs-scopes
   summary_line: 1 scope · authorizationCode/clientCredentials
 score:
-  band: thin
-  composite: 38.8
+  band: developing
+  composite: 42.4
   coverage:
     artifact_dirs: 14
     catalog_earned: 37.0
@@ -201,20 +201,26 @@ score:
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 38.8
+  previous_composite: 42.3
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

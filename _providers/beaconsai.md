@@ -35,14 +35,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 32.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: A live, first-party Model Context Protocol server exposing a Beacons creator's own data to an agent. Discovered through the RFC 9728 Protected Resource Metadata document Beacons serves at https://beac
   name: Beacons Creator MCP Server
   slug: beacons-creator-mcp-server
-artifact_total: 8
+artifact_total: 7
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/beaconsai/refs/heads/main/rate-limits/beaconsai-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/beaconsai-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/beaconsai/refs/heads/main/security/beaconsai-domain-security.yml
   title: ''
@@ -144,20 +149,17 @@ description: Beacons.ai is an all-in-one creator business platform for creators,
 image: https://beacons.ai/_framerusercontent/assets/xYEVVu9ePuRZMJOTTdnZi0MEUEM.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at beacons.ai over streamable HTTP requiring OAuth.
   name: Beacons Creator MCP
   slug: beacons-creator-mcp
-- description: ''
-  name: Beacons.ai MCP Server
-  slug: beaconsai-mcp-server
 modified: '2026-08-13'
 name: Beacons.ai
 nav: Providers
 network: true
-overview: 'Beacons.ai publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Creator Economy, Link in Bio, Creator Website Builder, and Creator Storefront.
+overview: 'Beacons.ai is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Creator Economy, Link in Bio, Creator Website Builder, and Creator Storefront.
 
 
-  Beacons.ai''s developer surface includes pricing, support, engineering blog, signup flow, changelog, and 17 more developer resources.'
+  Beacons.ai''s developer surface includes pricing, support, engineering blog, signup flow, changelog, and 18 more developer resources.'
 plans:
 - name: Beaconsai Plans Pricing
   plan_count: 4
@@ -169,12 +171,12 @@ rate_limits:
   slug: beaconsai-rate-limits
 scopes:
 - name: Beaconsai Scopes
-  scope_count: 0
+  scope_count: 1
   slug: beaconsai-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 1 scope
 score:
   band: thin
-  composite: 33.3
+  composite: 36.1
   coverage:
     artifact_dirs: 17
     catalog_earned: 49.0
@@ -182,20 +184,26 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 34.2
-  previous_composite: 33.3
+  previous_composite: 36.0
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -224,6 +232,6 @@ tags:
 - Creator Monetization
 - Influencer Software
 - MCP
-- agent-native
+- Agent-Native
 website: https://beacons.ai
 ---

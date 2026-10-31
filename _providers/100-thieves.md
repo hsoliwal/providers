@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 29.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 7
   human_in_the_loop: 1
@@ -56,6 +56,10 @@ apis:
   slug: 100-thieves-storefront-json
 artifact_total: 8
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://100thieves.com/blogs/news.atom
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/100-thieves/refs/heads/main/security/100-thieves-domain-security.yml
   title: ''
@@ -154,17 +158,17 @@ description: '100 Thieves is an American lifestyle brand and gaming organization
 image: https://100thieves.com/cdn/shop/files/100-Thieves-arcade.jpg?v=1710263463
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at 100thieves.com over HTTP; 13 tools listed.
   name: 100 Thieves MCP Server
-  slug: 100-thieves-mcp-server
-modified: '2026-08-05'
+  slug: 100-thieves-ucp-shopping
+modified: '2026-10-06'
 name: 100 Thieves
 nav: Providers
 network: true
-overview: '100 Thieves publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Esports, Gaming, Apparel, and Retail.
+overview: '100 Thieves is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Esports, Gaming, Apparel, and Retail.
 
 
-  100 Thieves'' developer surface includes documentation, authentication, engineering blog, support, signup flow, and 15 more developer resources.'
+  100 Thieves'' developer surface includes documentation, authentication, engineering blog, support, signup flow, and 16 more developer resources.'
 random_paper: 4
 scopes:
 - name: 100 Thieves Scopes
@@ -173,35 +177,43 @@ scopes:
   summary_line: 4 scopes · authorizationCode
 score:
   band: thin
-  composite: 33.6
+  composite: 27.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 40.0
+    artifact_dirs: 18
+    catalog_earned: 35.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 75.0
+    catalog_gap: 80.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 34.2
     contract_governance: 18.2
-    contract_quality: 41.5
+    contract_quality: 10.4
     developer_ergonomics: 30.4
-    discoverability: 81.5
+    discoverability: 71.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 33.6
+  previous_composite: 27.7
   provenance:
     agentic_access: first-party
     conformance: first-party
-    mcp: first-party
+    mcp: platform-generated
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

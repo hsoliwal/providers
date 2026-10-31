@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST payment gateway for accepting online card payments in Azerbaijan. Covers payment creation and hosted checkout, card registration/tokenization and saved-card charges, refunds and reversals, pre-au
@@ -163,7 +163,7 @@ modified: '2026-07-19'
 name: Epoint
 nav: Providers
 network: true
-overview: 'Epoint publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Payment Gateway, Fintech, and E-Commerce.
+overview: 'Epoint is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Payment Gateway, Fintech, and E-Commerce.
 
 
   The Epoint catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -172,10 +172,10 @@ overview: 'Epoint publishes 1 API on the [APIs.io](https://apis.io/) network. Ta
   Epoint''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, and 18 more developer resources.'
 random_paper: 17
 score:
-  band: developing
-  composite: 40.3
+  band: thin
+  composite: 38.2
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -185,11 +185,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 64.3
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 7.9
-  previous_composite: 40.3
+  previous_composite: 38.2
   provenance:
     conformance: derived
     mcp: derived
@@ -198,9 +198,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 48.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.fmshrc.gov/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/federal-mine-safety-and-health-review-commission/refs/heads/main/security/federal-mine-safety-and-health-review-commission-domain-security.yml
   title: ''
@@ -95,18 +99,18 @@ created: '2024-12-03'
 description: The Federal Mine Safety and Health Review Commission (FMSHRC) is an independent United States adjudicative agency that provides administrative trial and appellate review of legal disputes arising under the Federal Mine Safety and Health Amendments Act of 1977 (the Mine Act). Its administrative law judges and its five-member Commission hear contests of the citations, orders and civil penalties issued by the Department of Labor's Mine Safety and Health Administration, along with miner discrimination complaints under section 105(c). FMSHRC does not regulate mining or enforce the Mine Act. It publishes decisions, dockets and Blue Book volumes as HTML and PDF on fmshrc.gov and runs a vendor-hosted electronic case management system for filing, but exposes no public API, developer program or machine-readable contract.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/federal-mine-safety-and-health-review-commission.png
 layout: provider
-modified: '2026-09-09'
+modified: '2026-10-06'
 name: Federal Mine Safety and Health Review Commission
 nav: Providers
 network: true
-overview: 'Federal Mine Safety and Health Review Commission is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal-Government, Mine Safety, Adjudication, Occupational Safety, and Legal.
+overview: 'Federal Mine Safety and Health Review Commission is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Federal Government, Mine Safety, Adjudication, Occupational Safety, and Legal.
 
 
-  Federal Mine Safety and Health Review Commission''s developer surface includes support, engineering blog, and 7 more developer resources.'
+  Federal Mine Safety and Health Review Commission''s developer surface includes support, engineering blog, and 8 more developer resources.'
 random_paper: 2
 score:
-  band: emerging
-  composite: 11.8
+  band: minimal
+  composite: 10.8
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -120,17 +124,22 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
-  previous_composite: 11.8
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 10.8
   regulatory:
     applies: true
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 29.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 15.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -148,7 +157,7 @@ security:
   summary_line: Hackerone · security.txt · contact published
 slug: federal-mine-safety-and-health-review-commission
 tags:
-- Federal-Government
+- Federal Government
 - Mine Safety
 - Adjudication
 - Occupational Safety

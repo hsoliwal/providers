@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 37
   human_in_the_loop: 2
   name: Polygon Id Agentic Access
-  operation_count: 69
+  operation_count: 71
   slug: polygon-id-agentic-access
-  summary_line: 69 operations · 37 acting · 2 human-in-the-loop
+  summary_line: 71 operations · 37 acting · 2 human-in-the-loop
 api_count: 2
 apis:
 - description: The Verifier SDK enables web2 and web3 applications to authenticate users based on verifiable credentials without accessing the underlying personal data. Verifiers compose ZK queries using the Query B
@@ -172,6 +172,26 @@ collections:
   name: Privado ID - Issuer Agent Schemas API
   slug: open-polygon-id-schemas-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/polygon-id/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/polygon-id/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/polygon-id/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/polygon-id/refs/heads/main/capabilities/polygon-id-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/polygon-id-capability-edges.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -277,9 +297,13 @@ examples:
   name: Verifier Sign In Request Onchain Sig V3
   slug: verifier-sign-in-request-onchain-sig-v3
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://www.privado.id/img/logo.png
 json_schemas:
 - name: AgentResponse
@@ -565,13 +589,13 @@ modified: 2026-06-14
 name: Polygon ID
 nav: Providers
 network: true
-overview: 'Polygon ID publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Agent API, Auth API, Config API, and 11 more. Tagged areas include Identity, Verifiable Credentials, Zero-Knowledge Proofs, Self-Sovereign Identity, and Decentralized Identity.
+overview: 'Polygon ID publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agent API, Auth API, Config API, and 14 more. Tagged areas include Identity, Verifiable Credentials, Zero-Knowledge Proofs, Self-Sovereign Identity, and Decentralized Identity.
 
 
   The Polygon ID catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Polygon ID''s developer surface includes authentication, documentation, engineering blog, YouTube channel, support, and 10 more developer resources.'
+  Polygon ID''s developer surface includes authentication, documentation, engineering blog, YouTube channel, support, and 14 more developer resources.'
 plans:
 - name: Plans
   plan_count: 3
@@ -582,9 +606,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Polygon ID API Rules
+  name: Polygon ID — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -594,23 +619,23 @@ rules:
   slug: polygon-id-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 36.8
+  composite: 29.1
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 60.3
+    artifact_dirs: 17
+    catalog_earned: 48.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 54.8
+    catalog_gap: 66.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 56.8
+    contract_quality: 51.6
     developer_ergonomics: 23.8
-    discoverability: 70.4
+    discoverability: 67.9
     operational_transparency: 18.4
-  previous_composite: 36.8
+  previous_composite: 34.7
   provenance:
     agentic_access: derived
     contracts:
@@ -618,9 +643,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 14
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

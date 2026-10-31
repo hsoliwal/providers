@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: verified
@@ -33,8 +33,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 33.8
-  scored_at: '2026-09-20'
+  score: 31.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 3
   human_in_the_loop: 0
@@ -47,57 +47,57 @@ apis:
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: Abuse Contact API.
-  name: IPinfo abuse API
+  name: IPinfo Abuse API
   slug: ipinfo-abuse-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: ASN API.
-  name: IPinfo asn API
+  name: IPinfo Asn API
   slug: ipinfo-asn-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IP to Phone Carrier Detection API.
-  name: IPinfo carrier API
+  name: IPinfo Carrier API
   slug: ipinfo-carrier-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IP to Company API.
-  name: IPinfo company API
+  name: IPinfo Company API
   slug: ipinfo-company-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: Hosted Domains API.
-  name: IPinfo domains API
+  name: IPinfo Domains API
   slug: ipinfo-domains-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: General API.
-  name: IPinfo general API
+  name: IPinfo General API
   slug: ipinfo-general-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IPinfo Core API - Core IP information service.
-  name: IPinfo core API
+  name: IPinfo Core API
   slug: ipinfo-ipinfo-core-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IPinfo Lite API - IPinfo's free API service for country and ASN information.
-  name: IPinfo lite API
+  name: IPinfo Lite API
   slug: ipinfo-ipinfo-lite-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IPinfo Max API - Most comprehensive IP intelligence with residential proxy detection.
-  name: IPinfo max API
+  name: IPinfo Max API
   slug: ipinfo-ipinfo-max-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IPinfo Plus API - Enhanced IP information service with mobile and anonymity detection.
-  name: IPinfo plus API
+  name: IPinfo Plus API
   slug: ipinfo-ipinfo-plus-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IPinfo Places API - Building-level IP intelligence for physical locations.
-  name: IPinfo places API
+  name: IPinfo Places API
   slug: ipinfo-places-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
@@ -112,7 +112,7 @@ apis:
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IP Ranges API.
-  name: IPinfo ranges API
+  name: IPinfo Ranges API
   slug: ipinfo-ranges-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
@@ -122,12 +122,12 @@ apis:
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: Single info API.
-  name: IPinfo single API
+  name: IPinfo Single API
   slug: ipinfo-single-api
 - baseURL: https://api.ipinfo.io
   baseurl_source: declared
   description: IP WHOIS API
-  name: IPinfo whois API
+  name: IPinfo Whois API
   slug: ipinfo-whois-api
 arazzos:
 - description: Resolve an IP to its abuse contact and the domains hosted on it.
@@ -262,6 +262,21 @@ collections:
   name: IPinfo.io OpenAPI Specification
   slug: open-ipinfo
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ipinfo/refs/heads/main/plans/ipinfo-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ipinfo-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ipinfo/refs/heads/main/rate-limits/ipinfo-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ipinfo-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ipinfo/refs/heads/main/finops/ipinfo-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/ipinfo-finops.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -576,9 +591,13 @@ features:
 - description: High-availability service with 50-200 ms typical response time.
   name: 99.999% Uptime
 finops:
-- name: Ipinfo Finops
+- has_sources: true
+  method: generated
+  name: Ipinfo Finops
+  primary_unit: ''
   service_category: Identity + Network Intelligence
   slug: ipinfo-finops
+  template: false
 image: https://ipinfo.io/static/images/logo.svg
 integrations:
 - description: IPinfo Splunk app and lookups for SIEM enrichment.
@@ -752,20 +771,20 @@ jsonld:
   slug: ipinfo-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.ipinfo.io over HTTP; 6 tools listed.
   name: IPinfo MCP Server
-  slug: ipinfo-mcp-server
+  slug: ipinfo
 modified: '2026-09-16'
 name: IPinfo
 nav: Providers
 network: true
-overview: 'IPinfo publishes 17 APIs on the [APIs.io](https://apis.io/) network, including abuse API, asn API, carrier API, and 14 more. Tagged areas include IP Intelligence, IP Geolocation, ASN, Privacy Detection, and VPN Detection.
+overview: 'IPinfo publishes 17 API contracts indexed on the [APIs.io](https://apis.io/) network, including Abuse API, Asn API, Carrier API, and 14 more. Tagged areas include IP Intelligence, IP Geolocation, ASN, Privacy Detection, and VPN Detection.
 
 
   The IPinfo catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  IPinfo''s developer surface includes authentication, CLI, signup flow, pricing, developer console, engineering blog, support, and 40 more developer resources.'
+  IPinfo''s developer surface includes authentication, CLI, signup flow, pricing, developer console, engineering blog, support, and 43 more developer resources.'
 plans:
 - name: Ipinfo Plans Pricing
   plan_count: 6
@@ -776,9 +795,10 @@ rate_limits:
   name: Ipinfo Rate Limits
   slug: ipinfo-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: IPinfo API Rules
+  name: IPinfo — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -786,7 +806,8 @@ rules:
     info: 1
     warn: 4
   slug: ipinfo-jsonschema-spectral-rules
-- effective_rule_count: 71
+- authorship: generated
+  effective_rule_count: 71
   extends:
   - spectral:oas
   name: IPinfo API Rules
@@ -798,24 +819,24 @@ rules:
     warn: 24
   slug: ipinfo-spectral-rules
 score:
-  band: exemplar
-  composite: 67.5
+  band: strong
+  composite: 56.2
   coverage:
-    artifact_dirs: 30
-    catalog_earned: 87.5
+    artifact_dirs: 31
+    catalog_earned: 68.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 27.5
+    catalog_gap: 46.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 77.6
-    contract_governance: 33.3
-    contract_quality: 70.3
+    access_clarity: 46.1
+    contract_governance: 31.8
+    contract_quality: 64.3
     developer_ergonomics: 89.3
-    discoverability: 70.4
-    operational_transparency: 42.1
-  previous_composite: 67.5
+    discoverability: 75.0
+    operational_transparency: 18.4
+  previous_composite: 64.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -830,10 +851,10 @@ score:
     matched_via: tags
     regime: Telecommunications
     regime_id: telecommunications
-    score: 34.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 20.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0

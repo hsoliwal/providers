@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 2
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.memrise.com/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -114,18 +118,18 @@ created: '2026-07-17'
 description: Memrise is a language-learning app founded in 2010 and headquartered in London, UK, trusted by 80 million learners across iOS, Android, and web. It is built around real native-speaker video, goal-based specialised courses (exams, work, relationships, travel), a spaced-repetition memory-science engine created by co-founder and Princeton neuroscientist Greg Detre, and AI conversation practice. Memrise offers courses in 149+ languages and has been profitable since 2016. It was surfaced as a portfolio company of Balderton Capital and Techstars and added to the API Evangelist network. Memrise is a consumer product and publishes no public developer API; this profile captures its public web, security, and machine-readable (llms.txt) surface.
 image: https://www.memrise.com/favicon.ico
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: memrise
 nav: Providers
 network: true
 overview: 'memrise is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Language Learning, Education, EdTech, and Mobile App.
 
 
-  memrise''s developer surface includes engineering blog, support, pricing, and 14 more developer resources.'
+  memrise''s developer surface includes engineering blog, support, pricing, and 15 more developer resources.'
 random_paper: 6
 score:
   band: emerging
-  composite: 17.6
+  composite: 15.9
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -139,23 +143,25 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-kingdom
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 17.6
+  previous_composite: 15.9
   regulatory:
     applies: true
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 37.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 18.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -13,7 +13,8 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-native
+  band: agent-ready
+  band_gated_from: agent-native
   dimensions:
     agent_card: conformant
     agent_skills: derived
@@ -24,7 +25,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: documented
     mcp_server: platform
@@ -35,8 +36,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.1
-  scored_at: '2026-09-20'
+  score: 39.6
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 5
   human_in_the_loop: 0
@@ -100,6 +101,11 @@ collections:
   name: Koala API
   slug: open-koala-io
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/koala-io/refs/heads/main/capabilities/koala-io-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/koala-io-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/koala-io/refs/heads/main/agentic-access/koala-io-agentic-access.yml
   title: ''
@@ -348,9 +354,13 @@ examples:
   name: Koala Io Profile Batch Track Example
   slug: koala-io-profile-batch-track-example
 finops:
-- name: Koala Io Finops
+- has_sources: true
+  method: generated
+  name: Koala Io Finops
+  primary_unit: ''
   service_category: Analytics and Sales Intelligence
   slug: koala-io-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/koala-io.png
 json_schemas:
 - name: KoalaAccountBatchRequest
@@ -366,20 +376,20 @@ jsonld:
   slug: koala-io-context
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at koala.mintlify.app over HTTP; 3 tools listed.
   name: Koala MCP Server
-  slug: koala-mcp-server
+  slug: koala-docs
 modified: '2026-08-13'
 name: Koala
 nav: Providers
 network: true
-overview: 'Koala publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Collection API, Deletion API, and 1 more. Tagged areas include Buyer Intent, Visitor Identification, De-anonymization, Enrichment, and Go-To-Market.
+overview: 'Koala publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Collection API, Deletion API, and 2 more. Tagged areas include Buyer Intent, Visitor Identification, De-anonymization, Data Enrichment, and Go-To-Market.
 
 
   The Koala catalog on APIs.io includes 1 event-driven AsyncAPI specification, 1 JSON-LD context, and 1 Spectral governance ruleset.
 
 
-  Koala''s developer surface includes authentication, documentation, pricing, code examples, API reference, getting-started guide, signup flow, and 43 more developer resources.'
+  Koala''s developer surface includes authentication, documentation, pricing, code examples, API reference, getting-started guide, signup flow, and 44 more developer resources.'
 plans:
 - name: Koala Io Plans Pricing
   plan_count: 4
@@ -390,9 +400,10 @@ rate_limits:
   name: Koala Io Rate Limits
   slug: koala-io-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Koala API Rules
+  name: Koala — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -402,23 +413,23 @@ rules:
   slug: koala-io-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 64.3
+  composite: 63.4
   coverage:
-    artifact_dirs: 29
-    catalog_earned: 80.3
+    artifact_dirs: 30
+    catalog_earned: 76.8
     catalog_earned_first_party: 24.0
-    catalog_gap: 34.8
+    catalog_gap: 38.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 85.5
-    contract_governance: 29.5
-    contract_quality: 71.3
+    access_clarity: 77.6
+    contract_governance: 28.0
+    contract_quality: 65.8
     developer_ergonomics: 55.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 64.3
+  previous_composite: 64.9
   provenance:
     agentic_access: derived
     conformance: derived
@@ -429,8 +440,20 @@ score:
       total: 6
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 2
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -448,7 +471,7 @@ security:
 - kind: vulnerability-disclosure
   name: Koala Io Vulnerability Disclosure
   slug: koala-io-vulnerability-disclosure
-  summary_line: disclosure policy published
+  summary_line: no policy recorded
 - kind: trust-center
   name: Koala Io Trust Center
   slug: koala-io-trust-center
@@ -458,9 +481,10 @@ tags:
 - Buyer Intent
 - Visitor Identification
 - De-anonymization
-- Enrichment
+- Data Enrichment
 - Go-To-Market
 - Sales Intelligence
 - B2B
+- A2A
 website: https://getkoala.com
 ---

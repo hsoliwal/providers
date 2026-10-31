@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -43,7 +43,7 @@ agentic_access:
   operation_count: 1
   slug: windfall-agentic-access
   summary_line: 1 operation · 1 acting
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://api.windfalldata.com/v1
   baseurl_source: declared
@@ -59,6 +59,10 @@ collections:
   name: Windfall Windfall API API
   slug: open-windfall-windfall-api-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.windfall.com/blog/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/windfall/refs/heads/main/overlays/windfall-openapi-overlay.yaml
   title: ''
@@ -203,19 +207,23 @@ common:
   title: ''
   type: Twitter
   url: https://twitter.com/windfalldata
+- group: company
+  title: ''
+  type: Website
+  url: https://windfall.com
 created: '2026-07-17'
 description: Windfall is an AI-powered people intelligence platform that helps go-to-market teams personalize workflows with wealth and career data, serving 1,500+ organizations across finance, retail, education, healthcare, and nonprofits. The Windfall API delivers enriched household and career data for a single person record in real time — submit basic PII and receive JSON in one HTTPS request. One operation (enrichRecord) returns up to 32 documented household fields (net worth and its confidence bounds, property, life events, philanthropy, political giving, financial signals) and 26 career fields (job title and level, job-change signals, employer firmographics, LinkedIn URL), with availability set by the customer's plan. US coverage only; the database is rebuilt weekly; rate limited to 5 requests/second; and a non-billed sandbox with 15 deterministic fictitious personas and a header-driven error simulator mirrors production for integration testing. Access is contractual — tokens are issued
   by Windfall and API credits were bundled into existing subscriptions when the API opened to all customers and partners in May 2026.
 image: https://api-docs.windfall.com/static/favicon.png
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Windfall
 nav: Providers
 network: true
-overview: 'Windfall publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Data Enrichment, Wealth Data, and People Intelligence.
+overview: 'Windfall publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Data Enrichment, Wealth Data, and People Intelligence.
 
 
-  Windfall''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 25 more developer resources.'
+  Windfall''s developer surface includes documentation, API reference, getting-started guide, engineering blog, support, authentication, sandbox, and 27 more developer resources.'
 plans:
 - name: Windfall Plans Pricing
   plan_count: 0
@@ -227,7 +235,7 @@ rate_limits:
   slug: windfall-rate-limits
 score:
   band: developing
-  composite: 49.0
+  composite: 49.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -239,11 +247,11 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 59.9
+    contract_quality: 54.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 74.1
     operational_transparency: 23.7
-  previous_composite: 49.0
+  previous_composite: 49.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -254,8 +262,18 @@ score:
       total: 1
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: ccpa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -285,5 +303,8 @@ tags:
 - Identity Resolution
 - Sales Intelligence
 - Marketing
+- Data
+- Net Worth
+- Sales
 website: https://www.windfall.com
 ---

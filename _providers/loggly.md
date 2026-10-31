@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'REST API (apiv2) for searching and retrieving log events: initiate a search to get an RSID, then page results via the events/iterate endpoints, enumerate indexed fields with the fields/facet API, and '
@@ -181,16 +181,16 @@ modified: '2026-07-20'
 name: Loggly
 nav: Providers
 network: true
-overview: 'Loggly publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Logging, Log Management, and Observability.
+overview: 'Loggly is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Developer Tools, Logging, Log Management, and Observability.
 
 
   Loggly''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 22 more developer resources.'
 random_paper: 16
 score:
   band: thin
-  composite: 34.2
+  composite: 36.3
   coverage:
-    artifact_dirs: 13
+    artifact_dirs: 14
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -202,14 +202,24 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 44.7
-  previous_composite: 34.2
+  previous_composite: 36.3
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: US
+      standard: hipaa
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 31.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

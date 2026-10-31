@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.flowserve.com/rss.xml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/flowserve/refs/heads/main/security/flowserve-vulnerability-disclosure.yml
   title: ''
@@ -75,11 +79,11 @@ jsonld:
   property_count: 15
   slug: flowserve-context
 layout: provider
-modified: '2026-04-28'
+modified: '2026-10-06'
 name: Flowserve
 nav: Providers
 network: true
-overview: 'Flowserve is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Industrial, Flow Control, IIoT, Manufacturing, and Fortune 1000.
+overview: 'Flowserve is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Industrial, Flow Control, Industrial IoT, Manufacturing, and Fortune 1000.
 
 
   The Flowserve catalog on APIs.io includes 1 JSON-LD context.'
@@ -104,7 +108,7 @@ score:
   band: minimal
   composite: 8.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 38.0
     catalog_earned_first_party: 0.0
     catalog_gap: 77.0
@@ -116,11 +120,17 @@ score:
     contract_governance: 0.0
     contract_quality: 14.7
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   previous_composite: 8.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -140,7 +150,7 @@ slug: flowserve
 tags:
 - Industrial
 - Flow Control
-- IIoT
+- Industrial IoT
 - Manufacturing
 - Fortune 1000
 website: https://www.flowserve.com

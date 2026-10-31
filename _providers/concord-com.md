@@ -30,13 +30,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -69,7 +69,7 @@ apis:
   description: The authenticated user and their organization memberships.
   name: Concord Users API
   slug: concord-com-users-api
-artifact_total: 17
+artifact_total: 18
 collections:
 - collection_type: open
   name: API Collection
@@ -90,6 +90,15 @@ collections:
   name: Concord API
   slug: open-concord-com
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.concord.app/blog
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/concord-com/refs/heads/main/capabilities/concord-com-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/concord-com-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/concord-com/refs/heads/main/agentic-access/concord-com-agentic-access.yml
   title: ''
@@ -135,19 +144,27 @@ common:
 created: '2026-07-12'
 description: Concord is a contract lifecycle management (CLM) platform for creating, negotiating, redlining, e-signing, storing, and tracking agreements in one place, with unlimited electronic signatures, automated templates, approval workflows, and reporting. Concord exposes a documented REST API (base https://api.concordnow.com/api/rest/1) that lets integrators read a user's organizations, list and retrieve agreements and their attachments and members, and pull organization reports, groups, and tags. Outbound webhooks notify external systems of agreement lifecycle events (fully approved, fully signed, expired, signature provided). API key generation is offered on paid plans only.
 finops:
-- name: Concord Com Finops
+- has_sources: true
+  method: generated
+  name: Concord Com Finops
+  primary_unit: ''
   service_category: Contract Lifecycle Management
   slug: concord-com-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/concord-com.png
 layout: provider
-modified: '2026-07-12'
+mcp_servers:
+- description: Remote MCP server at mcp.concord.app over HTTP.
+  name: Concord MCP Server
+  slug: concord-com
+modified: '2026-10-06'
 name: Concord
 nav: Providers
 network: true
-overview: 'Concord publishes 4 APIs on the [APIs.io](https://apis.io/) network, including Agreements API, Organizations API, Templates API, and 1 more. Tagged areas include Contract Management, Contract Lifecycle Management, Contracts, Agreements, and E-Signature.
+overview: 'Concord publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agreements API, Organizations API, Templates API, and 2 more. Tagged areas include Contract Management, Contract Lifecycle Management, Contracts, Agreements, and E-Signature.
 
 
-  Concord''s developer surface includes authentication, documentation, and 7 more developer resources.'
+  Concord''s developer surface includes engineering blog, authentication, documentation, and 8 more developer resources.'
 plans:
 - name: Concord Com Plans Pricing
   plan_count: 3
@@ -159,23 +176,23 @@ rate_limits:
   slug: concord-com-rate-limits
 score:
   band: emerging
-  composite: 24.1
+  composite: 14.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.8
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
     contract_quality: 0.0
-    developer_ergonomics: 29.8
-    discoverability: 68.5
-    operational_transparency: 31.6
-  previous_composite: 24.1
+    developer_ergonomics: 32.1
+    discoverability: 68.3
+    operational_transparency: 7.9
+  previous_composite: 22.5
   provenance:
     agentic_access: derived
     contracts:
@@ -184,9 +201,15 @@ score:
       marker_coverage: 0.0
       total: 4
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -199,7 +222,7 @@ security:
 - kind: domain-security
   name: Concord Com Domain Security
   slug: concord-com-domain-security
-  summary_line: TLSv1.3 · HSTS · DMARC
+  summary_line: TLSv1.3 · HSTS · DNSSEC · DMARC
 slug: concord-com
 tags:
 - Contract Management
@@ -207,7 +230,7 @@ tags:
 - Contracts
 - Agreements
 - E-Signature
-- Document-Management
+- Document Management
 - Legal
 - Workflows
 website: https://www.concord.app

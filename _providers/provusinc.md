@@ -34,10 +34,19 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/provusinc/refs/heads/main/rate-limits/provusinc-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/provusinc-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://provus.ai/feed/
 - group: company
   title: ''
   type: Website
@@ -107,14 +116,14 @@ description: Provus (Provusinc) is an agentic AI Configure, Price, Quote (CPQ) p
   prebuilt connectors and a Salesforce AppExchange managed package, and product help documentation is hosted on a Document360 knowledge base at docs.provus.ai that 302s the entire site to a login. Provus names an internal "Profet API" in its published sub-processor list, but that service is not documented, versioned, or reachable publicly.
 image: https://provus.ai/wp-content/uploads/2021/08/Provus-Blue-Logo.png
 layout: provider
-modified: '2026-08-13'
+modified: '2026-10-06'
 name: Provus
 nav: Providers
 network: true
 overview: 'Provus is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, CPQ, Services Quoting, Professional Services, and Pricing.
 
 
-  Provus'' developer surface includes documentation, engineering blog, pricing, signup flow, support, and 6 more developer resources.'
+  Provus'' developer surface includes documentation, engineering blog, pricing, signup flow, support, and 8 more developer resources.'
 plans:
 - name: Provusinc Plans Pricing
   plan_count: 2
@@ -126,7 +135,7 @@ rate_limits:
   slug: provusinc-rate-limits
 score:
   band: emerging
-  composite: 18.2
+  composite: 17.2
   coverage:
     artifact_dirs: 9
     catalog_earned: 35.0
@@ -140,11 +149,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
-  previous_composite: 18.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 17.2
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

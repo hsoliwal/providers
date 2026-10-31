@@ -28,20 +28,20 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 24.4
-  scored_at: '2026-09-20'
+  score: 22.5
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 47
+- acting_count: 38
   human_in_the_loop: 0
   name: Lancedb Agentic Access
   operation_count: 50
   slug: lancedb-agentic-access
-  summary_line: 50 operations · 47 acting
+  summary_line: 50 operations · 38 acting
 api_count: 1
 apis:
 - description: Distributed, multi-tenant multimodal lakehouse. Adds curation and deduplication, Python UDF feature engineering, materialized views, GPU-accelerated index build via cuVS, distributed query, and direct
@@ -118,6 +118,21 @@ collections:
   name: Lance Namespace Specification Data Transaction API
   slug: open-lancedb-transaction-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/plans/lancedb-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/lancedb-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/rate-limits/lancedb-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/lancedb-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/lancedb/refs/heads/main/finops/lancedb-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/lancedb-finops.yml
 - group: operate
   title: ''
   type: IssueTracker
@@ -222,9 +237,13 @@ examples:
   name: Lancedb Merge Insert Example
   slug: lancedb-merge-insert-example
 finops:
-- name: Lancedb Finops
+- has_sources: false
+  method: generated
+  name: Lancedb Finops
+  primary_unit: ''
   service_category: ''
   slug: lancedb-finops
+  template: true
 image: https://kinlane-productions2.s3.amazonaws.com/api-evangelist-network/lancedb/lancedb-logo.png
 json_schemas:
 - name: Lance Namespace
@@ -250,13 +269,13 @@ modified: '2026-05-25'
 name: LanceDB
 nav: Providers
 network: true
-overview: 'LanceDB publishes 4 APIs on the [APIs.io](https://apis.io/) network, including MaterializedView API, Namespace API, Table API, and 1 more. Tagged areas include Vector Database, Multi-Modal, Lance Format, Lakehouse, and RAG.
+overview: 'LanceDB publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including MaterializedView API, Namespace API, Table API, and 9 more. Tagged areas include Vector Database, Multi-Modal, Lance Format, Lakehouse, and RAG.
 
 
   The LanceDB catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  LanceDB''s developer surface includes authentication, documentation, engineering blog, GitHub presence, support, and 15 more developer resources.'
+  LanceDB''s developer surface includes authentication, documentation, engineering blog, GitHub presence, support, and 18 more developer resources.'
 plans:
 - name: Lancedb Plans Pricing
   plan_count: 4
@@ -267,9 +286,10 @@ rate_limits:
   name: Lancedb Rate Limits
   slug: lancedb-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: LanceDB API Rules
+  name: LanceDB — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -277,7 +297,8 @@ rules:
     info: 2
     warn: 3
   slug: lancedb-jsonschema-spectral-rules
-- effective_rule_count: 48
+- authorship: unmarked
+  effective_rule_count: 48
   extends:
   - spectral:oas
   name: LanceDB API Rules
@@ -295,23 +316,26 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 49.6
+  composite: 41.5
   coverage:
-    artifact_dirs: 19
-    catalog_earned: 77.5
+    artifact_dirs: 20
+    catalog_earned: 54.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 37.5
+    catalog_gap: 61.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.1
   facets:
-    access_clarity: 47.4
-    contract_governance: 28.8
-    contract_quality: 55.8
+    access_clarity: 15.8
+    contract_governance: 27.3
+    contract_quality: 50.7
     developer_ergonomics: 40.5
-    discoverability: 75.9
-    operational_transparency: 42.1
-  previous_composite: 49.6
+    discoverability: 64.3
+    operational_transparency: 26.3
+  open_source:
+    applies: true
+    score: 50.0
+  previous_composite: 48.6
   provenance:
     agentic_access: derived
     contracts:
@@ -319,9 +343,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 29.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -347,12 +377,13 @@ tags:
 - Lakehouse
 - RAG
 - Agent Memory
-- Open-Source
+- Open Source
 - Embeddings
 - Full-Text Search
 - Hybrid Search
 - Columnar Storage
 - Arrow
 - AI Infrastructure
+- Vector Search
 website: https://lancedb.com/
 ---

@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 31
-  human_in_the_loop: 0
+- acting_count: 23
+  human_in_the_loop: 1
   name: Cycognito Agentic Access
   operation_count: 43
   slug: cycognito-agentic-access
-  summary_line: 43 operations · 31 acting
+  summary_line: 43 operations · 23 acting · 1 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.platform.cycognito.com
@@ -147,6 +147,15 @@ collections:
   name: CyCognito API V1 Reference Assets Verify IPs API
   slug: open-cycognito-verify-ips-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.cycognito.com/blog/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/cycognito/refs/heads/main/capabilities/cycognito-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/cycognito-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -289,34 +298,34 @@ created: '2026-07-17'
 description: CyCognito is a cybersecurity company providing an external attack surface management (EASM) and exposure management platform. Its cloud-native platform continuously discovers, maps, and tests an organization's internet-exposed assets—domains, IPs, web apps, APIs, and cloud environments—to surface and validate critical exposures before attackers exploit them. The CyCognito API V1 is a REST API (API-key authenticated) that lets you query assets and issues, manage attack-surface scope, attribute assets to organizations, manage users and cloud connectors, run exports and executive reports, and verify the identity of scanner IPs. CyCognito is backed by Accel and Lightspeed Venture Partners.
 image: https://www.cycognito.com/images/social/banner-homepage-2400x1256-email.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: CyCognito
 nav: Providers
 network: true
-overview: 'CyCognito publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Assets API, Audit Logs API, Cloud Connectors API, and 9 more. Tagged areas include Company, Cybersecurity, Attack Surface Management, Exposure Management, and Security.
+overview: 'CyCognito publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assets API, Audit Logs API, Cloud Connectors API, and 9 more. Tagged areas include Company, Cybersecurity, Attack Surface Management, Exposure Management, and Security.
 
 
-  CyCognito''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, authentication, and 24 more developer resources.'
+  CyCognito''s developer surface includes documentation, API reference, signup flow, pricing, engineering blog, authentication, and 26 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 45.0
+  composite: 46.6
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 48.7
+    contract_quality: 44.0
     developer_ergonomics: 44.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 45.0
+  previous_composite: 46.5
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -327,8 +336,18 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -32,7 +32,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 35.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -43,17 +43,17 @@ agentic_access:
 api_count: 2
 apis:
 - baseURL: https://api.chucknorris.io
-  baseurl_source: declared
+  baseurl_source: spec
   description: Joke category metadata.
   name: chucknorris.io Categories API
   slug: chucknorris-io-categories-api
 - baseURL: https://api.chucknorris.io
-  baseurl_source: declared
+  baseurl_source: spec
   description: Chuck Norris jokes (facts) endpoints.
   name: chucknorris.io Jokes API
   slug: chucknorris-io-jokes-api
 - baseURL: https://api.chucknorris.io
-  baseurl_source: declared
+  baseurl_source: spec
   description: Full-text search across the joke corpus.
   name: chucknorris.io Search API
   slug: chucknorris-io-search-api
@@ -221,9 +221,13 @@ features:
 - description: All endpoints honor Accept text/plain for shell-friendly output.
   name: Plain-Text Variant
 finops:
-- name: Chucknorris Io Finops
+- has_sources: false
+  method: generated
+  name: Chucknorris Io Finops
+  primary_unit: ''
   service_category: ''
   slug: chucknorris-io-finops
+  template: true
 image: https://api.chucknorris.io/img/avatar/chuck-norris.png
 integrations:
 - description: Slack slash command integration referenced in the public docs.
@@ -282,7 +286,7 @@ modified: '2026-08-08'
 name: chucknorris.io
 nav: Providers
 network: true
-overview: 'chucknorris.io publishes 3 APIs on the [APIs.io](https://apis.io/) network: Categories API, Jokes API, and Search API. Tagged areas include Entertainment, Jokes, Chuck Norris, Open-Source, and Public APIs.
+overview: 'chucknorris.io publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network: Categories API, Jokes API, and Search API. Tagged areas include Entertainment, Jokes, Chuck Norris, Open Source, and Public APIs.
 
 
   The chucknorris.io catalog on APIs.io includes 2 JSON-LD contexts and 2 Spectral governance rulesets.
@@ -299,9 +303,10 @@ rate_limits:
   name: Chucknorris Io Rate Limits
   slug: chucknorris-io-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: chucknorris.io API Rules
+  name: chucknorris.io — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -309,7 +314,8 @@ rules:
     info: 1
     warn: 4
   slug: chucknorris-io-jsonschema-spectral-rules
-- effective_rule_count: 51
+- authorship: unmarked
+  effective_rule_count: 51
   extends:
   - spectral:oas
   name: chucknorris.io API Rules
@@ -321,24 +327,24 @@ rules:
     warn: 6
   slug: chucknorris-io-rules
 score:
-  band: developing
-  composite: 44.3
+  band: thin
+  composite: 36.9
   coverage:
     artifact_dirs: 16
-    catalog_earned: 75.5
+    catalog_earned: 60.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 39.5
+    catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.2
   facets:
-    access_clarity: 39.5
-    contract_governance: 28.8
-    contract_quality: 71.2
+    access_clarity: 15.8
+    contract_governance: 27.3
+    contract_quality: 64.9
     developer_ergonomics: 31.0
-    discoverability: 75.9
+    discoverability: 64.3
     operational_transparency: 10.5
-  previous_composite: 44.3
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     contracts:
@@ -346,8 +352,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -364,7 +376,7 @@ tags:
 - Entertainment
 - Jokes
 - Chuck Norris
-- Open-Source
+- Open Source
 - Public APIs
 use_cases:
 - description: Tutorial-friendly free public API for learning HTTP clients, SDKs, and AI tool patterns.

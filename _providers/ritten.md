@@ -35,8 +35,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
-api_count: 2
+  scored_at: '2026-10-17'
+api_count: 4
 apis:
 - baseURL: https://api.ritten.io/v1
   baseurl_source: declared
@@ -247,7 +247,7 @@ modified: '2026-08-15'
 name: Ritten
 nav: Providers
 network: true
-overview: 'Ritten publishes 15 APIs on the [APIs.io](https://apis.io/) network, including Calendar API, Cases API, Contacts API, and 12 more. Tagged areas include Company, Behavioral Health, EMR, EHR, and Healthcare.
+overview: 'Ritten publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Calendar API, Cases API, Contacts API, and 12 more. Tagged areas include Company, Behavioral Health, Electronic Health Records, Healthcare, and Practice Management.
 
 
   The Ritten catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -265,28 +265,28 @@ rate_limits:
   slug: ritten-rate-limits
 score:
   band: developing
-  composite: 52.4
+  composite: 50.3
   coverage:
     artifact_dirs: 23
-    catalog_earned: 49.0
+    catalog_earned: 52.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 66.0
+    catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 57.1
+    contract_quality: 52.2
     developer_ergonomics: 54.2
-    discoverability: 75.9
+    discoverability: 78.6
     operational_transparency: 42.1
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 52.4
+  previous_composite: 49.7
   provenance:
     conformance: first-party
     contracts:
@@ -305,9 +305,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 37.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -326,8 +326,7 @@ slug: ritten
 tags:
 - Company
 - Behavioral Health
-- EMR
-- EHR
+- Electronic Health Records
 - Healthcare
 - Practice Management
 - HIPAA
@@ -339,6 +338,6 @@ tags:
 - Behavioral Health API
 - Substance Use Treatment
 - 42 CFR Part 2
-- Electronic Health Records
+- Mental Health
 website: https://ritten.io
 ---

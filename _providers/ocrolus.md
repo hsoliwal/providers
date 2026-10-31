@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 34
   human_in_the_loop: 1
@@ -230,6 +230,20 @@ collections:
   name: Account Level Book Commands Webhooks API
   slug: open-ocrolus-webhooks-api
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/rate-limits/ocrolus-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ocrolus-rate-limits.yml
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.ocrolus.com/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/ocrolus/refs/heads/main/capabilities/ocrolus-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/ocrolus-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -440,27 +454,27 @@ created: '2026-07-17'
 description: 'Ocrolus is a fintech document-automation and analytics platform that helps lenders analyze financial documents - bank statements, pay stubs, tax forms and more - with high accuracy. Its API covers Classify, Capture, Detect and Analyze: document classification and data extraction, fraud and authenticity detection, cash-flow analytics, income calculation for mortgage and SMB/consumer lending, business verification, tag management and webhooks. Authentication is OAuth 2.0 client credentials issuing JWT access tokens, over a REST API at api.ocrolus.com.'
 image: https://www.ocrolus.com/wp-content/uploads/2025/10/social-home-page.jpg
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Ocrolus
 nav: Providers
 network: true
-overview: 'Ocrolus publishes 16 APIs on the [APIs.io](https://apis.io/) network, including Book Commands API, Book Queries API, Business history API, and 13 more. Tagged areas include Company, Fintech, Document Automation, Lending, and Underwriting.
+overview: 'Ocrolus publishes 16 API contracts indexed on the [APIs.io](https://apis.io/) network, including Book Commands API, Book Queries API, Business history API, and 13 more. Tagged areas include Company, Fintech, Document Automation, Lending, and Underwriting.
 
 
   The Ocrolus catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Ocrolus'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 38 more developer resources.'
+  Ocrolus'' developer surface includes documentation, API reference, getting-started guide, authentication, support, engineering blog, signup flow, and 41 more developer resources.'
 random_paper: 5
 rate_limits:
 - limit_count: 1
   name: Ocrolus Rate Limits
   slug: ocrolus-rate-limits
 score:
-  band: strong
-  composite: 57.7
+  band: developing
+  composite: 53.9
   coverage:
-    artifact_dirs: 25
+    artifact_dirs: 26
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
@@ -470,11 +484,11 @@ score:
   facets:
     access_clarity: 50.0
     contract_governance: 18.2
-    contract_quality: 61.3
+    contract_quality: 56.0
     developer_ergonomics: 42.3
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 69.7
-  previous_composite: 57.7
+  previous_composite: 53.9
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -498,9 +512,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 54.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -531,11 +545,11 @@ tags:
 - Lending
 - Underwriting
 - OCR
-- Fraud Detection
+- Fraud Prevention
 - Income Verification
 - Bank Statement Analysis
 - Mortgage
-- Machine-Learning
+- Machine Learning
 - Cash Flow Analytics
 website: https://ocrolus.com
 ---

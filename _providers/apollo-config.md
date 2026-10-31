@@ -15,7 +15,7 @@ agent_readiness:
   band: agent-aware
   dimensions:
     agent_card: false
-    agent_skills: true
+    agent_skills: unknown
     agentic_access: derived
     agentic_commerce: false
     auth_clarity: bearer
@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.4
-  scored_at: '2026-09-20'
+  score: 24.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 8
   human_in_the_loop: 0
@@ -109,6 +109,26 @@ collections:
   name: Apollo Config Open API
   slug: open-apollo-open-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apollo-config/refs/heads/main/plans/apollo-config-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apollo-config-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apollo-config/refs/heads/main/rate-limits/apollo-config-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apollo-config-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apollo-config/refs/heads/main/finops/apollo-config-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apollo-config-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/apollo-config/refs/heads/main/capabilities/apollo-config-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/apollo-config-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -240,9 +260,13 @@ features:
 - description: Official Helm chart for Kubernetes deployments.
   name: Helm Chart Deployment
 finops:
-- name: Apollo Config Finops
+- has_sources: false
+  method: generated
+  name: Apollo Config Finops
+  primary_unit: ''
   service_category: API
   slug: apollo-config-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apollo-config.png
 integrations:
 - description: Official Java client library via apollo-java SDK.
@@ -297,13 +321,13 @@ modified: '2026-05-19'
 name: Apollo Config
 nav: Providers
 network: true
-overview: 'Apollo Config publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Apps API, Clusters API, Items API, and 2 more. Tagged areas include Apache 2.0, Configuration Management, Ctrip, Distributed Systems, and Java.
+overview: 'Apollo Config publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Apps API, Clusters API, Items API, and 2 more. Tagged areas include Apache 2.0, Configuration Management, Ctrip, Distributed Systems, and Java.
 
 
   The Apollo Config catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Apollo Config''s developer surface includes authentication, documentation, getting-started guide, release notes, support, code examples, and 16 more developer resources.'
+  Apollo Config''s developer surface includes authentication, documentation, getting-started guide, release notes, support, code examples, and 20 more developer resources.'
 plans:
 - name: Apollo Config Plans Pricing
   plan_count: 3
@@ -314,9 +338,10 @@ rate_limits:
   name: Apollo Config Rate Limits
   slug: apollo-config-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apollo Config API Rules
+  name: Apollo Config — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -326,26 +351,26 @@ rules:
   slug: apollo-config-jsonschema-spectral-rules
 score:
   band: developing
-  composite: 47.2
+  composite: 44.4
   coverage:
-    artifact_dirs: 17
-    catalog_earned: 65.3
+    artifact_dirs: 19
+    catalog_earned: 61.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 49.8
+    catalog_gap: 53.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.4
   facets:
-    access_clarity: 15.8
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 66.4
-    developer_ergonomics: 52.4
-    discoverability: 59.3
+    contract_quality: 60.8
+    developer_ergonomics: 51.7
+    discoverability: 57.1
     operational_transparency: 36.8
   open_source:
     applies: true
     score: 100.0
-  previous_composite: 47.2
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     contracts:
@@ -353,8 +378,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -397,7 +428,7 @@ tags:
 - Distributed Systems
 - Java
 - Microservices
-- Open-Source
+- Open Source
 - Real-Time Configuration
 use_cases:
 - description: Manage centralized configuration for distributed microservice architectures.

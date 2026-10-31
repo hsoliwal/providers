@@ -29,86 +29,86 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 22.3
-  scored_at: '2026-09-20'
+  score: 20.4
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 30
+- acting_count: 29
   human_in_the_loop: 0
   name: Flowise Agentic Access
   operation_count: 46
   slug: flowise-agentic-access
-  summary_line: 46 operations · 30 acting
+  summary_line: 46 operations · 29 acting
 api_count: 1
 apis:
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The assistants API from Flowise — 2 operation(s) for assistants.
-  name: Flowise assistants API
+  name: Flowise Assistants API
   slug: flowise-assistants-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The attachments API from Flowise — 1 operation(s) for attachments.
-  name: Flowise attachments API
+  name: Flowise Attachments API
   slug: flowise-attachments-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The chatflows API from Flowise — 3 operation(s) for chatflows.
-  name: Flowise chatflows API
+  name: Flowise Chatflows API
   slug: flowise-chatflows-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The chatmessage API from Flowise — 1 operation(s) for chatmessage.
-  name: Flowise chatmessage API
+  name: Flowise Chatmessage API
   slug: flowise-chatmessage-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The document-store API from Flowise — 9 operation(s) for document-store.
-  name: Flowise document-store API
+  name: Flowise Document Store API
   slug: flowise-document-store-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The feedback API from Flowise — 2 operation(s) for feedback.
-  name: Flowise feedback API
+  name: Flowise Feedback API
   slug: flowise-feedback-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The leads API from Flowise — 2 operation(s) for leads.
-  name: Flowise leads API
+  name: Flowise Leads API
   slug: flowise-leads-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The ping API from Flowise — 1 operation(s) for ping.
-  name: Flowise ping API
+  name: Flowise Ping API
   slug: flowise-ping-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The prediction API from Flowise — 1 operation(s) for prediction.
-  name: Flowise prediction API
+  name: Flowise Prediction API
   slug: flowise-prediction-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The tools API from Flowise — 2 operation(s) for tools.
-  name: Flowise tools API
+  name: Flowise Tools API
   slug: flowise-tools-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The upsert-history API from Flowise — 1 operation(s) for upsert-history.
-  name: Flowise upsert-history API
+  name: Flowise Upsert History API
   slug: flowise-upsert-history-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The variables API from Flowise — 2 operation(s) for variables.
-  name: Flowise variables API
+  name: Flowise Variables API
   slug: flowise-variables-api
 - baseURL: http://localhost:3000/api/v1
   baseurl_source: declared
   description: The vector API from Flowise — 1 operation(s) for vector.
-  name: Flowise vector API
+  name: Flowise Vector API
   slug: flowise-vector-api
 artifact_total: 50
 collections:
@@ -158,6 +158,11 @@ collections:
   name: Flowise APIs
   slug: open-flowise
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/flowise/refs/heads/main/capabilities/flowise-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/flowise-capability-edges.yml
 - group: other
   title: ''
   type: ParentCompany
@@ -280,9 +285,13 @@ examples:
   name: Flowise Vector Upsert Example
   slug: flowise-vector-upsert-example
 finops:
-- name: Flowise Finops
+- has_sources: false
+  method: generated
+  name: Flowise Finops
+  primary_unit: ''
   service_category: API
   slug: flowise-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flowise.png
 json_schemas:
 - name: Assistant
@@ -323,13 +332,13 @@ modified: '2026-05-24'
 name: Flowise
 nav: Providers
 network: true
-overview: 'Flowise publishes 13 APIs on the [APIs.io](https://apis.io/) network, including assistants API, attachments API, chatflows API, and 10 more. Tagged areas include Agents, Agent Workflows, Artificial Intelligence, LLM, and Low-Code.
+overview: 'Flowise publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Assistants API, Attachments API, Chatflows API, and 10 more. Tagged areas include Agents, Agent Workflows, Artificial Intelligence, LLM, and Low-Code.
 
 
   The Flowise catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Flowise''s developer surface includes authentication, documentation, GitHub presence, pricing, signup flow, YouTube channel, and 19 more developer resources.'
+  Flowise''s developer surface includes authentication, documentation, GitHub presence, pricing, signup flow, YouTube channel, and 20 more developer resources.'
 plans:
 - name: Flowise Plans Pricing
   plan_count: 4
@@ -340,9 +349,10 @@ rate_limits:
   name: Flowise Rate Limits
   slug: flowise-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Flowise API Rules
+  name: Flowise — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -350,7 +360,8 @@ rules:
     info: 2
     warn: 3
   slug: flowise-jsonschema-spectral-rules
-- effective_rule_count: 47
+- authorship: unmarked
+  effective_rule_count: 47
   extends:
   - spectral:oas
   name: Flowise API Rules
@@ -362,24 +373,24 @@ rules:
     warn: 4
   slug: flowise-rules
 score:
-  band: developing
-  composite: 48.4
+  band: thin
+  composite: 37.1
   coverage:
-    artifact_dirs: 15
-    catalog_earned: 71.5
+    artifact_dirs: 18
+    catalog_earned: 50.5
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.5
+    catalog_gap: 64.5
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.7
   facets:
-    access_clarity: 63.2
+    access_clarity: 31.6
     contract_governance: 13.6
-    contract_quality: 62.9
+    contract_quality: 57.5
     developer_ergonomics: 31.0
-    discoverability: 59.3
-    operational_transparency: 36.8
-  previous_composite: 48.4
+    discoverability: 57.1
+    operational_transparency: 13.2
+  previous_composite: 45.8
   provenance:
     agentic_access: derived
     contracts:
@@ -387,9 +398,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 15.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -414,7 +431,7 @@ tags:
 - LangChain
 - RAG
 - Chatbots
-- Open-Source
+- Open Source
 - Node.js
 - TypeScript
 website: https://flowiseai.com/

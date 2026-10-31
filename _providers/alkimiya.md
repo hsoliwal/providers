@@ -23,10 +23,20 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/alkimiya/refs/heads/main/plans/alkimiya-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/alkimiya-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/alkimiya/refs/heads/main/rate-limits/alkimiya-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/alkimiya-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -90,7 +100,7 @@ network: true
 overview: 'Alkimiya is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Health, Healthcare, Clinical Decision Support, and Evidence-Based Medicine.
 
 
-  Alkimiya''s developer surface includes support, engineering blog, and 7 more developer resources.'
+  Alkimiya''s developer surface includes support, engineering blog, and 9 more developer resources.'
 plans:
 - name: Alkimiya Plans Pricing
   plan_count: 0
@@ -102,9 +112,9 @@ rate_limits:
   slug: alkimiya-rate-limits
 score:
   band: minimal
-  composite: 8.9
+  composite: 9.0
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -116,7 +126,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -126,20 +136,21 @@ score:
     regions:
     - europe
     - italy-southern-europe
-  previous_composite: 8.9
+  previous_composite: 9.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 12.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/alkimiya/refs/heads/main/screenshots/alkimiya-2026-10-11T093636.png
 security:
 - kind: domain-security
   name: Alkimiya Domain Security

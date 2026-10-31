@@ -24,7 +24,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: verified
     openapi_examples: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.7
-  scored_at: '2026-09-20'
+  score: 32.3
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 9
   human_in_the_loop: 2
@@ -80,7 +80,7 @@ apis:
   description: Asynchronous AI music supervisor for natural-language and image-based catalog matching.
   name: Soundstripe Supe Search API
   slug: soundstripe-supe-search-api
-artifact_total: 22
+artifact_total: 23
 collections:
 - collection_type: open
   name: API Collection
@@ -216,16 +216,24 @@ created: '2026-05-25'
 description: Soundstripe is a Nashville-based subscription platform that licenses royalty-free music, sound effects, and stock video to creators, agencies, podcasters, filmmakers, and enterprises. The catalog spans roughly 120,000 human-made tracks from Grammy-winning and independent artists, nearly 100,000 sound effects, and 100,000+ stock video clips (HD through 8K) — all pre-cleared under a single digital license that covers YouTube, Instagram, TikTok, podcasting, and commercial use, with stems and cut-downs available for many songs. Soundstripe also publishes a server-to-server REST API at api.soundstripe.com (JSON:API, token auth, 25 req/sec, signed webhooks) that exposes songs, sound effects, playlists, private playlists, and "Supe" — an AI music supervisor that matches catalog tracks to natural-language briefs, scene context, and reference imagery via asynchronous search and asset upload endpoints. Native integrations exist for Adobe Premiere Pro, Adobe Express, and Twitch; partner
   programs cover API embedding, music resale, and custom licensing for tool makers and platforms.
 finops:
-- name: Soundstripe Finops
+- has_sources: false
+  method: generated
+  name: Soundstripe Finops
+  primary_unit: ''
   service_category: ''
   slug: soundstripe-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/soundstripe.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.soundstripe.com over HTTP.
+  name: Soundstripe MCP Server
+  slug: soundstripe
 modified: '2026-05-25'
 name: Soundstripe
 nav: Providers
 network: true
-overview: 'Soundstripe publishes 7 APIs on the [APIs.io](https://apis.io/) network, including Categories API, Playlists API, Private Playlists API, and 4 more. Tagged areas include Music, Sound Effects, Stock Video, Royalty-Free, and Licensing.
+overview: 'Soundstripe publishes 7 API contracts indexed on the [APIs.io](https://apis.io/) network, including Categories API, Playlists API, Private Playlists API, and 4 more. Tagged areas include Music, Sound Effects, Stock Video, Royalty-Free, and Licensing.
 
 
   Soundstripe''s developer surface includes authentication, signup flow, pricing, engineering blog, YouTube channel, and 19 more developer resources.'
@@ -239,29 +247,31 @@ rate_limits:
   name: Soundstripe Rate Limits
   slug: soundstripe-rate-limits
 score:
-  band: developing
-  composite: 40.4
+  band: thin
+  composite: 30.5
   coverage:
     artifact_dirs: 13
-    catalog_earned: 60.0
+    catalog_earned: 42.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 55.0
+    catalog_gap: 73.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.3
   facets:
-    access_clarity: 61.8
+    access_clarity: 30.3
     contract_governance: 0.0
-    contract_quality: 55.3
+    contract_quality: 50.1
     developer_ergonomics: 17.9
-    discoverability: 75.9
-    operational_transparency: 28.9
+    discoverability: 75.0
+    operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 40.4
+  previous_composite: 37.8
   provenance:
     agentic_access: derived
     contracts:
@@ -270,9 +280,15 @@ score:
       marker_coverage: 0.0
       total: 7
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -297,8 +313,8 @@ tags:
 - Creators
 - Content Creation
 - Video Production
-- Podcasting
+- Podcasts
 - AI Music Supervisor
-- STEM
+- Stems
 website: https://www.soundstripe.com
 ---

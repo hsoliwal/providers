@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -114,6 +114,26 @@ collections:
   name: Footprint Analytics Data Chain Wallet API
   slug: open-footprint-wallet-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/footprint/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/footprint/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/footprint/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/footprint/refs/heads/main/capabilities/footprint-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/footprint-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/footprint/refs/heads/main/agentic-access/footprint-agentic-access.yml
   title: ''
@@ -173,9 +193,13 @@ examples:
   name: Wallet Nft Eligibility
   slug: wallet-nft-eligibility
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/footprint.png
 json_schemas:
 - name: Footprint Analytics Query Request
@@ -197,13 +221,13 @@ modified: '2026-06-14'
 name: Footprint Analytics
 nav: Providers
 network: true
-overview: 'Footprint Analytics publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Chain API, DeFi API, Events API, and 5 more. Tagged areas include Blockchain, DeFi, NFT, GameFi, and Token Analytics.
+overview: 'Footprint Analytics publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Chain API, DeFi API, Events API, and 5 more. Tagged areas include Blockchain, DeFi, NFT, GameFi, and Token Analytics.
 
 
   The Footprint Analytics catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  Footprint Analytics'' developer surface includes authentication, documentation, GitHub presence, engineering blog, pricing, status page, changelog, and 3 more developer resources.'
+  Footprint Analytics'' developer surface includes authentication, documentation, GitHub presence, engineering blog, pricing, status page, changelog, and 7 more developer resources.'
 plans:
 - name: Plans
   plan_count: 3
@@ -214,9 +238,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Footprint Analytics API Rules
+  name: Footprint Analytics — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -226,23 +251,23 @@ rules:
   slug: footprint-jsonschema-spectral-rules
 score:
   band: thin
-  composite: 35.2
+  composite: 27.5
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 63.3
+    artifact_dirs: 17
+    catalog_earned: 51.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 63.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 9.8
-    contract_quality: 62.7
+    contract_quality: 57.0
     developer_ergonomics: 13.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 13.2
-  previous_composite: 35.2
+  previous_composite: 33.1
   provenance:
     agentic_access: derived
     contracts:
@@ -250,9 +275,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -275,6 +306,6 @@ tags:
 - Token Analytics
 - On-Chain Data
 - Web3
-- Crypto
+- Cryptocurrency
 website: https://www.footprint.network/
 ---

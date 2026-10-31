@@ -34,14 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 44.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 136
+- acting_count: 115
   human_in_the_loop: 0
   name: Nationgraph Agentic Access
   operation_count: 253
   slug: nationgraph-agentic-access
-  summary_line: 253 operations · 136 acting
+  summary_line: 253 operations · 115 acting
 api_count: 1
 apis:
 - baseURL: https://api.nationgraph.com
@@ -633,7 +633,7 @@ modified: '2026-08-14'
 name: NationGraph
 nav: Providers
 network: true
-overview: 'NationGraph publishes 56 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Automations API, Budgets API, and 53 more. Tagged areas include Company, Sales Intelligence, Public Sector, Government, and SLED.
+overview: 'NationGraph publishes 56 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Automations API, Budgets API, and 53 more. Tagged areas include Company, Sales Intelligence, Public Sector, Government, and SLED.
 
 
   NationGraph''s developer surface includes authentication, documentation, support, engineering blog, and 23 more developer resources.'
@@ -648,14 +648,14 @@ rate_limits:
   slug: nationgraph-rate-limits
 scopes:
 - name: Nationgraph Scopes
-  scope_count: 0
+  scope_count: 5
   slug: nationgraph-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 5 scopes
 score:
   band: developing
-  composite: 48.9
+  composite: 43.4
   coverage:
-    artifact_dirs: 23
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -665,11 +665,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 18.2
-    contract_quality: 49.2
+    contract_quality: 44.3
     developer_ergonomics: 30.4
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 2.6
-  previous_composite: 48.9
+  previous_composite: 43.4
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -685,9 +685,9 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 74.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 57
+- acting_count: 56
   human_in_the_loop: 5
   name: Replicas Agentic Access
   operation_count: 99
   slug: replicas-agentic-access
-  summary_line: 99 operations · 57 acting · 5 human-in-the-loop
+  summary_line: 99 operations · 56 acting · 5 human-in-the-loop
 api_count: 1
 apis:
 - baseURL: https://api.tryreplicas.com
@@ -110,7 +110,7 @@ apis:
   description: Manage interactive terminal sessions in active workspaces
   name: Replicas Terminal API
   slug: replicas-terminal-api
-artifact_total: 32
+artifact_total: 33
 asyncapis:
 - description: ''
   name: Replicas Webhooks
@@ -156,6 +156,16 @@ collections:
   name: Replica Analytics Terminal API
   slug: open-replicas-terminal-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/replicas/refs/heads/main/plans/replicas-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/replicas-plans-pricing.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/replicas/refs/heads/main/capabilities/replicas-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/replicas-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/replicas/refs/heads/main/overlays/replicas-openapi-overlay.yaml
   title: ''
@@ -300,38 +310,42 @@ layout: provider
 mcp_servers:
 - description: Official Replicas MCP server for managing cloud workspaces (replicas) for AI coding agents from MCP clients such as Claude Desktop, Claude Code, and Poke.
   name: Replicas MCP Server
-  slug: replicas-mcp-server
+  slug: replicas
 modified: '2026-07-20'
 name: Replicas
 nav: Providers
 network: true
-overview: 'Replicas publishes 13 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, API Keys API, Automation API, and 10 more. Tagged areas include Company, Artificial Intelligence, Coding Agents, Developer Tools, and Automation.
+overview: 'Replicas publishes 13 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, API Keys API, Automation API, and 10 more. Tagged areas include Company, Artificial Intelligence, Coding Agents, Developer Tools, and Automation.
 
 
   The Replicas catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Replicas'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, GitHub presence, and 23 more developer resources.'
+  Replicas'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, engineering blog, GitHub presence, and 25 more developer resources.'
+plans:
+- name: Replicas Plans Pricing
+  plan_count: 5
+  slug: replicas-plans-pricing
 random_paper: 15
 score:
-  band: developing
-  composite: 50.8
+  band: strong
+  composite: 57.7
   coverage:
-    artifact_dirs: 21
-    catalog_earned: 37.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 78.0
+    artifact_dirs: 23
+    catalog_earned: 49.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 44.7
+    access_clarity: 76.3
     contract_governance: 4.5
-    contract_quality: 64.5
+    contract_quality: 59.1
     developer_ergonomics: 66.1
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 39.5
-  previous_composite: 50.8
+  previous_composite: 51.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -342,9 +356,15 @@ score:
       total: 13
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 28.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: true
     score: 0.0

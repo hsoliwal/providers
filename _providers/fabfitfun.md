@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/fabfitfun/refs/heads/main/security/fabfitfun-domain-security.yml
@@ -69,6 +69,10 @@ created: '2026-07-17'
 description: FabFitFun is a members-only lifestyle subscription company that delivers curated seasonal boxes of full-size beauty, fashion, wellness, and home products from premium brands, plus a members' community, customization, and weekly flash-sale shopping. Founded in Los Angeles and backed by 500 Global, Bond Capital, and Kleiner Perkins, FabFitFun serves over one million members with seasonal boxes valued up to $350 for as low as $65 per season. The company operates a direct-to-consumer commerce website, a members' account and box-customization experience, a support/help center, and the FabFitFun Magazine content property. As of this profile FabFitFun publishes no public developer portal, API documentation, or API reference; this entry captures its public web and legal surface plus a probed domain-security posture, and remains a portfolio-sourced lead for further enrichment.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/fabfitfun.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.fabfitfun.com over HTTP.
+  name: FabFitFun MCP Server
+  slug: fabfitfun
 modified: '2026-07-19'
 name: FabFitFun
 nav: Providers
@@ -80,27 +84,33 @@ overview: 'FabFitFun is profiled on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 3
 score:
   band: minimal
-  composite: 7.6
+  composite: 7.0
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 7.6
+  previous_composite: 6.9
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

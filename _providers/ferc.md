@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 31.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 1
@@ -44,7 +44,7 @@ agentic_access:
   operation_count: 18
   slug: ferc-agentic-access
   summary_line: 18 operations · 2 acting · 1 human-in-the-loop
-api_count: 2
+api_count: 3
 apis:
 - baseURL: https://api.data.ferc.gov/v1
   baseurl_source: declared
@@ -298,7 +298,7 @@ modified: '2026-09-16'
 name: FERC
 nav: Providers
 network: true
-overview: 'FERC publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Data API, Data Assets API, Details API, and 5 more. Tagged areas include Energy, United States, Energy Markets, Electricity, and Natural Gas.
+overview: 'FERC publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Data API, Data Assets API, Details API, and 5 more. Tagged areas include Energy, United States, Energy Markets, Electricity, and Natural Gas.
 
 
   FERC''s developer surface includes authentication, code examples, changelog, sandbox, developer console, developer portal, documentation, and 35 more developer resources.'
@@ -309,21 +309,21 @@ rate_limits:
   slug: ferc-rate-limits
 score:
   band: developing
-  composite: 47.6
+  composite: 44.7
   coverage:
     artifact_dirs: 23
-    catalog_earned: 45.0
+    catalog_earned: 48.0
     catalog_earned_first_party: 8.0
-    catalog_gap: 70.0
+    catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.6
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 35.8
+    contract_quality: 33.2
     developer_ergonomics: 64.9
-    discoverability: 68.5
+    discoverability: 71.4
     operational_transparency: 47.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -332,7 +332,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 47.6
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -348,9 +348,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

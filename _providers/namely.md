@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 24.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://{company}.namely.com/api/v1
@@ -137,6 +137,15 @@ apis:
   slug: namely-teams-api
 artifact_total: 23
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://namely.com/feed/
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/namely/refs/heads/main/capabilities/namely-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/namely-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/namely/refs/heads/main/security/namely-domain-security.yml
   title: ''
@@ -283,14 +292,14 @@ description: Namely is a mid-market Human Capital Management (HCM) platform comb
   combined Vensure Employer Solutions / PrismHR organisation in September 2022.
 image: https://namely.com/wp-content/uploads/2023/11/Namely.svg
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Namely
 nav: Providers
 network: true
-overview: 'Namely publishes 19 APIs on the [APIs.io](https://apis.io/) network, including Comments API, Company Info API, Company Resources API, and 16 more. Tagged areas include Human Resources, HCM, Payroll, Employee Data, and Onboarding.
+overview: 'Namely publishes 19 API contracts indexed on the [APIs.io](https://apis.io/) network, including Comments API, Company Info API, Company Resources API, and 16 more. Tagged areas include Human Resources, HCM, Payroll, Employee Data, and Onboarding.
 
 
-  Namely''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 24 more developer resources.'
+  Namely''s developer surface includes documentation, API reference, getting-started guide, authentication, engineering blog, support, pricing, and 26 more developer resources.'
 plans:
 - name: Namely Plans Pricing
   plan_count: 4
@@ -302,9 +311,9 @@ rate_limits:
   slug: namely-rate-limits
 score:
   band: strong
-  composite: 56.9
+  composite: 56.4
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 23
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -314,11 +323,11 @@ score:
   facets:
     access_clarity: 69.7
     contract_governance: 18.2
-    contract_quality: 48.3
+    contract_quality: 43.9
     developer_ergonomics: 73.2
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 55.3
-  previous_composite: 56.9
+  previous_composite: 56.4
   provenance:
     conformance: first-party
     contracts:
@@ -328,8 +337,14 @@ score:
       total: 19
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -359,5 +374,6 @@ tags:
 - Identity Provisioning
 - Workforce Management
 - Identity Federation
+- Employee Benefits
 website: https://namely.com/
 ---

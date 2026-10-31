@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.drivio.in/feed.xml
 - group: company
   title: ''
   type: Website
@@ -79,18 +83,18 @@ created: '2026-07-17'
 description: Drivio (Drivio Technologies Pvt Ltd) is a tech-enabled, omni-channel two-wheeler financing marketplace in India that connects motorcycle, scooter, and electric-vehicle buyers with banks and NBFCs. Founded in 2022 by Saurabh Tripathi and Ankur Bhardwaj and headquartered in the Delhi NCR region (Gurugram / New Delhi), the platform offers EMI calculators, instant eligibility checks, curated finance offers, vehicle comparison, and same-day loan approval and disbursal through lending partners including IDFC First Bank, Bajaj Auto Credit, L&T Financial Services, HDB Financial Services, Moneyplus Financial Services, and Arthmate. Drivio is an ISO/IEC 27001 certified company and is backed by 500 Global.
 image: https://www.drivio.in/images/logo.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Drivio
 nav: Providers
 network: true
-overview: 'Drivio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial-Services, Lending, Fintech, and Two-Wheeler Financing.
+overview: 'Drivio is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Financial Services, Lending, Fintech, and Two-Wheeler Financing.
 
 
-  Drivio''s developer surface includes engineering blog and 8 more developer resources.'
+  Drivio''s developer surface includes engineering blog and 9 more developer resources.'
 random_paper: 15
 score:
   band: emerging
-  composite: 14.2
+  composite: 15.2
   coverage:
     artifact_dirs: 6
     catalog_earned: 27.0
@@ -104,7 +108,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -113,11 +117,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - india-south-asia
-  previous_composite: 14.2
+  previous_composite: 15.2
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 23.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -132,7 +142,7 @@ security:
 slug: drivio
 tags:
 - Company
-- Financial-Services
+- Financial Services
 - Lending
 - Fintech
 - Two-Wheeler Financing

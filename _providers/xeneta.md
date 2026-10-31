@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Airline reports API (Selfie) serving rates, chargeable weight, load factor, and capacity reports as CSV files in ZIP archives. Airlines use a branded host (https://{airline}.useselfie.com/api/selfie/v
@@ -62,6 +62,10 @@ collections:
   name: xeneta-api-30 Air Ocean API
   slug: open-xeneta-ocean-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.xeneta.com/blog/rss.xml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/xeneta/refs/heads/main/capabilities/xeneta-capability-edges.yml
   title: ''
@@ -198,18 +202,18 @@ created: '2026-07-17'
 description: Xeneta is an ocean and air freight rate benchmarking and market analytics platform headquartered in Oslo, Norway. It crowdsources contracted freight rates from shippers and forwarders into the world's largest rate database, and its REST API (v3.0) exposes ocean and air market rates, your own contracted prices, carrier spread, estimated rates, capacity, carbon emissions, and schedule reliability data, plus a separate airline reports API for airlines, shippers, and freight forwarders.
 image: https://files.readme.io/f8b1664-xeneta-favicon.ico
 layout: provider
-modified: '2026-07-21'
+modified: '2026-10-06'
 name: Xeneta
 nav: Providers
 network: true
-overview: 'Xeneta publishes 2 APIs on the [APIs.io](https://apis.io/) network: Air API and Ocean API. Tagged areas include Freight, Shipping, Logistics, Ocean Freight, and Air Freight.
+overview: 'Xeneta publishes 3 API contracts indexed on the [APIs.io](https://apis.io/) network, including Air API, Ocean API, and 1 more. Tagged areas include Freight, Shipping, Logistics, Ocean Freight, and Air Freight.
 
 
-  Xeneta''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, changelog, and 22 more developer resources.'
+  Xeneta''s developer surface includes authentication, documentation, API reference, getting-started guide, support, engineering blog, changelog, and 23 more developer resources.'
 random_paper: 7
 score:
   band: developing
-  composite: 44.7
+  composite: 41.9
   coverage:
     artifact_dirs: 20
     catalog_earned: 37.0
@@ -221,17 +225,19 @@ score:
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
-    contract_quality: 54.4
+    contract_quality: 49.0
     developer_ergonomics: 37.5
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 22.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - norway
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
     - nordics
-  previous_composite: 44.7
+  previous_composite: 41.9
   provenance:
     conformance: first-party
     contracts:
@@ -246,9 +252,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 15.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The OpenID Connect / OAuth 2.0 authorization server that authenticates E.ON Next customers into the online account and mobile app. It is an Auth0-hosted E.ON group CIAM tenant (certificate CN eon-next
@@ -136,7 +136,7 @@ modified: '2026-07-27'
 name: E.ON Next
 nav: Providers
 network: true
-overview: 'E.ON Next publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
+overview: 'E.ON Next is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, United Kingdom, Utilities, Electricity, and Gas.
 
 
   E.ON Next''s developer surface includes authentication, engineering blog, support, pricing, and 15 more developer resources.'
@@ -147,10 +147,10 @@ scopes:
   slug: eon-next-scopes
   summary_line: 14 scopes · authorizationCode/implicit/clientCredentials/deviceCode
 score:
-  band: thin
-  composite: 26.5
+  band: emerging
+  composite: 23.6
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -162,7 +162,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -172,7 +172,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 26.5
+  previous_composite: 23.6
   provenance:
     conformance: first-party
   regulatory:
@@ -180,9 +180,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 59.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

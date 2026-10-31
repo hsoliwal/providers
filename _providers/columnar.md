@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 3.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://columnar.tech/blog/rss.xml
 - group: company
   title: ''
   type: Website
@@ -106,18 +110,18 @@ created: '2026-07-17'
 description: Columnar is a data-infrastructure company advancing open standards for database connectivity. It builds and maintains tooling around ADBC (Apache Arrow Database Connectivity), including dbc — a cross-platform command-line package manager that installs and manages ADBC drivers across macOS, Linux, and Windows and eight programming languages — and databow, a command-line SQL query tool over ADBC. Columnar also ships the DuckDB ADBC community extension and publishes Agent Skills so AI agents can connect to and query databases through ADBC. The company was surfaced as a portfolio company of Bessemer Venture Partners and is built on the Apache Arrow open-source ecosystem.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/columnar.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Columnar
 nav: Providers
 network: true
 overview: 'Columnar is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data, ADBC, Apache Arrow, and Database Connectivity.
 
 
-  Columnar''s developer surface includes documentation, getting-started guide, engineering blog, support, CLI, changelog, and 9 more developer resources.'
+  Columnar''s developer surface includes documentation, getting-started guide, engineering blog, support, CLI, changelog, and 10 more developer resources.'
 random_paper: 7
 score:
   band: emerging
-  composite: 16.7
+  composite: 15.1
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -131,13 +135,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 42.9
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 18.4
-  previous_composite: 16.7
+  previous_composite: 15.1
   provenance:
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 5.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -159,7 +169,7 @@ tags:
 - Drivers
 - CLI
 - DuckDB
-- Open-Source
+- Open Source
 - Agent Skills
 website: https://columnar.tech/
 ---

@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/aven/refs/heads/main/security/aven-domain-security.yml
@@ -61,20 +61,24 @@ created: '2026-07-17'
 description: Aven is a consumer fintech that issues a home-equity-backed Visa credit card, letting homeowners tap their home equity (a HELOC) through a card with credit-card convenience at lower, home-equity-secured rates. Its product line spans the Aven HELOC card, a Bitcoin-backed Visa card, and educational tooling such as a payment calculator, positioning itself as an AI-driven "machine bank." Founded in the fintech sector and backed by Electric Capital, Founders Fund, General Catalyst, GGV Capital, and Khosla Ventures, Aven operates a consumer marketing and account-servicing web presence at aven.com. As of this enrichment pass Aven publishes no public developer API, developer portal, OpenAPI/AsyncAPI specification, SDKs, or MCP server; this profile captures its verifiable public identity and domain-security posture.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/aven.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at docs.aven.com over HTTP.
+  name: Aven MCP Server
+  slug: aven
 modified: '2026-07-18'
 name: Aven
 nav: Providers
 network: true
-overview: 'Aven is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial-Services, Lending, and Home Equity.
+overview: 'Aven is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Services, Lending, and Home Equity.
 
 
   Aven''s developer surface includes support, engineering blog, and 3 more developer resources.'
 random_paper: 8
 score:
   band: minimal
-  composite: 5.8
+  composite: 6.8
   coverage:
-    artifact_dirs: 5
+    artifact_dirs: 6
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -86,9 +90,9 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
-  previous_composite: 5.8
+  previous_composite: 6.8
   provenance:
     mcp: first-party
   regulatory:
@@ -96,9 +100,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 12.7
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 7.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -114,7 +118,7 @@ slug: aven
 tags:
 - Company
 - Fintech
-- Financial-Services
+- Financial Services
 - Lending
 - Home Equity
 - HELOC

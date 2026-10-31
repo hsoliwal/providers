@@ -34,10 +34,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 4.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://jerry.ai/feed/
 - group: company
   title: ''
   type: Website
@@ -167,18 +171,18 @@ description: Jerry (Jerry Services, Inc. / Jerry Insurance Agency, LLC) is a Pal
   document, a published llms.txt, a Content Signals declaration in robots.txt, an Upptime-backed status page and a Vanta trust center.
 image: https://jerry.ai/imgs/icon-app.png
 layout: provider
-modified: '2026-08-04'
+modified: '2026-10-06'
 name: Jerry
 nav: Providers
 network: true
 overview: 'Jerry is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Insurance, Insurtech, Auto Insurance, and Insurance Broker.
 
 
-  Jerry''s developer surface includes support, engineering blog, product news, signup flow, authentication, and 24 more developer resources.'
+  Jerry''s developer surface includes support, engineering blog, product news, signup flow, authentication, and 25 more developer resources.'
 random_paper: 6
 score:
   band: thin
-  composite: 29.8
+  composite: 26.8
   coverage:
     artifact_dirs: 10
     catalog_earned: 27.0
@@ -192,9 +196,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 56.3
     operational_transparency: 18.4
-  previous_composite: 29.8
+  previous_composite: 26.8
   provenance:
     conformance: first-party
   regulatory:
@@ -202,9 +206,9 @@ score:
     matched_via: tags
     regime: Insurance
     regime_id: insurance
-    score: 65.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 35.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -239,7 +243,7 @@ tags:
 - Consumer Finance
 - Lending
 - Telematics
-- Mobile Applications
+- Mobile App
 - Artificial Intelligence
 website: https://jerry.ai/
 ---

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Kartra's inbound developer API. One endpoint, POST only, form-encoded, with the operation selected by `actions[].cmd`. Twenty-nine documented commands cover leads, tags, lists, automation sequences, c
@@ -194,7 +194,7 @@ modified: '2026-08-12'
 name: Kartra
 nav: Providers
 network: true
-overview: 'Kartra publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing Automation, Email Marketing, CRM, and Contacts.
+overview: 'Kartra is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Marketing Automation, Email Marketing, CRM, and Contacts.
 
 
   The Kartra catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -212,9 +212,9 @@ rate_limits:
   slug: kartra-rate-limits
 score:
   band: strong
-  composite: 61.4
+  composite: 58.6
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 57.0
     catalog_earned_first_party: 20.0
     catalog_gap: 58.0
@@ -224,11 +224,11 @@ score:
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 66.1
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 60.5
-  previous_composite: 61.4
+  previous_composite: 58.6
   provenance:
     conformance: first-party
     mcp: derived
@@ -242,9 +242,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 59.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 33.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -11,7 +11,7 @@ access_model:
   trial: true
   try_now: true
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -28,13 +28,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 29.8
-  scored_at: '2026-09-20'
+  score: 27.9
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 71
   human_in_the_loop: 0
@@ -226,6 +226,11 @@ collections:
   name: When I Work API Documentation Accounts Users API
   slug: open-when-i-work-users-api
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/when-i-work/refs/heads/main/capabilities/when-i-work-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/when-i-work-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/when-i-work/refs/heads/main/agentic-access/when-i-work-agentic-access.yml
   title: ''
@@ -300,9 +305,13 @@ examples:
   name: When I Work Examples
   slug: when-i-work-examples
 finops:
-- name: When I Work Finops
+- has_sources: false
+  method: generated
+  name: When I Work Finops
+  primary_unit: ''
   service_category: ''
   slug: when-i-work-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/when-i-work.png
 json_schemas:
 - name: Position
@@ -339,13 +348,13 @@ modified: 2026-06-12
 name: When I Work
 nav: Providers
 network: true
-overview: 'When I Work publishes 22 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Annotations API, Availabilities API, and 19 more. Tagged areas include Employee Scheduling, Workforce Management, Time Tracking, Time Clock, and Shift Management.
+overview: 'When I Work publishes 22 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Annotations API, Availabilities API, and 19 more. Tagged areas include Employee Scheduling, Workforce Management, Time Tracking, Time Clock, and Shift Management.
 
 
   The When I Work catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  When I Work''s developer surface includes authentication, documentation, engineering blog, pricing, and 11 more developer resources.'
+  When I Work''s developer surface includes authentication, documentation, engineering blog, pricing, and 12 more developer resources.'
 plans:
 - name: When I Work Plans Pricing
   plan_count: 3
@@ -356,9 +365,10 @@ rate_limits:
   name: When I Work Rate Limits
   slug: when-i-work-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: When I Work API Rules
+  name: When I Work — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -367,24 +377,24 @@ rules:
     warn: 4
   slug: when-i-work-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 44.3
+  band: thin
+  composite: 38.6
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 63.3
+    artifact_dirs: 18
+    catalog_earned: 66.8
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.8
+    catalog_gap: 48.3
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -7.5
   facets:
-    access_clarity: 57.9
-    contract_governance: 25.0
-    contract_quality: 63.1
+    access_clarity: 26.3
+    contract_governance: 23.5
+    contract_quality: 64.1
     developer_ergonomics: 14.3
-    discoverability: 44.4
-    operational_transparency: 39.5
-  previous_composite: 44.3
+    discoverability: 66.1
+    operational_transparency: 23.7
+  previous_composite: 46.1
   provenance:
     agentic_access: derived
     contracts:
@@ -392,9 +402,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 22
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 21.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 22.2
@@ -424,5 +440,6 @@ tags:
 - Hourly Workers
 - Labor Forecasting
 - Human Resources
+- Scheduling
 website: https://wheniwork.com
 ---

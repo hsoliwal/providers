@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 30.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 11
   human_in_the_loop: 0
@@ -120,6 +120,19 @@ asyncapis:
   name: Paystone Datacandy Webhooks
   slug: paystone-datacandy-webhooks
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.paystone.com/resources/tag/blog
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.paystone.com/resources/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/paystone/refs/heads/main/capabilities/paystone-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/paystone-capability-edges.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/paystone/refs/heads/main/authentication/paystone-authentication.yml
   title: ''
@@ -242,23 +255,23 @@ description: 'Paystone is a Canadian payment processing and customer-engagement 
   delivered as a merchant product rather than a publicly self-serve developer API, so the honest developer story here is the DataCandy gift-and-loyalty platform API, not a public payments/acquiring API.'
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
 layout: provider
-modified: '2026-07-24'
+modified: '2026-10-06'
 name: Paystone
 nav: Providers
 network: true
-overview: 'Paystone publishes 14 APIs on the [APIs.io](https://apis.io/) network, including Balance Portal API, Client Management API, Contact API, and 11 more. Tagged areas include Payments, Canada, Payment Processing, Acquiring, and Gift Cards.
+overview: 'Paystone publishes 14 API contracts indexed on the [APIs.io](https://apis.io/) network, including Balance Portal API, Client Management API, Contact API, and 11 more. Tagged areas include Payments, Canada, Payment Processing, Acquiring, and Gift Cards.
 
 
   The Paystone catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Paystone''s developer surface includes authentication, documentation, API reference, pricing, engineering blog, signup flow, and 20 more developer resources.'
+  Paystone''s developer surface includes engineering blog, authentication, documentation, API reference, pricing, signup flow, and 23 more developer resources.'
 random_paper: 3
 score:
   band: developing
-  composite: 45.2
+  composite: 43.0
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 20
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -268,9 +281,9 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 64.3
+    contract_quality: 58.7
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 18.4
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -281,7 +294,7 @@ score:
     - europe
     - north-america
     - united-kingdom-ireland
-  previous_composite: 45.2
+  previous_composite: 43.0
   provenance:
     agentic_access: derived
     conformance: derived
@@ -297,9 +310,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 39.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 22.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

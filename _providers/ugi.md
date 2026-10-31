@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 2.5
-  scored_at: '2026-09-20'
+  score: 0.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: UGI International manages LPG and natural gas distribution operations across Europe, primarily through Flaga, AvantiGas, and other regional brands serving 17 European countries with liquid petroleum g
@@ -41,6 +41,21 @@ apis:
   slug: ugi-international
 artifact_total: 9
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ugi/refs/heads/main/plans/ugi-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ugi-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/ugi/refs/heads/main/rate-limits/ugi-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/ugi-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ugi/refs/heads/main/finops/ugi-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/ugi-finops.yml
 - group: company
   title: ''
   type: Website
@@ -69,9 +84,13 @@ common:
 created: '2026-05-03'
 description: 'UGI Corporation is a Fortune 500 international energy distribution and services company headquartered in King of Prussia, Pennsylvania. UGI distributes natural gas, liquid propane, and electricity primarily through four business segments: UGI Utilities (natural gas and electric distribution in Pennsylvania), AmeriGas Propane (largest US propane marketer), Midstream and Marketing, and UGI International (European energy distribution). No public developer API has been identified; the company primarily uses EDI and utility industry standards for B2B data exchange.'
 finops:
-- name: Ugi Finops
+- has_sources: true
+  method: generated
+  name: Ugi Finops
+  primary_unit: ''
   service_category: Utility / Energy
   slug: ugi-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ugi.png
 json_schemas:
 - name: UGI Energy Account
@@ -88,13 +107,13 @@ jsonld:
   slug: ugi-context
 layout: provider
 modified: '2026-09-16'
-name: UGI Corporation
+name: UGI
 nav: Providers
 network: true
-overview: 'UGI Corporation publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Natural Gas, Propane, and Electric.
+overview: 'UGI is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Energy, Utilities, Natural Gas, Propane, and Electric.
 
 
-  The UGI Corporation catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
+  The UGI catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.'
 plans:
 - name: Ugi Plans Pricing
   plan_count: 1
@@ -121,9 +140,10 @@ rate_limits:
   name: Ugi Rate Limits
   slug: ugi-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: UGI Corporation API Rules
+  name: UGI — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -133,31 +153,31 @@ rules:
   slug: ugi-jsonschema-spectral-rules
 score:
   band: emerging
-  composite: 13.4
+  composite: 11.7
   coverage:
     artifact_dirs: 14
-    catalog_earned: 53.3
+    catalog_earned: 50.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 61.8
+    catalog_gap: 64.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 13.2
+    access_clarity: 5.3
     contract_governance: 9.8
     contract_quality: 14.7
     developer_ergonomics: 0.0
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 5.3
-  previous_composite: 13.4
+  previous_composite: 13.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 14.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 9.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

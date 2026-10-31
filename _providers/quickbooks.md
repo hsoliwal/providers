@@ -31,9 +31,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 20.0
-  scored_at: '2026-09-20'
-api_count: 3
+  score: 19.7
+  scored_at: '2026-10-17'
+api_count: 4
 apis:
 - baseURL: https://quickbooks.api.intuit.com/v3/company
   baseurl_source: declared
@@ -46,7 +46,10 @@ apis:
 - description: REST API for managing payroll, employees, paychecks, and payroll tax information within QuickBooks Online Payroll.
   name: QuickBooks Payroll API
   slug: payroll
-artifact_total: 7
+- description: REST API for managing QuickBooks Online accounting entities including Customer, Vendor, Employee, Item, Invoice, Bill, Payment, BillPayment, JournalEntry, Account, TaxCode, and Company information. Al
+  name: QuickBooks
+  slug: accounting-api
+artifact_total: 8
 asyncapis:
 - description: AsyncAPI 2.6 description of the QuickBooks Online (QBO) Data Services webhook surface. QuickBooks Online delivers asynchronous notifications of data-change events on the configured Intuit App by issui
   name: QuickBooks Online Webhooks
@@ -105,7 +108,7 @@ modified: '2026-05-30'
 name: QuickBooks
 nav: Providers
 network: true
-overview: 'QuickBooks publishes 1 API on the [APIs.io](https://apis.io/) network: Online Accounting API. Tagged areas include Accounting, Bookkeeping, Small Business, Financial, and Invoicing.
+overview: 'QuickBooks is listed with 4 APIs on the [APIs.io](https://apis.io/) network, including Online Accounting API, and 3 more. Tagged areas include Accounting, Bookkeeping, Small Business, Finance, and Invoicing.
 
 
   The QuickBooks catalog on APIs.io includes 1 event-driven AsyncAPI specification and 1 Spectral governance ruleset.
@@ -114,10 +117,11 @@ overview: 'QuickBooks publishes 1 API on the [APIs.io](https://apis.io/) network
   QuickBooks'' developer surface includes documentation, API reference, signup flow, pricing, and 6 more developer resources.'
 random_paper: 5
 rules:
-- effective_rule_count: 30
+- authorship: generated
+  effective_rule_count: 30
   extends:
   - spectral:asyncapi
-  name: QuickBooks API Rules
+  name: QuickBooks — asyncapi rules
   rule_count: 3
   severity_counts:
     error: 1
@@ -127,9 +131,9 @@ rules:
   slug: quickbooks-asyncapi-spectral-rules
 score:
   band: thin
-  composite: 34.8
+  composite: 34.2
   coverage:
-    artifact_dirs: 6
+    artifact_dirs: 7
     catalog_earned: 44.5
     catalog_earned_first_party: 0.0
     catalog_gap: 70.5
@@ -139,13 +143,19 @@ score:
   facets:
     access_clarity: 23.7
     contract_governance: 13.6
-    contract_quality: 42.7
-    developer_ergonomics: 50.0
-    discoverability: 74.1
+    contract_quality: 40.6
+    developer_ergonomics: 57.1
+    discoverability: 70.0
     operational_transparency: 2.6
-  previous_composite: 34.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 34.2
+  regulatory:
+    applies: true
+    matched_via: tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -162,7 +172,7 @@ tags:
 - Accounting
 - Bookkeeping
 - Small Business
-- Financial
+- Finance
 - Invoicing
 - Payroll
 - Tax

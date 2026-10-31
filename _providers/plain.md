@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Plain's Core GraphQL API — the same API the Plain product is built on. Manage customers, companies, tenants, threads, messaging, help center, labels, tiers/SLAs, snippets, tasks, events, and webhook t
@@ -197,14 +197,14 @@ description: Plain is a customer support platform for B2B and technical SaaS com
 image: https://framerusercontent.com/assets/8LkFDsA5X0pauVd2p3tTSJ4AF4s.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.plain.com over HTTP; 30 tools listed.
   name: Plain MCP Server
-  slug: plain-mcp-server
+  slug: plain
 modified: '2026-07-20'
 name: Plain
 nav: Providers
 network: true
-overview: 'Plain publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer-Support, Customer Service, Help Desk, and Support.
+overview: 'Plain is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Customer Service, Help Desk, Support, and Software-as-a-Service.
 
 
   The Plain catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -214,9 +214,9 @@ overview: 'Plain publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 4
 score:
   band: developing
-  composite: 51.8
+  composite: 53.3
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -226,17 +226,23 @@ score:
   facets:
     access_clarity: 46.1
     contract_governance: 4.5
-    contract_quality: 53.1
+    contract_quality: 51.0
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 42.1
-  previous_composite: 51.8
+  previous_composite: 53.3
   provenance:
     conformance: derived
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 29.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -259,7 +265,6 @@ security:
 slug: plain
 tags:
 - Company
-- Customer-Support
 - Customer Service
 - Help Desk
 - Support

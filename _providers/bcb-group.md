@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -282,7 +282,7 @@ modified: '2026-07-18'
 name: BCB Group
 nav: Providers
 network: true
-overview: 'BCB Group publishes 8 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Beneficiaries API, and 5 more. Tagged areas include Company, Crypto, Payments, Banking, and Digital Assets.
+overview: 'BCB Group publishes 8 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Authentication API, Beneficiaries API, and 5 more. Tagged areas include Company, Cryptocurrency, Payments, Banking, and Digital Assets.
 
 
   The BCB Group catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -292,9 +292,9 @@ overview: 'BCB Group publishes 8 APIs on the [APIs.io](https://apis.io/) network
 random_paper: 17
 score:
   band: developing
-  composite: 43.7
+  composite: 41.2
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -304,11 +304,11 @@ score:
   facets:
     access_clarity: 35.5
     contract_governance: 4.5
-    contract_quality: 59.6
+    contract_quality: 54.4
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 21.1
-  previous_composite: 43.7
+  previous_composite: 41.2
   provenance:
     agentic_access: derived
     conformance: derived
@@ -324,9 +324,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 45.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 28.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -348,12 +348,12 @@ security:
 slug: bcb-group
 tags:
 - Company
-- Crypto
+- Cryptocurrency
 - Payments
 - Banking
 - Digital Assets
 - Stablecoins
-- Financial-Services
+- Financial Services
 - Fintech
 website: https://bcbgroup.io/
 ---

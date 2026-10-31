@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 4
   human_in_the_loop: 0
@@ -64,37 +64,37 @@ apis:
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The config API from DEGIRO — 1 operation(s) for config.
-  name: DEGIRO config API
+  name: DEGIRO Config API
   slug: degiro-config-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The login API from DEGIRO — 1 operation(s) for login.
-  name: DEGIRO login API
+  name: DEGIRO Login API
   slug: degiro-login-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The pa API from DEGIRO — 3 operation(s) for pa.
-  name: DEGIRO pa API
+  name: DEGIRO Pa API
   slug: degiro-pa-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The product-search API from DEGIRO — 1 operation(s) for product-search.
-  name: DEGIRO product-search API
+  name: DEGIRO Product Search API
   slug: degiro-product-search-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The reporting API from DEGIRO — 2 operation(s) for reporting.
-  name: DEGIRO reporting API
+  name: DEGIRO Reporting API
   slug: degiro-reporting-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The settings API from DEGIRO — 4 operation(s) for settings.
-  name: DEGIRO settings API
+  name: DEGIRO Settings API
   slug: degiro-settings-api
 - baseURL: https://trader.degiro.nl
   baseurl_source: declared
   description: The trading API from DEGIRO — 4 operation(s) for trading.
-  name: DEGIRO trading API
+  name: DEGIRO Trading API
   slug: degiro-trading-api
 artifact_total: 36
 collections:
@@ -123,6 +123,21 @@ collections:
   name: Unofficial Degiro config trading API
   slug: open-degiro-trading-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/degiro/refs/heads/main/plans/plans.yml
+  title: ''
+  type: Plans
+  url: plans/plans.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/degiro/refs/heads/main/rate-limits/rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/degiro/refs/heads/main/finops/finops.yml
+  title: ''
+  type: FinOps
+  url: finops/finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/degiro/refs/heads/main/agentic-access/degiro-agentic-access.yml
   title: ''
@@ -190,9 +205,13 @@ examples:
   name: Degiro Product Search Example
   slug: degiro-product-search-example
 finops:
-- name: Finops
+- has_sources: false
+  method: generated
+  name: Finops
+  primary_unit: ''
   service_category: ''
   slug: finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/degiro.png
 json_schemas:
 - name: DEGIRO Login
@@ -220,13 +239,13 @@ modified: '2026-06-13'
 name: DEGIRO
 nav: Providers
 network: true
-overview: 'DEGIRO publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Product Search API, Reporting API, config API, and 6 more. Tagged areas include Trading, Brokerage, Stocks, ETFs, and Portfolio.
+overview: 'DEGIRO publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Product Search API, Reporting API, Config API, and 8 more. Tagged areas include Trading, Brokerage, Stocks, ETFs, and Portfolio.
 
 
   The DEGIRO catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  DEGIRO''s developer surface includes authentication, support, engineering blog, status page, FAQ, and 7 more developer resources.'
+  DEGIRO''s developer surface includes authentication, support, engineering blog, status page, FAQ, and 10 more developer resources.'
 plans:
 - name: Plans
   plan_count: 1
@@ -237,9 +256,10 @@ rate_limits:
   name: Rate Limits
   slug: rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: DEGIRO API Rules
+  name: DEGIRO — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -248,24 +268,24 @@ rules:
     warn: 3
   slug: degiro-jsonschema-spectral-rules
 score:
-  band: thin
-  composite: 32.6
+  band: emerging
+  composite: 26.1
   coverage:
     artifact_dirs: 16
-    catalog_earned: 56.3
+    catalog_earned: 47.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.8
+    catalog_gap: 67.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -4.3
   facets:
-    access_clarity: 35.5
+    access_clarity: 11.8
     contract_governance: 9.8
-    contract_quality: 48.5
+    contract_quality: 44.0
     developer_ergonomics: 26.2
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 2.6
-  previous_composite: 32.6
+  previous_composite: 30.4
   provenance:
     agentic_access: derived
     contracts:
@@ -278,9 +298,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 38.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -304,5 +324,7 @@ tags:
 - Portfolio
 - Market Data
 - Finance
+- Investing
+- Financial Services
 website: https://www.degiro.eu
 ---

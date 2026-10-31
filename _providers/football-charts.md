@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Free read-only REST API for football statistics, standings, results, fixtures, match probabilities, season projections, goal timing, and prediction track record. Bearer API key auth (or X-API-Key) wit
@@ -32,8 +32,12 @@ apis:
 - description: Hosted MCP server (protocol 2025-06-18) exposing ten read-only football statistics tools (list_leagues, get_league_table, get_rankings, get_results, get_fixtures, get_match, get_season_projection, get
   name: Football Charts MCP Server
   slug: football-charts-mcp-server
-artifact_total: 8
+artifact_total: 7
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://www.football-charts.com/insights
 - group: company
   title: ''
   type: Website
@@ -155,18 +159,15 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Football Charts MCP Server
-  slug: football-charts-mcp-server
-- description: ''
-  name: Football Charts MCP Server
-  slug: football-charts-mcp-server-2
-modified: '2026-09-04'
+  slug: mcp
+modified: '2026-10-06'
 name: Football Charts
 nav: Providers
 network: true
-overview: 'Football Charts publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Football, Soccer, Sports, Sports Data, and Statistics.
+overview: 'Football Charts is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Football, Soccer, Sports, Sports Data, and Statistics.
 
 
-  Football Charts'' developer surface includes documentation, API reference, getting-started guide, signup flow, pricing, support, authentication, and 18 more developer resources.'
+  Football Charts'' developer surface includes engineering blog, documentation, API reference, getting-started guide, signup flow, pricing, support, and 19 more developer resources.'
 plans:
 - name: Football Charts Plans Pricing
   plan_count: 2
@@ -178,34 +179,41 @@ rate_limits:
   slug: football-charts-rate-limits
 score:
   band: thin
-  composite: 35.3
+  composite: 37.1
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 19
     catalog_earned: 53.0
     catalog_earned_first_party: 16.0
     catalog_gap: 62.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 65.8
     contract_governance: 4.5
     contract_quality: 0.0
-    developer_ergonomics: 56.5
-    discoverability: 68.5
+    developer_ergonomics: 58.9
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 35.3
+  previous_composite: 36.6
   provenance:
     conformance: derived
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/football-charts/refs/heads/main/screenshots/football-charts-2026-10-11T104606.png
 security:
 - kind: authentication
   name: Football Charts Authentication
@@ -229,7 +237,7 @@ tags:
 - probability-models
 - monte-carlo
 - MCP
-- agent-native
+- Agent-Native
 - Free API
 website: https://www.football-charts.com
 ---

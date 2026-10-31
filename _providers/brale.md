@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 51.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://api.brale.xyz
@@ -112,6 +112,10 @@ collections:
   name: Brale Accounts Webhooks API
   slug: open-brale-webhooks-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://brale.xyz/feed.xml
 - group: company
   title: ''
   type: Website
@@ -310,20 +314,20 @@ description: Brale is a regulated stablecoin issuance and orchestration platform
 image: https://brale.xyz/assets/site/global-og-image.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.brale.xyz over HTTP requiring OAuth; 4 tools listed.
   name: Brale MCP Server
-  slug: brale-mcp-server
-modified: '2026-07-18'
+  slug: brale
+modified: '2026-10-06'
 name: Brale
 nav: Providers
 network: true
-overview: 'Brale publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Addresses API, Automations API, and 3 more. Tagged areas include Company, Stablecoins, Stablecoin Issuance, Payments, and Blockchain.
+overview: 'Brale publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Addresses API, Automations API, and 3 more. Tagged areas include Company, Stablecoins, Stablecoin Issuance, Payments, and Blockchain.
 
 
   The Brale catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Brale''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 35 more developer resources.'
+  Brale''s developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 36 more developer resources.'
 random_paper: 12
 scopes:
 - name: Brale Scopes
@@ -332,7 +336,7 @@ scopes:
   summary_line: 20 scopes · clientCredentials
 score:
   band: strong
-  composite: 59.9
+  composite: 56.2
   coverage:
     artifact_dirs: 26
     catalog_earned: 37.0
@@ -344,11 +348,11 @@ score:
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 63.1
+    contract_quality: 57.6
     developer_ergonomics: 75.6
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 60.5
-  previous_composite: 59.9
+  previous_composite: 56.2
   provenance:
     conformance: derived
     contracts:
@@ -363,9 +367,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 64.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 36.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -393,10 +397,11 @@ tags:
 - Blockchain
 - Cryptocurrency
 - Fintech
-- Financial-Services
+- Financial Services
 - Custody
 - Tokenization
 - On-Ramp
 - Off-Ramp
+- A2A
 website: https://www.brale.xyz/
 ---

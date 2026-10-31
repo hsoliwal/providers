@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 1.3
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 6
 apis:
 - description: The historical Descartes Labs Platform — a managed geospatial data refinery and analytics environment exposing imagery catalog, raster access, vector tables, compute functions, and authentication thro
@@ -169,16 +169,16 @@ modified: '2026-05-24'
 name: Descartes Labs
 nav: Providers
 network: true
-overview: 'Descartes Labs publishes 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Geospatial, Geospatial Intelligence, Earth Observation, Satellite Imagery, and Remote Sensing.
+overview: 'Descartes Labs is listed with 6 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Geospatial, Geospatial Intelligence, Earth Observation, Satellite Imagery, and Remote Sensing.
 
 
   Descartes Labs'' developer surface includes documentation, support, code examples, and 19 more developer resources.'
 random_paper: 13
 score:
-  band: emerging
-  composite: 15.9
+  band: minimal
+  composite: 0.0
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 35.0
     catalog_earned_first_party: 0.0
     catalog_gap: 80.0
@@ -186,21 +186,22 @@ score:
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
   delta: 0.0
   facets:
-    access_clarity: 6.6
+    access_clarity: 0.0
     contract_governance: 0.0
-    contract_quality: 6.7
-    developer_ergonomics: 28.6
-    discoverability: 64.8
-    operational_transparency: 18.4
-  previous_composite: 15.9
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
+  lifecycle: defunct
+  previous_composite: 0.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -222,7 +223,7 @@ tags:
 - Raster
 - Vectors
 - GIS
-- Machine-Learning
+- Machine Learning
 - Geospatial Analytics
 - Agriculture
 - Mining

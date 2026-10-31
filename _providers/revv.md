@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 5.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 6
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/revv/refs/heads/main/rate-limits/revv-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/revv-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/revv/refs/heads/main/security/revv-domain-security.yml
   title: ''
@@ -125,10 +130,10 @@ modified: '2026-08-14'
 name: Revv
 nav: Providers
 network: true
-overview: 'Revv is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Document Automation, Electronic Signature, Contract Management, and Sales Enablement.
+overview: 'Revv is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Document Automation, E-Signature, Contract Management, and Sales Enablement.
 
 
-  Revv''s developer surface includes authentication, pricing, signup flow, engineering blog, and 11 more developer resources.'
+  Revv''s developer surface includes authentication, pricing, signup flow, engineering blog, and 12 more developer resources.'
 plans:
 - name: Revv Plans Pricing
   plan_count: 3
@@ -140,7 +145,7 @@ rate_limits:
   slug: revv-rate-limits
 score:
   band: thin
-  composite: 26.6
+  composite: 28.7
   coverage:
     artifact_dirs: 11
     catalog_earned: 39.0
@@ -154,11 +159,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 2.6
-  previous_composite: 26.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 28.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 30.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -186,10 +197,10 @@ slug: revv
 tags:
 - Company
 - Document Automation
-- Electronic Signature
+- E-Signature
 - Contract Management
 - Sales Enablement
-- Workflow-Automation
+- Workflow Automation
 - Software-as-a-Service
 website: https://www.revv.so/
 ---

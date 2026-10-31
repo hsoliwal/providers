@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 38.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://forge.lucrasports.com
@@ -264,7 +264,7 @@ modified: '2026-08-25'
 name: Lucra Sports
 nav: Providers
 network: true
-overview: 'Lucra Sports publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Health API, Locations API, Recreational Games API, and 6 more. Tagged areas include Gaming, Sports, Gamification, Loyalty, and Tournaments.
+overview: 'Lucra Sports publishes 9 API contracts indexed on the [APIs.io](https://apis.io/) network, including Health API, Locations API, Recreational Games API, and 6 more. Tagged areas include Gaming, Sports, Gamification, Loyalty, and Tournaments.
 
 
   The Lucra Sports catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -281,8 +281,8 @@ rate_limits:
   name: Lucra Sports Rate Limits
   slug: lucra-sports-rate-limits
 score:
-  band: strong
-  composite: 56.7
+  band: developing
+  composite: 53.5
   coverage:
     artifact_dirs: 24
     catalog_earned: 45.0
@@ -294,11 +294,11 @@ score:
   facets:
     access_clarity: 42.1
     contract_governance: 4.5
-    contract_quality: 61.8
+    contract_quality: 56.6
     developer_ergonomics: 78.6
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 47.4
-  previous_composite: 56.7
+  previous_composite: 53.5
   provenance:
     conformance: derived
     contracts:
@@ -313,9 +313,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 56.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

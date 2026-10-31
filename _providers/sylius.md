@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 15.5
-  scored_at: '2026-09-20'
+  score: 13.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The Sylius REST API is built on API Platform and provides endpoints for all core eCommerce operations including product catalog management, order processing, customer management, payment handling, shi
@@ -92,9 +92,13 @@ common:
 created: 2026-06-13
 description: Sylius is an open-source headless eCommerce platform built on PHP, Symfony, and API Platform. It provides a comprehensive REST API for managing products, product variants, orders, carts, customers, payments, shipments, promotions, and customizable shop configuration. The API uses JWT authentication and generates OpenAPI documentation automatically, making it well-suited for headless commerce architectures and custom storefront implementations.
 finops:
-- name: Sylius Finops
+- has_sources: false
+  method: generated
+  name: Sylius Finops
+  primary_unit: ''
   service_category: ''
   slug: sylius-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sylius.png
 jsonld:
 - class_count: 0
@@ -106,7 +110,7 @@ modified: 2026-06-13
 name: Sylius
 nav: Providers
 network: true
-overview: 'Sylius publishes 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include E-Commerce, Open-Source, Headless Commerce, REST API, and Symfony.
+overview: 'Sylius is listed with 1 API on the [APIs.io](https://apis.io/) network: REST API. Tagged areas include E-Commerce, Open Source, Headless Commerce, REST API, and Symfony.
 
 
   The Sylius catalog on APIs.io includes 1 JSON-LD context.
@@ -124,32 +128,32 @@ rate_limits:
   slug: sylius-rate-limits
 score:
   band: emerging
-  composite: 25.9
+  composite: 19.6
   coverage:
-    artifact_dirs: 8
-    catalog_earned: 57.0
+    artifact_dirs: 9
+    catalog_earned: 45.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 58.0
+    catalog_gap: 70.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -5.6
   facets:
-    access_clarity: 50.0
+    access_clarity: 18.4
     contract_governance: 0.0
-    contract_quality: 33.3
+    contract_quality: 30.7
     developer_ergonomics: 11.9
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 5.3
-  previous_composite: 25.9
+  previous_composite: 25.2
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 17.2
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 9.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -163,7 +167,7 @@ security:
 slug: sylius
 tags:
 - E-Commerce
-- Open-Source
+- Open Source
 - Headless Commerce
 - REST API
 - Symfony

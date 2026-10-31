@@ -21,7 +21,7 @@ agent_readiness:
     dry_run_mode: false
     dynamic_client_registration: false
     error_semantics: false
-    event_surface_described: true
+    event_surface_described: unknown
     idempotency: false
     mcp_server: false
     openapi_examples: false
@@ -31,8 +31,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 19.8
-  scored_at: '2026-09-20'
+  score: 19.4
+  scored_at: '2026-10-17'
 api_count: 19
 apis:
 - description: Getnet's core REST API and Single Entry Point (SEP) for direct payment integration across Argentina, Brazil, Chile, Colombia, Mexico, Portugal, Spain, and Uruguay. One contract gives merchants omnicha
@@ -94,6 +94,14 @@ apis:
   slug: getnet-local-processor-spain
 artifact_total: 20
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://site.getnet.com.br/blog/
+- group: company
+  title: ''
+  type: Website
+  url: https://site.getnet.com.br/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/getnet/refs/heads/main/security/getnet-domain-security.yml
   title: ''
@@ -127,32 +135,32 @@ created: '2026-05-25'
 description: Getnet is a leading merchant acquirer in Latin America and a payments subsidiary of Banco Santander, operating across Brazil, Argentina, Chile, Colombia, Mexico, Uruguay, Spain, and Portugal. Getnet is positioned as the region's second-largest acquirer by transaction volume and powers card processing, alternative payment methods, gateway, anti-fraud, tokenization, installments, marketplaces, and POS for over a million merchants. Its API ecosystem is now consolidated under the global Getnet Docs portal (docs.globalgetnet.com) with a Single Entry Point (SEP) Regional API alongside Web Checkout, Marketplace, Payment Link, Chargeback, Onboarding, in-store terminal integrations (App2App, Host-to-Host, Integrated POS, Cloud-to-Cloud), and an emerging Agentic Commerce / MCP AI Toolkit surface for AI-driven payments. The Brazilian developer hub at developers.getnet.com.br is being migrated to the unified global portal.
 image: https://site.getnet.com.br/wp-content/themes/getnet/dist/img/logo-getnet.svg
 layout: provider
-modified: '2026-05-25'
+modified: '2026-10-06'
 name: Getnet
 nav: Providers
 network: true
-overview: 'Getnet publishes 1 API on the [APIs.io](https://apis.io/) network: SAP Immediate Delivery APIs. Tagged areas include Payments, Acquirer, Brazil, Latin America, and Santander.
+overview: 'Getnet is listed with 19 APIs on the [APIs.io](https://apis.io/) network, including SAP Immediate Delivery APIs, and 18 more. Tagged areas include Payments, Acquirer, Brazil, Latin America, and Santander.
 
 
-  Getnet''s developer surface includes documentation, authentication, FAQ, pricing, sandbox, and 2 more developer resources.'
+  Getnet''s developer surface includes engineering blog, documentation, authentication, FAQ, pricing, sandbox, and 3 more developer resources.'
 random_paper: 9
 score:
   band: thin
-  composite: 28.3
+  composite: 28.6
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 5
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.5
   facets:
     access_clarity: 10.5
     contract_governance: 0.0
-    contract_quality: 42.7
-    developer_ergonomics: 47.6
-    discoverability: 74.1
+    contract_quality: 40.0
+    developer_ergonomics: 50.0
+    discoverability: 71.4
     operational_transparency: 5.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -161,15 +169,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 28.3
+  previous_composite: 28.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 18.8
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -206,4 +214,5 @@ tags:
 - Authentication
 - Agentic Commerce
 - MCP
+website: https://site.getnet.com.br/
 ---

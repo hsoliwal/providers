@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: verified
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 41.7
-  scored_at: '2026-09-20'
+  score: 39.8
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 30
   human_in_the_loop: 1
@@ -109,6 +109,26 @@ collections:
   name: Amazon Elasticsearch Service
   slug: open-amazon-opensearch
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-opensearch/refs/heads/main/plans/amazon-opensearch-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/amazon-opensearch-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-opensearch/refs/heads/main/rate-limits/amazon-opensearch-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/amazon-opensearch-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-opensearch/refs/heads/main/finops/amazon-opensearch-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/amazon-opensearch-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/amazon-opensearch/refs/heads/main/capabilities/amazon-opensearch-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/amazon-opensearch-capability-edges.yml
 - group: build
   title: ''
   type: PostmanWorkspace
@@ -1122,9 +1142,13 @@ examples:
   name: Openapi Zone Awareness Config Example
   slug: openapi-zone-awareness-config-example
 finops:
-- name: Amazon Opensearch Finops
+- has_sources: false
+  method: generated
+  name: Amazon Opensearch Finops
+  primary_unit: ''
   service_category: API
   slug: amazon-opensearch-finops
+  template: true
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 json_schemas:
 - name: AcceptInboundCrossClusterSearchConnectionRequest
@@ -3124,13 +3148,13 @@ modified: '2026-05-19'
 name: Amazon OpenSearch Service API
 nav: Providers
 network: true
-overview: 'Amazon OpenSearch Service API publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Domain API, Es API, Packages API, and 2 more. Tagged areas include Analytics, Elasticsearch, and Search.
+overview: 'Amazon OpenSearch Service API publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Domain API, Es API, Packages API, and 2 more. Tagged areas include Analytics, Elasticsearch, and Search.
 
 
   The Amazon OpenSearch Service API catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Amazon OpenSearch Service API''s developer surface includes authentication, developer portal, documentation, support, developer console, signup flow, engineering blog, and 20 more developer resources.'
+  Amazon OpenSearch Service API''s developer surface includes authentication, developer portal, documentation, support, developer console, signup flow, engineering blog, and 24 more developer resources.'
 plans:
 - name: Amazon Opensearch Plans Pricing
   plan_count: 3
@@ -3141,9 +3165,10 @@ rate_limits:
   name: Amazon Opensearch Rate Limits
   slug: amazon-opensearch-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Amazon OpenSearch Service API API Rules
+  name: Amazon OpenSearch Service API — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -3151,7 +3176,8 @@ rules:
     info: 1
     warn: 4
   slug: amazon-opensearch-jsonschema-spectral-rules
-- effective_rule_count: 68
+- authorship: generated
+  effective_rule_count: 68
   extends:
   - spectral:oas
   name: Amazon OpenSearch Service API API Rules
@@ -3164,23 +3190,23 @@ rules:
   slug: amazon-opensearch-spectral-rules
 score:
   band: developing
-  composite: 52.1
+  composite: 51.7
   coverage:
-    artifact_dirs: 18
-    catalog_earned: 61.5
+    artifact_dirs: 21
+    catalog_earned: 58.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 53.5
+    catalog_gap: 57.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 61.8
-    contract_governance: 28.8
-    contract_quality: 66.8
+    access_clarity: 53.9
+    contract_governance: 27.3
+    contract_quality: 60.8
     developer_ergonomics: 51.2
-    discoverability: 66.7
+    discoverability: 64.3
     operational_transparency: 26.3
-  previous_composite: 52.1
+  previous_composite: 53.2
   provenance:
     agentic_access: derived
     contracts:
@@ -3188,8 +3214,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

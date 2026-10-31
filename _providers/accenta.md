@@ -35,7 +35,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 7.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: The HTTP API behind Accenta's effiPilot building-energy platform. It is an RPC-style JSON surface — requests take the form /api/method/<methodName> — served per customer tenant from the wildcard accen
@@ -179,7 +179,7 @@ modified: '2026-08-17'
 name: Accenta
 nav: Providers
 network: true
-overview: 'Accenta publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Energy, Buildings, and Smart Buildings.
+overview: 'Accenta is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Energy, Buildings, and Smart Buildings.
 
 
   Accenta''s developer surface includes support, engineering blog, authentication, and 22 more developer resources.'
@@ -194,9 +194,9 @@ rate_limits:
   slug: accenta-rate-limits
 score:
   band: emerging
-  composite: 23.1
+  composite: 21.3
   coverage:
-    artifact_dirs: 14
+    artifact_dirs: 15
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -208,7 +208,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 68.5
+    discoverability: 67.0
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -218,7 +218,7 @@ score:
     regions:
     - europe
     - france-iberia
-  previous_composite: 23.1
+  previous_composite: 21.3
   provenance:
     conformance: first-party
   regulatory:
@@ -230,9 +230,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 40.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 23.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -261,7 +261,7 @@ tags:
 - Sustainability
 - Energy Management
 - Artificial Intelligence
-- Real-Estate
+- Real Estate
 - IoT
 - France
 website: https://www.accenta.ai/

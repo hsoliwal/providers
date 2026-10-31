@@ -24,7 +24,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 46.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://platform.aignostics.com/api/v1
@@ -201,14 +201,14 @@ description: 'Aignostics GmbH is a Berlin-based computational pathology company,
 image: https://cdn.prod.website-files.com/67adb01f31489469b513304a/67eec0230902714317f91424_ag-logo.svg
 layout: provider
 mcp_servers:
-- description: ''
+- description: Aignostics ships a runnable MCP server inside its Python SDK. `aignostics mcp run` starts a FastMCP server over stdio transport (MCP_TRANSPORT = "stdio" in utils/_mcp.py) named "Central Aignostics MCP
   name: Central Aignostics MCP Server
   slug: central-aignostics-mcp-server
 modified: '2026-09-14'
 name: Aignostics
 nav: Providers
 network: true
-overview: 'Aignostics publishes 1 API on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Artificial Intelligence, Machine-Learning, Health, and Healthcare.
+overview: 'Aignostics publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Public API. Tagged areas include Company, Artificial Intelligence, Machine Learning, Health, and Healthcare.
 
 
   The Aignostics catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -231,21 +231,21 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 54.0
+  composite: 50.1
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 24
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 17.1
     contract_governance: 4.5
-    contract_quality: 54.8
+    contract_quality: 50.1
     developer_ergonomics: 80.4
-    discoverability: 68.5
+    discoverability: 65.0
     operational_transparency: 36.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -255,7 +255,7 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 54.0
+  previous_composite: 50.0
   provenance:
     conformance: derived
     contracts:
@@ -270,13 +270,14 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 55.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 32.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
     score: 38.9
+screenshot: https://raw.githubusercontent.com/api-evangelist/aignostics/refs/heads/main/screenshots/aignostics-2026-10-11T093258.png
 security:
 - kind: authentication
   name: Aignostics Authentication
@@ -294,7 +295,7 @@ slug: aignostics
 tags:
 - Company
 - Artificial Intelligence
-- Machine-Learning
+- Machine Learning
 - Health
 - Healthcare
 - Life Sciences

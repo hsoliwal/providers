@@ -27,16 +27,31 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 5.0
-  scored_at: '2026-09-20'
+  score: 3.1
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 18
+artifact_total: 19
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/adidas/refs/heads/main/plans/adidas-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/adidas-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/adidas/refs/heads/main/rate-limits/adidas-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/adidas-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/adidas/refs/heads/main/finops/adidas-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/adidas-finops.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/adidas/refs/heads/main/security/adidas-domain-security.yml
   title: ''
@@ -70,6 +85,10 @@ common:
   title: ''
   type: Compliance
   url: ''
+- group: design
+  title: ''
+  type: SpectralRules
+  url: https://github.com/adidas/api-guidelines/blob/222b294d13872d55befbf61b3ee60998fcb9e57b/.spectral.yml
 created: '2026-05-05'
 description: A German multinational corporation designing and manufacturing athletic shoes, apparel, and accessories. One of the world's largest sportswear brands competing across performance and lifestyle markets.
 features:
@@ -84,9 +103,13 @@ features:
 - description: Adidas-owned running and fitness app (formerly Runtastic) tracking activity and integrating with adiClub.
   name: Runtastic / adidas Running
 finops:
-- name: Adidas Finops
+- has_sources: true
+  method: generated
+  name: Adidas Finops
+  primary_unit: ''
   service_category: Retail / Sportswear
   slug: adidas-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/adidas.png
 integrations:
 - description: Awin affiliate network manages Adidas' affiliate program in most regions.
@@ -104,10 +127,13 @@ modified: '2026-05-16'
 name: Adidas
 nav: Providers
 network: true
-overview: 'Adidas is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Athletic Apparel, Footwear, and Sportswear.
+overview: 'Adidas is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Athletic Apparel, Footwear, Sportswear, Fashion, and Apparel.
 
 
-  Adidas'' developer surface includes GitHub presence, authentication, and 4 more developer resources.'
+  The Adidas catalog on APIs.io includes 1 Spectral governance ruleset.
+
+
+  Adidas'' developer surface includes GitHub presence, authentication, and 8 more developer resources.'
 plans:
 - name: Adidas Plans Pricing
   plan_count: 1
@@ -117,27 +143,47 @@ rate_limits:
 - limit_count: 1
   name: Adidas Rate Limits
   slug: adidas-rate-limits
+rules:
+- authorship: provider
+  effective_rule_count: 98
+  extends:
+  - spectral:oas
+  - spectral:asyncapi
+  name: Adidas — api guidelines rules
+  rule_count: 30
+  severity_counts:
+    error: 20
+    hint: 1
+    info: 0
+    warn: 9
+  slug: adidas-api-guidelines-spectral-rules
 score:
   band: emerging
-  composite: 18.5
+  composite: 18.2
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 41.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 74.0
+    artifact_dirs: 8
+    catalog_earned: 46.0
+    catalog_earned_first_party: 15.0
+    catalog_gap: 69.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.6
   facets:
-    access_clarity: 43.4
-    contract_governance: 0.0
+    access_clarity: 19.7
+    contract_governance: 45.5
     contract_quality: 0.0
     developer_ergonomics: 11.9
-    discoverability: 40.7
-    operational_transparency: 26.3
-  previous_composite: 18.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    discoverability: 48.2
+    operational_transparency: 10.5
+  previous_composite: 18.8
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -153,6 +199,8 @@ tags:
 - Athletic Apparel
 - Footwear
 - Sportswear
+- Fashion
+- Apparel
 use_cases:
 - description: Direct-to-consumer e-commerce for performance footwear and apparel.
   name: Sportswear E-commerce

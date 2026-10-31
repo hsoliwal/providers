@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 3
+artifact_total: 4
 common:
 - group: company
   title: ''
@@ -137,6 +137,10 @@ created: '2026-07-17'
 description: Vention is a Montreal-based manufacturing automation company offering an integrated hardware, software, and AI platform for factory automation. Its Manufacturing Automation Platform spans MachineBuilder (browser CAD for designing automated equipment), MachineLogic (no-code, AI Copilot, and Python programming plus digital-twin simulation), MachineMotion AI (an automation controller with a built-in NVIDIA Jetson GPU that drives robots, motors, and sensors), and MachineAnalytics (remote monitoring). Developers program and control MachineMotion hardware through the official Vention Python SDK (machine-logic-sdk, imported as `from MachineMotion import *`), which exposes motion control, digital I/O, robot coordination, and path execution. Vention reports 28,000+ machines running globally and use by 90 of the Fortune 500.
 image: https://assets.vention.io/marketing/page-assets/thumbnails/default-with-text.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.vention.com over HTTP.
+  name: Vention MCP Server
+  slug: vention
 modified: '2026-07-21'
 name: Vention
 nav: Providers
@@ -148,7 +152,7 @@ overview: 'Vention is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 1
 score:
   band: thin
-  composite: 30.0
+  composite: 31.5
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -156,24 +160,32 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 50.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 52.4
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 30.0
+  previous_composite: 31.4
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

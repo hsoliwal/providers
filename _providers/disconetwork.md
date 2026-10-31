@@ -22,7 +22,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: true
     idempotency: false
     mcp_server: false
@@ -33,15 +33,15 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 32.9
-  scored_at: '2026-09-20'
+  score: 30.8
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 3
+- acting_count: 2
   human_in_the_loop: 0
   name: Disconetwork Agentic Access
   operation_count: 6
   slug: disconetwork-agentic-access
-  summary_line: 6 operations · 3 acting
+  summary_line: 6 operations · 2 acting
 api_count: 3
 apis:
 - description: The channel-partner management API behind DiscoBeat. Lists ad categories and subcategories, reads channel details, manages channel-wide and publisher-specific subcategory exclusions, and lists, inspec
@@ -253,7 +253,7 @@ modified: '2026-08-12'
 name: Disconetwork
 nav: Providers
 network: true
-overview: 'Disconetwork publishes 3 APIs on the [APIs.io](https://apis.io/) network: Discobeat API, Events API, and Recommendations API. Tagged areas include Company, Commerce Media, Retail Media, Post-Purchase, and Advertising.
+overview: 'Disconetwork publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Discobeat API, Events API, Recommendations API, and 2 more. Tagged areas include Company, Commerce Media, Retail Media, Post-Purchase, and Advertising.
 
 
   The Disconetwork catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -271,23 +271,23 @@ rate_limits:
   slug: disconetwork-rate-limits
 score:
   band: developing
-  composite: 45.7
+  composite: 44.2
   coverage:
-    artifact_dirs: 26
+    artifact_dirs: 27
     catalog_earned: 48.0
     catalog_earned_first_party: 8.0
     catalog_gap: 67.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 10.5
     contract_governance: 4.5
-    contract_quality: 62.2
-    developer_ergonomics: 66.1
-    discoverability: 81.5
+    contract_quality: 56.8
+    developer_ergonomics: 65.6
+    discoverability: 78.6
     operational_transparency: 52.6
-  previous_composite: 45.7
+  previous_composite: 44.1
   provenance:
     agentic_access: derived
     conformance: derived
@@ -298,8 +298,14 @@ score:
       total: 3
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

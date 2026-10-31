@@ -36,14 +36,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 57.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 62
+- acting_count: 60
   human_in_the_loop: 13
   name: Anchorbrowser Agentic Access
   operation_count: 98
   slug: anchorbrowser-agentic-access
-  summary_line: 98 operations · 62 acting · 13 human-in-the-loop
+  summary_line: 98 operations · 60 acting · 13 human-in-the-loop
 api_count: 1
 apis:
 - description: The Anchor Browser REST API exposes cloud browser sessions for AI agents. It covers session lifecycle (create, async create, status, end, list history), batch session creation (up to 5,000 simultaneou
@@ -140,7 +140,7 @@ apis:
   description: The Tools API from Anchor Browser — 4 operation(s) for tools.
   name: Anchor Browser Tools API
   slug: anchorbrowser-tools-api
-artifact_total: 66
+artifact_total: 67
 collections:
 - collection_type: open
   name: API Collection
@@ -200,6 +200,21 @@ collections:
   name: AnchorBrowser API
   slug: open-anchorbrowser
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/anchorbrowser/refs/heads/main/plans/anchorbrowser-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/anchorbrowser-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/anchorbrowser/refs/heads/main/rate-limits/anchorbrowser-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/anchorbrowser-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/anchorbrowser/refs/heads/main/finops/anchorbrowser-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/anchorbrowser-finops.yml
 - group: company
   title: ''
   type: Website
@@ -306,9 +321,13 @@ features:
 - description: Per-session video recording with pause/resume and bidirectional file upload/download.
   name: Recording and File I/O
 finops:
-- name: Anchorbrowser Finops
+- has_sources: false
+  method: generated
+  name: Anchorbrowser Finops
+  primary_unit: ''
   service_category: API
   slug: anchorbrowser-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/anchorbrowser.png
 integrations:
 - description: Hosted and open-source MCP servers let any MCP-compatible client use Anchor Browser as a tool.
@@ -327,15 +346,18 @@ layout: provider
 mcp_servers:
 - description: ''
   name: Anchor Browser MCP Server
-  slug: anchor-browser-mcp-server
+  slug: https-browsermcp-com
+- description: Remote MCP server at api.anchorbrowser.io over HTTP.
+  name: Anchor Browser MCP Server
+  slug: anchorbrowser
 modified: '2026-09-16'
 name: Anchor Browser
 nav: Providers
 network: true
-overview: 'Anchor Browser publishes 17 APIs on the [APIs.io](https://apis.io/) network, including Agentic capabilities API, AI Tools API, Applications API, and 14 more. Tagged areas include Browser Infrastructure, AI Agents, Cloud Browser, Browser Automation, and Sandbox.
+overview: 'Anchor Browser publishes 20 API contracts indexed on the [APIs.io](https://apis.io/) network, including Agentic capabilities API, AI Tools API, Applications API, and 17 more. Tagged areas include Browser Infrastructure, AI Agents, Cloud Browser, Browser Automation, and Sandbox.
 
 
-  Anchor Browser''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, developer console, engineering blog, and 13 more developer resources.'
+  Anchor Browser''s developer surface includes authentication, developer portal, documentation, getting-started guide, signup flow, developer console, engineering blog, and 16 more developer resources.'
 plans:
 - name: Anchorbrowser Plans Pricing
   plan_count: 1
@@ -347,23 +369,23 @@ rate_limits:
   slug: anchorbrowser-rate-limits
 score:
   band: developing
-  composite: 51.3
+  composite: 43.3
   coverage:
-    artifact_dirs: 14
-    catalog_earned: 51.0
+    artifact_dirs: 15
+    catalog_earned: 36.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 64.0
+    catalog_gap: 79.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.0
   facets:
-    access_clarity: 50.0
+    access_clarity: 26.3
     contract_governance: 0.0
-    contract_quality: 58.4
+    contract_quality: 52.7
     developer_ergonomics: 59.5
     discoverability: 66.7
-    operational_transparency: 42.1
-  previous_composite: 51.3
+    operational_transparency: 26.3
+  previous_composite: 49.3
   provenance:
     agentic_access: derived
     contracts:
@@ -372,9 +394,15 @@ score:
       marker_coverage: 0.0
       total: 17
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 33.3

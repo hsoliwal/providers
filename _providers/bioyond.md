@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.bioyond.com/feed
 - group: company
   title: ''
   type: Website
@@ -61,42 +65,42 @@ created: '2026-07-17'
 description: Bioyond Robotics (奔曜科技) is a life-sciences intelligent-automation company founded in 2021 and headquartered in Shanghai's Zhangjiang Science City. It combines robotics, machine vision, and artificial intelligence to build autonomous laboratory solutions for scientific research, drug discovery, applied chemistry, synthetic biology, multiomics, and clinical diagnostics. Its product line spans the LabGenius robot platform (liquid-handling and transport robots), the LabMate automation platform (material/liquid handling, stackers, and intelligent scheduling), the LabMind laboratory software platform for integrating external instruments and modules, and the BIOYOND AutoSeq genetic-analysis system. Bioyond is backed by Qiming Venture Partners. As of this profile the company exposes no public developer API, SDK, or developer portal — this record captures its identity and domain-security posture only.
 image: https://www.bioyond.com/en/wp-content/uploads/2025/08/logo-192x192.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Bioyond Robotics
 nav: Providers
 network: true
 overview: 'Bioyond Robotics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Life Sciences, Laboratory Automation, Robotics, and Artificial Intelligence.
 
 
-  Bioyond Robotics'' developer surface includes YouTube channel and 4 more developer resources.'
+  Bioyond Robotics'' developer surface includes YouTube channel and 5 more developer resources.'
 random_paper: 8
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 0.0
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 3.3
+  previous_composite: 3.6
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

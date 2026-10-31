@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 20.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: 'Read-only Model Context Protocol server served over HTTP at the Pixeltable apex host. Protocol version 2025-06-18, JSON-RPC 2.0 (initialize, tools/list, tools/call). Exposes two tools: search_docs, wh'
@@ -228,14 +228,14 @@ description: 'Pixeltable is an open-source (Apache 2.0) Python data infrastructu
 image: https://pixeltable.com/images/favicon.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at pixeltable.com over HTTP; 2 tools listed.
   name: Pixeltable MCP Server
-  slug: pixeltable-mcp-server
+  slug: pixeltable-web
 modified: '2026-08-17'
 name: Pixeltable
 nav: Providers
 network: true
-overview: 'Pixeltable publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Multimodal AI, AI Data Infrastructure, and Vector Search.
+overview: 'Pixeltable is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Ai Data, Multimodal AI, AI Data Infrastructure, and Vector Search.
 
 
   Pixeltable''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
@@ -250,29 +250,35 @@ rate_limits:
   slug: pixeltable-rate-limits
 score:
   band: developing
-  composite: 51.3
+  composite: 52.7
   coverage:
-    artifact_dirs: 21
+    artifact_dirs: 22
     catalog_earned: 60.0
     catalog_earned_first_party: 20.0
     catalog_gap: 55.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 76.3
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 85.7
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 51.3
+  previous_composite: 53.0
   provenance:
     conformance: first-party
     mcp: first-party
     skills: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 28.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -303,11 +309,12 @@ tags:
 - RAG
 - Agent Memory
 - MCP
-- Open-Source
+- Open Source
 - Python
 - Data Orchestration
 - Computed Columns
 - Video Processing
-- Machine-Learning
+- Machine Learning
+- A2A
 website: https://www.pixeltable.com/
 ---

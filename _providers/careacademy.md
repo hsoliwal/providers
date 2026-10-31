@@ -23,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: false
@@ -34,8 +34,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 21.8
-  scored_at: '2026-09-20'
+  score: 19.6
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - baseURL: https://go.careacademy.com/api/v1
@@ -84,6 +84,10 @@ collections:
   name: CareAcademy Compliance Report Sign In Url API
   slug: open-careacademy-sign-in-url-api
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://careacademy.com/feed/
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/careacademy/refs/heads/main/capabilities/careacademy-capability-edges.yml
   title: ''
@@ -205,18 +209,18 @@ created: '2026-07-17'
 description: CareAcademy (part of Activated Insights) is an online training, compliance, and workforce-management platform for post-acute care — home care, home health, hospice, and senior living organizations. It automates regulatory training assignment, caregiver onboarding, and audit-ready compliance reporting for 2,500+ organizations and 800K+ caregivers. The CareAcademy API lets integration partners (home-care software platforms) create agency organizations and caregivers, provide Single Sign-On into CareAcademy from their own product, and query course-completion and compliance data in real time. The partner API is an OpenAPI 3.0 REST interface using HTTP Basic authentication, published on SwaggerHub, with named integrations for WellSky, AxisCare, AlayaCare, eRSP, Aaniie, and Spectrum TeleTrack Services.
 image: https://careacademy.com/wp-content/uploads/2022/09/CA-Logo.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: CareAcademy
 nav: Providers
 network: true
-overview: 'CareAcademy publishes 5 APIs on the [APIs.io](https://apis.io/) network, including Compliance Report API, Locations API, Organizations API, and 2 more. Tagged areas include Company, Training, Education, Compliance, and Home Care.
+overview: 'CareAcademy publishes 5 API contracts indexed on the [APIs.io](https://apis.io/) network, including Compliance Report API, Locations API, Organizations API, and 2 more. Tagged areas include Company, Training, Education, Compliance, and Home Care.
 
 
-  CareAcademy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 19 more developer resources.'
+  CareAcademy''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 20 more developer resources.'
 random_paper: 13
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 37.3
   coverage:
     artifact_dirs: 21
     catalog_earned: 37.0
@@ -228,11 +232,11 @@ score:
   facets:
     access_clarity: 27.6
     contract_governance: 4.5
-    contract_quality: 50.5
+    contract_quality: 45.4
     developer_ergonomics: 53.0
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 15.8
-  previous_composite: 39.4
+  previous_composite: 37.3
   provenance:
     conformance: derived
     contracts:
@@ -247,9 +251,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 26.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 16.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: documented
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 27.1
-  scored_at: '2026-09-20'
+  score: 25.2
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 36
   human_in_the_loop: 1
@@ -54,27 +54,27 @@ apis:
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The access-tokens API from E2B — 2 operation(s) for access-tokens.
-  name: E2B access-tokens API
+  name: E2B Access Tokens API
   slug: e2b-dev-access-tokens-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The admin API from E2B — 4 operation(s) for admin.
-  name: E2B admin API
+  name: E2B Admin API
   slug: e2b-dev-admin-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The api-keys API from E2B — 2 operation(s) for api-keys.
-  name: E2B api-keys API
+  name: E2B API Keys API
   slug: e2b-dev-api-keys-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The auth API from E2B — 3 operation(s) for auth.
-  name: E2B auth API
+  name: E2B Auth API
   slug: e2b-dev-auth-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The events API from E2B — 2 operation(s) for events.
-  name: E2B events API
+  name: E2B Events API
   slug: e2b-dev-events-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
@@ -84,32 +84,32 @@ apis:
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The sandboxes API from E2B — 13 operation(s) for sandboxes.
-  name: E2B sandboxes API
+  name: E2B Sandboxes API
   slug: e2b-dev-sandboxes-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The snapshots API from E2B — 1 operation(s) for snapshots.
-  name: E2B snapshots API
+  name: E2B Snapshots API
   slug: e2b-dev-snapshots-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The tags API from E2B — 2 operation(s) for tags.
-  name: E2B tags API
+  name: E2B Tags API
   slug: e2b-dev-tags-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The templates API from E2B — 11 operation(s) for templates.
-  name: E2B templates API
+  name: E2B Templates API
   slug: e2b-dev-templates-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The volumes API from E2B — 5 operation(s) for volumes.
-  name: E2B volumes API
+  name: E2B Volumes API
   slug: e2b-dev-volumes-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
   description: The webhooks API from E2B — 2 operation(s) for webhooks.
-  name: E2B webhooks API
+  name: E2B Webhooks API
   slug: e2b-dev-webhooks-api
 - baseURL: https://api.e2b.app
   baseurl_source: declared
@@ -203,6 +203,23 @@ collections:
   name: E2B API
   slug: open-e2b-volumes
 common:
+- group: commercial
+  title: ''
+  type: Pricing
+  url: https://e2b.dev/pricing
+- group: company
+  title: ''
+  type: Blog
+  url: https://e2b.dev/resources
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://e2b.dev/rss.xml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/e2b-dev/refs/heads/main/capabilities/e2b-dev-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/e2b-dev-capability-edges.yml
 - group: company
   title: ''
   type: Website
@@ -438,9 +455,13 @@ features:
 - Per-second usage-based pricing on CPU, RAM, and storage with a $100 signup credit
 - Used in production by AI labs, agent startups, and Fortune 100 enterprises; 1B+ sandboxes started and 3.5M+ monthly SDK downloads
 finops:
-- name: E2B Dev Finops
+- has_sources: false
+  method: generated
+  name: E2B Dev Finops
+  primary_unit: ''
   service_category: ''
   slug: e2b-dev-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/e2b-dev.png
 json_schemas:
 - name: E2B Sandbox
@@ -455,20 +476,20 @@ jsonld:
   property_count: 11
   slug: e2b-dev-context
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: E2B
 nav: Providers
 network: true
-overview: 'E2B publishes 13 APIs on the [APIs.io](https://apis.io/) network, including access-tokens API, admin API, api-keys API, and 10 more. Tagged areas include Artificial Intelligence, Agents, Code Execution, Code Interpreter, and Sandbox.
+overview: 'E2B publishes 15 API contracts indexed on the [APIs.io](https://apis.io/) network, including Access Tokens API, Admin API, API Keys API, and 12 more. Tagged areas include Artificial Intelligence, Agents, Code Execution, Code Interpreter, and Sandbox.
 
 
   The E2B catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
 
 
-  E2B''s developer surface includes authentication, developer portal, documentation, getting-started guide, API reference, signup flow, engineering blog, and 43 more developer resources.'
+  E2B''s developer surface includes pricing, engineering blog, authentication, developer portal, documentation, getting-started guide, API reference, and 47 more developer resources.'
 plans:
 - name: E2B Dev Plans Pricing
-  plan_count: 3
+  plan_count: 5
   slug: e2b-dev-plans-pricing
 random_paper: 19
 rate_limits:
@@ -476,9 +497,10 @@ rate_limits:
   name: E2B Dev Rate Limits
   slug: e2b-dev-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: E2B API Rules
+  name: E2B — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -488,23 +510,23 @@ rules:
   slug: e2b-dev-jsonschema-spectral-rules
 score:
   band: strong
-  composite: 65.5
+  composite: 63.8
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 86.3
-    catalog_earned_first_party: 0.0
-    catalog_gap: 28.8
+    artifact_dirs: 18
+    catalog_earned: 73.3
+    catalog_earned_first_party: 12.0
+    catalog_gap: 41.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 81.6
+    access_clarity: 84.2
     contract_governance: 9.8
-    contract_quality: 76.0
+    contract_quality: 69.8
     developer_ergonomics: 82.1
-    discoverability: 64.8
-    operational_transparency: 52.6
-  previous_composite: 65.5
+    discoverability: 62.5
+    operational_transparency: 28.9
+  previous_composite: 65.3
   provenance:
     agentic_access: derived
     contracts:
@@ -512,8 +534,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 13
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 32.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -545,6 +573,6 @@ tags:
 - Desktop Sandbox
 - Templates
 - MCP
-- Open-Source
+- Open Source
 website: https://www.e2b.dev/
 ---

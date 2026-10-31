@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 17.3
-  scored_at: '2026-09-20'
+  score: 15.4
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 1
   human_in_the_loop: 0
@@ -79,6 +79,21 @@ collections:
   name: Apache Hive WebHCat REST API
   slug: open-apache-hive-webhcat
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-hive/refs/heads/main/plans/apache-hive-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/apache-hive-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/apache-hive/refs/heads/main/rate-limits/apache-hive-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/apache-hive-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/apache-hive/refs/heads/main/finops/apache-hive-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/apache-hive-finops.yml
 - group: company
   title: ''
   type: Website
@@ -179,9 +194,13 @@ features:
 - description: Batch processing of rows in CPU register-width vectors for improved query throughput.
   name: Vectorized Query Execution
 finops:
-- name: Apache Hive Finops
+- has_sources: false
+  method: generated
+  name: Apache Hive Finops
+  primary_unit: ''
   service_category: API
   slug: apache-hive-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/apache-hive.png
 json_schemas:
 - name: Column
@@ -231,13 +250,13 @@ modified: '2026-05-19'
 name: Apache Hive
 nav: Providers
 network: true
-overview: 'Apache Hive publishes 3 APIs on the [APIs.io](https://apis.io/) network: Databases API, Jobs API, and Tables API. Tagged areas include Apache, Big Data, Data Warehouse, ETL, and Hadoop.
+overview: 'Apache Hive publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Databases API, Jobs API, Tables API, and 1 more. Tagged areas include Apache, Big Data, Data Warehouse, ETL, and Hadoop.
 
 
   The Apache Hive catalog on APIs.io includes 1 JSON-LD context and 2 Spectral governance rulesets.
 
 
-  Apache Hive''s developer surface includes documentation, getting-started guide, and 12 more developer resources.'
+  Apache Hive''s developer surface includes documentation, getting-started guide, and 15 more developer resources.'
 plans:
 - name: Apache Hive Plans Pricing
   plan_count: 3
@@ -248,9 +267,10 @@ rate_limits:
   name: Apache Hive Rate Limits
   slug: apache-hive-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Apache Hive API Rules
+  name: Apache Hive — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -258,7 +278,8 @@ rules:
     info: 2
     warn: 3
   slug: apache-hive-jsonschema-spectral-rules
-- effective_rule_count: 54
+- authorship: generated
+  effective_rule_count: 54
   extends:
   - spectral:oas
   name: Apache Hive API Rules
@@ -271,26 +292,26 @@ rules:
   slug: apache-hive-spectral-rules
 score:
   band: thin
-  composite: 35.4
+  composite: 32.8
   coverage:
     artifact_dirs: 16
-    catalog_earned: 64.5
+    catalog_earned: 60.4
     catalog_earned_first_party: 0.0
-    catalog_gap: 50.5
+    catalog_gap: 54.6
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.3
   facets:
-    access_clarity: 15.8
-    contract_governance: 28.8
-    contract_quality: 54.2
+    access_clarity: 7.9
+    contract_governance: 27.3
+    contract_quality: 49.3
     developer_ergonomics: 28.6
-    discoverability: 59.3
+    discoverability: 57.1
     operational_transparency: 21.1
   open_source:
     applies: true
     score: 50.0
-  previous_composite: 35.4
+  previous_composite: 34.1
   provenance:
     agentic_access: derived
     contracts:
@@ -298,8 +319,14 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 16.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -321,7 +348,7 @@ tags:
 - Data Warehouse
 - ETL
 - Hadoop
-- Open-Source
+- Open Source
 - SQL
 use_cases:
 - description: Run SQL analytics on petabyte-scale datasets stored in HDFS or object storage.

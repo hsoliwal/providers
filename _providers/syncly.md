@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 50.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -42,7 +42,7 @@ agentic_access:
   operation_count: 4
   slug: syncly-agentic-access
   summary_line: 4 operations
-api_count: 1
+api_count: 2
 apis:
 - baseURL: https://mcp.syncly.app
   baseurl_source: declared
@@ -195,14 +195,14 @@ description: Syncly is an AI-native social and customer intelligence platform (b
 image: https://framerusercontent.com/images/eVsReqyksUv6paQaME2J7epX8.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.syncly.app over HTTP.
   name: Syncly Social MCP Server
   slug: syncly-social-mcp-server
 modified: '2026-09-16'
 name: Syncly
 nav: Providers
 network: true
-overview: 'Syncly publishes 2 APIs on the [APIs.io](https://apis.io/) network: Health API and .well Known API. Tagged areas include Company, Social Intelligence, Social Listening, Customer Feedback, and Voice of Customer.
+overview: 'Syncly publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Health API and .well Known API. Tagged areas include Company, Social Intelligence, Social Listening, Customer Feedback, and Voice of Customer.
 
 
   Syncly''s developer surface includes documentation, getting-started guide, engineering blog, pricing, signup flow, authentication, and 23 more developer resources.'
@@ -222,23 +222,23 @@ scopes:
   summary_line: 2 scopes · authorizationCode
 score:
   band: developing
-  composite: 44.1
+  composite: 46.8
   coverage:
-    artifact_dirs: 20
+    artifact_dirs: 21
     catalog_earned: 49.0
     catalog_earned_first_party: 12.0
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 71.1
     contract_governance: 18.2
-    contract_quality: 37.4
+    contract_quality: 33.7
     developer_ergonomics: 47.0
-    discoverability: 75.9
+    discoverability: 71.7
     operational_transparency: 10.5
-  previous_composite: 44.1
+  previous_composite: 46.7
   provenance:
     agentic_access: derived
     conformance: first-party
@@ -249,8 +249,18 @@ score:
       total: 2
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    jurisdictions:
+    - jurisdiction: EU
+      standard: gdpr
+    jurisdictions_satisfied: 1
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 41.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

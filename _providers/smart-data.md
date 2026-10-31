@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 4
 common:
@@ -149,9 +149,13 @@ created: '2026-03-16'
 description: 'SmartData is a hosted drone-data workspace built and operated by National Drones, a CASA ReOC holder and Registered Training Organisation headquartered at Level 34, 1 Eagle Street, Brisbane, Australia. Teams bring processed, viewer-ready outputs from DJI Terra, Agisoft Metashape or their own photogrammetry workflow into SmartData and share one secure browser workspace where clients and asset owners can inspect, measure, compare and sign off on the data instead of passing files around. The platform hosts orthomosaic views, Cesium 3D Tiles, tiled point clouds and Gaussian Splat packages, layers AI-assisted inspection review, measurements, change detection, reporting and role-based team governance over them, and is expanding into processing and analytics workflows for DJI L3 LiDAR, Elios confined-space data, powerline corridor analytics and forestry intelligence. It serves power and utilities, telecommunications, mining and resources, forestry and environment, and infrastructure
   and construction. SmartData is sold as an end-user SaaS product: it publishes pricing, a public demo sandbox and self-service signup, but no API, developer portal, SDK, webhook surface or machine-readable contract of any kind.'
 finops:
-- name: Smart Data Finops
+- has_sources: true
+  method: derived
+  name: Smart Data Finops
+  primary_unit: ''
   service_category: SaaS
   slug: smart-data-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/smart-data.png
 layout: provider
 modified: '2026-08-14'
@@ -173,21 +177,21 @@ rate_limits:
   slug: smart-data-rate-limits
 score:
   band: emerging
-  composite: 24.6
+  composite: 22.6
   coverage:
     artifact_dirs: 11
-    catalog_earned: 42.0
+    catalog_earned: 39.0
     catalog_earned_first_party: 12.0
-    catalog_gap: 73.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 84.2
+    access_clarity: 76.3
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 14.3
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -196,15 +200,15 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - anz
-  previous_composite: 24.6
+  previous_composite: 24.1
   regulatory:
     applies: true
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 18.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -226,7 +230,7 @@ tags:
 - Point Cloud
 - 3D Visualization
 - Gaussian Splatting
-- Computer-Vision
+- Computer Vision
 - Infrastructure
 - Utilities
 - Mining

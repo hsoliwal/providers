@@ -13,7 +13,6 @@ access_model:
   try_now: false
 agent_readiness:
   band: agent-ready
-  band_gated_from: agent-native
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -24,7 +23,7 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: true
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: derived
     idempotency: false
     mcp_server: false
@@ -35,9 +34,9 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: true
   schema_version: '0.2'
-  score: 39.0
-  scored_at: '2026-09-20'
-api_count: 4
+  score: 36.9
+  scored_at: '2026-10-17'
+api_count: 6
 apis:
 - baseURL: https://api.paperlessparts.com/v2
   baseurl_source: declared
@@ -105,6 +104,10 @@ asyncapis:
   name: Paperless Parts Events
   slug: paperless-parts-events
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.paperlessparts.com/feed/
 - group: commercial
   title: ''
   type: License
@@ -281,17 +284,17 @@ created: '2026-08-26'
 description: Paperless Parts, Inc. is a Boston-based manufacturing software company founded in 2017 that builds a secure, ITAR-compliant cloud quoting and sales platform for custom part manufacturers — job shops, contract manufacturers and rapid-prototype businesses working in CNC machining, sheet metal fabrication, Swiss screw machining, wire EDM, waterjet and additive manufacturing. A patented geometry engine analyses uploaded CAD to automate costing, and the P3L pricing language lets a shop encode its own pricing logic. The company publishes a public REST API in two live versions (v1 and v2) at api.paperlessparts.com, covering quotes, quote items, orders, jobs, parts, processes, contacts and accounts, custom pricing tables, purchased components, and a managed integrations framework with a poll-based Streaming API for reacting to platform events. A first-party Python SDK is published on GitHub under the part-os organization.
 image: https://paperlessparts.com/wp-content/uploads/paperless-parts-full-logo-2022.svg
 layout: provider
-modified: '2026-09-16'
+modified: '2026-10-06'
 name: Paperless Parts
 nav: Providers
 network: true
-overview: 'Paperless Parts publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Contacts API, Custom Tables API, Customers API, and 9 more. Tagged areas include Company, Manufacturing, Quoting, CNC Machining, and Sheet Metal.
+overview: 'Paperless Parts publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Contacts API, Custom Tables API, Customers API, and 9 more. Tagged areas include Company, Manufacturing, Quoting, CNC Machining, and Sheet Metal.
 
 
   The Paperless Parts catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Paperless Parts'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 31 more developer resources.'
+  Paperless Parts'' developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 32 more developer resources.'
 plans:
 - name: Paperless Parts Plans Pricing
   plan_count: 0
@@ -302,29 +305,31 @@ rate_limits:
   name: Paperless Parts Rate Limits
   slug: paperless-parts-rate-limits
 score:
-  band: developing
-  composite: 53.2
+  band: strong
+  composite: 54.7
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 40.0
     catalog_earned_first_party: 0.0
     catalog_gap: 75.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 52.6
     contract_governance: 18.2
-    contract_quality: 64.5
+    contract_quality: 59.2
     developer_ergonomics: 49.4
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 28.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 53.2
+  previous_composite: 54.6
   provenance:
     conformance: first-party
     contracts:
@@ -334,8 +339,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://coin98.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://coin98.com/blog/rss/
 - group: company
   title: ''
   type: Website
@@ -98,18 +106,18 @@ created: '2026-07-17'
 description: Coin98 is a crypto super-app built around a non-custodial, multi-chain wallet spanning 80+ blockchains across iOS, Android, a Chrome browser extension, Telegram, and web. Its product surface includes the Coin98 Super Wallet, an AI wallet with autonomous agents (Cypheus), the SwapX DEX aggregator routing across 50+ DEXs, on-chain perpetual futures (Coin98 Perps), the Fusion Visa debit card, PowerPool C98 staking, the Zen hardware card, Coin98 Markets data, and a token distribution Vault. For developers, Coin98 publishes a Developer Guide and the Coin98 Adapter — a React/Next.js wallet-connection SDK with useWallet and useWalletModal hooks and prebuilt connect UI — plus a Connect SDK and Telegram Mini App SDK, integrating dApps with the wallet across 40+ chains. Surfaced originally as a multicoin-capital portfolio company and enriched into the API Evangelist network.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/coin98.png
 layout: provider
-modified: '2026-07-18'
+modified: '2026-10-06'
 name: Coin98
 nav: Providers
 network: true
-overview: 'Coin98 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Crypto Web3, Cryptocurrency Wallet, DeFi, and Blockchain.
+overview: 'Coin98 is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Web3, Cryptocurrency Wallet, DeFi, and Blockchain.
 
 
-  Coin98''s developer surface includes documentation, API reference, getting-started guide, engineering blog, and 9 more developer resources.'
+  Coin98''s developer surface includes engineering blog, documentation, API reference, getting-started guide, and 11 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 12.1
+  composite: 13.3
   coverage:
     artifact_dirs: 8
     catalog_earned: 27.0
@@ -123,17 +131,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 47.6
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 12.1
+  previous_composite: 13.3
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 9.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 5.4
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -148,12 +156,12 @@ security:
 slug: coin98
 tags:
 - Company
-- Crypto Web3
+- Web3
 - Cryptocurrency Wallet
 - DeFi
 - Blockchain
-- Web3
 - Wallet SDK
 - Developer Tools
+- Cryptocurrency
 website: https://coin98.com
 ---

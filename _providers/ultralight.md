@@ -32,10 +32,15 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/ultralight/refs/heads/main/plans/ultralight-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/ultralight-plans-pricing.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/ultralight/refs/heads/main/security/ultralight-domain-security.yml
   title: ''
@@ -91,35 +96,41 @@ modified: '2026-07-21'
 name: Ultralight
 nav: Providers
 network: true
-overview: 'Ultralight is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, EHR, Artificial Intelligence, and Functional Medicine.
+overview: 'Ultralight is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Electronic Health Records, Artificial Intelligence, and Functional Medicine.
 
 
-  Ultralight''s developer surface includes pricing, engineering blog, and 9 more developer resources.'
+  Ultralight''s developer surface includes pricing, engineering blog, and 10 more developer resources.'
+plans:
+- name: Ultralight Plans Pricing
+  plan_count: 7
+  slug: ultralight-plans-pricing
 random_paper: 10
 score:
   band: emerging
-  composite: 20.6
+  composite: 25.9
   coverage:
-    artifact_dirs: 6
-    catalog_earned: 27.0
-    catalog_earned_first_party: 0.0
-    catalog_gap: 88.0
+    artifact_dirs: 8
+    catalog_earned: 39.0
+    catalog_earned_first_party: 12.0
+    catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 6.4
   facets:
-    access_clarity: 52.6
+    access_clarity: 84.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 20.6
+  previous_composite: 19.5
   provenance:
     conformance: first-party
   regulatory:
@@ -131,10 +142,10 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 30.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 17.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: rising
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
@@ -149,7 +160,7 @@ slug: ultralight
 tags:
 - Company
 - Healthcare
-- EHR
+- Electronic Health Records
 - Artificial Intelligence
 - Functional Medicine
 - Integrative Medicine

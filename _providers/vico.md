@@ -32,9 +32,9 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 8.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 1
+artifact_total: 2
 common:
 - group: company
   title: ''
@@ -73,11 +73,15 @@ created: '2026-07-17'
 description: Vico (getvico.com) is a Colombian marketplace for finding and renting furnished rooms, aparta-estudios, and apartments for shared, medium- to long-term stays across cities such as Bogotá and Medellín. Guests browse and book verified co-living spaces while hosts list and manage rooms, under the tagline "Ama donde vives" (Love where you live). It is a consumer-facing accommodation platform backed by 500 Global; it exposes no public developer API program, OpenAPI, GraphQL, or /.well-known discovery surface as of this enrichment pass.
 image: https://api.getvico.com/images/opengraph/facebook_opengraph_vicorooms.jpg
 layout: provider
+mcp_servers:
+- description: Remote MCP server at api.getvico.com over HTTP; 2 tools listed.
+  name: Vico MCP Server
+  slug: vico
 modified: '2026-07-21'
 name: Vico
 nav: Providers
 network: true
-overview: 'Vico is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real-Estate, Rentals, Housing, and Marketplace.
+overview: 'Vico is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Real Estate, Rentals, Housing, and Marketplace.
 
 
   Vico''s developer surface includes engineering blog, support, and 6 more developer resources.'
@@ -92,13 +96,13 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 21.1
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 51.7
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -107,11 +111,17 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - latin-america
-  previous_composite: 10.6
+  previous_composite: 10.5
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 13.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -126,7 +136,7 @@ security:
 slug: vico
 tags:
 - Company
-- Real-Estate
+- Real Estate
 - Rentals
 - Housing
 - Marketplace

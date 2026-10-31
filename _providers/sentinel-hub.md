@@ -28,21 +28,21 @@ agent_readiness:
     mcp_server: false
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: documented
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.9
-  scored_at: '2026-09-20'
+  score: 25.0
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 36
+- acting_count: 34
   human_in_the_loop: 2
   name: Sentinel Hub Agentic Access
   operation_count: 95
   slug: sentinel-hub-agentic-access
-  summary_line: 95 operations · 36 acting · 2 human-in-the-loop
-api_count: 1
+  summary_line: 95 operations · 34 acting · 2 human-in-the-loop
+api_count: 2
 apis:
 - description: OGC-standard web services (WMS, WCS, WFS, WMTS) for integrating Sentinel Hub satellite imagery into GIS applications such as QGIS, ArcGIS, OpenLayers, and Google Earth. Authentication uses a configura
   name: Sentinel Hub OGC Services
@@ -50,127 +50,127 @@ apis:
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: '**NOTE:** _Asynchronous Processing API is currently in beta release._'
-  name: Sentinel Hub async_process API
+  name: Sentinel Hub Async Process API
   slug: sentinel-hub-async-process-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The batch_statistical API from Sentinel Hub — 6 operation(s) for batch_statistical.
-  name: Sentinel Hub batch_statistical API
+  name: Sentinel Hub Batch Statistical API
   slug: sentinel-hub-batch-statistical-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The batch_v2_process API from Sentinel Hub — 5 operation(s) for batch_v2_process.
-  name: Sentinel Hub batch_v2_process API
+  name: Sentinel Hub Batch V2 Process API
   slug: sentinel-hub-batch-v2-process-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The batch_v2_tiling_grid API from Sentinel Hub — 2 operation(s) for batch_v2_tiling_grid.
-  name: Sentinel Hub batch_v2_tiling_grid API
+  name: Sentinel Hub Batch V2 Tiling Grid API
   slug: sentinel-hub-batch-v2-tiling-grid-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The byoc_collection API from Sentinel Hub — 3 operation(s) for byoc_collection.
-  name: Sentinel Hub byoc_collection API
+  name: Sentinel Hub Byoc Collection API
   slug: sentinel-hub-byoc-collection-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The byoc_tile API from Sentinel Hub — 5 operation(s) for byoc_tile.
-  name: Sentinel Hub byoc_tile API
+  name: Sentinel Hub Byoc Tile API
   slug: sentinel-hub-byoc-tile-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: This is an OpenAPI definition of the SpatioTemporal Asset Catalog API - Collections specification. This is a subset of the STAC API - Features specification.
-  name: Sentinel Hub catalog_collections API
+  name: Sentinel Hub Catalog Collections API
   slug: sentinel-hub-catalog-collections-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: This is an OpenAPI definition of the SpatioTemporal Asset Catalog API - Core specification. Any service that implements this endpoint to allow discovery of spatiotemporal assets can be considered a ST
-  name: Sentinel Hub catalog_core API
+  name: Sentinel Hub Catalog Core API
   slug: sentinel-hub-catalog-core-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: 'This is an OpenAPI definition of the SpatioTemporal Asset Catalog API - Features specification. This extends OGC API - Features - Part 1: Core.'
-  name: Sentinel Hub catalog_features API
+  name: Sentinel Hub Catalog Features API
   slug: sentinel-hub-catalog-features-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: This is an OpenAPI definition of the SpatioTemporal Asset Catalog API - Item Search specification.
-  name: Sentinel Hub catalog_item_search API
+  name: Sentinel Hub Catalog Item Search API
   slug: sentinel-hub-catalog-item-search-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Orders API](https://docs.planet.com/develop/apis/orders/reference/) instead.
-  name: Sentinel Hub dataimport_delivery API
+  name: Sentinel Hub Dataimport Delivery API
   slug: sentinel-hub-dataimport-delivery-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Orders API](https://docs.planet.com/develop/apis/orders/reference/) instead.
-  name: Sentinel Hub dataimport_order API
+  name: Sentinel Hub Dataimport Order API
   slug: sentinel-hub-dataimport-order-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Data API](https://docs.planet.com/develop/apis/data/reference/) instead.
-  name: Sentinel Hub dataimport_product API
+  name: Sentinel Hub Dataimport Product API
   slug: sentinel-hub-dataimport-product-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The dataimport_quota API from Sentinel Hub — 2 operation(s) for dataimport_quota.
-  name: Sentinel Hub dataimport_quota API
+  name: Sentinel Hub Dataimport Quota API
   slug: sentinel-hub-dataimport-quota-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Item Search](https://docs.planet.com/develop/apis/data/reference/#tag/Item-Search) instead.
-  name: Sentinel Hub dataimport_search API
+  name: Sentinel Hub Dataimport Search API
   slug: sentinel-hub-dataimport-search-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Subscriptions API](https://docs.planet.com/develop/apis/subscriptions/reference/) instead.
-  name: Sentinel Hub dataimport_subscription API
+  name: Sentinel Hub Dataimport Subscription API
   slug: sentinel-hub-dataimport-subscription-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use [Planet Subscriptions API](https://docs.planet.com/develop/apis/subscriptions/reference/) instead.
-  name: Sentinel Hub dataimport_subscription_delivery API
+  name: Sentinel Hub Dataimport Subscription Delivery API
   slug: sentinel-hub-dataimport-subscription-delivery-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use the [BYOC API](https://docs.planet.com/develop/apis/byoc/reference/#tag/byoc_tile) instead to work with
-  name: Sentinel Hub dataimport_subscription_tile_delivery API
+  name: Sentinel Hub Dataimport Subscription Tile Delivery API
   slug: sentinel-hub-dataimport-subscription-tile-delivery-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: TPDI Service for Planet data is deprecated and will be sunset on November 11th, 2026. Please use the [BYOC API](https://docs.planet.com/develop/apis/byoc/reference/#tag/byoc_tile) instead to work with
-  name: Sentinel Hub dataimport_tile_delivery API
+  name: Sentinel Hub Dataimport Tile Delivery API
   slug: sentinel-hub-dataimport-tile-delivery-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The metadata_collection API from Sentinel Hub — 3 operation(s) for metadata_collection.
-  name: Sentinel Hub metadata_collection API
+  name: Sentinel Hub Metadata Collection API
   slug: sentinel-hub-metadata-collection-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The metadata_location API from Sentinel Hub — 2 operation(s) for metadata_location.
-  name: Sentinel Hub metadata_location API
+  name: Sentinel Hub Metadata Location API
   slug: sentinel-hub-metadata-location-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: Make sure to use the appropriate <a href="https://docs.sentinel-hub.com/api/latest/data/" target="_blank">end-point for each of the datasets</a>, e.g. for Landsat, Sentinel-3, etc.
-  name: Sentinel Hub process API
+  name: Sentinel Hub Process API
   slug: sentinel-hub-process-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The statistical API from Sentinel Hub — 1 operation(s) for statistical.
-  name: Sentinel Hub statistical API
+  name: Sentinel Hub Statistical API
   slug: sentinel-hub-statistical-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The zarr_array API from Sentinel Hub — 2 operation(s) for zarr_array.
-  name: Sentinel Hub zarr_array API
+  name: Sentinel Hub Zarr Array API
   slug: sentinel-hub-zarr-array-api
 - baseURL: https://services.sentinel-hub.com
   baseurl_source: declared
   description: The zarr_collection API from Sentinel Hub — 3 operation(s) for zarr_collection.
-  name: Sentinel Hub zarr_collection API
+  name: Sentinel Hub Zarr Collection API
   slug: sentinel-hub-zarr-collection-api
 artifact_total: 343
 collections:
@@ -337,9 +337,13 @@ examples:
   name: Postcatalogitemsearch  Resp 200  Response_200
   slug: postCatalogItemSearch--resp-200--response_200
 finops:
-- name: Sentinel Hub Finops
+- has_sources: true
+  method: generated
+  name: Sentinel Hub Finops
+  primary_unit: ''
   service_category: Geospatial and Earth Observation
   slug: sentinel-hub-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sentinel-hub.png
 json_schemas:
 - name: Aggregation
@@ -1190,7 +1194,7 @@ modified: '2026-06-13'
 name: Sentinel Hub
 nav: Providers
 network: true
-overview: 'Sentinel Hub publishes 25 APIs on the [APIs.io](https://apis.io/) network, including async_process API, batch_statistical API, batch_v2_process API, and 22 more. Tagged areas include Satellite Imagery, Geospatial, Remote Sensing, Earth Observation, and NDVI.
+overview: 'Sentinel Hub publishes 26 API contracts indexed on the [APIs.io](https://apis.io/) network, including Async Process API, Batch Statistical API, Batch V2 Process API, and 23 more. Tagged areas include Satellite Imagery, Geospatial, Remote Sensing, Earth Observation, and NDVI.
 
 
   The Sentinel Hub catalog on APIs.io includes 2 JSON-LD contexts and 1 Spectral governance ruleset.
@@ -1207,9 +1211,10 @@ rate_limits:
   name: Sentinel Hub Rate Limits
   slug: sentinel-hub-rate-limits
 rules:
-- effective_rule_count: 5
+- authorship: generated
+  effective_rule_count: 5
   extends: []
-  name: Sentinel Hub API Rules
+  name: Sentinel Hub — jsonschema rules
   rule_count: 5
   severity_counts:
     error: 0
@@ -1223,24 +1228,24 @@ scopes:
   slug: sentinel-hub-scopes
   summary_line: 1 scope · clientCredentials
 score:
-  band: developing
-  composite: 41.9
+  band: thin
+  composite: 34.2
   coverage:
-    artifact_dirs: 16
-    catalog_earned: 71.3
+    artifact_dirs: 18
+    catalog_earned: 53.3
     catalog_earned_first_party: 0.0
-    catalog_gap: 43.8
+    catalog_gap: 61.8
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.9
   facets:
-    access_clarity: 28.9
+    access_clarity: 5.3
     contract_governance: 9.8
-    contract_quality: 65.1
+    contract_quality: 59.6
     developer_ergonomics: 33.3
-    discoverability: 68.5
-    operational_transparency: 36.8
-  previous_composite: 41.9
+    discoverability: 66.1
+    operational_transparency: 13.2
+  previous_composite: 41.1
   provenance:
     agentic_access: derived
     contracts:
@@ -1248,9 +1253,15 @@ score:
       derived: 0
       marker_coverage: 0.0
       total: 25
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 11.1
@@ -1276,5 +1287,6 @@ tags:
 - MODIS
 - OGC
 - STAC
+- Satellite
 website: https://www.sentinel-hub.com/
 ---

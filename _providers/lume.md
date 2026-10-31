@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'REST API for automating data mappings and transformations with AI. Create and run Flows, manage target schemas, poll job/run status, and retrieve mapping results. Authenticated with a per-account API '
@@ -140,7 +140,7 @@ modified: '2026-07-20'
 name: Lume
 nav: Providers
 network: true
-overview: 'Lume publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Integration, Data Mapping, ETL, and Data Transformation.
+overview: 'Lume is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Data Integration, Data Mapping, ETL, and Data Transformation.
 
 
   The Lume catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -150,7 +150,7 @@ overview: 'Lume publishes 1 API on the [APIs.io](https://apis.io/) network. Tagg
 random_paper: 17
 score:
   band: thin
-  composite: 36.7
+  composite: 36.5
   coverage:
     artifact_dirs: 12
     catalog_earned: 37.0
@@ -162,16 +162,22 @@ score:
   facets:
     access_clarity: 21.1
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 73.2
     operational_transparency: 10.5
-  previous_composite: 36.7
+  previous_composite: 36.5
   provenance:
     conformance: first-party
     mcp: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 20.0
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 26.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 8
 apis:
 - baseURL: https://api.talkwalker.com
@@ -98,6 +98,11 @@ apis:
   slug: talkwalker-topic-api-api
 artifact_total: 17
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/talkwalker/refs/heads/main/capabilities/talkwalker-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/talkwalker-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/talkwalker/refs/heads/main/overlays/talkwalker-search-overlay.yaml
   title: ''
@@ -282,19 +287,23 @@ common:
 created: '2026-06-13'
 description: Talkwalker is a social media analytics and listening platform that provides REST APIs for tracking brand mentions, analyzing sentiment, measuring campaign performance, and monitoring competitors across 150 million websites and 10+ social networks. The API suite covers search, streaming, histograms, document management, image detection, topic management, and custom metrics.
 finops:
-- name: Talkwalker Finops
+- has_sources: false
+  method: generated
+  name: Talkwalker Finops
+  primary_unit: ''
   service_category: ''
   slug: talkwalker-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/talkwalker.png
 layout: provider
 modified: '2026-08-13'
 name: Talkwalker
 nav: Providers
 network: true
-overview: 'Talkwalker publishes 12 APIs on the [APIs.io](https://apis.io/) network, including Image API, Modify documents API, Resources API, and 9 more. Tagged areas include Social Media Analytics, Social Listening, Brand Monitoring, Sentiment Analysis, and Media Monitoring.
+overview: 'Talkwalker publishes 12 API contracts indexed on the [APIs.io](https://apis.io/) network, including Image API, Modify documents API, Resources API, and 9 more. Tagged areas include Social Media Analytics, Social Listening, Brand Monitoring, Sentiment Analysis, and Media Monitoring.
 
 
-  Talkwalker''s developer surface includes authentication, documentation, engineering blog, pricing, API reference, getting-started guide, support, and 32 more developer resources.'
+  Talkwalker''s developer surface includes authentication, documentation, engineering blog, pricing, API reference, getting-started guide, support, and 33 more developer resources.'
 plans:
 - name: Talkwalker Plans Pricing
   plan_count: 3
@@ -305,24 +314,24 @@ rate_limits:
   name: Talkwalker Rate Limits
   slug: talkwalker-rate-limits
 score:
-  band: strong
-  composite: 54.8
+  band: developing
+  composite: 53.2
   coverage:
-    artifact_dirs: 22
-    catalog_earned: 67.0
+    artifact_dirs: 24
+    catalog_earned: 64.0
     catalog_earned_first_party: 24.0
-    catalog_gap: 48.0
+    catalog_gap: 51.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 71.1
+    access_clarity: 63.2
     contract_governance: 4.5
-    contract_quality: 48.3
+    contract_quality: 43.5
     developer_ergonomics: 66.1
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 44.7
-  previous_composite: 54.8
+  previous_composite: 54.7
   provenance:
     conformance: derived
     contracts:
@@ -332,8 +341,14 @@ score:
       total: 12
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 24.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

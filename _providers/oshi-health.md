@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://oshihealth.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/oshi-health/refs/heads/main/security/oshi-health-domain-security.yml
   title: ''
@@ -65,18 +69,18 @@ created: '2026-07-17'
 description: Oshi Health is a virtual, whole-person gastrointestinal (GI) care clinic delivering insurance-covered telehealth to patients with digestive conditions such as IBS, GERD, Crohn's disease, and ulcerative colitis. Care is provided by a coordinated team of GI providers, registered dietitians, and gut-brain behavioral health specialists, and is offered to members through major health plans and employers. Oshi Health is a patient-facing healthcare services company rather than an API producer; it publishes no public developer API, developer portal, SDKs, or /.well-known/ discovery surface. This profile was added to the API Evangelist network as a portfolio company of Bessemer Venture Partners and enriched with the artifacts the company genuinely publishes.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/oshi-health.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Oshi Health
 nav: Providers
 network: true
 overview: 'Oshi Health is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Healthcare, Telehealth, Gastroenterology, and Digital Health.
 
 
-  Oshi Health''s developer surface includes pricing, engineering blog, and 4 more developer resources.'
+  Oshi Health''s developer surface includes pricing, engineering blog, and 5 more developer resources.'
 random_paper: 10
 score:
   band: emerging
-  composite: 11.6
+  composite: 11.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,17 +94,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 2.4
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 11.6
+  previous_composite: 11.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 17.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 10.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

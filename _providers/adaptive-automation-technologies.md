@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: 'The Adaptive Client API is a sixteen-operation REST API under /api/v3/client that exposes an Adaptive workspace to external systems: list users, resources, endpoints, authorizations, scripts and teams'
@@ -38,6 +38,11 @@ asyncapis:
   name: Adaptive Automation Technologies Webhooks
   slug: adaptive-automation-technologies-webhooks
 common:
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/adaptive-automation-technologies/refs/heads/main/rate-limits/adaptive-automation-technologies-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/adaptive-automation-technologies-rate-limits.yml
 - group: company
   title: ''
   type: Website
@@ -154,18 +159,18 @@ layout: provider
 mcp_servers:
 - description: Adaptive ships a first-party, built-in remote MCP server as part of the platform — it is not a separate download. Every Adaptive deployment (managed cloud or self-hosted) exposes it on its own workspa
   name: Adaptive Automation Technologies MCP Server
-  slug: adaptive-automation-technologies-mcp-server
+  slug: adaptive-automation-technologies-mcp-yml
 modified: '2026-09-07'
 name: Adaptive Automation Technologies
 nav: Providers
 network: true
-overview: 'Adaptive Automation Technologies publishes 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Privileged Access Management, Identity and Access Management, and Data Security.
+overview: 'Adaptive Automation Technologies is listed with 2 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Security, Privileged Access Management, Identity and Access Management, and Data Security.
 
 
   The Adaptive Automation Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  Adaptive Automation Technologies'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 17 more developer resources.'
+  Adaptive Automation Technologies'' developer surface includes documentation, API reference, getting-started guide, engineering blog, pricing, signup flow, support, and 18 more developer resources.'
 plans:
 - name: Adaptive Automation Technologies Plans Pricing
   plan_count: 0
@@ -177,14 +182,14 @@ rate_limits:
   slug: adaptive-automation-technologies-rate-limits
 scopes:
 - name: Adaptive Automation Technologies Scopes
-  scope_count: 0
+  scope_count: 10
   slug: adaptive-automation-technologies-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 10 scopes
 score:
   band: developing
-  composite: 50.0
+  composite: 52.8
   coverage:
-    artifact_dirs: 19
+    artifact_dirs: 21
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -194,21 +199,28 @@ score:
   facets:
     access_clarity: 60.5
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
-  previous_composite: 50.0
+  previous_composite: 52.8
   provenance:
     conformance: first-party
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 39.2
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/adaptive-automation-technologies/refs/heads/main/screenshots/adaptive-automation-technologies-2026-10-11T092735.png
 security:
 - kind: authentication
   name: Adaptive Automation Technologies Authentication

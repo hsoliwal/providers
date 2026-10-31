@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.7
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 3
 apis:
 - description: Laundryheap's primary product API. A single GraphQL endpoint serving the consumer web and mobile apps, covering ordering, recurring orders, addresses, timeslots, services, hotels, subscriptions, bundl
@@ -175,7 +175,7 @@ modified: '2026-08-23'
 name: Laundryheap
 nav: Providers
 network: true
-overview: 'Laundryheap publishes 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laundry, Dry Cleaning, On-Demand Services, and Logistics.
+overview: 'Laundryheap is listed with 3 APIs on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Laundry, Dry Cleaning, On-Demand Services, and Logistics.
 
 
   Laundryheap''s developer surface includes pricing, support, engineering blog, signup flow, authentication, code examples, and 19 more developer resources.'
@@ -190,12 +190,12 @@ rate_limits:
   slug: laundryheap-rate-limits
 scopes:
 - name: Laundryheap Scopes
-  scope_count: 0
+  scope_count: 2
   slug: laundryheap-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 2 scopes
 score:
   band: emerging
-  composite: 22.1
+  composite: 24.6
   coverage:
     artifact_dirs: 20
     catalog_earned: 40.0
@@ -207,17 +207,23 @@ score:
   facets:
     access_clarity: 31.6
     contract_governance: 18.2
-    contract_quality: 6.7
+    contract_quality: 6.5
     developer_ergonomics: 20.8
-    discoverability: 74.1
+    discoverability: 71.4
     operational_transparency: 2.6
-  previous_composite: 22.1
+  previous_composite: 24.6
   provenance:
     conformance: first-party
     mcp: derived
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 34.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

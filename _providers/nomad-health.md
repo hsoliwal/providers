@@ -34,8 +34,8 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.2
-  scored_at: '2026-09-20'
-api_count: 4
+  scored_at: '2026-10-17'
+api_count: 8
 apis:
 - baseURL: https://nomadhealth.com/api/v1
   baseurl_source: declared
@@ -170,14 +170,14 @@ modified: '2026-08-04'
 name: Nomad Health
 nav: Providers
 network: true
-overview: 'Nomad Health publishes 1 API on the [APIs.io](https://apis.io/) network: Default API. Tagged areas include Company, Healthcare, Staffing, Job, and Marketplace.
+overview: 'Nomad Health publishes 1 API contract indexed on the [APIs.io](https://apis.io/) network: Default API. Tagged areas include Company, Healthcare, Staffing, Job, and Marketplace.
 
 
   Nomad Health''s developer surface includes API reference, engineering blog, support, signup flow, authentication, and 19 more developer resources.'
 random_paper: 14
 score:
   band: thin
-  composite: 34.2
+  composite: 32.8
   coverage:
     artifact_dirs: 18
     catalog_earned: 40.0
@@ -189,11 +189,11 @@ score:
   facets:
     access_clarity: 34.2
     contract_governance: 4.5
-    contract_quality: 37.2
+    contract_quality: 36.0
     developer_ergonomics: 28.0
-    discoverability: 81.5
+    discoverability: 78.6
     operational_transparency: 2.6
-  previous_composite: 34.2
+  previous_composite: 32.8
   provenance:
     conformance: derived
     contracts:
@@ -208,9 +208,9 @@ score:
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 31.3
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 19.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

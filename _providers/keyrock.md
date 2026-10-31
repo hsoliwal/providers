@@ -34,10 +34,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://keyrock.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://keyrock.com/blog/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/keyrock/refs/heads/main/security/keyrock-trust-center.yml
   title: ''
@@ -126,14 +134,14 @@ description: 'Keyrock is a digital asset market maker and liquidity provider fou
   SAS and has publicly announced SOC 2 Type II compliance.'
 image: https://avatars.githubusercontent.com/u/41155949?v=4
 layout: provider
-modified: '2026-08-23'
+modified: '2026-10-06'
 name: Keyrock
 nav: Providers
 network: true
 overview: 'Keyrock is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Market Making, Liquidity, Digital Assets, and Cryptocurrency.
 
 
-  Keyrock''s developer surface includes engineering blog, support, and 13 more developer resources.'
+  Keyrock''s developer surface includes engineering blog, support, and 15 more developer resources.'
 plans:
 - name: Keyrock Plans Pricing
   plan_count: 0
@@ -141,9 +149,9 @@ plans:
 random_paper: 12
 score:
   band: emerging
-  composite: 19.3
+  composite: 17.9
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -155,9 +163,9 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 2.6
-  previous_composite: 19.3
+  previous_composite: 17.9
   provenance:
     conformance: first-party
   regulatory:
@@ -165,9 +173,9 @@ score:
     matched_via: tags
     regime: Securities & Market Data
     regime_id: securities_market_data
-    score: 50.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -194,6 +202,6 @@ tags:
 - OTC
 - Options
 - Market Data
-- Financial-Services
+- Financial Services
 website: https://keyrock.com/
 ---

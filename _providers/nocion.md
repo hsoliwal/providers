@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://www.nociontx.com/feed/
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/nocion/refs/heads/main/security/nocion-domain-security.yml
   title: ''
@@ -49,17 +53,17 @@ created: '2026-07-17'
 description: Nocion Therapeutics is a clinical-stage biopharmaceutical company discovering and developing a novel class of biologically selective charged sodium channel (NaV) blockers designed to selectively silence overactive sensory neurons to relieve chronic cough, pain, itch, and inflammation. Its lead candidate, inhaled taplucainium, is a first-in-class therapy in a Phase 2b (ASPIRE) trial for refractory and unexplained chronic cough, with topline results expected in 2026. Founded on foundational intellectual property licensed from Harvard University and Boston Children's Hospital and backed by Canaan Partners, F-Prime Capital, and other life-sciences investors, Nocion is a therapeutics R&D company with no public developer API surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/nocion.png
 layout: provider
-modified: '2026-07-20'
+modified: '2026-10-06'
 name: Nocion Therapeutics
 nav: Providers
 network: true
-overview: Nocion Therapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biopharmaceutical, Biotech, Therapeutics, and Life Sciences.
+overview: Nocion Therapeutics is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Biopharmaceutical, Biotechnology, Therapeutics, and Life Sciences.
 random_paper: 8
 score:
   band: minimal
-  composite: 3.3
+  composite: 3.7
   coverage:
-    artifact_dirs: 3
+    artifact_dirs: 4
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -71,17 +75,17 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
-  previous_composite: 3.3
+  previous_composite: 3.7
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
-    score: 7.5
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -97,7 +101,7 @@ slug: nocion
 tags:
 - Company
 - Biopharmaceutical
-- Biotech
+- Biotechnology
 - Therapeutics
 - Life Sciences
 - Chronic Cough

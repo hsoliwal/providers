@@ -33,18 +33,23 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 19.8
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: REST API for programmatically uploading and processing video, managing templates/branding/output settings, retrieving results, and accessing analytics. Bearer API-key authentication with signed webhoo
   name: JoySpace Video Transformation API
   slug: joyspace-video-transformation-api
-artifact_total: 3
+artifact_total: 4
 asyncapis:
 - description: ''
   name: Joyspace Technologies Inc Webhooks
   slug: joyspace-technologies-inc-webhooks
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/joyspace-technologies-inc/refs/heads/main/plans/joyspace-technologies-inc-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/joyspace-technologies-inc-plans-pricing.yml
 - group: company
   title: ''
   type: Website
@@ -101,38 +106,48 @@ description: JoySpace Technologies, Inc. (Joyspace) operates an enterprise AI vi
 image: https://joyspace-ai.b-cdn.net/images/ogImage.png
 layout: provider
 modified: '2026-07-19'
-name: JoySpace Technologies, Inc.
+name: JoySpace Technologies
 nav: Providers
 network: true
-overview: 'JoySpace Technologies, Inc. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Artificial Intelligence, Video Processing, and Content Creation.
+overview: 'JoySpace Technologies is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Video, Artificial Intelligence, Video Processing, and Content Creation.
 
 
-  The JoySpace Technologies, Inc. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
+  The JoySpace Technologies catalog on APIs.io includes 1 event-driven AsyncAPI specification.
 
 
-  JoySpace Technologies, Inc.''s developer surface includes documentation, API reference, pricing, signup flow, engineering blog, support, authentication, and 5 more developer resources.'
+  JoySpace Technologies'' developer surface includes documentation, API reference, pricing, signup flow, engineering blog, support, authentication, and 6 more developer resources.'
+plans:
+- name: Joyspace Technologies Inc Plans Pricing
+  plan_count: 0
+  slug: joyspace-technologies-inc-plans-pricing
 random_paper: 20
 score:
   band: thin
-  composite: 33.1
+  composite: 31.8
   coverage:
-    artifact_dirs: 7
+    artifact_dirs: 8
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 38.2
     contract_governance: 0.0
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 35.7
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
-  previous_composite: 33.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  previous_composite: 31.7
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 12.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

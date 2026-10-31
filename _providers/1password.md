@@ -12,7 +12,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-ready
+  band: agent-aware
   dimensions:
     agent_card: false
     agent_skills: false
@@ -23,26 +23,26 @@ agent_readiness:
     delegated_identity: false
     dry_run_mode: false
     dynamic_client_registration: false
-    error_semantics: documented
+    error_semantics: derived
     event_surface_described: false
     idempotency: false
     mcp_server: documented
     openapi_examples: partial
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.6
-  scored_at: '2026-09-20'
+  score: 24.6
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 10
+- acting_count: 7
   human_in_the_loop: 0
   name: 1Password Agentic Access
   operation_count: 23
   slug: 1password-agentic-access
-  summary_line: 23 operations · 10 acting
+  summary_line: 23 operations · 7 acting
 api_count: 3
 apis:
 - baseURL: http://localhost:8080
@@ -182,6 +182,26 @@ collections:
   name: 1Password Connect Server Accounts Vaults API
   slug: open-1password-vaults-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/plans/1password-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/1password-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/rate-limits/1password-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/1password-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/finops/1password-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/1password-finops.yml
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/capabilities/1password-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/1password-capability-edges.yml
 - group: other
   href: https://raw.githubusercontent.com/api-evangelist/1password/refs/heads/main/overlays/1password-connect-overlay.yaml
   title: ''
@@ -518,9 +538,13 @@ features:
 - description: Load secrets from 1Password directly into GitHub Actions CI/CD pipelines
   name: GitHub Actions
 finops:
-- name: 1Password Finops
+- has_sources: true
+  method: generated
+  name: 1Password Finops
+  primary_unit: ''
   service_category: Identity
   slug: 1password-finops
+  template: false
 image: /assets/icons/1password.png
 integrations:
 - description: Native integration via operator and secrets injector for Kubernetes deployments
@@ -734,18 +758,18 @@ layout: provider
 mcp_servers:
 - description: Official 1Password MCP server (beta). Runs locally and communicates with the 1Password desktop app. Lets MCP clients (Codex, Kiro, and other MCP-compatible clients) manage 1Password Environments and a
   name: 1Password MCP Server
-  slug: 1password-mcp-server
+  slug: 1password-mcp
 modified: '2026-06-20'
 name: 1Password
 nav: Providers
 network: true
-overview: '1Password publishes 11 APIs on the [APIs.io](https://apis.io/) network, including Accounts API, Activity API, Audit Events API, and 8 more. Tagged areas include Password Manager, Passwords, Security, and Secrets.
+overview: '1Password publishes 11 API contracts indexed on the [APIs.io](https://apis.io/) network, including Accounts API, Activity API, Audit Events API, and 8 more. Tagged areas include Password Manager, Passwords, Security, Secrets, and Canada.
 
 
   The 1Password catalog on APIs.io includes 4 JSON-LD contexts and 2 Spectral governance rulesets.
 
 
-  1Password''s developer surface includes changelog, CLI, authentication, developer portal, documentation, getting-started guide, engineering blog, and 43 more developer resources.'
+  1Password''s developer surface includes changelog, CLI, authentication, developer portal, documentation, getting-started guide, engineering blog, and 47 more developer resources.'
 plans:
 - name: 1Password Plans Pricing
   plan_count: 5
@@ -756,9 +780,10 @@ rate_limits:
   name: 1Password Rate Limits
   slug: 1password-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: 1Password API Rules
+  name: 1Password — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -766,7 +791,8 @@ rules:
     info: 1
     warn: 5
   slug: 1password-jsonschema-spectral-rules
-- effective_rule_count: 30
+- authorship: unmarked
+  effective_rule_count: 30
   extends: []
   name: 1Password API Rules
   rule_count: 30
@@ -778,23 +804,30 @@ rules:
   slug: 1password-spectral-rules
 score:
   band: strong
-  composite: 57.9
+  composite: 58.1
   coverage:
-    artifact_dirs: 31
-    catalog_earned: 69.5
+    artifact_dirs: 33
+    catalog_earned: 70.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 45.5
+    catalog_gap: 45.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -1.5
   facets:
-    access_clarity: 57.9
-    contract_governance: 33.3
-    contract_quality: 73.3
+    access_clarity: 50.0
+    contract_governance: 31.8
+    contract_quality: 66.9
     developer_ergonomics: 75.0
-    discoverability: 63.0
+    discoverability: 68.3
     operational_transparency: 26.3
-  previous_composite: 57.9
+  jurisdiction:
+    basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - canada
+    note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
+    regions:
+    - north-america
+  previous_composite: 59.6
   provenance:
     agentic_access: derived
     conformance: derived
@@ -804,8 +837,14 @@ score:
       marker_coverage: 0.0
       total: 11
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 35.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -834,6 +873,7 @@ tags:
 - Passwords
 - Security
 - Secrets
+- Canada
 use_cases:
 - description: Inject secrets from 1Password into applications and containers at runtime
   name: Secrets Injection

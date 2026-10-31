@@ -36,7 +36,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 53.3
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 2
 apis:
 - description: Hosted remote Model Context Protocol server exposing 18 Toksta tools — campaigns, creator discovery, lists, enrichment, content-fit and audience-fit analysis, and job control — to Claude and ChatGPT c
@@ -87,7 +87,7 @@ apis:
   description: The System API from toksta — 4 operation(s) for system.
   name: toksta System API
   slug: toksta-system-api
-artifact_total: 18
+artifact_total: 17
 collections:
 - collection_type: open
   name: Toksta Public API
@@ -217,17 +217,14 @@ description: 'Toksta is a B2B influencer marketing intelligence platform that us
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/toksta.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Remote MCP server at mcp.toksta.com over HTTP requiring OAuth; 18 tools listed.
   name: toksta MCP Server
-  slug: toksta-mcp-server
-- description: ''
-  name: toksta MCP Server
-  slug: toksta-mcp-server-2
+  slug: toksta-mcp
 modified: '2026-08-13'
 name: toksta
 nav: Providers
 network: true
-overview: 'toksta publishes 9 APIs on the [APIs.io](https://apis.io/) network, including Account API, Analysis API, Campaigns API, and 6 more. Tagged areas include Company, Influencer Marketing, Marketing, B2B, and Creator Discovery.
+overview: 'toksta publishes 10 API contracts indexed on the [APIs.io](https://apis.io/) network, including Account API, Analysis API, Campaigns API, and 7 more. Tagged areas include Company, Influencer Marketing, Marketing, B2B, and Creator Discovery.
 
 
   toksta''s developer surface includes engineering blog, signup flow, documentation, API reference, getting-started guide, support, pricing, and 19 more developer resources.'
@@ -247,7 +244,7 @@ scopes:
   summary_line: OAuth 2.0 · no documented scopes
 score:
   band: developing
-  composite: 40.9
+  composite: 41.2
   coverage:
     artifact_dirs: 21
     catalog_earned: 49.0
@@ -255,15 +252,15 @@ score:
     catalog_gap: 66.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 11.8
     contract_governance: 18.2
-    contract_quality: 54.5
+    contract_quality: 49.0
     developer_ergonomics: 58.9
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 31.6
-  previous_composite: 40.9
+  previous_composite: 41.1
   provenance:
     conformance: first-party
     contracts:
@@ -273,8 +270,14 @@ score:
       total: 9
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 26.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true

@@ -37,7 +37,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 17.6
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 7
 common:
@@ -176,7 +176,7 @@ modified: '2026-08-25'
 name: LIQID Investments
 nav: Providers
 network: true
-overview: 'LIQID Investments is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wealth Management, Investing, Financial-Services, and Private Equity.
+overview: 'LIQID Investments is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Wealth Management, Investing, Financial Services, and Private Equity.
 
 
   LIQID Investments'' developer surface includes signup flow, support, engineering blog, pricing, authentication, and 18 more developer resources.'
@@ -191,12 +191,12 @@ rate_limits:
   slug: liqid-rate-limits
 scopes:
 - name: Liqid Scopes
-  scope_count: 0
+  scope_count: 14
   slug: liqid-scopes
-  summary_line: OAuth 2.0 · no documented scopes
+  summary_line: 14 scopes
 score:
   band: thin
-  composite: 30.3
+  composite: 34.6
   coverage:
     artifact_dirs: 13
     catalog_earned: 39.0
@@ -204,13 +204,13 @@ score:
     catalog_gap: 76.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 84.2
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 19.0
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -220,11 +220,17 @@ score:
     regions:
     - dach
     - europe
-  previous_composite: 30.3
+  previous_composite: 34.5
   provenance:
     conformance: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 45.1
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -253,7 +259,7 @@ tags:
 - Company
 - Wealth Management
 - Investing
-- Financial-Services
+- Financial Services
 - Private Equity
 - Venture Capital
 - Asset Management

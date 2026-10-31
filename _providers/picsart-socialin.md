@@ -35,14 +35,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 28.2
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
-- acting_count: 69
+- acting_count: 63
   human_in_the_loop: 0
   name: Picsart Socialin Agentic Access
-  operation_count: 91
+  operation_count: 84
   slug: picsart-socialin-agentic-access
-  summary_line: 91 operations · 69 acting
+  summary_line: 84 operations · 63 acting
 api_count: 4
 apis:
 - baseURL: https://api.picsart.io/tools/1.0
@@ -235,6 +235,14 @@ collections:
   name: Picsart GenAI Ads Watermark API
   slug: open-picsart-socialin-watermark-api
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://picsart.com/blog/
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://picsart.com/blog/feed/
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/picsart-socialin/refs/heads/main/agentic-access/picsart-socialin-agentic-access.yml
   title: ''
@@ -407,15 +415,15 @@ layout: provider
 mcp_servers:
 - description: Official hosted Picsart Creative APIs Model Context Protocol (MCP) server. Lets AI editors and agent runtimes call Picsart Image, Video, and GenAI tools and read the docs directly. Remote Streamable H
   name: PicsArt (Socialin) MCP Server
-  slug: picsart-socialin-mcp-server
-modified: '2026-07-20'
+  slug: picsart
+modified: '2026-10-06'
 name: PicsArt (Socialin)
 nav: Providers
 network: true
-overview: 'PicsArt (Socialin) publishes 23 APIs on the [APIs.io](https://apis.io/) network, including Ads API, Audio API, Classification API, and 20 more. Tagged areas include Company, Image Editing, Video Editing, Generative AI, and Photos.
+overview: 'PicsArt (Socialin) publishes 23 API contracts indexed on the [APIs.io](https://apis.io/) network, including Ads API, Audio API, Classification API, and 20 more. Tagged areas include Company, Image Editing, Video Editing, Generative AI, and Photos.
 
 
-  PicsArt (Socialin)''s developer surface includes authentication, documentation, API reference, getting-started guide, signup flow, pricing, support, and 29 more developer resources.'
+  PicsArt (Socialin)''s developer surface includes engineering blog, authentication, documentation, API reference, getting-started guide, signup flow, pricing, and 31 more developer resources.'
 random_paper: 3
 rate_limits:
 - limit_count: 3
@@ -423,23 +431,23 @@ rate_limits:
   slug: picsart-socialin-rate-limits
 score:
   band: developing
-  composite: 50.8
+  composite: 50.0
   coverage:
-    artifact_dirs: 22
+    artifact_dirs: 23
     catalog_earned: 52.0
     catalog_earned_first_party: 12.0
     catalog_gap: 63.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -0.3
   facets:
     access_clarity: 44.7
     contract_governance: 4.5
-    contract_quality: 58.1
+    contract_quality: 52.3
     developer_ergonomics: 54.2
-    discoverability: 81.5
+    discoverability: 80.0
     operational_transparency: 65.8
-  previous_composite: 50.8
+  previous_composite: 50.3
   provenance:
     agentic_access: derived
     conformance: derived
@@ -450,8 +458,14 @@ score:
       total: 23
     mcp: first-party
     skills: derived
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 22.7
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: true
@@ -476,7 +490,7 @@ tags:
 - Creative Tools
 - Image Processing
 - Background Removal
-- Machine-Learning
+- Machine Learning
 - Content Generation
 website: https://picsart.com/
 ---

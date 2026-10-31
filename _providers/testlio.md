@@ -25,16 +25,16 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 8.6
-  scored_at: '2026-09-20'
+  score: 12.2
+  scored_at: '2026-10-17'
 api_count: 0
-artifact_total: 2
+artifact_total: 3
 common:
 - group: company
   title: ''
@@ -100,6 +100,10 @@ created: '2026-07-17'
 description: Testlio is a managed software testing and quality assurance company that pairs a global, vetted community of expert testers with a testing-management platform (powered by its Leo AI Engine) to deliver on-demand manual, automated, functional, regression, payments, localization, accessibility, usability, and AI testing across web, mobile, streaming, and voice experiences. Founded in Estonia and headquartered in Austin, Texas, Testlio is a Techstars-backed company serving enterprise engineering and QA teams. It exposes no public REST API; the platform integrates with engineering toolchains (Jira, GitHub, Azure DevOps, GitLab, TestRail, Xray, Slack, BrowserStack, SauceLabs, Playwright) and ships first-party CI/CD integrations, including a CircleCI orb and a Jenkins plugin, alongside a documented Trust Center.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/testlio.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.testlio.com over HTTP.
+  name: Testlio MCP Server
+  slug: testlio
 modified: '2026-07-21'
 name: Testlio
 nav: Providers
@@ -111,32 +115,40 @@ overview: 'Testlio is profiled on the [APIs.io](https://apis.io/) network. Tagge
 random_paper: 2
 score:
   band: emerging
-  composite: 18.1
+  composite: 18.7
   coverage:
-    artifact_dirs: 8
+    artifact_dirs: 9
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 16.7
-    discoverability: 57.4
+    discoverability: 58.3
     operational_transparency: 2.6
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 18.1
+  previous_composite: 18.6
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 18.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

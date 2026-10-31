@@ -32,10 +32,18 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 1
 common:
+- group: company
+  title: ''
+  type: Blog
+  url: https://resources.sav.money/news
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://resources.sav.money/feed
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/sav-technologies-limited/refs/heads/main/security/sav-technologies-limited-domain-security.yml
   title: ''
@@ -65,18 +73,18 @@ created: '2026-07-17'
 description: Sav Technologies Limited operates Sav (sav.money), a UAE-based intelligent financial platform that lets users track, save, invest, and grow their wealth across accounts. Sav offers a suite of consumer products including Gold (physical gold investment from AED 10), MyMoney (financial management and savings), Card (a prepaid card with cashback), Wealth (investing), Sav Pro (premium membership), and an upcoming Credit product. Sav describes itself as extending the APIs and technology components of licensed financial services providers to its users. It is a 500 Global portfolio company. As of this enrichment pass, Sav publishes a consumer app and marketing site but no public developer API, API documentation, developer portal, or SDKs.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/sav-technologies-limited.png
 layout: provider
-modified: '2026-07-21'
-name: Sav Technologies Limited
+modified: '2026-10-06'
+name: Sav
 nav: Providers
 network: true
-overview: 'Sav Technologies Limited is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial-Services, Savings, and Investing.
+overview: 'Sav is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Financial Services, Savings, and Investing.
 
 
-  Sav Technologies Limited''s developer surface includes engineering blog, support, and 4 more developer resources.'
+  Sav''s developer surface includes engineering blog, support, and 6 more developer resources.'
 random_paper: 6
 score:
   band: minimal
-  composite: 9.1
+  composite: 9.4
   coverage:
     artifact_dirs: 4
     catalog_earned: 27.0
@@ -90,7 +98,7 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -98,16 +106,17 @@ score:
     - united-arab-emirates
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
+    - mena
     - middle-east
-  previous_composite: 9.1
+  previous_composite: 9.4
   regulatory:
     applies: true
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 21.9
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 12.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -123,7 +132,7 @@ slug: sav-technologies-limited
 tags:
 - Company
 - Fintech
-- Financial-Services
+- Financial Services
 - Savings
 - Investing
 - Wealth Management

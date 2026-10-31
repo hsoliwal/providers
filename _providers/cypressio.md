@@ -27,20 +27,20 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
+    protected_resource_metadata: verified
     rate_limit_signal: false
     reversibility_documented: false
     spec_presence: false
     well_known_catalog: false
   schema_version: '0.2'
-  score: 11.2
-  scored_at: '2026-09-20'
+  score: 14.7
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Enterprise reporting API that returns test and run analytics and raw test-result data from Cypress Cloud. Requests are HTTP GET with an organization API key passed as the token query parameter, and da
   name: Cypress Cloud Data Extract API
   slug: cypress-cloud-data-extract-api
-artifact_total: 4
+artifact_total: 5
 common:
 - group: company
   title: ''
@@ -168,20 +168,24 @@ created: '2026-07-17'
 description: Cypress.io, Inc. builds Cypress, an open-source, JavaScript-based end-to-end and component testing framework that runs tests directly in the browser with time-travel debugging, automatic waiting, and cross-browser support. Its commercial Cypress Cloud service adds test parallelization, smart orchestration, analytics, Test Replay, UI Coverage, and automated accessibility checks, plus an enterprise Data Extract API for exporting test and run analytics in CSV, JSON, or XLSX. Cypress is widely adopted across CI/CD pipelines for reliable, developer-friendly web application testing.
 image: https://avatars.githubusercontent.com/u/8908513?v=4
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.cypress.io over HTTP.
+  name: Cypress.io MCP Server
+  slug: cypressio
 modified: '2026-09-19'
 name: Cypress.io
 nav: Providers
 network: true
-overview: 'Cypress.io publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Testing, End-to-End Testing, Test Automation, and Quality Assurance.
+overview: 'Cypress.io is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Testing, End-to-End Testing, Test Automation, and Quality Assurance.
 
 
   Cypress.io''s developer surface includes documentation, API reference, getting-started guide, support, engineering blog, pricing, signup flow, and 21 more developer resources.'
 random_paper: 3
 score:
   band: thin
-  composite: 37.3
+  composite: 37.8
   coverage:
-    artifact_dirs: 12
+    artifact_dirs: 13
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -193,13 +197,19 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 71.4
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 47.4
-  previous_composite: 37.3
+  previous_composite: 37.8
   provenance:
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  regulatory:
+    applies: true
+    matched_via: fallback
+    regime: Horizontal (data, software, accessibility, platform)
+    regime_id: horizontal
+    score: 19.6
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

@@ -29,13 +29,13 @@ agent_readiness:
     mcp_server: verified
     openapi_examples: false
     protected_resource_metadata: verified
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 44.6
-  scored_at: '2026-09-20'
+  score: 42.7
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 2
   human_in_the_loop: 0
@@ -55,7 +55,7 @@ apis:
   description: The Templates API from Templated — 2 operation(s) for templates.
   name: Templated Templates API
   slug: templated-templates-api
-artifact_total: 12
+artifact_total: 13
 collections:
 - collection_type: open
   name: API Collection
@@ -123,16 +123,24 @@ common:
 created: '2026-06-25'
 description: Templated is an API for automated image, video, and PDF generation from reusable templates. Designers build templates in a drag-and-drop editor, then the REST API renders them at scale by overriding layer content, with synchronous and asynchronous rendering, batch and multi-page output, and webhook callbacks.
 finops:
-- name: Templated Finops
+- has_sources: true
+  method: generated
+  name: Templated Finops
+  primary_unit: ''
   service_category: Media and Content Generation
   slug: templated-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/templated.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at mcp.templated.io over HTTP.
+  name: Templated MCP Server
+  slug: templated
 modified: '2026-06-25'
 name: Templated
 nav: Providers
 network: true
-overview: 'Templated publishes 2 APIs on the [APIs.io](https://apis.io/) network: Renders API and Templates API. Tagged areas include Image-Generation, PDF Generation, Templates, Rendering, and Automation.
+overview: 'Templated publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Renders API and Templates API. Tagged areas include Image Generation, PDF Generation, Templates, Rendering, and Automation.
 
 
   Templated''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
@@ -146,24 +154,24 @@ rate_limits:
   name: Templated Rate Limits
   slug: templated-rate-limits
 score:
-  band: developing
-  composite: 41.4
+  band: thin
+  composite: 29.7
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 14
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.7
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 55.8
+    contract_quality: 50.2
     developer_ergonomics: 31.0
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 41.4
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 38.4
   provenance:
     agentic_access: derived
     contracts:
@@ -172,12 +180,19 @@ score:
       marker_coverage: 0.0
       total: 2
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: residual_tags
+    regime: AI & Biometrics
+    regime_id: ai_biometrics
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 27.8
+screenshot: https://raw.githubusercontent.com/api-evangelist/templated/refs/heads/main/screenshots/templated-2026-10-11T130751.png
 security:
 - kind: authentication
   name: Templated Authentication
@@ -189,7 +204,7 @@ security:
   summary_line: TLSv1.3 · DMARC
 slug: templated
 tags:
-- Image-Generation
+- Image Generation
 - PDF Generation
 - Templates
 - Rendering

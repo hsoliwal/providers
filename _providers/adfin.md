@@ -34,7 +34,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 39.1
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: Invoicing, payments and credit-control API — customers, invoices, payment requests, direct-debit mandates, payments and signed webhooks.
@@ -172,14 +172,14 @@ description: Adfin is a London-based fintech that combines payment collection an
 image: https://assets.adfin.com/frontend-resources/favicon/web-app-manifest-512x512.png
 layout: provider
 mcp_servers:
-- description: ''
+- description: Local (stdio) MCP server; 3 tools listed.
   name: Adfin MCP Server
-  slug: adfin-mcp-server
+  slug: adfin
 modified: '2026-07-17'
 name: Adfin
 nav: Providers
 network: true
-overview: 'Adfin publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Payments, Invoicing, and Credit Control.
+overview: 'Adfin is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Fintech, Payments, Invoicing, and Credit Control.
 
 
   The Adfin catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -189,21 +189,21 @@ overview: 'Adfin publishes 1 API on the [APIs.io](https://apis.io/) network. Tag
 random_paper: 8
 score:
   band: developing
-  composite: 45.1
+  composite: 43.0
   coverage:
-    artifact_dirs: 15
+    artifact_dirs: 16
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 38.2
     contract_governance: 18.2
-    contract_quality: 41.6
+    contract_quality: 39.0
     developer_ergonomics: 54.8
-    discoverability: 75.9
+    discoverability: 75.0
     operational_transparency: 26.3
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -213,7 +213,7 @@ score:
     regions:
     - europe
     - united-kingdom-ireland
-  previous_composite: 45.1
+  previous_composite: 42.9
   provenance:
     conformance: first-party
     mcp: first-party
@@ -222,9 +222,9 @@ score:
     matched_via: tags
     regime: Payments
     regime_id: payments
-    score: 51.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 29.5
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

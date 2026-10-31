@@ -32,10 +32,14 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 0.0
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 0
 common:
+- group: company
+  title: ''
+  type: BlogRSS
+  url: https://news.medtronic.com/press-releases?pagetemplate=rss
 - group: company
   title: ''
   type: Website
@@ -52,7 +56,7 @@ created: '2026-07-17'
 description: Intersect ENT was a medical device company based in Menlo Park, California that developed drug-eluting, bioresorbable sinus implants for patients with chronic rhinosinusitis. Its PROPEL family of steroid-eluting implants maintains sinus patency and delivers localized mometasone furoate to the sinus mucosa following endoscopic sinus surgery, while its SINUVA implant treats recurrent nasal polyps in an in-office setting. Formerly publicly traded on NASDAQ under the ticker XENT, Intersect ENT was acquired by Medtronic in May 2022 and its PROPEL and SINUVA product lines are now sold as part of Medtronic's ear, nose, and throat (ENT) portfolio. The company is a physical medical-device manufacturer and operates no public developer program, API, SDK, or documentation surface.
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/intersect-ent.png
 layout: provider
-modified: '2026-07-19'
+modified: '2026-10-06'
 name: Intersect ENT
 nav: Providers
 network: true
@@ -60,9 +64,9 @@ overview: Intersect ENT is profiled on the [APIs.io](https://apis.io/) network. 
 random_paper: 7
 score:
   band: minimal
-  composite: 2.2
+  composite: 3.0
   coverage:
-    artifact_dirs: 2
+    artifact_dirs: 3
     catalog_earned: 27.0
     catalog_earned_first_party: 0.0
     catalog_gap: 88.0
@@ -74,10 +78,12 @@ score:
     contract_governance: 0.0
     contract_quality: 0.0
     developer_ergonomics: 0.0
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
@@ -87,15 +93,15 @@ score:
     reasons:
     - owner: catalog
       reason: never_enriched
-  previous_composite: 2.2
+  previous_composite: 3.0
   regulatory:
     applies: true
     matched_via: tags
     regime: Health
     regime_id: health
     score: 0.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

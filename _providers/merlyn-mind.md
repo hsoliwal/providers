@@ -34,10 +34,20 @@ agent_readiness:
     well_known_catalog: true
   schema_version: '0.2'
   score: 5.4
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 5
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/merlyn-mind/refs/heads/main/plans/merlyn-mind-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/merlyn-mind-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/merlyn-mind/refs/heads/main/rate-limits/merlyn-mind-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/merlyn-mind-rate-limits.yml
 - group: auth
   href: https://raw.githubusercontent.com/api-evangelist/merlyn-mind/refs/heads/main/security/merlyn-mind-vulnerability-disclosure.yml
   title: ''
@@ -135,7 +145,7 @@ network: true
 overview: 'Merlyn Mind is profiled on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Artificial Intelligence, Education, EdTech, and K-12.
 
 
-  Merlyn Mind''s developer surface includes engineering blog, support, developer console, and 13 more developer resources.'
+  Merlyn Mind''s developer surface includes engineering blog, support, developer console, and 15 more developer resources.'
 plans:
 - name: Merlyn Mind Plans Pricing
   plan_count: 0
@@ -147,7 +157,7 @@ rate_limits:
   slug: merlyn-mind-rate-limits
 score:
   band: emerging
-  composite: 23.9
+  composite: 20.9
   coverage:
     artifact_dirs: 9
     catalog_earned: 27.0
@@ -155,20 +165,22 @@ score:
     catalog_gap: 88.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 0.1
   facets:
     access_clarity: 43.4
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 57.4
+    discoverability: 55.4
     operational_transparency: 13.2
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
+    countries:
+    - united-states
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - north-america
-  previous_composite: 23.9
+  previous_composite: 20.8
   provenance:
     conformance: first-party
   regulatory:
@@ -184,9 +196,9 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 55.6
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 27.3
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
@@ -216,7 +228,7 @@ tags:
 - LLM
 - Voice Assistant
 - Classroom Technology
-- Machine-Learning
+- Machine Learning
 - Responsible AI
 website: https://www.merlyn.org/
 ---

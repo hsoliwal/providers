@@ -11,7 +11,7 @@ access_model:
   trial: false
   try_now: true
 agent_readiness:
-  band: agent-aware
+  band: agent-ready
   dimensions:
     agent_card: false
     agent_skills: false
@@ -27,14 +27,14 @@ agent_readiness:
     idempotency: false
     mcp_server: verified
     openapi_examples: false
-    protected_resource_metadata: false
-    rate_limit_signal: documented
+    protected_resource_metadata: verified
+    rate_limit_signal: derived
     reversibility_documented: false
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 28.4
-  scored_at: '2026-09-20'
+  score: 30.1
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 12
   human_in_the_loop: 0
@@ -74,7 +74,7 @@ apis:
   description: Company members who give and receive recognition.
   name: Bonusly Users API
   slug: bonusly-users-api
-artifact_total: 20
+artifact_total: 21
 collections:
 - collection_type: open
   name: API Collection
@@ -101,6 +101,11 @@ collections:
   name: Bonusly API
   slug: open-bonusly
 common:
+- group: other
+  href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/capabilities/bonusly-capability-edges.yml
+  title: ''
+  type: CapabilityMap
+  url: capabilities/bonusly-capability-edges.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/bonusly/refs/heads/main/agentic-access/bonusly-agentic-access.yml
   title: ''
@@ -154,19 +159,27 @@ common:
 created: '2026-07-10'
 description: Bonusly is an employee recognition and rewards platform that lets coworkers give each other small, frequent, public bonuses tied to company values, which recipients redeem for gift cards, custom rewards, donations, and more. The Bonusly REST API (base https://bonus.ly/api/v1) exposes the same surface the product is built on - bonuses, users, the reward catalog, redemptions, awards, company settings, and analytics - authenticated with a Bearer personal access token. API access is available on paid plans; tokens are minted by admins with fine-grained read / write / administer scopes.
 finops:
-- name: Bonusly Finops
+- has_sources: true
+  method: generated
+  name: Bonusly Finops
+  primary_unit: ''
   service_category: HR and Employee Engagement
   slug: bonusly-finops
+  template: false
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/bonusly.png
 layout: provider
+mcp_servers:
+- description: Remote MCP server at bonus.ly over HTTP.
+  name: Bonusly MCP Server
+  slug: bonusly
 modified: '2026-07-10'
 name: Bonusly
 nav: Providers
 network: true
-overview: 'Bonusly publishes 6 APIs on the [APIs.io](https://apis.io/) network, including Analytics API, Bonuses API, Company API, and 3 more. Tagged areas include Employee Recognition, Rewards, Employee Engagement, Human Resources, and Company Culture.
+overview: 'Bonusly publishes 6 API contracts indexed on the [APIs.io](https://apis.io/) network, including Analytics API, Bonuses API, Company API, and 3 more. Tagged areas include Employee Recognition, Rewards, Employee Engagement, Human Resources, and Company Culture.
 
 
-  Bonusly''s developer surface includes authentication, documentation, engineering blog, and 8 more developer resources.'
+  Bonusly''s developer surface includes authentication, documentation, engineering blog, and 9 more developer resources.'
 plans:
 - name: Bonusly Plans Pricing
   plan_count: 4
@@ -177,24 +190,24 @@ rate_limits:
   name: Bonusly Rate Limits
   slug: bonusly-rate-limits
 score:
-  band: thin
-  composite: 37.9
+  band: emerging
+  composite: 26.0
   coverage:
-    artifact_dirs: 12
-    catalog_earned: 64.0
+    artifact_dirs: 13
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 51.0
+    catalog_gap: 72.0
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -8.4
   facets:
-    access_clarity: 39.5
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 58.6
+    contract_quality: 53.0
     developer_ergonomics: 23.8
-    discoverability: 68.5
-    operational_transparency: 34.2
-  previous_composite: 37.9
+    discoverability: 68.3
+    operational_transparency: 10.5
+  previous_composite: 34.4
   provenance:
     agentic_access: derived
     contracts:
@@ -203,9 +216,15 @@ score:
       marker_coverage: 0.0
       total: 6
     mcp: first-party
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+  regulatory:
+    applies: true
+    matched_via: weak_tags
+    regime: Employment & Payroll
+    regime_id: employment_payroll
+    score: 11.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: true
     score: 0.0
@@ -227,5 +246,6 @@ tags:
 - Human Resources
 - Company Culture
 - Bonuses
+- Loyalty & Incentives
 website: https://bonusly.com
 ---

@@ -27,13 +27,13 @@ agent_readiness:
     mcp_server: false
     openapi_examples: false
     protected_resource_metadata: false
-    rate_limit_signal: documented
+    rate_limit_signal: derived
     reversibility_documented: na
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 26.7
-  scored_at: '2026-09-20'
+  score: 24.5
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -46,22 +46,22 @@ apis:
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Import/export values
-  name: Energy Charts API import_export API
+  name: Energy Charts API Import Export API
   slug: energy-charts-api-import-export-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Query power values
-  name: Energy Charts API power API
+  name: Energy Charts API Power API
   slug: energy-charts-api-power-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Query price values
-  name: Energy Charts API prices API
+  name: Energy Charts API Prices API
   slug: energy-charts-api-prices-api
 - baseURL: https://api.energy-charts.info
   baseurl_source: declared
   description: Renewable shares
-  name: Energy Charts API ren_share API
+  name: Energy Charts API Ren Share API
   slug: energy-charts-api-ren-share-api
 artifact_total: 15
 collections:
@@ -84,6 +84,21 @@ collections:
   name: Energy-Charts API
   slug: open-energy-charts-api
 common:
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/energy-charts-api/refs/heads/main/plans/energy-charts-api-plans-pricing.yml
+  title: ''
+  type: Plans
+  url: plans/energy-charts-api-plans-pricing.yml
+- group: operate
+  href: https://raw.githubusercontent.com/api-evangelist/energy-charts-api/refs/heads/main/rate-limits/energy-charts-api-rate-limits.yml
+  title: ''
+  type: RateLimits
+  url: rate-limits/energy-charts-api-rate-limits.yml
+- group: commercial
+  href: https://raw.githubusercontent.com/api-evangelist/energy-charts-api/refs/heads/main/finops/energy-charts-api-finops.yml
+  title: ''
+  type: FinOps
+  url: finops/energy-charts-api-finops.yml
 - group: agent
   href: https://raw.githubusercontent.com/api-evangelist/energy-charts-api/refs/heads/main/agentic-access/energy-charts-api-agentic-access.yml
   title: ''
@@ -105,16 +120,20 @@ common:
 created: '2025-05-02'
 description: The Energy-Charts API, provided by Fraunhofer ISE, delivers European energy data including electricity production by source, day-ahead spot market prices, cross-border electricity trading and physical flows, grid frequency, installed capacity, and renewable energy share forecasts. It covers more than 40 European countries and bidding zones, supports ISO 8601, daily, and UNIX timestamp formats, and is largely licensed under CC BY 4.0.
 finops:
-- name: Energy Charts Api Finops
+- has_sources: false
+  method: generated
+  name: Energy Charts Api Finops
+  primary_unit: ''
   service_category: API
   slug: energy-charts-api-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/energy-charts-api.png
 layout: provider
 modified: '2026-05-19'
 name: Energy Charts API
 nav: Providers
 network: true
-overview: Energy Charts API publishes 4 APIs on the [APIs.io](https://apis.io/) network, including import_export API, power API, prices API, and 1 more. Tagged areas include Energy, Electricity, Renewables, Grid, and Europe.
+overview: Energy Charts API publishes 4 API contracts indexed on the [APIs.io](https://apis.io/) network, including Import Export API, Power API, Prices API, and 1 more. Tagged areas include Energy, Electricity, Renewables, Grid, and Europe.
 plans:
 - name: Energy Charts Api Plans Pricing
   plan_count: 3
@@ -126,28 +145,28 @@ rate_limits:
   slug: energy-charts-api-rate-limits
 score:
   band: emerging
-  composite: 20.1
+  composite: 20.7
   coverage:
     artifact_dirs: 9
-    catalog_earned: 40.0
+    catalog_earned: 43.0
     catalog_earned_first_party: 0.0
-    catalog_gap: 60.0
-    catalog_max: 100.0
+    catalog_gap: 72.0
+    catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: 1.6
   facets:
-    access_clarity: 0.0
+    access_clarity: 7.9
     contract_governance: 0.0
-    contract_quality: 48.0
+    contract_quality: 43.2
     developer_ergonomics: 9.5
-    discoverability: 68.5
+    discoverability: 66.1
     operational_transparency: 7.9
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 20.1
+  previous_composite: 19.1
   provenance:
     agentic_access: derived
     contracts:
@@ -160,9 +179,9 @@ score:
     matched_via: tags
     regime: Energy & Utilities
     regime_id: energy_utilities
-    score: 8.1
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 4.9
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false

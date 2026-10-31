@@ -33,7 +33,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 22.9
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 agentic_access:
 - acting_count: 0
   human_in_the_loop: 0
@@ -132,9 +132,13 @@ examples:
   name: Spider Man
   slug: spider-man
 finops:
-- name: Superhero Finops
+- has_sources: false
+  method: generated
+  name: Superhero Finops
+  primary_unit: ''
   service_category: API
   slug: superhero-finops
+  template: true
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/superhero.png
 json_schemas:
 - name: Character
@@ -150,7 +154,7 @@ modified: '2026-06-13'
 name: Superhero API
 nav: Providers
 network: true
-overview: 'Superhero API publishes 2 APIs on the [APIs.io](https://apis.io/) network: Characters API and Search API. Tagged areas include Superheroes, Comics, Characters, Marvel, and DC Comics.
+overview: 'Superhero API publishes 2 API contracts indexed on the [APIs.io](https://apis.io/) network: Characters API and Search API. Tagged areas include Superheroes, Comics, Characters, Marvel, and DC Comics.
 
 
   The Superhero API catalog on APIs.io includes 1 JSON-LD context and 1 Spectral governance ruleset.
@@ -167,9 +171,10 @@ rate_limits:
   name: Superhero Rate Limits
   slug: superhero-rate-limits
 rules:
-- effective_rule_count: 6
+- authorship: generated
+  effective_rule_count: 6
   extends: []
-  name: Superhero API API Rules
+  name: Superhero API — jsonschema rules
   rule_count: 6
   severity_counts:
     error: 0
@@ -178,24 +183,24 @@ rules:
     warn: 4
   slug: superhero-jsonschema-spectral-rules
 score:
-  band: developing
-  composite: 39.4
+  band: thin
+  composite: 30.6
   coverage:
     artifact_dirs: 15
-    catalog_earned: 81.3
+    catalog_earned: 65.2
     catalog_earned_first_party: 0.0
-    catalog_gap: 33.8
+    catalog_gap: 49.9
     catalog_max: 115.0
     note: 'Disclosure, not a penalty. catalog_gap is rubric points API Evangelist could add with no action by this provider, and it is NOT subtracted from the composite above. It is our backlog EXCEPT where this provider already did the work: catalog_earned is how much of the class was satisfied at all, and catalog_earned_first_party how much of that came from artifacts the provider published rather than ones we generated (roadmap#221). catalog_earned_first_party is a FLOOR, not the whole share: only ~40 of the rubric''s 113 checks carry a provenance class at all, so a check we cannot attribute counts toward neither side. Read it as "at least this much was theirs", never as "the rest was ours".'
-  delta: 0.0
+  delta: -6.1
   facets:
-    access_clarity: 39.5
-    contract_governance: 25.0
-    contract_quality: 63.5
+    access_clarity: 15.8
+    contract_governance: 23.5
+    contract_quality: 57.9
     developer_ergonomics: 2.4
-    discoverability: 68.5
-    operational_transparency: 42.1
-  previous_composite: 39.4
+    discoverability: 66.1
+    operational_transparency: 26.3
+  previous_composite: 36.7
   provenance:
     agentic_access: derived
     contracts:
@@ -208,10 +213,10 @@ score:
     matched_via: tags
     regime: Government & Public Sector
     regime_id: government
-    score: 20.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
-  trend: flat
+    score: 10.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
+  trend: falling
   upsert:
     applies: false
     note: 'Not scored: this provider''s published contracts declare no write operations, and a read-only API cannot create-or-update. Excluded from the denominator, not zeroed.'

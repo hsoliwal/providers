@@ -23,7 +23,7 @@ agent_readiness:
     well_known_catalog: false
   schema_version: '0.2'
   score: 2.5
-  scored_at: '2026-09-20'
+  scored_at: '2026-10-17'
 api_count: 0
 artifact_total: 3
 common:
@@ -129,10 +129,10 @@ rate_limits:
   name: Unifa Rate Limits
   slug: unifa-rate-limits
 score:
-  band: thin
-  composite: 26.6
+  band: emerging
+  composite: 24.4
   coverage:
-    artifact_dirs: 9
+    artifact_dirs: 10
     catalog_earned: 35.0
     catalog_earned_first_party: 8.0
     catalog_gap: 80.0
@@ -144,7 +144,7 @@ score:
     contract_governance: 18.2
     contract_quality: 0.0
     developer_ergonomics: 7.1
-    discoverability: 50.0
+    discoverability: 48.2
     operational_transparency: 15.8
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
@@ -153,7 +153,7 @@ score:
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - japan-korea
-  previous_composite: 26.6
+  previous_composite: 24.4
   provenance:
     conformance: first-party
   regulatory:
@@ -161,14 +161,15 @@ score:
     matched_via: tags
     regime: Education & Research
     regime_id: education
-    score: 44.4
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 21.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
     note: 'Not scored: no parseable contract to read. Never-measured is not the same fact as measured-empty, so this is absent rather than zero.'
     reason: no_specs
+screenshot: https://raw.githubusercontent.com/api-evangelist/unifa/refs/heads/main/screenshots/unifa-2026-10-11T131420.png
 security:
 - kind: domain-security
   name: Unifa Domain Security

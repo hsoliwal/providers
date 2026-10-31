@@ -10,7 +10,7 @@ access_model:
   trial: false
   try_now: false
 agent_readiness:
-  band: agent-aware
+  band: human-only
   dimensions:
     agent_card: false
     agent_skills: derived
@@ -32,8 +32,8 @@ agent_readiness:
     spec_presence: true
     well_known_catalog: false
   schema_version: '0.2'
-  score: 23.6
-  scored_at: '2026-09-20'
+  score: 0.0
+  scored_at: '2026-10-17'
 api_count: 1
 apis:
 - description: 'PSD2 open-banking platform API: Authentication, General, Payment Initiation (PIS) and Account Information (AIS) services for account-to-account bank payments, card (hybrid) payments, refunds and accou'
@@ -145,7 +145,7 @@ modified: '2026-07-19'
 name: Kevin.
 nav: Providers
 network: true
-overview: 'Kevin. publishes 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Open Banking, Account-to-Account, and PSD2.
+overview: 'Kevin. is listed with 1 API on the [APIs.io](https://apis.io/) network. Tagged areas include Company, Payments, Open Banking, Account-to-Account, and PSD2.
 
 
   The Kevin. catalog on APIs.io includes 1 event-driven AsyncAPI specification.
@@ -159,10 +159,10 @@ scopes:
   slug: kevin-scopes
   summary_line: 2 scopes · authorizationCode
 score:
-  band: thin
-  composite: 27.9
+  band: minimal
+  composite: 0.0
   coverage:
-    artifact_dirs: 16
+    artifact_dirs: 17
     catalog_earned: 37.0
     catalog_earned_first_party: 0.0
     catalog_gap: 78.0
@@ -171,17 +171,18 @@ score:
   delta: 0.0
   facets:
     access_clarity: 0.0
-    contract_governance: 4.5
-    contract_quality: 41.6
-    developer_ergonomics: 36.3
-    discoverability: 68.5
-    operational_transparency: 7.9
+    contract_governance: 0.0
+    contract_quality: 0.0
+    developer_ergonomics: 0.0
+    discoverability: 0.0
+    operational_transparency: 0.0
   jurisdiction:
     basis: provider tags (build_countries.py / build_regions.py)
     note: A first approximation of where this provider operates, derived from the tags on its profile. NOT a legal determination of domicile or regulatory scope, and it does not yet decide which regimes the regulatory facet evaluates (roadmap#85).
     regions:
     - europe
-  previous_composite: 27.9
+  lifecycle: defunct
+  previous_composite: 0.0
   provenance:
     conformance: derived
     mcp: derived
@@ -195,9 +196,9 @@ score:
     matched_via: tags
     regime: Banking & Open Finance
     regime_id: banking_open_finance
-    score: 43.0
-  schema_version: 0.22.0
-  scored_at: '2026-09-20'
+    score: 26.8
+  schema_version: 0.24.0
+  scored_at: '2026-10-17'
   trend: flat
   upsert:
     applies: false
